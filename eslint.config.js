@@ -50,6 +50,7 @@ export default tseslint.config(
       ...reactHooksPlugin.configs.recommended.rules,
       ...jsxA11yPlugin.configs.recommended.rules,
       ...importPlugin.configs.typescript.rules,
+      ...unicornPlugin.configs.recommended.rules,
 
       "react-refresh/only-export-components": [
         "warn",
@@ -58,8 +59,6 @@ export default tseslint.config(
 
       "no-console": ["warn", { allow: ["warn", "error"] }],
       "no-debugger": "error",
-      "no-duplicate-imports": "off",
-      "@typescript-eslint/no-duplicate-imports": "error",
       "@typescript-eslint/no-unused-vars": [
         "error",
         {
@@ -138,13 +137,8 @@ export default tseslint.config(
           },
         },
       ],
-      "unicorn/no-array-for-each": "error",
-      "unicorn/no-useless-undefined": "error",
-      "unicorn/prefer-structured-clone": "error",
-      "unicorn/prefer-array-flat": "error",
-      "unicorn/prefer-module": "error",
-      "unicorn/no-null": "off",
       "unicorn/prevent-abbreviations": "off",
+      "unicorn/no-null": "off",
 
       "promise/catch-or-return": "error",
       "promise/no-return-wrap": "error",

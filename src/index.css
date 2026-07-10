@@ -1,0 +1,73 @@
+@import "@fontsource-variable/jetbrains-mono";
+
+/*
+ * General Sans es una tipografía de Fontshare (gratuita, autohospedable) que no
+ * está publicada en npm. Para activarla: descarga los archivos variables desde
+ * fontshare.com/fonts/general-sans y colócalos en public/fonts/general-sans/,
+ * luego añade aquí el @font-face correspondiente. Mientras tanto se usa system-ui
+ * como fallback tipográfico, sin romper la jerarquía visual.
+ */
+
+:root {
+  --bg: #000000;
+  --fg: #ffffff;
+
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --fg: #000000;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 20;
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: var(--fg);
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 1;
+}
