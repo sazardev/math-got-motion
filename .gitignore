@@ -1,0 +1,65 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.tsbuildinfo
+
+# Tauri
+src-tauri/target/
+src-tauri/gen/
+src-tauri/Cargo.lock
+
+# Android
+src-tauri/gen/android/
+.gradle/
+local.properties
+*.apk
+*.aab
+
+# iOS
+src-tauri/gen/apple/
+*.xcodeproj/
+*.xcworkspace/
+DerivedData/
+*.ipa
+
+# Coverage
+coverage/
+
+# Environment
+.env
+.env.*
+.env.local
+.env.production
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Build artifacts
+*.stats.html
+stats.html
+
+# Debug
+debug/
