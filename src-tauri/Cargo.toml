@@ -1,7 +1,7 @@
 [package]
 name = "math-got-motion"
 version = "0.1.0"
-description = "A Tauri App"
+description = "Math formulas deconstructed letter by letter, scroll by scroll."
 authors = ["you"]
 edition = "2021"
 rust-version = "1.77.2"

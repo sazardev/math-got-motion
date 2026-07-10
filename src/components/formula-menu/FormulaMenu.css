@@ -1,0 +1,34 @@
+.formula-menu {
+  position: fixed;
+  top: clamp(1rem, 3vh, 2rem);
+  left: clamp(1rem, 3vw, 2rem);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(0.25rem, 1.2vh, 0.75rem);
+  max-width: 60vw;
+}
+
+.formula-menu__item {
+  border: none;
+  background: transparent;
+  padding: 0.3rem 0;
+  margin: 0;
+  color: var(--fg);
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(0.75rem, 2.2vw, 0.95rem);
+  text-align: left;
+  cursor: pointer;
+  opacity: 0.45;
+  transition: opacity 0.2s ease;
+}
+
+.formula-menu__item:hover {
+  opacity: 0.8;
+}
+
+.formula-menu__item[aria-current="true"] {
+  opacity: 1;
+  font-weight: 600;
+}

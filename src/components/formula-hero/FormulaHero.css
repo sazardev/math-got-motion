@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
+  height: 100dvh; /* viewport dinámico: evita el salto por la barra del navegador móvil */
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -11,14 +12,20 @@
 }
 
 .hero__formula {
+  /*
+   * DESIGN.md 4.1 — flujo de texto natural (no flex) para que el navegador
+   * resuelva kerning y vertical-align correctamente; el flex del .hero
+   * (el padre) ya se encarga de centrar este bloque como un todo.
+   */
   position: relative;
   z-index: 10;
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
+  display: inline-block;
+  text-align: center;
   font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
   font-variation-settings: "wght" 500;
-  font-size: clamp(4rem, 15vw, 11rem);
+  /* min(vw, vh): la fórmula nunca desborda ni en portrait angosto ni en
+     landscape bajo — se ajusta a la dimensión más restrictiva. */
+  font-size: clamp(2.25rem, min(15vw, 26vh), 11rem);
   line-height: 1;
   white-space: nowrap;
 }
@@ -43,9 +50,9 @@
   position: absolute;
   z-index: 5;
   left: 50%;
-  bottom: 14vh;
+  bottom: 16vh;
   transform: translateX(-50%);
-  width: min(90vw, 40rem);
+  width: min(92vw, 44rem);
   text-align: center;
   pointer-events: none;
 }
@@ -57,10 +64,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  column-gap: 0.32em;
-  row-gap: 0.2em;
+  column-gap: 0.34em;
+  row-gap: 0.25em;
   font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 3.2vw, 1.5rem);
   font-weight: 400;
   line-height: 1.5;
 }
@@ -77,53 +84,142 @@
   will-change: transform, opacity;
 }
 
-.hero__hint {
+.hero__context {
   position: absolute;
-  bottom: 4vh;
+  z-index: 5;
   left: 50%;
+  top: 36vh;
   transform: translateX(-50%);
+  width: min(90vw, 46rem);
+  text-align: center;
+}
+
+.context__author {
+  margin: 0 0 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 0.4em;
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 6vw, 3rem);
+  line-height: 1.1;
+}
+
+.context__era {
+  margin: 0 0 2rem;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-size: clamp(0.7rem, 2vw, 0.875rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(65%);
+  will-change: transform, opacity;
+}
+
+.context__history {
+  margin: 0 0 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 0.32em;
+  row-gap: 0.3em;
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(0.9rem, 2.6vw, 1.15rem);
+  line-height: 1.55;
+  opacity: 0.85;
+}
+
+.context__back {
+  pointer-events: auto;
+  display: inline-block;
+  border: none;
+  background: transparent;
+  padding: 0.6rem 0;
   margin: 0;
+  color: var(--fg);
   font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
   font-size: 0.875rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  opacity: 0.6;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
-/*
- * Sin scrollytelling: el AST se presenta como una lista legible en el flujo
- * normal del documento, sin el pin/scrub de ScrollTrigger y sin superponer
- * las explicaciones unas sobre otras.
- */
-@media (prefers-reduced-motion: reduce) {
-  .hero {
-    height: auto;
-    min-height: 100vh;
-    overflow: visible;
-    flex-direction: column;
-    gap: 4rem;
-    padding: 4rem 1.5rem;
+.context__back:hover {
+  opacity: 1 !important;
+}
+
+.hero__progress,
+.hero__hint {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+.hero__progress {
+  bottom: 7vh;
+}
+
+.hero__hint {
+  bottom: 4vh;
+}
+
+/* Landscape corto (teléfono acostado) y viewports muy bajos en general:
+   comprime el epílogo para que autor + época + historia + enlace entren
+   sin desbordar por debajo de la pantalla. */
+@media (max-height: 500px) {
+  .hero__context {
+    top: 22vh;
+  }
+
+  .context__author {
+    margin-bottom: 0.4rem;
+  }
+
+  .context__era {
+    margin-bottom: 0.9rem;
+  }
+
+  .context__history {
+    margin-bottom: 1rem;
+    font-size: clamp(0.8rem, 2.2vw, 0.95rem);
   }
 
   .hero__explanations {
-    position: static;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    transform: none;
-    pointer-events: auto;
+    bottom: 10vh;
   }
 
-  .explanation {
-    position: static;
-  }
-
-  .word__inner {
-    opacity: 1;
-    transform: none;
+  .hero__progress {
+    display: none;
   }
 
   .hero__hint {
+    bottom: 1.5vh;
+  }
+}
+
+/* Portrait angosto: el texto de cada explicación envuelve a más líneas,
+   así que se le da más aire por arriba y se retira el contador (queda
+   solo el hint) para que nada se superponga cerca del borde inferior. */
+@media (max-width: 600px) {
+  .hero__explanations {
+    bottom: 20vh;
+  }
+
+  .explanation {
+    font-size: clamp(0.9rem, 4vw, 1.25rem);
+  }
+
+  .hero__progress {
     display: none;
   }
 }

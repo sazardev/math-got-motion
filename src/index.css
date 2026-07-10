@@ -37,6 +37,7 @@ body,
   padding: 0;
   width: 100%;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -50,17 +51,25 @@ body {
   color: var(--bg);
 }
 
-.theme-toggle {
+.controls {
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  top: clamp(1rem, 3vh, 2rem);
+  right: clamp(1rem, 3vw, 2rem);
   z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: clamp(0.25rem, 1.2vh, 0.75rem);
+}
+
+.control-button {
   border: none;
   background: transparent;
-  padding: 0;
+  padding: 0.3rem 0;
+  margin: 0;
   color: var(--fg);
   font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, 2.2vw, 0.875rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   cursor: pointer;
@@ -68,6 +77,6 @@ body {
   transition: opacity 0.2s ease;
 }
 
-.theme-toggle:hover {
+.control-button:hover {
   opacity: 1;
 }
