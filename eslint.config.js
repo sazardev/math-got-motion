@@ -94,6 +94,13 @@ export default tseslint.config(
           selector: "enumMember",
           format: ["UPPER_CASE", "PascalCase"],
         },
+        {
+          // JSON-LD (schema.org) usa @context/@type — el formato lo define
+          // la especificación externa, no una convención propia del proyecto.
+          selector: "objectLiteralProperty",
+          filter: { regex: "^@", match: true },
+          format: null,
+        },
       ],
       "@typescript-eslint/no-unnecessary-condition": "warn",
       "@typescript-eslint/prefer-nullish-coalescing": "error",
@@ -162,7 +169,7 @@ export default tseslint.config(
   {
     // Scripts de Node/CLI (no app code): console.log y process.exit son el
     // idioma normal acá, no un code smell.
-    files: ["scripts/**/*.ts"],
+    files: ["scripts/**/*.{ts,tsx}"],
     rules: {
       "no-console": "off",
       "unicorn/no-process-exit": "off",

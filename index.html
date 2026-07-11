@@ -5,6 +5,7 @@
     <!-- Ruta relativa: funciona tanto servida en la raíz (Tauri) como bajo
          un subpath (GitHub Pages: sazardev.github.io/math-got-motion/). -->
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
@@ -14,6 +15,9 @@
       name="description"
       content="An interactive, typographic scrollytelling experience that deconstructs math formulas — Euler's Identity, the Pythagorean theorem, and more — letter by letter as you scroll."
     />
+    <!-- Fallback para la carga inicial antes de que el useSeo de la ruta activa
+         la reescriba (y para cualquier ruta no pre-renderizada). -->
+    <link rel="canonical" href="https://sazardev.github.io/math-got-motion/" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sazardev.github.io/math-got-motion/" />

@@ -13,6 +13,18 @@ export interface UiStrings {
   timelineTitle: string;
   useCasesTitle: string;
   exampleTitle: string;
+  share: string;
+  linkCopied: string;
+  changelogNav: string;
+  changelogTitle: string;
+  changelogDescription: string;
+  changelogAdded: string;
+  changelogChanged: string;
+  changelogFixed: string;
+  changelogRemoved: string;
+  notFoundTitle: string;
+  notFoundDescription: string;
+  notFoundBackLink: string;
 }
 
 export const uiStrings: Record<Locale, UiStrings> = {
@@ -29,6 +41,18 @@ export const uiStrings: Record<Locale, UiStrings> = {
     timelineTitle: "Línea de tiempo",
     useCasesTitle: "Dónde se usa hoy",
     exampleTitle: "Ejemplo resuelto",
+    share: "Compartir",
+    linkCopied: "Enlace copiado",
+    changelogNav: "Novedades",
+    changelogTitle: "Novedades",
+    changelogDescription: "Qué cambió en Math Got Motion, versión por versión.",
+    changelogAdded: "Agregado",
+    changelogChanged: "Cambiado",
+    changelogFixed: "Arreglado",
+    changelogRemoved: "Quitado",
+    notFoundTitle: "404",
+    notFoundDescription: "No encontramos esta página.",
+    notFoundBackLink: "Volver al inicio",
   },
   en: {
     scrollHint: "Scroll to deconstruct the formula",
@@ -43,5 +67,17 @@ export const uiStrings: Record<Locale, UiStrings> = {
     timelineTitle: "Timeline",
     useCasesTitle: "Where it's used today",
     exampleTitle: "Worked example",
+    share: "Share",
+    linkCopied: "Link copied",
+    changelogNav: "Changelog",
+    changelogTitle: "Changelog",
+    changelogDescription: "What changed in Math Got Motion, version by version.",
+    changelogAdded: "Added",
+    changelogChanged: "Changed",
+    changelogFixed: "Fixed",
+    changelogRemoved: "Removed",
+    notFoundTitle: "404",
+    notFoundDescription: "We couldn't find this page.",
+    notFoundBackLink: "Back to home",
   },
 };

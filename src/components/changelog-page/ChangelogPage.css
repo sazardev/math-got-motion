@@ -1,0 +1,82 @@
+.changelog {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: clamp(4rem, 10vh, 6rem) 1.5rem 4rem;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.changelog__title {
+  margin: 0;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-variation-settings: "wght" 500;
+  font-size: clamp(2rem, 8vw, 3.5rem);
+}
+
+.changelog__list {
+  width: 100%;
+  max-width: 42rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.changelog__version {
+  margin: 0 0 0.75rem;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.changelog__date {
+  margin-left: 0.6em;
+  opacity: 0.55;
+}
+
+.changelog__changes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.changelog__change {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem 0.75rem;
+  align-items: baseline;
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(0.95rem, 2.4vw, 1.05rem);
+  line-height: 1.5;
+}
+
+.changelog__change-type {
+  flex: 0 0 auto;
+  min-width: 5.5rem;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.changelog__back {
+  color: var(--fg);
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.changelog__back:hover {
+  opacity: 1;
+}

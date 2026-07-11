@@ -1,8 +1,11 @@
 import { useGSAP } from "@gsap/react";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
+import { useSeo } from "../../hooks/useSeo";
+import { locales } from "../../i18n/locale";
 import { useLocale } from "../../i18n/locale-context";
 import { gsap, ScrollTrigger } from "../../lib/gsap";
+import { SITE_URL } from "../../lib/site";
 
 import type { Formula } from "../../domain/formula.types";
 import "./FormulaHero.css";
@@ -16,6 +19,15 @@ interface NodeLayout {
 
 interface FormulaHeroProps {
   formula: Formula;
+  /** true en "/:locale/" (fórmula por defecto); false en "/:locale/formula/:id". Cambia la URL canónica. */
+  isIndexRoute?: boolean;
+}
+
+const DESCRIPTION_MAX_LENGTH = 155;
+
+function truncate(text: string, max: number): string {
+  if (text.length <= max) return text;
+  return `${text.slice(0, max - 1).trimEnd()}…`;
 }
 
 // Duraciones (en "tiempo" de timeline, no segundos reales — el scrub las
@@ -83,8 +95,29 @@ function scrollToTop() {
   globalThis.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-export function FormulaHero({ formula }: FormulaHeroProps) {
+export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps) {
   const { locale, strings } = useLocale();
+
+  const pathFor = (forLocale: typeof locale) =>
+    isIndexRoute ? `/${forLocale}/` : `/${forLocale}/formula/${formula.id}`;
+  const description = truncate(formula.context.history[locale], DESCRIPTION_MAX_LENGTH);
+
+  useSeo({
+    locale,
+    title: formula.title[locale],
+    description,
+    path: pathFor(locale),
+    image: `${SITE_URL}/og/${formula.id}-${locale}.png`,
+    alternates: locales.map((altLocale) => ({ locale: altLocale, path: pathFor(altLocale) })),
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: formula.title[locale],
+      description,
+      inLanguage: locale,
+      author: { "@type": "Person", name: formula.context.author[locale] },
+    },
+  });
   const heroRef = useRef<HTMLElement>(null);
   const formulaRef = useRef<HTMLDivElement>(null);
   const nodeRefs = useRef(new Map<string, HTMLSpanElement>());
@@ -96,6 +129,7 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
   const exampleTitleRef = useRef<HTMLParagraphElement>(null);
   const exampleLineRefs = useRef(new Map<number, HTMLParagraphElement>());
   const backLinkRef = useRef<HTMLButtonElement>(null);
+  const shareLinkRef = useRef<HTMLButtonElement>(null);
   const progressRef = useRef<HTMLParagraphElement>(null);
   const hintRef = useRef<HTMLParagraphElement>(null);
   const layoutRef = useRef<{ formulaRect: DOMRect; nodes: Map<string, NodeLayout> } | null>(null);
@@ -103,6 +137,7 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
   // Se incrementa en resize/cambio de orientación para forzar una nueva
   // medición FLIP y reconstruir el timeline de GSAP con las dimensiones actuales.
   const [layoutVersion, setLayoutVersion] = useState(0);
+  const [shareState, setShareState] = useState<"idle" | "copied">("idle");
 
   const total = formula.nodes.length;
   const formatProgress = (index: number) =>
@@ -443,7 +478,11 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
         at(exampleStart),
       );
 
-      tl.to(backLinkRef.current, { opacity: 0.7, duration: CONTEXT_BACK_DURATION }, at(backStart));
+      tl.to(
+        [backLinkRef.current, shareLinkRef.current],
+        { opacity: 0.7, duration: CONTEXT_BACK_DURATION },
+        at(backStart),
+      );
 
       tl.eventCallback("onUpdate", () => {
         const el = progressRef.current;
@@ -467,6 +506,34 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
     },
     { scope: heroRef, dependencies: [ready, formula, layoutVersion] },
   );
+
+  const handleShare = async () => {
+    const shareData = {
+      title: formula.title[locale],
+      text: formula.context.history[locale].slice(0, 140),
+      url: globalThis.location.href,
+    };
+
+    if (typeof navigator.share === "function") {
+      try {
+        await navigator.share(shareData);
+      } catch {
+        // El usuario canceló el share sheet nativo — no es un error a reportar.
+      }
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(shareData.url);
+      setShareState("copied");
+      globalThis.setTimeout(() => {
+        setShareState("idle");
+      }, 2000);
+    } catch {
+      // Sin Web Share API ni Clipboard API (ej. contexto no seguro) no hay
+      // fallback razonable más allá de dejar que el usuario copie la URL a mano.
+    }
+  };
 
   return (
     <section ref={heroRef} className="hero" aria-label={formula.title[locale]}>
@@ -614,9 +681,21 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
           </div>
         </div>
 
-        <button type="button" className="context__back" ref={backLinkRef} onClick={scrollToTop}>
-          {strings.backToFormula}
-        </button>
+        <div className="context__actions">
+          <button type="button" className="context__back" ref={backLinkRef} onClick={scrollToTop}>
+            {strings.backToFormula}
+          </button>
+          <button
+            type="button"
+            className="context__back"
+            ref={shareLinkRef}
+            onClick={() => {
+              void handleShare();
+            }}
+          >
+            {shareState === "copied" ? strings.linkCopied : strings.share}
+          </button>
+        </div>
       </div>
 
       <p className="hero__progress" ref={progressRef} aria-hidden="true">

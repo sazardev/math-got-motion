@@ -1,0 +1,46 @@
+.not-found {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background: var(--bg);
+  color: var(--fg);
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.not-found__code {
+  margin: 0;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-variation-settings: "wght" 500;
+  font-size: clamp(4rem, 22vw, 12rem);
+  line-height: 1;
+}
+
+.not-found__description {
+  margin: 0;
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  opacity: 0.85;
+}
+
+.not-found__link {
+  display: inline-block;
+  color: var(--fg);
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.not-found__link:hover {
+  opacity: 1;
+}

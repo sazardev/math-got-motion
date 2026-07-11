@@ -1,0 +1,72 @@
+# Fuente de verdad del changelog — validado por src/domain/changelog.types.ts
+# y renderizado en /:locale/changelog (ChangelogPage.tsx). CHANGELOG.md en la
+# raíz del repo es un espejo generado de este archivo para desarrolladores;
+# las entradas nuevas se agregan acá, no ahí.
+
+- version: "0.5.0"
+  date: "2026-07-10"
+  changes:
+    - type: added
+      text:
+        es: Cada fórmula ahora tiene su propia URL y se puede compartir directamente (con su propia imagen de vista previa).
+        en: Every formula now has its own URL and can be shared directly (with its own preview image).
+    - type: added
+      text:
+        es: Página de novedades (esta que estás leyendo).
+        en: A changelog page (this one).
+    - type: added
+      text:
+        es: SEO agresivo — sitemap, robots.txt, datos estructurados y páginas pre-renderizadas para buscadores e IA.
+        en: Aggressive SEO — sitemap, robots.txt, structured data, and prerendered pages for search engines and AI.
+    - type: changed
+      text:
+        es: El idioma y la fórmula activa ahora viven en la URL, no solo en memoria.
+        en: Language and the active formula now live in the URL, not just in memory.
+
+- version: "0.4.0"
+  date: "2026-07-10"
+  changes:
+    - type: added
+      text:
+        es: 34 fórmulas nuevas (38 en total), cada una con historia, línea de tiempo, casos de uso reales y un ejemplo resuelto.
+        en: 34 new formulas (38 total), each with history, a timeline, real-world use cases, and a worked example.
+    - type: added
+      text:
+        es: Índice de fórmulas con búsqueda en vivo y agrupación por categoría.
+        en: A searchable formula index grouped by category.
+    - type: changed
+      text:
+        es: Las fórmulas pasaron de módulos de código a archivos YAML validados por schema — cualquiera puede agregar una de forma segura.
+        en: Formulas moved from code modules to schema-validated YAML files — anyone can safely contribute one.
+
+- version: "0.3.0"
+  date: "2026-07-10"
+  changes:
+    - type: added
+      text:
+        es: Despliegue automático a GitHub Pages.
+        en: Automatic deployment to GitHub Pages.
+
+- version: "0.2.0"
+  date: "2026-07-10"
+  changes:
+    - type: added
+      text:
+        es: Menú para cambiar entre varias fórmulas.
+        en: A menu to switch between multiple formulas.
+    - type: added
+      text:
+        es: Soporte bilingüe, español e inglés.
+        en: Bilingual support, Spanish and English.
+    - type: added
+      text:
+        es: Diseño responsive para pantallas angostas y en orientación horizontal.
+        en: Responsive layout for narrow screens and landscape orientation.
+
+- version: "0.1.0"
+  date: "2026-07-10"
+  changes:
+    - type: added
+      text:
+        es: Primera prueba de concepto — la Identidad de Euler deconstruida con scroll.
+        en: First proof of concept — Euler's Identity deconstructed via scroll.

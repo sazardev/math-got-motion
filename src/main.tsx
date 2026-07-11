@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 import "./index.css";
@@ -17,9 +18,16 @@ globalThis.scrollTo(0, 0);
 const rootElement = document.querySelector("#root");
 
 if (rootElement) {
+  // BASE_URL ya refleja el `base` de vite.config.ts ("/math-got-motion/" en
+  // GitHub Pages, "/" en Tauri/local) — sin la barra final, que BrowserRouter
+  // no espera en su `basename`.
+  const basename = import.meta.env.BASE_URL.replace(/\/$/, "");
+
   ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
-      <App />
+      <BrowserRouter basename={basename}>
+        <App />
+      </BrowserRouter>
     </React.StrictMode>,
   );
 }

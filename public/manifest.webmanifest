@@ -1,0 +1,19 @@
+{
+  "name": "Math Got Motion",
+  "short_name": "Math Got Motion",
+  "description": "An interactive, typographic scrollytelling experience that deconstructs math formulas letter by letter as you scroll.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

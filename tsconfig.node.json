@@ -5,7 +5,10 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
-    "strict": true
+    "strict": true,
+    "jsx": "react-jsx",
+    "target": "ES2022",
+    "noUncheckedIndexedAccess": true
   },
   "include": ["vite.config.ts", "scripts"]
 }
