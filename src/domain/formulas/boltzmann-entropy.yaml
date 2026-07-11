@@ -1,0 +1,139 @@
+id: boltzmann-entropy
+title:
+  es: Fórmula de Entropía de Boltzmann
+  en: Boltzmann Entropy Formula
+category:
+  es: Física moderna
+  en: Modern physics
+nodes:
+  - id: s
+    type: variable
+    value: S
+    explanation:
+      es: La entropía del sistema, una medida de su desorden.
+      en: The system's entropy, a measure of its disorder.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: k
+    type: constant
+    value: k
+    explanation:
+      es: La constante de Boltzmann, que conecta el mundo microscópico con lo que medimos.
+      en: The Boltzmann constant, connecting the microscopic world to what we measure.
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+  - id: ln
+    type: operator
+    value: ln
+    explanation:
+      es: El logaritmo natural.
+      en: The natural logarithm.
+  - id: paren-open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el argumento del logaritmo.
+      en: Opens the logarithm's argument.
+  - id: w
+    type: variable
+    value: W
+    explanation:
+      es: El número de microestados, de cuántas formas distintas se puede organizar el sistema.
+      en: The number of microstates, how many distinct ways the system can be arranged.
+  - id: paren-close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el argumento del logaritmo.
+      en: Closes the logarithm's argument.
+context:
+  author:
+    es: Ludwig Boltzmann
+    en: Ludwig Boltzmann
+  era:
+    es: Austria, 1844–1906 · desarrollada en la década de 1870
+    en: Austria, 1844–1906 · developed in the 1870s
+  history:
+    es: >-
+      Boltzmann desarrolló durante la década de 1870 la interpretación estadística de la
+      entropía, conectándola con el número de microestados posibles de un sistema. La forma
+      exacta S = k log W fue escrita por Max Planck en 1900, en honor a Boltzmann. Hoy está
+      grabada en su tumba en el Cementerio Central de Viena. Boltzmann se suicidó en 1906, en
+      parte por el rechazo de colegas como Mach y Ostwald a la teoría atómica que defendía.
+    en: >-
+      During the 1870s, Boltzmann developed the statistical interpretation of entropy,
+      connecting it to the number of possible microstates of a system. The exact form S = k
+      log W was written by Max Planck in 1900, in Boltzmann's honor. It is now engraved on his
+      tombstone in Vienna's Central Cemetery. Boltzmann took his own life in 1906, partly due to
+      rejection by colleagues like Mach and Ostwald of the atomic theory he defended.
+  timeline:
+    - year: c. 1870s
+      label:
+        es: Boltzmann desarrolla la interpretación estadística de la entropía dentro de la teoría cinética de los gases.
+        en: Boltzmann develops the statistical interpretation of entropy within the kinetic theory of gases.
+    - year: "1877"
+      label:
+        es: Publica el artículo que relaciona la entropía con la probabilidad de un estado del sistema.
+        en: He publishes the paper relating entropy to the probability of a system's state.
+    - year: "1900"
+      label:
+        es: Max Planck introduce la constante k y escribe la fórmula en su forma moderna, S = k log W.
+        en: Max Planck introduces the constant k and writes the formula in its modern form, S = k log W.
+    - year: "1906"
+      label:
+        es: Boltzmann muere; años después su tumba en Viena se graba con esta fórmula como homenaje.
+        en: Boltzmann dies; years later his tomb in Vienna is engraved with this formula as a tribute.
+    - year: Hoy
+      label:
+        es: Es la base de la mecánica estadística, y su analogía inspiró la entropía de la teoría de la información.
+        en: It underlies statistical mechanics, and its analogy inspired entropy in information theory.
+  useCases:
+    - title:
+        es: Termodinámica química
+        en: Chemical thermodynamics
+      description:
+        es: Calcular la entropía de una sustancia a partir de sus estados moleculares posibles usa esta fórmula.
+        en: Calculating a substance's entropy from its possible molecular states directly uses this formula.
+    - title:
+        es: Teoría de la información
+        en: Information theory
+      description:
+        es: La entropía de Shannon, que mide la información de un mensaje, es un paralelo directo de esta ecuación.
+        en: Shannon entropy, which measures a message's information content, is a direct parallel of this equation.
+    - title:
+        es: Ciencia de materiales
+        en: Materials science
+      description:
+        es: Predecir transiciones de fase y el desorden en aleaciones y cristales depende de contar microestados.
+        en: Predicting phase transitions and disorder in alloys and crystals depends on counting microstates.
+    - title:
+        es: Cosmología
+        en: Cosmology
+      description:
+        es: La entropía de un agujero negro, propuesta por Bekenstein y Hawking, extiende esta misma idea a la gravedad.
+        en: Black hole entropy, proposed by Bekenstein and Hawking, extends this same idea to gravity.
+  example:
+    title:
+      es: Entropía de un sistema simple
+      en: Entropy of a simple system
+    lines:
+      - es: W = 10²³ microestados posibles
+        en: W = 10²³ possible microstates
+      - es: k = 1.381×10⁻²³ J/K
+        en: k = 1.381×10⁻²³ J/K
+      - es: S = k · ln(W)
+        en: S = k · ln(W)
+      - es: ln(10²³) ≈ 52.96
+        en: ln(10²³) ≈ 52.96
+      - es: S = 1.381×10⁻²³ · 52.96
+        en: S = 1.381×10⁻²³ · 52.96
+      - es: S ≈ 7.31×10⁻²² J/K
+        en: S ≈ 7.31×10⁻²² J/K

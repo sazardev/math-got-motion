@@ -1,0 +1,199 @@
+id: newtons-law-of-gravitation
+title:
+  es: Ley de Gravitación Universal de Newton
+  en: Newton's Law of Universal Gravitation
+category:
+  es: Física clásica
+  en: Classical physics
+nodes:
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: La fuerza gravitacional de atracción entre dos cuerpos.
+      en: The gravitational force of attraction between two bodies.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: g
+    type: constant
+    value: G
+    explanation:
+      es: La constante de gravitación universal, la misma en todo el universo.
+      en: The universal gravitational constant, the same throughout the universe.
+  - id: m1
+    type: variable
+    value: m
+    explanation:
+      es: La masa del primer cuerpo.
+      en: The mass of the first body.
+  - id: sub-1
+    type: superscript
+    value: "1"
+    explanation:
+      es: Un subíndice que identifica al primero de los dos cuerpos.
+      en: A subscript identifying the first of the two bodies.
+  - id: m2
+    type: variable
+    value: m
+    explanation:
+      es: La masa del segundo cuerpo.
+      en: The mass of the second body.
+  - id: sub-2
+    type: superscript
+    value: "2"
+    explanation:
+      es: Un subíndice que identifica al segundo de los dos cuerpos.
+      en: A subscript identifying the second of the two bodies.
+  - id: div
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por el cuadrado de la distancia entre los dos cuerpos.
+      en: Divided by the square of the distance between the two bodies.
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: La distancia entre los centros de los dos cuerpos.
+      en: The distance between the centers of the two bodies.
+  - id: exp-2
+    type: superscript
+    value: "2"
+    explanation:
+      es: "La distancia elevada al cuadrado: al duplicarla, la fuerza se reduce a un cuarto."
+      en: "The distance squared: doubling it reduces the force to a quarter."
+context:
+  author:
+    es: Isaac Newton
+    en: Isaac Newton
+  era:
+    es: Inglaterra, 1642–1727 · publicada en 1687
+    en: England, 1642–1727 · published in 1687
+  history:
+    es: >-
+      Según el relato popularizado por Voltaire, Newton concibió la idea al ver caer una manzana en
+      la finca familiar de Woolsthorpe hacia 1666, mientras Cambridge estaba cerrada por la peste, y
+      se preguntó si la misma fuerza que atrae la manzana al suelo también mantiene a la Luna en su
+      órbita. Esa intuición, madurada durante dos décadas, culminó en 1687 con la publicación de los
+      Principia, donde Newton demostró que un único conjunto de reglas gobierna tanto el movimiento
+      celeste como el terrestre, unificando por primera vez ambos dominios bajo una sola ley. Más de
+      un siglo después, en 1798, Henry Cavendish usó una balanza de torsión para medir en laboratorio
+      el valor de la constante G, permitiendo calcular por primera vez la masa de la Tierra.
+    en: >-
+      According to the account popularized by Voltaire, Newton conceived the idea while watching an
+      apple fall on the family estate at Woolsthorpe around 1666, while Cambridge was closed due to
+      the plague, and wondered whether the same force pulling the apple to the ground also kept the
+      Moon in its orbit. That intuition, matured over two decades, culminated in 1687 with the
+      publication of the Principia, where Newton showed that a single set of rules governs both
+      celestial and terrestrial motion, unifying the two domains under one law for the first time.
+      More than a century later, in 1798, Henry Cavendish used a torsion balance to measure the
+      constant G in the laboratory, allowing the mass of the Earth to be calculated for the first
+      time.
+  timeline:
+    - year: "1666"
+      label:
+        es: >-
+          Durante el 'año milagroso', Newton concibe la idea de que la gravedad terrestre y la
+          fuerza que rige la órbita lunar son la misma.
+        en: >-
+          During the 'year of wonders', Newton conceives the idea that terrestrial gravity and the
+          force governing the Moon's orbit are one and the same.
+    - year: "1687"
+      label:
+        es: >-
+          Publica los Principia con la ley de gravitación universal, uniendo el movimiento celeste y
+          el terrestre bajo una sola regla.
+        en: >-
+          Publishes the Principia with the law of universal gravitation, uniting celestial and
+          terrestrial motion under a single rule.
+    - year: "1798"
+      label:
+        es: >-
+          Henry Cavendish mide en laboratorio, con una balanza de torsión, el valor de la constante
+          G y calcula la masa de la Tierra.
+        en: >-
+          Henry Cavendish measures the constant G in the laboratory with a torsion balance and
+          calculates the mass of the Earth.
+    - year: "1915"
+      label:
+        es: >-
+          Einstein publica la relatividad general, que reemplaza a la gravedad de Newton en campos
+          muy intensos o velocidades muy altas.
+        en: >-
+          Einstein publishes general relativity, which replaces Newtonian gravity in very strong
+          fields or at very high speeds.
+    - year: "1969"
+      label:
+        es: >-
+          La misión Apolo 11 calcula su trayectoria a la Luna aplicando directamente esta ley
+          newtoniana.
+        en: >-
+          The Apollo 11 mission calculates its trajectory to the Moon by directly applying this
+          Newtonian law.
+    - year: Hoy
+      label:
+        es: >-
+          Sigue siendo la herramienta estándar para diseñar órbitas de satélites y planear misiones
+          espaciales.
+        en: >-
+          It remains the standard tool for designing satellite orbits and planning space missions.
+  useCases:
+    - title:
+        es: Diseño de órbitas satelitales
+        en: Satellite orbit design
+      description:
+        es: >-
+          Calcula la velocidad y altitud necesarias para que un satélite permanezca en órbita
+          estable.
+        en: >-
+          It calculates the speed and altitude a satellite needs to remain in stable orbit.
+    - title:
+        es: Misiones interplanetarias
+        en: Interplanetary missions
+      description:
+        es: >-
+          Planifica las trayectorias de transferencia entre planetas usando la atracción gravitatoria
+          del Sol y los cuerpos cercanos.
+        en: >-
+          It plans transfer trajectories between planets using the gravitational pull of the Sun and
+          nearby bodies.
+    - title:
+        es: Astronomía
+        en: Astronomy
+      description:
+        es: >-
+          Predice el movimiento de planetas, lunas y cometas a partir de sus masas y distancias.
+        en: >-
+          It predicts the motion of planets, moons, and comets from their masses and distances.
+    - title:
+        es: Geofísica
+        en: Geophysics
+      description:
+        es: >-
+          Explica el origen de las mareas oceánicas como resultado de la atracción gravitatoria de
+          la Luna y el Sol.
+        en: >-
+          It explains ocean tides as the result of the gravitational pull of the Moon and the Sun.
+  example:
+    title:
+      es: Atracción entre dos masas
+      en: Attraction between two masses
+    lines:
+      - es: m1 = 5000 kg
+        en: m1 = 5000 kg
+      - es: m2 = 200 kg
+        en: m2 = 200 kg
+      - es: r = 10 m
+        en: r = 10 m
+      - es: G = 6,674×10⁻¹¹ N·m²/kg²
+        en: G = 6.674×10⁻¹¹ N·m²/kg²
+      - es: F = G m1 m2 / r²
+        en: F = G m1 m2 / r²
+      - es: F = 6,674×10⁻¹¹ × 1×10⁶ / 100
+        en: F = 6.674×10⁻¹¹ × 1×10⁶ / 100
+      - es: F ≈ 6,674×10⁻⁷ N
+        en: F ≈ 6.674×10⁻⁷ N

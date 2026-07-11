@@ -1,34 +1,169 @@
 .formula-menu {
+  position: relative;
+}
+
+.formula-menu__trigger {
   position: fixed;
   top: clamp(1rem, 3vh, 2rem);
   left: clamp(1rem, 3vw, 2rem);
-  z-index: 20;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: clamp(0.25rem, 1.2vh, 0.75rem);
-  max-width: 60vw;
-}
-
-.formula-menu__item {
+  z-index: 30;
   border: none;
   background: transparent;
   padding: 0.3rem 0;
   margin: 0;
   color: var(--fg);
   font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
-  font-size: clamp(0.75rem, 2.2vw, 0.95rem);
-  text-align: left;
+  font-size: clamp(0.75rem, 2.2vw, 0.875rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   cursor: pointer;
-  opacity: 0.45;
+  opacity: 0.7;
   transition: opacity 0.2s ease;
 }
 
-.formula-menu__item:hover {
-  opacity: 0.8;
+.formula-menu__trigger:hover {
+  opacity: 1;
 }
 
-.formula-menu__item[aria-current="true"] {
+/*
+ * El índice es un overlay a pantalla completa en vez de una lista que crece
+ * en una esquina: escala a N fórmulas porque su contenido (.formula-index__list)
+ * scrollea internamente, y la búsqueda filtra en vivo en lugar de exigir que
+ * el usuario recorra la lista entera.
+ */
+.formula-index {
+  position: fixed;
+  inset: 0;
+  z-index: 25;
+  pointer-events: none;
+}
+
+.formula-index[data-open="true"] {
+  pointer-events: auto;
+}
+
+.formula-index__backdrop {
+  position: absolute;
+  inset: 0;
+  border: none;
+  background: var(--bg);
+  padding: 0;
+  margin: 0;
+  cursor: default;
+  opacity: 0;
+}
+
+.formula-index__panel {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  max-width: min(90vw, 44rem);
+  margin: 0 auto;
+  padding: clamp(5rem, 14vh, 7.5rem) 0 3rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+}
+
+.formula-index__search {
+  flex: 0 0 auto;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0 0 2.5rem;
+  color: var(--fg);
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
+  width: 100%;
+}
+
+.formula-index__search::placeholder {
+  color: var(--fg);
+  opacity: 0.35;
+}
+
+.formula-index__list {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  padding-bottom: 2rem;
+}
+
+.formula-index__empty {
+  margin: 0;
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(0.9rem, 2.6vw, 1.05rem);
+  opacity: 0.5;
+}
+
+.formula-index__category {
+  margin: 0 0 0.6rem;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-size: clamp(0.68rem, 1.8vw, 0.8rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.formula-index__items {
+  display: flex;
+  flex-direction: column;
+}
+
+.formula-index__item {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  border: none;
+  background: transparent;
+  padding: 0.5rem 0;
+  margin: 0;
+  color: var(--fg);
+  text-align: left;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.formula-index__item:hover {
+  opacity: 0.85;
+}
+
+.formula-index__item[aria-current="true"] {
   opacity: 1;
-  font-weight: 600;
+}
+
+.formula-index__number {
+  flex: 0 0 auto;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  opacity: 0.6;
+}
+
+.formula-index__title {
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.1rem, 4vw, 1.6rem);
+}
+
+.formula-index__item[aria-current="true"] .formula-index__title {
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .formula-index__panel {
+    max-width: 92vw;
+    padding-top: clamp(4.5rem, 12vh, 6rem);
+  }
+
+  .formula-index__list {
+    gap: 1.75rem;
+  }
+
+  .formula-index__title {
+    font-size: clamp(1rem, 5.5vw, 1.3rem);
+  }
 }

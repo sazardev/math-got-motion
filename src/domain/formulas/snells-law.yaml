@@ -1,0 +1,204 @@
+id: snells-law
+title:
+  es: Ley de Snell
+  en: Snell's Law
+category:
+  es: Física clásica
+  en: Classical physics
+nodes:
+  - id: n1
+    type: variable
+    value: n
+    explanation:
+      es: El índice de refracción del primer medio, por ejemplo el aire.
+      en: The refractive index of the first medium, e.g. air.
+  - id: n1-sub
+    type: superscript
+    value: "1"
+    explanation:
+      es: "El subíndice 1: indica el medio de origen del rayo, antes de refractarse."
+      en: "Subscript 1: marks the medium the ray comes from, before refracting."
+  - id: sin-1
+    type: operator
+    value: sin
+    explanation:
+      es: La función seno aplicada al ángulo de incidencia.
+      en: The sine function applied to the angle of incidence.
+  - id: paren-open-1
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el argumento del seno.
+      en: Opens the sine function's argument.
+  - id: theta-1
+    type: variable
+    value: θ
+    explanation:
+      es: El ángulo de incidencia, medido desde la normal a la superficie.
+      en: The angle of incidence, measured from the surface's normal.
+  - id: theta-1-sub
+    type: superscript
+    value: "1"
+    explanation:
+      es: "El subíndice 1: el ángulo del rayo antes de cruzar la superficie."
+      en: "Subscript 1: the angle of the ray before crossing the surface."
+  - id: paren-close-1
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el argumento del seno.
+      en: Closes the sine function's argument.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: n2
+    type: variable
+    value: n
+    explanation:
+      es: El índice de refracción del segundo medio, por ejemplo el agua.
+      en: The refractive index of the second medium, e.g. water.
+  - id: n2-sub
+    type: superscript
+    value: "2"
+    explanation:
+      es: "El subíndice 2: el medio al que entra la luz."
+      en: "Subscript 2: the medium the light enters."
+  - id: sin-2
+    type: operator
+    value: sin
+    explanation:
+      es: La misma función seno, ahora sobre el ángulo de refracción.
+      en: The same sine function, now over the angle of refraction.
+  - id: paren-open-2
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el argumento del seno.
+      en: Opens the sine function's argument.
+  - id: theta-2
+    type: variable
+    value: θ
+    explanation:
+      es: El ángulo de refracción, hacia donde se desvía el rayo al cambiar de medio.
+      en: The angle of refraction, the direction the ray bends when changing medium.
+  - id: theta-2-sub
+    type: superscript
+    value: "2"
+    explanation:
+      es: "El subíndice 2: el ángulo del rayo ya refractado."
+      en: "Subscript 2: the angle of the already-refracted ray."
+  - id: paren-close-2
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el argumento del seno.
+      en: Closes the sine function's argument.
+context:
+  author:
+    es: Ibn Sahl, Harriot, Snellius y Descartes
+    en: Ibn Sahl, Harriot, Snellius, and Descartes
+  era:
+    es: Bagdad, Inglaterra, Países Bajos, Francia · s. X–XVII
+    en: Baghdad, England, Netherlands, France · 10th–17th c.
+  history:
+    es: >-
+      La prioridad de esta ley es genuinamente disputada. El matemático Ibn Sahl la describió
+      geométricamente hacia el año 984, en Bagdad, en un tratado sobre lentes. El inglés Thomas
+      Harriot llegó al mismo resultado en 1602 pero no lo publicó. El neerlandés Willebrord
+      Snellius lo dedujo en 1621, también sin publicarlo. René Descartes fue el primero en
+      publicarlo, en 1637, en La Dióptrica — por eso en Francia se la llama 'ley de Descartes'.
+      Poco después Pierre de Fermat la derivó de forma independiente desde su principio del
+      tiempo mínimo.
+    en: >-
+      This law's priority is genuinely disputed. The mathematician Ibn Sahl described it
+      geometrically around the year 984, in Baghdad, in a treatise on lenses. Englishman Thomas
+      Harriot reached the same result in 1602 but never published it. Dutchman Willebrord
+      Snellius derived it in 1621, also unpublished. René Descartes was first to publish it, in
+      1637, in La Dioptrique — hence its French name, 'Descartes' law.' Soon after, Pierre de
+      Fermat derived it independently from his principle of least time.
+  timeline:
+    - year: c. 984
+      label:
+        es: >-
+          Ibn Sahl describe la ley de la refracción de forma geométrica en un tratado sobre
+          lentes y espejos ustorios.
+        en: >-
+          Ibn Sahl geometrically describes the law of refraction in a treatise on lenses and
+          burning mirrors.
+    - year: "1602"
+      label:
+        es: Thomas Harriot deduce la misma relación en Inglaterra, pero nunca la publica.
+        en: Thomas Harriot derives the same relationship in England, but never publishes it.
+    - year: "1621"
+      label:
+        es: >-
+          Willebrord Snellius llega al mismo resultado en los Países Bajos; se conoce recién
+          tras su muerte.
+        en: >-
+          Willebrord Snellius reaches the same result in the Netherlands; it becomes known only
+          after his death.
+    - year: "1637"
+      label:
+        es: >-
+          René Descartes es el primero en publicarla, en el apéndice La Dióptrica de su Discurso
+          del método.
+        en: >-
+          René Descartes is first to publish it, in the La Dioptrique appendix to his Discourse
+          on the Method.
+    - year: "1662"
+      label:
+        es: Pierre de Fermat la deriva de forma independiente a partir de su principio del tiempo mínimo.
+        en: Pierre de Fermat independently derives it from his principle of least time.
+    - year: Hoy
+      label:
+        es: Es la base del diseño de lentes, cámaras, fibra óptica y cualquier instrumento que dobla la luz.
+        en: It underlies the design of lenses, cameras, fiber optics, and any instrument that bends light.
+  useCases:
+    - title:
+        es: Diseño de lentes
+        en: Lens design
+      description:
+        es: >-
+          Cámaras, lentes de anteojos y microscopios se diseñan calculando cómo se refracta la
+          luz en cada superficie de vidrio.
+        en: >-
+          Cameras, eyeglass lenses, and microscopes are designed by calculating how light
+          refracts at each glass surface.
+    - title:
+        es: Fibra óptica
+        en: Fiber optics
+      description:
+        es: >-
+          Las telecomunicaciones dependen de la reflexión total interna, un caso límite de esta
+          ley, para guiar luz por kilómetros de fibra.
+        en: >-
+          Telecommunications rely on total internal reflection, a limiting case of this law, to
+          guide light through kilometers of fiber.
+    - title:
+        es: Instrumentos ópticos
+        en: Optical instruments
+      description:
+        es: Telescopios y microscopios corrigen aberraciones combinando lentes de distintos índices de refracción.
+        en: Telescopes and microscopes correct aberrations by combining lenses of different refractive indices.
+  example:
+    title:
+      es: Luz del aire al agua
+      en: Light from air into water
+    lines:
+      - es: n1 = 1.00 (aire)
+        en: n1 = 1.00 (air)
+      - es: n2 = 1.33 (agua)
+        en: n2 = 1.33 (water)
+      - es: θ1 = 30°
+        en: θ1 = 30°
+      - es: n1 · sen(θ1) = n2 · sen(θ2)
+        en: n1 · sin(θ1) = n2 · sin(θ2)
+      - es: 1.00 · 0.5 = 1.33 · sen(θ2)
+        en: 1.00 · 0.5 = 1.33 · sin(θ2)
+      - es: sen(θ2) = 0.5 / 1.33 ≈ 0.376
+        en: sin(θ2) = 0.5 / 1.33 ≈ 0.376
+      - es: θ2 ≈ 22.1°
+        en: θ2 ≈ 22.1°

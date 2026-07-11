@@ -1,0 +1,177 @@
+id: golden-ratio
+title:
+  es: Razón Áurea
+  en: Golden Ratio
+category:
+  es: Álgebra
+  en: Algebra
+nodes:
+  - id: phi
+    type: constant
+    value: φ
+    explanation:
+      es: "Phi: la letra griega usada para nombrar la razón áurea, aproximadamente 1.618."
+      en: "Phi: the Greek letter used to name the golden ratio, approximately 1.618."
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: La unidad, sumada a la raíz de cinco en el numerador.
+      en: The unit, added to the square root of five in the numerator.
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado al siguiente término.
+      en: Added to the following term.
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: Raíz cuadrada del número que sigue.
+      en: Square root of the number that follows.
+  - id: five
+    type: number
+    value: "5"
+    explanation:
+      es: El número cinco, cuya raíz cuadrada es aproximadamente 2.236.
+      en: The number five, whose square root is approximately 2.236.
+  - id: fraction-bar
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre el denominador que sigue.
+      en: Divided by the denominator that follows.
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: El número dos, el denominador de la razón.
+      en: The number two, the ratio's denominator.
+context:
+  author:
+    es: Euclides
+    en: Euclid
+  era:
+    es: Alejandría, c. 325–265 a.C. · Elementos, c. 300 a.C.
+    en: Alexandria, c. 325–265 BC · Elements, c. 300 BC
+  history:
+    es: >-
+      La primera definición rigurosa de la razón áurea aparece en los Elementos de Euclides, donde la
+      describe como la división de un segmento 'en media y extrema razón': un punto que divide una
+      línea de modo que la razón entre el todo y la parte mayor es igual a la razón entre la parte
+      mayor y la menor. Euclides la usaba con fines geométricos, en particular para construir el
+      pentágono regular y los sólidos platónicos, sin atribuirle ningún significado místico. Siglos
+      después, Leonardo de Pisa (Fibonacci) mostró en 1202 que los cocientes de su famosa secuencia
+      convergen hacia este mismo número. Durante el Renacimiento, el fraile Luca Pacioli la bautizó
+      'divina proporción' en 1509, y desde entonces se le atribuyó —con frecuencia exagerada o
+      infundada— un rol estético en el arte y la arquitectura clásicos. El símbolo φ se adoptó recién
+      en el siglo XX, en homenaje al escultor griego Fidias.
+    en: >-
+      The first rigorous definition of the golden ratio appears in Euclid's Elements, where he
+      describes it as dividing a line segment 'in extreme and mean ratio': a point that divides a line
+      so the ratio of the whole to the larger part equals the ratio of the larger part to the smaller.
+      Euclid used it for geometric purposes, particularly to construct the regular pentagon and the
+      Platonic solids, without attaching any mystical meaning to it. Centuries later, Leonardo of Pisa
+      (Fibonacci) showed in 1202 that the ratios of his famous sequence converge toward this same
+      number. During the Renaissance, the friar Luca Pacioli named it the 'divine proportion' in 1509,
+      and ever since it has been credited —often with exaggerated or unfounded claims— with an
+      aesthetic role in classical art and architecture. The symbol φ (phi) was only adopted in the 20th
+      century, in tribute to the Greek sculptor Phidias.
+  timeline:
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides define formalmente la 'media y extrema razón' en sus Elementos, usándola para
+          construir el pentágono regular.
+        en: >-
+          Euclid formally defines the 'extreme and mean ratio' in his Elements, using it to construct
+          the regular pentagon.
+    - year: "1202"
+      label:
+        es: >-
+          Fibonacci publica Liber Abaci; los cocientes de su secuencia de números convergen hacia la
+          razón áurea.
+        en: >-
+          Fibonacci publishes Liber Abaci; the ratios of his number sequence converge toward the
+          golden ratio.
+    - year: "1509"
+      label:
+        es: Luca Pacioli publica De Divina Proportione, ilustrado por Leonardo da Vinci.
+        en: Luca Pacioli publishes De Divina Proportione, illustrated by Leonardo da Vinci.
+    - year: s. XX
+      label:
+        es: >-
+          Matemáticos adoptan el símbolo griego φ para nombrar la razón, en homenaje al escultor
+          Fidias.
+        en: >-
+          Mathematicians adopt the Greek symbol φ to name the ratio, in tribute to the sculptor
+          Phidias.
+    - year: Hoy
+      label:
+        es: >-
+          Se usa en diseño gráfico, composición fotográfica y algoritmos de búsqueda como la búsqueda
+          de la sección áurea.
+        en: >-
+          Used in graphic design, photographic composition, and search algorithms like the golden
+          section search.
+  useCases:
+    - title:
+        es: Diseño gráfico
+        en: Graphic design
+      description:
+        es: >-
+          Rectángulos y espirales áureas guían proporciones de layouts, logotipos y composiciones
+          visuales consideradas armoniosas.
+        en: >-
+          Golden rectangles and spirals guide proportions in layouts, logos, and visual compositions
+          considered harmonious.
+    - title:
+        es: Botánica y filotaxis
+        en: Botany and phyllotaxis
+      description:
+        es: >-
+          El ángulo áureo (c. 137.5°) describe cómo se disponen hojas y semillas en muchas plantas para
+          maximizar la exposición a la luz.
+        en: >-
+          The golden angle (c. 137.5°) describes how leaves and seeds are arranged in many plants to
+          maximize light exposure.
+    - title:
+        es: Algoritmos de optimización
+        en: Optimization algorithms
+      description:
+        es: >-
+          La búsqueda de la sección áurea usa φ para minimizar funciones unimodales con el menor
+          número posible de evaluaciones.
+        en: >-
+          Golden section search uses φ to minimize unimodal functions with the fewest possible
+          evaluations.
+    - title:
+        es: Mercados financieros
+        en: Financial markets
+      description:
+        es: >-
+          Algunos analistas técnicos usan niveles de retroceso de Fibonacci, derivados de φ, para
+          estimar soportes y resistencias de precios.
+        en: >-
+          Some technical analysts use Fibonacci retracement levels, derived from φ, to estimate price
+          support and resistance.
+  example:
+    title:
+      es: Calculando el valor de φ
+      en: Calculating the value of φ
+    lines:
+      - es: √5 ≈ 2.2360679...
+        en: √5 ≈ 2.2360679...
+      - es: 1 + √5 ≈ 3.2360679...
+        en: 1 + √5 ≈ 3.2360679...
+      - es: (1 + √5) / 2 ≈ 1.6180339...
+        en: (1 + √5) / 2 ≈ 1.6180339...
+      - es: φ ≈ 1.618, y también φ² = φ + 1
+        en: φ ≈ 1.618, and also φ² = φ + 1

@@ -1,0 +1,183 @@
+id: binomial-theorem
+title:
+  es: Teorema del Binomio
+  en: Binomial Theorem
+category:
+  es: Álgebra
+  en: Algebra
+nodes:
+  - id: a-plus-b
+    type: variable
+    value: (a+b)
+    explanation:
+      es: Un binomio, la suma de dos términos a y b, que vamos a elevar a una potencia.
+      en: A binomial, the sum of two terms a and b, which we're raising to a power.
+  - id: n-exp
+    type: superscript
+    value: n
+    explanation:
+      es: El exponente n, un número entero no negativo que indica cuántas veces se multiplica el binomio por sí mismo.
+      en: The exponent n, a non-negative integer indicating how many times the binomial is multiplied by itself.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a la siguiente suma.
+      en: Is equal to the following sum.
+  - id: sum
+    type: operator
+    value: Σ
+    explanation:
+      es: "Sigma: el símbolo de sumatoria, que suma todos los términos desde k = 0 hasta k = n."
+      en: "Sigma: the summation symbol, adding all terms from k = 0 to k = n."
+  - id: choose
+    type: operator
+    value: "(n k)"
+    explanation:
+      es: "El coeficiente binomial 'n eligiendo k': cuenta de cuántas formas se pueden elegir k elementos de un total de n."
+      en: "The binomial coefficient 'n choose k': counts the number of ways to choose k elements from n total."
+  - id: a-term
+    type: variable
+    value: a
+    explanation:
+      es: El primer término del binomio, elevado a la potencia n−k en cada sumando.
+      en: The binomial's first term, raised to the power n−k in each summand.
+  - id: a-exp
+    type: superscript
+    value: n−k
+    explanation:
+      es: El exponente de a disminuye conforme k aumenta, desde n hasta 0.
+      en: The exponent of a decreases as k increases, from n down to 0.
+  - id: b-term
+    type: variable
+    value: b
+    explanation:
+      es: El segundo término del binomio, elevado a la potencia k en cada sumando.
+      en: The binomial's second term, raised to the power k in each summand.
+  - id: b-exp
+    type: superscript
+    value: k
+    explanation:
+      es: El exponente de b aumenta conforme k crece, desde 0 hasta n.
+      en: The exponent of b increases as k grows, from 0 to n.
+context:
+  author:
+    es: Isaac Newton
+    en: Isaac Newton
+  era:
+    es: Inglaterra, 1642–1727 · generalizado c. 1665
+    en: England, 1642–1727 · generalized c. 1665
+  history:
+    es: >-
+      Casos particulares del teorema del binomio eran conocidos siglos antes de Newton: el triángulo
+      aritmético que da los coeficientes aparece en textos indios y persas ya en el siglo X, y de forma
+      independiente en la matemática china del siglo XI, mucho antes de que Blaise Pascal lo
+      popularizara en Europa en 1653 (por eso se lo conoce como 'triángulo de Pascal' en Occidente).
+      Estos trabajos previos se limitaban a exponentes enteros positivos. La contribución decisiva de
+      Newton, hacia 1665, fue generalizar la fórmula para exponentes fraccionarios y negativos,
+      expresándola como una serie infinita. Nunca publicó una demostración formal, pero la comunicó en
+      cartas a Henry Oldenburg, y el resultado se convirtió en una herramienta central del cálculo que
+      él mismo estaba desarrollando en paralelo.
+    en: >-
+      Special cases of the binomial theorem were known centuries before Newton: the arithmetic triangle
+      giving the coefficients appears in Indian and Persian texts as early as the 10th century, and
+      independently in 11th-century Chinese mathematics, long before Blaise Pascal popularized it in
+      Europe in 1653 (hence its Western name, 'Pascal's triangle'). These earlier works were limited to
+      positive integer exponents. Newton's decisive contribution, around 1665, was generalizing the
+      formula to fractional and negative exponents, expressing it as an infinite series. He never
+      published a formal proof, but communicated it in letters to Henry Oldenburg, and the result
+      became a central tool of the calculus he was developing in parallel.
+  timeline:
+    - year: s. X
+      label:
+        es: >-
+          Matemáticos persas e indios describen el triángulo de coeficientes binomiales para
+          exponentes enteros positivos.
+        en: >-
+          Persian and Indian mathematicians describe the triangle of binomial coefficients for
+          positive integer exponents.
+    - year: s. XI
+      label:
+        es: Matemáticos chinos desarrollan de forma independiente el mismo triángulo de coeficientes.
+        en: Chinese mathematicians independently develop the same triangle of coefficients.
+    - year: "1653"
+      label:
+        es: >-
+          Blaise Pascal publica su Traité du triangle arithmétique, popularizando el triángulo en
+          Europa.
+        en: >-
+          Blaise Pascal publishes his Traité du triangle arithmétique, popularizing the triangle in
+          Europe.
+    - year: c. 1665
+      label:
+        es: >-
+          Isaac Newton generaliza el teorema a exponentes fraccionarios y negativos, expresándolo
+          como serie infinita.
+        en: >-
+          Isaac Newton generalizes the theorem to fractional and negative exponents, expressing it as
+          an infinite series.
+    - year: "1670s"
+      label:
+        es: Newton comunica el resultado en cartas a Henry Oldenburg, secretario de la Royal Society.
+        en: Newton communicates the result in letters to Henry Oldenburg, secretary of the Royal Society.
+    - year: Hoy
+      label:
+        es: >-
+          Base de la probabilidad binomial, la combinatoria y las aproximaciones por series en
+          computación numérica.
+        en: >-
+          Underpins binomial probability, combinatorics, and series approximations in numerical
+          computing.
+  useCases:
+    - title:
+        es: Probabilidad y estadística
+        en: Probability and statistics
+      description:
+        es: >-
+          Los coeficientes binomiales calculan la probabilidad de obtener exactamente k éxitos en n
+          ensayos independientes, base de la distribución binomial.
+        en: >-
+          Binomial coefficients calculate the probability of exactly k successes in n independent
+          trials, the basis of the binomial distribution.
+    - title:
+        es: Criptografía
+        en: Cryptography
+      description:
+        es: >-
+          Los coeficientes binomiales aparecen en códigos correctores de errores y esquemas de
+          compartición de secretos.
+        en: >-
+          Binomial coefficients appear in error-correcting codes and secret-sharing schemes.
+    - title:
+        es: Finanzas cuantitativas
+        en: Quantitative finance
+      description:
+        es: >-
+          El modelo binomial de valoración de opciones usa el teorema para calcular trayectorias de
+          precios en árboles de decisión.
+        en: >-
+          The binomial options pricing model uses the theorem to compute price paths in decision
+          trees.
+    - title:
+        es: Computación numérica
+        en: Numerical computing
+      description:
+        es: >-
+          La forma generalizada de Newton permite aproximar raíces y funciones mediante series
+          infinitas truncadas.
+        en: >-
+          Newton's generalized form allows approximating roots and functions via truncated infinite
+          series.
+  example:
+    title:
+      es: Expandiendo (a+b)³
+      en: Expanding (a+b)³
+    lines:
+      - es: n = 3, k va de 0 a 3
+        en: n = 3, k ranges from 0 to 3
+      - es: "(3 0) = 1, (3 1) = 3, (3 2) = 3, (3 3) = 1"
+        en: "(3 0) = 1, (3 1) = 3, (3 2) = 3, (3 3) = 1"
+      - es: (a+b)³ = 1·a³b⁰ + 3·a²b¹ + 3·a¹b² + 1·a⁰b³
+        en: (a+b)³ = 1·a³b⁰ + 3·a²b¹ + 3·a¹b² + 1·a⁰b³
+      - es: (a+b)³ = a³ + 3a²b + 3ab² + b³
+        en: (a+b)³ = a³ + 3a²b + 3ab² + b³

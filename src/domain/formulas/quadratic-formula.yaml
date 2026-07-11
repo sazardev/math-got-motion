@@ -1,0 +1,205 @@
+id: quadratic-formula
+title:
+  es: Fórmula Cuadrática
+  en: Quadratic Formula
+category:
+  es: Álgebra
+  en: Algebra
+nodes:
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: La incógnita, la raíz de la ecuación cuadrática que buscamos encontrar.
+      en: The unknown, the root of the quadratic equation we're trying to find.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+  - id: minus-b
+    type: variable
+    value: −b
+    explanation:
+      es: "El negativo del coeficiente b, tomado de la ecuación ax² + bx + c = 0."
+      en: "The negative of coefficient b, taken from the equation ax² + bx + c = 0."
+  - id: plus-minus
+    type: operator
+    value: ±
+    explanation:
+      es: Más o menos, indica que hay dos soluciones posibles, sumando o restando la raíz.
+      en: Plus or minus, indicating two possible solutions, adding or subtracting the root.
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: Raíz cuadrada de la expresión que sigue.
+      en: Square root of the expression that follows.
+  - id: b-sq
+    type: variable
+    value: b
+    explanation:
+      es: El coeficiente b elevado al cuadrado dentro de la raíz.
+      en: Coefficient b squared inside the root.
+  - id: b-exp
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Elevado al cuadrado: multiplicado por sí mismo."
+      en: "Squared: multiplied by itself."
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: Menos, resta el siguiente término.
+      en: Minus, subtracting the following term.
+  - id: four-a-c
+    type: variable
+    value: 4ac
+    explanation:
+      es: "Cuatro veces el producto de los coeficientes a y c: el discriminante indica cuántas raíces reales existen."
+      en: "Four times the product of coefficients a and c: the discriminant reveals how many real roots exist."
+  - id: fraction-bar
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre el denominador que sigue.
+      en: Divided by the denominator that follows.
+  - id: two-a
+    type: variable
+    value: 2a
+    explanation:
+      es: El doble del coeficiente a, el término que acompaña a x² en la ecuación original.
+      en: Twice coefficient a, the term that accompanies x² in the original equation.
+context:
+  author:
+    es: Muhammad ibn Musa al-Juarismi
+    en: Muhammad ibn Musa al-Khwarizmi
+  era:
+    es: Bagdad, c. 780–850 · su tratado Al-Jabr se publicó c. 820
+    en: Baghdad, c. 780–850 · his treatise Al-Jabr was published c. 820
+  history:
+    es: >-
+      Al-Juarismi, matemático de la Casa de la Sabiduría en Bagdad, sistematizó por primera vez métodos
+      generales para resolver ecuaciones cuadráticas mediante procedimientos geométricos, en su obra
+      Al-Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabala, de donde proviene la palabra 'álgebra'. Sin
+      embargo, la historia de esta fórmula es acumulativa: los babilonios ya resolvían problemas
+      cuadráticos hacia 2000 a.C. con métodos geométricos, y siglos después el matemático indio
+      Brahmagupta fue el primero en aceptar soluciones negativas y dar una regla explícita similar a la
+      fórmula moderna en el año 628. Bhaskara II refinó estos métodos en el siglo XII, y la notación
+      simbólica compacta que usamos hoy no se estabilizó hasta los siglos XVI y XVII, con aportes de
+      matemáticos europeos como Viète y Descartes.
+    en: >-
+      Al-Khwarizmi, a mathematician at the House of Wisdom in Baghdad, was the first to systematize
+      general methods for solving quadratic equations using geometric procedures, in his treatise
+      Al-Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabala, the origin of the word 'algebra'. Yet the
+      story of this formula is cumulative: the Babylonians already solved quadratic problems around
+      2000 BC using geometric methods, and centuries later the Indian mathematician Brahmagupta was
+      the first to accept negative solutions and give an explicit rule resembling the modern formula
+      in 628 AD. Bhaskara II refined these methods in the 12th century, and the compact symbolic
+      notation we use today wasn't settled until the 16th and 17th centuries, with contributions from
+      European mathematicians like Viète and Descartes.
+  timeline:
+    - year: c. 2000 a.C.
+      label:
+        es: >-
+          Los babilonios resuelven problemas equivalentes a ecuaciones cuadráticas usando métodos
+          geométricos registrados en tablillas de arcilla.
+        en: >-
+          The Babylonians solve problems equivalent to quadratic equations using geometric methods
+          recorded on clay tablets.
+    - year: c. 820
+      label:
+        es: >-
+          Al-Juarismi sistematiza en Bagdad los métodos generales de solución en su tratado Al-Jabr,
+          origen de la palabra 'álgebra'.
+        en: >-
+          Al-Khwarizmi systematizes general solution methods in Baghdad in his treatise Al-Jabr, the
+          origin of the word 'algebra'.
+    - year: "628"
+      label:
+        es: >-
+          Brahmagupta publica en India una regla explícita que acepta soluciones negativas, un paso
+          clave hacia la fórmula moderna.
+        en: >-
+          Brahmagupta publishes an explicit rule in India that accepts negative solutions, a key step
+          toward the modern formula.
+    - year: s. XII
+      label:
+        es: Bhaskara II refina y generaliza los métodos de solución en su obra Bijaganita.
+        en: Bhaskara II refines and generalizes the solution methods in his work Bijaganita.
+    - year: s. XVI–XVII
+      label:
+        es: >-
+          Viète y Descartes desarrollan la notación simbólica que permite escribir la fórmula tal como
+          se conoce hoy.
+        en: >-
+          Viète and Descartes develop the symbolic notation that allows the formula to be written as
+          it's known today.
+    - year: Hoy
+      label:
+        es: >-
+          Se enseña en escuelas de todo el mundo y es la base de algoritmos que resuelven ecuaciones
+          en ingeniería, física y computación.
+        en: >-
+          Taught in schools worldwide and forms the basis of algorithms that solve equations in
+          engineering, physics, and computing.
+  useCases:
+    - title:
+        es: Física del movimiento
+        en: Physics of motion
+      description:
+        es: >-
+          Calcula el tiempo en que un proyectil alcanza cierta altura, resolviendo ecuaciones de
+          posición cuadráticas en el tiempo.
+        en: >-
+          Calculates the time a projectile reaches a certain height, solving position equations
+          quadratic in time.
+    - title:
+        es: Ingeniería estructural
+        en: Structural engineering
+      description:
+        es: >-
+          Determina puntos críticos de curvas parabólicas usadas en el diseño de arcos, puentes y
+          antenas parabólicas.
+        en: >-
+          Determines critical points of parabolic curves used in designing arches, bridges, and
+          satellite dishes.
+    - title:
+        es: Optimización económica
+        en: Economic optimization
+      description:
+        es: >-
+          Encuentra el precio que maximiza ingresos cuando la función de ingreso es una parábola en
+          función del precio.
+        en: >-
+          Finds the price that maximizes revenue when the revenue function is a parabola in terms of
+          price.
+    - title:
+        es: Gráficos por computadora
+        en: Computer graphics
+      description:
+        es: >-
+          Calcula intersecciones entre rayos y superficies curvas en algoritmos de renderizado y
+          detección de colisiones.
+        en: >-
+          Computes intersections between rays and curved surfaces in rendering and collision-detection
+          algorithms.
+  example:
+    title:
+      es: Resolviendo x² − 5x + 6 = 0
+      en: Solving x² − 5x + 6 = 0
+    lines:
+      - es: a = 1, b = −5, c = 6
+        en: a = 1, b = −5, c = 6
+      - es: x = (−(−5) ± √((−5)² − 4·1·6)) / (2·1)
+        en: x = (−(−5) ± √((−5)² − 4·1·6)) / (2·1)
+      - es: x = (5 ± √(25 − 24)) / 2
+        en: x = (5 ± √(25 − 24)) / 2
+      - es: x = (5 ± √1) / 2
+        en: x = (5 ± √1) / 2
+      - es: x = (5 ± 1) / 2
+        en: x = (5 ± 1) / 2
+      - es: x = 3 o x = 2
+        en: x = 3 or x = 2

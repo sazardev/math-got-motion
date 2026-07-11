@@ -1,0 +1,173 @@
+id: pythagorean-identity
+title:
+  es: Identidad Pitagórica Trigonométrica
+  en: Pythagorean Trigonometric Identity
+category:
+  es: Trigonometría
+  en: Trigonometry
+nodes:
+  - id: sin
+    type: variable
+    value: sen
+    explanation:
+      es: "El seno de un ángulo θ: la coordenada vertical del punto sobre el círculo unitario."
+      en: "The sine of an angle θ: the vertical coordinate of the point on the unit circle."
+  - id: theta
+    type: variable
+    value: θ
+    explanation:
+      es: "Theta: el ángulo medido desde el eje horizontal, en el círculo unitario."
+      en: "Theta: the angle measured from the horizontal axis, on the unit circle."
+  - id: sin-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Elevado al cuadrado: el seno multiplicado por sí mismo."
+      en: "Squared: the sine multiplied by itself."
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado al coseno al cuadrado del mismo ángulo.
+      en: Added to the cosine squared of the same angle.
+  - id: cos
+    type: variable
+    value: cos
+    explanation:
+      es: "El coseno de un ángulo θ: la coordenada horizontal del punto sobre el círculo unitario."
+      en: "The cosine of an angle θ: the horizontal coordinate of the point on the unit circle."
+  - id: theta2
+    type: variable
+    value: θ
+    explanation:
+      es: El mismo ángulo θ usado en el seno.
+      en: The same angle θ used in the sine.
+  - id: cos-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: También elevado al cuadrado.
+      en: Also squared.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: "La unidad: el radio al cuadrado del círculo unitario, siempre constante."
+      en: "The unit: the squared radius of the unit circle, always constant."
+context:
+  author:
+    es: Hiparco de Nicea (formalización trigonométrica)
+    en: Hipparchus of Nicaea (trigonometric formalization)
+  era:
+    es: Grecia, c. 190–120 a.C. · trigonometría desarrollada s. II a.C.–s. XII
+    en: Greece, c. 190–120 BC · trigonometry developed 2nd century BC–12th century AD
+  history:
+    es: >-
+      Esta identidad es, en esencia, el teorema de Pitágoras reescrito sobre un triángulo rectángulo
+      inscrito en el círculo unitario: el cateto vertical mide sen(θ), el horizontal cos(θ), y la
+      hipotenusa mide siempre 1. Sus raíces geométricas están en la trigonometría griega, cuando
+      Hiparco elaboró las primeras tablas de cuerdas para calcular posiciones astronómicas, pero la
+      forma algebraica moderna con seno y coseno como funciones fue desarrollada mucho después por
+      matemáticos indios como Aryabhata y perfeccionada por astrónomos islámicos como al-Battani, que
+      la usaban de forma constante en sus cálculos.
+    en: >-
+      This identity is, in essence, the Pythagorean theorem rewritten over a right triangle
+      inscribed in the unit circle: the vertical leg measures sin(θ), the horizontal leg cos(θ), and
+      the hypotenuse always measures 1. Its geometric roots lie in Greek trigonometry, when
+      Hipparchus built the first chord tables to calculate astronomical positions, but the modern
+      algebraic form with sine and cosine as functions was developed much later by Indian
+      mathematicians such as Aryabhata and refined by Islamic astronomers such as al-Battani, who
+      used it routinely in their calculations.
+  timeline:
+    - year: c. 570–495 a.C.
+      label:
+        es: >-
+          Pitágoras y su escuela demuestran la relación entre catetos e hipotenusa que, siglos
+          después, dará origen a esta identidad trigonométrica.
+        en: >-
+          Pythagoras and his school prove the relationship between legs and hypotenuse that,
+          centuries later, would give rise to this trigonometric identity.
+    - year: c. 140 a.C.
+      label:
+        es: >-
+          Hiparco de Nicea construye la primera tabla de cuerdas conocida, sentando las bases de la
+          trigonometría como disciplina.
+        en: >-
+          Hipparchus of Nicaea builds the first known table of chords, laying the foundations of
+          trigonometry as a discipline.
+    - year: c. 500
+      label:
+        es: >-
+          El matemático indio Aryabhata introduce el seno como función independiente de la cuerda,
+          usando esencialmente esta identidad en sus cálculos.
+        en: >-
+          The Indian mathematician Aryabhata introduces the sine as a function independent of the
+          chord, essentially using this identity in his calculations.
+    - year: c. 870–920
+      label:
+        es: >-
+          Al-Battani perfecciona las funciones trigonométricas y sus relaciones para la astronomía,
+          incluyendo variantes de esta identidad.
+        en: >-
+          Al-Battani refines trigonometric functions and their relations for astronomy, including
+          variants of this identity.
+    - year: Hoy
+      label:
+        es: >-
+          Es la identidad más usada en trigonometría para simplificar ecuaciones, y aparece
+          constantemente en procesamiento de señales y gráficos por computadora.
+        en: >-
+          It is the most used identity in trigonometry to simplify equations, and appears
+          constantly in signal processing and computer graphics.
+  useCases:
+    - title:
+        es: Procesamiento de señales
+        en: Signal processing
+      description:
+        es: >-
+          Se usa para normalizar amplitudes de ondas y simplificar ecuaciones de señales periódicas
+          en audio y telecomunicaciones.
+        en: >-
+          Used to normalize wave amplitudes and simplify equations of periodic signals in audio and
+          telecommunications.
+    - title:
+        es: Gráficos por computadora
+        en: Computer graphics
+      description:
+        es: >-
+          Rotaciones y animaciones dependen de mantener vectores normalizados, lo que se verifica
+          constantemente con esta identidad.
+        en: >-
+          Rotations and animations rely on keeping vectors normalized, which is constantly verified
+          with this identity.
+    - title:
+        es: Navegación e ingeniería civil
+        en: Navigation and civil engineering
+      description:
+        es: >-
+          Simplifica cálculos de triangulación y trayectorias donde intervienen ángulos y
+          distancias sobre un plano.
+        en: >-
+          Simplifies triangulation and trajectory calculations involving angles and distances on a
+          plane.
+  example:
+    title:
+      es: Verificación en θ = 30°
+      en: Verification at θ = 30°
+    lines:
+      - es: sen(30°) = 0.5
+        en: sin(30°) = 0.5
+      - es: cos(30°) ≈ 0.8660
+        en: cos(30°) ≈ 0.8660
+      - es: sen²(30°) = 0.25
+        en: sin²(30°) = 0.25
+      - es: cos²(30°) ≈ 0.75
+        en: cos²(30°) ≈ 0.75
+      - es: 0.25 + 0.75 = 1, queda demostrado
+        en: 0.25 + 0.75 = 1, proven true

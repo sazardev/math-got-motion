@@ -1,0 +1,173 @@
+id: fundamental-theorem-of-calculus
+title:
+  es: Teorema Fundamental del Cálculo
+  en: Fundamental Theorem of Calculus
+category:
+  es: Cálculo
+  en: Calculus
+nodes:
+  - id: integral
+    type: operator
+    value: ∫
+    explanation:
+      es: "El signo de integral: representa la suma acumulada de cambios infinitesimales."
+      en: "The integral sign: represents the accumulated sum of infinitesimal changes."
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: "El límite inferior: el punto donde empieza la acumulación."
+      en: "The lower limit: the point where accumulation begins."
+  - id: b
+    type: superscript
+    value: b
+    explanation:
+      es: "El límite superior: el punto donde termina la acumulación."
+      en: "The upper limit: the point where accumulation ends."
+  - id: fprime
+    type: variable
+    value: f'(x)
+    explanation:
+      es: "La derivada de f: la tasa de cambio instantánea de la función original."
+      en: "The derivative of f: the instantaneous rate of change of the original function."
+  - id: dx
+    type: variable
+    value: dx
+    explanation:
+      es: Indica que la acumulación se hace respecto a la variable x.
+      en: Indicates the accumulation is taken with respect to the variable x.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: fb
+    type: variable
+    value: f(b)
+    explanation:
+      es: El valor de la función original evaluada en el límite superior.
+      en: The value of the original function evaluated at the upper limit.
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: Menos.
+      en: Minus.
+  - id: fa
+    type: variable
+    value: f(a)
+    explanation:
+      es: El valor de la función original evaluada en el límite inferior.
+      en: The value of the original function evaluated at the lower limit.
+context:
+  author:
+    es: Isaac Newton y Gottfried Leibniz
+    en: Isaac Newton and Gottfried Leibniz
+  era:
+    es: Inglaterra y Alemania, s. XVII · formalizado entre 1665 y 1686
+    en: England and Germany, 17th century · formalized between 1665 and 1686
+  history:
+    es: >-
+      El teorema conecta dos ideas que parecían separadas: el área bajo una curva (integración) y la
+      pendiente de una curva (derivación), mostrando que son procesos inversos. Newton y Leibniz lo
+      formalizaron de manera independiente como parte de la invención del cálculo, pero hubo
+      anticipaciones previas: el escocés James Gregory esbozó una versión geométrica del resultado
+      hacia 1668, y su maestro Isaac Barrow, mentor de Newton en Cambridge, ya relacionaba tangentes y
+      áreas en sus lecciones geométricas antes de que Newton diera el paso decisivo de generalizarlo
+      con su notación de fluxiones.
+    en: >-
+      The theorem connects two ideas that seemed separate: the area under a curve (integration) and
+      the slope of a curve (differentiation), showing they are inverse processes. Newton and Leibniz
+      formalized it independently as part of inventing calculus, but there were earlier
+      anticipations: the Scotsman James Gregory sketched a geometric version of the result around
+      1668, and his teacher Isaac Barrow, Newton's mentor at Cambridge, had already related tangents
+      and areas in his geometry lectures before Newton took the decisive step of generalizing it with
+      his notation of fluxions.
+  timeline:
+    - year: c. 1668
+      label:
+        es: >-
+          James Gregory publica una versión geométrica temprana de la relación entre áreas y
+          tangentes en su obra Geometriae Pars Universalis.
+        en: >-
+          James Gregory publishes an early geometric version of the relationship between areas and
+          tangents in his Geometriae Pars Universalis.
+    - year: c. 1670
+      label:
+        es: >-
+          Isaac Barrow, en sus Lectiones Geometricae, relaciona el problema de la tangente con el de
+          la cuadratura, un antecedente directo del teorema.
+        en: >-
+          Isaac Barrow, in his Lectiones Geometricae, relates the tangent problem to the quadrature
+          problem, a direct precursor to the theorem.
+    - year: c. 1666
+      label:
+        es: >-
+          Newton formula la relación inversa entre derivación e integración en sus manuscritos
+          privados sobre fluxiones.
+        en: >-
+          Newton formulates the inverse relationship between differentiation and integration in his
+          private manuscripts on fluxions.
+    - year: "1686"
+      label:
+        es: >-
+          Leibniz publica su propia formalización del teorema con la notación integral y diferencial
+          que se usa hasta hoy.
+        en: >-
+          Leibniz publishes his own formalization of the theorem with the integral and differential
+          notation still used today.
+    - year: Hoy
+      label:
+        es: >-
+          Permite calcular áreas, volúmenes y acumulaciones exactas en física, economía e ingeniería
+          sin recurrir a sumas infinitas manuales.
+        en: >-
+          It allows exact calculation of areas, volumes, and accumulations in physics, economics, and
+          engineering without resorting to manual infinite sums.
+  useCases:
+    - title:
+        es: Física
+        en: Physics
+      description:
+        es: >-
+          Calcular la distancia recorrida a partir de la velocidad, o el trabajo a partir de la
+          fuerza, se resuelve aplicando directamente este teorema.
+        en: >-
+          Computing distance traveled from velocity, or work from force, is solved by directly
+          applying this theorem.
+    - title:
+        es: Economía
+        en: Economics
+      description:
+        es: >-
+          El excedente del consumidor y del productor se calcula integrando funciones de demanda y
+          oferta entre dos puntos.
+        en: >-
+          Consumer and producer surplus are calculated by integrating demand and supply functions
+          between two points.
+    - title:
+        es: Ingeniería
+        en: Engineering
+      description:
+        es: >-
+          Calcular el trabajo de una fuerza variable o el flujo total de un fluido depende de
+          evaluar integrales definidas con este teorema.
+        en: >-
+          Calculating the work of a variable force or the total flow of a fluid depends on
+          evaluating definite integrals with this theorem.
+  example:
+    title:
+      es: Área bajo f(x) = 2x entre 1 y 3
+      en: Area under f(x) = 2x between 1 and 3
+    lines:
+      - es: f'(x) = 2x, entonces f(x) = x²
+        en: f'(x) = 2x, so f(x) = x²
+      - es: f(3) = 3² = 9
+        en: f(3) = 3² = 9
+      - es: f(1) = 1² = 1
+        en: f(1) = 1² = 1
+      - es: ∫₁³ 2x dx = f(3) − f(1)
+        en: ∫₁³ 2x dx = f(3) − f(1)
+      - es: 9 − 1 = 8
+        en: 9 − 1 = 8

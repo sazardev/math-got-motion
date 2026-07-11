@@ -26,7 +26,7 @@ function AppContent() {
         formulas={formulas}
         activeId={activeFormula.id}
         locale={locale}
-        label={strings.menuTitle}
+        strings={strings}
         onSelect={setActiveId}
       />
 

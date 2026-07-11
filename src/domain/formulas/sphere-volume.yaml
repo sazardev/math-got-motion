@@ -1,0 +1,163 @@
+id: sphere-volume
+title:
+  es: Volumen de la Esfera
+  en: Volume of a Sphere
+category:
+  es: Geometría
+  en: Geometry
+nodes:
+  - id: volume
+    type: variable
+    value: V
+    explanation:
+      es: "El volumen: el espacio tridimensional que ocupa la esfera."
+      en: "The volume: the three-dimensional space the sphere occupies."
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: four
+    type: number
+    value: "4"
+    explanation:
+      es: El numerador de la fracción 4/3, parte de la constante que relaciona el cubo del radio con el volumen.
+      en: The numerator of the fraction 4/3, part of the constant relating the cube of the radius to the volume.
+  - id: div
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+  - id: three
+    type: number
+    value: "3"
+    explanation:
+      es: El denominador de la fracción 4/3.
+      en: The denominator of the fraction 4/3.
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: Pi, la razón constante entre la circunferencia de un círculo y su diámetro.
+      en: Pi, the constant ratio between a circle's circumference and its diameter.
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "El radio: la distancia entre el centro de la esfera y su superficie."
+      en: "The radius: the distance from the sphere's center to its surface."
+  - id: r-cube
+    type: superscript
+    value: "3"
+    explanation:
+      es: "Elevado al cubo: multiplicado por sí mismo dos veces."
+      en: "Cubed: multiplied by itself twice."
+context:
+  author:
+    es: Arquímedes de Siracusa
+    en: Archimedes of Syracuse
+  era:
+    es: Siracusa, Sicilia, c. 287–212 a.C.
+    en: Syracuse, Sicily, c. 287–212 BC
+  history:
+    es: >-
+      Arquímedes demostró esta fórmula en su obra Sobre la esfera y el cilindro, usando su método
+      mecánico: imaginó la esfera, el cono y el cilindro en equilibrio sobre una balanza para deducir
+      la relación de volúmenes antes de probarla con rigor geométrico. Consideraba este resultado su
+      mayor logro y pidió que en su tumba se grabara una esfera inscrita en un cilindro, junto con la
+      razón 2:3 entre ambos volúmenes.
+    en: >-
+      Archimedes proved this formula in his treatise On the Sphere and the Cylinder, using his
+      mechanical method: he imagined the sphere, cone, and cylinder balanced on a lever to deduce the
+      ratio of volumes before proving it with full geometric rigor. He considered this his greatest
+      achievement and asked that his tomb be engraved with a sphere inscribed in a cylinder, along
+      with the 2:3 ratio between their volumes.
+  timeline:
+    - year: c. 350 a.C.
+      label:
+        es: >-
+          Eudoxo de Cnido desarrolla el método de exhausción, la herramienta geométrica que
+          Arquímedes usaría después para probar volúmenes curvos.
+        en: >-
+          Eudoxus of Cnidus develops the method of exhaustion, the geometric tool Archimedes would
+          later use to prove volumes of curved solids.
+    - year: c. 225 a.C.
+      label:
+        es: >-
+          Arquímedes publica Sobre la esfera y el cilindro, demostrando que V = (4/3)πr³ y que el
+          volumen de la esfera es dos tercios del cilindro que la circunscribe.
+        en: >-
+          Archimedes publishes On the Sphere and the Cylinder, proving V = (4/3)πr³ and that a
+          sphere's volume is two-thirds that of its circumscribing cylinder.
+    - year: s. XVII
+      label:
+        es: >-
+          Cavalieri y luego Newton y Leibniz generalizan el razonamiento de Arquímedes en el cálculo
+          integral moderno.
+        en: >-
+          Cavalieri, and later Newton and Leibniz, generalize Archimedes' reasoning into modern
+          integral calculus.
+    - year: "1965"
+      label:
+        es: >-
+          Un manuscrito conocido como el Palimpsesto de Arquímedes revela detalles perdidos de su
+          método mecánico, confirmando cómo llegó a este resultado.
+        en: >-
+          A manuscript known as the Archimedes Palimpsest reveals lost details of his mechanical
+          method, confirming how he arrived at this result.
+    - year: Hoy
+      label:
+        es: >-
+          Se usa para calcular la capacidad de tanques esféricos, el volumen de planetas y burbujas,
+          y en gráficos por computadora para renderizar esferas.
+        en: >-
+          Used to calculate the capacity of spherical tanks, the volume of planets and bubbles, and
+          in computer graphics to render spheres.
+  useCases:
+    - title:
+        es: Ingeniería industrial
+        en: Industrial engineering
+      description:
+        es: >-
+          Tanques y contenedores esféricos de almacenamiento de gas se dimensionan directamente con
+          esta fórmula para calcular su capacidad.
+        en: >-
+          Spherical gas storage tanks and containers are sized directly with this formula to
+          calculate their capacity.
+    - title:
+        es: Astronomía
+        en: Astronomy
+      description:
+        es: >-
+          Estimar el volumen de planetas, estrellas y asteroides, tratados como esferas en primera
+          aproximación, parte de esta relación.
+        en: >-
+          Estimating the volume of planets, stars, and asteroids, treated as spheres to a first
+          approximation, starts from this relationship.
+    - title:
+        es: Gráficos por computadora
+        en: Computer graphics
+      description:
+        es: >-
+          Motores de videojuegos y simulación física la usan para calcular masa y densidad de
+          objetos esféricos en tiempo real.
+        en: >-
+          Game engines and physics simulations use it to calculate the mass and density of
+          spherical objects in real time.
+  example:
+    title:
+      es: Una esfera de radio 3
+      en: A sphere of radius 3
+    lines:
+      - es: r = 3
+        en: r = 3
+      - es: V = (4/3) · π · r³
+        en: V = (4/3) · π · r³
+      - es: r³ = 27
+        en: r³ = 27
+      - es: V = (4/3) · π · 27
+        en: V = (4/3) · π · 27
+      - es: V ≈ 113.10 unidades³
+        en: V ≈ 113.10 cubic units

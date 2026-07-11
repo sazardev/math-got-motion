@@ -1,0 +1,174 @@
+id: poisson-distribution
+title:
+  es: Distribución de Poisson
+  en: Poisson Distribution
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+nodes:
+  - id: p-k
+    type: variable
+    value: P(k)
+    explanation:
+      es: >-
+        La probabilidad de que ocurran exactamente k eventos en el intervalo de tiempo o espacio
+        considerado.
+      en: >-
+        The probability that exactly k events occur in the given interval of time or space.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: lambda
+    type: variable
+    value: λ
+    explanation:
+      es: >-
+        Lambda: la tasa promedio de eventos esperados en ese mismo intervalo.
+      en: >-
+        Lambda: the average rate of events expected in that same interval.
+  - id: k-exp
+    type: superscript
+    value: k
+    explanation:
+      es: "Lambda elevado a la k: la tasa multiplicada por sí misma k veces."
+      en: "Lambda raised to the k: the rate multiplied by itself k times."
+  - id: e
+    type: variable
+    value: e
+    explanation:
+      es: El número de Euler, base del decaimiento exponencial de la probabilidad.
+      en: Euler's number, the base of the probability's exponential decay.
+  - id: neg-lambda
+    type: superscript
+    value: −λ
+    explanation:
+      es: "El exponente negativo de e: hace que valores de k muy alejados de λ sean poco probables."
+      en: "The negative exponent of e: it makes values of k far from λ unlikely."
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+  - id: k-fact
+    type: variable
+    value: k!
+    explanation:
+      es: >-
+        K factorial: el producto de todos los enteros positivos hasta k, que normaliza la
+        probabilidad.
+      en: >-
+        K factorial: the product of all positive integers up to k, which normalizes the probability.
+context:
+  author:
+    es: Siméon Denis Poisson
+    en: Siméon Denis Poisson
+  era:
+    es: Francia, 1781–1840 · publicada en 1837
+    en: France, 1781–1840 · published in 1837
+  history:
+    es: >-
+      Poisson la introdujo en 1837 en su obra Recherches sur la probabilité des jugements en matière
+      criminelle et en matière civile, un estudio sobre la probabilidad de veredictos judiciales
+      correctos. La distribución modela cuántas veces ocurre un evento raro e independiente en un
+      intervalo fijo de tiempo o espacio, como el número de llamadas que recibe una central
+      telefónica en una hora. Pasó relativamente desapercibida durante décadas hasta que, a comienzos
+      del siglo XX, el estadístico Ladislaus Bortkiewicz la popularizó al aplicarla a un caso célebre:
+      las muertes de soldados prusianos por coces de caballo.
+    en: >-
+      Poisson introduced it in 1837 in his work Recherches sur la probabilité des jugements en
+      matière criminelle et en matière civile, a study on the probability of correct judicial
+      verdicts. The distribution models how many times a rare, independent event occurs in a fixed
+      interval of time or space, such as the number of calls a telephone exchange receives in an
+      hour. It went relatively unnoticed for decades until, in the early 20th century, statistician
+      Ladislaus Bortkiewicz popularized it with a famous case: Prussian soldiers killed by horse
+      kicks.
+  timeline:
+    - year: "1837"
+      label:
+        es: >-
+          Poisson publica la distribución como parte de su análisis matemático de la probabilidad
+          judicial.
+        en: >-
+          Poisson publishes the distribution as part of his mathematical analysis of judicial
+          probability.
+    - year: "1898"
+      label:
+        es: >-
+          Ladislaus Bortkiewicz la aplica a las muertes de soldados prusianos por coces de caballo,
+          haciéndola famosa.
+        en: >-
+          Ladislaus Bortkiewicz applies it to Prussian soldiers' deaths by horse kicks, making it
+          famous.
+    - year: s. XX
+      label:
+        es: >-
+          Se adopta ampliamente en telecomunicaciones para modelar la llegada de llamadas y en
+          seguros para modelar reclamos.
+        en: >-
+          It's widely adopted in telecommunications to model call arrivals and in insurance to model
+          claims.
+    - year: Hoy
+      label:
+        es: >-
+          Modela desde fallas de servidores hasta la llegada de clientes a una tienda, en sistemas de
+          colas y confiabilidad.
+        en: >-
+          It models everything from server failures to customer arrivals at a store, in queueing and
+          reliability systems.
+  useCases:
+    - title:
+        es: Telecomunicaciones
+        en: Telecommunications
+      description:
+        es: >-
+          Estima cuántas llamadas o paquetes de datos llegarán a una red en un intervalo dado, para
+          dimensionar su capacidad.
+        en: >-
+          Estimates how many calls or data packets will arrive at a network in a given interval, to
+          size its capacity.
+    - title:
+        es: Seguros
+        en: Insurance
+      description:
+        es: >-
+          Calcula cuántos reclamos espera recibir una aseguradora en un período, para fijar primas.
+        en: >-
+          Calculates how many claims an insurer expects to receive in a period, to set premiums.
+    - title:
+        es: Control de calidad
+        en: Quality control
+      description:
+        es: >-
+          Modela el número de defectos esperados por lote de producción en una línea de manufactura.
+        en: >-
+          Models the expected number of defects per production batch on a manufacturing line.
+    - title:
+        es: Epidemiología
+        en: Epidemiology
+      description:
+        es: >-
+          Estima cuántos casos raros de una enfermedad ocurrirán en una población durante cierto
+          tiempo.
+        en: >-
+          Estimates how many rare cases of a disease will occur in a population over a given time.
+  example:
+    title:
+      es: Llamadas a un centro de soporte
+      en: Calls to a support center
+    lines:
+      - es: λ = 3 llamadas por hora, en promedio
+        en: λ = 3 calls per hour, on average
+      - es: "¿Probabilidad de recibir exactamente k = 5?"
+        en: "Probability of receiving exactly k = 5?"
+      - es: λ^k = 3^5 = 243
+        en: λ^k = 3^5 = 243
+      - es: e^(−λ) = e^(−3) ≈ 0.0498
+        en: e^(−λ) = e^(−3) ≈ 0.0498
+      - es: k! = 5! = 120
+        en: k! = 5! = 120
+      - es: P(5) = 243×0.0498 / 120 ≈ 0.1008
+        en: P(5) = 243×0.0498 / 120 ≈ 0.1008

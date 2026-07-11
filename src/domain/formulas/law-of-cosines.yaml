@@ -1,0 +1,187 @@
+id: law-of-cosines
+title:
+  es: Ley de Cosenos
+  en: Law of Cosines
+category:
+  es: Geometría
+  en: Geometry
+nodes:
+  - id: c
+    type: variable
+    value: c
+    explanation:
+      es: El lado c, opuesto al ángulo C, cuya longitud queremos encontrar.
+      en: Side c, opposite angle C, whose length we want to find.
+  - id: c-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Elevado al cuadrado: multiplicado por sí mismo."
+      en: "Squared: multiplied by itself."
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: El lado a del triángulo.
+      en: Side a of the triangle.
+  - id: a-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: También elevado al cuadrado.
+      en: Also squared.
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado al cuadrado del lado b.
+      en: Added to the square of side b.
+  - id: b
+    type: variable
+    value: b
+    explanation:
+      es: El lado b del triángulo.
+      en: Side b of the triangle.
+  - id: b-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: También elevado al cuadrado.
+      en: Also squared.
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: Menos el término de corrección que sigue, necesario cuando el ángulo no es recto.
+      en: Minus the correction term that follows, needed when the angle isn't a right angle.
+  - id: two-a-b
+    type: variable
+    value: 2ab
+    explanation:
+      es: El doble del producto de los lados a y b.
+      en: Twice the product of sides a and b.
+  - id: cos
+    type: operator
+    value: cos
+    explanation:
+      es: La función coseno, aplicada al ángulo C.
+      en: The cosine function, applied to angle C.
+  - id: angle-c
+    type: variable
+    value: C
+    explanation:
+      es: El ángulo C, opuesto al lado c, ubicado entre los lados a y b.
+      en: Angle C, opposite side c, located between sides a and b.
+context:
+  author:
+    es: Euclides · forma trigonométrica atribuida a al-Kashi
+    en: Euclid · trigonometric generalization credited to al-Kashi
+  era:
+    es: Alejandría, c. 300 a.C. · forma trigonométrica c. 1427 (Samarcanda)
+    en: Alexandria, c. 300 BC · trigonometric form c. 1427 (Samarkand)
+  history:
+    es: >-
+      Las raíces de esta ley están en las Proposiciones II.12 y II.13 de los Elementos de Euclides, que
+      describen —en lenguaje puramente geométrico, sin trigonometría— cómo el cuadrado de un lado se
+      relaciona con los cuadrados de los otros dos en triángulos obtusos y agudos. La forma
+      trigonométrica moderna, con la función coseno explícita, aparece siglos después: el matemático
+      persa Jamshid al-Kashi la desarrolló en su tratado de 1427 en Samarcanda, razón por la cual en
+      Francia todavía se la conoce como 'théorème d'al-Kashi'. La notación algebraica compacta que
+      usamos hoy se consolidó recién con la trigonometría europea de los siglos XVI y XVII. Es, en
+      esencia, una generalización del teorema de Pitágoras para triángulos que no son rectángulos.
+    en: >-
+      This law's roots lie in Propositions II.12 and II.13 of Euclid's Elements, which describe —in
+      purely geometric language, without trigonometry— how the square of one side relates to the
+      squares of the other two in obtuse and acute triangles. The modern trigonometric form, with the
+      explicit cosine function, appears centuries later: the Persian mathematician Jamshid al-Kashi
+      developed it in his 1427 treatise in Samarkand, which is why in France it's still known as the
+      'théorème d'al-Kashi'. The compact algebraic notation we use today wasn't settled until European
+      trigonometry of the 16th and 17th centuries. It is, in essence, a generalization of the
+      Pythagorean theorem for triangles that aren't right triangles.
+  timeline:
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides demuestra en las Proposiciones II.12–13 de los Elementos las versiones geométricas
+          para triángulos obtusos y agudos.
+        en: >-
+          Euclid proves the geometric versions for obtuse and acute triangles in Propositions II.12–13
+          of the Elements.
+    - year: "1427"
+      label:
+        es: >-
+          Jamshid al-Kashi formula la versión trigonométrica explícita en Samarcanda, con la función
+          coseno.
+        en: >-
+          Jamshid al-Kashi formulates the explicit trigonometric version in Samarkand, with the cosine
+          function.
+    - year: s. XVI–XVII
+      label:
+        es: La trigonometría europea consolida la notación algebraica moderna de la ley.
+        en: European trigonometry consolidates the law's modern algebraic notation.
+    - year: Hoy
+      label:
+        es: >-
+          Herramienta estándar en navegación, topografía y gráficos por computadora para resolver
+          triángulos sin ángulos rectos.
+        en: >-
+          A standard tool in navigation, surveying, and computer graphics for solving triangles
+          without right angles.
+  useCases:
+    - title:
+        es: Navegación y topografía
+        en: Navigation and surveying
+      description:
+        es: >-
+          Calcula distancias entre puntos conocidos cuando se mide un ángulo, esencial en triangulación
+          terrestre y marítima.
+        en: >-
+          Calculates distances between known points when an angle is measured, essential in land and
+          maritime triangulation.
+    - title:
+        es: Gráficos por computadora
+        en: Computer graphics
+      description:
+        es: >-
+          Resuelve ángulos y distancias entre vértices en modelos 3D y motores de físicas de
+          videojuegos.
+        en: >-
+          Resolves angles and distances between vertices in 3D models and video game physics engines.
+    - title:
+        es: Astronomía
+        en: Astronomy
+      description:
+        es: >-
+          Determina distancias entre cuerpos celestes a partir de ángulos observados desde la Tierra.
+        en: >-
+          Determines distances between celestial bodies from angles observed from Earth.
+    - title:
+        es: Robótica
+        en: Robotics
+      description:
+        es: >-
+          Calcula ángulos articulares de brazos robóticos a partir de las longitudes conocidas de sus
+          segmentos, en cinemática inversa.
+        en: >-
+          Calculates joint angles of robotic arms from known segment lengths, in inverse kinematics.
+  example:
+    title:
+      es: Triángulo con a=5, b=7, C=60°
+      en: Triangle with a=5, b=7, C=60°
+    lines:
+      - es: c² = 5² + 7² − 2·5·7·cos(60°)
+        en: c² = 5² + 7² − 2·5·7·cos(60°)
+      - es: cos(60°) = 0.5
+        en: cos(60°) = 0.5
+      - es: c² = 25 + 49 − 70·0.5
+        en: c² = 25 + 49 − 70·0.5
+      - es: c² = 74 − 35 = 39
+        en: c² = 74 − 35 = 39
+      - es: c = √39 ≈ 6.24
+        en: c = √39 ≈ 6.24

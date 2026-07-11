@@ -28,6 +28,36 @@ explanation fades in for the isolated symbol — one at a time.
 See [`SPEC.md`](SPEC.md) and [`DESIGN.md`](DESIGN.md) for the full product and
 design-system rules this project follows.
 
+## Adding a formula
+
+Each formula is a **data-only YAML file** — not code — so anyone can safely
+contribute one, including in an external pull request, without ever gaining
+the ability to run JavaScript inside the app:
+
+1. Copy [`src/domain/formulas/_template.yaml`](src/domain/formulas/_template.yaml)
+   to a new kebab-case file, e.g. `quadratic-formula.yaml`.
+2. Fill in its fields (title, category, per-symbol nodes, history, timeline,
+   use cases, a worked example — the template's comments explain each one).
+   `id` must match the filename exactly.
+3. Run `pnpm formulas:validate` (or just `pnpm dev`). It checks the file
+   against a [Zod](https://zod.dev) schema
+   ([`src/domain/formula.types.ts`](src/domain/formula.types.ts)) and reports
+   the exact field and reason if something's missing, too long, or the wrong
+   shape — the same check CI runs on every pull request.
+4. Done. `src/domain/formulas/index.ts` auto-discovers every `*.yaml` file
+   via `import.meta.glob` — no import to add, no array to update. The
+   formula index menu groups and sorts it automatically by `category`.
+
+Why YAML instead of a `.ts` module: a formula file only ever describes data
+(strings, numbers, lists), so it can't execute code, read the filesystem, or
+do anything beyond render text — a required property for accepting formulas
+from contributors you don't otherwise trust. The schema also caps every
+field's length, since the scrollytelling choreography assumes reasonably
+sized content; a malformed or oversized submission fails validation instead
+of breaking the pinned-scroll layout at runtime. Requiring `id` to equal the
+filename additionally makes duplicate IDs impossible by construction — two
+files can't share one name on the same filesystem.
+
 ## Stack
 
 - **Core:** [Tauri v2](https://tauri.app) for desktop/mobile packaging.

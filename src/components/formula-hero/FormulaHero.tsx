@@ -31,21 +31,53 @@ const RESET_DURATION = 0.6;
 const SEGMENT_DURATION = RESET_DELAY + RESET_DURATION;
 const INTRO_DURATION = 1.1;
 
-// Estado 4 — Epílogo: la fórmula se encoge (sin desaparecer) y el contexto
-// histórico entra en escena por capas, ganando fuerza progresivamente.
+// Estado 4 — Epílogo: la fórmula se encoge (sin desaparecer) a un sello que
+// queda como encabezado permanente junto a autor y época. Debajo, un
+// "escenario" central va revelando cuatro paneles — historia, línea de
+// tiempo, casos de uso y un ejemplo resuelto — uno a la vez, con la misma
+// coreografía in/hold/out que ya usan los nodos de la fórmula.
 const CONTEXT_SHRINK_DURATION = 1;
 const CONTEXT_AUTHOR_DELAY = 0.45;
 const CONTEXT_AUTHOR_DURATION = 0.6;
-const CONTEXT_ERA_DELAY = 0.95;
+const CONTEXT_ERA_DELAY = 0.35;
 const CONTEXT_ERA_DURATION = 0.5;
-const CONTEXT_HISTORY_DELAY = 1.3;
-const CONTEXT_HISTORY_DURATION = 0.6;
-const CONTEXT_BACK_DELAY = 2.3;
+
+// Cada panel del "stage" corre su propia mini-coreografía: entra con stagger,
+// se sostiene en pantalla, y sale antes de que entre el siguiente. La
+// duración de entrada/salida escala con la cantidad de ítems del panel
+// (palabras, eventos, casos o líneas) para que el ritmo se sienta parejo sea
+// cual sea el contenido de cada fórmula.
+const PANEL_GAP_BEFORE = 0.35;
+const PANEL_IN_DURATION = 0.6;
+const PANEL_ITEM_STAGGER = 0.14;
+const PANEL_HOLD = 0.9;
+const PANEL_OUT_DURATION = 0.4;
+
+const CONTEXT_BACK_GAP = 0.5;
 const CONTEXT_BACK_DURATION = 0.5;
-const EPILOGUE_DURATION = CONTEXT_BACK_DELAY + CONTEXT_BACK_DURATION;
 
 const CONTEXT_AUTHOR_KEY = "context-author";
 const CONTEXT_HISTORY_KEY = "context-history";
+
+/** Duración de la entrada con stagger de un panel, según su cantidad de ítems. */
+function panelInDuration(itemCount: number) {
+  return PANEL_IN_DURATION + PANEL_ITEM_STAGGER * Math.max(0, itemCount - 1);
+}
+
+/** Duración de la salida con stagger de un panel — el stagger de salida usa la mitad. */
+function panelOutDuration(itemCount: number) {
+  return PANEL_OUT_DURATION + (PANEL_ITEM_STAGGER / 2) * Math.max(0, itemCount - 1);
+}
+
+/** Recupera, en orden, los elementos 0..count-1 de un Map indexado por posición. */
+function orderedFromMap<T>(map: Map<number, T>, count: number): T[] {
+  const result: T[] = [];
+  for (let index = 0; index < count; index += 1) {
+    const el = map.get(index);
+    if (el) result.push(el);
+  }
+  return result;
+}
 
 function scrollToTop() {
   globalThis.scrollTo({ top: 0, behavior: "smooth" });
@@ -58,6 +90,11 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
   const nodeRefs = useRef(new Map<string, HTMLSpanElement>());
   const wordRefs = useRef(new Map<string, HTMLSpanElement[]>());
   const eraRef = useRef<HTMLParagraphElement>(null);
+  const timelineRailRef = useRef<HTMLDivElement>(null);
+  const timelineRowRefs = useRef(new Map<number, HTMLDivElement>());
+  const useCaseRefs = useRef(new Map<number, HTMLDivElement>());
+  const exampleTitleRef = useRef<HTMLParagraphElement>(null);
+  const exampleLineRefs = useRef(new Map<number, HTMLParagraphElement>());
   const backLinkRef = useRef<HTMLButtonElement>(null);
   const progressRef = useRef<HTMLParagraphElement>(null);
   const hintRef = useRef<HTMLParagraphElement>(null);
@@ -72,7 +109,7 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
     `${String(index + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
 
   useEffect(() => {
-    let timeoutId: number | undefined;
+    let timeoutId: ReturnType<typeof globalThis.setTimeout> | undefined;
     const handleResize = () => {
       globalThis.clearTimeout(timeoutId);
       timeoutId = globalThis.setTimeout(() => {
@@ -169,7 +206,36 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
       const viewportMin = Math.min(globalThis.innerWidth, globalThis.innerHeight);
       const isolateScale = Math.min(2.4, Math.max(1.4, viewportMin / 320));
 
-      const totalDuration = INTRO_DURATION + total * SEGMENT_DURATION + EPILOGUE_DURATION;
+      // El epílogo se arma como una secuencia de bloques cuya duración depende
+      // del contenido real de cada fórmula (cantidad de palabras/eventos/casos/
+      // líneas), calculada por adelantado para poder dimensionar el scroll total.
+      const historyWordCount = (wordRefs.current.get(CONTEXT_HISTORY_KEY) ?? []).length;
+      const timelineCount = formula.context.timeline.length;
+      const useCasesCount = formula.context.useCases.length;
+      const exampleCount = formula.context.example.lines.length;
+
+      const headerEnd =
+        CONTEXT_AUTHOR_DELAY + CONTEXT_AUTHOR_DURATION + CONTEXT_ERA_DELAY + CONTEXT_ERA_DURATION;
+
+      const historyStart = headerEnd + PANEL_GAP_BEFORE;
+      const historyHoldEnd = historyStart + panelInDuration(historyWordCount) + PANEL_HOLD;
+      const historyOutEnd = historyHoldEnd + panelOutDuration(historyWordCount);
+
+      const timelineStart = historyOutEnd + PANEL_GAP_BEFORE;
+      const timelineHoldEnd = timelineStart + panelInDuration(timelineCount) + PANEL_HOLD;
+      const timelineOutEnd = timelineHoldEnd + panelOutDuration(timelineCount);
+
+      const useCasesStart = timelineOutEnd + PANEL_GAP_BEFORE;
+      const useCasesHoldEnd = useCasesStart + panelInDuration(useCasesCount) + PANEL_HOLD;
+      const useCasesOutEnd = useCasesHoldEnd + panelOutDuration(useCasesCount);
+
+      const exampleStart = useCasesOutEnd + PANEL_GAP_BEFORE;
+      const exampleHoldEnd = exampleStart + panelInDuration(exampleCount) + PANEL_HOLD;
+
+      const backStart = exampleHoldEnd + CONTEXT_BACK_GAP;
+      const epilogueDuration = backStart + CONTEXT_BACK_DURATION;
+
+      const totalDuration = INTRO_DURATION + total * SEGMENT_DURATION + epilogueDuration;
 
       const tl = gsap.timeline({
         defaults: { duration: 0.9, ease: "power2.out" },
@@ -249,11 +315,20 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
       }
 
       // Estado 4 — Epílogo: la fórmula se encoge a un pequeño sello que sigue
-      // vivo (rebote elástico), mientras el contexto histórico gana fuerza.
+      // vivo (rebote elástico) y queda como encabezado permanente junto a
+      // autor y época. Debajo, un "stage" central revela cuatro paneles —
+      // historia, línea de tiempo, casos de uso y un ejemplo resuelto — uno a
+      // la vez: cada uno entra con stagger, se sostiene, y sale antes de que
+      // entre el siguiente (el mismo lenguaje in/hold/out del aislamiento de
+      // nodos, aplicado ahora a bloques de contenido en vez de a un símbolo).
       const contextLabel = "context";
       const authorWords = wordRefs.current.get(CONTEXT_AUTHOR_KEY) ?? [];
       const historyWords = wordRefs.current.get(CONTEXT_HISTORY_KEY) ?? [];
+      const timelineRows = orderedFromMap(timelineRowRefs.current, timelineCount);
+      const useCaseEls = orderedFromMap(useCaseRefs.current, useCasesCount);
+      const exampleLines = orderedFromMap(exampleLineRefs.current, exampleCount);
       const shrinkY = -globalThis.innerHeight * 0.24;
+      const at = (offset: number) => `${contextLabel}+=${String(offset)}`;
 
       tl.addLabel(contextLabel)
         .to(
@@ -277,23 +352,98 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
             duration: CONTEXT_AUTHOR_DURATION,
             ease: "back.out(1.7)",
           },
-          `${contextLabel}+=${String(CONTEXT_AUTHOR_DELAY)}`,
+          at(CONTEXT_AUTHOR_DELAY),
         )
         .to(
           eraRef.current,
           { opacity: 1, y: 0, duration: CONTEXT_ERA_DURATION },
-          `${contextLabel}+=${String(CONTEXT_ERA_DELAY)}`,
-        )
-        .to(
-          historyWords,
-          { opacity: 1, y: 0, stagger: 0.018, duration: CONTEXT_HISTORY_DURATION },
-          `${contextLabel}+=${String(CONTEXT_HISTORY_DELAY)}`,
-        )
-        .to(
-          backLinkRef.current,
-          { opacity: 0.7, duration: CONTEXT_BACK_DURATION },
-          `${contextLabel}+=${String(CONTEXT_BACK_DELAY)}`,
+          at(CONTEXT_AUTHOR_DELAY + CONTEXT_AUTHOR_DURATION + CONTEXT_ERA_DELAY),
         );
+
+      // Panel 1 — Historia: el mismo idioma tipográfico palabra a palabra que
+      // ya usan las explicaciones de cada nodo.
+      tl.to(
+        historyWords,
+        { opacity: 1, y: 0, stagger: PANEL_ITEM_STAGGER, duration: PANEL_IN_DURATION },
+        at(historyStart),
+      ).to(
+        historyWords,
+        { opacity: 0, y: "-30%", stagger: PANEL_ITEM_STAGGER * 0.5, duration: PANEL_OUT_DURATION },
+        at(historyHoldEnd),
+      );
+
+      // Panel 2 — Línea de tiempo: un riel vertical se dibuja (scaleY) mientras
+      // cada hito entra deslizándose desde la izquierda.
+      tl.to(
+        timelineRailRef.current,
+        { scaleY: 1, duration: panelInDuration(timelineCount) },
+        at(timelineStart),
+      )
+        .to(
+          timelineRows,
+          {
+            opacity: 1,
+            x: 0,
+            stagger: PANEL_ITEM_STAGGER,
+            duration: PANEL_IN_DURATION,
+            ease: "power2.out",
+          },
+          at(timelineStart),
+        )
+        .to(
+          timelineRows,
+          {
+            opacity: 0,
+            x: "16%",
+            stagger: PANEL_ITEM_STAGGER * 0.5,
+            duration: PANEL_OUT_DURATION,
+          },
+          at(timelineHoldEnd),
+        )
+        .to(
+          timelineRailRef.current,
+          { opacity: 0, duration: PANEL_OUT_DURATION },
+          at(timelineHoldEnd),
+        );
+
+      // Panel 3 — Casos de uso: las tarjetas caen y se enderezan con rebote,
+      // como si se repartieran una a una.
+      tl.to(
+        useCaseEls,
+        {
+          opacity: 1,
+          y: 0,
+          rotate: 0,
+          stagger: PANEL_ITEM_STAGGER,
+          duration: PANEL_IN_DURATION,
+          ease: "back.out(1.6)",
+        },
+        at(useCasesStart),
+      ).to(
+        useCaseEls,
+        { opacity: 0, y: "-18%", stagger: PANEL_ITEM_STAGGER * 0.5, duration: PANEL_OUT_DURATION },
+        at(useCasesHoldEnd),
+      );
+
+      // Panel 4 — Ejemplo resuelto: líneas monoespaciadas revelándose como en
+      // una terminal. Es el último panel: no sale, queda como cierre.
+      tl.to(
+        exampleTitleRef.current,
+        { opacity: 1, y: 0, duration: PANEL_IN_DURATION },
+        at(exampleStart),
+      ).to(
+        exampleLines,
+        {
+          opacity: 1,
+          x: 0,
+          stagger: PANEL_ITEM_STAGGER,
+          duration: PANEL_IN_DURATION,
+          ease: "power2.out",
+        },
+        at(exampleStart),
+      );
+
+      tl.to(backLinkRef.current, { opacity: 0.7, duration: CONTEXT_BACK_DURATION }, at(backStart));
 
       tl.eventCallback("onUpdate", () => {
         const el = progressRef.current;
@@ -379,23 +529,90 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
           {formula.context.era[locale]}
         </p>
 
-        <p className="context__history">
-          {formula.context.history[locale].split(" ").map((word, wordIndex) => (
-            <span className="word" key={wordIndex}>
-              <span
-                className="word__inner"
-                ref={(el) => {
-                  if (!el) return;
-                  const words = wordRefs.current.get(CONTEXT_HISTORY_KEY) ?? [];
-                  words[wordIndex] = el;
-                  wordRefs.current.set(CONTEXT_HISTORY_KEY, words);
-                }}
-              >
-                {word}
-              </span>
-            </span>
-          ))}
-        </p>
+        <div className="context__stage">
+          <div className="stage__panel">
+            <p className="stage__label">{strings.historyTitle}</p>
+            <p className="stage__text">
+              {formula.context.history[locale].split(" ").map((word, wordIndex) => (
+                <span className="word" key={wordIndex}>
+                  <span
+                    className="word__inner"
+                    ref={(el) => {
+                      if (!el) return;
+                      const words = wordRefs.current.get(CONTEXT_HISTORY_KEY) ?? [];
+                      words[wordIndex] = el;
+                      wordRefs.current.set(CONTEXT_HISTORY_KEY, words);
+                    }}
+                  >
+                    {word}
+                  </span>
+                </span>
+              ))}
+            </p>
+          </div>
+
+          <div className="stage__panel">
+            <p className="stage__label">{strings.timelineTitle}</p>
+            <div className="timeline">
+              <div className="timeline__rail" ref={timelineRailRef} />
+              {formula.context.timeline.map((event, index) => (
+                <div
+                  className="timeline__row"
+                  key={`${event.year}-${String(index)}`}
+                  ref={(el) => {
+                    if (el) timelineRowRefs.current.set(index, el);
+                  }}
+                >
+                  <span className="timeline__year">{event.year}</span>
+                  <span className="timeline__text">{event.label[locale]}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="stage__panel">
+            <p className="stage__label">{strings.useCasesTitle}</p>
+            <div className="usecases">
+              {formula.context.useCases.map((useCase, index) => (
+                <div
+                  className="usecase"
+                  key={`${useCase.title[locale]}-${String(index)}`}
+                  ref={(el) => {
+                    if (el) useCaseRefs.current.set(index, el);
+                  }}
+                >
+                  <p className="usecase__title">{useCase.title[locale]}</p>
+                  <p className="usecase__desc">{useCase.description[locale]}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="stage__panel">
+            <p className="stage__label">{strings.exampleTitle}</p>
+            <p className="example__title" ref={exampleTitleRef}>
+              {formula.context.example.title[locale]}
+            </p>
+            <div className="example">
+              {formula.context.example.lines.map((line, index) => (
+                <p
+                  className="example__line"
+                  key={`${line[locale]}-${String(index)}`}
+                  ref={(el) => {
+                    if (el) exampleLineRefs.current.set(index, el);
+                  }}
+                >
+                  {line[locale]}
+                  {index === formula.context.example.lines.length - 1 && (
+                    <span className="example__cursor" aria-hidden="true">
+                      _
+                    </span>
+                  )}
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
 
         <button type="button" className="context__back" ref={backLinkRef} onClick={scrollToTop}>
           {strings.backToFormula}

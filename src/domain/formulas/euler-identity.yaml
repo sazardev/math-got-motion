@@ -1,0 +1,153 @@
+id: euler-identity
+title:
+  es: Identidad de Euler
+  en: Euler's Identity
+category:
+  es: Análisis complejo
+  en: Complex analysis
+nodes:
+  - id: e
+    type: variable
+    value: e
+    explanation:
+      es: El número de Euler, aproximadamente 2.71828. Base del crecimiento exponencial continuo.
+      en: Euler's number, approximately 2.71828. The base of continuous exponential growth.
+  - id: i
+    type: superscript
+    value: i
+    explanation:
+      es: "La unidad imaginaria: el número tal que i² = −1."
+      en: "The imaginary unit: the number such that i² = −1."
+  - id: pi
+    type: superscript
+    value: π
+    explanation:
+      es: Pi, la razón constante entre la circunferencia de un círculo y su diámetro.
+      en: Pi, the constant ratio between a circle's circumference and its diameter.
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado a la unidad.
+      en: Added to the unit.
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: "La unidad: el primer entero positivo."
+      en: "The unit: the first positive integer."
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: zero
+    type: number
+    value: "0"
+    explanation:
+      es: "Cero: el origen, la nada absoluta."
+      en: "Zero: the origin, absolute nothingness."
+context:
+  author:
+    es: Leonhard Euler
+    en: Leonhard Euler
+  era:
+    es: Suiza, 1707–1783 · publicada en 1748
+    en: Switzerland, 1707–1783 · published in 1748
+  history:
+    es: >-
+      Euler la presentó en su obra Introductio in analysin infinitorum. La ecuación une, en una sola
+      línea, las cinco constantes más importantes de las matemáticas: 0, 1, e, i y π. El físico
+      Richard Feynman llegó a llamarla 'la fórmula más notable del mundo'.
+    en: >-
+      Euler introduced it in his work Introductio in analysin infinitorum. The equation unites, in a
+      single line, mathematics' five most important constants: 0, 1, e, i, and π. Physicist Richard
+      Feynman called it 'the most remarkable formula in the world.'
+  timeline:
+    - year: c. 1714
+      label:
+        es: >-
+          Roger Cotes anota una relación logarítmica entre exponenciales y funciones
+          trigonométricas, antecesora directa de la fórmula.
+        en: >-
+          Roger Cotes notes a logarithmic relationship between exponentials and trigonometric
+          functions, a direct ancestor of the formula.
+    - year: "1740"
+      label:
+        es: >-
+          Euler deriva e^(ix) = cos(x) + i·sen(x) a partir de series infinitas, resolviendo una
+          ecuación diferencial planteada por Johann Bernoulli.
+        en: >-
+          Euler derives e^(ix) = cos(x) + i·sin(x) from infinite series, solving a differential
+          equation posed by Johann Bernoulli.
+    - year: "1748"
+      label:
+        es: >-
+          Publica el caso particular x = π en Introductio in analysin infinitorum, dando origen a la
+          identidad tal como se conoce hoy.
+        en: >-
+          Publishes the special case x = π in Introductio in analysin infinitorum, giving rise to
+          the identity as it's known today.
+    - year: "1988"
+      label:
+        es: >-
+          Los lectores de The Mathematical Intelligencer la votan como 'el teorema más bello de las
+          matemáticas'.
+        en: >-
+          Readers of The Mathematical Intelligencer vote it 'the most beautiful theorem in
+          mathematics'.
+    - year: Hoy
+      label:
+        es: >-
+          Base matemática de los fasores en ingeniería eléctrica y de la transformada de Fourier en
+          procesamiento de señales.
+        en: >-
+          Mathematical basis for phasors in electrical engineering and the Fourier transform in
+          signal processing.
+  useCases:
+    - title:
+        es: Ingeniería eléctrica
+        en: Electrical engineering
+      description:
+        es: >-
+          Los fasores representan corriente alterna como números complejos, simplificando circuitos
+          que serían tediosos con solo senos y cosenos.
+        en: >-
+          Phasors represent alternating current as complex numbers, simplifying circuits that would
+          be tedious with sines and cosines alone.
+    - title:
+        es: Procesamiento de señales
+        en: Signal processing
+      description:
+        es: >-
+          La transformada de Fourier descompone cualquier señal en ondas e^(iωt), el corazón del
+          audio digital y la compresión de imágenes.
+        en: >-
+          The Fourier transform decomposes any signal into e^(iωt) waves — the heart of digital
+          audio and image compression.
+    - title:
+        es: Mecánica cuántica
+        en: Quantum mechanics
+      description:
+        es: >-
+          La función de onda de Schrödinger se expresa con exponenciales complejas; la identidad de
+          Euler es la gramática de ese lenguaje.
+        en: >-
+          Schrödinger's wave function is written with complex exponentials; Euler's identity is the
+          grammar of that language.
+  example:
+    title:
+      es: Verificación numérica
+      en: Numeric verification
+    lines:
+      - es: e^(iπ) = cos(π) + i·sen(π)
+        en: e^(iπ) = cos(π) + i·sin(π)
+      - es: cos(π) = −1
+        en: cos(π) = −1
+      - es: sen(π) = 0
+        en: sin(π) = 0
+      - es: e^(iπ) = −1 + 0i = −1
+        en: e^(iπ) = −1 + 0i = −1
+      - es: −1 + 1 = 0, queda demostrado
+        en: −1 + 1 = 0, proven true

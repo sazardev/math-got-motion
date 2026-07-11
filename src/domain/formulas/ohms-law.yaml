@@ -1,0 +1,149 @@
+id: ohms-law
+title:
+  es: Ley de Ohm
+  en: Ohm's Law
+category:
+  es: Física clásica
+  en: Classical physics
+nodes:
+  - id: v
+    type: variable
+    value: V
+    explanation:
+      es: La diferencia de potencial o voltaje entre dos puntos de un circuito.
+      en: The potential difference, or voltage, between two points in a circuit.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: i
+    type: variable
+    value: I
+    explanation:
+      es: La corriente eléctrica que fluye por el circuito.
+      en: The electric current flowing through the circuit.
+  - id: r
+    type: variable
+    value: R
+    explanation:
+      es: La resistencia eléctrica del conductor, que se opone al paso de la corriente.
+      en: The electrical resistance of the conductor, which opposes the flow of current.
+context:
+  author:
+    es: Georg Ohm
+    en: Georg Ohm
+  era:
+    es: Alemania, 1789–1854 · publicada en 1827
+    en: Germany, 1789–1854 · published in 1827
+  history:
+    es: >-
+      Georg Ohm, profesor de matemáticas en un colegio de Colonia, experimentó durante años con
+      alambres conductores para medir cómo la corriente cambiaba con el voltaje aplicado, y publicó
+      sus resultados en 1827 en "Die galvanische Kette, mathematisch bearbeitet". La comunidad
+      científica alemana recibió su trabajo con frialdad e incluso desdén: lo consideraban demasiado
+      matemático y especulativo para una disciplina experimental, y Ohm llegó a perder su puesto
+      docente. El reconocimiento tardó más de una década en llegar: en 1841 la Royal Society de
+      Londres le otorgó la Medalla Copley, y en 1881 el Congreso Internacional de Electricistas
+      bautizó con su nombre la unidad de resistencia, el ohmio.
+    en: >-
+      Georg Ohm, a mathematics teacher at a school in Cologne, spent years experimenting with
+      conducting wires to measure how current changed with applied voltage, publishing his results
+      in 1827 in "Die galvanische Kette, mathematisch bearbeitet". The German scientific community
+      received his work coldly, even with disdain, considering it too mathematical and speculative
+      for an experimental discipline, and Ohm eventually lost his teaching position. Recognition took
+      more than a decade to arrive: in 1841 the Royal Society of London awarded him the Copley Medal,
+      and in 1881 the International Congress of Electricians named the unit of resistance, the ohm,
+      after him.
+  timeline:
+    - year: "1827"
+      label:
+        es: >-
+          Ohm publica su ley tras años de experimentos con alambres conductores de distinto grosor y
+          longitud.
+        en: >-
+          Ohm publishes his law after years of experiments with conducting wires of different
+          thickness and length.
+    - year: "1830"
+      label:
+        es: >-
+          El trabajo de Ohm es recibido con escepticismo por la comunidad científica alemana, que lo
+          considera excesivamente matemático.
+        en: >-
+          Ohm's work is met with skepticism by the German scientific community, which considers it
+          excessively mathematical.
+    - year: "1841"
+      label:
+        es: >-
+          La Royal Society de Londres le concede la Medalla Copley, dando por fin reconocimiento
+          internacional a su ley.
+        en: >-
+          The Royal Society of London awards him the Copley Medal, finally giving his law
+          international recognition.
+    - year: "1881"
+      label:
+        es: >-
+          El Congreso Internacional de Electricistas en París nombra "ohmio" a la unidad de
+          resistencia eléctrica en su honor.
+        en: >-
+          The International Congress of Electricians in Paris names the unit of electrical
+          resistance the "ohm" in his honor.
+    - year: Hoy
+      label:
+        es: >-
+          Es la primera ecuación que aprende cualquier persona que diseña circuitos eléctricos o
+          electrónicos.
+        en: >-
+          It is the first equation anyone designing electrical or electronic circuits learns.
+  useCases:
+    - title:
+        es: Diseño de circuitos electrónicos
+        en: Electronic circuit design
+      description:
+        es: >-
+          Calcula el valor de resistencias necesario para limitar la corriente en un circuito y
+          proteger sus componentes.
+        en: >-
+          It calculates the resistor value needed to limit current in a circuit and protect its
+          components.
+    - title:
+        es: Instalaciones eléctricas domésticas
+        en: Home electrical wiring
+      description:
+        es: >-
+          Determina el calibre de cable adecuado para soportar la corriente sin sobrecalentarse.
+        en: >-
+          It determines the proper wire gauge to carry the current without overheating.
+    - title:
+        es: Sistemas eléctricos automotrices
+        en: Automotive electrical systems
+      description:
+        es: >-
+          Ayuda a dimensionar fusibles y cableado en el sistema eléctrico de un vehículo.
+        en: >-
+          It helps size fuses and wiring in a vehicle's electrical system.
+    - title:
+        es: Energía solar
+        en: Solar energy
+      description:
+        es: >-
+          Se usa para calcular la corriente que entregan los paneles solares según el voltaje del
+          sistema.
+        en: >-
+          It is used to calculate the current solar panels deliver given the system's voltage.
+  example:
+    title:
+      es: Voltaje de una batería
+      en: Voltage of a battery
+    lines:
+      - es: R = 4 Ω
+        en: R = 4 Ω
+      - es: I = 3 A
+        en: I = 3 A
+      - es: V = I · R
+        en: V = I · R
+      - es: V = 3 × 4
+        en: V = 3 × 4
+      - es: V = 12 voltios
+        en: V = 12 volts

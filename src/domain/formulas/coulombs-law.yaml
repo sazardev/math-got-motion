@@ -1,0 +1,190 @@
+id: coulombs-law
+title:
+  es: Ley de Coulomb
+  en: Coulomb's Law
+category:
+  es: Física clásica
+  en: Classical physics
+nodes:
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: La fuerza eléctrica entre dos cargas puntuales.
+      en: The electric force between two point charges.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: k
+    type: constant
+    value: k
+    explanation:
+      es: La constante de Coulomb, que fija la intensidad de la interacción eléctrica en el vacío.
+      en: Coulomb's constant, which sets the strength of the electric interaction in vacuum.
+  - id: q1
+    type: variable
+    value: q
+    explanation:
+      es: La magnitud de la primera carga eléctrica.
+      en: The magnitude of the first electric charge.
+  - id: sub-1
+    type: superscript
+    value: "1"
+    explanation:
+      es: Un subíndice que identifica a la primera de las dos cargas.
+      en: A subscript identifying the first of the two charges.
+  - id: q2
+    type: variable
+    value: q
+    explanation:
+      es: La magnitud de la segunda carga eléctrica.
+      en: The magnitude of the second electric charge.
+  - id: sub-2
+    type: superscript
+    value: "2"
+    explanation:
+      es: Un subíndice que identifica a la segunda de las dos cargas.
+      en: A subscript identifying the second of the two charges.
+  - id: div
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por el cuadrado de la distancia entre las cargas.
+      en: Divided by the square of the distance between the charges.
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: La distancia que separa a las dos cargas.
+      en: The distance separating the two charges.
+  - id: exp-2
+    type: superscript
+    value: "2"
+    explanation:
+      es: "La distancia elevada al cuadrado: la fuerza cae muy rápido al alejar las cargas."
+      en: "The distance squared: the force drops off very quickly as the charges move apart."
+context:
+  author:
+    es: Charles-Augustin de Coulomb
+    en: Charles-Augustin de Coulomb
+  era:
+    es: Francia, 1736–1806 · publicada en 1785
+    en: France, 1736–1806 · published in 1785
+  history:
+    es: >-
+      Coulomb, ingeniero militar formado en mecánica, construyó una balanza de torsión de altísima
+      sensibilidad para medir fuerzas diminutas: una fibra delgada que se retuerce en proporción a la
+      fuerza aplicada. Con ese instrumento, que él mismo inventó, midió cómo variaba la fuerza entre
+      dos esferas cargadas al cambiar su distancia y su carga, y publicó sus resultados en 1785 ante
+      la Academia de Ciencias de Francia. Su ley reveló que la fuerza eléctrica sigue la misma forma
+      matemática que la gravitación de Newton, con el cuadrado inverso de la distancia, sentando las
+      bases cuantitativas de la electrostática moderna.
+    en: >-
+      Coulomb, a military engineer trained in mechanics, built an extraordinarily sensitive torsion
+      balance to measure tiny forces: a thin fiber that twists in proportion to the applied force.
+      With that instrument, which he invented himself, he measured how the force between two charged
+      spheres varied with their distance and charge, publishing his results in 1785 before the French
+      Academy of Sciences. His law revealed that the electric force follows the same mathematical
+      form as Newton's gravitation, with an inverse square of the distance, laying the quantitative
+      foundations of modern electrostatics.
+  timeline:
+    - year: "1785"
+      label:
+        es: >-
+          Coulomb publica su ley usando mediciones hechas con la balanza de torsión que él mismo
+          diseñó.
+        en: >-
+          Coulomb publishes his law using measurements made with the torsion balance he himself
+          designed.
+    - year: "1873"
+      label:
+        es: >-
+          James Clerk Maxwell unifica electricidad y magnetismo, incorporando la ley de Coulomb como
+          caso estático de sus ecuaciones.
+        en: >-
+          James Clerk Maxwell unifies electricity and magnetism, folding Coulomb's law in as the
+          static case of his equations.
+    - year: "1909"
+      label:
+        es: >-
+          Robert Millikan mide con precisión la carga elemental del electrón, refinando las cantidades
+          que usa la ley.
+        en: >-
+          Robert Millikan precisely measures the elementary charge of the electron, refining the
+          quantities the law uses.
+    - year: "1948"
+      label:
+        es: >-
+          La electrodinámica cuántica explica la ley de Coulomb como el resultado del intercambio de
+          fotones virtuales.
+        en: >-
+          Quantum electrodynamics explains Coulomb's law as the result of virtual photon exchange.
+    - year: Hoy
+      label:
+        es: >-
+          Sigue siendo la base de la ingeniería electrónica, la química de enlaces iónicos y las
+          simulaciones electrostáticas.
+        en: >-
+          It remains the foundation of electronic engineering, ionic-bond chemistry, and
+          electrostatic simulations.
+  useCases:
+    - title:
+        es: Ingeniería electrónica
+        en: Electronic engineering
+      description:
+        es: >-
+          Se usa para calcular fuerzas de repulsión y atracción entre componentes cargados en
+          circuitos y dispositivos.
+        en: >-
+          It is used to calculate attraction and repulsion forces between charged components in
+          circuits and devices.
+    - title:
+        es: Química
+        en: Chemistry
+      description:
+        es: >-
+          Explica la fuerza que mantiene unidos a los iones en un enlace iónico, como en la sal
+          común.
+        en: >-
+          It explains the force that holds ions together in an ionic bond, such as in common table
+          salt.
+    - title:
+        es: Ciencias atmosféricas
+        en: Atmospheric science
+      description:
+        es: >-
+          Ayuda a modelar la acumulación de carga estática en nubes que da origen a los rayos.
+        en: >-
+          It helps model the buildup of static charge in clouds that gives rise to lightning.
+    - title:
+        es: Ingeniería aeroespacial
+        en: Aerospace engineering
+      description:
+        es: >-
+          Se aplica para prever la carga eléctrica que acumulan las naves espaciales en el vacío y
+          evitar descargas dañinas.
+        en: >-
+          It is applied to anticipate the electric charge spacecraft accumulate in vacuum and avoid
+          damaging discharges.
+  example:
+    title:
+      es: Fuerza entre dos cargas
+      en: Force between two charges
+    lines:
+      - es: q1 = 2×10⁻⁶ C
+        en: q1 = 2×10⁻⁶ C
+      - es: q2 = 3×10⁻⁶ C
+        en: q2 = 3×10⁻⁶ C
+      - es: r = 0,5 m
+        en: r = 0.5 m
+      - es: k = 8,99×10⁹ N·m²/C²
+        en: k = 8.99×10⁹ N·m²/C²
+      - es: F = k q1 q2 / r²
+        en: F = k q1 q2 / r²
+      - es: F = 8,99×10⁹ × 6×10⁻¹² / 0,25
+        en: F = 8.99×10⁹ × 6×10⁻¹² / 0.25
+      - es: F ≈ 0,216 N
+        en: F ≈ 0.216 N

@@ -1,0 +1,185 @@
+id: euler-formula
+title:
+  es: Fórmula de Euler
+  en: Euler's Formula
+category:
+  es: Análisis complejo
+  en: Complex analysis
+nodes:
+  - id: e
+    type: variable
+    value: e
+    explanation:
+      es: El número de Euler, aproximadamente 2.71828. Base del crecimiento exponencial continuo.
+      en: Euler's number, approximately 2.71828. The base of continuous exponential growth.
+  - id: i
+    type: superscript
+    value: i
+    explanation:
+      es: "La unidad imaginaria: el número tal que i² = −1."
+      en: "The imaginary unit: the number such that i² = −1."
+  - id: theta
+    type: superscript
+    value: θ
+    explanation:
+      es: "Theta: un ángulo cualquiera, medido en radianes, que puede variar libremente."
+      en: "Theta: any angle, measured in radians, free to vary."
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: cos
+    type: variable
+    value: cos
+    explanation:
+      es: "El coseno del ángulo θ: la componente real, la coordenada horizontal en el círculo unitario."
+      en: "The cosine of θ: the real part, the horizontal coordinate on the unit circle."
+  - id: theta2
+    type: variable
+    value: θ
+    explanation:
+      es: El mismo ángulo θ usado en el exponente.
+      en: The same angle θ used in the exponent.
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado a la parte imaginaria.
+      en: Added to the imaginary part.
+  - id: i2
+    type: variable
+    value: i
+    explanation:
+      es: La unidad imaginaria, marcando esta parte como el componente imaginario del número complejo.
+      en: The imaginary unit, marking this part as the complex number's imaginary component.
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+  - id: sin
+    type: variable
+    value: sen
+    explanation:
+      es: "El seno del ángulo θ: la componente imaginaria, la coordenada vertical en el círculo unitario."
+      en: "The sine of θ: the imaginary part, the vertical coordinate on the unit circle."
+  - id: theta3
+    type: variable
+    value: θ
+    explanation:
+      es: El mismo ángulo θ usado en el coseno.
+      en: The same angle θ used in the cosine.
+context:
+  author:
+    es: Leonhard Euler
+    en: Leonhard Euler
+  era:
+    es: Suiza, 1707–1783 · derivada hacia 1740, publicada en 1748
+    en: Switzerland, 1707–1783 · derived around 1740, published in 1748
+  history:
+    es: >-
+      A diferencia de la identidad de Euler, que es solo el caso particular θ = π, esta fórmula
+      general describe una relación válida para cualquier ángulo θ: conecta la función exponencial
+      compleja con las funciones trigonométricas seno y coseno, mostrando que ambas son, en el fondo,
+      la misma cosa vista desde ángulos distintos. Euler la derivó hacia 1740 combinando las series
+      infinitas de eˣ, sen(x) y cos(x), y la publicó en 1748 en su Introductio in analysin
+      infinitorum. Es la relación que unifica el análisis, el álgebra y la trigonometría, y hoy es
+      la herramienta central detrás de los fasores en ingeniería eléctrica y de la representación de
+      ondas en el procesamiento de señales.
+    en: >-
+      Unlike Euler's Identity, which is only the special case θ = π, this general formula describes
+      a relationship valid for any angle θ: it connects the complex exponential function with the
+      sine and cosine trigonometric functions, showing that both are, at their core, the same thing
+      viewed from different angles. Euler derived it around 1740 by combining the infinite series
+      of eˣ, sin(x), and cos(x), and published it in 1748 in his Introductio in analysin
+      infinitorum. It is the relationship that unifies analysis, algebra, and trigonometry, and is
+      today the central tool behind phasors in electrical engineering and the representation of
+      waves in signal processing.
+  timeline:
+    - year: c. 1714
+      label:
+        es: >-
+          Roger Cotes anota una relación logarítmica entre exponenciales y funciones trigonométricas,
+          antecesora directa de la fórmula general.
+        en: >-
+          Roger Cotes notes a logarithmic relationship between exponentials and trigonometric
+          functions, a direct ancestor of the general formula.
+    - year: "1740"
+      label:
+        es: >-
+          Euler deriva e^(iθ) = cos(θ) + i·sen(θ) a partir de las series infinitas de las tres
+          funciones, resolviendo una ecuación diferencial planteada por Johann Bernoulli.
+        en: >-
+          Euler derives e^(iθ) = cos(θ) + i·sin(θ) from the infinite series of all three functions,
+          solving a differential equation posed by Johann Bernoulli.
+    - year: "1748"
+      label:
+        es: >-
+          Publica la fórmula general en Introductio in analysin infinitorum, junto con el caso
+          particular θ = π que hoy se conoce como la identidad de Euler.
+        en: >-
+          Publishes the general formula in Introductio in analysin infinitorum, along with the
+          special case θ = π known today as Euler's Identity.
+    - year: s. XIX
+      label:
+        es: >-
+          Ingenieros como Charles Steinmetz adoptan la fórmula para representar corriente alterna
+          mediante fasores complejos.
+        en: >-
+          Engineers like Charles Steinmetz adopt the formula to represent alternating current using
+          complex phasors.
+    - year: Hoy
+      label:
+        es: >-
+          Es la base matemática de la transformada de Fourier, los fasores eléctricos y el
+          procesamiento digital de señales.
+        en: >-
+          It is the mathematical basis of the Fourier transform, electrical phasors, and digital
+          signal processing.
+  useCases:
+    - title:
+        es: Ingeniería eléctrica
+        en: Electrical engineering
+      description:
+        es: >-
+          Los fasores representan voltajes y corrientes alternas como números complejos que giran
+          con el ángulo θ, simplificando el análisis de circuitos.
+        en: >-
+          Phasors represent alternating voltages and currents as complex numbers rotating with the
+          angle θ, simplifying circuit analysis.
+    - title:
+        es: Procesamiento de señales
+        en: Signal processing
+      description:
+        es: >-
+          La transformada de Fourier descompone cualquier señal en una suma de ondas e^(iωt) para
+          distintas frecuencias ω, el corazón del audio digital.
+        en: >-
+          The Fourier transform decomposes any signal into a sum of e^(iωt) waves at different
+          frequencies ω, the heart of digital audio.
+    - title:
+        es: Mecánica cuántica
+        en: Quantum mechanics
+      description:
+        es: >-
+          Las funciones de onda dependen del tiempo a través de exponenciales complejas de la forma
+          e^(iθ), que describen la evolución de un sistema cuántico.
+        en: >-
+          Wave functions depend on time through complex exponentials of the form e^(iθ), which
+          describe the evolution of a quantum system.
+  example:
+    title:
+      es: Evaluación en θ = π/2
+      en: Evaluation at θ = π/2
+    lines:
+      - es: e^(iπ/2) = cos(π/2) + i·sen(π/2)
+        en: e^(iπ/2) = cos(π/2) + i·sin(π/2)
+      - es: cos(π/2) = 0
+        en: cos(π/2) = 0
+      - es: sen(π/2) = 1
+        en: sin(π/2) = 1
+      - es: e^(iπ/2) = 0 + i·1 = i
+        en: e^(iπ/2) = 0 + i·1 = i

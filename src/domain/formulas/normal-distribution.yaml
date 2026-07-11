@@ -1,0 +1,217 @@
+id: normal-distribution
+title:
+  es: Distribución Normal
+  en: Normal Distribution
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+nodes:
+  - id: f-x
+    type: variable
+    value: f(x)
+    explanation:
+      es: >-
+        La densidad de probabilidad: qué tan frecuente es cada valor de x en la distribución.
+      en: >-
+        The probability density: how frequent each value of x is in the distribution.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: El numerador de la constante de normalización.
+      en: The numerator of the normalizing constant.
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+  - id: sigma
+    type: variable
+    value: σ
+    explanation:
+      es: >-
+        Sigma, la desviación estándar: mide qué tan dispersos están los valores alrededor del
+        promedio.
+      en: >-
+        Sigma, the standard deviation: measures how spread out the values are around the mean.
+  - id: sqrt-2pi
+    type: operator
+    value: √(2π)
+    explanation:
+      es: >-
+        La raíz cuadrada de dos veces pi: una constante que asegura que el área bajo la curva sume
+        exactamente 1.
+      en: >-
+        The square root of two times pi: a constant that ensures the area under the curve sums to
+        exactly 1.
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+  - id: e
+    type: variable
+    value: e
+    explanation:
+      es: El número de Euler, base del decaimiento exponencial de la curva en forma de campana.
+      en: Euler's number, the base of the bell curve's exponential decay.
+  - id: neg
+    type: superscript
+    value: "−"
+    explanation:
+      es: El exponente de e es negativo, lo que hace que la curva decaiga al alejarse del centro.
+      en: The exponent of e is negative, which makes the curve decay away from the center.
+  - id: x-minus-mu
+    type: superscript
+    value: (x−μ)
+    explanation:
+      es: >-
+        La distancia entre un valor x y la media μ (mu): qué tan lejos está ese valor del centro.
+      en: >-
+        The distance between a value x and the mean μ (mu): how far that value sits from the center.
+  - id: sq
+    type: superscript
+    value: "²"
+    explanation:
+      es: Esa distancia se eleva al cuadrado, para que siempre cuente como positiva.
+      en: That distance is squared, so it always counts as positive.
+  - id: over
+    type: superscript
+    value: "/"
+    explanation:
+      es: Dividida entre el término de abajo, dentro del exponente.
+      en: Divided by the term below, inside the exponent.
+  - id: two-sigma-sq
+    type: superscript
+    value: 2σ²
+    explanation:
+      es: >-
+        Dos veces la varianza (sigma al cuadrado): controla qué tan rápido decae la curva según su
+        dispersión.
+      en: >-
+        Twice the variance (sigma squared): controls how fast the curve decays based on its spread.
+context:
+  author:
+    es: Abraham de Moivre y Carl Friedrich Gauss
+    en: Abraham de Moivre and Carl Friedrich Gauss
+  era:
+    es: Francia/Alemania, 1733–1809
+    en: France/Germany, 1733–1809
+  history:
+    es: >-
+      Abraham de Moivre la introdujo en 1733 como una aproximación a la distribución binomial cuando
+      el número de ensayos es grande. Décadas más tarde, Carl Friedrich Gauss la redescubrió en 1809
+      al modelar los errores de observación en las órbitas planetarias, y hoy suele llevar su nombre:
+      'distribución gaussiana'. Pierre-Simon Laplace también contribuyó a difundirla, probando su
+      papel central en el teorema del límite central: la suma de muchas variables aleatorias
+      independientes tiende a esta forma de campana, sin importar su distribución original.
+    en: >-
+      Abraham de Moivre introduced it in 1733 as an approximation to the binomial distribution when
+      the number of trials is large. Decades later, Carl Friedrich Gauss rediscovered it in 1809
+      while modeling observation errors in planetary orbits, and it's often named after him: the
+      'Gaussian distribution.' Pierre-Simon Laplace also helped popularize it, proving its central
+      role in the central limit theorem: the sum of many independent random variables tends toward
+      this bell shape, regardless of their original distribution.
+  timeline:
+    - year: "1733"
+      label:
+        es: >-
+          De Moivre publica la curva como una aproximación práctica a la distribución binomial para
+          muestras grandes.
+        en: >-
+          De Moivre publishes the curve as a practical approximation to the binomial distribution
+          for large samples.
+    - year: "1809"
+      label:
+        es: >-
+          Gauss la usa para modelar errores de medición astronómica en Theoria motus corporum
+          coelestium.
+        en: >-
+          Gauss uses it to model astronomical measurement errors in Theoria motus corporum
+          coelestium.
+    - year: "1810"
+      label:
+        es: >-
+          Laplace demuestra una versión temprana del teorema del límite central, explicando por qué
+          la curva aparece en tantos fenómenos.
+        en: >-
+          Laplace proves an early version of the central limit theorem, explaining why the curve
+          appears in so many phenomena.
+    - year: "1894"
+      label:
+        es: >-
+          Karl Pearson populariza el término 'distribución normal' en sus trabajos de bioestadística.
+        en: >-
+          Karl Pearson popularizes the term 'normal distribution' in his biostatistics work.
+    - year: Hoy
+      label:
+        es: >-
+          Es la base de los tests estadísticos, el control de calidad industrial y buena parte del
+          aprendizaje automático.
+        en: >-
+          It underlies statistical hypothesis tests, industrial quality control, and much of machine
+          learning.
+  useCases:
+    - title:
+        es: Control de calidad industrial
+        en: Industrial quality control
+      description:
+        es: >-
+          Las fábricas modelan la variación de piezas producidas en serie para detectar defectos
+          fuera de un rango esperado.
+        en: >-
+          Factories model the variation in mass-produced parts to flag defects outside an expected
+          range.
+    - title:
+        es: Pruebas estandarizadas
+        en: Standardized testing
+      description:
+        es: >-
+          Los puntajes de exámenes como el SAT se diseñan y calibran asumiendo una distribución
+          normal entre los evaluados.
+        en: >-
+          Scores on exams like the SAT are designed and scaled assuming a normal distribution among
+          test-takers.
+    - title:
+        es: Finanzas y riesgo
+        en: Finance and risk
+      description:
+        es: >-
+          Modelos de riesgo financiero usan la curva normal para estimar la probabilidad de
+          movimientos de precios.
+        en: >-
+          Financial risk models use the normal curve to estimate the probability of price movements.
+    - title:
+        es: Aprendizaje automático
+        en: Machine learning
+      description:
+        es: >-
+          Muchos algoritmos asumen ruido con distribución normal al ajustar modelos a datos
+          observados.
+        en: >-
+          Many algorithms assume normally distributed noise when fitting models to observed data.
+  example:
+    title:
+      es: Altura promedio de un grupo
+      en: Average height of a group
+    lines:
+      - es: μ = 170 cm, σ = 10 cm
+        en: μ = 170 cm, σ = 10 cm
+      - es: Se evalúa en x = 180 cm
+        en: Evaluated at x = 180 cm
+      - es: (x−μ)² = (180−170)² = 100
+        en: (x−μ)² = (180−170)² = 100
+      - es: 2σ² = 2×100 = 200
+        en: 2σ² = 2×100 = 200
+      - es: exponente = −100/200 = −0.5
+        en: exponent = −100/200 = −0.5
+      - es: f(180) ≈ (1/(10×2.5066))×e^(−0.5) ≈ 0.0242
+        en: f(180) ≈ (1/(10×2.5066))×e^(−0.5) ≈ 0.0242

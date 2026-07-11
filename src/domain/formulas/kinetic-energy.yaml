@@ -1,0 +1,175 @@
+id: kinetic-energy
+title:
+  es: Energía Cinética
+  en: Kinetic Energy
+category:
+  es: Física clásica
+  en: Classical physics
+nodes:
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: La energía asociada al movimiento de un cuerpo.
+      en: The energy associated with a body's motion.
+  - id: sub-k
+    type: superscript
+    value: k
+    explanation:
+      es: Un subíndice que indica que se trata específicamente de energía cinética.
+      en: A subscript indicating this is specifically kinetic energy.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: half
+    type: number
+    value: "½"
+    explanation:
+      es: "Un medio: el factor numérico que hace que la fórmula concuerde con el trabajo realizado."
+      en: "One half: the numerical factor that makes the formula match the work done."
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: La masa del cuerpo en movimiento.
+      en: The mass of the moving body.
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La velocidad del cuerpo.
+      en: The body's velocity.
+  - id: exp-2
+    type: superscript
+    value: "2"
+    explanation:
+      es: "La velocidad elevada al cuadrado: duplicar la velocidad cuadruplica la energía."
+      en: "The velocity squared: doubling the speed quadruples the energy."
+context:
+  author:
+    es: Gaspard-Gustave de Coriolis
+    en: Gaspard-Gustave de Coriolis
+  era:
+    es: Francia, 1792–1843 · forma moderna publicada en 1829
+    en: France, 1792–1843 · modern form published in 1829
+  history:
+    es: >-
+      La idea de que el movimiento contiene una "fuerza" cuantificable se remonta a Gottfried
+      Leibniz, quien hacia 1686 propuso la vis viva (mv²) como la magnitud que en verdad se conserva
+      en los choques, enfrentándose a los cartesianos que solo reconocían el momento (mv). La
+      disputa duró décadas. Émilie du Châtelet, en sus Institutions de Physique de 1740, usó los
+      experimentos de caída de esferas en arcilla de Willem 's Gravesande para mostrar
+      empíricamente que el efecto del impacto crecía con el cuadrado de la velocidad, dando
+      evidencia experimental decisiva a favor de la vis viva. Fue el ingeniero francés
+      Gaspard-Gustave de Coriolis quien, en 1829, en su obra sobre el cálculo del efecto de las
+      máquinas, formalizó el concepto moderno de "trabajo" y fijó el factor de un medio, dejando la
+      energía cinética con su forma actual, ½mv².
+    en: >-
+      The idea that motion contains a quantifiable "force" traces back to Gottfried Leibniz, who
+      around 1686 proposed vis viva (mv²) as the quantity truly conserved in collisions, clashing
+      with the Cartesians who recognized only momentum (mv). The dispute lasted decades. Émilie du
+      Châtelet, in her 1740 Institutions de Physique, used Willem 's Gravesande's experiments
+      dropping spheres into clay to empirically show that impact effects grew with the square of
+      velocity, giving decisive experimental evidence in favor of vis viva. It was the French
+      engineer Gaspard-Gustave de Coriolis who, in 1829, in his work on the calculation of the
+      effect of machines, formalized the modern concept of "work" and fixed the factor of one half,
+      leaving kinetic energy in its current form, ½mv².
+  timeline:
+    - year: c. 1686
+      label:
+        es: >-
+          Leibniz propone la vis viva (mv²) como la verdadera medida conservada del movimiento,
+          desatando una disputa con los cartesianos.
+        en: >-
+          Leibniz proposes vis viva (mv²) as the true conserved measure of motion, sparking a
+          dispute with the Cartesians.
+    - year: "1740"
+      label:
+        es: >-
+          Émilie du Châtelet aporta evidencia experimental de caída de esferas que respalda la vis
+          viva frente al momento simple.
+        en: >-
+          Émilie du Châtelet provides experimental sphere-drop evidence supporting vis viva over
+          simple momentum.
+    - year: "1829"
+      label:
+        es: >-
+          Gaspard-Gustave de Coriolis formaliza el concepto de "trabajo" y define la energía cinética
+          moderna como ½mv².
+        en: >-
+          Gaspard-Gustave de Coriolis formalizes the concept of "work" and defines modern kinetic
+          energy as ½mv².
+    - year: "1853"
+      label:
+        es: >-
+          William Rankine acuña el término "energía cinética" y la integra al naciente principio de
+          conservación de la energía.
+        en: >-
+          William Rankine coins the term "kinetic energy" and folds it into the emerging principle
+          of energy conservation.
+    - year: Hoy
+      label:
+        es: >-
+          Es central para el diseño de seguridad vehicular, la biomecánica deportiva y el
+          almacenamiento de energía en volantes de inercia.
+        en: >-
+          It is central to vehicle safety design, sports biomechanics, and flywheel energy storage.
+  useCases:
+    - title:
+        es: Seguridad automotriz
+        en: Automotive safety
+      description:
+        es: >-
+          Calcula la energía que debe absorber una zona de deformación en un choque a determinada
+          velocidad.
+        en: >-
+          It calculates the energy a crumple zone must absorb in a crash at a given speed.
+    - title:
+        es: Biomecánica deportiva
+        en: Sports biomechanics
+      description:
+        es: >-
+          Estima la energía transferida en un golpe o lanzamiento a partir de la masa y velocidad
+          del implemento.
+        en: >-
+          It estimates the energy transferred in a strike or throw from the mass and speed of the
+          implement.
+    - title:
+        es: Energía eólica
+        en: Wind energy
+      description:
+        es: >-
+          Cuantifica la energía cinética del aire en movimiento que una turbina puede convertir en
+          electricidad.
+        en: >-
+          It quantifies the kinetic energy of moving air that a turbine can convert into
+          electricity.
+    - title:
+        es: Ingeniería mecánica
+        en: Mechanical engineering
+      description:
+        es: >-
+          Dimensiona volantes de inercia que almacenan energía cinética para suavizar el
+          funcionamiento de máquinas.
+        en: >-
+          It sizes flywheels that store kinetic energy to smooth out machine operation.
+  example:
+    title:
+      es: Energía de un auto en movimiento
+      en: Energy of a moving car
+    lines:
+      - es: m = 1000 kg
+        en: m = 1000 kg
+      - es: v = 20 m/s
+        en: v = 20 m/s
+      - es: Ek = ½ m v²
+        en: Ek = ½ m v²
+      - es: Ek = ½ × 1000 × 20²
+        en: Ek = ½ × 1000 × 20²
+      - es: Ek = ½ × 1000 × 400
+        en: Ek = ½ × 1000 × 400
+      - es: Ek = 200 000 J
+        en: Ek = 200,000 J

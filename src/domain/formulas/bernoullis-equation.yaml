@@ -1,0 +1,199 @@
+id: bernoullis-equation
+title:
+  es: Ecuación de Bernoulli
+  en: Bernoulli's Equation
+category:
+  es: Física clásica
+  en: Classical physics
+nodes:
+  - id: p
+    type: variable
+    value: P
+    explanation:
+      es: La presión del fluido en un punto de la corriente.
+      en: The fluid's pressure at a point along the flow.
+  - id: plus-1
+    type: operator
+    value: "+"
+    explanation:
+      es: Sumada a la energía cinética del fluido por unidad de volumen.
+      en: Added to the fluid's kinetic energy per unit of volume.
+  - id: half
+    type: number
+    value: "½"
+    explanation:
+      es: "Un medio: el mismo factor que aparece en la energía cinética."
+      en: "One half: the same factor that appears in kinetic energy."
+  - id: rho-1
+    type: variable
+    value: ρ
+    explanation:
+      es: La densidad del fluido.
+      en: The fluid's density.
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La velocidad del fluido en ese punto.
+      en: The fluid's velocity at that point.
+  - id: exp-2
+    type: superscript
+    value: "2"
+    explanation:
+      es: La velocidad elevada al cuadrado.
+      en: The velocity squared.
+  - id: plus-2
+    type: operator
+    value: "+"
+    explanation:
+      es: Sumada también a la energía potencial gravitatoria por unidad de volumen.
+      en: Also added to the gravitational potential energy per unit of volume.
+  - id: rho-2
+    type: variable
+    value: ρ
+    explanation:
+      es: Otra vez la densidad del fluido.
+      en: The fluid's density again.
+  - id: g
+    type: constant
+    value: g
+    explanation:
+      es: La aceleración de la gravedad.
+      en: The acceleration due to gravity.
+  - id: h
+    type: variable
+    value: h
+    explanation:
+      es: La altura del punto respecto de un nivel de referencia.
+      en: The height of the point relative to a reference level.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: constant
+    type: constant
+    value: C
+    explanation:
+      es: "Una constante: la suma total no cambia a lo largo de una misma línea de corriente."
+      en: "A constant: the total sum stays the same all along a given streamline."
+context:
+  author:
+    es: Daniel Bernoulli
+    en: Daniel Bernoulli
+  era:
+    es: Suiza, 1700–1782 · publicada en 1738
+    en: Switzerland, 1700–1782 · published in 1738
+  history:
+    es: >-
+      Daniel Bernoulli perteneció a una familia de matemáticos suizos marcada por la rivalidad: su
+      propio padre, Johann, compitió con él y publicó una obra similar, Hydraulica, adelantando su
+      fecha para reclamar prioridad. A pesar de ello, fue Daniel quien en 1738, en su tratado
+      Hydrodynamica, estableció la relación fundamental entre la presión, la velocidad y la altura de
+      un fluido en movimiento: donde el fluido se acelera, su presión cae. La idea, contraintuitiva
+      en su momento, terminaría explicando fenómenos tan distintos como la sustentación de un ala de
+      avión o el funcionamiento de un carburador, y sigue siendo una de las piedras angulares de la
+      mecánica de fluidos.
+    en: >-
+      Daniel Bernoulli belonged to a family of Swiss mathematicians marked by rivalry: his own
+      father, Johann, competed with him and published a similar work, Hydraulica, backdating it to
+      claim priority. Despite this, it was Daniel who in 1738, in his treatise Hydrodynamica,
+      established the fundamental relationship between the pressure, velocity, and height of a
+      moving fluid: where the fluid speeds up, its pressure drops. The idea, counterintuitive at the
+      time, would go on to explain phenomena as different as the lift of an airplane wing and the
+      workings of a carburetor, and it remains one of the cornerstones of fluid mechanics.
+  timeline:
+    - year: "1738"
+      label:
+        es: >-
+          Daniel Bernoulli publica Hydrodynamica, estableciendo la relación entre presión, velocidad
+          y altura de un fluido.
+        en: >-
+          Daniel Bernoulli publishes Hydrodynamica, establishing the relationship between a fluid's
+          pressure, velocity, and height.
+    - year: "1752"
+      label:
+        es: >-
+          Leonhard Euler deriva las ecuaciones diferenciales del movimiento de fluidos, dando una
+          base rigurosa al principio de Bernoulli.
+        en: >-
+          Leonhard Euler derives the differential equations of fluid motion, giving Bernoulli's
+          principle a rigorous foundation.
+    - year: s. XIX
+      label:
+        es: >-
+          Los pioneros de la aeronáutica empiezan a usar la relación presión-velocidad para entender
+          la sustentación de las alas.
+        en: >-
+          Aeronautics pioneers begin using the pressure-velocity relationship to understand wing
+          lift.
+    - year: "1903"
+      label:
+        es: >-
+          El primer vuelo de los hermanos Wright se apoya, entre otros efectos, en principios
+          aerodinámicos derivados de esta ecuación.
+        en: >-
+          The Wright brothers' first flight relies, among other effects, on aerodynamic principles
+          derived from this equation.
+    - year: Hoy
+      label:
+        es: >-
+          Es clave en el diseño de alas de avión, carburadores, medidores Venturi y en el diagnóstico
+          médico de flujo sanguíneo.
+        en: >-
+          It is key to airplane wing design, carburetors, Venturi flow meters, and medical diagnosis
+          of blood flow.
+  useCases:
+    - title:
+        es: Aeronáutica
+        en: Aeronautics
+      description:
+        es: >-
+          Explica cómo la diferencia de velocidad del aire sobre y bajo un ala genera la fuerza de
+          sustentación.
+        en: >-
+          It explains how the difference in air speed above and below a wing generates lift.
+    - title:
+        es: Ingeniería automotriz
+        en: Automotive engineering
+      description:
+        es: >-
+          Es la base del funcionamiento de carburadores e inyectores que mezclan aire y combustible.
+        en: >-
+          It underlies the operation of carburetors and injectors that mix air and fuel.
+    - title:
+        es: Ingeniería civil e hidráulica
+        en: Civil and hydraulic engineering
+      description:
+        es: >-
+          Se usa para diseñar medidores Venturi y sistemas de tuberías que miden y controlan el flujo
+          de agua.
+        en: >-
+          It is used to design Venturi meters and pipe systems that measure and control water flow.
+    - title:
+        es: Medicina cardiovascular
+        en: Cardiovascular medicine
+      description:
+        es: >-
+          Ayuda a interpretar cómo el estrechamiento de una arteria altera la presión y velocidad de
+          la sangre.
+        en: >-
+          It helps interpret how the narrowing of an artery alters blood pressure and velocity.
+  example:
+    title:
+      es: Estrechamiento en una tubería
+      en: Constriction in a pipe
+    lines:
+      - es: ρ = 1000 kg/m³
+        en: ρ = 1000 kg/m³
+      - es: P1 = 200 000 Pa, v1 = 2 m/s
+        en: P1 = 200,000 Pa, v1 = 2 m/s
+      - es: v2 = 4 m/s (tubería más angosta)
+        en: v2 = 4 m/s (narrower pipe)
+      - es: P1 + ½ρv1² = P2 + ½ρv2²
+        en: P1 + ½ρv1² = P2 + ½ρv2²
+      - es: 200 000 + 2000 = P2 + 8000
+        en: 200,000 + 2000 = P2 + 8000
+      - es: P2 = 194 000 Pa
+        en: P2 = 194,000 Pa

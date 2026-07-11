@@ -76,6 +76,9 @@ export default defineConfig(async ({ mode }) => ({
         },
       },
     },
-    chunkSizeWarningLimit: 600,
+    // 38 formulas' worth of bilingual content lives inline in the bundle (see
+    // src/domain/formulas/index.ts) — this threshold tracks that content
+    // growth, not a code-splitting regression.
+    chunkSizeWarningLimit: 800,
   },
 }));

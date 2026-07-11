@@ -1,0 +1,176 @@
+id: drake-equation
+title:
+  es: Ecuación de Drake
+  en: Drake Equation
+category:
+  es: Astronomía
+  en: Astronomy
+nodes:
+  - id: n
+    type: variable
+    value: N
+    explanation:
+      es: El número de civilizaciones en la Vía Láctea cuyas emisiones electromagnéticas podríamos detectar.
+      en: The number of civilizations in the Milky Way whose electromagnetic emissions we could detect.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual al producto de los siguientes factores.
+      en: Equals the product of the following factors.
+  - id: r-star
+    type: variable
+    value: R*
+    explanation:
+      es: La tasa promedio de formación de nuevas estrellas en la galaxia, en estrellas por año.
+      en: The average rate of new star formation in the galaxy, in stars per year.
+  - id: fp
+    type: variable
+    value: fp
+    explanation:
+      es: La fracción de esas estrellas que tienen planetas.
+      en: The fraction of those stars that have planets.
+  - id: ne
+    type: variable
+    value: ne
+    explanation:
+      es: El número promedio de planetas por estrella que podrían albergar vida.
+      en: The average number of planets per star that could potentially support life.
+  - id: fl
+    type: variable
+    value: fl
+    explanation:
+      es: La fracción de esos planetas donde la vida realmente llega a desarrollarse.
+      en: The fraction of those planets where life actually develops.
+  - id: fi
+    type: variable
+    value: fi
+    explanation:
+      es: La fracción de planetas con vida donde surge vida inteligente.
+      en: The fraction of planets with life where intelligent life emerges.
+  - id: fc
+    type: variable
+    value: fc
+    explanation:
+      es: La fracción de civilizaciones inteligentes que desarrollan tecnología detectable a distancia.
+      en: The fraction of intelligent civilizations that develop technology detectable from afar.
+  - id: l
+    type: variable
+    value: L
+    explanation:
+      es: El tiempo, en años, durante el cual una civilización emite señales detectables al espacio.
+      en: The length of time, in years, a civilization releases detectable signals into space.
+context:
+  author:
+    es: Frank Drake
+    en: Frank Drake
+  era:
+    es: Estados Unidos, 1930–2022 · formulada en 1961
+    en: United States, 1930–2022 · formulated in 1961
+  history:
+    es: >-
+      Drake formuló la ecuación en 1961 como agenda para una reunión en el Observatorio Nacional de
+      Radioastronomía de Green Bank, Virginia Occidental, considerada el punto de partida formal de la
+      búsqueda de inteligencia extraterrestre (SETI). No pretendía dar una respuesta numérica exacta,
+      sino organizar en factores separados todo lo que habría que saber para estimar cuántas
+      civilizaciones detectables podrían existir en la galaxia. Muchos de sus términos, especialmente
+      los últimos, siguen siendo enormemente inciertos: la ecuación es hoy más una herramienta para
+      estructurar preguntas que una fórmula para calcular respuestas.
+    en: >-
+      Drake formulated the equation in 1961 as an agenda for a meeting at the National Radio Astronomy
+      Observatory in Green Bank, West Virginia, considered the formal starting point of the search for
+      extraterrestrial intelligence (SETI). It was never meant to yield an exact numerical answer, but
+      to organize into separate factors everything one would need to know to estimate how many
+      detectable civilizations might exist in the galaxy. Many of its terms, especially the later
+      ones, remain enormously uncertain: today the equation is more a tool for structuring questions
+      than a formula for computing answers.
+  timeline:
+    - year: "1960"
+      label:
+        es: >-
+          Drake realiza el Proyecto Ozma, la primera búsqueda moderna de señales de radio de posibles
+          civilizaciones cercanas.
+        en: >-
+          Drake conducts Project Ozma, the first modern search for radio signals from possible nearby
+          civilizations.
+    - year: "1961"
+      label:
+        es: >-
+          Formula la ecuación para estructurar la reunión de Green Bank sobre la probabilidad de
+          civilizaciones detectables.
+        en: >-
+          Formulates the equation to structure the Green Bank meeting on the probability of detectable
+          civilizations.
+    - year: "1974"
+      label:
+        es: >-
+          Se envía el mensaje de Arecibo, un intento de comunicación interestelar inspirado en el
+          espíritu de la ecuación.
+        en: >-
+          The Arecibo message is sent, an attempt at interstellar communication in the spirit of the
+          equation.
+    - year: "1995"
+      label:
+        es: >-
+          Se confirma el primer exoplaneta, 51 Pegasi b, dando por primera vez datos reales para
+          refinar los términos fp y ne.
+        en: >-
+          The first exoplanet, 51 Pegasi b, is confirmed, providing real data for the first time to
+          refine the fp and ne terms.
+    - year: Hoy
+      label:
+        es: >-
+          El telescopio espacial Kepler y sus sucesores han catalogado miles de exoplanetas, afinando
+          las estimaciones de fp y ne.
+        en: >-
+          The Kepler space telescope and its successors have cataloged thousands of exoplanets,
+          sharpening estimates of fp and ne.
+  useCases:
+    - title:
+        es: Investigación SETI
+        en: SETI research
+      description:
+        es: >-
+          Sirve de marco para organizar estrategias de búsqueda y priorizar qué estrellas observar.
+        en: >-
+          Serves as a framework for organizing search strategies and prioritizing which stars to
+          observe.
+    - title:
+        es: Astrobiología
+        en: Astrobiology
+      description:
+        es: >-
+          Orienta el estudio de qué condiciones planetarias son necesarias para la habitabilidad,
+          afinando términos como ne y fl.
+        en: >-
+          Guides the study of which planetary conditions are needed for habitability, refining terms
+          like ne and fl.
+    - title:
+        es: Divulgación científica
+        en: Science communication
+      description:
+        es: >-
+          Popularizó el razonamiento probabilístico sobre la prevalencia de la vida en el universo para
+          públicos no especializados.
+        en: >-
+          Popularized probabilistic reasoning about the prevalence of life in the universe for
+          non-specialist audiences.
+  example:
+    title:
+      es: "Estimación ilustrativa (valores especulativos)"
+      en: "Illustrative estimate (speculative values)"
+    lines:
+      - es: "R* = 1.5 estrellas nuevas por año (estimación)"
+        en: "R* = 1.5 new stars per year (estimate)"
+      - es: "fp = 1, ne = 0.2 (planetas potencialmente habitables por estrella)"
+        en: "fp = 1, ne = 0.2 (potentially habitable planets per star)"
+      - es: "fl = 0.13, fi = 0.01, fc = 0.01 (fracciones muy especulativas)"
+        en: "fl = 0.13, fi = 0.01, fc = 0.01 (highly speculative fractions)"
+      - es: "L = 10,000 años de emisión detectable (estimación)"
+        en: "L = 10,000 years of detectable emission (estimate)"
+      - es: N = 1.5 × 1 × 0.2 × 0.13 × 0.01 × 0.01 × 10000
+        en: N = 1.5 × 1 × 0.2 × 0.13 × 0.01 × 0.01 × 10000
+      - es: N ≈ 0.0039 civilizaciones detectables
+        en: N ≈ 0.0039 detectable civilizations
+      - es: "Son suposiciones ilustrativas, no constantes medidas: el valor real es incierto"
+        en: "These are illustrative guesses, not measured constants — the real value is uncertain"

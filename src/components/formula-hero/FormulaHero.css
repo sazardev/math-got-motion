@@ -117,8 +117,36 @@
   will-change: transform, opacity;
 }
 
-.context__history {
-  margin: 0 0 2.5rem;
+.context__stage {
+  position: relative;
+  min-height: clamp(17rem, 48vh, 27rem);
+  margin: 0 0 1.5rem;
+}
+
+/* Los cuatro paneles ocupan el mismo espacio (inset: 0) y se turnan por
+   completo mediante la opacidad de sus propios elementos internos — no hay
+   necesidad de ocultar el panel como bloque, sus ítems ya nacen en opacity: 0. */
+.stage__panel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stage__label {
+  margin: 0 0 1rem;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-size: clamp(0.7rem, 2vw, 0.875rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(65%);
+  will-change: transform, opacity;
+}
+
+.stage__text {
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -128,6 +156,122 @@
   font-size: clamp(0.9rem, 2.6vw, 1.15rem);
   line-height: 1.55;
   opacity: 0.85;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  width: 100%;
+  padding-left: 1.4rem;
+}
+
+.timeline__rail {
+  position: absolute;
+  left: 0.15rem;
+  top: 0.3rem;
+  bottom: 0.3rem;
+  width: 1px;
+  background: var(--fg);
+  opacity: 0.4;
+  transform: scaleY(0);
+  transform-origin: top;
+  will-change: transform;
+}
+
+.timeline__row {
+  display: flex;
+  gap: 0.85rem;
+  align-items: baseline;
+  text-align: left;
+  opacity: 0;
+  transform: translateX(-16%);
+  will-change: transform, opacity;
+}
+
+.timeline__year {
+  flex: 0 0 auto;
+  min-width: 5.5rem;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-size: clamp(0.68rem, 1.8vw, 0.8rem);
+  letter-spacing: 0.04em;
+  opacity: 0.65;
+}
+
+.timeline__text {
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(0.85rem, 2.3vw, 1.02rem);
+  line-height: 1.4;
+}
+
+.usecases {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.usecase {
+  flex: 1 1 13rem;
+  max-width: 15.5rem;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(38%) rotate(-3deg);
+  will-change: transform, opacity;
+}
+
+.usecase__title {
+  margin: 0 0 0.35rem;
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+}
+
+.usecase__desc {
+  margin: 0;
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(0.8rem, 2.1vw, 0.92rem);
+  line-height: 1.45;
+  opacity: 0.85;
+}
+
+.example__title {
+  margin: 0 0 0.9rem;
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  opacity: 0;
+  transform: translateY(50%);
+  will-change: transform, opacity;
+}
+
+.example {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-size: clamp(0.85rem, 2.3vw, 1.02rem);
+}
+
+.example__line {
+  margin: 0;
+  opacity: 0;
+  transform: translateX(-10%);
+  will-change: transform, opacity;
+}
+
+.example__cursor {
+  display: inline-block;
+  margin-left: 0.2em;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .context__back {
@@ -189,8 +333,12 @@
     margin-bottom: 0.9rem;
   }
 
-  .context__history {
+  .context__stage {
+    min-height: clamp(13rem, 60vh, 20rem);
     margin-bottom: 1rem;
+  }
+
+  .stage__text {
     font-size: clamp(0.8rem, 2.2vw, 0.95rem);
   }
 
@@ -217,6 +365,24 @@
 
   .explanation {
     font-size: clamp(0.9rem, 4vw, 1.25rem);
+  }
+
+  .context__stage {
+    min-height: clamp(15rem, 62vh, 24rem);
+  }
+
+  .usecase {
+    flex-basis: 100%;
+    max-width: 22rem;
+  }
+
+  .timeline__row {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .timeline__year {
+    min-width: 0;
   }
 
   .hero__progress {

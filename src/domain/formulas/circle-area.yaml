@@ -1,0 +1,137 @@
+id: circle-area
+title:
+  es: Área del Círculo
+  en: Area of a Circle
+category:
+  es: Geometría
+  en: Geometry
+nodes:
+  - id: area
+    type: variable
+    value: A
+    explanation:
+      es: "El área: la superficie total que ocupa el círculo."
+      en: "The area: the total surface the circle occupies."
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: Pi, la razón constante entre la circunferencia de un círculo y su diámetro.
+      en: Pi, the constant ratio between a circle's circumference and its diameter.
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "El radio: la distancia entre el centro del círculo y su borde."
+      en: "The radius: the distance from the circle's center to its edge."
+  - id: r-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Elevado al cuadrado: multiplicado por sí mismo."
+      en: "Squared: multiplied by itself."
+context:
+  author:
+    es: Arquímedes de Siracusa
+    en: Archimedes of Syracuse
+  era:
+    es: Siracusa, Sicilia, c. 287–212 a.C.
+    en: Syracuse, Sicily, c. 287–212 BC
+  history:
+    es: >-
+      En su tratado Sobre la medida del círculo, Arquímedes demostró esta fórmula con el método de
+      exhausción, aproximando el círculo con polígonos de cada vez más lados. Sentó las bases de lo
+      que siglos después sería el cálculo integral.
+    en: >-
+      In his treatise Measurement of a Circle, Archimedes proved this formula using the method of
+      exhaustion, approximating the circle with polygons of ever more sides. It laid groundwork for
+      what would, centuries later, become integral calculus.
+  timeline:
+    - year: c. 1650 a.C.
+      label:
+        es: >-
+          El papiro de Rhind, en Egipto, ya aproxima el área del círculo restando un noveno al
+          diámetro y elevando al cuadrado.
+        en: >-
+          The Rhind Papyrus, in Egypt, already approximates a circle's area by subtracting a ninth
+          from the diameter and squaring it.
+    - year: c. 250 a.C.
+      label:
+        es: Arquímedes prueba A = πr² con el método de exhausción y acota π entre 223/71 y 22/7.
+        en: >-
+          Archimedes proves A = πr² using the method of exhaustion and bounds π between 223/71 and
+          22/7.
+    - year: s. XVII
+      label:
+        es: >-
+          Newton y Leibniz formalizan el cálculo integral, convirtiendo la exhausción de Arquímedes
+          en un método general.
+        en: >-
+          Newton and Leibniz formalize integral calculus, turning Archimedes' exhaustion into a
+          general method.
+    - year: "1882"
+      label:
+        es: >-
+          Ferdinand von Lindemann demuestra que π es trascendente, cerrando siglos de intentos de
+          'cuadrar el círculo'.
+        en: >-
+          Ferdinand von Lindemann proves π is transcendental, closing centuries of attempts to
+          'square the circle'.
+    - year: Hoy
+      label:
+        es: >-
+          Ingenieros calculan con ella secciones de tuberías, cables y engranajes, y astrónomos,
+          áreas de órbitas y cráteres.
+        en: >-
+          Engineers use it to size pipes, cables, and gears, and astronomers to compute orbital and
+          crater areas.
+  useCases:
+    - title:
+        es: Ingeniería
+        en: Engineering
+      description:
+        es: >-
+          El área de la sección transversal de tuberías y cables determina cuánto fluido o corriente
+          pueden transportar.
+        en: >-
+          The cross-sectional area of pipes and cables determines how much fluid or current they can
+          carry.
+    - title:
+        es: Arquitectura
+        en: Architecture
+      description:
+        es: >-
+          Cúpulas, columnas y ventanas circulares se dimensionan a partir de esta misma relación
+          entre radio y superficie.
+        en: >-
+          Domes, columns, and circular windows are all sized from this same relationship between
+          radius and surface.
+    - title:
+        es: Astronomía
+        en: Astronomy
+      description:
+        es: >-
+          Estimar el área de un cráter o de un disco planetario parte de tratarlo, en primera
+          aproximación, como un círculo.
+        en: >-
+          Estimating the area of a crater or a planetary disk starts by treating it, to a first
+          approximation, as a circle.
+  example:
+    title:
+      es: Un círculo de radio 5
+      en: A circle of radius 5
+    lines:
+      - es: r = 5
+        en: r = 5
+      - es: A = π · r²
+        en: A = π · r²
+      - es: A = π · 25
+        en: A = π · 25
+      - es: A ≈ 78.54 unidades²
+        en: A ≈ 78.54 square units

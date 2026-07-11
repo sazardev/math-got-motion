@@ -1,0 +1,179 @@
+id: ideal-gas-law
+title:
+  es: Ley de los Gases Ideales
+  en: Ideal Gas Law
+category:
+  es: Física clásica
+  en: Classical physics
+nodes:
+  - id: p
+    type: variable
+    value: P
+    explanation:
+      es: La presión del gas, la fuerza que ejerce sobre las paredes de su recipiente por unidad de área.
+      en: The gas's pressure, the force it exerts on the walls of its container per unit of area.
+  - id: v
+    type: variable
+    value: V
+    explanation:
+      es: El volumen que ocupa el gas.
+      en: The volume occupied by the gas.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: La cantidad de sustancia, medida en moles.
+      en: The amount of substance, measured in moles.
+  - id: r
+    type: constant
+    value: R
+    explanation:
+      es: La constante universal de los gases, el mismo valor para cualquier gas ideal.
+      en: The universal gas constant, the same value for any ideal gas.
+  - id: t
+    type: variable
+    value: T
+    explanation:
+      es: La temperatura absoluta del gas, medida en kelvin.
+      en: The gas's absolute temperature, measured in kelvin.
+context:
+  author:
+    es: Émile Clapeyron
+    en: Émile Clapeyron
+  era:
+    es: Francia, 1799–1864 · forma combinada publicada en 1834
+    en: France, 1799–1864 · combined form published in 1834
+  history:
+    es: >-
+      Ninguna persona sola descubrió esta ecuación: es la fusión de tres leyes experimentales
+      independientes. Robert Boyle mostró en 1662 que la presión y el volumen de un gas son
+      inversamente proporcionales a temperatura constante. Jacques Charles observó en la década de
+      1780 que el volumen crece con la temperatura a presión constante, aunque no lo publicó; Joseph
+      Gay-Lussac difundió esa relación en 1802. Amedeo Avogadro propuso en 1811 que volúmenes iguales
+      de gases distintos, en las mismas condiciones, contienen el mismo número de moléculas. Fue el
+      ingeniero francés Émile Clapeyron quien, en 1834, combinó estas tres leyes en una sola ecuación
+      de estado, PV = nRT, unificando décadas de trabajo experimental disperso en una herramienta que
+      hoy es central para la química y la ingeniería.
+    en: >-
+      No single person discovered this equation: it is the fusion of three independent experimental
+      laws. Robert Boyle showed in 1662 that a gas's pressure and volume are inversely proportional
+      at constant temperature. Jacques Charles observed in the 1780s that volume grows with
+      temperature at constant pressure, though he never published it; Joseph Gay-Lussac spread that
+      relationship in 1802. Amedeo Avogadro proposed in 1811 that equal volumes of different gases,
+      under the same conditions, contain the same number of molecules. It was the French engineer
+      Émile Clapeyron who, in 1834, combined these three laws into a single equation of state, PV =
+      nRT, unifying decades of scattered experimental work into a tool that is now central to
+      chemistry and engineering.
+  timeline:
+    - year: "1662"
+      label:
+        es: >-
+          Robert Boyle publica su ley: a temperatura constante, la presión y el volumen de un gas
+          son inversamente proporcionales.
+        en: >-
+          Robert Boyle publishes his law: at constant temperature, a gas's pressure and volume are
+          inversely proportional.
+    - year: "1802"
+      label:
+        es: >-
+          Joseph Gay-Lussac publica la relación entre volumen y temperatura observada antes por
+          Jacques Charles.
+        en: >-
+          Joseph Gay-Lussac publishes the volume-temperature relationship observed earlier by
+          Jacques Charles.
+    - year: "1811"
+      label:
+        es: >-
+          Amedeo Avogadro propone que volúmenes iguales de gas, en igualdad de condiciones, contienen
+          el mismo número de moléculas.
+        en: >-
+          Amedeo Avogadro proposes that equal volumes of gas, under equal conditions, contain the
+          same number of molecules.
+    - year: "1834"
+      label:
+        es: >-
+          Émile Clapeyron combina las tres leyes anteriores en una única ecuación de estado: PV =
+          nRT.
+        en: >-
+          Émile Clapeyron combines the three earlier laws into a single equation of state: PV = nRT.
+    - year: "1873"
+      label:
+        es: >-
+          Johannes van der Waals la corrige para gases reales, incorporando el volumen molecular y
+          las fuerzas de atracción.
+        en: >-
+          Johannes van der Waals corrects it for real gases, incorporating molecular volume and
+          attractive forces.
+    - year: Hoy
+      label:
+        es: >-
+          Sigue siendo la base de cálculo en química, meteorología, motores de combustión y sistemas
+          de refrigeración.
+        en: >-
+          It remains the basic calculation tool in chemistry, meteorology, combustion engines, and
+          refrigeration systems.
+  useCases:
+    - title:
+        es: Química de laboratorio
+        en: Laboratory chemistry
+      description:
+        es: >-
+          Permite calcular cuántos moles de gas hay en un recipiente a partir de su presión,
+          volumen y temperatura.
+        en: >-
+          It lets chemists calculate how many moles of gas are in a container from its pressure,
+          volume, and temperature.
+    - title:
+        es: Meteorología
+        en: Meteorology
+      description:
+        es: >-
+          Modela cómo se comporta el aire atmosférico al cambiar la presión y la temperatura con la
+          altitud.
+        en: >-
+          It models how atmospheric air behaves as pressure and temperature change with altitude.
+    - title:
+        es: Motores de combustión
+        en: Combustion engines
+      description:
+        es: >-
+          Predice la presión dentro de un cilindro cuando la mezcla de aire y combustible se
+          calienta y comprime.
+        en: >-
+          It predicts the pressure inside a cylinder as the air-fuel mixture is heated and
+          compressed.
+    - title:
+        es: Refrigeración y climatización
+        en: Refrigeration and HVAC
+      description:
+        es: >-
+          Guía el diseño de ciclos de compresión de gases refrigerantes en heladeras y aires
+          acondicionados.
+        en: >-
+          It guides the design of refrigerant gas compression cycles in refrigerators and air
+          conditioners.
+  example:
+    title:
+      es: Volumen molar de un gas
+      en: Molar volume of a gas
+    lines:
+      - es: n = 1 mol
+        en: n = 1 mol
+      - es: R = 0,0821 L·atm/(mol·K)
+        en: R = 0.0821 L·atm/(mol·K)
+      - es: T = 273 K
+        en: T = 273 K
+      - es: P = 1 atm
+        en: P = 1 atm
+      - es: V = nRT / P
+        en: V = nRT / P
+      - es: V = (1)(0,0821)(273) / 1
+        en: V = (1)(0.0821)(273) / 1
+      - es: V ≈ 22,4 litros
+        en: V ≈ 22.4 liters

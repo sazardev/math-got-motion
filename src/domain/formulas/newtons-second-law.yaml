@@ -1,0 +1,133 @@
+id: newtons-second-law
+title:
+  es: Segunda Ley de Newton
+  en: Newton's Second Law
+category:
+  es: Física clásica
+  en: Classical physics
+nodes:
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: La fuerza neta que actúa sobre un objeto.
+      en: The net force acting on an object.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: "La masa del objeto: cuánta materia contiene."
+      en: "The object's mass: how much matter it contains."
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: "Multiplicada por la aceleración: el cambio de velocidad en el tiempo."
+      en: "Multiplied by acceleration: the rate of change of velocity over time."
+context:
+  author:
+    es: Isaac Newton
+    en: Isaac Newton
+  era:
+    es: Inglaterra, 1642–1727 · publicada en 1687
+    en: England, 1642–1727 · published in 1687
+  history:
+    es: >-
+      Newton la publicó en Philosophiæ Naturalis Principia Mathematica, junto a sus otras dos leyes
+      del movimiento. Es una de las ecuaciones más influyentes de la historia: describe cómo se
+      mueve todo, desde una manzana hasta un planeta.
+    en: >-
+      Newton published it in Philosophiæ Naturalis Principia Mathematica, alongside his other two
+      laws of motion. It is one of the most influential equations in history, describing how
+      everything moves — from an apple to a planet.
+  timeline:
+    - year: "1666"
+      label:
+        es: >-
+          Durante el 'año milagroso' en que la peste cierra Cambridge, Newton empieza a esbozar sus
+          ideas sobre fuerza y movimiento.
+        en: >-
+          During the 'year of wonders' when plague closes Cambridge, Newton begins sketching his
+          ideas on force and motion.
+    - year: "1687"
+      label:
+        es: >-
+          Publica Philosophiæ Naturalis Principia Mathematica, con F = ma como segunda de sus tres
+          leyes del movimiento.
+        en: >-
+          Publishes Philosophiæ Naturalis Principia Mathematica, with F = ma as the second of his
+          three laws of motion.
+    - year: "1905"
+      label:
+        es: >-
+          Einstein muestra que la ley es una aproximación válida solo a velocidades muy inferiores a
+          la de la luz.
+        en: Einstein shows the law is a valid approximation only at speeds far below that of light.
+    - year: "1969"
+      label:
+        es: >-
+          La misión Apolo 11 calcula trayectorias y empuje de sus cohetes aplicando esta misma
+          relación entre fuerza y masa.
+        en: >-
+          The Apollo 11 mission computes rocket trajectories and thrust using this same relationship
+          between force and mass.
+    - year: Hoy
+      label:
+        es: >-
+          Sigue siendo la ecuación central del diseño automotriz, aeroespacial y robótico en su
+          régimen de velocidades cotidiano.
+        en: >-
+          It remains the central equation of automotive, aerospace, and robotics design at everyday
+          speed regimes.
+  useCases:
+    - title:
+        es: Ingeniería automotriz
+        en: Automotive engineering
+      description:
+        es: >-
+          Calcula la fuerza de frenado necesaria para detener un vehículo de cierta masa en una
+          distancia dada.
+        en: >-
+          It calculates the braking force needed to stop a vehicle of a given mass within a given
+          distance.
+    - title:
+        es: Aeroespacial
+        en: Aerospace
+      description:
+        es: >-
+          El empuje de un cohete se dimensiona directamente a partir de la masa que debe acelerar y
+          la aceleración deseada.
+        en: >-
+          A rocket's thrust is sized directly from the mass it must accelerate and the desired
+          acceleration.
+    - title:
+        es: Robótica
+        en: Robotics
+      description:
+        es: >-
+          Controladores de motores y actuadores ajustan la fuerza aplicada en tiempo real usando
+          esta misma relación.
+        en: >-
+          Motor and actuator controllers adjust applied force in real time using this same
+          relationship.
+  example:
+    title:
+      es: Empujar un carrito
+      en: Pushing a cart
+    lines:
+      - es: m = 10 kg
+        en: m = 10 kg
+      - es: a = 2 m/s²
+        en: a = 2 m/s²
+      - es: F = m · a
+        en: F = m · a
+      - es: F = 10 · 2
+        en: F = 10 · 2
+      - es: F = 20 newtons
+        en: F = 20 newtons

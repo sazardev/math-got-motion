@@ -1,0 +1,91 @@
+# PLANTILLA — no es una fórmula real (el prefijo "_" la excluye del índice
+# automático en index.ts). Para agregar una fórmula nueva:
+#
+#   1. Copiá este archivo con un nombre nuevo en kebab-case,
+#      ej. src/domain/formulas/quadratic-formula.yaml
+#   2. Completá los campos de abajo. `id` DEBE ser igual al nombre del
+#      archivo (sin ".yaml") — es como se evita que dos fórmulas choquen
+#      por accidente.
+#   3. Corré `pnpm formulas:validate` (o simplemente `pnpm dev`) — valida
+#      el archivo y te dice exactamente qué campo falta o está mal, si algo
+#      está mal.
+#   4. Listo — no hay que tocar index.ts ni ningún otro archivo, se
+#      autoregistra solo.
+#
+# Es un archivo de DATOS, no de código: no puede ejecutar nada, así que es
+# seguro aceptarlo de cualquier persona sin darle acceso a correr código en
+# la app. Un validador (el mismo que corre en CI) rechaza cualquier archivo
+# que no cumpla esta forma exacta, con límites de longitud pensados para que
+# el contenido nunca rompa la coreografía de scroll.
+#
+# Todo lo bilingüe usa `es:`/`en:` (un objeto con ambas traducciones).
+# `category` agrupa la fórmula en el índice — reutilizá el mismo texto que
+# otra fórmula existente (ej. "Geometría") para que se agrupen juntas.
+
+id: quadratic-formula
+
+title:
+  es: Fórmula Cuadrática
+  en: Quadratic Formula
+
+category:
+  es: Álgebra
+  en: Algebra
+
+# La fórmula deconstruida símbolo por símbolo, en el mismo orden en que se
+# leen de izquierda a derecha. Cada nodo necesita su propia explicación — es
+# lo que se muestra cuando el scroll lo aísla. `type` es uno de: variable,
+# operator, equals, number, constant, superscript.
+nodes:
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: Qué representa este símbolo, en una o dos oraciones.
+      en: What this symbol represents, in one or two sentences.
+  # ...un ítem por cada símbolo/carácter visible de la fórmula.
+
+context:
+  author:
+    es: Nombre del autor o autores
+    en: Author or authors' name
+
+  era:
+    es: Lugar, años de vida · publicada en año
+    en: Place, years alive · published in year
+
+  history:
+    es: >-
+      Un párrafo de contexto histórico o cultural sobre el origen de la
+      fórmula.
+    en: >-
+      A paragraph of historical or cultural context about the formula's
+      origin.
+
+  # Hitos en orden cronológico. Entre 1 y 10 ítems.
+  timeline:
+    - year: "1800"
+      label:
+        es: Qué ocurrió en ese momento y por qué es relevante para la fórmula.
+        en: What happened at that point and why it matters to the formula.
+
+  # Dominios reales donde se usa hoy. Entre 1 y 6 ítems.
+  useCases:
+    - title:
+        es: Campo o industria
+        en: Field or industry
+      description:
+        es: Cómo se aplica concretamente la fórmula ahí.
+        en: How the formula is concretely applied there.
+
+  # Un ejemplo numérico resuelto, revelado línea por línea en el epílogo.
+  # Entre 1 y 14 líneas.
+  example:
+    title:
+      es: Título corto del ejemplo
+      en: Short example title
+    lines:
+      - es: primera línea del cálculo
+        en: first line of the calculation
+      - es: resultado final
+        en: final result

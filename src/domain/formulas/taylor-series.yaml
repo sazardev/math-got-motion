@@ -1,0 +1,166 @@
+id: taylor-series
+title:
+  es: Serie de Taylor
+  en: Taylor Series
+category:
+  es: Cálculo
+  en: Calculus
+nodes:
+  - id: f
+    type: variable
+    value: f(x)
+    explanation:
+      es: La función original que se quiere aproximar cerca de un punto a.
+      en: The original function being approximated near a point a.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: sum
+    type: operator
+    value: Σ
+    explanation:
+      es: "El signo de sumatoria: suma infinitos términos, uno por cada derivada de f."
+      en: "The summation sign: adds infinitely many terms, one for each derivative of f."
+  - id: fn
+    type: variable
+    value: fⁿ(a)
+    explanation:
+      es: "La n-ésima derivada de f evaluada en el punto a, alrededor del cual se expande la serie."
+      en: "The n-th derivative of f evaluated at the point a, around which the series is expanded."
+  - id: over-n-fact
+    type: operator
+    value: /n!
+    explanation:
+      es: Dividido entre n factorial, el producto de todos los enteros positivos hasta n.
+      en: Divided by n factorial, the product of all positive integers up to n.
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+  - id: x-minus-a
+    type: variable
+    value: (x−a)
+    explanation:
+      es: La distancia entre el punto x donde se evalúa y el punto a de expansión.
+      en: The distance between the point x being evaluated and the expansion point a.
+  - id: n
+    type: superscript
+    value: n
+    explanation:
+      es: Elevado a la potencia n, el mismo orden de la derivada correspondiente.
+      en: Raised to the power n, matching the order of the corresponding derivative.
+context:
+  author:
+    es: Brook Taylor
+    en: Brook Taylor
+  era:
+    es: Inglaterra, 1685–1731 · publicada en 1715
+    en: England, 1685–1731 · published in 1715
+  history:
+    es: >-
+      Brook Taylor publicó esta serie en su obra Methodus Incrementorum Directa et Inversa en 1715,
+      mostrando cómo aproximar cualquier función suave mediante un polinomio infinito construido a
+      partir de sus derivadas en un solo punto. El escocés James Gregory ya había descubierto casos
+      particulares décadas antes, hacia 1670, sin publicarlos ampliamente. Cuando el punto de
+      expansión a es cero, la serie se conoce como serie de Maclaurin, en honor a Colin Maclaurin,
+      quien popularizó ese caso especial en su tratado de 1742 y con frecuencia recibe crédito
+      compartido por él.
+    en: >-
+      Brook Taylor published this series in his 1715 work Methodus Incrementorum Directa et Inversa,
+      showing how to approximate any smooth function with an infinite polynomial built from its
+      derivatives at a single point. The Scotsman James Gregory had already discovered special cases
+      decades earlier, around 1670, without publishing them widely. When the expansion point a is
+      zero, the series is known as the Maclaurin series, after Colin Maclaurin, who popularized that
+      special case in his 1742 treatise and is often given shared credit for it.
+  timeline:
+    - year: c. 1670
+      label:
+        es: >-
+          James Gregory descubre casos particulares de expansiones en serie de funciones, sin
+          formalizar el resultado general.
+        en: >-
+          James Gregory discovers particular cases of series expansions of functions, without
+          formalizing the general result.
+    - year: "1715"
+      label:
+        es: >-
+          Brook Taylor publica la fórmula general en Methodus Incrementorum Directa et Inversa,
+          dándole su nombre.
+        en: >-
+          Brook Taylor publishes the general formula in Methodus Incrementorum Directa et Inversa,
+          giving it his name.
+    - year: "1742"
+      label:
+        es: >-
+          Colin Maclaurin populariza el caso especial con a = 0 en su Treatise of Fluxions,
+          hoy llamado serie de Maclaurin.
+        en: >-
+          Colin Maclaurin popularizes the special case with a = 0 in his Treatise of Fluxions,
+          today called the Maclaurin series.
+    - year: s. XIX
+      label:
+        es: >-
+          Cauchy y Lagrange formalizan las condiciones de convergencia y el término de error de la
+          serie, dándole rigor moderno.
+        en: >-
+          Cauchy and Lagrange formalize the series' convergence conditions and error term, giving it
+          modern rigor.
+    - year: Hoy
+      label:
+        es: >-
+          Es la base de calculadoras, computadoras y software científico para evaluar funciones como
+          seno, coseno y exponencial.
+        en: >-
+          It underlies calculators, computers, and scientific software for evaluating functions like
+          sine, cosine, and the exponential.
+  useCases:
+    - title:
+        es: Computación numérica
+        en: Numerical computing
+      description:
+        es: >-
+          Calculadoras y computadoras evalúan funciones trascendentes como seno o exponencial
+          sumando unos pocos términos de su serie de Taylor.
+        en: >-
+          Calculators and computers evaluate transcendental functions like sine or the exponential
+          by summing a few terms of their Taylor series.
+    - title:
+        es: Física
+        en: Physics
+      description:
+        es: >-
+          Aproximaciones como el péndulo simple o la relatividad a bajas velocidades usan los
+          primeros términos de una serie de Taylor.
+        en: >-
+          Approximations like the simple pendulum or low-velocity relativity use the first few terms
+          of a Taylor series.
+    - title:
+        es: Aprendizaje automático
+        en: Machine learning
+      description:
+        es: >-
+          Métodos de optimización como Newton usan expansiones de Taylor de segundo orden para
+          aproximar funciones de error complejas.
+        en: >-
+          Optimization methods like Newton's method use second-order Taylor expansions to
+          approximate complex error functions.
+  example:
+    title:
+      es: Aproximar eˣ alrededor de 0
+      en: Approximating eˣ around 0
+    lines:
+      - es: f(x) = eˣ, a = 0
+        en: f(x) = eˣ, a = 0
+      - es: fⁿ(0) = 1 para toda n
+        en: fⁿ(0) = 1 for all n
+      - es: eˣ ≈ 1 + x + x²/2! + x³/3!
+        en: eˣ ≈ 1 + x + x²/2! + x³/3!
+      - es: en x = 1, eˣ ≈ 1 + 1 + 0.5 + 0.1667
+        en: at x = 1, eˣ ≈ 1 + 1 + 0.5 + 0.1667
+      - es: suma ≈ 2.6667, cerca del valor real e ≈ 2.71828
+        en: sum ≈ 2.6667, close to the real value e ≈ 2.71828

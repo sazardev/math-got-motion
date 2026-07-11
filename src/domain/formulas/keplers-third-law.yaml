@@ -1,0 +1,158 @@
+id: keplers-third-law
+title:
+  es: Tercera Ley de Kepler
+  en: Kepler's Third Law
+category:
+  es: Astronomía
+  en: Astronomy
+nodes:
+  - id: t
+    type: variable
+    value: T
+    explanation:
+      es: "El período orbital: el tiempo que tarda un cuerpo en completar una vuelta alrededor de otro."
+      en: The orbital period — the time a body takes to complete one full orbit around another.
+  - id: exponent-2
+    type: superscript
+    value: "2"
+    explanation:
+      es: Elevado al cuadrado. El período de la órbita se multiplica por sí mismo.
+      en: Raised to the second power. The orbital period multiplied by itself.
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre. Compara el período al cuadrado con la distancia al cubo.
+      en: Divided by. Compares the squared period against the cubed distance.
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: "El semieje mayor de la órbita: la distancia promedio entre los dos cuerpos."
+      en: The orbit's semi-major axis — the average distance between the two bodies.
+  - id: exponent-3
+    type: superscript
+    value: "3"
+    explanation:
+      es: Elevado al cubo. La distancia se multiplica por sí misma dos veces.
+      en: Raised to the third power. The distance multiplied by itself twice.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+  - id: k
+    type: constant
+    value: k
+    explanation:
+      es: "Una constante: el mismo valor para todos los cuerpos que orbitan a la misma masa central."
+      en: A constant — the same value for every body orbiting the same central mass.
+context:
+  author:
+    es: Johannes Kepler
+    en: Johannes Kepler
+  era:
+    es: Sacro Imperio (Alemania), 1571–1630 · publicada en 1619
+    en: Holy Roman Empire (Germany), 1571–1630 · published in 1619
+  history:
+    es: >-
+      Kepler publicó esta ley en Harmonices Mundi, tras años analizando las precisísimas observaciones
+      planetarias que había heredado de Tycho Brahe. Fue la última de sus tres leyes del movimiento
+      planetario y la primera en relacionar matemáticamente distintos planetas entre sí: cuanto más
+      lejos está un planeta del Sol, desproporcionadamente más lento es su recorrido. Décadas después,
+      Isaac Newton demostró que esta relación se deduce directamente de su ley de gravitación
+      universal, uniendo la astronomía observacional de Kepler con una teoría física subyacente.
+    en: >-
+      Kepler published this law in Harmonices Mundi, after years analyzing the extraordinarily precise
+      planetary observations he had inherited from Tycho Brahe. It was the last of his three laws of
+      planetary motion and the first to mathematically relate different planets to one another: the
+      farther a planet is from the Sun, the disproportionately slower it travels. Decades later, Isaac
+      Newton showed that this relationship follows directly from his law of universal gravitation,
+      linking Kepler's observational astronomy to an underlying physical theory.
+  timeline:
+    - year: "1600"
+      label:
+        es: >-
+          Kepler se une a Tycho Brahe en Praga y hereda su archivo de observaciones astronómicas, las
+          más precisas de la era pretelescópica.
+        en: >-
+          Kepler joins Tycho Brahe in Prague and inherits his archive of astronomical observations,
+          the most precise of the pre-telescopic era.
+    - year: "1609"
+      label:
+        es: >-
+          Publica sus dos primeras leyes en Astronomia Nova, describiendo órbitas elípticas en vez de
+          circulares.
+        en: >-
+          Publishes his first two laws in Astronomia Nova, describing elliptical rather than circular
+          orbits.
+    - year: "1619"
+      label:
+        es: >-
+          Publica la tercera ley en Harmonices Mundi, relacionando el cuadrado del período orbital con
+          el cubo de la distancia media al Sol.
+        en: >-
+          Publishes the third law in Harmonices Mundi, relating the square of the orbital period to
+          the cube of the mean distance from the Sun.
+    - year: "1687"
+      label:
+        es: >-
+          Newton deriva la ley matemáticamente en los Principia, mostrándola como consecuencia de la
+          gravitación universal.
+        en: >-
+          Newton derives the law mathematically in the Principia, showing it as a consequence of
+          universal gravitation.
+    - year: Hoy
+      label:
+        es: >-
+          Se usa para calcular órbitas de satélites, misiones espaciales y para estimar la distancia de
+          exoplanetas a sus estrellas.
+        en: >-
+          Used to calculate satellite orbits, plan space missions, and estimate how far exoplanets
+          orbit their stars.
+  useCases:
+    - title:
+        es: Detección de exoplanetas
+        en: Exoplanet detection
+      description:
+        es: >-
+          A partir del período orbital medido por tránsito o velocidad radial, los astrónomos estiman
+          la distancia del exoplaneta a su estrella.
+        en: >-
+          From the orbital period measured by transit or radial velocity, astronomers estimate an
+          exoplanet's distance from its star.
+    - title:
+        es: Diseño de órbitas satelitales
+        en: Satellite orbit design
+      description:
+        es: >-
+          Ingenieros calculan la altitud necesaria para que un satélite tenga un período orbital
+          específico, como el de los satélites geoestacionarios.
+        en: >-
+          Engineers calculate the altitude a satellite needs for a specific orbital period, such as
+          geostationary satellites.
+    - title:
+        es: Planificación de misiones espaciales
+        en: Space mission planning
+      description:
+        es: >-
+          Se usa para calcular la duración de trayectorias de transferencia entre planetas en misiones
+          interplanetarias.
+        en: >-
+          Used to calculate the duration of interplanetary transfer trajectories in space missions.
+  example:
+    title:
+      es: Verificación con Marte
+      en: Verification with Mars
+    lines:
+      - es: "Período orbital observado de Marte: T = 1.88 años"
+        en: "Mars's observed orbital period: T = 1.88 years"
+      - es: T² = 1.88² = 3.53
+        en: T² = 1.88² = 3.53
+      - es: "Usando el Sol y años/UA, la constante k = 1, entonces a³ = 3.53"
+        en: "Using the Sun and AU/years, the constant k = 1, so a³ = 3.53"
+      - es: a = ∛3.53 ≈ 1.524 UA
+        en: a = ∛3.53 ≈ 1.524 AU
+      - es: "La distancia real de Marte al Sol es 1.524 UA: coincide"
+        en: "Mars's actual distance from the Sun is 1.524 AU — it matches"

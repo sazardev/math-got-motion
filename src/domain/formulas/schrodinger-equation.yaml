@@ -1,0 +1,126 @@
+id: schrodinger-equation
+title:
+  es: Ecuación de Schrödinger
+  en: Schrödinger Equation
+category:
+  es: Física moderna
+  en: Modern physics
+nodes:
+  - id: h-hat
+    type: constant
+    value: Ĥ
+    explanation:
+      es: El operador hamiltoniano, representa la energía total del sistema.
+      en: The Hamiltonian operator, it represents the system's total energy.
+  - id: psi-1
+    type: variable
+    value: ψ
+    explanation:
+      es: La función de onda, describe el estado cuántico de la partícula.
+      en: The wave function, it describes the particle's quantum state.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: La energía del estado estacionario, uno de los valores permitidos por la ecuación.
+      en: The energy of the stationary state, one of the values allowed by the equation.
+  - id: psi-2
+    type: variable
+    value: ψ
+    explanation:
+      es: La misma función de onda, reaparece porque este es un problema de valores propios.
+      en: The same wave function, reappearing because this is an eigenvalue problem.
+context:
+  author:
+    es: Erwin Schrödinger
+    en: Erwin Schrödinger
+  era:
+    es: Austria, 1887–1961 · publicada en 1926
+    en: Austria, 1887–1961 · published in 1926
+  history:
+    es: >-
+      Schrödinger publicó su ecuación de onda a comienzos de 1926, inspirado por la hipótesis de
+      De Broglie sobre las ondas de materia. Ofrecía una alternativa a la mecánica matricial de
+      Heisenberg, y poco después el propio Schrödinger demostró que ambas formulaciones eran
+      matemáticamente equivalentes. La forma independiente del tiempo, Ĥψ = Eψ, es un problema de
+      valores propios que da los niveles de energía permitidos de un sistema cuántico. Ganó el
+      Nobel de Física en 1933, junto con Paul Dirac.
+    en: >-
+      Schrödinger published his wave equation in early 1926, inspired by de Broglie's
+      matter-wave hypothesis. It offered an alternative to Heisenberg's matrix mechanics, and
+      Schrödinger himself soon proved both formulations were mathematically equivalent. The
+      time-independent form, Ĥψ = Eψ, is an eigenvalue problem that yields a quantum system's
+      allowed energy levels. He won the 1933 Nobel Prize in Physics, shared with Paul Dirac.
+  timeline:
+    - year: "1924"
+      label:
+        es: Louis de Broglie propone que la materia también se comporta como onda, inspirando a Schrödinger.
+        en: Louis de Broglie proposes that matter also behaves as a wave, inspiring Schrödinger.
+    - year: "1926"
+      label:
+        es: Schrödinger publica su serie de artículos introduciendo la mecánica ondulatoria y su ecuación.
+        en: Schrödinger publishes his series of papers introducing wave mechanics and his equation.
+    - year: "1926"
+      label:
+        es: Demuestra que su mecánica ondulatoria es matemáticamente equivalente a la mecánica matricial de Heisenberg.
+        en: He proves his wave mechanics is mathematically equivalent to Heisenberg's matrix mechanics.
+    - year: "1933"
+      label:
+        es: Schrödinger y Dirac comparten el Premio Nobel de Física por sus aportes a la teoría cuántica.
+        en: Schrödinger and Dirac share the Nobel Prize in Physics for their contributions to quantum theory.
+    - year: 1950s
+      label:
+        es: La química cuántica usa la ecuación para calcular orbitales atómicos y moleculares con computadoras.
+        en: Quantum chemistry uses the equation to compute atomic and molecular orbitals with computers.
+    - year: Hoy
+      label:
+        es: Sostiene el diseño de semiconductores, la química computacional y la simulación cuántica.
+        en: It underpins semiconductor design, computational chemistry, and quantum simulation.
+  useCases:
+    - title:
+        es: Química cuántica
+        en: Quantum chemistry
+      description:
+        es: Calcular los orbitales de electrones en átomos y moléculas parte de resolver esta ecuación.
+        en: Computing electron orbitals in atoms and molecules starts by solving this equation.
+    - title:
+        es: Diseño de semiconductores
+        en: Semiconductor design
+      description:
+        es: Modelar el comportamiento de electrones en materiales para chips depende de esta ecuación.
+        en: Modeling electron behavior in chip materials relies on this equation.
+    - title:
+        es: Computación cuántica
+        en: Quantum computing
+      description:
+        es: Simular sistemas cuánticos complejos requiere resolver versiones de esta misma ecuación.
+        en: Simulating complex quantum systems requires solving versions of this same equation.
+    - title:
+        es: Espectroscopía atómica
+        en: Atomic spectroscopy
+      description:
+        es: Los niveles de energía que predice la ecuación explican las líneas del espectro de cada elemento.
+        en: The energy levels the equation predicts explain each element's spectral lines.
+  example:
+    title:
+      es: Electrón en una caja de 1 nm
+      en: Electron in a 1 nm box
+    lines:
+      - es: L = 1 nm, electrón atrapado, n = 1
+        en: L = 1 nm, trapped electron, n = 1
+      - es: Eₙ = n² h² / (8 m L²)
+        en: Eₙ = n² h² / (8 m L²)
+      - es: h = 6.626×10⁻³⁴ J·s, m = 9.11×10⁻³¹ kg
+        en: h = 6.626×10⁻³⁴ J·s, m = 9.11×10⁻³¹ kg
+      - es: E₁ = h² / (8 m L²)
+        en: E₁ = h² / (8 m L²)
+      - es: E₁ ≈ 6.02×10⁻²⁰ joules
+        en: E₁ ≈ 6.02×10⁻²⁰ joules
+      - es: E₁ ≈ 0.376 eV
+        en: E₁ ≈ 0.376 eV

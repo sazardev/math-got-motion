@@ -1,0 +1,171 @@
+id: riemann-zeta-function
+title:
+  es: Función Zeta de Riemann
+  en: Riemann Zeta Function
+category:
+  es: Teoría de números
+  en: Number theory
+nodes:
+  - id: zeta-s
+    type: variable
+    value: ζ(s)
+    explanation:
+      es: >-
+        Zeta de s: una función que toma un número s (posiblemente complejo) y devuelve la suma de la
+        serie que sigue.
+      en: >-
+        Zeta of s: a function that takes a number s (possibly complex) and returns the sum of the
+        series that follows.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: sum
+    type: operator
+    value: Σ
+    explanation:
+      es: >-
+        Sigma mayúscula: suma infinitos términos, uno por cada número natural n desde 1 hasta el
+        infinito.
+      en: >-
+        Capital sigma: sums infinitely many terms, one for every natural number n from 1 to
+        infinity.
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: El numerador de cada término de la serie.
+      en: The numerator of each term in the series.
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: "Cada número natural: 1, 2, 3, 4… el índice que recorre la suma."
+      en: "Each natural number: 1, 2, 3, 4… the index that runs through the sum."
+  - id: s-exp
+    type: superscript
+    value: s
+    explanation:
+      es: >-
+        N elevado a s: cuando s es un número complejo, esta potencia gira y encoge el término en el
+        plano complejo.
+      en: >-
+        N raised to s: when s is a complex number, this power rotates and shrinks the term in the
+        complex plane.
+context:
+  author:
+    es: Bernhard Riemann
+    en: Bernhard Riemann
+  era:
+    es: Alemania, 1826–1866 · publicada en 1859
+    en: Germany, 1826–1866 · published in 1859
+  history:
+    es: >-
+      Euler ya había estudiado esta serie para valores reales de s, mostrando su sorprendente
+      conexión con los números primos. Pero fue Bernhard Riemann quien, en su único artículo de
+      teoría de números, publicado en 1859, extendió la función a valores complejos de s mediante
+      continuación analítica. Al hacerlo descubrió que la distribución de sus ceros codifica
+      información profunda sobre cómo se reparten los números primos, y conjeturó que todos los
+      ceros no triviales tienen parte real igual a 1/2: la todavía no demostrada Hipótesis de
+      Riemann, uno de los problemas abiertos más importantes de las matemáticas.
+    en: >-
+      Euler had already studied this series for real values of s, revealing its striking connection
+      to prime numbers. But it was Bernhard Riemann who, in his single number theory paper,
+      published in 1859, extended the function to complex values of s through analytic continuation.
+      In doing so he discovered that the distribution of its zeros encodes deep information about
+      how prime numbers are spread out, and he conjectured that every non-trivial zero has real part
+      equal to 1/2: the still-unproven Riemann Hypothesis, one of mathematics' most important open
+      problems.
+  timeline:
+    - year: "1737"
+      label:
+        es: >-
+          Euler prueba que la serie, para s real, se factoriza como un producto infinito sobre todos
+          los números primos.
+        en: >-
+          Euler proves that the series, for real s, factors as an infinite product over all prime
+          numbers.
+    - year: "1859"
+      label:
+        es: >-
+          Riemann extiende la función a números complejos y formula su famosa hipótesis sobre la
+          ubicación de sus ceros.
+        en: >-
+          Riemann extends the function to complex numbers and formulates his famous hypothesis about
+          the location of its zeros.
+    - year: "1896"
+      label:
+        es: >-
+          Hadamard y de la Vallée Poussin usan propiedades de la función zeta para demostrar el
+          teorema de los números primos.
+        en: >-
+          Hadamard and de la Vallée Poussin use properties of the zeta function to prove the prime
+          number theorem.
+    - year: "2000"
+      label:
+        es: >-
+          El Instituto Clay incluye la Hipótesis de Riemann entre los siete 'Problemas del Milenio',
+          con un millón de dólares de premio.
+        en: >-
+          The Clay Institute includes the Riemann Hypothesis among the seven 'Millennium Prize
+          Problems,' with a one-million-dollar reward.
+    - year: Hoy
+      label:
+        es: >-
+          Sigue sin resolverse: se han verificado miles de millones de ceros, todos consistentes con
+          la hipótesis, pero sin demostración general.
+        en: >-
+          It remains unsolved: billions of zeros have been verified, all consistent with the
+          hypothesis, but with no general proof.
+  useCases:
+    - title:
+        es: Distribución de los números primos
+        en: Distribution of prime numbers
+      description:
+        es: >-
+          Los ceros de la función zeta determinan con enorme precisión cómo se distribuyen los
+          números primos entre los enteros.
+        en: >-
+          The zeros of the zeta function determine, with enormous precision, how prime numbers are
+          distributed among the integers.
+    - title:
+        es: Criptografía
+        en: Cryptography
+      description:
+        es: >-
+          La seguridad de sistemas como RSA depende de la dificultad de factorizar números grandes,
+          un problema profundamente ligado a los primos.
+        en: >-
+          The security of systems like RSA depends on the difficulty of factoring large numbers, a
+          problem deeply tied to primes.
+    - title:
+        es: Física teórica
+        en: Theoretical physics
+      description:
+        es: >-
+          Los ceros de zeta aparecen conjeturalmente relacionados con los niveles de energía de
+          sistemas cuánticos caóticos.
+        en: >-
+          The zeros of zeta are conjecturally related to the energy levels of chaotic quantum
+          systems.
+  example:
+    title:
+      es: El caso s = 2
+      en: The case s = 2
+    lines:
+      - es: ζ(2) = 1/1² + 1/2² + 1/3² + 1/4² + …
+        en: ζ(2) = 1/1² + 1/2² + 1/3² + 1/4² + …
+      - es: "= 1 + 0.25 + 0.111 + 0.0625 + …"
+        en: "= 1 + 0.25 + 0.111 + 0.0625 + …"
+      - es: Euler demostró que esta suma converge exactamente a π²/6
+        en: Euler proved this sum converges to exactly π²/6
+      - es: ζ(2) = π²/6 ≈ 1.6449
+        en: ζ(2) = π²/6 ≈ 1.6449

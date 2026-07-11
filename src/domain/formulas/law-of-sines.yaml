@@ -1,0 +1,195 @@
+id: law-of-sines
+title:
+  es: Ley de Senos
+  en: Law of Sines
+category:
+  es: Geometría
+  en: Geometry
+nodes:
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: El lado a del triángulo, opuesto al ángulo A.
+      en: Side a of the triangle, opposite angle A.
+  - id: fraction-bar-1
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre el seno del ángulo opuesto.
+      en: Divided by the sine of the opposite angle.
+  - id: sin-a
+    type: operator
+    value: sen A
+    explanation:
+      es: El seno del ángulo A, opuesto al lado a.
+      en: The sine of angle A, opposite side a.
+  - id: equals-1
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a la siguiente razón.
+      en: Is equal to the following ratio.
+  - id: b
+    type: variable
+    value: b
+    explanation:
+      es: El lado b del triángulo, opuesto al ángulo B.
+      en: Side b of the triangle, opposite angle B.
+  - id: fraction-bar-2
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre el seno del ángulo opuesto.
+      en: Divided by the sine of the opposite angle.
+  - id: sin-b
+    type: operator
+    value: sen B
+    explanation:
+      es: El seno del ángulo B, opuesto al lado b.
+      en: The sine of angle B, opposite side b.
+  - id: equals-2
+    type: equals
+    value: "="
+    explanation:
+      es: Y también es igual a esta otra razón.
+      en: And is also equal to this other ratio.
+  - id: c
+    type: variable
+    value: c
+    explanation:
+      es: El lado c del triángulo, opuesto al ángulo C.
+      en: Side c of the triangle, opposite angle C.
+  - id: fraction-bar-3
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre el seno del ángulo opuesto.
+      en: Divided by the sine of the opposite angle.
+  - id: sin-c
+    type: operator
+    value: sen C
+    explanation:
+      es: El seno del ángulo C, opuesto al lado c. Las tres razones son siempre iguales entre sí.
+      en: The sine of angle C, opposite side c. All three ratios are always equal to each other.
+context:
+  author:
+    es: Nasir al-Din al-Tusi
+    en: Nasir al-Din al-Tusi
+  era:
+    es: Persia, 1201–1274 · Tratado sobre el cuadrilátero completo, s. XIII
+    en: Persia, 1201–1274 · Treatise on the Quadrilateral, 13th century
+  history:
+    es: >-
+      La ley de senos, en su forma plana, tiene antecedentes en la trigonometría griega e india: Hiparco
+      y Ptolomeo ya trabajaban con relaciones equivalentes usando cuerdas de círculo en vez de senos, y
+      matemáticos indios como Aryabhata definieron el seno como función independiente hacia el año 500.
+      Fue durante la Edad de Oro islámica que estos hilos se unieron: el matemático y astrónomo persa
+      Nasir al-Din al-Tusi, en su Tratado sobre el cuadrilátero completo, presentó la ley de senos de
+      forma sistemática y general, tratando la trigonometría como una disciplina matemática
+      independiente de la astronomía por primera vez. Su trabajo, junto con el de otros matemáticos
+      islámicos como Abu al-Wafa, se transmitió a Europa a través de traducciones latinas y sentó las
+      bases de la trigonometría moderna que consolidarían Regiomontanus y otros en el Renacimiento.
+    en: >-
+      The law of sines, in its plane form, has antecedents in Greek and Indian trigonometry: Hipparchus
+      and Ptolemy already worked with equivalent relations using chords of a circle instead of sines,
+      and Indian mathematicians like Aryabhata defined the sine as an independent function around 500
+      AD. It was during the Islamic Golden Age that these threads came together: the Persian
+      mathematician and astronomer Nasir al-Din al-Tusi, in his Treatise on the Quadrilateral,
+      presented the law of sines systematically and generally, treating trigonometry as a mathematical
+      discipline independent of astronomy for the first time. His work, alongside that of other Islamic
+      mathematicians like Abu al-Wafa, was transmitted to Europe through Latin translations and laid
+      the groundwork for the modern trigonometry that Regiomontanus and others would consolidate during
+      the Renaissance.
+  timeline:
+    - year: c. 150 a.C.
+      label:
+        es: >-
+          Hiparco desarrolla tablas de cuerdas circulares, un antecedente griego de las relaciones
+          trigonométricas.
+        en: >-
+          Hipparchus develops tables of circular chords, a Greek antecedent of trigonometric relations.
+    - year: c. 500
+      label:
+        es: El matemático indio Aryabhata define el seno como función trigonométrica independiente.
+        en: Indian mathematician Aryabhata defines the sine as an independent trigonometric function.
+    - year: s. XIII
+      label:
+        es: >-
+          Nasir al-Din al-Tusi presenta la ley de senos de forma sistemática en su Tratado sobre el
+          cuadrilátero completo.
+        en: >-
+          Nasir al-Din al-Tusi presents the law of sines systematically in his Treatise on the
+          Quadrilateral.
+    - year: s. XV
+      label:
+        es: >-
+          Regiomontanus difunde en Europa la trigonometría como disciplina independiente, basándose en
+          fuentes islámicas.
+        en: >-
+          Regiomontanus spreads trigonometry as an independent discipline in Europe, drawing on
+          Islamic sources.
+    - year: Hoy
+      label:
+        es: >-
+          Herramienta estándar en topografía, navegación y arquitectura para resolver triángulos con
+          datos parciales.
+        en: >-
+          A standard tool in surveying, navigation, and architecture for solving triangles from
+          partial data.
+  useCases:
+    - title:
+        es: Topografía
+        en: Surveying
+      description:
+        es: >-
+          La triangulación mide distancias inaccesibles calculando ángulos desde puntos conocidos y
+          aplicando la ley de senos.
+        en: >-
+          Triangulation measures inaccessible distances by calculating angles from known points and
+          applying the law of sines.
+    - title:
+        es: Navegación aérea y marítima
+        en: Air and maritime navigation
+      description:
+        es: >-
+          Calcula rumbos y distancias entre puntos cuando se conocen ángulos de referencia pero no
+          todos los lados.
+        en: >-
+          Calculates headings and distances between points when reference angles are known but not
+          all sides.
+    - title:
+        es: Astronomía
+        en: Astronomy
+      description:
+        es: >-
+          Determina distancias a estrellas y planetas mediante paralaje, midiendo ángulos desde dos
+          puntos de observación.
+        en: >-
+          Determines distances to stars and planets via parallax, measuring angles from two
+          observation points.
+    - title:
+        es: Arquitectura e ingeniería civil
+        en: Architecture and civil engineering
+      description:
+        es: >-
+          Resuelve estructuras triangulares en cerchas y techos cuando se conocen ángulos de diseño y
+          una sola longitud.
+        en: >-
+          Solves triangular structures in trusses and roofs when design angles and a single length are
+          known.
+  example:
+    title:
+      es: Triángulo con A=30°, B=45°, a=10
+      en: Triangle with A=30°, B=45°, a=10
+    lines:
+      - es: a / sen A = b / sen B
+        en: a / sin A = b / sin B
+      - es: 10 / sen 30° = b / sen 45°
+        en: 10 / sin 30° = b / sin 45°
+      - es: 10 / 0.5 = b / 0.7071
+        en: 10 / 0.5 = b / 0.7071
+      - es: 20 = b / 0.7071
+        en: 20 = b / 0.7071
+      - es: b = 20 · 0.7071 ≈ 14.14
+        en: b = 20 · 0.7071 ≈ 14.14

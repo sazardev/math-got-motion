@@ -1,0 +1,145 @@
+id: heisenberg-uncertainty-principle
+title:
+  es: Principio de Incertidumbre de Heisenberg
+  en: Heisenberg's Uncertainty Principle
+category:
+  es: Física moderna
+  en: Modern physics
+nodes:
+  - id: dx
+    type: variable
+    value: Δx
+    explanation:
+      es: La incertidumbre en la posición de una partícula.
+      en: The uncertainty in a particle's position.
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+  - id: dp
+    type: variable
+    value: Δp
+    explanation:
+      es: La incertidumbre en su cantidad de movimiento, o momento.
+      en: The uncertainty in its momentum.
+  - id: geq
+    type: operator
+    value: "≥"
+    explanation:
+      es: Es mayor o igual que, nunca se puede reducir más allá de este límite.
+      en: Is greater than or equal to, it can never be reduced below this limit.
+  - id: hbar
+    type: constant
+    value: ħ
+    explanation:
+      es: La constante de Planck reducida, h dividida entre 2π.
+      en: The reduced Planck constant, h divided by 2π.
+  - id: div
+    type: operator
+    value: /
+    explanation:
+      es: Dividida entre.
+      en: Divided by.
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: Dos, el factor que fija el límite exacto de la incertidumbre.
+      en: Two, the factor that sets the exact limit of the uncertainty.
+context:
+  author:
+    es: Werner Heisenberg
+    en: Werner Heisenberg
+  era:
+    es: Alemania, 1901–1976 · publicado en 1927
+    en: Germany, 1901–1976 · published in 1927
+  history:
+    es: >-
+      Heisenberg formuló el principio en 1927 mientras trabajaba con Niels Bohr en Copenhague.
+      Mostró que existe un límite fundamental — no técnico, sino de la naturaleza misma — a la
+      precisión con que se pueden conocer simultáneamente la posición y el momento de una
+      partícula. Fue central para la interpretación de Copenhague de la mecánica cuántica y le
+      valió el Nobel de Física en 1932.
+    en: >-
+      Heisenberg formulated the principle in 1927 while working with Niels Bohr in Copenhagen.
+      He showed there is a fundamental limit — not a technical one, but one built into nature
+      itself — to how precisely a particle's position and momentum can be known simultaneously.
+      It was central to the Copenhagen interpretation of quantum mechanics and earned him the
+      1932 Nobel Prize in Physics.
+  timeline:
+    - year: "1925"
+      label:
+        es: Heisenberg desarrolla la mecánica matricial, una de las primeras formulaciones completas de la cuántica.
+        en: Heisenberg develops matrix mechanics, one of the first complete formulations of quantum mechanics.
+    - year: "1927"
+      label:
+        es: Publica el principio de incertidumbre, un límite fundamental al conocimiento simultáneo de posición y momento.
+        en: He publishes the uncertainty principle, a fundamental limit on simultaneously knowing position and momentum.
+    - year: "1930"
+      label:
+        es: En el Congreso Solvay, Bohr y Einstein debaten el significado de la incertidumbre en la física cuántica.
+        en: At the Solvay Conference, Bohr and Einstein debate the meaning of uncertainty in quantum physics.
+    - year: "1932"
+      label:
+        es: Heisenberg recibe el Premio Nobel de Física por la creación de la mecánica cuántica.
+        en: Heisenberg receives the Nobel Prize in Physics for creating quantum mechanics.
+    - year: "1935"
+      label:
+        es: Einstein, Podolsky y Rosen publican su paradoja EPR, cuestionando si la cuántica está completa.
+        en: Einstein, Podolsky, and Rosen publish the EPR paradox, questioning whether quantum theory is complete.
+    - year: Hoy
+      label:
+        es: Fija límites reales en criptografía cuántica, microscopía electrónica y computación cuántica.
+        en: It sets real limits in quantum cryptography, electron microscopy, and quantum computing.
+  useCases:
+    - title:
+        es: Microscopía electrónica
+        en: Electron microscopy
+      description:
+        es: >-
+          La resolución máxima alcanzable al usar electrones para observar estructuras diminutas
+          está limitada por esta relación.
+        en: >-
+          The maximum resolution achievable when using electrons to image tiny structures is
+          limited by this relation.
+    - title:
+        es: Criptografía cuántica
+        en: Quantum cryptography
+      description:
+        es: >-
+          La distribución cuántica de claves es segura porque medir un sistema cuántico altera
+          inevitablemente su estado.
+        en: >-
+          Quantum key distribution is secure because measuring a quantum system inevitably
+          disturbs its state.
+    - title:
+        es: Electrónica cuántica
+        en: Quantum electronics
+      description:
+        es: El efecto túnel en transistores modernos depende de los límites cuánticos que impone este principio.
+        en: Quantum tunneling in modern transistors depends on the quantum limits this principle imposes.
+    - title:
+        es: Espectroscopía
+        en: Spectroscopy
+      description:
+        es: El ancho natural de una línea espectral surge de la incertidumbre entre energía y tiempo de vida del estado.
+        en: The natural width of a spectral line arises from the uncertainty between energy and a state's lifetime.
+  example:
+    title:
+      es: Un electrón dentro de un átomo
+      en: An electron inside an atom
+    lines:
+      - es: Δx = 1×10⁻¹⁰ m (tamaño atómico)
+        en: Δx = 1×10⁻¹⁰ m (atomic size)
+      - es: ħ = 1.055×10⁻³⁴ J·s
+        en: ħ = 1.055×10⁻³⁴ J·s
+      - es: Δx · Δp ≥ ħ / 2
+        en: Δx · Δp ≥ ħ / 2
+      - es: Δp ≥ ħ / (2 · Δx)
+        en: Δp ≥ ħ / (2 · Δx)
+      - es: Δp ≥ 1.055×10⁻³⁴ / (2×10⁻¹⁰)
+        en: Δp ≥ 1.055×10⁻³⁴ / (2×10⁻¹⁰)
+      - es: Δp ≥ 5.27×10⁻²⁵ kg·m/s
+        en: Δp ≥ 5.27×10⁻²⁵ kg·m/s

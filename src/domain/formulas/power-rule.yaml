@@ -1,0 +1,175 @@
+id: power-rule
+title:
+  es: Regla de la Potencia
+  en: Power Rule
+category:
+  es: Cálculo
+  en: Calculus
+nodes:
+  - id: d
+    type: operator
+    value: d/dx
+    explanation:
+      es: "El operador de derivación: indica la tasa de cambio respecto a x."
+      en: "The derivative operator: indicates the rate of change with respect to x."
+  - id: bracket-open
+    type: operator
+    value: "["
+    explanation:
+      es: Abre la expresión que se va a derivar.
+      en: Opens the expression being differentiated.
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: "La variable: la cantidad que cambia."
+      en: "The variable: the quantity that changes."
+  - id: n
+    type: superscript
+    value: n
+    explanation:
+      es: "El exponente: cualquier número real constante."
+      en: "The exponent: any constant real number."
+  - id: bracket-close
+    type: operator
+    value: "]"
+    explanation:
+      es: Cierra la expresión derivada.
+      en: Closes the differentiated expression.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: n2
+    type: variable
+    value: n
+    explanation:
+      es: El exponente original baja y multiplica al resultado.
+      en: The original exponent drops down and multiplies the result.
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+  - id: x2
+    type: variable
+    value: x
+    explanation:
+      es: La misma variable original.
+      en: The same original variable.
+  - id: n-minus-1
+    type: superscript
+    value: n−1
+    explanation:
+      es: El nuevo exponente, uno menos que el original.
+      en: The new exponent, one less than the original.
+context:
+  author:
+    es: Isaac Newton y Gottfried Leibniz
+    en: Isaac Newton and Gottfried Leibniz
+  era:
+    es: Inglaterra y Alemania, s. XVII · desarrollada en la década de 1660–1680
+    en: England and Germany, 17th century · developed in the 1660s–1680s
+  history:
+    es: >-
+      La regla de la potencia surgió como una de las primeras herramientas del cálculo diferencial,
+      inventado de forma independiente por Newton y Leibniz. Newton la desarrolló hacia 1665–1666
+      durante su 'año de las maravillas' en Woolsthorpe, mientras que Leibniz llegó a resultados
+      equivalentes con su propia notación a partir de 1675. La disputa de prioridad entre ambos y sus
+      seguidores duró décadas y dividió a la comunidad matemática europea, aunque hoy se reconoce que
+      ambos llegaron al resultado por caminos independientes.
+    en: >-
+      The power rule emerged as one of the earliest tools of differential calculus, invented
+      independently by Newton and Leibniz. Newton developed it around 1665–1666 during his
+      'annus mirabilis' at Woolsthorpe, while Leibniz reached equivalent results with his own
+      notation starting in 1675. The priority dispute between them and their followers lasted for
+      decades and split the European mathematical community, though today both are recognized as
+      having arrived at the result independently.
+  timeline:
+    - year: c. 1665
+      label:
+        es: >-
+          Newton desarrolla su método de fluxiones en Woolsthorpe, incluyendo una regla equivalente
+          para derivar potencias de x.
+        en: >-
+          Newton develops his method of fluxions at Woolsthorpe, including a rule equivalent to
+          differentiating powers of x.
+    - year: "1675"
+      label:
+        es: >-
+          Leibniz introduce su propia notación diferencial (dx, dy) y deriva la regla de la potencia
+          de forma independiente en París.
+        en: >-
+          Leibniz introduces his own differential notation (dx, dy) and derives the power rule
+          independently in Paris.
+    - year: "1704"
+      label:
+        es: >-
+          Estalla públicamente la disputa de prioridad entre newtonianos y leibnizianos sobre quién
+          inventó primero el cálculo.
+        en: >-
+          The priority dispute between Newtonians and Leibnizians over who invented calculus first
+          breaks out publicly.
+    - year: s. XIX
+      label:
+        es: >-
+          Matemáticos como Cauchy formalizan el concepto de límite, dando a la regla de la potencia
+          una base rigurosa moderna.
+        en: >-
+          Mathematicians like Cauchy formalize the concept of the limit, giving the power rule a
+          rigorous modern foundation.
+    - year: Hoy
+      label:
+        es: >-
+          Es la primera regla de derivación que se enseña en cualquier curso de cálculo, y la base de
+          reglas más avanzadas como la del producto y la cadena.
+        en: >-
+          It's the first differentiation rule taught in any calculus course, and the basis for more
+          advanced rules like the product and chain rules.
+  useCases:
+    - title:
+        es: Física del movimiento
+        en: Physics of motion
+      description:
+        es: >-
+          Derivar la posición respecto al tiempo, expresada como potencias de t, da la velocidad y la
+          aceleración de un objeto.
+        en: >-
+          Differentiating position with respect to time, expressed as powers of t, gives an object's
+          velocity and acceleration.
+    - title:
+        es: Optimización económica
+        en: Economic optimization
+      description:
+        es: >-
+          Empresas derivan funciones de costo e ingreso, casi siempre polinomios, para encontrar
+          niveles de producción óptimos.
+        en: >-
+          Businesses differentiate cost and revenue functions, almost always polynomials, to find
+          optimal production levels.
+    - title:
+        es: Aprendizaje automático
+        en: Machine learning
+      description:
+        es: >-
+          El descenso de gradiente, que entrena redes neuronales, depende de derivar funciones de
+          error que incluyen términos potenciales.
+        en: >-
+          Gradient descent, which trains neural networks, relies on differentiating error functions
+          that include power terms.
+  example:
+    title:
+      es: Derivar x⁴
+      en: Differentiating x⁴
+    lines:
+      - es: f(x) = x⁴
+        en: f(x) = x⁴
+      - es: n = 4
+        en: n = 4
+      - es: f'(x) = n · x^(n−1)
+        en: f'(x) = n · x^(n−1)
+      - es: f'(x) = 4 · x³
+        en: f'(x) = 4 · x³

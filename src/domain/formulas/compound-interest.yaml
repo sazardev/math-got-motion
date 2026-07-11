@@ -1,0 +1,182 @@
+id: compound-interest
+title:
+  es: Interés Compuesto
+  en: Compound Interest
+category:
+  es: Finanzas
+  en: Finance
+nodes:
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: "El monto final: cuánto dinero hay al cabo del tiempo, incluyendo capital e intereses."
+      en: The final amount — how much money there is after time has passed, including principal and interest.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+  - id: p
+    type: variable
+    value: P
+    explanation:
+      es: "El principal: la cantidad de dinero inicial, antes de que se le sumen intereses."
+      en: The principal — the initial amount of money, before any interest is added.
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el factor de crecimiento que se aplicará al principal.
+      en: Opens the growth factor that will be applied to the principal.
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: "La unidad: representa el 100% del capital que ya se tenía."
+      en: "The unit — represents the 100% of the capital already held."
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado a la tasa de interés de cada periodo.
+      en: Added to the interest rate of each period.
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: La tasa de interés anual, expresada como decimal (por ejemplo, 0.05 para 5%).
+      en: The annual interest rate, expressed as a decimal (for example, 0.05 for 5%).
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividida entre. Reparte la tasa anual entre los periodos de capitalización.
+      en: Divided by. Splits the annual rate across the compounding periods.
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: El número de veces que el interés se capitaliza por año.
+      en: The number of times interest is compounded per year.
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el factor de crecimiento por periodo.
+      en: Closes the per-period growth factor.
+  - id: nt
+    type: superscript
+    value: nt
+    explanation:
+      es: El número total de periodos de capitalización a lo largo de t años.
+      en: The total number of compounding periods over t years.
+context:
+  author:
+    es: "Origen colectivo, sin un único autor"
+    en: "Collective origin, no single author"
+  era:
+    es: Babilonia a Europa renacentista, c. 2000 a.C.–s. XVII · formalizada progresivamente
+    en: Babylon to Renaissance Europe, c. 2000 BCE–17th century · formalized progressively
+  history:
+    es: >-
+      Tablillas babilónicas de alrededor del año 2000 a.C. ya contienen tablas de interés que
+      aproximan el crecimiento compuesto de las deudas. Matemáticos del mundo islámico medieval
+      desarrollaron técnicas algebraicas para repartir ganancias y calcular préstamos. En 1202,
+      Leonardo Fibonacci introdujo en su Liber Abaci problemas de interés compuesto para los
+      comerciantes europeos, usando los novedosos numerales indoarábigos. La fórmula general que
+      usamos hoy se fue formalizando durante los siglos XVI y XVII, cuando banqueros italianos e
+      ingleses necesitaron tablas precisas para préstamos, anualidades y el comercio a larga
+      distancia.
+    en: >-
+      Babylonian clay tablets from around 2000 BCE already contain interest tables approximating the
+      compound growth of debts. Medieval Islamic mathematicians developed algebraic techniques for
+      splitting profits and calculating loans. In 1202, Leonardo Fibonacci introduced compound
+      interest problems for European merchants in his Liber Abaci, using the then-novel Hindu-Arabic
+      numerals. The general formula used today was progressively formalized during the 16th and 17th
+      centuries, as Italian and English bankers needed precise tables for loans, annuities, and
+      long-distance trade.
+  timeline:
+    - year: c. 2000 a.C.
+      label:
+        es: >-
+          Tablillas babilónicas registran tablas de interés que asumen capitalización periódica de las
+          deudas.
+        en: >-
+          Babylonian tablets record interest tables that assume periodic compounding of debts.
+    - year: "1202"
+      label:
+        es: >-
+          El Liber Abaci de Fibonacci introduce a los comerciantes europeos cálculos sofisticados de
+          interés y reparto de ganancias.
+        en: >-
+          Fibonacci's Liber Abaci introduces European merchants to sophisticated interest and
+          profit-sharing calculations.
+    - year: "1613"
+      label:
+        es: >-
+          Richard Witt publica en Londres el primer tratado en inglés dedicado enteramente al interés
+          compuesto, con tablas detalladas.
+        en: >-
+          Richard Witt publishes in London the first English treatise devoted entirely to compound
+          interest, with detailed tables.
+    - year: s. XVIII–XIX
+      label:
+        es: >-
+          La fórmula se vuelve estándar en la ciencia actuarial y en la regulación bancaria de seguros
+          y pensiones.
+        en: >-
+          The formula becomes standard in actuarial science and in banking regulation of insurance and
+          pensions.
+    - year: Hoy
+      label:
+        es: >-
+          Es la base de cuentas de ahorro, hipotecas, fondos de retiro y cualquier modelo financiero de
+          crecimiento a largo plazo.
+        en: >-
+          It underlies savings accounts, mortgages, retirement funds, and any long-term financial
+          growth model.
+  useCases:
+    - title:
+        es: Banca y ahorro
+        en: Banking and savings
+      description:
+        es: >-
+          Los bancos calculan cuánto crece un depósito con el tiempo según la frecuencia de
+          capitalización.
+        en: >-
+          Banks calculate how a deposit grows over time depending on the compounding frequency.
+    - title:
+        es: Préstamos e hipotecas
+        en: Loans and mortgages
+      description:
+        es: >-
+          Prestamistas y prestatarios calculan el costo total de una deuda a largo plazo, incluidos los
+          intereses acumulados.
+        en: >-
+          Lenders and borrowers calculate the total cost of long-term debt, including accumulated
+          interest.
+    - title:
+        es: Planificación de retiro e inversión
+        en: Retirement and investment planning
+      description:
+        es: >-
+          Asesores financieros proyectan el crecimiento de cuentas de inversión a lo largo de décadas.
+        en: >-
+          Financial advisors project the growth of investment accounts over decades.
+  example:
+    title:
+      es: Ejemplo de ahorro a 10 años
+      en: 10-year savings example
+    lines:
+      - es: "P = $1000 depositados a una tasa anual del 5%"
+        en: "P = $1,000 deposited at a 5% annual rate"
+      - es: "r = 0.05, n = 12 (capitalización mensual), t = 10 años"
+        en: "r = 0.05, n = 12 (monthly compounding), t = 10 years"
+      - es: A = 1000 × (1 + 0.05/12)^(12×10)
+        en: A = 1000 × (1 + 0.05/12)^(12×10)
+      - es: A = 1000 × (1.004167)^120
+        en: A = 1000 × (1.004167)^120
+      - es: A ≈ 1000 × 1.647 = $1,647
+        en: A ≈ 1000 × 1.647 = $1,647

@@ -1,0 +1,163 @@
+id: shannon-entropy
+title:
+  es: Entropía de Shannon
+  en: Shannon Entropy
+category:
+  es: Teoría de la información
+  en: Information theory
+nodes:
+  - id: h
+    type: variable
+    value: H
+    explanation:
+      es: "La entropía: una medida de la incertidumbre promedio o la información contenida en un mensaje."
+      en: The entropy — a measure of the average uncertainty or information contained in a message.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: Un signo negativo, necesario porque los logaritmos de probabilidades son negativos.
+      en: A negative sign, needed because the logarithms of probabilities are negative.
+  - id: sigma
+    type: operator
+    value: "Σ"
+    explanation:
+      es: La suma sobre todos los resultados posibles x del mensaje o variable aleatoria.
+      en: The sum over every possible outcome x of the message or random variable.
+  - id: px
+    type: variable
+    value: p(x)
+    explanation:
+      es: La probabilidad de que ocurra el resultado x.
+      en: The probability that outcome x occurs.
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+  - id: log2
+    type: operator
+    value: log₂
+    explanation:
+      es: El logaritmo en base 2, que mide la información en bits.
+      en: The base-2 logarithm, which measures information in bits.
+  - id: px-2
+    type: variable
+    value: p(x)
+    explanation:
+      es: La misma probabilidad de x, ahora dentro del logaritmo.
+      en: The same probability of x, now inside the logarithm.
+context:
+  author:
+    es: Claude Shannon
+    en: Claude Shannon
+  era:
+    es: Estados Unidos, 1916–2001 · publicada en 1948
+    en: United States, 1916–2001 · published in 1948
+  history:
+    es: >-
+      Shannon presentó esta fórmula en "A Mathematical Theory of Communication", publicado en 1948 en
+      el Bell System Technical Journal mientras trabajaba en los Laboratorios Bell. El artículo fundó
+      la teoría de la información como disciplina. Por sugerencia del matemático John von Neumann,
+      Shannon tomó prestado de la termodinámica el nombre "entropía" para su medida de incertidumbre,
+      notando que la fórmula tenía la misma forma que la entropía estadística de Boltzmann. El trabajo
+      estableció los límites fundamentales de cuánto puede comprimirse un mensaje y a qué velocidad
+      puede transmitirse información de forma confiable por un canal ruidoso.
+    en: >-
+      Shannon introduced this formula in "A Mathematical Theory of Communication," published in 1948
+      in the Bell System Technical Journal while working at Bell Labs. The paper founded information
+      theory as a discipline. On the suggestion of mathematician John von Neumann, Shannon borrowed
+      the term "entropy" from thermodynamics for his measure of uncertainty, noting the formula shared
+      its exact form with Boltzmann's statistical entropy. The work established the fundamental limits
+      of how far a message can be compressed and how fast information can be reliably transmitted over
+      a noisy channel.
+  timeline:
+    - year: "1948"
+      label:
+        es: >-
+          Shannon publica "A Mathematical Theory of Communication", introduciendo la entropía como
+          medida de información e incertidumbre.
+        en: >-
+          Shannon publishes "A Mathematical Theory of Communication," introducing entropy as a measure
+          of information and uncertainty.
+    - year: "1949"
+      label:
+        es: >-
+          La edición en libro, coescrita con Warren Weaver, populariza la teoría más allá de la
+          ingeniería.
+        en: >-
+          The book edition, co-written with Warren Weaver, popularizes the theory beyond engineering.
+    - year: décadas de 1950–60
+      label:
+        es: >-
+          El concepto de entropía se adopta en criptografía y en la teoría de codificación para
+          detectar y corregir errores.
+        en: >-
+          The entropy concept is adopted in cryptography and coding theory for error detection and
+          correction.
+    - year: décadas de 1990–2000
+      label:
+        es: >-
+          Se vuelve la base teórica de estándares de compresión como ZIP, JPEG y MP3.
+        en: >-
+          It becomes the theoretical basis for compression standards like ZIP, JPEG, and MP3.
+    - year: Hoy
+      label:
+        es: >-
+          Sustenta la compresión de datos, la seguridad criptográfica y funciones de pérdida como la
+          entropía cruzada en aprendizaje automático.
+        en: >-
+          It underlies data compression, cryptographic security, and loss functions such as
+          cross-entropy in machine learning.
+  useCases:
+    - title:
+        es: Compresión de datos
+        en: Data compression
+      description:
+        es: >-
+          La entropía define el número mínimo teórico de bits necesarios para codificar un mensaje, el
+          límite que persiguen formatos como ZIP o JPEG.
+        en: >-
+          Entropy defines the theoretical minimum number of bits needed to encode a message, the limit
+          that formats like ZIP or JPEG chase.
+    - title:
+        es: Criptografía
+        en: Cryptography
+      description:
+        es: >-
+          Mide la impredecibilidad de claves y contraseñas, clave para evaluar qué tan segura es una
+          clave frente a ataques.
+        en: >-
+          Measures the unpredictability of keys and passwords, key to evaluating how secure they are
+          against attacks.
+    - title:
+        es: Aprendizaje automático
+        en: Machine learning
+      description:
+        es: >-
+          Las funciones de pérdida de entropía cruzada, derivadas de esta fórmula, entrenan la mayoría
+          de los clasificadores modernos.
+        en: >-
+          Cross-entropy loss functions, derived from this formula, train most modern classifiers.
+  example:
+    title:
+      es: Entropía de una moneda justa
+      en: Entropy of a fair coin
+    lines:
+      - es: "Moneda justa: p(cara) = 0.5, p(cruz) = 0.5"
+        en: "Fair coin: p(heads) = 0.5, p(tails) = 0.5"
+      - es: log₂(0.5) = −1
+        en: log₂(0.5) = −1
+      - es: H = −(0.5 × (−1) + 0.5 × (−1))
+        en: H = −(0.5 × (−1) + 0.5 × (−1))
+      - es: H = −(−0.5 − 0.5) = 1
+        en: H = −(−0.5 − 0.5) = 1
+      - es: "Resultado: 1 bit de incertidumbre por lanzamiento"
+        en: "Result: 1 bit of uncertainty per flip"

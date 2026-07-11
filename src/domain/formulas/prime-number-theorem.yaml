@@ -1,0 +1,155 @@
+id: prime-number-theorem
+title:
+  es: Teorema de los Números Primos
+  en: Prime Number Theorem
+category:
+  es: Teoría de números
+  en: Number theory
+nodes:
+  - id: pi-x
+    type: variable
+    value: π(x)
+    explanation:
+      es: >-
+        La función contadora de primos: cuántos números primos hay que sean menores o iguales a x.
+      en: >-
+        The prime-counting function: how many prime numbers are less than or equal to x.
+  - id: approx
+    type: operator
+    value: "~"
+    explanation:
+      es: >-
+        Es asintóticamente equivalente a: la razón entre ambos lados tiende a 1 cuando x crece sin
+        límite.
+      en: >-
+        Is asymptotically equivalent to: the ratio of both sides tends to 1 as x grows without
+        bound.
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: Un número muy grande hasta el cual se cuentan los primos.
+      en: A very large number up to which primes are counted.
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+  - id: ln-x
+    type: variable
+    value: ln(x)
+    explanation:
+      es: >-
+        El logaritmo natural de x: crece muy lentamente y explica por qué los primos se vuelven cada
+        vez más escasos.
+      en: >-
+        The natural logarithm of x: it grows very slowly, and explains why primes become
+        increasingly scarce.
+context:
+  author:
+    es: Jacques Hadamard y Charles de la Vallée Poussin
+    en: Jacques Hadamard and Charles de la Vallée Poussin
+  era:
+    es: Francia/Bélgica · conjeturado c. 1797, demostrado en 1896
+    en: France/Belgium · conjectured c. 1797, proved in 1896
+  history:
+    es: >-
+      Tanto Gauss como Legendre, trabajando por separado a fines del siglo XVIII, notaron que la
+      densidad de los números primos alrededor de x se aproxima a 1/ln(x), a partir de tablas de
+      primos calculadas a mano. Gauss lo conjeturó ya en 1792, siendo adolescente, aunque no lo
+      publicó formalmente. La conjetura resistió cualquier demostración rigurosa durante casi un
+      siglo, hasta que en 1896 Jacques Hadamard y Charles de la Vallée Poussin, trabajando de forma
+      independiente, la probaron usando las propiedades de la función zeta de Riemann y sus ceros
+      complejos, conectando para siempre el análisis complejo con la teoría de números.
+    en: >-
+      Both Gauss and Legendre, working separately in the late 18th century, noticed that the density
+      of primes around x approaches 1/ln(x), based on prime tables computed by hand. Gauss
+      conjectured it as early as 1792, as a teenager, though he never formally published it. The
+      conjecture resisted any rigorous proof for nearly a century, until in 1896 Jacques Hadamard and
+      Charles de la Vallée Poussin, working independently, proved it using properties of Riemann's
+      zeta function and its complex zeros, forever linking complex analysis with number theory.
+  timeline:
+    - year: "1792"
+      label:
+        es: >-
+          Un joven Gauss, de apenas 15 años, conjetura la relación estudiando tablas de primos
+          calculadas a mano.
+        en: >-
+          A young Gauss, just 15, conjectures the relationship while studying hand-computed prime
+          tables.
+    - year: c. 1798
+      label:
+        es: >-
+          Legendre publica de forma independiente una conjetura similar sobre la densidad de los
+          números primos.
+        en: >-
+          Legendre independently publishes a similar conjecture about the density of prime numbers.
+    - year: "1859"
+      label:
+        es: >-
+          Riemann conecta el problema con los ceros de su función zeta, abriendo el camino hacia una
+          demostración.
+        en: >-
+          Riemann connects the problem to the zeros of his zeta function, opening the path toward a
+          proof.
+    - year: "1896"
+      label:
+        es: >-
+          Hadamard y de la Vallée Poussin demuestran el teorema de forma independiente, usando
+          análisis complejo.
+        en: >-
+          Hadamard and de la Vallée Poussin independently prove the theorem, using complex analysis.
+    - year: Hoy
+      label:
+        es: >-
+          Sigue siendo la base para estimar cuántos primos existen en cualquier rango, clave para
+          generar claves criptográficas.
+        en: >-
+          It remains the basis for estimating how many primes exist in any range, key to generating
+          cryptographic keys.
+  useCases:
+    - title:
+        es: Criptografía
+        en: Cryptography
+      description:
+        es: >-
+          Estima cuántos números primos grandes hay disponibles en cierto rango de bits, algo
+          esencial para generar claves RSA.
+        en: >-
+          Estimates how many large primes are available within a given bit range, essential for
+          generating RSA keys.
+    - title:
+        es: Teoría analítica de números
+        en: Analytic number theory
+      description:
+        es: >-
+          Sirve como punto de partida para resultados más finos sobre la distribución de los primos,
+          incluyendo la Hipótesis de Riemann.
+        en: >-
+          Serves as the starting point for finer results about prime distribution, including the
+          Riemann Hypothesis.
+    - title:
+        es: Algoritmos de test de primalidad
+        en: Primality testing algorithms
+      description:
+        es: >-
+          Ayuda a estimar cuántos intentos hará falta en promedio antes de encontrar un número primo
+          al azar.
+        en: >-
+          Helps estimate how many attempts it will take, on average, to find a random prime number.
+  example:
+    title:
+      es: Estimar primos hasta un millón
+      en: Estimating primes up to a million
+    lines:
+      - es: x = 1,000,000
+        en: x = 1,000,000
+      - es: ln(1,000,000) ≈ 13.816
+        en: ln(1,000,000) ≈ 13.816
+      - es: π(x) ~ x / ln(x) ≈ 1,000,000 / 13.816
+        en: π(x) ~ x / ln(x) ≈ 1,000,000 / 13.816
+      - es: Estimación ≈ 72,382 primos
+        en: Estimate ≈ 72,382 primes
+      - es: El valor real es 78,498 primos, una aproximación razonable
+        en: The true value is 78,498 primes, a reasonable approximation

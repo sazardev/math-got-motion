@@ -1,0 +1,157 @@
+id: herons-formula
+title:
+  es: Fórmula de Herón
+  en: Heron's Formula
+category:
+  es: Geometría
+  en: Geometry
+nodes:
+  - id: area
+    type: variable
+    value: A
+    explanation:
+      es: El área del triángulo, calculada únicamente a partir de las longitudes de sus tres lados.
+      en: The triangle's area, calculated solely from the lengths of its three sides.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: Raíz cuadrada de todo el producto que sigue.
+      en: Square root of the whole product that follows.
+  - id: s
+    type: variable
+    value: s
+    explanation:
+      es: "El semiperímetro: la mitad de la suma de los tres lados del triángulo, s = (a+b+c)/2."
+      en: "The semi-perimeter: half the sum of the triangle's three sides, s = (a+b+c)/2."
+  - id: s-minus-a
+    type: variable
+    value: (s−a)
+    explanation:
+      es: El semiperímetro menos el lado a.
+      en: The semi-perimeter minus side a.
+  - id: s-minus-b
+    type: variable
+    value: (s−b)
+    explanation:
+      es: El semiperímetro menos el lado b.
+      en: The semi-perimeter minus side b.
+  - id: s-minus-c
+    type: variable
+    value: (s−c)
+    explanation:
+      es: El semiperímetro menos el lado c, el último factor bajo la raíz.
+      en: The semi-perimeter minus side c, the last factor under the root.
+context:
+  author:
+    es: Herón de Alejandría
+    en: Heron of Alexandria
+  era:
+    es: Alejandría, Egipto romano, s. I d.C. · Metrica, c. 60 d.C.
+    en: Alexandria, Roman Egypt, 1st century AD · Metrica, c. 60 AD
+  history:
+    es: >-
+      Herón de Alejandría fue un matemático e ingeniero que trabajó en el Egipto romano, conocido por
+      sus inventos mecánicos —como el eolípila, un precursor de la turbina de vapor— además de sus
+      contribuciones a la geometría. Su fórmula para el área de un triángulo a partir únicamente de las
+      longitudes de sus tres lados aparece demostrada en su obra Metrica, redescubierta recién en 1896
+      en un manuscrito de Constantinopla, aunque se cita también en textos anteriores suyos. Algunos
+      historiadores señalan que el resultado pudo ser conocido por Arquímedes siglos antes, pero es
+      Herón quien nos dejó la primera demostración registrada. Su elegancia radica en que no requiere
+      conocer ningún ángulo ni altura del triángulo, solo sus tres lados.
+    en: >-
+      Heron of Alexandria was a mathematician and engineer working in Roman Egypt, known for
+      mechanical inventions —such as the aeolipile, a precursor to the steam turbine— alongside his
+      contributions to geometry. His formula for a triangle's area using only the lengths of its three
+      sides appears proven in his work Metrica, rediscovered only in 1896 in a manuscript found in
+      Constantinople, though it is also cited in his earlier texts. Some historians note the result may
+      have been known to Archimedes centuries earlier, but Heron is the one who left us the first
+      recorded proof. Its elegance lies in requiring no knowledge of any angle or height of the
+      triangle, only its three sides.
+  timeline:
+    - year: c. 60 d.C.
+      label:
+        es: >-
+          Herón de Alejandría demuestra la fórmula en su tratado Metrica, calculando áreas solo a
+          partir de los tres lados.
+        en: >-
+          Heron of Alexandria proves the formula in his treatise Metrica, calculating areas from only
+          the three sides.
+    - year: "1896"
+      label:
+        es: >-
+          Se redescubre en Constantinopla el manuscrito de Metrica, perdido durante siglos, confirmando
+          la autoría de Herón.
+        en: >-
+          The Metrica manuscript, lost for centuries, is rediscovered in Constantinople, confirming
+          Heron's authorship.
+    - year: s. IX–X
+      label:
+        es: Matemáticos árabes como Abu'l-Wafa transmiten y amplían el resultado en sus propios tratados.
+        en: Arab mathematicians like Abu'l-Wafa transmit and expand the result in their own treatises.
+    - year: Hoy
+      label:
+        es: >-
+          Se usa en topografía, computación gráfica y algoritmos de geometría computacional para
+          calcular áreas sin medir ángulos.
+        en: >-
+          Used in surveying, computer graphics, and computational geometry algorithms to calculate
+          areas without measuring angles.
+  useCases:
+    - title:
+        es: Topografía y catastro
+        en: Surveying and land registry
+      description:
+        es: >-
+          Calcula el área de parcelas triangulares de terreno midiendo solo la longitud de sus lados
+          con cinta métrica.
+        en: >-
+          Calculates the area of triangular land parcels by measuring only the length of their sides
+          with a tape measure.
+    - title:
+        es: Gráficos por computadora
+        en: Computer graphics
+      description:
+        es: >-
+          Calcula áreas de triángulos en mallas 3D para renderizado, física de partículas y detección
+          de colisiones.
+        en: >-
+          Calculates areas of triangles in 3D meshes for rendering, particle physics, and collision
+          detection.
+    - title:
+        es: Sistemas de información geográfica
+        en: Geographic information systems
+      description:
+        es: >-
+          Estima áreas de regiones irregulares descomponiéndolas en triángulos y sumando sus áreas
+          mediante la fórmula.
+        en: >-
+          Estimates areas of irregular regions by decomposing them into triangles and summing their
+          areas via the formula.
+    - title:
+        es: Arquitectura naval
+        en: Naval architecture
+      description:
+        es: >-
+          Calcula superficies de paneles triangulares en cascos de barcos y estructuras aeroespaciales.
+        en: >-
+          Calculates surface areas of triangular panels in ship hulls and aerospace structures.
+  example:
+    title:
+      es: Triángulo con lados 5, 6, 7
+      en: Triangle with sides 5, 6, 7
+    lines:
+      - es: s = (5 + 6 + 7) / 2 = 9
+        en: s = (5 + 6 + 7) / 2 = 9
+      - es: A = √(9 · (9−5) · (9−6) · (9−7))
+        en: A = √(9 · (9−5) · (9−6) · (9−7))
+      - es: A = √(9 · 4 · 3 · 2)
+        en: A = √(9 · 4 · 3 · 2)
+      - es: A = √216 ≈ 14.7
+        en: A = √216 ≈ 14.7

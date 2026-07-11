@@ -159,5 +159,14 @@ export default tseslint.config(
       },
     },
   },
+  {
+    // Scripts de Node/CLI (no app code): console.log y process.exit son el
+    // idioma normal acá, no un code smell.
+    files: ["scripts/**/*.ts"],
+    rules: {
+      "no-console": "off",
+      "unicorn/no-process-exit": "off",
+    },
+  },
   prettierConfig,
 );

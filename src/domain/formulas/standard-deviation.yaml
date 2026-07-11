@@ -1,0 +1,182 @@
+id: standard-deviation
+title:
+  es: Desviación Estándar
+  en: Standard Deviation
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+nodes:
+  - id: sigma
+    type: variable
+    value: σ
+    explanation:
+      es: >-
+        Sigma, la desviación estándar: mide en promedio qué tan lejos están los datos de su media.
+      en: >-
+        Sigma, the standard deviation: measures, on average, how far the data sits from its mean.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: La raíz cuadrada de todo lo que sigue, para devolver la medida a las unidades originales.
+      en: The square root of everything that follows, bringing the measure back to original units.
+  - id: sigma-sum
+    type: operator
+    value: Σ
+    explanation:
+      es: >-
+        Sigma mayúscula: suma un término por cada dato de la muestra, del primero al último.
+      en: >-
+        Capital sigma: sums one term for every data point in the sample, from first to last.
+  - id: x-i
+    type: variable
+    value: xᵢ
+    explanation:
+      es: Cada valor individual de los datos, identificado por su posición i.
+      en: Each individual data value, identified by its position i.
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: Menos, restando la media a cada valor.
+      en: Minus, subtracting the mean from each value.
+  - id: mu
+    type: variable
+    value: μ
+    explanation:
+      es: "Mu, la media aritmética: el promedio de todos los valores de los datos."
+      en: "Mu, the arithmetic mean: the average of all the data values."
+  - id: sq
+    type: superscript
+    value: "²"
+    explanation:
+      es: Cada diferencia se eleva al cuadrado, para que siempre cuente como positiva.
+      en: Each difference is squared, so it always counts as positive.
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+  - id: n
+    type: variable
+    value: N
+    explanation:
+      es: "N mayúscula: el número total de datos en la muestra o población."
+      en: "Capital N: the total number of data points in the sample or population."
+context:
+  author:
+    es: Karl Pearson
+    en: Karl Pearson
+  era:
+    es: Inglaterra, 1857–1936 · término y notación acuñados en 1894
+    en: England, 1857–1936 · term and notation coined in 1894
+  history:
+    es: >-
+      La idea de medir la dispersión de un conjunto de datos alrededor de su media surgió del trabajo
+      de Gauss y Laplace sobre errores de medición a comienzos del siglo XIX, pero no tenía nombre
+      propio ni un símbolo estándar. Fue el estadístico inglés Karl Pearson quien en 1894 acuñó el
+      término 'desviación estándar' y popularizó la letra griega σ (sigma) para representarla,
+      dentro de su programa de fundar la bioestadística como disciplina rigurosa. Desde entonces se
+      volvió la medida de dispersión más usada en ciencia y estadística aplicada.
+    en: >-
+      The idea of measuring how spread out a data set is around its mean grew out of Gauss and
+      Laplace's work on measurement errors in the early 1800s, but it had no proper name or standard
+      symbol. It was the English statistician Karl Pearson who, in 1894, coined the term 'standard
+      deviation' and popularized the Greek letter σ (sigma) to represent it, as part of his program
+      to establish biostatistics as a rigorous discipline. It has since become the most widely used
+      measure of spread in science and applied statistics.
+  timeline:
+    - year: c. 1809
+      label:
+        es: >-
+          Gauss y Laplace estudian la dispersión de errores de medición astronómica alrededor de un
+          valor central.
+        en: >-
+          Gauss and Laplace study the spread of astronomical measurement errors around a central
+          value.
+    - year: "1894"
+      label:
+        es: >-
+          Karl Pearson acuña el término 'desviación estándar' y adopta σ como su símbolo en sus
+          conferencias de bioestadística.
+        en: >-
+          Karl Pearson coins the term 'standard deviation' and adopts σ as its symbol in his
+          biostatistics lectures.
+    - year: s. XX
+      label:
+        es: >-
+          Se vuelve una herramienta central del control de calidad, la psicometría y las ciencias
+          sociales cuantitativas.
+        en: >-
+          It becomes a central tool of quality control, psychometrics, and quantitative social
+          science.
+    - year: Hoy
+      label:
+        es: >-
+          Se calcula automáticamente en cada hoja de cálculo y software estadístico para resumir la
+          variabilidad de cualquier dato.
+        en: >-
+          It's computed automatically in every spreadsheet and statistics package to summarize the
+          variability of any data.
+  useCases:
+    - title:
+        es: Control de calidad
+        en: Quality control
+      description:
+        es: >-
+          Las fábricas la usan para saber si las piezas producidas se mantienen dentro de una
+          tolerancia aceptable respecto al valor esperado.
+        en: >-
+          Factories use it to check whether manufactured parts stay within an acceptable tolerance
+          of the expected value.
+    - title:
+        es: Finanzas
+        en: Finance
+      description:
+        es: >-
+          Mide la volatilidad de una acción o cartera: a mayor desviación estándar, mayor riesgo
+          percibido.
+        en: >-
+          It measures the volatility of a stock or portfolio: the higher the standard deviation, the
+          higher the perceived risk.
+    - title:
+        es: Meteorología
+        en: Meteorology
+      description:
+        es: >-
+          Describe cuánto varían las temperaturas diarias respecto al promedio histórico de una
+          región.
+        en: >-
+          It describes how much daily temperatures vary from a region's historical average.
+    - title:
+        es: Ciencia de datos
+        en: Data science
+      description:
+        es: >-
+          Se usa para normalizar variables y detectar valores atípicos antes de entrenar modelos.
+        en: >-
+          It's used to normalize variables and flag outliers before training models.
+  example:
+    title:
+      es: Cinco calificaciones de examen
+      en: Five exam scores
+    lines:
+      - es: "Datos: 4, 8, 6, 5, 3"
+        en: "Data: 4, 8, 6, 5, 3"
+      - es: Media μ = (4+8+6+5+3)/5 = 5.2
+        en: Mean μ = (4+8+6+5+3)/5 = 5.2
+      - es: "Diferencias al cuadrado: 1.44, 7.84, 0.64, 0.04, 4.84"
+        en: "Squared differences: 1.44, 7.84, 0.64, 0.04, 4.84"
+      - es: Suma de diferencias = 14.8
+        en: Sum of differences = 14.8
+      - es: 14.8 / 5 = 2.96
+        en: 14.8 / 5 = 2.96
+      - es: σ = √2.96 ≈ 1.72
+        en: σ = √2.96 ≈ 1.72

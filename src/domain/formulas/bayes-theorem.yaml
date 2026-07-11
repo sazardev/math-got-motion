@@ -1,0 +1,181 @@
+id: bayes-theorem
+title:
+  es: Teorema de Bayes
+  en: Bayes' Theorem
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+nodes:
+  - id: p-a-given-b
+    type: variable
+    value: P(A|B)
+    explanation:
+      es: >-
+        La probabilidad posterior: qué tan probable es A ahora que sabemos que B ocurrió. Es lo que
+        el teorema permite calcular.
+      en: >-
+        The posterior probability: how likely A is now that we know B occurred. This is what the
+        theorem lets us compute.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: p-b-given-a
+    type: variable
+    value: P(B|A)
+    explanation:
+      es: >-
+        La verosimilitud: qué tan probable sería observar B si A fuera verdadero.
+      en: >-
+        The likelihood: how probable observing B would be if A were true.
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+  - id: p-a
+    type: variable
+    value: P(A)
+    explanation:
+      es: >-
+        La probabilidad previa (a priori) de A, antes de conocer cualquier evidencia sobre B.
+      en: >-
+        The prior probability of A, before knowing any evidence about B.
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+  - id: p-b
+    type: variable
+    value: P(B)
+    explanation:
+      es: >-
+        La probabilidad total de la evidencia B, sumando todas las formas en que B puede ocurrir.
+      en: >-
+        The total probability of the evidence B, summing every way B can occur.
+context:
+  author:
+    es: Thomas Bayes
+    en: Thomas Bayes
+  era:
+    es: Inglaterra, c. 1701–1761 · publicado póstumamente en 1763
+    en: England, c. 1701–1761 · published posthumously in 1763
+  history:
+    es: >-
+      Bayes, un clérigo y matemático inglés, nunca publicó su idea en vida. Su amigo Richard Price
+      encontró el manuscrito tras su muerte y lo presentó a la Royal Society en 1763 bajo el título
+      'An Essay towards solving a Problem in the Doctrine of Chances'. Años después, sin conocer el
+      trabajo de Bayes, Pierre-Simon Laplace redescubrió y generalizó el mismo principio de forma
+      independiente, dándole la notación y el alcance que lo volvieron una herramienta central de la
+      estadística moderna.
+    en: >-
+      Bayes, an English clergyman and mathematician, never published his idea during his lifetime.
+      His friend Richard Price found the manuscript after his death and presented it to the Royal
+      Society in 1763 under the title 'An Essay towards solving a Problem in the Doctrine of
+      Chances.' Years later, unaware of Bayes' work, Pierre-Simon Laplace independently rediscovered
+      and generalized the same principle, giving it the notation and scope that made it a central
+      tool of modern statistics.
+  timeline:
+    - year: "1763"
+      label:
+        es: >-
+          Richard Price publica póstumamente el ensayo de Bayes en Philosophical Transactions of the
+          Royal Society.
+        en: >-
+          Richard Price posthumously publishes Bayes' essay in Philosophical Transactions of the
+          Royal Society.
+    - year: "1774"
+      label:
+        es: >-
+          Laplace deriva de forma independiente el mismo principio y lo aplica a problemas de
+          probabilidad inversa.
+        en: >-
+          Laplace independently derives the same principle and applies it to problems of inverse
+          probability.
+    - year: "1812"
+      label:
+        es: >-
+          Laplace publica Théorie analytique des probabilités, consolidando el razonamiento
+          bayesiano como método formal.
+        en: >-
+          Laplace publishes Théorie analytique des probabilités, cementing Bayesian reasoning as a
+          formal method.
+    - year: s. XX
+      label:
+        es: >-
+          Surge un fuerte debate entre estadística bayesiana y frecuentista; el método revive con la
+          llegada de la computación.
+        en: >-
+          A strong debate emerges between Bayesian and frequentist statistics; the method is
+          revived by the arrival of computing.
+    - year: Hoy
+      label:
+        es: >-
+          Es la base de filtros de spam, diagnóstico médico, sistemas de recomendación y buena parte
+          del aprendizaje automático moderno.
+        en: >-
+          It underlies spam filters, medical diagnosis, recommendation systems, and much of modern
+          machine learning.
+  useCases:
+    - title:
+        es: Diagnóstico médico
+        en: Medical diagnosis
+      description:
+        es: >-
+          Actualiza la probabilidad de tener una enfermedad a partir del resultado de un test,
+          considerando su sensibilidad y su tasa de falsos positivos.
+        en: >-
+          Updates the probability of having a disease from a test result, factoring in its
+          sensitivity and false-positive rate.
+    - title:
+        es: Filtros de spam
+        en: Spam filtering
+      description:
+        es: >-
+          Los clasificadores 'naive Bayes' calculan la probabilidad de que un correo sea spam según
+          las palabras que contiene.
+        en: >-
+          Naive Bayes classifiers compute the probability that an email is spam based on the words
+          it contains.
+    - title:
+        es: Aprendizaje automático
+        en: Machine learning
+      description:
+        es: >-
+          La inferencia bayesiana actualiza modelos probabilísticos a medida que llegan nuevos datos,
+          en lugar de reentrenar desde cero.
+        en: >-
+          Bayesian inference updates probabilistic models as new data arrives, instead of retraining
+          from scratch.
+    - title:
+        es: Peritajes forenses y legales
+        en: Forensic and legal reasoning
+      description:
+        es: >-
+          Ayuda a evaluar cuánto cambia la probabilidad de culpabilidad frente a una nueva pieza de
+          evidencia, como una coincidencia de ADN.
+        en: >-
+          Helps assess how much a new piece of evidence, like a DNA match, should shift the
+          probability of guilt.
+  example:
+    title:
+      es: Un test médico
+      en: A medical test
+    lines:
+      - es: P(enfermedad) = 0.01, la prevalencia previa
+        en: P(disease) = 0.01, the prior prevalence
+      - es: P(positivo|enfermedad) = 0.9, sensibilidad del test
+        en: P(positive|disease) = 0.9, the test's sensitivity
+      - es: P(positivo|sano) = 0.05, tasa de falsos positivos
+        en: P(positive|healthy) = 0.05, the false-positive rate
+      - es: P(positivo) = 0.9×0.01 + 0.05×0.99 = 0.0585
+        en: P(positive) = 0.9×0.01 + 0.05×0.99 = 0.0585
+      - es: P(enfermedad|positivo) = 0.009 / 0.0585 ≈ 0.154
+        en: P(disease|positive) = 0.009 / 0.0585 ≈ 0.154
+      - es: Solo 15.4% de quienes dan positivo están realmente enfermos
+        en: Only 15.4% of those who test positive are actually sick

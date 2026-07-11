@@ -1,0 +1,149 @@
+id: mass-energy-equivalence
+title:
+  es: Equivalencia entre Masa y Energía
+  en: Mass-Energy Equivalence
+category:
+  es: Física moderna
+  en: Modern physics
+nodes:
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: La energía contenida en un objeto, medida en joules.
+      en: The energy contained in an object, measured in joules.
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: La masa del objeto, en kilogramos.
+      en: The object's mass, in kilograms.
+  - id: c
+    type: constant
+    value: c
+    explanation:
+      es: "La velocidad de la luz en el vacío: unos 300,000 km/s."
+      en: "The speed of light in vacuum: about 300,000 km/s."
+  - id: c-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: Elevada al cuadrado, la razón por la que incluso poca masa equivale a enorme energía.
+      en: Squared, the reason even a tiny mass equals enormous energy.
+context:
+  author:
+    es: Albert Einstein
+    en: Albert Einstein
+  era:
+    es: Alemania y Suiza, 1879–1955 · publicada en 1905
+    en: Germany and Switzerland, 1879–1955 · published in 1905
+  history:
+    es: >-
+      Einstein la presentó en 1905, en un breve artículo titulado '¿Depende la inercia de un
+      cuerpo de su contenido energético?', parte de sus célebres papers del 'año milagroso'. La
+      ecuación muestra que masa y energía son formas intercambiables de una misma cosa, unidas
+      por el cuadrado de la velocidad de la luz. Cambió para siempre la física nuclear y nuestra
+      idea de la materia.
+    en: >-
+      Einstein introduced it in 1905, in a short paper titled 'Does the Inertia of a Body
+      Depend Upon Its Energy Content?', part of his famous 'miracle year' papers. The equation
+      shows that mass and energy are interchangeable forms of the same thing, linked by the
+      square of the speed of light. It permanently changed nuclear physics and our idea of
+      matter.
+  timeline:
+    - year: "1905"
+      label:
+        es: Einstein publica la equivalencia masa-energía como consecuencia de su relatividad especial.
+        en: Einstein publishes mass-energy equivalence as a consequence of his special relativity.
+    - year: "1932"
+      label:
+        es: >-
+          Cockcroft y Walton dividen el átomo de litio y confirman experimentalmente la
+          conversión de masa en energía.
+        en: >-
+          Cockcroft and Walton split the lithium atom, experimentally confirming the conversion
+          of mass into energy.
+    - year: "1938"
+      label:
+        es: Hahn, Strassmann y Meitner descubren la fisión nuclear; Meitner explica la energía con E = mc².
+        en: Hahn, Strassmann, and Meitner discover nuclear fission; Meitner explains the energy using E = mc².
+    - year: "1945"
+      label:
+        es: >-
+          El Proyecto Manhattan demuestra a gran escala la conversión de masa en energía con las
+          primeras armas nucleares.
+        en: >-
+          The Manhattan Project demonstrates mass-to-energy conversion at scale with the first
+          nuclear weapons.
+    - year: "1956"
+      label:
+        es: Calder Hall, en Inglaterra, se convierte en la primera planta nuclear comercial.
+        en: Calder Hall in England becomes the first commercial nuclear power plant.
+    - year: Hoy
+      label:
+        es: Sustenta la energía nuclear, la medicina con positrones y los cálculos de física de partículas.
+        en: It underpins nuclear power, positron-based medicine, and particle physics calculations.
+  useCases:
+    - title:
+        es: Energía nuclear
+        en: Nuclear power
+      description:
+        es: >-
+          Las plantas nucleares generan electricidad convirtiendo una fracción diminuta de masa
+          de uranio en enormes cantidades de energía.
+        en: >-
+          Nuclear plants generate electricity by converting a tiny fraction of uranium's mass
+          into enormous amounts of energy.
+    - title:
+        es: Medicina nuclear
+        en: Nuclear medicine
+      description:
+        es: >-
+          Los escáneres PET detectan la aniquilación de positrones y electrones, que libera
+          energía exactamente según E = mc².
+        en: >-
+          PET scanners detect positron-electron annihilation, which releases energy exactly as
+          predicted by E = mc².
+    - title:
+        es: Física de partículas
+        en: Particle physics
+      description:
+        es: >-
+          Aceleradores como el LHC convierten energía cinética en masa, creando partículas nuevas
+          según esta misma ecuación.
+        en: >-
+          Accelerators like the LHC convert kinetic energy into mass, creating new particles
+          according to this same equation.
+    - title:
+        es: Astrofísica
+        en: Astrophysics
+      description:
+        es: >-
+          El Sol y las estrellas irradian energía perdiendo una pequeñísima fracción de su masa
+          cada segundo por fusión nuclear.
+        en: >-
+          The Sun and stars radiate energy by losing a tiny fraction of their mass each second
+          through nuclear fusion.
+  example:
+    title:
+      es: Un gramo convertido en energía
+      en: One gram converted to energy
+    lines:
+      - es: m = 0.001 kg (1 gramo)
+        en: m = 0.001 kg (1 gram)
+      - es: c = 3×10⁸ m/s
+        en: c = 3×10⁸ m/s
+      - es: E = m · c²
+        en: E = m · c²
+      - es: E = 0.001 · (3×10⁸)²
+        en: E = 0.001 · (3×10⁸)²
+      - es: E = 0.001 · 9×10¹⁶
+        en: E = 0.001 · 9×10¹⁶
+      - es: E = 9×10¹³ joules
+        en: E = 9×10¹³ joules
