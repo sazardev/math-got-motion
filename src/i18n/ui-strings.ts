@@ -52,6 +52,7 @@ export interface UiStrings {
   homeContributeText: string;
   homeContributeCta: string;
   homeEnterCta: string;
+  homeFeaturedTitle: string;
 }
 
 export const uiStrings: Record<Locale, UiStrings> = {
@@ -82,7 +83,8 @@ export const uiStrings: Record<Locale, UiStrings> = {
     notFoundBackLink: "Volver al inicio",
     homeNav: "Inicio",
     homeTitle: "Math Got Motion",
-    homeTagline: "Teoremas y fórmulas, deconstruidos letra por letra a través del scroll.",
+    homeTagline:
+      "Cada fórmula, descompuesta símbolo por símbolo — mirá cómo cobra vida con el scroll.",
     homeDescription:
       "Qué es Math Got Motion, cómo funciona y cómo contribuir con una nueva fórmula.",
     homeStatsFormulas: "Fórmulas",
@@ -111,6 +113,7 @@ export const uiStrings: Record<Locale, UiStrings> = {
       "Cada fórmula es un archivo de datos (YAML), no código — cualquiera puede agregar una nueva de forma simple y segura, incluso en una pull request externa.",
     homeContributeCta: "Ver en GitHub",
     homeEnterCta: "Explorar fórmulas",
+    homeFeaturedTitle: "Fórmulas destacadas",
   },
   en: {
     scrollHint: "Scroll to deconstruct the formula",
@@ -139,7 +142,7 @@ export const uiStrings: Record<Locale, UiStrings> = {
     notFoundBackLink: "Back to home",
     homeNav: "Home",
     homeTitle: "Math Got Motion",
-    homeTagline: "Theorems and formulas, deconstructed letter by letter through scroll.",
+    homeTagline: "Every formula, broken down symbol by symbol — watch it come alive as you scroll.",
     homeDescription: "What Math Got Motion is, how it works, and how to contribute a formula.",
     homeStatsFormulas: "Formulas",
     homeStatsCategories: "Categories",
@@ -167,6 +170,7 @@ export const uiStrings: Record<Locale, UiStrings> = {
       "Every formula is a data file (YAML), not code — anyone can safely add a new one, even in an external pull request.",
     homeContributeCta: "View on GitHub",
     homeEnterCta: "Explore formulas",
+    homeFeaturedTitle: "Featured formulas",
   },
   pt: {
     scrollHint: "Role para desconstruir a fórmula",
@@ -195,7 +199,7 @@ export const uiStrings: Record<Locale, UiStrings> = {
     notFoundBackLink: "Voltar ao início",
     homeNav: "Início",
     homeTitle: "Math Got Motion",
-    homeTagline: "Teoremas e fórmulas, desconstruídos letra por letra através do scroll.",
+    homeTagline: "Cada fórmula, decomposta símbolo por símbolo — veja-a ganhar vida com o scroll.",
     homeDescription:
       "O que é o Math Got Motion, como funciona e como contribuir com uma nova fórmula.",
     homeStatsFormulas: "Fórmulas",
@@ -224,6 +228,7 @@ export const uiStrings: Record<Locale, UiStrings> = {
       "Cada fórmula é um arquivo de dados (YAML), não código — qualquer pessoa pode adicionar uma nova de forma simples e segura, até em um pull request externo.",
     homeContributeCta: "Ver no GitHub",
     homeEnterCta: "Explorar fórmulas",
+    homeFeaturedTitle: "Fórmulas em destaque",
   },
   fr: {
     scrollHint: "Faites défiler pour déconstruire la formule",
@@ -252,7 +257,8 @@ export const uiStrings: Record<Locale, UiStrings> = {
     notFoundBackLink: "Retour à l'accueil",
     homeNav: "Accueil",
     homeTitle: "Math Got Motion",
-    homeTagline: "Théorèmes et formules, déconstruits lettre par lettre au fil du défilement.",
+    homeTagline:
+      "Chaque formule, décomposée symbole par symbole — regardez-la prendre vie au fil du défilement.",
     homeDescription:
       "Ce qu'est Math Got Motion, comment ça marche, et comment contribuer une nouvelle formule.",
     homeStatsFormulas: "Formules",
@@ -281,6 +287,7 @@ export const uiStrings: Record<Locale, UiStrings> = {
       "Chaque formule est un fichier de données (YAML), pas du code — n'importe qui peut en ajouter une nouvelle en toute simplicité et sécurité, même via une pull request externe.",
     homeContributeCta: "Voir sur GitHub",
     homeEnterCta: "Explorer les formules",
+    homeFeaturedTitle: "Formules à la une",
   },
   zh: {
     scrollHint: "滚动以逐步拆解公式",
@@ -309,7 +316,7 @@ export const uiStrings: Record<Locale, UiStrings> = {
     notFoundBackLink: "返回首页",
     homeNav: "首页",
     homeTitle: "Math Got Motion",
-    homeTagline: "通过滚动，逐字逐符号拆解定理与公式。",
+    homeTagline: "每个公式都被逐个符号拆解——滚动之间，看它真正“动”起来。",
     homeDescription: "了解 Math Got Motion 是什么、如何运作，以及如何贡献新公式。",
     homeStatsFormulas: "公式",
     homeStatsCategories: "分类",
@@ -336,6 +343,7 @@ export const uiStrings: Record<Locale, UiStrings> = {
       "每个公式都是一个数据文件（YAML），而非代码——任何人都可以安全、简单地添加新公式，即便是通过外部 pull request。",
     homeContributeCta: "在 GitHub 上查看",
     homeEnterCta: "浏览公式",
+    homeFeaturedTitle: "精选公式",
   },
   ja: {
     scrollHint: "スクロールして数式を分解する",
@@ -364,7 +372,7 @@ export const uiStrings: Record<Locale, UiStrings> = {
     notFoundBackLink: "ホームに戻る",
     homeNav: "ホーム",
     homeTitle: "Math Got Motion",
-    homeTagline: "定理と数式を、スクロールで一文字ずつ分解する。",
+    homeTagline: "すべての数式を、記号ごとに分解——スクロールするたびに命が吹き込まれる様子を見て。",
     homeDescription: "Math Got Motionとは何か、仕組み、新しい数式を貢献する方法について。",
     homeStatsFormulas: "数式",
     homeStatsCategories: "カテゴリー",
@@ -392,5 +400,6 @@ export const uiStrings: Record<Locale, UiStrings> = {
       "各数式はコードではなくデータファイル（YAML）——誰でも安全かつ簡単に、外部からのプルリクエストでも新しい数式を追加できる。",
     homeContributeCta: "GitHubで見る",
     homeEnterCta: "数式を見る",
+    homeFeaturedTitle: "注目の数式",
   },
 };
