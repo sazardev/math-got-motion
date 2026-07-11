@@ -7,8 +7,15 @@ import { resolve } from "path";
 
 // @ts-expect-error process is a nodejs global
 const host = process.env.TAURI_DEV_HOST;
+// @ts-expect-error process is a nodejs global
+const isGithubPages = process.env.GITHUB_PAGES === "true";
 
 export default defineConfig(async ({ mode }) => ({
+  // GitHub Pages sirve el proyecto bajo /math-got-motion/, no en la raíz;
+  // Tauri en cambio necesita la raíz ("/") porque carga el bundle desde su
+  // propio protocolo local. Solo el workflow de Pages define esta env var.
+  base: isGithubPages ? "/math-got-motion/" : "/",
+
   plugins: [
     react(),
     checker({
