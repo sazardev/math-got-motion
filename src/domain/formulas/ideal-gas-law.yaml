@@ -2,9 +2,17 @@ id: ideal-gas-law
 title:
   es: Ley de los Gases Ideales
   en: Ideal Gas Law
+  pt: Lei dos Gases Ideais
+  fr: Loi des gaz parfaits
+  zh: 理想气体定律
+  ja: 理想気体の法則
 category:
   es: Física clásica
   en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
 nodes:
   - id: p
     type: variable
@@ -12,43 +20,75 @@ nodes:
     explanation:
       es: La presión del gas, la fuerza que ejerce sobre las paredes de su recipiente por unidad de área.
       en: The gas's pressure, the force it exerts on the walls of its container per unit of area.
+      pt: A pressão do gás, a força que ele exerce sobre as paredes do recipiente por unidade de área.
+      fr: La pression du gaz, la force qu'il exerce sur les parois de son récipient par unité de surface.
+      zh: 气体的压强，即气体对容器壁单位面积施加的力。
+      ja: 気体の圧力。容器の壁に単位面積あたりに及ぼす力。
   - id: v
     type: variable
     value: V
     explanation:
       es: El volumen que ocupa el gas.
       en: The volume occupied by the gas.
+      pt: O volume ocupado pelo gás.
+      fr: Le volume occupé par le gaz.
+      zh: 气体所占据的体积。
+      ja: 気体が占める体積。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 精确地等于。
+      ja: これは次の値に正確に等しい。
   - id: n
     type: variable
     value: n
     explanation:
       es: La cantidad de sustancia, medida en moles.
       en: The amount of substance, measured in moles.
+      pt: A quantidade de substância, medida em mols.
+      fr: La quantité de matière, mesurée en moles.
+      zh: 物质的量，以摩尔为单位。
+      ja: 物質量。単位はモル。
   - id: r
     type: constant
     value: R
     explanation:
       es: La constante universal de los gases, el mismo valor para cualquier gas ideal.
       en: The universal gas constant, the same value for any ideal gas.
+      pt: A constante universal dos gases, o mesmo valor para qualquer gás ideal.
+      fr: La constante universelle des gaz parfaits, la même valeur pour tout gaz parfait.
+      zh: 普适气体常数，对任何理想气体都相同。
+      ja: 気体定数。どの理想気体でも同じ値をとる。
   - id: t
     type: variable
     value: T
     explanation:
       es: La temperatura absoluta del gas, medida en kelvin.
       en: The gas's absolute temperature, measured in kelvin.
+      pt: A temperatura absoluta do gás, medida em kelvin.
+      fr: La température absolue du gaz, mesurée en kelvins.
+      zh: 气体的绝对温度，以开尔文为单位。
+      ja: 気体の絶対温度。単位はケルビン。
 context:
   author:
     es: Émile Clapeyron
     en: Émile Clapeyron
+    pt: Émile Clapeyron
+    fr: Émile Clapeyron
+    zh: 埃米尔·克拉佩龙
+    ja: エミール・クラペイロン
   era:
     es: Francia, 1799–1864 · forma combinada publicada en 1834
     en: France, 1799–1864 · combined form published in 1834
+    pt: França, 1799–1864 · forma combinada publicada em 1834
+    fr: France, 1799–1864 · forme combinée publiée en 1834
+    zh: 法国，1799–1864 · 综合形式发表于1834年
+    ja: フランス、1799–1864年 · 統合形は1834年発表
   history:
     es: >-
       Ninguna persona sola descubrió esta ecuación: es la fusión de tres leyes experimentales
@@ -70,6 +110,30 @@ context:
       Émile Clapeyron who, in 1834, combined these three laws into a single equation of state, PV =
       nRT, unifying decades of scattered experimental work into a tool that is now central to
       chemistry and engineering.
+    pt: >-
+      Nenhuma pessoa sozinha descobriu esta equação: ela é a fusão de três leis experimentais
+      independentes. Robert Boyle mostrou em 1662 que a pressão e o volume de um gás são
+      inversamente proporcionais a temperatura constante. Jacques Charles observou na década de
+      1780 que o volume cresce com a temperatura a pressão constante, embora não tenha publicado
+      isso; Joseph Gay-Lussac divulgou essa relação em 1802. Amedeo Avogadro propôs em 1811 que
+      volumes iguais de gases diferentes, nas mesmas condições, contêm o mesmo número de moléculas.
+      Foi o engenheiro francês Émile Clapeyron quem, em 1834, combinou essas três leis em uma única
+      equação de estado, PV = nRT, unificando décadas de trabalho experimental disperso em uma
+      ferramenta hoje central para a química e a engenharia.
+    fr: >-
+      Personne à elle seule n'a découvert cette équation : elle résulte de la fusion de trois lois
+      expérimentales indépendantes. Robert Boyle montra en 1662 que la pression et le volume d'un
+      gaz sont inversement proportionnels à température constante. Jacques Charles observa dans les
+      années 1780 que le volume croît avec la température à pression constante, sans jamais le
+      publier ; Joseph Gay-Lussac diffusa cette relation en 1802. Amedeo Avogadro proposa en 1811
+      que des volumes égaux de gaz différents, dans les mêmes conditions, contiennent le même
+      nombre de molécules. C'est l'ingénieur français Émile Clapeyron qui, en 1834, combina ces
+      trois lois en une seule équation d'état, PV = nRT, unifiant des décennies de travaux
+      expérimentaux dispersés en un outil aujourd'hui central pour la chimie et l'ingénierie.
+    zh: >-
+      这个方程并非由某一人独自发现，而是三条独立实验定律融合的结果。罗伯特·玻意耳在1662年证明，在温度恒定时，气体的压强与体积成反比。雅克·查理在18世纪80年代观察到，在压强恒定时体积随温度增大而增大，但他从未发表这一发现；约瑟夫·盖-吕萨克于1802年将这一关系公之于世。阿梅迪奥·阿伏伽德罗在1811年提出，在相同条件下，等体积的不同气体含有相同数目的分子。正是法国工程师埃米尔·克拉佩龙于1834年将这三条定律合并为一个统一的状态方程PV = nRT，把几十年分散的实验成果凝结为如今化学与工程学的核心工具。
+    ja: >-
+      この方程式は一人の人物が発見したものではなく、三つの独立した実験法則が融合した結果である。ロバート・ボイルは1662年、温度が一定のとき気体の圧力と体積が反比例することを示した。ジャック・シャルルは1780年代、圧力が一定のとき体積が温度とともに増大することを観測したが、これを発表しなかった。ジョゼフ・ゲイ＝リュサックが1802年にこの関係を広めた。アメデオ・アボガドロは1811年、同じ条件下では異なる気体でも等しい体積中に同数の分子が含まれると提唱した。フランスの技術者エミール・クラペイロンが1834年、これら三つの法則を一つの状態方程式PV = nRTにまとめ上げ、何十年にもわたる散在した実験的成果を、今日の化学と工学の中心的な道具へと統合した。
   timeline:
     - year: "1662"
       label:
@@ -79,6 +143,16 @@ context:
         en: >-
           Robert Boyle publishes his law: at constant temperature, a gas's pressure and volume are
           inversely proportional.
+        pt: >-
+          Robert Boyle publica sua lei: a temperatura constante, a pressão e o volume de um gás
+          são inversamente proporcionais.
+        fr: >-
+          Robert Boyle publie sa loi : à température constante, la pression et le volume d'un gaz
+          sont inversement proportionnels.
+        zh: >-
+          罗伯特·玻意耳发表其定律：在温度恒定时，气体的压强与体积成反比。
+        ja: >-
+          ロバート・ボイルが法則を発表。温度が一定のとき、気体の圧力と体積は反比例する。
     - year: "1802"
       label:
         es: >-
@@ -87,6 +161,16 @@ context:
         en: >-
           Joseph Gay-Lussac publishes the volume-temperature relationship observed earlier by
           Jacques Charles.
+        pt: >-
+          Joseph Gay-Lussac publica a relação entre volume e temperatura observada anteriormente
+          por Jacques Charles.
+        fr: >-
+          Joseph Gay-Lussac publie la relation volume-température observée plus tôt par Jacques
+          Charles.
+        zh: >-
+          约瑟夫·盖-吕萨克发表了雅克·查理此前观察到的体积与温度关系。
+        ja: >-
+          ジョゼフ・ゲイ＝リュサックが、以前ジャック・シャルルが観測していた体積と温度の関係を発表。
     - year: "1811"
       label:
         es: >-
@@ -95,6 +179,16 @@ context:
         en: >-
           Amedeo Avogadro proposes that equal volumes of gas, under equal conditions, contain the
           same number of molecules.
+        pt: >-
+          Amedeo Avogadro propõe que volumes iguais de gás, em condições iguais, contêm o mesmo
+          número de moléculas.
+        fr: >-
+          Amedeo Avogadro propose que des volumes égaux de gaz, dans des conditions identiques,
+          contiennent le même nombre de molécules.
+        zh: >-
+          阿梅迪奥·阿伏伽德罗提出，在相同条件下等体积气体含有相同数目的分子。
+        ja: >-
+          アメデオ・アボガドロが、同条件下では等体積の気体に同数の分子が含まれると提唱。
     - year: "1834"
       label:
         es: >-
@@ -102,6 +196,16 @@ context:
           nRT.
         en: >-
           Émile Clapeyron combines the three earlier laws into a single equation of state: PV = nRT.
+        pt: >-
+          Émile Clapeyron combina as três leis anteriores em uma única equação de estado: PV =
+          nRT.
+        fr: >-
+          Émile Clapeyron combine les trois lois précédentes en une seule équation d'état : PV =
+          nRT.
+        zh: >-
+          埃米尔·克拉佩龙将前三条定律合并为一个统一的状态方程：PV = nRT。
+        ja: >-
+          エミール・クラペイロンが先の三つの法則を一つの状態方程式PV = nRTにまとめる。
     - year: "1873"
       label:
         es: >-
@@ -110,6 +214,16 @@ context:
         en: >-
           Johannes van der Waals corrects it for real gases, incorporating molecular volume and
           attractive forces.
+        pt: >-
+          Johannes van der Waals a corrige para gases reais, incorporando o volume molecular e as
+          forças de atração.
+        fr: >-
+          Johannes van der Waals la corrige pour les gaz réels, en intégrant le volume moléculaire
+          et les forces d'attraction.
+        zh: >-
+          约翰内斯·范德瓦耳斯针对真实气体对其进行修正，纳入了分子体积和吸引力的影响。
+        ja: >-
+          ヨハネス・ファンデルワールスが実在気体に対応するよう修正し、分子体積と引力を取り入れる。
     - year: Hoy
       label:
         es: >-
@@ -118,10 +232,24 @@ context:
         en: >-
           It remains the basic calculation tool in chemistry, meteorology, combustion engines, and
           refrigeration systems.
+        pt: >-
+          Continua sendo a ferramenta básica de cálculo em química, meteorologia, motores de
+          combustão e sistemas de refrigeração.
+        fr: >-
+          Elle reste l'outil de calcul de base en chimie, en météorologie, dans les moteurs à
+          combustion et les systèmes de réfrigération.
+        zh: >-
+          至今仍是化学、气象学、内燃机和制冷系统中的基本计算工具。
+        ja: >-
+          今なお化学、気象学、内燃機関、冷凍システムにおける基本的な計算手段であり続けている。
   useCases:
     - title:
         es: Química de laboratorio
         en: Laboratory chemistry
+        pt: Química de laboratório
+        fr: Chimie de laboratoire
+        zh: 实验室化学
+        ja: 実験室化学
       description:
         es: >-
           Permite calcular cuántos moles de gas hay en un recipiente a partir de su presión,
@@ -129,18 +257,46 @@ context:
         en: >-
           It lets chemists calculate how many moles of gas are in a container from its pressure,
           volume, and temperature.
+        pt: >-
+          Permite calcular quantos mols de gás há em um recipiente a partir de sua pressão, volume
+          e temperatura.
+        fr: >-
+          Elle permet de calculer combien de moles de gaz se trouvent dans un récipient à partir de
+          sa pression, de son volume et de sa température.
+        zh: >-
+          可以根据容器中气体的压强、体积和温度，计算出其中含有多少摩尔气体。
+        ja: >-
+          容器内の気体の圧力・体積・温度から、その中に何モルの気体があるかを計算できる。
     - title:
         es: Meteorología
         en: Meteorology
+        pt: Meteorologia
+        fr: Météorologie
+        zh: 气象学
+        ja: 気象学
       description:
         es: >-
           Modela cómo se comporta el aire atmosférico al cambiar la presión y la temperatura con la
           altitud.
         en: >-
           It models how atmospheric air behaves as pressure and temperature change with altitude.
+        pt: >-
+          Modela como o ar atmosférico se comporta quando a pressão e a temperatura mudam com a
+          altitude.
+        fr: >-
+          Elle modélise le comportement de l'air atmosphérique lorsque la pression et la
+          température varient avec l'altitude.
+        zh: >-
+          用于模拟大气中的空气随高度变化时压强和温度如何变化的行为。
+        ja: >-
+          高度によって気圧と気温が変化する際、大気がどのように振る舞うかをモデル化する。
     - title:
         es: Motores de combustión
         en: Combustion engines
+        pt: Motores de combustão
+        fr: Moteurs à combustion
+        zh: 内燃机
+        ja: 内燃機関
       description:
         es: >-
           Predice la presión dentro de un cilindro cuando la mezcla de aire y combustible se
@@ -148,9 +304,23 @@ context:
         en: >-
           It predicts the pressure inside a cylinder as the air-fuel mixture is heated and
           compressed.
+        pt: >-
+          Prevê a pressão dentro de um cilindro quando a mistura de ar e combustível é aquecida e
+          comprimida.
+        fr: >-
+          Elle prédit la pression à l'intérieur d'un cylindre lorsque le mélange air-carburant est
+          chauffé et comprimé.
+        zh: >-
+          可预测气缸内空气与燃料混合气体在受热压缩时产生的压强。
+        ja: >-
+          空気と燃料の混合気が加熱・圧縮される際にシリンダー内で生じる圧力を予測する。
     - title:
         es: Refrigeración y climatización
         en: Refrigeration and HVAC
+        pt: Refrigeração e climatização
+        fr: Réfrigération et climatisation
+        zh: 制冷与空调
+        ja: 冷凍・空調
       description:
         es: >-
           Guía el diseño de ciclos de compresión de gases refrigerantes en heladeras y aires
@@ -158,22 +328,64 @@ context:
         en: >-
           It guides the design of refrigerant gas compression cycles in refrigerators and air
           conditioners.
+        pt: >-
+          Orienta o design dos ciclos de compressão de gases refrigerantes em geladeiras e
+          aparelhos de ar condicionado.
+        fr: >-
+          Elle guide la conception des cycles de compression des gaz réfrigérants dans les
+          réfrigérateurs et les climatiseurs.
+        zh: >-
+          指导冰箱和空调中制冷剂气体压缩循环的设计。
+        ja: >-
+          冷蔵庫やエアコンにおける冷媒ガスの圧縮サイクルの設計を導く。
   example:
     title:
       es: Volumen molar de un gas
       en: Molar volume of a gas
+      pt: Volume molar de um gás
+      fr: Volume molaire d'un gaz
+      zh: 气体的摩尔体积
+      ja: 気体のモル体積
     lines:
       - es: n = 1 mol
         en: n = 1 mol
+        pt: n = 1 mol
+        fr: n = 1 mol
+        zh: n = 1 摩尔
+        ja: n = 1 mol
       - es: R = 0,0821 L·atm/(mol·K)
         en: R = 0.0821 L·atm/(mol·K)
+        pt: R = 0,0821 L·atm/(mol·K)
+        fr: R = 0,0821 L·atm/(mol·K)
+        zh: R = 0.0821 L·atm/(mol·K)
+        ja: R = 0.0821 L·atm/(mol·K)
       - es: T = 273 K
         en: T = 273 K
+        pt: T = 273 K
+        fr: T = 273 K
+        zh: T = 273 K
+        ja: T = 273 K
       - es: P = 1 atm
         en: P = 1 atm
+        pt: P = 1 atm
+        fr: P = 1 atm
+        zh: P = 1 atm
+        ja: P = 1 atm
       - es: V = nRT / P
         en: V = nRT / P
+        pt: V = nRT / P
+        fr: V = nRT / P
+        zh: V = nRT / P
+        ja: V = nRT / P
       - es: V = (1)(0,0821)(273) / 1
         en: V = (1)(0.0821)(273) / 1
+        pt: V = (1)(0,0821)(273) / 1
+        fr: V = (1)(0,0821)(273) / 1
+        zh: V = (1)(0.0821)(273) / 1
+        ja: V = (1)(0.0821)(273) / 1
       - es: V ≈ 22,4 litros
         en: V ≈ 22.4 liters
+        pt: V ≈ 22,4 litros
+        fr: V ≈ 22,4 litres
+        zh: V ≈ 22.4 升
+        ja: V ≈ 22.4 リットル

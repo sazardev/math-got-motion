@@ -2,9 +2,17 @@ id: euler-formula
 title:
   es: Fórmula de Euler
   en: Euler's Formula
+  pt: Fórmula de Euler
+  fr: Formule d'Euler
+  zh: 欧拉公式
+  ja: オイラーの公式
 category:
   es: Análisis complejo
   en: Complex analysis
+  pt: Análise complexa
+  fr: Analyse complexe
+  zh: 复分析
+  ja: 複素解析
 nodes:
   - id: e
     type: variable
@@ -12,73 +20,125 @@ nodes:
     explanation:
       es: El número de Euler, aproximadamente 2.71828. Base del crecimiento exponencial continuo.
       en: Euler's number, approximately 2.71828. The base of continuous exponential growth.
+      pt: O número de Euler, aproximadamente 2,71828. Base do crescimento exponencial contínuo.
+      fr: Le nombre d'Euler, environ 2,71828. La base de la croissance exponentielle continue.
+      zh: 欧拉数,约等于2.71828,是连续指数增长的底数。
+      ja: オイラー数、約2.71828。連続的な指数関数的成長の底となる数。
   - id: i
     type: superscript
     value: i
     explanation:
       es: "La unidad imaginaria: el número tal que i² = −1."
       en: "The imaginary unit: the number such that i² = −1."
+      pt: "A unidade imaginária: o número tal que i² = −1."
+      fr: "L'unité imaginaire : le nombre tel que i² = −1."
+      zh: "虚数单位:满足 i² = −1 的数。"
+      ja: "虚数単位:i² = −1 を満たす数。"
   - id: theta
     type: superscript
     value: θ
     explanation:
       es: "Theta: un ángulo cualquiera, medido en radianes, que puede variar libremente."
       en: "Theta: any angle, measured in radians, free to vary."
+      pt: "Teta: um ângulo qualquer, medido em radianos, que pode variar livremente."
+      fr: "Thêta : un angle quelconque, mesuré en radians, libre de varier."
+      zh: "θ(西塔):任意角度,以弧度为单位,可自由取值。"
+      ja: "シータ:自由に変化しうる、任意の角度(ラジアン単位)。"
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: 正確に等しい。
   - id: cos
     type: variable
     value: cos
     explanation:
       es: "El coseno del ángulo θ: la componente real, la coordenada horizontal en el círculo unitario."
       en: "The cosine of θ: the real part, the horizontal coordinate on the unit circle."
+      pt: "O cosseno do ângulo θ: a parte real, a coordenada horizontal no círculo unitário."
+      fr: "Le cosinus de l'angle θ : la partie réelle, la coordonnée horizontale sur le cercle unité."
+      zh: "角θ的余弦:实部,即单位圆上的水平坐标。"
+      ja: "角θの余弦:実部であり、単位円上の水平座標。"
   - id: theta2
     type: variable
     value: θ
     explanation:
       es: El mismo ángulo θ usado en el exponente.
       en: The same angle θ used in the exponent.
+      pt: O mesmo ângulo θ usado no expoente.
+      fr: Le même angle θ utilisé dans l'exposant.
+      zh: 与指数中相同的角θ。
+      ja: 指数で用いたのと同じ角θ。
   - id: plus
     type: operator
     value: +
     explanation:
       es: Sumado a la parte imaginaria.
       en: Added to the imaginary part.
+      pt: Somado à parte imaginária.
+      fr: Ajouté à la partie imaginaire.
+      zh: 加上虚部。
+      ja: 虚部に加える。
   - id: i2
     type: variable
     value: i
     explanation:
       es: La unidad imaginaria, marcando esta parte como el componente imaginario del número complejo.
       en: The imaginary unit, marking this part as the complex number's imaginary component.
+      pt: A unidade imaginária, marcando esta parte como o componente imaginário do número complexo.
+      fr: L'unité imaginaire, signalant que cette partie est la composante imaginaire du nombre complexe.
+      zh: 虚数单位,表示这部分是复数的虚部。
+      ja: 虚数単位。この部分が複素数の虚部であることを示す。
   - id: dot
     type: operator
     value: "·"
     explanation:
       es: Multiplicado por.
       en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
   - id: sin
     type: variable
     value: sen
     explanation:
       es: "El seno del ángulo θ: la componente imaginaria, la coordenada vertical en el círculo unitario."
       en: "The sine of θ: the imaginary part, the vertical coordinate on the unit circle."
+      pt: "O seno do ângulo θ: a parte imaginária, a coordenada vertical no círculo unitário."
+      fr: "Le sinus de l'angle θ : la partie imaginaire, la coordonnée verticale sur le cercle unité."
+      zh: "角θ的正弦:虚部,即单位圆上的垂直坐标。"
+      ja: "角θの正弦:虚部であり、単位円上の垂直座標。"
   - id: theta3
     type: variable
     value: θ
     explanation:
       es: El mismo ángulo θ usado en el coseno.
       en: The same angle θ used in the cosine.
+      pt: O mesmo ângulo θ usado no cosseno.
+      fr: Le même angle θ utilisé dans le cosinus.
+      zh: 与余弦中相同的角θ。
+      ja: 余弦で用いたのと同じ角θ。
 context:
   author:
     es: Leonhard Euler
     en: Leonhard Euler
+    pt: Leonhard Euler
+    fr: Leonhard Euler
+    zh: 莱昂哈德·欧拉
+    ja: レオンハルト・オイラー
   era:
     es: Suiza, 1707–1783 · derivada hacia 1740, publicada en 1748
     en: Switzerland, 1707–1783 · derived around 1740, published in 1748
+    pt: Suíça, 1707–1783 · derivada por volta de 1740, publicada em 1748
+    fr: Suisse, 1707–1783 · dérivée vers 1740, publiée en 1748
+    zh: 瑞士,1707–1783 · 约1740年推导,1748年发表
+    ja: スイス、1707–1783年 · 1740年頃導出、1748年発表
   history:
     es: >-
       A diferencia de la identidad de Euler, que es solo el caso particular θ = π, esta fórmula
@@ -98,6 +158,35 @@ context:
       infinitorum. It is the relationship that unifies analysis, algebra, and trigonometry, and is
       today the central tool behind phasors in electrical engineering and the representation of
       waves in signal processing.
+    pt: >-
+      Diferente da identidade de Euler, que é apenas o caso particular θ = π, esta fórmula geral
+      descreve uma relação válida para qualquer ângulo θ: ela conecta a função exponencial complexa
+      com as funções trigonométricas seno e cosseno, mostrando que ambas são, no fundo, a mesma coisa
+      vista sob ângulos diferentes. Euler a derivou por volta de 1740 combinando as séries infinitas
+      de eˣ, sen(x) e cos(x), e a publicou em 1748 em sua obra Introductio in analysin infinitorum.
+      É a relação que unifica a análise, a álgebra e a trigonometria, e hoje é a ferramenta central
+      por trás dos fasores na engenharia elétrica e da representação de ondas no processamento de
+      sinais.
+    fr: >-
+      Contrairement à l'identité d'Euler, qui n'est que le cas particulier θ = π, cette formule
+      générale décrit une relation valable pour tout angle θ : elle relie la fonction exponentielle
+      complexe aux fonctions trigonométriques sinus et cosinus, montrant qu'elles sont, au fond, la
+      même chose vue sous des angles différents. Euler l'a dérivée vers 1740 en combinant les séries
+      infinies de eˣ, sin(x) et cos(x), et l'a publiée en 1748 dans son Introductio in analysin
+      infinitorum. C'est la relation qui unifie l'analyse, l'algèbre et la trigonométrie, et elle est
+      aujourd'hui l'outil central derrière les phaseurs en génie électrique et la représentation des
+      ondes en traitement du signal.
+    zh: >-
+      与只是θ=π特殊情形的欧拉恒等式不同,这个一般公式描述了适用于任意角θ的关系:它将复指数函数与正弦、余弦这两个三角函数联系起来,
+      表明二者本质上是同一事物从不同角度的呈现。欧拉大约在1740年通过结合eˣ、sen(x)和cos(x)的无穷级数推导出该公式,
+      并于1748年在其著作《无穷小分析引论》(Introductio in analysin infinitorum)中发表。这是统一分析学、代数学与三角学的关系式,
+      如今更是电气工程中相量表示法以及信号处理中波形表示的核心工具。
+    ja: >-
+      θ=πという特殊な場合にすぎないオイラーの等式とは異なり、この一般公式は任意の角θに対して成り立つ関係を表す。
+      複素指数関数と三角関数(正弦・余弦)を結びつけ、両者が本質的には異なる角度から見た同じものであることを示している。
+      オイラーは1740年頃、eˣ、sen(x)、cos(x)の無限級数を組み合わせてこれを導出し、1748年に著書
+      『無限解析序説』(Introductio in analysin infinitorum)で発表した。これは解析学・代数学・三角法を統一する関係式であり、
+      今日では電気工学におけるフェーザ表現や信号処理における波形表現の中心的な道具となっている。
   timeline:
     - year: c. 1714
       label:
@@ -107,6 +196,16 @@ context:
         en: >-
           Roger Cotes notes a logarithmic relationship between exponentials and trigonometric
           functions, a direct ancestor of the general formula.
+        pt: >-
+          Roger Cotes registra uma relação logarítmica entre exponenciais e funções trigonométricas,
+          antecessora direta da fórmula geral.
+        fr: >-
+          Roger Cotes note une relation logarithmique entre exponentielles et fonctions
+          trigonométriques, ancêtre direct de la formule générale.
+        zh: >-
+          罗杰·科茨记录下指数函数与三角函数之间的一种对数关系,这是该一般公式的直接前身。
+        ja: >-
+          ロジャー・コーツが指数関数と三角関数の間の対数的な関係を記録する。これが一般公式の直接の前身となる。
     - year: "1740"
       label:
         es: >-
@@ -115,6 +214,17 @@ context:
         en: >-
           Euler derives e^(iθ) = cos(θ) + i·sin(θ) from the infinite series of all three functions,
           solving a differential equation posed by Johann Bernoulli.
+        pt: >-
+          Euler deriva e^(iθ) = cos(θ) + i·sen(θ) a partir das séries infinitas das três funções,
+          resolvendo uma equação diferencial proposta por Johann Bernoulli.
+        fr: >-
+          Euler dérive e^(iθ) = cos(θ) + i·sin(θ) à partir des séries infinies des trois fonctions,
+          en résolvant une équation différentielle posée par Johann Bernoulli.
+        zh: >-
+          欧拉从三个函数的无穷级数出发,推导出 e^(iθ) = cos(θ) + i·sen(θ),并借此解决了约翰·伯努利提出的一个微分方程。
+        ja: >-
+          オイラーは3つの関数の無限級数から e^(iθ) = cos(θ) + i·sen(θ) を導出し、
+          ヨハン・ベルヌーイが提起した微分方程式を解く。
     - year: "1748"
       label:
         es: >-
@@ -123,6 +233,16 @@ context:
         en: >-
           Publishes the general formula in Introductio in analysin infinitorum, along with the
           special case θ = π known today as Euler's Identity.
+        pt: >-
+          Publica a fórmula geral em Introductio in analysin infinitorum, junto com o caso particular
+          θ = π hoje conhecido como identidade de Euler.
+        fr: >-
+          Publie la formule générale dans Introductio in analysin infinitorum, avec le cas particulier
+          θ = π aujourd'hui connu comme l'identité d'Euler.
+        zh: >-
+          在《无穷小分析引论》中发表了这一一般公式,并附上了θ=π的特殊情形——即今天所称的欧拉恒等式。
+        ja: >-
+          『無限解析序説』にて一般公式を発表。今日オイラーの等式として知られるθ=πの特殊な場合も併せて示す。
     - year: s. XIX
       label:
         es: >-
@@ -131,6 +251,16 @@ context:
         en: >-
           Engineers like Charles Steinmetz adopt the formula to represent alternating current using
           complex phasors.
+        pt: >-
+          Engenheiros como Charles Steinmetz adotam a fórmula para representar corrente alternada por
+          meio de fasores complexos.
+        fr: >-
+          Des ingénieurs comme Charles Steinmetz adoptent la formule pour représenter le courant
+          alternatif au moyen de phaseurs complexes.
+        zh: >-
+          查尔斯·斯坦梅茨等工程师采用该公式,用复数相量来表示交流电。
+        ja: >-
+          チャールズ・スタインメッツらの技術者が、複素フェーザを用いて交流電流を表すためにこの公式を採用する。
     - year: Hoy
       label:
         es: >-
@@ -139,10 +269,24 @@ context:
         en: >-
           It is the mathematical basis of the Fourier transform, electrical phasors, and digital
           signal processing.
+        pt: >-
+          É a base matemática da transformada de Fourier, dos fasores elétricos e do processamento
+          digital de sinais.
+        fr: >-
+          Elle constitue la base mathématique de la transformée de Fourier, des phaseurs électriques
+          et du traitement numérique du signal.
+        zh: >-
+          它是傅里叶变换、电气相量以及数字信号处理的数学基础。
+        ja: >-
+          フーリエ変換、電気フェーザ、デジタル信号処理の数学的基盤となっている。
   useCases:
     - title:
         es: Ingeniería eléctrica
         en: Electrical engineering
+        pt: Engenharia elétrica
+        fr: Génie électrique
+        zh: 电气工程
+        ja: 電気工学
       description:
         es: >-
           Los fasores representan voltajes y corrientes alternas como números complejos que giran
@@ -150,9 +294,23 @@ context:
         en: >-
           Phasors represent alternating voltages and currents as complex numbers rotating with the
           angle θ, simplifying circuit analysis.
+        pt: >-
+          Os fasores representam tensões e correntes alternadas como números complexos que giram com
+          o ângulo θ, simplificando a análise de circuitos.
+        fr: >-
+          Les phaseurs représentent les tensions et courants alternatifs comme des nombres complexes
+          tournant avec l'angle θ, simplifiant l'analyse des circuits.
+        zh: >-
+          相量将交流电压和电流表示为随角θ旋转的复数,从而简化电路分析。
+        ja: >-
+          フェーザは交流の電圧・電流を、角θとともに回転する複素数として表し、回路解析を簡略化する。
     - title:
         es: Procesamiento de señales
         en: Signal processing
+        pt: Processamento de sinais
+        fr: Traitement du signal
+        zh: 信号处理
+        ja: 信号処理
       description:
         es: >-
           La transformada de Fourier descompone cualquier señal en una suma de ondas e^(iωt) para
@@ -160,9 +318,23 @@ context:
         en: >-
           The Fourier transform decomposes any signal into a sum of e^(iωt) waves at different
           frequencies ω, the heart of digital audio.
+        pt: >-
+          A transformada de Fourier decompõe qualquer sinal em uma soma de ondas e^(iωt) em
+          diferentes frequências ω, o coração do áudio digital.
+        fr: >-
+          La transformée de Fourier décompose tout signal en une somme d'ondes e^(iωt) à différentes
+          fréquences ω, le cœur de l'audio numérique.
+        zh: >-
+          傅里叶变换将任意信号分解为不同频率ω下的e^(iωt)波之和,这是数字音频技术的核心。
+        ja: >-
+          フーリエ変換は任意の信号を、異なる周波数ωにおけるe^(iωt)波の和に分解する。これがデジタルオーディオの核心である。
     - title:
         es: Mecánica cuántica
         en: Quantum mechanics
+        pt: Mecânica quântica
+        fr: Mécanique quantique
+        zh: 量子力学
+        ja: 量子力学
       description:
         es: >-
           Las funciones de onda dependen del tiempo a través de exponenciales complejas de la forma
@@ -170,16 +342,46 @@ context:
         en: >-
           Wave functions depend on time through complex exponentials of the form e^(iθ), which
           describe the evolution of a quantum system.
+        pt: >-
+          As funções de onda dependem do tempo por meio de exponenciais complexas da forma e^(iθ),
+          que descrevem a evolução de um sistema quântico.
+        fr: >-
+          Les fonctions d'onde dépendent du temps via des exponentielles complexes de la forme
+          e^(iθ), qui décrivent l'évolution d'un système quantique.
+        zh: >-
+          波函数通过形如e^(iθ)的复指数依赖于时间,描述了量子系统的演化。
+        ja: >-
+          波動関数は e^(iθ) の形の複素指数関数を通じて時間に依存し、量子系の時間発展を記述する。
   example:
     title:
       es: Evaluación en θ = π/2
       en: Evaluation at θ = π/2
+      pt: Avaliação em θ = π/2
+      fr: Évaluation en θ = π/2
+      zh: 在 θ = π/2 处求值
+      ja: θ = π/2 における評価
     lines:
       - es: e^(iπ/2) = cos(π/2) + i·sen(π/2)
         en: e^(iπ/2) = cos(π/2) + i·sin(π/2)
+        pt: e^(iπ/2) = cos(π/2) + i·sen(π/2)
+        fr: e^(iπ/2) = cos(π/2) + i·sin(π/2)
+        zh: e^(iπ/2) = cos(π/2) + i·sen(π/2)
+        ja: e^(iπ/2) = cos(π/2) + i·sen(π/2)
       - es: cos(π/2) = 0
         en: cos(π/2) = 0
+        pt: cos(π/2) = 0
+        fr: cos(π/2) = 0
+        zh: cos(π/2) = 0
+        ja: cos(π/2) = 0
       - es: sen(π/2) = 1
         en: sin(π/2) = 1
+        pt: sen(π/2) = 1
+        fr: sin(π/2) = 1
+        zh: sen(π/2) = 1
+        ja: sen(π/2) = 1
       - es: e^(iπ/2) = 0 + i·1 = i
         en: e^(iπ/2) = 0 + i·1 = i
+        pt: e^(iπ/2) = 0 + i·1 = i
+        fr: e^(iπ/2) = 0 + i·1 = i
+        zh: e^(iπ/2) = 0 + i·1 = i
+        ja: e^(iπ/2) = 0 + i·1 = i

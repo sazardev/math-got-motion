@@ -1,6 +1,6 @@
-export type Locale = "es" | "en";
+export type Locale = "es" | "en" | "pt" | "fr" | "zh" | "ja";
 
-export const locales: Locale[] = ["es", "en"];
+export const locales: Locale[] = ["es", "en", "pt", "fr", "zh", "ja"];
 
 export function isLocale(value: string): value is Locale {
   return locales.includes(value as Locale);

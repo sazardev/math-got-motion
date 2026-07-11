@@ -3,6 +3,10 @@ import { z } from "zod";
 const localizedTextSchema = z.object({
   es: z.string().trim().min(1).max(200),
   en: z.string().trim().min(1).max(200),
+  pt: z.string().trim().min(1).max(200),
+  fr: z.string().trim().min(1).max(200),
+  zh: z.string().trim().min(1).max(200),
+  ja: z.string().trim().min(1).max(200),
 });
 
 export const changelogChangeTypeSchema = z.enum(["added", "changed", "fixed", "removed"]);

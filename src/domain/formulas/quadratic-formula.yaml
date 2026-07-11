@@ -2,9 +2,17 @@ id: quadratic-formula
 title:
   es: Fórmula Cuadrática
   en: Quadratic Formula
+  pt: Fórmula Quadrática
+  fr: Formule quadratique
+  zh: 求根公式
+  ja: 二次方程式の解の公式
 category:
   es: Álgebra
   en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
 nodes:
   - id: x
     type: variable
@@ -12,73 +20,125 @@ nodes:
     explanation:
       es: La incógnita, la raíz de la ecuación cuadrática que buscamos encontrar.
       en: The unknown, the root of the quadratic equation we're trying to find.
+      pt: A incógnita, a raiz da equação quadrática que buscamos encontrar.
+      fr: L'inconnue, la racine de l'équation quadratique que l'on cherche à trouver.
+      zh: 未知数，即我们要求解的二次方程的根。
+      ja: 未知数、つまり求めようとしている二次方程式の解。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es igual a.
       en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
   - id: minus-b
     type: variable
     value: −b
     explanation:
       es: "El negativo del coeficiente b, tomado de la ecuación ax² + bx + c = 0."
       en: "The negative of coefficient b, taken from the equation ax² + bx + c = 0."
+      pt: "O negativo do coeficiente b, tomado da equação ax² + bx + c = 0."
+      fr: "L'opposé du coefficient b, tiré de l'équation ax² + bx + c = 0."
+      zh: "系数 b 的相反数，取自方程 ax² + bx + c = 0。"
+      ja: "係数bの符号を反転させたもの。方程式ax² + bx + c = 0より。"
   - id: plus-minus
     type: operator
     value: ±
     explanation:
       es: Más o menos, indica que hay dos soluciones posibles, sumando o restando la raíz.
       en: Plus or minus, indicating two possible solutions, adding or subtracting the root.
+      pt: Mais ou menos, indica que há duas soluções possíveis, somando ou subtraindo a raiz.
+      fr: Plus ou moins, indiquant deux solutions possibles, en ajoutant ou en soustrayant la racine.
+      zh: 加减号，表示存在两个可能的解，分别是加上或减去这个根号项。
+      ja: プラスマイナス。平方根を加える場合と引く場合の2つの解があることを示す。
   - id: sqrt
     type: operator
     value: √
     explanation:
       es: Raíz cuadrada de la expresión que sigue.
       en: Square root of the expression that follows.
+      pt: Raiz quadrada da expressão que segue.
+      fr: Racine carrée de l'expression qui suit.
+      zh: 后面表达式的平方根。
+      ja: 続く式の平方根。
   - id: b-sq
     type: variable
     value: b
     explanation:
       es: El coeficiente b elevado al cuadrado dentro de la raíz.
       en: Coefficient b squared inside the root.
+      pt: O coeficiente b elevado ao quadrado dentro da raiz.
+      fr: Le coefficient b élevé au carré à l'intérieur de la racine.
+      zh: 根号内系数 b 的平方。
+      ja: 根号の中で2乗された係数b。
   - id: b-exp
     type: superscript
     value: "2"
     explanation:
       es: "Elevado al cuadrado: multiplicado por sí mismo."
       en: "Squared: multiplied by itself."
+      pt: "Elevado ao quadrado: multiplicado por si mesmo."
+      fr: "Élevé au carré : multiplié par lui-même."
+      zh: "平方：与自身相乘。"
+      ja: "2乗: 自分自身に掛けたもの。"
   - id: minus
     type: operator
     value: −
     explanation:
       es: Menos, resta el siguiente término.
       en: Minus, subtracting the following term.
+      pt: Menos, subtrai o termo seguinte.
+      fr: Moins, soustrait le terme suivant.
+      zh: 减号，减去后面的项。
+      ja: マイナス。次の項を引く。
   - id: four-a-c
     type: variable
     value: 4ac
     explanation:
       es: "Cuatro veces el producto de los coeficientes a y c: el discriminante indica cuántas raíces reales existen."
       en: "Four times the product of coefficients a and c: the discriminant reveals how many real roots exist."
+      pt: "Quatro vezes o produto dos coeficientes a e c: o discriminante indica quantas raízes reais existem."
+      fr: "Quatre fois le produit des coefficients a et c : le discriminant révèle combien de racines réelles existent."
+      zh: "系数 a 与 c 之积的四倍：判别式表明存在多少个实数根。"
+      ja: "係数aとcの積の4倍。判別式は実数解がいくつ存在するかを示す。"
   - id: fraction-bar
     type: operator
     value: "/"
     explanation:
       es: Dividido entre el denominador que sigue.
       en: Divided by the denominator that follows.
+      pt: Dividido pelo denominador que segue.
+      fr: Divisé par le dénominateur qui suit.
+      zh: 除以后面的分母。
+      ja: 続く分母で割る。
   - id: two-a
     type: variable
     value: 2a
     explanation:
       es: El doble del coeficiente a, el término que acompaña a x² en la ecuación original.
       en: Twice coefficient a, the term that accompanies x² in the original equation.
+      pt: O dobro do coeficiente a, o termo que acompanha x² na equação original.
+      fr: Le double du coefficient a, le terme qui accompagne x² dans l'équation originale.
+      zh: 系数 a 的两倍，即原方程中 x² 前的项。
+      ja: 係数aの2倍で、元の方程式でx²に付随する項。
 context:
   author:
     es: Muhammad ibn Musa al-Juarismi
     en: Muhammad ibn Musa al-Khwarizmi
+    pt: Muhammad ibn Musa al-Khwarizmi
+    fr: Muhammad ibn Musa al-Khwarizmi
+    zh: 花拉子米（Muhammad ibn Musa al-Khwarizmi）
+    ja: フワーリズミー（ムハンマド・イブン・ムーサー・アル＝フワーリズミー）
   era:
     es: Bagdad, c. 780–850 · su tratado Al-Jabr se publicó c. 820
     en: Baghdad, c. 780–850 · his treatise Al-Jabr was published c. 820
+    pt: Bagdá, c. 780–850 · seu tratado Al-Jabr foi publicado c. 820
+    fr: Bagdad, v. 780–850 · son traité Al-Jabr fut publié v. 820
+    zh: 巴格达，约780–850年 · 其著作《代数学》约成书于公元820年
+    ja: バグダード、780〜850年頃・著書『アル＝ジャブル』は820年頃に発表
   history:
     es: >-
       Al-Juarismi, matemático de la Casa de la Sabiduría en Bagdad, sistematizó por primera vez métodos
@@ -100,6 +160,43 @@ context:
       in 628 AD. Bhaskara II refined these methods in the 12th century, and the compact symbolic
       notation we use today wasn't settled until the 16th and 17th centuries, with contributions from
       European mathematicians like Viète and Descartes.
+    pt: >-
+      Al-Khwarizmi, matemático da Casa da Sabedoria em Bagdá, foi o primeiro a sistematizar métodos
+      gerais para resolver equações quadráticas usando procedimentos geométricos, em seu tratado
+      Al-Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabala, de onde vem a palavra 'álgebra'. No
+      entanto, a história dessa fórmula é cumulativa: os babilônios já resolviam problemas
+      quadráticos por volta de 2000 a.C. com métodos geométricos, e séculos depois o matemático
+      indiano Brahmagupta foi o primeiro a aceitar soluções negativas e a dar uma regra explícita
+      semelhante à fórmula moderna, no ano 628. Bhaskara II refinou esses métodos no século XII, e a
+      notação simbólica compacta que usamos hoje só se estabilizou nos séculos XVI e XVII, com
+      contribuições de matemáticos europeus como Viète e Descartes.
+    fr: >-
+      Al-Khwarizmi, mathématicien de la Maison de la Sagesse à Bagdad, fut le premier à
+      systématiser des méthodes générales pour résoudre les équations quadratiques au moyen de
+      procédés géométriques, dans son traité Al-Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabala,
+      d'où provient le mot « algèbre ». Pourtant, l'histoire de cette formule est cumulative : les
+      Babyloniens résolvaient déjà des problèmes quadratiques vers 2000 av. J.-C. par des méthodes
+      géométriques, et des siècles plus tard le mathématicien indien Brahmagupta fut le premier à
+      accepter les solutions négatives et à donner une règle explicite proche de la formule moderne,
+      en 628. Bhaskara II raffina ces méthodes au XIIe siècle, et la notation symbolique compacte
+      que nous utilisons aujourd'hui ne se stabilisa qu'aux XVIe et XVIIe siècles, grâce aux
+      contributions de mathématiciens européens comme Viète et Descartes.
+    zh: >-
+      花拉子米是巴格达智慧宫的数学家，他在著作《还原与对消计算概要》中首次系统化了用几何方法求解
+      二次方程的一般方法，"代数"（algebra）一词正源于此书书名。然而这个公式的历史是不断积累的：
+      巴比伦人早在约公元前2000年就已用几何方法解决二次方程问题；数个世纪后，印度数学家婆罗摩笈多
+      在公元628年首次接受负数解，并给出了接近现代形式的明确规则。婆什迦罗第二在12世纪进一步完善
+      了这些方法，而我们今天使用的简洁符号记法，直到16、17世纪才由韦达和笛卡尔等欧洲数学家的贡献
+      而最终确立。
+    ja: >-
+      バグダードの知恵の館の数学者フワーリズミーは、著書『アル＝キターブ・アル＝ムフタサル・フィー・
+      ヒサーブ・アル＝ジャブル・ワル＝ムカーバラ』の中で、幾何学的手法を用いて二次方程式を解く一般的
+      方法を初めて体系化した。この書名から「代数（algebra）」という言葉が生まれた。しかしこの公式の
+      歴史は積み重ねの産物である。バビロニア人はすでに紀元前2000年頃、幾何学的方法で二次方程式の
+      問題を解いていた。その後、インドの数学者ブラーマグプタが628年、負の解を初めて受け入れ、現代の
+      公式に近い明確な規則を示した。12世紀にはバースカラ2世がこれらの方法を洗練させ、今日使われて
+      いるような簡潔な記号表記が確立したのは、ヴィエトやデカルトといったヨーロッパの数学者の貢献に
+      よって16〜17世紀になってからのことである。
   timeline:
     - year: c. 2000 a.C.
       label:
@@ -109,6 +206,16 @@ context:
         en: >-
           The Babylonians solve problems equivalent to quadratic equations using geometric methods
           recorded on clay tablets.
+        pt: >-
+          Os babilônios resolvem problemas equivalentes a equações quadráticas usando métodos
+          geométricos registrados em tábuas de argila.
+        fr: >-
+          Les Babyloniens résolvent des problèmes équivalents à des équations quadratiques à l'aide
+          de méthodes géométriques consignées sur des tablettes d'argile.
+        zh: >-
+          巴比伦人利用记录在泥板上的几何方法，解决了相当于二次方程的问题。
+        ja: >-
+          バビロニア人が、粘土板に記された幾何学的手法を用いて二次方程式に相当する問題を解く。
     - year: c. 820
       label:
         es: >-
@@ -117,6 +224,17 @@ context:
         en: >-
           Al-Khwarizmi systematizes general solution methods in Baghdad in his treatise Al-Jabr, the
           origin of the word 'algebra'.
+        pt: >-
+          Al-Khwarizmi sistematiza em Bagdá os métodos gerais de solução em seu tratado Al-Jabr,
+          origem da palavra 'álgebra'.
+        fr: >-
+          Al-Khwarizmi systématise à Bagdad les méthodes générales de résolution dans son traité
+          Al-Jabr, à l'origine du mot « algèbre ».
+        zh: >-
+          花拉子米在巴格达的著作《代数学》中系统化了一般求解方法，"代数"一词由此而来。
+        ja: >-
+          フワーリズミーがバグダードで著書『アル＝ジャブル』にて一般的な解法を体系化し、これが
+          「代数（algebra）」という言葉の由来となる。
     - year: "628"
       label:
         es: >-
@@ -125,10 +243,25 @@ context:
         en: >-
           Brahmagupta publishes an explicit rule in India that accepts negative solutions, a key step
           toward the modern formula.
+        pt: >-
+          Brahmagupta publica na Índia uma regra explícita que aceita soluções negativas, um passo
+          fundamental rumo à fórmula moderna.
+        fr: >-
+          Brahmagupta publie en Inde une règle explicite acceptant les solutions négatives, une
+          étape clé vers la formule moderne.
+        zh: >-
+          婆罗摩笈多在印度发表了一条接受负数解的明确规则，这是迈向现代公式的关键一步。
+        ja: >-
+          ブラーマグプタがインドで負の解を受け入れる明確な規則を発表し、現代の公式に向けた重要な
+          一歩となる。
     - year: s. XII
       label:
         es: Bhaskara II refina y generaliza los métodos de solución en su obra Bijaganita.
         en: Bhaskara II refines and generalizes the solution methods in his work Bijaganita.
+        pt: Bhaskara II refina e generaliza os métodos de solução em sua obra Bijaganita.
+        fr: Bhaskara II raffine et généralise les méthodes de résolution dans son ouvrage Bijaganita.
+        zh: 婆什迦罗第二在其著作《种子算法》中完善并推广了求解方法。
+        ja: バースカラ2世が著書『ビージャガニタ』で解法を洗練させ、一般化する。
     - year: s. XVI–XVII
       label:
         es: >-
@@ -137,6 +270,16 @@ context:
         en: >-
           Viète and Descartes develop the symbolic notation that allows the formula to be written as
           it's known today.
+        pt: >-
+          Viète e Descartes desenvolvem a notação simbólica que permite escrever a fórmula como é
+          conhecida hoje.
+        fr: >-
+          Viète et Descartes développent la notation symbolique qui permet d'écrire la formule
+          telle qu'on la connaît aujourd'hui.
+        zh: >-
+          韦达和笛卡尔发展出符号记法，使得该公式能够以今天所知的形式书写出来。
+        ja: >-
+          ヴィエトとデカルトが、今日知られる形で公式を書き表せる記号表記法を発展させる。
     - year: Hoy
       label:
         es: >-
@@ -145,10 +288,25 @@ context:
         en: >-
           Taught in schools worldwide and forms the basis of algorithms that solve equations in
           engineering, physics, and computing.
+        pt: >-
+          É ensinada em escolas do mundo todo e forma a base de algoritmos que resolvem equações em
+          engenharia, física e computação.
+        fr: >-
+          Enseignée dans les écoles du monde entier, elle constitue la base d'algorithmes résolvant
+          des équations en ingénierie, en physique et en informatique.
+        zh: >-
+          它在全世界的学校中被教授，也是工程、物理和计算机科学中求解方程算法的基础。
+        ja: >-
+          世界中の学校で教えられており、工学・物理学・計算機科学において方程式を解くアルゴリズム
+          の基礎となっている。
   useCases:
     - title:
         es: Física del movimiento
         en: Physics of motion
+        pt: Física do movimento
+        fr: Physique du mouvement
+        zh: 运动物理学
+        ja: 運動の物理学
       description:
         es: >-
           Calcula el tiempo en que un proyectil alcanza cierta altura, resolviendo ecuaciones de
@@ -156,9 +314,23 @@ context:
         en: >-
           Calculates the time a projectile reaches a certain height, solving position equations
           quadratic in time.
+        pt: >-
+          Calcula o tempo em que um projétil alcança determinada altura, resolvendo equações de
+          posição quadráticas no tempo.
+        fr: >-
+          Calcule le temps que met un projectile à atteindre une certaine hauteur, en résolvant des
+          équations de position quadratiques en fonction du temps.
+        zh: >-
+          通过求解关于时间的二次位置方程，计算抛射体到达某一高度所需的时间。
+        ja: >-
+          時間に関する2次の位置方程式を解くことで、発射体がある高さに達するまでの時間を計算する。
     - title:
         es: Ingeniería estructural
         en: Structural engineering
+        pt: Engenharia estrutural
+        fr: Génie des structures
+        zh: 结构工程
+        ja: 構造工学
       description:
         es: >-
           Determina puntos críticos de curvas parabólicas usadas en el diseño de arcos, puentes y
@@ -166,9 +338,23 @@ context:
         en: >-
           Determines critical points of parabolic curves used in designing arches, bridges, and
           satellite dishes.
+        pt: >-
+          Determina pontos críticos de curvas parabólicas usadas no projeto de arcos, pontes e
+          antenas parabólicas.
+        fr: >-
+          Détermine les points critiques des courbes paraboliques utilisées dans la conception
+          d'arcs, de ponts et d'antennes paraboliques.
+        zh: >-
+          确定用于设计拱、桥梁和抛物面天线的抛物线曲线的临界点。
+        ja: >-
+          アーチ、橋、パラボラアンテナの設計に使われる放物線の臨界点を求める。
     - title:
         es: Optimización económica
         en: Economic optimization
+        pt: Otimização econômica
+        fr: Optimisation économique
+        zh: 经济优化
+        ja: 経済最適化
       description:
         es: >-
           Encuentra el precio que maximiza ingresos cuando la función de ingreso es una parábola en
@@ -176,9 +362,23 @@ context:
         en: >-
           Finds the price that maximizes revenue when the revenue function is a parabola in terms of
           price.
+        pt: >-
+          Encontra o preço que maximiza a receita quando a função de receita é uma parábola em
+          função do preço.
+        fr: >-
+          Trouve le prix qui maximise le revenu lorsque la fonction de revenu est une parabole en
+          fonction du prix.
+        zh: >-
+          当收入函数是关于价格的抛物线时，求出使收入最大化的价格。
+        ja: >-
+          収益関数が価格の関数として放物線になる場合に、収益を最大化する価格を求める。
     - title:
         es: Gráficos por computadora
         en: Computer graphics
+        pt: Computação gráfica
+        fr: Infographie
+        zh: 计算机图形学
+        ja: コンピューターグラフィックス
       description:
         es: >-
           Calcula intersecciones entre rayos y superficies curvas en algoritmos de renderizado y
@@ -186,20 +386,58 @@ context:
         en: >-
           Computes intersections between rays and curved surfaces in rendering and collision-detection
           algorithms.
+        pt: >-
+          Calcula interseções entre raios e superfícies curvas em algoritmos de renderização e
+          detecção de colisões.
+        fr: >-
+          Calcule les intersections entre des rayons et des surfaces courbes dans les algorithmes
+          de rendu et de détection de collisions.
+        zh: >-
+          在渲染和碰撞检测算法中，计算光线与曲面之间的交点。
+        ja: >-
+          レンダリングや衝突検出アルゴリズムにおいて、光線と曲面の交点を計算する。
   example:
     title:
       es: Resolviendo x² − 5x + 6 = 0
       en: Solving x² − 5x + 6 = 0
+      pt: Resolvendo x² − 5x + 6 = 0
+      fr: Résolution de x² − 5x + 6 = 0
+      zh: 求解 x² − 5x + 6 = 0
+      ja: x² − 5x + 6 = 0を解く
     lines:
       - es: a = 1, b = −5, c = 6
         en: a = 1, b = −5, c = 6
+        pt: a = 1, b = −5, c = 6
+        fr: a = 1, b = −5, c = 6
+        zh: a = 1, b = −5, c = 6
+        ja: a = 1, b = −5, c = 6
       - es: x = (−(−5) ± √((−5)² − 4·1·6)) / (2·1)
         en: x = (−(−5) ± √((−5)² − 4·1·6)) / (2·1)
+        pt: x = (−(−5) ± √((−5)² − 4·1·6)) / (2·1)
+        fr: x = (−(−5) ± √((−5)² − 4·1·6)) / (2·1)
+        zh: x = (−(−5) ± √((−5)² − 4·1·6)) / (2·1)
+        ja: x = (−(−5) ± √((−5)² − 4·1·6)) / (2·1)
       - es: x = (5 ± √(25 − 24)) / 2
         en: x = (5 ± √(25 − 24)) / 2
+        pt: x = (5 ± √(25 − 24)) / 2
+        fr: x = (5 ± √(25 − 24)) / 2
+        zh: x = (5 ± √(25 − 24)) / 2
+        ja: x = (5 ± √(25 − 24)) / 2
       - es: x = (5 ± √1) / 2
         en: x = (5 ± √1) / 2
+        pt: x = (5 ± √1) / 2
+        fr: x = (5 ± √1) / 2
+        zh: x = (5 ± √1) / 2
+        ja: x = (5 ± √1) / 2
       - es: x = (5 ± 1) / 2
         en: x = (5 ± 1) / 2
+        pt: x = (5 ± 1) / 2
+        fr: x = (5 ± 1) / 2
+        zh: x = (5 ± 1) / 2
+        ja: x = (5 ± 1) / 2
       - es: x = 3 o x = 2
         en: x = 3 or x = 2
+        pt: x = 3 ou x = 2
+        fr: x = 3 ou x = 2
+        zh: x = 3 或 x = 2
+        ja: x = 3 または x = 2

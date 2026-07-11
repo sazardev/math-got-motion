@@ -2,9 +2,17 @@ id: schrodinger-equation
 title:
   es: Ecuación de Schrödinger
   en: Schrödinger Equation
+  pt: Equação de Schrödinger
+  fr: Équation de Schrödinger
+  zh: 薛定谔方程
+  ja: シュレーディンガー方程式
 category:
   es: Física moderna
   en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
 nodes:
   - id: h-hat
     type: constant
@@ -12,37 +20,65 @@ nodes:
     explanation:
       es: El operador hamiltoniano, representa la energía total del sistema.
       en: The Hamiltonian operator, it represents the system's total energy.
+      pt: O operador hamiltoniano, representa a energia total do sistema.
+      fr: L'opérateur hamiltonien, il représente l'énergie totale du système.
+      zh: 哈密顿算符，代表系统的总能量。
+      ja: ハミルトニアン演算子。系の全エネルギーを表す。
   - id: psi-1
     type: variable
     value: ψ
     explanation:
       es: La función de onda, describe el estado cuántico de la partícula.
       en: The wave function, it describes the particle's quantum state.
+      pt: A função de onda, descreve o estado quântico da partícula.
+      fr: La fonction d'onde, elle décrit l'état quantique de la particule.
+      zh: 波函数，描述粒子的量子态。
+      ja: 波動関数。粒子の量子状態を記述する。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 精确地等于。
+      ja: 正確に等しい。
   - id: e
     type: variable
     value: E
     explanation:
       es: La energía del estado estacionario, uno de los valores permitidos por la ecuación.
       en: The energy of the stationary state, one of the values allowed by the equation.
+      pt: A energia do estado estacionário, um dos valores permitidos pela equação.
+      fr: L'énergie de l'état stationnaire, une des valeurs autorisées par l'équation.
+      zh: 定态的能量，是方程所允许的取值之一。
+      ja: 定常状態のエネルギー。方程式が許す値のひとつ。
   - id: psi-2
     type: variable
     value: ψ
     explanation:
       es: La misma función de onda, reaparece porque este es un problema de valores propios.
       en: The same wave function, reappearing because this is an eigenvalue problem.
+      pt: A mesma função de onda, reaparece porque este é um problema de autovalores.
+      fr: La même fonction d'onde, elle réapparaît car il s'agit d'un problème aux valeurs propres.
+      zh: 同一个波函数再次出现，因为这是一个本征值问题。
+      ja: 同じ波動関数が再び現れる。これは固有値問題だからだ。
 context:
   author:
     es: Erwin Schrödinger
     en: Erwin Schrödinger
+    pt: Erwin Schrödinger
+    fr: Erwin Schrödinger
+    zh: 埃尔温·薛定谔
+    ja: エルヴィン・シュレーディンガー
   era:
     es: Austria, 1887–1961 · publicada en 1926
     en: Austria, 1887–1961 · published in 1926
+    pt: Áustria, 1887–1961 · publicada em 1926
+    fr: Autriche, 1887–1961 · publiée en 1926
+    zh: 奥地利，1887–1961 · 1926年发表
+    ja: オーストリア、1887–1961年 · 1926年発表
   history:
     es: >-
       Schrödinger publicó su ecuación de onda a comienzos de 1926, inspirado por la hipótesis de
@@ -57,70 +93,177 @@ context:
       Schrödinger himself soon proved both formulations were mathematically equivalent. The
       time-independent form, Ĥψ = Eψ, is an eigenvalue problem that yields a quantum system's
       allowed energy levels. He won the 1933 Nobel Prize in Physics, shared with Paul Dirac.
+    pt: >-
+      Schrödinger publicou sua equação de onda no início de 1926, inspirado pela hipótese de
+      De Broglie sobre as ondas de matéria. Ela oferecia uma alternativa à mecânica matricial de
+      Heisenberg, e pouco depois o próprio Schrödinger demonstrou que ambas as formulações eram
+      matematicamente equivalentes. A forma independente do tempo, Ĥψ = Eψ, é um problema de
+      autovalores que fornece os níveis de energia permitidos de um sistema quântico. Ele ganhou
+      o Nobel de Física em 1933, dividido com Paul Dirac.
+    fr: >-
+      Schrödinger publia son équation d'onde au début de 1926, inspiré par l'hypothèse de
+      De Broglie sur les ondes de matière. Elle offrait une alternative à la mécanique matricielle
+      de Heisenberg, et peu après Schrödinger lui-même démontra que les deux formulations étaient
+      mathématiquement équivalentes. La forme indépendante du temps, Ĥψ = Eψ, est un problème aux
+      valeurs propres qui donne les niveaux d'énergie permis d'un système quantique. Il reçut le
+      prix Nobel de physique en 1933, partagé avec Paul Dirac.
+    zh: >-
+      1926年初，薛定谔在德布罗意物质波假设的启发下发表了他的波动方程。这为海森堡的矩阵力学提供了另一种表述方式，
+      不久后薛定谔本人证明了这两种表述在数学上是等价的。不含时形式 Ĥψ = Eψ 是一个本征值问题，
+      给出量子系统所允许的能级。他与保罗·狄拉克共同获得了1933年诺贝尔物理学奖。
+    ja: >-
+      シュレーディンガーは1926年初頭、ド・ブロイの物質波仮説に触発されて波動方程式を発表した。
+      これはハイゼンベルクの行列力学に代わる理論を提供し、まもなくシュレーディンガー自身が
+      両者が数学的に同値であることを証明した。時間に依存しない形 Ĥψ = Eψ は固有値問題であり、
+      量子系の許容エネルギー準位を与える。彼はポール・ディラックと共に1933年のノーベル物理学賞を受賞した。
   timeline:
     - year: "1924"
       label:
         es: Louis de Broglie propone que la materia también se comporta como onda, inspirando a Schrödinger.
         en: Louis de Broglie proposes that matter also behaves as a wave, inspiring Schrödinger.
+        pt: Louis de Broglie propõe que a matéria também se comporta como onda, inspirando Schrödinger.
+        fr: Louis de Broglie propose que la matière se comporte aussi comme une onde, inspirant Schrödinger.
+        zh: 路易·德布罗意提出物质也具有波动性，启发了薛定谔。
+        ja: ルイ・ド・ブロイが物質も波として振る舞うと提唱し、シュレーディンガーに影響を与える。
     - year: "1926"
       label:
         es: Schrödinger publica su serie de artículos introduciendo la mecánica ondulatoria y su ecuación.
         en: Schrödinger publishes his series of papers introducing wave mechanics and his equation.
+        pt: Schrödinger publica sua série de artigos introduzindo a mecânica ondulatória e sua equação.
+        fr: Schrödinger publie sa série d'articles introduisant la mécanique ondulatoire et son équation.
+        zh: 薛定谔发表了一系列论文，提出波动力学及其方程。
+        ja: シュレーディンガーが波動力学とその方程式を導入する一連の論文を発表する。
     - year: "1926"
       label:
         es: Demuestra que su mecánica ondulatoria es matemáticamente equivalente a la mecánica matricial de Heisenberg.
         en: He proves his wave mechanics is mathematically equivalent to Heisenberg's matrix mechanics.
+        pt: Ele demonstra que sua mecânica ondulatória é matematicamente equivalente à mecânica matricial de Heisenberg.
+        fr: Il démontre que sa mécanique ondulatoire est mathématiquement équivalente à la mécanique matricielle de Heisenberg.
+        zh: 他证明了波动力学在数学上等价于海森堡的矩阵力学。
+        ja: 彼は自身の波動力学がハイゼンベルクの行列力学と数学的に同値であることを証明する。
     - year: "1933"
       label:
         es: Schrödinger y Dirac comparten el Premio Nobel de Física por sus aportes a la teoría cuántica.
         en: Schrödinger and Dirac share the Nobel Prize in Physics for their contributions to quantum theory.
+        pt: Schrödinger e Dirac dividem o Prêmio Nobel de Física por suas contribuições à teoria quântica.
+        fr: Schrödinger et Dirac partagent le prix Nobel de physique pour leurs contributions à la théorie quantique.
+        zh: 薛定谔与狄拉克共同获得诺贝尔物理学奖，以表彰他们对量子理论的贡献。
+        ja: シュレーディンガーとディラックが量子論への貢献によりノーベル物理学賞を共同受賞する。
     - year: 1950s
       label:
         es: La química cuántica usa la ecuación para calcular orbitales atómicos y moleculares con computadoras.
         en: Quantum chemistry uses the equation to compute atomic and molecular orbitals with computers.
+        pt: A química quântica usa a equação para calcular orbitais atômicos e moleculares com computadores.
+        fr: La chimie quantique utilise l'équation pour calculer des orbitales atomiques et moléculaires par ordinateur.
+        zh: 量子化学利用该方程借助计算机计算原子和分子轨道。
+        ja: 量子化学は、この方程式をコンピュータで解いて原子・分子軌道を計算する。
     - year: Hoy
       label:
         es: Sostiene el diseño de semiconductores, la química computacional y la simulación cuántica.
         en: It underpins semiconductor design, computational chemistry, and quantum simulation.
+        pt: Sustenta o design de semicondutores, a química computacional e a simulação quântica.
+        fr: Elle sous-tend la conception des semi-conducteurs, la chimie computationnelle et la simulation quantique.
+        zh: 它支撑着半导体设计、计算化学和量子模拟。
+        ja: 半導体設計、計算化学、量子シミュレーションの基盤となっている。
   useCases:
     - title:
         es: Química cuántica
         en: Quantum chemistry
+        pt: Química quântica
+        fr: Chimie quantique
+        zh: 量子化学
+        ja: 量子化学
       description:
         es: Calcular los orbitales de electrones en átomos y moléculas parte de resolver esta ecuación.
         en: Computing electron orbitals in atoms and molecules starts by solving this equation.
+        pt: Calcular os orbitais de elétrons em átomos e moléculas começa resolvendo esta equação.
+        fr: Le calcul des orbitales électroniques dans les atomes et molécules commence par résoudre cette équation.
+        zh: 计算原子和分子中的电子轨道，首先要求解这个方程。
+        ja: 原子や分子中の電子軌道の計算は、この方程式を解くことから始まる。
     - title:
         es: Diseño de semiconductores
         en: Semiconductor design
+        pt: Design de semicondutores
+        fr: Conception des semi-conducteurs
+        zh: 半导体设计
+        ja: 半導体設計
       description:
         es: Modelar el comportamiento de electrones en materiales para chips depende de esta ecuación.
         en: Modeling electron behavior in chip materials relies on this equation.
+        pt: Modelar o comportamento de elétrons em materiais para chips depende desta equação.
+        fr: La modélisation du comportement des électrons dans les matériaux des puces repose sur cette équation.
+        zh: 对芯片材料中电子行为的建模依赖于这个方程。
+        ja: チップ材料中の電子の振る舞いをモデル化するにはこの方程式が使われる。
     - title:
         es: Computación cuántica
         en: Quantum computing
+        pt: Computação quântica
+        fr: Informatique quantique
+        zh: 量子计算
+        ja: 量子コンピューティング
       description:
         es: Simular sistemas cuánticos complejos requiere resolver versiones de esta misma ecuación.
         en: Simulating complex quantum systems requires solving versions of this same equation.
+        pt: Simular sistemas quânticos complexos requer resolver versões desta mesma equação.
+        fr: Simuler des systèmes quantiques complexes nécessite de résoudre des variantes de cette même équation.
+        zh: 模拟复杂的量子系统需要求解这个方程的各种变体。
+        ja: 複雑な量子系のシミュレーションには、この方程式の各種バージョンを解く必要がある。
     - title:
         es: Espectroscopía atómica
         en: Atomic spectroscopy
+        pt: Espectroscopia atômica
+        fr: Spectroscopie atomique
+        zh: 原子光谱学
+        ja: 原子分光法
       description:
         es: Los niveles de energía que predice la ecuación explican las líneas del espectro de cada elemento.
         en: The energy levels the equation predicts explain each element's spectral lines.
+        pt: Os níveis de energia previstos pela equação explicam as linhas espectrais de cada elemento.
+        fr: Les niveaux d'énergie prédits par l'équation expliquent les raies spectrales de chaque élément.
+        zh: 方程所预测的能级解释了每种元素的光谱线。
+        ja: 方程式が予測するエネルギー準位は、各元素のスペクトル線を説明する。
   example:
     title:
       es: Electrón en una caja de 1 nm
       en: Electron in a 1 nm box
+      pt: Elétron em uma caixa de 1 nm
+      fr: Électron dans une boîte de 1 nm
+      zh: 1纳米势阱中的电子
+      ja: 1 nmの箱の中の電子
     lines:
       - es: L = 1 nm, electrón atrapado, n = 1
         en: L = 1 nm, trapped electron, n = 1
+        pt: L = 1 nm, elétron confinado, n = 1
+        fr: L = 1 nm, électron confiné, n = 1
+        zh: L = 1 nm，受限电子，n = 1
+        ja: L = 1 nm、閉じ込められた電子、n = 1
       - es: Eₙ = n² h² / (8 m L²)
         en: Eₙ = n² h² / (8 m L²)
+        pt: Eₙ = n² h² / (8 m L²)
+        fr: Eₙ = n² h² / (8 m L²)
+        zh: Eₙ = n² h² / (8 m L²)
+        ja: Eₙ = n² h² / (8 m L²)
       - es: h = 6.626×10⁻³⁴ J·s, m = 9.11×10⁻³¹ kg
         en: h = 6.626×10⁻³⁴ J·s, m = 9.11×10⁻³¹ kg
+        pt: h = 6,626×10⁻³⁴ J·s, m = 9,11×10⁻³¹ kg
+        fr: h = 6,626×10⁻³⁴ J·s, m = 9,11×10⁻³¹ kg
+        zh: h = 6.626×10⁻³⁴ J·s，m = 9.11×10⁻³¹ kg
+        ja: h = 6.626×10⁻³⁴ J·s、m = 9.11×10⁻³¹ kg
       - es: E₁ = h² / (8 m L²)
         en: E₁ = h² / (8 m L²)
+        pt: E₁ = h² / (8 m L²)
+        fr: E₁ = h² / (8 m L²)
+        zh: E₁ = h² / (8 m L²)
+        ja: E₁ = h² / (8 m L²)
       - es: E₁ ≈ 6.02×10⁻²⁰ joules
         en: E₁ ≈ 6.02×10⁻²⁰ joules
+        pt: E₁ ≈ 6,02×10⁻²⁰ joules
+        fr: E₁ ≈ 6,02×10⁻²⁰ joules
+        zh: E₁ ≈ 6.02×10⁻²⁰ 焦耳
+        ja: E₁ ≈ 6.02×10⁻²⁰ ジュール
       - es: E₁ ≈ 0.376 eV
         en: E₁ ≈ 0.376 eV
+        pt: E₁ ≈ 0,376 eV
+        fr: E₁ ≈ 0,376 eV
+        zh: E₁ ≈ 0.376 eV
+        ja: E₁ ≈ 0.376 eV

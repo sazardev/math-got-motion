@@ -2,9 +2,17 @@ id: law-of-cosines
 title:
   es: Ley de Cosenos
   en: Law of Cosines
+  pt: Lei dos Cossenos
+  fr: Loi des cosinus
+  zh: 余弦定理
+  ja: 余弦定理
 category:
   es: Geometría
   en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
 nodes:
   - id: c
     type: variable
@@ -12,79 +20,135 @@ nodes:
     explanation:
       es: El lado c, opuesto al ángulo C, cuya longitud queremos encontrar.
       en: Side c, opposite angle C, whose length we want to find.
+      pt: O lado c, oposto ao ângulo C, cujo comprimento queremos encontrar.
+      fr: Le côté c, opposé à l'angle C, dont on cherche la longueur.
+      zh: 边c，与角C相对，是我们要求出长度的边。
+      ja: 角Cの対辺である辺c。その長さを求めたい。
   - id: c-sq
     type: superscript
     value: "2"
     explanation:
       es: "Elevado al cuadrado: multiplicado por sí mismo."
       en: "Squared: multiplied by itself."
+      pt: "Elevado ao quadrado: multiplicado por si mesmo."
+      fr: "Élevé au carré : multiplié par lui-même."
+      zh: "平方：与自身相乘。"
+      ja: "二乗。自分自身と掛け合わせる。"
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es igual a.
       en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: これは次の値に等しい。
   - id: a
     type: variable
     value: a
     explanation:
       es: El lado a del triángulo.
       en: Side a of the triangle.
+      pt: O lado a do triângulo.
+      fr: Le côté a du triangle.
+      zh: 三角形的边a。
+      ja: 三角形の辺a。
   - id: a-sq
     type: superscript
     value: "2"
     explanation:
       es: También elevado al cuadrado.
       en: Also squared.
+      pt: Também elevado ao quadrado.
+      fr: Également élevé au carré.
+      zh: 同样取平方。
+      ja: これも二乗する。
   - id: plus
     type: operator
     value: +
     explanation:
       es: Sumado al cuadrado del lado b.
       en: Added to the square of side b.
+      pt: Somado ao quadrado do lado b.
+      fr: Ajouté au carré du côté b.
+      zh: 加上边b的平方。
+      ja: 辺bの平方と足し合わせる。
   - id: b
     type: variable
     value: b
     explanation:
       es: El lado b del triángulo.
       en: Side b of the triangle.
+      pt: O lado b do triângulo.
+      fr: Le côté b du triangle.
+      zh: 三角形的边b。
+      ja: 三角形の辺b。
   - id: b-sq
     type: superscript
     value: "2"
     explanation:
       es: También elevado al cuadrado.
       en: Also squared.
+      pt: Também elevado ao quadrado.
+      fr: Également élevé au carré.
+      zh: 同样取平方。
+      ja: これも二乗する。
   - id: minus
     type: operator
     value: −
     explanation:
       es: Menos el término de corrección que sigue, necesario cuando el ángulo no es recto.
       en: Minus the correction term that follows, needed when the angle isn't a right angle.
+      pt: Menos o termo de correção a seguir, necessário quando o ângulo não é reto.
+      fr: Moins le terme correctif qui suit, nécessaire lorsque l'angle n'est pas droit.
+      zh: 减去随后的修正项，当角不是直角时需要这一项。
+      ja: 続く補正項を引く。角が直角でない場合に必要となる。
   - id: two-a-b
     type: variable
     value: 2ab
     explanation:
       es: El doble del producto de los lados a y b.
       en: Twice the product of sides a and b.
+      pt: O dobro do produto dos lados a e b.
+      fr: Le double du produit des côtés a et b.
+      zh: 边a与边b乘积的两倍。
+      ja: 辺aと辺bの積の2倍。
   - id: cos
     type: operator
     value: cos
     explanation:
       es: La función coseno, aplicada al ángulo C.
       en: The cosine function, applied to angle C.
+      pt: A função cosseno, aplicada ao ângulo C.
+      fr: La fonction cosinus, appliquée à l'angle C.
+      zh: 余弦函数，作用于角C。
+      ja: 角Cに適用される余弦関数。
   - id: angle-c
     type: variable
     value: C
     explanation:
       es: El ángulo C, opuesto al lado c, ubicado entre los lados a y b.
       en: Angle C, opposite side c, located between sides a and b.
+      pt: O ângulo C, oposto ao lado c, localizado entre os lados a e b.
+      fr: L'angle C, opposé au côté c, situé entre les côtés a et b.
+      zh: 角C，与边c相对，位于边a和边b之间。
+      ja: 角C。辺cの対角であり、辺aと辺bの間に位置する。
 context:
   author:
     es: Euclides · forma trigonométrica atribuida a al-Kashi
     en: Euclid · trigonometric generalization credited to al-Kashi
+    pt: Euclides · forma trigonométrica atribuída a al-Kashi
+    fr: Euclide · forme trigonométrique attribuée à al-Kashi
+    zh: 欧几里得 · 三角形式归功于卡西
+    ja: エウクレイデス · 三角関数形はアル＝カーシーによる
   era:
     es: Alejandría, c. 300 a.C. · forma trigonométrica c. 1427 (Samarcanda)
     en: Alexandria, c. 300 BC · trigonometric form c. 1427 (Samarkand)
+    pt: Alexandria, c. 300 a.C. · forma trigonométrica c. 1427 (Samarcanda)
+    fr: Alexandrie, v. 300 av. J.-C. · forme trigonométrique v. 1427 (Samarcande)
+    zh: 亚历山大，约公元前300年 · 三角形式约1427年（撒马尔罕）
+    ja: アレクサンドリア、紀元前300年頃 · 三角関数形は1427年頃（サマルカンド）
   history:
     es: >-
       Las raíces de esta ley están en las Proposiciones II.12 y II.13 de los Elementos de Euclides, que
@@ -104,6 +168,29 @@ context:
       'théorème d'al-Kashi'. The compact algebraic notation we use today wasn't settled until European
       trigonometry of the 16th and 17th centuries. It is, in essence, a generalization of the
       Pythagorean theorem for triangles that aren't right triangles.
+    pt: >-
+      As raízes desta lei estão nas Proposições II.12 e II.13 dos Elementos de Euclides, que
+      descrevem — em linguagem puramente geométrica, sem trigonometria — como o quadrado de um lado
+      se relaciona com os quadrados dos outros dois em triângulos obtusos e agudos. A forma
+      trigonométrica moderna, com a função cosseno explícita, aparece séculos depois: o matemático
+      persa Jamshid al-Kashi a desenvolveu em seu tratado de 1427 em Samarcanda, razão pela qual na
+      França ainda é conhecida como 'théorème d'al-Kashi'. A notação algébrica compacta que usamos
+      hoje só se consolidou com a trigonometria europeia dos séculos XVI e XVII. É, em essência, uma
+      generalização do teorema de Pitágoras para triângulos que não são retângulos.
+    fr: >-
+      Les racines de cette loi se trouvent dans les propositions II.12 et II.13 des Éléments
+      d'Euclide, qui décrivent — dans un langage purement géométrique, sans trigonométrie — comment
+      le carré d'un côté se rapporte aux carrés des deux autres dans les triangles obtusangles et
+      acutangles. La forme trigonométrique moderne, avec la fonction cosinus explicite, apparaît des
+      siècles plus tard : le mathématicien persan Jamshid al-Kashi la développa dans son traité de
+      1427 à Samarcande, raison pour laquelle on l'appelle encore en France le 'théorème d'al-Kashi'.
+      La notation algébrique compacte que nous utilisons aujourd'hui ne s'est consolidée qu'avec la
+      trigonométrie européenne des XVIe et XVIIe siècles. Il s'agit, en somme, d'une généralisation
+      du théorème de Pythagore pour les triangles qui ne sont pas rectangles.
+    zh: >-
+      这条定律的根源可以追溯到欧几里得《几何原本》中的命题II.12和II.13，这两条命题以纯几何语言（不涉及三角函数）描述了在钝角三角形和锐角三角形中，一条边的平方与另外两边平方之间的关系。带有显式余弦函数的现代三角形式则出现在几个世纪之后：波斯数学家贾姆希德·卡西于1427年在撒马尔罕的论著中提出了这一形式，这也是为什么在法国它至今仍被称为"al-Kashi定理"。我们今天使用的简洁代数记法，直到16、17世纪欧洲三角学发展成熟后才最终确立。从本质上说，它是勾股定理向非直角三角形的推广。
+    ja: >-
+      この定理の起源は、ユークリッドの『原論』の命題II.12とII.13にさかのぼる。そこでは三角関数を用いず、純粋に幾何学的な言葉で、鈍角三角形と鋭角三角形において一辺の平方が他の二辺の平方とどう関係するかが記述されている。余弦関数を明示的に用いる現代の三角関数形は何世紀も後に登場する。ペルシアの数学者ジャムシード・アル＝カーシーが1427年、サマルカンドで著した論文の中でこれを発展させた。フランスで今なお「アル＝カーシーの定理」と呼ばれるのはそのためである。今日私たちが用いる簡潔な代数表記が確立したのは、16世紀から17世紀のヨーロッパの三角法によってである。これは本質的に、直角三角形以外にも適用できるようピタゴラスの定理を一般化したものである。
   timeline:
     - year: c. 300 a.C.
       label:
@@ -113,6 +200,16 @@ context:
         en: >-
           Euclid proves the geometric versions for obtuse and acute triangles in Propositions II.12–13
           of the Elements.
+        pt: >-
+          Euclides demonstra nas Proposições II.12–13 dos Elementos as versões geométricas para
+          triângulos obtusos e agudos.
+        fr: >-
+          Euclide démontre dans les propositions II.12–13 des Éléments les versions géométriques
+          pour les triangles obtusangles et acutangles.
+        zh: >-
+          欧几里得在《几何原本》命题II.12–13中证明了钝角和锐角三角形的几何版本。
+        ja: >-
+          ユークリッドが『原論』命題II.12–13で、鈍角三角形と鋭角三角形についての幾何学的な形を証明する。
     - year: "1427"
       label:
         es: >-
@@ -121,10 +218,24 @@ context:
         en: >-
           Jamshid al-Kashi formulates the explicit trigonometric version in Samarkand, with the cosine
           function.
+        pt: >-
+          Jamshid al-Kashi formula a versão trigonométrica explícita em Samarcanda, com a função
+          cosseno.
+        fr: >-
+          Jamshid al-Kashi formule la version trigonométrique explicite à Samarcande, avec la
+          fonction cosinus.
+        zh: >-
+          贾姆希德·卡西在撒马尔罕提出了带有余弦函数的明确三角形式。
+        ja: >-
+          ジャムシード・アル＝カーシーがサマルカンドで、余弦関数を用いた明示的な三角関数形を定式化する。
     - year: s. XVI–XVII
       label:
         es: La trigonometría europea consolida la notación algebraica moderna de la ley.
         en: European trigonometry consolidates the law's modern algebraic notation.
+        pt: A trigonometria europeia consolida a notação algébrica moderna da lei.
+        fr: La trigonométrie européenne consolide la notation algébrique moderne de la loi.
+        zh: 欧洲三角学确立了该定律现代的代数记法。
+        ja: ヨーロッパの三角法がこの定理の現代的な代数表記を確立する。
     - year: Hoy
       label:
         es: >-
@@ -133,10 +244,24 @@ context:
         en: >-
           A standard tool in navigation, surveying, and computer graphics for solving triangles
           without right angles.
+        pt: >-
+          Ferramenta padrão em navegação, topografia e computação gráfica para resolver triângulos
+          sem ângulos retos.
+        fr: >-
+          Outil standard en navigation, en topographie et en infographie pour résoudre des triangles
+          sans angles droits.
+        zh: >-
+          在导航、测量和计算机图形学中，是求解非直角三角形的标准工具。
+        ja: >-
+          直角のない三角形を解くための、航海術・測量・コンピュータグラフィックスにおける標準的な道具。
   useCases:
     - title:
         es: Navegación y topografía
         en: Navigation and surveying
+        pt: Navegação e topografia
+        fr: Navigation et topographie
+        zh: 导航与测量
+        ja: 航海と測量
       description:
         es: >-
           Calcula distancias entre puntos conocidos cuando se mide un ángulo, esencial en triangulación
@@ -144,44 +269,119 @@ context:
         en: >-
           Calculates distances between known points when an angle is measured, essential in land and
           maritime triangulation.
+        pt: >-
+          Calcula distâncias entre pontos conhecidos quando um ângulo é medido, essencial na
+          triangulação terrestre e marítima.
+        fr: >-
+          Calcule les distances entre des points connus lorsqu'un angle est mesuré, essentiel pour
+          la triangulation terrestre et maritime.
+        zh: >-
+          在测得一个角的情况下计算已知点之间的距离，是陆地和海洋三角测量中的基本方法。
+        ja: >-
+          角度が測定できるとき既知の点間の距離を計算する。陸上・海上の三角測量に不可欠。
     - title:
         es: Gráficos por computadora
         en: Computer graphics
+        pt: Computação gráfica
+        fr: Infographie
+        zh: 计算机图形学
+        ja: コンピュータグラフィックス
       description:
         es: >-
           Resuelve ángulos y distancias entre vértices en modelos 3D y motores de físicas de
           videojuegos.
         en: >-
           Resolves angles and distances between vertices in 3D models and video game physics engines.
+        pt: >-
+          Resolve ângulos e distâncias entre vértices em modelos 3D e motores de física de jogos
+          eletrônicos.
+        fr: >-
+          Permet de résoudre les angles et distances entre sommets dans les modèles 3D et les
+          moteurs physiques de jeux vidéo.
+        zh: >-
+          用于求解3D模型和电子游戏物理引擎中顶点之间的角度和距离。
+        ja: >-
+          3Dモデルやビデオゲームの物理エンジンにおいて、頂点間の角度と距離を求める。
     - title:
         es: Astronomía
         en: Astronomy
+        pt: Astronomia
+        fr: Astronomie
+        zh: 天文学
+        ja: 天文学
       description:
         es: >-
           Determina distancias entre cuerpos celestes a partir de ángulos observados desde la Tierra.
         en: >-
           Determines distances between celestial bodies from angles observed from Earth.
+        pt: >-
+          Determina distâncias entre corpos celestes a partir de ângulos observados a partir da
+          Terra.
+        fr: >-
+          Détermine les distances entre corps célestes à partir d'angles observés depuis la Terre.
+        zh: >-
+          根据从地球上观测到的角度确定天体之间的距离。
+        ja: >-
+          地球から観測した角度から天体間の距離を求める。
     - title:
         es: Robótica
         en: Robotics
+        pt: Robótica
+        fr: Robotique
+        zh: 机器人学
+        ja: ロボット工学
       description:
         es: >-
           Calcula ángulos articulares de brazos robóticos a partir de las longitudes conocidas de sus
           segmentos, en cinemática inversa.
         en: >-
           Calculates joint angles of robotic arms from known segment lengths, in inverse kinematics.
+        pt: >-
+          Calcula ângulos articulares de braços robóticos a partir dos comprimentos conhecidos de
+          seus segmentos, na cinemática inversa.
+        fr: >-
+          Calcule les angles articulaires des bras robotisés à partir des longueurs connues de leurs
+          segments, en cinématique inverse.
+        zh: >-
+          在逆运动学中，根据机械臂各段已知的长度计算其关节角度。
+        ja: >-
+          逆運動学において、各リンクの既知の長さからロボットアームの関節角度を計算する。
   example:
     title:
       es: Triángulo con a=5, b=7, C=60°
       en: Triangle with a=5, b=7, C=60°
+      pt: Triângulo com a=5, b=7, C=60°
+      fr: Triangle avec a=5, b=7, C=60°
+      zh: 三角形 a=5, b=7, C=60°
+      ja: a=5, b=7, C=60°の三角形
     lines:
       - es: c² = 5² + 7² − 2·5·7·cos(60°)
         en: c² = 5² + 7² − 2·5·7·cos(60°)
+        pt: c² = 5² + 7² − 2·5·7·cos(60°)
+        fr: c² = 5² + 7² − 2·5·7·cos(60°)
+        zh: c² = 5² + 7² − 2·5·7·cos(60°)
+        ja: c² = 5² + 7² − 2·5·7·cos(60°)
       - es: cos(60°) = 0.5
         en: cos(60°) = 0.5
+        pt: cos(60°) = 0,5
+        fr: cos(60°) = 0,5
+        zh: cos(60°) = 0.5
+        ja: cos(60°) = 0.5
       - es: c² = 25 + 49 − 70·0.5
         en: c² = 25 + 49 − 70·0.5
+        pt: c² = 25 + 49 − 70·0,5
+        fr: c² = 25 + 49 − 70·0,5
+        zh: c² = 25 + 49 − 70·0.5
+        ja: c² = 25 + 49 − 70·0.5
       - es: c² = 74 − 35 = 39
         en: c² = 74 − 35 = 39
+        pt: c² = 74 − 35 = 39
+        fr: c² = 74 − 35 = 39
+        zh: c² = 74 − 35 = 39
+        ja: c² = 74 − 35 = 39
       - es: c = √39 ≈ 6.24
         en: c = √39 ≈ 6.24
+        pt: c = √39 ≈ 6,24
+        fr: c = √39 ≈ 6,24
+        zh: c = √39 ≈ 6.24
+        ja: c = √39 ≈ 6.24

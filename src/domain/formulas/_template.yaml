@@ -18,19 +18,29 @@
 # que no cumpla esta forma exacta, con límites de longitud pensados para que
 # el contenido nunca rompa la coreografía de scroll.
 #
-# Todo lo bilingüe usa `es:`/`en:` (un objeto con ambas traducciones).
-# `category` agrupa la fórmula en el índice — reutilizá el mismo texto que
-# otra fórmula existente (ej. "Geometría") para que se agrupen juntas.
+# Todo lo traducible usa `es:`/`en:`/`pt:`/`fr:`/`zh:`/`ja:` (un objeto con
+# las 6 traducciones — todas son obligatorias, el validador rechaza el
+# archivo si falta alguna). `category` agrupa la fórmula en el índice —
+# reutilizá el mismo texto que otra fórmula existente (ej. "Geometría") para
+# que se agrupen juntas.
 
 id: quadratic-formula
 
 title:
   es: Fórmula Cuadrática
   en: Quadratic Formula
+  pt: Fórmula Quadrática
+  fr: Formule Quadratique
+  zh: 二次方程求根公式
+  ja: 二次方程式の解の公式
 
 category:
   es: Álgebra
   en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
 
 # La fórmula deconstruida símbolo por símbolo, en el mismo orden en que se
 # leen de izquierda a derecha. Cada nodo necesita su propia explicación — es
@@ -43,16 +53,28 @@ nodes:
     explanation:
       es: Qué representa este símbolo, en una o dos oraciones.
       en: What this symbol represents, in one or two sentences.
+      pt: O que este símbolo representa, em uma ou duas frases.
+      fr: Ce que ce symbole représente, en une ou deux phrases.
+      zh: 这个符号代表什么，用一两句话说明。
+      ja: この記号が何を表すかを、一文か二文で説明する。
   # ...un ítem por cada símbolo/carácter visible de la fórmula.
 
 context:
   author:
     es: Nombre del autor o autores
     en: Author or authors' name
+    pt: Nome do autor ou autores
+    fr: Nom de l'auteur ou des auteurs
+    zh: 作者姓名
+    ja: 著者名
 
   era:
     es: Lugar, años de vida · publicada en año
     en: Place, years alive · published in year
+    pt: Local, anos de vida · publicada em ano
+    fr: Lieu, années de vie · publiée en année
+    zh: 地点，生卒年 · 发表于某年
+    ja: 場所、生没年・発表年
 
   history:
     es: >-
@@ -61,6 +83,16 @@ context:
     en: >-
       A paragraph of historical or cultural context about the formula's
       origin.
+    pt: >-
+      Um parágrafo de contexto histórico ou cultural sobre a origem da
+      fórmula.
+    fr: >-
+      Un paragraphe de contexte historique ou culturel sur l'origine de la
+      formule.
+    zh: >-
+      一段关于该公式起源的历史或文化背景介绍。
+    ja: >-
+      この公式の由来に関する歴史的・文化的背景を一段落で説明する。
 
   # Hitos en orden cronológico. Entre 1 y 10 ítems.
   timeline:
@@ -68,15 +100,27 @@ context:
       label:
         es: Qué ocurrió en ese momento y por qué es relevante para la fórmula.
         en: What happened at that point and why it matters to the formula.
+        pt: O que aconteceu naquele momento e por que é relevante para a fórmula.
+        fr: Ce qui s'est passé à ce moment-là et pourquoi c'est important pour la formule.
+        zh: 那个时刻发生了什么，以及它对这个公式为何重要。
+        ja: その時点で何が起き、それが公式にとってなぜ重要なのか。
 
   # Dominios reales donde se usa hoy. Entre 1 y 6 ítems.
   useCases:
     - title:
         es: Campo o industria
         en: Field or industry
+        pt: Área ou indústria
+        fr: Domaine ou industrie
+        zh: 领域或行业
+        ja: 分野・業界
       description:
         es: Cómo se aplica concretamente la fórmula ahí.
         en: How the formula is concretely applied there.
+        pt: Como a fórmula é aplicada concretamente ali.
+        fr: Comment la formule y est concrètement appliquée.
+        zh: 该公式在这里具体是如何应用的。
+        ja: そこで公式が具体的にどのように応用されているか。
 
   # Un ejemplo numérico resuelto, revelado línea por línea en el epílogo.
   # Entre 1 y 14 líneas.
@@ -84,8 +128,20 @@ context:
     title:
       es: Título corto del ejemplo
       en: Short example title
+      pt: Título curto do exemplo
+      fr: Titre court de l'exemple
+      zh: 示例的简短标题
+      ja: 例の短いタイトル
     lines:
       - es: primera línea del cálculo
         en: first line of the calculation
+        pt: primeira linha do cálculo
+        fr: première ligne du calcul
+        zh: 计算的第一行
+        ja: 計算の最初の行
       - es: resultado final
         en: final result
+        pt: resultado final
+        fr: résultat final
+        zh: 最终结果
+        ja: 最終結果

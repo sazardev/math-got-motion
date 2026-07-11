@@ -2,9 +2,17 @@ id: binomial-theorem
 title:
   es: Teorema del Binomio
   en: Binomial Theorem
+  pt: Teorema do Binômio
+  fr: Théorème du binôme
+  zh: 二项式定理
+  ja: 二項定理
 category:
   es: Álgebra
   en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
 nodes:
   - id: a-plus-b
     type: variable
@@ -12,61 +20,105 @@ nodes:
     explanation:
       es: Un binomio, la suma de dos términos a y b, que vamos a elevar a una potencia.
       en: A binomial, the sum of two terms a and b, which we're raising to a power.
+      pt: Um binômio, a soma de dois termos a e b, que vamos elevar a uma potência.
+      fr: Un binôme, la somme de deux termes a et b, que nous allons élever à une puissance.
+      zh: 一个二项式，即两项 a 和 b 之和，我们要将其提升到某个幂次。
+      ja: 二項式、すなわち2つの項aとbの和であり、これをある指数でべき乗する。
   - id: n-exp
     type: superscript
     value: n
     explanation:
       es: El exponente n, un número entero no negativo que indica cuántas veces se multiplica el binomio por sí mismo.
       en: The exponent n, a non-negative integer indicating how many times the binomial is multiplied by itself.
+      pt: O expoente n, um número inteiro não negativo que indica quantas vezes o binômio é multiplicado por si mesmo.
+      fr: L'exposant n, un entier non négatif indiquant combien de fois le binôme est multiplié par lui-même.
+      zh: 指数 n，一个非负整数，表示该二项式与自身相乘的次数。
+      ja: 指数nは非負の整数であり、二項式が自分自身と何回掛け合わされるかを示す。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es igual a la siguiente suma.
       en: Is equal to the following sum.
+      pt: É igual à soma a seguir.
+      fr: Est égal à la somme suivante.
+      zh: 等于下面这个求和式。
+      ja: 次の和に等しい。
   - id: sum
     type: operator
     value: Σ
     explanation:
       es: "Sigma: el símbolo de sumatoria, que suma todos los términos desde k = 0 hasta k = n."
       en: "Sigma: the summation symbol, adding all terms from k = 0 to k = n."
+      pt: "Sigma: o símbolo de somatório, que soma todos os termos de k = 0 até k = n."
+      fr: "Sigma : le symbole de sommation, qui additionne tous les termes de k = 0 à k = n."
+      zh: "Sigma：求和符号，将 k = 0 到 k = n 的所有项相加。"
+      ja: "シグマ：総和記号であり、k = 0からk = nまでのすべての項を足し合わせる。"
   - id: choose
     type: operator
     value: "(n k)"
     explanation:
       es: "El coeficiente binomial 'n eligiendo k': cuenta de cuántas formas se pueden elegir k elementos de un total de n."
       en: "The binomial coefficient 'n choose k': counts the number of ways to choose k elements from n total."
+      pt: "O coeficiente binomial 'n escolhe k': conta de quantas formas é possível escolher k elementos entre um total de n."
+      fr: "Le coefficient binomial « n choisit k » : compte le nombre de façons de choisir k éléments parmi n."
+      zh: "二项式系数“n 选 k”：表示从 n 个元素中选出 k 个元素的方法数。"
+      ja: "二項係数「nからkを選ぶ」：n個の要素からk個を選ぶ方法の総数を表す。"
   - id: a-term
     type: variable
     value: a
     explanation:
       es: El primer término del binomio, elevado a la potencia n−k en cada sumando.
       en: The binomial's first term, raised to the power n−k in each summand.
+      pt: O primeiro termo do binômio, elevado à potência n−k em cada parcela.
+      fr: Le premier terme du binôme, élevé à la puissance n−k dans chaque terme de la somme.
+      zh: 二项式的第一项，在每个加项中提升到 n−k 次幂。
+      ja: 二項式の第一項であり、各項でn−k乗される。
   - id: a-exp
     type: superscript
     value: n−k
     explanation:
       es: El exponente de a disminuye conforme k aumenta, desde n hasta 0.
       en: The exponent of a decreases as k increases, from n down to 0.
+      pt: O expoente de a diminui conforme k aumenta, de n até 0.
+      fr: L'exposant de a diminue à mesure que k augmente, de n jusqu'à 0.
+      zh: a 的指数随 k 增大而减小，从 n 一直降到 0。
+      ja: aの指数はkが増えるにつれてnから0まで減少する。
   - id: b-term
     type: variable
     value: b
     explanation:
       es: El segundo término del binomio, elevado a la potencia k en cada sumando.
       en: The binomial's second term, raised to the power k in each summand.
+      pt: O segundo termo do binômio, elevado à potência k em cada parcela.
+      fr: Le second terme du binôme, élevé à la puissance k dans chaque terme de la somme.
+      zh: 二项式的第二项，在每个加项中提升到 k 次幂。
+      ja: 二項式の第二項であり、各項でk乗される。
   - id: b-exp
     type: superscript
     value: k
     explanation:
       es: El exponente de b aumenta conforme k crece, desde 0 hasta n.
       en: The exponent of b increases as k grows, from 0 to n.
+      pt: O expoente de b aumenta conforme k cresce, de 0 até n.
+      fr: L'exposant de b augmente à mesure que k croît, de 0 jusqu'à n.
+      zh: b 的指数随 k 增大而增大，从 0 一直升到 n。
+      ja: bの指数はkが増えるにつれて0からnまで増加する。
 context:
   author:
     es: Isaac Newton
     en: Isaac Newton
+    pt: Isaac Newton
+    fr: Isaac Newton
+    zh: 艾萨克·牛顿
+    ja: アイザック・ニュートン
   era:
     es: Inglaterra, 1642–1727 · generalizado c. 1665
     en: England, 1642–1727 · generalized c. 1665
+    pt: Inglaterra, 1642–1727 · generalizado c. 1665
+    fr: Angleterre, 1642–1727 · généralisé v. 1665
+    zh: 英格兰，1642–1727 · 约1665年推广
+    ja: イングランド、1642–1727年 · 1665年頃に一般化
   history:
     es: >-
       Casos particulares del teorema del binomio eran conocidos siglos antes de Newton: el triángulo
@@ -87,6 +139,40 @@ context:
       formula to fractional and negative exponents, expressing it as an infinite series. He never
       published a formal proof, but communicated it in letters to Henry Oldenburg, and the result
       became a central tool of the calculus he was developing in parallel.
+    pt: >-
+      Casos particulares do teorema do binômio já eram conhecidos séculos antes de Newton: o triângulo
+      aritmético que fornece os coeficientes aparece em textos indianos e persas já no século X, e de
+      forma independente na matemática chinesa do século XI, muito antes de Blaise Pascal popularizá-lo
+      na Europa em 1653 (por isso é conhecido no Ocidente como 'triângulo de Pascal'). Esses trabalhos
+      anteriores limitavam-se a expoentes inteiros positivos. A contribuição decisiva de Newton, por
+      volta de 1665, foi generalizar a fórmula para expoentes fracionários e negativos, expressando-a
+      como uma série infinita. Ele nunca publicou uma demonstração formal, mas a comunicou em cartas a
+      Henry Oldenburg, e o resultado se tornou uma ferramenta central do cálculo que ele mesmo
+      desenvolvia em paralelo.
+    fr: >-
+      Des cas particuliers du théorème du binôme étaient connus des siècles avant Newton : le triangle
+      arithmétique donnant les coefficients apparaît dans des textes indiens et persans dès le Xe
+      siècle, et indépendamment dans les mathématiques chinoises du XIe siècle, bien avant que Blaise
+      Pascal ne le popularise en Europe en 1653 (d'où son nom occidental de « triangle de Pascal »). Ces
+      travaux antérieurs se limitaient aux exposants entiers positifs. La contribution décisive de
+      Newton, vers 1665, fut de généraliser la formule aux exposants fractionnaires et négatifs, en
+      l'exprimant sous forme de série infinie. Il n'en publia jamais de démonstration formelle, mais la
+      communiqua dans des lettres à Henry Oldenburg, et le résultat devint un outil central du calcul
+      infinitésimal qu'il développait en parallèle.
+    zh: >-
+      二项式定理的特殊情形早在牛顿之前几个世纪就已为人所知：给出系数的算术三角形早在十世纪就出现在印度和波斯的文献中，
+      并在十一世纪的中国数学中被独立发现，远早于布莱兹·帕斯卡于1653年在欧洲将其推广（因此西方称之为“帕斯卡三角形”）。
+      这些早期成果都局限于正整数指数。牛顿在1665年前后做出的关键贡献，是将该公式推广到分数指数和负数指数，
+      并将其表示为一个无穷级数。他从未发表过正式证明，但在写给亨利·奥尔登堡的信中传达了这一结果，
+      而这一成果后来成为他同时期发展的微积分学中的核心工具。
+    ja: >-
+      二項定理の特殊な場合は、ニュートンより何世紀も前から知られていた。係数を与える算術三角形は、
+      早くも10世紀のインドやペルシアの文献に登場し、11世紀の中国数学でも独立に発見されていた。
+      これはブレーズ・パスカルが1653年にヨーロッパで広めるよりずっと前のことである
+      （そのため西洋では「パスカルの三角形」と呼ばれる）。これらの先行研究は正の整数指数に限られていた。
+      ニュートンが1665年頃に成し遂げた決定的な貢献は、この公式を分数指数や負の指数にまで一般化し、
+      無限級数として表現したことである。彼は正式な証明を発表することはなかったが、
+      ヘンリー・オルデンバーグへの書簡でこれを伝え、この結果は彼が並行して発展させていた微積分学の中心的な道具となった。
   timeline:
     - year: s. X
       label:
@@ -96,10 +182,24 @@ context:
         en: >-
           Persian and Indian mathematicians describe the triangle of binomial coefficients for
           positive integer exponents.
+        pt: >-
+          Matemáticos persas e indianos descrevem o triângulo de coeficientes binomiais para
+          expoentes inteiros positivos.
+        fr: >-
+          Des mathématiciens persans et indiens décrivent le triangle des coefficients binomiaux
+          pour les exposants entiers positifs.
+        zh: >-
+          波斯和印度数学家描述了正整数指数下二项式系数所构成的三角形。
+        ja: >-
+          ペルシアとインドの数学者たちが、正の整数指数に対する二項係数の三角形を記述する。
     - year: s. XI
       label:
         es: Matemáticos chinos desarrollan de forma independiente el mismo triángulo de coeficientes.
         en: Chinese mathematicians independently develop the same triangle of coefficients.
+        pt: Matemáticos chineses desenvolvem de forma independente o mesmo triângulo de coeficientes.
+        fr: Des mathématiciens chinois développent indépendamment le même triangle de coefficients.
+        zh: 中国数学家独立发展出了同样的系数三角形。
+        ja: 中国の数学者たちが同じ係数の三角形を独立に発展させる。
     - year: "1653"
       label:
         es: >-
@@ -108,6 +208,16 @@ context:
         en: >-
           Blaise Pascal publishes his Traité du triangle arithmétique, popularizing the triangle in
           Europe.
+        pt: >-
+          Blaise Pascal publica seu Traité du triangle arithmétique, popularizando o triângulo na
+          Europa.
+        fr: >-
+          Blaise Pascal publie son Traité du triangle arithmétique, popularisant le triangle en
+          Europe.
+        zh: >-
+          布莱兹·帕斯卡发表《算术三角形论》，使该三角形在欧洲广为流传。
+        ja: >-
+          ブレーズ・パスカルが『算術三角形論』を発表し、この三角形をヨーロッパに広める。
     - year: c. 1665
       label:
         es: >-
@@ -116,10 +226,24 @@ context:
         en: >-
           Isaac Newton generalizes the theorem to fractional and negative exponents, expressing it as
           an infinite series.
+        pt: >-
+          Isaac Newton generaliza o teorema para expoentes fracionários e negativos, expressando-o
+          como série infinita.
+        fr: >-
+          Isaac Newton généralise le théorème aux exposants fractionnaires et négatifs, en
+          l'exprimant sous forme de série infinie.
+        zh: >-
+          艾萨克·牛顿将该定理推广到分数指数和负数指数，并将其表示为无穷级数。
+        ja: >-
+          アイザック・ニュートンがこの定理を分数指数と負の指数に一般化し、無限級数として表現する。
     - year: "1670s"
       label:
         es: Newton comunica el resultado en cartas a Henry Oldenburg, secretario de la Royal Society.
         en: Newton communicates the result in letters to Henry Oldenburg, secretary of the Royal Society.
+        pt: Newton comunica o resultado em cartas a Henry Oldenburg, secretário da Royal Society.
+        fr: Newton communique le résultat dans des lettres à Henry Oldenburg, secrétaire de la Royal Society.
+        zh: 牛顿在写给英国皇家学会秘书亨利·奥尔登堡的信中传达了这一结果。
+        ja: ニュートンは王立協会書記のヘンリー・オルデンバーグへの書簡でこの結果を伝える。
     - year: Hoy
       label:
         es: >-
@@ -128,10 +252,24 @@ context:
         en: >-
           Underpins binomial probability, combinatorics, and series approximations in numerical
           computing.
+        pt: >-
+          Base da probabilidade binomial, da combinatória e das aproximações por séries na
+          computação numérica.
+        fr: >-
+          Fondement de la probabilité binomiale, de la combinatoire et des approximations par
+          séries en calcul numérique.
+        zh: >-
+          是二项概率、组合数学以及数值计算中级数近似方法的基础。
+        ja: >-
+          二項確率、組合せ論、そして数値計算における級数近似の基盤となっている。
   useCases:
     - title:
         es: Probabilidad y estadística
         en: Probability and statistics
+        pt: Probabilidade e estatística
+        fr: Probabilités et statistiques
+        zh: 概率与统计
+        ja: 確率と統計
       description:
         es: >-
           Los coeficientes binomiales calculan la probabilidad de obtener exactamente k éxitos en n
@@ -139,18 +277,46 @@ context:
         en: >-
           Binomial coefficients calculate the probability of exactly k successes in n independent
           trials, the basis of the binomial distribution.
+        pt: >-
+          Os coeficientes binomiais calculam a probabilidade de obter exatamente k sucessos em n
+          tentativas independentes, base da distribuição binomial.
+        fr: >-
+          Les coefficients binomiaux calculent la probabilité d'obtenir exactement k succès en n
+          essais indépendants, fondement de la loi binomiale.
+        zh: >-
+          二项式系数用于计算在 n 次独立试验中恰好出现 k 次成功的概率，是二项分布的基础。
+        ja: >-
+          二項係数は、n回の独立試行のうちちょうどk回成功する確率を計算し、二項分布の基礎となる。
     - title:
         es: Criptografía
         en: Cryptography
+        pt: Criptografia
+        fr: Cryptographie
+        zh: 密码学
+        ja: 暗号理論
       description:
         es: >-
           Los coeficientes binomiales aparecen en códigos correctores de errores y esquemas de
           compartición de secretos.
         en: >-
           Binomial coefficients appear in error-correcting codes and secret-sharing schemes.
+        pt: >-
+          Os coeficientes binomiais aparecem em códigos corretores de erros e esquemas de
+          compartilhamento de segredos.
+        fr: >-
+          Les coefficients binomiaux apparaissent dans les codes correcteurs d'erreurs et les
+          schémas de partage de secret.
+        zh: >-
+          二项式系数出现在纠错码和秘密共享方案之中。
+        ja: >-
+          二項係数は誤り訂正符号や秘密分散方式に登場する。
     - title:
         es: Finanzas cuantitativas
         en: Quantitative finance
+        pt: Finanças quantitativas
+        fr: Finance quantitative
+        zh: 量化金融
+        ja: 数理ファイナンス
       description:
         es: >-
           El modelo binomial de valoración de opciones usa el teorema para calcular trayectorias de
@@ -158,9 +324,23 @@ context:
         en: >-
           The binomial options pricing model uses the theorem to compute price paths in decision
           trees.
+        pt: >-
+          O modelo binomial de precificação de opções usa o teorema para calcular trajetórias de
+          preços em árvores de decisão.
+        fr: >-
+          Le modèle binomial d'évaluation des options utilise le théorème pour calculer les
+          trajectoires de prix dans des arbres de décision.
+        zh: >-
+          二项式期权定价模型利用该定理在决策树中计算价格路径。
+        ja: >-
+          二項オプション価格モデルはこの定理を用いて、決定木における価格経路を計算する。
     - title:
         es: Computación numérica
         en: Numerical computing
+        pt: Computação numérica
+        fr: Calcul numérique
+        zh: 数值计算
+        ja: 数値計算
       description:
         es: >-
           La forma generalizada de Newton permite aproximar raíces y funciones mediante series
@@ -168,16 +348,46 @@ context:
         en: >-
           Newton's generalized form allows approximating roots and functions via truncated infinite
           series.
+        pt: >-
+          A forma generalizada de Newton permite aproximar raízes e funções por meio de séries
+          infinitas truncadas.
+        fr: >-
+          La forme généralisée de Newton permet d'approximer des racines et des fonctions au moyen
+          de séries infinies tronquées.
+        zh: >-
+          牛顿的推广形式使得可以通过截断的无穷级数来近似求解根和函数。
+        ja: >-
+          ニュートンの一般化された形式により、打ち切った無限級数を用いて根や関数を近似できる。
   example:
     title:
       es: Expandiendo (a+b)³
       en: Expanding (a+b)³
+      pt: Expandindo (a+b)³
+      fr: Développement de (a+b)³
+      zh: 展开 (a+b)³
+      ja: (a+b)³ の展開
     lines:
       - es: n = 3, k va de 0 a 3
         en: n = 3, k ranges from 0 to 3
+        pt: n = 3, k varia de 0 a 3
+        fr: n = 3, k varie de 0 à 3
+        zh: n = 3，k 从 0 到 3
+        ja: n = 3、kは0から3まで変化する
       - es: "(3 0) = 1, (3 1) = 3, (3 2) = 3, (3 3) = 1"
         en: "(3 0) = 1, (3 1) = 3, (3 2) = 3, (3 3) = 1"
+        pt: "(3 0) = 1, (3 1) = 3, (3 2) = 3, (3 3) = 1"
+        fr: "(3 0) = 1, (3 1) = 3, (3 2) = 3, (3 3) = 1"
+        zh: "(3 0) = 1, (3 1) = 3, (3 2) = 3, (3 3) = 1"
+        ja: "(3 0) = 1, (3 1) = 3, (3 2) = 3, (3 3) = 1"
       - es: (a+b)³ = 1·a³b⁰ + 3·a²b¹ + 3·a¹b² + 1·a⁰b³
         en: (a+b)³ = 1·a³b⁰ + 3·a²b¹ + 3·a¹b² + 1·a⁰b³
+        pt: (a+b)³ = 1·a³b⁰ + 3·a²b¹ + 3·a¹b² + 1·a⁰b³
+        fr: (a+b)³ = 1·a³b⁰ + 3·a²b¹ + 3·a¹b² + 1·a⁰b³
+        zh: (a+b)³ = 1·a³b⁰ + 3·a²b¹ + 3·a¹b² + 1·a⁰b³
+        ja: (a+b)³ = 1·a³b⁰ + 3·a²b¹ + 3·a¹b² + 1·a⁰b³
       - es: (a+b)³ = a³ + 3a²b + 3ab² + b³
         en: (a+b)³ = a³ + 3a²b + 3ab² + b³
+        pt: (a+b)³ = a³ + 3a²b + 3ab² + b³
+        fr: (a+b)³ = a³ + 3a²b + 3ab² + b³
+        zh: (a+b)³ = a³ + 3a²b + 3ab² + b³
+        ja: (a+b)³ = a³ + 3a²b + 3ab² + b³

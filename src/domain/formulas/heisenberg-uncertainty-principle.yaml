@@ -2,9 +2,17 @@ id: heisenberg-uncertainty-principle
 title:
   es: Principio de Incertidumbre de Heisenberg
   en: Heisenberg's Uncertainty Principle
+  pt: Princípio da Incerteza de Heisenberg
+  fr: Principe d'incertitude de Heisenberg
+  zh: 海森堡不确定性原理
+  ja: ハイゼンベルクの不確定性原理
 category:
   es: Física moderna
   en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
 nodes:
   - id: dx
     type: variable
@@ -12,49 +20,85 @@ nodes:
     explanation:
       es: La incertidumbre en la posición de una partícula.
       en: The uncertainty in a particle's position.
+      pt: A incerteza na posição de uma partícula.
+      fr: L'incertitude sur la position d'une particule.
+      zh: 粒子位置的不确定度。
+      ja: 粒子の位置における不確かさ。
   - id: dot
     type: operator
     value: "·"
     explanation:
       es: Multiplicada por.
       en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: 掛ける。
   - id: dp
     type: variable
     value: Δp
     explanation:
       es: La incertidumbre en su cantidad de movimiento, o momento.
       en: The uncertainty in its momentum.
+      pt: A incerteza em sua quantidade de movimento, ou momento.
+      fr: L'incertitude sur sa quantité de mouvement, ou impulsion.
+      zh: 粒子动量的不确定度。
+      ja: その運動量における不確かさ。
   - id: geq
     type: operator
     value: "≥"
     explanation:
       es: Es mayor o igual que, nunca se puede reducir más allá de este límite.
       en: Is greater than or equal to, it can never be reduced below this limit.
+      pt: É maior ou igual a, nunca pode ser reduzida além deste limite.
+      fr: Est supérieur ou égal à, on ne peut jamais réduire cette valeur en dessous de cette limite.
+      zh: 大于或等于,这个下限永远无法被突破。
+      ja: 以上である。この限界より下げることは決してできない。
   - id: hbar
     type: constant
     value: ħ
     explanation:
       es: La constante de Planck reducida, h dividida entre 2π.
       en: The reduced Planck constant, h divided by 2π.
+      pt: A constante de Planck reduzida, h dividida por 2π.
+      fr: La constante de Planck réduite, h divisée par 2π.
+      zh: 约化普朗克常数,即h除以2π。
+      ja: 換算プランク定数。hを2πで割ったもの。
   - id: div
     type: operator
     value: /
     explanation:
       es: Dividida entre.
       en: Divided by.
+      pt: Dividida por.
+      fr: Divisée par.
+      zh: 除以。
+      ja: で割る。
   - id: two
     type: number
     value: "2"
     explanation:
       es: Dos, el factor que fija el límite exacto de la incertidumbre.
       en: Two, the factor that sets the exact limit of the uncertainty.
+      pt: Dois, o fator que fixa o limite exato da incerteza.
+      fr: Deux, le facteur qui fixe la limite exacte de l'incertitude.
+      zh: 数字2,是确定这一不确定度精确下限的因子。
+      ja: 2。不確かさの正確な下限を定める係数。
 context:
   author:
     es: Werner Heisenberg
     en: Werner Heisenberg
+    pt: Werner Heisenberg
+    fr: Werner Heisenberg
+    zh: 维尔纳·海森堡
+    ja: ヴェルナー・ハイゼンベルク
   era:
     es: Alemania, 1901–1976 · publicado en 1927
     en: Germany, 1901–1976 · published in 1927
+    pt: Alemanha, 1901–1976 · publicado em 1927
+    fr: Allemagne, 1901–1976 · publié en 1927
+    zh: 德国,1901–1976 · 1927年发表
+    ja: ドイツ、1901–1976年 · 1927年発表
   history:
     es: >-
       Heisenberg formuló el principio en 1927 mientras trabajaba con Niels Bohr en Copenhague.
@@ -68,35 +112,85 @@ context:
       itself — to how precisely a particle's position and momentum can be known simultaneously.
       It was central to the Copenhagen interpretation of quantum mechanics and earned him the
       1932 Nobel Prize in Physics.
+    pt: >-
+      Heisenberg formulou o princípio em 1927 enquanto trabalhava com Niels Bohr em Copenhague.
+      Ele mostrou que existe um limite fundamental — não técnico, mas inerente à própria natureza
+      — para a precisão com que se pode conhecer simultaneamente a posição e o momento de uma
+      partícula. Foi central para a interpretação de Copenhague da mecânica quântica e lhe rendeu
+      o Prêmio Nobel de Física em 1932.
+    fr: >-
+      Heisenberg a formulé le principe en 1927 alors qu'il travaillait avec Niels Bohr à
+      Copenhague. Il a montré qu'il existe une limite fondamentale — non pas technique, mais
+      inscrite dans la nature elle-même — à la précision avec laquelle on peut connaître
+      simultanément la position et la quantité de mouvement d'une particule. Ce principe fut
+      central pour l'interprétation de Copenhague de la mécanique quantique et lui valut le prix
+      Nobel de physique en 1932.
+    zh: >-
+      海森堡于1927年在哥本哈根与尼尔斯·玻尔共事期间提出了这一原理。他证明了存在一个根本性的极限——
+      这并非技术上的限制,而是自然本身固有的——限制了人们能够同时精确了解一个粒子的位置和动量的程度。
+      这一原理是量子力学哥本哈根诠释的核心内容,并使他荣获1932年诺贝尔物理学奖。
+    ja: >-
+      ハイゼンベルクは1927年、コペンハーゲンでニールス・ボーアとともに研究していた際にこの原理を定式化した。
+      彼は、粒子の位置と運動量を同時にどれだけ正確に知りうるかには、技術的な限界ではなく自然そのものに
+      組み込まれた根本的な限界があることを示した。これは量子力学のコペンハーゲン解釈の中心をなすものであり、
+      1932年のノーベル物理学賞受賞につながった。
   timeline:
     - year: "1925"
       label:
         es: Heisenberg desarrolla la mecánica matricial, una de las primeras formulaciones completas de la cuántica.
         en: Heisenberg develops matrix mechanics, one of the first complete formulations of quantum mechanics.
+        pt: Heisenberg desenvolve a mecânica matricial, uma das primeiras formulações completas da mecânica quântica.
+        fr: Heisenberg développe la mécanique matricielle, l'une des premières formulations complètes de la physique quantique.
+        zh: 海森堡创立矩阵力学,这是量子力学最早的完整表述之一。
+        ja: ハイゼンベルクが行列力学を確立する。量子力学の最初期の完全な定式化の一つ。
     - year: "1927"
       label:
         es: Publica el principio de incertidumbre, un límite fundamental al conocimiento simultáneo de posición y momento.
         en: He publishes the uncertainty principle, a fundamental limit on simultaneously knowing position and momentum.
+        pt: Publica o princípio da incerteza, um limite fundamental para o conhecimento simultâneo de posição e momento.
+        fr: Il publie le principe d'incertitude, une limite fondamentale à la connaissance simultanée de la position et de la quantité de mouvement.
+        zh: 发表不确定性原理,给同时确知位置和动量设定了根本性的限制。
+        ja: 不確定性原理を発表。位置と運動量を同時に知ることに対する根本的な限界を示す。
     - year: "1930"
       label:
         es: En el Congreso Solvay, Bohr y Einstein debaten el significado de la incertidumbre en la física cuántica.
         en: At the Solvay Conference, Bohr and Einstein debate the meaning of uncertainty in quantum physics.
+        pt: No Congresso Solvay, Bohr e Einstein debatem o significado da incerteza na física quântica.
+        fr: Au congrès Solvay, Bohr et Einstein débattent de la signification de l'incertitude en physique quantique.
+        zh: 在索尔维会议上,玻尔与爱因斯坦就量子物理中不确定性的含义展开辩论。
+        ja: ソルベー会議にて、ボーアとアインシュタインが量子物理学における不確定性の意味について議論する。
     - year: "1932"
       label:
         es: Heisenberg recibe el Premio Nobel de Física por la creación de la mecánica cuántica.
         en: Heisenberg receives the Nobel Prize in Physics for creating quantum mechanics.
+        pt: Heisenberg recebe o Prêmio Nobel de Física pela criação da mecânica quântica.
+        fr: Heisenberg reçoit le prix Nobel de physique pour la création de la mécanique quantique.
+        zh: 海森堡因创立量子力学而荣获诺贝尔物理学奖。
+        ja: ハイゼンベルクが量子力学創始の功績によりノーベル物理学賞を受賞する。
     - year: "1935"
       label:
         es: Einstein, Podolsky y Rosen publican su paradoja EPR, cuestionando si la cuántica está completa.
         en: Einstein, Podolsky, and Rosen publish the EPR paradox, questioning whether quantum theory is complete.
+        pt: Einstein, Podolsky e Rosen publicam seu paradoxo EPR, questionando se a mecânica quântica está completa.
+        fr: Einstein, Podolsky et Rosen publient le paradoxe EPR, remettant en question l'exhaustivité de la théorie quantique.
+        zh: 爱因斯坦、波多尔斯基和罗森发表EPR佯谬,质疑量子理论是否完备。
+        ja: アインシュタイン、ポドルスキー、ローゼンがEPRパラドックスを発表し、量子論が完全であるかどうかを問う。
     - year: Hoy
       label:
         es: Fija límites reales en criptografía cuántica, microscopía electrónica y computación cuántica.
         en: It sets real limits in quantum cryptography, electron microscopy, and quantum computing.
+        pt: Impõe limites reais na criptografia quântica, microscopia eletrônica e computação quântica.
+        fr: Il impose des limites réelles en cryptographie quantique, en microscopie électronique et en informatique quantique.
+        zh: 它为量子密码学、电子显微镜技术和量子计算设定了实际的限制。
+        ja: 量子暗号、電子顕微鏡、量子コンピューティングにおいて実際の限界を定めている。
   useCases:
     - title:
         es: Microscopía electrónica
         en: Electron microscopy
+        pt: Microscopia eletrônica
+        fr: Microscopie électronique
+        zh: 电子显微镜技术
+        ja: 電子顕微鏡法
       description:
         es: >-
           La resolución máxima alcanzable al usar electrones para observar estructuras diminutas
@@ -104,9 +198,23 @@ context:
         en: >-
           The maximum resolution achievable when using electrons to image tiny structures is
           limited by this relation.
+        pt: >-
+          A resolução máxima alcançável ao usar elétrons para observar estruturas diminutas é
+          limitada por essa relação.
+        fr: >-
+          La résolution maximale atteignable en utilisant des électrons pour observer des
+          structures minuscules est limitée par cette relation.
+        zh: >-
+          利用电子观察微小结构时所能达到的最高分辨率,受到这一关系式的限制。
+        ja: >-
+          電子を用いて微小な構造を観察する際に到達可能な最大分解能は、この関係によって制限される。
     - title:
         es: Criptografía cuántica
         en: Quantum cryptography
+        pt: Criptografia quântica
+        fr: Cryptographie quantique
+        zh: 量子密码学
+        ja: 量子暗号
       description:
         es: >-
           La distribución cuántica de claves es segura porque medir un sistema cuántico altera
@@ -114,32 +222,86 @@ context:
         en: >-
           Quantum key distribution is secure because measuring a quantum system inevitably
           disturbs its state.
+        pt: >-
+          A distribuição quântica de chaves é segura porque medir um sistema quântico altera
+          inevitavelmente seu estado.
+        fr: >-
+          La distribution quantique de clés est sûre car la mesure d'un système quantique perturbe
+          inévitablement son état.
+        zh: >-
+          量子密钥分发之所以安全,是因为测量一个量子系统必然会扰动它的状态。
+        ja: >-
+          量子鍵配送が安全であるのは、量子系を測定すると必然的にその状態が乱れるためである。
     - title:
         es: Electrónica cuántica
         en: Quantum electronics
+        pt: Eletrônica quântica
+        fr: Électronique quantique
+        zh: 量子电子学
+        ja: 量子エレクトロニクス
       description:
         es: El efecto túnel en transistores modernos depende de los límites cuánticos que impone este principio.
         en: Quantum tunneling in modern transistors depends on the quantum limits this principle imposes.
+        pt: O efeito túnel em transistores modernos depende dos limites quânticos impostos por este princípio.
+        fr: L'effet tunnel dans les transistors modernes dépend des limites quantiques imposées par ce principe.
+        zh: 现代晶体管中的隧穿效应依赖于这一原理所施加的量子限制。
+        ja: 現代のトランジスタにおけるトンネル効果は、この原理が課す量子的な限界に依存している。
     - title:
         es: Espectroscopía
         en: Spectroscopy
+        pt: Espectroscopia
+        fr: Spectroscopie
+        zh: 光谱学
+        ja: 分光学
       description:
         es: El ancho natural de una línea espectral surge de la incertidumbre entre energía y tiempo de vida del estado.
         en: The natural width of a spectral line arises from the uncertainty between energy and a state's lifetime.
+        pt: A largura natural de uma linha espectral surge da incerteza entre energia e tempo de vida do estado.
+        fr: La largeur naturelle d'une raie spectrale résulte de l'incertitude entre l'énergie et la durée de vie de l'état.
+        zh: 谱线的自然线宽源于能量与状态寿命之间的不确定关系。
+        ja: スペクトル線の自然幅は、エネルギーと状態の寿命との間の不確定性から生じる。
   example:
     title:
       es: Un electrón dentro de un átomo
       en: An electron inside an atom
+      pt: Um elétron dentro de um átomo
+      fr: Un électron à l'intérieur d'un atome
+      zh: 原子内的一个电子
+      ja: 原子内の電子
     lines:
       - es: Δx = 1×10⁻¹⁰ m (tamaño atómico)
         en: Δx = 1×10⁻¹⁰ m (atomic size)
+        pt: Δx = 1×10⁻¹⁰ m (tamanho atômico)
+        fr: Δx = 1×10⁻¹⁰ m (taille atomique)
+        zh: Δx = 1×10⁻¹⁰ m(原子尺度)
+        ja: Δx = 1×10⁻¹⁰ m(原子サイズ)
       - es: ħ = 1.055×10⁻³⁴ J·s
         en: ħ = 1.055×10⁻³⁴ J·s
+        pt: ħ = 1,055×10⁻³⁴ J·s
+        fr: ħ = 1,055×10⁻³⁴ J·s
+        zh: ħ = 1.055×10⁻³⁴ J·s
+        ja: ħ = 1.055×10⁻³⁴ J·s
       - es: Δx · Δp ≥ ħ / 2
         en: Δx · Δp ≥ ħ / 2
+        pt: Δx · Δp ≥ ħ / 2
+        fr: Δx · Δp ≥ ħ / 2
+        zh: Δx · Δp ≥ ħ / 2
+        ja: Δx · Δp ≥ ħ / 2
       - es: Δp ≥ ħ / (2 · Δx)
         en: Δp ≥ ħ / (2 · Δx)
+        pt: Δp ≥ ħ / (2 · Δx)
+        fr: Δp ≥ ħ / (2 · Δx)
+        zh: Δp ≥ ħ / (2 · Δx)
+        ja: Δp ≥ ħ / (2 · Δx)
       - es: Δp ≥ 1.055×10⁻³⁴ / (2×10⁻¹⁰)
         en: Δp ≥ 1.055×10⁻³⁴ / (2×10⁻¹⁰)
+        pt: Δp ≥ 1,055×10⁻³⁴ / (2×10⁻¹⁰)
+        fr: Δp ≥ 1,055×10⁻³⁴ / (2×10⁻¹⁰)
+        zh: Δp ≥ 1.055×10⁻³⁴ / (2×10⁻¹⁰)
+        ja: Δp ≥ 1.055×10⁻³⁴ / (2×10⁻¹⁰)
       - es: Δp ≥ 5.27×10⁻²⁵ kg·m/s
         en: Δp ≥ 5.27×10⁻²⁵ kg·m/s
+        pt: Δp ≥ 5,27×10⁻²⁵ kg·m/s
+        fr: Δp ≥ 5,27×10⁻²⁵ kg·m/s
+        zh: Δp ≥ 5.27×10⁻²⁵ kg·m/s
+        ja: Δp ≥ 5.27×10⁻²⁵ kg·m/s

@@ -2,9 +2,17 @@ id: ohms-law
 title:
   es: Ley de Ohm
   en: Ohm's Law
+  pt: Lei de Ohm
+  fr: Loi d'Ohm
+  zh: 欧姆定律
+  ja: オームの法則
 category:
   es: Física clásica
   en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
 nodes:
   - id: v
     type: variable
@@ -12,31 +20,55 @@ nodes:
     explanation:
       es: La diferencia de potencial o voltaje entre dos puntos de un circuito.
       en: The potential difference, or voltage, between two points in a circuit.
+      pt: A diferença de potencial, ou tensão, entre dois pontos de um circuito.
+      fr: La différence de potentiel, ou tension, entre deux points d'un circuit.
+      zh: 电路中两点之间的电位差,即电压。
+      ja: 回路の二点間の電位差、すなわち電圧。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
   - id: i
     type: variable
     value: I
     explanation:
       es: La corriente eléctrica que fluye por el circuito.
       en: The electric current flowing through the circuit.
+      pt: A corrente elétrica que flui pelo circuito.
+      fr: Le courant électrique circulant dans le circuit.
+      zh: 流经电路的电流。
+      ja: 回路を流れる電流。
   - id: r
     type: variable
     value: R
     explanation:
       es: La resistencia eléctrica del conductor, que se opone al paso de la corriente.
       en: The electrical resistance of the conductor, which opposes the flow of current.
+      pt: A resistência elétrica do condutor, que se opõe à passagem da corrente.
+      fr: La résistance électrique du conducteur, qui s'oppose au passage du courant.
+      zh: 导体的电阻,它阻碍电流的通过。
+      ja: 導体の電気抵抗。電流の流れを妨げる。
 context:
   author:
     es: Georg Ohm
     en: Georg Ohm
+    pt: Georg Ohm
+    fr: Georg Ohm
+    zh: 格奥尔格·欧姆
+    ja: ゲオルク・オーム
   era:
     es: Alemania, 1789–1854 · publicada en 1827
     en: Germany, 1789–1854 · published in 1827
+    pt: Alemanha, 1789–1854 · publicada em 1827
+    fr: Allemagne, 1789–1854 · publiée en 1827
+    zh: 德国,1789–1854年 · 1827年发表
+    ja: ドイツ、1789–1854年・1827年発表
   history:
     es: >-
       Georg Ohm, profesor de matemáticas en un colegio de Colonia, experimentó durante años con
@@ -56,6 +88,35 @@ context:
       more than a decade to arrive: in 1841 the Royal Society of London awarded him the Copley Medal,
       and in 1881 the International Congress of Electricians named the unit of resistance, the ohm,
       after him.
+    pt: >-
+      Georg Ohm, professor de matemática em uma escola de Colônia, passou anos experimentando com
+      fios condutores para medir como a corrente variava com a tensão aplicada, e publicou seus
+      resultados em 1827 em "Die galvanische Kette, mathematisch bearbeitet". A comunidade científica
+      alemã recebeu seu trabalho com frieza e até desdém, considerando-o excessivamente matemático e
+      especulativo para uma disciplina experimental, e Ohm chegou a perder seu cargo docente. O
+      reconhecimento demorou mais de uma década para chegar: em 1841 a Royal Society de Londres lhe
+      concedeu a Medalha Copley, e em 1881 o Congresso Internacional de Eletricistas batizou com seu
+      nome a unidade de resistência, o ohm.
+    fr: >-
+      Georg Ohm, professeur de mathématiques dans un collège de Cologne, expérimenta pendant des
+      années avec des fils conducteurs pour mesurer comment le courant variait avec la tension
+      appliquée, et publia ses résultats en 1827 dans « Die galvanische Kette, mathematisch
+      bearbeitet ». La communauté scientifique allemande accueillit son travail froidement, voire avec
+      dédain, le jugeant trop mathématique et spéculatif pour une discipline expérimentale, et Ohm
+      finit par perdre son poste d'enseignant. La reconnaissance mit plus d'une décennie à venir : en
+      1841 la Royal Society de Londres lui décerna la médaille Copley, et en 1881 le Congrès
+      international des électriciens donna son nom à l'unité de résistance, l'ohm.
+    zh: >-
+      格奥尔格·欧姆是科隆一所学校的数学教师,他花了数年时间用导线做实验,测量电流如何随所加电压变化,
+      并于1827年在《伽伐尼电路的数学研究》一书中发表了他的成果。德国科学界对他的工作反应冷淡,甚至颇为不屑,
+      认为对于一门实验学科来说这过于数学化、过于思辨,欧姆甚至因此失去了教职。这项成果的认可迟到了十多年:
+      1841年伦敦皇家学会授予他科普利奖章,1881年国际电学家大会则以他的名字命名了电阻的单位——欧姆。
+    ja: >-
+      ケルンの学校で数学教師をしていたゲオルク・オームは、電流が印加電圧に応じてどう変化するかを測るため、
+      何年もかけて導線を用いた実験を重ね、1827年に『数学的に扱われたガルヴァーニ電気回路』でその成果を発表した。
+      ドイツの科学界はこの研究を冷淡に、時には侮蔑をもって受け止め、実験科学にはあまりに数学的・思弁的すぎると見なした。
+      オームは最終的に教職を失うことになる。評価が定まるまでには十年以上を要した。1841年、ロンドン王立協会が
+      彼にコプリ・メダルを授与し、1881年には国際電気技術者会議が抵抗の単位を彼にちなんで「オーム」と名付けた。
   timeline:
     - year: "1827"
       label:
@@ -65,6 +126,16 @@ context:
         en: >-
           Ohm publishes his law after years of experiments with conducting wires of different
           thickness and length.
+        pt: >-
+          Ohm publica sua lei após anos de experimentos com fios condutores de espessura e
+          comprimento diferentes.
+        fr: >-
+          Ohm publie sa loi après des années d'expériences avec des fils conducteurs de différentes
+          épaisseurs et longueurs.
+        zh: >-
+          经过多年使用不同粗细和长度的导线所做的实验,欧姆发表了他的定律。
+        ja: >-
+          太さや長さの異なる導線を使った長年の実験の末、オームが自身の法則を発表する。
     - year: "1830"
       label:
         es: >-
@@ -73,6 +144,16 @@ context:
         en: >-
           Ohm's work is met with skepticism by the German scientific community, which considers it
           excessively mathematical.
+        pt: >-
+          O trabalho de Ohm é recebido com ceticismo pela comunidade científica alemã, que o
+          considera excessivamente matemático.
+        fr: >-
+          Le travail d'Ohm est accueilli avec scepticisme par la communauté scientifique allemande,
+          qui le juge excessivement mathématique.
+        zh: >-
+          欧姆的成果遭到德国科学界的怀疑,他们认为这项研究过于数学化。
+        ja: >-
+          オームの研究はドイツの科学界から懐疑的に受け止められ、あまりに数学的すぎると見なされる。
     - year: "1841"
       label:
         es: >-
@@ -81,6 +162,16 @@ context:
         en: >-
           The Royal Society of London awards him the Copley Medal, finally giving his law
           international recognition.
+        pt: >-
+          A Royal Society de Londres lhe concede a Medalha Copley, dando finalmente reconhecimento
+          internacional à sua lei.
+        fr: >-
+          La Royal Society de Londres lui décerne la médaille Copley, donnant enfin à sa loi une
+          reconnaissance internationale.
+        zh: >-
+          伦敦皇家学会授予他科普利奖章,他的定律终于获得了国际认可。
+        ja: >-
+          ロンドン王立協会が彼にコプリ・メダルを授与し、彼の法則はついに国際的な評価を得る。
     - year: "1881"
       label:
         es: >-
@@ -89,6 +180,16 @@ context:
         en: >-
           The International Congress of Electricians in Paris names the unit of electrical
           resistance the "ohm" in his honor.
+        pt: >-
+          O Congresso Internacional de Eletricistas em Paris nomeia "ohm" a unidade de resistência
+          elétrica em sua homenagem.
+        fr: >-
+          Le Congrès international des électriciens à Paris nomme « ohm » l'unité de résistance
+          électrique en son honneur.
+        zh: >-
+          巴黎国际电学家大会将电阻的单位命名为"欧姆",以纪念他的贡献。
+        ja: >-
+          パリで開催された国際電気技術者会議が、彼の栄誉をたたえて電気抵抗の単位を「オーム」と命名する。
     - year: Hoy
       label:
         es: >-
@@ -96,10 +197,24 @@ context:
           electrónicos.
         en: >-
           It is the first equation anyone designing electrical or electronic circuits learns.
+        pt: >-
+          É a primeira equação que qualquer pessoa que projeta circuitos elétricos ou eletrônicos
+          aprende.
+        fr: >-
+          C'est la toute première équation qu'apprend quiconque conçoit des circuits électriques ou
+          électroniques.
+        zh: >-
+          它是任何设计电路或电子电路的人首先要学习的方程。
+        ja: >-
+          電気回路や電子回路を設計する人が最初に学ぶ方程式である。
   useCases:
     - title:
         es: Diseño de circuitos electrónicos
         en: Electronic circuit design
+        pt: Projeto de circuitos eletrônicos
+        fr: Conception de circuits électroniques
+        zh: 电子电路设计
+        ja: 電子回路設計
       description:
         es: >-
           Calcula el valor de resistencias necesario para limitar la corriente en un circuito y
@@ -107,43 +222,115 @@ context:
         en: >-
           It calculates the resistor value needed to limit current in a circuit and protect its
           components.
+        pt: >-
+          Calcula o valor de resistores necessário para limitar a corrente em um circuito e proteger
+          seus componentes.
+        fr: >-
+          Elle calcule la valeur de résistance nécessaire pour limiter le courant dans un circuit et
+          protéger ses composants.
+        zh: >-
+          计算限制电路电流所需的电阻值,以保护电路元件。
+        ja: >-
+          回路の電流を制限し、部品を保護するために必要な抵抗値を計算する。
     - title:
         es: Instalaciones eléctricas domésticas
         en: Home electrical wiring
+        pt: Instalações elétricas residenciais
+        fr: Installations électriques domestiques
+        zh: 家庭电气布线
+        ja: 家庭用電気配線
       description:
         es: >-
           Determina el calibre de cable adecuado para soportar la corriente sin sobrecalentarse.
         en: >-
           It determines the proper wire gauge to carry the current without overheating.
+        pt: >-
+          Determina a bitola de fio adequada para suportar a corrente sem superaquecer.
+        fr: >-
+          Elle détermine la section de câble adaptée pour supporter le courant sans surchauffer.
+        zh: >-
+          确定合适的线径,使其能够承载电流而不会过热。
+        ja: >-
+          過熱せずに電流を流せる適切な電線の太さを決定する。
     - title:
         es: Sistemas eléctricos automotrices
         en: Automotive electrical systems
+        pt: Sistemas elétricos automotivos
+        fr: Systèmes électriques automobiles
+        zh: 汽车电气系统
+        ja: 自動車の電気系統
       description:
         es: >-
           Ayuda a dimensionar fusibles y cableado en el sistema eléctrico de un vehículo.
         en: >-
           It helps size fuses and wiring in a vehicle's electrical system.
+        pt: >-
+          Ajuda a dimensionar fusíveis e fiação no sistema elétrico de um veículo.
+        fr: >-
+          Elle aide à dimensionner les fusibles et le câblage du système électrique d'un véhicule.
+        zh: >-
+          帮助确定车辆电气系统中保险丝和线路的规格。
+        ja: >-
+          車両の電気系統におけるヒューズや配線の設計に役立つ。
     - title:
         es: Energía solar
         en: Solar energy
+        pt: Energia solar
+        fr: Énergie solaire
+        zh: 太阳能
+        ja: 太陽光発電
       description:
         es: >-
           Se usa para calcular la corriente que entregan los paneles solares según el voltaje del
           sistema.
         en: >-
           It is used to calculate the current solar panels deliver given the system's voltage.
+        pt: >-
+          É usada para calcular a corrente que os painéis solares fornecem de acordo com a tensão do
+          sistema.
+        fr: >-
+          Elle sert à calculer le courant fourni par les panneaux solaires en fonction de la tension
+          du système.
+        zh: >-
+          用于根据系统电压计算太阳能电池板输出的电流。
+        ja: >-
+          システムの電圧に基づいて、太陽光パネルが供給する電流を計算するのに使われる。
   example:
     title:
       es: Voltaje de una batería
       en: Voltage of a battery
+      pt: Tensão de uma bateria
+      fr: Tension d'une batterie
+      zh: 电池的电压
+      ja: 電池の電圧
     lines:
       - es: R = 4 Ω
         en: R = 4 Ω
+        pt: R = 4 Ω
+        fr: R = 4 Ω
+        zh: R = 4 Ω
+        ja: R = 4 Ω
       - es: I = 3 A
         en: I = 3 A
+        pt: I = 3 A
+        fr: I = 3 A
+        zh: I = 3 A
+        ja: I = 3 A
       - es: V = I · R
         en: V = I · R
+        pt: V = I · R
+        fr: V = I · R
+        zh: V = I · R
+        ja: V = I · R
       - es: V = 3 × 4
         en: V = 3 × 4
+        pt: V = 3 × 4
+        fr: V = 3 × 4
+        zh: V = 3 × 4
+        ja: V = 3 × 4
       - es: V = 12 voltios
         en: V = 12 volts
+        pt: V = 12 volts
+        fr: V = 12 volts
+        zh: V = 12 伏特
+        ja: V = 12 ボルト

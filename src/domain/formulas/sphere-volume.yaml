@@ -2,9 +2,17 @@ id: sphere-volume
 title:
   es: Volumen de la Esfera
   en: Volume of a Sphere
+  pt: Volume da Esfera
+  fr: Volume de la sphère
+  zh: 球体体积
+  ja: 球の体積
 category:
   es: Geometría
   en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
 nodes:
   - id: volume
     type: variable
@@ -12,55 +20,95 @@ nodes:
     explanation:
       es: "El volumen: el espacio tridimensional que ocupa la esfera."
       en: "The volume: the three-dimensional space the sphere occupies."
+      pt: "O volume: o espaço tridimensional ocupado pela esfera."
+      fr: "Le volume : l'espace tridimensionnel occupé par la sphère."
+      zh: "体积：球体所占据的三维空间。"
+      ja: "体積：球が占める三次元空間。"
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 精确地等于。
+      ja: 正確に等しい。
   - id: four
     type: number
     value: "4"
     explanation:
       es: El numerador de la fracción 4/3, parte de la constante que relaciona el cubo del radio con el volumen.
       en: The numerator of the fraction 4/3, part of the constant relating the cube of the radius to the volume.
+      pt: O numerador da fração 4/3, parte da constante que relaciona o cubo do raio com o volume.
+      fr: Le numérateur de la fraction 4/3, partie de la constante reliant le cube du rayon au volume.
+      zh: 分数4/3的分子，是将半径的立方与体积联系起来的常数的一部分。
+      ja: 分数4/3の分子。半径の3乗と体積を結びつける定数の一部。
   - id: div
     type: operator
     value: /
     explanation:
       es: Dividido entre.
       en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: 割る。
   - id: three
     type: number
     value: "3"
     explanation:
       es: El denominador de la fracción 4/3.
       en: The denominator of the fraction 4/3.
+      pt: O denominador da fração 4/3.
+      fr: Le dénominateur de la fraction 4/3.
+      zh: 分数4/3的分母。
+      ja: 分数4/3の分母。
   - id: pi
     type: constant
     value: π
     explanation:
       es: Pi, la razón constante entre la circunferencia de un círculo y su diámetro.
       en: Pi, the constant ratio between a circle's circumference and its diameter.
+      pt: Pi, a razão constante entre a circunferência de um círculo e seu diâmetro.
+      fr: Pi, le rapport constant entre la circonférence d'un cercle et son diamètre.
+      zh: 圆周率π，圆的周长与直径之比的常数。
+      ja: 円周率π。円の円周と直径の一定な比。
   - id: r
     type: variable
     value: r
     explanation:
       es: "El radio: la distancia entre el centro de la esfera y su superficie."
       en: "The radius: the distance from the sphere's center to its surface."
+      pt: "O raio: a distância entre o centro da esfera e sua superfície."
+      fr: "Le rayon : la distance entre le centre de la sphère et sa surface."
+      zh: "半径：球心到球面的距离。"
+      ja: "半径：球の中心から表面までの距離。"
   - id: r-cube
     type: superscript
     value: "3"
     explanation:
       es: "Elevado al cubo: multiplicado por sí mismo dos veces."
       en: "Cubed: multiplied by itself twice."
+      pt: "Elevado ao cubo: multiplicado por si mesmo duas vezes."
+      fr: "Élevé au cube : multiplié deux fois par lui-même."
+      zh: "立方：自身相乘两次。"
+      ja: "3乗：自分自身を2回掛ける。"
 context:
   author:
     es: Arquímedes de Siracusa
     en: Archimedes of Syracuse
+    pt: Arquimedes de Siracusa
+    fr: Archimède de Syracuse
+    zh: 叙拉古的阿基米德
+    ja: シラクサのアルキメデス
   era:
     es: Siracusa, Sicilia, c. 287–212 a.C.
     en: Syracuse, Sicily, c. 287–212 BC
+    pt: Siracusa, Sicília, c. 287–212 a.C.
+    fr: Syracuse, Sicile, v. 287–212 av. J.-C.
+    zh: 西西里岛叙拉古，约公元前287–212年
+    ja: シチリア島シラクサ、紀元前287年頃–212年
   history:
     es: >-
       Arquímedes demostró esta fórmula en su obra Sobre la esfera y el cilindro, usando su método
@@ -74,6 +122,27 @@ context:
       ratio of volumes before proving it with full geometric rigor. He considered this his greatest
       achievement and asked that his tomb be engraved with a sphere inscribed in a cylinder, along
       with the 2:3 ratio between their volumes.
+    pt: >-
+      Arquimedes demonstrou esta fórmula em seu tratado Sobre a esfera e o cilindro, usando seu
+      método mecânico: ele imaginou a esfera, o cone e o cilindro em equilíbrio sobre uma alavanca
+      para deduzir a razão entre os volumes antes de prová-la com rigor geométrico completo. Ele
+      considerava esse resultado sua maior realização e pediu que em seu túmulo fosse gravada uma
+      esfera inscrita em um cilindro, junto com a razão 2:3 entre os dois volumes.
+    fr: >-
+      Archimède démontra cette formule dans son traité De la sphère et du cylindre, en utilisant sa
+      méthode mécanique : il imagina la sphère, le cône et le cylindre en équilibre sur un levier
+      pour déduire le rapport des volumes avant de le prouver avec toute la rigueur géométrique.
+      Il considérait ce résultat comme son plus grand accomplissement et demanda que l'on grave sur
+      sa tombe une sphère inscrite dans un cylindre, avec le rapport 2:3 entre leurs volumes.
+    zh: >-
+      阿基米德在其论著《论球与圆柱》中证明了这个公式，运用了他的力学方法：他设想将球、圆锥和圆柱
+      平衡地悬挂在一根杠杆上，从而推导出体积之比，然后再用严密的几何方法加以证明。
+      他认为这是自己最伟大的成就，并要求在自己的墓碑上刻上一个内接于圆柱的球，以及两者体积2:3的比例。
+    ja: >-
+      アルキメデスは著書『球と円柱について』の中で、この公式を彼独自の力学的方法で証明した。
+      球、円錐、円柱を天秤の上でつり合わせることを想像し、体積の比を導いた上で、
+      厳密な幾何学的方法で証明を仕上げたのである。彼はこの結果を自らの最大の業績とみなし、
+      自分の墓に円柱に内接する球と、両者の体積比2:3を刻むよう頼んだ。
   timeline:
     - year: c. 350 a.C.
       label:
@@ -83,6 +152,17 @@ context:
         en: >-
           Eudoxus of Cnidus develops the method of exhaustion, the geometric tool Archimedes would
           later use to prove volumes of curved solids.
+        pt: >-
+          Eudoxo de Cnido desenvolve o método da exaustão, a ferramenta geométrica que Arquimedes
+          usaria depois para provar volumes de sólidos curvos.
+        fr: >-
+          Eudoxe de Cnide développe la méthode d'exhaustion, l'outil géométrique qu'Archimède
+          utiliserait plus tard pour prouver les volumes de solides courbes.
+        zh: >-
+          克尼多斯的欧多克索斯发展出穷竭法，这一几何工具后来被阿基米德用来证明曲面立体的体积。
+        ja: >-
+          クニドスのエウドクソスが取り尽くし法を開発する。これは後にアルキメデスが曲面立体の
+          体積を証明する際に用いる幾何学的手法となる。
     - year: c. 225 a.C.
       label:
         es: >-
@@ -91,6 +171,17 @@ context:
         en: >-
           Archimedes publishes On the Sphere and the Cylinder, proving V = (4/3)πr³ and that a
           sphere's volume is two-thirds that of its circumscribing cylinder.
+        pt: >-
+          Arquimedes publica Sobre a esfera e o cilindro, demonstrando que V = (4/3)πr³ e que o
+          volume da esfera é dois terços do cilindro que a circunscreve.
+        fr: >-
+          Archimède publie De la sphère et du cylindre, démontrant que V = (4/3)πr³ et que le
+          volume d'une sphère vaut les deux tiers de celui du cylindre qui la circonscrit.
+        zh: >-
+          阿基米德发表《论球与圆柱》，证明了V = (4/3)πr³，以及球的体积是其外接圆柱体积的三分之二。
+        ja: >-
+          アルキメデスが『球と円柱について』を発表し、V = (4/3)πr³であること、
+          そして球の体積が外接する円柱の体積の3分の2であることを証明する。
     - year: s. XVII
       label:
         es: >-
@@ -99,6 +190,17 @@ context:
         en: >-
           Cavalieri, and later Newton and Leibniz, generalize Archimedes' reasoning into modern
           integral calculus.
+        pt: >-
+          Cavalieri, e depois Newton e Leibniz, generalizam o raciocínio de Arquimedes no cálculo
+          integral moderno.
+        fr: >-
+          Cavalieri, puis Newton et Leibniz, généralisent le raisonnement d'Archimède dans le calcul
+          intégral moderne.
+        zh: >-
+          卡瓦列里，随后是牛顿和莱布尼茨，将阿基米德的推理推广为现代积分学。
+        ja: >-
+          カヴァリエリ、そして後にニュートンとライプニッツが、アルキメデスの論法を
+          現代の積分法へと一般化する。
     - year: "1965"
       label:
         es: >-
@@ -107,6 +209,17 @@ context:
         en: >-
           A manuscript known as the Archimedes Palimpsest reveals lost details of his mechanical
           method, confirming how he arrived at this result.
+        pt: >-
+          Um manuscrito conhecido como o Palimpsesto de Arquimedes revela detalhes perdidos de seu
+          método mecânico, confirmando como ele chegou a esse resultado.
+        fr: >-
+          Un manuscrit connu sous le nom de Palimpseste d'Archimède révèle des détails perdus de sa
+          méthode mécanique, confirmant comment il est parvenu à ce résultat.
+        zh: >-
+          一份名为《阿基米德羊皮书》的手稿揭示了其力学方法中失传的细节，证实了他是如何得出这一结果的。
+        ja: >-
+          「アルキメデス・パリンプセスト」として知られる写本が、彼の力学的方法の失われていた
+          詳細を明らかにし、この結果にどう到達したかを裏付ける。
     - year: Hoy
       label:
         es: >-
@@ -115,10 +228,25 @@ context:
         en: >-
           Used to calculate the capacity of spherical tanks, the volume of planets and bubbles, and
           in computer graphics to render spheres.
+        pt: >-
+          Usada para calcular a capacidade de tanques esféricos, o volume de planetas e bolhas, e em
+          computação gráfica para renderizar esferas.
+        fr: >-
+          Utilisée pour calculer la capacité de réservoirs sphériques, le volume des planètes et des
+          bulles, et en infographie pour le rendu des sphères.
+        zh: >-
+          用于计算球形储罐的容量、行星和气泡的体积，以及在计算机图形学中渲染球体。
+        ja: >-
+          球形タンクの容量、惑星や気泡の体積の計算、またコンピュータグラフィックスにおける
+          球のレンダリングに使われている。
   useCases:
     - title:
         es: Ingeniería industrial
         en: Industrial engineering
+        pt: Engenharia industrial
+        fr: Ingénierie industrielle
+        zh: 工业工程
+        ja: 産業工学
       description:
         es: >-
           Tanques y contenedores esféricos de almacenamiento de gas se dimensionan directamente con
@@ -126,9 +254,23 @@ context:
         en: >-
           Spherical gas storage tanks and containers are sized directly with this formula to
           calculate their capacity.
+        pt: >-
+          Tanques e recipientes esféricos de armazenamento de gás são dimensionados diretamente com
+          esta fórmula para calcular sua capacidade.
+        fr: >-
+          Les réservoirs et cuves sphériques de stockage de gaz sont dimensionnés directement avec
+          cette formule pour calculer leur capacité.
+        zh: >-
+          球形储气罐和容器直接使用这个公式来计算其容量并确定尺寸。
+        ja: >-
+          球形のガス貯蔵タンクや容器は、この式を使って容量を計算し、直接寸法が決められる。
     - title:
         es: Astronomía
         en: Astronomy
+        pt: Astronomia
+        fr: Astronomie
+        zh: 天文学
+        ja: 天文学
       description:
         es: >-
           Estimar el volumen de planetas, estrellas y asteroides, tratados como esferas en primera
@@ -136,9 +278,24 @@ context:
         en: >-
           Estimating the volume of planets, stars, and asteroids, treated as spheres to a first
           approximation, starts from this relationship.
+        pt: >-
+          Estimar o volume de planetas, estrelas e asteroides, tratados como esferas em primeira
+          aproximação, parte desta relação.
+        fr: >-
+          L'estimation du volume des planètes, étoiles et astéroïdes, assimilés à des sphères en
+          première approximation, part de cette relation.
+        zh: >-
+          在初步近似下将行星、恒星和小行星视为球体来估算其体积，正是从这一关系出发的。
+        ja: >-
+          惑星、恒星、小惑星を第一近似として球とみなし、その体積を推定する際には
+          この関係式が出発点となる。
     - title:
         es: Gráficos por computadora
         en: Computer graphics
+        pt: Computação gráfica
+        fr: Infographie
+        zh: 计算机图形学
+        ja: コンピュータグラフィックス
       description:
         es: >-
           Motores de videojuegos y simulación física la usan para calcular masa y densidad de
@@ -146,18 +303,53 @@ context:
         en: >-
           Game engines and physics simulations use it to calculate the mass and density of
           spherical objects in real time.
+        pt: >-
+          Motores de jogos e simulações físicas a usam para calcular massa e densidade de objetos
+          esféricos em tempo real.
+        fr: >-
+          Les moteurs de jeux et les simulations physiques l'utilisent pour calculer en temps réel
+          la masse et la densité d'objets sphériques.
+        zh: >-
+          游戏引擎和物理模拟利用它实时计算球形物体的质量和密度。
+        ja: >-
+          ゲームエンジンや物理シミュレーションは、球形の物体の質量と密度をリアルタイムで
+          計算するのにこれを利用している。
   example:
     title:
       es: Una esfera de radio 3
       en: A sphere of radius 3
+      pt: Uma esfera de raio 3
+      fr: Une sphère de rayon 3
+      zh: 半径为3的球体
+      ja: 半径3の球
     lines:
       - es: r = 3
         en: r = 3
+        pt: r = 3
+        fr: r = 3
+        zh: r = 3
+        ja: r = 3
       - es: V = (4/3) · π · r³
         en: V = (4/3) · π · r³
+        pt: V = (4/3) · π · r³
+        fr: V = (4/3) · π · r³
+        zh: V = (4/3) · π · r³
+        ja: V = (4/3) · π · r³
       - es: r³ = 27
         en: r³ = 27
+        pt: r³ = 27
+        fr: r³ = 27
+        zh: r³ = 27
+        ja: r³ = 27
       - es: V = (4/3) · π · 27
         en: V = (4/3) · π · 27
+        pt: V = (4/3) · π · 27
+        fr: V = (4/3) · π · 27
+        zh: V = (4/3) · π · 27
+        ja: V = (4/3) · π · 27
       - es: V ≈ 113.10 unidades³
         en: V ≈ 113.10 cubic units
+        pt: V ≈ 113,10 unidades³
+        fr: V ≈ 113,10 unités³
+        zh: V ≈ 113.10 立方单位
+        ja: V ≈ 113.10 立方単位

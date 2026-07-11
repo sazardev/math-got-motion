@@ -2,9 +2,17 @@ id: shannon-entropy
 title:
   es: Entropía de Shannon
   en: Shannon Entropy
+  pt: Entropia de Shannon
+  fr: Entropie de Shannon
+  zh: 香农熵
+  ja: シャノンエントロピー
 category:
   es: Teoría de la información
   en: Information theory
+  pt: Teoria da informação
+  fr: Théorie de l'information
+  zh: 信息论
+  ja: 情報理論
 nodes:
   - id: h
     type: variable
@@ -12,55 +20,95 @@ nodes:
     explanation:
       es: "La entropía: una medida de la incertidumbre promedio o la información contenida en un mensaje."
       en: The entropy — a measure of the average uncertainty or information contained in a message.
+      pt: "A entropia: uma medida da incerteza média ou da informação contida em uma mensagem."
+      fr: "L'entropie : une mesure de l'incertitude moyenne ou de l'information contenue dans un message."
+      zh: "熵：衡量一条消息中平均不确定性或所含信息量的度量。"
+      ja: エントロピー。メッセージに含まれる平均的な不確実性、あるいは情報量を測る尺度。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es igual a.
       en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
   - id: minus
     type: operator
     value: "−"
     explanation:
       es: Un signo negativo, necesario porque los logaritmos de probabilidades son negativos.
       en: A negative sign, needed because the logarithms of probabilities are negative.
+      pt: Um sinal negativo, necessário porque os logaritmos de probabilidades são negativos.
+      fr: Un signe négatif, nécessaire car les logarithmes de probabilités sont négatifs.
+      zh: 一个负号，因为概率的对数为负值，所以需要它。
+      ja: 負の符号。確率の対数は負になるため必要となる。
   - id: sigma
     type: operator
     value: "Σ"
     explanation:
       es: La suma sobre todos los resultados posibles x del mensaje o variable aleatoria.
       en: The sum over every possible outcome x of the message or random variable.
+      pt: A soma sobre todos os resultados possíveis x da mensagem ou variável aleatória.
+      fr: La somme sur tous les résultats possibles x du message ou de la variable aléatoire.
+      zh: 对消息或随机变量的所有可能结果 x 求和。
+      ja: メッセージや確率変数のすべての起こりうる結果 x について和をとる。
   - id: px
     type: variable
     value: p(x)
     explanation:
       es: La probabilidad de que ocurra el resultado x.
       en: The probability that outcome x occurs.
+      pt: A probabilidade de que o resultado x ocorra.
+      fr: La probabilité que le résultat x se produise.
+      zh: 结果 x 发生的概率。
+      ja: 結果 x が起こる確率。
   - id: dot
     type: operator
     value: "·"
     explanation:
       es: Multiplicado por.
       en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
   - id: log2
     type: operator
     value: log₂
     explanation:
       es: El logaritmo en base 2, que mide la información en bits.
       en: The base-2 logarithm, which measures information in bits.
+      pt: O logaritmo na base 2, que mede a informação em bits.
+      fr: Le logarithme en base 2, qui mesure l'information en bits.
+      zh: 以2为底的对数，用比特衡量信息量。
+      ja: 底が2の対数。情報量をビット単位で測る。
   - id: px-2
     type: variable
     value: p(x)
     explanation:
       es: La misma probabilidad de x, ahora dentro del logaritmo.
       en: The same probability of x, now inside the logarithm.
+      pt: A mesma probabilidade de x, agora dentro do logaritmo.
+      fr: La même probabilité de x, maintenant à l'intérieur du logarithme.
+      zh: 同一个 x 的概率，现在出现在对数内部。
+      ja: 同じ x の確率が、今度は対数の中に現れる。
 context:
   author:
     es: Claude Shannon
     en: Claude Shannon
+    pt: Claude Shannon
+    fr: Claude Shannon
+    zh: 克劳德·香农
+    ja: クロード・シャノン
   era:
     es: Estados Unidos, 1916–2001 · publicada en 1948
     en: United States, 1916–2001 · published in 1948
+    pt: Estados Unidos, 1916–2001 · publicada em 1948
+    fr: États-Unis, 1916–2001 · publiée en 1948
+    zh: 美国，1916–2001 · 1948年发表
+    ja: アメリカ合衆国、1916–2001年 · 1948年発表
   history:
     es: >-
       Shannon presentó esta fórmula en "A Mathematical Theory of Communication", publicado en 1948 en
@@ -78,6 +126,35 @@ context:
       its exact form with Boltzmann's statistical entropy. The work established the fundamental limits
       of how far a message can be compressed and how fast information can be reliably transmitted over
       a noisy channel.
+    pt: >-
+      Shannon apresentou esta fórmula em "A Mathematical Theory of Communication", publicado em 1948
+      no Bell System Technical Journal enquanto trabalhava nos Laboratórios Bell. O artigo fundou a
+      teoria da informação como disciplina. Por sugestão do matemático John von Neumann, Shannon
+      tomou emprestado da termodinâmica o nome "entropia" para sua medida de incerteza, observando
+      que a fórmula tinha exatamente a mesma forma da entropia estatística de Boltzmann. O trabalho
+      estabeleceu os limites fundamentais de quanto uma mensagem pode ser comprimida e a que
+      velocidade a informação pode ser transmitida de forma confiável por um canal ruidoso.
+    fr: >-
+      Shannon présenta cette formule dans "A Mathematical Theory of Communication", publié en 1948
+      dans le Bell System Technical Journal alors qu'il travaillait aux Bell Labs. L'article fonda la
+      théorie de l'information comme discipline. Sur suggestion du mathématicien John von Neumann,
+      Shannon emprunta à la thermodynamique le terme "entropie" pour sa mesure de l'incertitude,
+      remarquant que la formule avait exactement la même forme que l'entropie statistique de
+      Boltzmann. Ce travail établit les limites fondamentales de la compression possible d'un
+      message et de la vitesse à laquelle l'information peut être transmise de façon fiable sur un
+      canal bruité.
+    zh: >-
+      香农在1948年发表于《贝尔系统技术期刊》的论文《通信的数学理论》中提出了这个公式，当时他正供职于贝尔实验室。
+      这篇论文奠定了信息论这门学科。在数学家约翰·冯·诺伊曼的建议下，香农借用了热力学中的"熵"一词来命名他对不确定性的度量，
+      并指出该公式与玻尔兹曼的统计熵形式完全相同。这项工作确立了一条消息最多能被压缩到什么程度、
+      以及信息在有噪声信道上能以多快速度可靠传输的基本极限。
+    ja: >-
+      シャノンはベル研究所に勤務していた1948年、この公式を「通信の数学的理論」として
+      ベル・システム・テクニカル・ジャーナルに発表した。この論文は情報理論という学問分野を築いた。
+      数学者ジョン・フォン・ノイマンの助言により、シャノンは不確実性を測るこの尺度に
+      熱力学から「エントロピー」という語を借用した。彼はこの式がボルツマンの統計エントロピーと
+      全く同じ形をしていることに気づいていた。この研究は、メッセージをどこまで圧縮できるか、
+      また雑音のある通信路を通じて情報をどれだけ高速かつ確実に伝送できるかという根本的な限界を確立した。
   timeline:
     - year: "1948"
       label:
@@ -87,6 +164,16 @@ context:
         en: >-
           Shannon publishes "A Mathematical Theory of Communication," introducing entropy as a measure
           of information and uncertainty.
+        pt: >-
+          Shannon publica "A Mathematical Theory of Communication", introduzindo a entropia como
+          medida de informação e incerteza.
+        fr: >-
+          Shannon publie "A Mathematical Theory of Communication", introduisant l'entropie comme
+          mesure de l'information et de l'incertitude.
+        zh: >-
+          香农发表《通信的数学理论》，将熵引入作为信息与不确定性的度量。
+        ja: >-
+          シャノンが「通信の数学的理論」を発表し、情報と不確実性の尺度としてエントロピーを導入する。
     - year: "1949"
       label:
         es: >-
@@ -94,6 +181,15 @@ context:
           ingeniería.
         en: >-
           The book edition, co-written with Warren Weaver, popularizes the theory beyond engineering.
+        pt: >-
+          A edição em livro, coescrita com Warren Weaver, populariza a teoria além da engenharia.
+        fr: >-
+          L'édition en livre, coécrite avec Warren Weaver, popularise la théorie au-delà de
+          l'ingénierie.
+        zh: >-
+          与沃伦·韦弗合著的图书版将该理论推广到工程学之外的领域。
+        ja: >-
+          ウォーレン・ウィーバーとの共著による書籍版が、工学分野を超えてこの理論を広める。
     - year: décadas de 1950–60
       label:
         es: >-
@@ -102,12 +198,30 @@ context:
         en: >-
           The entropy concept is adopted in cryptography and coding theory for error detection and
           correction.
+        pt: >-
+          O conceito de entropia é adotado na criptografia e na teoria da codificação para detectar
+          e corrigir erros.
+        fr: >-
+          Le concept d'entropie est adopté en cryptographie et en théorie du codage pour la détection
+          et la correction d'erreurs.
+        zh: >-
+          熵的概念被密码学和编码理论采纳，用于错误检测与纠正。
+        ja: >-
+          エントロピーの概念が暗号理論や符号理論に取り入れられ、誤り検出・訂正に応用される。
     - year: décadas de 1990–2000
       label:
         es: >-
           Se vuelve la base teórica de estándares de compresión como ZIP, JPEG y MP3.
         en: >-
           It becomes the theoretical basis for compression standards like ZIP, JPEG, and MP3.
+        pt: >-
+          Torna-se a base teórica de padrões de compressão como ZIP, JPEG e MP3.
+        fr: >-
+          Elle devient le fondement théorique de normes de compression comme ZIP, JPEG et MP3.
+        zh: >-
+          它成为 ZIP、JPEG 和 MP3 等压缩标准的理论基础。
+        ja: >-
+          ZIP、JPEG、MP3といった圧縮規格の理論的基盤となる。
     - year: Hoy
       label:
         es: >-
@@ -116,10 +230,25 @@ context:
         en: >-
           It underlies data compression, cryptographic security, and loss functions such as
           cross-entropy in machine learning.
+        pt: >-
+          Sustenta a compressão de dados, a segurança criptográfica e funções de perda como a
+          entropia cruzada no aprendizado de máquina.
+        fr: >-
+          Elle sous-tend la compression de données, la sécurité cryptographique et des fonctions de
+          perte comme l'entropie croisée en apprentissage automatique.
+        zh: >-
+          它支撑着数据压缩、密码学安全性，以及机器学习中如交叉熵这样的损失函数。
+        ja: >-
+          データ圧縮、暗号セキュリティ、そして機械学習における交差エントロピーのような
+          損失関数の基盤となっている。
   useCases:
     - title:
         es: Compresión de datos
         en: Data compression
+        pt: Compressão de dados
+        fr: Compression de données
+        zh: 数据压缩
+        ja: データ圧縮
       description:
         es: >-
           La entropía define el número mínimo teórico de bits necesarios para codificar un mensaje, el
@@ -127,9 +256,24 @@ context:
         en: >-
           Entropy defines the theoretical minimum number of bits needed to encode a message, the limit
           that formats like ZIP or JPEG chase.
+        pt: >-
+          A entropia define o número mínimo teórico de bits necessários para codificar uma mensagem, o
+          limite que formatos como ZIP ou JPEG buscam alcançar.
+        fr: >-
+          L'entropie définit le nombre minimal théorique de bits nécessaires pour coder un message, la
+          limite que visent des formats comme ZIP ou JPEG.
+        zh: >-
+          熵定义了编码一条消息所需的理论最小比特数，这正是 ZIP 或 JPEG 等格式所追求的极限。
+        ja: >-
+          エントロピーはメッセージを符号化するのに必要な理論上の最小ビット数を定めており、
+          ZIPやJPEGなどの形式はこの限界に迫ろうとしている。
     - title:
         es: Criptografía
         en: Cryptography
+        pt: Criptografia
+        fr: Cryptographie
+        zh: 密码学
+        ja: 暗号理論
       description:
         es: >-
           Mide la impredecibilidad de claves y contraseñas, clave para evaluar qué tan segura es una
@@ -137,27 +281,75 @@ context:
         en: >-
           Measures the unpredictability of keys and passwords, key to evaluating how secure they are
           against attacks.
+        pt: >-
+          Mede a imprevisibilidade de chaves e senhas, algo essencial para avaliar quão segura ela é
+          diante de ataques.
+        fr: >-
+          Elle mesure l'imprévisibilité des clés et des mots de passe, essentielle pour évaluer leur
+          résistance aux attaques.
+        zh: >-
+          衡量密钥和密码的不可预测性，是评估其抗攻击安全性的关键。
+        ja: >-
+          鍵やパスワードの予測不可能性を測るもので、攻撃に対する安全性を評価する鍵となる。
     - title:
         es: Aprendizaje automático
         en: Machine learning
+        pt: Aprendizado de máquina
+        fr: Apprentissage automatique
+        zh: 机器学习
+        ja: 機械学習
       description:
         es: >-
           Las funciones de pérdida de entropía cruzada, derivadas de esta fórmula, entrenan la mayoría
           de los clasificadores modernos.
         en: >-
           Cross-entropy loss functions, derived from this formula, train most modern classifiers.
+        pt: >-
+          As funções de perda de entropia cruzada, derivadas desta fórmula, treinam a maioria dos
+          classificadores modernos.
+        fr: >-
+          Les fonctions de perte d'entropie croisée, dérivées de cette formule, entraînent la plupart
+          des classificateurs modernes.
+        zh: >-
+          由此公式衍生出的交叉熵损失函数，训练着当今大多数分类模型。
+        ja: >-
+          この式から導かれる交差エントロピー損失関数は、現代の分類器の大半を学習させている。
   example:
     title:
       es: Entropía de una moneda justa
       en: Entropy of a fair coin
+      pt: Entropia de uma moeda justa
+      fr: Entropie d'une pièce équilibrée
+      zh: 公平硬币的熵
+      ja: 公正なコインのエントロピー
     lines:
       - es: "Moneda justa: p(cara) = 0.5, p(cruz) = 0.5"
         en: "Fair coin: p(heads) = 0.5, p(tails) = 0.5"
+        pt: "Moeda justa: p(cara) = 0,5, p(coroa) = 0,5"
+        fr: "Pièce équilibrée : p(pile) = 0,5, p(face) = 0,5"
+        zh: "公平硬币：p(正面) = 0.5，p(反面) = 0.5"
+        ja: "公正なコイン：p(表) = 0.5、p(裏) = 0.5"
       - es: log₂(0.5) = −1
         en: log₂(0.5) = −1
+        pt: log₂(0,5) = −1
+        fr: log₂(0,5) = −1
+        zh: log₂(0.5) = −1
+        ja: log₂(0.5) = −1
       - es: H = −(0.5 × (−1) + 0.5 × (−1))
         en: H = −(0.5 × (−1) + 0.5 × (−1))
+        pt: H = −(0,5 × (−1) + 0,5 × (−1))
+        fr: H = −(0,5 × (−1) + 0,5 × (−1))
+        zh: H = −(0.5 × (−1) + 0.5 × (−1))
+        ja: H = −(0.5 × (−1) + 0.5 × (−1))
       - es: H = −(−0.5 − 0.5) = 1
         en: H = −(−0.5 − 0.5) = 1
+        pt: H = −(−0,5 − 0,5) = 1
+        fr: H = −(−0,5 − 0,5) = 1
+        zh: H = −(−0.5 − 0.5) = 1
+        ja: H = −(−0.5 − 0.5) = 1
       - es: "Resultado: 1 bit de incertidumbre por lanzamiento"
         en: "Result: 1 bit of uncertainty per flip"
+        pt: "Resultado: 1 bit de incerteza por lançamento"
+        fr: "Résultat : 1 bit d'incertitude par lancer"
+        zh: "结果：每次抛掷有1比特的不确定性"
+        ja: "結果：1回の試行につき1ビットの不確実性"

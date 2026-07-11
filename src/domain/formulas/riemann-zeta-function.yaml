@@ -2,9 +2,17 @@ id: riemann-zeta-function
 title:
   es: Función Zeta de Riemann
   en: Riemann Zeta Function
+  pt: Função Zeta de Riemann
+  fr: Fonction zêta de Riemann
+  zh: 黎曼ζ函数
+  ja: リーマンゼータ関数
 category:
   es: Teoría de números
   en: Number theory
+  pt: Teoria dos números
+  fr: Théorie des nombres
+  zh: 数论
+  ja: 数論
 nodes:
   - id: zeta-s
     type: variable
@@ -16,12 +24,26 @@ nodes:
       en: >-
         Zeta of s: a function that takes a number s (possibly complex) and returns the sum of the
         series that follows.
+      pt: >-
+        Zeta de s: uma função que recebe um número s (possivelmente complexo) e retorna a soma da
+        série que segue.
+      fr: >-
+        Zêta de s : une fonction qui prend un nombre s (éventuellement complexe) et renvoie la
+        somme de la série qui suit.
+      zh: >-
+        s 的ζ值：一个函数，接受一个（可能为复数的）数 s，并返回后面级数的和。
+      ja: >-
+        sのゼータ: （複素数の場合もある）数sを受け取り、続く級数の和を返す関数。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: 正確に等しい。
   - id: sum
     type: operator
     value: Σ
@@ -32,24 +54,45 @@ nodes:
       en: >-
         Capital sigma: sums infinitely many terms, one for every natural number n from 1 to
         infinity.
+      pt: >-
+        Sigma maiúsculo: soma infinitos termos, um para cada número natural n de 1 até o infinito.
+      fr: >-
+        Sigma majuscule : somme une infinité de termes, un pour chaque entier naturel n de 1 à
+        l'infini.
+      zh: >-
+        大写西格玛：将无穷多项相加，对应从1到无穷大的每一个自然数 n。
+      ja: >-
+        大文字のシグマ: 1から無限大までのすべての自然数nに対応する項を無限に足し合わせる。
   - id: one
     type: number
     value: "1"
     explanation:
       es: El numerador de cada término de la serie.
       en: The numerator of each term in the series.
+      pt: O numerador de cada termo da série.
+      fr: Le numérateur de chaque terme de la série.
+      zh: 级数中每一项的分子。
+      ja: 級数の各項の分子。
   - id: slash
     type: operator
     value: "/"
     explanation:
       es: Dividido entre.
       en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: 割る。
   - id: n
     type: variable
     value: n
     explanation:
       es: "Cada número natural: 1, 2, 3, 4… el índice que recorre la suma."
       en: "Each natural number: 1, 2, 3, 4… the index that runs through the sum."
+      pt: "Cada número natural: 1, 2, 3, 4… o índice que percorre a soma."
+      fr: "Chaque entier naturel : 1, 2, 3, 4… l'indice qui parcourt la somme."
+      zh: "每一个自然数：1、2、3、4……贯穿整个求和的下标。"
+      ja: "各自然数: 1, 2, 3, 4…と和を通して動く添字。"
   - id: s-exp
     type: superscript
     value: s
@@ -60,13 +103,31 @@ nodes:
       en: >-
         N raised to s: when s is a complex number, this power rotates and shrinks the term in the
         complex plane.
+      pt: >-
+        N elevado a s: quando s é um número complexo, essa potência gira e encolhe o termo no
+        plano complexo.
+      fr: >-
+        N élevé à la puissance s : lorsque s est un nombre complexe, cette puissance fait tourner
+        et rétrécit le terme dans le plan complexe.
+      zh: >-
+        n 的 s 次方：当 s 是复数时，这个幂运算会在复平面上旋转并缩小该项。
+      ja: >-
+        nのs乗: sが複素数の場合、このべき乗は複素平面上でその項を回転させながら縮小させる。
 context:
   author:
     es: Bernhard Riemann
     en: Bernhard Riemann
+    pt: Bernhard Riemann
+    fr: Bernhard Riemann
+    zh: 波恩哈德·黎曼
+    ja: ベルンハルト・リーマン
   era:
     es: Alemania, 1826–1866 · publicada en 1859
     en: Germany, 1826–1866 · published in 1859
+    pt: Alemanha, 1826–1866 · publicada em 1859
+    fr: Allemagne, 1826–1866 · publiée en 1859
+    zh: 德国，1826–1866 · 于1859年发表
+    ja: ドイツ、1826〜1866年・1859年発表
   history:
     es: >-
       Euler ya había estudiado esta serie para valores reales de s, mostrando su sorprendente
@@ -84,6 +145,35 @@ context:
       how prime numbers are spread out, and he conjectured that every non-trivial zero has real part
       equal to 1/2: the still-unproven Riemann Hypothesis, one of mathematics' most important open
       problems.
+    pt: >-
+      Euler já havia estudado essa série para valores reais de s, revelando sua surpreendente
+      conexão com os números primos. Mas foi Bernhard Riemann quem, em seu único artigo de teoria
+      dos números, publicado em 1859, estendeu a função a valores complexos de s por meio da
+      continuação analítica. Ao fazê-lo, descobriu que a distribuição de seus zeros codifica
+      informações profundas sobre como os números primos se distribuem, e conjecturou que todos os
+      zeros não triviais têm parte real igual a 1/2: a ainda não demonstrada Hipótese de Riemann,
+      um dos problemas em aberto mais importantes da matemática.
+    fr: >-
+      Euler avait déjà étudié cette série pour des valeurs réelles de s, révélant son étonnant lien
+      avec les nombres premiers. Mais c'est Bernhard Riemann qui, dans son unique article de
+      théorie des nombres, publié en 1859, étendit la fonction à des valeurs complexes de s par
+      prolongement analytique. Ce faisant, il découvrit que la répartition de ses zéros encode des
+      informations profondes sur la manière dont se répartissent les nombres premiers, et il
+      conjectura que tous les zéros non triviaux ont pour partie réelle 1/2 : l'hypothèse de
+      Riemann, toujours non démontrée, l'un des problèmes ouverts les plus importants des
+      mathématiques.
+    zh: >-
+      欧拉早已研究过 s 取实数值时的这个级数，揭示了它与素数之间惊人的联系。但正是波恩哈德·黎曼
+      在1859年发表的他唯一一篇数论论文中，通过解析延拓将该函数扩展到 s 为复数的情形。在此过程中，
+      他发现该函数零点的分布蕴含了关于素数分布方式的深刻信息，并猜想所有非平凡零点的实部都等于
+      1/2——这就是至今仍未被证明的黎曼假设，是数学中最重要的未解决问题之一。
+    ja: >-
+      オイラーはすでにsが実数の場合についてこの級数を研究し、素数との驚くべき関係を明らかにして
+      いた。しかし、1859年に発表された唯一の数論の論文の中で、解析接続によってsが複素数の場合まで
+      この関数を拡張したのはベルンハルト・リーマンであった。その過程で彼は、零点の分布が素数の
+      分布に関する深い情報を符号化していることを発見し、すべての非自明な零点の実部が1/2に等しい
+      と予想した。これが今なお証明されていないリーマン予想であり、数学における最も重要な未解決
+      問題の一つである。
   timeline:
     - year: "1737"
       label:
@@ -93,6 +183,17 @@ context:
         en: >-
           Euler proves that the series, for real s, factors as an infinite product over all prime
           numbers.
+        pt: >-
+          Euler prova que a série, para s real, se fatora como um produto infinito sobre todos os
+          números primos.
+        fr: >-
+          Euler démontre que la série, pour s réel, se factorise en un produit infini sur tous les
+          nombres premiers.
+        zh: >-
+          欧拉证明了当 s 为实数时，该级数可以分解为遍历所有素数的无穷乘积。
+        ja: >-
+          オイラーが、sが実数の場合にこの級数がすべての素数にわたる無限積として因数分解されること
+          を証明する。
     - year: "1859"
       label:
         es: >-
@@ -101,6 +202,16 @@ context:
         en: >-
           Riemann extends the function to complex numbers and formulates his famous hypothesis about
           the location of its zeros.
+        pt: >-
+          Riemann estende a função aos números complexos e formula sua famosa hipótese sobre a
+          localização de seus zeros.
+        fr: >-
+          Riemann étend la fonction aux nombres complexes et formule sa célèbre hypothèse sur la
+          position de ses zéros.
+        zh: >-
+          黎曼将该函数扩展到复数域，并提出了关于其零点位置的著名猜想。
+        ja: >-
+          リーマンが関数を複素数に拡張し、その零点の位置に関する有名な予想を提示する。
     - year: "1896"
       label:
         es: >-
@@ -109,6 +220,16 @@ context:
         en: >-
           Hadamard and de la Vallée Poussin use properties of the zeta function to prove the prime
           number theorem.
+        pt: >-
+          Hadamard e de la Vallée Poussin usam propriedades da função zeta para demonstrar o
+          teorema dos números primos.
+        fr: >-
+          Hadamard et de la Vallée Poussin utilisent les propriétés de la fonction zêta pour
+          démontrer le théorème des nombres premiers.
+        zh: >-
+          阿达马和德拉瓦莱·普桑利用ζ函数的性质证明了素数定理。
+        ja: >-
+          アダマールとド・ラ・ヴァレー・プーサンがゼータ関数の性質を用いて素数定理を証明する。
     - year: "2000"
       label:
         es: >-
@@ -117,6 +238,17 @@ context:
         en: >-
           The Clay Institute includes the Riemann Hypothesis among the seven 'Millennium Prize
           Problems,' with a one-million-dollar reward.
+        pt: >-
+          O Instituto Clay inclui a Hipótese de Riemann entre os sete 'Problemas do Milênio', com
+          um prêmio de um milhão de dólares.
+        fr: >-
+          L'Institut Clay inclut l'hypothèse de Riemann parmi les sept « problèmes du millénaire »,
+          avec une récompense d'un million de dollars.
+        zh: >-
+          克雷研究所将黎曼假设列为七大"千禧年大奖难题"之一，悬赏一百万美元。
+        ja: >-
+          クレイ数学研究所がリーマン予想を7つの「ミレニアム懸賞問題」の一つに指定し、賞金100万ドル
+          を懸ける。
     - year: Hoy
       label:
         es: >-
@@ -125,10 +257,25 @@ context:
         en: >-
           It remains unsolved: billions of zeros have been verified, all consistent with the
           hypothesis, but with no general proof.
+        pt: >-
+          Continua sem solução: bilhões de zeros já foram verificados, todos consistentes com a
+          hipótese, mas sem demonstração geral.
+        fr: >-
+          Elle reste non résolue : des milliards de zéros ont été vérifiés, tous cohérents avec
+          l'hypothèse, mais sans démonstration générale.
+        zh: >-
+          它至今仍未解决：数十亿个零点已被验证，全部符合该假设，但仍没有一般性的证明。
+        ja: >-
+          いまだ未解決である。数十億個の零点が検証されすべて予想と一致しているが、一般的な証明は
+          得られていない。
   useCases:
     - title:
         es: Distribución de los números primos
         en: Distribution of prime numbers
+        pt: Distribuição dos números primos
+        fr: Répartition des nombres premiers
+        zh: 素数分布
+        ja: 素数の分布
       description:
         es: >-
           Los ceros de la función zeta determinan con enorme precisión cómo se distribuyen los
@@ -136,9 +283,23 @@ context:
         en: >-
           The zeros of the zeta function determine, with enormous precision, how prime numbers are
           distributed among the integers.
+        pt: >-
+          Os zeros da função zeta determinam, com enorme precisão, como os números primos se
+          distribuem entre os inteiros.
+        fr: >-
+          Les zéros de la fonction zêta déterminent, avec une précision extrême, la répartition des
+          nombres premiers parmi les entiers.
+        zh: >-
+          ζ函数的零点极其精确地决定了素数在整数中的分布方式。
+        ja: >-
+          ゼータ関数の零点は、素数が整数の中でどのように分布しているかを非常に高い精度で決定する。
     - title:
         es: Criptografía
         en: Cryptography
+        pt: Criptografia
+        fr: Cryptographie
+        zh: 密码学
+        ja: 暗号理論
       description:
         es: >-
           La seguridad de sistemas como RSA depende de la dificultad de factorizar números grandes,
@@ -146,9 +307,24 @@ context:
         en: >-
           The security of systems like RSA depends on the difficulty of factoring large numbers, a
           problem deeply tied to primes.
+        pt: >-
+          A segurança de sistemas como o RSA depende da dificuldade de fatorar números grandes, um
+          problema profundamente ligado aos primos.
+        fr: >-
+          La sécurité de systèmes comme le RSA repose sur la difficulté de factoriser de grands
+          nombres, un problème profondément lié aux nombres premiers.
+        zh: >-
+          RSA等系统的安全性依赖于大数分解的困难性，而这一难题与素数密切相关。
+        ja: >-
+          RSAのようなシステムの安全性は、大きな数を素因数分解する困難さに依存しており、これは
+          素数と深く結びついた問題である。
     - title:
         es: Física teórica
         en: Theoretical physics
+        pt: Física teórica
+        fr: Physique théorique
+        zh: 理论物理学
+        ja: 理論物理学
       description:
         es: >-
           Los ceros de zeta aparecen conjeturalmente relacionados con los niveles de energía de
@@ -156,16 +332,46 @@ context:
         en: >-
           The zeros of zeta are conjecturally related to the energy levels of chaotic quantum
           systems.
+        pt: >-
+          Os zeros de zeta aparecem, conjecturalmente, relacionados aos níveis de energia de
+          sistemas quânticos caóticos.
+        fr: >-
+          Les zéros de zêta seraient, selon des conjectures, liés aux niveaux d'énergie de systèmes
+          quantiques chaotiques.
+        zh: >-
+          ζ函数的零点被猜想与混沌量子系统的能级相关。
+        ja: >-
+          ゼータ関数の零点はカオス的な量子系のエネルギー準位と関連していると予想されている。
   example:
     title:
       es: El caso s = 2
       en: The case s = 2
+      pt: O caso s = 2
+      fr: Le cas s = 2
+      zh: s = 2 的情形
+      ja: s = 2の場合
     lines:
       - es: ζ(2) = 1/1² + 1/2² + 1/3² + 1/4² + …
         en: ζ(2) = 1/1² + 1/2² + 1/3² + 1/4² + …
+        pt: ζ(2) = 1/1² + 1/2² + 1/3² + 1/4² + …
+        fr: ζ(2) = 1/1² + 1/2² + 1/3² + 1/4² + …
+        zh: ζ(2) = 1/1² + 1/2² + 1/3² + 1/4² + …
+        ja: ζ(2) = 1/1² + 1/2² + 1/3² + 1/4² + …
       - es: "= 1 + 0.25 + 0.111 + 0.0625 + …"
         en: "= 1 + 0.25 + 0.111 + 0.0625 + …"
+        pt: "= 1 + 0,25 + 0,111 + 0,0625 + …"
+        fr: "= 1 + 0,25 + 0,111 + 0,0625 + …"
+        zh: "= 1 + 0.25 + 0.111 + 0.0625 + …"
+        ja: "= 1 + 0.25 + 0.111 + 0.0625 + …"
       - es: Euler demostró que esta suma converge exactamente a π²/6
         en: Euler proved this sum converges to exactly π²/6
+        pt: Euler demonstrou que essa soma converge exatamente para π²/6
+        fr: Euler a démontré que cette somme converge exactement vers π²/6
+        zh: 欧拉证明了这个和恰好收敛于 π²/6
+        ja: オイラーはこの和がちょうどπ²/6に収束することを証明した
       - es: ζ(2) = π²/6 ≈ 1.6449
         en: ζ(2) = π²/6 ≈ 1.6449
+        pt: ζ(2) = π²/6 ≈ 1,6449
+        fr: ζ(2) = π²/6 ≈ 1,6449
+        zh: ζ(2) = π²/6 ≈ 1.6449
+        ja: ζ(2) = π²/6 ≈ 1.6449

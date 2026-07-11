@@ -21,6 +21,10 @@ function localizedText(max: number) {
   return z.object({
     es: z.string().trim().min(1).max(max),
     en: z.string().trim().min(1).max(max),
+    pt: z.string().trim().min(1).max(max),
+    fr: z.string().trim().min(1).max(max),
+    zh: z.string().trim().min(1).max(max),
+    ja: z.string().trim().min(1).max(max),
   });
 }
 

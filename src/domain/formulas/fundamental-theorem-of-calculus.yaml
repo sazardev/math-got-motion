@@ -2,9 +2,17 @@ id: fundamental-theorem-of-calculus
 title:
   es: Teorema Fundamental del Cálculo
   en: Fundamental Theorem of Calculus
+  pt: Teorema Fundamental do Cálculo
+  fr: Théorème fondamental de l'analyse
+  zh: 微积分基本定理
+  ja: 微積分学の基本定理
 category:
   es: Cálculo
   en: Calculus
+  pt: Cálculo
+  fr: Analyse
+  zh: 微积分
+  ja: 微積分学
 nodes:
   - id: integral
     type: operator
@@ -12,61 +20,105 @@ nodes:
     explanation:
       es: "El signo de integral: representa la suma acumulada de cambios infinitesimales."
       en: "The integral sign: represents the accumulated sum of infinitesimal changes."
+      pt: "O sinal de integral: representa a soma acumulada de variações infinitesimais."
+      fr: "Le signe intégrale : représente la somme accumulée de variations infinitésimales."
+      zh: "积分符号:表示无穷小变化量的累加和。"
+      ja: "積分記号:無限小の変化の累積和を表す。"
   - id: a
     type: variable
     value: a
     explanation:
       es: "El límite inferior: el punto donde empieza la acumulación."
       en: "The lower limit: the point where accumulation begins."
+      pt: "O limite inferior: o ponto onde a acumulação começa."
+      fr: "La borne inférieure : le point où commence l'accumulation."
+      zh: "积分下限:累加开始的点。"
+      ja: "下限:累積が始まる点。"
   - id: b
     type: superscript
     value: b
     explanation:
       es: "El límite superior: el punto donde termina la acumulación."
       en: "The upper limit: the point where accumulation ends."
+      pt: "O limite superior: o ponto onde a acumulação termina."
+      fr: "La borne supérieure : le point où se termine l'accumulation."
+      zh: "积分上限:累加结束的点。"
+      ja: "上限:累積が終わる点。"
   - id: fprime
     type: variable
     value: f'(x)
     explanation:
       es: "La derivada de f: la tasa de cambio instantánea de la función original."
       en: "The derivative of f: the instantaneous rate of change of the original function."
+      pt: "A derivada de f: a taxa de variação instantânea da função original."
+      fr: "La dérivée de f : le taux de variation instantané de la fonction d'origine."
+      zh: "f的导数:原函数的瞬时变化率。"
+      ja: "fの導関数:元の関数の瞬間変化率。"
   - id: dx
     type: variable
     value: dx
     explanation:
       es: Indica que la acumulación se hace respecto a la variable x.
       en: Indicates the accumulation is taken with respect to the variable x.
+      pt: Indica que a acumulação é feita em relação à variável x.
+      fr: Indique que l'accumulation se fait par rapport à la variable x.
+      zh: 表示累加是相对于变量x进行的。
+      ja: 累積が変数xに関して行われることを示す。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: 正確に等しい。
   - id: fb
     type: variable
     value: f(b)
     explanation:
       es: El valor de la función original evaluada en el límite superior.
       en: The value of the original function evaluated at the upper limit.
+      pt: O valor da função original avaliada no limite superior.
+      fr: La valeur de la fonction d'origine évaluée à la borne supérieure.
+      zh: 原函数在积分上限处的值。
+      ja: 元の関数を上限で評価した値。
   - id: minus
     type: operator
     value: "−"
     explanation:
       es: Menos.
       en: Minus.
+      pt: Menos.
+      fr: Moins.
+      zh: 减去。
+      ja: 引く。
   - id: fa
     type: variable
     value: f(a)
     explanation:
       es: El valor de la función original evaluada en el límite inferior.
       en: The value of the original function evaluated at the lower limit.
+      pt: O valor da função original avaliada no limite inferior.
+      fr: La valeur de la fonction d'origine évaluée à la borne inférieure.
+      zh: 原函数在积分下限处的值。
+      ja: 元の関数を下限で評価した値。
 context:
   author:
     es: Isaac Newton y Gottfried Leibniz
     en: Isaac Newton and Gottfried Leibniz
+    pt: Isaac Newton e Gottfried Leibniz
+    fr: Isaac Newton et Gottfried Leibniz
+    zh: 艾萨克·牛顿与戈特弗里德·莱布尼茨
+    ja: アイザック・ニュートンとゴットフリート・ライプニッツ
   era:
     es: Inglaterra y Alemania, s. XVII · formalizado entre 1665 y 1686
     en: England and Germany, 17th century · formalized between 1665 and 1686
+    pt: Inglaterra e Alemanha, séc. XVII · formalizado entre 1665 e 1686
+    fr: Angleterre et Allemagne, XVIIe siècle · formalisé entre 1665 et 1686
+    zh: 英国与德国,17世纪 · 1665年至1686年间形式化
+    ja: イングランドとドイツ、17世紀 · 1665年から1686年の間に定式化
   history:
     es: >-
       El teorema conecta dos ideas que parecían separadas: el área bajo una curva (integración) y la
@@ -84,6 +136,34 @@ context:
       1668, and his teacher Isaac Barrow, Newton's mentor at Cambridge, had already related tangents
       and areas in his geometry lectures before Newton took the decisive step of generalizing it with
       his notation of fluxions.
+    pt: >-
+      O teorema conecta duas ideias que pareciam separadas: a área sob uma curva (integração) e a
+      inclinação de uma curva (derivação), mostrando que são processos inversos. Newton e Leibniz o
+      formalizaram de forma independente como parte da invenção do cálculo, mas houve antecipações
+      anteriores: o escocês James Gregory esboçou uma versão geométrica do resultado por volta de
+      1668, e seu professor Isaac Barrow, mentor de Newton em Cambridge, já relacionava tangentes e
+      áreas em suas aulas de geometria antes de Newton dar o passo decisivo de generalizá-lo com sua
+      notação de fluxões.
+    fr: >-
+      Le théorème relie deux idées qui semblaient distinctes : l'aire sous une courbe (l'intégration)
+      et la pente d'une courbe (la dérivation), montrant qu'il s'agit de processus inverses. Newton
+      et Leibniz l'ont formalisé indépendamment dans le cadre de l'invention du calcul infinitésimal,
+      mais il y eut des anticipations antérieures : l'Écossais James Gregory a esquissé une version
+      géométrique du résultat vers 1668, et son maître Isaac Barrow, mentor de Newton à Cambridge,
+      reliait déjà tangentes et aires dans ses cours de géométrie avant que Newton ne franchisse le
+      pas décisif de le généraliser avec sa notation des fluxions.
+    zh: >-
+      这个定理把两个看似互不相关的概念联系了起来:曲线下的面积(积分)与曲线的斜率(求导),表明二者互为逆运算。
+      牛顿和莱布尼茨各自独立地将其形式化,这是微积分发明过程的一部分,但此前已有先驱:苏格兰人詹姆斯·格雷戈里
+      大约在1668年就勾勒出该结果的几何版本,而他的老师、牛顿在剑桥的导师艾萨克·巴罗,在几何学讲义中早已把切线
+      问题和面积问题联系在一起,随后牛顿才用他的流数记号迈出了将其一般化的决定性一步。
+    ja: >-
+      この定理は、一見別々に見える2つの概念——曲線の下の面積(積分)と曲線の傾き(微分)——を結びつけ、
+      両者が互いに逆の操作であることを示す。ニュートンとライプニッツはそれぞれ独立に、微積分学の発明の一環として
+      これを定式化したが、それ以前にも先駆的な研究があった。スコットランド人ジェームズ・グレゴリーは1668年頃
+      この結果の幾何学的な形を示しており、ニュートンのケンブリッジでの師であったアイザック・バローも、
+      幾何学の講義で接線と面積の関係をすでに扱っていた。ニュートンはその後、流率法の記法を用いて
+      これを一般化するという決定的な一歩を踏み出した。
   timeline:
     - year: c. 1668
       label:
@@ -93,6 +173,16 @@ context:
         en: >-
           James Gregory publishes an early geometric version of the relationship between areas and
           tangents in his Geometriae Pars Universalis.
+        pt: >-
+          James Gregory publica uma versão geométrica inicial da relação entre áreas e tangentes em
+          sua obra Geometriae Pars Universalis.
+        fr: >-
+          James Gregory publie une première version géométrique de la relation entre aires et
+          tangentes dans son ouvrage Geometriae Pars Universalis.
+        zh: >-
+          詹姆斯·格雷戈里在其著作《普遍几何学》(Geometriae Pars Universalis)中发表了面积与切线关系的早期几何版本。
+        ja: >-
+          ジェームズ・グレゴリーが著書『Geometriae Pars Universalis』にて、面積と接線の関係の初期の幾何学的形を発表する。
     - year: c. 1670
       label:
         es: >-
@@ -101,6 +191,16 @@ context:
         en: >-
           Isaac Barrow, in his Lectiones Geometricae, relates the tangent problem to the quadrature
           problem, a direct precursor to the theorem.
+        pt: >-
+          Isaac Barrow, em suas Lectiones Geometricae, relaciona o problema da tangente com o da
+          quadratura, um antecedente direto do teorema.
+        fr: >-
+          Isaac Barrow, dans ses Lectiones Geometricae, relie le problème de la tangente à celui de
+          la quadrature, un précurseur direct du théorème.
+        zh: >-
+          艾萨克·巴罗在其《几何学讲义》(Lectiones Geometricae)中,把切线问题与求积问题联系起来,这是该定理的直接先声。
+        ja: >-
+          アイザック・バローは著書『Lectiones Geometricae』で、接線問題と求積問題を関連づける。これは定理の直接の前駆となる。
     - year: c. 1666
       label:
         es: >-
@@ -109,6 +209,16 @@ context:
         en: >-
           Newton formulates the inverse relationship between differentiation and integration in his
           private manuscripts on fluxions.
+        pt: >-
+          Newton formula a relação inversa entre derivação e integração em seus manuscritos privados
+          sobre fluxões.
+        fr: >-
+          Newton formule la relation inverse entre dérivation et intégration dans ses manuscrits
+          privés sur les fluxions.
+        zh: >-
+          牛顿在他关于流数法的私人手稿中,提出了求导与积分之间的互逆关系。
+        ja: >-
+          ニュートンは流率法に関する私的な手稿で、微分と積分の逆の関係を定式化する。
     - year: "1686"
       label:
         es: >-
@@ -117,6 +227,16 @@ context:
         en: >-
           Leibniz publishes his own formalization of the theorem with the integral and differential
           notation still used today.
+        pt: >-
+          Leibniz publica sua própria formalização do teorema com a notação integral e diferencial
+          usada até hoje.
+        fr: >-
+          Leibniz publie sa propre formalisation du théorème avec la notation intégrale et
+          différentielle encore utilisée aujourd'hui.
+        zh: >-
+          莱布尼茨发表了他自己对该定理的形式化表述,采用了沿用至今的积分与微分记号。
+        ja: >-
+          ライプニッツは今日でも使われる積分・微分の記法を用いて、独自にこの定理を定式化して発表する。
     - year: Hoy
       label:
         es: >-
@@ -125,10 +245,25 @@ context:
         en: >-
           It allows exact calculation of areas, volumes, and accumulations in physics, economics, and
           engineering without resorting to manual infinite sums.
+        pt: >-
+          Permite calcular áreas, volumes e acumulações exatas em física, economia e engenharia sem
+          recorrer a somas infinitas manuais.
+        fr: >-
+          Il permet de calculer avec exactitude des aires, des volumes et des accumulations en
+          physique, en économie et en ingénierie sans recourir à des sommes infinies manuelles.
+        zh: >-
+          它使得在物理学、经济学和工程学中能够精确计算面积、体积和累积量,而无需手工进行无穷求和。
+        ja: >-
+          物理学・経済学・工学において、手作業での無限級数の和を用いることなく、面積・体積・累積量を
+          正確に計算できるようにする。
   useCases:
     - title:
         es: Física
         en: Physics
+        pt: Física
+        fr: Physique
+        zh: 物理学
+        ja: 物理学
       description:
         es: >-
           Calcular la distancia recorrida a partir de la velocidad, o el trabajo a partir de la
@@ -136,9 +271,23 @@ context:
         en: >-
           Computing distance traveled from velocity, or work from force, is solved by directly
           applying this theorem.
+        pt: >-
+          Calcular a distância percorrida a partir da velocidade, ou o trabalho a partir da força, é
+          resolvido aplicando diretamente este teorema.
+        fr: >-
+          Calculer la distance parcourue à partir de la vitesse, ou le travail à partir de la force,
+          se résout en appliquant directement ce théorème.
+        zh: >-
+          根据速度计算行驶距离,或根据力计算做功,都可以直接应用这个定理来求解。
+        ja: >-
+          速度から移動距離を求めたり、力から仕事量を求めたりする計算は、この定理を直接適用することで解ける。
     - title:
         es: Economía
         en: Economics
+        pt: Economia
+        fr: Économie
+        zh: 经济学
+        ja: 経済学
       description:
         es: >-
           El excedente del consumidor y del productor se calcula integrando funciones de demanda y
@@ -146,9 +295,23 @@ context:
         en: >-
           Consumer and producer surplus are calculated by integrating demand and supply functions
           between two points.
+        pt: >-
+          O excedente do consumidor e do produtor é calculado integrando funções de demanda e oferta
+          entre dois pontos.
+        fr: >-
+          Le surplus du consommateur et du producteur se calcule en intégrant les fonctions de
+          demande et d'offre entre deux points.
+        zh: >-
+          消费者剩余和生产者剩余是通过对需求函数和供给函数在两点之间进行积分来计算的。
+        ja: >-
+          消費者余剰と生産者余剰は、需要関数と供給関数を2点間で積分することで計算される。
     - title:
         es: Ingeniería
         en: Engineering
+        pt: Engenharia
+        fr: Ingénierie
+        zh: 工程学
+        ja: 工学
       description:
         es: >-
           Calcular el trabajo de una fuerza variable o el flujo total de un fluido depende de
@@ -156,18 +319,52 @@ context:
         en: >-
           Calculating the work of a variable force or the total flow of a fluid depends on
           evaluating definite integrals with this theorem.
+        pt: >-
+          Calcular o trabalho de uma força variável ou o fluxo total de um fluido depende de avaliar
+          integrais definidas com este teorema.
+        fr: >-
+          Calculer le travail d'une force variable ou le débit total d'un fluide repose sur
+          l'évaluation d'intégrales définies grâce à ce théorème.
+        zh: >-
+          计算变力所做的功或流体的总流量,都依赖于借助该定理求解定积分。
+        ja: >-
+          変化する力による仕事や流体の総流量の計算は、この定理を用いて定積分を評価することに基づいている。
   example:
     title:
       es: Área bajo f(x) = 2x entre 1 y 3
       en: Area under f(x) = 2x between 1 and 3
+      pt: Área sob f(x) = 2x entre 1 e 3
+      fr: Aire sous f(x) = 2x entre 1 et 3
+      zh: f(x) = 2x 在1到3之间的面积
+      ja: f(x) = 2x の1から3までの面積
     lines:
       - es: f'(x) = 2x, entonces f(x) = x²
         en: f'(x) = 2x, so f(x) = x²
+        pt: f'(x) = 2x, então f(x) = x²
+        fr: f'(x) = 2x, donc f(x) = x²
+        zh: f'(x) = 2x,因此 f(x) = x²
+        ja: f'(x) = 2x なので f(x) = x²
       - es: f(3) = 3² = 9
         en: f(3) = 3² = 9
+        pt: f(3) = 3² = 9
+        fr: f(3) = 3² = 9
+        zh: f(3) = 3² = 9
+        ja: f(3) = 3² = 9
       - es: f(1) = 1² = 1
         en: f(1) = 1² = 1
+        pt: f(1) = 1² = 1
+        fr: f(1) = 1² = 1
+        zh: f(1) = 1² = 1
+        ja: f(1) = 1² = 1
       - es: ∫₁³ 2x dx = f(3) − f(1)
         en: ∫₁³ 2x dx = f(3) − f(1)
+        pt: ∫₁³ 2x dx = f(3) − f(1)
+        fr: ∫₁³ 2x dx = f(3) − f(1)
+        zh: ∫₁³ 2x dx = f(3) − f(1)
+        ja: ∫₁³ 2x dx = f(3) − f(1)
       - es: 9 − 1 = 8
         en: 9 − 1 = 8
+        pt: 9 − 1 = 8
+        fr: 9 − 1 = 8
+        zh: 9 − 1 = 8
+        ja: 9 − 1 = 8

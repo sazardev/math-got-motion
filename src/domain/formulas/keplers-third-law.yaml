@@ -2,9 +2,17 @@ id: keplers-third-law
 title:
   es: Tercera Ley de Kepler
   en: Kepler's Third Law
+  pt: Terceira Lei de Kepler
+  fr: Troisième loi de Kepler
+  zh: 开普勒第三定律
+  ja: ケプラーの第三法則
 category:
   es: Astronomía
   en: Astronomy
+  pt: Astronomia
+  fr: Astronomie
+  zh: 天文学
+  ja: 天文学
 nodes:
   - id: t
     type: variable
@@ -12,49 +20,85 @@ nodes:
     explanation:
       es: "El período orbital: el tiempo que tarda un cuerpo en completar una vuelta alrededor de otro."
       en: The orbital period — the time a body takes to complete one full orbit around another.
+      pt: "O período orbital: o tempo que um corpo leva para completar uma volta em torno de outro."
+      fr: "La période orbitale : le temps que met un corps pour accomplir une révolution complète autour d'un autre."
+      zh: 公转周期，即一个天体绕另一个天体完成一整圈所需的时间。
+      ja: 公転周期。ある天体が別の天体の周りを一周するのにかかる時間。
   - id: exponent-2
     type: superscript
     value: "2"
     explanation:
       es: Elevado al cuadrado. El período de la órbita se multiplica por sí mismo.
       en: Raised to the second power. The orbital period multiplied by itself.
+      pt: Elevado ao quadrado. O período da órbita é multiplicado por si mesmo.
+      fr: Élevé au carré. La période orbitale est multipliée par elle-même.
+      zh: 平方。轨道周期与自身相乘。
+      ja: 二乗する。公転周期を自分自身と掛け合わせる。
   - id: slash
     type: operator
     value: /
     explanation:
       es: Dividido entre. Compara el período al cuadrado con la distancia al cubo.
       en: Divided by. Compares the squared period against the cubed distance.
+      pt: Dividido por. Compara o período ao quadrado com a distância ao cubo.
+      fr: Divisé par. Compare la période au carré à la distance au cube.
+      zh: 除以。将周期的平方与距离的立方进行比较。
+      ja: で割る。周期の二乗を距離の三乗と比較する。
   - id: a
     type: variable
     value: a
     explanation:
       es: "El semieje mayor de la órbita: la distancia promedio entre los dos cuerpos."
       en: The orbit's semi-major axis — the average distance between the two bodies.
+      pt: "O semieixo maior da órbita: a distância média entre os dois corpos."
+      fr: "Le demi-grand axe de l'orbite : la distance moyenne entre les deux corps."
+      zh: 轨道的半长轴，即两个天体之间的平均距离。
+      ja: 軌道の半長軸。二つの天体間の平均距離。
   - id: exponent-3
     type: superscript
     value: "3"
     explanation:
       es: Elevado al cubo. La distancia se multiplica por sí misma dos veces.
       en: Raised to the third power. The distance multiplied by itself twice.
+      pt: Elevado ao cubo. A distância é multiplicada por si mesma duas vezes.
+      fr: Élevé au cube. La distance est multipliée deux fois par elle-même.
+      zh: 立方。距离与自身相乘两次。
+      ja: 三乗する。距離を自分自身と二回掛け合わせる。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es igual a.
       en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: これは次の値に等しい。
   - id: k
     type: constant
     value: k
     explanation:
       es: "Una constante: el mismo valor para todos los cuerpos que orbitan a la misma masa central."
       en: A constant — the same value for every body orbiting the same central mass.
+      pt: "Uma constante: o mesmo valor para todos os corpos que orbitam a mesma massa central."
+      fr: "Une constante : la même valeur pour tous les corps orbitant autour de la même masse centrale."
+      zh: 一个常数，对所有绕同一中心天体运行的天体都相同。
+      ja: 定数。同じ中心天体を公転するすべての天体で共通の値をとる。
 context:
   author:
     es: Johannes Kepler
     en: Johannes Kepler
+    pt: Johannes Kepler
+    fr: Johannes Kepler
+    zh: 约翰内斯·开普勒
+    ja: ヨハネス・ケプラー
   era:
     es: Sacro Imperio (Alemania), 1571–1630 · publicada en 1619
     en: Holy Roman Empire (Germany), 1571–1630 · published in 1619
+    pt: Sacro Império (Alemanha), 1571–1630 · publicada em 1619
+    fr: Saint-Empire (Allemagne), 1571–1630 · publiée en 1619
+    zh: 神圣罗马帝国（德国），1571–1630 · 发表于1619年
+    ja: 神聖ローマ帝国（ドイツ）、1571–1630年 · 1619年発表
   history:
     es: >-
       Kepler publicó esta ley en Harmonices Mundi, tras años analizando las precisísimas observaciones
@@ -70,6 +114,26 @@ context:
       farther a planet is from the Sun, the disproportionately slower it travels. Decades later, Isaac
       Newton showed that this relationship follows directly from his law of universal gravitation,
       linking Kepler's observational astronomy to an underlying physical theory.
+    pt: >-
+      Kepler publicou esta lei em Harmonices Mundi, depois de anos analisando as observações
+      planetárias extremamente precisas que havia herdado de Tycho Brahe. Foi a última de suas três
+      leis do movimento planetário e a primeira a relacionar matematicamente diferentes planetas
+      entre si: quanto mais distante um planeta está do Sol, desproporcionalmente mais lento é seu
+      deslocamento. Décadas depois, Isaac Newton demonstrou que essa relação decorre diretamente de
+      sua lei da gravitação universal, unindo a astronomia observacional de Kepler a uma teoria
+      física subjacente.
+    fr: >-
+      Kepler publia cette loi dans Harmonices Mundi, après des années passées à analyser les
+      observations planétaires extrêmement précises qu'il avait héritées de Tycho Brahe. Ce fut la
+      dernière de ses trois lois du mouvement planétaire et la première à relier mathématiquement
+      différentes planètes entre elles : plus une planète est éloignée du Soleil, plus son
+      déplacement est ralenti de façon disproportionnée. Des décennies plus tard, Isaac Newton
+      montra que cette relation découle directement de sa loi de la gravitation universelle,
+      reliant ainsi l'astronomie observationnelle de Kepler à une théorie physique sous-jacente.
+    zh: >-
+      开普勒在《世界的和谐》一书中发表了这条定律，此前他花费多年分析了从第谷·布拉赫那里继承来的极其精确的行星观测数据。这是他行星运动三大定律中的最后一条，也是第一条将不同行星在数学上联系起来的定律：行星离太阳越远，其运行速度就不成比例地越慢。几十年后，艾萨克·牛顿证明这一关系可直接由他的万有引力定律推导得出，从而将开普勒的观测天文学与其背后的物理理论联系了起来。
+    ja: >-
+      ケプラーはこの法則を『世界の調和』の中で発表した。それは、ティコ・ブラーエから受け継いだ極めて精密な惑星観測データを何年もかけて分析した末のことだった。これは彼の惑星運動に関する三法則の最後のものであり、異なる惑星同士を数学的に関連づけた初めての法則でもあった。太陽から遠い惑星ほど、その公転速度は不釣り合いなほど遅くなる。数十年後、アイザック・ニュートンはこの関係が万有引力の法則から直接導かれることを示し、ケプラーの観測天文学とその背後にある物理理論とを結びつけた。
   timeline:
     - year: "1600"
       label:
@@ -79,6 +143,16 @@ context:
         en: >-
           Kepler joins Tycho Brahe in Prague and inherits his archive of astronomical observations,
           the most precise of the pre-telescopic era.
+        pt: >-
+          Kepler se junta a Tycho Brahe em Praga e herda seu arquivo de observações astronômicas, as
+          mais precisas da era pré-telescópica.
+        fr: >-
+          Kepler rejoint Tycho Brahe à Prague et hérite de ses archives d'observations
+          astronomiques, les plus précises de l'ère pré-télescopique.
+        zh: >-
+          开普勒在布拉格加入第谷·布拉赫团队，继承了他的天文观测档案，那是望远镜发明前最精确的观测记录。
+        ja: >-
+          ケプラーがプラハでティコ・ブラーエのもとに加わり、望遠鏡以前の時代で最も精密な天文観測記録を受け継ぐ。
     - year: "1609"
       label:
         es: >-
@@ -87,6 +161,16 @@ context:
         en: >-
           Publishes his first two laws in Astronomia Nova, describing elliptical rather than circular
           orbits.
+        pt: >-
+          Publica suas duas primeiras leis em Astronomia Nova, descrevendo órbitas elípticas em vez
+          de circulares.
+        fr: >-
+          Publie ses deux premières lois dans Astronomia Nova, décrivant des orbites elliptiques
+          plutôt que circulaires.
+        zh: >-
+          在《新天文学》中发表前两条定律，描述行星轨道为椭圆形而非圆形。
+        ja: >-
+          『新天文学』で最初の二法則を発表し、軌道を円ではなく楕円として記述する。
     - year: "1619"
       label:
         es: >-
@@ -95,6 +179,16 @@ context:
         en: >-
           Publishes the third law in Harmonices Mundi, relating the square of the orbital period to
           the cube of the mean distance from the Sun.
+        pt: >-
+          Publica a terceira lei em Harmonices Mundi, relacionando o quadrado do período orbital ao
+          cubo da distância média ao Sol.
+        fr: >-
+          Publie la troisième loi dans Harmonices Mundi, reliant le carré de la période orbitale au
+          cube de la distance moyenne au Soleil.
+        zh: >-
+          在《世界的和谐》中发表第三定律，将公转周期的平方与到太阳的平均距离的立方联系起来。
+        ja: >-
+          『世界の調和』で第三法則を発表し、公転周期の二乗と太陽からの平均距離の三乗の関係を示す。
     - year: "1687"
       label:
         es: >-
@@ -103,6 +197,16 @@ context:
         en: >-
           Newton derives the law mathematically in the Principia, showing it as a consequence of
           universal gravitation.
+        pt: >-
+          Newton deriva a lei matematicamente nos Principia, mostrando-a como consequência da
+          gravitação universal.
+        fr: >-
+          Newton établit mathématiquement la loi dans les Principia, la présentant comme une
+          conséquence de la gravitation universelle.
+        zh: >-
+          牛顿在《原理》中以数学方式推导出该定律，展示其为万有引力的一个推论。
+        ja: >-
+          ニュートンが『プリンキピア』でこの法則を数学的に導出し、万有引力の帰結として示す。
     - year: Hoy
       label:
         es: >-
@@ -111,10 +215,24 @@ context:
         en: >-
           Used to calculate satellite orbits, plan space missions, and estimate how far exoplanets
           orbit their stars.
+        pt: >-
+          Usada para calcular órbitas de satélites, planejar missões espaciais e estimar a distância
+          de exoplanetas às suas estrelas.
+        fr: >-
+          Utilisée pour calculer les orbites de satellites, planifier des missions spatiales et
+          estimer la distance des exoplanètes à leur étoile.
+        zh: >-
+          用于计算卫星轨道、规划太空任务，以及估算系外行星与其恒星之间的距离。
+        ja: >-
+          衛星の軌道計算、宇宙ミッションの計画、系外惑星が恒星からどれだけ離れているかの推定に用いられる。
   useCases:
     - title:
         es: Detección de exoplanetas
         en: Exoplanet detection
+        pt: Detecção de exoplanetas
+        fr: Détection d'exoplanètes
+        zh: 系外行星探测
+        ja: 系外惑星の検出
       description:
         es: >-
           A partir del período orbital medido por tránsito o velocidad radial, los astrónomos estiman
@@ -122,9 +240,23 @@ context:
         en: >-
           From the orbital period measured by transit or radial velocity, astronomers estimate an
           exoplanet's distance from its star.
+        pt: >-
+          A partir do período orbital medido por trânsito ou velocidade radial, os astrônomos
+          estimam a distância do exoplaneta à sua estrela.
+        fr: >-
+          À partir de la période orbitale mesurée par transit ou par vitesse radiale, les astronomes
+          estiment la distance d'une exoplanète à son étoile.
+        zh: >-
+          天文学家根据凌星法或视向速度法测得的公转周期，估算系外行星与其恒星之间的距离。
+        ja: >-
+          トランジット法や視線速度法で測定した公転周期から、天文学者は系外惑星と恒星の距離を推定する。
     - title:
         es: Diseño de órbitas satelitales
         en: Satellite orbit design
+        pt: Design de órbitas satelitais
+        fr: Conception d'orbites satellitaires
+        zh: 卫星轨道设计
+        ja: 衛星軌道の設計
       description:
         es: >-
           Ingenieros calculan la altitud necesaria para que un satélite tenga un período orbital
@@ -132,27 +264,75 @@ context:
         en: >-
           Engineers calculate the altitude a satellite needs for a specific orbital period, such as
           geostationary satellites.
+        pt: >-
+          Engenheiros calculam a altitude necessária para que um satélite tenha um período orbital
+          específico, como os satélites geoestacionários.
+        fr: >-
+          Les ingénieurs calculent l'altitude nécessaire pour qu'un satellite ait une période
+          orbitale donnée, comme pour les satellites géostationnaires.
+        zh: >-
+          工程师据此计算卫星达到特定公转周期所需的高度，例如地球静止轨道卫星。
+        ja: >-
+          静止衛星のように特定の公転周期を持たせるために必要な高度を、技術者はこの法則で計算する。
     - title:
         es: Planificación de misiones espaciales
         en: Space mission planning
+        pt: Planejamento de missões espaciais
+        fr: Planification de missions spatiales
+        zh: 太空任务规划
+        ja: 宇宙ミッションの計画
       description:
         es: >-
           Se usa para calcular la duración de trayectorias de transferencia entre planetas en misiones
           interplanetarias.
         en: >-
           Used to calculate the duration of interplanetary transfer trajectories in space missions.
+        pt: >-
+          Usada para calcular a duração das trajetórias de transferência entre planetas em missões
+          interplanetárias.
+        fr: >-
+          Utilisée pour calculer la durée des trajectoires de transfert entre planètes lors des
+          missions interplanétaires.
+        zh: >-
+          用于计算行星际任务中转移轨道所需的飞行时间。
+        ja: >-
+          惑星間ミッションにおける惑星間転移軌道の飛行時間を計算するのに使われる。
   example:
     title:
       es: Verificación con Marte
       en: Verification with Mars
+      pt: Verificação com Marte
+      fr: Vérification avec Mars
+      zh: 用火星验证
+      ja: 火星による検証
     lines:
       - es: "Período orbital observado de Marte: T = 1.88 años"
         en: "Mars's observed orbital period: T = 1.88 years"
+        pt: "Período orbital observado de Marte: T = 1,88 anos"
+        fr: "Période orbitale observée de Mars : T = 1,88 an"
+        zh: "火星观测到的公转周期：T = 1.88 年"
+        ja: "火星の観測された公転周期：T = 1.88年"
       - es: T² = 1.88² = 3.53
         en: T² = 1.88² = 3.53
+        pt: T² = 1,88² = 3,53
+        fr: T² = 1,88² = 3,53
+        zh: T² = 1.88² = 3.53
+        ja: T² = 1.88² = 3.53
       - es: "Usando el Sol y años/UA, la constante k = 1, entonces a³ = 3.53"
         en: "Using the Sun and AU/years, the constant k = 1, so a³ = 3.53"
+        pt: "Usando o Sol e anos/UA, a constante k = 1, então a³ = 3,53"
+        fr: "Avec le Soleil et les unités années/UA, la constante k = 1, donc a³ = 3,53"
+        zh: "以太阳、年和天文单位为单位，常数 k = 1，因此 a³ = 3.53"
+        ja: "太陽と年・天文単位を用いると定数k = 1なので、a³ = 3.53"
       - es: a = ∛3.53 ≈ 1.524 UA
         en: a = ∛3.53 ≈ 1.524 AU
+        pt: a = ∛3,53 ≈ 1,524 UA
+        fr: a = ∛3,53 ≈ 1,524 UA
+        zh: a = ∛3.53 ≈ 1.524 天文单位
+        ja: a = ∛3.53 ≈ 1.524天文単位
       - es: "La distancia real de Marte al Sol es 1.524 UA: coincide"
         en: "Mars's actual distance from the Sun is 1.524 AU — it matches"
+        pt: "A distância real de Marte ao Sol é 1,524 UA: coincide"
+        fr: "La distance réelle de Mars au Soleil est de 1,524 UA : cela correspond"
+        zh: "火星到太阳的实际距离为1.524天文单位，结果吻合"
+        ja: "火星から太陽までの実際の距離は1.524天文単位——一致する"

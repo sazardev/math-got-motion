@@ -2,9 +2,17 @@ id: pythagorean-theorem
 title:
   es: Teorema de Pitágoras
   en: Pythagorean Theorem
+  pt: Teorema de Pitágoras
+  fr: Théorème de Pythagore
+  zh: 毕达哥拉斯定理
+  ja: ピタゴラスの定理
 category:
   es: Geometría
   en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
 nodes:
   - id: a
     type: variable
@@ -12,55 +20,95 @@ nodes:
     explanation:
       es: "El cateto a: uno de los dos lados que forman el ángulo recto."
       en: "Leg a: one of the two sides that form the right angle."
+      pt: "O cateto a: um dos dois lados que formam o ângulo reto."
+      fr: "Le côté a : l'un des deux côtés qui forment l'angle droit."
+      zh: "直角边 a：构成直角的两条边之一。"
+      ja: "辺a: 直角を構成する2辺のうちの一つ。"
   - id: a-sq
     type: superscript
     value: "2"
     explanation:
       es: "Elevado al cuadrado: multiplicado por sí mismo."
       en: "Squared: multiplied by itself."
+      pt: "Elevado ao quadrado: multiplicado por si mesmo."
+      fr: "Élevé au carré : multiplié par lui-même."
+      zh: "平方：与自身相乘。"
+      ja: "2乗: 自分自身に掛けたもの。"
   - id: plus
     type: operator
     value: +
     explanation:
       es: Sumado al cuadrado del otro cateto.
       en: Added to the square of the other leg.
+      pt: Somado ao quadrado do outro cateto.
+      fr: Ajouté au carré de l'autre côté.
+      zh: 与另一条直角边的平方相加。
+      ja: もう一方の辺の2乗に加える。
   - id: b
     type: variable
     value: b
     explanation:
       es: "El cateto b: el segundo lado que forma el ángulo recto."
       en: "Leg b: the second side that forms the right angle."
+      pt: "O cateto b: o segundo lado que forma o ângulo reto."
+      fr: "Le côté b : le second côté qui forme l'angle droit."
+      zh: "直角边 b：构成直角的第二条边。"
+      ja: "辺b: 直角を構成するもう一つの辺。"
   - id: b-sq
     type: superscript
     value: "2"
     explanation:
       es: También elevado al cuadrado.
       en: Also squared.
+      pt: Também elevado ao quadrado.
+      fr: Également élevé au carré.
+      zh: 同样进行平方。
+      ja: これも2乗される。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: 正確に等しい。
   - id: c
     type: variable
     value: c
     explanation:
       es: "La hipotenusa: el lado opuesto al ángulo recto, siempre el más largo."
       en: "The hypotenuse: the side opposite the right angle, always the longest."
+      pt: "A hipotenusa: o lado oposto ao ângulo reto, sempre o mais longo."
+      fr: "L'hypoténuse : le côté opposé à l'angle droit, toujours le plus long."
+      zh: "斜边：与直角相对的边，始终是最长的一边。"
+      ja: "斜辺: 直角に対する辺で、常に最も長い。"
   - id: c-sq
     type: superscript
     value: "2"
     explanation:
       es: También elevada al cuadrado.
       en: Also squared.
+      pt: Também elevada ao quadrado.
+      fr: Également élevée au carré.
+      zh: 同样进行平方。
+      ja: これも2乗される。
 context:
   author:
     es: Pitágoras de Samos
     en: Pythagoras of Samos
+    pt: Pitágoras de Samos
+    fr: Pythagore de Samos
+    zh: 萨摩斯的毕达哥拉斯
+    ja: サモスのピタゴラス
   era:
     es: Samos, Grecia, c. 570–495 a.C.
     en: Samos, Greece, c. 570–495 BC
+    pt: Samos, Grécia, c. 570–495 a.C.
+    fr: Samos, Grèce, v. 570–495 av. J.-C.
+    zh: 希腊萨摩斯岛，约公元前570–495年
+    ja: ギリシャ、サモス島、紀元前570〜495年頃
   history:
     es: >-
       Babilonios y egipcios ya usaban esta relación en la práctica siglos antes, pero se atribuye a
@@ -70,6 +118,21 @@ context:
       Babylonians and Egyptians had already used this relationship in practice centuries earlier,
       but the first formal proof is attributed to Pythagoras and his school. It remains one of the
       oldest and most cited results in all of geometry.
+    pt: >-
+      Babilônios e egípcios já usavam essa relação na prática séculos antes, mas a primeira
+      demonstração formal é atribuída a Pitágoras e sua escola. Continua sendo um dos resultados
+      mais antigos e mais citados de toda a geometria.
+    fr: >-
+      Babyloniens et Égyptiens utilisaient déjà cette relation en pratique des siècles auparavant,
+      mais la première démonstration formelle est attribuée à Pythagore et son école. Il reste l'un
+      des résultats les plus anciens et les plus cités de toute la géométrie.
+    zh: >-
+      早在几个世纪之前，巴比伦人和埃及人就已经在实践中使用了这一关系，但第一个正式证明通常归功于
+      毕达哥拉斯及其学派。它至今仍是整个几何学中最古老、被引用最多的成果之一。
+    ja: >-
+      バビロニア人やエジプト人は、それより何世紀も前からこの関係を実用的に用いていたが、最初の
+      正式な証明はピタゴラスとその学派によるものとされる。今なお幾何学全体の中で最も古く、最も
+      多く引用される成果の一つである。
   timeline:
     - year: c. 1800 a.C.
       label:
@@ -79,6 +142,17 @@ context:
         en: >-
           The Babylonian tablet Plimpton 322 records lists of triples that satisfy the relationship,
           with no formal proof.
+        pt: >-
+          A tábua babilônica Plimpton 322 registra listas de triplas que satisfazem a relação, sem
+          demonstração formal.
+        fr: >-
+          La tablette babylonienne Plimpton 322 recense des listes de triplets satisfaisant la
+          relation, sans démonstration formelle.
+        zh: >-
+          巴比伦泥板普林顿322记录了满足该关系的数组列表，但没有正式证明。
+        ja: >-
+          バビロニアの粘土板プリンプトン322には、この関係を満たす数の組の一覧が記録されているが、
+          正式な証明はない。
     - year: c. 570–495 a.C.
       label:
         es: >-
@@ -87,6 +161,16 @@ context:
         en: >-
           Pythagoras and his school in Croton offer, according to tradition, the first general proof
           of the theorem.
+        pt: >-
+          Pitágoras e sua escola em Crotona oferecem, segundo a tradição, a primeira demonstração
+          geral do teorema.
+        fr: >-
+          Pythagore et son école de Crotone offrent, selon la tradition, la première démonstration
+          générale du théorème.
+        zh: >-
+          按照传统说法，毕达哥拉斯及其在克罗顿的学派给出了该定理的第一个一般性证明。
+        ja: >-
+          伝承によれば、ピタゴラスとクロトンの学派がこの定理の最初の一般的な証明を与えたとされる。
     - year: c. 300 a.C.
       label:
         es: >-
@@ -95,6 +179,16 @@ context:
         en: >-
           Euclid formalizes it as Proposition 47 of Book I of Elements, with a purely geometric
           proof.
+        pt: >-
+          Euclides o formaliza como a Proposição 47 do Livro I de Os Elementos, com uma
+          demonstração puramente geométrica.
+        fr: >-
+          Euclide le formalise en tant que Proposition 47 du Livre I des Éléments, avec une
+          démonstration purement géométrique.
+        zh: >-
+          欧几里得在《几何原本》第一卷命题47中将其形式化，给出了纯几何证明。
+        ja: >-
+          ユークリッドが『原論』第1巻命題47としてこれを定式化し、純粋に幾何学的な証明を与える。
     - year: "1971"
       label:
         es: >-
@@ -103,6 +197,16 @@ context:
         en: >-
           The Mariner 9 probe and later missions use triangulation based on this theorem for
           spacecraft navigation.
+        pt: >-
+          A sonda Mariner 9 e missões posteriores usam triangulação baseada neste teorema para
+          navegação espacial.
+        fr: >-
+          La sonde Mariner 9 et les missions ultérieures utilisent la triangulation fondée sur ce
+          théorème pour la navigation spatiale.
+        zh: >-
+          水手9号探测器及后续任务利用基于该定理的三角测量进行航天导航。
+        ja: >-
+          マリナー9号探査機やその後のミッションが、この定理に基づく三角測量を宇宙船の航法に用いる。
     - year: Hoy
       label:
         es: >-
@@ -111,10 +215,25 @@ context:
         en: >-
           It underlies Euclidean distance: GPS, 3D graphics, and machine learning compute it
           millions of times per second.
+        pt: >-
+          É a base da distância euclidiana: GPS, gráficos 3D e aprendizado de máquina a calculam
+          milhões de vezes por segundo.
+        fr: >-
+          Il est à la base de la distance euclidienne : le GPS, l'infographie 3D et l'apprentissage
+          automatique la calculent des millions de fois par seconde.
+        zh: >-
+          它是欧几里得距离的基础：GPS、三维图形和机器学习每秒都要计算数百万次。
+        ja: >-
+          ユークリッド距離の基盤であり、GPSや3Dグラフィックス、機械学習では毎秒何百万回も計算
+          されている。
   useCases:
     - title:
         es: Construcción y arquitectura
         en: Construction and architecture
+        pt: Construção e arquitetura
+        fr: Construction et architecture
+        zh: 建筑与施工
+        ja: 建築と建設
       description:
         es: >-
           La regla del triángulo 3-4-5 permite trazar ángulos rectos perfectos en obra sin
@@ -122,9 +241,23 @@ context:
         en: >-
           The 3-4-5 triangle rule lets builders mark perfect right angles on site without precision
           instruments.
+        pt: >-
+          A regra do triângulo 3-4-5 permite traçar ângulos retos perfeitos na obra sem
+          instrumentos de precisão.
+        fr: >-
+          La règle du triangle 3-4-5 permet de tracer des angles droits parfaits sur chantier sans
+          instruments de précision.
+        zh: >-
+          3-4-5三角形法则可以让施工人员在没有精密仪器的情况下，在现场标出完美的直角。
+        ja: >-
+          3-4-5の三角形の法則により、精密機器なしでも現場で正確な直角を引くことができる。
     - title:
         es: Navegación GPS
         en: GPS navigation
+        pt: Navegação GPS
+        fr: Navigation GPS
+        zh: GPS 导航
+        ja: GPSナビゲーション
       description:
         es: >-
           Calcular la distancia entre dos coordenadas es, en esencia, aplicar este teorema sobre un
@@ -132,26 +265,72 @@ context:
         en: >-
           Computing the distance between two coordinates is, at its core, applying this theorem over
           a reference plane.
+        pt: >-
+          Calcular a distância entre duas coordenadas é, essencialmente, aplicar este teorema sobre
+          um plano de referência.
+        fr: >-
+          Calculer la distance entre deux coordonnées consiste essentiellement à appliquer ce
+          théorème sur un plan de référence.
+        zh: >-
+          计算两个坐标点之间的距离，本质上就是在参考平面上应用这一定理。
+        ja: >-
+          2つの座標間の距離を計算することは、本質的に基準平面上でこの定理を適用することである。
     - title:
         es: Gráficos por computadora
         en: Computer graphics
+        pt: Computação gráfica
+        fr: Infographie
+        zh: 计算机图形学
+        ja: コンピューターグラフィックス
       description:
         es: >-
           Motores de videojuegos lo usan constantemente para medir distancias entre vectores y
           detectar colisiones.
         en: Game engines use it constantly to measure distances between vectors and detect collisions.
+        pt: >-
+          Motores de jogos o usam constantemente para medir distâncias entre vetores e detectar
+          colisões.
+        fr: >-
+          Les moteurs de jeux vidéo l'utilisent constamment pour mesurer les distances entre
+          vecteurs et détecter les collisions.
+        zh: 游戏引擎经常用它来测量向量之间的距离并检测碰撞。
+        ja: ゲームエンジンはベクトル間の距離測定や衝突判定に常時これを利用している。
   example:
     title:
       es: El triángulo 3-4-5
       en: The 3-4-5 triangle
+      pt: O triângulo 3-4-5
+      fr: Le triangle 3-4-5
+      zh: 3-4-5 三角形
+      ja: 3-4-5の三角形
     lines:
       - es: a = 3, b = 4
         en: a = 3, b = 4
+        pt: a = 3, b = 4
+        fr: a = 3, b = 4
+        zh: a = 3, b = 4
+        ja: a = 3, b = 4
       - es: a² + b² = 9 + 16
         en: a² + b² = 9 + 16
+        pt: a² + b² = 9 + 16
+        fr: a² + b² = 9 + 16
+        zh: a² + b² = 9 + 16
+        ja: a² + b² = 9 + 16
       - es: 9 + 16 = 25
         en: 9 + 16 = 25
+        pt: 9 + 16 = 25
+        fr: 9 + 16 = 25
+        zh: 9 + 16 = 25
+        ja: 9 + 16 = 25
       - es: c² = 25 → c = 5
         en: c² = 25 → c = 5
+        pt: c² = 25 → c = 5
+        fr: c² = 25 → c = 5
+        zh: c² = 25 → c = 5
+        ja: c² = 25 → c = 5
       - es: 3² + 4² = 5², queda demostrado
         en: 3² + 4² = 5², proven true
+        pt: 3² + 4² = 5², comprovado
+        fr: 3² + 4² = 5², ce qui est démontré
+        zh: 3² + 4² = 5²，得证
+        ja: 3² + 4² = 5²、証明された

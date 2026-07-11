@@ -2,9 +2,17 @@ id: bayes-theorem
 title:
   es: Teorema de Bayes
   en: Bayes' Theorem
+  pt: Teorema de Bayes
+  fr: Théorème de Bayes
+  zh: 贝叶斯定理
+  ja: ベイズの定理
 category:
   es: Probabilidad y estadística
   en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率と統計
 nodes:
   - id: p-a-given-b
     type: variable
@@ -16,12 +24,27 @@ nodes:
       en: >-
         The posterior probability: how likely A is now that we know B occurred. This is what the
         theorem lets us compute.
+      pt: >-
+        A probabilidade posterior: o quão provável é A agora que sabemos que B ocorreu. É isso que
+        o teorema permite calcular.
+      fr: >-
+        La probabilité postérieure : la vraisemblance de A maintenant que l'on sait que B s'est
+        produit. C'est ce que le théorème permet de calculer.
+      zh: >-
+        后验概率：在已知B发生的情况下，A发生的可能性有多大。这正是该定理所要计算的结果。
+      ja: >-
+        事後確率:Bが起きたと分かったうえで、Aがどれだけ起こりやすいか。これこそがこの定理で
+        計算できる値である。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これに正確に等しい。
   - id: p-b-given-a
     type: variable
     value: P(B|A)
@@ -30,12 +53,24 @@ nodes:
         La verosimilitud: qué tan probable sería observar B si A fuera verdadero.
       en: >-
         The likelihood: how probable observing B would be if A were true.
+      pt: >-
+        A verossimilhança: qual seria a probabilidade de observar B se A fosse verdadeiro.
+      fr: >-
+        La vraisemblance : la probabilité d'observer B si A était vrai.
+      zh: >-
+        似然：如果A为真，观测到B的可能性有多大。
+      ja: >-
+        尤度:もしAが真であるとしたら、Bが観測される確率はどれくらいか。
   - id: dot
     type: operator
     value: "·"
     explanation:
       es: Multiplicado por.
       en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: これに掛ける。
   - id: p-a
     type: variable
     value: P(A)
@@ -44,12 +79,24 @@ nodes:
         La probabilidad previa (a priori) de A, antes de conocer cualquier evidencia sobre B.
       en: >-
         The prior probability of A, before knowing any evidence about B.
+      pt: >-
+        A probabilidade prévia (a priori) de A, antes de conhecer qualquer evidência sobre B.
+      fr: >-
+        La probabilité a priori de A, avant de connaître la moindre preuve concernant B.
+      zh: >-
+        A的先验概率，即在了解任何关于B的证据之前A发生的概率。
+      ja: >-
+        Aの事前確率。Bに関する証拠を何も知らない時点でのAの確率。
   - id: slash
     type: operator
     value: "/"
     explanation:
       es: Dividido entre.
       en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: これで割る。
   - id: p-b
     type: variable
     value: P(B)
@@ -58,13 +105,30 @@ nodes:
         La probabilidad total de la evidencia B, sumando todas las formas en que B puede ocurrir.
       en: >-
         The total probability of the evidence B, summing every way B can occur.
+      pt: >-
+        A probabilidade total da evidência B, somando todas as formas pelas quais B pode ocorrer.
+      fr: >-
+        La probabilité totale de l'observation B, en additionnant toutes les façons dont B peut se
+        produire.
+      zh: >-
+        证据B的总概率，即把B可能发生的所有方式的概率相加。
+      ja: >-
+        証拠Bの全確率。Bが起こり得るすべての場合の確率を合計したもの。
 context:
   author:
     es: Thomas Bayes
     en: Thomas Bayes
+    pt: Thomas Bayes
+    fr: Thomas Bayes
+    zh: 托马斯·贝叶斯
+    ja: トーマス・ベイズ
   era:
     es: Inglaterra, c. 1701–1761 · publicado póstumamente en 1763
     en: England, c. 1701–1761 · published posthumously in 1763
+    pt: Inglaterra, c. 1701–1761 · publicado postumamente em 1763
+    fr: Angleterre, v. 1701–1761 · publié à titre posthume en 1763
+    zh: 英格兰，约1701–1761年 · 于1763年身后发表
+    ja: イングランド、1701年頃–1761年 · 1763年に死後出版
   history:
     es: >-
       Bayes, un clérigo y matemático inglés, nunca publicó su idea en vida. Su amigo Richard Price
@@ -80,6 +144,31 @@ context:
       Chances.' Years later, unaware of Bayes' work, Pierre-Simon Laplace independently rediscovered
       and generalized the same principle, giving it the notation and scope that made it a central
       tool of modern statistics.
+    pt: >-
+      Bayes, um clérigo e matemático inglês, nunca publicou sua ideia em vida. Seu amigo Richard
+      Price encontrou o manuscrito após sua morte e o apresentou à Royal Society em 1763 sob o
+      título 'An Essay towards solving a Problem in the Doctrine of Chances'. Anos depois, sem
+      conhecer o trabalho de Bayes, Pierre-Simon Laplace redescobriu e generalizou o mesmo princípio
+      de forma independente, dando-lhe a notação e o alcance que o tornaram uma ferramenta central
+      da estatística moderna.
+    fr: >-
+      Bayes, ecclésiastique et mathématicien anglais, ne publia jamais son idée de son vivant. Son
+      ami Richard Price retrouva le manuscrit après sa mort et le présenta à la Royal Society en
+      1763 sous le titre 'An Essay towards solving a Problem in the Doctrine of Chances'. Des années
+      plus tard, sans connaître les travaux de Bayes, Pierre-Simon Laplace redécouvrit et généralisa
+      le même principe de manière indépendante, lui donnant la notation et la portée qui en firent
+      un outil central de la statistique moderne.
+    zh: >-
+      贝叶斯是一位英国牧师兼数学家，生前从未发表过这一思想。他的朋友理查德·普赖斯在他去世后
+      找到了这份手稿，并于1763年以《论机会学说中一个问题的求解》为题提交给了皇家学会。多年
+      以后，皮埃尔-西蒙·拉普拉斯在不了解贝叶斯工作的情况下独立地重新发现并推广了同一原理，
+      赋予其严谨的记号和更广的适用范围，使之成为现代统计学的核心工具。
+    ja: >-
+      聖職者であり数学者でもあったベイズは、生前この着想を一度も発表しなかった。友人の
+      リチャード・プライスが彼の死後に草稿を発見し、1763年に『機会の教理における問題を解く
+      試み』という題で王立協会に提出した。その後、ベイズの業績を知らないまま、ピエール=シモン・
+      ラプラスが独立に同じ原理を再発見して一般化し、記法と適用範囲を整えることで、これを現代
+      統計学の中心的な道具へと押し上げた。
   timeline:
     - year: "1763"
       label:
@@ -89,6 +178,16 @@ context:
         en: >-
           Richard Price posthumously publishes Bayes' essay in Philosophical Transactions of the
           Royal Society.
+        pt: >-
+          Richard Price publica postumamente o ensaio de Bayes em Philosophical Transactions of the
+          Royal Society.
+        fr: >-
+          Richard Price publie à titre posthume l'essai de Bayes dans les Philosophical
+          Transactions of the Royal Society.
+        zh: >-
+          理查德·普赖斯在《皇家学会哲学汇刊》上身后发表了贝叶斯的论文。
+        ja: >-
+          リチャード・プライスがベイズの論文を『王立協会哲学紀要』に死後出版する。
     - year: "1774"
       label:
         es: >-
@@ -97,6 +196,16 @@ context:
         en: >-
           Laplace independently derives the same principle and applies it to problems of inverse
           probability.
+        pt: >-
+          Laplace deriva de forma independente o mesmo princípio e o aplica a problemas de
+          probabilidade inversa.
+        fr: >-
+          Laplace démontre indépendamment le même principe et l'applique à des problèmes de
+          probabilité inverse.
+        zh: >-
+          拉普拉斯独立推导出同一原理，并将其应用于逆概率问题。
+        ja: >-
+          ラプラスが独立に同じ原理を導き、逆確率の問題に応用する。
     - year: "1812"
       label:
         es: >-
@@ -105,6 +214,16 @@ context:
         en: >-
           Laplace publishes Théorie analytique des probabilités, cementing Bayesian reasoning as a
           formal method.
+        pt: >-
+          Laplace publica Théorie analytique des probabilités, consolidando o raciocínio bayesiano
+          como método formal.
+        fr: >-
+          Laplace publie la Théorie analytique des probabilités, consacrant le raisonnement
+          bayésien comme méthode formelle.
+        zh: >-
+          拉普拉斯发表《概率的解析理论》，将贝叶斯推理确立为一种正式方法。
+        ja: >-
+          ラプラスが『確率の解析理論』を出版し、ベイズ推論を正式な方法として確立する。
     - year: s. XX
       label:
         es: >-
@@ -113,6 +232,17 @@ context:
         en: >-
           A strong debate emerges between Bayesian and frequentist statistics; the method is
           revived by the arrival of computing.
+        pt: >-
+          Surge um forte debate entre a estatística bayesiana e a frequentista; o método é
+          revitalizado com a chegada da computação.
+        fr: >-
+          Un vif débat oppose statistique bayésienne et fréquentiste ; la méthode renaît avec
+          l'arrivée de l'informatique.
+        zh: >-
+          贝叶斯统计与频率派统计之间展开激烈论战；随着计算机技术的兴起，该方法重获新生。
+        ja: >-
+          ベイズ統計と頻度主義統計の間で激しい論争が起こる。コンピュータの登場によりこの手法
+          は再び脚光を浴びる。
     - year: Hoy
       label:
         es: >-
@@ -121,10 +251,25 @@ context:
         en: >-
           It underlies spam filters, medical diagnosis, recommendation systems, and much of modern
           machine learning.
+        pt: >-
+          É a base de filtros de spam, diagnóstico médico, sistemas de recomendação e boa parte do
+          aprendizado de máquina moderno.
+        fr: >-
+          Il est à la base des filtres antispam, du diagnostic médical, des systèmes de
+          recommandation et d'une grande partie de l'apprentissage automatique moderne.
+        zh: >-
+          它是垃圾邮件过滤、医学诊断、推荐系统以及现代机器学习中许多方法的基础。
+        ja: >-
+          スパムフィルター、医療診断、レコメンデーションシステム、そして現代の機械学習の多く
+          を支える基盤となっている。
   useCases:
     - title:
         es: Diagnóstico médico
         en: Medical diagnosis
+        pt: Diagnóstico médico
+        fr: Diagnostic médical
+        zh: 医学诊断
+        ja: 医療診断
       description:
         es: >-
           Actualiza la probabilidad de tener una enfermedad a partir del resultado de un test,
@@ -132,9 +277,23 @@ context:
         en: >-
           Updates the probability of having a disease from a test result, factoring in its
           sensitivity and false-positive rate.
+        pt: >-
+          Atualiza a probabilidade de ter uma doença a partir do resultado de um teste, considerando
+          sua sensibilidade e sua taxa de falsos positivos.
+        fr: >-
+          Met à jour la probabilité d'avoir une maladie à partir du résultat d'un test, en tenant
+          compte de sa sensibilité et de son taux de faux positifs.
+        zh: >-
+          根据检测结果更新患病概率，同时考虑检测的灵敏度和假阳性率。
+        ja: >-
+          検査結果から疾患を有する確率を更新する。その際、検査の感度と偽陽性率を考慮に入れる。
     - title:
         es: Filtros de spam
         en: Spam filtering
+        pt: Filtros de spam
+        fr: Filtrage du spam
+        zh: 垃圾邮件过滤
+        ja: スパムフィルタリング
       description:
         es: >-
           Los clasificadores 'naive Bayes' calculan la probabilidad de que un correo sea spam según
@@ -142,9 +301,23 @@ context:
         en: >-
           Naive Bayes classifiers compute the probability that an email is spam based on the words
           it contains.
+        pt: >-
+          Os classificadores 'naive Bayes' calculam a probabilidade de um e-mail ser spam com base
+          nas palavras que ele contém.
+        fr: >-
+          Les classificateurs naïfs bayésiens calculent la probabilité qu'un courriel soit un spam
+          selon les mots qu'il contient.
+        zh: >-
+          朴素贝叶斯分类器根据邮件中包含的词语来计算该邮件是垃圾邮件的概率。
+        ja: >-
+          ナイーブベイズ分類器は、含まれる単語をもとにメールがスパムである確率を計算する。
     - title:
         es: Aprendizaje automático
         en: Machine learning
+        pt: Aprendizado de máquina
+        fr: Apprentissage automatique
+        zh: 机器学习
+        ja: 機械学習
       description:
         es: >-
           La inferencia bayesiana actualiza modelos probabilísticos a medida que llegan nuevos datos,
@@ -152,9 +325,24 @@ context:
         en: >-
           Bayesian inference updates probabilistic models as new data arrives, instead of retraining
           from scratch.
+        pt: >-
+          A inferência bayesiana atualiza modelos probabilísticos à medida que chegam novos dados,
+          em vez de retreinar do zero.
+        fr: >-
+          L'inférence bayésienne met à jour les modèles probabilistes à mesure que de nouvelles
+          données arrivent, plutôt que de réentraîner à partir de zéro.
+        zh: >-
+          贝叶斯推断会随着新数据的到来不断更新概率模型，而无需从头重新训练。
+        ja: >-
+          ベイズ推論は、新しいデータが到着するたびに確率モデルを更新する。ゼロから再学習する
+          必要はない。
     - title:
         es: Peritajes forenses y legales
         en: Forensic and legal reasoning
+        pt: Perícias forenses e jurídicas
+        fr: Expertises judiciaires et légales
+        zh: 法医与法律推理
+        ja: 法科学・法的推論
       description:
         es: >-
           Ayuda a evaluar cuánto cambia la probabilidad de culpabilidad frente a una nueva pieza de
@@ -162,20 +350,59 @@ context:
         en: >-
           Helps assess how much a new piece of evidence, like a DNA match, should shift the
           probability of guilt.
+        pt: >-
+          Ajuda a avaliar o quanto a probabilidade de culpa muda diante de uma nova evidência, como
+          uma correspondência de DNA.
+        fr: >-
+          Aide à évaluer dans quelle mesure une nouvelle preuve, comme une correspondance ADN,
+          devrait modifier la probabilité de culpabilité.
+        zh: >-
+          帮助评估一项新证据（如DNA匹配）应当在多大程度上改变有罪的概率。
+        ja: >-
+          DNA一致のような新たな証拠によって、有罪である確率がどれほど変化すべきかを評価する
+          助けとなる。
   example:
     title:
       es: Un test médico
       en: A medical test
+      pt: Um teste médico
+      fr: Un test médical
+      zh: 一次医学检测
+      ja: ある医療検査
     lines:
       - es: P(enfermedad) = 0.01, la prevalencia previa
         en: P(disease) = 0.01, the prior prevalence
+        pt: P(doença) = 0,01, a prevalência prévia
+        fr: P(maladie) = 0,01, la prévalence a priori
+        zh: P(患病) = 0.01，先验患病率
+        ja: P(疾患) = 0.01、事前有病率
       - es: P(positivo|enfermedad) = 0.9, sensibilidad del test
         en: P(positive|disease) = 0.9, the test's sensitivity
+        pt: P(positivo|doença) = 0,9, a sensibilidade do teste
+        fr: P(positif|maladie) = 0,9, la sensibilité du test
+        zh: P(阳性|患病) = 0.9，检测的灵敏度
+        ja: P(陽性|疾患) = 0.9、検査の感度
       - es: P(positivo|sano) = 0.05, tasa de falsos positivos
         en: P(positive|healthy) = 0.05, the false-positive rate
+        pt: P(positivo|saudável) = 0,05, a taxa de falsos positivos
+        fr: P(positif|sain) = 0,05, le taux de faux positifs
+        zh: P(阳性|健康) = 0.05，假阳性率
+        ja: P(陽性|健常) = 0.05、偽陽性率
       - es: P(positivo) = 0.9×0.01 + 0.05×0.99 = 0.0585
         en: P(positive) = 0.9×0.01 + 0.05×0.99 = 0.0585
+        pt: P(positivo) = 0,9×0,01 + 0,05×0,99 = 0,0585
+        fr: P(positif) = 0,9×0,01 + 0,05×0,99 = 0,0585
+        zh: P(阳性) = 0.9×0.01 + 0.05×0.99 = 0.0585
+        ja: P(陽性) = 0.9×0.01 + 0.05×0.99 = 0.0585
       - es: P(enfermedad|positivo) = 0.009 / 0.0585 ≈ 0.154
         en: P(disease|positive) = 0.009 / 0.0585 ≈ 0.154
+        pt: P(doença|positivo) = 0,009 / 0,0585 ≈ 0,154
+        fr: P(maladie|positif) = 0,009 / 0,0585 ≈ 0,154
+        zh: P(患病|阳性) = 0.009 / 0.0585 ≈ 0.154
+        ja: P(疾患|陽性) = 0.009 / 0.0585 ≈ 0.154
       - es: Solo 15.4% de quienes dan positivo están realmente enfermos
         en: Only 15.4% of those who test positive are actually sick
+        pt: Apenas 15,4% de quem testa positivo está de fato doente
+        fr: Seulement 15,4 % des personnes testées positives sont réellement malades
+        zh: 在检测呈阳性的人中，只有15.4%真正患病
+        ja: 陽性となった人のうち、実際に病気であるのはわずか15.4%にすぎない

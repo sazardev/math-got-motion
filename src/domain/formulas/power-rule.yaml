@@ -2,9 +2,17 @@ id: power-rule
 title:
   es: Regla de la Potencia
   en: Power Rule
+  pt: Regra da Potência
+  fr: Règle de la puissance
+  zh: 幂法则
+  ja: べき乗の法則
 category:
   es: Cálculo
   en: Calculus
+  pt: Cálculo
+  fr: Calcul
+  zh: 微积分
+  ja: 微積分
 nodes:
   - id: d
     type: operator
@@ -12,67 +20,115 @@ nodes:
     explanation:
       es: "El operador de derivación: indica la tasa de cambio respecto a x."
       en: "The derivative operator: indicates the rate of change with respect to x."
+      pt: "O operador de derivação: indica a taxa de variação em relação a x."
+      fr: "L'opérateur de dérivation : indique le taux de variation par rapport à x."
+      zh: "求导算子：表示相对于 x 的变化率。"
+      ja: "微分演算子: xに関する変化率を表す。"
   - id: bracket-open
     type: operator
     value: "["
     explanation:
       es: Abre la expresión que se va a derivar.
       en: Opens the expression being differentiated.
+      pt: Abre a expressão que será derivada.
+      fr: Ouvre l'expression à dériver.
+      zh: 开始要求导的表达式。
+      ja: 微分する式の始まりを示す。
   - id: x
     type: variable
     value: x
     explanation:
       es: "La variable: la cantidad que cambia."
       en: "The variable: the quantity that changes."
+      pt: "A variável: a quantidade que varia."
+      fr: "La variable : la quantité qui change."
+      zh: "变量：发生变化的量。"
+      ja: "変数: 変化する量。"
   - id: n
     type: superscript
     value: n
     explanation:
       es: "El exponente: cualquier número real constante."
       en: "The exponent: any constant real number."
+      pt: "O expoente: qualquer número real constante."
+      fr: "L'exposant : un nombre réel constant quelconque."
+      zh: "指数：任意常数实数。"
+      ja: "指数: 任意の定数実数。"
   - id: bracket-close
     type: operator
     value: "]"
     explanation:
       es: Cierra la expresión derivada.
       en: Closes the differentiated expression.
+      pt: Fecha a expressão derivada.
+      fr: Ferme l'expression dérivée.
+      zh: 结束求导的表达式。
+      ja: 微分された式の終わりを示す。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: 正確に等しい。
   - id: n2
     type: variable
     value: n
     explanation:
       es: El exponente original baja y multiplica al resultado.
       en: The original exponent drops down and multiplies the result.
+      pt: O expoente original desce e multiplica o resultado.
+      fr: L'exposant original redescend et multiplie le résultat.
+      zh: 原来的指数下降并乘以结果。
+      ja: 元の指数が前に出て、結果に掛けられる。
   - id: dot
     type: operator
     value: "·"
     explanation:
       es: Multiplicado por.
       en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
   - id: x2
     type: variable
     value: x
     explanation:
       es: La misma variable original.
       en: The same original variable.
+      pt: A mesma variável original.
+      fr: La même variable d'origine.
+      zh: 与原来相同的变量。
+      ja: 元と同じ変数。
   - id: n-minus-1
     type: superscript
     value: n−1
     explanation:
       es: El nuevo exponente, uno menos que el original.
       en: The new exponent, one less than the original.
+      pt: O novo expoente, uma unidade menor que o original.
+      fr: Le nouvel exposant, inférieur d'une unité à l'original.
+      zh: 新的指数，比原来小 1。
+      ja: 新しい指数で、元より1小さい。
 context:
   author:
     es: Isaac Newton y Gottfried Leibniz
     en: Isaac Newton and Gottfried Leibniz
+    pt: Isaac Newton e Gottfried Leibniz
+    fr: Isaac Newton et Gottfried Leibniz
+    zh: 艾萨克·牛顿和戈特弗里德·莱布尼茨
+    ja: アイザック・ニュートンとゴットフリート・ライプニッツ
   era:
     es: Inglaterra y Alemania, s. XVII · desarrollada en la década de 1660–1680
     en: England and Germany, 17th century · developed in the 1660s–1680s
+    pt: Inglaterra e Alemanha, séc. XVII · desenvolvida entre 1660 e 1680
+    fr: Angleterre et Allemagne, XVIIe siècle · développée entre 1660 et 1680
+    zh: 英格兰和德国，17世纪 · 于1660至1680年代发展
+    ja: イングランドとドイツ、17世紀・1660〜1680年代に発展
   history:
     es: >-
       La regla de la potencia surgió como una de las primeras herramientas del cálculo diferencial,
@@ -88,6 +144,31 @@ context:
       notation starting in 1675. The priority dispute between them and their followers lasted for
       decades and split the European mathematical community, though today both are recognized as
       having arrived at the result independently.
+    pt: >-
+      A regra da potência surgiu como uma das primeiras ferramentas do cálculo diferencial,
+      inventada de forma independente por Newton e Leibniz. Newton a desenvolveu por volta de
+      1665–1666, durante seu 'ano miraculoso' em Woolsthorpe, enquanto Leibniz chegou a resultados
+      equivalentes com sua própria notação a partir de 1675. A disputa de prioridade entre ambos e
+      seus seguidores durou décadas e dividiu a comunidade matemática europeia, embora hoje se
+      reconheça que os dois chegaram ao resultado por caminhos independentes.
+    fr: >-
+      La règle de la puissance est apparue comme l'un des premiers outils du calcul différentiel,
+      inventée indépendamment par Newton et Leibniz. Newton l'a développée vers 1665–1666 pendant
+      son 'année miraculeuse' à Woolsthorpe, tandis que Leibniz est parvenu à des résultats
+      équivalents avec sa propre notation à partir de 1675. La querelle de priorité entre eux et
+      leurs partisans dura des décennies et divisa la communauté mathématique européenne, bien
+      qu'aujourd'hui on reconnaisse que les deux sont parvenus au résultat de façon indépendante.
+    zh: >-
+      幂法则是微分学最早的工具之一，由牛顿和莱布尼茨各自独立发明。牛顿约在1665至1666年间，也就是他在
+      伍尔索普的"奇迹年"期间发展出这一法则，而莱布尼茨则从1675年起用自己的记号得出了等价的结果。两人
+      及其支持者之间的优先权之争持续了数十年，分裂了整个欧洲数学界，不过如今公认二人是各自独立得出这一
+      结果的。
+    ja: >-
+      べき乗の法則は微分学最初期の道具の一つとして登場し、ニュートンとライプニッツがそれぞれ独立に
+      発見した。ニュートンはウールスソープでの「驚異の年」と呼ばれる1665〜1666年頃にこれを発展させ、
+      一方ライプニッツは1675年以降、自身の記法で同等の結果に到達した。両者とその支持者の間の先取権
+      論争は数十年にわたり続きヨーロッパの数学界を分裂させたが、今日では両者が独立にこの結果へ到達した
+      と認められている。
   timeline:
     - year: c. 1665
       label:
@@ -97,6 +178,16 @@ context:
         en: >-
           Newton develops his method of fluxions at Woolsthorpe, including a rule equivalent to
           differentiating powers of x.
+        pt: >-
+          Newton desenvolve seu método das fluxões em Woolsthorpe, incluindo uma regra equivalente
+          para derivar potências de x.
+        fr: >-
+          Newton développe sa méthode des fluxions à Woolsthorpe, incluant une règle équivalente
+          pour dériver les puissances de x.
+        zh: >-
+          牛顿在伍尔索普发展出他的流数法，其中包含一条与对 x 的幂求导等价的法则。
+        ja: >-
+          ニュートンがウールスソープで流率法を発展させ、xのべき乗を微分するのと同等の規則を含んでいた。
     - year: "1675"
       label:
         es: >-
@@ -105,6 +196,16 @@ context:
         en: >-
           Leibniz introduces his own differential notation (dx, dy) and derives the power rule
           independently in Paris.
+        pt: >-
+          Leibniz introduz sua própria notação diferencial (dx, dy) e deriva a regra da potência de
+          forma independente em Paris.
+        fr: >-
+          Leibniz introduit sa propre notation différentielle (dx, dy) et établit la règle de la
+          puissance de façon indépendante à Paris.
+        zh: >-
+          莱布尼茨在巴黎引入了自己的微分记号（dx、dy），并独立推导出幂法则。
+        ja: >-
+          ライプニッツがパリで独自の微分記法（dx、dy）を導入し、独立にべき乗の法則を導いた。
     - year: "1704"
       label:
         es: >-
@@ -113,6 +214,16 @@ context:
         en: >-
           The priority dispute between Newtonians and Leibnizians over who invented calculus first
           breaks out publicly.
+        pt: >-
+          Estoura publicamente a disputa de prioridade entre newtonianos e leibnizianos sobre quem
+          inventou o cálculo primeiro.
+        fr: >-
+          La querelle de priorité entre newtoniens et leibniziens sur qui a inventé le calcul en
+          premier éclate publiquement.
+        zh: >-
+          牛顿派与莱布尼茨派之间关于谁先发明微积分的优先权之争公开爆发。
+        ja: >-
+          誰が先に微積分を発明したかをめぐるニュートン派とライプニッツ派の先取権論争が公に勃発する。
     - year: s. XIX
       label:
         es: >-
@@ -121,6 +232,16 @@ context:
         en: >-
           Mathematicians like Cauchy formalize the concept of the limit, giving the power rule a
           rigorous modern foundation.
+        pt: >-
+          Matemáticos como Cauchy formalizam o conceito de limite, dando à regra da potência uma
+          base rigorosa moderna.
+        fr: >-
+          Des mathématiciens comme Cauchy formalisent la notion de limite, donnant à la règle de la
+          puissance un fondement rigoureux moderne.
+        zh: >-
+          柯西等数学家将极限概念形式化，为幂法则提供了严格的现代基础。
+        ja: >-
+          コーシーらの数学者が極限の概念を形式化し、べき乗の法則に厳密な近代的基盤を与えた。
     - year: Hoy
       label:
         es: >-
@@ -129,10 +250,25 @@ context:
         en: >-
           It's the first differentiation rule taught in any calculus course, and the basis for more
           advanced rules like the product and chain rules.
+        pt: >-
+          É a primeira regra de derivação ensinada em qualquer curso de cálculo, e a base de regras
+          mais avançadas como a do produto e a da cadeia.
+        fr: >-
+          C'est la première règle de dérivation enseignée dans tout cours de calcul, et la base de
+          règles plus avancées comme celles du produit et de la chaîne.
+        zh: >-
+          它是任何微积分课程中最先教授的求导法则，也是乘积法则和链式法则等更高级法则的基础。
+        ja: >-
+          あらゆる微積分の授業で最初に教えられる微分法則であり、積の法則や連鎖律といったより高度な
+          法則の基礎となっている。
   useCases:
     - title:
         es: Física del movimiento
         en: Physics of motion
+        pt: Física do movimento
+        fr: Physique du mouvement
+        zh: 运动物理学
+        ja: 運動の物理学
       description:
         es: >-
           Derivar la posición respecto al tiempo, expresada como potencias de t, da la velocidad y la
@@ -140,9 +276,23 @@ context:
         en: >-
           Differentiating position with respect to time, expressed as powers of t, gives an object's
           velocity and acceleration.
+        pt: >-
+          Derivar a posição em relação ao tempo, expressa como potências de t, dá a velocidade e a
+          aceleração de um objeto.
+        fr: >-
+          Dériver la position par rapport au temps, exprimée en puissances de t, donne la vitesse et
+          l'accélération d'un objet.
+        zh: >-
+          对以 t 的幂表示的位置关于时间求导，可以得到物体的速度和加速度。
+        ja: >-
+          tのべき乗で表された位置を時間で微分すると、物体の速度と加速度が得られる。
     - title:
         es: Optimización económica
         en: Economic optimization
+        pt: Otimização econômica
+        fr: Optimisation économique
+        zh: 经济优化
+        ja: 経済最適化
       description:
         es: >-
           Empresas derivan funciones de costo e ingreso, casi siempre polinomios, para encontrar
@@ -150,9 +300,23 @@ context:
         en: >-
           Businesses differentiate cost and revenue functions, almost always polynomials, to find
           optimal production levels.
+        pt: >-
+          Empresas derivam funções de custo e receita, quase sempre polinomiais, para encontrar
+          níveis de produção ótimos.
+        fr: >-
+          Les entreprises dérivent des fonctions de coût et de revenu, presque toujours
+          polynomiales, pour trouver des niveaux de production optimaux.
+        zh: >-
+          企业对成本和收入函数（几乎都是多项式）求导，以找出最优的生产水平。
+        ja: >-
+          企業はほとんどの場合多項式であるコスト関数と収益関数を微分し、最適な生産量を求める。
     - title:
         es: Aprendizaje automático
         en: Machine learning
+        pt: Aprendizado de máquina
+        fr: Apprentissage automatique
+        zh: 机器学习
+        ja: 機械学習
       description:
         es: >-
           El descenso de gradiente, que entrena redes neuronales, depende de derivar funciones de
@@ -160,16 +324,47 @@ context:
         en: >-
           Gradient descent, which trains neural networks, relies on differentiating error functions
           that include power terms.
+        pt: >-
+          O gradiente descendente, que treina redes neurais, depende de derivar funções de erro que
+          incluem termos potenciais.
+        fr: >-
+          La descente de gradient, qui entraîne les réseaux de neurones, repose sur la dérivation de
+          fonctions d'erreur incluant des termes en puissance.
+        zh: >-
+          用于训练神经网络的梯度下降法，依赖于对包含幂次项的误差函数求导。
+        ja: >-
+          ニューラルネットワークを学習させる勾配降下法は、べき乗の項を含む誤差関数を微分することに
+          依存している。
   example:
     title:
       es: Derivar x⁴
       en: Differentiating x⁴
+      pt: Derivando x⁴
+      fr: Dériver x⁴
+      zh: 对 x⁴ 求导
+      ja: x⁴を微分する
     lines:
       - es: f(x) = x⁴
         en: f(x) = x⁴
+        pt: f(x) = x⁴
+        fr: f(x) = x⁴
+        zh: f(x) = x⁴
+        ja: f(x) = x⁴
       - es: n = 4
         en: n = 4
+        pt: n = 4
+        fr: n = 4
+        zh: n = 4
+        ja: n = 4
       - es: f'(x) = n · x^(n−1)
         en: f'(x) = n · x^(n−1)
+        pt: f'(x) = n · x^(n−1)
+        fr: f'(x) = n · x^(n−1)
+        zh: f'(x) = n · x^(n−1)
+        ja: f'(x) = n · x^(n−1)
       - es: f'(x) = 4 · x³
         en: f'(x) = 4 · x³
+        pt: f'(x) = 4 · x³
+        fr: f'(x) = 4 · x³
+        zh: f'(x) = 4 · x³
+        ja: f'(x) = 4 · x³

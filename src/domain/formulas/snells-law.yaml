@@ -2,9 +2,17 @@ id: snells-law
 title:
   es: Ley de Snell
   en: Snell's Law
+  pt: Lei de Snell
+  fr: Loi de Snell
+  zh: 斯涅尔定律
+  ja: スネルの法則
 category:
   es: Física clásica
   en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
 nodes:
   - id: n1
     type: variable
@@ -12,97 +20,165 @@ nodes:
     explanation:
       es: El índice de refracción del primer medio, por ejemplo el aire.
       en: The refractive index of the first medium, e.g. air.
+      pt: O índice de refração do primeiro meio, por exemplo o ar.
+      fr: L'indice de réfraction du premier milieu, par exemple l'air.
+      zh: 第一种介质的折射率，例如空气。
+      ja: 第一の媒質（例えば空気）の屈折率。
   - id: n1-sub
     type: superscript
     value: "1"
     explanation:
       es: "El subíndice 1: indica el medio de origen del rayo, antes de refractarse."
       en: "Subscript 1: marks the medium the ray comes from, before refracting."
+      pt: "O subíndice 1: indica o meio de origem do raio, antes de se refratar."
+      fr: "L'indice 1 : indique le milieu d'origine du rayon, avant réfraction."
+      zh: "下标1：表示光线折射前所处的原始介质。"
+      ja: "下付き1：光線が屈折する前に存在していた媒質を示す。"
   - id: sin-1
     type: operator
     value: sin
     explanation:
       es: La función seno aplicada al ángulo de incidencia.
       en: The sine function applied to the angle of incidence.
+      pt: A função seno aplicada ao ângulo de incidência.
+      fr: La fonction sinus appliquée à l'angle d'incidence.
+      zh: 应用于入射角的正弦函数。
+      ja: 入射角に適用される正弦関数。
   - id: paren-open-1
     type: operator
     value: "("
     explanation:
       es: Abre el argumento del seno.
       en: Opens the sine function's argument.
+      pt: Abre o argumento da função seno.
+      fr: Ouvre l'argument de la fonction sinus.
+      zh: 正弦函数参数的起始括号。
+      ja: 正弦関数の引数を開く括弧。
   - id: theta-1
     type: variable
     value: θ
     explanation:
       es: El ángulo de incidencia, medido desde la normal a la superficie.
       en: The angle of incidence, measured from the surface's normal.
+      pt: O ângulo de incidência, medido a partir da normal à superfície.
+      fr: L'angle d'incidence, mesuré par rapport à la normale à la surface.
+      zh: 入射角，从表面法线方向量起。
+      ja: 入射角。表面の法線から測る。
   - id: theta-1-sub
     type: superscript
     value: "1"
     explanation:
       es: "El subíndice 1: el ángulo del rayo antes de cruzar la superficie."
       en: "Subscript 1: the angle of the ray before crossing the surface."
+      pt: "O subíndice 1: o ângulo do raio antes de cruzar a superfície."
+      fr: "L'indice 1 : l'angle du rayon avant de traverser la surface."
+      zh: "下标1：光线穿过表面之前的角度。"
+      ja: "下付き1：光線が表面を通過する前の角度。"
   - id: paren-close-1
     type: operator
     value: ")"
     explanation:
       es: Cierra el argumento del seno.
       en: Closes the sine function's argument.
+      pt: Fecha o argumento da função seno.
+      fr: Ferme l'argument de la fonction sinus.
+      zh: 正弦函数参数的结束括号。
+      ja: 正弦関数の引数を閉じる括弧。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 精确地等于。
+      ja: 正確に等しい。
   - id: n2
     type: variable
     value: n
     explanation:
       es: El índice de refracción del segundo medio, por ejemplo el agua.
       en: The refractive index of the second medium, e.g. water.
+      pt: O índice de refração do segundo meio, por exemplo a água.
+      fr: L'indice de réfraction du second milieu, par exemple l'eau.
+      zh: 第二种介质的折射率，例如水。
+      ja: 第二の媒質（例えば水）の屈折率。
   - id: n2-sub
     type: superscript
     value: "2"
     explanation:
       es: "El subíndice 2: el medio al que entra la luz."
       en: "Subscript 2: the medium the light enters."
+      pt: "O subíndice 2: o meio no qual a luz entra."
+      fr: "L'indice 2 : le milieu dans lequel la lumière pénètre."
+      zh: "下标2：光进入的介质。"
+      ja: "下付き2：光が入っていく媒質。"
   - id: sin-2
     type: operator
     value: sin
     explanation:
       es: La misma función seno, ahora sobre el ángulo de refracción.
       en: The same sine function, now over the angle of refraction.
+      pt: A mesma função seno, agora sobre o ângulo de refração.
+      fr: La même fonction sinus, maintenant sur l'angle de réfraction.
+      zh: 同一个正弦函数，现在作用于折射角。
+      ja: 同じ正弦関数が、今度は屈折角に適用される。
   - id: paren-open-2
     type: operator
     value: "("
     explanation:
       es: Abre el argumento del seno.
       en: Opens the sine function's argument.
+      pt: Abre o argumento da função seno.
+      fr: Ouvre l'argument de la fonction sinus.
+      zh: 正弦函数参数的起始括号。
+      ja: 正弦関数の引数を開く括弧。
   - id: theta-2
     type: variable
     value: θ
     explanation:
       es: El ángulo de refracción, hacia donde se desvía el rayo al cambiar de medio.
       en: The angle of refraction, the direction the ray bends when changing medium.
+      pt: O ângulo de refração, a direção para a qual o raio se desvia ao mudar de meio.
+      fr: L'angle de réfraction, la direction vers laquelle le rayon se courbe en changeant de milieu.
+      zh: 折射角，即光线在介质变化时偏折的方向。
+      ja: 屈折角。媒質が変わる際に光線が曲がる方向。
   - id: theta-2-sub
     type: superscript
     value: "2"
     explanation:
       es: "El subíndice 2: el ángulo del rayo ya refractado."
       en: "Subscript 2: the angle of the already-refracted ray."
+      pt: "O subíndice 2: o ângulo do raio já refratado."
+      fr: "L'indice 2 : l'angle du rayon déjà réfracté."
+      zh: "下标2：已折射光线的角度。"
+      ja: "下付き2：すでに屈折した光線の角度。"
   - id: paren-close-2
     type: operator
     value: ")"
     explanation:
       es: Cierra el argumento del seno.
       en: Closes the sine function's argument.
+      pt: Fecha o argumento da função seno.
+      fr: Ferme l'argument de la fonction sinus.
+      zh: 正弦函数参数的结束括号。
+      ja: 正弦関数の引数を閉じる括弧。
 context:
   author:
     es: Ibn Sahl, Harriot, Snellius y Descartes
     en: Ibn Sahl, Harriot, Snellius, and Descartes
+    pt: Ibn Sahl, Harriot, Snellius e Descartes
+    fr: Ibn Sahl, Harriot, Snellius et Descartes
+    zh: 伊本·萨赫勒、哈里奥特、斯涅尔与笛卡儿
+    ja: イブン・サフル、ハリオット、スネル、デカルト
   era:
     es: Bagdad, Inglaterra, Países Bajos, Francia · s. X–XVII
     en: Baghdad, England, Netherlands, France · 10th–17th c.
+    pt: Bagdá, Inglaterra, Países Baixos, França · séc. X–XVII
+    fr: Bagdad, Angleterre, Pays-Bas, France · Xe–XVIIe s.
+    zh: 巴格达、英格兰、荷兰、法国 · 10至17世纪
+    ja: バグダード、イングランド、オランダ、フランス · 10〜17世紀
   history:
     es: >-
       La prioridad de esta ley es genuinamente disputada. El matemático Ibn Sahl la describió
@@ -119,6 +195,34 @@ context:
       Snellius derived it in 1621, also unpublished. René Descartes was first to publish it, in
       1637, in La Dioptrique — hence its French name, 'Descartes' law.' Soon after, Pierre de
       Fermat derived it independently from his principle of least time.
+    pt: >-
+      A prioridade desta lei é genuinamente disputada. O matemático Ibn Sahl a descreveu
+      geometricamente por volta do ano 984, em Bagdá, em um tratado sobre lentes. O inglês Thomas
+      Harriot chegou ao mesmo resultado em 1602, mas não o publicou. O neerlandês Willebrord
+      Snellius a deduziu em 1621, também sem publicá-la. René Descartes foi o primeiro a publicá-la,
+      em 1637, em La Dioptrique — por isso na França ela é chamada de 'lei de Descartes'. Pouco
+      depois, Pierre de Fermat a derivou de forma independente a partir de seu princípio do tempo
+      mínimo.
+    fr: >-
+      L'antériorité de cette loi est réellement disputée. Le mathématicien Ibn Sahl la décrivit
+      géométriquement vers l'an 984, à Bagdad, dans un traité sur les lentilles. L'Anglais Thomas
+      Harriot parvint au même résultat en 1602 mais ne le publia jamais. Le Néerlandais Willebrord
+      Snellius la déduisit en 1621, également sans la publier. René Descartes fut le premier à la
+      publier, en 1637, dans La Dioptrique — d'où son nom français de 'loi de Descartes'. Peu après,
+      Pierre de Fermat la déduisit indépendamment à partir de son principe du temps minimal.
+    zh: >-
+      这条定律的发现优先权确实存在争议。数学家伊本·萨赫勒大约在公元984年在巴格达的一篇关于透镜的论文中，
+      以几何方式描述了这条规律。英国人托马斯·哈里奥特于1602年得出同样的结果，但未曾发表。
+      荷兰人威理博·斯涅尔于1621年推导出该定律，同样未予发表。勒内·笛卡儿是第一个将其发表的人，
+      1637年发表于《屈光学》——因此在法国它被称为"笛卡儿定律"。不久之后，皮埃尔·德·费马
+      从他的最短时间原理出发独立推导出了这条定律。
+    ja: >-
+      この法則の発見の先取権は本当に議論の的となっている。数学者イブン・サフルは西暦984年頃、
+      バグダードでレンズに関する論文の中でこれを幾何学的に記述した。イギリス人トマス・ハリオットは
+      1602年に同じ結果に到達したが、発表しなかった。オランダ人ウィレブロルト・スネルは1621年に
+      これを導いたが、これも未発表であった。ルネ・デカルトが1637年、著書『屈折光学』で
+      最初に発表した——フランスでこの法則が「デカルトの法則」と呼ばれる所以である。
+      その後まもなく、ピエール・ド・フェルマーが最小時間の原理から独立にこれを導出した。
   timeline:
     - year: c. 984
       label:
@@ -128,10 +232,24 @@ context:
         en: >-
           Ibn Sahl geometrically describes the law of refraction in a treatise on lenses and
           burning mirrors.
+        pt: >-
+          Ibn Sahl descreve a lei da refração de forma geométrica em um tratado sobre lentes e
+          espelhos ustórios.
+        fr: >-
+          Ibn Sahl décrit géométriquement la loi de la réfraction dans un traité sur les lentilles
+          et les miroirs ardents.
+        zh: >-
+          伊本·萨赫勒在一篇关于透镜和聚光镜的论文中以几何方式描述了折射定律。
+        ja: >-
+          イブン・サフルがレンズと燃焼鏡に関する論文の中で、屈折の法則を幾何学的に記述する。
     - year: "1602"
       label:
         es: Thomas Harriot deduce la misma relación en Inglaterra, pero nunca la publica.
         en: Thomas Harriot derives the same relationship in England, but never publishes it.
+        pt: Thomas Harriot deduz a mesma relação na Inglaterra, mas nunca a publica.
+        fr: Thomas Harriot déduit la même relation en Angleterre, mais ne la publie jamais.
+        zh: 托马斯·哈里奥特在英格兰推导出同样的关系，但从未发表。
+        ja: トマス・ハリオットがイングランドで同じ関係を導くが、決して発表しなかった。
     - year: "1621"
       label:
         es: >-
@@ -140,6 +258,16 @@ context:
         en: >-
           Willebrord Snellius reaches the same result in the Netherlands; it becomes known only
           after his death.
+        pt: >-
+          Willebrord Snellius chega ao mesmo resultado nos Países Baixos; isso só se torna
+          conhecido após sua morte.
+        fr: >-
+          Willebrord Snellius parvient au même résultat aux Pays-Bas ; cela ne se sait qu'après
+          sa mort.
+        zh: >-
+          威理博·斯涅尔在荷兰得到同样的结果；这一发现直到他去世后才为人所知。
+        ja: >-
+          ウィレブロルト・スネルがオランダで同じ結果に到達するが、それが知られるのは彼の死後のことである。
     - year: "1637"
       label:
         es: >-
@@ -148,18 +276,40 @@ context:
         en: >-
           René Descartes is first to publish it, in the La Dioptrique appendix to his Discourse
           on the Method.
+        pt: >-
+          René Descartes é o primeiro a publicá-la, no apêndice La Dioptrique de seu Discurso do
+          método.
+        fr: >-
+          René Descartes est le premier à la publier, dans l'appendice La Dioptrique de son
+          Discours de la méthode.
+        zh: >-
+          勒内·笛卡儿在其《方法论》的附录《屈光学》中率先发表了这条定律。
+        ja: >-
+          ルネ・デカルトが『方法序説』の付録『屈折光学』の中で、最初にこれを発表する。
     - year: "1662"
       label:
         es: Pierre de Fermat la deriva de forma independiente a partir de su principio del tiempo mínimo.
         en: Pierre de Fermat independently derives it from his principle of least time.
+        pt: Pierre de Fermat a deriva de forma independente a partir de seu princípio do tempo mínimo.
+        fr: Pierre de Fermat la déduit indépendamment à partir de son principe du temps minimal.
+        zh: 皮埃尔·德·费马从他的最短时间原理出发独立推导出这条定律。
+        ja: ピエール・ド・フェルマーが最小時間の原理から独立にこれを導出する。
     - year: Hoy
       label:
         es: Es la base del diseño de lentes, cámaras, fibra óptica y cualquier instrumento que dobla la luz.
         en: It underlies the design of lenses, cameras, fiber optics, and any instrument that bends light.
+        pt: É a base do design de lentes, câmeras, fibra óptica e qualquer instrumento que curva a luz.
+        fr: Elle sous-tend la conception des lentilles, appareils photo, fibres optiques et tout instrument courbant la lumière.
+        zh: 它是镜头、相机、光纤以及任何弯曲光线的仪器设计的基础。
+        ja: レンズ、カメラ、光ファイバー、そして光を曲げるあらゆる装置の設計の基礎となっている。
   useCases:
     - title:
         es: Diseño de lentes
         en: Lens design
+        pt: Design de lentes
+        fr: Conception de lentilles
+        zh: 镜头设计
+        ja: レンズ設計
       description:
         es: >-
           Cámaras, lentes de anteojos y microscopios se diseñan calculando cómo se refracta la
@@ -167,9 +317,23 @@ context:
         en: >-
           Cameras, eyeglass lenses, and microscopes are designed by calculating how light
           refracts at each glass surface.
+        pt: >-
+          Câmeras, lentes de óculos e microscópios são projetados calculando como a luz se
+          refrata em cada superfície de vidro.
+        fr: >-
+          Appareils photo, verres de lunettes et microscopes sont conçus en calculant comment la
+          lumière se réfracte à chaque surface de verre.
+        zh: >-
+          相机、眼镜镜片和显微镜都是通过计算光线在每个玻璃表面的折射方式来设计的。
+        ja: >-
+          カメラ、眼鏡レンズ、顕微鏡は、光がガラスの各表面でどのように屈折するかを計算して設計される。
     - title:
         es: Fibra óptica
         en: Fiber optics
+        pt: Fibra óptica
+        fr: Fibre optique
+        zh: 光纤
+        ja: 光ファイバー
       description:
         es: >-
           Las telecomunicaciones dependen de la reflexión total interna, un caso límite de esta
@@ -177,28 +341,79 @@ context:
         en: >-
           Telecommunications rely on total internal reflection, a limiting case of this law, to
           guide light through kilometers of fiber.
+        pt: >-
+          As telecomunicações dependem da reflexão total interna, um caso limite desta lei, para
+          guiar a luz por quilômetros de fibra.
+        fr: >-
+          Les télécommunications reposent sur la réflexion totale interne, un cas limite de cette
+          loi, pour guider la lumière sur des kilomètres de fibre.
+        zh: >-
+          电信通信依赖全内反射——这条定律的一个极限情形——将光引导通过数千米长的光纤。
+        ja: >-
+          通信はこの法則の極限的なケースである全反射を利用し、数キロメートルに及ぶ
+          ファイバー内で光を導いている。
     - title:
         es: Instrumentos ópticos
         en: Optical instruments
+        pt: Instrumentos ópticos
+        fr: Instruments optiques
+        zh: 光学仪器
+        ja: 光学機器
       description:
         es: Telescopios y microscopios corrigen aberraciones combinando lentes de distintos índices de refracción.
         en: Telescopes and microscopes correct aberrations by combining lenses of different refractive indices.
+        pt: Telescópios e microscópios corrigem aberrações combinando lentes de diferentes índices de refração.
+        fr: Télescopes et microscopes corrigent les aberrations en combinant des lentilles d'indices de réfraction différents.
+        zh: 望远镜和显微镜通过组合不同折射率的镜片来校正像差。
+        ja: 望遠鏡や顕微鏡は、異なる屈折率のレンズを組み合わせることで収差を補正する。
   example:
     title:
       es: Luz del aire al agua
       en: Light from air into water
+      pt: Luz do ar para a água
+      fr: Lumière de l'air vers l'eau
+      zh: 光从空气进入水中
+      ja: 空気から水へ入射する光
     lines:
       - es: n1 = 1.00 (aire)
         en: n1 = 1.00 (air)
+        pt: n1 = 1,00 (ar)
+        fr: n1 = 1,00 (air)
+        zh: n1 = 1.00（空气）
+        ja: n1 = 1.00（空気）
       - es: n2 = 1.33 (agua)
         en: n2 = 1.33 (water)
+        pt: n2 = 1,33 (água)
+        fr: n2 = 1,33 (eau)
+        zh: n2 = 1.33（水）
+        ja: n2 = 1.33（水）
       - es: θ1 = 30°
         en: θ1 = 30°
+        pt: θ1 = 30°
+        fr: θ1 = 30°
+        zh: θ1 = 30°
+        ja: θ1 = 30°
       - es: n1 · sen(θ1) = n2 · sen(θ2)
         en: n1 · sin(θ1) = n2 · sin(θ2)
+        pt: n1 · sen(θ1) = n2 · sen(θ2)
+        fr: n1 · sin(θ1) = n2 · sin(θ2)
+        zh: n1 · sin(θ1) = n2 · sin(θ2)
+        ja: n1 · sin(θ1) = n2 · sin(θ2)
       - es: 1.00 · 0.5 = 1.33 · sen(θ2)
         en: 1.00 · 0.5 = 1.33 · sin(θ2)
+        pt: 1,00 · 0,5 = 1,33 · sen(θ2)
+        fr: 1,00 · 0,5 = 1,33 · sin(θ2)
+        zh: 1.00 · 0.5 = 1.33 · sin(θ2)
+        ja: 1.00 · 0.5 = 1.33 · sin(θ2)
       - es: sen(θ2) = 0.5 / 1.33 ≈ 0.376
         en: sin(θ2) = 0.5 / 1.33 ≈ 0.376
+        pt: sen(θ2) = 0,5 / 1,33 ≈ 0,376
+        fr: sin(θ2) = 0,5 / 1,33 ≈ 0,376
+        zh: sin(θ2) = 0.5 / 1.33 ≈ 0.376
+        ja: sin(θ2) = 0.5 / 1.33 ≈ 0.376
       - es: θ2 ≈ 22.1°
         en: θ2 ≈ 22.1°
+        pt: θ2 ≈ 22,1°
+        fr: θ2 ≈ 22,1°
+        zh: θ2 ≈ 22.1°
+        ja: θ2 ≈ 22.1°

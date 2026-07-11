@@ -2,9 +2,17 @@ id: herons-formula
 title:
   es: Fórmula de Herón
   en: Heron's Formula
+  pt: Fórmula de Heron
+  fr: Formule de Héron
+  zh: 海伦公式
+  ja: ヘロンの公式
 category:
   es: Geometría
   en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
 nodes:
   - id: area
     type: variable
@@ -12,49 +20,85 @@ nodes:
     explanation:
       es: El área del triángulo, calculada únicamente a partir de las longitudes de sus tres lados.
       en: The triangle's area, calculated solely from the lengths of its three sides.
+      pt: A área do triângulo, calculada unicamente a partir dos comprimentos de seus três lados.
+      fr: L'aire du triangle, calculée uniquement à partir des longueurs de ses trois côtés.
+      zh: 三角形的面积,仅通过其三条边的长度计算得出。
+      ja: 三角形の面積。3辺の長さのみから計算される。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es igual a.
       en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
   - id: sqrt
     type: operator
     value: √
     explanation:
       es: Raíz cuadrada de todo el producto que sigue.
       en: Square root of the whole product that follows.
+      pt: Raiz quadrada de todo o produto que segue.
+      fr: Racine carrée de tout le produit qui suit.
+      zh: 后面整个乘积的平方根。
+      ja: 続く積全体の平方根。
   - id: s
     type: variable
     value: s
     explanation:
       es: "El semiperímetro: la mitad de la suma de los tres lados del triángulo, s = (a+b+c)/2."
       en: "The semi-perimeter: half the sum of the triangle's three sides, s = (a+b+c)/2."
+      pt: "O semiperímetro: metade da soma dos três lados do triângulo, s = (a+b+c)/2."
+      fr: "Le demi-périmètre : la moitié de la somme des trois côtés du triangle, s = (a+b+c)/2."
+      zh: "半周长:三角形三条边之和的一半,s = (a+b+c)/2。"
+      ja: "半周長:三角形の3辺の和の半分。s = (a+b+c)/2。"
   - id: s-minus-a
     type: variable
     value: (s−a)
     explanation:
       es: El semiperímetro menos el lado a.
       en: The semi-perimeter minus side a.
+      pt: O semiperímetro menos o lado a.
+      fr: Le demi-périmètre moins le côté a.
+      zh: 半周长减去边a。
+      ja: 半周長から辺aを引いたもの。
   - id: s-minus-b
     type: variable
     value: (s−b)
     explanation:
       es: El semiperímetro menos el lado b.
       en: The semi-perimeter minus side b.
+      pt: O semiperímetro menos o lado b.
+      fr: Le demi-périmètre moins le côté b.
+      zh: 半周长减去边b。
+      ja: 半周長から辺bを引いたもの。
   - id: s-minus-c
     type: variable
     value: (s−c)
     explanation:
       es: El semiperímetro menos el lado c, el último factor bajo la raíz.
       en: The semi-perimeter minus side c, the last factor under the root.
+      pt: O semiperímetro menos o lado c, o último fator sob a raiz.
+      fr: Le demi-périmètre moins le côté c, le dernier facteur sous la racine.
+      zh: 半周长减去边c,是根号下的最后一个因子。
+      ja: 半周長から辺cを引いたもの。根号内の最後の因子。
 context:
   author:
     es: Herón de Alejandría
     en: Heron of Alexandria
+    pt: Heron de Alexandria
+    fr: Héron d'Alexandrie
+    zh: 亚历山大的海伦
+    ja: アレクサンドリアのヘロン
   era:
     es: Alejandría, Egipto romano, s. I d.C. · Metrica, c. 60 d.C.
     en: Alexandria, Roman Egypt, 1st century AD · Metrica, c. 60 AD
+    pt: Alexandria, Egito romano, séc. I d.C. · Metrica, c. 60 d.C.
+    fr: Alexandrie, Égypte romaine, Ier siècle apr. J.-C. · Metrica, v. 60 apr. J.-C.
+    zh: 亚历山大,罗马埃及,公元1世纪 · 《测量论》约公元60年
+    ja: アレクサンドリア、ローマ支配下のエジプト、1世紀 · 『測量術』紀元60年頃
   history:
     es: >-
       Herón de Alejandría fue un matemático e ingeniero que trabajó en el Egipto romano, conocido por
@@ -74,6 +118,41 @@ context:
       have been known to Archimedes centuries earlier, but Heron is the one who left us the first
       recorded proof. Its elegance lies in requiring no knowledge of any angle or height of the
       triangle, only its three sides.
+    pt: >-
+      Heron de Alexandria foi um matemático e engenheiro que trabalhou no Egito romano, conhecido por
+      suas invenções mecânicas —como o eolípila, precursor da turbina a vapor— além de suas
+      contribuições à geometria. Sua fórmula para a área de um triângulo, calculada apenas a partir
+      dos comprimentos de seus três lados, aparece demonstrada em sua obra Metrica, redescoberta
+      somente em 1896 em um manuscrito de Constantinopla, embora também seja citada em textos
+      anteriores dele. Alguns historiadores apontam que o resultado talvez já fosse conhecido por
+      Arquimedes séculos antes, mas foi Heron quem nos deixou a primeira demonstração registrada. Sua
+      elegância está em não exigir o conhecimento de nenhum ângulo ou altura do triângulo, apenas seus
+      três lados.
+    fr: >-
+      Héron d'Alexandrie était un mathématicien et ingénieur travaillant en Égypte romaine, connu pour
+      ses inventions mécaniques —comme l'éolipyle, précurseur de la turbine à vapeur— ainsi que pour
+      ses contributions à la géométrie. Sa formule donnant l'aire d'un triangle à partir uniquement
+      des longueurs de ses trois côtés est démontrée dans son ouvrage Metrica, redécouvert seulement
+      en 1896 dans un manuscrit trouvé à Constantinople, bien qu'elle soit également citée dans des
+      textes antérieurs de sa main. Certains historiens notent que le résultat aurait pu être connu
+      d'Archimède des siècles plus tôt, mais c'est Héron qui nous a laissé la première preuve
+      enregistrée. Son élégance tient au fait qu'elle ne nécessite la connaissance d'aucun angle ni
+      d'aucune hauteur du triangle, seulement de ses trois côtés.
+    zh: >-
+      亚历山大的海伦是一位在罗马统治下的埃及工作的数学家兼工程师,他以机械发明著称——例如汽转球(eolípila),
+      是蒸汽轮机的先驱——同时也在几何学方面有所贡献。他那条仅凭三角形三边长度就能求出面积的公式,
+      被证明记载于他的著作《测量论》(Metrica)中,该书直到1896年才在君士坦丁堡的一份手稿中被重新发现,
+      不过在他更早的文献中也曾被引用过。一些历史学家指出,这个结果或许早在几个世纪前就已被阿基米德知晓,
+      但正是海伦为我们留下了第一份有记载的证明。这个公式的优雅之处在于,它不需要知道三角形的任何角度或高,
+      只需要三条边。
+    ja: >-
+      アレクサンドリアのヘロンは、ローマ支配下のエジプトで活動した数学者・技術者であり、蒸気タービンの
+      先駆けとされるアイオロスの球(エオリパイル)などの機械的発明で知られるとともに、幾何学にも貢献した。
+      三角形の三辺の長さのみから面積を求める彼の公式は、著書『測量術』(Metrica)の中で証明されているが、
+      この書物は1896年になってコンスタンティノープルで発見された写本によって再発見されたものであり、
+      それより前の彼自身の著作にも引用が見られる。一部の歴史家は、この結果が何世紀も前にアルキメデスに
+      すでに知られていた可能性を指摘しているが、記録に残る最初の証明を残したのはヘロンである。
+      この公式の優雅さは、三角形の角度や高さを一切知る必要がなく、三辺の長さだけで済む点にある。
   timeline:
     - year: c. 60 d.C.
       label:
@@ -83,6 +162,16 @@ context:
         en: >-
           Heron of Alexandria proves the formula in his treatise Metrica, calculating areas from only
           the three sides.
+        pt: >-
+          Heron de Alexandria demonstra a fórmula em seu tratado Metrica, calculando áreas apenas a
+          partir dos três lados.
+        fr: >-
+          Héron d'Alexandrie démontre la formule dans son traité Metrica, calculant les aires à
+          partir des seuls trois côtés.
+        zh: >-
+          亚历山大的海伦在其论著《测量论》中证明了这一公式,仅凭三条边就能计算出面积。
+        ja: >-
+          アレクサンドリアのヘロンが論文『測量術』でこの公式を証明し、三辺のみから面積を計算する。
     - year: "1896"
       label:
         es: >-
@@ -91,10 +180,24 @@ context:
         en: >-
           The Metrica manuscript, lost for centuries, is rediscovered in Constantinople, confirming
           Heron's authorship.
+        pt: >-
+          O manuscrito de Metrica, perdido por séculos, é redescoberto em Constantinopla, confirmando
+          a autoria de Heron.
+        fr: >-
+          Le manuscrit de Metrica, perdu pendant des siècles, est redécouvert à Constantinople,
+          confirmant la paternité de Héron.
+        zh: >-
+          失传数百年的《测量论》手稿在君士坦丁堡被重新发现,证实了这一公式确为海伦所作。
+        ja: >-
+          何世紀も失われていた『測量術』の写本がコンスタンティノープルで再発見され、ヘロンの著作であることが確認される。
     - year: s. IX–X
       label:
         es: Matemáticos árabes como Abu'l-Wafa transmiten y amplían el resultado en sus propios tratados.
         en: Arab mathematicians like Abu'l-Wafa transmit and expand the result in their own treatises.
+        pt: Matemáticos árabes como Abu'l-Wafa transmitem e ampliam o resultado em seus próprios tratados.
+        fr: Des mathématiciens arabes comme Abu'l-Wafa transmettent et développent le résultat dans leurs propres traités.
+        zh: 阿布瓦法等阿拉伯数学家在他们自己的论著中传承并扩展了这一结果。
+        ja: アブル・ワファーらアラブの数学者がこの結果を自らの論考で伝え、さらに発展させる。
     - year: Hoy
       label:
         es: >-
@@ -103,10 +206,25 @@ context:
         en: >-
           Used in surveying, computer graphics, and computational geometry algorithms to calculate
           areas without measuring angles.
+        pt: >-
+          É usada em topografia, computação gráfica e algoritmos de geometria computacional para
+          calcular áreas sem medir ângulos.
+        fr: >-
+          Utilisée en topographie, en infographie et dans les algorithmes de géométrie algorithmique
+          pour calculer des aires sans mesurer d'angles.
+        zh: >-
+          被用于测绘学、计算机图形学以及计算几何算法中,在不测量角度的情况下计算面积。
+        ja: >-
+          測量学、コンピュータグラフィックス、計算幾何学のアルゴリズムにおいて、角度を測ることなく
+          面積を計算するために使われている。
   useCases:
     - title:
         es: Topografía y catastro
         en: Surveying and land registry
+        pt: Topografia e cadastro
+        fr: Topographie et cadastre
+        zh: 测绘与地籍
+        ja: 測量と地籍
       description:
         es: >-
           Calcula el área de parcelas triangulares de terreno midiendo solo la longitud de sus lados
@@ -114,9 +232,23 @@ context:
         en: >-
           Calculates the area of triangular land parcels by measuring only the length of their sides
           with a tape measure.
+        pt: >-
+          Calcula a área de parcelas triangulares de terreno medindo apenas o comprimento de seus
+          lados com uma trena.
+        fr: >-
+          Permet de calculer l'aire de parcelles triangulaires en mesurant uniquement la longueur de
+          leurs côtés au ruban.
+        zh: >-
+          只需用卷尺测量边长,就能计算三角形地块的面积。
+        ja: >-
+          巻尺で辺の長さを測るだけで、三角形の土地区画の面積を計算できる。
     - title:
         es: Gráficos por computadora
         en: Computer graphics
+        pt: Computação gráfica
+        fr: Infographie
+        zh: 计算机图形学
+        ja: コンピュータグラフィックス
       description:
         es: >-
           Calcula áreas de triángulos en mallas 3D para renderizado, física de partículas y detección
@@ -124,9 +256,23 @@ context:
         en: >-
           Calculates areas of triangles in 3D meshes for rendering, particle physics, and collision
           detection.
+        pt: >-
+          Calcula áreas de triângulos em malhas 3D para renderização, física de partículas e detecção
+          de colisões.
+        fr: >-
+          Calcule les aires des triangles dans les maillages 3D pour le rendu, la physique des
+          particules et la détection de collisions.
+        zh: >-
+          用于计算3D网格中三角形的面积,应用于渲染、粒子物理和碰撞检测。
+        ja: >-
+          レンダリング、粒子物理、衝突判定のために、3Dメッシュ内の三角形の面積を計算する。
     - title:
         es: Sistemas de información geográfica
         en: Geographic information systems
+        pt: Sistemas de informação geográfica
+        fr: Systèmes d'information géographique
+        zh: 地理信息系统
+        ja: 地理情報システム
       description:
         es: >-
           Estima áreas de regiones irregulares descomponiéndolas en triángulos y sumando sus áreas
@@ -134,24 +280,68 @@ context:
         en: >-
           Estimates areas of irregular regions by decomposing them into triangles and summing their
           areas via the formula.
+        pt: >-
+          Estima áreas de regiões irregulares decompondo-as em triângulos e somando suas áreas por
+          meio da fórmula.
+        fr: >-
+          Estime les aires de régions irrégulières en les décomposant en triangles et en additionnant
+          leurs aires grâce à la formule.
+        zh: >-
+          通过把不规则区域分解为多个三角形,再用该公式求和,来估算这些区域的面积。
+        ja: >-
+          不規則な領域を三角形に分割し、この公式で各面積を求めて合計することで、領域全体の面積を推定する。
     - title:
         es: Arquitectura naval
         en: Naval architecture
+        pt: Arquitetura naval
+        fr: Architecture navale
+        zh: 船舶建筑学
+        ja: 造船工学
       description:
         es: >-
           Calcula superficies de paneles triangulares en cascos de barcos y estructuras aeroespaciales.
         en: >-
           Calculates surface areas of triangular panels in ship hulls and aerospace structures.
+        pt: >-
+          Calcula áreas de superfície de painéis triangulares em cascos de navios e estruturas
+          aeroespaciais.
+        fr: >-
+          Calcule les surfaces des panneaux triangulaires des coques de navires et des structures
+          aérospatiales.
+        zh: >-
+          用于计算船体和航空航天结构中三角形面板的表面积。
+        ja: >-
+          船体や航空宇宙構造物における三角形パネルの表面積を計算する。
   example:
     title:
       es: Triángulo con lados 5, 6, 7
       en: Triangle with sides 5, 6, 7
+      pt: Triângulo com lados 5, 6, 7
+      fr: Triangle de côtés 5, 6, 7
+      zh: 边长为5、6、7的三角形
+      ja: 辺の長さが5、6、7の三角形
     lines:
       - es: s = (5 + 6 + 7) / 2 = 9
         en: s = (5 + 6 + 7) / 2 = 9
+        pt: s = (5 + 6 + 7) / 2 = 9
+        fr: s = (5 + 6 + 7) / 2 = 9
+        zh: s = (5 + 6 + 7) / 2 = 9
+        ja: s = (5 + 6 + 7) / 2 = 9
       - es: A = √(9 · (9−5) · (9−6) · (9−7))
         en: A = √(9 · (9−5) · (9−6) · (9−7))
+        pt: A = √(9 · (9−5) · (9−6) · (9−7))
+        fr: A = √(9 · (9−5) · (9−6) · (9−7))
+        zh: A = √(9 · (9−5) · (9−6) · (9−7))
+        ja: A = √(9 · (9−5) · (9−6) · (9−7))
       - es: A = √(9 · 4 · 3 · 2)
         en: A = √(9 · 4 · 3 · 2)
+        pt: A = √(9 · 4 · 3 · 2)
+        fr: A = √(9 · 4 · 3 · 2)
+        zh: A = √(9 · 4 · 3 · 2)
+        ja: A = √(9 · 4 · 3 · 2)
       - es: A = √216 ≈ 14.7
         en: A = √216 ≈ 14.7
+        pt: A = √216 ≈ 14,7
+        fr: A = √216 ≈ 14,7
+        zh: A = √216 ≈ 14.7
+        ja: A = √216 ≈ 14.7

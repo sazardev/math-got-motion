@@ -2,9 +2,17 @@ id: poisson-distribution
 title:
   es: Distribución de Poisson
   en: Poisson Distribution
+  pt: Distribuição de Poisson
+  fr: Loi de Poisson
+  zh: 泊松分布
+  ja: ポアソン分布
 category:
   es: Probabilidad y estadística
   en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率と統計
 nodes:
   - id: p-k
     type: variable
@@ -15,12 +23,26 @@ nodes:
         considerado.
       en: >-
         The probability that exactly k events occur in the given interval of time or space.
+      pt: >-
+        A probabilidade de que ocorram exatamente k eventos no intervalo de tempo ou espaço
+        considerado.
+      fr: >-
+        La probabilité que exactement k événements se produisent dans l'intervalle de temps ou
+        d'espace considéré.
+      zh: >-
+        在给定的时间或空间区间内,恰好发生k次事件的概率。
+      ja: >-
+        考えている時間または空間の区間内で、事象がちょうどk回起こる確率。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
   - id: lambda
     type: variable
     value: λ
@@ -29,30 +51,54 @@ nodes:
         Lambda: la tasa promedio de eventos esperados en ese mismo intervalo.
       en: >-
         Lambda: the average rate of events expected in that same interval.
+      pt: >-
+        Lambda: a taxa média de eventos esperados nesse mesmo intervalo.
+      fr: >-
+        Lambda : le taux moyen d'événements attendus dans ce même intervalle.
+      zh: >-
+        兰姆达:该区间内预期事件发生的平均速率。
+      ja: >-
+        ラムダ。同じ区間内で見込まれる事象の平均発生率。
   - id: k-exp
     type: superscript
     value: k
     explanation:
       es: "Lambda elevado a la k: la tasa multiplicada por sí misma k veces."
       en: "Lambda raised to the k: the rate multiplied by itself k times."
+      pt: "Lambda elevado a k: a taxa multiplicada por si mesma k vezes."
+      fr: "Lambda à la puissance k : le taux multiplié par lui-même k fois."
+      zh: "兰姆达的k次方:该速率自乘k次。"
+      ja: "ラムダのk乗。発生率をk回掛け合わせたもの。"
   - id: e
     type: variable
     value: e
     explanation:
       es: El número de Euler, base del decaimiento exponencial de la probabilidad.
       en: Euler's number, the base of the probability's exponential decay.
+      pt: O número de Euler, base do decaimento exponencial da probabilidade.
+      fr: Le nombre d'Euler, base de la décroissance exponentielle de la probabilité.
+      zh: 欧拉数,是概率指数衰减的底数。
+      ja: ネイピア数。確率の指数関数的減衰の底となる。
   - id: neg-lambda
     type: superscript
     value: −λ
     explanation:
       es: "El exponente negativo de e: hace que valores de k muy alejados de λ sean poco probables."
       en: "The negative exponent of e: it makes values of k far from λ unlikely."
+      pt: "O expoente negativo de e: torna improváveis valores de k muito distantes de λ."
+      fr: "L'exposant négatif de e : il rend improbables les valeurs de k très éloignées de λ."
+      zh: "e的负指数:使得远离λ的k值出现的概率很低。"
+      ja: "eの負の指数。λから大きく離れたkの値が起こりにくくなる。"
   - id: slash
     type: operator
     value: "/"
     explanation:
       es: Dividido entre.
       en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: 次で割る。
   - id: k-fact
     type: variable
     value: k!
@@ -62,13 +108,30 @@ nodes:
         probabilidad.
       en: >-
         K factorial: the product of all positive integers up to k, which normalizes the probability.
+      pt: >-
+        K fatorial: o produto de todos os inteiros positivos até k, que normaliza a probabilidade.
+      fr: >-
+        K factoriel : le produit de tous les entiers positifs jusqu'à k, qui normalise la
+        probabilité.
+      zh: >-
+        k的阶乘:从1到k的所有正整数的乘积,用于对概率进行归一化。
+      ja: >-
+        kの階乗。1からkまでのすべての正の整数の積で、確率を正規化する。
 context:
   author:
     es: Siméon Denis Poisson
     en: Siméon Denis Poisson
+    pt: Siméon Denis Poisson
+    fr: Siméon Denis Poisson
+    zh: 西莫恩·德尼·泊松
+    ja: シメオン・ドニ・ポアソン
   era:
     es: Francia, 1781–1840 · publicada en 1837
     en: France, 1781–1840 · published in 1837
+    pt: França, 1781–1840 · publicada em 1837
+    fr: France, 1781–1840 · publiée en 1837
+    zh: 法国,1781–1840年 · 1837年发表
+    ja: フランス、1781–1840年・1837年発表
   history:
     es: >-
       Poisson la introdujo en 1837 en su obra Recherches sur la probabilité des jugements en matière
@@ -86,6 +149,33 @@ context:
       hour. It went relatively unnoticed for decades until, in the early 20th century, statistician
       Ladislaus Bortkiewicz popularized it with a famous case: Prussian soldiers killed by horse
       kicks.
+    pt: >-
+      Poisson a introduziu em 1837 em sua obra Recherches sur la probabilité des jugements en
+      matière criminelle et en matière civile, um estudo sobre a probabilidade de veredictos
+      judiciais corretos. A distribuição modela quantas vezes um evento raro e independente ocorre
+      em um intervalo fixo de tempo ou espaço, como o número de chamadas que uma central telefônica
+      recebe em uma hora. Passou relativamente despercebida por décadas até que, no início do século
+      XX, o estatístico Ladislaus Bortkiewicz a popularizou aplicando-a a um caso célebre: as mortes
+      de soldados prussianos por coices de cavalo.
+    fr: >-
+      Poisson l'introduisit en 1837 dans son ouvrage Recherches sur la probabilité des jugements en
+      matière criminelle et en matière civile, une étude sur la probabilité de verdicts judiciaires
+      corrects. La distribution modélise combien de fois un événement rare et indépendant se produit
+      dans un intervalle fixe de temps ou d'espace, comme le nombre d'appels reçus par un central
+      téléphonique en une heure. Elle passa relativement inaperçue pendant des décennies jusqu'à ce
+      que, au début du XXe siècle, le statisticien Ladislaus Bortkiewicz la popularise en l'appliquant
+      à un cas célèbre : les morts de soldats prussiens par ruades de chevaux.
+    zh: >-
+      1837年,泊松在其著作《关于刑事和民事案件裁决概率的研究》中提出了这一分布,该书研究的是司法裁决正确与否的概率问题。
+      这一分布用来描述一个罕见的独立事件在固定的时间或空间区间内发生的次数,例如某个电话交换台一小时内接到的呼叫数。
+      在此后数十年间,它一直相对默默无闻,直到20世纪初,统计学家拉迪斯拉斯·博尔特凯维奇将其应用于一个著名案例——
+      普鲁士士兵被马踢死的事件——才使这一分布广为人知。
+    ja: >-
+      1837年、ポアソンは著書『刑事および民事裁判における判決の確率に関する研究』の中でこの分布を導入した。
+      これは裁判の判決が正しい確率についての研究であった。この分布は、稀で独立な事象が固定された時間や空間の区間内に
+      何回起こるかをモデル化するもので、たとえば電話交換局が1時間に受ける通話数などが例に挙げられる。
+      発表後数十年間は比較的注目されなかったが、20世紀初頭に統計学者ラディスラウス・ボルトキェヴィチが、
+      プロイセン兵が馬に蹴られて死亡した事例という有名な事例に応用したことで、広く知られるようになった。
   timeline:
     - year: "1837"
       label:
@@ -95,6 +185,16 @@ context:
         en: >-
           Poisson publishes the distribution as part of his mathematical analysis of judicial
           probability.
+        pt: >-
+          Poisson publica a distribuição como parte de sua análise matemática da probabilidade
+          judicial.
+        fr: >-
+          Poisson publie la distribution dans le cadre de son analyse mathématique de la probabilité
+          judiciaire.
+        zh: >-
+          泊松在其对司法概率的数学分析中发表了这一分布。
+        ja: >-
+          ポアソンが、裁判の確率に関する数学的分析の一部としてこの分布を発表する。
     - year: "1898"
       label:
         es: >-
@@ -103,6 +203,16 @@ context:
         en: >-
           Ladislaus Bortkiewicz applies it to Prussian soldiers' deaths by horse kicks, making it
           famous.
+        pt: >-
+          Ladislaus Bortkiewicz a aplica às mortes de soldados prussianos por coices de cavalo,
+          tornando-a famosa.
+        fr: >-
+          Ladislaus Bortkiewicz l'applique aux morts de soldats prussiens par ruades de chevaux, la
+          rendant célèbre.
+        zh: >-
+          拉迪斯拉斯·博尔特凯维奇将其应用于普鲁士士兵被马踢死的事件,使这一分布声名远扬。
+        ja: >-
+          ラディスラウス・ボルトキェヴィチがプロイセン兵の落馬死事故にこれを応用し、この分布を有名にする。
     - year: s. XX
       label:
         es: >-
@@ -111,6 +221,16 @@ context:
         en: >-
           It's widely adopted in telecommunications to model call arrivals and in insurance to model
           claims.
+        pt: >-
+          É amplamente adotada em telecomunicações para modelar a chegada de chamadas e em seguros
+          para modelar sinistros.
+        fr: >-
+          Elle est largement adoptée en télécommunications pour modéliser les arrivées d'appels et
+          en assurance pour modéliser les sinistres.
+        zh: >-
+          它被广泛应用于电信行业以对呼叫到达进行建模,以及保险行业以对理赔进行建模。
+        ja: >-
+          電気通信では着信のモデル化に、保険では請求件数のモデル化に広く採用される。
     - year: Hoy
       label:
         es: >-
@@ -119,10 +239,24 @@ context:
         en: >-
           It models everything from server failures to customer arrivals at a store, in queueing and
           reliability systems.
+        pt: >-
+          Modela desde falhas de servidores até a chegada de clientes a uma loja, em sistemas de
+          filas e confiabilidade.
+        fr: >-
+          Elle modélise aussi bien les pannes de serveurs que l'arrivée de clients dans un magasin,
+          dans les systèmes de files d'attente et de fiabilité.
+        zh: >-
+          从服务器故障到顾客到店,它被用于排队论和可靠性系统的各种建模场景。
+        ja: >-
+          サーバー障害から店舗への来客まで、待ち行列理論や信頼性工学のさまざまな場面でモデル化に使われている。
   useCases:
     - title:
         es: Telecomunicaciones
         en: Telecommunications
+        pt: Telecomunicações
+        fr: Télécommunications
+        zh: 电信
+        ja: 通信
       description:
         es: >-
           Estima cuántas llamadas o paquetes de datos llegarán a una red en un intervalo dado, para
@@ -130,45 +264,124 @@ context:
         en: >-
           Estimates how many calls or data packets will arrive at a network in a given interval, to
           size its capacity.
+        pt: >-
+          Estima quantas chamadas ou pacotes de dados chegarão a uma rede em um intervalo dado, para
+          dimensionar sua capacidade.
+        fr: >-
+          Elle estime combien d'appels ou de paquets de données arriveront sur un réseau dans un
+          intervalle donné, afin d'en dimensionner la capacité.
+        zh: >-
+          估算在给定时间内将有多少通话或数据包到达网络,以便规划网络容量。
+        ja: >-
+          一定の時間内にネットワークに到着する通話やデータパケットの数を見積もり、容量設計に役立てる。
     - title:
         es: Seguros
         en: Insurance
+        pt: Seguros
+        fr: Assurance
+        zh: 保险
+        ja: 保険
       description:
         es: >-
           Calcula cuántos reclamos espera recibir una aseguradora en un período, para fijar primas.
         en: >-
           Calculates how many claims an insurer expects to receive in a period, to set premiums.
+        pt: >-
+          Calcula quantos sinistros uma seguradora espera receber em um período, para definir os
+          prêmios.
+        fr: >-
+          Elle calcule combien de sinistres un assureur s'attend à recevoir sur une période, afin de
+          fixer les primes.
+        zh: >-
+          计算保险公司在某一时期内预计收到的理赔数量,以便厘定保费。
+        ja: >-
+          保険会社が一定期間に受け取ると見込まれる請求件数を計算し、保険料の設定に用いる。
     - title:
         es: Control de calidad
         en: Quality control
+        pt: Controle de qualidade
+        fr: Contrôle qualité
+        zh: 质量控制
+        ja: 品質管理
       description:
         es: >-
           Modela el número de defectos esperados por lote de producción en una línea de manufactura.
         en: >-
           Models the expected number of defects per production batch on a manufacturing line.
+        pt: >-
+          Modela o número esperado de defeitos por lote de produção em uma linha de fabricação.
+        fr: >-
+          Elle modélise le nombre attendu de défauts par lot de production sur une chaîne de
+          fabrication.
+        zh: >-
+          对生产线上每批产品预期出现的缺陷数量进行建模。
+        ja: >-
+          製造ラインの生産ロットごとに予想される不良品の数をモデル化する。
     - title:
         es: Epidemiología
         en: Epidemiology
+        pt: Epidemiologia
+        fr: Épidémiologie
+        zh: 流行病学
+        ja: 疫学
       description:
         es: >-
           Estima cuántos casos raros de una enfermedad ocurrirán en una población durante cierto
           tiempo.
         en: >-
           Estimates how many rare cases of a disease will occur in a population over a given time.
+        pt: >-
+          Estima quantos casos raros de uma doença ocorrerão em uma população durante determinado
+          tempo.
+        fr: >-
+          Elle estime combien de cas rares d'une maladie surviendront dans une population sur une
+          période donnée.
+        zh: >-
+          估算在一定时间内,某一人群中将出现多少例某种罕见疾病的病例。
+        ja: >-
+          一定期間内に、ある集団の中である疾患の稀な症例が何件発生するかを見積もる。
   example:
     title:
       es: Llamadas a un centro de soporte
       en: Calls to a support center
+      pt: Chamadas para uma central de suporte
+      fr: Appels à un centre de support
+      zh: 呼叫支持中心
+      ja: サポートセンターへの着信
     lines:
       - es: λ = 3 llamadas por hora, en promedio
         en: λ = 3 calls per hour, on average
+        pt: λ = 3 chamadas por hora, em média
+        fr: λ = 3 appels par heure, en moyenne
+        zh: λ = 平均每小时3次呼叫
+        ja: λ = 平均して1時間あたり3件の着信
       - es: "¿Probabilidad de recibir exactamente k = 5?"
         en: "Probability of receiving exactly k = 5?"
+        pt: "Probabilidade de receber exatamente k = 5?"
+        fr: "Probabilité de recevoir exactement k = 5 ?"
+        zh: "恰好收到k = 5次呼叫的概率是多少?"
+        ja: "ちょうどk = 5件受け取る確率は?"
       - es: λ^k = 3^5 = 243
         en: λ^k = 3^5 = 243
+        pt: λ^k = 3^5 = 243
+        fr: λ^k = 3^5 = 243
+        zh: λ^k = 3^5 = 243
+        ja: λ^k = 3^5 = 243
       - es: e^(−λ) = e^(−3) ≈ 0.0498
         en: e^(−λ) = e^(−3) ≈ 0.0498
+        pt: e^(−λ) = e^(−3) ≈ 0.0498
+        fr: e^(−λ) = e^(−3) ≈ 0,0498
+        zh: e^(−λ) = e^(−3) ≈ 0.0498
+        ja: e^(−λ) = e^(−3) ≈ 0.0498
       - es: k! = 5! = 120
         en: k! = 5! = 120
+        pt: k! = 5! = 120
+        fr: k! = 5! = 120
+        zh: k! = 5! = 120
+        ja: k! = 5! = 120
       - es: P(5) = 243×0.0498 / 120 ≈ 0.1008
         en: P(5) = 243×0.0498 / 120 ≈ 0.1008
+        pt: P(5) = 243×0.0498 / 120 ≈ 0.1008
+        fr: P(5) = 243×0,0498 / 120 ≈ 0,1008
+        zh: P(5) = 243×0.0498 / 120 ≈ 0.1008
+        ja: P(5) = 243×0.0498 / 120 ≈ 0.1008

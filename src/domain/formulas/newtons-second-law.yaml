@@ -2,9 +2,17 @@ id: newtons-second-law
 title:
   es: Segunda Ley de Newton
   en: Newton's Second Law
+  pt: Segunda Lei de Newton
+  fr: Deuxième loi de Newton
+  zh: 牛顿第二定律
+  ja: ニュートンの第二法則
 category:
   es: Física clásica
   en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
 nodes:
   - id: f
     type: variable
@@ -12,31 +20,55 @@ nodes:
     explanation:
       es: La fuerza neta que actúa sobre un objeto.
       en: The net force acting on an object.
+      pt: A força resultante que atua sobre um objeto.
+      fr: La force nette agissant sur un objet.
+      zh: 作用在物体上的合力。
+      ja: 物体に働く正味の力。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
   - id: m
     type: variable
     value: m
     explanation:
       es: "La masa del objeto: cuánta materia contiene."
       en: "The object's mass: how much matter it contains."
+      pt: "A massa do objeto: quanta matéria ele contém."
+      fr: "La masse de l'objet : la quantité de matière qu'il contient."
+      zh: "物体的质量:它所含物质的多少。"
+      ja: "物体の質量。どれだけの物質を含むかを表す。"
   - id: a
     type: variable
     value: a
     explanation:
       es: "Multiplicada por la aceleración: el cambio de velocidad en el tiempo."
       en: "Multiplied by acceleration: the rate of change of velocity over time."
+      pt: "Multiplicada pela aceleração: a variação da velocidade ao longo do tempo."
+      fr: "Multipliée par l'accélération : la variation de la vitesse au cours du temps."
+      zh: "乘以加速度:速度随时间的变化率。"
+      ja: "加速度をかけたもの。速度が時間とともに変化する割合。"
 context:
   author:
     es: Isaac Newton
     en: Isaac Newton
+    pt: Isaac Newton
+    fr: Isaac Newton
+    zh: 艾萨克·牛顿
+    ja: アイザック・ニュートン
   era:
     es: Inglaterra, 1642–1727 · publicada en 1687
     en: England, 1642–1727 · published in 1687
+    pt: Inglaterra, 1642–1727 · publicada em 1687
+    fr: Angleterre, 1642–1727 · publiée en 1687
+    zh: 英格兰,1642–1727年 · 1687年发表
+    ja: イングランド、1642–1727年・1687年発表
   history:
     es: >-
       Newton la publicó en Philosophiæ Naturalis Principia Mathematica, junto a sus otras dos leyes
@@ -46,6 +78,20 @@ context:
       Newton published it in Philosophiæ Naturalis Principia Mathematica, alongside his other two
       laws of motion. It is one of the most influential equations in history, describing how
       everything moves — from an apple to a planet.
+    pt: >-
+      Newton a publicou em Philosophiæ Naturalis Principia Mathematica, junto às suas outras duas
+      leis do movimento. É uma das equações mais influentes da história: descreve como tudo se
+      move, de uma maçã a um planeta.
+    fr: >-
+      Newton la publia dans les Philosophiæ Naturalis Principia Mathematica, aux côtés de ses deux
+      autres lois du mouvement. C'est l'une des équations les plus influentes de l'histoire : elle
+      décrit comment tout se meut, d'une pomme à une planète.
+    zh: >-
+      牛顿在《自然哲学的数学原理》中发表了这条定律,与他的另外两条运动定律并列。它是历史上最具影响力的方程之一,
+      描述了从一颗苹果到一颗行星,万物是如何运动的。
+    ja: >-
+      ニュートンは『自然哲学の数学原理』の中で、この法則を他の二つの運動法則とともに発表した。これは歴史上最も影響力のある
+      方程式の一つであり、リンゴから惑星まで、あらゆるものの運動を記述する。
   timeline:
     - year: "1666"
       label:
@@ -55,6 +101,16 @@ context:
         en: >-
           During the 'year of wonders' when plague closes Cambridge, Newton begins sketching his
           ideas on force and motion.
+        pt: >-
+          Durante o 'ano miraculoso' em que a peste fecha Cambridge, Newton começa a esboçar suas
+          ideias sobre força e movimento.
+        fr: >-
+          Pendant l' « année miraculeuse » où la peste ferme Cambridge, Newton commence à esquisser
+          ses idées sur la force et le mouvement.
+        zh: >-
+          在瘟疫导致剑桥关闭的这个"奇迹年"里,牛顿开始构思关于力与运动的想法。
+        ja: >-
+          ペストでケンブリッジが閉鎖された「奇跡の年」に、ニュートンは力と運動についての着想をまとめ始める。
     - year: "1687"
       label:
         es: >-
@@ -63,12 +119,30 @@ context:
         en: >-
           Publishes Philosophiæ Naturalis Principia Mathematica, with F = ma as the second of his
           three laws of motion.
+        pt: >-
+          Publica Philosophiæ Naturalis Principia Mathematica, com F = ma como a segunda de suas
+          três leis do movimento.
+        fr: >-
+          Publie les Philosophiæ Naturalis Principia Mathematica, avec F = ma comme deuxième de ses
+          trois lois du mouvement.
+        zh: >-
+          发表《自然哲学的数学原理》,将F=ma作为他三条运动定律中的第二条。
+        ja: >-
+          『自然哲学の数学原理』を出版。F=maは三つの運動法則のうち第二法則として示される。
     - year: "1905"
       label:
         es: >-
           Einstein muestra que la ley es una aproximación válida solo a velocidades muy inferiores a
           la de la luz.
         en: Einstein shows the law is a valid approximation only at speeds far below that of light.
+        pt: >-
+          Einstein mostra que a lei é uma aproximação válida apenas em velocidades muito inferiores
+          à da luz.
+        fr: >-
+          Einstein montre que la loi n'est une approximation valable qu'à des vitesses très
+          inférieures à celle de la lumière.
+        zh: 爱因斯坦证明,这条定律只有在远低于光速的速度下才是有效的近似。
+        ja: アインシュタインは、この法則が光速よりはるかに遅い速度でのみ有効な近似であることを示す。
     - year: "1969"
       label:
         es: >-
@@ -77,6 +151,16 @@ context:
         en: >-
           The Apollo 11 mission computes rocket trajectories and thrust using this same relationship
           between force and mass.
+        pt: >-
+          A missão Apollo 11 calcula trajetórias e o empuxo de seus foguetes aplicando essa mesma
+          relação entre força e massa.
+        fr: >-
+          La mission Apollo 11 calcule les trajectoires et la poussée de ses fusées en appliquant
+          cette même relation entre force et masse.
+        zh: >-
+          阿波罗11号任务运用这一力与质量的关系来计算火箭的轨道和推力。
+        ja: >-
+          アポロ11号のミッションでは、この力と質量の関係を用いてロケットの軌道と推力を計算する。
     - year: Hoy
       label:
         es: >-
@@ -85,10 +169,24 @@ context:
         en: >-
           It remains the central equation of automotive, aerospace, and robotics design at everyday
           speed regimes.
+        pt: >-
+          Continua sendo a equação central do design automotivo, aeroespacial e robótico em
+          velocidades cotidianas.
+        fr: >-
+          Elle reste l'équation centrale de la conception automobile, aérospatiale et robotique aux
+          vitesses du quotidien.
+        zh: >-
+          在日常速度范围内,它仍然是汽车、航空航天和机器人设计的核心方程。
+        ja: >-
+          日常的な速度域では、現在も自動車、航空宇宙、ロボット工学における設計の中心的な方程式であり続けている。
   useCases:
     - title:
         es: Ingeniería automotriz
         en: Automotive engineering
+        pt: Engenharia automotiva
+        fr: Ingénierie automobile
+        zh: 汽车工程
+        ja: 自動車工学
       description:
         es: >-
           Calcula la fuerza de frenado necesaria para detener un vehículo de cierta masa en una
@@ -96,9 +194,23 @@ context:
         en: >-
           It calculates the braking force needed to stop a vehicle of a given mass within a given
           distance.
+        pt: >-
+          Calcula a força de frenagem necessária para parar um veículo de determinada massa em uma
+          distância dada.
+        fr: >-
+          Elle calcule la force de freinage nécessaire pour arrêter un véhicule d'une masse donnée
+          sur une distance donnée.
+        zh: >-
+          计算使某一质量的车辆在给定距离内停下所需的制动力。
+        ja: >-
+          ある質量の車両を一定の距離で停止させるのに必要な制動力を計算する。
     - title:
         es: Aeroespacial
         en: Aerospace
+        pt: Aeroespacial
+        fr: Aérospatiale
+        zh: 航空航天
+        ja: 航空宇宙
       description:
         es: >-
           El empuje de un cohete se dimensiona directamente a partir de la masa que debe acelerar y
@@ -106,9 +218,23 @@ context:
         en: >-
           A rocket's thrust is sized directly from the mass it must accelerate and the desired
           acceleration.
+        pt: >-
+          O empuxo de um foguete é dimensionado diretamente a partir da massa que deve acelerar e da
+          aceleração desejada.
+        fr: >-
+          La poussée d'une fusée est dimensionnée directement à partir de la masse à accélérer et de
+          l'accélération souhaitée.
+        zh: >-
+          火箭的推力大小直接由需要加速的质量和期望的加速度决定。
+        ja: >-
+          ロケットの推力は、加速すべき質量と目標とする加速度から直接決定される。
     - title:
         es: Robótica
         en: Robotics
+        pt: Robótica
+        fr: Robotique
+        zh: 机器人技术
+        ja: ロボット工学
       description:
         es: >-
           Controladores de motores y actuadores ajustan la fuerza aplicada en tiempo real usando
@@ -116,18 +242,52 @@ context:
         en: >-
           Motor and actuator controllers adjust applied force in real time using this same
           relationship.
+        pt: >-
+          Controladores de motores e atuadores ajustam a força aplicada em tempo real usando essa
+          mesma relação.
+        fr: >-
+          Les contrôleurs de moteurs et d'actionneurs ajustent la force appliquée en temps réel grâce
+          à cette même relation.
+        zh: >-
+          电机和执行器的控制器利用这一关系实时调整所施加的力。
+        ja: >-
+          モーターやアクチュエーターの制御装置は、この同じ関係を使って加える力をリアルタイムで調整する。
   example:
     title:
       es: Empujar un carrito
       en: Pushing a cart
+      pt: Empurrar um carrinho
+      fr: Pousser un chariot
+      zh: 推购物车
+      ja: カートを押す
     lines:
       - es: m = 10 kg
         en: m = 10 kg
+        pt: m = 10 kg
+        fr: m = 10 kg
+        zh: m = 10 kg
+        ja: m = 10 kg
       - es: a = 2 m/s²
         en: a = 2 m/s²
+        pt: a = 2 m/s²
+        fr: a = 2 m/s²
+        zh: a = 2 m/s²
+        ja: a = 2 m/s²
       - es: F = m · a
         en: F = m · a
+        pt: F = m · a
+        fr: F = m · a
+        zh: F = m · a
+        ja: F = m · a
       - es: F = 10 · 2
         en: F = 10 · 2
+        pt: F = 10 · 2
+        fr: F = 10 · 2
+        zh: F = 10 · 2
+        ja: F = 10 · 2
       - es: F = 20 newtons
         en: F = 20 newtons
+        pt: F = 20 newtons
+        fr: F = 20 newtons
+        zh: F = 20 牛顿
+        ja: F = 20 ニュートン

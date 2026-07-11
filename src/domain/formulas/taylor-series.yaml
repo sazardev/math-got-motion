@@ -2,9 +2,17 @@ id: taylor-series
 title:
   es: Serie de Taylor
   en: Taylor Series
+  pt: Série de Taylor
+  fr: Série de Taylor
+  zh: 泰勒级数
+  ja: テイラー級数
 category:
   es: Cálculo
   en: Calculus
+  pt: Cálculo
+  fr: Calcul infinitésimal
+  zh: 微积分
+  ja: 微積分学
 nodes:
   - id: f
     type: variable
@@ -12,55 +20,95 @@ nodes:
     explanation:
       es: La función original que se quiere aproximar cerca de un punto a.
       en: The original function being approximated near a point a.
+      pt: A função original que se deseja aproximar perto de um ponto a.
+      fr: La fonction originale que l'on cherche à approximer près d'un point a.
+      zh: 需要在点 a 附近近似的原函数。
+      ja: 点 a の近くで近似しようとしている元の関数。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 精确地等于。
+      ja: 正確に等しい。
   - id: sum
     type: operator
     value: Σ
     explanation:
       es: "El signo de sumatoria: suma infinitos términos, uno por cada derivada de f."
       en: "The summation sign: adds infinitely many terms, one for each derivative of f."
+      pt: "O sinal de somatório: soma infinitos termos, um para cada derivada de f."
+      fr: "Le signe de sommation : additionne une infinité de termes, un pour chaque dérivée de f."
+      zh: "求和符号：将无穷多个项相加，每一项对应 f 的一阶导数。"
+      ja: "総和記号：無限個の項を足し合わせる。fの各微分に対応する項がひとつずつある。"
   - id: fn
     type: variable
     value: fⁿ(a)
     explanation:
       es: "La n-ésima derivada de f evaluada en el punto a, alrededor del cual se expande la serie."
       en: "The n-th derivative of f evaluated at the point a, around which the series is expanded."
+      pt: "A n-ésima derivada de f avaliada no ponto a, em torno do qual a série é expandida."
+      fr: "La dérivée n-ième de f évaluée au point a, autour duquel la série est développée."
+      zh: "f 在点 a 处的 n 阶导数值，级数正是围绕该点展开的。"
+      ja: "点 a における f の n 次導関数の値。級数はこの点のまわりで展開される。"
   - id: over-n-fact
     type: operator
     value: /n!
     explanation:
       es: Dividido entre n factorial, el producto de todos los enteros positivos hasta n.
       en: Divided by n factorial, the product of all positive integers up to n.
+      pt: Dividido por n fatorial, o produto de todos os inteiros positivos até n.
+      fr: Divisé par n factorielle, le produit de tous les entiers positifs jusqu'à n.
+      zh: 除以 n 的阶乘，即从1到n所有正整数的乘积。
+      ja: n の階乗で割る。n の階乗とは1からnまでのすべての正の整数の積である。
   - id: dot
     type: operator
     value: "·"
     explanation:
       es: Multiplicado por.
       en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
   - id: x-minus-a
     type: variable
     value: (x−a)
     explanation:
       es: La distancia entre el punto x donde se evalúa y el punto a de expansión.
       en: The distance between the point x being evaluated and the expansion point a.
+      pt: A distância entre o ponto x onde se avalia e o ponto a de expansão.
+      fr: La distance entre le point x d'évaluation et le point de développement a.
+      zh: 求值点 x 与展开点 a 之间的距离。
+      ja: 評価点 x と展開点 a との間の距離。
   - id: n
     type: superscript
     value: n
     explanation:
       es: Elevado a la potencia n, el mismo orden de la derivada correspondiente.
       en: Raised to the power n, matching the order of the corresponding derivative.
+      pt: Elevado à potência n, correspondendo à ordem da derivada correspondente.
+      fr: Élevé à la puissance n, correspondant à l'ordre de la dérivée correspondante.
+      zh: 取 n 次幂，与对应导数的阶数相同。
+      ja: n 乗される。対応する導関数の次数と一致する。
 context:
   author:
     es: Brook Taylor
     en: Brook Taylor
+    pt: Brook Taylor
+    fr: Brook Taylor
+    zh: 布鲁克·泰勒
+    ja: ブルック・テイラー
   era:
     es: Inglaterra, 1685–1731 · publicada en 1715
     en: England, 1685–1731 · published in 1715
+    pt: Inglaterra, 1685–1731 · publicada em 1715
+    fr: Angleterre, 1685–1731 · publiée en 1715
+    zh: 英格兰，1685–1731 · 1715年发表
+    ja: イングランド、1685–1731年 · 1715年発表
   history:
     es: >-
       Brook Taylor publicó esta serie en su obra Methodus Incrementorum Directa et Inversa en 1715,
@@ -77,6 +125,35 @@ context:
       decades earlier, around 1670, without publishing them widely. When the expansion point a is
       zero, the series is known as the Maclaurin series, after Colin Maclaurin, who popularized that
       special case in his 1742 treatise and is often given shared credit for it.
+    pt: >-
+      Brook Taylor publicou esta série em sua obra Methodus Incrementorum Directa et Inversa em 1715,
+      mostrando como aproximar qualquer função suave por meio de um polinômio infinito construído a
+      partir de suas derivadas em um único ponto. O escocês James Gregory já havia descoberto casos
+      particulares décadas antes, por volta de 1670, sem publicá-los amplamente. Quando o ponto de
+      expansão a é zero, a série é conhecida como série de Maclaurin, em homenagem a Colin Maclaurin,
+      que popularizou esse caso especial em seu tratado de 1742 e frequentemente recebe crédito
+      compartilhado por ela.
+    fr: >-
+      Brook Taylor publia cette série dans son ouvrage Methodus Incrementorum Directa et Inversa en
+      1715, montrant comment approximer toute fonction lisse par un polynôme infini construit à
+      partir de ses dérivées en un seul point. L'Écossais James Gregory avait déjà découvert des cas
+      particuliers des décennies plus tôt, vers 1670, sans les publier largement. Lorsque le point de
+      développement a est nul, la série est appelée série de Maclaurin, du nom de Colin Maclaurin,
+      qui popularisa ce cas particulier dans son traité de 1742 et se voit souvent attribuer un
+      crédit partagé pour celle-ci.
+    zh: >-
+      布鲁克·泰勒于1715年在其著作《正逆增量法》中发表了这个级数，展示了如何利用某一点处的各阶导数
+      构造一个无穷多项式，来近似任意光滑函数。苏格兰人詹姆斯·格雷戈里早在几十年前，
+      大约1670年就已发现了一些特殊情形，但未曾广泛发表。当展开点 a 为零时，
+      该级数被称为麦克劳林级数，得名于科林·麦克劳林——他在1742年的论著中推广了这一特殊情形，
+      因此常常与泰勒共同分享这一成果的荣誉。
+    ja: >-
+      ブルック・テイラーは1715年の著書『Methodus Incrementorum Directa et Inversa』の中でこの級数を発表し、
+      なめらかな関数を一点における各階導関数から作られる無限多項式で近似する方法を示した。
+      スコットランド人のジェームズ・グレゴリーは、すでに数十年前の1670年頃に特殊な場合を
+      発見していたが、広く発表することはなかった。展開点 a がゼロのとき、
+      この級数はマクローリン級数と呼ばれる。これはコリン・マクローリンにちなんだ名称で、
+      彼は1742年の論文でこの特殊な場合を広め、しばしばこの功績を共有する形で評価されている。
   timeline:
     - year: c. 1670
       label:
@@ -86,6 +163,17 @@ context:
         en: >-
           James Gregory discovers particular cases of series expansions of functions, without
           formalizing the general result.
+        pt: >-
+          James Gregory descobre casos particulares de expansões em série de funções, sem
+          formalizar o resultado geral.
+        fr: >-
+          James Gregory découvre des cas particuliers de développements en série de fonctions, sans
+          formaliser le résultat général.
+        zh: >-
+          詹姆斯·格雷戈里发现了函数级数展开的一些特殊情形，但未将其一般结果形式化。
+        ja: >-
+          ジェームズ・グレゴリーが関数の級数展開の特殊な場合を発見するが、
+          一般的な結果として定式化するには至らない。
     - year: "1715"
       label:
         es: >-
@@ -94,6 +182,17 @@ context:
         en: >-
           Brook Taylor publishes the general formula in Methodus Incrementorum Directa et Inversa,
           giving it his name.
+        pt: >-
+          Brook Taylor publica a fórmula geral em Methodus Incrementorum Directa et Inversa,
+          dando-lhe seu nome.
+        fr: >-
+          Brook Taylor publie la formule générale dans Methodus Incrementorum Directa et Inversa,
+          lui donnant son nom.
+        zh: >-
+          布鲁克·泰勒在《正逆增量法》中发表了这一通用公式，并以自己的名字命名它。
+        ja: >-
+          ブルック・テイラーが『Methodus Incrementorum Directa et Inversa』で一般公式を発表し、
+          それに自らの名を与える。
     - year: "1742"
       label:
         es: >-
@@ -102,6 +201,17 @@ context:
         en: >-
           Colin Maclaurin popularizes the special case with a = 0 in his Treatise of Fluxions,
           today called the Maclaurin series.
+        pt: >-
+          Colin Maclaurin populariza o caso especial com a = 0 em seu Treatise of Fluxions,
+          hoje chamado de série de Maclaurin.
+        fr: >-
+          Colin Maclaurin popularise le cas particulier avec a = 0 dans son Treatise of Fluxions,
+          aujourd'hui appelé série de Maclaurin.
+        zh: >-
+          科林·麦克劳林在其《流数论》中推广了 a = 0 的特殊情形，今天被称为麦克劳林级数。
+        ja: >-
+          コリン・マクローリンが著書『Treatise of Fluxions』で a = 0 の特殊な場合を広め、
+          今日ではマクローリン級数と呼ばれている。
     - year: s. XIX
       label:
         es: >-
@@ -110,6 +220,17 @@ context:
         en: >-
           Cauchy and Lagrange formalize the series' convergence conditions and error term, giving it
           modern rigor.
+        pt: >-
+          Cauchy e Lagrange formalizam as condições de convergência e o termo de erro da série,
+          dando-lhe rigor moderno.
+        fr: >-
+          Cauchy et Lagrange formalisent les conditions de convergence et le terme d'erreur de la
+          série, lui conférant une rigueur moderne.
+        zh: >-
+          柯西和拉格朗日形式化了该级数的收敛条件和误差项，赋予其现代的严格性。
+        ja: >-
+          コーシーとラグランジュが級数の収束条件と誤差項を定式化し、
+          現代的な厳密さを与える。
     - year: Hoy
       label:
         es: >-
@@ -118,10 +239,25 @@ context:
         en: >-
           It underlies calculators, computers, and scientific software for evaluating functions like
           sine, cosine, and the exponential.
+        pt: >-
+          É a base de calculadoras, computadores e softwares científicos para avaliar funções como
+          seno, cosseno e exponencial.
+        fr: >-
+          Elle sous-tend les calculatrices, ordinateurs et logiciels scientifiques pour évaluer des
+          fonctions comme le sinus, le cosinus et l'exponentielle.
+        zh: >-
+          它是计算器、计算机和科学软件计算正弦、余弦和指数等函数的基础。
+        ja: >-
+          電卓、コンピュータ、科学技術ソフトウェアが正弦、余弦、指数関数などを
+          計算する際の基盤となっている。
   useCases:
     - title:
         es: Computación numérica
         en: Numerical computing
+        pt: Computação numérica
+        fr: Calcul numérique
+        zh: 数值计算
+        ja: 数値計算
       description:
         es: >-
           Calculadoras y computadoras evalúan funciones trascendentes como seno o exponencial
@@ -129,9 +265,24 @@ context:
         en: >-
           Calculators and computers evaluate transcendental functions like sine or the exponential
           by summing a few terms of their Taylor series.
+        pt: >-
+          Calculadoras e computadores avaliam funções transcendentes como seno ou exponencial
+          somando alguns termos de sua série de Taylor.
+        fr: >-
+          Calculatrices et ordinateurs évaluent des fonctions transcendantes comme le sinus ou
+          l'exponentielle en additionnant quelques termes de leur série de Taylor.
+        zh: >-
+          计算器和计算机通过对泰勒级数的几个项求和，来计算正弦、指数等超越函数的值。
+        ja: >-
+          電卓やコンピュータは、正弦や指数関数といった超越関数の値を、
+          そのテイラー級数の項をいくつか足し合わせることで計算している。
     - title:
         es: Física
         en: Physics
+        pt: Física
+        fr: Physique
+        zh: 物理学
+        ja: 物理学
       description:
         es: >-
           Aproximaciones como el péndulo simple o la relatividad a bajas velocidades usan los
@@ -139,9 +290,24 @@ context:
         en: >-
           Approximations like the simple pendulum or low-velocity relativity use the first few terms
           of a Taylor series.
+        pt: >-
+          Aproximações como o pêndulo simples ou a relatividade em baixas velocidades usam os
+          primeiros termos de uma série de Taylor.
+        fr: >-
+          Des approximations comme le pendule simple ou la relativité à basse vitesse utilisent les
+          premiers termes d'une série de Taylor.
+        zh: >-
+          单摆或低速相对论等近似方法都使用泰勒级数的前几项。
+        ja: >-
+          単振り子や低速度における相対論的近似などは、テイラー級数の
+          最初の数項を利用している。
     - title:
         es: Aprendizaje automático
         en: Machine learning
+        pt: Aprendizado de máquina
+        fr: Apprentissage automatique
+        zh: 机器学习
+        ja: 機械学習
       description:
         es: >-
           Métodos de optimización como Newton usan expansiones de Taylor de segundo orden para
@@ -149,18 +315,53 @@ context:
         en: >-
           Optimization methods like Newton's method use second-order Taylor expansions to
           approximate complex error functions.
+        pt: >-
+          Métodos de otimização como o de Newton usam expansões de Taylor de segunda ordem para
+          aproximar funções de erro complexas.
+        fr: >-
+          Des méthodes d'optimisation comme celle de Newton utilisent des développements de Taylor
+          au second ordre pour approximer des fonctions d'erreur complexes.
+        zh: >-
+          牛顿法等优化方法使用二阶泰勒展开来近似复杂的误差函数。
+        ja: >-
+          ニュートン法などの最適化手法は、複雑な誤差関数を近似するために
+          2次のテイラー展開を利用する。
   example:
     title:
       es: Aproximar eˣ alrededor de 0
       en: Approximating eˣ around 0
+      pt: Aproximar eˣ em torno de 0
+      fr: Approximer eˣ autour de 0
+      zh: 在0附近近似 eˣ
+      ja: 0のまわりでeˣを近似する
     lines:
       - es: f(x) = eˣ, a = 0
         en: f(x) = eˣ, a = 0
+        pt: f(x) = eˣ, a = 0
+        fr: f(x) = eˣ, a = 0
+        zh: f(x) = eˣ，a = 0
+        ja: f(x) = eˣ、a = 0
       - es: fⁿ(0) = 1 para toda n
         en: fⁿ(0) = 1 for all n
+        pt: fⁿ(0) = 1 para todo n
+        fr: fⁿ(0) = 1 pour tout n
+        zh: 对所有 n，fⁿ(0) = 1
+        ja: すべての n について fⁿ(0) = 1
       - es: eˣ ≈ 1 + x + x²/2! + x³/3!
         en: eˣ ≈ 1 + x + x²/2! + x³/3!
+        pt: eˣ ≈ 1 + x + x²/2! + x³/3!
+        fr: eˣ ≈ 1 + x + x²/2! + x³/3!
+        zh: eˣ ≈ 1 + x + x²/2! + x³/3!
+        ja: eˣ ≈ 1 + x + x²/2! + x³/3!
       - es: en x = 1, eˣ ≈ 1 + 1 + 0.5 + 0.1667
         en: at x = 1, eˣ ≈ 1 + 1 + 0.5 + 0.1667
+        pt: em x = 1, eˣ ≈ 1 + 1 + 0,5 + 0,1667
+        fr: en x = 1, eˣ ≈ 1 + 1 + 0,5 + 0,1667
+        zh: 在 x = 1 处，eˣ ≈ 1 + 1 + 0.5 + 0.1667
+        ja: x = 1 のとき、eˣ ≈ 1 + 1 + 0.5 + 0.1667
       - es: suma ≈ 2.6667, cerca del valor real e ≈ 2.71828
         en: sum ≈ 2.6667, close to the real value e ≈ 2.71828
+        pt: soma ≈ 2,6667, próxima do valor real e ≈ 2,71828
+        fr: somme ≈ 2,6667, proche de la valeur réelle e ≈ 2,71828
+        zh: 总和 ≈ 2.6667，接近真实值 e ≈ 2.71828
+        ja: 合計 ≈ 2.6667、実際の値 e ≈ 2.71828 に近い

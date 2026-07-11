@@ -2,9 +2,17 @@ id: bernoullis-equation
 title:
   es: Ecuación de Bernoulli
   en: Bernoulli's Equation
+  pt: Equação de Bernoulli
+  fr: Équation de Bernoulli
+  zh: 伯努利方程
+  ja: ベルヌーイの定理
 category:
   es: Física clásica
   en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理
+  ja: 古典物理学
 nodes:
   - id: p
     type: variable
@@ -12,79 +20,135 @@ nodes:
     explanation:
       es: La presión del fluido en un punto de la corriente.
       en: The fluid's pressure at a point along the flow.
+      pt: A pressão do fluido em um ponto da corrente.
+      fr: La pression du fluide en un point de l'écoulement.
+      zh: 流体在流线上某一点的压强。
+      ja: 流れに沿ったある点での流体の圧力。
   - id: plus-1
     type: operator
     value: "+"
     explanation:
       es: Sumada a la energía cinética del fluido por unidad de volumen.
       en: Added to the fluid's kinetic energy per unit of volume.
+      pt: Somada à energia cinética do fluido por unidade de volume.
+      fr: Ajoutée à l'énergie cinétique du fluide par unité de volume.
+      zh: 加上流体单位体积的动能。
+      ja: これに流体の単位体積あたりの運動エネルギーを加える。
   - id: half
     type: number
     value: "½"
     explanation:
       es: "Un medio: el mismo factor que aparece en la energía cinética."
       en: "One half: the same factor that appears in kinetic energy."
+      pt: "Um meio: o mesmo fator que aparece na energia cinética."
+      fr: "Un demi : le même facteur que celui présent dans l'énergie cinétique."
+      zh: "二分之一：与动能公式中出现的相同系数。"
+      ja: "2分の1:運動エネルギーの式に現れるのと同じ係数。"
   - id: rho-1
     type: variable
     value: ρ
     explanation:
       es: La densidad del fluido.
       en: The fluid's density.
+      pt: A densidade do fluido.
+      fr: La masse volumique du fluide.
+      zh: 流体的密度。
+      ja: 流体の密度。
   - id: v
     type: variable
     value: v
     explanation:
       es: La velocidad del fluido en ese punto.
       en: The fluid's velocity at that point.
+      pt: A velocidade do fluido nesse ponto.
+      fr: La vitesse du fluide en ce point.
+      zh: 流体在该点的速度。
+      ja: その点における流体の速度。
   - id: exp-2
     type: superscript
     value: "2"
     explanation:
       es: La velocidad elevada al cuadrado.
       en: The velocity squared.
+      pt: A velocidade elevada ao quadrado.
+      fr: La vitesse élevée au carré.
+      zh: 速度的平方。
+      ja: 速度の2乗。
   - id: plus-2
     type: operator
     value: "+"
     explanation:
       es: Sumada también a la energía potencial gravitatoria por unidad de volumen.
       en: Also added to the gravitational potential energy per unit of volume.
+      pt: Somada também à energia potencial gravitacional por unidade de volume.
+      fr: Ajoutée aussi à l'énergie potentielle de pesanteur par unité de volume.
+      zh: 再加上单位体积的重力势能。
+      ja: さらに単位体積あたりの重力による位置エネルギーも加える。
   - id: rho-2
     type: variable
     value: ρ
     explanation:
       es: Otra vez la densidad del fluido.
       en: The fluid's density again.
+      pt: Novamente a densidade do fluido.
+      fr: De nouveau la masse volumique du fluide.
+      zh: 再次是流体的密度。
+      ja: 再び流体の密度。
   - id: g
     type: constant
     value: g
     explanation:
       es: La aceleración de la gravedad.
       en: The acceleration due to gravity.
+      pt: A aceleração da gravidade.
+      fr: L'accélération de la pesanteur.
+      zh: 重力加速度。
+      ja: 重力加速度。
   - id: h
     type: variable
     value: h
     explanation:
       es: La altura del punto respecto de un nivel de referencia.
       en: The height of the point relative to a reference level.
+      pt: A altura do ponto em relação a um nível de referência.
+      fr: La hauteur du point par rapport à un niveau de référence.
+      zh: 该点相对于参考水平面的高度。
+      ja: 基準面から見たその点の高さ。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これに正確に等しい。
   - id: constant
     type: constant
     value: C
     explanation:
       es: "Una constante: la suma total no cambia a lo largo de una misma línea de corriente."
       en: "A constant: the total sum stays the same all along a given streamline."
+      pt: "Uma constante: a soma total não muda ao longo de uma mesma linha de corrente."
+      fr: "Une constante : la somme totale reste la même tout le long d'une même ligne de courant."
+      zh: "一个常数：沿同一条流线，总和保持不变。"
+      ja: "定数:同一の流線に沿って、この合計値は変化しない。"
 context:
   author:
     es: Daniel Bernoulli
     en: Daniel Bernoulli
+    pt: Daniel Bernoulli
+    fr: Daniel Bernoulli
+    zh: 丹尼尔·伯努利
+    ja: ダニエル・ベルヌーイ
   era:
     es: Suiza, 1700–1782 · publicada en 1738
     en: Switzerland, 1700–1782 · published in 1738
+    pt: Suíça, 1700–1782 · publicada em 1738
+    fr: Suisse, 1700–1782 · publiée en 1738
+    zh: 瑞士，1700–1782年 · 1738年发表
+    ja: スイス、1700年–1782年 · 1738年発表
   history:
     es: >-
       Daniel Bernoulli perteneció a una familia de matemáticos suizos marcada por la rivalidad: su
@@ -103,6 +167,38 @@ context:
       moving fluid: where the fluid speeds up, its pressure drops. The idea, counterintuitive at the
       time, would go on to explain phenomena as different as the lift of an airplane wing and the
       workings of a carburetor, and it remains one of the cornerstones of fluid mechanics.
+    pt: >-
+      Daniel Bernoulli pertencia a uma família de matemáticos suíços marcada pela rivalidade: seu
+      próprio pai, Johann, competiu com ele e publicou uma obra semelhante, Hydraulica,
+      antedatando-a para reivindicar prioridade. Apesar disso, foi Daniel quem, em 1738, em seu
+      tratado Hydrodynamica, estabeleceu a relação fundamental entre a pressão, a velocidade e a
+      altura de um fluido em movimento: onde o fluido acelera, sua pressão cai. A ideia,
+      contraintuitiva para a época, acabaria explicando fenômenos tão distintos quanto a
+      sustentação de uma asa de avião e o funcionamento de um carburador, e continua sendo um dos
+      pilares da mecânica dos fluidos.
+    fr: >-
+      Daniel Bernoulli appartenait à une famille de mathématiciens suisses marquée par la
+      rivalité : son propre père, Johann, rivalisa avec lui et publia un ouvrage similaire,
+      Hydraulica, en antidatant sa parution pour en revendiquer la priorité. Malgré cela, c'est
+      Daniel qui, en 1738, dans son traité Hydrodynamica, établit la relation fondamentale entre la
+      pression, la vitesse et la hauteur d'un fluide en mouvement : là où le fluide accélère, sa
+      pression chute. Cette idée, contre-intuitive à l'époque, finira par expliquer des phénomènes
+      aussi différents que la portance d'une aile d'avion ou le fonctionnement d'un carburateur, et
+      demeure l'une des pierres angulaires de la mécanique des fluides.
+    zh: >-
+      丹尼尔·伯努利出身于一个充满竞争色彩的瑞士数学世家：他的父亲约翰同他竞争，出版了一部
+      类似的著作《流体力学》，并将出版日期提前以争夺优先权。尽管如此，正是丹尼尔在1738年的
+      论著《流体动力学》中确立了运动流体中压强、速度与高度之间的基本关系：流体加速的地方，
+      压强就会下降。这一在当时看来违反直觉的想法，后来解释了从飞机机翼升力到化油器工作原理
+      等诸多迥异的现象，至今仍是流体力学的基石之一。
+    ja: >-
+      ダニエル・ベルヌーイは、競争意識の強いスイスの数学者一族の出身であった。彼自身の父
+      ヨハンも彼と競い合い、類似の著作『流体学』を、優先権を主張するために発行日を遡らせて
+      出版した。それでもなお、1738年に論文『流体力学』において、流れる流体の圧力・速度・
+      高さの間の基本的な関係――流体が加速する場所では圧力が下がる――を確立したのは
+      ダニエルであった。当時は直観に反すると思われたこの考えは、その後、飛行機の翼の揚力から
+      気化器の仕組みに至るまで、実に多様な現象を説明することとなり、流体力学の礎の一つで
+      あり続けている。
   timeline:
     - year: "1738"
       label:
@@ -112,6 +208,16 @@ context:
         en: >-
           Daniel Bernoulli publishes Hydrodynamica, establishing the relationship between a fluid's
           pressure, velocity, and height.
+        pt: >-
+          Daniel Bernoulli publica Hydrodynamica, estabelecendo a relação entre pressão, velocidade
+          e altura de um fluido.
+        fr: >-
+          Daniel Bernoulli publie Hydrodynamica, établissant la relation entre la pression, la
+          vitesse et la hauteur d'un fluide.
+        zh: >-
+          丹尼尔·伯努利发表《流体动力学》，确立了流体压强、速度与高度之间的关系。
+        ja: >-
+          ダニエル・ベルヌーイが『流体力学』を出版し、流体の圧力・速度・高さの関係を確立する。
     - year: "1752"
       label:
         es: >-
@@ -120,6 +226,17 @@ context:
         en: >-
           Leonhard Euler derives the differential equations of fluid motion, giving Bernoulli's
           principle a rigorous foundation.
+        pt: >-
+          Leonhard Euler deriva as equações diferenciais do movimento de fluidos, dando uma base
+          rigorosa ao princípio de Bernoulli.
+        fr: >-
+          Leonhard Euler établit les équations différentielles du mouvement des fluides, donnant
+          au principe de Bernoulli un fondement rigoureux.
+        zh: >-
+          莱昂哈德·欧拉推导出流体运动的微分方程，为伯努利原理奠定了严谨的基础。
+        ja: >-
+          レオンハルト・オイラーが流体運動の微分方程式を導き、ベルヌーイの原理に厳密な基礎を
+          与える。
     - year: s. XIX
       label:
         es: >-
@@ -128,6 +245,16 @@ context:
         en: >-
           Aeronautics pioneers begin using the pressure-velocity relationship to understand wing
           lift.
+        pt: >-
+          Os pioneiros da aeronáutica começam a usar a relação pressão-velocidade para entender a
+          sustentação das asas.
+        fr: >-
+          Les pionniers de l'aéronautique commencent à utiliser la relation pression-vitesse pour
+          comprendre la portance des ailes.
+        zh: >-
+          航空先驱们开始利用压强与速度的关系来理解机翼的升力。
+        ja: >-
+          航空黎明期の先駆者たちが、翼の揚力を理解するために圧力と速度の関係を利用し始める。
     - year: "1903"
       label:
         es: >-
@@ -136,6 +263,17 @@ context:
         en: >-
           The Wright brothers' first flight relies, among other effects, on aerodynamic principles
           derived from this equation.
+        pt: >-
+          O primeiro voo dos irmãos Wright se apoia, entre outros efeitos, em princípios
+          aerodinâmicos derivados desta equação.
+        fr: >-
+          Le premier vol des frères Wright s'appuie, entre autres effets, sur des principes
+          aérodynamiques dérivés de cette équation.
+        zh: >-
+          莱特兄弟的首次飞行在一定程度上依赖于由该方程推导出的空气动力学原理。
+        ja: >-
+          ライト兄弟の初飛行は、他の効果とともに、この方程式に由来する空気力学的原理にも
+          支えられている。
     - year: Hoy
       label:
         es: >-
@@ -144,56 +282,150 @@ context:
         en: >-
           It is key to airplane wing design, carburetors, Venturi flow meters, and medical diagnosis
           of blood flow.
+        pt: >-
+          É essencial no projeto de asas de avião, carburadores, medidores Venturi e no diagnóstico
+          médico do fluxo sanguíneo.
+        fr: >-
+          Elle est essentielle à la conception des ailes d'avion, des carburateurs, des débitmètres
+          Venturi et au diagnostic médical du flux sanguin.
+        zh: >-
+          它在飞机机翼设计、化油器、文丘里流量计以及血流的医学诊断中都起着关键作用。
+        ja: >-
+          飛行機の翼の設計、気化器、ベンチュリ流量計、そして血流の医療診断において重要な役割
+          を果たしている。
   useCases:
     - title:
         es: Aeronáutica
         en: Aeronautics
+        pt: Aeronáutica
+        fr: Aéronautique
+        zh: 航空学
+        ja: 航空工学
       description:
         es: >-
           Explica cómo la diferencia de velocidad del aire sobre y bajo un ala genera la fuerza de
           sustentación.
         en: >-
           It explains how the difference in air speed above and below a wing generates lift.
+        pt: >-
+          Explica como a diferença de velocidade do ar acima e abaixo de uma asa gera a força de
+          sustentação.
+        fr: >-
+          Elle explique comment la différence de vitesse de l'air au-dessus et en dessous d'une
+          aile engendre la portance.
+        zh: >-
+          它解释了机翼上下表面气流速度的差异如何产生升力。
+        ja: >-
+          翼の上面と下面での空気の速度差がどのように揚力を生み出すかを説明する。
     - title:
         es: Ingeniería automotriz
         en: Automotive engineering
+        pt: Engenharia automotiva
+        fr: Ingénierie automobile
+        zh: 汽车工程
+        ja: 自動車工学
       description:
         es: >-
           Es la base del funcionamiento de carburadores e inyectores que mezclan aire y combustible.
         en: >-
           It underlies the operation of carburetors and injectors that mix air and fuel.
+        pt: >-
+          É a base do funcionamento de carburadores e injetores que misturam ar e combustível.
+        fr: >-
+          Elle est à la base du fonctionnement des carburateurs et des injecteurs qui mélangent
+          l'air et le carburant.
+        zh: >-
+          它是化油器和喷油器混合空气与燃料这一工作原理的基础。
+        ja: >-
+          空気と燃料を混合する気化器や噴射装置の動作原理の根底にある。
     - title:
         es: Ingeniería civil e hidráulica
         en: Civil and hydraulic engineering
+        pt: Engenharia civil e hidráulica
+        fr: Génie civil et hydraulique
+        zh: 土木与水利工程
+        ja: 土木・水理工学
       description:
         es: >-
           Se usa para diseñar medidores Venturi y sistemas de tuberías que miden y controlan el flujo
           de agua.
         en: >-
           It is used to design Venturi meters and pipe systems that measure and control water flow.
+        pt: >-
+          É usada para projetar medidores Venturi e sistemas de tubulações que medem e controlam o
+          fluxo de água.
+        fr: >-
+          Elle sert à concevoir des débitmètres Venturi et des réseaux de canalisations qui mesurent
+          et régulent le débit d'eau.
+        zh: >-
+          它被用于设计文丘里流量计以及测量和控制水流的管道系统。
+        ja: >-
+          水の流量を計測・制御するベンチュリ流量計や配管系統の設計に用いられる。
     - title:
         es: Medicina cardiovascular
         en: Cardiovascular medicine
+        pt: Medicina cardiovascular
+        fr: Médecine cardiovasculaire
+        zh: 心血管医学
+        ja: 循環器医学
       description:
         es: >-
           Ayuda a interpretar cómo el estrechamiento de una arteria altera la presión y velocidad de
           la sangre.
         en: >-
           It helps interpret how the narrowing of an artery alters blood pressure and velocity.
+        pt: >-
+          Ajuda a interpretar como o estreitamento de uma artéria altera a pressão e a velocidade do
+          sangue.
+        fr: >-
+          Elle aide à comprendre comment le rétrécissement d'une artère modifie la pression et la
+          vitesse du sang.
+        zh: >-
+          它有助于解释动脉狭窄如何改变血液的压强和流速。
+        ja: >-
+          動脈の狭窄が血圧と血流速度をどのように変化させるかを理解する助けとなる。
   example:
     title:
       es: Estrechamiento en una tubería
       en: Constriction in a pipe
+      pt: Estreitamento em uma tubulação
+      fr: Rétrécissement dans une conduite
+      zh: 管道中的收缩段
+      ja: 配管の狭窄部
     lines:
       - es: ρ = 1000 kg/m³
         en: ρ = 1000 kg/m³
+        pt: ρ = 1000 kg/m³
+        fr: ρ = 1000 kg/m³
+        zh: ρ = 1000 kg/m³
+        ja: ρ = 1000 kg/m³
       - es: P1 = 200 000 Pa, v1 = 2 m/s
         en: P1 = 200,000 Pa, v1 = 2 m/s
+        pt: P1 = 200.000 Pa, v1 = 2 m/s
+        fr: P1 = 200 000 Pa, v1 = 2 m/s
+        zh: P1 = 200,000 Pa，v1 = 2 m/s
+        ja: P1 = 200,000 Pa、v1 = 2 m/s
       - es: v2 = 4 m/s (tubería más angosta)
         en: v2 = 4 m/s (narrower pipe)
+        pt: v2 = 4 m/s (tubulação mais estreita)
+        fr: v2 = 4 m/s (conduite plus étroite)
+        zh: v2 = 4 m/s（较窄的管道）
+        ja: v2 = 4 m/s（より細い配管）
       - es: P1 + ½ρv1² = P2 + ½ρv2²
         en: P1 + ½ρv1² = P2 + ½ρv2²
+        pt: P1 + ½ρv1² = P2 + ½ρv2²
+        fr: P1 + ½ρv1² = P2 + ½ρv2²
+        zh: P1 + ½ρv1² = P2 + ½ρv2²
+        ja: P1 + ½ρv1² = P2 + ½ρv2²
       - es: 200 000 + 2000 = P2 + 8000
         en: 200,000 + 2000 = P2 + 8000
+        pt: 200.000 + 2000 = P2 + 8000
+        fr: 200 000 + 2000 = P2 + 8000
+        zh: 200,000 + 2000 = P2 + 8000
+        ja: 200,000 + 2000 = P2 + 8000
       - es: P2 = 194 000 Pa
         en: P2 = 194,000 Pa
+        pt: P2 = 194.000 Pa
+        fr: P2 = 194 000 Pa
+        zh: P2 = 194,000 Pa
+        ja: P2 = 194,000 Pa

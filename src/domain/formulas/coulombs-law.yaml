@@ -2,9 +2,17 @@ id: coulombs-law
 title:
   es: Ley de Coulomb
   en: Coulomb's Law
+  pt: Lei de Coulomb
+  fr: Loi de Coulomb
+  zh: 库仑定律
+  ja: クーロンの法則
 category:
   es: Física clásica
   en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
 nodes:
   - id: f
     type: variable
@@ -12,67 +20,115 @@ nodes:
     explanation:
       es: La fuerza eléctrica entre dos cargas puntuales.
       en: The electric force between two point charges.
+      pt: A força elétrica entre duas cargas pontuais.
+      fr: La force électrique entre deux charges ponctuelles.
+      zh: 两个点电荷之间的电力。
+      ja: 2つの点電荷の間に働く電気力。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égale à.
+      zh: 恰好等于。
+      ja: 次の式に等しい。
   - id: k
     type: constant
     value: k
     explanation:
       es: La constante de Coulomb, que fija la intensidad de la interacción eléctrica en el vacío.
       en: Coulomb's constant, which sets the strength of the electric interaction in vacuum.
+      pt: A constante de Coulomb, que define a intensidade da interação elétrica no vácuo.
+      fr: La constante de Coulomb, qui fixe l'intensité de l'interaction électrique dans le vide.
+      zh: 库仑常数,决定真空中电相互作用的强度。
+      ja: 真空中における電気的相互作用の強さを決めるクーロン定数。
   - id: q1
     type: variable
     value: q
     explanation:
       es: La magnitud de la primera carga eléctrica.
       en: The magnitude of the first electric charge.
+      pt: A magnitude da primeira carga elétrica.
+      fr: La grandeur de la première charge électrique.
+      zh: 第一个电荷的电荷量。
+      ja: 1つ目の電荷の大きさ。
   - id: sub-1
     type: superscript
     value: "1"
     explanation:
       es: Un subíndice que identifica a la primera de las dos cargas.
       en: A subscript identifying the first of the two charges.
+      pt: Um subíndice que identifica a primeira das duas cargas.
+      fr: Un indice identifiant la première des deux charges.
+      zh: 下标,用于标识两个电荷中的第一个。
+      ja: 2つの電荷のうち1つ目を示す添字。
   - id: q2
     type: variable
     value: q
     explanation:
       es: La magnitud de la segunda carga eléctrica.
       en: The magnitude of the second electric charge.
+      pt: A magnitude da segunda carga elétrica.
+      fr: La grandeur de la seconde charge électrique.
+      zh: 第二个电荷的电荷量。
+      ja: 2つ目の電荷の大きさ。
   - id: sub-2
     type: superscript
     value: "2"
     explanation:
       es: Un subíndice que identifica a la segunda de las dos cargas.
       en: A subscript identifying the second of the two charges.
+      pt: Um subíndice que identifica a segunda das duas cargas.
+      fr: Un indice identifiant la seconde des deux charges.
+      zh: 下标,用于标识两个电荷中的第二个。
+      ja: 2つの電荷のうち2つ目を示す添字。
   - id: div
     type: operator
     value: /
     explanation:
       es: Dividido por el cuadrado de la distancia entre las cargas.
       en: Divided by the square of the distance between the charges.
+      pt: Dividido pelo quadrado da distância entre as cargas.
+      fr: Divisée par le carré de la distance entre les charges.
+      zh: 除以两电荷之间距离的平方。
+      ja: 電荷間の距離の2乗で割る。
   - id: r
     type: variable
     value: r
     explanation:
       es: La distancia que separa a las dos cargas.
       en: The distance separating the two charges.
+      pt: A distância que separa as duas cargas.
+      fr: La distance qui sépare les deux charges.
+      zh: 两个电荷之间的距离。
+      ja: 2つの電荷を隔てる距離。
   - id: exp-2
     type: superscript
     value: "2"
     explanation:
       es: "La distancia elevada al cuadrado: la fuerza cae muy rápido al alejar las cargas."
       en: "The distance squared: the force drops off very quickly as the charges move apart."
+      pt: "A distância elevada ao quadrado: a força cai muito rapidamente ao afastar as cargas."
+      fr: "La distance élevée au carré : la force diminue très rapidement quand les charges s'éloignent."
+      zh: "距离的平方:电荷分开时,力会迅速减弱。"
+      ja: "距離の2乗:電荷が離れるほど力は急激に弱まる。"
 context:
   author:
     es: Charles-Augustin de Coulomb
     en: Charles-Augustin de Coulomb
+    pt: Charles-Augustin de Coulomb
+    fr: Charles-Augustin de Coulomb
+    zh: 夏尔-奥古斯丁·德·库仑
+    ja: シャルル=オーギュスタン・ド・クーロン
   era:
     es: Francia, 1736–1806 · publicada en 1785
     en: France, 1736–1806 · published in 1785
+    pt: França, 1736–1806 · publicada em 1785
+    fr: France, 1736–1806 · publiée en 1785
+    zh: 法国,1736–1806年 · 1785年发表
+    ja: フランス、1736–1806年・1785年発表
   history:
     es: >-
       Coulomb, ingeniero militar formado en mecánica, construyó una balanza de torsión de altísima
@@ -90,6 +146,25 @@ context:
       Academy of Sciences. His law revealed that the electric force follows the same mathematical
       form as Newton's gravitation, with an inverse square of the distance, laying the quantitative
       foundations of modern electrostatics.
+    pt: >-
+      Coulomb, engenheiro militar formado em mecânica, construiu uma balança de torção de altíssima
+      sensibilidade para medir forças minúsculas: uma fibra fina que se torce em proporção à força
+      aplicada. Com esse instrumento, que ele mesmo inventou, mediu como variava a força entre duas
+      esferas carregadas ao mudar sua distância e sua carga, publicando seus resultados em 1785
+      perante a Academia de Ciências da França. Sua lei revelou que a força elétrica segue a mesma
+      forma matemática que a gravitação de Newton, com o inverso do quadrado da distância, lançando
+      as bases quantitativas da eletrostática moderna.
+    fr: >-
+      Coulomb, ingénieur militaire formé à la mécanique, construisit une balance de torsion d'une
+      sensibilité extrême pour mesurer de minuscules forces : une fine fibre qui se tord
+      proportionnellement à la force appliquée. Avec cet instrument, qu'il inventa lui-même, il
+      mesura comment variait la force entre deux sphères chargées lorsqu'on modifiait leur distance
+      et leur charge, publiant ses résultats en 1785 devant l'Académie des sciences de France. Sa loi
+      révéla que la force électrique suit la même forme mathématique que la gravitation de Newton,
+      avec l'inverse du carré de la distance, posant les bases quantitatives de l'électrostatique
+      moderne.
+    zh: 库仑是一名受过力学训练的军事工程师,他制造了一台极为灵敏的扭秤来测量微小的力:一根细纤维会按施加力的大小成比例地扭转。他用这台自己发明的仪器测量了两个带电小球之间的作用力如何随距离和电荷量变化,并于1785年在法国科学院发表了研究成果。他的定律揭示出电力遵循与牛顿万有引力相同的数学形式,即距离平方反比关系,为现代静电学奠定了定量基础。
+    ja: 力学の訓練を受けた軍事技術者クーロンは、微小な力を測定するために極めて高感度なねじり秤を考案した。加えた力に比例してねじれる細い繊維を用いた装置である。彼はこの自作の器具を使い、帯電した2つの球の間に働く力が距離と電荷量によってどう変化するかを測定し、1785年にフランス科学アカデミーで結果を発表した。彼の法則は、電気力がニュートンの万有引力と同じ数学的形式、すなわち距離の逆二乗則に従うことを明らかにし、現代静電気学の定量的基礎を築いた。
   timeline:
     - year: "1785"
       label:
@@ -99,6 +174,16 @@ context:
         en: >-
           Coulomb publishes his law using measurements made with the torsion balance he himself
           designed.
+        pt: >-
+          Coulomb publica sua lei usando medições feitas com a balança de torção que ele mesmo
+          projetou.
+        fr: >-
+          Coulomb publie sa loi à partir de mesures effectuées avec la balance de torsion qu'il a
+          lui-même conçue.
+        zh: >-
+          库仑发表了他的定律,所用数据来自他亲自设计的扭秤测量结果。
+        ja: >-
+          クーロンは、自ら設計したねじり秤による測定結果をもとに法則を発表する。
     - year: "1873"
       label:
         es: >-
@@ -107,6 +192,16 @@ context:
         en: >-
           James Clerk Maxwell unifies electricity and magnetism, folding Coulomb's law in as the
           static case of his equations.
+        pt: >-
+          James Clerk Maxwell unifica eletricidade e magnetismo, incorporando a lei de Coulomb como
+          o caso estático de suas equações.
+        fr: >-
+          James Clerk Maxwell unifie électricité et magnétisme, intégrant la loi de Coulomb comme cas
+          statique de ses équations.
+        zh: >-
+          詹姆斯·克拉克·麦克斯韦统一了电学与磁学,将库仑定律纳入其方程组作为静态特例。
+        ja: >-
+          ジェームズ・クラーク・マクスウェルが電気と磁気を統一し、クーロンの法則を自らの方程式の静的な場合として組み込む。
     - year: "1909"
       label:
         es: >-
@@ -115,6 +210,16 @@ context:
         en: >-
           Robert Millikan precisely measures the elementary charge of the electron, refining the
           quantities the law uses.
+        pt: >-
+          Robert Millikan mede com precisão a carga elementar do elétron, refinando as grandezas
+          usadas pela lei.
+        fr: >-
+          Robert Millikan mesure avec précision la charge élémentaire de l'électron, affinant les
+          grandeurs utilisées par la loi.
+        zh: >-
+          罗伯特·密立根精确测定了电子的基本电荷,细化了定律中使用的各项数值。
+        ja: >-
+          ロバート・ミリカンが電子の素電荷を精密に測定し、法則で用いられる量を精緻化する。
     - year: "1948"
       label:
         es: >-
@@ -122,6 +227,16 @@ context:
           fotones virtuales.
         en: >-
           Quantum electrodynamics explains Coulomb's law as the result of virtual photon exchange.
+        pt: >-
+          A eletrodinâmica quântica explica a lei de Coulomb como resultado da troca de fótons
+          virtuais.
+        fr: >-
+          L'électrodynamique quantique explique la loi de Coulomb comme le résultat d'un échange de
+          photons virtuels.
+        zh: >-
+          量子电动力学将库仑定律解释为虚光子交换的结果。
+        ja: >-
+          量子電磁力学は、クーロンの法則を仮想光子の交換の結果として説明する。
     - year: Hoy
       label:
         es: >-
@@ -130,10 +245,24 @@ context:
         en: >-
           It remains the foundation of electronic engineering, ionic-bond chemistry, and
           electrostatic simulations.
+        pt: >-
+          Continua sendo a base da engenharia eletrônica, da química das ligações iônicas e das
+          simulações eletrostáticas.
+        fr: >-
+          Elle demeure le fondement de l'ingénierie électronique, de la chimie des liaisons ioniques
+          et des simulations électrostatiques.
+        zh: >-
+          它至今仍是电子工程、离子键化学以及静电模拟的基础。
+        ja: >-
+          今日でも電子工学、イオン結合の化学、静電シミュレーションの基礎であり続けている。
   useCases:
     - title:
         es: Ingeniería electrónica
         en: Electronic engineering
+        pt: Engenharia eletrônica
+        fr: Ingénierie électronique
+        zh: 电子工程
+        ja: 電子工学
       description:
         es: >-
           Se usa para calcular fuerzas de repulsión y atracción entre componentes cargados en
@@ -141,9 +270,23 @@ context:
         en: >-
           It is used to calculate attraction and repulsion forces between charged components in
           circuits and devices.
+        pt: >-
+          É usada para calcular forças de repulsão e atração entre componentes carregados em
+          circuitos e dispositivos.
+        fr: >-
+          Elle sert à calculer les forces d'attraction et de répulsion entre composants chargés dans
+          les circuits et les dispositifs.
+        zh: >-
+          用于计算电路和器件中带电元件之间的排斥力与吸引力。
+        ja: >-
+          回路や機器内の帯電した部品間に働く反発力と引力を計算するために用いられる。
     - title:
         es: Química
         en: Chemistry
+        pt: Química
+        fr: Chimie
+        zh: 化学
+        ja: 化学
       description:
         es: >-
           Explica la fuerza que mantiene unidos a los iones en un enlace iónico, como en la sal
@@ -151,17 +294,44 @@ context:
         en: >-
           It explains the force that holds ions together in an ionic bond, such as in common table
           salt.
+        pt: >-
+          Explica a força que mantém os íons unidos em uma ligação iônica, como no sal de cozinha
+          comum.
+        fr: >-
+          Elle explique la force qui maintient les ions liés dans une liaison ionique, comme dans le
+          sel de table ordinaire.
+        zh: >-
+          解释了离子键中将离子结合在一起的作用力,例如普通食盐中的离子键。
+        ja: >-
+          食塩などのイオン結合において、イオン同士を結びつける力を説明する。
     - title:
         es: Ciencias atmosféricas
         en: Atmospheric science
+        pt: Ciências atmosféricas
+        fr: Sciences de l'atmosphère
+        zh: 大气科学
+        ja: 大気科学
       description:
         es: >-
           Ayuda a modelar la acumulación de carga estática en nubes que da origen a los rayos.
         en: >-
           It helps model the buildup of static charge in clouds that gives rise to lightning.
+        pt: >-
+          Ajuda a modelar o acúmulo de carga estática nas nuvens que dá origem aos raios.
+        fr: >-
+          Elle aide à modéliser l'accumulation de charge statique dans les nuages qui donne naissance
+          à la foudre.
+        zh: >-
+          有助于模拟云层中静电荷的积累过程,从而解释闪电的产生。
+        ja: >-
+          雲の中で静電荷が蓄積し、落雷を引き起こす過程のモデル化に役立つ。
     - title:
         es: Ingeniería aeroespacial
         en: Aerospace engineering
+        pt: Engenharia aeroespacial
+        fr: Ingénierie aérospatiale
+        zh: 航空航天工程
+        ja: 航空宇宙工学
       description:
         es: >-
           Se aplica para prever la carga eléctrica que acumulan las naves espaciales en el vacío y
@@ -169,22 +339,64 @@ context:
         en: >-
           It is applied to anticipate the electric charge spacecraft accumulate in vacuum and avoid
           damaging discharges.
+        pt: >-
+          É aplicada para prever a carga elétrica que as naves espaciais acumulam no vácuo e evitar
+          descargas prejudiciais.
+        fr: >-
+          Elle est utilisée pour anticiper la charge électrique que les engins spatiaux accumulent
+          dans le vide et éviter des décharges dommageables.
+        zh: >-
+          用于预测航天器在真空中积累的电荷,从而避免造成损害的放电现象。
+        ja: >-
+          宇宙船が真空中で蓄積する電荷を予測し、有害な放電を防ぐために応用される。
   example:
     title:
       es: Fuerza entre dos cargas
       en: Force between two charges
+      pt: Força entre duas cargas
+      fr: Force entre deux charges
+      zh: 两个电荷之间的力
+      ja: 2つの電荷間に働く力
     lines:
       - es: q1 = 2×10⁻⁶ C
         en: q1 = 2×10⁻⁶ C
+        pt: q1 = 2×10⁻⁶ C
+        fr: q1 = 2×10⁻⁶ C
+        zh: q1 = 2×10⁻⁶ C
+        ja: q1 = 2×10⁻⁶ C
       - es: q2 = 3×10⁻⁶ C
         en: q2 = 3×10⁻⁶ C
+        pt: q2 = 3×10⁻⁶ C
+        fr: q2 = 3×10⁻⁶ C
+        zh: q2 = 3×10⁻⁶ C
+        ja: q2 = 3×10⁻⁶ C
       - es: r = 0,5 m
         en: r = 0.5 m
+        pt: r = 0,5 m
+        fr: r = 0,5 m
+        zh: r = 0.5 m
+        ja: r = 0.5 m
       - es: k = 8,99×10⁹ N·m²/C²
         en: k = 8.99×10⁹ N·m²/C²
+        pt: k = 8,99×10⁹ N·m²/C²
+        fr: k = 8,99×10⁹ N·m²/C²
+        zh: k = 8.99×10⁹ N·m²/C²
+        ja: k = 8.99×10⁹ N·m²/C²
       - es: F = k q1 q2 / r²
         en: F = k q1 q2 / r²
+        pt: F = k q1 q2 / r²
+        fr: F = k q1 q2 / r²
+        zh: F = k q1 q2 / r²
+        ja: F = k q1 q2 / r²
       - es: F = 8,99×10⁹ × 6×10⁻¹² / 0,25
         en: F = 8.99×10⁹ × 6×10⁻¹² / 0.25
+        pt: F = 8,99×10⁹ × 6×10⁻¹² / 0,25
+        fr: F = 8,99×10⁹ × 6×10⁻¹² / 0,25
+        zh: F = 8.99×10⁹ × 6×10⁻¹² / 0.25
+        ja: F = 8.99×10⁹ × 6×10⁻¹² / 0.25
       - es: F ≈ 0,216 N
         en: F ≈ 0.216 N
+        pt: F ≈ 0,216 N
+        fr: F ≈ 0,216 N
+        zh: F ≈ 0.216 N
+        ja: F ≈ 0.216 N

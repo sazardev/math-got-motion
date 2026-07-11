@@ -2,9 +2,17 @@ id: mass-energy-equivalence
 title:
   es: Equivalencia entre Masa y Energía
   en: Mass-Energy Equivalence
+  pt: Equivalência entre Massa e Energia
+  fr: Équivalence masse-énergie
+  zh: 质能方程
+  ja: 質量とエネルギーの等価性
 category:
   es: Física moderna
   en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
 nodes:
   - id: e
     type: variable
@@ -12,37 +20,66 @@ nodes:
     explanation:
       es: La energía contenida en un objeto, medida en joules.
       en: The energy contained in an object, measured in joules.
+      pt: A energia contida em um objeto, medida em joules.
+      fr: L'énergie contenue dans un objet, mesurée en joules.
+      zh: 物体所含的能量，以焦耳为单位。
+      ja: 物体に含まれるエネルギー。単位はジュール。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 精确地等于。
+      ja: これは次の値に正確に等しい。
   - id: m
     type: variable
     value: m
     explanation:
       es: La masa del objeto, en kilogramos.
       en: The object's mass, in kilograms.
+      pt: A massa do objeto, em quilogramas.
+      fr: La masse de l'objet, en kilogrammes.
+      zh: 物体的质量，以千克为单位。
+      ja: 物体の質量。単位はキログラム。
   - id: c
     type: constant
     value: c
     explanation:
       es: "La velocidad de la luz en el vacío: unos 300,000 km/s."
       en: "The speed of light in vacuum: about 300,000 km/s."
+      pt: "A velocidade da luz no vácuo: cerca de 300.000 km/s."
+      fr: "La vitesse de la lumière dans le vide : environ 300 000 km/s."
+      zh: "真空中的光速：约每秒30万千米。"
+      ja: "真空中の光の速さ。秒速およそ30万km。"
   - id: c-sq
     type: superscript
     value: "2"
     explanation:
       es: Elevada al cuadrado, la razón por la que incluso poca masa equivale a enorme energía.
       en: Squared, the reason even a tiny mass equals enormous energy.
+      pt: Elevada ao quadrado, a razão pela qual mesmo pouca massa equivale a uma energia enorme.
+      fr: Élevée au carré, la raison pour laquelle même une masse infime équivaut à une énergie
+        colossale.
+      zh: 平方，这正是为什么即便质量很小也对应巨大能量的原因。
+      ja: 二乗されている。これがわずかな質量でも莫大なエネルギーに相当する理由である。
 context:
   author:
     es: Albert Einstein
     en: Albert Einstein
+    pt: Albert Einstein
+    fr: Albert Einstein
+    zh: 阿尔伯特·爱因斯坦
+    ja: アルベルト・アインシュタイン
   era:
     es: Alemania y Suiza, 1879–1955 · publicada en 1905
     en: Germany and Switzerland, 1879–1955 · published in 1905
+    pt: Alemanha e Suíça, 1879–1955 · publicada em 1905
+    fr: Allemagne et Suisse, 1879–1955 · publiée en 1905
+    zh: 德国与瑞士，1879–1955 · 发表于1905年
+    ja: ドイツ・スイス、1879–1955年 · 1905年発表
   history:
     es: >-
       Einstein la presentó en 1905, en un breve artículo titulado '¿Depende la inercia de un
@@ -56,11 +93,32 @@ context:
       shows that mass and energy are interchangeable forms of the same thing, linked by the
       square of the speed of light. It permanently changed nuclear physics and our idea of
       matter.
+    pt: >-
+      Einstein a apresentou em 1905, em um breve artigo intitulado 'A inércia de um corpo depende
+      do seu conteúdo de energia?', parte de seus célebres artigos do 'ano miraculoso'. A equação
+      mostra que massa e energia são formas intercambiáveis de uma mesma coisa, unidas pelo
+      quadrado da velocidade da luz. Ela mudou para sempre a física nuclear e nossa ideia sobre a
+      matéria.
+    fr: >-
+      Einstein la présenta en 1905, dans un court article intitulé 'L'inertie d'un corps
+      dépend-elle de son contenu en énergie ?', qui fait partie de ses célèbres articles de
+      l''année miraculeuse'. L'équation montre que la masse et l'énergie sont des formes
+      interchangeables d'une même chose, reliées par le carré de la vitesse de la lumière. Elle a
+      changé à jamais la physique nucléaire et notre conception de la matière.
+    zh: >-
+      爱因斯坦于1905年在一篇题为《物体的惯性是否取决于其所含的能量？》的短文中提出了这一方程，这是他著名的"奇迹年"论文之一。该方程表明质量和能量是同一事物可以互相转化的两种形式，二者由光速的平方联系在一起。它永远地改变了核物理学以及我们对物质的理解。
+    ja: >-
+      アインシュタインは1905年、「物体の慣性はそのエネルギー量に依存するか？」と題した短い論文の中でこれを発表した。これは彼の有名な「奇跡の年」の論文の一つである。この方程式は、質量とエネルギーが同じものの互いに交換可能な二つの形態であり、光速の二乗によって結びついていることを示している。これは核物理学と物質についての私たちの考え方を永久に変えた。
   timeline:
     - year: "1905"
       label:
         es: Einstein publica la equivalencia masa-energía como consecuencia de su relatividad especial.
         en: Einstein publishes mass-energy equivalence as a consequence of his special relativity.
+        pt: Einstein publica a equivalência massa-energia como consequência de sua relatividade
+          especial.
+        fr: Einstein publie l'équivalence masse-énergie comme conséquence de sa relativité restreinte.
+        zh: 爱因斯坦发表质能方程，作为其狭义相对论的一个推论。
+        ja: アインシュタインが特殊相対性理論の帰結として質量とエネルギーの等価性を発表する。
     - year: "1932"
       label:
         es: >-
@@ -69,10 +127,26 @@ context:
         en: >-
           Cockcroft and Walton split the lithium atom, experimentally confirming the conversion
           of mass into energy.
+        pt: >-
+          Cockcroft e Walton dividem o átomo de lítio e confirmam experimentalmente a conversão de
+          massa em energia.
+        fr: >-
+          Cockcroft et Walton scindent l'atome de lithium, confirmant expérimentalement la
+          conversion de la masse en énergie.
+        zh: >-
+          考克饶夫和沃尔顿分裂了锂原子，用实验证实了质量向能量的转化。
+        ja: >-
+          コッククロフトとウォルトンがリチウム原子を分裂させ、質量からエネルギーへの変換を実験的に確認する。
     - year: "1938"
       label:
         es: Hahn, Strassmann y Meitner descubren la fisión nuclear; Meitner explica la energía con E = mc².
         en: Hahn, Strassmann, and Meitner discover nuclear fission; Meitner explains the energy using E = mc².
+        pt: Hahn, Strassmann e Meitner descobrem a fissão nuclear; Meitner explica a energia com E =
+          mc².
+        fr: Hahn, Strassmann et Meitner découvrent la fission nucléaire ; Meitner explique l'énergie
+          au moyen de E = mc².
+        zh: 哈恩、斯特拉斯曼和迈特纳发现了核裂变；迈特纳用E = mc²解释了释放的能量。
+        ja: ハーン、シュトラスマン、マイトナーが核分裂を発見。マイトナーがE = mc²でそのエネルギーを説明する。
     - year: "1945"
       label:
         es: >-
@@ -81,18 +155,42 @@ context:
         en: >-
           The Manhattan Project demonstrates mass-to-energy conversion at scale with the first
           nuclear weapons.
+        pt: >-
+          O Projeto Manhattan demonstra em grande escala a conversão de massa em energia com as
+          primeiras armas nucleares.
+        fr: >-
+          Le projet Manhattan démontre à grande échelle la conversion de la masse en énergie avec
+          les premières armes nucléaires.
+        zh: >-
+          曼哈顿计划以首批核武器大规模展示了质量向能量的转化。
+        ja: >-
+          マンハッタン計画が最初の核兵器によって質量からエネルギーへの変換を大規模に実証する。
     - year: "1956"
       label:
         es: Calder Hall, en Inglaterra, se convierte en la primera planta nuclear comercial.
         en: Calder Hall in England becomes the first commercial nuclear power plant.
+        pt: Calder Hall, na Inglaterra, se torna a primeira usina nuclear comercial.
+        fr: Calder Hall, en Angleterre, devient la première centrale nucléaire commerciale.
+        zh: 英国的考尔德霍尔核电站成为世界上第一座商业核电站。
+        ja: イギリスのコールダーホールが世界初の商業原子力発電所となる。
     - year: Hoy
       label:
         es: Sustenta la energía nuclear, la medicina con positrones y los cálculos de física de partículas.
         en: It underpins nuclear power, positron-based medicine, and particle physics calculations.
+        pt: Sustenta a energia nuclear, a medicina com pósitrons e os cálculos de física de
+          partículas.
+        fr: Elle sous-tend l'énergie nucléaire, la médecine à base de positrons et les calculs de
+          physique des particules.
+        zh: 它支撑着核能、正电子医学以及粒子物理学中的各种计算。
+        ja: 原子力発電、陽電子を用いた医療、素粒子物理学の計算を支えている。
   useCases:
     - title:
         es: Energía nuclear
         en: Nuclear power
+        pt: Energia nuclear
+        fr: Énergie nucléaire
+        zh: 核能
+        ja: 原子力発電
       description:
         es: >-
           Las plantas nucleares generan electricidad convirtiendo una fracción diminuta de masa
@@ -100,9 +198,23 @@ context:
         en: >-
           Nuclear plants generate electricity by converting a tiny fraction of uranium's mass
           into enormous amounts of energy.
+        pt: >-
+          As usinas nucleares geram eletricidade convertendo uma fração diminuta da massa do
+          urânio em enormes quantidades de energia.
+        fr: >-
+          Les centrales nucléaires produisent de l'électricité en convertissant une infime
+          fraction de la masse de l'uranium en énormes quantités d'énergie.
+        zh: >-
+          核电站通过将极小部分的铀质量转化为巨大能量来发电。
+        ja: >-
+          原子力発電所は、ウランのごく一部の質量を莫大な量のエネルギーに変換して発電する。
     - title:
         es: Medicina nuclear
         en: Nuclear medicine
+        pt: Medicina nuclear
+        fr: Médecine nucléaire
+        zh: 核医学
+        ja: 核医学
       description:
         es: >-
           Los escáneres PET detectan la aniquilación de positrones y electrones, que libera
@@ -110,9 +222,23 @@ context:
         en: >-
           PET scanners detect positron-electron annihilation, which releases energy exactly as
           predicted by E = mc².
+        pt: >-
+          Os scanners PET detectam a aniquilação de pósitrons e elétrons, que libera energia
+          exatamente conforme previsto por E = mc².
+        fr: >-
+          Les scanners TEP détectent l'annihilation des positrons et des électrons, qui libère de
+          l'énergie exactement conformément à E = mc².
+        zh: >-
+          PET扫描仪能探测正电子与电子的湮灭，其释放的能量正如E = mc²所预测的那样。
+        ja: >-
+          PETスキャナーは陽電子と電子の対消滅を検出する。これはE = mc²が予測する通りにエネルギーを放出する現象である。
     - title:
         es: Física de partículas
         en: Particle physics
+        pt: Física de partículas
+        fr: Physique des particules
+        zh: 粒子物理学
+        ja: 素粒子物理学
       description:
         es: >-
           Aceleradores como el LHC convierten energía cinética en masa, creando partículas nuevas
@@ -120,9 +246,23 @@ context:
         en: >-
           Accelerators like the LHC convert kinetic energy into mass, creating new particles
           according to this same equation.
+        pt: >-
+          Aceleradores como o LHC convertem energia cinética em massa, criando novas partículas
+          de acordo com essa mesma equação.
+        fr: >-
+          Des accélérateurs comme le LHC convertissent l'énergie cinétique en masse, créant de
+          nouvelles particules selon cette même équation.
+        zh: >-
+          像LHC这样的加速器将动能转化为质量，依据这同一方程创造出新的粒子。
+        ja: >-
+          LHCのような加速器は運動エネルギーを質量に変換し、この同じ方程式に従って新しい粒子を生み出す。
     - title:
         es: Astrofísica
         en: Astrophysics
+        pt: Astrofísica
+        fr: Astrophysique
+        zh: 天体物理学
+        ja: 天体物理学
       description:
         es: >-
           El Sol y las estrellas irradian energía perdiendo una pequeñísima fracción de su masa
@@ -130,20 +270,58 @@ context:
         en: >-
           The Sun and stars radiate energy by losing a tiny fraction of their mass each second
           through nuclear fusion.
+        pt: >-
+          O Sol e as estrelas irradiam energia perdendo uma fração minúscula de sua massa a cada
+          segundo por meio da fusão nuclear.
+        fr: >-
+          Le Soleil et les étoiles rayonnent de l'énergie en perdant chaque seconde une infime
+          fraction de leur masse par fusion nucléaire.
+        zh: >-
+          太阳和恒星通过核聚变，每秒损失极其微小的一部分质量，以此辐射出能量。
+        ja: >-
+          太陽や恒星は核融合によって毎秒ごくわずかな質量を失いながらエネルギーを放射している。
   example:
     title:
       es: Un gramo convertido en energía
       en: One gram converted to energy
+      pt: Um grama convertido em energia
+      fr: Un gramme converti en énergie
+      zh: 一克质量转化为能量
+      ja: 1グラムがエネルギーに変換される場合
     lines:
       - es: m = 0.001 kg (1 gramo)
         en: m = 0.001 kg (1 gram)
+        pt: m = 0,001 kg (1 grama)
+        fr: m = 0,001 kg (1 gramme)
+        zh: m = 0.001 千克（1克）
+        ja: m = 0.001 kg（1グラム）
       - es: c = 3×10⁸ m/s
         en: c = 3×10⁸ m/s
+        pt: c = 3×10⁸ m/s
+        fr: c = 3×10⁸ m/s
+        zh: c = 3×10⁸ 米/秒
+        ja: c = 3×10⁸ m/s
       - es: E = m · c²
         en: E = m · c²
+        pt: E = m · c²
+        fr: E = m · c²
+        zh: E = m · c²
+        ja: E = m · c²
       - es: E = 0.001 · (3×10⁸)²
         en: E = 0.001 · (3×10⁸)²
+        pt: E = 0,001 · (3×10⁸)²
+        fr: E = 0,001 · (3×10⁸)²
+        zh: E = 0.001 · (3×10⁸)²
+        ja: E = 0.001 · (3×10⁸)²
       - es: E = 0.001 · 9×10¹⁶
         en: E = 0.001 · 9×10¹⁶
+        pt: E = 0,001 · 9×10¹⁶
+        fr: E = 0,001 · 9×10¹⁶
+        zh: E = 0.001 · 9×10¹⁶
+        ja: E = 0.001 · 9×10¹⁶
       - es: E = 9×10¹³ joules
         en: E = 9×10¹³ joules
+        pt: E = 9×10¹³ joules
+        fr: E = 9×10¹³ joules
+        zh: E = 9×10¹³ 焦耳
+        ja: E = 9×10¹³ ジュール

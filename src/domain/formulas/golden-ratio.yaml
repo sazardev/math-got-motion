@@ -2,9 +2,17 @@ id: golden-ratio
 title:
   es: Razón Áurea
   en: Golden Ratio
+  pt: Razão Áurea
+  fr: Nombre d'or
+  zh: 黄金比例
+  ja: 黄金比
 category:
   es: Álgebra
   en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
 nodes:
   - id: phi
     type: constant
@@ -12,55 +20,95 @@ nodes:
     explanation:
       es: "Phi: la letra griega usada para nombrar la razón áurea, aproximadamente 1.618."
       en: "Phi: the Greek letter used to name the golden ratio, approximately 1.618."
+      pt: "Phi: a letra grega usada para nomear a razão áurea, aproximadamente 1,618."
+      fr: "Phi : la lettre grecque utilisée pour nommer le nombre d'or, environ 1,618."
+      zh: "φ(phi):用来命名黄金比例的希腊字母,约等于1.618。"
+      ja: "φ(ファイ):黄金比を表すギリシャ文字。約1.618。"
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es igual a.
       en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
   - id: one
     type: number
     value: "1"
     explanation:
       es: La unidad, sumada a la raíz de cinco en el numerador.
       en: The unit, added to the square root of five in the numerator.
+      pt: A unidade, somada à raiz de cinco no numerador.
+      fr: L'unité, ajoutée à la racine carrée de cinq au numérateur.
+      zh: 分子中的1,加上根号5。
+      ja: 分子において、5の平方根に加えられる1。
   - id: plus
     type: operator
     value: +
     explanation:
       es: Sumado al siguiente término.
       en: Added to the following term.
+      pt: Somado ao termo seguinte.
+      fr: Ajouté au terme suivant.
+      zh: 与下一项相加。
+      ja: 次の項に加える。
   - id: sqrt
     type: operator
     value: √
     explanation:
       es: Raíz cuadrada del número que sigue.
       en: Square root of the number that follows.
+      pt: Raiz quadrada do número seguinte.
+      fr: Racine carrée du nombre qui suit.
+      zh: 后面数字的平方根。
+      ja: 続く数の平方根。
   - id: five
     type: number
     value: "5"
     explanation:
       es: El número cinco, cuya raíz cuadrada es aproximadamente 2.236.
       en: The number five, whose square root is approximately 2.236.
+      pt: O número cinco, cuja raiz quadrada é aproximadamente 2,236.
+      fr: Le nombre cinq, dont la racine carrée vaut environ 2,236.
+      zh: 数字5,其平方根约为2.236。
+      ja: 数字5。その平方根は約2.236。
   - id: fraction-bar
     type: operator
     value: "/"
     explanation:
       es: Dividido entre el denominador que sigue.
       en: Divided by the denominator that follows.
+      pt: Dividido pelo denominador seguinte.
+      fr: Divisé par le dénominateur qui suit.
+      zh: 除以后面的分母。
+      ja: 続く分母で割る。
   - id: two
     type: number
     value: "2"
     explanation:
       es: El número dos, el denominador de la razón.
       en: The number two, the ratio's denominator.
+      pt: O número dois, o denominador da razão.
+      fr: Le nombre deux, le dénominateur du rapport.
+      zh: 数字2,是这个比值的分母。
+      ja: 数字2。この比の分母。
 context:
   author:
     es: Euclides
     en: Euclid
+    pt: Euclides
+    fr: Euclide
+    zh: 欧几里得
+    ja: ユークリッド
   era:
     es: Alejandría, c. 325–265 a.C. · Elementos, c. 300 a.C.
     en: Alexandria, c. 325–265 BC · Elements, c. 300 BC
+    pt: Alexandria, c. 325–265 a.C. · Elementos, c. 300 a.C.
+    fr: Alexandrie, v. 325–265 av. J.-C. · Éléments, v. 300 av. J.-C.
+    zh: 亚历山大,约公元前325–265年 · 《几何原本》约公元前300年
+    ja: アレクサンドリア、紀元前325年頃–265年頃 · 『原論』紀元前300年頃
   history:
     es: >-
       La primera definición rigurosa de la razón áurea aparece en los Elementos de Euclides, donde la
@@ -84,6 +132,44 @@ context:
       and ever since it has been credited —often with exaggerated or unfounded claims— with an
       aesthetic role in classical art and architecture. The symbol φ (phi) was only adopted in the 20th
       century, in tribute to the Greek sculptor Phidias.
+    pt: >-
+      A primeira definição rigorosa da razão áurea aparece nos Elementos de Euclides, onde ele a
+      descreve como a divisão de um segmento 'em média e extrema razão': um ponto que divide uma
+      linha de modo que a razão entre o todo e a parte maior seja igual à razão entre a parte maior e
+      a menor. Euclides a usava com fins geométricos, em particular para construir o pentágono
+      regular e os sólidos platônicos, sem atribuir a ela nenhum significado místico. Séculos depois,
+      Leonardo de Pisa (Fibonacci) mostrou em 1202 que os quocientes de sua famosa sequência
+      convergem para esse mesmo número. Durante o Renascimento, o frade Luca Pacioli a batizou de
+      'divina proporção' em 1509, e desde então lhe foi atribuído —com frequência de forma exagerada
+      ou infundada— um papel estético na arte e na arquitetura clássicas. O símbolo φ só foi adotado
+      no século XX, em homenagem ao escultor grego Fídias.
+    fr: >-
+      La première définition rigoureuse du nombre d'or apparaît dans les Éléments d'Euclide, où il la
+      décrit comme la division d'un segment 'en extrême et moyenne raison' : un point qui divise une
+      ligne de sorte que le rapport du tout à la plus grande partie soit égal au rapport de la plus
+      grande partie à la plus petite. Euclide s'en servait à des fins géométriques, notamment pour
+      construire le pentagone régulier et les solides platoniciens, sans signification mystique. Des
+      siècles plus tard, Léonard de Pise (Fibonacci) montra en 1202 que les quotients de sa célèbre
+      suite convergent vers ce même nombre. Pendant la Renaissance, le frère Luca Pacioli la baptisa
+      'divine proportion' en 1509, et depuis lors on lui a attribué —souvent à tort— un rôle esthétique
+      dans l'art et l'architecture classiques. Le symbole φ ne fut
+      adopté qu'au XXe siècle, en hommage au sculpteur grec Phidias.
+    zh: >-
+      黄金比例最早的严谨定义出现在欧几里得的《几何原本》中,他将其描述为对一条线段进行"中末比"分割:
+      即一个分割点,使得整体与较长部分之比等于较长部分与较短部分之比。欧几里得使用它是出于几何目的,
+      特别是用来构造正五边形和柏拉图立体,并未赋予它任何神秘含义。几个世纪后,比萨的莱昂纳多(斐波那契)
+      于1202年证明了他那著名数列的相邻项之比会收敛到同一个数。文艺复兴时期,修士卢卡·帕西奥利在1509年
+      将其命名为"神圣比例",从那以后人们(常常是夸大或缺乏根据地)赋予它在古典艺术与建筑中的审美意义。
+      符号φ直到20世纪才被采用,以此向希腊雕塑家菲迪亚斯致敬。
+    ja: >-
+      黄金比の最初の厳密な定義はユークリッドの『原論』に登場する。そこでは線分を「外中比」に分割することとして
+      説明されている。すなわち、全体と長い部分との比が、長い部分と短い部分との比に等しくなるように線分を分ける点である。
+      ユークリッドはこれを幾何学的な目的、特に正五角形やプラトンの立体を作図するために用いており、神秘的な意味は
+      付与していなかった。何世紀も後の1202年、ピサのレオナルド(フィボナッチ)は、自身の有名な数列の比が
+      この同じ数に収束することを示した。ルネサンス期には修道士ルカ・パチョーリが1509年にこれを「神聖比例」と
+      名付け、以来(しばしば誇張された、あるいは根拠の乏しい形で)古典芸術や建築における美的役割が
+      語られるようになった。記号φが採用されたのは20世紀になってからで、ギリシャの彫刻家ペイディアスに
+      ちなんでいる。
   timeline:
     - year: c. 300 a.C.
       label:
@@ -93,6 +179,16 @@ context:
         en: >-
           Euclid formally defines the 'extreme and mean ratio' in his Elements, using it to construct
           the regular pentagon.
+        pt: >-
+          Euclides define formalmente a 'média e extrema razão' em seus Elementos, usando-a para
+          construir o pentágono regular.
+        fr: >-
+          Euclide définit formellement l'« extrême et moyenne raison » dans ses Éléments, l'utilisant
+          pour construire le pentagone régulier.
+        zh: >-
+          欧几里得在《几何原本》中正式定义了"中末比",并用它来构造正五边形。
+        ja: >-
+          ユークリッドが『原論』で「外中比」を正式に定義し、正五角形の作図に用いる。
     - year: "1202"
       label:
         es: >-
@@ -101,10 +197,24 @@ context:
         en: >-
           Fibonacci publishes Liber Abaci; the ratios of his number sequence converge toward the
           golden ratio.
+        pt: >-
+          Fibonacci publica o Liber Abaci; os quocientes de sua sequência de números convergem para a
+          razão áurea.
+        fr: >-
+          Fibonacci publie le Liber Abaci ; les quotients de sa suite de nombres convergent vers le
+          nombre d'or.
+        zh: >-
+          斐波那契发表《计算之书》(Liber Abaci);他的数列各项之比收敛于黄金比例。
+        ja: >-
+          フィボナッチが『算盤の書』(Liber Abaci)を発表。その数列の比は黄金比に収束する。
     - year: "1509"
       label:
         es: Luca Pacioli publica De Divina Proportione, ilustrado por Leonardo da Vinci.
         en: Luca Pacioli publishes De Divina Proportione, illustrated by Leonardo da Vinci.
+        pt: Luca Pacioli publica De Divina Proportione, ilustrado por Leonardo da Vinci.
+        fr: Luca Pacioli publie De Divina Proportione, illustré par Léonard de Vinci.
+        zh: 卢卡·帕西奥利发表《神圣比例》(De Divina Proportione),由列奥纳多·达·芬奇绘制插图。
+        ja: ルカ・パチョーリが『神聖比例論』(De Divina Proportione)を発表。レオナルド・ダ・ヴィンチが挿絵を担当した。
     - year: s. XX
       label:
         es: >-
@@ -113,6 +223,15 @@ context:
         en: >-
           Mathematicians adopt the Greek symbol φ to name the ratio, in tribute to the sculptor
           Phidias.
+        pt: >-
+          Matemáticos adotam o símbolo grego φ para nomear a razão, em homenagem ao escultor Fídias.
+        fr: >-
+          Les mathématiciens adoptent le symbole grec φ pour nommer le rapport, en hommage au
+          sculpteur Phidias.
+        zh: >-
+          数学家们采用希腊字母φ来命名这一比例,以此纪念雕塑家菲迪亚斯。
+        ja: >-
+          数学者たちが彫刻家ペイディアスに敬意を表し、この比を表すギリシャ文字φを採用する。
     - year: Hoy
       label:
         es: >-
@@ -121,10 +240,24 @@ context:
         en: >-
           Used in graphic design, photographic composition, and search algorithms like the golden
           section search.
+        pt: >-
+          Usada em design gráfico, composição fotográfica e algoritmos de busca como a busca da seção
+          áurea.
+        fr: >-
+          Utilisé en design graphique, en composition photographique et dans des algorithmes de
+          recherche comme la recherche par section dorée.
+        zh: >-
+          被应用于平面设计、摄影构图以及诸如黄金分割搜索之类的搜索算法。
+        ja: >-
+          グラフィックデザイン、写真の構図、黄金分割探索のような検索アルゴリズムに利用されている。
   useCases:
     - title:
         es: Diseño gráfico
         en: Graphic design
+        pt: Design gráfico
+        fr: Design graphique
+        zh: 平面设计
+        ja: グラフィックデザイン
       description:
         es: >-
           Rectángulos y espirales áureas guían proporciones de layouts, logotipos y composiciones
@@ -132,9 +265,23 @@ context:
         en: >-
           Golden rectangles and spirals guide proportions in layouts, logos, and visual compositions
           considered harmonious.
+        pt: >-
+          Retângulos e espirais áureas orientam proporções em layouts, logotipos e composições
+          visuais consideradas harmoniosas.
+        fr: >-
+          Les rectangles et spirales d'or guident les proportions des mises en page, logos et
+          compositions visuelles jugées harmonieuses.
+        zh: >-
+          黄金矩形和黄金螺旋指导着版面布局、标志设计以及被认为和谐的视觉构图的比例。
+        ja: >-
+          黄金長方形や黄金螺旋は、調和的とされるレイアウト、ロゴ、視覚構成の比率の指針となる。
     - title:
         es: Botánica y filotaxis
         en: Botany and phyllotaxis
+        pt: Botânica e filotaxia
+        fr: Botanique et phyllotaxie
+        zh: 植物学与叶序
+        ja: 植物学と葉序
       description:
         es: >-
           El ángulo áureo (c. 137.5°) describe cómo se disponen hojas y semillas en muchas plantas para
@@ -142,9 +289,23 @@ context:
         en: >-
           The golden angle (c. 137.5°) describes how leaves and seeds are arranged in many plants to
           maximize light exposure.
+        pt: >-
+          O ângulo áureo (c. 137,5°) descreve como folhas e sementes se dispõem em muitas plantas para
+          maximizar a exposição à luz.
+        fr: >-
+          L'angle d'or (env. 137,5°) décrit la disposition des feuilles et des graines chez de
+          nombreuses plantes afin de maximiser l'exposition à la lumière.
+        zh: >-
+          黄金角(约137.5°)描述了许多植物中叶片和种子的排列方式,以最大化光照的接收。
+        ja: >-
+          黄金角(約137.5°)は、多くの植物で葉や種子が光の吸収を最大化するようにどう配置されるかを説明する。
     - title:
         es: Algoritmos de optimización
         en: Optimization algorithms
+        pt: Algoritmos de otimização
+        fr: Algorithmes d'optimisation
+        zh: 优化算法
+        ja: 最適化アルゴリズム
       description:
         es: >-
           La búsqueda de la sección áurea usa φ para minimizar funciones unimodales con el menor
@@ -152,9 +313,23 @@ context:
         en: >-
           Golden section search uses φ to minimize unimodal functions with the fewest possible
           evaluations.
+        pt: >-
+          A busca da seção áurea usa φ para minimizar funções unimodais com o menor número possível
+          de avaliações.
+        fr: >-
+          La recherche par section dorée utilise φ pour minimiser des fonctions unimodales avec le
+          moins d'évaluations possible.
+        zh: >-
+          黄金分割搜索利用φ以尽可能少的求值次数来最小化单峰函数。
+        ja: >-
+          黄金分割探索はφを用いて、単峰関数を可能な限り少ない評価回数で最小化する。
     - title:
         es: Mercados financieros
         en: Financial markets
+        pt: Mercados financeiros
+        fr: Marchés financiers
+        zh: 金融市场
+        ja: 金融市場
       description:
         es: >-
           Algunos analistas técnicos usan niveles de retroceso de Fibonacci, derivados de φ, para
@@ -162,16 +337,47 @@ context:
         en: >-
           Some technical analysts use Fibonacci retracement levels, derived from φ, to estimate price
           support and resistance.
+        pt: >-
+          Alguns analistas técnicos usam níveis de retração de Fibonacci, derivados de φ, para estimar
+          suportes e resistências de preços.
+        fr: >-
+          Certains analystes techniques utilisent les niveaux de retracement de Fibonacci, dérivés de
+          φ, pour estimer les supports et résistances des prix.
+        zh: >-
+          一些技术分析师使用源自φ的斐波那契回撤位来估计价格的支撑位和阻力位。
+        ja: >-
+          一部のテクニカルアナリストは、φから導かれるフィボナッチ・リトレースメントを用いて、
+          価格のサポートやレジスタンスを推定する。
   example:
     title:
       es: Calculando el valor de φ
       en: Calculating the value of φ
+      pt: Calculando o valor de φ
+      fr: Calcul de la valeur de φ
+      zh: 计算φ的值
+      ja: φの値を計算する
     lines:
       - es: √5 ≈ 2.2360679...
         en: √5 ≈ 2.2360679...
+        pt: √5 ≈ 2,2360679...
+        fr: √5 ≈ 2,2360679...
+        zh: √5 ≈ 2.2360679...
+        ja: √5 ≈ 2.2360679...
       - es: 1 + √5 ≈ 3.2360679...
         en: 1 + √5 ≈ 3.2360679...
+        pt: 1 + √5 ≈ 3,2360679...
+        fr: 1 + √5 ≈ 3,2360679...
+        zh: 1 + √5 ≈ 3.2360679...
+        ja: 1 + √5 ≈ 3.2360679...
       - es: (1 + √5) / 2 ≈ 1.6180339...
         en: (1 + √5) / 2 ≈ 1.6180339...
+        pt: (1 + √5) / 2 ≈ 1,6180339...
+        fr: (1 + √5) / 2 ≈ 1,6180339...
+        zh: (1 + √5) / 2 ≈ 1.6180339...
+        ja: (1 + √5) / 2 ≈ 1.6180339...
       - es: φ ≈ 1.618, y también φ² = φ + 1
         en: φ ≈ 1.618, and also φ² = φ + 1
+        pt: φ ≈ 1,618, e também φ² = φ + 1
+        fr: φ ≈ 1,618, et aussi φ² = φ + 1
+        zh: φ ≈ 1.618,并且 φ² = φ + 1
+        ja: φ ≈ 1.618、また φ² = φ + 1 でもある

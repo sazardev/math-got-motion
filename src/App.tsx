@@ -14,7 +14,7 @@ import { FormulaHero } from "./components/formula-hero/FormulaHero";
 import { FormulaMenu } from "./components/formula-menu/FormulaMenu";
 import { NotFoundPage } from "./components/not-found/NotFoundPage";
 import { formulas } from "./domain/formulas";
-import { detectInitialLocale, isLocale, type Locale } from "./i18n/locale";
+import { detectInitialLocale, isLocale, locales, type Locale } from "./i18n/locale";
 import { useLocale } from "./i18n/locale-context";
 import { LocaleProvider } from "./i18n/LocaleContext";
 
@@ -61,15 +61,21 @@ function LocaleChrome({ theme, onToggleTheme }: ThemeControlProps) {
         <button type="button" className="control-button" onClick={onToggleTheme}>
           {theme === "dark" ? strings.themeToLight : strings.themeToDark}
         </button>
-        <button
-          type="button"
-          className="control-button"
-          onClick={() => {
-            setLocale(locale === "es" ? "en" : "es");
-          }}
-        >
-          {locale === "es" ? "EN" : "ES"}
-        </button>
+        <div className="control-locales">
+          {locales.map((code) => (
+            <button
+              key={code}
+              type="button"
+              className="control-button control-button--locale"
+              aria-current={code === locale}
+              onClick={() => {
+                setLocale(code);
+              }}
+            >
+              {code.toUpperCase()}
+            </button>
+          ))}
+        </div>
         <button
           type="button"
           className="control-button"

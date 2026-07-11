@@ -2,9 +2,17 @@ id: pythagorean-identity
 title:
   es: Identidad Pitagórica Trigonométrica
   en: Pythagorean Trigonometric Identity
+  pt: Identidade Pitagórica Trigonométrica
+  fr: Identité trigonométrique de Pythagore
+  zh: 毕达哥拉斯三角恒等式
+  ja: ピタゴラスの三角恒等式
 category:
   es: Trigonometría
   en: Trigonometry
+  pt: Trigonometria
+  fr: Trigonométrie
+  zh: 三角学
+  ja: 三角法
 nodes:
   - id: sin
     type: variable
@@ -12,61 +20,105 @@ nodes:
     explanation:
       es: "El seno de un ángulo θ: la coordenada vertical del punto sobre el círculo unitario."
       en: "The sine of an angle θ: the vertical coordinate of the point on the unit circle."
+      pt: "O seno de um ângulo θ: a coordenada vertical do ponto sobre o círculo unitário."
+      fr: "Le sinus d'un angle θ : la coordonnée verticale du point sur le cercle unité."
+      zh: "角 θ 的正弦：单位圆上该点的纵坐标。"
+      ja: "角θの正弦: 単位円上の点の縦座標。"
   - id: theta
     type: variable
     value: θ
     explanation:
       es: "Theta: el ángulo medido desde el eje horizontal, en el círculo unitario."
       en: "Theta: the angle measured from the horizontal axis, on the unit circle."
+      pt: "Teta: o ângulo medido a partir do eixo horizontal, no círculo unitário."
+      fr: "Thêta : l'angle mesuré depuis l'axe horizontal, sur le cercle unité."
+      zh: "西塔（θ）：在单位圆上从水平轴测量的角度。"
+      ja: "シータ: 単位円上で水平軸から測った角度。"
   - id: sin-sq
     type: superscript
     value: "2"
     explanation:
       es: "Elevado al cuadrado: el seno multiplicado por sí mismo."
       en: "Squared: the sine multiplied by itself."
+      pt: "Elevado ao quadrado: o seno multiplicado por si mesmo."
+      fr: "Élevé au carré : le sinus multiplié par lui-même."
+      zh: "平方：正弦值与自身相乘。"
+      ja: "2乗: 正弦を自分自身に掛けたもの。"
   - id: plus
     type: operator
     value: +
     explanation:
       es: Sumado al coseno al cuadrado del mismo ángulo.
       en: Added to the cosine squared of the same angle.
+      pt: Somado ao cosseno ao quadrado do mesmo ângulo.
+      fr: Ajouté au cosinus au carré du même angle.
+      zh: 与同一角的余弦平方相加。
+      ja: 同じ角の余弦の2乗に加える。
   - id: cos
     type: variable
     value: cos
     explanation:
       es: "El coseno de un ángulo θ: la coordenada horizontal del punto sobre el círculo unitario."
       en: "The cosine of an angle θ: the horizontal coordinate of the point on the unit circle."
+      pt: "O cosseno de um ângulo θ: a coordenada horizontal do ponto sobre o círculo unitário."
+      fr: "Le cosinus d'un angle θ : la coordonnée horizontale du point sur le cercle unité."
+      zh: "角 θ 的余弦：单位圆上该点的横坐标。"
+      ja: "角θの余弦: 単位円上の点の横座標。"
   - id: theta2
     type: variable
     value: θ
     explanation:
       es: El mismo ángulo θ usado en el seno.
       en: The same angle θ used in the sine.
+      pt: O mesmo ângulo θ usado no seno.
+      fr: Le même angle θ utilisé pour le sinus.
+      zh: 与正弦中使用的同一角 θ。
+      ja: 正弦で使われたのと同じ角θ。
   - id: cos-sq
     type: superscript
     value: "2"
     explanation:
       es: También elevado al cuadrado.
       en: Also squared.
+      pt: Também elevado ao quadrado.
+      fr: Également élevé au carré.
+      zh: 同样进行平方。
+      ja: これも2乗される。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: 正確に等しい。
   - id: one
     type: number
     value: "1"
     explanation:
       es: "La unidad: el radio al cuadrado del círculo unitario, siempre constante."
       en: "The unit: the squared radius of the unit circle, always constant."
+      pt: "A unidade: o raio ao quadrado do círculo unitário, sempre constante."
+      fr: "L'unité : le rayon au carré du cercle unité, toujours constant."
+      zh: "单位值：单位圆半径的平方，始终恒定。"
+      ja: "単位: 単位円の半径の2乗であり、常に一定。"
 context:
   author:
     es: Hiparco de Nicea (formalización trigonométrica)
     en: Hipparchus of Nicaea (trigonometric formalization)
+    pt: Hiparco de Niceia (formalização trigonométrica)
+    fr: Hipparque de Nicée (formalisation trigonométrique)
+    zh: 尼西亚的喜帕恰斯（三角学的形式化者）
+    ja: ニカイアのヒッパルコス（三角法の体系化）
   era:
     es: Grecia, c. 190–120 a.C. · trigonometría desarrollada s. II a.C.–s. XII
     en: Greece, c. 190–120 BC · trigonometry developed 2nd century BC–12th century AD
+    pt: Grécia, c. 190–120 a.C. · trigonometria desenvolvida entre os séc. II a.C. e XII
+    fr: Grèce, v. 190–120 av. J.-C. · trigonométrie développée du IIe s. av. J.-C. au XIIe s.
+    zh: 希腊，约公元前190–120年 · 三角学发展于公元前2世纪至公元12世纪
+    ja: ギリシャ、紀元前190〜120年頃・三角法は紀元前2世紀から12世紀にかけて発展
   history:
     es: >-
       Esta identidad es, en esencia, el teorema de Pitágoras reescrito sobre un triángulo rectángulo
@@ -84,6 +136,35 @@ context:
       algebraic form with sine and cosine as functions was developed much later by Indian
       mathematicians such as Aryabhata and refined by Islamic astronomers such as al-Battani, who
       used it routinely in their calculations.
+    pt: >-
+      Esta identidade é, em essência, o teorema de Pitágoras reescrito sobre um triângulo
+      retângulo inscrito no círculo unitário: o cateto vertical mede sen(θ), o horizontal mede
+      cos(θ), e a hipotenusa mede sempre 1. Suas raízes geométricas estão na trigonometria grega,
+      quando Hiparco elaborou as primeiras tábuas de cordas para calcular posições astronômicas,
+      mas a forma algébrica moderna, com seno e cosseno como funções, foi desenvolvida muito depois
+      por matemáticos indianos como Aryabhata e aperfeiçoada por astrônomos islâmicos como
+      al-Battani, que a usavam constantemente em seus cálculos.
+    fr: >-
+      Cette identité est, en substance, le théorème de Pythagore réécrit sur un triangle rectangle
+      inscrit dans le cercle unité : le côté vertical mesure sin(θ), le côté horizontal cos(θ), et
+      l'hypoténuse mesure toujours 1. Ses racines géométriques se trouvent dans la trigonométrie
+      grecque, lorsque Hipparque élabora les premières tables de cordes pour calculer des positions
+      astronomiques, mais la forme algébrique moderne avec sinus et cosinus comme fonctions fut
+      développée bien plus tard par des mathématiciens indiens comme Aryabhata, puis perfectionnée
+      par des astronomes islamiques comme al-Battani, qui l'utilisaient constamment dans leurs
+      calculs.
+    zh: >-
+      这个恒等式本质上就是毕达哥拉斯定理在内接于单位圆的直角三角形上的改写：竖直的直角边长为
+      sen(θ)，水平的直角边长为 cos(θ)，斜边则始终为1。它的几何根源在于希腊三角学，喜帕恰斯当年
+      编制了最早的弦表以计算天文位置；但把正弦和余弦作为函数的现代代数形式，是后来由阿耶波多等
+      印度数学家发展出来的，并被巴塔尼等伊斯兰天文学家加以完善，他们在计算中经常使用它。
+    ja: >-
+      この恒等式は本質的に、単位円に内接する直角三角形に書き直されたピタゴラスの定理である。垂直の
+      辺の長さはsen(θ)、水平の辺の長さはcos(θ)、そして斜辺は常に1である。その幾何学的起源はギリシャ
+      の三角法にあり、ヒッパルコスが天文学的な位置を計算するために最初の弦の表を作成した。しかし、
+      正弦・余弦を関数として扱う現代の代数的な形は、ずっと後にアーリヤバタなどインドの数学者によって
+      発展し、アル＝バッターニーなどイスラムの天文学者によって精緻化され、彼らは計算の中で日常的に
+      これを用いていた。
   timeline:
     - year: c. 570–495 a.C.
       label:
@@ -93,6 +174,17 @@ context:
         en: >-
           Pythagoras and his school prove the relationship between legs and hypotenuse that,
           centuries later, would give rise to this trigonometric identity.
+        pt: >-
+          Pitágoras e sua escola demonstram a relação entre catetos e hipotenusa que, séculos
+          depois, dará origem a esta identidade trigonométrica.
+        fr: >-
+          Pythagore et son école démontrent la relation entre les côtés et l'hypoténuse qui,
+          des siècles plus tard, donnera naissance à cette identité trigonométrique.
+        zh: >-
+          毕达哥拉斯及其学派证明了直角边与斜边之间的关系，这一关系在数世纪后催生了这个三角恒等式。
+        ja: >-
+          ピタゴラスとその学派が、直角の辺と斜辺の関係を証明し、それが何世紀も後にこの三角恒等式を
+          生み出すことになる。
     - year: c. 140 a.C.
       label:
         es: >-
@@ -101,6 +193,17 @@ context:
         en: >-
           Hipparchus of Nicaea builds the first known table of chords, laying the foundations of
           trigonometry as a discipline.
+        pt: >-
+          Hiparco de Niceia constrói a primeira tábua de cordas conhecida, lançando as bases da
+          trigonometria como disciplina.
+        fr: >-
+          Hipparque de Nicée construit la première table de cordes connue, posant les bases de la
+          trigonométrie en tant que discipline.
+        zh: >-
+          尼西亚的喜帕恰斯编制了已知最早的弦表，为三角学作为一门学科奠定了基础。
+        ja: >-
+          ニカイアのヒッパルコスが知られている最古の弦の表を作成し、学問としての三角法の基礎を
+          築く。
     - year: c. 500
       label:
         es: >-
@@ -109,6 +212,17 @@ context:
         en: >-
           The Indian mathematician Aryabhata introduces the sine as a function independent of the
           chord, essentially using this identity in his calculations.
+        pt: >-
+          O matemático indiano Aryabhata introduz o seno como função independente da corda,
+          usando essencialmente esta identidade em seus cálculos.
+        fr: >-
+          Le mathématicien indien Aryabhata introduit le sinus comme fonction indépendante de la
+          corde, utilisant essentiellement cette identité dans ses calculs.
+        zh: >-
+          印度数学家阿耶波多引入了独立于弦的正弦函数，在计算中实质上使用了这一恒等式。
+        ja: >-
+          インドの数学者アーリヤバタが弦から独立した関数として正弦を導入し、実質的にこの恒等式を
+          計算に用いる。
     - year: c. 870–920
       label:
         es: >-
@@ -117,6 +231,17 @@ context:
         en: >-
           Al-Battani refines trigonometric functions and their relations for astronomy, including
           variants of this identity.
+        pt: >-
+          Al-Battani aperfeiçoa as funções trigonométricas e suas relações para a astronomia,
+          incluindo variantes desta identidade.
+        fr: >-
+          Al-Battani perfectionne les fonctions trigonométriques et leurs relations pour
+          l'astronomie, y compris des variantes de cette identité.
+        zh: >-
+          巴塔尼完善了用于天文学的三角函数及其关系，包括这一恒等式的各种变体。
+        ja: >-
+          アル＝バッターニーが天文学のために三角関数とその関係式を精緻化し、この恒等式の変種も
+          含まれる。
     - year: Hoy
       label:
         es: >-
@@ -125,10 +250,25 @@ context:
         en: >-
           It is the most used identity in trigonometry to simplify equations, and appears
           constantly in signal processing and computer graphics.
+        pt: >-
+          É a identidade mais usada em trigonometria para simplificar equações, e aparece
+          constantemente em processamento de sinais e computação gráfica.
+        fr: >-
+          C'est l'identité la plus utilisée en trigonométrie pour simplifier les équations, et
+          elle apparaît constamment en traitement du signal et en infographie.
+        zh: >-
+          它是三角学中最常用于简化方程的恒等式，在信号处理和计算机图形学中随处可见。
+        ja: >-
+          三角法において方程式を簡略化するために最もよく使われる恒等式であり、信号処理やコン
+          ピューターグラフィックスに絶えず登場する。
   useCases:
     - title:
         es: Procesamiento de señales
         en: Signal processing
+        pt: Processamento de sinais
+        fr: Traitement du signal
+        zh: 信号处理
+        ja: 信号処理
       description:
         es: >-
           Se usa para normalizar amplitudes de ondas y simplificar ecuaciones de señales periódicas
@@ -136,9 +276,23 @@ context:
         en: >-
           Used to normalize wave amplitudes and simplify equations of periodic signals in audio and
           telecommunications.
+        pt: >-
+          É usada para normalizar amplitudes de ondas e simplificar equações de sinais periódicos
+          em áudio e telecomunicações.
+        fr: >-
+          Utilisée pour normaliser les amplitudes d'ondes et simplifier les équations de signaux
+          périodiques en audio et en télécommunications.
+        zh: >-
+          用于归一化波幅，并简化音频和电信中周期信号的方程。
+        ja: >-
+          波の振幅を正規化し、音声通信や通信分野における周期信号の方程式を簡略化するために使われる。
     - title:
         es: Gráficos por computadora
         en: Computer graphics
+        pt: Computação gráfica
+        fr: Infographie
+        zh: 计算机图形学
+        ja: コンピューターグラフィックス
       description:
         es: >-
           Rotaciones y animaciones dependen de mantener vectores normalizados, lo que se verifica
@@ -146,9 +300,24 @@ context:
         en: >-
           Rotations and animations rely on keeping vectors normalized, which is constantly verified
           with this identity.
+        pt: >-
+          Rotações e animações dependem de manter vetores normalizados, o que é constantemente
+          verificado com esta identidade.
+        fr: >-
+          Les rotations et les animations reposent sur le maintien de vecteurs normalisés, ce qui
+          est constamment vérifié grâce à cette identité.
+        zh: >-
+          旋转和动画依赖于保持向量归一化，而这一点正是通过这个恒等式不断验证的。
+        ja: >-
+          回転やアニメーションはベクトルを正規化された状態に保つことに依存しており、これはこの恒等式
+          によって常に検証される。
     - title:
         es: Navegación e ingeniería civil
         en: Navigation and civil engineering
+        pt: Navegação e engenharia civil
+        fr: Navigation et génie civil
+        zh: 导航与土木工程
+        ja: 航法と土木工学
       description:
         es: >-
           Simplifica cálculos de triangulación y trayectorias donde intervienen ángulos y
@@ -156,18 +325,52 @@ context:
         en: >-
           Simplifies triangulation and trajectory calculations involving angles and distances on a
           plane.
+        pt: >-
+          Simplifica cálculos de triangulação e trajetórias que envolvem ângulos e distâncias sobre
+          um plano.
+        fr: >-
+          Simplifie les calculs de triangulation et de trajectoire impliquant des angles et des
+          distances sur un plan.
+        zh: >-
+          简化涉及平面上角度和距离的三角测量与轨迹计算。
+        ja: >-
+          平面上の角度と距離が関わる三角測量や軌道計算を簡略化する。
   example:
     title:
       es: Verificación en θ = 30°
       en: Verification at θ = 30°
+      pt: Verificação em θ = 30°
+      fr: Vérification pour θ = 30°
+      zh: 在 θ = 30° 处验证
+      ja: θ = 30°での検証
     lines:
       - es: sen(30°) = 0.5
         en: sin(30°) = 0.5
+        pt: sen(30°) = 0,5
+        fr: sin(30°) = 0,5
+        zh: sen(30°) = 0.5
+        ja: sen(30°) = 0.5
       - es: cos(30°) ≈ 0.8660
         en: cos(30°) ≈ 0.8660
+        pt: cos(30°) ≈ 0,8660
+        fr: cos(30°) ≈ 0,8660
+        zh: cos(30°) ≈ 0.8660
+        ja: cos(30°) ≈ 0.8660
       - es: sen²(30°) = 0.25
         en: sin²(30°) = 0.25
+        pt: sen²(30°) = 0,25
+        fr: sin²(30°) = 0,25
+        zh: sen²(30°) = 0.25
+        ja: sen²(30°) = 0.25
       - es: cos²(30°) ≈ 0.75
         en: cos²(30°) ≈ 0.75
+        pt: cos²(30°) ≈ 0,75
+        fr: cos²(30°) ≈ 0,75
+        zh: cos²(30°) ≈ 0.75
+        ja: cos²(30°) ≈ 0.75
       - es: 0.25 + 0.75 = 1, queda demostrado
         en: 0.25 + 0.75 = 1, proven true
+        pt: 0,25 + 0,75 = 1, comprovado
+        fr: 0,25 + 0,75 = 1, ce qui est démontré
+        zh: 0.25 + 0.75 = 1，得证
+        ja: 0.25 + 0.75 = 1、証明された

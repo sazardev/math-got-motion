@@ -1,4 +1,4 @@
-# Math Got Motion
+<img src="public/logo.svg" alt="Math Got Motion" height="80" />
 
 Math formulas deconstructed letter by letter, scroll by scroll.
 

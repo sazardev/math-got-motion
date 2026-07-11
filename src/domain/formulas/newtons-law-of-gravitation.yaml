@@ -2,9 +2,17 @@ id: newtons-law-of-gravitation
 title:
   es: Ley de Gravitación Universal de Newton
   en: Newton's Law of Universal Gravitation
+  pt: Lei da Gravitação Universal de Newton
+  fr: Loi de la gravitation universelle de Newton
+  zh: 牛顿万有引力定律
+  ja: ニュートンの万有引力の法則
 category:
   es: Física clásica
   en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
 nodes:
   - id: f
     type: variable
@@ -12,67 +20,115 @@ nodes:
     explanation:
       es: La fuerza gravitacional de atracción entre dos cuerpos.
       en: The gravitational force of attraction between two bodies.
+      pt: A força gravitacional de atração entre dois corpos.
+      fr: La force gravitationnelle d'attraction entre deux corps.
+      zh: 两个物体之间的引力。
+      ja: 二つの物体間に働く万有引力。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
   - id: g
     type: constant
     value: G
     explanation:
       es: La constante de gravitación universal, la misma en todo el universo.
       en: The universal gravitational constant, the same throughout the universe.
+      pt: A constante de gravitação universal, a mesma em todo o universo.
+      fr: La constante de gravitation universelle, identique dans tout l'univers.
+      zh: 万有引力常数,在宇宙中处处相同。
+      ja: 万有引力定数。宇宙のどこでも同じ値をとる。
   - id: m1
     type: variable
     value: m
     explanation:
       es: La masa del primer cuerpo.
       en: The mass of the first body.
+      pt: A massa do primeiro corpo.
+      fr: La masse du premier corps.
+      zh: 第一个物体的质量。
+      ja: 一方の物体の質量。
   - id: sub-1
     type: superscript
     value: "1"
     explanation:
       es: Un subíndice que identifica al primero de los dos cuerpos.
       en: A subscript identifying the first of the two bodies.
+      pt: Um subscrito que identifica o primeiro dos dois corpos.
+      fr: Un indice identifiant le premier des deux corps.
+      zh: 下标,用来标识这两个物体中的第一个。
+      ja: 二つの物体のうち一方目を示す添字。
   - id: m2
     type: variable
     value: m
     explanation:
       es: La masa del segundo cuerpo.
       en: The mass of the second body.
+      pt: A massa do segundo corpo.
+      fr: La masse du second corps.
+      zh: 第二个物体的质量。
+      ja: もう一方の物体の質量。
   - id: sub-2
     type: superscript
     value: "2"
     explanation:
       es: Un subíndice que identifica al segundo de los dos cuerpos.
       en: A subscript identifying the second of the two bodies.
+      pt: Um subscrito que identifica o segundo dos dois corpos.
+      fr: Un indice identifiant le second des deux corps.
+      zh: 下标,用来标识这两个物体中的第二个。
+      ja: 二つの物体のうち他方を示す添字。
   - id: div
     type: operator
     value: /
     explanation:
       es: Dividido por el cuadrado de la distancia entre los dos cuerpos.
       en: Divided by the square of the distance between the two bodies.
+      pt: Dividido pelo quadrado da distância entre os dois corpos.
+      fr: Divisé par le carré de la distance entre les deux corps.
+      zh: 除以两个物体之间距离的平方。
+      ja: 二つの物体間の距離の二乗で割る。
   - id: r
     type: variable
     value: r
     explanation:
       es: La distancia entre los centros de los dos cuerpos.
       en: The distance between the centers of the two bodies.
+      pt: A distância entre os centros dos dois corpos.
+      fr: La distance entre les centres des deux corps.
+      zh: 两个物体中心之间的距离。
+      ja: 二つの物体の中心間の距離。
   - id: exp-2
     type: superscript
     value: "2"
     explanation:
       es: "La distancia elevada al cuadrado: al duplicarla, la fuerza se reduce a un cuarto."
       en: "The distance squared: doubling it reduces the force to a quarter."
+      pt: "A distância elevada ao quadrado: ao dobrá-la, a força cai para um quarto."
+      fr: "La distance au carré : la doubler réduit la force à un quart."
+      zh: "距离的平方:距离加倍,引力就减少到原来的四分之一。"
+      ja: "距離の二乗。距離を2倍にすると、力は4分の1に減る。"
 context:
   author:
     es: Isaac Newton
     en: Isaac Newton
+    pt: Isaac Newton
+    fr: Isaac Newton
+    zh: 艾萨克·牛顿
+    ja: アイザック・ニュートン
   era:
     es: Inglaterra, 1642–1727 · publicada en 1687
     en: England, 1642–1727 · published in 1687
+    pt: Inglaterra, 1642–1727 · publicada em 1687
+    fr: Angleterre, 1642–1727 · publiée en 1687
+    zh: 英格兰,1642–1727年 · 1687年发表
+    ja: イングランド、1642–1727年・1687年発表
   history:
     es: >-
       Según el relato popularizado por Voltaire, Newton concibió la idea al ver caer una manzana en
@@ -93,6 +149,37 @@ context:
       More than a century later, in 1798, Henry Cavendish used a torsion balance to measure the
       constant G in the laboratory, allowing the mass of the Earth to be calculated for the first
       time.
+    pt: >-
+      Segundo o relato popularizado por Voltaire, Newton teve a ideia ao ver uma maçã cair na
+      propriedade da família em Woolsthorpe por volta de 1666, enquanto Cambridge estava fechada por
+      causa da peste, e se perguntou se a mesma força que puxava a maçã para o chão também mantinha a
+      Lua em sua órbita. Essa intuição, amadurecida ao longo de duas décadas, culminou em 1687 com a
+      publicação dos Principia, onde Newton demonstrou que um único conjunto de regras governa tanto
+      o movimento celeste quanto o terrestre, unificando pela primeira vez os dois domínios sob uma
+      só lei. Mais de um século depois, em 1798, Henry Cavendish usou uma balança de torção para medir
+      em laboratório o valor da constante G, permitindo calcular pela primeira vez a massa da Terra.
+    fr: >-
+      Selon le récit popularisé par Voltaire, Newton eut cette idée en voyant tomber une pomme dans
+      le domaine familial de Woolsthorpe vers 1666, alors que Cambridge était fermée à cause de la
+      peste, et se demanda si la même force qui attirait la pomme vers le sol maintenait aussi la
+      Lune sur son orbite. Cette intuition, mûrie pendant deux décennies, culmina en 1687 avec la
+      publication des Principia, où Newton montra qu'un seul ensemble de règles gouverne à la fois le
+      mouvement céleste et terrestre, unifiant pour la première fois ces deux domaines sous une seule
+      loi. Plus d'un siècle plus tard, en 1798, Henry Cavendish utilisa une balance de torsion pour
+      mesurer en laboratoire la valeur de la constante G, permettant de calculer pour la première fois
+      la masse de la Terre.
+    zh: >-
+      根据伏尔泰广为流传的说法,大约在1666年,当剑桥因瘟疫而关闭时,牛顿在伍尔索普的家族庄园看到一颗苹果落地,由此产生了灵感,
+      他开始思考,把苹果拉向地面的力,是否也正是维持月球绕地运行的力。这一直觉经过二十年的酝酿,最终在1687年凝结为《自然哲学的数学原理》
+      的出版,牛顿在书中证明了同一套规律既支配天体运动又支配地面运动,第一次将这两个领域统一在一条定律之下。一个多世纪后的1798年,
+      亨利·卡文迪什用扭秤在实验室中测出了引力常数G的数值,从而首次能够计算出地球的质量。
+    ja: >-
+      ヴォルテールによって広められた逸話によれば、ニュートンは1666年頃、ペストでケンブリッジが閉鎖されていた時期に、
+      ウールスソープの実家の敷地でリンゴが落ちるのを見て着想を得たとされる。地面にリンゴを引き寄せる力と、月を軌道上にとどめる力は
+      同じものではないかと考えたのである。この直感は二十年をかけて熟成し、1687年の『プリンキピア』の出版で結実した。
+      ニュートンはこの中で、天体の運動と地上の運動がただ一組の規則によって支配されることを示し、両者を初めて一つの法則の下に統一した。
+      一世紀以上のちの1798年、ヘンリー・キャヴェンディッシュはねじり秤を用いて実験室で定数Gの値を測定し、
+      これにより初めて地球の質量を計算できるようになった。
   timeline:
     - year: "1666"
       label:
@@ -102,6 +189,16 @@ context:
         en: >-
           During the 'year of wonders', Newton conceives the idea that terrestrial gravity and the
           force governing the Moon's orbit are one and the same.
+        pt: >-
+          Durante o 'ano miraculoso', Newton concebe a ideia de que a gravidade terrestre e a força
+          que rege a órbita lunar são a mesma coisa.
+        fr: >-
+          Pendant l' « année miraculeuse », Newton conçoit l'idée que la gravité terrestre et la
+          force régissant l'orbite lunaire ne font qu'une.
+        zh: >-
+          在这个"奇迹年",牛顿产生了一个想法:地球上的引力与支配月球轨道的力其实是同一种力。
+        ja: >-
+          「奇跡の年」に、ニュートンは地上の重力と月の軌道を支配する力が同一のものであるという着想を得る。
     - year: "1687"
       label:
         es: >-
@@ -110,6 +207,16 @@ context:
         en: >-
           Publishes the Principia with the law of universal gravitation, uniting celestial and
           terrestrial motion under a single rule.
+        pt: >-
+          Publica os Principia com a lei da gravitação universal, unindo o movimento celeste e o
+          terrestre sob uma única regra.
+        fr: >-
+          Publie les Principia avec la loi de la gravitation universelle, unissant le mouvement
+          céleste et terrestre sous une seule règle.
+        zh: >-
+          发表《自然哲学的数学原理》,提出万有引力定律,将天体运动和地面运动统一在同一条规则之下。
+        ja: >-
+          『プリンキピア』を出版し、万有引力の法則を発表。天体の運動と地上の運動を一つの規則のもとに統合する。
     - year: "1798"
       label:
         es: >-
@@ -118,6 +225,16 @@ context:
         en: >-
           Henry Cavendish measures the constant G in the laboratory with a torsion balance and
           calculates the mass of the Earth.
+        pt: >-
+          Henry Cavendish mede em laboratório, com uma balança de torção, o valor da constante G e
+          calcula a massa da Terra.
+        fr: >-
+          Henry Cavendish mesure en laboratoire, avec une balance de torsion, la valeur de la
+          constante G et calcule la masse de la Terre.
+        zh: >-
+          亨利·卡文迪什在实验室中用扭秤测出了引力常数G的数值,并由此计算出地球的质量。
+        ja: >-
+          ヘンリー・キャヴェンディッシュがねじり秤を用いて実験室で定数Gの値を測定し、地球の質量を算出する。
     - year: "1915"
       label:
         es: >-
@@ -126,6 +243,16 @@ context:
         en: >-
           Einstein publishes general relativity, which replaces Newtonian gravity in very strong
           fields or at very high speeds.
+        pt: >-
+          Einstein publica a relatividade geral, que substitui a gravidade newtoniana em campos
+          muito intensos ou velocidades muito altas.
+        fr: >-
+          Einstein publie la relativité générale, qui remplace la gravité newtonienne dans les champs
+          très intenses ou à très grande vitesse.
+        zh: >-
+          爱因斯坦发表广义相对论,在极强引力场或极高速度的情形下取代了牛顿引力理论。
+        ja: >-
+          アインシュタインが一般相対性理論を発表。非常に強い重力場や高速度の状況ではニュートン重力に取って代わる。
     - year: "1969"
       label:
         es: >-
@@ -134,6 +261,16 @@ context:
         en: >-
           The Apollo 11 mission calculates its trajectory to the Moon by directly applying this
           Newtonian law.
+        pt: >-
+          A missão Apollo 11 calcula sua trajetória até a Lua aplicando diretamente essa lei
+          newtoniana.
+        fr: >-
+          La mission Apollo 11 calcule sa trajectoire vers la Lune en appliquant directement cette
+          loi newtonienne.
+        zh: >-
+          阿波罗11号任务直接运用这条牛顿定律计算飞往月球的轨道。
+        ja: >-
+          アポロ11号のミッションでは、このニュートンの法則を直接応用して月への軌道を計算する。
     - year: Hoy
       label:
         es: >-
@@ -141,19 +278,47 @@ context:
           espaciales.
         en: >-
           It remains the standard tool for designing satellite orbits and planning space missions.
+        pt: >-
+          Continua sendo a ferramenta padrão para projetar órbitas de satélites e planejar missões
+          espaciais.
+        fr: >-
+          Elle reste l'outil standard pour concevoir des orbites de satellites et planifier des
+          missions spatiales.
+        zh: >-
+          至今仍是设计卫星轨道和规划太空任务的标准工具。
+        ja: >-
+          現在も衛星軌道の設計や宇宙ミッションの計画における標準的な手法であり続けている。
   useCases:
     - title:
         es: Diseño de órbitas satelitales
         en: Satellite orbit design
+        pt: Projeto de órbitas de satélites
+        fr: Conception d'orbites satellitaires
+        zh: 卫星轨道设计
+        ja: 衛星軌道の設計
       description:
         es: >-
           Calcula la velocidad y altitud necesarias para que un satélite permanezca en órbita
           estable.
         en: >-
           It calculates the speed and altitude a satellite needs to remain in stable orbit.
+        pt: >-
+          Calcula a velocidade e a altitude necessárias para que um satélite permaneça em órbita
+          estável.
+        fr: >-
+          Elle calcule la vitesse et l'altitude nécessaires pour qu'un satellite reste en orbite
+          stable.
+        zh: >-
+          计算卫星保持稳定轨道所需的速度和高度。
+        ja: >-
+          衛星が安定した軌道を維持するために必要な速度と高度を計算する。
     - title:
         es: Misiones interplanetarias
         en: Interplanetary missions
+        pt: Missões interplanetárias
+        fr: Missions interplanétaires
+        zh: 星际任务
+        ja: 惑星間ミッション
       description:
         es: >-
           Planifica las trayectorias de transferencia entre planetas usando la atracción gravitatoria
@@ -161,39 +326,108 @@ context:
         en: >-
           It plans transfer trajectories between planets using the gravitational pull of the Sun and
           nearby bodies.
+        pt: >-
+          Planeja as trajetórias de transferência entre planetas usando a atração gravitacional do
+          Sol e dos corpos próximos.
+        fr: >-
+          Elle planifie les trajectoires de transfert entre planètes en utilisant l'attraction
+          gravitationnelle du Soleil et des corps voisins.
+        zh: >-
+          利用太阳及邻近天体的引力,规划行星之间的转移轨道。
+        ja: >-
+          太陽や近隣の天体の引力を利用して、惑星間の遷移軌道を計画する。
     - title:
         es: Astronomía
         en: Astronomy
+        pt: Astronomia
+        fr: Astronomie
+        zh: 天文学
+        ja: 天文学
       description:
         es: >-
           Predice el movimiento de planetas, lunas y cometas a partir de sus masas y distancias.
         en: >-
           It predicts the motion of planets, moons, and comets from their masses and distances.
+        pt: >-
+          Prevê o movimento de planetas, luas e cometas a partir de suas massas e distâncias.
+        fr: >-
+          Elle prédit le mouvement des planètes, des lunes et des comètes à partir de leurs masses et
+          de leurs distances.
+        zh: >-
+          根据行星、卫星和彗星的质量与距离,预测它们的运动轨迹。
+        ja: >-
+          惑星、衛星、彗星の質量と距離から、その運動を予測する。
     - title:
         es: Geofísica
         en: Geophysics
+        pt: Geofísica
+        fr: Géophysique
+        zh: 地球物理学
+        ja: 地球物理学
       description:
         es: >-
           Explica el origen de las mareas oceánicas como resultado de la atracción gravitatoria de
           la Luna y el Sol.
         en: >-
           It explains ocean tides as the result of the gravitational pull of the Moon and the Sun.
+        pt: >-
+          Explica a origem das marés oceânicas como resultado da atração gravitacional da Lua e do
+          Sol.
+        fr: >-
+          Elle explique l'origine des marées océaniques comme résultat de l'attraction
+          gravitationnelle de la Lune et du Soleil.
+        zh: >-
+          解释了海洋潮汐是月球与太阳引力共同作用的结果。
+        ja: >-
+          海の潮汐が月と太陽の引力の結果として生じることを説明する。
   example:
     title:
       es: Atracción entre dos masas
       en: Attraction between two masses
+      pt: Atração entre duas massas
+      fr: Attraction entre deux masses
+      zh: 两个质量之间的引力
+      ja: 二つの質量間の引力
     lines:
       - es: m1 = 5000 kg
         en: m1 = 5000 kg
+        pt: m1 = 5000 kg
+        fr: m1 = 5000 kg
+        zh: m1 = 5000 kg
+        ja: m1 = 5000 kg
       - es: m2 = 200 kg
         en: m2 = 200 kg
+        pt: m2 = 200 kg
+        fr: m2 = 200 kg
+        zh: m2 = 200 kg
+        ja: m2 = 200 kg
       - es: r = 10 m
         en: r = 10 m
+        pt: r = 10 m
+        fr: r = 10 m
+        zh: r = 10 m
+        ja: r = 10 m
       - es: G = 6,674×10⁻¹¹ N·m²/kg²
         en: G = 6.674×10⁻¹¹ N·m²/kg²
+        pt: G = 6,674×10⁻¹¹ N·m²/kg²
+        fr: G = 6,674×10⁻¹¹ N·m²/kg²
+        zh: G = 6.674×10⁻¹¹ N·m²/kg²
+        ja: G = 6.674×10⁻¹¹ N·m²/kg²
       - es: F = G m1 m2 / r²
         en: F = G m1 m2 / r²
+        pt: F = G m1 m2 / r²
+        fr: F = G m1 m2 / r²
+        zh: F = G m1 m2 / r²
+        ja: F = G m1 m2 / r²
       - es: F = 6,674×10⁻¹¹ × 1×10⁶ / 100
         en: F = 6.674×10⁻¹¹ × 1×10⁶ / 100
+        pt: F = 6,674×10⁻¹¹ × 1×10⁶ / 100
+        fr: F = 6,674×10⁻¹¹ × 1×10⁶ / 100
+        zh: F = 6.674×10⁻¹¹ × 1×10⁶ / 100
+        ja: F = 6.674×10⁻¹¹ × 1×10⁶ / 100
       - es: F ≈ 6,674×10⁻⁷ N
         en: F ≈ 6.674×10⁻⁷ N
+        pt: F ≈ 6,674×10⁻⁷ N
+        fr: F ≈ 6,674×10⁻⁷ N
+        zh: F ≈ 6.674×10⁻⁷ N
+        ja: F ≈ 6.674×10⁻⁷ N

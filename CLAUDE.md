@@ -205,11 +205,44 @@ developers — run `pnpm changelog:sync` after adding an entry to the YAML; don'
 
 ### i18n
 
-`src/i18n/` — `Locale` is `"es" | "en"`. The locale for a given page comes from its `:locale`
-URL segment (see "Routing & URLs"), not from browser detection alone — `detectInitialLocale()`
-is only used to pick where `/` redirects to. All user-facing strings go through `ui-strings.ts`
-(`UiStrings` type); all formula content is bilingual `{ es, en }` (`LocalizedText`) enforced by
-the Zod schema itself, not just by convention.
+`src/i18n/` — `Locale` is `"es" | "en" | "pt" | "fr" | "zh" | "ja"` (`zh` = Simplified Chinese,
+`pt` = Brazilian Portuguese). The locale for a given page comes from its `:locale` URL segment
+(see "Routing & URLs"), not from browser detection alone — `detectInitialLocale()` is only used
+to pick where `/` redirects to. All user-facing strings go through `ui-strings.ts` (`UiStrings`
+type); all formula content is `LocalizedText` — an object requiring **all 6** locale keys,
+enforced by the Zod schema itself (`pnpm formulas:validate` fails if any is missing), not just
+by convention. Adding a 7th locale means: extend `locales` in `locale.ts`, add the key to
+`localizedText()` in `formula.types.ts` and to `changelog.types.ts`'s inline schema, translate
+`ui-strings.ts` and `changelog.yaml` by hand, then re-translate all 38 formula YAML files
+(this was parallelized across 6 agents, one per batch of files, last time).
+
+Chinese/Japanese have no spaces between words, so the per-word GSAP stagger reveal in
+`FormulaHero.tsx` doesn't use plain `.split(" ")` — it uses `splitWords()` in `src/lib/text.ts`
+(`Intl.Segmenter`-based, locale-aware) instead, which produces correct word boundaries for CJK
+while reproducing the exact same output as `.split(" ")` for space-delimited languages. Any new
+text-splitting logic in this component should go through that helper, not a raw `.split(" ")`.
+
+OG image generation (`scripts/generate-og-images.tsx`) needs a CJK-capable fallback font for
+the same reason it already needed latin-ext/greek fallbacks for π/Ĥ/ψ: satori has no OS font
+fallback like a real browser. `@fontsource/noto-sans-sc` and `@fontsource/noto-sans-jp` are
+loaded as further entries in the same font-family stack.
+
+### Branding & sharing
+
+`public/logo.svg` is the wordmark (Euler's identity motif, "e^iπ", next to the "Math Got
+Motion" name) used in `README.md`; `public/favicon.svg` is the same "π" mark alone, for the
+browser tab. `public/og-image.png` is the site-wide default share preview, generated once via
+the same satori pipeline as the per-formula cards (not regenerated on every build — it's a
+committed static asset, unlike `dist/og/*.png`).
+
+The share button in `FormulaHero.tsx` doesn't just copy a link: it first tries to fetch that
+formula's own OG PNG (relative to `import.meta.env.BASE_URL`, not `SITE_URL` — this must stay
+same-origin so it also works against a local `vite preview`) and, if `navigator.canShare`
+reports file support, shares it via the Web Share API alongside the title/text/url. If file
+sharing isn't supported but the image fetch succeeded, it downloads the PNG directly instead.
+Only if neither the image nor `navigator.share` are available does it fall back to copying the
+URL to the clipboard. The image only exists as a build artifact, so this degrades gracefully
+(no image, no crash) when testing against `pnpm dev` rather than a full `pnpm build:web`.
 
 ### Node scripts vs. the app's TypeScript project
 

@@ -3,6 +3,42 @@
 # raíz del repo es un espejo generado de este archivo para desarrolladores;
 # las entradas nuevas se agregan acá, no ahí.
 
+- version: "0.6.0"
+  date: "2026-07-11"
+  changes:
+    - type: added
+      text:
+        es: Cuatro idiomas nuevos — portugués, francés, chino y japonés — sumados a español e inglés en las 38 fórmulas y en toda la interfaz.
+        en: Four new languages — Portuguese, French, Chinese, and Japanese — added alongside Spanish and English across all 38 formulas and the whole interface.
+        pt: Quatro novos idiomas — português, francês, chinês e japonês — adicionados ao lado do espanhol e do inglês em todas as 38 fórmulas e em toda a interface.
+        fr: Quatre nouvelles langues — portugais, français, chinois et japonais — ajoutées à l'espagnol et à l'anglais dans les 38 formules et dans toute l'interface.
+        zh: 新增四种语言——葡萄牙语、法语、中文和日语——覆盖全部 38 个公式及整个界面，与西班牙语、英语并列。
+        ja: ポルトガル語・フランス語・中国語・日本語の4言語を新たに追加。既存のスペイン語・英語とあわせ、38個の公式全体とインターフェース全体に対応。
+    - type: added
+      text:
+        es: Un logo — el motivo de la identidad de Euler (e^iπ) como marca — y una imagen de vista previa propia para el sitio.
+        en: A logo — Euler's Identity motif (e^iπ) as the brand mark — and a dedicated site-wide preview image.
+        pt: Um logo — o motivo da Identidade de Euler (e^iπ) como marca — e uma imagem de pré-visualização própria para o site.
+        fr: Un logo — le motif de l'identité d'Euler (e^iπ) comme marque — et une image d'aperçu dédiée pour le site.
+        zh: 新增品牌标志——以欧拉恒等式（e^iπ）为设计元素——以及网站专属的预览图。
+        ja: ロゴを追加——オイラーの等式（e^iπ）をモチーフにしたブランドマーク——サイト専用のプレビュー画像も用意。
+    - type: changed
+      text:
+        es: Compartir ahora adjunta la imagen de la fórmula (o la descarga, si el navegador no admite adjuntar archivos) en vez de solo el enlace.
+        en: Sharing now attaches the formula's image (or downloads it, on browsers that can't attach files) instead of just the link.
+        pt: Compartilhar agora anexa a imagem da fórmula (ou a baixa, em navegadores que não suportam anexar arquivos) em vez de apenas o link.
+        fr: Le partage joint désormais l'image de la formule (ou la télécharge, sur les navigateurs qui ne peuvent pas joindre de fichiers) au lieu de seulement le lien.
+        zh: 分享功能现在会附上公式图片（若浏览器不支持附加文件，则改为下载图片），而不只是分享链接。
+        ja: 共有時に数式の画像が添付されるようになりました（ファイル添付に対応していないブラウザでは画像をダウンロード）。リンクだけの共有ではなくなりました。
+    - type: fixed
+      text:
+        es: Los botones de "volver" y "compartir" quedaban recortados fuera de la pantalla en ciertas alturas de ventana — ahora siempre entran en el viewport.
+        en: The "back" and "share" buttons could get clipped off-screen at certain window heights — they now always fit within the viewport.
+        pt: Os botões "voltar" e "compartilhar" podiam ficar cortados fora da tela em certas alturas de janela — agora sempre cabem na viewport.
+        fr: Les boutons « retour » et « partager » pouvaient être coupés hors de l'écran à certaines hauteurs de fenêtre — ils tiennent désormais toujours dans la fenêtre.
+        zh: 在某些窗口高度下，"返回"和"分享"按钮会被截断到屏幕外——现在始终能完整显示在视口内。
+        ja: 一部のウィンドウの高さでは「戻る」「共有」ボタンが画面外に切れてしまう問題を修正——常にビューポート内に収まるようになりました。
+
 - version: "0.5.0"
   date: "2026-07-10"
   changes:
@@ -10,18 +46,34 @@
       text:
         es: Cada fórmula ahora tiene su propia URL y se puede compartir directamente (con su propia imagen de vista previa).
         en: Every formula now has its own URL and can be shared directly (with its own preview image).
+        pt: Cada fórmula agora tem sua própria URL e pode ser compartilhada diretamente (com sua própria imagem de pré-visualização).
+        fr: Chaque formule a désormais sa propre URL et peut être partagée directement (avec sa propre image d'aperçu).
+        zh: 现在每个公式都有自己的网址，可以直接分享（并配有专属预览图）。
+        ja: 各数式に専用URLが付与され、直接共有できるようになりました（専用のプレビュー画像付き）。
     - type: added
       text:
         es: Página de novedades (esta que estás leyendo).
         en: A changelog page (this one).
+        pt: Uma página de novidades (esta que você está lendo).
+        fr: Une page de nouveautés (celle que vous lisez).
+        zh: 新增更新日志页面（也就是你正在看的这个）。
+        ja: 更新履歴ページ（今読んでいるこのページ）を追加しました。
     - type: added
       text:
         es: SEO agresivo — sitemap, robots.txt, datos estructurados y páginas pre-renderizadas para buscadores e IA.
         en: Aggressive SEO — sitemap, robots.txt, structured data, and prerendered pages for search engines and AI.
+        pt: SEO agressivo — sitemap, robots.txt, dados estruturados e páginas pré-renderizadas para buscadores e IA.
+        fr: SEO agressif — sitemap, robots.txt, données structurées et pages pré-rendues pour les moteurs de recherche et l'IA.
+        zh: 更激进的 SEO——站点地图、robots.txt、结构化数据，以及为搜索引擎和 AI 预渲染的页面。
+        ja: 積極的なSEO対応——サイトマップ、robots.txt、構造化データ、検索エンジンとAI向けのプリレンダリングページを追加。
     - type: changed
       text:
         es: El idioma y la fórmula activa ahora viven en la URL, no solo en memoria.
         en: Language and the active formula now live in the URL, not just in memory.
+        pt: O idioma e a fórmula ativa agora vivem na URL, não apenas na memória.
+        fr: La langue et la formule active vivent désormais dans l'URL, pas seulement en mémoire.
+        zh: 语言和当前公式现在都体现在网址中，而不只是保存在内存里。
+        ja: 言語と現在の数式は、メモリ内だけでなくURLにも反映されるようになりました。
 
 - version: "0.4.0"
   date: "2026-07-10"
@@ -30,14 +82,26 @@
       text:
         es: 34 fórmulas nuevas (38 en total), cada una con historia, línea de tiempo, casos de uso reales y un ejemplo resuelto.
         en: 34 new formulas (38 total), each with history, a timeline, real-world use cases, and a worked example.
+        pt: 34 novas fórmulas (38 no total), cada uma com história, linha do tempo, casos de uso reais e um exemplo resolvido.
+        fr: 34 nouvelles formules (38 au total), chacune avec son histoire, sa chronologie, des cas d'usage réels et un exemple résolu.
+        zh: 新增 34 个公式（共 38 个），每个都配有历史、时间线、真实应用场景和解题示例。
+        ja: 新たに34個の公式を追加（合計38個）。それぞれに歴史、年表、実際の活用例、計算例が付いています。
     - type: added
       text:
         es: Índice de fórmulas con búsqueda en vivo y agrupación por categoría.
         en: A searchable formula index grouped by category.
+        pt: Um índice de fórmulas pesquisável e agrupado por categoria.
+        fr: Un index des formules consultable, avec recherche en direct et regroupement par catégorie.
+        zh: 新增可搜索的公式索引，并按类别分组。
+        ja: カテゴリー別にグループ化された、リアルタイム検索可能な数式一覧を追加。
     - type: changed
       text:
         es: Las fórmulas pasaron de módulos de código a archivos YAML validados por schema — cualquiera puede agregar una de forma segura.
         en: Formulas moved from code modules to schema-validated YAML files — anyone can safely contribute one.
+        pt: As fórmulas deixaram de ser módulos de código e passaram a ser arquivos YAML validados por schema — qualquer pessoa pode contribuir com uma com segurança.
+        fr: Les formules sont passées de modules de code à des fichiers YAML validés par schéma — n'importe qui peut désormais en ajouter une en toute sécurité.
+        zh: 公式从代码模块改为经过 schema 校验的 YAML 文件——任何人都可以安全地贡献一个新公式。
+        ja: 数式はコードモジュールから、スキーマ検証済みのYAMLファイルに変更されました——誰でも安全に新しい数式を追加できます。
 
 - version: "0.3.0"
   date: "2026-07-10"
@@ -46,6 +110,10 @@
       text:
         es: Despliegue automático a GitHub Pages.
         en: Automatic deployment to GitHub Pages.
+        pt: Implantação automática no GitHub Pages.
+        fr: Déploiement automatique sur GitHub Pages.
+        zh: 新增自动部署到 GitHub Pages。
+        ja: GitHub Pagesへの自動デプロイに対応しました。
 
 - version: "0.2.0"
   date: "2026-07-10"
@@ -54,14 +122,26 @@
       text:
         es: Menú para cambiar entre varias fórmulas.
         en: A menu to switch between multiple formulas.
+        pt: Um menu para alternar entre várias fórmulas.
+        fr: Un menu pour basculer entre plusieurs formules.
+        zh: 新增菜单，可在多个公式之间切换。
+        ja: 複数の数式を切り替えられるメニューを追加。
     - type: added
       text:
         es: Soporte bilingüe, español e inglés.
         en: Bilingual support, Spanish and English.
+        pt: Suporte bilíngue, espanhol e inglês.
+        fr: Prise en charge bilingue, espagnol et anglais.
+        zh: 支持西班牙语和英语双语。
+        ja: スペイン語と英語のバイリンガル対応。
     - type: added
       text:
         es: Diseño responsive para pantallas angostas y en orientación horizontal.
         en: Responsive layout for narrow screens and landscape orientation.
+        pt: Layout responsivo para telas estreitas e orientação paisagem.
+        fr: Mise en page responsive pour les écrans étroits et l'orientation paysage.
+        zh: 响应式布局，适配窄屏幕和横屏方向。
+        ja: 狭い画面や横向き表示に対応したレスポンシブレイアウト。
 
 - version: "0.1.0"
   date: "2026-07-10"
@@ -70,3 +150,7 @@
       text:
         es: Primera prueba de concepto — la Identidad de Euler deconstruida con scroll.
         en: First proof of concept — Euler's Identity deconstructed via scroll.
+        pt: Primeira prova de conceito — a Identidade de Euler desconstruída pelo scroll.
+        fr: Première preuve de concept — l'identité d'Euler déconstruite au fil du défilement.
+        zh: 首个概念验证——通过滚动逐步拆解欧拉恒等式。
+        ja: 最初のプロトタイプ——スクロールでオイラーの等式を分解する仕組み。

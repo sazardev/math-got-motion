@@ -6,6 +6,7 @@ import { locales } from "../../i18n/locale";
 import { useLocale } from "../../i18n/locale-context";
 import { gsap, ScrollTrigger } from "../../lib/gsap";
 import { SITE_URL } from "../../lib/site";
+import { splitWords } from "../../lib/text";
 
 import type { Formula } from "../../domain/formula.types";
 import "./FormulaHero.css";
@@ -508,15 +509,50 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
   );
 
   const handleShare = async () => {
-    const shareData = {
-      title: formula.title[locale],
-      text: formula.context.history[locale].slice(0, 140),
-      url: globalThis.location.href,
-    };
+    const title = formula.title[locale];
+    const text = formula.context.history[locale].slice(0, 140);
+    const url = globalThis.location.href;
+
+    // La misma tarjeta que genera scripts/generate-og-images.tsx para Open
+    // Graph — reusarla acá hace que "compartir" adjunte una imagen prolija
+    // de la fórmula en vez de solo un link pelado. Ruta relativa al origen
+    // actual (no SITE_URL, que es fijo a producción): así funciona igual en
+    // dev/preview local que en el sitio publicado. Solo existe como
+    // artefacto de build (dist/og/), así que en `pnpm dev` el fetch 404 y
+    // se sigue sin imagen.
+    let file: File | undefined;
+    try {
+      const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+      const response = await fetch(`${base}/og/${formula.id}-${locale}.png`);
+      if (response.ok) {
+        const blob = await response.blob();
+        file = new File([blob], `${formula.id}-${locale}.png`, { type: "image/png" });
+      }
+    } catch {
+      // Sin conexión a la imagen (ej. en dev) — se sigue sin ella.
+    }
+
+    if (file && typeof navigator.canShare === "function" && navigator.canShare({ files: [file] })) {
+      try {
+        await navigator.share({ title, text, url, files: [file] });
+      } catch {
+        // El usuario canceló el share sheet nativo — no es un error a reportar.
+      }
+      return;
+    }
+
+    if (file) {
+      const objectUrl = URL.createObjectURL(file);
+      const link = document.createElement("a");
+      link.href = objectUrl;
+      link.download = file.name;
+      link.click();
+      URL.revokeObjectURL(objectUrl);
+    }
 
     if (typeof navigator.share === "function") {
       try {
-        await navigator.share(shareData);
+        await navigator.share({ title, text, url });
       } catch {
         // El usuario canceló el share sheet nativo — no es un error a reportar.
       }
@@ -524,7 +560,7 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
     }
 
     try {
-      await navigator.clipboard.writeText(shareData.url);
+      await navigator.clipboard.writeText(url);
       setShareState("copied");
       globalThis.setTimeout(() => {
         setShareState("idle");
@@ -554,7 +590,7 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
       <div className="hero__explanations">
         {formula.nodes.map((node) => (
           <p key={node.id} className="explanation">
-            {node.explanation[locale].split(" ").map((word, wordIndex) => (
+            {splitWords(node.explanation[locale], locale).map((word, wordIndex) => (
               <span className="word" key={wordIndex}>
                 <span
                   className="word__inner"
@@ -575,7 +611,7 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
 
       <div className="hero__context">
         <p className="context__author">
-          {formula.context.author[locale].split(" ").map((word, wordIndex) => (
+          {splitWords(formula.context.author[locale], locale).map((word, wordIndex) => (
             <span className="word" key={wordIndex}>
               <span
                 className="word__inner"
@@ -600,7 +636,7 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
           <div className="stage__panel">
             <p className="stage__label">{strings.historyTitle}</p>
             <p className="stage__text">
-              {formula.context.history[locale].split(" ").map((word, wordIndex) => (
+              {splitWords(formula.context.history[locale], locale).map((word, wordIndex) => (
                 <span className="word" key={wordIndex}>
                   <span
                     className="word__inner"

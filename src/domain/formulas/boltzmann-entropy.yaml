@@ -2,9 +2,17 @@ id: boltzmann-entropy
 title:
   es: Fórmula de Entropía de Boltzmann
   en: Boltzmann Entropy Formula
+  pt: Fórmula da Entropia de Boltzmann
+  fr: Formule d'entropie de Boltzmann
+  zh: 玻尔兹曼熵公式
+  ja: ボルツマンのエントロピー公式
 category:
   es: Física moderna
   en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
 nodes:
   - id: s
     type: variable
@@ -12,55 +20,95 @@ nodes:
     explanation:
       es: La entropía del sistema, una medida de su desorden.
       en: The system's entropy, a measure of its disorder.
+      pt: A entropia do sistema, uma medida de sua desordem.
+      fr: L'entropie du système, une mesure de son désordre.
+      zh: 系统的熵，衡量其无序程度。
+      ja: 系のエントロピーであり、その乱雑さの尺度である。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: まさに等しい。
   - id: k
     type: constant
     value: k
     explanation:
       es: La constante de Boltzmann, que conecta el mundo microscópico con lo que medimos.
       en: The Boltzmann constant, connecting the microscopic world to what we measure.
+      pt: A constante de Boltzmann, que conecta o mundo microscópico com o que medimos.
+      fr: La constante de Boltzmann, qui relie le monde microscopique à ce que nous mesurons.
+      zh: 玻尔兹曼常数，将微观世界与我们所测量的宏观量联系起来。
+      ja: ボルツマン定数であり、微視的な世界と我々が測定する量とを結びつける。
   - id: dot
     type: operator
     value: "·"
     explanation:
       es: Multiplicada por.
       en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: 掛ける。
   - id: ln
     type: operator
     value: ln
     explanation:
       es: El logaritmo natural.
       en: The natural logarithm.
+      pt: O logaritmo natural.
+      fr: Le logarithme népérien.
+      zh: 自然对数。
+      ja: 自然対数。
   - id: paren-open
     type: operator
     value: "("
     explanation:
       es: Abre el argumento del logaritmo.
       en: Opens the logarithm's argument.
+      pt: Abre o argumento do logaritmo.
+      fr: Ouvre l'argument du logarithme.
+      zh: 打开对数的自变量。
+      ja: 対数の真数部分を開始する括弧。
   - id: w
     type: variable
     value: W
     explanation:
       es: El número de microestados, de cuántas formas distintas se puede organizar el sistema.
       en: The number of microstates, how many distinct ways the system can be arranged.
+      pt: O número de microestados, de quantas formas distintas o sistema pode ser organizado.
+      fr: Le nombre de microétats, c'est-à-dire de combien de façons distinctes le système peut être arrangé.
+      zh: 微观状态数，即系统可以被排列的不同方式的数量。
+      ja: 微視的状態の数であり、系が取りうる異なる配置の総数を表す。
   - id: paren-close
     type: operator
     value: ")"
     explanation:
       es: Cierra el argumento del logaritmo.
       en: Closes the logarithm's argument.
+      pt: Fecha o argumento do logaritmo.
+      fr: Ferme l'argument du logarithme.
+      zh: 关闭对数的自变量。
+      ja: 対数の真数部分を終了する括弧。
 context:
   author:
     es: Ludwig Boltzmann
     en: Ludwig Boltzmann
+    pt: Ludwig Boltzmann
+    fr: Ludwig Boltzmann
+    zh: 路德维希·玻尔兹曼
+    ja: ルートヴィッヒ・ボルツマン
   era:
     es: Austria, 1844–1906 · desarrollada en la década de 1870
     en: Austria, 1844–1906 · developed in the 1870s
+    pt: Áustria, 1844–1906 · desenvolvida na década de 1870
+    fr: Autriche, 1844–1906 · élaborée dans les années 1870
+    zh: 奥地利，1844–1906 · 于19世纪70年代提出
+    ja: オーストリア、1844–1906年 · 1870年代に確立
   history:
     es: >-
       Boltzmann desarrolló durante la década de 1870 la interpretación estadística de la
@@ -74,66 +122,174 @@ context:
       log W was written by Max Planck in 1900, in Boltzmann's honor. It is now engraved on his
       tombstone in Vienna's Central Cemetery. Boltzmann took his own life in 1906, partly due to
       rejection by colleagues like Mach and Ostwald of the atomic theory he defended.
+    pt: >-
+      Durante a década de 1870, Boltzmann desenvolveu a interpretação estatística da entropia,
+      conectando-a ao número de microestados possíveis de um sistema. A forma exata S = k log
+      W foi escrita por Max Planck em 1900, em homenagem a Boltzmann. Hoje está gravada em seu
+      túmulo no Cemitério Central de Viena. Boltzmann tirou a própria vida em 1906, em parte
+      devido à rejeição de colegas como Mach e Ostwald à teoria atômica que ele defendia.
+    fr: >-
+      Dans les années 1870, Boltzmann développa l'interprétation statistique de l'entropie, la
+      reliant au nombre de microétats possibles d'un système. La forme exacte S = k log W fut
+      écrite par Max Planck en 1900, en l'honneur de Boltzmann. Elle est aujourd'hui gravée sur
+      sa tombe au cimetière central de Vienne. Boltzmann se suicida en 1906, en partie à cause
+      du rejet par des collègues comme Mach et Ostwald de la théorie atomique qu'il défendait.
+    zh: >-
+      在19世纪70年代，玻尔兹曼提出了熵的统计学诠释，将其与系统可能的微观状态数联系起来。
+      精确形式 S = k log W 是马克斯·普朗克于1900年为纪念玻尔兹曼而写下的，
+      如今这一公式镌刻在他位于维也纳中央公墓的墓碑上。玻尔兹曼于1906年自杀身亡，
+      部分原因是马赫和奥斯特瓦尔德等同行对他所坚持的原子论的排斥。
+    ja: >-
+      1870年代、ボルツマンはエントロピーの統計的解釈を発展させ、それを系のとりうる微視的状態の数と結びつけた。
+      正確な形 S = k log W は、1900年にマックス・プランクがボルツマンに敬意を表して記したものである。
+      この式は現在、ウィーン中央墓地にある彼の墓石に刻まれている。ボルツマンは1906年に自ら命を絶ったが、
+      その一因は、マッハやオストヴァルトら同僚たちが、彼の擁護していた原子論を否定したことにあった。
   timeline:
     - year: c. 1870s
       label:
         es: Boltzmann desarrolla la interpretación estadística de la entropía dentro de la teoría cinética de los gases.
         en: Boltzmann develops the statistical interpretation of entropy within the kinetic theory of gases.
+        pt: Boltzmann desenvolve a interpretação estatística da entropia dentro da teoria cinética dos gases.
+        fr: Boltzmann développe l'interprétation statistique de l'entropie au sein de la théorie cinétique des gaz.
+        zh: 玻尔兹曼在气体动理论的框架内提出了熵的统计学诠释。
+        ja: ボルツマンが気体分子運動論の枠組みの中でエントロピーの統計的解釈を発展させる。
     - year: "1877"
       label:
         es: Publica el artículo que relaciona la entropía con la probabilidad de un estado del sistema.
         en: He publishes the paper relating entropy to the probability of a system's state.
+        pt: Publica o artigo que relaciona a entropia com a probabilidade de um estado do sistema.
+        fr: Il publie l'article reliant l'entropie à la probabilité d'un état du système.
+        zh: 他发表了将熵与系统状态的概率相联系的论文。
+        ja: エントロピーを系の状態の確率と関連づける論文を発表する。
     - year: "1900"
       label:
         es: Max Planck introduce la constante k y escribe la fórmula en su forma moderna, S = k log W.
         en: Max Planck introduces the constant k and writes the formula in its modern form, S = k log W.
+        pt: Max Planck introduz a constante k e escreve a fórmula em sua forma moderna, S = k log W.
+        fr: Max Planck introduit la constante k et écrit la formule sous sa forme moderne, S = k log W.
+        zh: 马克斯·普朗克引入常数 k，并将公式写成其现代形式 S = k log W。
+        ja: マックス・プランクが定数kを導入し、公式を現代的な形 S = k log W として記す。
     - year: "1906"
       label:
         es: Boltzmann muere; años después su tumba en Viena se graba con esta fórmula como homenaje.
         en: Boltzmann dies; years later his tomb in Vienna is engraved with this formula as a tribute.
+        pt: Boltzmann morre; anos depois, seu túmulo em Viena é gravado com esta fórmula como homenagem.
+        fr: Boltzmann meurt ; des années plus tard, sa tombe à Vienne est gravée de cette formule en hommage.
+        zh: 玻尔兹曼去世；多年后，作为纪念，这条公式被刻在了他位于维也纳的墓碑上。
+        ja: ボルツマンが死去する。数年後、彼へのオマージュとしてこの公式がウィーンの墓碑に刻まれる。
     - year: Hoy
       label:
-        es: Es la base de la mecánica estadística, y su analogía inspiró la entropía de la teoría de la información.
-        en: It underlies statistical mechanics, and its analogy inspired entropy in information theory.
+        es: >-
+          Es la base de la mecánica estadística, y su analogía inspiró la entropía de la teoría de la información.
+        en: >-
+          It underlies statistical mechanics, and its analogy inspired entropy in information theory.
+        pt: >-
+          É a base da mecânica estatística, e sua analogia inspirou a entropia da teoria da informação.
+        fr: >-
+          Elle est le fondement de la mécanique statistique, et son analogie a inspiré l'entropie de la théorie de l'information.
+        zh: >-
+          它是统计力学的基础，其类比方式也启发了信息论中熵的概念。
+        ja: >-
+          統計力学の基盤であり、その類推は情報理論におけるエントロピーの着想源ともなった。
   useCases:
     - title:
         es: Termodinámica química
         en: Chemical thermodynamics
+        pt: Termodinâmica química
+        fr: Thermodynamique chimique
+        zh: 化学热力学
+        ja: 化学熱力学
       description:
         es: Calcular la entropía de una sustancia a partir de sus estados moleculares posibles usa esta fórmula.
         en: Calculating a substance's entropy from its possible molecular states directly uses this formula.
+        pt: Calcular a entropia de uma substância a partir de seus estados moleculares possíveis usa diretamente esta fórmula.
+        fr: Calculer l'entropie d'une substance à partir de ses états moléculaires possibles utilise directement cette formule.
+        zh: 根据物质可能的分子状态计算其熵值，正是直接应用这一公式。
+        ja: 物質のとりうる分子状態からそのエントロピーを計算する際、この公式が直接用いられる。
     - title:
         es: Teoría de la información
         en: Information theory
+        pt: Teoria da informação
+        fr: Théorie de l'information
+        zh: 信息论
+        ja: 情報理論
       description:
         es: La entropía de Shannon, que mide la información de un mensaje, es un paralelo directo de esta ecuación.
         en: Shannon entropy, which measures a message's information content, is a direct parallel of this equation.
+        pt: A entropia de Shannon, que mede a informação de uma mensagem, é um paralelo direto desta equação.
+        fr: L'entropie de Shannon, qui mesure le contenu informationnel d'un message, est un parallèle direct de cette équation.
+        zh: 香农熵用于衡量一条信息的信息量，是这一方程的直接类比。
+        ja: メッセージの情報量を測るシャノンのエントロピーは、この方程式の直接的な対応物である。
     - title:
         es: Ciencia de materiales
         en: Materials science
+        pt: Ciência dos materiais
+        fr: Science des matériaux
+        zh: 材料科学
+        ja: 材料科学
       description:
         es: Predecir transiciones de fase y el desorden en aleaciones y cristales depende de contar microestados.
         en: Predicting phase transitions and disorder in alloys and crystals depends on counting microstates.
+        pt: Prever transições de fase e a desordem em ligas e cristais depende de contar microestados.
+        fr: Prédire les transitions de phase et le désordre dans les alliages et les cristaux dépend du dénombrement des microétats.
+        zh: 预测合金和晶体中的相变与无序程度，依赖于对微观状态的计数。
+        ja: 合金や結晶における相転移や乱雑さを予測するには、微視的状態を数え上げることが必要となる。
     - title:
         es: Cosmología
         en: Cosmology
+        pt: Cosmologia
+        fr: Cosmologie
+        zh: 宇宙学
+        ja: 宇宙論
       description:
         es: La entropía de un agujero negro, propuesta por Bekenstein y Hawking, extiende esta misma idea a la gravedad.
         en: Black hole entropy, proposed by Bekenstein and Hawking, extends this same idea to gravity.
+        pt: A entropia de um buraco negro, proposta por Bekenstein e Hawking, estende essa mesma ideia à gravidade.
+        fr: L'entropie d'un trou noir, proposée par Bekenstein et Hawking, étend cette même idée à la gravitation.
+        zh: 由贝肯斯坦和霍金提出的黑洞熵，将这一思想延伸到了引力领域。
+        ja: ベッケンシュタインとホーキングが提唱したブラックホールのエントロピーは、この同じ発想を重力にまで拡張したものである。
   example:
     title:
       es: Entropía de un sistema simple
       en: Entropy of a simple system
+      pt: Entropia de um sistema simples
+      fr: Entropie d'un système simple
+      zh: 简单系统的熵
+      ja: 単純な系のエントロピー
     lines:
       - es: W = 10²³ microestados posibles
         en: W = 10²³ possible microstates
+        pt: W = 10²³ microestados possíveis
+        fr: W = 10²³ microétats possibles
+        zh: W = 10²³ 种可能的微观状态
+        ja: W = 10²³ 通りの可能な微視的状態
       - es: k = 1.381×10⁻²³ J/K
         en: k = 1.381×10⁻²³ J/K
+        pt: k = 1.381×10⁻²³ J/K
+        fr: k = 1,381×10⁻²³ J/K
+        zh: k = 1.381×10⁻²³ J/K
+        ja: k = 1.381×10⁻²³ J/K
       - es: S = k · ln(W)
         en: S = k · ln(W)
+        pt: S = k · ln(W)
+        fr: S = k · ln(W)
+        zh: S = k · ln(W)
+        ja: S = k · ln(W)
       - es: ln(10²³) ≈ 52.96
         en: ln(10²³) ≈ 52.96
+        pt: ln(10²³) ≈ 52.96
+        fr: ln(10²³) ≈ 52,96
+        zh: ln(10²³) ≈ 52.96
+        ja: ln(10²³) ≈ 52.96
       - es: S = 1.381×10⁻²³ · 52.96
         en: S = 1.381×10⁻²³ · 52.96
+        pt: S = 1.381×10⁻²³ · 52.96
+        fr: S = 1,381×10⁻²³ · 52,96
+        zh: S = 1.381×10⁻²³ · 52.96
+        ja: S = 1.381×10⁻²³ · 52.96
       - es: S ≈ 7.31×10⁻²² J/K
         en: S ≈ 7.31×10⁻²² J/K
+        pt: S ≈ 7.31×10⁻²² J/K
+        fr: S ≈ 7,31×10⁻²² J/K
+        zh: S ≈ 7.31×10⁻²² J/K
+        ja: S ≈ 7.31×10⁻²² J/K

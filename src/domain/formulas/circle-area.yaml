@@ -2,9 +2,17 @@ id: circle-area
 title:
   es: Área del Círculo
   en: Area of a Circle
+  pt: Área do Círculo
+  fr: Aire du Cercle
+  zh: 圆的面积
+  ja: 円の面積
 category:
   es: Geometría
   en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
 nodes:
   - id: area
     type: variable
@@ -12,37 +20,65 @@ nodes:
     explanation:
       es: "El área: la superficie total que ocupa el círculo."
       en: "The area: the total surface the circle occupies."
+      pt: "A área: a superfície total que o círculo ocupa."
+      fr: "L'aire : la surface totale occupée par le cercle."
+      zh: "面积：圆所占据的总表面。"
+      ja: "面積：円が占める表面全体。"
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: ちょうど等しい。
   - id: pi
     type: constant
     value: π
     explanation:
       es: Pi, la razón constante entre la circunferencia de un círculo y su diámetro.
       en: Pi, the constant ratio between a circle's circumference and its diameter.
+      pt: Pi, a razão constante entre a circunferência de um círculo e seu diâmetro.
+      fr: Pi, le rapport constant entre la circonférence d'un cercle et son diamètre.
+      zh: 圆周率π，圆的周长与直径之比的常数。
+      ja: 円周率π。円の円周と直径の比である定数。
   - id: r
     type: variable
     value: r
     explanation:
       es: "El radio: la distancia entre el centro del círculo y su borde."
       en: "The radius: the distance from the circle's center to its edge."
+      pt: "O raio: a distância entre o centro do círculo e sua borda."
+      fr: "Le rayon : la distance entre le centre du cercle et son bord."
+      zh: "半径：圆心到圆边缘的距离。"
+      ja: "半径：円の中心から縁までの距離。"
   - id: r-sq
     type: superscript
     value: "2"
     explanation:
       es: "Elevado al cuadrado: multiplicado por sí mismo."
       en: "Squared: multiplied by itself."
+      pt: "Elevado ao quadrado: multiplicado por si mesmo."
+      fr: "Élevé au carré : multiplié par lui-même."
+      zh: "平方：自身相乘。"
+      ja: "二乗：自分自身を掛ける。"
 context:
   author:
     es: Arquímedes de Siracusa
     en: Archimedes of Syracuse
+    pt: Arquimedes de Siracusa
+    fr: Archimède de Syracuse
+    zh: 叙拉古的阿基米德
+    ja: シラクサのアルキメデス
   era:
     es: Siracusa, Sicilia, c. 287–212 a.C.
     en: Syracuse, Sicily, c. 287–212 BC
+    pt: Siracusa, Sicília, c. 287–212 a.C.
+    fr: Syracuse, Sicile, v. 287–212 av. J.-C.
+    zh: 西西里叙拉古，约公元前287–212年
+    ja: シチリア島シラクサ、紀元前287年頃–前212年
   history:
     es: >-
       En su tratado Sobre la medida del círculo, Arquímedes demostró esta fórmula con el método de
@@ -52,6 +88,20 @@ context:
       In his treatise Measurement of a Circle, Archimedes proved this formula using the method of
       exhaustion, approximating the circle with polygons of ever more sides. It laid groundwork for
       what would, centuries later, become integral calculus.
+    pt: >-
+      Em seu tratado Sobre a Medida do Círculo, Arquimedes demonstrou esta fórmula com o método da
+      exaustão, aproximando o círculo por polígonos com cada vez mais lados. Lançou as bases do que,
+      séculos depois, se tornaria o cálculo integral.
+    fr: >-
+      Dans son traité De la mesure du cercle, Archimède démontra cette formule à l'aide de la
+      méthode d'exhaustion, en approchant le cercle par des polygones à un nombre croissant de
+      côtés. Il posa ainsi les fondements de ce qui deviendrait, des siècles plus tard, le calcul
+      intégral.
+    zh: >-
+      在《圆的度量》一书中，阿基米德用穷竭法证明了这一公式，用边数不断增加的多边形逼近圆。这为几个世纪后诞生的积分学奠定了基础。
+    ja: >-
+      アルキメデスは著書『円の測定について』の中で、辺の数を増やしていく多角形で円を近似する取り尽くし法を
+      用いてこの公式を証明した。これは後の時代に積分法として結実する基礎を築いた。
   timeline:
     - year: c. 1650 a.C.
       label:
@@ -61,12 +111,29 @@ context:
         en: >-
           The Rhind Papyrus, in Egypt, already approximates a circle's area by subtracting a ninth
           from the diameter and squaring it.
+        pt: >-
+          O Papiro de Rhind, no Egito, já aproxima a área do círculo subtraindo um nono do diâmetro
+          e elevando o resultado ao quadrado.
+        fr: >-
+          Le papyrus Rhind, en Égypte, approche déjà l'aire d'un cercle en retranchant un neuvième
+          du diamètre puis en l'élevant au carré.
+        zh: >-
+          埃及的莱因德纸草书已经通过从直径中减去九分之一再平方来近似计算圆的面积。
+        ja: >-
+          エジプトのリンド・パピルスは、直径からその9分の1を引いて二乗することで、すでに円の面積を
+          近似していた。
     - year: c. 250 a.C.
       label:
         es: Arquímedes prueba A = πr² con el método de exhausción y acota π entre 223/71 y 22/7.
         en: >-
           Archimedes proves A = πr² using the method of exhaustion and bounds π between 223/71 and
           22/7.
+        pt: >-
+          Arquimedes prova A = πr² com o método da exaustão e limita π entre 223/71 e 22/7.
+        fr: >-
+          Archimède démontre A = πr² par la méthode d'exhaustion et encadre π entre 223/71 et 22/7.
+        zh: 阿基米德用穷竭法证明了A = πr²，并将π的取值范围限定在223/71与22/7之间。
+        ja: アルキメデスは取り尽くし法によりA = πr²を証明し、πの値を223/71と22/7の間に限定した。
     - year: s. XVII
       label:
         es: >-
@@ -75,6 +142,17 @@ context:
         en: >-
           Newton and Leibniz formalize integral calculus, turning Archimedes' exhaustion into a
           general method.
+        pt: >-
+          Newton e Leibniz formalizam o cálculo integral, transformando a exaustão de Arquimedes em
+          um método geral.
+        fr: >-
+          Newton et Leibniz formalisent le calcul intégral, transformant l'exhaustion d'Archimède en
+          une méthode générale.
+        zh: >-
+          牛顿和莱布尼茨将积分学系统化，把阿基米德的穷竭法变成了一种普遍方法。
+        ja: >-
+          ニュートンとライプニッツが積分法を体系化し、アルキメデスの取り尽くし法を一般的な方法へと
+          発展させた。
     - year: "1882"
       label:
         es: >-
@@ -83,6 +161,17 @@ context:
         en: >-
           Ferdinand von Lindemann proves π is transcendental, closing centuries of attempts to
           'square the circle'.
+        pt: >-
+          Ferdinand von Lindemann prova que π é transcendente, encerrando séculos de tentativas de
+          'quadrar o círculo'.
+        fr: >-
+          Ferdinand von Lindemann démontre que π est transcendant, mettant fin à des siècles de
+          tentatives pour 'quadrer le cercle'.
+        zh: >-
+          费迪南德·冯·林德曼证明π是超越数，终结了几个世纪以来"化圆为方"的尝试。
+        ja: >-
+          フェルディナント・フォン・リンデマンがπが超越数であることを証明し、何世紀にもわたる
+          「円積問題」への挑戦に終止符を打った。
     - year: Hoy
       label:
         es: >-
@@ -91,10 +180,25 @@ context:
         en: >-
           Engineers use it to size pipes, cables, and gears, and astronomers to compute orbital and
           crater areas.
+        pt: >-
+          Engenheiros a utilizam para dimensionar tubulações, cabos e engrenagens, e astrônomos, para
+          calcular áreas de órbitas e crateras.
+        fr: >-
+          Les ingénieurs l'utilisent pour dimensionner tuyaux, câbles et engrenages, et les
+          astronomes pour calculer les aires d'orbites et de cratères.
+        zh: >-
+          工程师用它计算管道、电缆和齿轮的截面，天文学家用它计算轨道和陨石坑的面积。
+        ja: >-
+          技術者はこれを使って配管やケーブル、歯車の断面を計算し、天文学者は軌道やクレーターの面積を
+          計算する。
   useCases:
     - title:
         es: Ingeniería
         en: Engineering
+        pt: Engenharia
+        fr: Ingénierie
+        zh: 工程学
+        ja: 工学
       description:
         es: >-
           El área de la sección transversal de tuberías y cables determina cuánto fluido o corriente
@@ -102,9 +206,23 @@ context:
         en: >-
           The cross-sectional area of pipes and cables determines how much fluid or current they can
           carry.
+        pt: >-
+          A área da seção transversal de tubulações e cabos determina quanto fluido ou corrente
+          elétrica eles podem transportar.
+        fr: >-
+          L'aire de la section transversale des tuyaux et des câbles détermine la quantité de fluide
+          ou de courant qu'ils peuvent transporter.
+        zh: >-
+          管道和电缆的横截面积决定了它们能够输送多少流体或电流。
+        ja: >-
+          配管やケーブルの断面積は、どれだけの流体や電流を運べるかを決める。
     - title:
         es: Arquitectura
         en: Architecture
+        pt: Arquitetura
+        fr: Architecture
+        zh: 建筑学
+        ja: 建築学
       description:
         es: >-
           Cúpulas, columnas y ventanas circulares se dimensionan a partir de esta misma relación
@@ -112,9 +230,23 @@ context:
         en: >-
           Domes, columns, and circular windows are all sized from this same relationship between
           radius and surface.
+        pt: >-
+          Cúpulas, colunas e janelas circulares são dimensionadas a partir dessa mesma relação entre
+          raio e superfície.
+        fr: >-
+          Coupoles, colonnes et fenêtres circulaires sont toutes dimensionnées à partir de cette même
+          relation entre rayon et surface.
+        zh: >-
+          穹顶、柱子和圆形窗户的尺寸都是根据半径与面积之间的这一关系来确定的。
+        ja: >-
+          ドーム、柱、円形の窓はすべて、この半径と表面積の関係に基づいて寸法が決められる。
     - title:
         es: Astronomía
         en: Astronomy
+        pt: Astronomia
+        fr: Astronomie
+        zh: 天文学
+        ja: 天文学
       description:
         es: >-
           Estimar el área de un cráter o de un disco planetario parte de tratarlo, en primera
@@ -122,16 +254,46 @@ context:
         en: >-
           Estimating the area of a crater or a planetary disk starts by treating it, to a first
           approximation, as a circle.
+        pt: >-
+          Estimar a área de uma cratera ou de um disco planetário parte de tratá-lo, em primeira
+          aproximação, como um círculo.
+        fr: >-
+          Estimer l'aire d'un cratère ou d'un disque planétaire consiste d'abord à le traiter, en
+          première approximation, comme un cercle.
+        zh: >-
+          估算陨石坑或行星圆盘的面积，第一近似是将其视为一个圆。
+        ja: >-
+          クレーターや惑星の円盤の面積を見積もる際には、まず第一近似として円として扱う。
   example:
     title:
       es: Un círculo de radio 5
       en: A circle of radius 5
+      pt: Um círculo de raio 5
+      fr: Un cercle de rayon 5
+      zh: 半径为5的圆
+      ja: 半径5の円
     lines:
       - es: r = 5
         en: r = 5
+        pt: r = 5
+        fr: r = 5
+        zh: r = 5
+        ja: r = 5
       - es: A = π · r²
         en: A = π · r²
+        pt: A = π · r²
+        fr: A = π · r²
+        zh: A = π · r²
+        ja: A = π · r²
       - es: A = π · 25
         en: A = π · 25
+        pt: A = π · 25
+        fr: A = π · 25
+        zh: A = π · 25
+        ja: A = π · 25
       - es: A ≈ 78.54 unidades²
         en: A ≈ 78.54 square units
+        pt: A ≈ 78,54 unidades quadradas
+        fr: A ≈ 78,54 unités carrées
+        zh: A ≈ 78.54 平方单位
+        ja: A ≈ 78.54 平方単位

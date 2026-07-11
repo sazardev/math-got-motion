@@ -2,9 +2,17 @@ id: normal-distribution
 title:
   es: Distribución Normal
   en: Normal Distribution
+  pt: Distribuição Normal
+  fr: Loi normale
+  zh: 正态分布
+  ja: 正規分布
 category:
   es: Probabilidad y estadística
   en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率と統計
 nodes:
   - id: f-x
     type: variable
@@ -14,24 +22,44 @@ nodes:
         La densidad de probabilidad: qué tan frecuente es cada valor de x en la distribución.
       en: >-
         The probability density: how frequent each value of x is in the distribution.
+      pt: >-
+        A densidade de probabilidade: quão frequente é cada valor de x na distribuição.
+      fr: >-
+        La densité de probabilité : la fréquence de chaque valeur de x dans la distribution.
+      zh: >-
+        概率密度:分布中每个x值出现的相对频繁程度。
+      ja: >-
+        確率密度。分布の中で各xの値がどれくらい頻繁に現れるかを示す。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
   - id: one
     type: number
     value: "1"
     explanation:
       es: El numerador de la constante de normalización.
       en: The numerator of the normalizing constant.
+      pt: O numerador da constante de normalização.
+      fr: Le numérateur de la constante de normalisation.
+      zh: 归一化常数的分子。
+      ja: 正規化定数の分子。
   - id: slash
     type: operator
     value: "/"
     explanation:
       es: Dividido entre.
       en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: 次で割る。
   - id: sigma
     type: variable
     value: σ
@@ -41,6 +69,14 @@ nodes:
         promedio.
       en: >-
         Sigma, the standard deviation: measures how spread out the values are around the mean.
+      pt: >-
+        Sigma, o desvio padrão: mede o quanto os valores estão dispersos em torno da média.
+      fr: >-
+        Sigma, l'écart type : mesure la dispersion des valeurs autour de la moyenne.
+      zh: >-
+        西格玛,即标准差:衡量数值围绕平均值的离散程度。
+      ja: >-
+        シグマ、標準偏差。値が平均のまわりにどれだけ散らばっているかを表す。
   - id: sqrt-2pi
     type: operator
     value: √(2π)
@@ -51,24 +87,46 @@ nodes:
       en: >-
         The square root of two times pi: a constant that ensures the area under the curve sums to
         exactly 1.
+      pt: >-
+        A raiz quadrada de duas vezes pi: uma constante que garante que a área sob a curva some
+        exatamente 1.
+      fr: >-
+        La racine carrée de deux fois pi : une constante qui garantit que l'aire sous la courbe vaut
+        exactement 1.
+      zh: >-
+        二倍圆周率的平方根:确保曲线下面积恰好等于1的常数。
+      ja: >-
+        2πの平方根。曲線の下の面積がちょうど1になることを保証する定数。
   - id: dot
     type: operator
     value: "·"
     explanation:
       es: Multiplicado por.
       en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 次を掛ける。
   - id: e
     type: variable
     value: e
     explanation:
       es: El número de Euler, base del decaimiento exponencial de la curva en forma de campana.
       en: Euler's number, the base of the bell curve's exponential decay.
+      pt: O número de Euler, base do decaimento exponencial da curva em forma de sino.
+      fr: Le nombre d'Euler, base de la décroissance exponentielle de la courbe en cloche.
+      zh: 欧拉数,是钟形曲线指数衰减的底数。
+      ja: ネイピア数。釣鐘型曲線の指数関数的減衰の底となる。
   - id: neg
     type: superscript
     value: "−"
     explanation:
       es: El exponente de e es negativo, lo que hace que la curva decaiga al alejarse del centro.
       en: The exponent of e is negative, which makes the curve decay away from the center.
+      pt: O expoente de e é negativo, o que faz a curva decair ao se afastar do centro.
+      fr: L'exposant de e est négatif, ce qui fait décroître la courbe en s'éloignant du centre.
+      zh: e的指数为负,这使得曲线在远离中心时逐渐衰减。
+      ja: eの指数は負であり、そのため中心から離れるほど曲線は減衰する。
   - id: x-minus-mu
     type: superscript
     value: (x−μ)
@@ -77,18 +135,35 @@ nodes:
         La distancia entre un valor x y la media μ (mu): qué tan lejos está ese valor del centro.
       en: >-
         The distance between a value x and the mean μ (mu): how far that value sits from the center.
+      pt: >-
+        A distância entre um valor x e a média μ (mu): quão longe esse valor está do centro.
+      fr: >-
+        La distance entre une valeur x et la moyenne μ (mu) : à quel point cette valeur est éloignée
+        du centre.
+      zh: >-
+        数值x与均值μ(mu)之间的距离:该值离中心有多远。
+      ja: >-
+        値xと平均μ(ミュー)との距離。その値が中心からどれだけ離れているかを表す。
   - id: sq
     type: superscript
     value: "²"
     explanation:
       es: Esa distancia se eleva al cuadrado, para que siempre cuente como positiva.
       en: That distance is squared, so it always counts as positive.
+      pt: Essa distância é elevada ao quadrado, para que sempre conte como positiva.
+      fr: Cette distance est élevée au carré, afin qu'elle compte toujours comme positive.
+      zh: 该距离被平方,以保证它始终为正值。
+      ja: この距離は二乗され、常に正の値として扱われる。
   - id: over
     type: superscript
     value: "/"
     explanation:
       es: Dividida entre el término de abajo, dentro del exponente.
       en: Divided by the term below, inside the exponent.
+      pt: Dividida pelo termo abaixo, dentro do expoente.
+      fr: Divisée par le terme du dessous, à l'intérieur de l'exposant.
+      zh: 在指数内部,除以下方的项。
+      ja: 指数の内部で、下の項によって割られる。
   - id: two-sigma-sq
     type: superscript
     value: 2σ²
@@ -98,13 +173,31 @@ nodes:
         dispersión.
       en: >-
         Twice the variance (sigma squared): controls how fast the curve decays based on its spread.
+      pt: >-
+        Duas vezes a variância (sigma ao quadrado): controla quão rápido a curva decai de acordo com
+        sua dispersão.
+      fr: >-
+        Deux fois la variance (sigma au carré) : contrôle la vitesse de décroissance de la courbe
+        selon sa dispersion.
+      zh: >-
+        方差(西格玛的平方)的两倍:根据数据的离散程度控制曲线衰减的速度。
+      ja: >-
+        分散(シグマの二乗)の2倍。ばらつきの大きさに応じて曲線がどれだけ速く減衰するかを制御する。
 context:
   author:
     es: Abraham de Moivre y Carl Friedrich Gauss
     en: Abraham de Moivre and Carl Friedrich Gauss
+    pt: Abraham de Moivre e Carl Friedrich Gauss
+    fr: Abraham de Moivre et Carl Friedrich Gauss
+    zh: 亚伯拉罕·德莫弗与卡尔·弗里德里希·高斯
+    ja: アブラーム・ド・モアブルとカール・フリードリヒ・ガウス
   era:
     es: Francia/Alemania, 1733–1809
     en: France/Germany, 1733–1809
+    pt: França/Alemanha, 1733–1809
+    fr: France/Allemagne, 1733–1809
+    zh: 法国/德国,1733–1809年
+    ja: フランス/ドイツ、1733–1809年
   history:
     es: >-
       Abraham de Moivre la introdujo en 1733 como una aproximación a la distribución binomial cuando
@@ -120,6 +213,31 @@ context:
       'Gaussian distribution.' Pierre-Simon Laplace also helped popularize it, proving its central
       role in the central limit theorem: the sum of many independent random variables tends toward
       this bell shape, regardless of their original distribution.
+    pt: >-
+      Abraham de Moivre a introduziu em 1733 como uma aproximação da distribuição binomial quando o
+      número de tentativas é grande. Décadas depois, Carl Friedrich Gauss a redescobriu em 1809 ao
+      modelar erros de observação em órbitas planetárias, e hoje costuma levar seu nome:
+      'distribuição gaussiana'. Pierre-Simon Laplace também ajudou a difundi-la, provando seu papel
+      central no teorema do limite central: a soma de muitas variáveis aleatórias independentes
+      tende a essa forma de sino, independentemente de sua distribuição original.
+    fr: >-
+      Abraham de Moivre l'introduisit en 1733 comme approximation de la loi binomiale lorsque le
+      nombre d'essais est grand. Des décennies plus tard, Carl Friedrich Gauss la redécouvrit en 1809
+      en modélisant les erreurs d'observation des orbites planétaires, et elle porte souvent son nom :
+      la « loi gaussienne ». Pierre-Simon Laplace contribua aussi à sa diffusion, en démontrant son
+      rôle central dans le théorème central limite : la somme de nombreuses variables aléatoires
+      indépendantes tend vers cette forme de cloche, quelle que soit leur distribution d'origine.
+    zh: >-
+      1733年,亚伯拉罕·德莫弗首次提出这一分布,作为试验次数较多时二项分布的近似。数十年后的1809年,
+      卡尔·弗里德里希·高斯在为行星轨道的观测误差建模时重新发现了它,如今这条曲线常以他的名字命名,称为"高斯分布"。
+      皮埃尔-西蒙·拉普拉斯也为其普及做出了贡献,他证明了这一分布在中心极限定理中的核心地位:
+      无论原始分布如何,大量独立随机变量之和都趋于这一钟形分布。
+    ja: >-
+      1733年、アブラーム・ド・モアブルは試行回数が多い場合の二項分布の近似としてこの分布を導入した。
+      その数十年後の1809年、カール・フリードリヒ・ガウスが惑星軌道の観測誤差をモデル化する中でこれを再発見し、
+      今日ではしばしば彼の名にちなんで「ガウス分布」と呼ばれる。ピエール=シモン・ラプラスもその普及に貢献し、
+      中心極限定理におけるこの分布の中心的な役割を証明した。すなわち、多数の独立な確率変数の和は、
+      元の分布によらずこの釣鐘型に近づいていく。
   timeline:
     - year: "1733"
       label:
@@ -129,6 +247,16 @@ context:
         en: >-
           De Moivre publishes the curve as a practical approximation to the binomial distribution
           for large samples.
+        pt: >-
+          De Moivre publica a curva como uma aproximação prática da distribuição binomial para
+          amostras grandes.
+        fr: >-
+          De Moivre publie la courbe comme approximation pratique de la loi binomiale pour de grands
+          échantillons.
+        zh: >-
+          德莫弗发表这条曲线,将其作为大样本情形下二项分布的实用近似。
+        ja: >-
+          ド・モアブルが、大標本における二項分布の実用的な近似として、この曲線を発表する。
     - year: "1809"
       label:
         es: >-
@@ -137,6 +265,16 @@ context:
         en: >-
           Gauss uses it to model astronomical measurement errors in Theoria motus corporum
           coelestium.
+        pt: >-
+          Gauss a usa para modelar erros de medição astronômica em Theoria motus corporum
+          coelestium.
+        fr: >-
+          Gauss l'utilise pour modéliser les erreurs de mesure astronomiques dans Theoria motus
+          corporum coelestium.
+        zh: >-
+          高斯在《天体运动理论》中用它来为天文测量误差建模。
+        ja: >-
+          ガウスが『天体運行論』の中で、天文観測誤差のモデル化にこれを用いる。
     - year: "1810"
       label:
         es: >-
@@ -145,12 +283,30 @@ context:
         en: >-
           Laplace proves an early version of the central limit theorem, explaining why the curve
           appears in so many phenomena.
+        pt: >-
+          Laplace demonstra uma versão inicial do teorema do limite central, explicando por que a
+          curva aparece em tantos fenômenos.
+        fr: >-
+          Laplace démontre une version précoce du théorème central limite, expliquant pourquoi la
+          courbe apparaît dans tant de phénomènes.
+        zh: >-
+          拉普拉斯证明了中心极限定理的早期版本,解释了这条曲线为何出现在如此多的现象之中。
+        ja: >-
+          ラプラスが中心極限定理の初期の形を証明し、この曲線がなぜ多くの現象に現れるのかを説明する。
     - year: "1894"
       label:
         es: >-
           Karl Pearson populariza el término 'distribución normal' en sus trabajos de bioestadística.
         en: >-
           Karl Pearson popularizes the term 'normal distribution' in his biostatistics work.
+        pt: >-
+          Karl Pearson populariza o termo 'distribuição normal' em seus trabalhos de bioestatística.
+        fr: >-
+          Karl Pearson popularise le terme « loi normale » dans ses travaux de biostatistique.
+        zh: >-
+          卡尔·皮尔逊在其生物统计学著作中推广了"正态分布"这一术语。
+        ja: >-
+          カール・ピアソンが生物統計学の研究の中で「正規分布」という用語を広める。
     - year: Hoy
       label:
         es: >-
@@ -159,10 +315,24 @@ context:
         en: >-
           It underlies statistical hypothesis tests, industrial quality control, and much of machine
           learning.
+        pt: >-
+          É a base dos testes estatísticos, do controle de qualidade industrial e de boa parte do
+          aprendizado de máquina.
+        fr: >-
+          Elle est à la base des tests d'hypothèses statistiques, du contrôle qualité industriel et
+          d'une grande partie de l'apprentissage automatique.
+        zh: >-
+          它是统计假设检验、工业质量控制以及大量机器学习方法的基础。
+        ja: >-
+          統計的仮説検定、工業における品質管理、そして機械学習の多くの手法の基盤となっている。
   useCases:
     - title:
         es: Control de calidad industrial
         en: Industrial quality control
+        pt: Controle de qualidade industrial
+        fr: Contrôle qualité industriel
+        zh: 工业质量控制
+        ja: 工業品質管理
       description:
         es: >-
           Las fábricas modelan la variación de piezas producidas en serie para detectar defectos
@@ -170,9 +340,23 @@ context:
         en: >-
           Factories model the variation in mass-produced parts to flag defects outside an expected
           range.
+        pt: >-
+          As fábricas modelam a variação de peças produzidas em série para detectar defeitos fora de
+          uma faixa esperada.
+        fr: >-
+          Les usines modélisent la variation des pièces produites en série pour détecter les défauts
+          hors d'une plage attendue.
+        zh: >-
+          工厂对批量生产零件的差异建模,以检测超出预期范围的缺陷。
+        ja: >-
+          工場は大量生産部品のばらつきをモデル化し、想定範囲を外れた不良品を検出する。
     - title:
         es: Pruebas estandarizadas
         en: Standardized testing
+        pt: Testes padronizados
+        fr: Tests standardisés
+        zh: 标准化考试
+        ja: 標準化テスト
       description:
         es: >-
           Los puntajes de exámenes como el SAT se diseñan y calibran asumiendo una distribución
@@ -180,38 +364,104 @@ context:
         en: >-
           Scores on exams like the SAT are designed and scaled assuming a normal distribution among
           test-takers.
+        pt: >-
+          As pontuações de exames como o SAT são projetadas e calibradas assumindo uma distribuição
+          normal entre os avaliados.
+        fr: >-
+          Les scores d'examens comme le SAT sont conçus et calibrés en supposant une distribution
+          normale parmi les candidats.
+        zh: >-
+          诸如SAT之类考试的分数设计与换算都假设考生成绩呈正态分布。
+        ja: >-
+          SATのような試験の得点は、受験者間で正規分布を仮定して設計・調整されている。
     - title:
         es: Finanzas y riesgo
         en: Finance and risk
+        pt: Finanças e risco
+        fr: Finance et risque
+        zh: 金融与风险
+        ja: 金融とリスク
       description:
         es: >-
           Modelos de riesgo financiero usan la curva normal para estimar la probabilidad de
           movimientos de precios.
         en: >-
           Financial risk models use the normal curve to estimate the probability of price movements.
+        pt: >-
+          Modelos de risco financeiro usam a curva normal para estimar a probabilidade de
+          movimentos de preços.
+        fr: >-
+          Les modèles de risque financier utilisent la courbe normale pour estimer la probabilité
+          des mouvements de prix.
+        zh: >-
+          金融风险模型利用正态曲线来估算价格波动的概率。
+        ja: >-
+          金融リスクモデルは正規曲線を用いて価格変動の確率を推定する。
     - title:
         es: Aprendizaje automático
         en: Machine learning
+        pt: Aprendizado de máquina
+        fr: Apprentissage automatique
+        zh: 机器学习
+        ja: 機械学習
       description:
         es: >-
           Muchos algoritmos asumen ruido con distribución normal al ajustar modelos a datos
           observados.
         en: >-
           Many algorithms assume normally distributed noise when fitting models to observed data.
+        pt: >-
+          Muitos algoritmos assumem ruído com distribuição normal ao ajustar modelos a dados
+          observados.
+        fr: >-
+          De nombreux algorithmes supposent un bruit distribué normalement lors de l'ajustement des
+          modèles aux données observées.
+        zh: >-
+          许多算法在将模型拟合到观测数据时,都假设噪声服从正态分布。
+        ja: >-
+          多くのアルゴリズムは、観測データにモデルを当てはめる際、ノイズが正規分布に従うと仮定する。
   example:
     title:
       es: Altura promedio de un grupo
       en: Average height of a group
+      pt: Altura média de um grupo
+      fr: Taille moyenne d'un groupe
+      zh: 一组人的平均身高
+      ja: 集団の平均身長
     lines:
       - es: μ = 170 cm, σ = 10 cm
         en: μ = 170 cm, σ = 10 cm
+        pt: μ = 170 cm, σ = 10 cm
+        fr: μ = 170 cm, σ = 10 cm
+        zh: μ = 170 cm, σ = 10 cm
+        ja: μ = 170 cm, σ = 10 cm
       - es: Se evalúa en x = 180 cm
         en: Evaluated at x = 180 cm
+        pt: Avaliado em x = 180 cm
+        fr: Évalué à x = 180 cm
+        zh: 在x = 180 cm处求值
+        ja: x = 180 cm で評価する
       - es: (x−μ)² = (180−170)² = 100
         en: (x−μ)² = (180−170)² = 100
+        pt: (x−μ)² = (180−170)² = 100
+        fr: (x−μ)² = (180−170)² = 100
+        zh: (x−μ)² = (180−170)² = 100
+        ja: (x−μ)² = (180−170)² = 100
       - es: 2σ² = 2×100 = 200
         en: 2σ² = 2×100 = 200
+        pt: 2σ² = 2×100 = 200
+        fr: 2σ² = 2×100 = 200
+        zh: 2σ² = 2×100 = 200
+        ja: 2σ² = 2×100 = 200
       - es: exponente = −100/200 = −0.5
         en: exponent = −100/200 = −0.5
+        pt: expoente = −100/200 = −0.5
+        fr: exposant = −100/200 = −0.5
+        zh: 指数 = −100/200 = −0.5
+        ja: 指数 = −100/200 = −0.5
       - es: f(180) ≈ (1/(10×2.5066))×e^(−0.5) ≈ 0.0242
         en: f(180) ≈ (1/(10×2.5066))×e^(−0.5) ≈ 0.0242
+        pt: f(180) ≈ (1/(10×2.5066))×e^(−0.5) ≈ 0.0242
+        fr: f(180) ≈ (1/(10×2.5066))×e^(−0.5) ≈ 0.0242
+        zh: f(180) ≈ (1/(10×2.5066))×e^(−0.5) ≈ 0.0242
+        ja: f(180) ≈ (1/(10×2.5066))×e^(−0.5) ≈ 0.0242

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 120" width="620" height="120">
+  <rect x="0" y="0" width="120" height="120" fill="#000000" />
+  <text
+    x="46"
+    y="84"
+    text-anchor="middle"
+    font-family="'JetBrains Mono', ui-monospace, monospace"
+    font-weight="700"
+    font-size="68"
+    fill="#ffffff"
+  >e</text>
+  <text
+    x="86"
+    y="46"
+    text-anchor="middle"
+    font-family="'JetBrains Mono', ui-monospace, monospace"
+    font-weight="700"
+    font-size="30"
+    fill="#ffffff"
+  >iπ</text>
+  <text
+    x="150"
+    y="76"
+    font-family="'General Sans', ui-sans-serif, system-ui, sans-serif"
+    font-weight="700"
+    font-size="42"
+    fill="#000000"
+  >Math Got Motion</text>
+</svg>

@@ -7,6 +7,21 @@ This file is generated from `src/domain/changelog.yaml` — the source of
 truth, bilingual, also rendered in-app at `/:locale/changelog`. Add new
 entries there, then run `pnpm changelog:sync`.
 
+## [0.6.0] - 2026-07-11
+
+### Added
+
+- Four new languages — Portuguese, French, Chinese, and Japanese — added alongside Spanish and English across all 38 formulas and the whole interface.
+- A logo — Euler's Identity motif (e^iπ) as the brand mark — and a dedicated site-wide preview image.
+
+### Changed
+
+- Sharing now attaches the formula's image (or downloads it, on browsers that can't attach files) instead of just the link.
+
+### Fixed
+
+- The "back" and "share" buttons could get clipped off-screen at certain window heights — they now always fit within the viewport.
+
 ## [0.5.0] - 2026-07-10
 
 ### Added

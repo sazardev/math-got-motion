@@ -2,9 +2,17 @@ id: prime-number-theorem
 title:
   es: Teorema de los Números Primos
   en: Prime Number Theorem
+  pt: Teorema dos Números Primos
+  fr: Théorème des nombres premiers
+  zh: 素数定理
+  ja: 素数定理
 category:
   es: Teoría de números
   en: Number theory
+  pt: Teoria dos números
+  fr: Théorie des nombres
+  zh: 数论
+  ja: 数論
 nodes:
   - id: pi-x
     type: variable
@@ -14,6 +22,15 @@ nodes:
         La función contadora de primos: cuántos números primos hay que sean menores o iguales a x.
       en: >-
         The prime-counting function: how many prime numbers are less than or equal to x.
+      pt: >-
+        A função contadora de primos: quantos números primos são menores ou iguais a x.
+      fr: >-
+        La fonction de compte des nombres premiers : combien de nombres premiers sont inférieurs
+        ou égaux à x.
+      zh: >-
+        素数计数函数：小于或等于 x 的素数有多少个。
+      ja: >-
+        素数計数関数: x以下の素数がいくつあるかを表す。
   - id: approx
     type: operator
     value: "~"
@@ -24,18 +41,36 @@ nodes:
       en: >-
         Is asymptotically equivalent to: the ratio of both sides tends to 1 as x grows without
         bound.
+      pt: >-
+        É assintoticamente equivalente a: a razão entre os dois lados tende a 1 quando x cresce
+        indefinidamente.
+      fr: >-
+        Est asymptotiquement équivalent à : le rapport des deux membres tend vers 1 lorsque x
+        croît indéfiniment.
+      zh: >-
+        渐近等价于：当 x 无限增大时，两边的比值趋近于 1。
+      ja: >-
+        漸近的に等しい: xが限りなく大きくなるにつれて両辺の比が1に近づくことを示す。
   - id: x
     type: variable
     value: x
     explanation:
       es: Un número muy grande hasta el cual se cuentan los primos.
       en: A very large number up to which primes are counted.
+      pt: Um número muito grande até o qual os primos são contados.
+      fr: Un très grand nombre jusqu'auquel les nombres premiers sont comptés.
+      zh: 一个用于计数素数上限的极大数。
+      ja: 素数を数える上限となる非常に大きな数。
   - id: slash
     type: operator
     value: "/"
     explanation:
       es: Dividido entre.
       en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: 割る。
   - id: ln-x
     type: variable
     value: ln(x)
@@ -46,13 +81,31 @@ nodes:
       en: >-
         The natural logarithm of x: it grows very slowly, and explains why primes become
         increasingly scarce.
+      pt: >-
+        O logaritmo natural de x: cresce muito lentamente e explica por que os primos se tornam
+        cada vez mais escassos.
+      fr: >-
+        Le logarithme naturel de x : il croît très lentement, ce qui explique pourquoi les nombres
+        premiers se raréfient.
+      zh: >-
+        x 的自然对数：增长非常缓慢，解释了为什么素数会变得越来越稀疏。
+      ja: >-
+        xの自然対数: 非常にゆっくり増加し、素数がしだいに希薄になる理由を説明する。
 context:
   author:
     es: Jacques Hadamard y Charles de la Vallée Poussin
     en: Jacques Hadamard and Charles de la Vallée Poussin
+    pt: Jacques Hadamard e Charles de la Vallée Poussin
+    fr: Jacques Hadamard et Charles de la Vallée Poussin
+    zh: 雅克·阿达马和夏尔·德拉瓦莱·普桑
+    ja: ジャック・アダマールとシャルル・ド・ラ・ヴァレー・プーサン
   era:
     es: Francia/Bélgica · conjeturado c. 1797, demostrado en 1896
     en: France/Belgium · conjectured c. 1797, proved in 1896
+    pt: França/Bélgica · conjecturado c. 1797, demonstrado em 1896
+    fr: France/Belgique · conjecturé v. 1797, démontré en 1896
+    zh: 法国/比利时 · 约1797年提出猜想，1896年证明
+    ja: フランス／ベルギー・1797年頃予想、1896年証明
   history:
     es: >-
       Tanto Gauss como Legendre, trabajando por separado a fines del siglo XVIII, notaron que la
@@ -69,6 +122,34 @@ context:
       conjecture resisted any rigorous proof for nearly a century, until in 1896 Jacques Hadamard and
       Charles de la Vallée Poussin, working independently, proved it using properties of Riemann's
       zeta function and its complex zeros, forever linking complex analysis with number theory.
+    pt: >-
+      Tanto Gauss quanto Legendre, trabalhando separadamente no final do século XVIII, notaram que
+      a densidade dos números primos ao redor de x se aproxima de 1/ln(x), a partir de tábuas de
+      primos calculadas manualmente. Gauss já havia conjecturado isso em 1792, ainda adolescente,
+      embora nunca tenha publicado formalmente. A conjectura resistiu a qualquer demonstração
+      rigorosa por quase um século, até que em 1896 Jacques Hadamard e Charles de la Vallée
+      Poussin, trabalhando de forma independente, a provaram usando propriedades da função zeta de
+      Riemann e seus zeros complexos, ligando para sempre a análise complexa à teoria dos números.
+    fr: >-
+      Gauss et Legendre, travaillant séparément à la fin du XVIIIe siècle, remarquèrent tous deux
+      que la densité des nombres premiers autour de x s'approche de 1/ln(x), à partir de tables de
+      nombres premiers calculées à la main. Gauss l'avait déjà conjecturé en 1792, alors
+      adolescent, bien qu'il ne l'ait jamais publié formellement. La conjecture résista à toute
+      démonstration rigoureuse pendant près d'un siècle, jusqu'à ce qu'en 1896 Jacques Hadamard et
+      Charles de la Vallée Poussin, travaillant indépendamment, la démontrent en utilisant les
+      propriétés de la fonction zêta de Riemann et de ses zéros complexes, reliant à jamais
+      l'analyse complexe à la théorie des nombres.
+    zh: >-
+      高斯和勒让德在18世纪末各自独立地注意到，通过手工计算的素数表可以看出，x 附近素数的密度接近
+      1/ln(x)。高斯早在1792年还是青少年时就提出了这一猜想，但从未正式发表。这个猜想在近一个世纪里
+      未能得到严格证明，直到1896年雅克·阿达马和夏尔·德拉瓦莱·普桑各自独立地利用黎曼ζ函数及其复数
+      零点的性质证明了它，从此将复分析与数论永远联系在一起。
+    ja: >-
+      ガウスとルジャンドルは18世紀末にそれぞれ独立に、手計算で作られた素数表をもとに、x付近の素数
+      の密度が1/ln(x)に近づくことに気づいた。ガウスは10代だった1792年にすでにこれを予想していたが、
+      正式に発表することはなかった。この予想は約1世紀にわたり厳密な証明に耐え続けたが、1896年に
+      ジャック・アダマールとシャルル・ド・ラ・ヴァレー・プーサンがそれぞれ独立に、リーマンのゼータ
+      関数とその複素零点の性質を用いてこれを証明し、複素解析と数論を永久に結びつけた。
   timeline:
     - year: "1792"
       label:
@@ -78,6 +159,16 @@ context:
         en: >-
           A young Gauss, just 15, conjectures the relationship while studying hand-computed prime
           tables.
+        pt: >-
+          Um jovem Gauss, de apenas 15 anos, conjectura a relação estudando tábuas de primos
+          calculadas à mão.
+        fr: >-
+          Un jeune Gauss, âgé de seulement 15 ans, conjecture la relation en étudiant des tables de
+          nombres premiers calculées à la main.
+        zh: >-
+          年仅15岁的高斯在研究手工计算的素数表时提出了这一关系的猜想。
+        ja: >-
+          わずか15歳の若きガウスが、手計算で作られた素数表を研究してこの関係を予想する。
     - year: c. 1798
       label:
         es: >-
@@ -85,6 +176,16 @@ context:
           números primos.
         en: >-
           Legendre independently publishes a similar conjecture about the density of prime numbers.
+        pt: >-
+          Legendre publica de forma independiente uma conjectura semelhante sobre a densidade dos
+          números primos.
+        fr: >-
+          Legendre publie de façon indépendante une conjecture similaire sur la densité des nombres
+          premiers.
+        zh: >-
+          勒让德独立发表了关于素数密度的类似猜想。
+        ja: >-
+          ルジャンドルが素数の密度について同様の予想を独立に発表する。
     - year: "1859"
       label:
         es: >-
@@ -93,6 +194,16 @@ context:
         en: >-
           Riemann connects the problem to the zeros of his zeta function, opening the path toward a
           proof.
+        pt: >-
+          Riemann conecta o problema aos zeros de sua função zeta, abrindo o caminho para uma
+          demonstração.
+        fr: >-
+          Riemann relie le problème aux zéros de sa fonction zêta, ouvrant la voie à une
+          démonstration.
+        zh: >-
+          黎曼将这一问题与他的ζ函数的零点联系起来，为证明开辟了道路。
+        ja: >-
+          リーマンがこの問題を自らのゼータ関数の零点と結びつけ、証明への道を開く。
     - year: "1896"
       label:
         es: >-
@@ -100,6 +211,16 @@ context:
           análisis complejo.
         en: >-
           Hadamard and de la Vallée Poussin independently prove the theorem, using complex analysis.
+        pt: >-
+          Hadamard e de la Vallée Poussin demonstram o teorema de forma independiente, usando
+          análise complexa.
+        fr: >-
+          Hadamard et de la Vallée Poussin démontrent le théorème de façon indépendante, en
+          utilisant l'analyse complexe.
+        zh: >-
+          阿达马和德拉瓦莱·普桑各自独立地用复分析证明了这个定理。
+        ja: >-
+          アダマールとド・ラ・ヴァレー・プーサンが複素解析を用いて独立にこの定理を証明する。
     - year: Hoy
       label:
         es: >-
@@ -108,10 +229,24 @@ context:
         en: >-
           It remains the basis for estimating how many primes exist in any range, key to generating
           cryptographic keys.
+        pt: >-
+          Continua sendo a base para estimar quantos primos existem em qualquer intervalo, algo
+          essencial para gerar chaves criptográficas.
+        fr: >-
+          Il reste la base pour estimer combien de nombres premiers existent dans un intervalle
+          donné, un élément clé pour générer des clés cryptographiques.
+        zh: >-
+          它仍然是估算任意范围内存在多少素数的基础，对生成加密密钥至关重要。
+        ja: >-
+          任意の範囲にいくつ素数が存在するかを推定する基礎であり続けており、暗号鍵の生成に不可欠である。
   useCases:
     - title:
         es: Criptografía
         en: Cryptography
+        pt: Criptografia
+        fr: Cryptographie
+        zh: 密码学
+        ja: 暗号理論
       description:
         es: >-
           Estima cuántos números primos grandes hay disponibles en cierto rango de bits, algo
@@ -119,9 +254,23 @@ context:
         en: >-
           Estimates how many large primes are available within a given bit range, essential for
           generating RSA keys.
+        pt: >-
+          Estima quantos números primos grandes estão disponíveis em determinado intervalo de bits,
+          algo essencial para gerar chaves RSA.
+        fr: >-
+          Estime combien de grands nombres premiers sont disponibles dans une plage de bits donnée,
+          élément essentiel pour générer des clés RSA.
+        zh: >-
+          估计在特定比特范围内有多少个大素数可用，这对于生成 RSA 密钥至关重要。
+        ja: >-
+          特定のビット範囲内に利用可能な大きな素数がいくつあるかを推定し、RSA鍵の生成に不可欠である。
     - title:
         es: Teoría analítica de números
         en: Analytic number theory
+        pt: Teoria analítica dos números
+        fr: Théorie analytique des nombres
+        zh: 解析数论
+        ja: 解析数論
       description:
         es: >-
           Sirve como punto de partida para resultados más finos sobre la distribución de los primos,
@@ -129,27 +278,75 @@ context:
         en: >-
           Serves as the starting point for finer results about prime distribution, including the
           Riemann Hypothesis.
+        pt: >-
+          Serve como ponto de partida para resultados mais refinados sobre a distribuição dos
+          primos, incluindo a Hipótese de Riemann.
+        fr: >-
+          Sert de point de départ à des résultats plus fins sur la distribution des nombres
+          premiers, y compris l'hypothèse de Riemann.
+        zh: >-
+          它是关于素数分布更精细结果（包括黎曼假设）的出发点。
+        ja: >-
+          リーマン予想を含む、素数分布に関するより精緻な結果への出発点となる。
     - title:
         es: Algoritmos de test de primalidad
         en: Primality testing algorithms
+        pt: Algoritmos de teste de primalidade
+        fr: Algorithmes de test de primalité
+        zh: 素性检验算法
+        ja: 素数判定アルゴリズム
       description:
         es: >-
           Ayuda a estimar cuántos intentos hará falta en promedio antes de encontrar un número primo
           al azar.
         en: >-
           Helps estimate how many attempts it will take, on average, to find a random prime number.
+        pt: >-
+          Ajuda a estimar quantas tentativas serão necessárias, em média, para encontrar um número
+          primo aleatório.
+        fr: >-
+          Aide à estimer combien de tentatives seront nécessaires, en moyenne, pour trouver un
+          nombre premier au hasard.
+        zh: >-
+          帮助估算平均需要尝试多少次才能随机找到一个素数。
+        ja: >-
+          ランダムに素数を見つけるまでに平均何回の試行が必要かを推定する助けとなる。
   example:
     title:
       es: Estimar primos hasta un millón
       en: Estimating primes up to a million
+      pt: Estimando primos até um milhão
+      fr: Estimer les nombres premiers jusqu'à un million
+      zh: 估算一百万以内的素数个数
+      ja: 100万までの素数を推定する
     lines:
       - es: x = 1,000,000
         en: x = 1,000,000
+        pt: x = 1.000.000
+        fr: x = 1 000 000
+        zh: x = 1,000,000
+        ja: x = 1,000,000
       - es: ln(1,000,000) ≈ 13.816
         en: ln(1,000,000) ≈ 13.816
+        pt: ln(1.000.000) ≈ 13,816
+        fr: ln(1 000 000) ≈ 13,816
+        zh: ln(1,000,000) ≈ 13.816
+        ja: ln(1,000,000) ≈ 13.816
       - es: π(x) ~ x / ln(x) ≈ 1,000,000 / 13.816
         en: π(x) ~ x / ln(x) ≈ 1,000,000 / 13.816
+        pt: π(x) ~ x / ln(x) ≈ 1.000.000 / 13,816
+        fr: π(x) ~ x / ln(x) ≈ 1 000 000 / 13,816
+        zh: π(x) ~ x / ln(x) ≈ 1,000,000 / 13.816
+        ja: π(x) ~ x / ln(x) ≈ 1,000,000 / 13.816
       - es: Estimación ≈ 72,382 primos
         en: Estimate ≈ 72,382 primes
+        pt: Estimativa ≈ 72.382 primos
+        fr: Estimation ≈ 72 382 nombres premiers
+        zh: 估计值 ≈ 72,382 个素数
+        ja: 推定値 ≈ 72,382個の素数
       - es: El valor real es 78,498 primos, una aproximación razonable
         en: The true value is 78,498 primes, a reasonable approximation
+        pt: O valor real é 78.498 primos, uma aproximação razoável
+        fr: La valeur réelle est de 78 498 nombres premiers, une approximation raisonnable
+        zh: 实际值为 78,498 个素数，这是一个合理的近似
+        ja: 実際の値は78,498個で、妥当な近似といえる

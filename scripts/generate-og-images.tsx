@@ -20,30 +20,53 @@ import type { Formula } from "../src/domain/formula.types";
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const FORMULAS_DIR = path.join(ROOT, "src/domain/formulas");
 const OUT_DIR = path.join(ROOT, "dist/og");
-const FONT_DIR = path.join(ROOT, "node_modules/@fontsource/jetbrains-mono/files");
+const NODE_MODULES = path.join(ROOT, "node_modules");
 
 // Las fórmulas usan letras griegas (π, θ, λ, μ, ρ, σ, φ, ψ, ζ, Δ, Σ) y
 // caracteres latinos extendidos (Ĥ, ħ) además de latín básico — @fontsource
-// reparte esos rangos en subsets .woff separados, así que hay que cargar
-// los tres y encadenarlos como fallback de font-family, o esos glifos
-// aparecen como tofu boxes en vez del símbolo real.
-const FONT_SUBSETS = ["latin", "latin-ext", "greek"] as const;
-const fontFamilyStack = FONT_SUBSETS.map((subset) => `JetBrains Mono ${subset}`).join(", ");
+// reparte esos rangos en subsets .woff separados, así que hay que cargarlos
+// y encadenarlos como fallback de font-family, o esos glifos aparecen como
+// tofu boxes en vez del símbolo real. JetBrains Mono (una fuente de código)
+// no incluye chino/japonés en absoluto, así que el título/categoría en esos
+// idiomas necesita un fallback aparte (Noto Sans SC/JP) — la ecuación en sí
+// nunca tiene CJK (es notación matemática), así que sigue en JetBrains Mono.
+interface FontSource {
+  family: string;
+  dir: string;
+  fileBase: string;
+}
 
-const fonts = FONT_SUBSETS.flatMap((subset) => [
+const FONT_SOURCES: FontSource[] = [
+  { family: "JetBrains Mono latin", dir: "jetbrains-mono", fileBase: "jetbrains-mono-latin" },
   {
-    name: `JetBrains Mono ${subset}`,
-    data: readFileSync(path.join(FONT_DIR, `jetbrains-mono-${subset}-400-normal.woff`)),
-    weight: 400 as const,
-    style: "normal" as const,
+    family: "JetBrains Mono latin-ext",
+    dir: "jetbrains-mono",
+    fileBase: "jetbrains-mono-latin-ext",
   },
-  {
-    name: `JetBrains Mono ${subset}`,
-    data: readFileSync(path.join(FONT_DIR, `jetbrains-mono-${subset}-700-normal.woff`)),
-    weight: 700 as const,
-    style: "normal" as const,
-  },
-]);
+  { family: "JetBrains Mono greek", dir: "jetbrains-mono", fileBase: "jetbrains-mono-greek" },
+  { family: "Noto Sans SC", dir: "noto-sans-sc", fileBase: "noto-sans-sc-chinese-simplified" },
+  { family: "Noto Sans JP", dir: "noto-sans-jp", fileBase: "noto-sans-jp-japanese" },
+];
+
+const fontFamilyStack = FONT_SOURCES.map((source) => source.family).join(", ");
+
+const fonts = FONT_SOURCES.flatMap((source) => {
+  const fontDir = path.join(NODE_MODULES, "@fontsource", source.dir, "files");
+  return [
+    {
+      name: source.family,
+      data: readFileSync(path.join(fontDir, `${source.fileBase}-400-normal.woff`)),
+      weight: 400 as const,
+      style: "normal" as const,
+    },
+    {
+      name: source.family,
+      data: readFileSync(path.join(fontDir, `${source.fileBase}-700-normal.woff`)),
+      weight: 700 as const,
+      style: "normal" as const,
+    },
+  ];
+});
 
 function equationFontSize(equation: string): number {
   if (equation.length > 24) return 64;
@@ -58,6 +81,7 @@ async function renderOgSvg(formula: Formula, locale: Locale): Promise<string> {
   return satori(
     <div
       style={{
+        position: "relative",
         width: "1200px",
         height: "630px",
         display: "flex",
@@ -71,6 +95,25 @@ async function renderOgSvg(formula: Formula, locale: Locale): Promise<string> {
         padding: "80px",
       }}
     >
+      {/* Marca — refuerza de quién es la tarjeta cuando se comparte, sin
+          competir visualmente con la ecuación (opacidad baja, esquina). */}
+      <div
+        style={{
+          position: "absolute",
+          left: "64px",
+          bottom: "48px",
+          display: "flex",
+          alignItems: "baseline",
+          gap: "8px",
+          fontSize: "22px",
+          letterSpacing: "2px",
+          textTransform: "uppercase",
+          opacity: 0.45,
+        }}
+      >
+        <span style={{ fontWeight: 700 }}>e</span>
+        <span>Math Got Motion</span>
+      </div>
       <div
         style={{
           fontSize: "28px",

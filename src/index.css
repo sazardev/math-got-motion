@@ -80,3 +80,17 @@ body {
 .control-button:hover {
   opacity: 1;
 }
+
+.control-locales {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.control-button--locale {
+  opacity: 0.45;
+}
+
+.control-button--locale[aria-current="true"] {
+  opacity: 1;
+  font-weight: 700;
+}

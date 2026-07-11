@@ -2,9 +2,17 @@ id: compound-interest
 title:
   es: Interés Compuesto
   en: Compound Interest
+  pt: Juros Compostos
+  fr: Intérêts Composés
+  zh: 复利
+  ja: 複利
 category:
   es: Finanzas
   en: Finance
+  pt: Finanças
+  fr: Finance
+  zh: 金融
+  ja: 金融
 nodes:
   - id: a
     type: variable
@@ -12,73 +20,125 @@ nodes:
     explanation:
       es: "El monto final: cuánto dinero hay al cabo del tiempo, incluyendo capital e intereses."
       en: The final amount — how much money there is after time has passed, including principal and interest.
+      pt: "O montante final: quanto dinheiro há ao final do período, incluindo capital e juros."
+      fr: "Le montant final : la somme d'argent disponible après un certain temps, capital et intérêts inclus."
+      zh: "最终金额：经过一段时间后拥有的总金额，包括本金和利息。"
+      ja: "最終金額：一定期間が経過した後の総額。元本と利息を含む。"
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es igual a.
       en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
   - id: p
     type: variable
     value: P
     explanation:
       es: "El principal: la cantidad de dinero inicial, antes de que se le sumen intereses."
       en: The principal — the initial amount of money, before any interest is added.
+      pt: "O principal: a quantia inicial de dinheiro, antes de qualquer juro ser somado."
+      fr: "Le principal : la somme d'argent initiale, avant l'ajout de tout intérêt."
+      zh: "本金：在加入任何利息之前的初始金额。"
+      ja: "元本：利息が加算される前の最初の金額。"
   - id: open-paren
     type: operator
     value: (
     explanation:
       es: Abre el factor de crecimiento que se aplicará al principal.
       en: Opens the growth factor that will be applied to the principal.
+      pt: Abre o fator de crescimento que será aplicado ao principal.
+      fr: Ouvre le facteur de croissance qui sera appliqué au principal.
+      zh: 打开将应用于本金的增长系数。
+      ja: 元本に適用される成長率の括弧を開く。
   - id: one
     type: number
     value: "1"
     explanation:
       es: "La unidad: representa el 100% del capital que ya se tenía."
       en: "The unit — represents the 100% of the capital already held."
+      pt: "A unidade: representa os 100% do capital que já se possuía."
+      fr: "L'unité : représente les 100 % du capital déjà détenu."
+      zh: "单位1：代表已经拥有的100%本金。"
+      ja: "1：すでに保有していた元本の100%を表す。"
   - id: plus
     type: operator
     value: +
     explanation:
       es: Sumado a la tasa de interés de cada periodo.
       en: Added to the interest rate of each period.
+      pt: Somado à taxa de juros de cada período.
+      fr: Ajouté au taux d'intérêt de chaque période.
+      zh: 加上每个周期的利率。
+      ja: 各期の利率を加える。
   - id: r
     type: variable
     value: r
     explanation:
       es: La tasa de interés anual, expresada como decimal (por ejemplo, 0.05 para 5%).
       en: The annual interest rate, expressed as a decimal (for example, 0.05 for 5%).
+      pt: A taxa de juros anual, expressa como decimal (por exemplo, 0,05 para 5%).
+      fr: Le taux d'intérêt annuel, exprimé sous forme décimale (par exemple, 0,05 pour 5 %).
+      zh: 年利率，以小数形式表示（例如，0.05代表5%）。
+      ja: 年利率。小数で表される（例えば5%なら0.05）。
   - id: slash
     type: operator
     value: /
     explanation:
       es: Dividida entre. Reparte la tasa anual entre los periodos de capitalización.
       en: Divided by. Splits the annual rate across the compounding periods.
+      pt: Dividido por. Distribui a taxa anual entre os períodos de capitalização.
+      fr: Divisé par. Répartit le taux annuel entre les périodes de capitalisation.
+      zh: 除以。将年利率分摊到各个复利周期。
+      ja: で割る。年利率を複利計算の各期間に配分する。
   - id: n
     type: variable
     value: n
     explanation:
       es: El número de veces que el interés se capitaliza por año.
       en: The number of times interest is compounded per year.
+      pt: O número de vezes que os juros são capitalizados por ano.
+      fr: Le nombre de fois où l'intérêt est capitalisé par an.
+      zh: 每年利息复利计算的次数。
+      ja: 1年あたりに利息が複利計算される回数。
   - id: close-paren
     type: operator
     value: )
     explanation:
       es: Cierra el factor de crecimiento por periodo.
       en: Closes the per-period growth factor.
+      pt: Fecha o fator de crescimento por período.
+      fr: Ferme le facteur de croissance par période.
+      zh: 关闭每期增长系数的括号。
+      ja: 各期の成長率の括弧を閉じる。
   - id: nt
     type: superscript
     value: nt
     explanation:
       es: El número total de periodos de capitalización a lo largo de t años.
       en: The total number of compounding periods over t years.
+      pt: O número total de períodos de capitalização ao longo de t anos.
+      fr: Le nombre total de périodes de capitalisation sur t années.
+      zh: 在t年内的复利周期总数。
+      ja: t年間における複利計算期間の総数。
 context:
   author:
     es: "Origen colectivo, sin un único autor"
     en: "Collective origin, no single author"
+    pt: "Origem coletiva, sem autor único"
+    fr: "Origine collective, sans auteur unique"
+    zh: "集体起源，没有单一作者"
+    ja: "集合的起源であり、単一の著者はいない"
   era:
     es: Babilonia a Europa renacentista, c. 2000 a.C.–s. XVII · formalizada progresivamente
     en: Babylon to Renaissance Europe, c. 2000 BCE–17th century · formalized progressively
+    pt: Babilônia à Europa renascentista, c. 2000 a.C.–séc. XVII · formalizada progressivamente
+    fr: De Babylone à l'Europe de la Renaissance, v. 2000 av. J.-C.–XVIIe siècle · formalisée progressivement
+    zh: 从巴比伦到文艺复兴时期的欧洲，约公元前2000年–17世纪·逐步形式化
+    ja: バビロニアからルネサンス期ヨーロッパまで、紀元前2000年頃–17世紀・段階的に体系化
   history:
     es: >-
       Tablillas babilónicas de alrededor del año 2000 a.C. ya contienen tablas de interés que
@@ -97,6 +157,34 @@ context:
       numerals. The general formula used today was progressively formalized during the 16th and 17th
       centuries, as Italian and English bankers needed precise tables for loans, annuities, and
       long-distance trade.
+    pt: >-
+      Tábuas babilônicas de cerca de 2000 a.C. já contêm tabelas de juros que aproximam o crescimento
+      composto das dívidas. Matemáticos do mundo islâmico medieval desenvolveram técnicas algébricas
+      para repartir lucros e calcular empréstimos. Em 1202, Leonardo Fibonacci introduziu em seu
+      Liber Abaci problemas de juros compostos para os comerciantes europeus, usando os então novos
+      numerais indo-arábicos. A fórmula geral que usamos hoje foi sendo formalizada ao longo dos
+      séculos XVI e XVII, quando banqueiros italianos e ingleses precisaram de tabelas precisas para
+      empréstimos, anuidades e o comércio de longa distância.
+    fr: >-
+      Des tablettes babyloniennes datant d'environ 2000 av. J.-C. contiennent déjà des tables
+      d'intérêts approximant la croissance composée des dettes. Des mathématiciens du monde islamique
+      médiéval ont développé des techniques algébriques pour répartir les gains et calculer les
+      prêts. En 1202, Leonardo Fibonacci a introduit dans son Liber Abaci des problèmes d'intérêts
+      composés destinés aux marchands européens, en utilisant les chiffres indo-arabes alors
+      nouveaux. La formule générale utilisée aujourd'hui s'est progressivement formalisée aux XVIe et
+      XVIIe siècles, lorsque les banquiers italiens et anglais eurent besoin de tables précises pour
+      les prêts, les rentes et le commerce à longue distance.
+    zh: >-
+      约公元前2000年的巴比伦泥板上已经载有近似计算债务复利增长的利息表。中世纪伊斯兰世界的数学家发展出代数技巧，
+      用于分配利润和计算贷款。1202年，列奥纳多·斐波那契在其著作《计算之书》中，用当时新颖的印度-阿拉伯数字向欧洲
+      商人介绍了复利问题。我们今天使用的通用公式在16、17世纪逐步形式化，当时意大利和英国的银行家需要精确的表格来
+      处理贷款、年金和远距离贸易。
+    ja: >-
+      紀元前2000年頃のバビロニアの粘土板には、すでに負債の複利的な増加を近似する利息表が記されている。中世
+      イスラム世界の数学者たちは、利益の分配や貸付の計算のための代数的手法を発展させた。1202年、レオナルド・
+      フィボナッチは著書『計算の書』の中で、当時新しかったインド・アラビア数字を用いて、ヨーロッパの商人向けに
+      複利の問題を紹介した。今日使われている一般公式は16世紀から17世紀にかけて徐々に体系化され、イタリアや
+      イギリスの銀行家たちが貸付、年金、遠距離貿易のために精密な表を必要としたことが背景にある。
   timeline:
     - year: c. 2000 a.C.
       label:
@@ -105,6 +193,16 @@ context:
           deudas.
         en: >-
           Babylonian tablets record interest tables that assume periodic compounding of debts.
+        pt: >-
+          Tábuas babilônicas registram tabelas de juros que pressupõem a capitalização periódica das
+          dívidas.
+        fr: >-
+          Des tablettes babyloniennes consignent des tables d'intérêts qui supposent une capitalisation
+          périodique des dettes.
+        zh: >-
+          巴比伦泥板记录了假定债务定期复利的利息表。
+        ja: >-
+          バビロニアの粘土板には、負債が定期的に複利計算されることを前提とした利息表が記されている。
     - year: "1202"
       label:
         es: >-
@@ -113,6 +211,16 @@ context:
         en: >-
           Fibonacci's Liber Abaci introduces European merchants to sophisticated interest and
           profit-sharing calculations.
+        pt: >-
+          O Liber Abaci de Fibonacci apresenta aos comerciantes europeus cálculos sofisticados de
+          juros e repartição de lucros.
+        fr: >-
+          Le Liber Abaci de Fibonacci initie les marchands européens à des calculs sophistiqués
+          d'intérêts et de partage des profits.
+        zh: >-
+          斐波那契的《计算之书》向欧洲商人介绍了复杂的利息与利润分配计算方法。
+        ja: >-
+          フィボナッチの『計算の書』が、ヨーロッパの商人に高度な利息計算と利益配分の方法を紹介した。
     - year: "1613"
       label:
         es: >-
@@ -121,6 +229,16 @@ context:
         en: >-
           Richard Witt publishes in London the first English treatise devoted entirely to compound
           interest, with detailed tables.
+        pt: >-
+          Richard Witt publica em Londres o primeiro tratado em inglês dedicado inteiramente aos
+          juros compostos, com tabelas detalhadas.
+        fr: >-
+          Richard Witt publie à Londres le premier traité en anglais entièrement consacré aux
+          intérêts composés, accompagné de tables détaillées.
+        zh: >-
+          理查德·威特在伦敦出版了第一部完全专门讨论复利的英文著作，附有详细的表格。
+        ja: >-
+          リチャード・ウィットがロンドンで、複利のみを扱った初の英語の論文を詳細な表とともに出版した。
     - year: s. XVIII–XIX
       label:
         es: >-
@@ -129,6 +247,15 @@ context:
         en: >-
           The formula becomes standard in actuarial science and in banking regulation of insurance and
           pensions.
+        pt: >-
+          A fórmula se torna padrão na ciência atuarial e na regulação bancária de seguros e pensões.
+        fr: >-
+          La formule devient la norme en science actuarielle et dans la réglementation bancaire des
+          assurances et des pensions.
+        zh: >-
+          该公式成为精算科学以及保险和养老金银行监管的标准工具。
+        ja: >-
+          この公式は保険数理学、および保険・年金の銀行規制における標準となった。
     - year: Hoy
       label:
         es: >-
@@ -137,19 +264,47 @@ context:
         en: >-
           It underlies savings accounts, mortgages, retirement funds, and any long-term financial
           growth model.
+        pt: >-
+          É a base de contas de poupança, hipotecas, fundos de aposentadoria e qualquer modelo
+          financeiro de crescimento a longo prazo.
+        fr: >-
+          Elle sous-tend les comptes d'épargne, les prêts hypothécaires, les fonds de retraite et tout
+          modèle financier de croissance à long terme.
+        zh: >-
+          它是储蓄账户、抵押贷款、退休基金以及任何长期财务增长模型的基础。
+        ja: >-
+          貯蓄口座、住宅ローン、退職基金、その他あらゆる長期的な財務成長モデルの基盤となっている。
   useCases:
     - title:
         es: Banca y ahorro
         en: Banking and savings
+        pt: Bancos e poupança
+        fr: Banque et épargne
+        zh: 银行与储蓄
+        ja: 銀行と貯蓄
       description:
         es: >-
           Los bancos calculan cuánto crece un depósito con el tiempo según la frecuencia de
           capitalización.
         en: >-
           Banks calculate how a deposit grows over time depending on the compounding frequency.
+        pt: >-
+          Os bancos calculam quanto um depósito cresce ao longo do tempo, dependendo da frequência de
+          capitalização.
+        fr: >-
+          Les banques calculent la croissance d'un dépôt dans le temps selon la fréquence de
+          capitalisation.
+        zh: >-
+          银行根据复利计算频率来计算存款随时间的增长情况。
+        ja: >-
+          銀行は複利計算の頻度に応じて、預金が時間とともにどれだけ増えるかを計算する。
     - title:
         es: Préstamos e hipotecas
         en: Loans and mortgages
+        pt: Empréstimos e hipotecas
+        fr: Prêts et hypothèques
+        zh: 贷款与抵押
+        ja: 融資と住宅ローン
       description:
         es: >-
           Prestamistas y prestatarios calculan el costo total de una deuda a largo plazo, incluidos los
@@ -157,26 +312,74 @@ context:
         en: >-
           Lenders and borrowers calculate the total cost of long-term debt, including accumulated
           interest.
+        pt: >-
+          Credores e devedores calculam o custo total de uma dívida de longo prazo, incluindo os
+          juros acumulados.
+        fr: >-
+          Prêteurs et emprunteurs calculent le coût total d'une dette à long terme, intérêts cumulés
+          inclus.
+        zh: >-
+          贷方和借方计算长期债务的总成本，包括累积利息。
+        ja: >-
+          貸し手と借り手は、累積利息を含めた長期債務の総コストを計算する。
     - title:
         es: Planificación de retiro e inversión
         en: Retirement and investment planning
+        pt: Planejamento de aposentadoria e investimentos
+        fr: Planification de la retraite et des investissements
+        zh: 退休与投资规划
+        ja: 退職・投資計画
       description:
         es: >-
           Asesores financieros proyectan el crecimiento de cuentas de inversión a lo largo de décadas.
         en: >-
           Financial advisors project the growth of investment accounts over decades.
+        pt: >-
+          Consultores financeiros projetam o crescimento de contas de investimento ao longo de
+          décadas.
+        fr: >-
+          Les conseillers financiers projettent la croissance des comptes d'investissement sur
+          plusieurs décennies.
+        zh: >-
+          财务顾问预测投资账户在数十年间的增长情况。
+        ja: >-
+          ファイナンシャルアドバイザーは、数十年にわたる投資口座の成長を予測する。
   example:
     title:
       es: Ejemplo de ahorro a 10 años
       en: 10-year savings example
+      pt: Exemplo de poupança de 10 anos
+      fr: Exemple d'épargne sur 10 ans
+      zh: 10年储蓄示例
+      ja: 10年間の貯蓄の例
     lines:
       - es: "P = $1000 depositados a una tasa anual del 5%"
         en: "P = $1,000 deposited at a 5% annual rate"
+        pt: "P = US$ 1.000 depositados a uma taxa anual de 5%"
+        fr: "P = 1 000 $ déposés à un taux annuel de 5 %"
+        zh: "P = 存入1,000美元，年利率为5%"
+        ja: "P = 年利5%で1,000ドルを預ける"
       - es: "r = 0.05, n = 12 (capitalización mensual), t = 10 años"
         en: "r = 0.05, n = 12 (monthly compounding), t = 10 years"
+        pt: "r = 0,05, n = 12 (capitalização mensal), t = 10 anos"
+        fr: "r = 0,05, n = 12 (capitalisation mensuelle), t = 10 ans"
+        zh: "r = 0.05，n = 12（每月复利），t = 10年"
+        ja: "r = 0.05、n = 12（月次複利）、t = 10年"
       - es: A = 1000 × (1 + 0.05/12)^(12×10)
         en: A = 1000 × (1 + 0.05/12)^(12×10)
+        pt: A = 1000 × (1 + 0.05/12)^(12×10)
+        fr: A = 1000 × (1 + 0.05/12)^(12×10)
+        zh: A = 1000 × (1 + 0.05/12)^(12×10)
+        ja: A = 1000 × (1 + 0.05/12)^(12×10)
       - es: A = 1000 × (1.004167)^120
         en: A = 1000 × (1.004167)^120
+        pt: A = 1000 × (1.004167)^120
+        fr: A = 1000 × (1.004167)^120
+        zh: A = 1000 × (1.004167)^120
+        ja: A = 1000 × (1.004167)^120
       - es: A ≈ 1000 × 1.647 = $1,647
         en: A ≈ 1000 × 1.647 = $1,647
+        pt: A ≈ 1000 × 1,647 = US$ 1.647
+        fr: A ≈ 1000 × 1,647 = 1 647 $
+        zh: A ≈ 1000 × 1.647 = 1,647美元
+        ja: A ≈ 1000 × 1.647 = 1,647ドル

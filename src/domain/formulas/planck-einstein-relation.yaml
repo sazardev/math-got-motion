@@ -2,9 +2,17 @@ id: planck-einstein-relation
 title:
   es: Relación de Planck-Einstein
   en: Planck-Einstein Relation
+  pt: Relação de Planck-Einstein
+  fr: Relation de Planck-Einstein
+  zh: 普朗克-爱因斯坦关系
+  ja: プランク–アインシュタインの関係式
 category:
   es: Física moderna
   en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
 nodes:
   - id: e
     type: variable
@@ -12,37 +20,65 @@ nodes:
     explanation:
       es: La energía de un solo fotón, un cuanto de luz.
       en: The energy of a single photon, a quantum of light.
+      pt: A energia de um único fóton, um quantum de luz.
+      fr: L'énergie d'un seul photon, un quantum de lumière.
+      zh: 单个光子的能量,即一份光量子。
+      ja: 光の量子である一個の光子が持つエネルギー。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
   - id: h
     type: constant
     value: h
     explanation:
       es: "La constante de Planck: el cuanto de acción, un número diminuto y fijo."
       en: "Planck's constant: the quantum of action, a tiny, fixed number."
+      pt: "A constante de Planck: o quantum de ação, um número minúsculo e fixo."
+      fr: "La constante de Planck : le quantum d'action, un nombre minuscule et fixe."
+      zh: "普朗克常数:作用量子,一个极小的固定数值。"
+      ja: "プランク定数。作用量子と呼ばれる、非常に小さな固定の値。"
   - id: dot
     type: operator
     value: "·"
     explanation:
       es: Multiplicada por.
       en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: 次を掛ける。
   - id: f
     type: variable
     value: f
     explanation:
       es: La frecuencia de la luz, cuántas oscilaciones completa por segundo.
       en: The frequency of the light, how many oscillations it completes per second.
+      pt: A frequência da luz, quantas oscilações ela completa por segundo.
+      fr: La fréquence de la lumière, le nombre d'oscillations qu'elle effectue par seconde.
+      zh: 光的频率,即每秒完成的振荡次数。
+      ja: 光の振動数。1秒あたりに完了する振動の回数。
 context:
   author:
     es: Max Planck y Albert Einstein
     en: Max Planck and Albert Einstein
+    pt: Max Planck e Albert Einstein
+    fr: Max Planck et Albert Einstein
+    zh: 马克斯·普朗克与阿尔伯特·爱因斯坦
+    ja: マックス・プランクとアルベルト・アインシュタイン
   era:
     es: Alemania, 1858–1947 y 1879–1955 · 1900–1905
     en: Germany, 1858–1947 and 1879–1955 · 1900–1905
+    pt: Alemanha, 1858–1947 e 1879–1955 · 1900–1905
+    fr: Allemagne, 1858–1947 et 1879–1955 · 1900–1905
+    zh: 德国,1858–1947年及1879–1955年 · 1900–1905年
+    ja: ドイツ、1858–1947年および1879–1955年・1900–1905年
   history:
     es: >-
       Planck introdujo la constante h en 1900 para resolver el problema de la radiación del
@@ -56,35 +92,83 @@ context:
       device. In 1905 Einstein gave it real physical meaning: he proposed light itself travels
       in quanta, photons, explaining the photoelectric effect and winning the 1921 Nobel Prize
       for it.
+    pt: >-
+      Planck introduziu a constante h em 1900 para resolver o problema da radiação de corpo
+      negro, supondo que a energia é trocada em pacotes discretos. No início, ele a via apenas
+      como um recurso matemático. Em 1905 Einstein lhe deu um significado físico real: propôs que
+      a própria luz viaja em quanta, os fótons, explicando o efeito fotoelétrico e ganhando por
+      isso o Nobel de 1921.
+    fr: >-
+      Planck introduisit la constante h en 1900 pour résoudre le problème du rayonnement du corps
+      noir, en supposant que l'énergie s'échange par paquets discrets. Au départ, il n'y voyait
+      qu'un artifice mathématique. En 1905, Einstein lui donna un véritable sens physique : il
+      proposa que la lumière elle-même voyage en quanta, les photons, expliquant l'effet
+      photoélectrique et remportant pour cela le prix Nobel de 1921.
+    zh: >-
+      1900年,普朗克为解决黑体辐射问题引入了常数h,假设能量以离散的能量包进行交换。起初他只把它当作一种数学手段。
+      1905年,爱因斯坦赋予了它真正的物理意义:他提出光本身就是以量子——即光子——的形式传播的,
+      并借此解释了光电效应,因而获得1921年诺贝尔奖。
+    ja: >-
+      1900年、プランクは黒体放射の問題を解決するため定数hを導入し、エネルギーが離散的な塊としてやり取りされると仮定した。
+      当初は単なる数学的な便法と見なしていた。1905年、アインシュタインはこれに実際の物理的意味を与え、
+      光そのものが量子、すなわち光子として伝わると提唱し、光電効果を説明した。この功績により1921年にノーベル賞を受賞した。
   timeline:
     - year: "1900"
       label:
         es: Planck propone la cuantización de la energía para resolver la radiación del cuerpo negro, introduciendo h.
         en: Planck proposes energy quantization to solve blackbody radiation, introducing h.
+        pt: Planck propõe a quantização da energia para resolver a radiação de corpo negro, introduzindo h.
+        fr: Planck propose la quantification de l'énergie pour résoudre le rayonnement du corps noir, en introduisant h.
+        zh: 普朗克提出能量量子化以解决黑体辐射问题,并引入常数h。
+        ja: プランクが黒体放射を解決するためエネルギーの量子化を提唱し、hを導入する。
     - year: "1905"
       label:
         es: Einstein interpreta la luz como cuantos discretos, los fotones, para explicar el efecto fotoeléctrico.
         en: Einstein interprets light as discrete quanta, photons, to explain the photoelectric effect.
+        pt: Einstein interpreta a luz como quanta discretos, os fótons, para explicar o efeito fotoelétrico.
+        fr: Einstein interprète la lumière comme des quanta discrets, les photons, pour expliquer l'effet photoélectrique.
+        zh: 爱因斯坦将光解释为离散的量子——光子,以此解释光电效应。
+        ja: アインシュタインが光を離散的な量子、すなわち光子として解釈し、光電効果を説明する。
     - year: "1913"
       label:
         es: Niels Bohr usa E = h·f para explicar las líneas espectrales del átomo de hidrógeno.
         en: Niels Bohr uses E = h·f to explain the hydrogen atom's spectral lines.
+        pt: Niels Bohr usa E = h·f para explicar as linhas espectrais do átomo de hidrogênio.
+        fr: Niels Bohr utilise E = h·f pour expliquer les raies spectrales de l'atome d'hydrogène.
+        zh: 尼尔斯·玻尔用E = h·f解释了氢原子的谱线。
+        ja: ニールス・ボーアがE = h·fを用いて水素原子のスペクトル線を説明する。
     - year: "1921"
       label:
         es: Einstein recibe el Premio Nobel de Física por su explicación del efecto fotoeléctrico.
         en: Einstein receives the Nobel Prize in Physics for his explanation of the photoelectric effect.
+        pt: Einstein recebe o Prêmio Nobel de Física por sua explicação do efeito fotoelétrico.
+        fr: Einstein reçoit le prix Nobel de physique pour son explication de l'effet photoélectrique.
+        zh: 爱因斯坦因对光电效应的解释而获得诺贝尔物理学奖。
+        ja: アインシュタインが光電効果の説明によりノーベル物理学賞を受賞する。
     - year: "1923"
       label:
         es: El efecto Compton confirma que los fotones también llevan cantidad de movimiento.
         en: The Compton effect confirms that photons also carry momentum.
+        pt: O efeito Compton confirma que os fótons também carregam quantidade de movimento.
+        fr: L'effet Compton confirme que les photons transportent aussi de la quantité de mouvement.
+        zh: 康普顿效应证实光子同样携带动量。
+        ja: コンプトン効果により、光子が運動量も持つことが確認される。
     - year: Hoy
       label:
         es: Es la base de paneles solares, láseres, LEDs y sensores de luz.
         en: It underlies solar panels, lasers, LEDs, and light sensors.
+        pt: É a base de painéis solares, lasers, LEDs e sensores de luz.
+        fr: Elle est à la base des panneaux solaires, des lasers, des LED et des capteurs de lumière.
+        zh: 它是太阳能电池板、激光器、LED和光传感器的理论基础。
+        ja: 太陽光パネル、レーザー、LED、光センサーの基盤となっている。
   useCases:
     - title:
         es: Energía solar
         en: Solar energy
+        pt: Energia solar
+        fr: Énergie solaire
+        zh: 太阳能
+        ja: 太陽光発電
       description:
         es: >-
           Las celdas fotovoltaicas solo liberan electrones cuando la energía del fotón supera un
@@ -92,9 +176,23 @@ context:
         en: >-
           Photovoltaic cells only release electrons when a photon's energy exceeds a threshold,
           calculated with this formula.
+        pt: >-
+          As células fotovoltaicas só liberam elétrons quando a energia do fóton ultrapassa um
+          limiar, calculado com essa fórmula.
+        fr: >-
+          Les cellules photovoltaïques ne libèrent des électrons que lorsque l'énergie du photon
+          dépasse un seuil, calculé avec cette formule.
+        zh: >-
+          只有当光子能量超过某一阈值时,光伏电池才会释放电子,该阈值由这个公式计算得出。
+        ja: >-
+          太陽電池は、光子のエネルギーがこの式で計算されるしきい値を超えたときにのみ電子を放出する。
     - title:
         es: Espectroscopía
         en: Spectroscopy
+        pt: Espectroscopia
+        fr: Spectroscopie
+        zh: 光谱学
+        ja: 分光法
       description:
         es: >-
           Identificar elementos químicos por la luz que emiten depende de las energías discretas
@@ -102,32 +200,86 @@ context:
         en: >-
           Identifying chemical elements by the light they emit relies on the discrete energies
           this relation predicts.
+        pt: >-
+          Identificar elementos químicos pela luz que emitem depende das energias discretas que
+          essa relação prevê.
+        fr: >-
+          Identifier les éléments chimiques par la lumière qu'ils émettent repose sur les énergies
+          discrètes prédites par cette relation.
+        zh: >-
+          通过元素发出的光来识别化学元素,依赖于这一关系所预测的离散能量。
+        ja: >-
+          元素が発する光からその元素を特定する分光法は、この式が予測する離散的なエネルギーに基づいている。
     - title:
         es: Tecnología láser
         en: Laser technology
+        pt: Tecnologia laser
+        fr: Technologie laser
+        zh: 激光技术
+        ja: レーザー技術
       description:
         es: Los láseres emiten fotones de energía precisa, determinada por la frecuencia de la transición usada.
         en: Lasers emit photons of precise energy, determined by the frequency of the transition used.
+        pt: Os lasers emitem fótons de energia precisa, determinada pela frequência da transição usada.
+        fr: Les lasers émettent des photons d'énergie précise, déterminée par la fréquence de la transition utilisée.
+        zh: 激光器发出能量精确的光子,其能量由所用跃迁的频率决定。
+        ja: レーザーは、使用される遷移の振動数によって定まる正確なエネルギーの光子を放出する。
     - title:
         es: Astronomía
         en: Astronomy
+        pt: Astronomia
+        fr: Astronomie
+        zh: 天文学
+        ja: 天文学
       description:
         es: La energía de los fotones que llegan de estrellas lejanas revela su temperatura y composición.
         en: The energy of photons arriving from distant stars reveals their temperature and composition.
+        pt: A energia dos fótons que chegam de estrelas distantes revela sua temperatura e composição.
+        fr: L'énergie des photons provenant d'étoiles lointaines révèle leur température et leur composition.
+        zh: 来自遥远恒星的光子能量揭示了它们的温度和化学组成。
+        ja: 遠くの恒星から届く光子のエネルギーは、その星の温度と組成を明らかにする。
   example:
     title:
       es: Energía de un fotón de luz verde
       en: Energy of a green light photon
+      pt: Energia de um fóton de luz verde
+      fr: Énergie d'un photon de lumière verte
+      zh: 绿光光子的能量
+      ja: 緑色光の光子のエネルギー
     lines:
       - es: λ = 500 nm (luz verde)
         en: λ = 500 nm (green light)
+        pt: λ = 500 nm (luz verde)
+        fr: λ = 500 nm (lumière verte)
+        zh: λ = 500 nm(绿光)
+        ja: λ = 500 nm(緑色光)
       - es: f = c / λ = 6×10¹⁴ Hz
         en: f = c / λ = 6×10¹⁴ Hz
+        pt: f = c / λ = 6×10¹⁴ Hz
+        fr: f = c / λ = 6×10¹⁴ Hz
+        zh: f = c / λ = 6×10¹⁴ Hz
+        ja: f = c / λ = 6×10¹⁴ Hz
       - es: h = 6.626×10⁻³⁴ J·s
         en: h = 6.626×10⁻³⁴ J·s
+        pt: h = 6.626×10⁻³⁴ J·s
+        fr: h = 6.626×10⁻³⁴ J·s
+        zh: h = 6.626×10⁻³⁴ J·s
+        ja: h = 6.626×10⁻³⁴ J·s
       - es: E = h · f
         en: E = h · f
+        pt: E = h · f
+        fr: E = h · f
+        zh: E = h · f
+        ja: E = h · f
       - es: E = 6.626×10⁻³⁴ · 6×10¹⁴
         en: E = 6.626×10⁻³⁴ · 6×10¹⁴
+        pt: E = 6.626×10⁻³⁴ · 6×10¹⁴
+        fr: E = 6.626×10⁻³⁴ · 6×10¹⁴
+        zh: E = 6.626×10⁻³⁴ · 6×10¹⁴
+        ja: E = 6.626×10⁻³⁴ · 6×10¹⁴
       - es: E ≈ 3.98×10⁻¹⁹ joules
         en: E ≈ 3.98×10⁻¹⁹ joules
+        pt: E ≈ 3.98×10⁻¹⁹ joules
+        fr: E ≈ 3,98×10⁻¹⁹ joules
+        zh: E ≈ 3.98×10⁻¹⁹ 焦耳
+        ja: E ≈ 3.98×10⁻¹⁹ ジュール

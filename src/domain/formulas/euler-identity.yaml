@@ -2,9 +2,17 @@ id: euler-identity
 title:
   es: Identidad de Euler
   en: Euler's Identity
+  pt: Identidade de Euler
+  fr: Identité d'Euler
+  zh: 欧拉恒等式
+  ja: オイラーの等式
 category:
   es: Análisis complejo
   en: Complex analysis
+  pt: Análise complexa
+  fr: Analyse complexe
+  zh: 复分析
+  ja: 複素解析
 nodes:
   - id: e
     type: variable
@@ -12,49 +20,85 @@ nodes:
     explanation:
       es: El número de Euler, aproximadamente 2.71828. Base del crecimiento exponencial continuo.
       en: Euler's number, approximately 2.71828. The base of continuous exponential growth.
+      pt: O número de Euler, aproximadamente 2,71828. Base do crescimento exponencial contínuo.
+      fr: Le nombre d'Euler, environ 2,71828. La base de la croissance exponentielle continue.
+      zh: 欧拉数,约等于2.71828,是连续指数增长的底数。
+      ja: オイラー数、約2.71828。連続的な指数関数的成長の底となる数。
   - id: i
     type: superscript
     value: i
     explanation:
       es: "La unidad imaginaria: el número tal que i² = −1."
       en: "The imaginary unit: the number such that i² = −1."
+      pt: "A unidade imaginária: o número tal que i² = −1."
+      fr: "L'unité imaginaire : le nombre tel que i² = −1."
+      zh: "虚数单位:满足 i² = −1 的数。"
+      ja: "虚数単位:i² = −1 を満たす数。"
   - id: pi
     type: superscript
     value: π
     explanation:
       es: Pi, la razón constante entre la circunferencia de un círculo y su diámetro.
       en: Pi, the constant ratio between a circle's circumference and its diameter.
+      pt: Pi, a razão constante entre a circunferência de um círculo e seu diâmetro.
+      fr: Pi, le rapport constant entre la circonférence d'un cercle et son diamètre.
+      zh: 圆周率π,圆的周长与直径之比,是一个常数。
+      ja: 円周率π。円の円周と直径の一定の比。
   - id: plus
     type: operator
     value: +
     explanation:
       es: Sumado a la unidad.
       en: Added to the unit.
+      pt: Somado à unidade.
+      fr: Ajouté à l'unité.
+      zh: 加上1。
+      ja: 1に加える。
   - id: one
     type: number
     value: "1"
     explanation:
       es: "La unidad: el primer entero positivo."
       en: "The unit: the first positive integer."
+      pt: "A unidade: o primeiro inteiro positivo."
+      fr: "L'unité : le premier entier positif."
+      zh: "1:第一个正整数。"
+      ja: "1:最初の正の整数。"
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: 正確に等しい。
   - id: zero
     type: number
     value: "0"
     explanation:
       es: "Cero: el origen, la nada absoluta."
       en: "Zero: the origin, absolute nothingness."
+      pt: "Zero: a origem, o nada absoluto."
+      fr: "Zéro : l'origine, le néant absolu."
+      zh: "0:原点,绝对的虚无。"
+      ja: "0:原点であり、絶対的な無。"
 context:
   author:
     es: Leonhard Euler
     en: Leonhard Euler
+    pt: Leonhard Euler
+    fr: Leonhard Euler
+    zh: 莱昂哈德·欧拉
+    ja: レオンハルト・オイラー
   era:
     es: Suiza, 1707–1783 · publicada en 1748
     en: Switzerland, 1707–1783 · published in 1748
+    pt: Suíça, 1707–1783 · publicada em 1748
+    fr: Suisse, 1707–1783 · publiée en 1748
+    zh: 瑞士,1707–1783 · 1748年发表
+    ja: スイス、1707–1783年 · 1748年発表
   history:
     es: >-
       Euler la presentó en su obra Introductio in analysin infinitorum. La ecuación une, en una sola
@@ -64,6 +108,22 @@ context:
       Euler introduced it in his work Introductio in analysin infinitorum. The equation unites, in a
       single line, mathematics' five most important constants: 0, 1, e, i, and π. Physicist Richard
       Feynman called it 'the most remarkable formula in the world.'
+    pt: >-
+      Euler a apresentou em sua obra Introductio in analysin infinitorum. A equação une, em uma única
+      linha, as cinco constantes mais importantes da matemática: 0, 1, e, i e π. O físico Richard
+      Feynman chegou a chamá-la de 'a fórmula mais notável do mundo'.
+    fr: >-
+      Euler l'a présentée dans son ouvrage Introductio in analysin infinitorum. L'équation réunit, en
+      une seule ligne, les cinq constantes les plus importantes des mathématiques : 0, 1, e, i et π.
+      Le physicien Richard Feynman est allé jusqu'à la qualifier de « formule la plus remarquable du
+      monde ».
+    zh: >-
+      欧拉在其著作《无穷小分析引论》(Introductio in analysin infinitorum)中提出了这一恒等式。这个等式用一行就把数学中最重要
+      的五个常数——0、1、e、i和π——联系在了一起。物理学家理查德·费曼曾称它为"世界上最非凡的公式"。
+    ja: >-
+      オイラーは著書『無限解析序説』(Introductio in analysin infinitorum)でこの等式を示した。この式は、数学において
+      最も重要な5つの定数——0、1、e、i、π——をたった一行で結びつけている。物理学者リチャード・ファインマンは
+      これを「世界で最も注目すべき公式」と呼んだ。
   timeline:
     - year: c. 1714
       label:
@@ -73,6 +133,16 @@ context:
         en: >-
           Roger Cotes notes a logarithmic relationship between exponentials and trigonometric
           functions, a direct ancestor of the formula.
+        pt: >-
+          Roger Cotes registra uma relação logarítmica entre exponenciais e funções
+          trigonométricas, antecessora direta da fórmula.
+        fr: >-
+          Roger Cotes note une relation logarithmique entre exponentielles et fonctions
+          trigonométriques, ancêtre direct de la formule.
+        zh: >-
+          罗杰·科茨记录下指数函数与三角函数之间的一种对数关系,这是该公式的直接前身。
+        ja: >-
+          ロジャー・コーツが指数関数と三角関数の間の対数的な関係を記録する。これがこの公式の直接の前身となる。
     - year: "1740"
       label:
         es: >-
@@ -81,6 +151,17 @@ context:
         en: >-
           Euler derives e^(ix) = cos(x) + i·sin(x) from infinite series, solving a differential
           equation posed by Johann Bernoulli.
+        pt: >-
+          Euler deriva e^(ix) = cos(x) + i·sen(x) a partir de séries infinitas, resolvendo uma
+          equação diferencial proposta por Johann Bernoulli.
+        fr: >-
+          Euler dérive e^(ix) = cos(x) + i·sin(x) à partir de séries infinies, en résolvant une
+          équation différentielle posée par Johann Bernoulli.
+        zh: >-
+          欧拉从无穷级数出发推导出 e^(ix) = cos(x) + i·sen(x),并借此解决了约翰·伯努利提出的一个微分方程。
+        ja: >-
+          オイラーは無限級数から e^(ix) = cos(x) + i·sen(x) を導出し、
+          ヨハン・ベルヌーイが提起した微分方程式を解く。
     - year: "1748"
       label:
         es: >-
@@ -89,6 +170,16 @@ context:
         en: >-
           Publishes the special case x = π in Introductio in analysin infinitorum, giving rise to
           the identity as it's known today.
+        pt: >-
+          Publica o caso particular x = π em Introductio in analysin infinitorum, dando origem à
+          identidade tal como é conhecida hoje.
+        fr: >-
+          Publie le cas particulier x = π dans Introductio in analysin infinitorum, donnant
+          naissance à l'identité telle qu'on la connaît aujourd'hui.
+        zh: >-
+          在《无穷小分析引论》中发表了x=π这一特殊情形,由此产生了如今所知的这一恒等式。
+        ja: >-
+          『無限解析序説』にてx=πという特殊な場合を発表し、今日知られる形の等式が生まれる。
     - year: "1988"
       label:
         es: >-
@@ -97,6 +188,16 @@ context:
         en: >-
           Readers of The Mathematical Intelligencer vote it 'the most beautiful theorem in
           mathematics'.
+        pt: >-
+          Os leitores de The Mathematical Intelligencer a elegem como 'o teorema mais belo da
+          matemática'.
+        fr: >-
+          Les lecteurs de The Mathematical Intelligencer la désignent comme « le plus beau théorème
+          des mathématiques ».
+        zh: >-
+          《数学信使》(The Mathematical Intelligencer)的读者投票将其评为"数学中最美的定理"。
+        ja: >-
+          『マセマティカル・インテリジェンサー』誌の読者投票で「数学で最も美しい定理」に選ばれる。
     - year: Hoy
       label:
         es: >-
@@ -105,10 +206,24 @@ context:
         en: >-
           Mathematical basis for phasors in electrical engineering and the Fourier transform in
           signal processing.
+        pt: >-
+          Base matemática dos fasores na engenharia elétrica e da transformada de Fourier no
+          processamento de sinais.
+        fr: >-
+          Base mathématique des phaseurs en génie électrique et de la transformée de Fourier en
+          traitement du signal.
+        zh: >-
+          是电气工程中相量表示法以及信号处理中傅里叶变换的数学基础。
+        ja: >-
+          電気工学におけるフェーザや信号処理におけるフーリエ変換の数学的基盤となっている。
   useCases:
     - title:
         es: Ingeniería eléctrica
         en: Electrical engineering
+        pt: Engenharia elétrica
+        fr: Génie électrique
+        zh: 电气工程
+        ja: 電気工学
       description:
         es: >-
           Los fasores representan corriente alterna como números complejos, simplificando circuitos
@@ -116,9 +231,23 @@ context:
         en: >-
           Phasors represent alternating current as complex numbers, simplifying circuits that would
           be tedious with sines and cosines alone.
+        pt: >-
+          Os fasores representam corrente alternada como números complexos, simplificando circuitos
+          que seriam tediosos usando apenas senos e cossenos.
+        fr: >-
+          Les phaseurs représentent le courant alternatif sous forme de nombres complexes,
+          simplifiant des circuits qui seraient fastidieux avec de simples sinus et cosinus.
+        zh: >-
+          相量将交流电表示为复数,从而简化了那些若仅用正弦和余弦来处理会非常繁琐的电路。
+        ja: >-
+          フェーザは交流電流を複素数として表し、正弦・余弦だけでは煩雑になる回路解析を簡略化する。
     - title:
         es: Procesamiento de señales
         en: Signal processing
+        pt: Processamento de sinais
+        fr: Traitement du signal
+        zh: 信号处理
+        ja: 信号処理
       description:
         es: >-
           La transformada de Fourier descompone cualquier señal en ondas e^(iωt), el corazón del
@@ -126,9 +255,23 @@ context:
         en: >-
           The Fourier transform decomposes any signal into e^(iωt) waves — the heart of digital
           audio and image compression.
+        pt: >-
+          A transformada de Fourier decompõe qualquer sinal em ondas e^(iωt) — o coração do áudio
+          digital e da compressão de imagens.
+        fr: >-
+          La transformée de Fourier décompose tout signal en ondes e^(iωt) — le cœur de l'audio
+          numérique et de la compression d'images.
+        zh: >-
+          傅里叶变换将任意信号分解为e^(iωt)波——这是数字音频和图像压缩技术的核心。
+        ja: >-
+          フーリエ変換は任意の信号をe^(iωt)波に分解する。これがデジタルオーディオや画像圧縮の核心である。
     - title:
         es: Mecánica cuántica
         en: Quantum mechanics
+        pt: Mecânica quântica
+        fr: Mécanique quantique
+        zh: 量子力学
+        ja: 量子力学
       description:
         es: >-
           La función de onda de Schrödinger se expresa con exponenciales complejas; la identidad de
@@ -136,18 +279,52 @@ context:
         en: >-
           Schrödinger's wave function is written with complex exponentials; Euler's identity is the
           grammar of that language.
+        pt: >-
+          A função de onda de Schrödinger é expressa com exponenciais complexas; a identidade de
+          Euler é a gramática dessa linguagem.
+        fr: >-
+          La fonction d'onde de Schrödinger s'exprime avec des exponentielles complexes ; l'identité
+          d'Euler est la grammaire de ce langage.
+        zh: >-
+          薛定谔的波函数是用复指数来表示的;欧拉恒等式就是这种语言的语法。
+        ja: >-
+          シュレーディンガーの波動関数は複素指数関数で表される。オイラーの等式はその言語の文法にあたる。
   example:
     title:
       es: Verificación numérica
       en: Numeric verification
+      pt: Verificação numérica
+      fr: Vérification numérique
+      zh: 数值验证
+      ja: 数値による検証
     lines:
       - es: e^(iπ) = cos(π) + i·sen(π)
         en: e^(iπ) = cos(π) + i·sin(π)
+        pt: e^(iπ) = cos(π) + i·sen(π)
+        fr: e^(iπ) = cos(π) + i·sin(π)
+        zh: e^(iπ) = cos(π) + i·sen(π)
+        ja: e^(iπ) = cos(π) + i·sen(π)
       - es: cos(π) = −1
         en: cos(π) = −1
+        pt: cos(π) = −1
+        fr: cos(π) = −1
+        zh: cos(π) = −1
+        ja: cos(π) = −1
       - es: sen(π) = 0
         en: sin(π) = 0
+        pt: sen(π) = 0
+        fr: sin(π) = 0
+        zh: sen(π) = 0
+        ja: sen(π) = 0
       - es: e^(iπ) = −1 + 0i = −1
         en: e^(iπ) = −1 + 0i = −1
+        pt: e^(iπ) = −1 + 0i = −1
+        fr: e^(iπ) = −1 + 0i = −1
+        zh: e^(iπ) = −1 + 0i = −1
+        ja: e^(iπ) = −1 + 0i = −1
       - es: −1 + 1 = 0, queda demostrado
         en: −1 + 1 = 0, proven true
+        pt: −1 + 1 = 0, fica demonstrado
+        fr: −1 + 1 = 0, ce qui est démontré
+        zh: −1 + 1 = 0,证明成立
+        ja: −1 + 1 = 0、これで証明された

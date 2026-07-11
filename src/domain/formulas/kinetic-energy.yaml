@@ -2,9 +2,17 @@ id: kinetic-energy
 title:
   es: Energía Cinética
   en: Kinetic Energy
+  pt: Energia Cinética
+  fr: Énergie cinétique
+  zh: 动能
+  ja: 運動エネルギー
 category:
   es: Física clásica
   en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
 nodes:
   - id: e
     type: variable
@@ -12,49 +20,85 @@ nodes:
     explanation:
       es: La energía asociada al movimiento de un cuerpo.
       en: The energy associated with a body's motion.
+      pt: A energia associada ao movimento de um corpo.
+      fr: L'énergie associée au mouvement d'un corps.
+      zh: 与物体运动相关联的能量。
+      ja: 物体の運動に伴うエネルギー。
   - id: sub-k
     type: superscript
     value: k
     explanation:
       es: Un subíndice que indica que se trata específicamente de energía cinética.
       en: A subscript indicating this is specifically kinetic energy.
+      pt: Um subscrito que indica que se trata especificamente de energia cinética.
+      fr: Un indice indiquant qu'il s'agit spécifiquement d'énergie cinétique.
+      zh: 一个下标，表明这特指动能。
+      ja: これが運動エネルギーであることを示す下付き文字。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 精确地等于。
+      ja: これは次の値に正確に等しい。
   - id: half
     type: number
     value: "½"
     explanation:
       es: "Un medio: el factor numérico que hace que la fórmula concuerde con el trabajo realizado."
       en: "One half: the numerical factor that makes the formula match the work done."
+      pt: "Um meio: o fator numérico que faz a fórmula corresponder ao trabalho realizado."
+      fr: "Un demi : le facteur numérique qui fait correspondre la formule au travail effectué."
+      zh: "二分之一：使公式与所做的功相符的数值系数。"
+      ja: "2分の1。この式が実際になされた仕事と一致するようにする数係数。"
   - id: m
     type: variable
     value: m
     explanation:
       es: La masa del cuerpo en movimiento.
       en: The mass of the moving body.
+      pt: A massa do corpo em movimento.
+      fr: La masse du corps en mouvement.
+      zh: 运动物体的质量。
+      ja: 運動する物体の質量。
   - id: v
     type: variable
     value: v
     explanation:
       es: La velocidad del cuerpo.
       en: The body's velocity.
+      pt: A velocidade do corpo.
+      fr: La vitesse du corps.
+      zh: 物体的速度。
+      ja: 物体の速度。
   - id: exp-2
     type: superscript
     value: "2"
     explanation:
       es: "La velocidad elevada al cuadrado: duplicar la velocidad cuadruplica la energía."
       en: "The velocity squared: doubling the speed quadruples the energy."
+      pt: "A velocidade elevada ao quadrado: dobrar a velocidade quadruplica a energia."
+      fr: "La vitesse au carré : doubler la vitesse quadruple l'énergie."
+      zh: "速度的平方：速度加倍，能量增至四倍。"
+      ja: "速度の二乗。速度を2倍にするとエネルギーは4倍になる。"
 context:
   author:
     es: Gaspard-Gustave de Coriolis
     en: Gaspard-Gustave de Coriolis
+    pt: Gaspard-Gustave de Coriolis
+    fr: Gaspard-Gustave de Coriolis
+    zh: 加斯帕-古斯塔夫·德·科里奥利
+    ja: ガスパール＝ギュスターヴ・ド・コリオリ
   era:
     es: Francia, 1792–1843 · forma moderna publicada en 1829
     en: France, 1792–1843 · modern form published in 1829
+    pt: França, 1792–1843 · forma moderna publicada em 1829
+    fr: France, 1792–1843 · forme moderne publiée en 1829
+    zh: 法国，1792–1843 · 现代形式发表于1829年
+    ja: フランス、1792–1843年 · 現代形は1829年発表
   history:
     es: >-
       La idea de que el movimiento contiene una "fuerza" cuantificable se remonta a Gottfried
@@ -77,6 +121,31 @@ context:
       engineer Gaspard-Gustave de Coriolis who, in 1829, in his work on the calculation of the
       effect of machines, formalized the modern concept of "work" and fixed the factor of one half,
       leaving kinetic energy in its current form, ½mv².
+    pt: >-
+      A ideia de que o movimento contém uma "força" quantificável remonta a Gottfried Leibniz, que
+      por volta de 1686 propôs a vis viva (mv²) como a grandeza verdadeiramente conservada nas
+      colisões, opondo-se aos cartesianos que só reconheciam o momento (mv). A disputa durou
+      décadas. Émilie du Châtelet, em suas Institutions de Physique de 1740, usou os experimentos
+      de queda de esferas em argila de Willem 's Gravesande para mostrar empiricamente que o efeito
+      do impacto crescia com o quadrado da velocidade, fornecendo evidência experimental decisiva a
+      favor da vis viva. Foi o engenheiro francês Gaspard-Gustave de Coriolis quem, em 1829, em sua
+      obra sobre o cálculo do efeito das máquinas, formalizou o conceito moderno de "trabalho" e
+      fixou o fator de um meio, deixando a energia cinética em sua forma atual, ½mv².
+    fr: >-
+      L'idée que le mouvement renferme une "force" quantifiable remonte à Gottfried Leibniz, qui
+      proposa vers 1686 la vis viva (mv²) comme la grandeur véritablement conservée lors des chocs,
+      s'opposant aux cartésiens qui ne reconnaissaient que la quantité de mouvement (mv). Le débat
+      dura des décennies. Émilie du Châtelet, dans ses Institutions de Physique de 1740, utilisa
+      les expériences de chute de sphères dans l'argile de Willem 's Gravesande pour montrer
+      empiriquement que l'effet de l'impact croissait avec le carré de la vitesse, apportant une
+      preuve expérimentale décisive en faveur de la vis viva. C'est l'ingénieur français
+      Gaspard-Gustave de Coriolis qui, en 1829, dans son ouvrage sur le calcul de l'effet des
+      machines, formalisa le concept moderne de "travail" et fixa le facteur un demi, donnant à
+      l'énergie cinétique sa forme actuelle, ½mv².
+    zh: >-
+      运动蕴含可量化"力"的想法可追溯到戈特弗里德·莱布尼茨，他在1686年前后提出活力（mv²）才是碰撞中真正守恒的量，这与只承认动量（mv）的笛卡尔学派产生了冲突。这场争论持续了数十年。艾米莉·迪·夏特莱在1740年的《物理学原理》中，利用威廉·斯·格拉夫桑德将球体落入黏土的实验，以实证方式证明冲击效应随速度的平方增长，为活力说提供了决定性的实验证据。1829年，法国工程师加斯帕-古斯塔夫·德·科里奥利在其关于机械效应计算的著作中，将现代"功"的概念系统化，并确定了二分之一这一系数，从而使动能定型为今天的形式：½mv²。
+    ja: >-
+      運動が定量化可能な「力」を含むという発想は、ゴットフリート・ライプニッツにさかのぼる。彼は1686年頃、衝突において真に保存される量として活力（mv²）を提唱し、運動量（mv）のみを認めるデカルト派と対立した。この論争は数十年続いた。エミリー・デュ・シャトレは1740年の著書『物理学の基礎』の中で、ウィレム・スフラーフェサンデによる球を粘土に落とす実験を用い、衝撃の効果が速度の二乗に比例して増大することを実証し、活力説を支持する決定的な実験的証拠を示した。1829年、フランスの技術者ガスパール＝ギュスターヴ・ド・コリオリが機械の効果の計算に関する著作の中で、現代的な「仕事」の概念を体系化し、二分の一という係数を定めたことで、運動エネルギーは今日の形、½mv²に落ち着いた。
   timeline:
     - year: c. 1686
       label:
@@ -86,6 +155,16 @@ context:
         en: >-
           Leibniz proposes vis viva (mv²) as the true conserved measure of motion, sparking a
           dispute with the Cartesians.
+        pt: >-
+          Leibniz propõe a vis viva (mv²) como a verdadeira medida conservada do movimento,
+          desencadeando uma disputa com os cartesianos.
+        fr: >-
+          Leibniz propose la vis viva (mv²) comme véritable mesure conservée du mouvement,
+          déclenchant une controverse avec les cartésiens.
+        zh: >-
+          莱布尼茨提出活力（mv²）才是运动中真正守恒的量，引发了与笛卡尔学派的争论。
+        ja: >-
+          ライプニッツが運動の真の保存量として活力（mv²）を提唱し、デカルト派との論争を引き起こす。
     - year: "1740"
       label:
         es: >-
@@ -94,6 +173,16 @@ context:
         en: >-
           Émilie du Châtelet provides experimental sphere-drop evidence supporting vis viva over
           simple momentum.
+        pt: >-
+          Émilie du Châtelet fornece evidência experimental de queda de esferas que respalda a vis
+          viva em relação ao momento simples.
+        fr: >-
+          Émilie du Châtelet apporte des preuves expérimentales, par chute de sphères, en faveur de
+          la vis viva plutôt que de la simple quantité de mouvement.
+        zh: >-
+          艾米莉·迪·夏特莱通过球体落体实验提供了支持活力说而非简单动量说的实证证据。
+        ja: >-
+          エミリー・デュ・シャトレが球の落下実験による証拠を示し、単純な運動量説よりも活力説を支持する。
     - year: "1829"
       label:
         es: >-
@@ -102,6 +191,16 @@ context:
         en: >-
           Gaspard-Gustave de Coriolis formalizes the concept of "work" and defines modern kinetic
           energy as ½mv².
+        pt: >-
+          Gaspard-Gustave de Coriolis formaliza o conceito de "trabalho" e define a energia
+          cinética moderna como ½mv².
+        fr: >-
+          Gaspard-Gustave de Coriolis formalise le concept de "travail" et définit l'énergie
+          cinétique moderne comme ½mv².
+        zh: >-
+          加斯帕-古斯塔夫·德·科里奥利将"功"的概念系统化，并将现代动能定义为½mv²。
+        ja: >-
+          ガスパール＝ギュスターヴ・ド・コリオリが「仕事」の概念を体系化し、現代の運動エネルギーを½mv²と定義する。
     - year: "1853"
       label:
         es: >-
@@ -110,6 +209,16 @@ context:
         en: >-
           William Rankine coins the term "kinetic energy" and folds it into the emerging principle
           of energy conservation.
+        pt: >-
+          William Rankine cunha o termo "energia cinética" e a integra ao princípio nascente de
+          conservação da energia.
+        fr: >-
+          William Rankine forge le terme "énergie cinétique" et l'intègre au principe naissant de
+          conservation de l'énergie.
+        zh: >-
+          威廉·兰金创造了"动能"一词，并将其纳入正在兴起的能量守恒原理之中。
+        ja: >-
+          ウィリアム・ランキンが「運動エネルギー」という用語を作り、勃興しつつあったエネルギー保存の原理に組み込む。
     - year: Hoy
       label:
         es: >-
@@ -117,19 +226,47 @@ context:
           almacenamiento de energía en volantes de inercia.
         en: >-
           It is central to vehicle safety design, sports biomechanics, and flywheel energy storage.
+        pt: >-
+          É central para o design de segurança veicular, a biomecânica esportiva e o armazenamento
+          de energia em volantes de inércia.
+        fr: >-
+          Elle est centrale pour la conception de la sécurité automobile, la biomécanique sportive
+          et le stockage d'énergie par volants d'inertie.
+        zh: >-
+          它在车辆安全设计、运动生物力学以及飞轮储能等领域都居于核心地位。
+        ja: >-
+          自動車の安全設計、スポーツバイオメカニクス、フライホイールによるエネルギー貯蔵において中心的な役割を担う。
   useCases:
     - title:
         es: Seguridad automotriz
         en: Automotive safety
+        pt: Segurança automotiva
+        fr: Sécurité automobile
+        zh: 汽车安全
+        ja: 自動車の安全性
       description:
         es: >-
           Calcula la energía que debe absorber una zona de deformación en un choque a determinada
           velocidad.
         en: >-
           It calculates the energy a crumple zone must absorb in a crash at a given speed.
+        pt: >-
+          Calcula a energia que uma zona de deformação deve absorver em uma colisão a determinada
+          velocidade.
+        fr: >-
+          Elle permet de calculer l'énergie qu'une zone de déformation doit absorber lors d'une
+          collision à une vitesse donnée.
+        zh: >-
+          用于计算特定速度下碰撞时溃缩区必须吸收的能量。
+        ja: >-
+          一定の速度での衝突時にクラッシャブルゾーンが吸収すべきエネルギーを計算する。
     - title:
         es: Biomecánica deportiva
         en: Sports biomechanics
+        pt: Biomecânica esportiva
+        fr: Biomécanique sportive
+        zh: 运动生物力学
+        ja: スポーツバイオメカニクス
       description:
         es: >-
           Estima la energía transferida en un golpe o lanzamiento a partir de la masa y velocidad
@@ -137,9 +274,23 @@ context:
         en: >-
           It estimates the energy transferred in a strike or throw from the mass and speed of the
           implement.
+        pt: >-
+          Estima a energia transferida em um golpe ou arremesso a partir da massa e da velocidade
+          do implemento.
+        fr: >-
+          Elle estime l'énergie transférée lors d'un coup ou d'un lancer à partir de la masse et de
+          la vitesse de l'engin utilisé.
+        zh: >-
+          根据器械的质量和速度，估算一次击打或投掷中传递的能量。
+        ja: >-
+          用具の質量と速度から、打撃や投擲で伝わるエネルギーを見積もる。
     - title:
         es: Energía eólica
         en: Wind energy
+        pt: Energia eólica
+        fr: Énergie éolienne
+        zh: 风能
+        ja: 風力エネルギー
       description:
         es: >-
           Cuantifica la energía cinética del aire en movimiento que una turbina puede convertir en
@@ -147,29 +298,81 @@ context:
         en: >-
           It quantifies the kinetic energy of moving air that a turbine can convert into
           electricity.
+        pt: >-
+          Quantifica a energia cinética do ar em movimento que uma turbina pode converter em
+          eletricidade.
+        fr: >-
+          Elle quantifie l'énergie cinétique de l'air en mouvement qu'une éolienne peut convertir
+          en électricité.
+        zh: >-
+          用于量化流动空气所具有的动能，涡轮机可将其转化为电能。
+        ja: >-
+          タービンが電力に変換できる、流れる空気の運動エネルギーを定量化する。
     - title:
         es: Ingeniería mecánica
         en: Mechanical engineering
+        pt: Engenharia mecânica
+        fr: Ingénierie mécanique
+        zh: 机械工程
+        ja: 機械工学
       description:
         es: >-
           Dimensiona volantes de inercia que almacenan energía cinética para suavizar el
           funcionamiento de máquinas.
         en: >-
           It sizes flywheels that store kinetic energy to smooth out machine operation.
+        pt: >-
+          Dimensiona volantes de inércia que armazenam energia cinética para suavizar o
+          funcionamento de máquinas.
+        fr: >-
+          Elle permet de dimensionner les volants d'inertie qui stockent l'énergie cinétique pour
+          fluidifier le fonctionnement des machines.
+        zh: >-
+          用于设计存储动能以使机械运转更平稳的飞轮尺寸。
+        ja: >-
+          機械の動作を滑らかにするために運動エネルギーを蓄えるフライホイールの寸法設計に使われる。
   example:
     title:
       es: Energía de un auto en movimiento
       en: Energy of a moving car
+      pt: Energia de um carro em movimento
+      fr: Énergie d'une voiture en mouvement
+      zh: 行驶中汽车的能量
+      ja: 走行中の自動車のエネルギー
     lines:
       - es: m = 1000 kg
         en: m = 1000 kg
+        pt: m = 1000 kg
+        fr: m = 1000 kg
+        zh: m = 1000 千克
+        ja: m = 1000 kg
       - es: v = 20 m/s
         en: v = 20 m/s
+        pt: v = 20 m/s
+        fr: v = 20 m/s
+        zh: v = 20 米/秒
+        ja: v = 20 m/s
       - es: Ek = ½ m v²
         en: Ek = ½ m v²
+        pt: Ek = ½ m v²
+        fr: Ek = ½ m v²
+        zh: Ek = ½ m v²
+        ja: Ek = ½ m v²
       - es: Ek = ½ × 1000 × 20²
         en: Ek = ½ × 1000 × 20²
+        pt: Ek = ½ × 1000 × 20²
+        fr: Ek = ½ × 1000 × 20²
+        zh: Ek = ½ × 1000 × 20²
+        ja: Ek = ½ × 1000 × 20²
       - es: Ek = ½ × 1000 × 400
         en: Ek = ½ × 1000 × 400
+        pt: Ek = ½ × 1000 × 400
+        fr: Ek = ½ × 1000 × 400
+        zh: Ek = ½ × 1000 × 400
+        ja: Ek = ½ × 1000 × 400
       - es: Ek = 200 000 J
         en: Ek = 200,000 J
+        pt: Ek = 200.000 J
+        fr: Ek = 200 000 J
+        zh: Ek = 200,000 焦耳
+        ja: Ek = 200,000 J

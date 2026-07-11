@@ -2,9 +2,17 @@ id: standard-deviation
 title:
   es: Desviación Estándar
   en: Standard Deviation
+  pt: Desvio Padrão
+  fr: Écart-type
+  zh: 标准差
+  ja: 標準偏差
 category:
   es: Probabilidad y estadística
   en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率統計
 nodes:
   - id: sigma
     type: variable
@@ -14,18 +22,34 @@ nodes:
         Sigma, la desviación estándar: mide en promedio qué tan lejos están los datos de su media.
       en: >-
         Sigma, the standard deviation: measures, on average, how far the data sits from its mean.
+      pt: >-
+        Sigma, o desvio padrão: mede, em média, a que distância os dados estão de sua média.
+      fr: >-
+        Sigma, l'écart-type : mesure, en moyenne, à quelle distance les données se situent de leur moyenne.
+      zh: >-
+        西格玛，标准差：衡量数据平均而言与其均值相差多远。
+      ja: >-
+        シグマ、標準偏差：データが平均から平均してどれくらい離れているかを測る。
   - id: equals
     type: equals
     value: "="
     explanation:
       es: Es exactamente igual a.
       en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 精确地等于。
+      ja: 正確に等しい。
   - id: sqrt
     type: operator
     value: √
     explanation:
       es: La raíz cuadrada de todo lo que sigue, para devolver la medida a las unidades originales.
       en: The square root of everything that follows, bringing the measure back to original units.
+      pt: A raiz quadrada de tudo o que segue, trazendo a medida de volta às unidades originais.
+      fr: La racine carrée de tout ce qui suit, ramenant la mesure aux unités d'origine.
+      zh: 对后面所有内容取平方根，使度量恢复到原始单位。
+      ja: 続く全体の平方根をとり、単位を元の尺度に戻す。
   - id: sigma-sum
     type: operator
     value: Σ
@@ -34,49 +58,89 @@ nodes:
         Sigma mayúscula: suma un término por cada dato de la muestra, del primero al último.
       en: >-
         Capital sigma: sums one term for every data point in the sample, from first to last.
+      pt: >-
+        Sigma maiúsculo: soma um termo para cada dado da amostra, do primeiro ao último.
+      fr: >-
+        Sigma majuscule : additionne un terme pour chaque donnée de l'échantillon, de la première à la dernière.
+      zh: >-
+        大写西格玛：对样本中每一个数据点求和，从第一个到最后一个。
+      ja: >-
+        大文字のシグマ：標本の各データについて、最初から最後まで一項ずつ足し合わせる。
   - id: x-i
     type: variable
     value: xᵢ
     explanation:
       es: Cada valor individual de los datos, identificado por su posición i.
       en: Each individual data value, identified by its position i.
+      pt: Cada valor individual dos dados, identificado por sua posição i.
+      fr: Chaque valeur individuelle des données, identifiée par sa position i.
+      zh: 每一个单独的数据值，由其位置 i 标识。
+      ja: 各データの個々の値。位置 i によって識別される。
   - id: minus
     type: operator
     value: "−"
     explanation:
       es: Menos, restando la media a cada valor.
       en: Minus, subtracting the mean from each value.
+      pt: Menos, subtraindo a média de cada valor.
+      fr: Moins, en soustrayant la moyenne de chaque valeur.
+      zh: 减，从每个值中减去均值。
+      ja: マイナス。各値から平均を引く。
   - id: mu
     type: variable
     value: μ
     explanation:
       es: "Mu, la media aritmética: el promedio de todos los valores de los datos."
       en: "Mu, the arithmetic mean: the average of all the data values."
+      pt: "Mu, a média aritmética: a média de todos os valores dos dados."
+      fr: "Mu, la moyenne arithmétique : la moyenne de toutes les valeurs des données."
+      zh: "μ，算术平均数：所有数据值的平均值。"
+      ja: "ミュー、算術平均：すべてのデータ値の平均。"
   - id: sq
     type: superscript
     value: "²"
     explanation:
       es: Cada diferencia se eleva al cuadrado, para que siempre cuente como positiva.
       en: Each difference is squared, so it always counts as positive.
+      pt: Cada diferença é elevada ao quadrado, para que sempre conte como positiva.
+      fr: Chaque écart est élevé au carré, afin qu'il compte toujours comme positif.
+      zh: 每个差值都取平方，使其始终为正值。
+      ja: 各差はすべて2乗され、常に正の値として扱われる。
   - id: slash
     type: operator
     value: "/"
     explanation:
       es: Dividido entre.
       en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: 割る。
   - id: n
     type: variable
     value: N
     explanation:
       es: "N mayúscula: el número total de datos en la muestra o población."
       en: "Capital N: the total number of data points in the sample or population."
+      pt: "N maiúsculo: o número total de dados na amostra ou população."
+      fr: "N majuscule : le nombre total de données dans l'échantillon ou la population."
+      zh: "大写N：样本或总体中的数据总数。"
+      ja: "大文字のN：標本または母集団に含まれるデータの総数。"
 context:
   author:
     es: Karl Pearson
     en: Karl Pearson
+    pt: Karl Pearson
+    fr: Karl Pearson
+    zh: 卡尔·皮尔逊
+    ja: カール・ピアソン
   era:
     es: Inglaterra, 1857–1936 · término y notación acuñados en 1894
     en: England, 1857–1936 · term and notation coined in 1894
+    pt: Inglaterra, 1857–1936 · termo e notação cunhados em 1894
+    fr: Angleterre, 1857–1936 · terme et notation inventés en 1894
+    zh: 英格兰，1857–1936 · 术语与符号确立于1894年
+    ja: イングランド、1857–1936年 · 1894年に用語と記号が定められる
   history:
     es: >-
       La idea de medir la dispersión de un conjunto de datos alrededor de su media surgió del trabajo
@@ -92,6 +156,33 @@ context:
       deviation' and popularized the Greek letter σ (sigma) to represent it, as part of his program
       to establish biostatistics as a rigorous discipline. It has since become the most widely used
       measure of spread in science and applied statistics.
+    pt: >-
+      A ideia de medir a dispersão de um conjunto de dados em torno de sua média surgiu do trabalho
+      de Gauss e Laplace sobre erros de medição no início do século XIX, mas não tinha nome próprio
+      nem símbolo padrão. Foi o estatístico inglês Karl Pearson quem, em 1894, cunhou o termo 'desvio
+      padrão' e popularizou a letra grega σ (sigma) para representá-lo, dentro de seu programa de
+      fundar a bioestatística como disciplina rigorosa. Desde então, tornou-se a medida de dispersão
+      mais usada na ciência e na estatística aplicada.
+    fr: >-
+      L'idée de mesurer la dispersion d'un ensemble de données autour de sa moyenne est née des
+      travaux de Gauss et Laplace sur les erreurs de mesure au début du XIXe siècle, mais elle
+      n'avait ni nom propre ni symbole standard. C'est le statisticien anglais Karl Pearson qui, en
+      1894, inventa le terme 'écart-type' et popularisa la lettre grecque σ (sigma) pour le
+      représenter, dans le cadre de son projet visant à établir la biostatistique comme discipline
+      rigoureuse. Elle est depuis devenue la mesure de dispersion la plus utilisée en science et en
+      statistique appliquée.
+    zh: >-
+      衡量一组数据围绕其均值分散程度的想法，源于19世纪初高斯和拉普拉斯对测量误差的研究，
+      但当时既没有专门的名称，也没有标准的符号。正是英国统计学家卡尔·皮尔逊在1894年创造了
+      "标准差"这一术语，并推广了希腊字母σ（西格玛）作为其符号，这是他致力于将生物统计学
+      确立为一门严谨学科的计划的一部分。从那以后，它成为科学和应用统计学中使用最广泛的离散程度度量。
+    ja: >-
+      データ集合が平均のまわりでどれほど散らばっているかを測るという発想は、19世紀初頭の
+      ガウスとラプラスによる測定誤差の研究に端を発するが、当時は固有の名称も標準的な記号もなかった。
+      1894年、イギリスの統計学者カール・ピアソンが「標準偏差」という用語を作り出し、
+      それを表す記号としてギリシャ文字σ（シグマ）を広めた。これは彼が生物統計学を
+      厳密な学問分野として確立しようとした取り組みの一環であった。それ以来、
+      科学および応用統計学において最も広く使われる散らばりの尺度となっている。
   timeline:
     - year: c. 1809
       label:
@@ -101,6 +192,16 @@ context:
         en: >-
           Gauss and Laplace study the spread of astronomical measurement errors around a central
           value.
+        pt: >-
+          Gauss e Laplace estudam a dispersão de erros de medição astronômica em torno de um valor
+          central.
+        fr: >-
+          Gauss et Laplace étudient la dispersion des erreurs de mesure astronomique autour d'une
+          valeur centrale.
+        zh: >-
+          高斯和拉普拉斯研究了天文测量误差围绕中心值的分布情况。
+        ja: >-
+          ガウスとラプラスが、天文測定誤差が中心値のまわりでどう散らばるかを研究する。
     - year: "1894"
       label:
         es: >-
@@ -109,6 +210,17 @@ context:
         en: >-
           Karl Pearson coins the term 'standard deviation' and adopts σ as its symbol in his
           biostatistics lectures.
+        pt: >-
+          Karl Pearson cunha o termo 'desvio padrão' e adota σ como seu símbolo em suas palestras de
+          bioestatística.
+        fr: >-
+          Karl Pearson invente le terme 'écart-type' et adopte σ comme symbole dans ses conférences
+          de biostatistique.
+        zh: >-
+          卡尔·皮尔逊在其生物统计学讲座中创造了"标准差"一词，并采用σ作为其符号。
+        ja: >-
+          カール・ピアソンが生物統計学の講義で「標準偏差」という用語を作り、
+          その記号としてσを採用する。
     - year: s. XX
       label:
         es: >-
@@ -117,6 +229,16 @@ context:
         en: >-
           It becomes a central tool of quality control, psychometrics, and quantitative social
           science.
+        pt: >-
+          Torna-se uma ferramenta central do controle de qualidade, da psicometria e das ciências
+          sociais quantitativas.
+        fr: >-
+          Elle devient un outil central du contrôle qualité, de la psychométrie et des sciences
+          sociales quantitatives.
+        zh: >-
+          它成为质量控制、心理测量学和定量社会科学中的核心工具。
+        ja: >-
+          品質管理、心理測定学、定量的社会科学における中心的なツールとなる。
     - year: Hoy
       label:
         es: >-
@@ -125,10 +247,25 @@ context:
         en: >-
           It's computed automatically in every spreadsheet and statistics package to summarize the
           variability of any data.
+        pt: >-
+          É calculado automaticamente em cada planilha e software estatístico para resumir a
+          variabilidade de qualquer dado.
+        fr: >-
+          Il est calculé automatiquement dans chaque tableur et logiciel statistique pour résumer la
+          variabilité de toute donnée.
+        zh: >-
+          它在每一款电子表格和统计软件中都会被自动计算，用来概括任何数据的变异程度。
+        ja: >-
+          あらゆる表計算ソフトや統計ソフトウェアで自動的に計算され、データのばらつきを
+          要約するのに使われている。
   useCases:
     - title:
         es: Control de calidad
         en: Quality control
+        pt: Controle de qualidade
+        fr: Contrôle qualité
+        zh: 质量控制
+        ja: 品質管理
       description:
         es: >-
           Las fábricas la usan para saber si las piezas producidas se mantienen dentro de una
@@ -136,9 +273,24 @@ context:
         en: >-
           Factories use it to check whether manufactured parts stay within an acceptable tolerance
           of the expected value.
+        pt: >-
+          As fábricas o usam para saber se as peças produzidas permanecem dentro de uma tolerância
+          aceitável em relação ao valor esperado.
+        fr: >-
+          Les usines l'utilisent pour vérifier si les pièces produites restent dans une tolérance
+          acceptable par rapport à la valeur attendue.
+        zh: >-
+          工厂用它来判断所生产的零件是否维持在相对于预期值的可接受公差范围内。
+        ja: >-
+          工場では、製造された部品が期待値に対して許容範囲内に収まっているかを
+          確認するために使われる。
     - title:
         es: Finanzas
         en: Finance
+        pt: Finanças
+        fr: Finance
+        zh: 金融
+        ja: 金融
       description:
         es: >-
           Mide la volatilidad de una acción o cartera: a mayor desviación estándar, mayor riesgo
@@ -146,37 +298,103 @@ context:
         en: >-
           It measures the volatility of a stock or portfolio: the higher the standard deviation, the
           higher the perceived risk.
+        pt: >-
+          Mede a volatilidade de uma ação ou carteira: quanto maior o desvio padrão, maior o risco
+          percebido.
+        fr: >-
+          Elle mesure la volatilité d'une action ou d'un portefeuille : plus l'écart-type est élevé,
+          plus le risque perçu est grand.
+        zh: >-
+          衡量一只股票或投资组合的波动性：标准差越大，被认为的风险就越高。
+        ja: >-
+          株式やポートフォリオのボラティリティを測る：標準偏差が大きいほど、
+          知覚されるリスクも大きい。
     - title:
         es: Meteorología
         en: Meteorology
+        pt: Meteorologia
+        fr: Météorologie
+        zh: 气象学
+        ja: 気象学
       description:
         es: >-
           Describe cuánto varían las temperaturas diarias respecto al promedio histórico de una
           región.
         en: >-
           It describes how much daily temperatures vary from a region's historical average.
+        pt: >-
+          Descreve o quanto as temperaturas diárias variam em relação à média histórica de uma
+          região.
+        fr: >-
+          Elle décrit à quel point les températures quotidiennes varient par rapport à la moyenne
+          historique d'une région.
+        zh: >-
+          描述某一地区每日气温相对于历史平均值的变化程度。
+        ja: >-
+          ある地域の日々の気温が、過去の平均からどれくらい変動するかを表す。
     - title:
         es: Ciencia de datos
         en: Data science
+        pt: Ciência de dados
+        fr: Science des données
+        zh: 数据科学
+        ja: データサイエンス
       description:
         es: >-
           Se usa para normalizar variables y detectar valores atípicos antes de entrenar modelos.
         en: >-
           It's used to normalize variables and flag outliers before training models.
+        pt: >-
+          É usado para normalizar variáveis e detectar valores atípicos antes de treinar modelos.
+        fr: >-
+          Il est utilisé pour normaliser les variables et détecter les valeurs aberrantes avant
+          d'entraîner des modèles.
+        zh: >-
+          用于在训练模型之前对变量进行归一化处理并标记异常值。
+        ja: >-
+          モデルを学習させる前に、変数を正規化したり外れ値を検出したりするのに使われる。
   example:
     title:
       es: Cinco calificaciones de examen
       en: Five exam scores
+      pt: Cinco notas de prova
+      fr: Cinq notes d'examen
+      zh: 五个考试成绩
+      ja: 5つの試験の点数
     lines:
       - es: "Datos: 4, 8, 6, 5, 3"
         en: "Data: 4, 8, 6, 5, 3"
+        pt: "Dados: 4, 8, 6, 5, 3"
+        fr: "Données : 4, 8, 6, 5, 3"
+        zh: "数据：4、8、6、5、3"
+        ja: "データ：4, 8, 6, 5, 3"
       - es: Media μ = (4+8+6+5+3)/5 = 5.2
         en: Mean μ = (4+8+6+5+3)/5 = 5.2
+        pt: Média μ = (4+8+6+5+3)/5 = 5,2
+        fr: Moyenne μ = (4+8+6+5+3)/5 = 5,2
+        zh: 均值 μ = (4+8+6+5+3)/5 = 5.2
+        ja: 平均 μ = (4+8+6+5+3)/5 = 5.2
       - es: "Diferencias al cuadrado: 1.44, 7.84, 0.64, 0.04, 4.84"
         en: "Squared differences: 1.44, 7.84, 0.64, 0.04, 4.84"
+        pt: "Diferenças ao quadrado: 1,44, 7,84, 0,64, 0,04, 4,84"
+        fr: "Écarts au carré : 1,44, 7,84, 0,64, 0,04, 4,84"
+        zh: "差的平方：1.44、7.84、0.64、0.04、4.84"
+        ja: "差の2乗：1.44, 7.84, 0.64, 0.04, 4.84"
       - es: Suma de diferencias = 14.8
         en: Sum of differences = 14.8
+        pt: Soma das diferenças = 14,8
+        fr: Somme des écarts = 14,8
+        zh: 差值之和 = 14.8
+        ja: 差の合計 = 14.8
       - es: 14.8 / 5 = 2.96
         en: 14.8 / 5 = 2.96
+        pt: 14,8 / 5 = 2,96
+        fr: 14,8 / 5 = 2,96
+        zh: 14.8 / 5 = 2.96
+        ja: 14.8 / 5 = 2.96
       - es: σ = √2.96 ≈ 1.72
         en: σ = √2.96 ≈ 1.72
+        pt: σ = √2,96 ≈ 1,72
+        fr: σ = √2,96 ≈ 1,72
+        zh: σ = √2.96 ≈ 1.72
+        ja: σ = √2.96 ≈ 1.72

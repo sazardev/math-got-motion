@@ -2,9 +2,17 @@ id: law-of-sines
 title:
   es: Ley de Senos
   en: Law of Sines
+  pt: Lei dos Senos
+  fr: Loi des sinus
+  zh: 正弦定理
+  ja: 正弦定理
 category:
   es: Geometría
   en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
 nodes:
   - id: a
     type: variable
@@ -12,73 +20,125 @@ nodes:
     explanation:
       es: El lado a del triángulo, opuesto al ángulo A.
       en: Side a of the triangle, opposite angle A.
+      pt: O lado a do triângulo, oposto ao ângulo A.
+      fr: Le côté a du triangle, opposé à l'angle A.
+      zh: 三角形的边a，与角A相对。
+      ja: 三角形の辺a。角Aの対辺。
   - id: fraction-bar-1
     type: operator
     value: "/"
     explanation:
       es: Dividido entre el seno del ángulo opuesto.
       en: Divided by the sine of the opposite angle.
+      pt: Dividido pelo seno do ângulo oposto.
+      fr: Divisé par le sinus de l'angle opposé.
+      zh: 除以对角的正弦值。
+      ja: 対角の正弦で割る。
   - id: sin-a
     type: operator
     value: sen A
     explanation:
       es: El seno del ángulo A, opuesto al lado a.
       en: The sine of angle A, opposite side a.
+      pt: O seno do ângulo A, oposto ao lado a.
+      fr: Le sinus de l'angle A, opposé au côté a.
+      zh: 角A的正弦，角A与边a相对。
+      ja: 角Aの正弦。角Aは辺aの対角。
   - id: equals-1
     type: equals
     value: "="
     explanation:
       es: Es igual a la siguiente razón.
       en: Is equal to the following ratio.
+      pt: É igual à razão a seguir.
+      fr: Est égal au rapport suivant.
+      zh: 等于下面这个比值。
+      ja: 次の比に等しい。
   - id: b
     type: variable
     value: b
     explanation:
       es: El lado b del triángulo, opuesto al ángulo B.
       en: Side b of the triangle, opposite angle B.
+      pt: O lado b do triângulo, oposto ao ângulo B.
+      fr: Le côté b du triangle, opposé à l'angle B.
+      zh: 三角形的边b，与角B相对。
+      ja: 三角形の辺b。角Bの対辺。
   - id: fraction-bar-2
     type: operator
     value: "/"
     explanation:
       es: Dividido entre el seno del ángulo opuesto.
       en: Divided by the sine of the opposite angle.
+      pt: Dividido pelo seno do ângulo oposto.
+      fr: Divisé par le sinus de l'angle opposé.
+      zh: 除以对角的正弦值。
+      ja: 対角の正弦で割る。
   - id: sin-b
     type: operator
     value: sen B
     explanation:
       es: El seno del ángulo B, opuesto al lado b.
       en: The sine of angle B, opposite side b.
+      pt: O seno do ângulo B, oposto ao lado b.
+      fr: Le sinus de l'angle B, opposé au côté b.
+      zh: 角B的正弦，角B与边b相对。
+      ja: 角Bの正弦。角Bは辺bの対角。
   - id: equals-2
     type: equals
     value: "="
     explanation:
       es: Y también es igual a esta otra razón.
       en: And is also equal to this other ratio.
+      pt: E também é igual a esta outra razão.
+      fr: Et est également égal à cet autre rapport.
+      zh: 并且也等于下面这个比值。
+      ja: そしてこの別の比にも等しい。
   - id: c
     type: variable
     value: c
     explanation:
       es: El lado c del triángulo, opuesto al ángulo C.
       en: Side c of the triangle, opposite angle C.
+      pt: O lado c do triângulo, oposto ao ângulo C.
+      fr: Le côté c du triangle, opposé à l'angle C.
+      zh: 三角形的边c，与角C相对。
+      ja: 三角形の辺c。角Cの対辺。
   - id: fraction-bar-3
     type: operator
     value: "/"
     explanation:
       es: Dividido entre el seno del ángulo opuesto.
       en: Divided by the sine of the opposite angle.
+      pt: Dividido pelo seno do ângulo oposto.
+      fr: Divisé par le sinus de l'angle opposé.
+      zh: 除以对角的正弦值。
+      ja: 対角の正弦で割る。
   - id: sin-c
     type: operator
     value: sen C
     explanation:
       es: El seno del ángulo C, opuesto al lado c. Las tres razones son siempre iguales entre sí.
       en: The sine of angle C, opposite side c. All three ratios are always equal to each other.
+      pt: O seno do ângulo C, oposto ao lado c. As três razões são sempre iguais entre si.
+      fr: Le sinus de l'angle C, opposé au côté c. Les trois rapports sont toujours égaux entre eux.
+      zh: 角C的正弦，角C与边c相对。这三个比值始终彼此相等。
+      ja: 角Cの正弦。角Cは辺cの対角。この三つの比は常に互いに等しい。
 context:
   author:
     es: Nasir al-Din al-Tusi
     en: Nasir al-Din al-Tusi
+    pt: Nasir al-Din al-Tusi
+    fr: Nasir al-Din al-Tusi
+    zh: 纳西尔丁·图西
+    ja: ナスィールッディーン・トゥースィー
   era:
     es: Persia, 1201–1274 · Tratado sobre el cuadrilátero completo, s. XIII
     en: Persia, 1201–1274 · Treatise on the Quadrilateral, 13th century
+    pt: Pérsia, 1201–1274 · Tratado sobre o Quadrilátero Completo, séc. XIII
+    fr: Perse, 1201–1274 · Traité sur le quadrilatère complet, XIIIe siècle
+    zh: 波斯，1201–1274 · 《论完全四边形》，13世纪
+    ja: ペルシア、1201–1274年 · 『完全四辺形論』、13世紀
   history:
     es: >-
       La ley de senos, en su forma plana, tiene antecedentes en la trigonometría griega e india: Hiparco
@@ -101,6 +161,31 @@ context:
       mathematicians like Abu al-Wafa, was transmitted to Europe through Latin translations and laid
       the groundwork for the modern trigonometry that Regiomontanus and others would consolidate during
       the Renaissance.
+    pt: >-
+      A lei dos senos, em sua forma plana, tem antecedentes na trigonometria grega e indiana:
+      Hiparco e Ptolomeu já trabalhavam com relações equivalentes usando cordas de círculo em vez de
+      senos, e matemáticos indianos como Aryabhata definiram o seno como função independente por
+      volta do ano 500. Foi durante a Idade de Ouro islâmica que esses fios se uniram: o matemático e
+      astrônomo persa Nasir al-Din al-Tusi, em seu Tratado sobre o Quadrilátero Completo, apresentou
+      a lei dos senos de forma sistemática e geral, tratando a trigonometria como uma disciplina
+      matemática independente da astronomia pela primeira vez. Seu trabalho, junto com o de outros
+      matemáticos islâmicos como Abu al-Wafa, foi transmitido à Europa por meio de traduções latinas
+      e lançou as bases da trigonometria moderna que Regiomontanus e outros consolidariam no
+      Renascimento.
+    fr: >-
+      La loi des sinus, sous sa forme plane, trouve des antécédents dans la trigonométrie grecque et
+      indienne : Hipparque et Ptolémée travaillaient déjà avec des relations équivalentes utilisant
+      des cordes de cercle plutôt que des sinus, et des mathématiciens indiens comme Aryabhata
+      définirent le sinus comme fonction indépendante vers l'an 500. C'est durant l'âge d'or islamique
+      que ces fils se rejoignirent : le Persan Nasir al-Din al-Tusi, dans son Traité sur le
+      quadrilatère complet, présenta la loi des sinus de manière systématique, traitant pour la
+      première fois la trigonométrie comme discipline indépendante de l'astronomie. Son travail, avec
+      celui d'Abu al-Wafa, fut transmis en Europe par des traductions latines et posa les bases de la
+      trigonométrie moderne consolidée à la Renaissance.
+    zh: >-
+      平面正弦定理在希腊和印度三角学中已有先例：希帕克斯和托勒密早已利用圆的弦（而非正弦）研究等价关系，印度数学家阿耶波多在公元500年前后将正弦定义为独立函数。正是在伊斯兰黄金时代，这些线索汇聚到了一起：波斯数学家兼天文学家纳西尔丁·图西在其《论完全四边形》中，第一次系统而普遍地提出了正弦定理，将三角学视为一门独立于天文学的数学学科。他的工作连同阿布·瓦法等其他伊斯兰数学家的成果，通过拉丁文译本传入欧洲，为文艺复兴时期雷格蒙塔努斯等人巩固的现代三角学奠定了基础。
+    ja: >-
+      平面上の正弦定理には、ギリシアとインドの三角法における先駆がある。ヒッパルコスとプトレマイオスは、正弦の代わりに円の弦を用いた等価な関係をすでに扱っており、アーリヤバタなどインドの数学者たちは西暦500年頃、正弦を独立した関数として定義した。これらの流れが一つに合流したのはイスラムの黄金時代である。ペルシアの数学者・天文学者ナスィールッディーン・トゥースィーは『完全四辺形論』の中で、正弦定理を初めて体系的かつ一般的な形で提示し、三角法を天文学から独立した数学の一分野として扱った最初の人物となった。彼の業績は、アブル・ワファーなど他のイスラム数学者の業績とともにラテン語訳を通じてヨーロッパに伝わり、ルネサンス期にレギオモンタヌスらが確立する近代三角法の基礎を築いた。
   timeline:
     - year: c. 150 a.C.
       label:
@@ -109,10 +194,24 @@ context:
           trigonométricas.
         en: >-
           Hipparchus develops tables of circular chords, a Greek antecedent of trigonometric relations.
+        pt: >-
+          Hiparco desenvolve tabelas de cordas circulares, um antecedente grego das relações
+          trigonométricas.
+        fr: >-
+          Hipparque élabore des tables de cordes circulaires, un antécédent grec des relations
+          trigonométriques.
+        zh: >-
+          希帕克斯编制了圆弦表，这是三角关系在希腊时代的先驱。
+        ja: >-
+          ヒッパルコスが円の弦の表を作成する。これは三角関係のギリシアにおける先駆である。
     - year: c. 500
       label:
         es: El matemático indio Aryabhata define el seno como función trigonométrica independiente.
         en: Indian mathematician Aryabhata defines the sine as an independent trigonometric function.
+        pt: O matemático indiano Aryabhata define o seno como função trigonométrica independente.
+        fr: Le mathématicien indien Aryabhata définit le sinus comme fonction trigonométrique indépendante.
+        zh: 印度数学家阿耶波多将正弦定义为独立的三角函数。
+        ja: インドの数学者アーリヤバタが正弦を独立した三角関数として定義する。
     - year: s. XIII
       label:
         es: >-
@@ -121,6 +220,16 @@ context:
         en: >-
           Nasir al-Din al-Tusi presents the law of sines systematically in his Treatise on the
           Quadrilateral.
+        pt: >-
+          Nasir al-Din al-Tusi apresenta a lei dos senos de forma sistemática em seu Tratado sobre o
+          Quadrilátero Completo.
+        fr: >-
+          Nasir al-Din al-Tusi présente la loi des sinus de manière systématique dans son Traité sur
+          le quadrilatère complet.
+        zh: >-
+          纳西尔丁·图西在其《论完全四边形》中系统地提出了正弦定理。
+        ja: >-
+          ナスィールッディーン・トゥースィーが『完全四辺形論』で正弦定理を体系的に提示する。
     - year: s. XV
       label:
         es: >-
@@ -129,6 +238,16 @@ context:
         en: >-
           Regiomontanus spreads trigonometry as an independent discipline in Europe, drawing on
           Islamic sources.
+        pt: >-
+          Regiomontanus difunde na Europa a trigonometria como disciplina independente, baseando-se
+          em fontes islâmicas.
+        fr: >-
+          Regiomontanus diffuse en Europe la trigonométrie comme discipline indépendante, en
+          s'appuyant sur des sources islamiques.
+        zh: >-
+          雷格蒙塔努斯以伊斯兰文献为基础，将三角学作为独立学科传播到欧洲。
+        ja: >-
+          レギオモンタヌスがイスラムの文献を基に、三角法を独立した学問としてヨーロッパに広める。
     - year: Hoy
       label:
         es: >-
@@ -137,10 +256,24 @@ context:
         en: >-
           A standard tool in surveying, navigation, and architecture for solving triangles from
           partial data.
+        pt: >-
+          Ferramenta padrão em topografia, navegação e arquitetura para resolver triângulos a partir
+          de dados parciais.
+        fr: >-
+          Outil standard en topographie, navigation et architecture pour résoudre des triangles à
+          partir de données partielles.
+        zh: >-
+          在测量、导航和建筑中，是根据部分已知数据求解三角形的标准工具。
+        ja: >-
+          部分的なデータから三角形を解くための、測量・航海・建築における標準的な道具。
   useCases:
     - title:
         es: Topografía
         en: Surveying
+        pt: Topografia
+        fr: Topographie
+        zh: 测量学
+        ja: 測量
       description:
         es: >-
           La triangulación mide distancias inaccesibles calculando ángulos desde puntos conocidos y
@@ -148,9 +281,23 @@ context:
         en: >-
           Triangulation measures inaccessible distances by calculating angles from known points and
           applying the law of sines.
+        pt: >-
+          A triangulação mede distâncias inacessíveis calculando ângulos a partir de pontos
+          conhecidos e aplicando a lei dos senos.
+        fr: >-
+          La triangulation mesure des distances inaccessibles en calculant des angles à partir de
+          points connus et en appliquant la loi des sinus.
+        zh: >-
+          三角测量法通过从已知点计算角度并运用正弦定理，测量难以直接到达的距离。
+        ja: >-
+          三角測量では、既知の点から角度を計算し正弦定理を適用することで、到達困難な距離を測定する。
     - title:
         es: Navegación aérea y marítima
         en: Air and maritime navigation
+        pt: Navegação aérea e marítima
+        fr: Navigation aérienne et maritime
+        zh: 航空与海上导航
+        ja: 航空・海上航法
       description:
         es: >-
           Calcula rumbos y distancias entre puntos cuando se conocen ángulos de referencia pero no
@@ -158,9 +305,23 @@ context:
         en: >-
           Calculates headings and distances between points when reference angles are known but not
           all sides.
+        pt: >-
+          Calcula rumos e distâncias entre pontos quando ângulos de referência são conhecidos, mas
+          não todos os lados.
+        fr: >-
+          Calcule les caps et distances entre points lorsque des angles de référence sont connus
+          mais pas tous les côtés.
+        zh: >-
+          在已知参考角但并非所有边长的情况下，计算各点之间的航向和距离。
+        ja: >-
+          参照角はわかっているがすべての辺の長さがわからないとき、地点間の方位と距離を計算する。
     - title:
         es: Astronomía
         en: Astronomy
+        pt: Astronomia
+        fr: Astronomie
+        zh: 天文学
+        ja: 天文学
       description:
         es: >-
           Determina distancias a estrellas y planetas mediante paralaje, midiendo ángulos desde dos
@@ -168,9 +329,23 @@ context:
         en: >-
           Determines distances to stars and planets via parallax, measuring angles from two
           observation points.
+        pt: >-
+          Determina distâncias a estrelas e planetas por meio de paralaxe, medindo ângulos a partir
+          de dois pontos de observação.
+        fr: >-
+          Détermine les distances aux étoiles et aux planètes par parallaxe, en mesurant des angles
+          depuis deux points d'observation.
+        zh: >-
+          通过视差法确定恒星和行星的距离，即从两个观测点测量角度。
+        ja: >-
+          二つの観測点から角度を測定する視差法により、恒星や惑星までの距離を求める。
     - title:
         es: Arquitectura e ingeniería civil
         en: Architecture and civil engineering
+        pt: Arquitetura e engenharia civil
+        fr: Architecture et génie civil
+        zh: 建筑与土木工程
+        ja: 建築・土木工学
       description:
         es: >-
           Resuelve estructuras triangulares en cerchas y techos cuando se conocen ángulos de diseño y
@@ -178,18 +353,52 @@ context:
         en: >-
           Solves triangular structures in trusses and roofs when design angles and a single length are
           known.
+        pt: >-
+          Resolve estruturas triangulares em treliças e telhados quando ângulos de projeto e um único
+          comprimento são conhecidos.
+        fr: >-
+          Résout les structures triangulaires des fermes et des toitures lorsque les angles de
+          conception et une seule longueur sont connus.
+        zh: >-
+          当已知设计角度和一个边长时，用于求解桁架和屋顶中的三角形结构。
+        ja: >-
+          設計角度と一つの長さがわかっているとき、トラスや屋根の三角形構造を解く。
   example:
     title:
       es: Triángulo con A=30°, B=45°, a=10
       en: Triangle with A=30°, B=45°, a=10
+      pt: Triângulo com A=30°, B=45°, a=10
+      fr: Triangle avec A=30°, B=45°, a=10
+      zh: 三角形 A=30°, B=45°, a=10
+      ja: A=30°, B=45°, a=10の三角形
     lines:
       - es: a / sen A = b / sen B
         en: a / sin A = b / sin B
+        pt: a / sen A = b / sen B
+        fr: a / sin A = b / sin B
+        zh: a / sin A = b / sin B
+        ja: a / sin A = b / sin B
       - es: 10 / sen 30° = b / sen 45°
         en: 10 / sin 30° = b / sin 45°
+        pt: 10 / sen 30° = b / sen 45°
+        fr: 10 / sin 30° = b / sin 45°
+        zh: 10 / sin 30° = b / sin 45°
+        ja: 10 / sin 30° = b / sin 45°
       - es: 10 / 0.5 = b / 0.7071
         en: 10 / 0.5 = b / 0.7071
+        pt: 10 / 0,5 = b / 0,7071
+        fr: 10 / 0,5 = b / 0,7071
+        zh: 10 / 0.5 = b / 0.7071
+        ja: 10 / 0.5 = b / 0.7071
       - es: 20 = b / 0.7071
         en: 20 = b / 0.7071
+        pt: 20 = b / 0,7071
+        fr: 20 = b / 0,7071
+        zh: 20 = b / 0.7071
+        ja: 20 = b / 0.7071
       - es: b = 20 · 0.7071 ≈ 14.14
         en: b = 20 · 0.7071 ≈ 14.14
+        pt: b = 20 · 0,7071 ≈ 14,14
+        fr: b = 20 · 0,7071 ≈ 14,14
+        zh: b = 20 · 0.7071 ≈ 14.14
+        ja: b = 20 · 0.7071 ≈ 14.14
