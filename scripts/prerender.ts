@@ -34,7 +34,7 @@ function buildRoutes(): Route[] {
   const routes: Route[] = [];
 
   for (const locale of locales) {
-    routes.push({ routePath: `/${locale}/`, waitSelector: ".hero__formula" });
+    routes.push({ routePath: `/${locale}/`, waitSelector: ".home" });
     for (const formula of formulas) {
       routes.push({
         routePath: `/${locale}/formula/${formula.id}`,

@@ -12,11 +12,13 @@ import {
 import { ChangelogPage } from "./components/changelog-page/ChangelogPage";
 import { FormulaHero } from "./components/formula-hero/FormulaHero";
 import { FormulaMenu } from "./components/formula-menu/FormulaMenu";
+import { HomePage } from "./components/home-page/HomePage";
 import { NotFoundPage } from "./components/not-found/NotFoundPage";
 import { formulas } from "./domain/formulas";
 import { detectInitialLocale, isLocale, locales, type Locale } from "./i18n/locale";
 import { useLocale } from "./i18n/locale-context";
 import { LocaleProvider } from "./i18n/LocaleContext";
+import { destroyLenis, initLenis } from "./lib/lenis";
 
 type Theme = "dark" | "light";
 
@@ -25,17 +27,15 @@ interface ThemeControlProps {
   onToggleTheme: () => void;
 }
 
-/** El contenido que cambia bajo el chrome persistente: la fórmula activa (o la primera, en "/") o un id inexistente. */
+/** El contenido de "/:locale/formula/:formulaId" — la fórmula activa, o un id inexistente. */
 function FormulaRouteContent() {
   const { locale } = useLocale();
   const { formulaId } = useParams<{ formulaId: string }>();
-  const activeFormula = formulaId
-    ? formulas.find((formula) => formula.id === formulaId)
-    : formulas[0];
+  const activeFormula = formulas.find((formula) => formula.id === formulaId);
 
   if (!activeFormula) return <NotFoundPage locale={locale} />;
 
-  return <FormulaHero key={activeFormula.id} formula={activeFormula} isIndexRoute={!formulaId} />;
+  return <FormulaHero key={activeFormula.id} formula={activeFormula} />;
 }
 
 /** Menú + controles de tema/idioma, persistentes entre fórmula/changelog dentro de un mismo locale. */
@@ -76,6 +76,15 @@ function LocaleChrome({ theme, onToggleTheme }: ThemeControlProps) {
             </button>
           ))}
         </div>
+        <button
+          type="button"
+          className="control-button"
+          onClick={() => {
+            void navigate(`/${locale}/`);
+          }}
+        >
+          {strings.homeNav}
+        </button>
         <button
           type="button"
           className="control-button"
@@ -122,6 +131,13 @@ function AppRoutes() {
     document.documentElement.dataset["theme"] = theme;
   }, [theme]);
 
+  // Instancia única para toda la vida de la app — independiente de la
+  // fórmula activa, ver src/lib/lenis.ts.
+  useEffect(() => {
+    initLenis();
+    return destroyLenis;
+  }, []);
+
   const toggleTheme = () => {
     setTheme((current) => (current === "dark" ? "light" : "dark"));
   };
@@ -130,7 +146,7 @@ function AppRoutes() {
     <Routes>
       <Route path="/" element={<Navigate to={`/${detectInitialLocale()}/`} replace />} />
       <Route path=":locale" element={<LocaleLayout theme={theme} onToggleTheme={toggleTheme} />}>
-        <Route index element={<FormulaRouteContent />} />
+        <Route index element={<HomePage />} />
         <Route path="formula/:formulaId" element={<FormulaRouteContent />} />
         <Route path="changelog" element={<ChangelogPage />} />
       </Route>

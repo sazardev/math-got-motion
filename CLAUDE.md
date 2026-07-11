@@ -95,7 +95,14 @@ change, since every existing YAML file must keep validating against it.
 locale-prefixed — this is required for the hreflang/sitemap setup below, not a style choice:
 
 - `/` → replaces itself with `/${detectInitialLocale()}/` (browser-language redirect).
-- `/:locale/` → the default formula's hero (same look as visiting its own `/formula/:id`).
+- `/:locale/` → `HomePage` — the app's entrance/landing: an autoplay GSAP teaser (the flagship
+  formula's symbols separate and reassemble in a loop, no scroll — same visual language as
+  `FormulaHero`'s "Despegue" state, just not scroll-scrubbed), live counts (formula/category/
+  language totals, read from `formulas`/`locales` at render time, not hardcoded), the scroll
+  choreography explained step by step, and a "how to contribute" CTA linking to `REPO_URL`
+  (`src/lib/site.ts`). An "Explorar fórmulas"-style button jumps straight into the flagship
+  formula's hero. This used to redirect straight into the default formula's hero; formulas now
+  only live at their own `/formula/:id` URL.
 - `/:locale/formula/:formulaId` → that formula's hero.
 - `/:locale/changelog` → `ChangelogPage`.
 - `*` → `NotFoundPage` (also rendered in place, not via redirect, for a formula id that
@@ -103,7 +110,7 @@ locale-prefixed — this is required for the hreflang/sitemap setup below, not a
 
 `src/App.tsx` is the whole route tree: `LocaleLayout` resolves the `:locale` param (redirecting
 to a detected locale if it's missing/invalid) and renders `LocaleProvider` + the persistent
-chrome (`FormulaMenu`, theme/locale/changelog buttons) around an `<Outlet />`. `LocaleProvider`
+chrome (`FormulaMenu`, theme/locale/changelog/home buttons) around an `<Outlet />`. `LocaleProvider`
 (`src/i18n/LocaleContext.tsx`) no longer owns `locale` as internal state — it's now a controlled
 component fed by the route param, with `onLocaleChange` wired to `navigate(...)` so switching
 language changes the URL (preserving whatever formula/page you're on) instead of only updating

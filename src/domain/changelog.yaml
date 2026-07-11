@@ -3,6 +3,34 @@
 # raíz del repo es un espejo generado de este archivo para desarrolladores;
 # las entradas nuevas se agregan acá, no ahí.
 
+- version: "0.7.0"
+  date: "2026-07-11"
+  changes:
+    - type: added
+      text:
+        es: Una página de inicio nueva, con la Identidad de Euler armándose sola, estadísticas en vivo, cómo funciona la app, y cómo contribuir.
+        en: A brand new home page, with Euler's Identity assembling itself, live stats, how the app works, and how to contribute.
+        pt: Uma nova página inicial, com a Identidade de Euler se montando sozinha, estatísticas em tempo real, como o app funciona, e como contribuir.
+        fr: Une toute nouvelle page d'accueil, avec l'identité d'Euler s'assemblant seule, des statistiques en direct, le fonctionnement de l'app, et comment contribuer.
+        zh: 全新首页——不再直接跳转到默认公式。展示欧拉恒等式自动组装的动画、实时统计数据、逐步讲解应用原理，以及如何参与贡献。
+        ja: 新しいホームページを追加——デフォルトの数式へ直接ジャンプする代わりに表示されます。オイラーの等式が自動で組み立てられる様子、リアルタイムの統計、アプリの仕組みのステップ解説、貢献方法を掲載。
+    - type: changed
+      text:
+        es: El scroll ahora tiene inercia real (Lenis) para una sensación más natural y fluida, y respeta "menos movimiento" del sistema operativo con una versión más calma de la misma animación.
+        en: Scroll now has real inertia (Lenis) for a more natural, fluid feel, and respects the OS's "reduce motion" setting with a calmer version of the same animation.
+        pt: O scroll agora tem inércia real (Lenis) para uma sensação mais natural e fluida, e respeita o "menos movimento" do sistema operacional com uma versão mais calma da mesma animação.
+        fr: Le défilement a désormais une véritable inertie (Lenis), plus naturelle et fluide, et respecte le réglage « mouvement réduit » du système avec une version plus calme.
+        zh: 滚动现在具有真实的惯性效果（Lenis），体验更自然流畅；同时会遵循系统的"减少动态效果"设置，提供更平缓的动画版本。
+        ja: スクロールに実際の慣性（Lenis）が加わり、より自然で滑らかな感覚に。OSの「動きを減らす」設定にも対応し、同じアニメーションの落ち着いたバージョンを表示します。
+    - type: added
+      text:
+        es: Guía de contribución (CONTRIBUTING.md), plantillas de pull request/issues, y una skill de Claude Code para agregar fórmulas paso a paso.
+        en: A contribution guide (CONTRIBUTING.md), pull request/issue templates, and a Claude Code skill for adding formulas step by step.
+        pt: Um guia de contribuição (CONTRIBUTING.md), modelos de pull request/issues, e uma skill do Claude Code para adicionar fórmulas passo a passo.
+        fr: Un guide de contribution (CONTRIBUTING.md), des modèles de pull request/issues, et une skill Claude Code pour ajouter des formules étape par étape.
+        zh: 新增贡献指南（CONTRIBUTING.md）、pull request/issue 模板，以及一个用于逐步添加公式的 Claude Code skill。
+        ja: 貢献ガイド（CONTRIBUTING.md）、プルリクエスト/イシューのテンプレート、数式を段階的に追加するためのClaude Codeスキルを追加。
+
 - version: "0.6.0"
   date: "2026-07-11"
   changes:

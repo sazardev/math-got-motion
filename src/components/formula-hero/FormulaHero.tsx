@@ -5,6 +5,7 @@ import { useSeo } from "../../hooks/useSeo";
 import { locales } from "../../i18n/locale";
 import { useLocale } from "../../i18n/locale-context";
 import { gsap, ScrollTrigger } from "../../lib/gsap";
+import { getLenis } from "../../lib/lenis";
 import { SITE_URL } from "../../lib/site";
 import { splitWords } from "../../lib/text";
 
@@ -20,8 +21,6 @@ interface NodeLayout {
 
 interface FormulaHeroProps {
   formula: Formula;
-  /** true en "/:locale/" (fórmula por defecto); false en "/:locale/formula/:id". Cambia la URL canónica. */
-  isIndexRoute?: boolean;
 }
 
 const DESCRIPTION_MAX_LENGTH = 155;
@@ -63,7 +62,7 @@ const CONTEXT_ERA_DURATION = 0.5;
 const PANEL_GAP_BEFORE = 0.35;
 const PANEL_IN_DURATION = 0.6;
 const PANEL_ITEM_STAGGER = 0.14;
-const PANEL_HOLD = 0.9;
+const PANEL_HOLD = 0.7;
 const PANEL_OUT_DURATION = 0.4;
 
 const CONTEXT_BACK_GAP = 0.5;
@@ -73,13 +72,13 @@ const CONTEXT_AUTHOR_KEY = "context-author";
 const CONTEXT_HISTORY_KEY = "context-history";
 
 /** Duración de la entrada con stagger de un panel, según su cantidad de ítems. */
-function panelInDuration(itemCount: number) {
-  return PANEL_IN_DURATION + PANEL_ITEM_STAGGER * Math.max(0, itemCount - 1);
+function panelInDuration(itemCount: number, stagger: number = PANEL_ITEM_STAGGER) {
+  return PANEL_IN_DURATION + stagger * Math.max(0, itemCount - 1);
 }
 
 /** Duración de la salida con stagger de un panel — el stagger de salida usa la mitad. */
-function panelOutDuration(itemCount: number) {
-  return PANEL_OUT_DURATION + (PANEL_ITEM_STAGGER / 2) * Math.max(0, itemCount - 1);
+function panelOutDuration(itemCount: number, stagger: number = PANEL_ITEM_STAGGER) {
+  return PANEL_OUT_DURATION + (stagger / 2) * Math.max(0, itemCount - 1);
 }
 
 /** Recupera, en orden, los elementos 0..count-1 de un Map indexado por posición. */
@@ -96,11 +95,10 @@ function scrollToTop() {
   globalThis.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps) {
+export function FormulaHero({ formula }: FormulaHeroProps) {
   const { locale, strings } = useLocale();
 
-  const pathFor = (forLocale: typeof locale) =>
-    isIndexRoute ? `/${forLocale}/` : `/${forLocale}/formula/${formula.id}`;
+  const pathFor = (forLocale: typeof locale) => `/${forLocale}/formula/${formula.id}`;
   const description = truncate(formula.context.history[locale], DESCRIPTION_MAX_LENGTH);
 
   useSeo({
@@ -160,6 +158,17 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
       globalThis.removeEventListener("orientationchange", handleResize);
     };
   }, []);
+
+  // Al cambiar de fórmula, Lenis no debe seguir animando hacia un scroll
+  // objetivo calculado contra la altura de pin anterior mientras el DOM
+  // todavía se está reconstruyendo — se detiene y se vuelve al tope con
+  // scroll nativo (no lenis.scrollTo, cuyo estado interno no es confiable
+  // en este momento). Se reanuda más abajo, después de que ScrollTrigger.
+  // refresh() asiente la nueva altura de pin (ver el setTimeout en useGSAP).
+  useLayoutEffect(() => {
+    getLenis()?.stop();
+    globalThis.scrollTo(0, 0);
+  }, [formula.id]);
 
   // DESIGN.md 4.2 — captura de coordenadas (First) y fijación absoluta (Invert),
   // manteniendo el footprint del contenedor para que no se re-centre al vaciar el flujo.
@@ -242,6 +251,23 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
       const viewportMin = Math.min(globalThis.innerWidth, globalThis.innerHeight);
       const isolateScale = Math.min(2.4, Math.max(1.4, viewportMin / 320));
 
+      // "Para todos" incluye a quienes le pidieron a su sistema operativo
+      // menos movimiento: el scroll sigue controlando el mismo timeline
+      // (historia → línea de tiempo → casos → ejemplo no se vuelve
+      // estático), pero sin rebotes elásticos y con un stagger casi plano.
+      const prefersReducedMotion = globalThis.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+      const introEase = prefersReducedMotion ? "power1.out" : "elastic.out(1, 0.6)";
+      const isolateMoveEase = prefersReducedMotion ? "power1.out" : "elastic.out(1, 0.75)";
+      const shrinkEase = prefersReducedMotion ? "power1.out" : "elastic.out(1, 0.65)";
+      const authorEase = prefersReducedMotion ? "power1.out" : "back.out(1.7)";
+      const useCaseEase = prefersReducedMotion ? "power1.out" : "back.out(1.6)";
+      const wordInStagger = prefersReducedMotion ? 0.01 : 0.035;
+      const wordOutStagger = prefersReducedMotion ? 0.005 : 0.02;
+      const itemStagger = prefersReducedMotion ? 0.03 : PANEL_ITEM_STAGGER;
+      const scrubValue = prefersReducedMotion ? true : 0.5;
+
       // El epílogo se arma como una secuencia de bloques cuya duración depende
       // del contenido real de cada fórmula (cantidad de palabras/eventos/casos/
       // líneas), calculada por adelantado para poder dimensionar el scroll total.
@@ -254,34 +280,60 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
         CONTEXT_AUTHOR_DELAY + CONTEXT_AUTHOR_DURATION + CONTEXT_ERA_DELAY + CONTEXT_ERA_DURATION;
 
       const historyStart = headerEnd + PANEL_GAP_BEFORE;
-      const historyHoldEnd = historyStart + panelInDuration(historyWordCount) + PANEL_HOLD;
-      const historyOutEnd = historyHoldEnd + panelOutDuration(historyWordCount);
+      const historyHoldEnd =
+        historyStart + panelInDuration(historyWordCount, itemStagger) + PANEL_HOLD;
+      const historyOutEnd = historyHoldEnd + panelOutDuration(historyWordCount, itemStagger);
 
       const timelineStart = historyOutEnd + PANEL_GAP_BEFORE;
-      const timelineHoldEnd = timelineStart + panelInDuration(timelineCount) + PANEL_HOLD;
-      const timelineOutEnd = timelineHoldEnd + panelOutDuration(timelineCount);
+      const timelineHoldEnd =
+        timelineStart + panelInDuration(timelineCount, itemStagger) + PANEL_HOLD;
+      const timelineOutEnd = timelineHoldEnd + panelOutDuration(timelineCount, itemStagger);
 
       const useCasesStart = timelineOutEnd + PANEL_GAP_BEFORE;
-      const useCasesHoldEnd = useCasesStart + panelInDuration(useCasesCount) + PANEL_HOLD;
-      const useCasesOutEnd = useCasesHoldEnd + panelOutDuration(useCasesCount);
+      const useCasesHoldEnd =
+        useCasesStart + panelInDuration(useCasesCount, itemStagger) + PANEL_HOLD;
+      const useCasesOutEnd = useCasesHoldEnd + panelOutDuration(useCasesCount, itemStagger);
 
       const exampleStart = useCasesOutEnd + PANEL_GAP_BEFORE;
-      const exampleHoldEnd = exampleStart + panelInDuration(exampleCount) + PANEL_HOLD;
+      const exampleHoldEnd = exampleStart + panelInDuration(exampleCount, itemStagger) + PANEL_HOLD;
 
       const backStart = exampleHoldEnd + CONTEXT_BACK_GAP;
       const epilogueDuration = backStart + CONTEXT_BACK_DURATION;
 
       const totalDuration = INTRO_DURATION + total * SEGMENT_DURATION + epilogueDuration;
 
+      const willChangeTargets = [
+        ...nodeEls,
+        ...[...wordRefs.current.values()].flat(),
+        eraRef.current,
+        timelineRailRef.current,
+        ...orderedFromMap(timelineRowRefs.current, timelineCount),
+        ...orderedFromMap(useCaseRefs.current, useCasesCount),
+        exampleTitleRef.current,
+        ...orderedFromMap(exampleLineRefs.current, exampleCount),
+      ].filter((el): el is HTMLElement => !!el);
+
       const tl = gsap.timeline({
         defaults: { duration: 0.9, ease: "power2.out" },
         scrollTrigger: {
           trigger: heroRef.current,
           start: "top top",
-          end: () => `+=${String(globalThis.innerHeight * totalDuration * 0.85)}`,
-          scrub: 1,
+          end: () => `+=${String(globalThis.innerHeight * totalDuration * 0.75)}`,
+          scrub: scrubValue,
           pin: true,
           anticipatePin: 1,
+          onEnter: () => {
+            gsap.set(willChangeTargets, { willChange: "transform, opacity" });
+          },
+          onEnterBack: () => {
+            gsap.set(willChangeTargets, { willChange: "transform, opacity" });
+          },
+          onLeave: () => {
+            gsap.set(willChangeTargets, { willChange: "auto" });
+          },
+          onLeaveBack: () => {
+            gsap.set(willChangeTargets, { willChange: "auto" });
+          },
         },
       });
 
@@ -294,7 +346,7 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
       for (const [index, node] of formula.nodes.entries()) {
         const el = nodeRefs.current.get(node.id);
         if (!el) continue;
-        tl.to(el, { x: spreadX(index), ease: "elastic.out(1, 0.6)", duration: INTRO_DURATION }, 0);
+        tl.to(el, { x: spreadX(index), ease: introEase, duration: INTRO_DURATION }, 0);
       }
 
       // Estado 2/3 — Aislamiento de cada nodo + resolución tipográfica, uno a la vez.
@@ -324,18 +376,18 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
               y: targetY,
               scale: isolateScale,
               duration: ISOLATE_MOVE_DURATION,
-              ease: "elastic.out(1, 0.75)",
+              ease: isolateMoveEase,
             },
             label,
           )
           .to(
             words,
-            { opacity: 1, y: 0, stagger: 0.035, duration: WORDS_IN_DURATION },
+            { opacity: 1, y: 0, stagger: wordInStagger, duration: WORDS_IN_DURATION },
             `${label}+=${String(WORDS_IN_DELAY)}`,
           )
           .to(
             words,
-            { opacity: 0, y: "-40%", stagger: 0.02, duration: WORDS_OUT_DURATION },
+            { opacity: 0, y: "-40%", stagger: wordOutStagger, duration: WORDS_OUT_DURATION },
             `${label}+=${String(WORDS_OUT_DELAY)}`,
           )
           .to(
@@ -375,7 +427,7 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
             opacity: 0.55,
             stagger: 0.02,
             duration: CONTEXT_SHRINK_DURATION,
-            ease: "elastic.out(1, 0.65)",
+            ease: shrinkEase,
           },
           contextLabel,
         )
@@ -384,9 +436,9 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
           {
             opacity: 1,
             y: 0,
-            stagger: 0.04,
+            stagger: wordInStagger,
             duration: CONTEXT_AUTHOR_DURATION,
-            ease: "back.out(1.7)",
+            ease: authorEase,
           },
           at(CONTEXT_AUTHOR_DELAY),
         )
@@ -400,11 +452,11 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
       // ya usan las explicaciones de cada nodo.
       tl.to(
         historyWords,
-        { opacity: 1, y: 0, stagger: PANEL_ITEM_STAGGER, duration: PANEL_IN_DURATION },
+        { opacity: 1, y: 0, stagger: itemStagger, duration: PANEL_IN_DURATION },
         at(historyStart),
       ).to(
         historyWords,
-        { opacity: 0, y: "-30%", stagger: PANEL_ITEM_STAGGER * 0.5, duration: PANEL_OUT_DURATION },
+        { opacity: 0, y: "-30%", stagger: itemStagger * 0.5, duration: PANEL_OUT_DURATION },
         at(historyHoldEnd),
       );
 
@@ -412,7 +464,7 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
       // cada hito entra deslizándose desde la izquierda.
       tl.to(
         timelineRailRef.current,
-        { scaleY: 1, duration: panelInDuration(timelineCount) },
+        { scaleY: 1, duration: panelInDuration(timelineCount, itemStagger) },
         at(timelineStart),
       )
         .to(
@@ -420,7 +472,7 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
           {
             opacity: 1,
             x: 0,
-            stagger: PANEL_ITEM_STAGGER,
+            stagger: itemStagger,
             duration: PANEL_IN_DURATION,
             ease: "power2.out",
           },
@@ -431,7 +483,7 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
           {
             opacity: 0,
             x: "16%",
-            stagger: PANEL_ITEM_STAGGER * 0.5,
+            stagger: itemStagger * 0.5,
             duration: PANEL_OUT_DURATION,
           },
           at(timelineHoldEnd),
@@ -450,14 +502,14 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
           opacity: 1,
           y: 0,
           rotate: 0,
-          stagger: PANEL_ITEM_STAGGER,
+          stagger: itemStagger,
           duration: PANEL_IN_DURATION,
-          ease: "back.out(1.6)",
+          ease: useCaseEase,
         },
         at(useCasesStart),
       ).to(
         useCaseEls,
-        { opacity: 0, y: "-18%", stagger: PANEL_ITEM_STAGGER * 0.5, duration: PANEL_OUT_DURATION },
+        { opacity: 0, y: "-18%", stagger: itemStagger * 0.5, duration: PANEL_OUT_DURATION },
         at(useCasesHoldEnd),
       );
 
@@ -472,7 +524,7 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
         {
           opacity: 1,
           x: 0,
-          stagger: PANEL_ITEM_STAGGER,
+          stagger: itemStagger,
           duration: PANEL_IN_DURATION,
           ease: "power2.out",
         },
@@ -503,6 +555,12 @@ export function FormulaHero({ formula, isIndexRoute = false }: FormulaHeroProps)
       // rAF puede no dispararse nunca si la pestaña no está visible/activa.
       globalThis.setTimeout(() => {
         ScrollTrigger.refresh();
+        // Lenis debe re-medir contra la altura de pin ya asentada por el
+        // refresh de arriba (no antes), o cachea la altura de la fórmula
+        // anterior y el scroll queda mal calibrado — el mismo tipo de bug
+        // que hizo descartar normalizeScroll().
+        getLenis()?.resize();
+        getLenis()?.start();
       }, 0);
     },
     { scope: heroRef, dependencies: [ready, formula, layoutVersion] },

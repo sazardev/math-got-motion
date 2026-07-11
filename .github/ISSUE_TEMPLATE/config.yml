@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Contributing guide
+    url: https://github.com/sazardev/math-got-motion/blob/master/CONTRIBUTING.md
+    about: Read this before adding a formula or opening a PR.

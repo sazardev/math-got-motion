@@ -7,6 +7,17 @@ This file is generated from `src/domain/changelog.yaml` — the source of
 truth, bilingual, also rendered in-app at `/:locale/changelog`. Add new
 entries there, then run `pnpm changelog:sync`.
 
+## [0.7.0] - 2026-07-11
+
+### Added
+
+- A brand new home page, with Euler's Identity assembling itself, live stats, how the app works, and how to contribute.
+- A contribution guide (CONTRIBUTING.md), pull request/issue templates, and a Claude Code skill for adding formulas step by step.
+
+### Changed
+
+- Scroll now has real inertia (Lenis) for a more natural, fluid feel, and respects the OS's "reduce motion" setting with a calmer version of the same animation.
+
 ## [0.6.0] - 2026-07-11
 
 ### Added

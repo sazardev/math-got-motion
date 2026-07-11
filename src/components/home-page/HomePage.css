@@ -1,0 +1,196 @@
+.home {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: clamp(3rem, 9vh, 5rem) 1.5rem 4rem;
+  background: var(--bg);
+  color: var(--fg);
+  text-align: center;
+}
+
+.home__teaser {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  column-gap: 0.15em;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-variation-settings: "wght" 500;
+  font-size: clamp(2.75rem, 13vw, 7rem);
+  line-height: 1;
+}
+
+.home__teaser-node {
+  display: inline-block;
+}
+
+.home__teaser-node--superscript {
+  font-size: 0.55em;
+  vertical-align: super;
+  margin-left: 0.03em;
+}
+
+.home__teaser-node--operator,
+.home__teaser-node--equals {
+  margin: 0 0.3em;
+}
+
+.home__title {
+  margin: -1rem 0 0;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-variation-settings: "wght" 500;
+  font-size: clamp(1.75rem, 6vw, 2.75rem);
+}
+
+.home__tagline {
+  margin: -1.25rem 0 0;
+  max-width: 34rem;
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  opacity: 0.75;
+}
+
+.home__enter {
+  border: none;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.9rem 2rem;
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.92;
+  transition: opacity 0.2s ease;
+}
+
+.home__enter:hover {
+  opacity: 1;
+}
+
+.home__stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(2rem, 8vw, 4rem);
+  margin-top: 0.5rem;
+}
+
+.home__stat-value {
+  margin: 0;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-variation-settings: "wght" 500;
+  font-size: clamp(2.25rem, 7vw, 3.25rem);
+  line-height: 1;
+}
+
+.home__stat-label {
+  margin: 0.35rem 0 0;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.home__section {
+  width: 100%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.home__section-title {
+  margin: 0;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.home__section-text {
+  margin: 0;
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(0.95rem, 2.4vw, 1.1rem);
+  line-height: 1.6;
+}
+
+.home__steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+.home__step {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.home__step-number {
+  flex: 0 0 auto;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.home__step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.home__step-title {
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1rem, 2.6vw, 1.15rem);
+}
+
+.home__step-text {
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(0.9rem, 2.3vw, 1rem);
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.home__languages {
+  margin: 0;
+  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-size: clamp(0.9rem, 2.6vw, 1.05rem);
+  letter-spacing: 0.02em;
+}
+
+.home__cta,
+.home__back {
+  color: var(--fg);
+  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.home__cta {
+  border: none;
+  background: transparent;
+  padding: 0.6rem 0;
+  cursor: pointer;
+}
+
+.home__cta:hover,
+.home__back:hover {
+  opacity: 1;
+}

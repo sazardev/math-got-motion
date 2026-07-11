@@ -60,3 +60,33 @@ La lógica no interactúa directamente con GSAP. El flujo es unidireccional:
 
 - **Rendimiento:** 60 fps sostenidos durante el scroll en dispositivos móviles de gama media.
 - **Claridad:** El usuario comprende el concepto matemático basándose únicamente en el ritmo de la animación y el texto.
+
+## 7. Contribución y Escalabilidad de Contenido
+
+El proyecto evolucionó de 4 fórmulas embebidas en código a un modelo donde **cada
+fórmula es un archivo de datos** (`src/domain/formulas/*.yaml`), validado en runtime
+contra un schema [Zod](https://zod.dev) (`src/domain/formula.types.ts`). Esto no es
+un detalle de implementación menor: es lo que permite que cualquier persona —
+incluso en una pull request externa, sin acceso de confianza al repositorio — pueda
+agregar una fórmula nueva sin poder ejecutar código dentro de la app. Un archivo YAML
+solo describe strings, números y listas; no hay forma de que contenga lógica.
+
+Reglas que se derivan de esto:
+
+- **`id` debe ser igual al nombre del archivo** (sin `.yaml`) — hace que dos fórmulas
+  no puedan chocar de ID por construcción (dos archivos no pueden compartir nombre en
+  el mismo directorio).
+- **Todo campo tiene un límite de longitud** atado a la coreografía de scroll (ver
+  `TEXT_LIMITS` en `formula.types.ts`) — un envío mal formado o demasiado largo falla
+  la validación en vez de romper el layout en producción.
+- **Todo campo traducible requiere las 6 claves de idioma** (`es`, `en`, `pt`, `fr`,
+  `zh`, `ja`) — no hay fallback silencioso a un idioma por defecto; si falta una
+  traducción, `pnpm formulas:validate` lo rechaza explícitamente.
+- **No hace falta tocar código** para agregar una fórmula: `src/domain/formulas/index.ts`
+  descubre cada archivo `*.yaml` automáticamente (`import.meta.glob`), y el menú de
+  fórmulas, el sitemap, las imágenes Open Graph, y las estadísticas del home
+  (`/:locale/`) se actualizan solos.
+
+La guía completa para contribuir — paso a paso, con los límites exactos de cada
+campo y qué se espera de una traducción parcial — vive en
+[`CONTRIBUTING.md`](CONTRIBUTING.md) en la raíz del repo, no en este documento.

@@ -32,7 +32,6 @@
 
 .node {
   display: inline-block;
-  will-change: transform, opacity;
 }
 
 .node--superscript {
@@ -81,7 +80,6 @@
   display: inline-block;
   opacity: 0;
   transform: translateY(65%);
-  will-change: transform, opacity;
 }
 
 .hero__context {
@@ -114,7 +112,6 @@
   text-transform: uppercase;
   opacity: 0;
   transform: translateY(65%);
-  will-change: transform, opacity;
 }
 
 .context__stage {
@@ -142,7 +139,6 @@
   text-transform: uppercase;
   opacity: 0;
   transform: translateY(65%);
-  will-change: transform, opacity;
 }
 
 .stage__text {
@@ -177,7 +173,6 @@
   opacity: 0.4;
   transform: scaleY(0);
   transform-origin: top;
-  will-change: transform;
 }
 
 .timeline__row {
@@ -187,7 +182,6 @@
   text-align: left;
   opacity: 0;
   transform: translateX(-16%);
-  will-change: transform, opacity;
 }
 
 .timeline__year {
@@ -219,7 +213,6 @@
   text-align: left;
   opacity: 0;
   transform: translateY(38%) rotate(-3deg);
-  will-change: transform, opacity;
 }
 
 .usecase__title {
@@ -244,7 +237,6 @@
   font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   opacity: 0;
   transform: translateY(50%);
-  will-change: transform, opacity;
 }
 
 .example {
@@ -259,7 +251,6 @@
   margin: 0;
   opacity: 0;
   transform: translateX(-10%);
-  will-change: transform, opacity;
 }
 
 .example__cursor {
@@ -393,5 +384,22 @@
 
   .hero__progress {
     display: none;
+  }
+}
+
+/* Tablet en portrait: intermedio entre el ajuste de teléfono angosto de
+   arriba y el desktop fluido de base — ninguna de las dos reglas anteriores
+   lo cubre (>600px de ancho, >500px de alto). */
+@media (min-width: 601px) and (max-width: 900px) {
+  .hero__context {
+    top: 28vh;
+  }
+
+  .hero__explanations {
+    bottom: 18vh;
+  }
+
+  .context__stage {
+    min-height: clamp(15rem, 48vh, 23rem);
   }
 }
