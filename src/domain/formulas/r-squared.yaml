@@ -1,0 +1,325 @@
+id: r-squared
+title:
+  es: Coeficiente de Determinación (R²)
+  en: Coefficient of Determination
+  pt: Coeficiente de Determinação (R²)
+  fr: Coefficient de détermination (R²)
+  zh: 决定系数（R²）
+  ja: 決定係数（R²）
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率統計
+nodes:
+  - id: r2
+    type: variable
+    value: R²
+    explanation:
+      es: El coeficiente de determinación, la fracción de la varianza que el modelo explica.
+      en: The coefficient of determination, the fraction of variance the model explains.
+      pt: O coeficiente de determinação, a fração da variância que o modelo explica.
+      fr: Le coefficient de détermination, la fraction de variance expliquée par le modèle.
+      zh: 决定系数，模型所解释的方差比例。
+      ja: 決定係数。モデルが説明する分散の割合。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: 次の値に等しい。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: El 100% de la varianza, el punto de partida antes de restar lo no explicado.
+      en: 100% of the variance, the starting point before subtracting what is not explained.
+      pt: Os 100% da variância, o ponto de partida antes de subtrair o não explicado.
+      fr: 100 % de la variance, le point de départ avant de soustraire ce qui n'est pas expliqué.
+      zh: 方差的100%，在减去未被解释的部分之前的起点。
+      ja: 分散の100%。説明されない部分を引く前の出発点。
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: Menos, restando la proporción de varianza que el modelo no explica.
+      en: Minus, subtracting the proportion of variance the model does not explain.
+      pt: Menos, subtraindo a proporção da variância que o modelo não explica.
+      fr: Moins, en soustrayant la proportion de variance que le modèle n'explique pas.
+      zh: 减，减去模型未能解释的方差比例。
+      ja: マイナス。モデルが説明できない分散の割合を引く。
+  - id: ss-res
+    type: variable
+    value: SS_res
+    explanation:
+      es: La suma de cuadrados residual, la variación que el modelo no logra explicar.
+      en: The residual sum of squares, the variation the model fails to explain.
+      pt: A soma dos quadrados dos resíduos, a variação que o modelo não consegue explicar.
+      fr: La somme des carrés résiduelle, la variation que le modèle ne parvient pas à expliquer.
+      zh: 残差平方和，即模型未能解释的变异。
+      ja: 残差平方和。モデルが説明できなかった変動。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: ss-tot
+    type: variable
+    value: SS_tot
+    explanation:
+      es: La suma de cuadrados total, toda la variación de la variable observada.
+      en: The total sum of squares, all the variation of the observed variable.
+      pt: A soma dos quadrados total, toda a variação da variável observada.
+      fr: La somme des carrés totale, toute la variation de la variable observée.
+      zh: 总平方和，即被观察变量的全部变异。
+      ja: 総平方和。観測された変数のすべての変動。
+context:
+  author:
+    es: Basado en el trabajo de Pearson
+    en: Based on Pearson's work
+    pt: Baseado no trabalho de Pearson
+    fr: Basé sur les travaux de Pearson
+    zh: 基于皮尔逊的工作
+    ja: ピアソンの業績に基づく
+  era:
+    es: EE. UU., s. XX
+    en: USA, 20th century
+    pt: EUA, séc. XX
+    fr: États-Unis, XXe siècle
+    zh: 美国，20世纪
+    ja: アメリカ、20世紀
+  history:
+    es: >-
+      El coeficiente de determinación R² mide la fracción de la varianza de una variable que explica
+      un modelo de regresión. Se apoya en el trabajo de Karl Pearson sobre correlación y en la
+      descomposición de la varianza en partes explicada y residual, que el genetista Sewall Wright
+      formalizó en los años 1920. R² = 1 significa ajuste perfecto y R² = 0 ningún ajuste. Es el
+      primer número que lee quien examina un reporte de regresión, desde la investigación médica
+      hasta los paneles de desempeño de machine learning.
+    en: >-
+      The coefficient of determination R² measures the fraction of the variance of a variable that a
+      regression model explains. It builds on Karl Pearson's work on correlation and on the split of
+      variance into explained and residual parts, formalized by the geneticist Sewall Wright in the
+      1920s. R² = 1 means a perfect fit and R² = 0 no fit at all. It is the first number anyone
+      reads in a regression report, from medical research to machine learning performance dashboards.
+    pt: >-
+      O coeficiente de determinação R² mede a fração da variância de uma variável que um modelo de
+      regressão explica. Ele se apoia no trabalho de Karl Pearson sobre correlação e na decomposição
+      da variância em partes explicada e residual, formalizada pelo geneticista Sewall Wright na
+      década de 1920. R² = 1 significa ajuste perfeito e R² = 0 nenhum ajuste. É o primeiro número
+      que se lê em um relatório de regressão, da pesquisa médica aos painéis de desempenho de machine
+      learning.
+    fr: >-
+      Le coefficient de détermination R² mesure la fraction de la variance d'une variable qu'un
+      modèle de régression explique. Il s'appuie sur les travaux de Karl Pearson sur la corrélation
+      et sur la décomposition de la variance en parties expliquée et résiduelle, formalisée par le
+      généticien Sewall Wright dans les années 1920. R² = 1 signifie un ajustement parfait et R² = 0
+      aucun ajustement. C'est le premier nombre que l'on lit dans un rapport de régression, de la
+      recherche médicale aux tableaux de bord de machine learning.
+    zh: >-
+      决定系数R²衡量回归模型所能解释的变量方差的比例。它建立在卡尔·皮尔逊的相关性研究基础上，并借助了
+      遗传学家休厄尔·赖特在20世纪20年代正式确立的方差分解（解释部分与残差部分）思想。R² = 1表示完全拟合，
+      R² = 0表示完全无拟合。它是人们阅读回归报告时看到的第一项数值，从医学研究到机器学习的性能面板皆如此。
+    ja: >-
+      決定係数R²は、回帰モデルが説明できる変数の分散の割合を測る。これはカール・ピアソンの相関研究と、
+      遺伝学者シューアル・ライトが1920年代に定式化した、分散を説明部分と残差部分に分解する考え方に基づく。
+      R² = 1は完全な当てはまりを、R² = 0はまったく当てはまらないことを意味する。回帰レポートで最初に
+      目にする数字であり、医学研究から機械学習の性能ダッシュボードまで使われている。
+  timeline:
+    - year: "1896"
+      label:
+        es: >-
+          Pearson publica el coeficiente de correlación y desarrolla los fundamentos del análisis de
+          regresión.
+        en: >-
+          Pearson publishes the correlation coefficient and develops the foundations of regression
+          analysis.
+        pt: >-
+          Pearson publica o coeficiente de correlação e desenvolve os fundamentos da análise de
+          regressão.
+        fr: >-
+          Pearson publie le coefficient de corrélation et développe les fondements de l'analyse de
+          régression.
+        zh: >-
+          皮尔逊发表相关系数，并奠定了回归分析的基础。
+        ja: >-
+          ピアソンが相関係数を発表し、回帰分析の基礎を築く。
+    - year: "1921"
+      label:
+        es: >-
+          El genetista Sewall Wright introduce el término "coeficiente de determinación".
+        en: >-
+          The geneticist Sewall Wright introduces the term "coefficient of determination".
+        pt: >-
+          O geneticista Sewall Wright introduz o termo "coeficiente de determinação".
+        fr: >-
+          Le généticien Sewall Wright introduit le terme « coefficient de détermination ».
+        zh: >-
+          遗传学家休厄尔·赖特引入"决定系数"一词。
+        ja: >-
+          遺伝学者シューアル・ライトが「決定係数」という用語を導入する。
+    - year: s. XX
+      label:
+        es: >-
+          R² se vuelve estándar en economía, psicometría y las ciencias sociales cuantitativas.
+        en: >-
+          R² becomes standard in economics, psychometrics, and quantitative social science.
+        pt: >-
+          R² torna-se padrão em economia, psicometria e nas ciências sociais quantitativas.
+        fr: >-
+          R² devient standard en économie, en psychométrie et dans les sciences sociales
+          quantitatives.
+        zh: >-
+          R²成为经济学、心理测量学和定量社会科学的标准指标。
+        ja: >-
+          R²は経済学、心理測定学、定量的社会科学の標準となる。
+    - year: Hoy
+      label:
+        es: >-
+          Es el primer número de ajuste que muestra cualquier software estadístico y panel de machine
+          learning.
+        en: >-
+          It is the first fit metric any statistics software and machine learning dashboard reports.
+        pt: >-
+          É a primeira métrica de ajuste que qualquer software estatístico e painel de machine
+          learning reporta.
+        fr: >-
+          C'est la première métrique d'ajustement rapportée par tout logiciel statistique et tableau
+          de bord de machine learning.
+        zh: >-
+          它是所有统计软件和机器学习面板展示的第一项拟合指标。
+        ja: >-
+          あらゆる統計ソフトウェアや機械学習ダッシュボードが最初に表示する適合度の指標である。
+  useCases:
+    - title:
+        es: Economía
+        en: Economics
+        pt: Economia
+        fr: Économie
+        zh: 经济学
+        ja: 経済学
+      description:
+        es: >-
+          Evalúa cuánto explica un modelo el PIB, la inflación o el consumo observado.
+        en: >-
+          It assesses how much a model explains observed GDP, inflation, or consumption.
+        pt: >-
+          Avalia o quanto um modelo explica o PIB, a inflação ou o consumo observado.
+        fr: >-
+          Elle évalue à quel point un modèle explique le PIB, l'inflation ou la consommation
+          observés.
+        zh: >-
+          评估模型在多大程度上解释了所观察到的GDP、通货膨胀或消费。
+        ja: >-
+          モデルが観測されたGDP、インフレ、消費をどれだけ説明するかを評価する。
+    - title:
+        es: Finanzas
+        en: Finance
+        pt: Finanças
+        fr: Finance
+        zh: 金融
+        ja: 金融
+      description:
+        es: >-
+          Mide el ajuste de modelos de precios de activos como el CAPM.
+        en: >-
+          It measures the fit of asset-pricing models such as the CAPM.
+        pt: >-
+          Mede o ajuste de modelos de precificação de ativos como o CAPM.
+        fr: >-
+          Elle mesure l'ajustement de modèles de valorisation d'actifs comme le CAPM.
+        zh: >-
+          衡量资产定价模型（如CAPM）的拟合程度。
+        ja: >-
+          CAPMなどの資産価格モデルの当てはまりの良さを測る。
+    - title:
+        es: Marketing
+        en: Marketing
+        pt: Marketing
+        fr: Marketing
+        zh: 营销
+        ja: マーケティング
+      description:
+        es: >-
+          Cuantifica cuánto del cambio en las ventas explica el gasto publicitario.
+        en: >-
+          It quantifies how much of the change in sales is explained by advertising spend.
+        pt: >-
+          Quantifica o quanto da variação nas vendas é explicada pelo gasto com publicidade.
+        fr: >-
+          Elle quantifie la part de la variation des ventes expliquée par les dépenses publicitaires.
+        zh: >-
+          量化广告支出解释了多大比例的销售变化。
+        ja: >-
+          売上の変動のうち、広告費で説明できる割合を定量化する。
+    - title:
+        es: Machine learning
+        en: Machine learning
+        pt: Aprendizado de máquina
+        fr: Apprentissage automatique
+        zh: 机器学习
+        ja: 機械学習
+      description:
+        es: >-
+          Todo panel de desempeño de regresión reporta R² junto a otras métricas de error.
+        en: >-
+          Every regression performance dashboard reports R² alongside other error metrics.
+        pt: >-
+          Todo painel de desempenho de regressão reporta R² junto a outras métricas de erro.
+        fr: >-
+          Chaque tableau de bord de performance de régression rapporte R² aux côtés d'autres
+          métriques d'erreur.
+        zh: >-
+          每个回归性能面板都会在展示其他误差指标的同时报告R²。
+        ja: >-
+          あらゆる回帰の性能ダッシュボードが、他の誤差指標と並んでR²を表示する。
+  example:
+    title:
+      es: Modelo que explica el 80%
+      en: A model that explains 80%
+      pt: Modelo que explica 80%
+      fr: Un modèle qui explique 80 %
+      zh: 解释了80%的模型
+      ja: 80%を説明するモデル
+    lines:
+      - es: "SS_res = 20; SS_tot = 100"
+        en: "SS_res = 20; SS_tot = 100"
+        pt: "SS_res = 20; SS_tot = 100"
+        fr: "SS_res = 20 ; SS_tot = 100"
+        zh: "SS_res = 20；SS_tot = 100"
+        ja: "SS_res = 20；SS_tot = 100"
+      - es: R² = 1 − 20/100
+        en: R² = 1 − 20/100
+        pt: R² = 1 − 20/100
+        fr: R² = 1 − 20/100
+        zh: R² = 1 − 20/100
+        ja: R² = 1 − 20/100
+      - es: R² = 1 − 0.2
+        en: R² = 1 − 0.2
+        pt: R² = 1 − 0,2
+        fr: R² = 1 − 0,2
+        zh: R² = 1 − 0.2
+        ja: R² = 1 − 0.2
+      - es: R² = 0.8
+        en: R² = 0.8
+        pt: R² = 0,8
+        fr: R² = 0,8
+        zh: R² = 0.8
+        ja: R² = 0.8
+      - es: El modelo explica el 80% de la varianza
+        en: The model explains 80% of the variance
+        pt: O modelo explica 80% da variância
+        fr: Le modèle explique 80 % de la variance
+        zh: 该模型解释了80%的方差
+        ja: このモデルは分散の80%を説明する

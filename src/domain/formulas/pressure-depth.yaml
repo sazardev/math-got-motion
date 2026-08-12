@@ -1,0 +1,344 @@
+id: pressure-depth
+title:
+  es: Presión Hidrostática
+  en: Hydrostatic Pressure
+  pt: Pressão Hidrostática
+  fr: Pression hydrostatique
+  zh: 静水压强
+  ja: 静水圧
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: p
+    type: variable
+    value: P
+    explanation:
+      es: "P: la presión hidrostática, la que ejerce el peso del propio fluido a cierta profundidad."
+      en: "P: the hydrostatic pressure, the one exerted by the fluid's own weight at a given depth."
+      pt: "P: a pressão hidrostática, a exercida pelo peso do próprio fluido a certa profundidade."
+      fr: "P : la pression hydrostatique, celle qu'exerce le poids du fluide lui-même à une profondeur donnée."
+      zh: "P：静水压强，即流体自身重量在某一深度所产生的压强。"
+      ja: "P：静水圧。ある深さで流体自身の重さが及ぼす圧力。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: rho
+    type: constant
+    value: ρ
+    explanation:
+      es: "ρ: la densidad del fluido."
+      en: "ρ: the density of the fluid."
+      pt: "ρ: a densidade do fluido."
+      fr: "ρ : la masse volumique du fluide."
+      zh: "ρ：流体的密度。"
+      ja: "ρ：流体の密度。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: g
+    type: variable
+    value: g
+    explanation:
+      es: "g: la aceleración de la gravedad (9.81 m/s²)."
+      en: "g: the acceleration of gravity (9.81 m/s²)."
+      pt: "g: a aceleração da gravidade (9,81 m/s²)."
+      fr: "g : l'accélération de la pesanteur (9,81 m/s²)."
+      zh: "g：重力加速度（9.81 米/秒²）。"
+      ja: "g：重力加速度（9.81 m/s²）。"
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: h
+    type: variable
+    value: h
+    explanation:
+      es: "h: la profundidad medida desde la superficie libre del fluido."
+      en: "h: the depth measured from the free surface of the fluid."
+      pt: "h: a profundidade medida a partir da superfície livre do fluido."
+      fr: "h : la profondeur mesurée depuis la surface libre du fluide."
+      zh: "h：从流体的自由表面向下量得的深度。"
+      ja: "h：流体の自由表面から測った深さ。"
+context:
+  author:
+    es: Origen colectivo; derivada de la mecánica de fluidos
+    en: Collective origin; derived from fluid mechanics
+    pt: Origem coletiva; derivada da mecânica dos fluidos
+    fr: Origine collective ; dérivée de la mécanique des fluides
+    zh: 集体起源；由流体力学推导而来
+    ja: 集団的起源；流体力学から導かれる
+  era:
+    es: Europa, s. XVII–XVIII
+    en: Europe, 17th–18th century
+    pt: Europa, s. XVII–XVIII
+    fr: Europe, XVIIe–XVIIIe siècle
+    zh: 欧洲，17–18世纪
+    ja: ヨーロッパ、17～18世紀
+  history:
+    es: >-
+      Que la presión aumenta con la profundidad se intuye desde que los buceadores de perlas sintieron
+      el agua comprimir sus oídos, pero su formalización llegó con la hidrostática del siglo XVII.
+      Simon Stevin y luego Blaise Pascal y Evangelista Torricelli mostraron que en un fluido en reposo
+      la presión crece de forma lineal con la profundidad: P = ρgh. Esto es lo que sienten los buzos al
+      descender, y por eso las presas y los diques engrosan hacia el fondo, donde el agua presiona más.
+      Stevin formuló además la paradoja hidrostática: la presión en el fondo solo depende de la altura
+      del líquido, no de la forma del recipiente. La misma relación explica el barómetro: la presión
+      atmosférica sostiene una columna de mercurio de unos 76 cm.
+    en: >-
+      That pressure increases with depth has been intuited since pearl divers felt the water compress
+      their ears, but its formalization came with the hydrostatics of the 17th century. Simon Stevin
+      and then Blaise Pascal and Evangelista Torricelli showed that in a fluid at rest pressure grows
+      linearly with depth: P = ρgh. This is what divers feel as they descend, and why dams and dikes
+      thicken toward the bottom, where water presses hardest. Stevin also formulated the hydrostatic
+      paradox: the pressure at the bottom depends only on the liquid's height, not on the container's
+      shape. The same relation explains the barometer: atmospheric pressure supports a column of
+      mercury about 76 cm tall.
+    pt: >-
+      Que a pressão aumenta com a profundidade é intuído desde que os mergulhadores de pérolas sentiram
+      a água comprimir seus ouvidos, mas sua formalização chegou com a hidrostática do século XVII.
+      Simon Stevin e depois Blaise Pascal e Evangelista Torricelli mostraram que, num fluido em
+      repouso, a pressão cresce linearmente com a profundidade: P = ρgh. É o que os mergulhadores
+      sentem ao descer, e por isso as barragens e os diques engrossam na base, onde a água pressiona
+      mais. Stevin formulou ainda o paradoxo hidrostático: a pressão no fundo depende apenas da altura
+      do líquido, não da forma do recipiente. A mesma relação explica o barômetro: a pressão
+      atmosférica sustenta uma coluna de mercúrio de cerca de 76 cm.
+    fr: >-
+      Que la pression augmente avec la profondeur est connu d'intuition depuis que les pêcheurs de
+      perles ont senti l'eau comprimer leurs oreilles, mais sa formalisation vint avec l'hydrostatique
+      du XVIIe siècle. Simon Stevin, puis Blaise Pascal et Evangelista Torricelli montrèrent que dans
+      un fluide au repos la pression croît linéairement avec la profondeur : P = ρgh. C'est ce que
+      ressentent les plongeurs en descendant, et c'est pourquoi les barrages et les digues s'épaississent
+      vers le fond, où l'eau presse le plus. Stevin formula aussi le paradoxe hydrostatique : la
+      pression au fond ne dépend que de la hauteur du liquide, et non de la forme du récipient. La même
+      relation explique le baromètre : la pression atmosphérique soutient une colonne de mercure
+      d'environ 76 cm.
+    zh: >-
+      压强随深度增加，这一点从采珠人感到水在挤压耳膜时起就已被直觉认知，但它的形式化是在17世纪的流体静力学
+      中才完成的。西蒙·斯蒂文，随后是布莱兹·帕斯卡和埃万杰利斯塔·托里拆利，都表明静止流体中的压强随深度线性
+      增长：P = ρgh。这就是潜水员下潜时的感受，也是大坝和堤坝越往底部越厚的原因——那里的水压最大。斯蒂文还提出
+      了流体静力学悖论：底部的压强只取决于液体的高度，与容器的形状无关。同一关系还能解释气压计：大气压能托起
+      约76厘米高的水银柱。
+    ja: >-
+      圧力が深さとともに増すことは、潜水採珠者が水に耳を圧される感覚を知っていた頃から直感的に理解されていた
+      が、その定式化は17世紀の流体静力学によってもたらされた。シモン・ステヴィン、続いてブレーズ・パスカル、
+      エヴァンジェリスタ・トリチェリが、静止流体では圧力が深さに比例して増すこと（P = ρgh）を示した。潜水士が
+      潜るほど感じるのはこれであり、ダムや堤防が水圧の最も大きい底部ほど厚くなる理由でもある。ステヴィンはまた
+      流体静力学の逆説も定式化した。底面の圧力は液柱の高さだけに依存し、容器の形にはよらないというものだ。同じ
+      関係が気圧計も説明する。大気圧は約76 cmの水銀柱を支えている。
+  timeline:
+    - year: "1586"
+      label:
+        es: >-
+          Simon Stevin publica la paradoja hidrostática: la presión del fondo no depende de la forma
+          del recipiente.
+        en: >-
+          Simon Stevin publishes the hydrostatic paradox: bottom pressure does not depend on the
+          container's shape.
+        pt: >-
+          Simon Stevin publica o paradoxo hidrostático: a pressão do fundo não depende da forma do
+          recipiente.
+        fr: >-
+          Simon Stevin publie le paradoxe hydrostatique : la pression au fond ne dépend pas de la
+          forme du récipient.
+        zh: >-
+          西蒙·斯蒂文发表流体静力学悖论：底部压强与容器形状无关。
+        ja: >-
+          シモン・ステヴィンが流体静力学の逆説を発表。底面の圧力は容器の形に依存しない。
+    - year: "1643"
+      label:
+        es: >-
+          Torricelli inventa el barómetro: la presión atmosférica sostiene una columna de mercurio de
+          unos 76 cm.
+        en: >-
+          Torricelli invents the barometer: atmospheric pressure supports a mercury column about 76 cm
+          tall.
+        pt: >-
+          Torricelli inventa o barômetro: a pressão atmosférica sustenta uma coluna de mercúrio de
+          cerca de 76 cm.
+        fr: >-
+          Torricelli invente le baromètre : la pression atmosphérique soutient une colonne de mercure
+          d'environ 76 cm.
+        zh: >-
+          托里拆利发明气压计：大气压托起约76厘米高的水银柱。
+        ja: >-
+          トリチェリが気圧計を発明。大気圧が約76 cmの水銀柱を支える。
+    - year: "1648"
+      label:
+        es: >-
+          La experiencia del Puy-de-Dôme confirma que la presión del aire desciende con la altitud.
+        en: >-
+          The Puy-de-Dôme experiment confirms that air pressure falls with altitude.
+        pt: >-
+          A experiência do Puy-de-Dôme confirma que a pressão do ar desce com a altitude.
+        fr: >-
+          L'expérience du Puy-de-Dôme confirme que la pression de l'air diminue avec l'altitude.
+        zh: >-
+          多姆山实验证实空气压强随海拔升高而下降。
+        ja: >-
+          ピュイ・ド・ドームの実験が、気圧が高度とともに下がることを確認する。
+    - year: Hoy
+      label:
+        es: >-
+          El diseño de presas, el buceo y la explotación petrolera submarina dependen de P = ρgh.
+        en: >-
+          Dam design, scuba diving, and offshore oil operations all depend on P = ρgh.
+        pt: >-
+          O projeto de barragens, o mergulho e a exploração petrolífera submarina dependem de P = ρgh.
+        fr: >-
+          La conception des barrages, la plongée et l'exploitation pétrolière en mer dépendent de P =
+          ρgh.
+        zh: >-
+          大坝设计、潜水以及海底石油开采都依赖 P = ρgh。
+        ja: >-
+          ダム設計、スキューバダイビング、海洋石油採掘はすべて P = ρgh に依存している。
+  useCases:
+    - title:
+        es: Presas y diques
+        en: Dams and dikes
+        pt: Barragens e diques
+        fr: Barrages et digues
+        zh: 大坝与堤防
+        ja: ダムと堤防
+      description:
+        es: >-
+          Los muros se engrosan hacia la base porque la presión del agua crece con la profundidad.
+        en: >-
+          Walls thicken toward the base because water pressure grows with depth.
+        pt: >-
+          As paredes engrossam na base porque a pressão da água cresce com a profundidade.
+        fr: >-
+          Les murs s'épaississent vers la base car la pression de l'eau croît avec la profondeur.
+        zh: >-
+          由于水压随深度增大，坝体越靠底部越厚。
+        ja: >-
+          水圧は深さとともに増すため、ダムの壁は底部ほど厚くなる。
+    - title:
+        es: Buceo
+        en: Scuba diving
+        pt: Mergulho
+        fr: Plongée sous-marine
+        zh: 潜水
+        ja: スキューバダイビング
+      description:
+        es: >-
+          Calcular la presión a cada profundidad permite planificar la descompresión y evitar el
+          accidente de inmersión.
+        en: >-
+          Calculating pressure at each depth lets divers plan decompression and avoid dive accidents.
+        pt: >-
+          Calcular a pressão em cada profundidade permite planejar a descompressão e evitar o acidente
+          de mergulho.
+        fr: >-
+          Calculer la pression à chaque profondeur permet de planifier la décompression et d'éviter
+          les accidents de plongée.
+        zh: >-
+          计算每一深度的压强，有助于规划减压过程并避免潜水事故。
+        ja: >-
+          各深度の圧力を計算することで、減圧計画を立てて潜水事故を防げる。
+    - title:
+        es: Barcos y sumergibles
+        en: Ships and submersibles
+        pt: Navios e submersíveis
+        fr: Navires et submersibles
+        zh: 船舶与潜水器
+        ja: 船舶と潜水艇
+      description:
+        es: >-
+          El casco se dimensiona para la presión máxima de la profundidad de operación, sobre todo en
+          sumergibles.
+        en: >-
+          The hull is sized for the maximum pressure at operating depth, especially for submersibles.
+        pt: >-
+          O casco é dimensionado para a pressão máxima da profundidade de operação, sobretudo em
+          submersíveis.
+        fr: >-
+          La coque est dimensionnée pour la pression maximale à la profondeur d'exploitation, surtout
+          pour les submersibles.
+        zh: >-
+          船体按工作深度处的最大压强来设计，潜水器尤其如此。
+        ja: >-
+          船体は運用深度での最大圧力に合わせて設計される。特に潜水艇では重要だ。
+    - title:
+        es: Petróleo y gas
+        en: Oil and gas
+        pt: Petróleo e gás
+        fr: Pétrole et gaz
+        zh: 石油与天然气
+        ja: 石油・ガス
+      description:
+        es: >-
+          La columna de lodo de perforación debe vencer la presión del fluido en el pozo profundo.
+        en: >-
+          The drilling mud column must overcome the pressure of the fluid in the deep well.
+        pt: >-
+          A coluna de lama de perfuração deve vencer a pressão do fluido no poço profundo.
+        fr: >-
+          La colonne de boue de forage doit vaincre la pression du fluide dans le puits profond.
+        zh: >-
+          钻井泥浆柱必须克服深井中流体的压强。
+        ja: >-
+          掘削泥水の柱は、深い坑井内の流体の圧力に打ち勝つ必要がある。
+  example:
+    title:
+      es: Presión a 10 metros de profundidad
+      en: Pressure at 10 meters deep
+      pt: Pressão a 10 metros de profundidade
+      fr: Pression à 10 mètres de profondeur
+      zh: 10 米深处的压强
+      ja: 深さ10メートルでの圧力
+    lines:
+      - es: ρ = 1000 kg/m³, g = 9.81 m/s², h = 10 m
+        en: ρ = 1000 kg/m³, g = 9.81 m/s², h = 10 m
+        pt: ρ = 1000 kg/m³, g = 9,81 m/s², h = 10 m
+        fr: ρ = 1000 kg/m³, g = 9,81 m/s², h = 10 m
+        zh: ρ = 1000 千克/米³，g = 9.81 米/秒²，h = 10 米
+        ja: ρ = 1000 kg/m³、g = 9.81 m/s²、h = 10 m
+      - es: P = ρ · g · h
+        en: P = ρ · g · h
+        pt: P = ρ · g · h
+        fr: P = ρ · g · h
+        zh: P = ρ · g · h
+        ja: P = ρ · g · h
+      - es: P = 1000 × 9.81 × 10
+        en: P = 1000 × 9.81 × 10
+        pt: P = 1000 × 9,81 × 10
+        fr: P = 1000 × 9,81 × 10
+        zh: P = 1000 × 9.81 × 10
+        ja: P = 1000 × 9.81 × 10
+      - es: P = 98 100 Pa (manométrica)
+        en: P = 98,100 Pa (gauge)
+        pt: P = 98.100 Pa (manométrica)
+        fr: P = 98 100 Pa (manométrique)
+        zh: P = 98,100 帕（表压）
+        ja: P = 98,100 Pa（ゲージ圧）
+      - es: ≈ 1 atm más que en la superficie
+        en: ≈ 1 atm more than at the surface
+        pt: ≈ 1 atm acima da superfície
+        fr: ≈ 1 atm de plus qu'en surface
+        zh: ≈ 比水面高出 1 个大气压
+        ja: ≈ 水面より 1 気圧大きい

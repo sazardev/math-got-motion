@@ -1,0 +1,361 @@
+id: percent-yield
+title:
+  es: Rendimiento Porcentual
+  en: Percent Yield
+  pt: Rendimento Percentual
+  fr: Rendement en Pourcentage
+  zh: 百分比收率
+  ja: 収率（パーセント）
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: yield
+    type: variable
+    value: "%r"
+    explanation:
+      es: El rendimiento porcentual, cuánto producto real se obtuvo frente al teórico.
+      en: The percent yield, how much actual product was obtained versus theoretical.
+      pt: O rendimento percentual, quanto produto real foi obtido frente ao teórico.
+      fr: Le rendement en pourcentage, le produit réel obtenu par rapport au théorique.
+      zh: 百分比收率,实际得到的产物相对于理论值的比例。
+      ja: 収率。理論値に対して実際に得られた生成物の割合。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual al cociente entre la masa real y la teórica, por cien.
+      en: Is equal to the ratio of actual to theoretical mass, times one hundred.
+      pt: É igual ao quociente entre a massa real e a teórica, vezes cem.
+      fr: Est égal au rapport entre la masse réelle et la masse théorique, fois cent.
+      zh: 等于实际质量与理论质量之比乘以一百。
+      ja: 実際の質量と理論質量の比に100を掛けたものに等しい。
+  - id: paren-1
+    type: operator
+    value: "("
+    explanation:
+      es: Agrupa el cociente entre la masa real y la teórica.
+      en: Groups the ratio of actual to theoretical mass.
+      pt: Agrupa o quociente entre a massa real e a teórica.
+      fr: Regroupe le rapport entre la masse réelle et la théorique.
+      zh: 将实际质量与理论质量之比括起来。
+      ja: 実際の質量と理論質量の比をまとめる括弧。
+  - id: real
+    type: variable
+    value: real
+    explanation:
+      es: La masa de producto que realmente se obtuvo en el laboratorio.
+      en: The mass of product actually obtained in the laboratory.
+      pt: A massa de produto realmente obtida no laboratório.
+      fr: La masse de produit réellement obtenue au laboratoire.
+      zh: 在实验室中实际得到的产物质量。
+      ja: 実験室で実際に得られた生成物の質量。
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido por la masa teórica.
+      en: Divided by the theoretical mass.
+      pt: Dividido pela massa teórica.
+      fr: Divisé par la masse théorique.
+      zh: 除以理论质量。
+      ja: 理論質量で割る。
+  - id: teorico
+    type: variable
+    value: teórico
+    explanation:
+      es: La masa máxima que predice la estequiometría para la reacción.
+      en: The maximum mass predicted by stoichiometry for the reaction.
+      pt: A massa máxima que a estequiometria prevê para a reação.
+      fr: La masse maximale prédite par la stœchiométrie pour la réaction.
+      zh: 化学计量学为反应预测的最大质量。
+      ja: 化学量論が反応に対して予測する最大質量。
+  - id: paren-2
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el cociente de masas.
+      en: Closes the mass ratio.
+      pt: Fecha o quociente de massas.
+      fr: Ferme le rapport de masses.
+      zh: 结束质量之比。
+      ja: 質量の比を閉じる括弧。
+  - id: times
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por 100 para expresarlo como porcentaje.
+      en: Multiplied by 100 to express it as a percentage.
+      pt: Multiplicado por 100 para expressá-lo como porcentagem.
+      fr: Multiplié par 100 pour l'exprimer en pourcentage.
+      zh: 乘以100,以百分比形式表示。
+      ja: 100を掛けて百分率で表す。
+  - id: cien
+    type: number
+    value: "100"
+    explanation:
+      es: Convierte el cociente fraccionario en un porcentaje.
+      en: Converts the fractional ratio into a percentage.
+      pt: Converte o quociente fracionário em uma porcentagem.
+      fr: Convertit le rapport fractionnaire en pourcentage.
+      zh: 将分数形式的比值转换为百分比。
+      ja: 分数の比をパーセントに変換する。
+context:
+  author:
+    es: Origen colectivo de la química analítica
+    en: Collective origin of analytical chemistry
+    pt: Origem coletiva da química analítica
+    fr: Origine collective de la chimie analytique
+    zh: 分析化学的集体起源
+    ja: 分析化学における集団的起源
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, século XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲,19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      El rendimiento porcentual nace con la química analítica cuantitativa del
+      siglo XIX, cuando la estequiometría de Berzelius permitió calcular cuánto
+      producto debería formarse en una reacción y compararlo con lo que realmente
+      se obtenía en el laboratorio. En la práctica casi nunca alcanza el 100 %:
+      las reacciones laterales, los equilibrios incompletos y las pérdidas durante
+      la purificación hacen que siempre se pierda una parte. Por eso se convirtió
+      en la medida estándar de la eficiencia de una síntesis, usada para juzgar
+      cada proceso químico desde la escala de laboratorio hasta la industrial.
+    en: >-
+      Percent yield was born with the quantitative analytical chemistry of the
+      nineteenth century, when Berzelius's stoichiometry allowed chemists to
+      compute how much product a reaction should form and compare it with what was
+      actually recovered in the laboratory. In practice it almost never reaches
+      100%: side reactions, incomplete equilibria, and losses during purification
+      always shave off a fraction. For that reason it became the standard measure
+      of synthesis efficiency, used to judge every chemical process from lab to
+      industrial scale.
+    pt: >-
+      O rendimento percentual nasceu com a química analítica quantitativa do
+      século XIX, quando a estequiometria de Berzelius permitiu calcular quanto
+      produto uma reação deveria formar e comparar com o que realmente se
+      recuperava no laboratório. Na prática ele quase nunca chega a 100%: reações
+      paralelas, equilíbrios incompletos e perdas na purificação sempre descontam
+      uma fração. Por isso tornou-se a medida padrão da eficiência de uma síntese,
+      usada para avaliar todo processo químico da escala de laboratório à
+      industrial.
+    fr: >-
+      Le rendement en pourcentage est né avec la chimie analytique quantitative du
+      XIXe siècle, lorsque la stoechiométrie de Berzelius permit de calculer la
+      quantité de produit qu'une réaction devait former et de la comparer à ce qui
+      était réellement récupéré au laboratoire. En pratique, il n'atteint presque
+      jamais 100 % : les réactions secondaires, les équilibres incomplets et les
+      pertes lors de la purification en prélèvent toujours une fraction. Il est
+      ainsi devenu la mesure standard de l'efficacité d'une synthèse, utilisée
+      pour juger tout procédé chimique, du laboratoire à l'échelle industrielle.
+    zh: >-
+      百分比收率诞生于十九世纪的定量分析化学。当贝采利乌斯创立了化学计量学之后,
+      化学家得以计算一个反应理论上应生成多少产物,并与实验室中实际获得的量相比
+      较。在实践中收率几乎永远不会达到100%:副反应、不完全的平衡以及纯化过程中
+      的损失总会扣掉一部分。因此它成为衡量合成效率的标准指标,用于评价从实验室
+      规模到工业规模的每一个化学过程。
+    ja: >-
+      収率（パーセント）は、19世紀の定量分析化学とともに生まれた。ベルセリウスの化学量論により、
+      化学者は反応が理論的に生成する量を計算し、実験室で実際に回収された量と比較できるようになった。
+      実際には100%に達することはほぼない。副反応、不完全な平衡、精製中の損失が常に一部を削るためである。
+      そのため、収率は合成効率の標準的な尺度となり、実験室規模から工業規模まであらゆる化学プロセスを
+      評価するのに用いられる。
+  timeline:
+    - year: "1803"
+      label:
+        es: >-
+          Dalton propone la teoría atómica y da a las reacciones químicas
+          proporciones mensurables.
+        en: >-
+          Dalton proposes atomic theory and gives chemical reactions measurable
+          proportions.
+        pt: >-
+          Dalton propõe a teoria atômica e dá às reações químicas proporções
+          mensuráveis.
+        fr: >-
+          Dalton propose la théorie atomique et donne aux réactions chimiques des
+          proportions mesurables.
+        zh: >-
+          道尔顿提出原子论,使化学反应具有可测量的比例关系。
+        ja: >-
+          ドルトンが原子論を提唱し、化学反応に測定可能な比率を与える。
+    - year: "1819"
+      label:
+        es: >-
+          Berzelius publica pesos atómicos precisos, lo que permite calcular el
+          rendimiento teórico.
+        en: >-
+          Berzelius publishes accurate atomic weights, making theoretical yields
+          calculable.
+        pt: >-
+          Berzelius publica pesos atômicos precisos, permitindo calcular o
+          rendimento teórico.
+        fr: >-
+          Berzelius publie des poids atomiques précis, rendant calculable le
+          rendement théorique.
+        zh: >-
+          贝采利乌斯发表了精确的原子量,使理论收率的计算成为可能。
+        ja: >-
+          ベルセリウスが正確な原子量を発表し、理論収率の計算を可能にする。
+    - year: Hoy
+      label:
+        es: >-
+          El rendimiento porcentual es la métrica estándar de eficiencia en todo
+          laboratorio de síntesis.
+        en: >-
+          Percent yield is the standard efficiency metric in every synthesis
+          laboratory.
+        pt: >-
+          O rendimento percentual é a métrica padrão de eficiência em todo
+          laboratório de síntese.
+        fr: >-
+          Le rendement en pourcentage est la métrique standard d'efficacité dans
+          tout laboratoire de synthèse.
+        zh: >-
+          百分比收率是每个合成实验室中衡量效率的标准指标。
+        ja: >-
+          収率はすべての合成研究室で効率を測る標準的な指標である。
+  useCases:
+    - title:
+        es: Industria farmacéutica
+        en: Pharmaceutical industry
+        pt: Indústria farmacêutica
+        fr: Industrie pharmaceutique
+        zh: 制药工业
+        ja: 製薬業界
+      description:
+        es: >-
+          Mide la eficiencia de cada paso en la fabricación de principios
+          activos, clave para el coste final del fármaco.
+        en: >-
+          It measures the efficiency of each step in making active ingredients,
+          key to a drug's final cost.
+        pt: >-
+          Mede a eficiência de cada etapa na fabricação de princípios ativos,
+          essencial para o custo final do fármaco.
+        fr: >-
+          Elle mesure l'efficacité de chaque étape de fabrication des principes
+          actifs, déterminante pour le coût final du médicament.
+        zh: >-
+          衡量原料药生产中每个步骤的效率,它决定了药物的最终成本。
+        ja: >-
+          有効成分の製造における各段階の効率を測る。薬剤の最終コストを左右する。
+    - title:
+        es: Síntesis de laboratorio
+        en: Laboratory synthesis
+        pt: Síntese de laboratório
+        fr: Synthèse au laboratoire
+        zh: 实验室合成
+        ja: 実験室での合成
+      description:
+        es: >-
+          El químico compara su rendimiento obtenido con el teórico para evaluar
+          su técnica de reacción y purificación.
+        en: >-
+          The chemist compares the obtained yield with the theoretical one to
+          evaluate reaction and purification technique.
+        pt: >-
+          O químico compara o rendimento obtido com o teórico para avaliar sua
+          técnica de reação e purificação.
+        fr: >-
+          Le chimiste compare le rendement obtenu au rendement théorique pour
+          évaluer sa technique de réaction et de purification.
+        zh: >-
+          化学家将实际收率与理论收率比较,以评估其反应和纯化技术。
+        ja: >-
+          得られた収率を理論収率と比較し、反応・精製の技術を評価する。
+    - title:
+        es: Petroquímica
+        en: Petrochemistry
+        pt: Petroquímica
+        fr: Pétrochimie
+        zh: 石油化工
+        ja: 石油化学
+      description:
+        es: >-
+          Controla cuánto producto útil se extrae de un proceso de refinado
+          frente al máximo teórico.
+        en: >-
+          It tracks how much useful product a refining process extracts versus the
+          theoretical maximum.
+        pt: >-
+          Controla quanto produto útil um processo de refino extrai frente ao
+          máximo teórico.
+        fr: >-
+          Elle contrôle la quantité de produit utile qu'un procédé de raffinage
+          extrait par rapport au maximum théorique.
+        zh: >-
+          跟踪炼油过程相对于理论最大值实际提取了多少有用产物。
+        ja: >-
+          精製プロセスが理論上の最大量に対してどれだけ有用な生成物を抽出するかを管理する。
+    - title:
+        es: Fertilizantes
+        en: Fertilizers
+        pt: Fertilizantes
+        fr: Engrais
+        zh: 化肥
+        ja: 肥料
+      description:
+        es: >-
+          Ajusta los procesos de amoníaco y urea para maximizar el producto por
+          kilogramo de reactivo.
+        en: >-
+          It tunes ammonia and urea processes to maximize product per kilogram of
+          reactant.
+        pt: >-
+          Ajusta os processos de amônia e ureia para maximizar o produto por
+          quilograma de reagente.
+        fr: >-
+          Elle ajuste les procédés d'ammoniac et d'urée pour maximiser le produit
+          par kilogramme de réactif.
+        zh: >-
+          调整氨和尿素的生产工艺,使每公斤反应物产出的产品最大化。
+        ja: >-
+          アンモニアや尿素のプロセスを調整し、反応物1キログラムあたりの生成物を最大化する。
+  example:
+    title:
+      es: Síntesis con rendimiento del 80 %
+      en: Synthesis with 80% yield
+      pt: Síntese com rendimento de 80 %
+      fr: Synthèse avec un rendement de 80 %
+      zh: 收率为80%的合成
+      ja: 収率80%の合成
+    lines:
+      - es: Masa teórica = 10 g
+        en: Theoretical mass = 10 g
+        pt: Massa teórica = 10 g
+        fr: Masse théorique = 10 g
+        zh: 理论质量 = 10 g
+        ja: 理論質量 = 10 g
+      - es: Masa real obtenida = 8 g
+        en: Actual mass obtained = 8 g
+        pt: Massa real obtida = 8 g
+        fr: Masse réelle obtenue = 8 g
+        zh: 实际获得的质量 = 8 g
+        ja: 実際に得られた質量 = 8 g
+      - es: "%r = (real/teórico)·100"
+        en: "%r = (real/teórico)·100"
+        pt: "%r = (real/teórico)·100"
+        fr: "%r = (real/teórico)·100"
+        zh: "%r = (real/teórico)·100"
+        ja: "%r = (real/teórico)·100"
+      - es: "%r = (8/10)·100"
+        en: "%r = (8/10)·100"
+        pt: "%r = (8/10)·100"
+        fr: "%r = (8/10)·100"
+        zh: "%r = (8/10)·100"
+        ja: "%r = (8/10)·100"
+      - es: "%r = 80 %"
+        en: "%r = 80 %"
+        pt: "%r = 80 %"
+        fr: "%r = 80 %"
+        zh: "%r = 80 %"
+        ja: "%r = 80 %"

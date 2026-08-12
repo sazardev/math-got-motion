@@ -1,0 +1,318 @@
+id: latent-heat
+title:
+  es: Calor Latente
+  en: Latent Heat
+  pt: Calor Latente
+  fr: Chaleur latente
+  zh: 潜热
+  ja: 潜熱
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: q
+    type: variable
+    value: Q
+    explanation:
+      es: El calor absorbido o liberado durante un cambio de fase, como fundir o congelar.
+      en: The heat absorbed or released during a phase change, such as melting or freezing.
+      pt: O calor absorvido ou liberado durante uma mudança de fase, como derreter ou congelar.
+      fr: La chaleur absorbée ou libérée lors d'un changement de phase, comme la fusion ou la congélation.
+      zh: 相变（如熔化或凝固）过程中吸收或释放的热量。
+      ja: 融解や凝固などの相変化の際に吸収または放出される熱。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: La masa de la sustancia que cambia de fase, en kilogramos.
+      en: The mass of the substance changing phase, in kilograms.
+      pt: A massa da substância que muda de fase, em quilogramas.
+      fr: La masse de la substance qui change de phase, en kilogrammes.
+      zh: 发生相变的物质的质量，以千克为单位。
+      ja: 相変化する物質の質量。単位はキログラム。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: l
+    type: constant
+    value: L
+    explanation:
+      es: El calor latente específico de la sustancia, en julios por kilogramo (J/kg).
+      en: The specific latent heat of the substance, in joules per kilogram (J/kg).
+      pt: O calor latente específico da substância, em joules por quilograma (J/kg).
+      fr: La chaleur latente spécifique de la substance, en joules par kilogramme (J/kg).
+      zh: 该物质的比潜热，单位为焦耳每千克（J/kg）。
+      ja: その物質の比潜熱。単位はキログラム当たりのジュール（J/kg）。
+context:
+  author:
+    es: Joseph Black
+    en: Joseph Black
+    pt: Joseph Black
+    fr: Joseph Black
+    zh: 约瑟夫·布莱克
+    ja: ジョセフ・ブラック
+  era:
+    es: Escocia, 1728–1799 · descubierto en el s. XVIII
+    en: Scotland, 1728–1799 · discovered in the 18th century
+    pt: Escócia, 1728–1799 · descoberto no século XVIII
+    fr: Écosse, 1728–1799 · découvert au XVIIIe siècle
+    zh: 苏格兰，1728–1799年 · 发现于18世纪
+    ja: スコットランド、1728–1799年・18世紀に発見
+  history:
+    es: >-
+      Joseph Black, médico y químico escocés, descubrió el calor latente en la década de 1760 mientras
+      estudiaba por qué la temperatura no cambiaba mientras el hielo se derretía o el agua hervía. Llamó
+      "latente" a ese calor porque quedaba oculto en el cambio de fase sin alterar el termómetro, y lo
+      distinguió del calor sensible, que sí eleva la temperatura. Sus mediciones sentaron las bases de la
+      capacidad térmica y explicaron por qué el agua hirviendo permanece a 100 °C por más que se agregue
+      fuego. La idea fue clave para la máquina de vapor de James Watt, su alumno y amigo, y sigue siendo
+      fundamental en termodinámica.
+    en: >-
+      Joseph Black, a Scottish physician and chemist, discovered latent heat in the 1760s while studying
+      why the temperature did not change as ice melted or water boiled. He called that heat "latent"
+      because it stays hidden inside the phase change without moving the thermometer, distinguishing it
+      from sensible heat, which does raise the temperature. His measurements laid the foundations of heat
+      capacity and explained why boiling water stays at 100 °C no matter how much heat is added. The idea
+      was essential to James Watt's steam engine and remains fundamental in thermodynamics today.
+    pt: >-
+      Joseph Black, médico e químico escocês, descobriu o calor latente na década de 1760 ao estudar por
+      que a temperatura não mudava enquanto o gelo derretia ou a água fervia. Chamou de "latente" a esse
+      calor porque ele ficava oculto na mudança de fase sem alterar o termômetro, distinguindo-o do calor
+      sensível, que de fato eleva a temperatura. Suas medições lançaram as bases da capacidade térmica e
+      explicaram por que a água em ebulição permanece a 100 °C por mais que se adicione calor. A ideia foi
+      essencial para a máquina a vapor de James Watt e continua fundamental na termodinâmica.
+    fr: >-
+      Joseph Black, médecin et chimiste écossais, découvrit la chaleur latente dans les années 1760 en
+      étudiant pourquoi la température ne changeait pas pendant la fonte de la glace ou l'ébullition de
+      l'eau. Il qualifia cette chaleur de "latente" car elle restait cachée dans le changement de phase sans
+      faire bouger le thermomètre, la distinguant de la chaleur sensible, qui, elle, fait monter la
+      température. Ses mesures fondèrent la notion de capacité calorifique et expliquèrent pourquoi l'eau
+      bouillante reste à 100 °C même si l'on ajoute du feu. L'idée fut essentielle pour la machine à vapeur
+      de James Watt et reste fondamentale en thermodynamique.
+    zh: >-
+      苏格兰医生和化学家约瑟夫·布莱克在18世纪60年代研究冰融化和水沸腾时温度为何不变，从而发现了潜热。
+      他把这种热量称为"潜热"，因为它藏在相变之中而不使温度计读数变化，并将其与确会升高温度的"显热"相区分。
+      他的测量为热容概念奠定了基础，也解释了为什么无论加多少热量，沸水始终保持在100 °C。
+      这一思想对詹姆斯·瓦特的蒸汽机至关重要，至今仍是热力学的基础。
+    ja: >-
+      スコットランドの医師で化学者のジョセフ・ブラックは、1760年代に氷が溶けたり水が沸騰したりする際に
+      温度が変わらない理由を研究する中で潜熱を発見した。彼はこの熱が相変化の中に隠れたままで温度計を動かさない
+      ことから「潜熱」と呼び、確かに温度を上げる顕熱と区別した。彼の測定は熱容量の概念の基礎を築き、
+      どれだけ熱を加えても沸騰水が100 °Cのままである理由を説明した。この考えはジェームズ・ワットの蒸気機関に
+      欠かせないものであり、今日でも熱力学の基本である。
+  timeline:
+    - year: "1761"
+      label:
+        es: >-
+          Black experimenta con hielo fundiéndose y descubre que la fusión absorbe calor sin cambiar la
+          temperatura.
+        en: >-
+          Black experiments with melting ice and finds that fusion absorbs heat without a change in
+          temperature.
+        pt: >-
+          Black experimenta com gelo derretendo e descobre que a fusão absorve calor sem mudar a
+          temperatura.
+        fr: >-
+          Black expérimente sur la fonte de la glace et découvre que la fusion absorbe de la chaleur sans
+          changement de température.
+        zh: >-
+          布莱克用正在融化的冰做实验，发现熔化会吸收热量而温度不变。
+        ja: >-
+          ブラックは融けつつある氷で実験し、融解が温度を変えずに熱を吸収することを発見する。
+    - year: "1764"
+      label:
+        es: >-
+          Acuña el término "calor latente" y comienza a enseñarle a James Watt, quien luego lo usaría
+          para mejorar la máquina de vapor.
+        en: >-
+          He coins the term "latent heat" and begins teaching James Watt, who would later use it to
+          improve the steam engine.
+        pt: >-
+          Ele cunha o termo "calor latente" e começa a ensinar James Watt, que depois o usaria para
+          melhorar a máquina a vapor.
+        fr: >-
+          Il forge le terme "chaleur latente" et commence à enseigner à James Watt, qui l'utilisera plus
+          tard pour améliorer la machine à vapeur.
+        zh: >-
+          他创造了"潜热"一词，并开始指导詹姆斯·瓦特，后者后来用它改进了蒸汽机。
+        ja: >-
+          「潜熱」という用語を生み出し、後に蒸気機関を改良するジェームズ・ワットに教え始める。
+    - year: "1803"
+      label:
+        es: >-
+          Sus conferencias sobre química se publican póstumamente y difunden el concepto en toda Europa.
+        en: >-
+          His chemistry lectures are published posthumously, spreading the concept across Europe.
+        pt: >-
+          Suas conferências sobre química são publicadas postumamente, difundindo o conceito pela Europa.
+        fr: >-
+          Ses conférences sur la chimie sont publiées à titre posthume, diffusant le concept dans toute
+          l'Europe.
+        zh: >-
+          他的化学讲义在去世后出版，将这一概念传播到整个欧洲。
+        ja: >-
+          彼の化学講義が死後出版され、この概念がヨーロッパ中に広まる。
+    - year: Hoy
+      label:
+        es: >-
+          Es la base de la refrigeración, de los materiales de cambio de fase y de la meteorología.
+        en: >-
+          It underpins refrigeration, phase-change materials, and meteorology.
+        pt: >-
+          É a base da refrigeração, dos materiais de mudança de fase e da meteorologia.
+        fr: >-
+          Elle est à la base de la réfrigération, des matériaux à changement de phase et de la
+          météorologie.
+        zh: >-
+          它是制冷、相变材料和气象学的理论基础。
+        ja: >-
+          冷凍、相変化材料、気象学の基礎となっている。
+  useCases:
+    - title:
+        es: Refrigeración y aire acondicionado
+        en: Refrigeration and air conditioning
+        pt: Refrigeração e ar condicionado
+        fr: Réfrigération et climatisation
+        zh: 制冷与空调
+        ja: 冷凍・空調
+      description:
+        es: >-
+          Los evaporadores y condensadores aprovechan el calor latente de los refrigerantes al evaporarse y
+          condensarse para mover calor.
+        en: >-
+          Evaporators and condensers harness the latent heat of refrigerants as they evaporate and condense
+          to move heat.
+        pt: >-
+          Evaporadores e condensadores aproveitam o calor latente dos refrigerantes ao evaporar e condensar
+          para mover calor.
+        fr: >-
+          Les évaporateurs et condenseurs exploitent la chaleur latente des fluides frigorigènes en
+          s'évaporant et en se condensant pour déplacer la chaleur.
+        zh: >-
+          蒸发器和冷凝器利用制冷剂蒸发和冷凝时的潜热来搬运热量。
+        ja: >-
+          蒸発器と凝縮器は、冷媒が蒸発・凝縮する際の潜熱を利用して熱を移動させる。
+    - title:
+        es: Meteorología y clima
+        en: Meteorology and climate
+        pt: Meteorologia e clima
+        fr: Météorologie et climat
+        zh: 气象与气候
+        ja: 気象学・気候学
+      description:
+        es: >-
+          La condensación del vapor en las nubes libera enormes cantidades de calor latente que alimenta
+          las tormentas.
+        en: >-
+          Condensation of water vapor in clouds releases enormous amounts of latent heat that feeds storms.
+        pt: >-
+          A condensação do vapor nas nuvens libera enormes quantidades de calor latente que alimenta as
+          tempestades.
+        fr: >-
+          La condensation de la vapeur dans les nuages libère d'énormes quantités de chaleur latente qui
+          alimentent les tempêtes.
+        zh: >-
+          云中水汽的凝结释放出巨大的潜热，为风暴提供能量。
+        ja: >-
+          雲の中での水蒸気の凝結は、嵐を支える莫大な潜熱を放出する。
+    - title:
+        es: Almacenamiento de energía térmica
+        en: Thermal energy storage
+        pt: Armazenamento de energia térmica
+        fr: Stockage d'énergie thermique
+        zh: 热能储存
+        ja: 熱エネルギー貯蔵
+      description:
+        es: >-
+          Los materiales de cambio de fase (PCM) guardan energía al fundirse y la devuelven al solidificarse.
+        en: >-
+          Phase-change materials (PCMs) store energy when they melt and release it when they solidify.
+        pt: >-
+          Os materiais de mudança de fase (PCM) armazenam energia ao derreter e a devolvem ao solidificar.
+        fr: >-
+          Les matériaux à changement de phase (MCP) stockent l'énergie à la fusion et la restituent à la
+          solidification.
+        zh: >-
+          相变材料（PCM）在熔化时储存能量，在凝固时释放能量。
+        ja: >-
+          相変化材料（PCM）は、融解時にエネルギーを蓄え、凝固時に放出する。
+    - title:
+        es: Industria alimentaria
+        en: Food industry
+        pt: Indústria alimentícia
+        fr: Industrie agroalimentaire
+        zh: 食品工业
+        ja: 食品産業
+      description:
+        es: >-
+          Permite calcular la energía que hay que extraer para congelar o deshidratar alimentos.
+        en: >-
+          It calculates the energy that must be removed to freeze or dehydrate food products.
+        pt: >-
+          Permite calcular a energia que deve ser retirada para congelar ou desidratar alimentos.
+        fr: >-
+          Elle permet de calculer l'énergie à retirer pour congeler ou déshydrater les aliments.
+        zh: >-
+          用于计算冷冻或脱水食品所需抽走的能量。
+        ja: >-
+          食品を冷凍したり脱水したりするために取り除くべきエネルギーを計算できる。
+  example:
+    title:
+      es: Fusión de 2 kg de hielo
+      en: Melting 2 kg of ice
+      pt: Fusão de 2 kg de gelo
+      fr: Fonte de 2 kg de glace
+      zh: 融化2千克冰
+      ja: 2 kgの氷の融解
+    lines:
+      - es: L = 334 kJ/kg = 334000 J/kg
+        en: L = 334 kJ/kg = 334000 J/kg
+        pt: L = 334 kJ/kg = 334000 J/kg
+        fr: L = 334 kJ/kg = 334000 J/kg
+        zh: L = 334 kJ/kg = 334000 J/kg
+        ja: L = 334 kJ/kg = 334000 J/kg
+      - es: m = 2 kg
+        en: m = 2 kg
+        pt: m = 2 kg
+        fr: m = 2 kg
+        zh: m = 2 kg
+        ja: m = 2 kg
+      - es: Q = m · L
+        en: Q = m · L
+        pt: Q = m · L
+        fr: Q = m · L
+        zh: Q = m · L
+        ja: Q = m · L
+      - es: Q = 2 × 334000
+        en: Q = 2 × 334000
+        pt: Q = 2 × 334000
+        fr: Q = 2 × 334000
+        zh: Q = 2 × 334000
+        ja: Q = 2 × 334000
+      - es: Q = 668000 J = 668 kJ
+        en: Q = 668000 J = 668 kJ
+        pt: Q = 668000 J = 668 kJ
+        fr: Q = 668000 J = 668 kJ
+        zh: Q = 668000 J = 668 kJ
+        ja: Q = 668000 J = 668 kJ

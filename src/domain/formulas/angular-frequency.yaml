@@ -1,0 +1,326 @@
+id: angular-frequency
+title:
+  es: Frecuencia Angular
+  en: Angular Frequency
+  pt: Frequência Angular
+  fr: Fréquence angulaire
+  zh: 角频率
+  ja: 角周波数
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: omega
+    type: variable
+    value: ω
+    explanation:
+      es: "Omega: la frecuencia angular, cuántos radianes avanza una vibración por segundo."
+      en: "Omega: the angular frequency, how many radians a vibration sweeps per second."
+      pt: "Ômega: a frequência angular, quantos radianos uma vibração percorre por segundo."
+      fr: "Oméga : la pulsation, combien de radians une vibration parcourt par seconde."
+      zh: "ω：角频率，即振动每秒扫过的弧度数。"
+      ja: "ω：角周波数。振動が1秒間に掃くラジアン数。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "El factor 2: hay 2π radianes en un giro completo."
+      en: "The factor 2: there are 2π radians in one full turn."
+      pt: "O fator 2: há 2π radianos em uma volta completa."
+      fr: "Le facteur 2 : il y a 2π radians dans un tour complet."
+      zh: "因数2：一周整圈有2π弧度。"
+      ja: "係数の2。1回転は2πラジアン。"
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: Pi, la constante que relaciona la circunferencia con su diámetro, unos 3,1416.
+      en: Pi, the constant relating a circle's circumference to its diameter, about 3.1416.
+      pt: Pi, a constante que relaciona a circunferência com o diâmetro, cerca de 3,1416.
+      fr: Pi, la constante reliant la circonférence d'un cercle à son diamètre, environ 3,1416.
+      zh: 圆周率π，即圆的周长与直径之比，约为3.1416。
+      ja: 円周率。円の円周と直径の比で、約3.1416。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por la frecuencia.
+      en: Multiplied by the frequency.
+      pt: Multiplicado pela frequência.
+      fr: Multiplié par la fréquence.
+      zh: 乘以频率。
+      ja: 周波数を掛ける。
+  - id: f
+    type: variable
+    value: f
+    explanation:
+      es: La frecuencia, cuántos ciclos completos ocurren por segundo, en hercios (Hz).
+      en: The frequency, how many full cycles occur per second, in hertz (Hz).
+      pt: A frequência, quantos ciclos completos ocorrem por segundo, em hertz (Hz).
+      fr: La fréquence, combien de cycles complets se produisent par seconde, en hertz (Hz).
+      zh: 频率，即每秒钟发生的完整周期数，单位为赫兹（Hz）。
+      ja: 周波数。1秒間に起きる完全な周期の数。単位はヘルツ（Hz）。
+context:
+  author:
+    es: Origen colectivo del análisis armónico
+    en: Collective origin of harmonic analysis
+    pt: Origem coletiva da análise harmônica
+    fr: Origine collective de l'analyse harmonique
+    zh: 谐波分析的集体起源
+    ja: 調和解析の集団的起源
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, século XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲，19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      La frecuencia angular ω mide cuántos radianes recorre una vibración por segundo, uniendo el mundo
+      de los ciclos con el del círculo unitario: cada ciclo completo equivale a 2π radianes. Su uso se
+      consolidó en el siglo XIX cuando Joseph Fourier demostró que cualquier señal periódica es una suma
+      de senos y cosenos, cada uno con su propia ω, y cuando los físicos descubrieron que resortes y
+      circuitos oscilan siguiendo la misma ecuación. En electrónica, ω simplifica las cuentas: aparece
+      en las reactancias, en las impedancias y en toda fórmula de corriente alterna, por eso los
+      ingenieros la usan en lugar de f en casi todos los cálculos.
+    en: >-
+      Angular frequency ω measures how many radians a vibration sweeps per second, tying the world of
+      cycles to the unit circle: each full cycle equals 2π radians. Its use was consolidated in the 19th
+      century, when Joseph Fourier showed that any periodic signal is a sum of sines and cosines, each
+      with its own ω, and when physicists realized that springs and circuits oscillate by the same
+      equation. In electronics ω simplifies the math: it appears in reactances, impedances, and every
+      alternating-current formula, which is why engineers use it instead of f in nearly all calculations.
+    pt: >-
+      A frequência angular ω mede quantos radianos uma vibração percorre por segundo, unindo o mundo dos
+      ciclos ao círculo unitário: cada ciclo completo equivale a 2π radianos. Seu uso se consolidou no
+      século XIX, quando Joseph Fourier mostrou que qualquer sinal periódico é uma soma de senos e
+      cossenos, cada um com sua própria ω, e quando os físicos descobriram que molas e circuitos oscilam
+      pela mesma equação. Na eletrônica, ω simplifica as contas: aparece nas reatâncias, nas impedâncias
+      e em toda fórmula de corrente alternada, por isso os engenheiros a usam no lugar de f em quase
+      todos os cálculos.
+    fr: >-
+      La pulsation ω mesure combien de radians une vibration parcourt par seconde, reliant le monde des
+      cycles à celui du cercle trigonométrique : chaque cycle complet équivaut à 2π radians. Son usage
+      s'est consolidé au XIXe siècle, lorsque Joseph Fourier a montré que tout signal périodique est une
+      somme de sinus et de cosinus, chacun avec sa propre ω, et lorsque les physiciens ont découvert que
+      ressorts et circuits oscillent selon la même équation. En électronique, ω simplifie les calculs :
+      elle apparaît dans les réactances, les impédances et toutes les formules du courant alternatif,
+      c'est pourquoi les ingénieurs l'emploient à la place de f dans presque tous les calculs.
+    zh: >-
+      角频率ω衡量振动每秒扫过的弧度数，把周期现象与单位圆联系起来：每个完整周期等于2π弧度。这一用法在19世纪得到确立
+      ——约瑟夫·傅里叶证明任何周期信号都可以表示为正弦与余弦之和，每个都带各自的ω；物理学家也发现弹簧和电路遵循同一
+      振荡方程。在电子学中，ω简化了计算：它出现在电抗、阻抗以及一切交流电公式中，因此工程师几乎在所有计算里都用它来
+      代替f。
+    ja: >-
+      角周波数ωは、振動が1秒間に掃く角度をラジアンで表し、周期の世界を単位円に結びつける。1周期はちょうど2πラジアンに
+      相当する。この用法が定着したのは19世紀で、ジョゼフ・フーリエが任意の周期信号はそれぞれ固有のωを持つ正弦・余弦の
+      和であることを示し、また物理学者たちがばねと回路が同じ振動方程式に従うことを見出した。電子工学ではωが計算を
+      単純化する。リアクタンス、インピーダンス、そして交流のあらゆる公式に現れるため、技術者はほぼすべての計算で
+      fの代わりにωを使う。
+  timeline:
+    - year: "1714"
+      label:
+        es: >-
+          Roger Cotes introduce el radián, la medida natural del ángulo sobre la que se expresa ω.
+        en: >-
+          Roger Cotes introduces the radian, the natural unit of angle in which ω is expressed.
+        pt: >-
+          Roger Cotes introduz o radiano, a medida natural do ângulo sobre a qual ω é expressa.
+        fr: >-
+          Roger Cotes introduit le radian, l'unité d'angle naturelle dans laquelle ω s'exprime.
+        zh: >-
+          罗杰·科茨引入弧度，这是表达ω所用的自然角度单位。
+        ja: >-
+          ロジャー・コーツがラジアンを導入。ωを表すのに自然な角度の単位となる。
+    - year: "1807"
+      label:
+        es: >-
+          Fourier publica su memoria sobre la conducción del calor: toda señal periódica se descompone
+          en senos y cosenos.
+        en: >-
+          Fourier publishes his memoir on heat conduction: every periodic signal decomposes into sines
+          and cosines.
+        pt: >-
+          Fourier publica sua memória sobre a condução do calor: todo sinal periódico se decompõe em
+          senos e cossenos.
+        fr: >-
+          Fourier publie son mémoire sur la conduction de la chaleur : tout signal périodique se
+          décompose en sinus et cosinus.
+        zh: >-
+          傅里叶发表关于热传导的论文：任何周期信号都可分解为正弦与余弦。
+        ja: >-
+          フーリエが熱伝導に関する論文を発表。あらゆる周期信号が正弦と余弦に分解されることを示す。
+    - year: "1888"
+      label:
+        es: >-
+          La corriente alterna de Tesla y Westinghouse populariza la frecuencia (ciclos por segundo) a
+          escala industrial.
+        en: >-
+          Tesla and Westinghouse's alternating current popularizes frequency (cycles per second) on an
+          industrial scale.
+        pt: >-
+          A corrente alternada de Tesla e Westinghouse populariza a frequência (ciclos por segundo) em
+          escala industrial.
+        fr: >-
+          Le courant alternatif de Tesla et Westinghouse popularise la fréquence (cycles par seconde) à
+          l'échelle industrielle.
+        zh: >-
+          特斯拉和威斯汀豪斯的交流电让频率（每秒周数）在工业规模上普及。
+        ja: >-
+          テスラとウェスティングハウスの交流が、周波数（毎秒サイクル）を産業規模で普及させる。
+    - year: Hoy
+      label:
+        es: >-
+          ω aparece en toda la electrónica de corriente alterna y en el procesamiento digital de
+          señales.
+        en: >-
+          ω appears across all alternating-current electronics and digital signal processing.
+        pt: >-
+          ω aparece em toda a eletrônica de corrente alternada e no processamento digital de sinais.
+        fr: >-
+          ω apparaît dans toute l'électronique du courant alternatif et dans le traitement numérique
+          du signal.
+        zh: >-
+          ω出现在一切交流电子学和数字信号处理之中。
+        ja: >-
+          交流電子機器とデジタル信号処理のすべてにωが現れる。
+  useCases:
+    - title:
+        es: Circuitos de corriente alterna
+        en: Alternating-current circuits
+        pt: Circuitos de corrente alternada
+        fr: Circuits à courant alternatif
+        zh: 交流电路
+        ja: 交流回路
+      description:
+        es: >-
+          La reactancia inductiva X_L = ωL y la impedancia dependen de ω; con ella se diseñan filtros y
+          redes eléctricas.
+        en: >-
+          Inductive reactance X_L = ωL and impedance depend on ω; filters and power networks are
+          designed with it.
+        pt: >-
+          A reatância indutiva X_L = ωL e a impedância dependem de ω; com ela se projetam filtros e
+          redes elétricas.
+        fr: >-
+          La réactance inductive X_L = ωL et l'impédance dépendent de ω ; filtres et réseaux électriques
+          se conçoivent avec elle.
+        zh: >-
+          感抗X_L = ωL和阻抗都取决于ω；滤波器与电网都凭它设计。
+        ja: >-
+          誘導性リアクタンス X_L = ωL やインピーダンスはωに依存し、フィルタや電力網はこれを使って設計される。
+    - title:
+        es: Radio y telecomunicaciones
+        en: Radio and telecommunications
+        pt: Rádio e telecomunicações
+        fr: Radio et télécommunications
+        zh: 无线电与电信
+        ja: 無線と電気通信
+      description:
+        es: >-
+          La sintonización de estaciones se expresa en la frecuencia angular de la onda portadora.
+        en: >-
+          Station tuning is expressed in the angular frequency of the carrier wave.
+        pt: >-
+          A sintonia de estações é expressa na frequência angular da onda portadora.
+        fr: >-
+          L'accord des stations s'exprime dans la pulsation de l'onde porteuse.
+        zh: >-
+          电台调谐用载波的角频率来表达。
+        ja: >-
+          放送局の選局は、搬送波の角周波数で表される。
+    - title:
+        es: Procesamiento de señales y audio
+        en: Signal and audio processing
+        pt: Processamento de sinais e áudio
+        fr: Traitement du signal et de l'audio
+        zh: 信号与音频处理
+        ja: 信号処理と音声処理
+      description:
+        es: >-
+          El análisis de Fourier y los ecualizadores trabajan con ω en radianes por segundo.
+        en: >-
+          Fourier analysis and equalizers work in ω, in radians per second.
+        pt: >-
+          A análise de Fourier e os equalizadores trabalham com ω em radianos por segundo.
+        fr: >-
+          L'analyse de Fourier et les égaliseurs travaillent avec ω, en radians par seconde.
+        zh: >-
+          傅里叶分析和均衡器都以每秒弧度的ω来运算。
+        ja: >-
+          フーリエ解析やイコライザーは、毎秒ラジアンのωで計算する。
+    - title:
+        es: Vibraciones y control
+        en: Vibrations and control systems
+        pt: Vibrações e sistemas de controle
+        fr: Vibrations et systèmes de contrôle
+        zh: 振动与控制系统
+        ja: 振動と制御システム
+      description:
+        es: >-
+          La respuesta de resortes, servos y amortiguadores se formula con ω natural de cada sistema.
+        en: >-
+          The response of springs, servos, and dampers is formulated with each system's natural ω.
+        pt: >-
+          A resposta de molas, servos e amortecedores é formulada com a ω natural de cada sistema.
+        fr: >-
+          La réponse des ressorts, servomécanismes et amortisseurs se formule avec la ω naturelle de
+          chaque système.
+        zh: >-
+          弹簧、伺服机构和阻尼器的响应都用各系统的固有ω来表达。
+        ja: >-
+          ばね、サーボ、ダンパーの応答は、各システム固有のωで記述される。
+  example:
+    title:
+      es: La red eléctrica europea a 50 Hz
+      en: Europe's 50 Hz mains
+      pt: A rede elétrica europeia a 50 Hz
+      fr: Le réseau électrique européen à 50 Hz
+      zh: 50赫兹的欧洲电网
+      ja: 50 Hzの欧州電力網
+    lines:
+      - es: f = 50 Hz
+        en: f = 50 Hz
+        pt: f = 50 Hz
+        fr: f = 50 Hz
+        zh: f = 50 赫兹
+        ja: f = 50 Hz
+      - es: ω = 2π·f
+        en: ω = 2π·f
+        pt: ω = 2π·f
+        fr: ω = 2π·f
+        zh: ω = 2π·f
+        ja: ω = 2π·f
+      - es: ω = 2π × 50
+        en: ω = 2π × 50
+        pt: ω = 2π × 50
+        fr: ω = 2π × 50
+        zh: ω = 2π × 50
+        ja: ω = 2π × 50
+      - es: ω ≈ 6,2832 × 50
+        en: ω ≈ 6.2832 × 50
+        pt: ω ≈ 6,2832 × 50
+        fr: ω ≈ 6,2832 × 50
+        zh: ω ≈ 6.2832 × 50
+        ja: ω ≈ 6.2832 × 50
+      - es: ω ≈ 314,16 rad/s
+        en: ω ≈ 314.16 rad/s
+        pt: ω ≈ 314,16 rad/s
+        fr: ω ≈ 314,16 rad/s
+        zh: ω ≈ 314.16 rad/s
+        ja: ω ≈ 314.16 rad/s

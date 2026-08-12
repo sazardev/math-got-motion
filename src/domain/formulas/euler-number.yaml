@@ -1,0 +1,375 @@
+id: euler-number
+title:
+  es: El Número e
+  en: Euler's Number e
+  pt: O Número e
+  fr: Le nombre e
+  zh: 自然常数 e
+  ja: ネイピア数 e
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: e
+    type: constant
+    value: e
+    explanation:
+      es: La constante de Euler, un número irracional de valor aproximado 2.71828.
+      en: Euler's constant, an irrational number of about 2.71828.
+      pt: A constante de Euler, um número irracional de valor aproximado 2,71828.
+      fr: La constante d'Euler, un nombre irrationnel d'environ 2,71828.
+      zh: 欧拉常数，无理数，约等于 2.71828。
+      ja: オイラーの定数。無理数で、およそ 2.71828。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual al límite siguiente.
+      en: Is equal to the following limit.
+      pt: É igual ao limite a seguir.
+      fr: Est égal à la limite suivante.
+      zh: 等于下面的极限。
+      ja: 次の極限に等しい。
+  - id: lim
+    type: operator
+    value: lim
+    explanation:
+      es: El límite, valor al que se aproxima la expresión cuando n tiende a infinito.
+      en: The limit, the value the expression approaches as n tends to infinity.
+      pt: O limite, valor ao qual a expressão se aproxima quando n tende ao infinito.
+      fr: La limite, valeur vers laquelle l'expression tend lorsque n tend vers l'infini.
+      zh: 极限，即当 n 趋于无穷大时表达式趋近的值。
+      ja: 極限。nが無限大に近づくとき、式が近づく値。
+  - id: n-to-inf
+    type: variable
+    value: n→∞
+    explanation:
+      es: El índice n, que tiende a infinito.
+      en: The index n, tending to infinity.
+      pt: O índice n, tendendo ao infinito.
+      fr: L'indice n, tendant vers l'infini.
+      zh: 趋于无穷大的下标 n。
+      ja: 無限大に向かう添え字 n。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre la expresión que se eleva a n.
+      en: Opens the expression raised to n.
+      pt: Abre a expressão que é elevada a n.
+      fr: Ouvre l'expression élevée à la puissance n.
+      zh: 打开将被乘方 n 的表达式。
+      ja: n乗される式の括弧を開く。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: La unidad inicial del interés o del crecimiento.
+      en: The initial unit of interest or growth.
+      pt: A unidade inicial do juro ou do crescimento.
+      fr: L'unité initiale de l'intérêt ou de la croissance.
+      zh: 利息或增长的初始单位1。
+      ja: 利息や成長の初期値である1。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Más el incremento por periodo.
+      en: Plus the increment per period.
+      pt: Mais o incremento por período.
+      fr: Plus l'incrément par période.
+      zh: 加上每个周期的增量。
+      ja: 各期間の増分を足す。
+  - id: one-n
+    type: number
+    value: "1"
+    explanation:
+      es: El 1 del numerador de la fracción.
+      en: The 1 in the numerator of the fraction.
+      pt: O 1 do numerador da fração.
+      fr: Le 1 du numérateur de la fraction.
+      zh: 分数分子中的1。
+      ja: 分数の分子にある1。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre n.
+      en: Divided by n.
+      pt: Dividido por n.
+      fr: Divisé par n.
+      zh: 除以 n。
+      ja: nで割る。
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: El número de periodos o de pasos.
+      en: The number of periods or steps.
+      pt: O número de períodos ou passos.
+      fr: Le nombre de périodes ou d'étapes.
+      zh: 周期或步数的个数。
+      ja: 期間またはステップの数。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la base de la potencia.
+      en: Closes the base of the power.
+      pt: Fecha a base da potência.
+      fr: Ferme la base de la puissance.
+      zh: 闭合幂的底数括号。
+      ja: 累乗の底の括弧を閉じる。
+  - id: exp-n
+    type: superscript
+    value: n
+    explanation:
+      es: El exponente n, que en el límite tiende a infinito.
+      en: The exponent n, which in the limit tends to infinity.
+      pt: O expoente n, que no limite tende ao infinito.
+      fr: L'exposant n, qui à la limite tend vers l'infini.
+      zh: 指数 n，在极限中趋于无穷大。
+      ja: 指数n。極限では無限大に近づく。
+context:
+  author:
+    es: Leonhard Euler
+    en: Leonhard Euler
+    pt: Leonhard Euler
+    fr: Leonhard Euler
+    zh: 莱昂哈德·欧拉
+    ja: レオンハルト・オイラー
+  era:
+    es: Suiza, 1707–1783 · límite estudiado por Jacob Bernoulli en 1683
+    en: Switzerland, 1707–1783 · limit studied by Jacob Bernoulli in 1683
+    pt: Suíça, 1707–1783 · limite estudado por Jacob Bernoulli em 1683
+    fr: Suisse, 1707–1783 · limite étudié par Jacob Bernoulli en 1683
+    zh: 瑞士，1707–1783年 · 极限由雅各布·伯努利于1683年研究
+    ja: スイス、1707–1783年・極限はヤコブ・ベルヌーイが1683年に研究
+  history:
+    es: >-
+      Jacob Bernoulli, estudiando el interés compuesto continuo en 1683, descubrió que (1 + 1/n)ⁿ se
+      aproxima a un límite de unos 2.718...; Leonhard Euler lo bautizó con la letra e hacia 1728 y
+      demostró su irracionalidad en 1737. La constante es la base de los logaritmos naturales y surge
+      en cualquier proceso de crecimiento o decaimiento continuo, de la población a la desintegración
+      radiactiva.
+    en: >-
+      While studying continuous compound interest in 1683, Jacob Bernoulli discovered that (1 + 1/n)ⁿ
+      approaches a limit of about 2.718...; Leonhard Euler named it e around 1728 and proved it
+      irrational in 1737. The constant is the base of natural logarithms and arises in any continuous
+      growth or decay process, from populations to radioactive decay.
+    pt: >-
+      Ao estudar o juro composto contínuo em 1683, Jacob Bernoulli descobriu que (1 + 1/n)ⁿ se
+      aproxima de um limite de cerca de 2,718...; Leonhard Euler o batizou com a letra e por volta de
+      1728 e provou sua irracionalidade em 1737. A constante é a base dos logaritmos naturais e surge
+      em qualquer processo de crescimento ou decaimento contínuo, das populações à desintegração
+      radioativa.
+    fr: >-
+      En étudiant l'intérêt composé continu en 1683, Jacob Bernoulli découvrit que (1 + 1/n)ⁿ tend
+      vers une limite d'environ 2,718... ; Leonhard Euler la baptisa du nom de e vers 1728 et en prouva
+      l'irrationalité en 1737. Cette constante est la base des logarithmes naturels et apparaît dans
+      tout processus de croissance ou de décroissance continue, des populations à la désintégration
+      radioactive.
+    zh: >-
+      1683年，雅各布·伯努利在研究连续复利时发现，(1 + 1/n)ⁿ 趋近于一个约为 2.718…… 的极限；1728年前后，
+      莱昂哈德·欧拉用字母 e 为它命名，并于1737年证明了它是无理数。e 是自然对数的底，出现在一切连续增长或衰减
+      的过程中，从人口增长到放射性衰变莫不如此。
+    ja: >-
+      1683年、ヤコブ・ベルヌーイは連続複利の研究の中で、(1 + 1/n)ⁿ がおよそ2.718…という極限に近づくことを
+      発見した。1728年頃、レオンハルト・オイラーがこれを e と名付け、1737年には無理数であることを証明した。
+      この定数は自然対数の底であり、人口増加から放射性崩壊に至るまで、あらゆる連続的な成長・減衰の過程に現れる。
+  timeline:
+    - year: "1683"
+      label:
+        es: >-
+          Jacob Bernoulli estudia el interés compuesto continuo y descubre que (1 + 1/n)ⁿ tiene un
+          límite finito.
+        en: >-
+          Jacob Bernoulli studies continuous compound interest and discovers that (1 + 1/n)ⁿ has a
+          finite limit.
+        pt: >-
+          Jacob Bernoulli estuda o juro composto contínuo e descobre que (1 + 1/n)ⁿ tem um limite
+          finito.
+        fr: >-
+          Jacob Bernoulli étudie l'intérêt composé continu et découvre que (1 + 1/n)ⁿ a une limite
+          finie.
+        zh: >-
+          雅各布·伯努利研究连续复利，发现 (1 + 1/n)ⁿ 存在有限极限。
+        ja: >-
+          ヤコブ・ベルヌーイが連続複利を研究し、(1 + 1/n)ⁿ が有限の極限を持つことを発見する。
+    - year: "1728"
+      label:
+        es: Euler usa por primera vez la letra e para la constante en sus notas sobre exponenciales.
+        en: Euler first uses the letter e for the constant in his notes on exponentials.
+        pt: Euler usa pela primeira vez a letra e para a constante em suas notas sobre exponenciais.
+        fr: Euler utilise pour la première fois la lettre e pour la constante dans ses notes sur les exponentielles.
+        zh: 欧拉在他关于指数函数的笔记中首次用字母 e 表示这个常数。
+        ja: オイラーが指数関数に関するノートで、この定数を表す文字 e を初めて用いる。
+    - year: "1730s"
+      label:
+        es: >-
+          Euler demuestra que e es irracional y consolida su papel como base de los logaritmos
+          naturales.
+        en: >-
+          Euler proves e is irrational and cements its role as the base of natural logarithms.
+        pt: >-
+          Euler prova que e é irracional e consolida seu papel como base dos logaritmos naturais.
+        fr: >-
+          Euler prouve que e est irrationnel et consolide son rôle de base des logarithmes naturels.
+        zh: >-
+          欧拉证明了 e 是无理数，并巩固了它作为自然对数底的地位。
+        ja: >-
+          オイラーが e が無理数であることを証明し、自然対数の底としての役割を確立する。
+    - year: Hoy
+      label:
+        es: >-
+          La constante e aparece en finanzas, biología, física e ingeniería, en todo modelo de
+          crecimiento continuo.
+        en: >-
+          The constant e appears in finance, biology, physics, and engineering, in any continuous
+          growth model.
+        pt: >-
+          A constante e aparece em finanças, biologia, física e engenharia, em todo modelo de
+          crescimento contínuo.
+        fr: >-
+          La constante e apparaît en finance, en biologie, en physique et en ingénierie, dans tout
+          modèle de croissance continue.
+        zh: >-
+          常数 e 出现在金融、生物学、物理学和工程学中，凡连续增长模型皆离不开它。
+        ja: >-
+          定数 e は金融、生物学、物理学、工学など、あらゆる連続成長モデルに登場する。
+  useCases:
+    - title:
+        es: Finanzas
+        en: Finance
+        pt: Finanças
+        fr: Finance
+        zh: 金融
+        ja: 金融
+      description:
+        es: >-
+          El interés compuesto continuo se modela con e^x: el límite de capitalizar infinitas veces al
+          año.
+        en: >-
+          Continuously compounded interest is modeled with e^x: the limit of compounding infinitely
+          often per year.
+        pt: >-
+          O juro composto contínuo é modelado com e^x: o limite de capitalizar infinitas vezes ao ano.
+        fr: >-
+          L'intérêt composé continu se modélise avec e^x : la limite d'une capitalisation infiniment
+          fréquente chaque année.
+        zh: >-
+          连续复利用 e^x 建模：它是每年无限次复利的极限。
+        ja: >-
+          連続複利は e^x でモデル化される。1年に無限回複利計算する極限である。
+    - title:
+        es: Biología y física
+        en: Biology and physics
+        pt: Biologia e física
+        fr: Biologie et physique
+        zh: 生物学与物理学
+        ja: 生物学と物理学
+      description:
+        es: >-
+          El crecimiento de poblaciones y la desintegración radiactiva siguen leyes exponenciales con
+          base e.
+        en: >-
+          Population growth and radioactive decay follow exponential laws with base e.
+        pt: >-
+          O crescimento populacional e a desintegração radioativa seguem leis exponenciais de base e.
+        fr: >-
+          La croissance des populations et la désintégration radioactive suivent des lois
+          exponentielles de base e.
+        zh: >-
+          人口增长和放射性衰变遵循以 e 为底的指数规律。
+        ja: >-
+          人口増加や放射性崩壊は、底をeとする指数法則に従う。
+    - title:
+        es: Logaritmos naturales
+        en: Natural logarithms
+        pt: Logaritmos naturais
+        fr: Logarithmes naturels
+        zh: 自然对数
+        ja: 自然対数
+      description:
+        es: >-
+          La función ln(x), inversa de e^x, simplifica ecuaciones de crecimiento y aparece en el
+          cálculo integral.
+        en: >-
+          The function ln(x), inverse of e^x, simplifies growth equations and appears throughout
+          integral calculus.
+        pt: >-
+          A função ln(x), inversa de e^x, simplifica equações de crescimento e aparece no cálculo
+          integral.
+        fr: >-
+          La fonction ln(x), inverse de e^x, simplifie les équations de croissance et apparaît dans le
+          calcul intégral.
+        zh: >-
+          函数 ln(x) 是 e^x 的反函数，能简化增长方程，在微积分中无处不在。
+        ja: >-
+          e^x の逆関数である ln(x) は成長方程式を簡潔にし、積分計算のいたるところに現れる。
+    - title:
+        es: Identidad de Euler
+        en: Euler's identity
+        pt: Identidade de Euler
+        fr: Identité d'Euler
+        zh: 欧拉恒等式
+        ja: オイラーの等式
+      description:
+        es: >-
+          La constante e protagoniza la identidad e^(iπ) + 1 = 0, que reúne cinco constantes
+          fundamentales.
+        en: >-
+          The constant e stars in the identity e^(iπ) + 1 = 0, which unites five fundamental constants.
+        pt: >-
+          A constante e protagoniza a identidade e^(iπ) + 1 = 0, que reúne cinco constantes
+          fundamentais.
+        fr: >-
+          La constante e est à l'honneur dans l'identité e^(iπ) + 1 = 0, qui réunit cinq constantes
+          fondamentales.
+        zh: >-
+          e 在恒等式 e^(iπ) + 1 = 0 中登场，这条式子汇聚了五个基本常数。
+        ja: >-
+          定数 e は、五つの基本定数を結び付ける等式 e^(iπ) + 1 = 0 の主役である。
+  example:
+    title:
+      es: Aproximación con n = 1000
+      en: Approximation with n = 1000
+      pt: Aproximação com n = 1000
+      fr: Approximation avec n = 1000
+      zh: 用 n = 1000 近似
+      ja: n = 1000 による近似
+    lines:
+      - es: n = 1000
+        en: n = 1000
+        pt: n = 1000
+        fr: n = 1000
+        zh: n = 1000
+        ja: n = 1000
+      - es: e = lim (1 + 1/n)ⁿ con n → ∞
+        en: e = lim (1 + 1/n)ⁿ as n → ∞
+        pt: e = lim (1 + 1/n)ⁿ com n → ∞
+        fr: e = lim (1 + 1/n)ⁿ avec n → ∞
+        zh: e = lim (1 + 1/n)ⁿ，其中 n → ∞
+        ja: e = lim (1 + 1/n)ⁿ、n → ∞ のとき
+      - es: "(1 + 1/1000)¹⁰⁰⁰ = (1.001)¹⁰⁰⁰"
+        en: "(1 + 1/1000)¹⁰⁰⁰ = (1.001)¹⁰⁰⁰"
+        pt: "(1 + 1/1000)¹⁰⁰⁰ = (1,001)¹⁰⁰⁰"
+        fr: "(1 + 1/1000)¹⁰⁰⁰ = (1,001)¹⁰⁰⁰"
+        zh: "(1 + 1/1000)¹⁰⁰⁰ = (1.001)¹⁰⁰⁰"
+        ja: "(1 + 1/1000)¹⁰⁰⁰ = (1.001)¹⁰⁰⁰"
+      - es: ≈ 2.7169
+        en: ≈ 2.7169
+        pt: ≈ 2,7169
+        fr: ≈ 2,7169
+        zh: ≈ 2.7169
+        ja: ≈ 2.7169
+      - es: e ≈ 2.71828 (el verdadero valor)
+        en: e ≈ 2.71828 (the true value)
+        pt: e ≈ 2,71828 (o valor real)
+        fr: e ≈ 2,71828 (la vraie valeur)
+        zh: e ≈ 2.71828（真实值）
+        ja: e ≈ 2.71828（真の値）

@@ -1,0 +1,438 @@
+id: equation-of-circle
+title:
+  es: Ecuación de la Circunferencia
+  en: Equation of a Circle
+  pt: Equação da Circunferência
+  fr: Équation d'un Cercle
+  zh: 圆的方程
+  ja: 円の方程式
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el primer binomio, el de la coordenada x.
+      en: Opens the first binomial, for the x coordinate.
+      pt: Abre o primeiro binômio, o da coordenada x.
+      fr: Ouvre le premier binôme, celui de la coordonnée x.
+      zh: 打开第一个二项式,即 x 坐标的二项式。
+      ja: 最初の二項式(x座標の二項式)を開く括弧。
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: La coordenada x de un punto cualquiera de la circunferencia.
+      en: The x coordinate of any point on the circle.
+      pt: A coordenada x de qualquer ponto da circunferência.
+      fr: La coordonnée x d'un point quelconque du cercle.
+      zh: 圆周上任意一点的 x 坐标。
+      ja: 円周上の任意の点のx座標。
+  - id: minus-h
+    type: operator
+    value: −
+    explanation:
+      es: Menos la coordenada x del centro.
+      en: Minus the x coordinate of the center.
+      pt: Menos a coordenada x do centro.
+      fr: Moins la coordonnée x du centre.
+      zh: 减去圆心的 x 坐标。
+      ja: 中心のx座標を引く。
+  - id: h
+    type: variable
+    value: h
+    explanation:
+      es: La coordenada x del centro de la circunferencia.
+      en: The x coordinate of the circle's center.
+      pt: A coordenada x do centro da circunferência.
+      fr: La coordonnée x du centre du cercle.
+      zh: 圆心在 x 轴上的坐标。
+      ja: 円の中心のx座標。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el primer binomio.
+      en: Closes the first binomial.
+      pt: Fecha o primeiro binômio.
+      fr: Ferme le premier binôme.
+      zh: 闭合第一个二项式。
+      ja: 最初の二項式を閉じる括弧。
+  - id: x-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: El binomio completo está elevado al cuadrado.
+      en: The whole binomial is squared.
+      pt: O binômio inteiro é elevado ao quadrado.
+      fr: Tout le binôme est élevé au carré.
+      zh: 整个二项式取平方。
+      ja: 二項式全体を2乗する。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado al segundo binomio.
+      en: Added to the second binomial.
+      pt: Somado ao segundo binômio.
+      fr: Ajouté au second binôme.
+      zh: 加上第二个二项式。
+      ja: 2つ目の二項式と足す。
+  - id: open-paren-2
+    type: operator
+    value: (
+    explanation:
+      es: Abre el segundo binomio, el de la coordenada y.
+      en: Opens the second binomial, for the y coordinate.
+      pt: Abre o segundo binômio, o da coordenada y.
+      fr: Ouvre le second binôme, celui de la coordonnée y.
+      zh: 打开第二个二项式,即 y 坐标的二项式。
+      ja: 2つ目の二項式(y座標の二項式)を開く括弧。
+  - id: y
+    type: variable
+    value: y
+    explanation:
+      es: La coordenada y de un punto cualquiera de la circunferencia.
+      en: The y coordinate of any point on the circle.
+      pt: A coordenada y de qualquer ponto da circunferência.
+      fr: La coordonnée y d'un point quelconque du cercle.
+      zh: 圆周上任意一点的 y 坐标。
+      ja: 円周上の任意の点のy座標。
+  - id: minus-k
+    type: operator
+    value: −
+    explanation:
+      es: Menos la coordenada y del centro.
+      en: Minus the y coordinate of the center.
+      pt: Menos a coordenada y do centro.
+      fr: Moins la coordonnée y du centre.
+      zh: 减去圆心的 y 坐标。
+      ja: 中心のy座標を引く。
+  - id: k
+    type: variable
+    value: k
+    explanation:
+      es: La coordenada y del centro de la circunferencia.
+      en: The y coordinate of the circle's center.
+      pt: A coordenada y do centro da circunferência.
+      fr: La coordonnée y du centre du cercle.
+      zh: 圆心在 y 轴上的坐标。
+      ja: 円の中心のy座標。
+  - id: close-paren-2
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el segundo binomio.
+      en: Closes the second binomial.
+      pt: Fecha o segundo binômio.
+      fr: Ferme le second binôme.
+      zh: 闭合第二个二项式。
+      ja: 2つ目の二項式を閉じる括弧。
+  - id: y-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: El segundo binomio también está al cuadrado.
+      en: The second binomial is also squared.
+      pt: O segundo binômio também é elevado ao quadrado.
+      fr: Le second binôme est aussi élevé au carré.
+      zh: 第二个二项式同样取平方。
+      ja: 2つ目の二項式も2乗する。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "El radio: la distancia constante desde el centro a cualquier punto."
+      en: "The radius: the constant distance from the center to any point."
+      pt: "O raio: a distância constante do centro a qualquer ponto."
+      fr: "Le rayon : la distance constante du centre à tout point."
+      zh: "半径：从圆心到任意一点的恒定距离。"
+      ja: "半径。中心から任意の点までの一定距離。"
+  - id: r-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: El radio al cuadrado.
+      en: The radius squared.
+      pt: O raio ao quadrado.
+      fr: Le rayon au carré.
+      zh: 半径的平方。
+      ja: 半径の2乗。
+context:
+  author:
+    es: Origen colectivo de la geometría analítica
+    en: Collective origin of analytic geometry
+    pt: Origem coletiva da geometria analítica
+    fr: Origine collective de la géométrie analytique
+    zh: 解析几何的集体起源
+    ja: 解析幾何学の集団的起源
+  era:
+    es: Europa, 1637 (Descartes)
+    en: Europe, 1637 (Descartes)
+    pt: Europa, 1637 (Descartes)
+    fr: Europe, 1637 (Descartes)
+    zh: 欧洲,1637年(笛卡尔)
+    ja: ヨーロッパ、1637年(デカルト)
+  history:
+    es: >-
+      La ecuación del círculo traduce a coordenadas la definición geométrica más antigua: el
+      conjunto de puntos que distan exactamente r de un centro (h, k). Nació con la geometría
+      analítica de René Descartes, que en 1637 publicó "La Géométrie" mostrando cómo traducir
+      figuras a ecuaciones, y de Pierre de Fermat, que exploraba ideas semejantes. La forma general
+      x² + y² + Dx + Ey + F = 0, reordenada completando cuadrados, deja leer el centro y el radio
+      de un vistazo. Hoy, medir una distancia constante a un centro es lo que hace cada señal GPS,
+      cada barrido de radar y cada círculo trazado en CAD.
+    en: >-
+      The circle equation translates into coordinates the oldest geometric definition: the set of
+      points lying exactly at distance r from a center (h, k). It was born with the analytic
+      geometry of René Descartes, who in 1637 published "La Géométrie" showing how to turn figures
+      into equations, and of Pierre de Fermat, who explored similar ideas. The general form
+      x² + y² + Dx + Ey + F = 0, rearranged by completing squares, lets one read the center and
+      radius at a glance. Today, measuring a constant distance from a center is what every GPS
+      signal, every radar sweep, and every circle drawn in CAD does.
+    pt: >-
+      A equação da circunferência traduz em coordenadas a definição geométrica mais antiga: o
+      conjunto de pontos que distam exatamente r de um centro (h, k). Nasceu com a geometria
+      analítica de René Descartes, que em 1637 publicou "La Géométrie" mostrando como traduzir
+      figuras em equações, e de Pierre de Fermat, que explorava ideias semelhantes. A forma geral
+      x² + y² + Dx + Ey + F = 0, rearranjada completando quadrados, deixa ler o centro e o raio de
+      relance. Hoje, medir uma distância constante a um centro é o que faz cada sinal de GPS, cada
+      varredura de radar e cada círculo traçado em CAD.
+    fr: >-
+      L'équation du cercle traduit en coordonnées la plus ancienne définition géométrique :
+      l'ensemble des points situés exactement à la distance r d'un centre (h, k). Elle est née avec
+      la géométrie analytique de René Descartes, qui publia en 1637 « La Géométrie » en montrant
+      comment traduire les figures en équations, et de Pierre de Fermat, qui explorait des idées
+      analogues. La forme générale x² + y² + Dx + Ey + F = 0, réordonnée en complétant les carrés,
+      laisse lire d'un coup d'œil le centre et le rayon. Aujourd'hui, mesurer une distance constante
+      à un centre, c'est ce que fait chaque signal GPS, chaque balayage radar et chaque cercle tracé
+      en CAO.
+    zh: >-
+      圆的方程把最古老的几何定义译成坐标：到圆心 (h, k) 距离恰好为 r 的点的集合。它诞生于勒内·笛卡尔的
+      解析几何——1637年他发表《几何学》，展示了如何把图形化为方程；皮埃尔·费马也在探索类似的思想。
+      一般形式 x² + y² + Dx + Ey + F = 0 经配方整理后，可以一眼读出圆心和半径。今天，测量到某个中心
+      的恒定距离，正是每个 GPS 信号、每次雷达扫描以及 CAD 中绘制每个圆所做的事情。
+    ja: >-
+      円の方程式は、最も古い幾何学的定義を座標で表したものだ。すなわち、中心 (h, k) から正確に距離 r だけ
+      離れた点の集合である。これはルネ・デカルトの解析幾何学とともに生まれた。デカルトは1637年に『幾何学』を
+      出版し、図形を方程式へと翻訳する方法を示した。ピエール・ド・フェルマーも同様の考えを探求していた。
+      一般形 x² + y² + Dx + Ey + F = 0 を平方完成で整理すれば、中心と半径が一目で読み取れる。今日、中心
+      からの距離を一定と測ることは、GPS の各信号、レーダーの各走査、CAD で描かれるすべての円が行っていることである。
+  timeline:
+    - year: "1637"
+      label:
+        es: >-
+          Descartes publica "La Géométrie", fundando la geometría analítica que traduce figuras a
+          ecuaciones.
+        en: >-
+          Descartes publishes "La Géométrie", founding analytic geometry that turns figures into
+          equations.
+        pt: >-
+          Descartes publica "La Géométrie", fundando a geometria analítica que transforma figuras
+          em equações.
+        fr: >-
+          Descartes publie « La Géométrie », fondant la géométrie analytique qui traduit les
+          figures en équations.
+        zh: >-
+          笛卡尔发表《几何学》,创立了将图形转化为方程的解析几何。
+        ja: >-
+          デカルトが『幾何学』を発表し、図形を方程式へと翻訳する解析幾何学を創始する。
+    - year: s. XVII
+      label:
+        es: >-
+          Fermat desarrolla en paralelo sus métodos de coordenadas para curvas y lugares
+          geométricos.
+        en: >-
+          Fermat develops in parallel his coordinate methods for curves and loci.
+        pt: >-
+          Fermat desenvolve em paralelo seus métodos de coordenadas para curvas e lugares
+          geométricos.
+        fr: >-
+          Fermat développe en parallèle ses méthodes de coordonnées pour les courbes et les lieux
+          géométriques.
+        zh: >-
+          费马并行地发展了用坐标处理曲线与轨迹的方法。
+        ja: >-
+          フェルマーが並行して、曲線と軌跡を座標で扱う方法を発展させる。
+    - year: s. XX
+      label:
+        es: >-
+          El radar y los sistemas de navegación usan el lugar geométrico de distancia constante
+          para fijar posiciones.
+        en: >-
+          Radar and navigation systems use the locus of constant distance to fix positions.
+        pt: >-
+          O radar e os sistemas de navegação usam o lugar geométrico de distância constante para
+          fixar posições.
+        fr: >-
+          Le radar et les systèmes de navigation utilisent le lieu de distance constante pour fixer
+          des positions.
+        zh: >-
+          雷达与导航系统用恒定距离的轨迹来确定位置。
+        ja: >-
+          レーダーや航法システムは、一定距離の軌跡を用いて位置を定める。
+    - year: Hoy
+      label:
+        es: >-
+          La ecuación del círculo subyace al GPS, al alcance de radares y al dibujo circular en
+          software CAD.
+        en: >-
+          The circle equation underlies GPS, radar range, and circular drawing in CAD software.
+        pt: >-
+          A equação da circunferência sustenta o GPS, o alcance de radares e o desenho circular em
+          software CAD.
+        fr: >-
+          L'équation du cercle sous-tend le GPS, la portée des radars et le tracé circulaire en
+          logiciels de CAO.
+        zh: >-
+          圆的方程是 GPS、雷达作用距离和 CAD 软件中圆形绘图的基础。
+        ja: >-
+          円の方程式は、GPS、レーダーの探知範囲、CADソフトの円描画の基盤である。
+  useCases:
+    - title:
+        es: Navegación GPS
+        en: GPS navigation
+        pt: Navegação GPS
+        fr: Navigation GPS
+        zh: GPS 导航
+        ja: GPSナビゲーション
+      description:
+        es: >-
+          La posición se fija intersectando esferas y círculos de distancia constante a satélites.
+        en: >-
+          Position is fixed by intersecting spheres and circles of constant distance from
+          satellites.
+        pt: >-
+          A posição é fixada pela interseção de esferas e círculos de distância constante aos
+          satélites.
+        fr: >-
+          La position est déterminée par l'intersection de sphères et de cercles de distance
+          constante aux satellites.
+        zh: >-
+          通过求与卫星保持恒定距离的球面和圆的交点来确定位置。
+        ja: >-
+          衛星までの距離が一定となる球面や円の交点によって位置を定める。
+    - title:
+        es: Radar
+        en: Radar
+        pt: Radar
+        fr: Radar
+        zh: 雷达
+        ja: レーダー
+      description:
+        es: >-
+          Un eco a distancia constante dibuja una circunferencia en torno a la antena; su
+          intersección localiza el blanco.
+        en: >-
+          An echo at constant distance draws a circle around the antenna; its intersections locate
+          the target.
+        pt: >-
+          Um eco a distância constante desenha uma circunferência em torno da antena; suas
+          interseções localizam o alvo.
+        fr: >-
+          Un écho à distance constante trace un cercle autour de l'antenne ; ses intersections
+          localisent la cible.
+        zh: >-
+          距离恒定的回波以天线为中心画出一个圆,其交点即可定位目标。
+        ja: >-
+          一定距離の反射波がアンテナを中心とする円を描き、その交点で目標を位置特定する。
+    - title:
+        es: Diseño asistido por computadora
+        en: Computer-aided design
+        pt: Projeto auxiliado por computador
+        fr: Conception assistée par ordinateur
+        zh: 计算机辅助设计
+        ja: CAD
+      description:
+        es: >-
+          Los programas CAD trazan círculos y arcos evaluando directamente esta ecuación en
+          coordenadas.
+        en: >-
+          CAD programs draw circles and arcs by evaluating this equation directly in coordinates.
+        pt: >-
+          Programas CAD traçam círculos e arcos avaliando diretamente esta equação em coordenadas.
+        fr: >-
+          Les logiciels de CAO tracent cercles et arcs en évaluant directement cette équation en
+          coordonnées.
+        zh: >-
+          CAD 程序直接按坐标求值该方程来绘制圆和圆弧。
+        ja: >-
+          CADソフトは、この方程式を座標で直接評価して円や円弧を描画する。
+    - title:
+        es: Robótica
+        en: Robotics
+        pt: Robótica
+        fr: Robotique
+        zh: 机器人学
+        ja: ロボティクス
+      description:
+        es: >-
+          El espacio de trabajo de un brazo de dos eslabones se describe como intersección de
+          círculos de alcance fijo.
+        en: >-
+          A two-link arm's workspace is described as an intersection of circles of fixed reach.
+        pt: >-
+          O espaço de trabalho de um braço de dois elos é descrito como interseção de círculos de
+          alcance fixo.
+        fr: >-
+          L'espace de travail d'un bras à deux segments se décrit comme l'intersection de cercles
+          de portée fixe.
+        zh: >-
+          两连杆机械臂的工作空间可描述为固定半径圆的交。
+        ja: >-
+          2リンクアームの可動範囲は、固定到達距離の円の共通部分として記述される。
+  example:
+    title:
+      es: Círculo con centro (2, 3)
+      en: Circle with center (2, 3)
+      pt: Circunferência com centro (2, 3)
+      fr: Cercle de centre (2, 3)
+      zh: 圆心为 (2, 3) 的圆
+      ja: 中心(2, 3)の円
+    lines:
+      - es: Centro (h, k) = (2, 3), r = 5
+        en: Center (h, k) = (2, 3), r = 5
+        pt: Centro (h, k) = (2, 3), r = 5
+        fr: Centre (h, k) = (2, 3), r = 5
+        zh: 圆心 (h, k) = (2, 3), r = 5
+        ja: 中心 (h, k) = (2, 3), r = 5
+      - es: (x−2)² + (y−3)² = 5²
+        en: (x−2)² + (y−3)² = 5²
+        pt: (x−2)² + (y−3)² = 5²
+        fr: (x−2)² + (y−3)² = 5²
+        zh: (x−2)² + (y−3)² = 5²
+        ja: (x−2)² + (y−3)² = 5²
+      - es: (x−2)² + (y−3)² = 25
+        en: (x−2)² + (y−3)² = 25
+        pt: (x−2)² + (y−3)² = 25
+        fr: (x−2)² + (y−3)² = 25
+        zh: (x−2)² + (y−3)² = 25
+        ja: (x−2)² + (y−3)² = 25
+      - es: "Punto (2, 8): (2−2)² + (8−3)² = 0² + 5²"
+        en: "Point (2, 8): (2−2)² + (8−3)² = 0² + 5²"
+        pt: "Ponto (2, 8): (2−2)² + (8−3)² = 0² + 5²"
+        fr: "Point (2, 8) : (2−2)² + (8−3)² = 0² + 5²"
+        zh: "点(2, 8)：(2−2)² + (8−3)² = 0² + 5²"
+        ja: "点(2, 8)：(2−2)² + (8−3)² = 0² + 5²"
+      - es: 0 + 25 = 25 → (2, 8) está sobre la circunferencia
+        en: 0 + 25 = 25 → (2, 8) lies on the circle
+        pt: 0 + 25 = 25 → (2, 8) está sobre a circunferência
+        fr: 0 + 25 = 25 → (2, 8) se trouve sur le cercle
+        zh: 0 + 25 = 25 → (2, 8) 在圆上
+        ja: 0 + 25 = 25 → (2, 8) は円周上にある

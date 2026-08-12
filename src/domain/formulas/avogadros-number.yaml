@@ -1,0 +1,286 @@
+id: avogadros-number
+title:
+  es: Número de Avogadro
+  en: Avogadro's Number
+  pt: Número de Avogadro
+  fr: Nombre d'Avogadro
+  zh: 阿伏伽德罗常数
+  ja: アボガドロ数
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: particle-count
+    type: variable
+    value: N
+    explanation:
+      es: El número total de partículas, sean átomos, moléculas o iones, en la muestra.
+      en: The total number of particles, whether atoms, molecules, or ions, in the sample.
+      pt: O número total de partículas, sejam átomos, moléculas ou íons, na amostra.
+      fr: Le nombre total de particules, qu'il s'agisse d'atomes, de molécules ou d'ions, dans l'échantillon.
+      zh: 样品中粒子的总数,无论是原子、分子还是离子。
+      ja: 試料中の粒子（原子・分子・イオン）の総数。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: amount
+    type: variable
+    value: n
+    explanation:
+      es: La cantidad de sustancia en la muestra, medida en moles.
+      en: The amount of substance in the sample, measured in moles.
+      pt: A quantidade de substância na amostra, medida em mols.
+      fr: La quantité de matière de l'échantillon, mesurée en moles.
+      zh: 样品中物质的量,单位是摩尔。
+      ja: 試料中の物質量。単位はモル。
+  - id: avogadro-constant
+    type: constant
+    value: N_A
+    explanation:
+      es: La constante de Avogadro, igual a 6.022 × 10²³ partículas por mol.
+      en: The Avogadro constant, equal to 6.022 × 10²³ particles per mole.
+      pt: A constante de Avogadro, igual a 6,022 × 10²³ partículas por mol.
+      fr: La constante d'Avogadro, égale à 6,022 × 10²³ particules par mole.
+      zh: 阿伏伽德罗常数,等于每摩尔6.022 × 10²³个粒子。
+      ja: アボガドロ定数。1モルあたり6.022 × 10²³個の粒子に等しい。
+context:
+  author:
+    es: Amedeo Avogadro; nombrado por Perrin
+    en: Amedeo Avogadro; named by Perrin
+    pt: Amedeo Avogadro; nomeado por Perrin
+    fr: Amedeo Avogadro; nommé par Perrin
+    zh: 阿梅代奥·阿伏伽德罗；由佩兰命名
+    ja: アメデオ・アボガドロ；ペランにより命名
+  era:
+    es: Italia, 1776–1856 · medido por Perrin en 1909
+    en: Italy, 1776–1856 · measured by Perrin in 1909
+    pt: Itália, 1776–1856 · medido por Perrin em 1909
+    fr: Italie, 1776–1856 · mesuré par Perrin en 1909
+    zh: 意大利,1776–1856年 · 1909年由佩兰测定
+    ja: イタリア、1776–1856年・1909年にペランが測定
+  history:
+    es: >-
+      El número de Avogadro, 6.022 × 10²³, es el número de partículas en un mol, una cifra tan grande
+      que marca el paso del mundo de los átomos al de la balanza. En 1811 Avogadro intuyó la idea
+      fundamental, y en 1909 Jean Perrin la convirtió en un número medible estudiando el movimiento
+      browniano, lo que también permitió estimar el tamaño de las moléculas. En 2019 la Conferencia
+      General de Pesas y Medidas fijó la constante como un valor exacto y con ella definió el mol del
+      SI, de modo que hoy los químicos cuentan átomos con una simple división.
+    en: >-
+      Avogadro's number, 6.022 × 10²³, is the number of particles in one mole, a figure so large that
+      it marks the passage from the world of atoms to the world of the balance scale. In 1811 Avogadro
+      grasped the underlying idea, and in 1909 Jean Perrin turned it into a measurable number by
+      studying Brownian motion, which also made it possible to estimate the size of molecules. In 2019
+      the General Conference on Weights and Measures fixed the constant as an exact value and used it to
+      define the SI mole, so that today chemists count atoms with a single division.
+    pt: >-
+      O número de Avogadro, 6,022 × 10²³, é o número de partículas em um mol, uma cifra tão grande que
+      marca a passagem do mundo dos átomos para o mundo da balança. Em 1811, Avogadro entreviu a ideia
+      fundamental, e em 1909 Jean Perrin a transformou em um número mensurável ao estudar o movimento
+      browniano, o que também permitiu estimar o tamanho das moléculas. Em 2019, a Conferência Geral de
+      Pesos e Medidas fixou a constante como um valor exato e com ela definiu o mol do SI, de modo que
+      hoje os químicos contam átomos com uma simples divisão.
+    fr: >-
+      Le nombre d'Avogadro, 6,022 × 10²³, est le nombre de particules contenues dans une mole, une
+      valeur si grande qu'elle marque le passage du monde des atomes à celui de la balance. En 1811,
+      Avogadro en saisit l'idée fondamentale, et en 1909 Jean Perrin en fit un nombre mesurable en
+      étudiant le mouvement brownien, ce qui permit aussi d'estimer la taille des molécules. En 2019, la
+      Conférence générale des poids et mesures fixa la constante comme une valeur exacte et définit
+      grâce à elle la mole du SI, si bien qu'aujourd'hui les chimistes comptent les atomes en une simple
+      division.
+    zh: >-
+      阿伏伽德罗常数,6.022 × 10²³,是一摩尔所含的粒子数,这个数字大到足以标志从原子世界到天平世界的跨越。1811年,阿伏伽德罗提出了这一基本思想;
+      1909年,让·佩兰通过研究布朗运动将其转化为可测量的数值,并由此估算出分子的大小。2019年,国际计量大会将该常数确定为精确值,并据此重新定义了国际单位制中的摩尔,
+      如今化学家只需一次除法就能数出原子。
+    ja: >-
+      アボガドロ数 6.022 × 10²³ は、1モルに含まれる粒子の数であり、原子の世界から天秤の世界への橋渡しをするほど巨大な値である。1811年にアボガドロがその基本的な考えを着想し、
+      1909年にジャン・ペランがブラウン運動の研究によってこれを測定可能な数値とし、分子の大きさの推定も可能にした。2019年、国際度量衡総会はこの定数を厳密値として定め、
+      それに基づいてSIのモルを定義した。今日、化学者は1回の割り算で原子を数えることができる。
+  timeline:
+    - year: "1811"
+      label:
+        es: >-
+          Avogadro propone que volúmenes iguales de gases contienen el mismo número de moléculas.
+        en: >-
+          Avogadro proposes that equal volumes of gases contain the same number of molecules.
+        pt: >-
+          Avogadro propõe que volumes iguais de gases contêm o mesmo número de moléculas.
+        fr: >-
+          Avogadro propose que des volumes égaux de gaz contiennent le même nombre de molécules.
+        zh: >-
+          阿伏伽德罗提出,相同体积的气体含有相同数目的分子。
+        ja: >-
+          アボガドロが、同体積の気体には同じ数の分子が含まれると提唱する。
+    - year: "1909"
+      label:
+        es: >-
+          Jean Perrin mide el número de Avogadro a partir del movimiento browniano y gana el Nobel en 1926.
+        en: >-
+          Jean Perrin measures Avogadro's number from Brownian motion and wins the Nobel Prize in 1926.
+        pt: >-
+          Jean Perrin mede o número de Avogadro a partir do movimento browniano e ganha o Nobel em 1926.
+        fr: >-
+          Jean Perrin mesure le nombre d'Avogadro à partir du mouvement brownien et obtient le prix Nobel en 1926.
+        zh: >-
+          让·佩兰根据布朗运动测定了阿伏伽德罗常数,并于1926年获得诺贝尔奖。
+        ja: >-
+          ジャン・ペランがブラウン運動からアボガドロ数を測定し、1926年にノーベル賞を受賞する。
+    - year: "2019"
+      label:
+        es: >-
+          El SI redefine el mol fijando la constante de Avogadro como un valor exacto.
+        en: >-
+          The SI redefines the mole by fixing the Avogadro constant as an exact value.
+        pt: >-
+          O SI redefine o mol fixando a constante de Avogadro como um valor exato.
+        fr: >-
+          Le SI redéfinit la mole en fixant la constante d'Avogadro comme une valeur exacte.
+        zh: >-
+          国际单位制将阿伏伽德罗常数确定为精确值,并据此重新定义了摩尔。
+        ja: >-
+          SIがアボガドロ定数を厳密値と定め、それに基づいてモルを再定義する。
+    - year: Hoy
+      label:
+        es: >-
+          Los laboratorios usan esta constante para contar átomos y moléculas en cada medición.
+        en: >-
+          Laboratories use this constant to count atoms and molecules in every measurement.
+        pt: >-
+          Os laboratórios usam essa constante para contar átomos e moléculas em cada medição.
+        fr: >-
+          Les laboratoires utilisent cette constante pour compter les atomes et les molécules dans chaque mesure.
+        zh: >-
+          实验室用这一常数在每次测量中数出原子和分子。
+        ja: >-
+          実験室では、この定数を使ってあらゆる測定で原子や分子を数えている。
+  useCases:
+    - title:
+        es: Laboratorio químico
+        en: Chemical laboratory
+        pt: Laboratório químico
+        fr: Laboratoire de chimie
+        zh: 化学实验室
+        ja: 化学実験室
+      description:
+        es: >-
+          Prepara disoluciones y reacciones que necesitan un número exacto de moléculas de cada reactivo.
+        en: >-
+          It prepares solutions and reactions needing an exact number of molecules of each reagent.
+        pt: >-
+          Prepara soluções e reações que precisam de um número exato de moléculas de cada reagente.
+        fr: >-
+          Il prépare des solutions et des réactions exigeant un nombre exact de molécules de chaque réactif.
+        zh: >-
+          配制溶液和进行反应时,需要知道每种试剂的精确分子数。
+        ja: >-
+          各試薬の分子数を正確にそろえる溶液調製や反応に使われる。
+    - title:
+        es: Semiconductores
+        en: Semiconductors
+        pt: Semicondutores
+        fr: Semi-conducteurs
+        zh: 半导体
+        ja: 半導体
+      description:
+        es: >-
+          El dopaje controla cuántos átomos de impureza se incorporan por volumen de material.
+        en: >-
+          Doping controls how many impurity atoms are incorporated per volume of material.
+        pt: >-
+          A dopagem controla quantos átomos de impureza são incorporados por volume de material.
+        fr: >-
+          Le dopage contrôle le nombre d'atomes d'impureté incorporés par volume de matériau.
+        zh: >-
+          掺杂工艺控制着每单位体积材料中掺入的杂质原子数量。
+        ja: >-
+          ドーピングにより、材料の単位体積あたりに取り込む不純物原子の数を制御する。
+    - title:
+        es: Física nuclear
+        en: Nuclear physics
+        pt: Física nuclear
+        fr: Physique nucléaire
+        zh: 核物理
+        ja: 核物理学
+      description:
+        es: >-
+          Convierte la actividad de una muestra radiactiva en el número de núcleos que se desintegran.
+        en: >-
+          It converts the activity of a radioactive sample into the number of nuclei decaying.
+        pt: >-
+          Converte a atividade de uma amostra radioativa no número de núcleos que se desintegram.
+        fr: >-
+          Elle convertit l'activité d'un échantillon radioactif en nombre de noyaux qui se désintègrent.
+        zh: >-
+          把放射性样品的活度换算为发生衰变的原子核数目。
+        ja: >-
+          放射性試料の放射能を、崩壊する原子核の数に換算する。
+    - title:
+        es: Metrología
+        en: Metrology
+        pt: Metrologia
+        fr: Métrologie
+        zh: 计量学
+        ja: 計量学
+      description:
+        es: >-
+          La constante define el mol del SI y conecta la escala de masas atómicas con los gramos.
+        en: >-
+          The constant defines the SI mole and connects the atomic mass scale with grams.
+        pt: >-
+          A constante define o mol do SI e conecta a escala de massas atômicas aos gramas.
+        fr: >-
+          La constante définit la mole du SI et relie l'échelle des masses atomiques aux grammes.
+        zh: >-
+          该常数定义了国际单位制中的摩尔,把原子质量标度与克联系起来。
+        ja: >-
+          この定数はSIのモルを定義し、原子質量の基準とグラムをつなぐ。
+  example:
+    title:
+      es: Átomos en un mol de carbono-12
+      en: Atoms in a mole of carbon-12
+      pt: Átomos em um mol de carbono-12
+      fr: Atomes dans une mole de carbone-12
+      zh: 一摩尔碳-12中的原子数
+      ja: 炭素12を1モル中の原子数
+    lines:
+      - es: n = 1 mol (carbono-12)
+        en: n = 1 mol (carbon-12)
+        pt: n = 1 mol (carbono-12)
+        fr: n = 1 mol (carbone-12)
+        zh: n = 1 mol（碳-12）
+        ja: n = 1 mol（炭素12）
+      - es: N_A = 6.022 × 10²³ mol⁻¹
+        en: N_A = 6.022 × 10²³ mol⁻¹
+        pt: N_A = 6,022 × 10²³ mol⁻¹
+        fr: N_A = 6,022 × 10²³ mol⁻¹
+        zh: N_A = 6.022 × 10²³ mol⁻¹
+        ja: N_A = 6.022 × 10²³ mol⁻¹
+      - es: N = n × N_A
+        en: N = n × N_A
+        pt: N = n × N_A
+        fr: N = n × N_A
+        zh: N = n × N_A
+        ja: N = n × N_A
+      - es: N = 1 × 6.022 × 10²³
+        en: N = 1 × 6.022 × 10²³
+        pt: N = 1 × 6,022 × 10²³
+        fr: N = 1 × 6,022 × 10²³
+        zh: N = 1 × 6.022 × 10²³
+        ja: N = 1 × 6.022 × 10²³
+      - es: N = 6.022 × 10²³ átomos
+        en: N = 6.022 × 10²³ atoms
+        pt: N = 6,022 × 10²³ átomos
+        fr: N = 6,022 × 10²³ atomes
+        zh: N = 6.022 × 10²³ 个原子
+        ja: N = 6.022 × 10²³ 個の原子

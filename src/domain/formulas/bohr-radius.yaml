@@ -1,0 +1,334 @@
+id: bohr-radius
+title:
+  es: Radio de Bohr
+  en: Bohr Radius
+  pt: Raio de Bohr
+  fr: Rayon de Bohr
+  zh: 玻尔半径
+  ja: ボーア半径
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: r
+    type: variable
+    value: "r"
+    explanation:
+      es: El radio de la órbita del electrón en el átomo de hidrógeno.
+      en: The electron orbit's radius in the hydrogen atom.
+      pt: O raio da órbita do elétron no átomo de hidrogênio.
+      fr: Le rayon de l'orbite de l'électron dans l'atome d'hydrogène.
+      zh: 氢原子中电子轨道的半径。
+      ja: 水素原子における電子軌道の半径。
+  - id: r-sub
+    type: superscript
+    value: "n"
+    explanation:
+      es: "El subíndice n: el número cuántico principal de la órbita."
+      en: "Subscript n: the orbit's principal quantum number."
+      pt: "O subíndice n: o número quântico principal da órbita."
+      fr: "L'indice n : le nombre quantique principal de l'orbite."
+      zh: "下标n：轨道的主量子数。"
+      ja: "下付きn：軌道の主量子数。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: n
+    type: variable
+    value: "n"
+    explanation:
+      es: "El número cuántico principal, que numera las órbitas: 1, 2, 3..."
+      en: "The principal quantum number, numbering the orbits: 1, 2, 3..."
+      pt: "O número quântico principal, que numera as órbitas: 1, 2, 3..."
+      fr: "Le nombre quantique principal, qui numérote les orbites : 1, 2, 3..."
+      zh: "主量子数，为轨道编号：1、2、3…"
+      ja: "許容軌道に番号を付ける主量子数：1、2、3…"
+  - id: squared
+    type: superscript
+    value: "²"
+    explanation:
+      es: "Al cuadrado: la órbita crece con n², no con n."
+      en: "Squared: the orbit grows with n², not n."
+      pt: "Ao quadrado: a órbita cresce com n², não com n."
+      fr: "Au carré : l'orbite croît avec n², pas n."
+      zh: "平方：轨道随n²而非n增长。"
+      ja: "2乗：軌道はnではなくn²に比例して大きくなる。"
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: a
+    type: variable
+    value: "a"
+    explanation:
+      es: El radio de Bohr, la menor órbita posible del hidrógeno.
+      en: The Bohr radius, hydrogen's smallest possible orbit.
+      pt: O raio de Bohr, a menor órbita possível do hidrogênio.
+      fr: Le rayon de Bohr, la plus petite orbite possible de l'hydrogène.
+      zh: 玻尔半径，氢原子最小的可能轨道。
+      ja: ボーア半径。水素で可能な最小の軌道。
+  - id: a-sub
+    type: superscript
+    value: "0"
+    explanation:
+      es: "El subíndice 0: el estado fundamental, la órbita de menor energía."
+      en: "Subscript 0: the ground state, the lowest-energy orbit."
+      pt: "O subíndice 0: o estado fundamental, a órbita de menor energia."
+      fr: "L'indice 0 : l'état fondamental, l'orbite de plus basse énergie."
+      zh: "下标0：基态，能量最低的轨道。"
+      ja: "下付き0：基底状態、最もエネルギーが低い軌道。"
+context:
+  author:
+    es: Niels Bohr
+    en: Niels Bohr
+    pt: Niels Bohr
+    fr: Niels Bohr
+    zh: 尼尔斯·玻尔
+    ja: ニールス・ボーア
+  era:
+    es: Dinamarca, 1885–1962 · publicada en 1913
+    en: Denmark, 1885–1962 · published in 1913
+    pt: Dinamarca, 1885–1962 · publicada em 1913
+    fr: Danemark, 1885–1962 · publiée en 1913
+    zh: 丹麦,1885–1962年 · 1913年发表
+    ja: デンマーク、1885–1962年・1913年発表
+  history:
+    es: >-
+      En su modelo de 1913, Niels Bohr calculó la órbita más pequeña que puede ocupar el electrón del
+      hidrógeno y obtuvo el radio de Bohr, a₀ ≈ 0.529 Å, una fracción del diámetro de un átomo. Las
+      órbitas permitidas crecen como n²: cada nivel cuántico es cuatro veces mayor que el anterior.
+      Fue el primer modelo cuantitativo que explicó por qué los átomos son estables y por qué emiten
+      luz en colores discretos, aunque según la física clásica el electrón debería caer al núcleo.
+    en: >-
+      In his 1913 model, Niels Bohr computed the smallest orbit the hydrogen electron can occupy and
+      obtained the Bohr radius, a₀ ≈ 0.529 Å, a fraction of an atom's diameter. Allowed orbits grow
+      as n²: each quantum level is four times larger than the previous one. It was the first
+      quantitative model to explain why atoms are stable and emit light in discrete colors, even
+      though classically the electron should fall into the nucleus.
+    pt: >-
+      Em seu modelo de 1913, Niels Bohr calculou a menor órbita que o elétron do hidrogênio pode
+      ocupar e obteve o raio de Bohr, a₀ ≈ 0,529 Å, uma fração do diâmetro de um átomo. As órbitas
+      permitidas crescem como n²: cada nível quântico é quatro vezes maior que o anterior. Foi o
+      primeiro modelo quantitativo a explicar por que os átomos são estáveis e emitem luz em cores
+      discretas, embora, classicamente, o elétron devesse cair no núcleo.
+    fr: >-
+      Dans son modèle de 1913, Niels Bohr calcula la plus petite orbite que peut occuper l'électron
+      de l'hydrogène et obtint le rayon de Bohr, a₀ ≈ 0,529 Å, une fraction du diamètre d'un atome.
+      Les orbites permises croissent comme n² : chaque niveau quantique est quatre fois plus grand
+      que le précédent. Ce fut le premier modèle quantitatif à expliquer pourquoi les atomes sont
+      stables et émettent une lumière aux couleurs discrètes, alors que classiquement l'électron
+      devrait s'effondrer sur le noyau.
+    zh: >-
+      在1913年的模型中，尼尔斯·玻尔计算了氢原子电子所能占据的最小轨道，得到了玻尔半径a₀ ≈ 0.529 Å——
+      原子直径的一小部分。允许的轨道按n²增长：每个量子态轨道都是前一个的四倍大。这是第一个能够定量解释
+      原子为何稳定、为何发出离散颜色的光，而按经典物理电子本应坠入原子核的模型。
+    ja: >-
+      1913年のモデルで、ニールス・ボーアは水素原子の電子が占められる最小の軌道を計算し、原子の直径のほんの
+      一部にあたるボーア半径a₀ ≈ 0.529 Åを得た。許される軌道はn²で大きくなる。各量子準位は前のものの4倍
+      である。これは、古典的には電子が原子核へ落ち込むはずなのに、なぜ原子が安定で離散的な色の光を放つのかを
+      説明した最初の定量的モデルだった。
+  timeline:
+    - year: "1913"
+      label:
+        es: >-
+          Bohr publica su modelo atómico y deriva el radio a₀ a partir de constantes físicas.
+        en: >-
+          Bohr publishes his atomic model and derives the radius a₀ from physical constants.
+        pt: >-
+          Bohr publica seu modelo atômico e deriva o raio a₀ a partir de constantes físicas.
+        fr: >-
+          Bohr publie son modèle atomique et dérive le rayon a₀ à partir de constantes physiques.
+        zh: >-
+          玻尔发表他的原子模型，并从物理常数推导出半径a₀。
+        ja: >-
+          ボーアが原子モデルを発表し、物理定数から半径a₀を導く。
+    - year: "1922"
+      label:
+        es: Recibe el Premio Nobel de Física por su modelo del átomo.
+        en: He receives the Nobel Prize in Physics for his model of the atom.
+        pt: Recebe o Prêmio Nobel de Física por seu modelo do átomo.
+        fr: Il reçoit le prix Nobel de physique pour son modèle de l'atome.
+        zh: 他因原子模型获得诺贝尔物理学奖。
+        ja: 原子モデルによりノーベル物理学賞を受賞する。
+    - year: "1926"
+      label:
+        es: >-
+          Schrödinger formula la mecánica ondulatoria; a₀ sigue siendo la escala de longitud
+          atómica.
+        en: >-
+          Schrödinger formulates wave mechanics; a₀ remains the atomic length scale.
+        pt: >-
+          Schrödinger formula a mecânica ondulatória; a₀ segue sendo a escala de comprimento
+          atômica.
+        fr: >-
+          Schrödinger formule la mécanique ondulatoire ; a₀ reste l'échelle de longueur atomique.
+        zh: >-
+          薛定谔建立波动力学；a₀仍是原子尺度的特征长度。
+        ja: >-
+          シュレーディンガーが波動力学を定式化。a₀は今も原子スケールの長さの単位である。
+    - year: Hoy
+      label:
+        es: >-
+          a₀ se usa como unidad natural en física atómica, química cuántica y nanotecnología.
+        en: >-
+          a₀ is used as a natural unit in atomic physics, quantum chemistry, and nanotechnology.
+        pt: >-
+          a₀ é usado como unidade natural na física atômica, química quântica e nanotecnologia.
+        fr: >-
+          a₀ est utilisé comme unité naturelle en physique atomique, chimie quantique et
+          nanotechnologie.
+        zh: >-
+          a₀被用作原子物理、量子化学和纳米技术中的自然单位。
+        ja: >-
+          a₀は原子物理学、量子化学、ナノテクノロジーで自然単位として用いられている。
+  useCases:
+    - title:
+        es: Física atómica
+        en: Atomic physics
+        pt: Física atômica
+        fr: Physique atomique
+        zh: 原子物理学
+        ja: 原子物理学
+      description:
+        es: >-
+          a₀ fija la escala de tamaño del átomo: todas las distancias atómicas se miden en unidades
+          de a₀.
+        en: >-
+          a₀ sets the atom's size scale: all atomic distances are measured in units of a₀.
+        pt: >-
+          a₀ define a escala de tamanho do átomo: todas as distâncias atômicas são medidas em
+          unidades de a₀.
+        fr: >-
+          a₀ fixe l'échelle de taille de l'atome : toutes les distances atomiques se mesurent en
+          unités de a₀.
+        zh: >-
+          a₀确定了原子的大小尺度：一切原子距离都以a₀为单位来度量。
+        ja: >-
+          a₀が原子の大きさの尺度を決める。原子スケールの距離はすべてa₀を単位に測られる。
+    - title:
+        es: Nanotecnología
+        en: Nanotechnology
+        pt: Nanotecnologia
+        fr: Nanotechnologie
+        zh: 纳米技术
+        ja: ナノテクノロジー
+      description:
+        es: >-
+          Los puntos cuánticos y las nanoestructuras se dimensionan en escalas comparables a a₀.
+        en: >-
+          Quantum dots and nanostructures are sized on scales comparable to a₀.
+        pt: >-
+          Pontos quânticos e nanoestruturas são dimensionados em escalas comparáveis a a₀.
+        fr: >-
+          Les points quantiques et les nanostructures sont dimensionnés à des échelles comparables à
+          a₀.
+        zh: >-
+          量子点和纳米结构的尺寸都与a₀在同一数量级。
+        ja: >-
+          量子ドットやナノ構造は、a₀に匹敵するスケールで設計される。
+    - title:
+        es: Química cuántica
+        en: Quantum chemistry
+        pt: Química quântica
+        fr: Chimie quantique
+        zh: 量子化学
+        ja: 量子化学
+      description:
+        es: >-
+          Los radios atómicos calculados sirven de referencia para enlaces, orbitales y moléculas.
+        en: >-
+          The computed atomic radii serve as reference for bonds, orbitals, and molecules.
+        pt: >-
+          Os raios atômicos calculados servem de referência para ligações, orbitais e moléculas.
+        fr: >-
+          Les rayons atomiques calculés servent de référence pour les liaisons, les orbitales et les
+          molécules.
+        zh: >-
+          计算得到的原子半径，是研究化学键、轨道和分子的参考基准。
+        ja: >-
+          計算で得られる原子半径は、結合、軌道、分子を扱う際の基準となる。
+    - title:
+        es: Espectroscopia
+        en: Spectroscopy
+        pt: Espectroscopia
+        fr: Spectroscopie
+        zh: 光谱学
+        ja: 分光学
+      description:
+        es: >-
+          Conocer el tamaño de cada órbita permite predecir las transiciones y las líneas espectrales
+          del hidrógeno.
+        en: >-
+          Knowing each orbit's size allows predicting hydrogen's transitions and spectral lines.
+        pt: >-
+          Conhecer o tamanho de cada órbita permite prever as transições e as linhas espectrais do
+          hidrogênio.
+        fr: >-
+          Connaître la taille de chaque orbite permet de prédire les transitions et les raies
+          spectrales de l'hydrogène.
+        zh: >-
+          知道了每条轨道的大小，就可以预测氢的跃迁和光谱线。
+        ja: >-
+          各軌道の大きさがわかれば、水素の遷移とスペクトル線を予測できる。
+  example:
+    title:
+      es: Las dos primeras órbitas
+      en: The first two orbits
+      pt: As duas primeiras órbitas
+      fr: Les deux premières orbites
+      zh: 前两条轨道
+      ja: 最初の二つの軌道
+    lines:
+      - es: a0 ≈ 0.529 Å
+        en: a0 ≈ 0.529 Å
+        pt: a0 ≈ 0,529 Å
+        fr: a0 ≈ 0,529 Å
+        zh: a0 ≈ 0.529 Å
+        ja: a0 ≈ 0.529 Å
+      - es: r1 = 1² · a0
+        en: r1 = 1² · a0
+        pt: r1 = 1² · a0
+        fr: r1 = 1² · a0
+        zh: r1 = 1² · a0
+        ja: r1 = 1² · a0
+      - es: r1 = 1 · 0.529 Å
+        en: r1 = 1 · 0.529 Å
+        pt: r1 = 1 · 0,529 Å
+        fr: r1 = 1 · 0,529 Å
+        zh: r1 = 1 · 0.529 Å
+        ja: r1 = 1 · 0.529 Å
+      - es: "r1 = 0.529 Å: la órbita más pequeña"
+        en: "r1 = 0.529 Å: the smallest orbit"
+        pt: "r1 = 0,529 Å: a menor órbita"
+        fr: "r1 = 0,529 Å : la plus petite orbite"
+        zh: "r1 = 0.529 Å：最小的轨道"
+        ja: "r1 = 0.529 Å：最も小さい軌道"
+      - es: r2 = 2² · a0 = 4 · 0.529 Å
+        en: r2 = 2² · a0 = 4 · 0.529 Å
+        pt: r2 = 2² · a0 = 4 · 0,529 Å
+        fr: r2 = 2² · a0 = 4 · 0,529 Å
+        zh: r2 = 2² · a0 = 4 · 0.529 Å
+        ja: r2 = 2² · a0 = 4 · 0.529 Å
+      - es: "r2 = 2.116 Å: cuatro veces la primera"
+        en: "r2 = 2.116 Å: four times the first"
+        pt: "r2 = 2,116 Å: quatro vezes a primeira"
+        fr: "r2 = 2,116 Å : quatre fois la première"
+        zh: "r2 = 2.116 Å：是第一轨道的四倍"
+        ja: "r2 = 2.116 Å：最初の軌道の4倍"

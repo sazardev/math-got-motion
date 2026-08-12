@@ -1,0 +1,329 @@
+id: present-value
+title:
+  es: Valor Presente
+  en: Present Value
+  pt: Valor Presente
+  fr: Valeur actuelle
+  zh: 现值
+  ja: 現在価値
+category:
+  es: Finanzas
+  en: Finance
+  pt: Finanças
+  fr: Finance
+  zh: 金融
+  ja: 金融
+nodes:
+  - id: pv
+    type: variable
+    value: PV
+    explanation:
+      es: "PV: cuánto vale hoy un pago futuro."
+      en: "PV: what a future payment is worth today."
+      pt: "PV: quanto vale hoje um pagamento futuro."
+      fr: "PV : ce que vaut aujourd'hui un paiement futur."
+      zh: "PV：未来一笔付款今天值多少。"
+      ja: "PV：将来の支払いが今日どれだけの価値を持つか。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Se calcula como.
+      en: Is computed as.
+      pt: É calculado como.
+      fr: Se calcule comme.
+      zh: 计算为。
+      ja: 次のように計算される。
+  - id: fv
+    type: variable
+    value: FV
+    explanation:
+      es: "FV: el valor futuro del pago."
+      en: "FV: the future value of the payment."
+      pt: "FV: o valor futuro do pagamento."
+      fr: "FV : la valeur future du paiement."
+      zh: "FV：付款的未来价值。"
+      ja: "FV：支払いの将来価値。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el factor de descuento.
+      en: Opens the discount factor.
+      pt: Abre o fator de desconto.
+      fr: Ouvre le facteur d'actualisation.
+      zh: 打开折现因子。
+      ja: 割引係数を開く括弧。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: La unidad base.
+      en: The base unit.
+      pt: A unidade base.
+      fr: L'unité de base.
+      zh: 基础单位1。
+      ja: 基準の1。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Más la tasa.
+      en: Plus the rate.
+      pt: Mais a taxa.
+      fr: Plus le taux.
+      zh: 加上利率。
+      ja: 金利を加える。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "r: la tasa de descuento o interés por periodo."
+      en: "r: the discount or interest rate per period."
+      pt: "r: a taxa de desconto ou juros por período."
+      fr: "r : le taux d'actualisation ou d'intérêt par période."
+      zh: "r：每期的折现率或利率。"
+      ja: "r：期間あたりの割引率または金利。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el factor de descuento.
+      en: Closes the discount factor.
+      pt: Fecha o fator de desconto.
+      fr: Ferme le facteur d'actualisation.
+      zh: 关闭折现因子。
+      ja: 割引係数を閉じる括弧。
+  - id: n
+    type: superscript
+    value: n
+    explanation:
+      es: "n: el número de periodos hasta el pago."
+      en: "n: the number of periods until the payment."
+      pt: "n: o número de períodos até o pagamento."
+      fr: "n : le nombre de périodes jusqu'au paiement."
+      zh: "n：距付款的期数。"
+      ja: "n：支払いまでの期間の数。"
+context:
+  author:
+    es: Origen colectivo de la ciencia actuarial
+    en: Collective origin in actuarial science
+    pt: Origem coletiva na ciência atuarial
+    fr: Origine collective de la science actuarielle
+    zh: 精算学的集体起源
+    ja: 保険数理学における集団的起源
+  era:
+    es: Europa, s. XVI–XVII · formalizada con las tablas de interés compuesto
+    en: Europe, 16th–17th centuries · formalized with compound interest tables
+    pt: Europa, sécs. XVI–XVII · formalizada com as tabelas de juros compostos
+    fr: Europe, XVIe–XVIIe siècles · formalisée avec les tables d'intérêts composés
+    zh: 欧洲，16–17世纪·借助复利表形式化
+    ja: ヨーロッパ、16〜17世紀・複利表とともに定式化
+  history:
+    es: >-
+      La idea de que un peso hoy vale más que un peso mañana es tan antigua como el préstamo con
+      interés. Con la generalización de las tablas de interés compuesto en la Europa de los siglos XVI
+      y XVII, los actuarios formalizaron el descuento: para saber cuánto vale hoy un pago futuro, se
+      divide por el factor (1+r)ⁿ. Es la operación inversa del interés compuesto y el corazón de los
+      bonos, los préstamos y la valoración de empresas.
+    en: >-
+      The idea that a peso today is worth more than a peso tomorrow is as old as lending at interest.
+      As compound interest tables spread through 16th- and 17th-century Europe, actuaries formalized
+      discounting: to know what a future payment is worth today, divide by (1+r)ⁿ. It is the inverse of
+      compound interest and the heart of bonds, loans, and business valuation.
+    pt: >-
+      A ideia de que um real hoje vale mais do que um real amanhã é tão antiga quanto o empréstimo com
+      juros. Com a difusão das tabelas de juros compostos na Europa dos séculos XVI e XVII, os atuários
+      formalizaram o desconto: para saber quanto vale hoje um pagamento futuro, divide-se por (1+r)ⁿ. É
+      a operação inversa dos juros compostos e o coração dos títulos, dos empréstimos e da avaliação de
+      empresas.
+    fr: >-
+      L'idée qu'un euro d'aujourd'hui vaut plus qu'un euro de demain est aussi vieille que le prêt à
+      intérêt. Avec la diffusion des tables d'intérêts composés dans l'Europe des XVIe et XVIIe siècles,
+      les actuaires formalisèrent l'actualisation : pour savoir ce que vaut aujourd'hui un paiement
+      futur, on divise par (1+r)ⁿ. C'est l'opération inverse des intérêts composés et le cœur des
+      obligations, des prêts et de l'évaluation d'entreprise.
+    zh: >-
+      "今天的钱比明天的钱更值钱"这一观念与带息贷款一样古老。随着复利表在16、17世纪欧洲的普及，精算师将折现
+      形式化：要知道未来一笔付款今天值多少，就除以(1+r)ⁿ。它是复利的逆运算，也是债券、贷款和企业估值的核心。
+    ja: >-
+      「今日の1円は明日の1円より価値がある」という考えは、利息付き貸付と同じくらい古い。16〜17世紀のヨーロッパで
+      複利の表が普及するにつれ、保険数理士は割引を定式化した。将来の支払いが今日いくらかを知るには、(1+r)ⁿで
+      割ればよい。これは複利の逆演算であり、債券、融資、企業価値評価の核心である。
+  timeline:
+    - year: s. XVI–XVII
+      label:
+        es: >-
+          Banqueros italianos e ingleses construyen tablas de descuento para préstamos.
+        en: >-
+          Italian and English bankers build discount tables for loans.
+        pt: >-
+          Banqueiros italianos e ingleses constroem tabelas de desconto para empréstimos.
+        fr: >-
+          Les banquiers italiens et anglais construisent des tables d'actualisation pour les prêts.
+        zh: >-
+          意大利和英国银行家为贷款编制折现表。
+        ja: >-
+          イタリアとイギリスの銀行家が、融資のための割引表を作る。
+    - year: s. XIX
+      label:
+        es: >-
+          La ciencia actuarial vuelve el valor presente estándar en seguros y pensiones.
+        en: >-
+          Actuarial science makes present value standard in insurance and pensions.
+        pt: >-
+          A ciência atuarial torna o valor presente padrão em seguros e pensões.
+        fr: >-
+          La science actuarielle rend la valeur actuelle standard en assurance et retraite.
+        zh: >-
+          精算学使现值成为保险和养老金的标准。
+        ja: >-
+          保険数理学が、現在価値を保険と年金の標準にする。
+    - year: "1938"
+      label:
+        es: >-
+          John Burr Williams funda la valoración por flujos descontados en The Theory of Investment
+          Value.
+        en: >-
+          John Burr Williams founds discounted cash flow valuation in The Theory of Investment Value.
+        pt: >-
+          John Burr Williams funda a avaliação por fluxo de caixa descontado em The Theory of Investment
+          Value.
+        fr: >-
+          John Burr Williams fonde l'évaluation par flux de trésorerie actualisés dans The Theory of
+          Investment Value.
+        zh: >-
+          约翰·伯尔·威廉姆斯在《投资价值理论》中创立现金流折现估值法。
+        ja: >-
+          ジョン・バー・ウィリアムズが『投資価値論』で割引キャッシュフロー評価を創始する。
+    - year: Hoy
+      label:
+        es: >-
+          Es el método estándar para valorar bonos, proyectos y empresas enteras.
+        en: >-
+          It is the standard method to value bonds, projects, and whole companies.
+        pt: >-
+          É o método padrão para valorar títulos, projetos e empresas inteiras.
+        fr: >-
+          C'est la méthode standard pour valoriser obligations, projets et entreprises entières.
+        zh: >-
+          它是评估债券、项目和整家公司的标准方法。
+        ja: >-
+          債券、プロジェクト、企業全体を評価する標準的な手法である。
+  useCases:
+    - title:
+        es: Valoración de bonos
+        en: Bond valuation
+        pt: Avaliação de títulos
+        fr: Valorisation d'obligations
+        zh: 债券估值
+        ja: 債券評価
+      description:
+        es: >-
+          El precio de un bono es el valor presente de sus cupones futuros y su principal.
+        en: >-
+          A bond's price is the present value of its future coupons and principal.
+        pt: >-
+          O preço de um título é o valor presente de seus cupons futuros e do principal.
+        fr: >-
+          Le prix d'une obligation est la valeur actuelle de ses coupons et de son principal.
+        zh: >-
+          债券的价格就是其未来息票与本金的现值之和。
+        ja: >-
+          債券の価格は、将来のクーポンと元本の現在価値である。
+    - title:
+        es: Presupuesto de capital
+        en: Capital budgeting
+        pt: Orçamento de capital
+        fr: Budgétisation des investissements
+        zh: 资本预算
+        ja: 資本予算
+      description:
+        es: >-
+          Un proyecto se acepta si el valor presente de sus flujos supera su costo.
+        en: >-
+          A project is accepted if the present value of its cash flows exceeds its cost.
+        pt: >-
+          Um projeto é aceito se o valor presente de seus fluxos supera seu custo.
+        fr: >-
+          Un projet est accepté si la valeur actuelle de ses flux dépasse son coût.
+        zh: >-
+          若项目现金流的现值超过其成本，就接受该项目。
+        ja: >-
+          プロジェクトのキャッシュフローの現在価値がコストを上回れば、そのプロジェクトは採択される。
+    - title:
+        es: Planificación de pensiones
+        en: Pension planning
+        pt: Planejamento de pensões
+        fr: Planification des retraites
+        zh: 养老金规划
+        ja: 年金計画
+      description:
+        es: >-
+          Saber cuánto ahorrar hoy para un retiro fijo usa el valor presente de la pensión.
+        en: >-
+          Knowing how much to save today for a fixed retirement uses the pension's present value.
+        pt: >-
+          Saber quanto poupar hoje para uma aposentadoria fixa usa o valor presente da pensão.
+        fr: >-
+          Savoir combien épargner aujourd'hui pour une retraite fixe utilise la valeur actuelle de la
+          pension.
+        zh: >-
+          要计算为固定退休生活今天该存多少钱，就用养老金的现值。
+        ja: >-
+          定額の退職後の生活のために今日いくら貯めるべきかを知るには、年金の現在価値を使う。
+  example:
+    title:
+      es: Un pago en 10 años
+      en: A payment in 10 years
+      pt: Um pagamento em 10 anos
+      fr: Un paiement dans 10 ans
+      zh: 10年后的一笔付款
+      ja: 10年後の支払い
+    lines:
+      - es: "FV = 1000, r = 5% = 0.05, n = 10"
+        en: "FV = 1000, r = 5% = 0.05, n = 10"
+        pt: "FV = 1000, r = 5% = 0,05, n = 10"
+        fr: "FV = 1000, r = 5 % = 0,05, n = 10"
+        zh: "FV = 1000，r = 5% = 0.05，n = 10"
+        ja: "FV = 1000、r = 5% = 0.05、n = 10"
+      - es: PV = 1000 / (1.05)¹⁰
+        en: PV = 1000 / (1.05)¹⁰
+        pt: PV = 1000 / (1,05)¹⁰
+        fr: PV = 1000 / (1,05)¹⁰
+        zh: PV = 1000 / (1.05)¹⁰
+        ja: PV = 1000 / (1.05)¹⁰
+      - es: (1.05)¹⁰ ≈ 1.6289
+        en: (1.05)¹⁰ ≈ 1.6289
+        pt: (1,05)¹⁰ ≈ 1,6289
+        fr: (1,05)¹⁰ ≈ 1,6289
+        zh: (1.05)¹⁰ ≈ 1.6289
+        ja: (1.05)¹⁰ ≈ 1.6289
+      - es: PV ≈ 1000 / 1.6289
+        en: PV ≈ 1000 / 1.6289
+        pt: PV ≈ 1000 / 1,6289
+        fr: PV ≈ 1000 / 1,6289
+        zh: PV ≈ 1000 / 1.6289
+        ja: PV ≈ 1000 / 1.6289
+      - es: PV ≈ 613.9
+        en: PV ≈ 613.9
+        pt: PV ≈ 613,9
+        fr: PV ≈ 613,9
+        zh: PV ≈ 613.9
+        ja: PV ≈ 613.9
+      - es: 1000 en 10 años valen hoy unos 614
+        en: 1000 in 10 years is worth about 614 today
+        pt: 1000 em 10 anos valem hoje cerca de 614
+        fr: 1000 dans 10 ans valent aujourd'hui environ 614
+        zh: 10年后的1000今天约值614
+        ja: 10年後の1000は、今日約614の価値がある

@@ -1,0 +1,319 @@
+id: mechanical-power
+title:
+  es: Potencia Mecánica
+  en: Mechanical Power
+  pt: Potência Mecânica
+  fr: Puissance Mécanique
+  zh: 机械功率
+  ja: 力学的仕事率
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: p
+    type: variable
+    value: P
+    explanation:
+      es: La potencia desarrollada por la fuerza, o sea la rapidez con que se realiza trabajo.
+      en: The power developed by the force, that is, how fast work is done.
+      pt: A potência desenvolvida pela força, ou seja, a rapidez com que o trabalho é realizado.
+      fr: La puissance développée par la force, c'est-à-dire la rapidité avec laquelle un travail est effectué.
+      zh: 力产生的功率,也就是做功的快慢。
+      ja: 力が生み出す仕事率、すなわち仕事を行う速さ。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: La fuerza aplicada al objeto, medida en newtons.
+      en: The force applied to the object, measured in newtons.
+      pt: A força aplicada ao objeto, medida em newtons.
+      fr: La force appliquée à l'objet, mesurée en newtons.
+      zh: 施加在物体上的力,以牛顿为单位。
+      ja: 物体に加えられる力。単位はニュートン。
+  - id: times
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación de dos magnitudes.
+      en: Multiplication of two quantities.
+      pt: Multiplicação de duas grandezas.
+      fr: Multiplication de deux grandeurs.
+      zh: 两个量相乘。
+      ja: 二つの量の掛け算。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La velocidad del objeto, medida en metros por segundo.
+      en: The speed of the object, measured in meters per second.
+      pt: A velocidade do objeto, medida em metros por segundo.
+      fr: La vitesse de l'objet, mesurée en mètres par seconde.
+      zh: 物体的速度,以米每秒为单位。
+      ja: 物体の速度。単位はメートル毎秒。
+context:
+  author:
+    es: Basada en los Principia de Newton
+    en: Based on Newton's Principia
+    pt: Baseada nos Principia de Newton
+    fr: Basée sur les Principia de Newton
+    zh: 基于牛顿的《自然哲学的数学原理》
+    ja: ニュートンの『プリンキピア』に基づく
+  era:
+    es: Inglaterra, s. XVII–XVIII
+    en: England, 17th–18th century
+    pt: Inglaterra, séculos XVII–XVIII
+    fr: Angleterre, XVIIe–XVIIIe siècle
+    zh: 英国,17–18世纪
+    ja: イギリス、17–18世紀
+  history:
+    es: >-
+      En los Principia (1687) Newton formalizó el trabajo como fuerza por desplazamiento, y de esa
+      base se sigue que el trabajo por segundo equivale a fuerza por velocidad. James Watt le dio
+      forma práctica a la idea un siglo después, para vender sus motores de vapor comparó su
+      producción con la de los caballos y definió el caballo de fuerza. Por eso los autos se siguen
+      calificando en potencia, la cifra expresa cuánta fuerza útil puede empujar un vehículo a
+      velocidad constante, unida al torque y las RPM en los motores modernos.
+    en: >-
+      In the Principia (1687) Newton formalized work as force times displacement, and from that
+      basis it follows that work per second equals force times velocity. James Watt gave the idea
+      practical form a century later, to sell his steam engines he compared their output with that
+      of horses and defined the horsepower. That is why cars are still rated in power today, the
+      figure expresses how much useful force can push a vehicle at a constant speed, linked to
+      torque and RPM in modern engines.
+    pt: >-
+      Nos Principia (1687) Newton formalizou o trabalho como força vezes deslocamento, e dessa base
+      decorre que o trabalho por segundo equivale à força vezes a velocidade. James Watt deu forma
+      prática à ideia um século depois, para vender suas máquinas a vapor comparou a produção delas
+      com a de cavalos e definiu o cavalo-vapor. É por isso que os carros ainda são avaliados por
+      potência, o número expressa quanta força útil consegue empurrar um veículo a velocidade
+      constante, ligada ao torque e às RPM nos motores modernos.
+    fr: >-
+      Dans les Principia (1687), Newton formalisa le travail comme le produit d'une force par un
+      déplacement, et de cette base découle que le travail par seconde équivaut à la force multipliée
+      par la vitesse. James Watt donna une forme pratique à l'idée un siècle plus tard, pour vendre
+      ses machines à vapeur il compara leur production à celle des chevaux et définit le cheval-
+      vapeur. C'est pourquoi les voitures sont encore évaluées en puissance, ce chiffre exprime
+      combien de force utile peut pousser un véhicule à vitesse constante, lié au couple et au régime
+      des moteurs modernes.
+    zh: >-
+      牛顿在1687年的《自然哲学的数学原理》中将功定义为力乘以位移,由此可知单位时间的功等于力乘以速度。
+      一个世纪后,詹姆斯·瓦特将这一思想付诸实用,为了推销他的蒸汽机,他把机器的输出与马匹相比,定义了马力。
+      因此如今汽车仍以功率来标定,这个数字表示在恒定速度下能推动车辆的有效力有多大,并与现代发动机的扭矩和转速相关联。
+    ja: >-
+      ニュートンは『プリンキピア』(1687年)で仕事を力と変位の積として定式化し、この基礎から単位時間あたりの仕事は
+      力×速度に等しいことが導かれる。1世紀後、ジェームズ・ワットがこの考えを実用化した。蒸気機関を売るために
+      馬の出力と比較し、「馬力」を定義したのである。車がいまだに出力で評価されるのはこのためで、その数値は
+      一定速度で車を押し続けられる実効力を表し、現代のエンジンではトルクと回転数と結びつく。
+  timeline:
+    - year: "1687"
+      label:
+        es: >-
+          Newton publica los Principia, donde define el trabajo como fuerza por desplazamiento,
+          base de la potencia mecánica.
+        en: >-
+          Newton publishes the Principia, defining work as force times displacement, the basis of
+          mechanical power.
+        pt: >-
+          Newton publica os Principia, definindo trabalho como força vezes deslocamento, base da
+          potência mecânica.
+        fr: >-
+          Newton publie les Principia, définissant le travail comme force fois déplacement, base de
+          la puissance mécanique.
+        zh: >-
+          牛顿发表《原理》,将功定义为力乘以位移,这是机械功率的基础。
+        ja: >-
+          ニュートンが『プリンキピア』を発表し、仕事を力×変位と定義。力学的仕事率の基礎となる。
+    - year: "1782"
+      label:
+        es: >-
+          James Watt define el caballo de fuerza comparando sus motores de vapor con caballos de
+          tiro.
+        en: >-
+          James Watt defines horsepower by comparing his steam engines with draft horses.
+        pt: >-
+          James Watt define o cavalo-vapor comparando suas máquinas a vapor com cavalos de tração.
+        fr: >-
+          James Watt définit le cheval-vapeur en comparant ses machines à vapeur aux chevaux de
+          trait.
+        zh: >-
+          詹姆斯·瓦特用役马作对比来定义马力。
+        ja: >-
+          ジェームズ・ワットが蒸気機関を挽き馬と比較して馬力を定義する。
+    - year: "1884"
+      label:
+        es: >-
+          La Asociación Británica para el Avance de la Ciencia adopta el vatio como unidad de
+          potencia.
+        en: >-
+          The British Association for the Advancement of Science adopts the watt as the unit of
+          power.
+        pt: >-
+          A Associação Britânica para o Avanço da Ciência adota o watt como unidade de potência.
+        fr: >-
+          La British Association pour l'avancement des sciences adopte le watt comme unité de
+          puissance.
+        zh: >-
+          英国科学促进协会采用瓦特作为功率单位。
+        ja: >-
+          英国科学振興協会が仕事率の単位としてワットを採用する。
+    - year: Hoy
+      label:
+        es: >-
+          Todo motor de auto anuncia su potencia máxima en kW o caballos, y su relación con el
+          torque define las cajas de cambio.
+        en: >-
+          Every car engine advertises peak power in kW or horsepower, and its relation to torque
+          defines gearbox design.
+        pt: >-
+          Todo motor de carro anuncia sua potência máxima em kW ou cavalos, e sua relação com o
+          torque define as caixas de câmbio.
+        fr: >-
+          Tous les moteurs automobiles annoncent leur puissance maximale en kW ou en chevaux, et son
+          lien avec le couple définit la conception des boîtes de vitesses.
+        zh: >-
+          每台汽车发动机都以千瓦或马力标称峰值功率,它与扭矩的关系决定了变速箱的设计。
+        ja: >-
+          すべての自動車エンジンは最高出力をkWまたは馬力で表示し、トルクとの関係がトランスミッションの設計を決める。
+  useCases:
+    - title:
+        es: Motores de automóviles
+        en: Car engines
+        pt: Motores de automóveis
+        fr: Moteurs automobiles
+        zh: 汽车发动机
+        ja: 自動車エンジン
+      description:
+        es: >-
+          La ficha de todo auto indica la potencia máxima en kW o caballos, que decide cuánta fuerza
+          útil puede sostener el motor a alta velocidad.
+        en: >-
+          Every car's spec sheet lists peak power in kW or horsepower, deciding how much useful force
+          the engine can sustain at high speed.
+        pt: >-
+          A ficha de todo carro indica a potência máxima em kW ou cavalos, que decide quanta força
+          útil o motor consegue sustentar em alta velocidade.
+        fr: >-
+          La fiche technique de chaque voiture indique la puissance maximale en kW ou en chevaux,
+          qui décide de la force utile que le moteur peut soutenir à grande vitesse.
+        zh: >-
+          每辆汽车的规格表都列出峰值功率,以千瓦或马力为单位,它决定了发动机在高速下能维持多大的有效推力。
+        ja: >-
+          すべての車のスペック表に最高出力がkWまたは馬力で記載され、高速でエンジンが維持できる実効力を決める。
+    - title:
+        es: Maquinaria industrial
+        en: Industrial machinery
+        pt: Maquinário industrial
+        fr: Machines industrielles
+        zh: 工业机械
+        ja: 産業機械
+      description:
+        es: >-
+          Cintas, grúas y tornos se dimensionan por la potencia necesaria para mover una carga a
+          cierta velocidad.
+        en: >-
+          Conveyor belts, cranes and lathes are sized by the power needed to move a load at a given
+          speed.
+        pt: >-
+          Esteiras, guindastes e tornos são dimensionados pela potência necessária para mover uma
+          carga a certa velocidade.
+        fr: >-
+          Convoyeurs, grues et tours sont dimensionnés par la puissance nécessaire pour déplacer une
+          charge à une vitesse donnée.
+        zh: >-
+          输送带、起重机和车床都按以一定速度移动载荷所需的功率来选型。
+        ja: >-
+          ベルトコンベアやクレーン、旋盤は、荷物を一定速度で動かすのに必要な出力で選定される。
+    - title:
+        es: Motores eléctricos
+        en: Electric motors
+        pt: Motores elétricos
+        fr: Moteurs électriques
+        zh: 电动机
+        ja: 電動モーター
+      description:
+        es: >-
+          Un motor eléctrico entrega potencia constante en todo su rango útil, así que P = F · v
+          relaciona su fuerza de empuje con la velocidad del vehículo.
+        en: >-
+          An electric motor delivers constant power across its useful range, so P = F · v ties its
+          pulling force to vehicle speed.
+        pt: >-
+          Um motor elétrico entrega potência constante em toda sua faixa útil, então P = F · v liga
+          sua força de tração à velocidade do veículo.
+        fr: >-
+          Un moteur électrique délivre une puissance constante sur toute sa plage utile, donc
+          P = F · v relie sa force de traction à la vitesse du véhicule.
+        zh: >-
+          电动机在整个可用区间内输出恒定功率,因此P = F · v把它的牵引力与车速联系起来。
+        ja: >-
+          電動モーターは有効な範囲全体で一定の出力を供給するため、P = F · vが牽引力と車速を結びつける。
+    - title:
+        es: Ciclismo y atletismo
+        en: Cycling and athletics
+        pt: Ciclismo e atletismo
+        fr: Cyclisme et athlétisme
+        zh: 自行车与田径运动
+        ja: 自転車と陸上競技
+      description:
+        es: >-
+          Los entrenadores calculan la potencia de un ciclista en vatios para planificar el esfuerzo
+          en cada subida y vuelta.
+        en: >-
+          Coaches track a cyclist's power in watts to plan effort on every climb and lap.
+        pt: >-
+          Treinadores calculam a potência de um ciclista em watts para planejar o esforço em cada
+          subida e volta.
+        fr: >-
+          Les entraîneurs mesurent la puissance d'un cycliste en watts pour planifier l'effort sur
+          chaque montée et chaque tour.
+        zh: >-
+          教练以瓦特为单位追踪自行车手的功率,为每次爬坡和每圈规划发力。
+        ja: >-
+          コーチは自転車選手の出力をワットで計測し、登坂ごと周回ごとの負荷を計画する。
+  example:
+    title:
+      es: Un auto en la autopista
+      en: A car on the highway
+      pt: Um carro na estrada
+      fr: Une voiture sur l'autoroute
+      zh: 高速公路上的汽车
+      ja: 高速道路の車
+    lines:
+      - es: F = 1500 N · v = 20 m/s
+        en: F = 1500 N · v = 20 m/s
+        pt: F = 1500 N · v = 20 m/s
+        fr: F = 1500 N · v = 20 m/s
+        zh: F = 1500 N · v = 20 m/s
+        ja: F = 1500 N · v = 20 m/s
+      - es: P = F · v
+        en: P = F · v
+        pt: P = F · v
+        fr: P = F · v
+        zh: P = F · v
+        ja: P = F · v
+      - es: P = 1500 × 20
+        en: P = 1500 × 20
+        pt: P = 1500 × 20
+        fr: P = 1500 × 20
+        zh: P = 1500 × 20
+        ja: P = 1500 × 20
+      - es: P = 30000 W = 30 kW
+        en: P = 30000 W = 30 kW
+        pt: P = 30000 W = 30 kW
+        fr: P = 30000 W = 30 kW
+        zh: P = 30000 W = 30 kW
+        ja: P = 30000 W = 30 kW

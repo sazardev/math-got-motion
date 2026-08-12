@@ -1,0 +1,347 @@
+id: relativistic-momentum
+title:
+  es: Momento Relativista
+  en: Relativistic Momentum
+  pt: Momento Relativístico
+  fr: Quantité de mouvement relativiste
+  zh: 相对论动量
+  ja: 相対論的運動量
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: p
+    type: variable
+    value: p
+    explanation:
+      es: El momento lineal relativista, la cantidad de movimiento del objeto.
+      en: The relativistic linear momentum, the quantity of motion of the object.
+      pt: O momento linear relativístico, a quantidade de movimento do objeto.
+      fr: La quantité de mouvement relativiste, la quantité de mouvement de l'objet.
+      zh: 相对论线性动量，即物体的运动量。
+      ja: 相対論的運動量。物体の運動の量。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: gamma
+    type: constant
+    value: γ
+    explanation:
+      es: El factor de Lorentz, que crece sin límite al acercarse a la velocidad de la luz.
+      en: The Lorentz factor, which grows without bound as speed approaches that of light.
+      pt: O fator de Lorentz, que cresce sem limite à medida que a velocidade se aproxima da luz.
+      fr: Le facteur de Lorentz, qui croît sans limite quand la vitesse approche celle de la
+        lumière.
+      zh: 洛伦兹因子，当速度接近光速时无限增大。
+      ja: ローレンツ因子。速度が光速に近づくにつれて際限なく大きくなる。
+  - id: dot-1
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: La masa en reposo del objeto.
+      en: The rest mass of the object.
+      pt: A massa de repouso do objeto.
+      fr: La masse au repos de l'objet.
+      zh: 物体的静质量。
+      ja: 物体の静止質量。
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La velocidad del objeto respecto al observador.
+      en: The object's velocity relative to the observer.
+      pt: A velocidade do objeto em relação ao observador.
+      fr: La vitesse de l'objet par rapport à l'observateur.
+      zh: 物体相对于观测者的速度。
+      ja: 観測者から見た物体の速度。
+context:
+  author:
+    es: Albert Einstein
+    en: Albert Einstein
+    pt: Albert Einstein
+    fr: Albert Einstein
+    zh: 阿尔伯特·爱因斯坦
+    ja: アルベルト・アインシュタイン
+  era:
+    es: Suiza, 1879–1955 · publicada en 1905
+    en: Switzerland, 1879–1955 · published in 1905
+    pt: Suíça, 1879–1955 · publicada em 1905
+    fr: Suisse, 1879–1955 · publiée en 1905
+    zh: 瑞士，1879–1955年·1905年发表
+    ja: スイス、1879–1955年・1905年発表
+  history:
+    es: >-
+      En 1905, dentro de su teoría de la relatividad especial, Einstein mostró que el momento lineal
+      clásico p = m·v falla a altas velocidades: hay que multiplicarlo por el factor de Lorentz γ. Al
+      acercarse a la velocidad de la luz, γ tiende a infinito y el momento crece sin límite; por eso
+      alcanzar c exigiría energía infinita y ninguna partícula material la supera. Este
+      comportamiento dicta el diseño de los aceleradores de partículas, cuyos imanes deben curvar
+      partículas cada vez más 'pesadas' en sentido relativista.
+    en: >-
+      In 1905, within his theory of special relativity, Einstein showed that the classical momentum p
+      = m·v fails at high speeds: it must be multiplied by the Lorentz factor γ. As speed approaches
+      that of light, γ tends to infinity and momentum grows without bound; that is why reaching c
+      would require infinite energy, and no material particle can exceed it. This behavior dictates
+      the design of particle accelerators, whose magnets must bend particles that grow ever heavier
+      in the relativistic sense.
+    pt: >-
+      Em 1905, dentro da sua teoria da relatividade especial, Einstein mostrou que o momento clássico
+      p = m·v falha em altas velocidades: é preciso multiplicá-lo pelo fator de Lorentz γ. Ao se
+      aproximar da velocidade da luz, γ tende ao infinito e o momento cresce sem limite; por isso,
+      alcançar c exigiria energia infinita e nenhuma partícula material a supera. Esse comportamento
+      dita o projeto dos aceleradores de partículas, cujos ímãs precisam curvar partículas cada vez
+      mais 'pesadas' em sentido relativístico.
+    fr: >-
+      En 1905, dans le cadre de sa relativité restreinte, Einstein montra que la quantité de
+      mouvement classique p = m·v échoue à grande vitesse : il faut la multiplier par le facteur de
+      Lorentz γ. Lorsqu'on s'approche de la vitesse de la lumière, γ tend vers l'infini et la
+      quantité de mouvement croît sans limite ; c'est pourquoi atteindre c exigerait une énergie
+      infinie et aucune particule matérielle ne peut la dépasser. Ce comportement dicte la conception
+      des accélérateurs de particules, dont les aimants doivent courber des particules toujours plus
+      « lourdes » au sens relativiste.
+    zh: >-
+      1905年，在狭义相对论中，爱因斯坦指出经典的动量公式p = m·v在高速下失效：必须乘以洛伦兹因子γ。当速度接近光速时，γ趋于
+      无穷大，动量无限增长；因此要达到光速需要无穷大的能量，任何有质量的粒子都无法超越它。这一行为决定了粒子加速器的设计——
+      加速器的磁铁必须偏转那些在相对论意义下越来越"重"的粒子。
+    ja: >-
+      1905年、アインシュタインは特殊相対性理論の中で、古典的な運動量p = m・vが高速では成り立たず、ローレンツ因子γを掛ける
+      必要があることを示した。速度が光速に近づくとγは無限大に近づき、運動量は際限なく増大する。そのため光速に到達するには無限の
+      エネルギーが必要となり、質量を持つ粒子は決して光速を超えられない。この振る舞いが粒子加速器の設計を左右する。加速器の磁石は、
+      相対論的にどんどん「重く」なる粒子を曲げなければならないからだ。
+  timeline:
+    - year: "1905"
+      label:
+        es: >-
+          Einstein publica la relatividad especial, donde el momento lineal incorpora el factor de
+          Lorentz.
+        en: >-
+          Einstein publishes special relativity, in which linear momentum incorporates the Lorentz
+          factor.
+        pt: >-
+          Einstein publica a relatividade especial, em que o momento linear incorpora o fator de
+          Lorentz.
+        fr: >-
+          Einstein publie la relativité restreinte, où la quantité de mouvement intègre le facteur
+          de Lorentz.
+        zh: >-
+          爱因斯坦发表狭义相对论，把洛伦兹因子引入动量。
+        ja: >-
+          アインシュタインが特殊相対性理論を発表し、ローレンツ因子を運動量に組み込む。
+    - year: "1932"
+      label:
+        es: >-
+          Lawrence construye el primer ciclotrón, que aplica la dinámica relativista para acelerar
+          iones.
+        en: >-
+          Lawrence builds the first cyclotron, applying relativistic dynamics to accelerate ions.
+        pt: >-
+          Lawrence constrói o primeiro cíclotron, que aplica a dinâmica relativística para acelerar
+          íons.
+        fr: >-
+          Lawrence construit le premier cyclotron, qui applique la dynamique relativiste pour
+          accélérer des ions.
+        zh: >-
+          劳伦斯制造出第一台回旋加速器，用相对论动力学加速离子。
+        ja: >-
+          ローレンスが最初のサイクロトロンを建設し、相対論的力学でイオンを加速する。
+    - year: "1954"
+      label:
+        es: >-
+          Se funda el CERN, cuyos aceleradores posteriores dependerán de la dinámica relativista.
+        en: >-
+          CERN is founded; its later accelerators will rely on relativistic dynamics.
+        pt: >-
+          O CERN é fundado; seus aceleradores posteriores dependerão da dinâmica relativística.
+        fr: >-
+          Le CERN est fondé ; ses accélérateurs ultérieurs dépendront de la dynamique relativiste.
+        zh: >-
+          欧洲核子研究中心（CERN）成立，其日后的加速器都依赖相对论动力学。
+        ja: >-
+          CERNが創設される。以後の加速器は相対論的力学に依存することになる。
+    - year: Hoy
+      label:
+        es: >-
+          El LHC acelera protones al 99,9999991% de la velocidad de la luz, donde γ ≈ 7460.
+        en: >-
+          The LHC accelerates protons to 99.9999991% of light speed, where γ ≈ 7460.
+        pt: >-
+          O LHC acelera prótons a 99,9999991% da velocidade da luz, onde γ ≈ 7460.
+        fr: >-
+          Le LHC accélère des protons à 99,9999991 % de la vitesse de la lumière, où γ ≈ 7460.
+        zh: >-
+          LHC把质子加速到光速的99.9999991%，此时γ ≈ 7460。
+        ja: >-
+          LHCは陽子を光速の99.9999991%まで加速する。このときγ ≈ 7460である。
+  useCases:
+    - title:
+        es: Aceleradores de partículas
+        en: Particle accelerators
+        pt: Aceleradores de partículas
+        fr: Accélérateurs de particules
+        zh: 粒子加速器
+        ja: 粒子加速器
+      description:
+        es: >-
+          Los imanes y las cavidades se diseñan con la dinámica relativista para mantener partículas
+          casi a la velocidad de la luz.
+        en: >-
+          Magnets and cavities are designed with relativistic dynamics to keep particles near the
+          speed of light.
+        pt: >-
+          Os ímãs e as cavidades são projetados com a dinâmica relativística para manter partículas
+          quase à velocidade da luz.
+        fr: >-
+          Les aimants et les cavités sont conçus avec la dynamique relativiste pour maintenir des
+          particules presque à la vitesse de la lumière.
+        zh: >-
+          加速器的磁铁与腔体依据相对论动力学设计，以让粒子保持在接近光速的状态。
+        ja: >-
+          加速器の磁石と空洞は相対論的力学に基づいて設計され、粒子を光速近くに保っている。
+    - title:
+        es: Física de rayos cósmicos
+        en: Cosmic-ray physics
+        pt: Física de raios cósmicos
+        fr: Physique des rayons cosmiques
+        zh: 宇宙线物理学
+        ja: 宇宙線物理学
+      description:
+        es: >-
+          Las partículas que llegan de la galaxia viajan con un momento relativista enorme al chocar
+          con la atmósfera.
+        en: >-
+          Particles arriving from the galaxy carry enormous relativistic momentum when they strike
+          the atmosphere.
+        pt: >-
+          As partículas que chegam da galáxia viajam com um momento relativístico enorme ao colidir
+          com a atmosfera.
+        fr: >-
+          Les particules venues de la galaxie portent une quantité de mouvement relativiste énorme
+          en frappant l'atmosphère.
+        zh: >-
+          来自银河系的粒子撞击大气层时，携带着巨大的相对论动量。
+        ja: >-
+          銀河から飛来する粒子は、大気と衝突するとき莫大な相対論的運動量を運んでいる。
+    - title:
+        es: Terapia con protones
+        en: Proton therapy
+        pt: Terapia com prótons
+        fr: Protonthérapie
+        zh: 质子治疗
+        ja: 陽子線治療
+      description:
+        es: >-
+          Los haces de protones se calibran con el momento relativista para depositar su energía con
+          precisión en el tumor.
+        en: >-
+          Proton beams are calibrated with relativistic momentum to deposit their energy precisely
+          in the tumor.
+        pt: >-
+          Os feixes de prótons são calibrados com o momento relativístico para depositar sua energia
+          com precisão no tumor.
+        fr: >-
+          Les faisceaux de protons sont calibrés avec la quantité de mouvement relativiste pour
+          déposer leur énergie avec précision dans la tumeur.
+        zh: >-
+          质子束用相对论动量进行标定，从而把能量精确地沉积在肿瘤上。
+        ja: >-
+          陽子線は相対論的運動量で校正され、腫瘍に正確にエネルギーを集中させる。
+    - title:
+        es: Experimentos de precisión
+        en: Precision experiments
+        pt: Experimentos de precisão
+        fr: Expériences de précision
+        zh: 精密实验
+        ja: 精密測定実験
+      description:
+        es: >-
+          Medidas como el momento anómalo del muón exigen corregir cada dato con la dinámica
+          relativista.
+        en: >-
+          Measurements such as the muon's anomalous moment require correcting every datum with
+          relativistic dynamics.
+        pt: >-
+          Medidas como o momento magnético anômalo do múon exigem corrigir cada dado com a dinâmica
+          relativística.
+        fr: >-
+          Des mesures comme le moment magnétique anomal du muon exigent de corriger chaque donnée
+          avec la dynamique relativiste.
+        zh: >-
+          像μ子反常磁矩这样的测量，每个数据都必须用相对论动力学加以修正。
+        ja: >-
+          ミューオンの異常磁気モーメントのような測定では、すべてのデータを相対論的力学で補正する必要がある。
+  example:
+    title:
+      es: Momento al 80% de la luz
+      en: Momentum at 80% of light speed
+      pt: Momento a 80% da velocidade da luz
+      fr: Quantité de mouvement à 80 % de la vitesse de la lumière
+      zh: 以80%光速运动的动量
+      ja: 光速の80%での運動量
+    lines:
+      - es: v = 0.8c
+        en: v = 0.8c
+        pt: v = 0,8c
+        fr: v = 0,8c
+        zh: v = 0.8c
+        ja: v = 0.8c
+      - es: γ = 1 / √(1 − v²/c²)
+        en: γ = 1 / √(1 − v²/c²)
+        pt: γ = 1 / √(1 − v²/c²)
+        fr: γ = 1 / √(1 − v²/c²)
+        zh: γ = 1 / √(1 − v²/c²)
+        ja: γ = 1 / √(1 − v²/c²)
+      - es: γ = 1 / 0.6 ≈ 1.667
+        en: γ = 1 / 0.6 ≈ 1.667
+        pt: γ = 1 / 0,6 ≈ 1,667
+        fr: γ = 1 / 0,6 ≈ 1,667
+        zh: γ = 1 / 0.6 ≈ 1.667
+        ja: γ = 1 / 0.6 ≈ 1.667
+      - es: m·v = 10 kg·m/s
+        en: m·v = 10 kg·m/s
+        pt: m·v = 10 kg·m/s
+        fr: m·v = 10 kg·m/s
+        zh: m·v = 10 千克·米/秒
+        ja: m·v = 10 kg·m/s
+      - es: p = γ · m · v
+        en: p = γ · m · v
+        pt: p = γ · m · v
+        fr: p = γ · m · v
+        zh: p = γ · m · v
+        ja: p = γ · m · v
+      - es: p ≈ 1.667 × 10 = 16.67 kg·m/s
+        en: p ≈ 1.667 × 10 = 16.67 kg·m/s
+        pt: p ≈ 1,667 × 10 = 16,67 kg·m/s
+        fr: p ≈ 1,667 × 10 = 16,67 kg·m/s
+        zh: p ≈ 1.667 × 10 = 16.67 千克·米/秒
+        ja: p ≈ 1.667 × 10 = 16.67 kg·m/s

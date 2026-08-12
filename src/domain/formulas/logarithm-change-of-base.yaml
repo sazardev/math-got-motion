@@ -1,0 +1,400 @@
+id: logarithm-change-of-base
+title:
+  es: Cambio de Base de Logaritmos
+  en: Change of Base
+  pt: Mudança de Base de Logaritmos
+  fr: Changement de Base des Logarithmes
+  zh: 对数的换底公式
+  ja: 対数の底の変換
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: log-left
+    type: operator
+    value: log
+    explanation:
+      es: El logaritmo en base b del argumento.
+      en: The logarithm in base b of the argument.
+      pt: O logaritmo na base b do argumento.
+      fr: Le logarithme en base b de l'argument.
+      zh: 以 b 为底对真数取对数。
+      ja: 底をbとする真数の対数。
+  - id: base-left
+    type: variable
+    value: b
+    explanation:
+      es: La base original del logaritmo, un número positivo distinto de 1.
+      en: The original base of the logarithm, a positive number other than 1.
+      pt: A base original do logaritmo, um número positivo diferente de 1.
+      fr: La base d'origine du logarithme, un nombre positif différent de 1.
+      zh: 对数的原底数，一个不等于 1 的正数。
+      ja: 対数の元の底。1以外の正の数。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el argumento del logaritmo.
+      en: Opens the logarithm's argument.
+      pt: Abre o argumento do logaritmo.
+      fr: Ouvre l'argument du logarithme.
+      zh: 打开对数的真数括号。
+      ja: 対数の真数の括弧を開く。
+  - id: a-arg
+    type: variable
+    value: a
+    explanation:
+      es: El argumento, el número del que se toma el logaritmo.
+      en: The argument, the number whose logarithm is taken.
+      pt: O argumento, o número do qual se calcula o logaritmo.
+      fr: L'argument, le nombre dont on prend le logarithme.
+      zh: 真数，即被取对数的那个数。
+      ja: 真数。対数を取られる数。
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el argumento del logaritmo.
+      en: Closes the logarithm's argument.
+      pt: Fecha o argumento do logaritmo.
+      fr: Ferme l'argument du logarithme.
+      zh: 闭合对数的真数括号。
+      ja: 対数の真数の括弧を閉じる。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual al cociente de dos logaritmos en la base nueva c.
+      en: Is equal to the ratio of two logarithms in the new base c.
+      pt: É igual ao quociente de dois logaritmos na base nova c.
+      fr: Est égal au rapport de deux logarithmes dans la nouvelle base c.
+      zh: 等于用新底数 c 求得的两个对数之比。
+      ja: 新しい底cによる二つの対数の比に等しい。
+  - id: log-num
+    type: operator
+    value: log
+    explanation:
+      es: El logaritmo del argumento a, ahora en la base nueva c.
+      en: The logarithm of the argument a, now in the new base c.
+      pt: O logaritmo do argumento a, agora na base nova c.
+      fr: Le logarithme de l'argument a, désormais dans la nouvelle base c.
+      zh: 真数 a 的对数，现在使用新底数 c。
+      ja: 真数aの対数。今度は新しい底cを使う。
+  - id: base-c-num
+    type: variable
+    value: c
+    explanation:
+      es: La base nueva, la de la calculadora (10 o e) o la más conveniente.
+      en: The new base, the one on the calculator (10 or e) or any convenient one.
+      pt: A base nova, a da calculadora (10 ou e) ou a mais conveniente.
+      fr: La nouvelle base, celle de la calculatrice (10 ou e) ou toute base commode.
+      zh: 新底数，可以是计算器上的 10 或 e，也可以任取。
+      ja: 新しい底。計算機の底（10やe）や、都合のよい底。
+  - id: a-num
+    type: variable
+    value: a
+    explanation:
+      es: El mismo argumento a.
+      en: The same argument a.
+      pt: O mesmo argumento a.
+      fr: Le même argument a.
+      zh: 同一个真数 a。
+      ja: 同じ真数a。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre el logaritmo de la base original.
+      en: Divided by the logarithm of the original base.
+      pt: Dividido pelo logaritmo da base original.
+      fr: Divisé par le logarithme de la base d'origine.
+      zh: 除以原底数的对数。
+      ja: 元の底の対数で割る。
+  - id: log-den
+    type: operator
+    value: log
+    explanation:
+      es: El logaritmo de la base original b, en la base nueva c.
+      en: The logarithm of the original base b, in the new base c.
+      pt: O logaritmo da base original b, na base nova c.
+      fr: Le logarithme de la base d'origine b, dans la nouvelle base c.
+      zh: 原底数 b 在新底数 c 下的对数。
+      ja: 元の底bを新しい底cで取った対数。
+  - id: base-c-den
+    type: variable
+    value: c
+    explanation:
+      es: La misma base nueva c.
+      en: The same new base c.
+      pt: A mesma base nova c.
+      fr: La même nouvelle base c.
+      zh: 同一个新底数 c。
+      ja: 同じ新しい底c。
+  - id: b-den
+    type: variable
+    value: b
+    explanation:
+      es: La base original b, ahora como argumento.
+      en: The original base b, now as the argument.
+      pt: A base original b, agora como argumento.
+      fr: La base d'origine b, désormais en argument.
+      zh: 原底数 b，现在作为真数出现。
+      ja: 元の底bが、今度は真数として現れる。
+context:
+  author:
+    es: Basada en la obra de Napier
+    en: Based on Napier's work
+    pt: Baseada na obra de Napier
+    fr: Basée sur l'œuvre de Napier
+    zh: 基于纳皮尔的著作
+    ja: ネイピアの業績に基づく
+  era:
+    es: Escocia, s. XVII
+    en: Scotland, 17th century
+    pt: Escócia, séc. XVII
+    fr: Écosse, XVIIe siècle
+    zh: 苏格兰，17世纪
+    ja: スコットランド、17世紀
+  history:
+    es: >-
+      La regla del cambio de base expresa un logaritmo de cualquier base como el cociente de dos
+      logaritmos de otra base. Gracias a ella las calculadoras solo implementan log (base 10) y ln
+      (base e): cualquier otra base se obtiene con una división. John Napier definió sus logaritmos
+      originales con una escala tan próxima a la base e que el logaritmo natural se llamó durante
+      siglos logaritmo de Napier. El logaritmo binario, de base 2, se volvió central en informática
+      para medir la información en bits, mientras el decimal gobierna las escalas de la acústica,
+      como los decibelios.
+    en: >-
+      The change-of-base rule expresses a logarithm of any base as the ratio of two logarithms of
+      another base. Thanks to it, calculators only implement log (base 10) and ln (base e): any other
+      base is obtained with a single division. John Napier defined his original logarithms on a scale
+      so close to base e that the natural logarithm was long called 'Napierian'. The binary logarithm,
+      base 2, became central in computing for measuring information in bits, while the decimal
+      logarithm governs acoustic scales such as the decibel.
+    pt: >-
+      A regra da mudança de base expressa um logaritmo de qualquer base como o quociente de dois
+      logaritmos de outra base. Graças a ela, as calculadoras só implementam log (base 10) e ln
+      (base e): qualquer outra base é obtida com uma divisão. John Napier definiu seus logaritmos
+      originais numa escala tão próxima da base e que o logaritmo natural foi chamado durante séculos
+      de logaritmo de Napier. O logaritmo binário, base 2, tornou-se central na computação para medir
+      a informação em bits, enquanto o decimal rege as escalas da acústica, como os decibéis.
+    fr: >-
+      La règle du changement de base exprime un logarithme de n'importe quelle base comme le rapport
+      de deux logarithmes d'une autre base. Grâce à elle, les calculatrices n'implémentent que log
+      (base 10) et ln (base e) : toute autre base s'obtient par une simple division. John Napier avait
+      défini ses logarithmes originaux sur une échelle si proche de la base e que le logarithme naturel
+      fut longtemps appelé logarithme napérien. Le logarithme binaire, base 2, est devenu central en
+      informatique pour mesurer l'information en bits, tandis que le logarithme décimal gouverne les
+      échelles de l'acoustique, comme les décibels.
+    zh: >-
+      换底公式把任意底数的对数表示成另一底数的两个对数之比。正因为如此，计算器上只需实现 log（以10为底）和 ln
+      （以e为底）：任何其他底数都可以通过一次除法得到。约翰·纳皮尔最初定义的对数尺度与底数 e 极为接近，
+      因此自然对数曾长期被称为“纳皮尔对数”。以2为底的对数在计算机科学中成为核心，用于以比特度量信息；
+      以10为底的对数则统治着声学中的分贝等尺度。
+    ja: >-
+      底の変換公式は、任意の底を持つ対数を、別の底を持つ二つの対数の比として表す。このおかげで、計算機には
+      常用対数log（底10）と自然対数ln（底e）だけが実装されていればよく、他の底は割り算一つで得られる。
+      ジョン・ネイピアが定義した元の対数は底eに非常に近い尺度だったため、自然対数は長らく「ネイピアの対数」
+      と呼ばれた。底2の二進対数は、情報量をビットで測るための中心的な道具となり、常用対数はデシベルなど
+      音響学の尺度を支配している。
+  timeline:
+    - year: "1614"
+      label:
+        es: >-
+          Napier publica Mirifici Logarithmorum, definiendo los logaritmos sobre una escala cercana a
+          la base e.
+        en: >-
+          Napier publishes Mirifici Logarithmorum, defining logarithms on a scale close to base e.
+        pt: >-
+          Napier publica Mirifici Logarithmorum, definindo os logaritmos numa escala próxima da base e.
+        fr: >-
+          Napier publie Mirifici Logarithmorum, définissant les logarithmes sur une échelle proche de
+          la base e.
+        zh: >-
+          纳皮尔发表《奇妙的对数表的说明》，在接近底数 e 的尺度上定义了对数。
+        ja: >-
+          ネイピアが『対数の驚くべき法則の記述』を発表し、底eに近い尺度で対数を定義する。
+    - year: "1624"
+      label:
+        es: >-
+          Henry Briggs publica las tablas de logaritmos decimales, consagrando la base 10.
+        en: >-
+          Henry Briggs publishes tables of decimal logarithms, enshrining base 10.
+        pt: >-
+          Henry Briggs publica as tabelas de logaritmos decimais, consagrando a base 10.
+        fr: >-
+          Henry Briggs publie des tables de logarithmes décimaux, consacrant la base 10.
+        zh: >-
+          亨利·布里格斯发表常用对数表，确立了以10为底的地位。
+        ja: >-
+          ヘンリー・ブリッグスが常用対数表を出版し、底10が定着する。
+    - year: "1700s"
+      label:
+        es: >-
+          Euler introduce la base e y el logaritmo natural; el cambio de base se vuelve regla
+          estándar.
+        en: >-
+          Euler introduces base e and the natural logarithm; the change-of-base rule becomes
+          standard.
+        pt: >-
+          Euler introduz a base e e o logaritmo natural; a mudança de base vira regra padrão.
+        fr: >-
+          Euler introduit la base e et le logarithme naturel ; le changement de base devient une règle
+          standard.
+        zh: >-
+          欧拉引入底数 e 和自然对数，换底公式成为标准法则。
+        ja: >-
+          オイラーが底eと自然対数を導入し、底の変換は標準的な規則となる。
+    - year: Hoy
+      label:
+        es: >-
+          La regla vive en cada calculadora y lenguaje de programación, con log, ln y log2.
+        en: >-
+          The rule lives in every calculator and programming language, with log, ln, and log2.
+        pt: >-
+          A regra vive em cada calculadora e linguagem de programação, com log, ln e log2.
+        fr: >-
+          La règle vit dans chaque calculatrice et langage de programmation, avec log, ln et log2.
+        zh: >-
+          这条公式活在每一台计算器和每一门编程语言里，即 log、ln 和 log2。
+        ja: >-
+          この規則は、log、ln、log2として、あらゆる計算機とプログラミング言語の中に生きている。
+  useCases:
+    - title:
+        es: Informática
+        en: Computer science
+        pt: Computação
+        fr: Informatique
+        zh: 计算机科学
+        ja: コンピュータ科学
+      description:
+        es: >-
+          La complejidad de los algoritmos se mide con log₂; la regla permite calcularlo con el
+          logaritmo natural o decimal de cualquier calculadora.
+        en: >-
+          Algorithm complexity is measured with log₂; the rule lets you compute it with the natural or
+          decimal log of any calculator.
+        pt: >-
+          A complexidade dos algoritmos é medida com log₂; a regra permite calculá-lo com o logaritmo
+          natural ou decimal de qualquer calculadora.
+        fr: >-
+          La complexité des algorithmes se mesure avec log₂ ; la règle permet de la calculer avec le
+          logarithme naturel ou décimal de n'importe quelle calculatrice.
+        zh: >-
+          算法复杂度用 log₂ 来衡量；换底公式让你可以用任何计算器上的自然对数或常用对数来计算它。
+        ja: >-
+          アルゴリズムの計算量はlog₂で測られる。この規則により、どんな計算機の自然対数や常用対数でも計算できる。
+    - title:
+        es: Acústica
+        en: Acoustics
+        pt: Acústica
+        fr: Acoustique
+        zh: 声学
+        ja: 音響学
+      description:
+        es: >-
+          El decibelio se define con log₁₀; convertir medidas entre escalas logarítmicas usa el cambio
+          de base.
+        en: >-
+          The decibel is defined with log₁₀; converting between logarithmic scales uses the change of
+          base.
+        pt: >-
+          O decibel é definido com log₁₀; converter medidas entre escalas logarítmicas usa a mudança de
+          base.
+        fr: >-
+          Le décibel se définit avec log₁₀ ; convertir des mesures entre échelles logarithmiques repose
+          sur le changement de base.
+        zh: >-
+          分贝用 log₁₀ 定义；在不同对数尺度之间转换时要使用换底公式。
+        ja: >-
+          デシベルはlog₁₀で定義される。対数目盛り同士の換算には底の変換を使う。
+    - title:
+        es: Química
+        en: Chemistry
+        pt: Química
+        fr: Chimie
+        zh: 化学
+        ja: 化学
+      description:
+        es: >-
+          El pH usa log₁₀; pasar al logaritmo natural en termodinámica o electroquímica requiere el
+          cambio de base.
+        en: >-
+          pH uses log₁₀; switching to natural logs in thermodynamics or electrochemistry requires the
+          change of base.
+        pt: >-
+          O pH usa log₁₀; passar ao logaritmo natural em termodinâmica ou eletroquímica exige a mudança
+          de base.
+        fr: >-
+          Le pH utilise log₁₀ ; passer au logarithme naturel en thermodynamique ou en électrochimie
+          exige le changement de base.
+        zh: >-
+          pH 值使用 log₁₀；在热力学或电化学中改用自然对数时需要换底。
+        ja: >-
+          pHはlog₁₀を使う。熱力学や電気化学で自然対数に切り替えるには底の変換が必要だ。
+    - title:
+        es: Ingeniería
+        en: Engineering
+        pt: Engenharia
+        fr: Ingénierie
+        zh: 工程
+        ja: 工学
+      description:
+        es: >-
+          Para despejar un exponente desconocido en bˣ = a se toman logaritmos de ambos lados en una
+          base cómoda.
+        en: >-
+          To solve for an unknown exponent in bˣ = a, take logs of both sides in any convenient base.
+        pt: >-
+          Para isolar um expoente desconhecido em bˣ = a, tomam-se logaritmos dos dois lados numa base
+          conveniente.
+        fr: >-
+          Pour isoler un exposant inconnu dans bˣ = a, on prend les logarithmes des deux côtés dans une
+          base commode.
+        zh: >-
+          在 bˣ = a 中解未知指数时，两边取任意方便底数的对数即可。
+        ja: >-
+          bˣ = a の未知の指数を求めるには、両辺を都合のよい底で対数を取ればよい。
+  example:
+    title:
+      es: Calcular log₂(8)
+      en: Computing log₂(8)
+      pt: Calculando log₂(8)
+      fr: Calcul de log₂(8)
+      zh: 计算 log₂(8)
+      ja: log₂(8) の計算
+    lines:
+      - es: a = 8, b = 2, c = 10
+        en: a = 8, b = 2, c = 10
+        pt: a = 8, b = 2, c = 10
+        fr: a = 8, b = 2, c = 10
+        zh: a = 8, b = 2, c = 10
+        ja: a = 8, b = 2, c = 10
+      - es: log₂(8) = log₁₀(8) / log₁₀(2)
+        en: log₂(8) = log₁₀(8) / log₁₀(2)
+        pt: log₂(8) = log₁₀(8) / log₁₀(2)
+        fr: log₂(8) = log₁₀(8) / log₁₀(2)
+        zh: log₂(8) = log₁₀(8) / log₁₀(2)
+        ja: log₂(8) = log₁₀(8) / log₁₀(2)
+      - es: log₂(8) = 0.903 / 0.301
+        en: log₂(8) = 0.903 / 0.301
+        pt: log₂(8) = 0,903 / 0,301
+        fr: log₂(8) = 0,903 / 0,301
+        zh: log₂(8) = 0.903 / 0.301
+        ja: log₂(8) = 0.903 / 0.301
+      - es: log₂(8) = 3
+        en: log₂(8) = 3
+        pt: log₂(8) = 3
+        fr: log₂(8) = 3
+        zh: log₂(8) = 3
+        ja: log₂(8) = 3
+      - es: "Verificación: 2³ = 8, luego log₂(8) = 3"
+        en: "Check: 2³ = 8, so log₂(8) = 3"
+        pt: "Verificação: 2³ = 8, logo log₂(8) = 3"
+        fr: "Vérification : 2³ = 8, donc log₂(8) = 3"
+        zh: 验证：2³ = 8，因此 log₂(8) = 3
+        ja: 検算：2³ = 8 なので log₂(8) = 3

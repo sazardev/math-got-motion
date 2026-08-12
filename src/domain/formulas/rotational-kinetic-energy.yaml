@@ -1,0 +1,331 @@
+id: rotational-kinetic-energy
+title:
+  es: Energía Cinética Rotacional
+  en: Rotational Kinetic Energy
+  pt: Energia Cinética Rotacional
+  fr: Énergie cinétique de rotation
+  zh: 转动动能
+  ja: 回転運動エネルギー
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: ke
+    type: variable
+    value: KE
+    explanation:
+      es: La energía cinética rotacional que almacena el cuerpo al girar.
+      en: The rotational kinetic energy stored by a spinning body.
+      pt: A energia cinética rotacional que o corpo armazena ao girar.
+      fr: L'énergie cinétique de rotation emmagasinée par un corps qui tourne.
+      zh: 物体转动时储存的转动动能。
+      ja: 回転する物体が蓄える回転運動エネルギー。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: half
+    type: number
+    value: "½"
+    explanation:
+      es: "Un medio: la constante de proporcionalidad de la fórmula."
+      en: "One half: the formula's constant of proportionality."
+      pt: "Um meio: a constante de proporcionalidade da fórmula."
+      fr: Un demi, la constante de proportionnalité de la formule.
+      zh: "二分之一:公式中的比例常数。"
+      ja: "1/2。公式の比例定数。"
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación.
+      en: Multiplication.
+      pt: Multiplicação.
+      fr: Multiplication.
+      zh: 乘法。
+      ja: 乗算。
+  - id: i
+    type: variable
+    value: I
+    explanation:
+      es: El momento de inercia, la resistencia del cuerpo a cambiar su rotación.
+      en: The moment of inertia, a body's resistance to changing its rotation.
+      pt: O momento de inércia, a resistência do corpo a mudar sua rotação.
+      fr: Le moment d'inertie, la résistance d'un corps au changement de sa rotation.
+      zh: 转动惯量,物体改变转动的难易程度。
+      ja: 慣性モーメント。物体が回転状態を変えることへの抵抗。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación.
+      en: Multiplication.
+      pt: Multiplicação.
+      fr: Multiplication.
+      zh: 乘法。
+      ja: 乗算。
+  - id: omega
+    type: variable
+    value: ω
+    explanation:
+      es: La velocidad angular, cuántos radianes gira el cuerpo por segundo.
+      en: The angular velocity, how many radians the body turns per second.
+      pt: A velocidade angular, quantos radianos o corpo gira por segundo.
+      fr: La vitesse angulaire, le nombre de radians parcourus par le corps par seconde.
+      zh: 角速度,物体每秒钟转过的弧度数。
+      ja: 角速度。物体が1秒間に何ラジアン回転するか。
+  - id: squared
+    type: superscript
+    value: "²"
+    explanation:
+      es: "Al cuadrado: la energía crece con el cuadrado de la velocidad angular."
+      en: "Squared: the energy grows with the square of the angular velocity."
+      pt: "Ao quadrado: a energia cresce com o quadrado da velocidade angular."
+      fr: Au carré, l'énergie croît avec le carré de la vitesse angulaire.
+      zh: "平方:能量随角速度的平方增长。"
+      ja: "2乗:エネルギーは角速度の2乗に比例して増大する。"
+context:
+  author:
+    es: Basada en la mecánica de Euler
+    en: Based on the mechanics of Euler
+    pt: Baseada na mecânica de Euler
+    fr: Basée sur la mécanique d'Euler
+    zh: 基于欧拉的力学
+    ja: オイラーの力学に基づく
+  era:
+    es: Europa, s. XVIII
+    en: Europe, 18th century
+    pt: Europa, séc. XVIII
+    fr: Europe, XVIIIe siècle
+    zh: 欧洲,18世纪
+    ja: ヨーロッパ、18世紀
+  history:
+    es: >-
+      Así como la energía cinética ½mv² describe un cuerpo que se traslada, su gemela rotacional
+      ½I·ω² describe la energía de un cuerpo que gira: depende de su momento de inercia I y de su
+      velocidad angular ω. Leonhard Euler sistematizó esta mecánica en el siglo XVIII con sus
+      ecuaciones de rotación de cuerpos rígidos. Los volantes de inercia almacenan esta energía para
+      suavizar máquinas y motores, y los giroscopios la aprovechan para mantenerse estables. Por eso
+      una rueda en movimiento resiste a ser volteada: es energía rotacional en acción.
+    en: >-
+      Just as kinetic energy ½mv² describes a translating body, its rotational twin ½I·ω² describes
+      the energy of a spinning body, depending on its moment of inertia I and its angular velocity ω.
+      Leonhard Euler systematized this mechanics in the 18th century with his equations for
+      rigid-body rotation. Flywheels store this energy to smooth machines and engines, and gyroscopes
+      exploit it to stay stable. That is why a spinning wheel resists being tipped over: it is
+      rotational energy in action.
+    pt: >-
+      Assim como a energia cinética ½mv² descreve um corpo em translação, sua gêmea rotacional ½I·ω²
+      descreve a energia de um corpo que gira, dependendo do seu momento de inércia I e da sua
+      velocidade angular ω. Leonhard Euler sistematizou essa mecânica no século XVIII com suas
+      equações de rotação de corpos rígidos. Volantes de inércia armazenam essa energia para suavizar
+      máquinas e motores, e os giroscópios a aproveitam para se manter estáveis. Por isso uma roda em
+      movimento resiste a ser tombada: é energia rotacional em ação.
+    fr: >-
+      Tout comme l'énergie cinétique ½mv² décrit un corps en translation, sa jumelle rotationnelle
+      ½I·ω² décrit l'énergie d'un corps qui tourne, selon son moment d'inertie I et sa vitesse
+      angulaire ω. Leonhard Euler a systématisé cette mécanique au XVIIIe siècle avec ses équations de
+      rotation des corps rigides. Les volants d'inertie emmagasinent cette énergie pour lisser
+      machines et moteurs, et les gyroscopes l'exploitent pour rester stables. Voilà pourquoi une roue
+      en mouvement résiste qu'on la renverse : c'est de l'énergie rotationnelle en action.
+    zh: >-
+      正如动能 ½mv² 描述平动的物体一样,它的转动孪生式 ½I·ω² 描述旋转物体的能量,取决于转动惯量 I
+      和角速度 ω。18世纪,欧拉用刚体转动方程将这一力学系统化。飞轮储存这种能量,使机器和发动机运转
+      平稳;陀螺仪利用它保持稳定。旋转中的车轮之所以不易被扳倒,正是转动动能在起作用。
+    ja: >-
+      並進する物体の運動エネルギーが ½mv² で表されるのに対し、回転版である ½I·ω² は回転する物体
+      のエネルギーを表し、慣性モーメント I と角速度 ω に依存する。オイラーは18世紀、剛体の回転方程式
+      でこの力学を体系化した。フライホイールはこのエネルギーを蓄えて機械やエンジンの回転を滑らかにし、
+      ジャイロスコープはそれを利用して姿勢を保つ。回転する車輪が倒されまいとするのは、まさに回転運動
+      エネルギーが働いているからだ。
+  timeline:
+    - year: "1736"
+      label:
+        es: >-
+          Euler publica la Mechanica, donde sienta las bases analíticas de la mecánica.
+        en: >-
+          Euler publishes the Mechanica, laying the analytic foundations of mechanics.
+        pt: >-
+          Euler publica a Mechanica, estabelecendo as bases analíticas da mecânica.
+        fr: >-
+          Euler publie la Mechanica, posant les fondements analytiques de la mécanique.
+        zh: >-
+          欧拉发表《力学》,奠定了力学的解析基础。
+        ja: >-
+          オイラーが『力学』を出版し、力学の解析的な基礎を築く。
+    - year: "1765"
+      label:
+        es: >-
+          Publica su teoría del movimiento de los cuerpos rígidos, con las ecuaciones que describen
+          su rotación.
+        en: >-
+          He publishes his theory of rigid-body motion, with the equations describing their rotation.
+        pt: >-
+          Publica sua teoria do movimento dos corpos rígidos, com as equações que descrevem sua
+          rotação.
+        fr: >-
+          Il publie sa théorie du mouvement des corps rigides, avec les équations décrivant leur
+          rotation.
+        zh: >-
+          出版刚体运动理论,给出了描述刚体转动的方程。
+        ja: >-
+          剛体の運動理論を出版し、その回転を記述する方程式を示す。
+    - year: Hoy
+      label:
+        es: >-
+          Los volantes de inercia y los giroscopios la usan en autos eléctricos, satélites y
+          almacenamiento de energía.
+        en: >-
+          Flywheels and gyroscopes use it in electric cars, satellites, and energy storage.
+        pt: >-
+          Volantes de inércia e giroscópios a usam em carros elétricos, satélites e armazenamento de
+          energia.
+        fr: >-
+          Volants d'inertie et gyroscopes l'utilisent dans les voitures électriques, les satellites et
+          le stockage d'énergie.
+        zh: >-
+          飞轮和陀螺仪在电动汽车、卫星和储能设备中应用这一公式。
+        ja: >-
+          フライホイールとジャイロスコープが、電気自動車や衛星、エネルギー貯蔵にこの式を利用して
+          いる。
+  useCases:
+    - title:
+        es: Volantes de inercia
+        en: Flywheels
+        pt: Volantes de inércia
+        fr: Volants d'inertie
+        zh: 飞轮
+        ja: フライホイール
+      description:
+        es: >-
+          Almacenan energía cinética rotacional para suavizar máquinas y respaldar redes eléctricas.
+        en: >-
+          They store rotational kinetic energy to smooth machines and back up power grids.
+        pt: >-
+          Armazenam energia cinética rotacional para suavizar máquinas e dar suporte a redes
+          elétricas.
+        fr: >-
+          Ils emmagasinent l'énergie cinétique de rotation pour lisser les machines et soutenir les
+          réseaux électriques.
+        zh: >-
+          储存转动动能,使机器运转平稳,并为电网提供后备支撑。
+        ja: >-
+          回転運動エネルギーを蓄えて機械の回転を滑らかにし、電力網のバックアップを担う。
+    - title:
+        es: Giroscopios
+        en: Gyroscopes
+        pt: Giroscópios
+        fr: Gyroscopes
+        zh: 陀螺仪
+        ja: ジャイロスコープ
+      description:
+        es: >-
+          La energía del disco giratorio da estabilidad a barcos, aviones, drones y satélites.
+        en: >-
+          The spinning disc's energy and momentum give stability to ships, planes, drones, and
+          satellites.
+        pt: >-
+          A energia e o momento do disco giratório dão estabilidade a navios, aviões, drones e
+          satélites.
+        fr: >-
+          L'énergie et le moment du disque en rotation donnent de la stabilité aux navires, avions,
+          drones et satellites.
+        zh: >-
+          旋转圆盘的能量和动量使船舶、飞机、无人机和卫星保持稳定。
+        ja: >-
+          回転する円盤のエネルギーとモーメントが、船舶、航空機、ドローン、人工衛星に安定性を
+          もたらす。
+    - title:
+        es: Autos eléctricos
+        en: Electric cars
+        pt: Carros elétricos
+        fr: Voitures électriques
+        zh: 电动汽车
+        ja: 電気自動車
+      description:
+        es: >-
+          El frenado regenerativo convierte la energía cinética rotacional de las ruedas en
+          electricidad.
+        en: >-
+          Regenerative braking converts the wheels' rotational kinetic energy back into electricity.
+        pt: >-
+          A frenagem regenerativa converte a energia cinética rotacional das rodas em eletricidade.
+        fr: >-
+          Le freinage régénératif reconvertit l'énergie cinétique de rotation des roues en
+          électricité.
+        zh: >-
+          再生制动将车轮的转动动能重新转化为电能。
+        ja: >-
+          回生ブレーキが車輪の回転運動エネルギーを電気に変換する。
+    - title:
+        es: Máquinas rotativas
+        en: Rotating machinery
+        pt: Máquinas rotativas
+        fr: Machines tournantes
+        zh: 旋转机械
+        ja: 回転機械
+      description:
+        es: >-
+          Dimensiona volantes y ejes de motores, turbinas y compresores para controlar picos de
+          potencia.
+        en: >-
+          It sizes flywheels and shafts in motors, turbines, and compressors to manage power peaks.
+        pt: >-
+          Dimensiona volantes e eixos em motores, turbinas e compressores para controlar picos de
+          potência.
+        fr: >-
+          Elle dimensionne volants et arbres dans moteurs, turbines et compresseurs pour maîtriser les
+          pointes de puissance.
+        zh: >-
+          为电机、涡轮机和压缩机中的飞轮与轴确定尺寸,以控制功率峰值。
+        ja: >-
+          モーター、タービン、圧縮機のフライホイールや軸の寸法を決め、出力のピークを制御する。
+  example:
+    title:
+      es: Energía de un volante
+      en: Energy of a flywheel
+      pt: Energia de um volante
+      fr: Énergie d'un volant
+      zh: 飞轮的能量
+      ja: フライホイールのエネルギー
+    lines:
+      - es: I = 0.5 kg·m²
+        en: I = 0.5 kg·m²
+        pt: I = 0,5 kg·m²
+        fr: I = 0,5 kg·m²
+        zh: I = 0.5 kg·m²
+        ja: I = 0.5 kg·m²
+      - es: ω = 20 rad/s
+        en: ω = 20 rad/s
+        pt: ω = 20 rad/s
+        fr: ω = 20 rad/s
+        zh: ω = 20 rad/s
+        ja: ω = 20 rad/s
+      - es: KE = ½·I·ω² = ½ × 0.5 × 20²
+        en: KE = ½·I·ω² = ½ × 0.5 × 20²
+        pt: KE = ½·I·ω² = ½ × 0,5 × 20²
+        fr: KE = ½·I·ω² = ½ × 0,5 × 20²
+        zh: KE = ½·I·ω² = ½ × 0.5 × 20²
+        ja: KE = ½·I·ω² = ½ × 0.5 × 20²
+      - es: KE = ½ × 0.5 × 400
+        en: KE = ½ × 0.5 × 400
+        pt: KE = ½ × 0,5 × 400
+        fr: KE = ½ × 0,5 × 400
+        zh: KE = ½ × 0.5 × 400
+        ja: KE = ½ × 0.5 × 400
+      - es: KE = 100 J
+        en: KE = 100 J
+        pt: KE = 100 J
+        fr: KE = 100 J
+        zh: KE = 100 J
+        ja: KE = 100 J

@@ -1,0 +1,350 @@
+id: resistors-in-series
+title:
+  es: Resistencias en Serie
+  en: Resistors in Series
+  pt: Resistores em Série
+  fr: Résistances en série
+  zh: 串联电阻
+  ja: 直列接続の抵抗
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: r-total
+    type: variable
+    value: R
+    explanation:
+      es: La resistencia equivalente total de toda la cadena de resistencias.
+      en: The total equivalent resistance of the whole chain of resistors.
+      pt: A resistência equivalente total de toda a cadeia de resistores.
+      fr: La résistance équivalente totale de toute la chaîne de résistances.
+      zh: 整串电阻的等效总电阻。
+      ja: 抵抗の連なり全体の合計抵抗値。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: r1
+    type: variable
+    value: R₁
+    explanation:
+      es: La primera resistencia, la primera que la corriente encuentra en su camino.
+      en: The first resistor, the first one the current meets on its path.
+      pt: O primeiro resistor, o primeiro que a corrente encontra em seu caminho.
+      fr: La première résistance, la première que le courant rencontre sur son chemin.
+      zh: 第一个电阻，即电流在路径上遇到的第一个。
+      ja: 最初の抵抗。電流が経路上で最初に出会うもの。
+  - id: plus-1
+    type: operator
+    value: +
+    explanation:
+      es: "Suma: las resistencias en serie se suman directamente."
+      en: "Addition: resistors in series are simply added."
+      pt: "Soma: resistores em série são somados diretamente."
+      fr: "Addition : les résistances en série s'additionnent directement."
+      zh: "加法：串联电阻直接相加。"
+      ja: "加算。直列の抵抗はそのまま足し合わせる。"
+  - id: r2
+    type: variable
+    value: R₂
+    explanation:
+      es: La segunda resistencia, conectada a continuación de la primera.
+      en: The second resistor, connected after the first.
+      pt: O segundo resistor, conectado em seguida ao primeiro.
+      fr: La deuxième résistance, branchée à la suite de la première.
+      zh: 第二个电阻，连接在第一个之后。
+      ja: 2番目の抵抗。最初の抵抗の後に接続される。
+  - id: plus-2
+    type: operator
+    value: +
+    explanation:
+      es: "Y así sucesivamente: se suman tantas resistencias como haya en la cadena."
+      en: "And so on: as many resistors as the chain holds are added."
+      pt: "E assim por diante: somam-se quantos resistores houver na cadeia."
+      fr: "Et ainsi de suite : on additionne autant de résistances que la chaîne en compte."
+      zh: 依此类推：链条中有多少电阻就加多少。
+      ja: 以下同様。連なりにあるだけの抵抗をすべて足し合わせる。
+  - id: ellipsis
+    type: operator
+    value: "…"
+    explanation:
+      es: Indica que la cadena puede continuar con más resistencias.
+      en: Indicates the chain can continue with more resistors.
+      pt: Indica que a cadeia pode continuar com mais resistores.
+      fr: Indique que la chaîne peut se poursuivre avec d'autres résistances.
+      zh: 表示链条还可以继续接更多的电阻。
+      ja: さらに抵抗が続く可能性を示す。
+context:
+  author:
+    es: Basada en la ley de Ohm
+    en: Based on Ohm's law
+    pt: Baseada na lei de Ohm
+    fr: Fondée sur la loi d'Ohm
+    zh: 基于欧姆定律
+    ja: オームの法則に基づく
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, s. XIX
+    fr: Europe, XIXᵉ siècle
+    zh: 欧洲，19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      Cuando varias resistencias se conectan una tras otra, la corriente debe atravesarlas en orden
+      y cada una se opone al paso: la resistencia total es la suma de todas, R = R₁ + R₂ + …,
+      consecuencia directa de la ley de Ohm publicada por Georg Ohm en 1827. Esta regla explica
+      comportamientos cotidianos: en las guirnaldas navideñas conectadas en serie, la falla de un
+      solo filamento interrumpe la corriente y apaga toda la cadena. La misma idea permite construir
+      divisores de voltaje, que reparten una tensión en partes proporcionales a cada resistencia y
+      son la base de innumerables sensores y circuitos de medición.
+    en: >-
+      When several resistors are connected one after another, the current must pass through each in
+      turn, and each opposes the flow: the total resistance is the sum of them all, R = R₁ + R₂ + …,
+      a direct consequence of Ohm's law published by Georg Ohm in 1827. This rule explains everyday
+      behavior: in series-wired Christmas light strings, the failure of a single filament breaks the
+      current and turns off the whole chain. The same idea builds voltage dividers, which split a
+      voltage into parts proportional to each resistor and underlie countless sensors and measuring
+      circuits.
+    pt: >-
+      Quando vários resistores são conectados um após o outro, a corrente precisa atravessá-los em
+      ordem e cada um se opõe à passagem: a resistência total é a soma de todos, R = R₁ + R₂ + …,
+      consequência direta da lei de Ohm publicada por Georg Ohm em 1827. Essa regra explica
+      comportamentos cotidianos: em cordões de luzes natalinas ligados em série, a falha de um único
+      filamento interrompe a corrente e apaga toda a cadeia. A mesma ideia permite construir
+      divisores de tensão, que repartem uma tensão em partes proporcionais a cada resistor e são a
+      base de inúmeros sensores e circuitos de medição.
+    fr: >-
+      Lorsque plusieurs résistances sont branchées l'une après l'autre, le courant doit les traverser
+      en ordre et chacune s'oppose au passage : la résistance totale est la somme de toutes, R = R₁ +
+      R₂ + …, conséquence directe de la loi d'Ohm publiée par Georg Ohm en 1827. Cette règle explique
+      des comportements quotidiens : dans les guirlandes de Noël câblées en série, la défaillance
+      d'un seul filament coupe le courant et éteint toute la chaîne. La même idée permet de construire
+      des diviseurs de tension, qui répartissent une tension en parties proportionnelles à chaque
+      résistance et sont à la base d'innombrables capteurs et circuits de mesure.
+    zh: >-
+      当多个电阻一个接一个地连接时，电流必须依次通过每一个，而每个电阻都会阻碍电流：总电阻就是所有电阻之和，
+      R = R₁ + R₂ + …，这是格奥尔格·欧姆1827年发表的欧姆定律的直接推论。这条规则解释了许多日常现象：
+      在串联连接的圣诞灯串中，只要一个灯丝损坏就会中断电流，使整串灯全部熄灭。同样的思想还可以构成分压器，
+      把电压按每个电阻成比例地分配，是无数传感器和测量电路的基础。
+    ja: >-
+      複数の抵抗を直列に接続すると、電流は順にそれぞれを通らなければならず、各抵抗が流れを妨げる。
+      合計抵抗はすべての和である。R = R₁ + R₂ + …。これは1827年にゲオルク・オームが発表したオームの法則の
+      直接の帰結である。この規則は身近な現象を説明する。直列配線のクリスマスイルミネーションでは、1つの
+      フィラメントが切れるだけで電流が途絶え、列全体が消えてしまう。同じ考え方で分圧器を構成でき、電圧を
+      各抵抗に比例した部分に分割し、数えきれないほどのセンサーや測定回路の基盤となっている。
+  timeline:
+    - year: "1827"
+      label:
+        es: >-
+          Ohm publica su ley, que establece que la corriente es la misma en toda una rama en serie.
+        en: >-
+          Ohm publishes his law, establishing that the current is the same along an entire series
+          branch.
+        pt: >-
+          Ohm publica sua lei, que estabelece que a corrente é a mesma ao longo de todo um ramo em
+          série.
+        fr: >-
+          Ohm publie sa loi, qui établit que le courant est le même tout au long d'une branche en
+          série.
+        zh: >-
+          欧姆发表其定律，确立了串联支路中各处电流相同的原理。
+        ja: >-
+          オームが法則を発表し、直列の枝路全体で電流が等しいことを確立する。
+    - year: "1845"
+      label:
+        es: >-
+          Kirchhoff formula las leyes de los circuitos que permiten analizar cadenas de resistencias
+          en serie con rigor.
+        en: >-
+          Kirchhoff states the circuit laws that make rigorous analysis of series resistor chains
+          possible.
+        pt: >-
+          Kirchhoff formula as leis dos circuitos que permitem analisar rigorosamente cadeias de
+          resistores em série.
+        fr: >-
+          Kirchhoff énonce les lois des circuits qui permettent d'analyser rigoureusement les chaînes
+          de résistances en série.
+        zh: >-
+          基尔霍夫提出电路定律，使串联电阻链的严谨分析成为可能。
+        ja: >-
+          キルヒホッフが回路の法則を定式化し、直列抵抗の連なりの厳密な解析が可能になる。
+    - year: "1882"
+      label:
+        es: >-
+          Se popularizan los primeros árboles de Navidad iluminados eléctricamente, con bombillas
+          conectadas en serie.
+        en: >-
+          The first electrically lit Christmas trees appear, using bulbs wired in series.
+        pt: >-
+          Popularizam-se as primeiras árvores de Natal iluminadas eletricamente, com lâmpadas ligadas
+          em série.
+        fr: >-
+          Les premiers arbres de Noël éclairés électriquement se popularisent, avec des ampoules
+          câblées en série.
+        zh: >-
+          首批用电照明的圣诞树流行起来，灯泡采用串联接法。
+        ja: >-
+          電飾を施した最初のクリスマスツリーが普及。電球は直列配線だった。
+    - year: Hoy
+      label:
+        es: >-
+          Los divisores de voltaje y las resistencias de limitación de corriente hacen de esta suma
+          una herramienta cotidiana de la electrónica.
+        en: >-
+          Voltage dividers and current-limiting resistors make this sum an everyday tool of
+          electronics.
+        pt: >-
+          Divisores de tensão e resistores limitadores de corrente fazem dessa soma uma ferramenta
+          cotidiana da eletrônica.
+        fr: >-
+          Les diviseurs de tension et les résistances de limitation font de cette somme un outil
+          quotidien de l'électronique.
+        zh: >-
+          分压器和限流电阻使这条求和规则成为电子学中的日常工具。
+        ja: >-
+          分圧器や電流制限抵抗により、この和の公式は電子工学の日常的な道具となっている。
+  useCases:
+    - title:
+        es: Divisores de voltaje
+        en: Voltage dividers
+        pt: Divisores de tensão
+        fr: Diviseurs de tension
+        zh: 分压器
+        ja: 分圧器
+      description:
+        es: >-
+          Dos resistencias en serie reparten una tensión en partes proporcionales, base de los
+          sensores y los ajustes de nivel de señal.
+        en: >-
+          Two series resistors split a voltage into proportional parts, the basis of sensors and
+          signal-level adjustments.
+        pt: >-
+          Dois resistores em série repartem uma tensão em partes proporcionais, base dos sensores e
+          dos ajustes de nível de sinal.
+        fr: >-
+          Deux résistances en série répartissent une tension en parties proportionnelles, à la base
+          des capteurs et des réglages de niveau de signal.
+        zh: >-
+          两个串联电阻把电压分成按比例的部分，是传感器和信号电平调节的基础。
+        ja: >-
+          直列の2つの抵抗が電圧を比例配分し、センサーや信号レベルの調整の基礎となる。
+    - title:
+        es: Iluminación en serie
+        en: Series lighting
+        pt: Iluminação em série
+        fr: Éclairage en série
+        zh: 串联照明
+        ja: 直列照明
+      description:
+        es: >-
+          Las guirnaldas y tiras de LED encadenan los elementos, de modo que un solo fallo apaga la
+          cadena completa.
+        en: >-
+          Light strings and LED strips chain their elements, so a single failure turns off the whole
+          string.
+        pt: >-
+          Cordões de luzes e fitas de LED encadeiam os elementos, de modo que uma única falha apaga a
+          cadeia inteira.
+        fr: >-
+          Les guirlandes et rubans de LED enchaînent leurs éléments, si bien qu'une seule défaillance
+          éteint toute la chaîne.
+        zh: >-
+          灯串和LED灯带把各元件串联起来，一个损坏就会使整串熄灭。
+        ja: >-
+          イルミネーションやLEDテープは素子を直列に連ねるため、1つの故障で列全体が消える。
+    - title:
+        es: Instrumentos de medición
+        en: Measuring instruments
+        pt: Instrumentos de medição
+        fr: Instruments de mesure
+        zh: 测量仪器
+        ja: 計測器
+      description:
+        es: >-
+          Los amperímetros se conectan en serie con el circuito para que toda la corriente pase por
+          ellos.
+        en: >-
+          Ammeters are connected in series with the circuit so that all the current flows through
+          them.
+        pt: >-
+          Amperímetros são conectados em série com o circuito para que toda a corrente passe por
+          eles.
+        fr: >-
+          Les ampèremètres se branchent en série avec le circuit pour que tout le courant les
+          traverse.
+        zh: >-
+          电流表与电路串联，使全部电流都流经它。
+        ja: >-
+          電流計は回路と直列に接続され、全電流がそこを流れるようにする。
+    - title:
+        es: Electrónica de consumo
+        en: Consumer electronics
+        pt: Eletrônica de consumo
+        fr: Électronique grand public
+        zh: 消费电子
+        ja: 家電・電子機器
+      description:
+        es: >-
+          Una resistencia en serie limita la corriente que alimenta un LED, protegiéndolo de la
+          fuente de voltaje.
+        en: >-
+          A series resistor limits the current feeding an LED, protecting it from the voltage source.
+        pt: >-
+          Um resistor em série limita a corrente que alimenta um LED, protegendo-o da fonte de tensão.
+        fr: >-
+          Une résistance en série limite le courant alimentant une LED, la protégeant de la source de
+          tension.
+        zh: >-
+          串联电阻限制流入LED的电流，使其免受电压源损坏。
+        ja: >-
+          直列抵抗がLEDに流れる電流を制限し、電圧源から保護する。
+  example:
+    title:
+      es: Dos resistencias en serie
+      en: Two resistors in series
+      pt: Dois resistores em série
+      fr: Deux résistances en série
+      zh: 两个串联电阻
+      ja: 直列の2つの抵抗
+    lines:
+      - es: R₁ = 10 Ω
+        en: R₁ = 10 Ω
+        pt: R₁ = 10 Ω
+        fr: R₁ = 10 Ω
+        zh: R₁ = 10 Ω
+        ja: R₁ = 10 Ω
+      - es: R₂ = 20 Ω
+        en: R₂ = 20 Ω
+        pt: R₂ = 20 Ω
+        fr: R₂ = 20 Ω
+        zh: R₂ = 20 Ω
+        ja: R₂ = 20 Ω
+      - es: R = R₁ + R₂
+        en: R = R₁ + R₂
+        pt: R = R₁ + R₂
+        fr: R = R₁ + R₂
+        zh: R = R₁ + R₂
+        ja: R = R₁ + R₂
+      - es: R = 10 + 20
+        en: R = 10 + 20
+        pt: R = 10 + 20
+        fr: R = 10 + 20
+        zh: R = 10 + 20
+        ja: R = 10 + 20
+      - es: R = 30 Ω
+        en: R = 30 Ω
+        pt: R = 30 Ω
+        fr: R = 30 Ω
+        zh: R = 30 Ω
+        ja: R = 30 Ω

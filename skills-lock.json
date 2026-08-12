@@ -34,6 +34,11 @@
       "skillPath": "skills/gsap-core/SKILL.md",
       "computedHash": "c4a01101d9e1aafbf4b49f75d74f9349790d8741981ba0237c990093863035a6"
     },
+    "gsap-frameworks": {
+      "source": "greensock/gsap-skills",
+      "sourceType": "autoskills-registry",
+      "computedHash": "97f2615815e642f630d472a5ff553b9a17b2c270d0b7962419a620d13a7e4b45"
+    },
     "gsap-performance": {
       "source": "greensock/gsap-skills",
       "sourceType": "github",
@@ -46,6 +51,11 @@
       "skillPath": "skills/gsap-plugins/SKILL.md",
       "computedHash": "791bda0e6e460511fe82a78e745db519b88ffaeeab4d04a74879a03ca4f41740"
     },
+    "gsap-react": {
+      "source": "greensock/gsap-skills",
+      "sourceType": "autoskills-registry",
+      "computedHash": "980d520d22a964fa0ceea60f14f4f92bca47f263d80504049808ced8a7a10849"
+    },
     "gsap-scrolltrigger": {
       "source": "greensock/gsap-skills",
       "sourceType": "github",
@@ -57,6 +67,11 @@
       "sourceType": "github",
       "skillPath": "skills/gsap-timeline/SKILL.md",
       "computedHash": "54981c2feec5a9c0d57988aeb32315af32bdeadd261550d5e9db7a7b1f08b487"
+    },
+    "gsap-utils": {
+      "source": "greensock/gsap-skills",
+      "sourceType": "autoskills-registry",
+      "computedHash": "4bc9e220b816f74547d770f73a2878e86df035f42e445c1e98875dd9793fe927"
     },
     "improve-codebase-architecture": {
       "source": "mattpocock/skills",
@@ -73,6 +88,11 @@
       "source": "sickn33/antigravity-awesome-skills",
       "sourceType": "autoskills-registry",
       "computedHash": "7361ab02fb6b09913e3bdd9cf61c629ed6c17de9485e6a781054e5d437ccfc29"
+    },
+    "playwright-best-practices": {
+      "source": "currents-dev/playwright-best-practices-skill",
+      "sourceType": "autoskills-registry",
+      "computedHash": "dcc414410b81cfcc5c56490a7e450e664b11d170f3c336fe475c6e0a47def574"
     },
     "react-best-practices": {
       "source": "vercel-labs/agent-skills",
@@ -110,6 +130,11 @@
       "source": "antfu/skills",
       "sourceType": "autoskills-registry",
       "computedHash": "e0b52fe3ffea533e1e543ac8a8a20fccca3beed9f8bdc31a0934fe9f554439e8"
+    },
+    "zod": {
+      "source": "pproenca/dot-skills",
+      "sourceType": "autoskills-registry",
+      "computedHash": "aa8a97195b07763d37494b511f48be90979fd6826c031956c831cfc58f6a24b8"
     }
   }
 }

@@ -1,0 +1,302 @@
+id: angular-displacement
+title:
+  es: Desplazamiento Angular
+  en: Angular Displacement
+  pt: Deslocamento Angular
+  fr: Déplacement angulaire
+  zh: 角位移
+  ja: 角変位
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: theta
+    type: variable
+    value: θ
+    explanation:
+      es: "Theta: el ángulo total girado, medido en radianes."
+      en: "Theta: the total angle rotated, measured in radians."
+      pt: "Theta: o ângulo total girado, medido em radianos."
+      fr: "Thêta : l'angle total parcouru, mesuré en radians."
+      zh: "θ：旋转的总角度，以弧度为单位。"
+      ja: "θ：回転した合計の角度。単位はラジアン。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: omega
+    type: variable
+    value: ω
+    explanation:
+      es: "Omega: la velocidad angular, los radianes que gira cada segundo."
+      en: "Omega: the angular speed, how many radians it turns each second."
+      pt: "Ômega: a velocidade angular, os radianos que gira por segundo."
+      fr: "Oméga : la vitesse angulaire, les radians parcourus chaque seconde."
+      zh: "ω：角速度，即每秒转过的弧度数。"
+      ja: "ω：角速度。1秒間に回転するラジアン数。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por el tiempo de giro.
+      en: Multiplied by the time of rotation.
+      pt: Multiplicado pelo tempo de giro.
+      fr: Multiplié par la durée de rotation.
+      zh: 乘以旋转的时间。
+      ja: 回転時間を掛ける。
+  - id: t
+    type: variable
+    value: t
+    explanation:
+      es: El tiempo que ha estado girando, en segundos.
+      en: How long it has been rotating, in seconds.
+      pt: O tempo de rotação, em segundos.
+      fr: La durée de rotation, en secondes.
+      zh: 已经旋转的时间，以秒为单位。
+      ja: 回転していた時間。単位は秒。
+context:
+  author:
+    es: Origen colectivo de la mecánica rotacional
+    en: Collective origin of rotational mechanics
+    pt: Origem coletiva da mecânica rotacional
+    fr: Origine collective de la mécanique rotationnelle
+    zh: 转动机械学的集体起源
+    ja: 回転力学の集団的起源
+  era:
+    es: Europa, s. XVIII
+    en: Europe, 18th century
+    pt: Europa, século XVIII
+    fr: Europe, XVIIIe siècle
+    zh: 欧洲，18世纪
+    ja: ヨーロッパ、18世紀
+  history:
+    es: >-
+      El desplazamiento angular θ describe cuánto ha girado un cuerpo: a velocidad angular constante ω,
+      cada segundo se suman ω radianes, de modo que tras t segundos el ángulo total es θ = ω·t. Los
+      radianes son la unidad natural porque convierten el movimiento circular en movimiento rectilíneo:
+      la distancia recorrida sobre una rueda es simplemente radio por ángulo. Esta relación es la base
+      de engranajes, volantes y ejes de motores, y hoy permite a los robots calcular su posición midiendo
+      cuántas vueltas giraron sus ruedas, la llamada odometría.
+    en: >-
+      Angular displacement θ describes how far a body has rotated: at a constant angular speed ω, each
+      second adds ω radians, so after t seconds the total angle is θ = ω·t. Radians are the natural unit
+      because they turn circular motion into straight-line motion: the distance rolled by a wheel is
+      simply radius times angle. This relationship underlies gears, flywheels, and motor shafts, and
+      today it lets robots compute their position by counting how many turns their wheels made — wheel
+      odometry.
+    pt: >-
+      O deslocamento angular θ descreve o quanto um corpo girou: a uma velocidade angular constante ω,
+      cada segundo soma ω radianos, de modo que após t segundos o ângulo total é θ = ω·t. Os radianos
+      são a unidade natural porque convertem movimento circular em movimento retilíneo: a distância
+      percorrida por uma roda é simplesmente o raio vezes o ângulo. Essa relação está na base de
+      engrenagens, volantes e eixos de motores, e hoje permite que robôs calculem sua posição contando
+      quantas voltas suas rodas deram, a chamada odometria.
+    fr: >-
+      Le déplacement angulaire θ décrit de combien un corps a tourné : à vitesse angulaire constante ω,
+      chaque seconde ajoute ω radians, si bien qu'après t secondes l'angle total vaut θ = ω·t. Le radian
+      est l'unité naturelle car il transforme le mouvement circulaire en mouvement rectiligne : la
+      distance parcourue par une roue est simplement le rayon multiplié par l'angle. Cette relation est
+      à la base des engrenages, des volants et des arbres de moteurs, et permet aujourd'hui aux robots de
+      calculer leur position en comptant les tours de leurs roues, la fameuse odométrie.
+    zh: >-
+      角位移θ描述一个物体转过了多少角度：在恒定角速度ω下，每秒钟增加ω弧度，因此经过t秒后总角度为θ = ω·t。弧度是
+      自然的单位，因为它把圆周运动变成直线运动：轮子滚过的距离恰好等于半径乘以角度。这一关系是齿轮、飞轮和电机转轴的
+      基础；今天，它还让机器人通过计算轮子转了多少圈来确定自身位置，即所谓轮式里程计。
+    ja: >-
+      角変位θは、物体がどれだけ回転したかを表す。角速度ωが一定なら、毎秒ωラジアンずつ増えるので、t秒後の合計の角度は
+      θ = ω·tとなる。ラジアンが自然な単位なのは、円運動を直線運動に直してくれるからだ。車輪が転がる距離は、半径×角度に
+      ほかならない。この関係は歯車、フライホイール、モーター軸の基礎であり、今日ではロボットが車輪の回転数を数えて
+      自分の位置を計算する（ホイールオドメトリ）のに使われている。
+  timeline:
+    - year: "1714"
+      label:
+        es: >-
+          Roger Cotes introduce el radián, la medida natural del ángulo en la mecánica rotacional.
+        en: >-
+          Roger Cotes introduces the radian, the natural unit of angle in rotational mechanics.
+        pt: >-
+          Roger Cotes introduz o radiano, a medida natural do ângulo na mecânica rotacional.
+        fr: >-
+          Roger Cotes introduit le radian, l'unité naturelle de l'angle en mécanique rotationnelle.
+        zh: >-
+          罗杰·科茨引入弧度，这是转动机械学中自然的角单位。
+        ja: >-
+          ロジャー・コーツがラジアンを導入。回転力学において自然な角度の単位となる。
+    - year: "1788"
+      label:
+        es: >-
+          Lagrange publica la Mecánica analítica, que formaliza la rotación con variables angulares.
+        en: >-
+          Lagrange publishes Mécanique analytique, formalizing rotation with angular variables.
+        pt: >-
+          Lagrange publica a Mecânica analítica, que formaliza a rotação com variáveis angulares.
+        fr: >-
+          Lagrange publie la Mécanique analytique, qui formalise la rotation par des variables
+          angulaires.
+        zh: >-
+          拉格朗日出版《分析力学》，用角变量把转动形式化。
+        ja: >-
+          ラグランジュが『解析力学』を出版し、回転を角度変数で定式化する。
+    - year: "1880"
+      label:
+        es: >-
+          Los motores eléctricos y los engranajes industrializan el movimiento rotatorio.
+        en: >-
+          Electric motors and gearing industrialize rotational motion.
+        pt: >-
+          Os motores elétricos e as engrenagens industrializam o movimento rotatório.
+        fr: >-
+          Les moteurs électriques et les engrenages industrialisent le mouvement de rotation.
+        zh: >-
+          电动机与齿轮装置使旋转运动工业化。
+        ja: >-
+          電動モーターと歯車機構が回転運動を産業に広げる。
+    - year: Hoy
+      label:
+        es: >-
+          La odometría por cuentavueltas de las ruedas guía a los robots móviles.
+        en: >-
+          Wheel-turn odometry guides mobile robots to their position.
+        pt: >-
+          A odometria por contagem de voltas das rodas guia os robôs móveis.
+        fr: >-
+          L'odométrie par comptage des tours de roues guide les robots mobiles.
+        zh: >-
+          通过统计轮子转数来计算位置的里程计，引导着移动机器人。
+        ja: >-
+          車輪の回転数を数えるオドメトリが、移動ロボットの位置を導く。
+  useCases:
+    - title:
+        es: Robótica móvil
+        en: Mobile robotics
+        pt: Robótica móvel
+        fr: Robotique mobile
+        zh: 移动机器人
+        ja: 移動ロボティクス
+      description:
+        es: >-
+          La odometría integra los ángulos de las ruedas (θ = ω·t) para estimar cuánto avanzó el robot.
+        en: >-
+          Odometry integrates wheel angles (θ = ω·t) to estimate how far the robot has traveled.
+        pt: >-
+          A odometria integra os ângulos das rodas (θ = ω·t) para estimar quanto o robô avançou.
+        fr: >-
+          L'odométrie intègre les angles des roues (θ = ω·t) pour estimer la distance parcourue par le
+          robot.
+        zh: >-
+          里程计对轮子角度（θ = ω·t）进行积分，以估计机器人行进了多远。
+        ja: >-
+          オドメトリは車輪の角度（θ = ω·t）を積分し、ロボットの移動距離を推定する。
+    - title:
+        es: Motores eléctricos
+        en: Electric motors
+        pt: Motores elétricos
+        fr: Moteurs électriques
+        zh: 电动机
+        ja: 電動モーター
+      description:
+        es: >-
+          Los encoders del eje miden la posición angular a partir de las vueltas acumuladas.
+        en: >-
+          Shaft encoders measure angular position from accumulated turns.
+        pt: >-
+          Os encoders do eixo medem a posição angular a partir das voltas acumuladas.
+        fr: >-
+          Les codeurs d'arbre mesurent la position angulaire à partir des tours accumulés.
+        zh: >-
+          转轴编码器依据累计转数测量角位置。
+        ja: >-
+          シャフトのエンコーダーが、累積した回転数から角位置を測定する。
+    - title:
+        es: Engranajes y transmisiones
+        en: Gears and transmissions
+        pt: Engrenagens e transmissões
+        fr: Engrenages et transmissions
+        zh: 齿轮与传动
+        ja: 歯車と変速機
+      description:
+        es: >-
+          El ángulo de salida de un tren de engranajes es la entrada multiplicada por la relación de
+          transmisión.
+        en: >-
+          A gear train's output angle is its input times the gear ratio.
+        pt: >-
+          O ângulo de saída de um trem de engrenagens é a entrada vezes a relação de transmissão.
+        fr: >-
+          L'angle de sortie d'un train d'engrenages est l'entrée multipliée par le rapport de
+          transmission.
+        zh: >-
+          齿轮系的输出角等于输入角乘以传动比。
+        ja: >-
+          歯車列の出力角度は、入力角度にギア比を掛けたものになる。
+    - title:
+        es: Navegación inercial
+        en: Inertial navigation
+        pt: Navegação inercial
+        fr: Navigation inertielle
+        zh: 惯性导航
+        ja: 慣性航法
+      description:
+        es: >-
+          Los giroscopios integran la velocidad angular para conocer la orientación de aviones y
+          cohetes.
+        en: >-
+          Gyroscopes integrate angular speed to track the orientation of aircraft and rockets.
+        pt: >-
+          Os giroscópios integram a velocidade angular para conhecer a orientação de aviões e foguetes.
+        fr: >-
+          Les gyroscopes intègrent la vitesse angulaire pour suivre l'orientation des avions et des
+          fusées.
+        zh: >-
+          陀螺仪对角速度积分，从而跟踪飞机与火箭的姿态。
+        ja: >-
+          ジャイロスコープは角速度を積分し、航空機やロケットの姿勢を追跡する。
+  example:
+    title:
+      es: Una rueda que gira 3 segundos
+      en: A wheel spinning for 3 seconds
+      pt: Uma roda que gira por 3 segundos
+      fr: Une roue qui tourne pendant 3 secondes
+      zh: 旋转3秒的轮子
+      ja: 3秒間回転する車輪
+    lines:
+      - es: ω = 2 rad/s
+        en: ω = 2 rad/s
+        pt: ω = 2 rad/s
+        fr: ω = 2 rad/s
+        zh: ω = 2 弧度/秒
+        ja: ω = 2 rad/s
+      - es: t = 3 s
+        en: t = 3 s
+        pt: t = 3 s
+        fr: t = 3 s
+        zh: t = 3 秒
+        ja: t = 3 秒
+      - es: θ = ω·t
+        en: θ = ω·t
+        pt: θ = ω·t
+        fr: θ = ω·t
+        zh: θ = ω·t
+        ja: θ = ω·t
+      - es: θ = 2 × 3
+        en: θ = 2 × 3
+        pt: θ = 2 × 3
+        fr: θ = 2 × 3
+        zh: θ = 2 × 3
+        ja: θ = 2 × 3
+      - es: θ = 6 rad
+        en: θ = 6 rad
+        pt: θ = 6 rad
+        fr: θ = 6 rad
+        zh: θ = 6 弧度
+        ja: θ = 6 rad

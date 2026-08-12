@@ -1,0 +1,403 @@
+id: square-of-binomial
+title:
+  es: Cuadrado de un Binomio
+  en: Square of a Binomial
+  pt: Quadrado de um Binômio
+  fr: Carré d'un binôme
+  zh: 二项式的平方
+  ja: 二項式の平方
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el binomio que se va a elevar al cuadrado.
+      en: Opens the binomial that is being squared.
+      pt: Abre o binômio que será elevado ao quadrado.
+      fr: Ouvre le binôme qui va être élevé au carré.
+      zh: 打开将要平方的二项式括号。
+      ja: 平方する二項式の括弧を開く。
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: La primera variable del binomio.
+      en: The binomial's first variable.
+      pt: A primeira variável do binômio.
+      fr: La première variable du binôme.
+      zh: 二项式的第一个变量。
+      ja: 二項式の最初の変数。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumada a la segunda variable.
+      en: Added to the second variable.
+      pt: Somada à segunda variável.
+      fr: Ajoutée à la seconde variable.
+      zh: 与第二个变量相加。
+      ja: 2つ目の変数と加え合わせる。
+  - id: b
+    type: variable
+    value: b
+    explanation:
+      es: La segunda variable del binomio.
+      en: The binomial's second variable.
+      pt: A segunda variável do binômio.
+      fr: La seconde variable du binôme.
+      zh: 二项式的第二个变量。
+      ja: 二項式の2つ目の変数。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el binomio antes de elevarlo al cuadrado.
+      en: Closes the binomial before it is squared.
+      pt: Fecha o binômio antes de elevá-lo ao quadrado.
+      fr: Ferme le binôme avant de l'élever au carré.
+      zh: 在平方之前闭合二项式括号。
+      ja: 平方する前に二項式の括弧を閉じる。
+  - id: squared
+    type: superscript
+    value: "2"
+    explanation:
+      es: "El exponente 2: el binomio multiplicado por sí mismo."
+      en: "The exponent 2: the binomial multiplied by itself."
+      pt: "O expoente 2: o binômio multiplicado por si mesmo."
+      fr: "L'exposant 2 : le binôme multiplié par lui-même."
+      zh: 指数2：二项式与自身相乘。
+      ja: 指数2：二項式を自分自身と掛け合わせる。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a la suma de los tres términos desarrollados.
+      en: Is equal to the three expanded terms.
+      pt: É igual à soma dos três termos desenvolvidos.
+      fr: Est égal à la somme des trois termes développés.
+      zh: 等于展开后的三项之和。
+      ja: 展開された3つの項の和に等しい。
+  - id: a-rhs
+    type: variable
+    value: a
+    explanation:
+      es: El primer término se eleva al cuadrado.
+      en: The first term is squared.
+      pt: O primeiro termo é elevado ao quadrado.
+      fr: Le premier terme est élevé au carré.
+      zh: 第一项平方。
+      ja: 最初の項を2乗する。
+  - id: squared-a
+    type: superscript
+    value: "2"
+    explanation:
+      es: El exponente 2 de la primera variable.
+      en: The exponent 2 on the first variable.
+      pt: O expoente 2 da primeira variável.
+      fr: L'exposant 2 de la première variable.
+      zh: 第一个变量上的指数2。
+      ja: 最初の変数に付く指数2。
+  - id: plus-rhs
+    type: operator
+    value: +
+    explanation:
+      es: Más el doble del producto de ambas variables.
+      en: Plus twice the product of both variables.
+      pt: Mais o dobro do produto das duas variáveis.
+      fr: Plus le double du produit des deux variables.
+      zh: 加上两倍的两变量乘积。
+      ja: 両変数の積の2倍を足す。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: El 2 del término central, resultado de sumar ab dos veces.
+      en: The 2 in the middle term, from adding ab twice.
+      pt: O 2 do termo central, resultado de somar ab duas vezes.
+      fr: Le 2 du terme central, issu de la somme ab + ab.
+      zh: 中间项中的2，来自 ab 相加两次。
+      ja: 中央の項の2。ab を2回足したもの。
+  - id: ab-a
+    type: variable
+    value: a
+    explanation:
+      es: La primera variable multiplicada por la segunda.
+      en: The first variable multiplied by the second.
+      pt: A primeira variável multiplicada pela segunda.
+      fr: La première variable multipliée par la seconde.
+      zh: 第一个变量乘以第二个变量。
+      ja: 最初の変数と2つ目の変数の積。
+  - id: ab-b
+    type: variable
+    value: b
+    explanation:
+      es: La segunda variable del producto.
+      en: The second variable of the product.
+      pt: A segunda variável do produto.
+      fr: La seconde variable du produit.
+      zh: 乘积中的第二个变量。
+      ja: 積における2つ目の変数。
+  - id: plus-rhs-2
+    type: operator
+    value: +
+    explanation:
+      es: Más el cuadrado de la segunda variable.
+      en: Plus the square of the second variable.
+      pt: Mais o quadrado da segunda variável.
+      fr: Plus le carré de la seconde variable.
+      zh: 加上第二个变量的平方。
+      ja: 2つ目の変数の2乗を足す。
+  - id: b-rhs
+    type: variable
+    value: b
+    explanation:
+      es: La segunda variable, también elevada al cuadrado.
+      en: The second variable, also squared.
+      pt: A segunda variável, também elevada ao quadrado.
+      fr: La seconde variable, elle aussi élevée au carré.
+      zh: 第二个变量同样要平方。
+      ja: 2つ目の変数も2乗される。
+  - id: squared-b
+    type: superscript
+    value: "2"
+    explanation:
+      es: El exponente 2 del último término.
+      en: The exponent 2 of the last term.
+      pt: O expoente 2 do último termo.
+      fr: L'exposant 2 du dernier terme.
+      zh: 末项的指数2。
+      ja: 最後の項の指数2。
+context:
+  author:
+    es: Origen colectivo (Euclides, Elementos)
+    en: Collective origin (Euclid's Elements)
+    pt: Origem coletiva (Euclides, Elementos)
+    fr: Origine collective (Euclide, Éléments)
+    zh: 集体起源（欧几里得，《几何原本》）
+    ja: 集合的起源（ユークリッド『原論』）
+  era:
+    es: Grecia, c. 300 a.C. · publicada en Elementos
+    en: Greece, c. 300 BC · published in Elements
+    pt: Grécia, c. 300 a.C. · publicada em Os Elementos
+    fr: Grèce, v. 300 av. J.-C. · publiée dans les Éléments
+    zh: 希腊，约公元前300年 · 发表于《几何原本》
+    ja: ギリシャ、紀元前300年頃 · 『原論』に発表
+  history:
+    es: >-
+      La identidad aparece como la Proposición 4 del Libro II de los Elementos de Euclides, donde se
+      demuestra geométricamente: un cuadrado de lado a+b se parte en dos cuadrados (a² y b²) y dos
+      rectángulos de área ab. El mnemotécnico moderno 'FOIL' (First, Outer, Inner, Last) recuerda el
+      orden de los productos, y la fórmula sigue siendo la puerta de entrada al álgebra en las
+      escuelas.
+    en: >-
+      The identity appears as Proposition 4 of Book II of Euclid's Elements, where it is proved
+      geometrically: a square of side a+b is cut into two squares (a² and b²) and two rectangles of
+      area ab. The modern mnemonic 'FOIL' (First, Outer, Inner, Last) recalls the order of the
+      products, and the formula remains the gateway to algebra in schools today.
+    pt: >-
+      A identidade aparece como a Proposição 4 do Livro II dos Elementos de Euclides, onde é
+      demonstrada geometricamente: um quadrado de lado a+b é dividido em dois quadrados (a² e b²) e
+      dois retângulos de área ab. O mnemônico moderno 'FOIL' (First, Outer, Inner, Last) lembra a
+      ordem dos produtos, e a fórmula continua sendo a porta de entrada para a álgebra nas escolas.
+    fr: >-
+      L'identité apparaît comme la Proposition 4 du Livre II des Éléments d'Euclide, où elle est
+      démontrée géométriquement : un carré de côté a+b est découpé en deux carrés (a² et b²) et deux
+      rectangles d'aire ab. Le moyen mnémotechnique moderne « FOIL » (First, Outer, Inner, Last)
+      rappelle l'ordre des produits, et la formule reste le passage obligé de l'algèbre à l'école.
+    zh: >-
+      该恒等式出现在欧几里得《几何原本》第二卷命题4中，并用几何方法证明：边长为 a+b 的正方形被分割成两个
+      正方形（a² 和 b²）以及两个面积为 ab 的矩形。现代流行的助记口诀“FOIL”（First, Outer, Inner, Last）
+      用来记忆乘积的顺序，这条公式至今仍是学校学习代数的入门内容。
+    ja: >-
+      この恒等式はユークリッドの『原論』第2巻の命題4として登場し、幾何学的に証明される。辺の長さがa+bの
+      正方形は、二つの正方形（a²とb²）と面積abの長方形二つに分割される。現代では「FOIL」（First, Outer,
+      Inner, Last）という覚え方で積の順序を記憶し、この公式は今も学校で代数の入り口として教えられている。
+  timeline:
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides demuestra la identidad por disección geométrica en la Proposición 4 del Libro II de
+          los Elementos.
+        en: >-
+          Euclid proves the identity by geometric dissection in Proposition 4 of Book II of the
+          Elements.
+        pt: >-
+          Euclides demonstra a identidade por dissecação geométrica na Proposição 4 do Livro II dos
+          Elementos.
+        fr: >-
+          Euclide démontre l'identité par dissection géométrique dans la Proposition 4 du Livre II des
+          Éléments.
+        zh: >-
+          欧几里得在《几何原本》第二卷命题4中，用几何剖分的方法证明了该恒等式。
+        ja: >-
+          ユークリッドが『原論』第2巻の命題4で、幾何学的な分割によりこの恒等式を証明する。
+    - year: "820"
+      label:
+        es: >-
+          Al-Khwarizmi publica su álgebra, donde los productos notables se tratan como reglas de
+          cálculo con números.
+        en: >-
+          Al-Khwarizmi publishes his algebra, where these notable products are treated as rules of
+          calculation with numbers.
+        pt: >-
+          Al-Khwarizmi publica sua álgebra, onde os produtos notáveis são tratados como regras de
+          cálculo com números.
+        fr: >-
+          Al-Khwârizmî publie son algèbre, où ces produits remarquables sont traités comme des règles
+          de calcul sur les nombres.
+        zh: >-
+          花拉子米出版其代数学著作，其中这些乘法公式被视为数字计算的规则。
+        ja: >-
+          アル＝フワーリズミーが代数学の著作を発表し、これらの展開公式は数の計算規則として扱われる。
+    - year: Hoy
+      label:
+        es: >-
+          Es la primera identidad notable que se enseña, base del cálculo mental y de la factorización
+          posterior.
+        en: >-
+          It is the first notable identity taught, the basis for mental arithmetic and later factoring.
+        pt: >-
+          É a primeira identidade notável ensinada, base do cálculo mental e da fatoração posterior.
+        fr: >-
+          C'est la première identité remarquable enseignée, base du calcul mental et de la
+          factorisation ultérieure.
+        zh: >-
+          它是最先教授的常用恒等式，是心算和后续因式分解的基础。
+        ja: >-
+          最初に教わる展開公式であり、暗算やその後の因数分解の基礎となっている。
+  useCases:
+    - title:
+        es: Álgebra escolar
+        en: School algebra
+        pt: Álgebra escolar
+        fr: Algèbre scolaire
+        zh: 学校代数
+        ja: 学校の代数
+      description:
+        es: >-
+          Permite expandir binomios al cuadrado sin multiplicar término a término, herramienta básica
+          del álgebra.
+        en: >-
+          Lets you expand squared binomials without multiplying term by term, a basic algebra tool.
+        pt: >-
+          Permite expandir binômios ao quadrado sem multiplicar termo a termo, ferramenta básica da
+          álgebra.
+        fr: >-
+          Permet de développer les carrés de binômes sans multiplier terme à terme, outil de base de
+          l'algèbre.
+        zh: >-
+          无需逐项相乘即可展开二项式的平方，是代数的基本工具。
+        ja: >-
+          二項式の平方を、項ごとに掛け合わせることなく展開できる、代数の基本ツール。
+    - title:
+        es: Cálculo diferencial
+        en: Differential calculus
+        pt: Cálculo diferencial
+        fr: Calcul différentiel
+        zh: 微积分
+        ja: 微分積分学
+      description:
+        es: >-
+          La derivada de x² se obtiene expandiendo (x+h)² = x² + 2xh + h² para luego dividir entre h.
+        en: >-
+          The derivative of x² is found by expanding (x+h)² = x² + 2xh + h² and then dividing by h.
+        pt: >-
+          A derivada de x² é obtida expandindo (x+h)² = x² + 2xh + h² e depois dividindo por h.
+        fr: >-
+          La dérivée de x² s'obtient en développant (x+h)² = x² + 2xh + h², puis en divisant par h.
+        zh: >-
+          对 x² 求导时，需先展开 (x+h)² = x² + 2xh + h²，再除以 h。
+        ja: >-
+          x²の導関数は、(x+h)² = x² + 2xh + h² と展開してからhで割ることによって得られる。
+    - title:
+        es: Aritmética mental
+        en: Mental arithmetic
+        pt: Aritmética mental
+        fr: Calcul mental
+        zh: 心算
+        ja: 暗算
+      description:
+        es: >-
+          Cuadrados como 31² se calculan rápido: (30+1)² = 900 + 60 + 1 = 961.
+        en: >-
+          Squares like 31² are computed quickly: (30+1)² = 900 + 60 + 1 = 961.
+        pt: >-
+          Quadrados como 31² são calculados rápido: (30+1)² = 900 + 60 + 1 = 961.
+        fr: >-
+          Des carrés comme 31² se calculent vite : (30+1)² = 900 + 60 + 1 = 961.
+        zh: >-
+          像 31² 这样的平方可以快速计算：(30+1)² = 900 + 60 + 1 = 961。
+        ja: >-
+          31² のような平方もすぐに計算できる：(30+1)² = 900 + 60 + 1 = 961。
+    - title:
+        es: Ecuaciones cuadráticas
+        en: Quadratic equations
+        pt: Equações quadráticas
+        fr: Équations du second degré
+        zh: 二次方程
+        ja: 二次方程式
+      description:
+        es: >-
+          Completar el cuadrado con (x+p)² = x² + 2px + p² permite despejar la fórmula cuadrática.
+        en: >-
+          Completing the square with (x+p)² = x² + 2px + p² leads to the quadratic formula.
+        pt: >-
+          Completar o quadrado com (x+p)² = x² + 2px + p² leva à fórmula quadrática.
+        fr: >-
+          Compléter le carré avec (x+p)² = x² + 2px + p² conduit à la formule quadratique.
+        zh: >-
+          利用 (x+p)² = x² + 2px + p² 配方，可推导出二次方程求根公式。
+        ja: >-
+          (x+p)² = x² + 2px + p² を用いて平方完成し、二次方程式の解の公式を導く。
+  example:
+    title:
+      es: Calcular (3+4)²
+      en: Computing (3+4)²
+      pt: Calculando (3+4)²
+      fr: Calcul de (3+4)²
+      zh: 计算 (3+4)²
+      ja: (3+4)² の計算
+    lines:
+      - es: a = 3, b = 4
+        en: a = 3, b = 4
+        pt: a = 3, b = 4
+        fr: a = 3, b = 4
+        zh: a = 3, b = 4
+        ja: a = 3, b = 4
+      - es: "(a + b)² = a² + 2ab + b²"
+        en: "(a + b)² = a² + 2ab + b²"
+        pt: "(a + b)² = a² + 2ab + b²"
+        fr: "(a + b)² = a² + 2ab + b²"
+        zh: "(a + b)² = a² + 2ab + b²"
+        ja: "(a + b)² = a² + 2ab + b²"
+      - es: "(3 + 4)² = 3² + 2·3·4 + 4²"
+        en: "(3 + 4)² = 3² + 2·3·4 + 4²"
+        pt: "(3 + 4)² = 3² + 2·3·4 + 4²"
+        fr: "(3 + 4)² = 3² + 2·3·4 + 4²"
+        zh: "(3 + 4)² = 3² + 2·3·4 + 4²"
+        ja: "(3 + 4)² = 3² + 2·3·4 + 4²"
+      - es: 7² = 9 + 24 + 16
+        en: 7² = 9 + 24 + 16
+        pt: 7² = 9 + 24 + 16
+        fr: 7² = 9 + 24 + 16
+        zh: 7² = 9 + 24 + 16
+        ja: 7² = 9 + 24 + 16
+      - es: 49 = 49
+        en: 49 = 49
+        pt: 49 = 49
+        fr: 49 = 49
+        zh: 49 = 49
+        ja: 49 = 49
+      - es: "Resultado: 49"
+        en: "Result: 49"
+        pt: "Resultado: 49"
+        fr: "Résultat : 49"
+        zh: 结果：49
+        ja: 結果：49

@@ -1,0 +1,249 @@
+id: sound-intensity
+title:
+  es: Intensidad del Sonido
+  en: Sound Intensity
+  pt: Intensidade do Som
+  fr: Intensité du Son
+  zh: 声强
+  ja: 音の強さ
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: i
+    type: variable
+    value: I
+    explanation:
+      es: "I: la intensidad del sonido, la potencia acústica que llega a cada unidad de área."
+      en: "I: the sound intensity, the acoustic power arriving at each unit of area."
+      pt: "I: a intensidade do som, a potência acústica que chega a cada unidade de área."
+      fr: "I : l'intensité du son, la puissance acoustique arrivant sur chaque unité de surface."
+      zh: "I：声强,即到达每单位面积的声功率。"
+      ja: "I：音の強さ。単位面積あたりに届く音響パワー。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: p
+    type: variable
+    value: P
+    explanation:
+      es: "P: la potencia acústica total que emite la fuente, medida en vatios."
+      en: "P: the total acoustic power emitted by the source, measured in watts."
+      pt: "P: a potência acústica total emitida pela fonte, medida em watts."
+      fr: "P : la puissance acoustique totale émise par la source, mesurée en watts."
+      zh: "P：声源发射的总声功率,单位为瓦特。"
+      ja: "P：音源が放射する総音響パワー。単位はワット。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: "A: el área sobre la que se reparte esa potencia, perpendicular a la dirección de propagación."
+      en: "A: the area over which that power spreads, perpendicular to the direction of travel."
+      pt: "A: a área sobre a qual essa potência se distribui, perpendicular à direção de propagação."
+      fr: "A : la surface sur laquelle cette puissance se répartit, perpendiculaire à la direction de propagation."
+      zh: "A：该功率所分布的面积,垂直于传播方向。"
+      ja: "A：そのパワーが広がる面積。伝播方向に対して垂直。"
+context:
+  author:
+    es: Basada en el trabajo de Rayleigh y Helmholtz
+    en: Based on the work of Rayleigh and Helmholtz
+    pt: Baseada no trabalho de Rayleigh e Helmholtz
+    fr: Basée sur les travaux de Rayleigh et Helmholtz
+    zh: 基于瑞利和亥姆霍兹的工作
+    ja: レイリーとヘルムホルツの研究に基づく
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, séc. XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲,19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      La intensidad acústica, potencia sonora por unidad de área, se formalizó en el siglo XIX
+      cuando Helmholtz, Rayleigh y otros fundaron la física del sonido. Al alejarse de la fuente,
+      la energía se reparte sobre una superficie cada vez mayor y la intensidad cae con el
+      cuadrado de la distancia. El oído humano percibe desde el umbral auditivo, 10⁻¹² W/m²,
+      hasta el umbral de dolor, cerca de 1 W/m²: un rango de un billón a uno. Para abarcarlo, el
+      decibel compara intensidades en escala logarítmica, base de toda la acústica moderna.
+    en: >-
+      Acoustic intensity, sound power per unit of area, was formalized in the 19th century as
+      Helmholtz, Rayleigh, and others founded the physics of sound. As you move away from the
+      source, the energy spreads over an ever larger surface and the intensity falls with the
+      square of the distance. The human ear perceives from the threshold of hearing, 10⁻¹² W/m²,
+      up to the threshold of pain, near 1 W/m²: a range of a trillion to one. To cover it, the
+      decibel compares intensities on a logarithmic scale, the basis of all modern acoustics.
+    pt: >-
+      A intensidade acústica, potência sonora por unidade de área, foi formalizada no século XIX,
+      quando Helmholtz, Rayleigh e outros fundaram a física do som. Ao se afastar da fonte, a
+      energia se distribui sobre uma superfície cada vez maior e a intensidade cai com o quadrado
+      da distância. O ouvido humano percebe desde o limiar auditivo, 10⁻¹² W/m², até o limiar da
+      dor, perto de 1 W/m²: uma faixa de um trilhão para um. Para abarcá-la, o decibel compara
+      intensidades em escala logarítmica, base de toda a acústica moderna.
+    fr: >-
+      L'intensité acoustique, puissance sonore par unité de surface, fut formalisée au XIXe
+      siècle quand Helmholtz, Rayleigh et d'autres fondèrent la physique du son. En s'éloignant de
+      la source, l'énergie se répartit sur une surface toujours plus grande et l'intensité
+      décroît avec le carré de la distance. L'oreille humaine perçoit du seuil d'audition,
+      10⁻¹² W/m², jusqu'au seuil de douleur, près de 1 W/m² : un rapport d'un billion à un. Pour
+      l'embrasser, le décibel compare les intensités sur une échelle logarithmique, base de toute
+      l'acoustique moderne.
+    zh: >-
+      声强,即单位面积的声功率,于19世纪由亥姆霍兹、瑞利等人创立声音物理学时正式确立。离声源越远,能量分布在越来越大的
+      面积上,声强随距离的平方而衰减。人耳能感知的范围从听阈10⁻¹² 瓦/米²到痛阈约1 瓦/米²,相差一万亿倍。为了覆盖这一
+      范围,分贝用对数标度来比较声强,成为现代声学的基础。
+    ja: >-
+      音の強さ、すなわち単位面積あたりの音響パワーは、ヘルムホルツやレイリーらが音の物理学を築いた19世紀に体系化された。
+      音源から離れるほどエネルギーはより広い面に広がり、強さは距離の二乗に反比例して減衰する。人間の耳は可聴閾値
+      10⁻¹² W/m²から痛みを感じる閾値の約1 W/m²までを感知する。その差は一兆対一にも及ぶ。この範囲を扱うため、デシベルは
+      対数目盛で強さを比較する。これは現代の音響学すべての基礎となっている。
+  timeline:
+    - year: "1863"
+      label:
+        es: Helmholtz publica "Sobre las sensaciones de tono", fundamento de la percepción del sonido.
+        en: Helmholtz publishes "On the Sensations of Tone", a foundation of sound perception.
+        pt: Helmholtz publica "Sobre as Sensações de Tom", fundamento da percepção do som.
+        fr: Helmholtz publie « Sensations tonales », une base de la perception du son.
+        zh: 亥姆霍兹发表《论音的感觉》,奠定声音感知的基础。
+        ja: ヘルムホルツが『音感覚論』を発表し、音の知覚の基礎を築く。
+    - year: "1877"
+      label:
+        es: Rayleigh publica "The Theory of Sound", que sistematiza la intensidad acústica.
+        en: Rayleigh publishes "The Theory of Sound", which systematizes acoustic intensity.
+        pt: Rayleigh publica "The Theory of Sound", que sistematiza a intensidade acústica.
+        fr: Rayleigh publie « The Theory of Sound », qui systématise l'intensité acoustique.
+        zh: 瑞利发表《声学理论》,系统阐述了声强。
+        ja: レイリーが音の強さを体系化した『音の理論』を出版する。
+    - year: "1924"
+      label:
+        es: Bell Labs adopta el decibel como unidad estándar para comparar intensidades sonoras.
+        en: Bell Labs adopts the decibel as the standard unit for comparing sound intensities.
+        pt: Bell Labs adota o decibel como unidade padrão para comparar intensidades sonoras.
+        fr: Bell Labs adopte le décibel comme unité standard pour comparer les intensités sonores.
+        zh: 贝尔实验室采用分贝作为比较声强的标准单位。
+        ja: ベル研究所が音の強さを比較する標準単位としてデシベルを採用する。
+    - year: Hoy
+      label:
+        es: La intensidad acústica mide el ruido ambiental, diseña auditorios y calibra audífonos.
+        en: Acoustic intensity measures environmental noise, designs auditoriums, and calibrates hearing aids.
+        pt: A intensidade acústica mede o ruído ambiental, projeta auditórios e calibra aparelhos auditivos.
+        fr: L'intensité acoustique mesure le bruit ambiant, conçoit les auditoriums et calibre les aides auditives.
+        zh: 声强用于测量环境噪声、设计音乐厅和校准助听器。
+        ja: 音の強さは環境騒音の測定、ホールの設計、補聴器の校正に使われる。
+  useCases:
+    - title:
+        es: Acústica arquitectónica
+        en: Architectural acoustics
+        pt: Acústica arquitetônica
+        fr: Acoustique architecturale
+        zh: 建筑声学
+        ja: 建築音響
+      description:
+        es: Los ingenieros calculan cómo se reparte la energía sonora en salas y auditorios para evitar puntos muertos.
+        en: Engineers compute how sound energy spreads in rooms and auditoriums to avoid dead spots.
+        pt: Engenheiros calculam como a energia sonora se distribui em salas e auditórios para evitar pontos mortos.
+        fr: Les ingénieurs calculent comment l'énergie sonore se répartit dans les salles et auditoriums pour éviter les zones mortes.
+        zh: 工程师计算声能在房间和音乐厅中的分布,以避免盲区。
+        ja: 技術者は部屋やホールでの音のエネルギーの広がり方を計算し、デッドスポットを避ける。
+    - title:
+        es: Protección auditiva y ruido laboral
+        en: Hearing protection and workplace noise
+        pt: Proteção auditiva e ruído no trabalho
+        fr: Protection auditive et bruit au travail
+        zh: 听力保护与职业噪声
+        ja: 聴覚保護と職場騒音
+      description:
+        es: Las normas de seguridad establecen la intensidad máxima permitida en un puesto de trabajo.
+        en: Safety standards set the maximum intensity allowed at a workplace.
+        pt: Normas de segurança definem a intensidade máxima permitida em um posto de trabalho.
+        fr: Les normes de sécurité fixent l'intensité maximale autorisée sur un poste de travail.
+        zh: 安全标准规定了工作场所允许的最大声强。
+        ja: 安全基準は職場で許容される最大強さを定めている。
+    - title:
+        es: Ingeniería de sonido en vivo
+        en: Live sound engineering
+        pt: Engenharia de som ao vivo
+        fr: Sonorisation de spectacle
+        zh: 现场扩声工程
+        ja: ライブ音響
+      description:
+        es: Se usa para repartir la potencia de los altavoces según el área y la distancia a cubrir.
+        en: It is used to spread speaker power according to the area and distance to cover.
+        pt: É usada para distribuir a potência das caixas de som conforme a área e a distância a cobrir.
+        fr: Elle sert à répartir la puissance des enceintes selon la surface et la distance à couvrir.
+        zh: 用于根据所需覆盖的面积和距离分配扬声器的功率。
+        ja: カバーすべき面積と距離に応じてスピーカーのパワーを配分するのに使われる。
+    - title:
+        es: Ultrasonido médico
+        en: Medical ultrasound
+        pt: Ultrassom médico
+        fr: Échographie médicale
+        zh: 医学超声
+        ja: 医療超音波
+      description:
+        es: La intensidad del haz acústico se controla para obtener imágenes sin dañar los tejidos.
+        en: The acoustic beam's intensity is controlled to image without damaging tissue.
+        pt: A intensidade do feixe acústico é controlada para gerar imagens sem danificar tecidos.
+        fr: L'intensité du faisceau acoustique est contrôlée pour imager sans endommager les tissus.
+        zh: 控制声束的声强,以便在不损伤组织的情况下成像。
+        ja: 音響ビームの強さを制御し、組織を傷つけずに画像を得る。
+  example:
+    title:
+      es: Intensidad de una fuente pequeña
+      en: Intensity of a small source
+      pt: Intensidade de uma fonte pequena
+      fr: Intensité d'une petite source
+      zh: 小声源的强度
+      ja: 小さな音源の強さ
+    lines:
+      - es: P = 0.04 W
+        en: P = 0.04 W
+        pt: P = 0,04 W
+        fr: P = 0,04 W
+        zh: P = 0.04 瓦
+        ja: P = 0.04 W
+      - es: A = 2 m²
+        en: A = 2 m²
+        pt: A = 2 m²
+        fr: A = 2 m²
+        zh: A = 2 米²
+        ja: A = 2 m²
+      - es: I = P / A
+        en: I = P / A
+        pt: I = P / A
+        fr: I = P / A
+        zh: I = P / A
+        ja: I = P / A
+      - es: I = 0.04 / 2
+        en: I = 0.04 / 2
+        pt: I = 0,04 / 2
+        fr: I = 0,04 / 2
+        zh: I = 0.04 / 2
+        ja: I = 0.04 / 2
+      - es: I = 0.02 W/m²
+        en: I = 0.02 W/m²
+        pt: I = 0,02 W/m²
+        fr: I = 0,02 W/m²
+        zh: I = 0.02 瓦/米²
+        ja: I = 0.02 W/m²

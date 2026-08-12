@@ -1,0 +1,315 @@
+id: boyles-law
+title:
+  es: Ley de Boyle
+  en: Boyle's Law
+  pt: Lei de Boyle
+  fr: Loi de Boyle
+  zh: 玻意耳定律
+  ja: ボイルの法則
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: p1
+    type: variable
+    value: P₁
+    explanation:
+      es: "P₁: la presión inicial del gas."
+      en: "P₁: the gas's initial pressure."
+      pt: "P₁: a pressão inicial do gás."
+      fr: "P₁ : la pression initiale du gaz."
+      zh: "P₁:气体的初始压强。"
+      ja: "P₁:気体の最初の圧力。"
+  - id: dot-1
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: かける。
+  - id: v1
+    type: variable
+    value: V₁
+    explanation:
+      es: "V₁: el volumen inicial del gas."
+      en: "V₁: the gas's initial volume."
+      pt: "V₁: o volume inicial do gás."
+      fr: "V₁ : le volume initial du gaz."
+      zh: "V₁:气体的初始体积。"
+      ja: "V₁:気体の最初の体積。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: p2
+    type: variable
+    value: P₂
+    explanation:
+      es: "P₂: la presión final del gas."
+      en: "P₂: the gas's final pressure."
+      pt: "P₂: a pressão final do gás."
+      fr: "P₂ : la pression finale du gaz."
+      zh: "P₂:气体的最终压强。"
+      ja: "P₂:気体の最終的な圧力。"
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: かける。
+  - id: v2
+    type: variable
+    value: V₂
+    explanation:
+      es: "V₂: el volumen final del gas."
+      en: "V₂: the gas's final volume."
+      pt: "V₂: o volume final do gás."
+      fr: "V₂ : le volume final du gaz."
+      zh: "V₂:气体的最终体积。"
+      ja: "V₂:気体の最終的な体積。"
+context:
+  author:
+    es: Robert Boyle
+    en: Robert Boyle
+    pt: Robert Boyle
+    fr: Robert Boyle
+    zh: 罗伯特·玻意耳
+    ja: ロバート・ボイル
+  era:
+    es: Inglaterra, 1627–1691 · publicada en 1662
+    en: England, 1627–1691 · published in 1662
+    pt: Inglaterra, 1627–1691 · publicada em 1662
+    fr: Angleterre, 1627–1691 · publiée en 1662
+    zh: 英国,1627–1691年 · 1662年发表
+    ja: イギリス、1627–1691年・1662年発表
+  history:
+    es: >-
+      Robert Boyle experimentó con una bomba de aire y un tubo en forma de J lleno de mercurio para
+      comprimir aire atrapado, y demostró en 1662 que, a temperatura constante, el producto de la
+      presión por el volumen es constante: si el volumen se reduce a la mitad, la presión se duplica.
+      Es la primera ley de los gases y explica fenómenos cotidianos: los pulmones inhalan porque
+      aumentan su volumen y reducen la presión, y las jeringas succionan por la misma razón. Su
+      publicación inauguró la física de los gases.
+    en: >-
+      Robert Boyle used an air pump and a J-shaped tube filled with mercury to compress trapped air,
+      showing in 1662 that at constant temperature the product of pressure and volume is constant:
+      halve the volume and the pressure doubles. It is the first gas law and explains everyday
+      phenomena: lungs inhale because they increase their volume and lower pressure, and syringes draw
+      fluid for the same reason. Its publication inaugurated the physics of gases.
+    pt: >-
+      Robert Boyle usou uma bomba de ar e um tubo em forma de J cheio de mercúrio para comprimir ar
+      preso, e demonstrou em 1662 que, a temperatura constante, o produto da pressão pelo volume é
+      constante: reduzir o volume pela metade duplica a pressão. É a primeira lei dos gases e explica
+      fenômenos cotidianos: os pulmões inspiram porque aumentam seu volume e reduzem a pressão, e as
+      seringas sugam pelo mesmo motivo. Sua publicação inaugurou a física dos gases.
+    fr: >-
+      Robert Boyle utilisa une pompe à air et un tube en forme de J rempli de mercure pour comprimer de
+      l'air piégé, et montra en 1662 qu'à température constante le produit de la pression par le volume
+      est constant : réduisez le volume de moitié et la pression double. C'est la première loi des gaz,
+      qui explique des phénomènes quotidiens : les poumons inspirent en augmentant leur volume et en
+      réduisant la pression, et les seringues aspirent pour la même raison. Sa publication inaugura la
+      physique des gaz.
+    zh: >-
+      罗伯特·玻意耳用气泵和充满水银的J形管压缩封闭空气,并于1662年证明:在温度不变的条件下,压强与体积的乘积为常数——
+      体积减半,压强就加倍。这是第一条气体定律,它解释了日常现象:肺吸气是因为增大体积、降低压强,注射器也是因此吸液。
+      该定律的发表开创了气体的物理学。
+    ja: >-
+      ロバート・ボイルは空気ポンプと水銀を満たしたJ字形の管を使って密閉空気を圧縮し、1662年、温度が一定なら圧力と
+      体積の積は一定であることを示した。体積を半分にすれば圧力は2倍になる。これは最初の気体の法則であり、日常の現象を
+      説明する:肺は体積を増やして圧力を下げることで息を吸い、注射器も同じ理由で液体を吸い上げる。この発表は気体の
+      物理学を開いた。
+  timeline:
+    - year: "1662"
+      label:
+        es: >-
+          Boyle publica sus experimentos y demuestra la relación inversa entre presión y volumen.
+        en: >-
+          Boyle publishes his experiments and demonstrates the inverse relation between pressure and
+          volume.
+        pt: >-
+          Boyle publica seus experimentos e demonstra a relação inversa entre pressão e volume.
+        fr: >-
+          Boyle publie ses expériences et démontre la relation inverse entre pression et volume.
+        zh: >-
+          玻意耳发表其实验,证明了压强与体积的反比关系。
+        ja: >-
+          ボイルが実験を発表し、圧力と体積の反比例関係を証明する。
+    - year: "1676"
+      label:
+        es: >-
+          Edme Mariotte llega a la misma conclusión en Francia; la ley se conoce también como ley de
+          Boyle-Mariotte.
+        en: >-
+          Edme Mariotte reaches the same conclusion in France; the law is also called
+          Boyle-Mariotte.
+        pt: >-
+          Edme Mariotte chega à mesma conclusão na França; a lei também é chamada de Boyle-Mariotte.
+        fr: >-
+          Edme Mariotte aboutit à la même conclusion en France ; la loi porte aussi le nom de
+          Boyle-Mariotte.
+        zh: >-
+          埃德姆·马略特在法国得出相同结论,该定律也被称为玻意耳-马略特定律。
+        ja: >-
+          フランスのエドム・マリオットも同じ結論に達し、この法則はボイル＝マリオットの法則とも呼ばれる。
+    - year: Hoy
+      label:
+        es: >-
+          Rige el buceo, la ventilación pulmonar y el funcionamiento de jeringas y bombas.
+        en: >-
+          It governs diving, lung ventilation, and how syringes and pumps work.
+        pt: >-
+          Ela rege o mergulho, a ventilação pulmonar e o funcionamento de seringas e bombas.
+        fr: >-
+          Elle régit la plongée, la ventilation pulmonaire et le fonctionnement des seringues et des
+          pompes.
+        zh: >-
+          它支配着潜水、肺通气以及注射器和泵的工作原理。
+        ja: >-
+          潜水、肺の換気、注射器やポンプの仕組みを支配している。
+  useCases:
+    - title:
+        es: Buceo
+        en: Scuba diving
+        pt: Mergulho
+        fr: Plongée
+        zh: 潜水
+        ja: ダイビング
+      description:
+        es: >-
+          Al descender, la presión aumenta y el aire de los pulmones se comprime; ascender requiere
+          exhalar.
+        en: >-
+          Descending raises pressure and compresses the air in the lungs; ascending requires exhaling.
+        pt: >-
+          Ao descer, a pressão aumenta e o ar dos pulmões se comprime; subir exige expirar.
+        fr: >-
+          En descendant, la pression augmente et l'air des poumons se comprime ; remonter exige
+          d'expirer.
+        zh: >-
+          下潜时压强增大,肺部空气被压缩;上浮时需要呼气。
+        ja: >-
+          潜るほど圧力が上がり肺の空気は圧縮され、浮上時には息を吐く必要がある。
+    - title:
+        es: Medicina
+        en: Medicine
+        pt: Medicina
+        fr: Médecine
+        zh: 医学
+        ja: 医学
+      description:
+        es: >-
+          La ventilación mecánica y la anestesia ajustan la presión de los gases para insuflar los
+          pulmones.
+        en: >-
+          Mechanical ventilation and anesthesia adjust gas pressures to inflate the lungs.
+        pt: >-
+          A ventilação mecânica e a anestesia ajustam a pressão dos gases para insuflar os pulmões.
+        fr: >-
+          La ventilation mécanique et l'anesthésie ajustent la pression des gaz pour insuffler les
+          poumons.
+        zh: >-
+          机械通气和麻醉通过调节气体压强给肺部充气。
+        ja: >-
+          人工呼吸器や麻酔は、気体の圧力を調整して肺を膨らませる。
+    - title:
+        es: Neumática
+        en: Pneumatics
+        pt: Pneumática
+        fr: Pneumatique
+        zh: 气动技术
+        ja: 空気圧機器
+      description:
+        es: >-
+          Compresores, jeringas y bombas manuales funcionan al comprimir o expandir aire en un volumen
+          cerrado.
+        en: >-
+          Compressors, syringes, and manual pumps work by compressing or expanding air in a closed
+          volume.
+        pt: >-
+          Compressores, seringas e bombas manuais funcionam ao comprimir ou expandir ar em um volume
+          fechado.
+        fr: >-
+          Compresseurs, seringues et pompes manuelles fonctionnent en comprimant ou en dilatant l'air
+          dans un volume clos.
+        zh: >-
+          压缩机、注射器和手动泵的工作原理就是在密闭空间中压缩或膨胀空气。
+        ja: >-
+          コンプレッサーや注射器、手動ポンプは、密閉空間の空気を圧縮・膨張させて動く。
+    - title:
+        es: Industria química
+        en: Chemical industry
+        pt: Indústria química
+        fr: Industrie chimique
+        zh: 化学工业
+        ja: 化学工業
+      description:
+        es: >-
+          El almacenamiento de gases comprimidos y licuados respeta la relación entre presión y
+          volumen.
+        en: >-
+          Storing compressed and liquefied gases respects the pressure-volume relation.
+        pt: >-
+          O armazenamento de gases comprimidos e liquefeitos respeita a relação entre pressão e
+          volume.
+        fr: >-
+          Le stockage des gaz comprimés et liquéfiés respecte la relation pression-volume.
+        zh: >-
+          压缩和液化气体的储存遵循压强与体积的关系。
+        ja: >-
+          圧縮・液化ガスの貯蔵は、圧力と体積の関係に従う。
+  example:
+    title:
+      es: Comprimir un gas
+      en: Compressing a gas
+      pt: Comprimindo um gás
+      fr: Comprimer un gaz
+      zh: 压缩气体
+      ja: 気体を圧縮
+    lines:
+      - es: "P₁ = 1 atm, V₁ = 2 L"
+        en: "P₁ = 1 atm, V₁ = 2 L"
+        pt: "P₁ = 1 atm, V₁ = 2 L"
+        fr: "P₁ = 1 atm, V₁ = 2 L"
+        zh: "P₁ = 1 atm, V₁ = 2 L"
+        ja: "P₁ = 1 atm, V₁ = 2 L"
+      - es: "P₁ · V₁ = P₂ · V₂"
+        en: "P₁ · V₁ = P₂ · V₂"
+        pt: "P₁ · V₁ = P₂ · V₂"
+        fr: "P₁ · V₁ = P₂ · V₂"
+        zh: "P₁ · V₁ = P₂ · V₂"
+        ja: "P₁ · V₁ = P₂ · V₂"
+      - es: "1 · 2 = P₂ · 0.5"
+        en: "1 · 2 = P₂ · 0.5"
+        pt: "1 · 2 = P₂ · 0,5"
+        fr: "1 · 2 = P₂ · 0,5"
+        zh: "1 · 2 = P₂ · 0.5"
+        ja: "1 · 2 = P₂ · 0.5"
+      - es: "P₂ = 2 / 0.5"
+        en: "P₂ = 2 / 0.5"
+        pt: "P₂ = 2 / 0,5"
+        fr: "P₂ = 2 / 0,5"
+        zh: "P₂ = 2 / 0.5"
+        ja: "P₂ = 2 / 0.5"
+      - es: "P₂ = 4 atm"
+        en: "P₂ = 4 atm"
+        pt: "P₂ = 4 atm"
+        fr: "P₂ = 4 atm"
+        zh: "P₂ = 4 atm"
+        ja: "P₂ = 4 atm"

@@ -1,0 +1,318 @@
+id: rms-voltage
+title:
+  es: Voltaje Eficaz (RMS)
+  en: RMS Voltage
+  pt: Tensão Eficaz (RMS)
+  fr: Tension Efficace (RMS)
+  zh: 有效电压 (RMS)
+  ja: 実効電圧 (RMS)
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: v-rms
+    type: variable
+    value: V_rms
+    explanation:
+      es: El valor eficaz o RMS de la tensión, el equivalente en continua de una señal alterna.
+      en: The RMS or effective voltage, the DC equivalent of an alternating signal.
+      pt: O valor eficaz (RMS) da tensão, o equivalente em contínua de um sinal alternado.
+      fr: La tension efficace (RMS), l'équivalent continu d'un signal alternatif.
+      zh: 电压的有效值(RMS),即交流信号的直流等效值。
+      ja: 電圧の実効値(RMS)。交流信号の直流換算値。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: v-max
+    type: variable
+    value: V_max
+    explanation:
+      es: El valor máximo o pico de la onda de tensión.
+      en: The maximum, or peak, value of the voltage wave.
+      pt: O valor máximo, ou de pico, da onda de tensão.
+      fr: La valeur maximale, ou crête, de l'onde de tension.
+      zh: 电压波形的最大值,即峰值。
+      ja: 電圧波形の最大値、すなわちピーク値。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por la raíz cuadrada de dos.
+      en: Divided by the square root of two.
+      pt: Dividido pela raiz quadrada de dois.
+      fr: Divisée par la racine carrée de deux.
+      zh: 除以二的平方根。
+      ja: 2の平方根で割る。
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: La raíz cuadrada de dos, que normaliza la potencia media de la onda.
+      en: The square root of two, which normalizes the wave's average power.
+      pt: A raiz quadrada de dois, que normaliza a potência média da onda.
+      fr: La racine carrée de deux, qui normalise la puissance moyenne de l'onde.
+      zh: 二的平方根,它把波的平均功率归一化。
+      ja: 2の平方根。波の平均電力を規格化する。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: El número dos, proveniente del promedio de la onda senoidal al cuadrado.
+      en: The number two, coming from averaging the squared sine wave.
+      pt: O número dois, que vem da média da onda senoidal ao quadrado.
+      fr: Le nombre deux, issu de la moyenne de l'onde sinusoïdale au carré.
+      zh: 数字二,来自对正弦波平方的求平均。
+      ja: 数字の2。正弦波の2乗の平均から来る。
+context:
+  author:
+    es: Basada en el análisis de corriente alterna
+    en: Based on the analysis of alternating current
+    pt: Baseada na análise de corrente alternada
+    fr: D'après l'analyse du courant alternatif
+    zh: 基于交流电分析
+    ja: 交流の解析に基づく
+  era:
+    es: Europa, s. XIX–XX
+    en: Europe, 19th–20th century
+    pt: Europa, séc. XIX–XX
+    fr: Europe, XIXᵉ–XXᵉ siècle
+    zh: 欧洲,19–20世纪
+    ja: ヨーロッパ、19〜20世紀
+  history:
+    es: >-
+      Una corriente alterna cambia de signo constantemente, por lo que su valor medio es cero y no
+      sirve para describir cuánto trabaja. El valor eficaz resuelve el problema: es la tensión
+      continua que calentaría un resistor igual a la misma potencia que la señal alterna. Para una
+      onda senoidal, ese equivalente es el valor pico dividido por √2; de ahí que la red de 230 V de
+      Europa alcance picos de unos 325 V. Todas las clasificaciones de electrodomésticos y la
+      potencia que realmente disipan se expresan en estos valores eficaces.
+    en: >-
+      An alternating current constantly changes sign, so its average value is zero and cannot
+      describe how much work it does. The RMS value solves the problem: it is the DC voltage that
+      would heat a given resistor to the same power as the alternating signal. For a sine wave, that
+      equivalent is the peak value divided by √2; that is why Europe's 230 V mains reach peaks of
+      about 325 V. Every appliance rating, and the power it actually dissipates, is expressed in
+      these effective values.
+    pt: >-
+      Uma corrente alternada muda de sinal constantemente, então seu valor médio é zero e não serve
+      para descrever quanto trabalho ela realiza. O valor eficaz resolve o problema: é a tensão
+      contínua que aqueceria um mesmo resistor com a mesma potência do sinal alternado. Para uma
+      onda senoidal, esse equivalente é o valor de pico dividido por √2; por isso a rede de 230 V da
+      Europa atinge picos de cerca de 325 V. Todas as classificações de eletrodomésticos, e a
+      potência que eles realmente dissipam, são expressas nesses valores eficazes.
+    fr: >-
+      Un courant alternatif change de signe en permanence, si bien que sa valeur moyenne est nulle
+      et ne peut décrire le travail qu'il fournit. La valeur efficace résout le problème : c'est la
+      tension continue qui chaufferait une même résistance avec la même puissance que le signal
+      alternatif. Pour une onde sinusoïdale, cet équivalent est la valeur de crête divisée par √2 ;
+      c'est pourquoi le réseau européen de 230 V atteint des crêtes d'environ 325 V. Toutes les
+      puissances annoncées des appareils, et la puissance qu'ils dissipent réellement, s'expriment
+      avec ces valeurs efficaces.
+    zh: >-
+      交流电不断改变正负,其平均值为零,无法用来描述它做功的多少。有效值解决了这个问题:它就是会让同一电阻产生与交流
+      信号相同功率的直流电压。对正弦波而言,这一等效值等于峰值除以√2;因此欧洲230伏的电网峰值约为325伏。所有家用
+      电器的标称功率,以及它们实际耗散的功率,都用这种有效值表示。
+    ja: >-
+      交流は常に正負を変えるため、その平均値はゼロとなり、どれだけ仕事をするかを表せない。実効値はこの問題を解決
+      する。同じ抵抗を交流信号と同じ電力で発熱させる直流電圧のことだ。正弦波では、この等価値はピーク値を√2で割っ
+      たものになる。だから欧州の230 Vの電力網では約325 Vのピークが生じる。すべての家電製品の定格、そして実際に消費
+      される電力は、この実効値で表される。
+  timeline:
+    - year: "1885"
+      label:
+        es: >-
+          La compañía húngara Ganz construye los primeros transformadores de corriente alterna de la
+          historia.
+        en: >-
+          The Hungarian Ganz Works builds the first alternating-current transformers in history.
+        pt: >-
+          A empresa húngara Ganz constrói os primeiros transformadores de corrente alternada da
+          história.
+        fr: >-
+          La société hongroise Ganz construit les premiers transformateurs à courant alternatif de
+          l'histoire.
+        zh: >-
+          匈牙利冈茨公司制造出历史上第一批交流变压器。
+        ja: >-
+          ハンガリーのガンツ社が、史上初の交流変圧器を製造する。
+    - year: "1888"
+      label:
+        es: >-
+          Tesla patenta el motor polifásico de corriente alterna, que impone la AC sobre la continua.
+        en: >-
+          Tesla patents the polyphase AC motor, cementing alternating current over DC.
+        pt: >-
+          Tesla patenteia o motor polifásico de corrente alternada, impondo a CA sobre a contínua.
+        fr: >-
+          Tesla brevète le moteur polyphasé à courant alternatif, imposant l'alternatif face au
+          continu.
+        zh: >-
+          特斯拉为多相交流电动机申请专利,使交流胜过直流。
+        ja: >-
+          テスラが多相交流モーターの特許を取得し、直流に代わって交流が主流となる。
+    - year: "1891"
+      label:
+        es: >-
+          La línea de Lauffen a Frankfurt transmite energía trifásica a 15 kV, mostrando el poder de
+          la AC.
+        en: >-
+          The Lauffen–Frankfurt line transmits three-phase power at 15 kV, demonstrating AC's reach.
+        pt: >-
+          A linha de Lauffen a Frankfurt transmite energia trifásica a 15 kV, mostrando o alcance da
+          CA.
+        fr: >-
+          La ligne Lauffen–Francfort transporte de l'énergie triphasée à 15 kV, montrant la portée
+          de l'alternatif.
+        zh: >-
+          劳芬到法兰克福的线路以15千伏传输三相电力,展示了交流的覆盖能力。
+        ja: >-
+          ラウフェン〜フランクフルト間の送電線が15 kVの三相電力を送り、交流の威力を示す。
+    - year: Hoy
+      label:
+        es: >-
+          Los 230 V europeos y los 120 V estadounidenses son valores eficaces, no picos.
+        en: >-
+          Europe's 230 V and the US's 120 V are RMS values, not peaks.
+        pt: >-
+          Os 230 V europeus e os 120 V americanos são valores eficazes, não picos.
+        fr: >-
+          Les 230 V européens et les 120 V américains sont des valeurs efficaces, pas des crêtes.
+        zh: >-
+          欧洲的230伏和美国的120伏都是有效值,而非峰值。
+        ja: >-
+          欧州の230 Vと米国の120 Vは、ピークではなく実効値である。
+  useCases:
+    - title:
+        es: Distribución eléctrica doméstica
+        en: Household power distribution
+        pt: Distribuição elétrica residencial
+        fr: Distribution électrique domestique
+        zh: 家庭配电
+        ja: 家庭用配電
+      description:
+        es: >-
+          La tensión de red anunciada (230 V o 120 V) es el valor eficaz que recibe cada enchufe.
+        en: >-
+          The advertised mains voltage (230 V or 120 V) is the RMS value delivered at every socket.
+        pt: >-
+          A tensão de rede anunciada (230 V ou 120 V) é o valor eficaz entregue em cada tomada.
+        fr: >-
+          La tension du réseau annoncée (230 V ou 120 V) est la valeur efficace livrée à chaque
+          prise.
+        zh: >-
+          标称电网电压(230伏或120伏)就是每个插座得到的有效值。
+        ja: >-
+          表記される電源電圧(230 Vや120 V)は、各コンセントに供給される実効値である。
+    - title:
+        es: Instrumentos de medida
+        en: Measurement instruments
+        pt: Instrumentos de medição
+        fr: Instruments de mesure
+        zh: 测量仪器
+        ja: 計測器
+      description:
+        es: >-
+          Los multímetros en modo AC muestran directamente el valor eficaz de la señal.
+        en: >-
+          Multimeters in AC mode read the signal's RMS value directly.
+        pt: >-
+          Multímetros no modo CA exibem diretamente o valor eficaz do sinal.
+        fr: >-
+          Les multimètres en mode alternatif affichent directement la valeur efficace du signal.
+        zh: >-
+          处于交流档的万用表直接显示信号的有效值。
+        ja: >-
+          ACモードのマルチメータは信号の実効値を直接表示する。
+    - title:
+        es: Especificación de electrodomésticos
+        en: Appliance rating
+        pt: Especificação de eletrodomésticos
+        fr: Spécification des appareils
+        zh: 家用电器额定值
+        ja: 家電製品の定格
+      description:
+        es: >-
+          La potencia nominal de un electrodoméstico usa el voltaje eficaz para calcular su consumo
+          real.
+        en: >-
+          An appliance's rated power uses the RMS voltage to compute its real consumption.
+        pt: >-
+          A potência nominal de um eletrodoméstico usa a tensão eficaz para calcular seu consumo
+          real.
+        fr: >-
+          La puissance nominale d'un appareil utilise la tension efficace pour calculer sa
+          consommation réelle.
+        zh: >-
+          家电的额定功率用有效值电压计算其真实耗电。
+        ja: >-
+          家電の定格電力は実効値電圧を使って実際の消費電力を計算する。
+    - title:
+        es: Diseño de rectificadores
+        en: Rectifier design
+        pt: Projeto de retificadores
+        fr: Conception de redresseurs
+        zh: 整流器设计
+        ja: 整流器の設計
+      description:
+        es: >-
+          El pico de la onda (V_max) fija la tensión inversa que deben soportar los diodos.
+        en: >-
+          The wave's peak (V_max) sets the reverse voltage the diodes must withstand.
+        pt: >-
+          O pico da onda (V_max) define a tensão reversa que os diodos devem suportar.
+        fr: >-
+          La crête de l'onde (V_max) fixe la tension inverse que les diodes doivent supporter.
+        zh: >-
+          波的峰值(V_max)决定二极管必须承受的反向电压。
+        ja: >-
+          波のピーク(V_max)が、ダイオードが耐えるべき逆電圧を決める。
+  example:
+    title:
+      es: Voltaje eficaz de la red
+      en: RMS voltage of the mains
+      pt: Tensão eficaz da rede
+      fr: Tension efficace du réseau
+      zh: 电网的有效电压
+      ja: 電源の実効電圧
+    lines:
+      - es: Vmax = 325 V
+        en: Vmax = 325 V
+        pt: Vmax = 325 V
+        fr: Vmax = 325 V
+        zh: Vmax = 325 V
+        ja: Vmax = 325 V
+      - es: Vrms = Vmax / √2
+        en: Vrms = Vmax / √2
+        pt: Vrms = Vmax / √2
+        fr: Vrms = Vmax / √2
+        zh: Vrms = Vmax / √2
+        ja: Vrms = Vmax / √2
+      - es: Vrms = 325 / 1,4142
+        en: Vrms = 325 / 1.4142
+        pt: Vrms = 325 / 1,4142
+        fr: Vrms = 325 / 1,4142
+        zh: Vrms = 325 / 1.4142
+        ja: Vrms = 325 / 1.4142
+      - es: Vrms ≈ 229,8 V
+        en: Vrms ≈ 229.8 V
+        pt: Vrms ≈ 229,8 V
+        fr: Vrms ≈ 229,8 V
+        zh: Vrms ≈ 229.8 V
+        ja: Vrms ≈ 229.8 V
+      - es: Vrms ≈ 230 V
+        en: Vrms ≈ 230 V
+        pt: Vrms ≈ 230 V
+        fr: Vrms ≈ 230 V
+        zh: Vrms ≈ 230 V
+        ja: Vrms ≈ 230 V

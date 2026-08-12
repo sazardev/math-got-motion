@@ -1,0 +1,340 @@
+id: angular-momentum
+title:
+  es: Momento Angular
+  en: Angular Momentum
+  pt: Momento Angular
+  fr: Moment cinétique
+  zh: 角动量
+  ja: 角運動量
+category:
+  es: Astronomía
+  en: Astronomy
+  pt: Astronomia
+  fr: Astronomie
+  zh: 天文学
+  ja: 天文学
+nodes:
+  - id: l
+    type: variable
+    value: L
+    explanation:
+      es: "L: el momento angular, la cantidad de giro del cuerpo."
+      en: "L: the angular momentum, the body's amount of spin."
+      pt: "L: o momento angular, a quantidade de giro do corpo."
+      fr: "L : le moment cinétique, la quantité de rotation du corps."
+      zh: "L：角动量，即物体转动的量。"
+      ja: "L：角運動量。物体の回転量。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "r: la distancia desde el eje de giro hasta el cuerpo."
+      en: "r: the distance from the axis of rotation to the body."
+      pt: "r: a distância do eixo de rotação ao corpo."
+      fr: "r : la distance de l'axe de rotation au corps."
+      zh: "r：从转轴到物体的距离。"
+      ja: "r：回転軸から物体までの距離。"
+  - id: dot-r
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: "m: la masa del cuerpo en movimiento."
+      en: "m: the mass of the moving body."
+      pt: "m: a massa do corpo em movimento."
+      fr: "m : la masse du corps en mouvement."
+      zh: "m：运动物体的质量。"
+      ja: "m：運動する物体の質量。"
+  - id: dot-m
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: "v: la velocidad tangencial, perpendicular al radio."
+      en: "v: the tangential speed, perpendicular to the radius."
+      pt: "v: a velocidade tangencial, perpendicular ao raio."
+      fr: "v : la vitesse tangentielle, perpendiculaire au rayon."
+      zh: "v：与半径垂直的切向速度。"
+      ja: "v：半径に垂直な接線速度。"
+context:
+  author:
+    es: Basada en el trabajo de Kepler y Newton
+    en: Based on the work of Kepler and Newton
+    pt: Baseada no trabalho de Kepler e Newton
+    fr: Basée sur les travaux de Kepler et Newton
+    zh: 基于开普勒和牛顿的研究
+    ja: ケプラーとニュートンの研究に基づく
+  era:
+    es: Europa, s. XVII
+    en: Europe, 17th century
+    pt: Europa, séc. XVII
+    fr: Europe, XVIIᵉ siècle
+    zh: 欧洲，17世纪
+    ja: ヨーロッパ、17世紀
+  history:
+    es: >-
+      El momento angular mide la cantidad de "giro" de un cuerpo: para una masa puntual, el producto
+      de la distancia al eje de rotación, la masa y la velocidad tangencial. En ausencia de fuerzas
+      externas se conserva, lo que explica la segunda ley de Kepler: un planeta acelera al acercarse
+      al Sol, porque al reducir su distancia debe aumentar su velocidad para mantener el producto
+      constante. La misma ley sostiene giroscopios y trompos, y es la base del control de actitud de
+      los satélites mediante ruedas de reacción.
+    en: >-
+      Angular momentum measures how much "spin" a body carries: for a point mass, the product of its
+      distance from the axis of rotation, its mass, and its tangential speed. With no external
+      forces it is conserved, which explains Kepler's second law: a planet speeds up as it
+      approaches the Sun, because shrinking its distance forces its speed up to keep the product
+      constant. The same law keeps gyroscopes and spinning tops upright, and is the basis of
+      satellite attitude control with reaction wheels.
+    pt: >-
+      O momento angular mede a quantidade de "giro" de um corpo: para uma massa puntual, o produto
+      da distância ao eixo de rotação, da massa e da velocidade tangencial. Na ausência de forças
+      externas ele se conserva, o que explica a segunda lei de Kepler: um planeta acelera ao se
+      aproximar do Sol, pois, ao reduzir sua distância, deve aumentar sua velocidade para manter o
+      produto constante. A mesma lei sustenta giroscópios e piões, e é a base do controle de atitude
+      de satélites com rodas de reação.
+    fr: >-
+      Le moment cinétique mesure la quantité de « rotation » d'un corps : pour une masse ponctuelle,
+      le produit de sa distance à l'axe de rotation, de sa masse et de sa vitesse tangentielle. Sans
+      forces extérieures, il se conserve, ce qui explique la deuxième loi de Kepler : une planète
+      accélère en s'approchant du Soleil, car la réduction de sa distance force sa vitesse à
+      augmenter pour maintenir le produit constant. La même loi maintient gyroscopes et toupies en
+      équilibre, et fonde le contrôle d'attitude des satellites par roues de réaction.
+    zh: >-
+      角动量衡量一个物体携带的"转动量"：对质点而言，它是到转轴的距离、质量与切向速度三者的乘积。
+      在无外力作用下角动量守恒，这解释了开普勒第二定律：行星靠近太阳时加速，因为距离缩短后必须
+      提高速度才能使乘积保持不变。同一规律让陀螺仪和陀螺保持直立，也是卫星用反作用轮进行姿态
+      控制的基础。
+    ja: >-
+      角運動量は物体が持つ「回転量」を測る量である。質点の場合、回転軸からの距離と質量、接線速度の
+      積に等しい。外力が働かなければ保存され、これがケプラーの第二法則を説明する。惑星は太陽に
+      近づくにつれて速くなる。距離が縮まる分、積を一定に保つには速度を上げるしかないからだ。
+      同じ法則がジャイロスコープや独楽を支えており、リアクションホイールによる衛星の姿勢制御の
+      基礎でもある。
+  timeline:
+    - year: "1609"
+      label:
+        es: >-
+          Kepler publica su segunda ley: áreas iguales en tiempos iguales, primera formulación de la
+          conservación del giro orbital.
+        en: >-
+          Kepler publishes his second law: equal areas in equal times, the first formulation of
+          conserved orbital spin.
+        pt: >-
+          Kepler publica sua segunda lei: áreas iguais em tempos iguais, primeira formulação da
+          conservação do giro orbital.
+        fr: >-
+          Kepler publie sa deuxième loi : aires égales en temps égaux, première formulation de la
+          conservation du spin orbital.
+        zh: >-
+          开普勒发表第二定律：相同时间内扫过相同的面积，这是轨道转动守恒的首次表述。
+        ja: >-
+          ケプラーが第二法則（面積速度一定）を発表する。軌道の回転の保存を最初に定式化したもの。
+    - year: "1687"
+      label:
+        es: >-
+          Newton explica el movimiento orbital en los Principia, base moderna del momento angular.
+        en: >-
+          Newton explains orbital motion in the Principia, the modern basis of angular momentum.
+        pt: >-
+          Newton explica o movimento orbital nos Principia, base moderna do momento angular.
+        fr: >-
+          Newton explique le mouvement orbital dans les Principia, base moderne du moment cinétique.
+        zh: >-
+          牛顿在《原理》中解释轨道运动，这是角动量的现代基础。
+        ja: >-
+          ニュートンが『プリンキピア』で軌道運動を説明する。角運動量の近代的な基礎となる。
+    - year: "1852"
+      label:
+        es: >-
+          Léon Foucault presenta el giroscopio, demostrando que el eje de giro se mantiene fijo en el
+          espacio.
+        en: >-
+          Léon Foucault presents the gyroscope, showing the spin axis stays fixed in space.
+        pt: >-
+          Léon Foucault apresenta o giroscópio, mostrando que o eixo de giro permanece fixo no
+          espaço.
+        fr: >-
+          Léon Foucault présente le gyroscope, montrant que l'axe de rotation reste fixe dans
+          l'espace.
+        zh: >-
+          莱昂·傅科展示陀螺仪，证明转轴在空间中保持固定。
+        ja: >-
+          レオン・フーコーがジャイロスコープを発表し、回転軸が空間内で固定されることを示す。
+    - year: Hoy
+      label:
+        es: >-
+          Rige el control de actitud de los satélites y el giro estabilizador de naves espaciales.
+        en: >-
+          It governs satellite attitude control and the stabilizing spin of spacecraft.
+        pt: >-
+          Rege o controle de atitude de satélites e o giro estabilizador de naves espaciais.
+        fr: >-
+          Elle régit le contrôle d'attitude des satellites et la rotation stabilisatrice des engins
+          spatiaux.
+        zh: >-
+          它支配着卫星的姿态控制和航天器的稳定自旋。
+        ja: >-
+          衛星の姿勢制御や宇宙機の安定回転を支配している。
+  useCases:
+    - title:
+        es: Control de actitud de satélites
+        en: Satellite attitude control
+        pt: Controle de atitude de satélites
+        fr: Contrôle d'attitude de satellites
+        zh: 卫星姿态控制
+        ja: 衛星の姿勢制御
+      description:
+        es: >-
+          Las ruedas de reacción intercambian momento angular con el satélite para orientar sus
+          antenas y paneles.
+        en: >-
+          Reaction wheels swap angular momentum with the satellite to aim its antennas and panels.
+        pt: >-
+          Rodas de reação trocam momento angular com o satélite para apontar suas antenas e painéis.
+        fr: >-
+          Les roues de réaction échangent du moment cinétique avec le satellite pour orienter ses
+          antennes et panneaux.
+        zh: >-
+          反作用轮与卫星交换角动量，以对准天线和太阳能板。
+        ja: >-
+          リアクションホイールが衛星と角運動量をやり取りし、アンテナやパネルの向きを変える。
+    - title:
+        es: Estabilización por giro
+        en: Spin stabilization
+        pt: Estabilização por giro
+        fr: Stabilisation par rotation
+        zh: 自旋稳定
+        ja: スピン安定化
+      description:
+        es: >-
+          Hacer girar un cuerpo lo mantiene estable: el eje de giro resiste los cambios, como en un
+          trompo.
+        en: >-
+          Spinning a body keeps it stable: the spin axis resists change, like a spinning top.
+        pt: >-
+          Girar um corpo o mantém estável: o eixo de giro resiste a mudanças, como um pião.
+        fr: >-
+          Mettre un corps en rotation le stabilise : l'axe de rotation résiste au changement, comme
+          une toupie.
+        zh: >-
+          让物体旋转可保持稳定：转轴抵抗变化，就像陀螺。
+        ja: >-
+          物体を回転させると安定する。回転軸が変化に抗うからだ。独楽と同じ原理である。
+    - title:
+        es: Instrumentos giroscópicos
+        en: Gyroscopic instruments
+        pt: Instrumentos giroscópicos
+        fr: Instruments gyroscopiques
+        zh: 陀螺仪表
+        ja: ジャイロ計器
+      description:
+        es: >-
+          El horizonte artificial y el giróscopo direccional de los aviones usan la conservación del
+          giro.
+        en: >-
+          Aircraft's artificial horizon and directional gyro use the conservation of spin.
+        pt: >-
+          O horizonte artificial e o giroscópio direcional dos aviões usam a conservação do giro.
+        fr: >-
+          L'horizon artificiel et le gyroscope directionnel des avions utilisent la conservation du
+          spin.
+        zh: >-
+          飞机的姿态指示仪和航向陀螺利用了旋转守恒。
+        ja: >-
+          航空機の姿勢指示計や指向性ジャイロは回転の保存を利用している。
+    - title:
+        es: Mecánica orbital
+        en: Orbital mechanics
+        pt: Mecânica orbital
+        fr: Mécanique orbitale
+        zh: 轨道力学
+        ja: 軌道力学
+      description:
+        es: >-
+          Explica la ley de las áreas de Kepler: los cuerpos aceleran cerca del perihelio y frenan
+          lejos.
+        en: >-
+          Explains Kepler's areal law: bodies speed up near perihelion and slow down far away.
+        pt: >-
+          Explica a lei das áreas de Kepler: corpos aceleram perto do periélio e desaceleram longe.
+        fr: >-
+          Explique la loi des aires de Kepler : les corps accélèrent près du périhélie et
+          ralentissent au loin.
+        zh: >-
+          解释开普勒面积定律：天体在近日点加速，在远处减速。
+        ja: >-
+          ケプラーの面積速度の法則を説明する。天体は近日点付近で速くなり、遠ざかると遅くなる。
+  example:
+    title:
+      es: Un satélite en órbita baja
+      en: A satellite in low orbit
+      pt: Um satélite em órbita baixa
+      fr: Un satellite en orbite basse
+      zh: 低轨道卫星
+      ja: 低軌道衛星
+    lines:
+      - es: m = 1000 kg, r = 6.771×10⁶ m, v = 7670 m/s
+        en: m = 1000 kg, r = 6.771×10⁶ m, v = 7670 m/s
+        pt: m = 1000 kg, r = 6,771×10⁶ m, v = 7670 m/s
+        fr: m = 1000 kg, r = 6,771×10⁶ m, v = 7670 m/s
+        zh: m = 1000 kg，r = 6.771×10⁶ 米，v = 7670 m/s
+        ja: m = 1000 kg、r = 6.771×10⁶ m、v = 7670 m/s
+      - es: L = r · m · v
+        en: L = r · m · v
+        pt: L = r · m · v
+        fr: L = r · m · v
+        zh: L = r · m · v
+        ja: L = r · m · v
+      - es: L = 6.771×10⁶ × 1000 × 7670
+        en: L = 6.771×10⁶ × 1000 × 7670
+        pt: L = 6,771×10⁶ × 1000 × 7670
+        fr: L = 6,771×10⁶ × 1000 × 7670
+        zh: L = 6.771×10⁶ × 1000 × 7670
+        ja: L = 6.771×10⁶ × 1000 × 7670
+      - es: 6.771×10⁶ × 1000 = 6.771×10⁹
+        en: 6.771×10⁶ × 1000 = 6.771×10⁹
+        pt: 6,771×10⁶ × 1000 = 6,771×10⁹
+        fr: 6,771×10⁶ × 1000 = 6,771×10⁹
+        zh: 6.771×10⁶ × 1000 = 6.771×10⁹
+        ja: 6.771×10⁶ × 1000 = 6.771×10⁹
+      - es: L ≈ 6.771×10⁹ × 7670 ≈ 5.19×10¹³ kg·m²/s
+        en: L ≈ 6.771×10⁹ × 7670 ≈ 5.19×10¹³ kg·m²/s
+        pt: L ≈ 6,771×10⁹ × 7670 ≈ 5,19×10¹³ kg·m²/s
+        fr: L ≈ 6,771×10⁹ × 7670 ≈ 5,19×10¹³ kg·m²/s
+        zh: L ≈ 6.771×10⁹ × 7670 ≈ 5.19×10¹³ kg·m²/s
+        ja: L ≈ 6.771×10⁹ × 7670 ≈ 5.19×10¹³ kg·m²/s
+      - es: L ≈ 5.2×10¹³ kg·m²/s
+        en: L ≈ 5.2×10¹³ kg·m²/s
+        pt: L ≈ 5,2×10¹³ kg·m²/s
+        fr: L ≈ 5,2×10¹³ kg·m²/s
+        zh: L ≈ 5.2×10¹³ kg·m²/s
+        ja: L ≈ 5.2×10¹³ kg·m²/s

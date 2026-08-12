@@ -1,0 +1,319 @@
+id: wiens-displacement-law
+title:
+  es: Ley de Desplazamiento de Wien
+  en: Wien's Displacement Law
+  pt: Lei do Deslocamento de Wien
+  fr: Loi du déplacement de Wien
+  zh: 维恩位移定律
+  ja: ウィーンの変位則
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: lambda-max
+    type: variable
+    value: λmax
+    explanation:
+      es: La longitud de onda en la que la radiación alcanza su máxima intensidad.
+      en: The wavelength at which the radiation reaches its maximum intensity.
+      pt: O comprimento de onda em que a radiação atinge sua intensidade máxima.
+      fr: La longueur d'onde à laquelle le rayonnement atteint son intensité maximale.
+      zh: 辐射强度达到最大值时的波长。
+      ja: 放射が最大強度に達する波長。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: b
+    type: constant
+    value: b
+    explanation:
+      es: La constante de desplazamiento de Wien, un número universal que vale 2.898×10⁻³ m·K.
+      en: Wien's displacement constant, a universal number equal to 2.898×10⁻³ m·K.
+      pt: A constante de deslocamento de Wien, um número universal que vale 2,898×10⁻³ m·K.
+      fr: La constante de déplacement de Wien, un nombre universel valant 2,898×10⁻³ m·K.
+      zh: 维恩位移常数，一个等于2.898×10⁻³ m·K的普适常数。
+      ja: ウィーンの変位定数。2.898×10⁻³ m·Kに等しい普遍定数。
+  - id: divide
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: 次で割る。
+  - id: t
+    type: variable
+    value: T
+    explanation:
+      es: La temperatura absoluta del cuerpo emisor, medida en kelvin.
+      en: The absolute temperature of the emitting body, measured in kelvin.
+      pt: A temperatura absoluta do corpo emissor, medida em kelvin.
+      fr: La température absolue du corps émetteur, mesurée en kelvins.
+      zh: 发射体的绝对温度，以开尔文为单位。
+      ja: 放射体の絶対温度。単位はケルビン。
+context:
+  author:
+    es: Wilhelm Wien
+    en: Wilhelm Wien
+    pt: Wilhelm Wien
+    fr: Wilhelm Wien
+    zh: 威廉·维恩
+    ja: ヴィルヘルム・ウィーン
+  era:
+    es: Alemania, 1864–1928 · publicada en 1893
+    en: Germany, 1864–1928 · published in 1893
+    pt: Alemanha, 1864–1928 · publicada em 1893
+    fr: Allemagne, 1864–1928 · publiée en 1893
+    zh: 德国，1864–1928年 · 1893年发表
+    ja: ドイツ、1864–1928年・1893年発表
+  history:
+    es: >-
+      Wilhelm Wien derivó en 1893 la relación entre la temperatura de un cuerpo negro y la longitud
+      de onda en la que emite con máxima intensidad, combinando consideraciones termodinámicas con
+      las leyes de la radiación. La constante b, hoy fijada en 2.898×10⁻³ m·K, hace que el pico se
+      desplace hacia longitudes de onda más cortas a medida que sube la temperatura: por eso el
+      metal caliente pasa de un resplandor rojo a uno blanco. En astrofísica, la ley permite estimar
+      la temperatura superficial de las estrellas a partir de su color.
+    en: >-
+      In 1893 Wilhelm Wien derived the relation between a black body's temperature and the
+      wavelength at which it emits with maximum intensity, combining thermodynamic reasoning with
+      the laws of radiation. The constant b, today fixed at 2.898×10⁻³ m·K, shifts the peak toward
+      shorter wavelengths as temperature rises: that is why hot metal glows red first and then
+      white. In astrophysics, the law lets astronomers estimate a star's surface temperature from
+      its color.
+    pt: >-
+      Em 1893, Wilhelm Wien derivou a relação entre a temperatura de um corpo negro e o comprimento
+      de onda em que ele emite com máxima intensidade, combinando considerações termodinâmicas com
+      as leis da radiação. A constante b, hoje fixada em 2,898×10⁻³ m·K, desloca o pico para
+      comprimentos de onda mais curtos conforme a temperatura sobe: por isso o metal quente passa de
+      um brilho vermelho para um branco. Na astrofísica, a lei permite estimar a temperatura
+      superficial das estrelas a partir de sua cor.
+    fr: >-
+      En 1893, Wilhelm Wien dériva la relation entre la température d'un corps noir et la longueur
+      d'onde à laquelle il émet avec une intensité maximale, en combinant des considérations
+      thermodynamiques avec les lois du rayonnement. La constante b, fixée aujourd'hui à
+      2,898×10⁻³ m·K, déplace le pic vers des longueurs d'onde plus courtes à mesure que la
+      température s'élève : c'est pourquoi le métal chaud passe d'une lueur rouge à une lueur
+      blanche. En astrophysique, la loi permet d'estimer la température de surface des étoiles
+      d'après leur couleur.
+    zh: >-
+      1893年，威廉·维恩将热力学分析与辐射定律相结合，推导出了黑体温度与其辐射强度最大的波长之间的关系。
+      常数b如今取值为2.898×10⁻³ m·K，它使辐射峰值随温度升高而向更短的波长移动：这就是热金属先呈红光、
+      后变白光的原因。在天体物理学中，这条定律使得科学家能够根据恒星的颜色估算其表面温度。
+    ja: >-
+      1893年、ヴィルヘルム・ウィーンは熱力学の考察と放射の法則を組み合わせ、黒体の温度と最大強度で放射する
+      波長との関係を導いた。定数bは現在 2.898×10⁻³ m·K と定められており、温度が上がるにつれてピークは
+      より短い波長へ移動する。金属が熱せられると赤く輝き、さらに高温で白く輝くのはこのためである。
+      天体物理学では、この法則により恒星の表面温度を色から推定できる。
+  timeline:
+    - year: "1893"
+      label:
+        es: >-
+          Wien publica la ley del desplazamiento, que relaciona el pico de emisión con la
+          temperatura.
+        en: >-
+          Wien publishes the displacement law, relating the emission peak to temperature.
+        pt: >-
+          Wien publica a lei do deslocamento, que relaciona o pico de emissão com a temperatura.
+        fr: >-
+          Wien publie la loi du déplacement, reliant le pic d'émission à la température.
+        zh: >-
+          维恩发表了位移定律，将发射峰值与温度联系起来。
+        ja: >-
+          ウィーンが変位則を発表し、放射ピークと温度を結びつける。
+    - year: "1896"
+      label:
+        es: >-
+          Wien propone su ley de radiación completa, válida para longitudes de onda cortas, que
+          luego inspiraría a Planck.
+        en: >-
+          Wien proposes his full radiation law, valid for short wavelengths, which would later
+          inspire Planck.
+        pt: >-
+          Wien propõe sua lei de radiação completa, válida para comprimentos de onda curtos, que
+          depois inspiraria Planck.
+        fr: >-
+          Wien propose sa loi de rayonnement complète, valable pour les courtes longueurs d'onde, qui
+          inspirera plus tard Planck.
+        zh: >-
+          维恩提出了完整的辐射定律，适用于短波长，后来启发了普朗克。
+        ja: >-
+          ウィーンが短波長で成り立つ完全な放射法則を提唱。後にプランクに着想を与える。
+    - year: "1911"
+      label:
+        es: >-
+          Wien recibe el Premio Nobel de Física por sus estudios sobre la radiación del calor.
+        en: >-
+          Wien receives the Nobel Prize in Physics for his studies of heat radiation.
+        pt: >-
+          Wien recebe o Prêmio Nobel de Física por seus estudos sobre a radiação do calor.
+        fr: >-
+          Wien reçoit le prix Nobel de physique pour ses travaux sur le rayonnement de la chaleur.
+        zh: >-
+          维恩因对热辐射的研究而获得诺贝尔物理学奖。
+        ja: >-
+          ウィーンが熱放射の研究によりノーベル物理学賞を受賞する。
+    - year: Hoy
+      label:
+        es: >-
+          Los astrónomos deducen la temperatura de las estrellas por su color, y los pirómetros
+          ópticos miden el calor del metal fundido.
+        en: >-
+          Astronomers infer star temperatures from color, and optical pyrometers gauge the heat of
+          molten metal.
+        pt: >-
+          Astrônomos deduzem a temperatura das estrelas pela cor, e pirômetros ópticos medem o calor
+          do metal fundido.
+        fr: >-
+          Les astronomes déduisent la température des étoiles par leur couleur, et les pyromètres
+          optiques mesurent la chaleur du métal en fusion.
+        zh: >-
+          天文学家根据恒星颜色推断其温度，光学高温计则测量熔融金属的热度。
+        ja: >-
+          天文学者は恒星の色から温度を推定し、光高温計は溶融金属の熱を測定する。
+  useCases:
+    - title:
+        es: Astrofísica
+        en: Astrophysics
+        pt: Astrofísica
+        fr: Astrophysique
+        zh: 天体物理学
+        ja: 天体物理学
+      description:
+        es: >-
+          La temperatura superficial de una estrella se estima a partir del color, el punto en que
+          su espectro alcanza el máximo.
+        en: >-
+          A star's surface temperature is estimated from its color, the point where its spectrum
+          peaks.
+        pt: >-
+          A temperatura superficial de uma estrela é estimada pela cor, o ponto em que seu espectro
+          atinge o máximo.
+        fr: >-
+          La température de surface d'une étoile est estimée d'après sa couleur, le point où son
+          spectre atteint son maximum.
+        zh: >-
+          恒星的表面温度可由其颜色——即光谱达到峰值的点——来估算。
+        ja: >-
+          恒星の表面温度は、そのスペクトルが最大となる色から推定される。
+    - title:
+        es: Termometría óptica
+        en: Optical pyrometry
+        pt: Pirômetria óptica
+        fr: Pyrométrie optique
+        zh: 光学测温
+        ja: 光高温測定
+      description:
+        es: >-
+          Los pirómetros ópticos miden la temperatura del metal fundido observando el color de su
+          radiación.
+        en: >-
+          Optical pyrometers measure the temperature of molten metal by observing the color of its
+          radiation.
+        pt: >-
+          Pirômetros ópticos medem a temperatura do metal fundido observando a cor de sua radiação.
+        fr: >-
+          Les pyromètres optiques mesurent la température du métal en fusion en observant la couleur
+          de son rayonnement.
+        zh: >-
+          光学高温计通过观察熔融金属辐射的颜色来测量其温度。
+        ja: >-
+          光高温計は、溶融金属の放射の色を観察してその温度を測定する。
+    - title:
+        es: Iluminación y color
+        en: Lighting and color
+        pt: Iluminação e cor
+        fr: Éclairage et couleur
+        zh: 照明与色彩
+        ja: 照明と色
+      description:
+        es: >-
+          La temperatura de color de una luz describe su tonalidad según el pico que predice esta
+          ley.
+        en: >-
+          A light's color temperature describes its hue according to the peak this law predicts.
+        pt: >-
+          A temperatura de cor de uma luz descreve seu matiz conforme o pico que essa lei prevê.
+        fr: >-
+          La température de couleur d'une lumière décrit sa tonalité selon le pic prédit par cette
+          loi.
+        zh: >-
+          光的色温根据这条定律所预测的峰值来描述其色调。
+        ja: >-
+          光の色温度は、この法則が予測するピークに応じてその色調を表す。
+    - title:
+        es: Teledetección
+        en: Remote sensing
+        pt: Sensoriamento remoto
+        fr: Télédétection
+        zh: 遥感
+        ja: リモートセンシング
+      description:
+        es: >-
+          Satélites y sensores infrarrojos deducen la temperatura de océanos y suelos desde la
+          banda de emisión máxima.
+        en: >-
+          Satellites and infrared sensors infer the temperature of oceans and soils from their
+          peak emission band.
+        pt: >-
+          Satélites e sensores infravermelhos deduzem a temperatura de oceanos e solos a partir da
+          banda de emissão máxima.
+        fr: >-
+          Les satellites et capteurs infrarouges déduisent la température des océans et des sols à
+          partir de leur bande d'émission maximale.
+        zh: >-
+          卫星和红外传感器根据海洋与地表的最大发射波段来推知其温度。
+        ja: >-
+          人工衛星や赤外線センサーは、海洋や地表の最大放射帯からその温度を推定する。
+  example:
+    title:
+      es: Pico de emisión del Sol
+      en: The Sun's emission peak
+      pt: Pico de emissão do Sol
+      fr: Pic d'émission du Soleil
+      zh: 太阳的发射峰值
+      ja: 太陽の放射ピーク
+    lines:
+      - es: b = 2.898×10⁻³ m·K
+        en: b = 2.898×10⁻³ m·K
+        pt: b = 2,898×10⁻³ m·K
+        fr: b = 2,898×10⁻³ m·K
+        zh: b = 2.898×10⁻³ m·K
+        ja: b = 2.898×10⁻³ m·K
+      - es: T = 5778 K
+        en: T = 5778 K
+        pt: T = 5778 K
+        fr: T = 5778 K
+        zh: T = 5778 开
+        ja: T = 5778 K
+      - es: λmax = b / T
+        en: λmax = b / T
+        pt: λmax = b / T
+        fr: λmax = b / T
+        zh: λmax = b / T
+        ja: λmax = b / T
+      - es: λmax = 2.898×10⁻³ / 5778
+        en: λmax = 2.898×10⁻³ / 5778
+        pt: λmax = 2,898×10⁻³ / 5778
+        fr: λmax = 2,898×10⁻³ / 5778
+        zh: λmax = 2.898×10⁻³ / 5778
+        ja: λmax = 2.898×10⁻³ / 5778
+      - es: λmax ≈ 5.02×10⁻⁷ m ≈ 502 nm (verde)
+        en: λmax ≈ 5.02×10⁻⁷ m ≈ 502 nm (green)
+        pt: λmax ≈ 5,02×10⁻⁷ m ≈ 502 nm (verde)
+        fr: λmax ≈ 5,02×10⁻⁷ m ≈ 502 nm (vert)
+        zh: λmax ≈ 5.02×10⁻⁷ 米 ≈ 502 纳米(绿色)
+        ja: λmax ≈ 5.02×10⁻⁷ m ≈ 502 nm(緑色)

@@ -1,0 +1,416 @@
+id: logarithm-product-rule
+title:
+  es: Logaritmo de un Producto
+  en: Logarithm of a Product
+  pt: Logaritmo de um Produto
+  fr: Logarithme d'un produit
+  zh: 乘积的对数
+  ja: 積の対数
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: log-left
+    type: operator
+    value: log
+    explanation:
+      es: El logaritmo en base a de su argumento.
+      en: The logarithm in base a of its argument.
+      pt: O logaritmo na base a do argumento.
+      fr: Le logarithme en base a de son argument.
+      zh: 以 a 为底对真数取对数。
+      ja: 底をaとする、真数の対数。
+  - id: base-left
+    type: variable
+    value: ₐ
+    explanation:
+      es: La base del logaritmo, el número que se eleva para obtener el argumento.
+      en: The base of the logarithm, the number raised to obtain the argument.
+      pt: A base do logaritmo, o número elevado para obter o argumento.
+      fr: La base du logarithme, le nombre élevé pour obtenir l'argument.
+      zh: 对数的底数，即被乘方以得到真数的那个数。
+      ja: 対数の底。真数を得るために累乗される数。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el argumento del logaritmo.
+      en: Opens the logarithm's argument.
+      pt: Abre o argumento do logaritmo.
+      fr: Ouvre l'argument du logarithme.
+      zh: 打开对数的真数括号。
+      ja: 対数の真数の括弧を開く。
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: El primer factor del argumento.
+      en: The first factor of the argument.
+      pt: O primeiro fator do argumento.
+      fr: Le premier facteur de l'argument.
+      zh: 真数中的第一个因数。
+      ja: 真数における最初の因数。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: y
+    type: variable
+    value: y
+    explanation:
+      es: El segundo factor del argumento.
+      en: The second factor of the argument.
+      pt: O segundo fator do argumento.
+      fr: Le second facteur de l'argument.
+      zh: 真数中的第二个因数。
+      ja: 真数における2つ目の因数。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el argumento del logaritmo.
+      en: Closes the logarithm's argument.
+      pt: Fecha o argumento do logaritmo.
+      fr: Ferme l'argument du logarithme.
+      zh: 闭合对数的真数括号。
+      ja: 対数の真数の括弧を閉じる。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a la suma de los logaritmos de cada factor.
+      en: Is equal to the sum of the logarithms of each factor.
+      pt: É igual à soma dos logaritmos de cada fator.
+      fr: Est égal à la somme des logarithmes de chaque facteur.
+      zh: 等于各因数对数之和。
+      ja: 各因数の対数の和に等しい。
+  - id: log-rhs1
+    type: operator
+    value: log
+    explanation:
+      es: El logaritmo del primer factor.
+      en: The logarithm of the first factor.
+      pt: O logaritmo do primeiro fator.
+      fr: Le logarithme du premier facteur.
+      zh: 第一个因数的对数。
+      ja: 最初の因数の対数。
+  - id: base-rhs1
+    type: variable
+    value: ₐ
+    explanation:
+      es: La misma base a.
+      en: The same base a.
+      pt: A mesma base a.
+      fr: La même base a.
+      zh: 相同的底数 a。
+      ja: 同じ底 a。
+  - id: x-rhs
+    type: variable
+    value: x
+    explanation:
+      es: El primer factor, sin los paréntesis.
+      en: The first factor, without the parentheses.
+      pt: O primeiro fator, sem os parênteses.
+      fr: Le premier facteur, sans parenthèses.
+      zh: 去掉括号后的第一个因数。
+      ja: 括弧のない最初の因数。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado al logaritmo del segundo factor.
+      en: Added to the logarithm of the second factor.
+      pt: Somado ao logaritmo do segundo fator.
+      fr: Ajouté au logarithme du second facteur.
+      zh: 加上第二个因数的对数。
+      ja: 2つ目の因数の対数を加える。
+  - id: log-rhs2
+    type: operator
+    value: log
+    explanation:
+      es: El logaritmo del segundo factor.
+      en: The logarithm of the second factor.
+      pt: O logaritmo do segundo fator.
+      fr: Le logarithme du second facteur.
+      zh: 第二个因数的对数。
+      ja: 2つ目の因数の対数。
+  - id: base-rhs2
+    type: variable
+    value: ₐ
+    explanation:
+      es: La misma base a.
+      en: The same base a.
+      pt: A mesma base a.
+      fr: La même base a.
+      zh: 相同的底数 a。
+      ja: 同じ底 a。
+  - id: y-rhs
+    type: variable
+    value: y
+    explanation:
+      es: El segundo factor, sin los paréntesis.
+      en: The second factor, without the parentheses.
+      pt: O segundo fator, sem os parênteses.
+      fr: Le second facteur, sans parenthèses.
+      zh: 去掉括号后的第二个因数。
+      ja: 括弧のない2つ目の因数。
+context:
+  author:
+    es: John Napier
+    en: John Napier
+    pt: John Napier
+    fr: John Napier
+    zh: 约翰·纳皮尔
+    ja: ジョン・ネイピア
+  era:
+    es: Escocia, 1550–1617 · publicado en 1614
+    en: Scotland, 1550–1617 · published in 1614
+    pt: Escócia, 1550–1617 · publicado em 1614
+    fr: Écosse, 1550–1617 · publié en 1614
+    zh: 苏格兰，1550–1617年 · 1614年发表
+    ja: スコットランド、1550–1617年・1614年発表
+  history:
+    es: >-
+      John Napier inventó los logaritmos en 1614 para transformar la multiplicación en suma, un alivio
+      enorme para los astrónomos que calculaban a mano. La regla del producto es el núcleo de su
+      método y del propio sentido de un logaritmo: multiplicar números equivale a sumar sus
+      logaritmos. Las tablas de logaritmos decimales de Henry Briggs y la regla de cálculo, usada
+      hasta los años 70, hicieron de esta idea una herramienta de cálculo universal.
+    en: >-
+      John Napier invented logarithms in 1614 to turn multiplication into addition, a huge relief for
+      astronomers computing by hand. The product rule is the core of his method and of the very
+      meaning of a logarithm: multiplying numbers is the same as adding their logarithms. Henry
+      Briggs' base-10 tables and the slide rule, used until the 1970s, turned this idea into a
+      universal computing tool.
+    pt: >-
+      John Napier inventou os logaritmos em 1614 para transformar a multiplicação em adição, um alívio
+      enorme para os astrônomos que calculavam à mão. A regra do produto é o núcleo de seu método e do
+      próprio sentido de um logaritmo: multiplicar números equivale a somar seus logaritmos. As
+      tabelas de logaritmos decimais de Henry Briggs e a régua de cálculo, usada até os anos 1970,
+      transformaram essa ideia numa ferramenta universal de cálculo.
+    fr: >-
+      John Napier inventa les logarithmes en 1614 pour transformer la multiplication en addition, un
+      immense soulagement pour les astronomes qui calculaient à la main. La règle du produit est au
+      cœur de sa méthode et du sens même d'un logarithme : multiplier des nombres revient à additionner
+      leurs logarithmes. Les tables de logarithmes décimaux de Henry Briggs et la règle à calcul,
+      utilisée jusqu'aux années 1970, ont fait de cette idée un outil de calcul universel.
+    zh: >-
+      1614年，约翰·纳皮尔发明了对数，把乘法变成加法，这对当时靠手算的天文学家来说是莫大的解脱。乘积法则正是
+      其方法的核心理念，也是对数的本义：两个数相乘，等价于把它们各自的对数相加。亨利·布里格斯制作的以10为底的
+      对数表，以及一直用到20世纪70年代的滑尺，让这一思想成为通用的计算工具。
+    ja: >-
+      ジョン・ネイピアは1614年、乗算を加算に置き換えるために対数を発明した。これは手計算に頼っていた天文学者
+      にとって大きな救いとなった。積の法則は彼の方法の中核であり、対数という概念そのものの意味でもある。すなわち、
+      数を掛け合わせることは、それらの対数を足し合わせることに等しい。ヘンリー・ブリッグスによる常用対数表と、
+      1970年代まで使われた計算尺が、この考えを普遍的な計算道具へと変えた。
+  timeline:
+    - year: "1614"
+      label:
+        es: >-
+          Napier publica Mirifici Logarithmorum Canonis Descriptio, presentando los logaritmos al
+          mundo.
+        en: >-
+          Napier publishes Mirifici Logarithmorum Canonis Descriptio, presenting logarithms to the
+          world.
+        pt: >-
+          Napier publica Mirifici Logarithmorum Canonis Descriptio, apresentando os logaritmos ao
+          mundo.
+        fr: >-
+          Napier publie Mirifici Logarithmorum Canonis Descriptio, présentant les logarithmes au
+          monde.
+        zh: >-
+          纳皮尔发表《奇妙的对数表的说明》，把对数介绍给了世界。
+        ja: >-
+          ネイピアが『対数の驚くべき法則の記述』を発表し、対数を世界に紹介する。
+    - year: "1620s"
+      label:
+        es: >-
+          Edmund Gunter y William Oughtred desarrollan la regla de cálculo, que aplica la regla del
+          producto de forma mecánica.
+        en: >-
+          Edmund Gunter and William Oughtred develop the slide rule, which applies the product rule
+          mechanically.
+        pt: >-
+          Edmund Gunter e William Oughtred desenvolvem a régua de cálculo, que aplica a regra do
+          produto mecanicamente.
+        fr: >-
+          Edmund Gunter et William Oughtred développent la règle à calcul, qui applique mécaniquement
+          la règle du produit.
+        zh: >-
+          埃德蒙·冈特和威廉·奥特雷德发明了滑尺，用机械方式应用乘积法则。
+        ja: >-
+          エドマンド・ガンターとウィリアム・オートレッドが、積の法則を機械的に応用した計算尺を開発する。
+    - year: "1970s"
+      label:
+        es: Las calculadoras electrónicas de bolsillo vuelven obsoletas las tablas y la regla de cálculo.
+        en: Pocket electronic calculators make tables and the slide rule obsolete.
+        pt: As calculadoras eletrônicas de bolso tornam obsoletas as tabelas e a régua de cálculo.
+        fr: Les calculatrices électroniques de poche rendent obsolètes les tables et la règle à calcul.
+        zh: 袖珍电子计算器使对数表和滑尺退出了历史舞台。
+        ja: 電子式のポケット計算機が、対数表や計算尺を不要にした。
+    - year: Hoy
+      label:
+        es: >-
+          La regla sigue vigente en las escalas logarítmicas de la ciencia, del pH al ruido en
+          decibelios.
+        en: >-
+          The rule lives on in the logarithmic scales of science, from pH to noise in decibels.
+        pt: >-
+          A regra segue viva nas escalas logarítmicas da ciência, do pH ao ruído em decibéis.
+        fr: >-
+          La règle perdure dans les échelles logarithmiques de la science, du pH au bruit en décibels.
+        zh: >-
+          该法则依然活跃于科学中的各种对数尺度上，从pH值到以分贝计量的噪声。
+        ja: >-
+          この法則は今も科学の対数目盛り、pHからデシベル単位の騒音まで、さまざまな場面で生き続けている。
+  useCases:
+    - title:
+        es: Sonido y decibelios
+        en: Sound and decibels
+        pt: Som e decibéis
+        fr: Son et décibels
+        zh: 声音与分贝
+        ja: 音とデシベル
+      description:
+        es: >-
+          El nivel de sonido en decibelios es logarítmico: duplicar la intensidad suma el nivel, no lo
+          multiplica.
+        en: >-
+          Sound level in decibels is logarithmic: doubling intensity adds to the level, it does not
+          multiply it.
+        pt: >-
+          O nível de som em decibéis é logarítmico: dobrar a intensidade soma o nível, não o
+          multiplica.
+        fr: >-
+          Le niveau sonore en décibels est logarithmique : doubler l'intensité ajoute au niveau, il ne
+          le multiplie pas.
+        zh: >-
+          以分贝表示的声音级别是对数的：强度翻倍使级别相加，而非相乘。
+        ja: >-
+          デシベルで表す音のレベルは対数であり、強度が2倍になるとレベルは掛け算ではなく足し算で増える。
+    - title:
+        es: Sismología
+        en: Seismology
+        pt: Sismologia
+        fr: Sismologie
+        zh: 地震学
+        ja: 地震学
+      description:
+        es: >-
+          La escala de Richter convierte la energía de un sismo en una magnitud logarítmica fácil de
+          comparar.
+        en: >-
+          The Richter scale turns a quake's energy into a logarithmic magnitude that is easy to
+          compare.
+        pt: >-
+          A escala Richter converte a energia de um terremoto em uma magnitude logarítmica fácil de
+          comparar.
+        fr: >-
+          L'échelle de Richter convertit l'énergie d'un séisme en une magnitude logarithmique facile à
+          comparer.
+        zh: >-
+          里氏震级把地震的能量换算成易于比较的对数级标度。
+        ja: >-
+          リヒタースケールは地震のエネルギーを、比較しやすい対数によるマグニチュードへと変換する。
+    - title:
+        es: Análisis de algoritmos
+        en: Algorithm analysis
+        pt: Análise de algoritmos
+        fr: Analyse d'algorithmes
+        zh: 算法分析
+        ja: アルゴリズム解析
+      description:
+        es: >-
+          La búsqueda binaria divide el problema a la mitad en cada paso, por lo que el número de pasos
+          es un logaritmo.
+        en: >-
+          Binary search halves the problem each step, so the number of steps is a logarithm.
+        pt: >-
+          A busca binária reduz o problema pela metade a cada passo, então o número de passos é um
+          logaritmo.
+        fr: >-
+          La recherche binaire divise le problème par deux à chaque étape, si bien que le nombre
+          d'étapes est un logarithme.
+        zh: >-
+          二分查找每一步都把问题规模减半，因此所需步数是一个对数。
+        ja: >-
+          二分探索は各ステップで問題を半分にするため、必要なステップ数は対数となる。
+    - title:
+        es: Química
+        en: Chemistry
+        pt: Química
+        fr: Chimie
+        zh: 化学
+        ja: 化学
+      description:
+        es: >-
+          El pH mide la acidez en escala logarítmica; cada unidad equivale a multiplicar la
+          concentración por diez.
+        en: >-
+          pH measures acidity on a logarithmic scale; each unit means the concentration is multiplied
+          by ten.
+        pt: >-
+          O pH mede a acidez em escala logarítmica; cada unidade equivale a multiplicar a concentração
+          por dez.
+        fr: >-
+          Le pH mesure l'acidité sur une échelle logarithmique ; chaque unité correspond à une
+          concentration multipliée par dix.
+        zh: >-
+          pH值用对数尺度衡量酸度：每增加一个单位，浓度就乘以10。
+        ja: >-
+          pHは酸性度を対数目盛りで測る。1単位の違いは濃度が10倍変わることを意味する。
+  example:
+    title:
+      es: Calcular log₂(4·8)
+      en: Computing log₂(4·8)
+      pt: Calculando log₂(4·8)
+      fr: Calcul de log₂(4·8)
+      zh: 计算 log₂(4·8)
+      ja: log₂(4·8) の計算
+    lines:
+      - es: a = 2, x = 4, y = 8
+        en: a = 2, x = 4, y = 8
+        pt: a = 2, x = 4, y = 8
+        fr: a = 2, x = 4, y = 8
+        zh: a = 2, x = 4, y = 8
+        ja: a = 2, x = 4, y = 8
+      - es: log₂(x · y) = log₂ x + log₂ y
+        en: log₂(x · y) = log₂ x + log₂ y
+        pt: log₂(x · y) = log₂ x + log₂ y
+        fr: log₂(x · y) = log₂ x + log₂ y
+        zh: log₂(x · y) = log₂ x + log₂ y
+        ja: log₂(x · y) = log₂ x + log₂ y
+      - es: log₂(4 · 8) = log₂ 4 + log₂ 8
+        en: log₂(4 · 8) = log₂ 4 + log₂ 8
+        pt: log₂(4 · 8) = log₂ 4 + log₂ 8
+        fr: log₂(4 · 8) = log₂ 4 + log₂ 8
+        zh: log₂(4 · 8) = log₂ 4 + log₂ 8
+        ja: log₂(4 · 8) = log₂ 4 + log₂ 8
+      - es: log₂ 32 = 2 + 3
+        en: log₂ 32 = 2 + 3
+        pt: log₂ 32 = 2 + 3
+        fr: log₂ 32 = 2 + 3
+        zh: log₂ 32 = 2 + 3
+        ja: log₂ 32 = 2 + 3
+      - es: log₂ 32 = 5
+        en: log₂ 32 = 5
+        pt: log₂ 32 = 5
+        fr: log₂ 32 = 5
+        zh: log₂ 32 = 5
+        ja: log₂ 32 = 5
+      - es: "Verificación: 2⁵ = 32, luego log₂ 32 = 5"
+        en: "Check: 2⁵ = 32, so log₂ 32 = 5"
+        pt: "Verificação: 2⁵ = 32, logo log₂ 32 = 5"
+        fr: "Vérification : 2⁵ = 32, donc log₂ 32 = 5"
+        zh: 验证：2⁵ = 32，因此 log₂ 32 = 5
+        ja: 検算：2⁵ = 32 なので log₂ 32 = 5

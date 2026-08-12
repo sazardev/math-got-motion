@@ -1,0 +1,387 @@
+id: arithmetic-mean
+title:
+  es: Media Aritmética
+  en: Arithmetic Mean
+  pt: Média Aritmética
+  fr: Moyenne Arithmétique
+  zh: 算术平均数
+  ja: 算術平均
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率統計
+nodes:
+  - id: x-bar
+    type: variable
+    value: x̄
+    explanation:
+      es: La media aritmética, el valor típico que resume un conjunto de datos.
+      en: The arithmetic mean, the typical value that summarizes a set of data.
+      pt: A média aritmética, o valor típico que resume um conjunto de dados.
+      fr: La moyenne arithmétique, la valeur typique qui résume un ensemble de données.
+      zh: 算术平均数，概括一组数据的典型值。
+      ja: 算術平均。データの集合を要約する代表値。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre la suma de todos los valores del conjunto.
+      en: Opens the sum of all the values in the set.
+      pt: Abre a soma de todos os valores do conjunto.
+      fr: Ouvre la somme de toutes les valeurs de l'ensemble.
+      zh: 打开所有数据之和的括号。
+      ja: データ全体の合計を開く括弧。
+  - id: x-1
+    type: variable
+    value: x₁
+    explanation:
+      es: El primer valor del conjunto de datos.
+      en: The first value of the data set.
+      pt: O primeiro valor do conjunto de dados.
+      fr: La première valeur de l'ensemble de données.
+      zh: 数据集的第一个数值。
+      ja: データ集合の最初の値。
+  - id: plus-1
+    type: operator
+    value: +
+    explanation:
+      es: Suma este valor con el siguiente.
+      en: Adds this value to the next one.
+      pt: Soma este valor com o seguinte.
+      fr: Additionne cette valeur à la suivante.
+      zh: 将这个值加上下一个值。
+      ja: この値に次の値を加える。
+  - id: x-2
+    type: variable
+    value: x₂
+    explanation:
+      es: El segundo valor del conjunto de datos.
+      en: The second value of the data set.
+      pt: O segundo valor do conjunto de dados.
+      fr: La deuxième valeur de l'ensemble de données.
+      zh: 数据集的第二个数值。
+      ja: データ集合の2番目の値。
+  - id: ellipsis
+    type: operator
+    value: …
+    explanation:
+      es: "Los puntos suspensivos: la suma continúa del mismo modo hasta el último valor."
+      en: "The ellipsis: the sum continues in the same way up to the last value."
+      pt: "As reticências: a soma continua da mesma forma até o último valor."
+      fr: "Les points de suspension : la somme se poursuit de la même façon jusqu'à la dernière valeur."
+      zh: "省略号：和以同样方式一直加到最后一项。"
+      ja: "省略記号。合計は同じように最後の値まで続く。"
+  - id: plus-2
+    type: operator
+    value: +
+    explanation:
+      es: Suma el último valor, xₙ, para completar la suma.
+      en: Adds the last value, xₙ, to complete the sum.
+      pt: Soma o último valor, xₙ, para completar a soma.
+      fr: Additionne la dernière valeur, xₙ, pour compléter la somme.
+      zh: 加上最后一项 xₙ，完成求和。
+      ja: 最後の値xₙを加えて合計を完成させる。
+  - id: x-n
+    type: variable
+    value: xₙ
+    explanation:
+      es: El último valor del conjunto de datos.
+      en: The last value of the data set.
+      pt: O último valor do conjunto de dados.
+      fr: La dernière valeur de l'ensemble de données.
+      zh: 数据集的最后一个数值。
+      ja: データ集合の最後の値。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la suma de todos los valores.
+      en: Closes the sum of all the values.
+      pt: Fecha a soma de todos os valores.
+      fr: Ferme la somme de toutes les valeurs.
+      zh: 关闭所有数值之和的括号。
+      ja: 全値の合計を閉じる括弧。
+  - id: divide
+    type: operator
+    value: /
+    explanation:
+      es: Se divide entre el número total de valores.
+      en: Divides by the total number of values.
+      pt: Divide pelo número total de valores.
+      fr: Divise par le nombre total de valeurs.
+      zh: 除以数值的总个数。
+      ja: 値の総数で割る。
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: El número total de valores en el conjunto de datos.
+      en: The total number of values in the data set.
+      pt: O número total de valores no conjunto de dados.
+      fr: Le nombre total de valeurs dans l'ensemble de données.
+      zh: 数据集中数值的总个数。
+      ja: データ集合内の値の総数。
+context:
+  author:
+    es: Origen colectivo de la estadística
+    en: Collective origin of statistics
+    pt: Origem coletiva da estatística
+    fr: Origine collective de la statistique
+    zh: 统计学的集体起源
+    ja: 統計学の集団的起源
+  era:
+    es: Europa, s. XVII–XVIII
+    en: Europe, 17th–18th century
+    pt: Europa, séc. XVII–XVIII
+    fr: Europe, XVIIe–XVIIIe siècle
+    zh: 欧洲，17–18世纪
+    ja: ヨーロッパ、17〜18世紀
+  history:
+    es: >-
+      Es el "promedio" que todos conocen: la suma de un conjunto de valores dividida por la cantidad
+      de valores. Nace del análisis de errores de los astrónomos de los siglos XVII y XVIII, que
+      repetían mediciones y buscaban el mejor estimado único de una cantidad observada, y de las
+      tablas de mortalidad de Graunt y Halley. En 1805 Legendre lo usó como base de su método de
+      mínimos cuadrados, y en el siglo XIX Quetelet lo convirtió en una herramienta para describir a
+      la sociedad. Hoy sigue siendo la línea de base contra la que se mide toda la estadística.
+    en: >-
+      It is the "average" everyone knows: the sum of a set of values divided by how many there are.
+      It grew out of the error analysis of 17th- and 18th-century astronomers, who repeated
+      measurements and looked for the single best estimate of an observed quantity, and out of the
+      mortality tables of Graunt and Halley. In 1805 Legendre built his method of least squares on
+      it, and in the 19th century Quetelet turned it into a tool for describing society. Today it
+      remains the baseline against which all of statistics is measured.
+    pt: >-
+      É a "média" que todos conhecem: a soma de um conjunto de valores dividida pela quantidade de
+      valores. Nasce da análise de erros dos astrônomos dos séculos XVII e XVIII, que repetiam
+      medições e buscavam a melhor estimativa única de uma quantidade observada, e das tábuas de
+      mortalidade de Graunt e Halley. Em 1805 Legendre a usou como base de seu método dos mínimos
+      quadrados, e no século XIX Quetelet a transformou em uma ferramenta para descrever a sociedade.
+      Hoje continua sendo a linha de base contra a qual toda a estatística é medida.
+    fr: >-
+      C'est la « moyenne » que tout le monde connaît : la somme d'un ensemble de valeurs divisée par
+      leur nombre. Elle naît de l'analyse des erreurs des astronomes des XVIIe et XVIIIe siècles, qui
+      répétaient les mesures et cherchaient la meilleure estimation unique d'une quantité observée,
+      et des tables de mortalité de Graunt et Halley. En 1805 Legendre en fit la base de sa méthode
+      des moindres carrés, et au XIXe siècle Quetelet en fit un outil pour décrire la société.
+      Aujourd'hui elle reste la référence par rapport à laquelle toute la statistique se mesure.
+    zh: >-
+      它就是人人皆知的"平均值"：一组数值之和除以数值的个数。它源自17、18世纪天文学家的误差分析——
+      他们重复测量，并为观测到的量寻找唯一的最佳估计值；也源自格兰特和哈雷的人口死亡率表。1805年，
+      勒让德将其作为最小二乘法的基础；19世纪，凯特勒把它变成了描述社会的工具。如今它仍是衡量一切
+      统计量的基准线。
+    ja: >-
+      誰もが知る「平均」である。データの値をすべて足し合わせ、その個数で割る。その起源は17〜18世紀の
+      天文学者による誤差分析にある。彼らは測定を繰り返し、観測量の最良の単一推定値を探していた。グラント
+      やハレーの死亡率表も源流の一つだ。1805年、ルジャンドルが最小二乗法の基礎として用い、19世紀には
+      ケトレーが社会を記述する道具に変えた。今日でも、あらゆる統計の物差しとなる基準線である。
+  timeline:
+    - year: "1662"
+      label:
+        es: >-
+          John Graunt publica sus Observaciones sobre las tablas de mortalidad, un uso temprano de
+          promedios para entender datos de población.
+        en: >-
+          John Graunt publishes his Observations on the bills of mortality, an early use of averages
+          to make sense of population data.
+        pt: >-
+          John Graunt publica suas Observações sobre as tábuas de mortalidade, um uso inicial de
+          médias para entender dados populacionais.
+        fr: >-
+          John Graunt publie ses Observations sur les tables de mortalité, un usage précoce des
+          moyennes pour comprendre les données de population.
+        zh: >-
+          约翰·格兰特出版《死亡率观测》，这是用平均数理解人口数据的早期应用。
+        ja: >-
+          ジョン・グラントが『死亡表の観察』を発表し、人口データの理解に平均を用いる初期の応用となる。
+    - year: "1805"
+      label:
+        es: >-
+          Legendre publica el método de mínimos cuadrados, que se apoya en la media de los errores
+          para ajustar curvas.
+        en: >-
+          Legendre publishes the method of least squares, which leans on the mean of the errors to
+          fit curves.
+        pt: >-
+          Legendre publica o método dos mínimos quadrados, que se apoia na média dos erros para
+          ajustar curvas.
+        fr: >-
+          Legendre publie la méthode des moindres carrés, qui s'appuie sur la moyenne des erreurs
+          pour ajuster des courbes.
+        zh: >-
+          勒让德发表最小二乘法，它依靠误差的平均值来拟合曲线。
+        ja: >-
+          ルジャンドルが最小二乗法を発表する。これは誤差の平均に依拠して曲線を当てはめる方法である。
+    - year: s. XIX
+      label:
+        es: >-
+          Quetelet introduce el "hombre medio" y convierte la media en la herramienta central de la
+          estadística social.
+        en: >-
+          Quetelet introduces the "average man" and makes the mean the central tool of social
+          statistics.
+        pt: >-
+          Quetelet introduz o "homem médio" e torna a média a ferramenta central da estatística
+          social.
+        fr: >-
+          Quetelet introduit l'« homme moyen » et fait de la moyenne l'outil central de la
+          statistique sociale.
+        zh: >-
+          凯特勒提出"平均人"，使平均数成为社会统计的核心工具。
+        ja: >-
+          ケトレーが「平均人」を提唱し、平均を社会統計の中心的な道具にする。
+    - year: Hoy
+      label:
+        es: >-
+          Es la línea de base de la estadística, la ciencia de datos y el machine learning, de la
+          imputación de datos a la evaluación de modelos.
+        en: >-
+          It is the baseline of statistics, data science, and machine learning, from data imputation
+          to model evaluation.
+        pt: >-
+          É a linha de base da estatística, da ciência de dados e do aprendizado de máquina, da
+          imputação de dados à avaliação de modelos.
+        fr: >-
+          Elle est la référence de la statistique, de la science des données et de l'apprentissage
+          automatique, de l'imputation des données à l'évaluation des modèles.
+        zh: >-
+          它是统计学、数据科学和机器学习的基础，从数据填补到模型评估都离不开它。
+        ja: >-
+          統計学、データサイエンス、機械学習の基盤であり、データ補完からモデル評価まで幅広く使われる。
+  useCases:
+    - title:
+        es: Estadística descriptiva
+        en: Descriptive statistics
+        pt: Estatística descritiva
+        fr: Statistiques descriptives
+        zh: 描述性统计
+        ja: 記述統計学
+      description:
+        es: >-
+          Resume un conjunto de datos con un valor típico único, para comparar grupos o poblaciones
+          de forma inmediata.
+        en: >-
+          Summarizes a data set with a single typical value, making it immediate to compare groups or
+          populations.
+        pt: >-
+          Resume um conjunto de dados com um único valor típico, permitindo comparar grupos ou
+          populações de imediato.
+        fr: >-
+          Résume un ensemble de données par une valeur typique unique, pour comparer immédiatement des
+          groupes ou des populations.
+        zh: >-
+          用一个典型值概括一组数据，以便立即比较不同的群体或总体。
+        ja: >-
+          データ集合を一つの代表値で要約し、集団や母集団をすぐに比較できるようにする。
+    - title:
+        es: Ciencia de datos
+        en: Data science
+        pt: Ciência de dados
+        fr: Science des données
+        zh: 数据科学
+        ja: データサイエンス
+      description:
+        es: >-
+          Proporciona la línea de base para normalizar, imputar valores faltantes y evaluar modelos.
+        en: >-
+          Provides the baseline for normalization, imputing missing values, and evaluating models.
+        pt: >-
+          Fornece a linha de base para normalizar, imputar valores ausentes e avaliar modelos.
+        fr: >-
+          Fournit la référence pour normaliser, imputer les valeurs manquantes et évaluer les modèles.
+        zh: >-
+          为标准化、缺失值填补和模型评估提供基准。
+        ja: >-
+          正規化、欠損値の補完、モデルの評価における基準を提供する。
+    - title:
+        es: Finanzas
+        en: Finance
+        pt: Finanças
+        fr: Finance
+        zh: 金融
+        ja: 金融
+      description:
+        es: >-
+          Calcula el rendimiento medio de un activo o de una cartera a lo largo de varios períodos.
+        en: >-
+          Computes the average return of an asset or a portfolio across several periods.
+        pt: >-
+          Calcula o retorno médio de um ativo ou de uma carteira ao longo de vários períodos.
+        fr: >-
+          Calcule le rendement moyen d'un actif ou d'un portefeuille sur plusieurs périodes.
+        zh: >-
+          计算资产或投资组合在多个时期的平均回报。
+        ja: >-
+          資産やポートフォリオの複数期間にわたる平均リターンを計算する。
+    - title:
+        es: Ingeniería
+        en: Engineering
+        pt: Engenharia
+        fr: Ingénierie
+        zh: 工程
+        ja: 工学
+      description:
+        es: >-
+          Promedia mediciones repetidas para reducir el error aleatorio de un instrumento.
+        en: >-
+          Averages repeated measurements to reduce the random error of an instrument.
+        pt: >-
+          Faz a média de medições repetidas para reduzir o erro aleatório de um instrumento.
+        fr: >-
+          Fait la moyenne de mesures répétées pour réduire l'erreur aléatoire d'un instrument.
+        zh: >-
+          对重复测量取平均，以减小仪器的随机误差。
+        ja: >-
+          繰り返し測定の平均をとり、測定器のランダム誤差を減らす。
+  example:
+    title:
+      es: Media de 4 notas
+      en: Mean of 4 grades
+      pt: Média de 4 notas
+      fr: Moyenne de 4 notes
+      zh: 4个分数的均值
+      ja: 4つの成績の平均
+    lines:
+      - es: "Datos: 6, 7, 8, 9"
+        en: "Data: 6, 7, 8, 9"
+        pt: "Dados: 6, 7, 8, 9"
+        fr: "Données : 6, 7, 8, 9"
+        zh: "数据：6, 7, 8, 9"
+        ja: "データ：6, 7, 8, 9"
+      - es: Suma = 6 + 7 + 8 + 9 = 30
+        en: Sum = 6 + 7 + 8 + 9 = 30
+        pt: Soma = 6 + 7 + 8 + 9 = 30
+        fr: Somme = 6 + 7 + 8 + 9 = 30
+        zh: 总和 = 6 + 7 + 8 + 9 = 30
+        ja: 合計 = 6 + 7 + 8 + 9 = 30
+      - es: "Conteo: n = 4"
+        en: "Count: n = 4"
+        pt: "Contagem: n = 4"
+        fr: "Effectif : n = 4"
+        zh: "个数：n = 4"
+        ja: "個数：n = 4"
+      - es: x̄ = 30 / 4
+        en: x̄ = 30 / 4
+        pt: x̄ = 30 / 4
+        fr: x̄ = 30 / 4
+        zh: x̄ = 30 / 4
+        ja: x̄ = 30 / 4
+      - es: x̄ = 7.5
+        en: x̄ = 7.5
+        pt: x̄ = 7,5
+        fr: x̄ = 7,5
+        zh: x̄ = 7.5
+        ja: x̄ = 7.5

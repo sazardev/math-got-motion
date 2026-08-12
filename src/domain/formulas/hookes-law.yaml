@@ -1,0 +1,335 @@
+id: hookes-law
+title:
+  es: Ley de Hooke
+  en: Hooke's Law
+  pt: Lei de Hooke
+  fr: Loi de Hooke
+  zh: 胡克定律
+  ja: フックの法則
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: La fuerza restauradora que ejerce el resorte, en dirección opuesta a la deformación.
+      en: The restoring force the spring exerts, pointing opposite to the deformation.
+      pt: A força restauradora exercida pela mola, em direção oposta à deformação.
+      fr: La force de rappel exercée par le ressort, opposée à la déformation.
+      zh: 弹簧施加的恢复力，方向与形变相反。
+      ja: バネが及ぼす復元力。変形とは反対向きに働く。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égale à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: "El signo menos: la fuerza restauradora siempre se opone a la deformación."
+      en: "The minus sign: the restoring force always opposes the deformation."
+      pt: "O sinal de menos: a força restauradora sempre se opõe à deformação."
+      fr: "Le signe moins : la force de rappel s'oppose toujours à la déformation."
+      zh: 负号：恢复力总是与形变方向相反。
+      ja: マイナス記号。復元力は常に変形と反対向きに働く。
+  - id: k
+    type: constant
+    value: k
+    explanation:
+      es: La constante del resorte, una medida de su rigidez.
+      en: The spring constant, a measure of the spring's stiffness.
+      pt: A constante da mola, uma medida de sua rigidez.
+      fr: La constante du ressort, une mesure de sa raideur.
+      zh: 弹簧的劲度系数，衡量弹簧的刚度。
+      ja: バネ定数。バネの硬さを表す。
+  - id: mul
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por la deformación.
+      en: Multiplied by the deformation.
+      pt: Multiplicado pela deformação.
+      fr: Multiplié par la déformation.
+      zh: 乘以形变量。
+      ja: 変形量を掛ける。
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: La deformación, o desplazamiento desde la posición de equilibrio.
+      en: The deformation, or displacement from the equilibrium position.
+      pt: A deformação, ou deslocamento em relação à posição de equilíbrio.
+      fr: La déformation, ou le déplacement par rapport à la position d'équilibre.
+      zh: 形变量，即相对平衡位置的位移。
+      ja: 変形量。つり合いの位置からの変位。
+context:
+  author:
+    es: Robert Hooke
+    en: Robert Hooke
+    pt: Robert Hooke
+    fr: Robert Hooke
+    zh: 罗伯特·胡克
+    ja: ロバート・フック
+  era:
+    es: Inglaterra, 1635–1703 · publicada en 1678
+    en: England, 1635–1703 · published in 1678
+    pt: Inglaterra, 1635–1703 · publicada em 1678
+    fr: Angleterre, 1635–1703 · publiée en 1678
+    zh: 英格兰，1635–1703年 · 1678年发表
+    ja: イングランド、1635–1703年・1678年発表
+  history:
+    es: >-
+      Hooke descubrió la proporcionalidad en 1660, pero la anunció en 1676 como el anagrama
+      'ceiiinosssttuv', un reordenamiento de la frase latina 'ut tensio, sic vis' — como la
+      extensión, así la fuerza. Revelada en 1678, la ley lo enredó en su amarga disputa con Newton
+      por la paternidad de la gravitación y de la luz. La relación lineal solo vale dentro del
+      límite elástico: más allá, los materiales se deforman de forma permanente, y por eso resortes,
+      vigas y cuerdas de guitarra la cumplen dentro de su rango de trabajo.
+    en: >-
+      Hooke discovered the proportionality in 1660 but announced it in 1676 as the anagram
+      'ceiiinosssttuv', a reordering of the Latin phrase 'ut tensio, sic vis' — as the extension,
+      so the force. Revealed in 1678, the law drew him into his bitter priority dispute with Newton
+      over gravitation and light. The linear relationship holds only within the elastic limit:
+      beyond it, materials deform permanently, which is why springs, beams, and guitar strings obey
+      it within their working range.
+    pt: >-
+      Hooke descobriu a proporcionalidade em 1660, mas a anunciou em 1676 como o anagrama
+      'ceiiinosssttuv', um rearranjo da frase latina 'ut tensio, sic vis' — como a extensão, assim
+      a força. Revelada em 1678, a lei o envolveu em sua amarga disputa com Newton pela autoria da
+      gravitação e da luz. A relação linear vale apenas dentro do limite elástico: além dele, os
+      materiais se deformam de forma permanente, e por isso molas, vigas e cordas de violão a
+      obedecem dentro de sua faixa de trabalho.
+    fr: >-
+      Hooke découvrit la proportionnalité en 1660 mais ne l'annonça qu'en 1676 sous la forme de
+      l'anagramme « ceiiinosssttuv », un réarrangement de la phrase latine « ut tensio, sic vis » —
+      telle l'extension, telle la force. Révélée en 1678, la loi l'engagea dans sa querelle de
+      priorité avec Newton au sujet de la gravitation et de la lumière. La relation linéaire ne
+      vaut que dans la limite d'élasticité : au-delà, les matériaux se déforment de façon
+      permanente, ce qui explique pourquoi ressorts, poutres et cordes de guitare la respectent dans
+      leur plage de fonctionnement.
+    zh: >-
+      胡克于1660年发现了这一正比关系，但在1676年才以字谜'ceiiinosssttuv'的形式公布，它重新排列后是拉丁语
+      'ut tensio, sic vis'——伸长多少，力就多大。1678年谜底揭晓后，这条定律使他在万有引力和光的发现权问题上
+      与牛顿陷入了激烈的争执。线性关系只在弹性限度内成立：超过这一限度，材料就会永久变形，所以弹簧、梁和吉他弦
+      在各自的工作范围内都遵循它。
+    ja: >-
+      フックは1660年にこの比例関係を発見したが、1676年にはアナグラム「ceiiinosssttuv」として発表した。これは
+      ラテン語の「ut tensio, sic vis」（伸びた分だけ力は大きくなる）を並べ替えたものである。1678年に解読されると、
+      この法則は万有引力と光をめぐるニュートンとの痛烈な優先権争いに発展した。この線形関係が成り立つのは弾性限界の
+      範囲内だけであり、それを超えると材料は永久に変形する。だからこそバネや梁、ギターの弦は、その使用範囲内では
+      この法則に従うのだ。
+  timeline:
+    - year: "1660"
+      label:
+        es: >-
+          Hooke descubre la proporcionalidad entre fuerza y deformación al experimentar con
+          resortes, sin publicarla todavía.
+        en: >-
+          Hooke discovers the proportionality between force and deformation while experimenting
+          with springs, not yet publishing it.
+        pt: >-
+          Hooke descobre a proporcionalidade entre força e deformação ao experimentar com molas,
+          sem ainda publicá-la.
+        fr: >-
+          Hooke découvre la proportionnalité entre force et déformation en expérimentant sur des
+          ressorts, sans encore la publier.
+        zh: >-
+          胡克在实验中发现了力与形变之间的正比关系，但尚未发表。
+        ja: >-
+          フックがバネの実験から力と変形の比例関係を発見するが、まだ発表しない。
+    - year: "1676"
+      label:
+        es: >-
+          Anuncia la ley como anagrama 'ceiiinosssttuv' para reservarse la prioridad del
+          descubrimiento.
+        en: >-
+          Announces the law as the anagram 'ceiiinosssttuv' to secure his priority for the
+          discovery.
+        pt: >-
+          Anuncia a lei como o anagrama 'ceiiinosssttuv' para assegurar sua prioridade na
+          descoberta.
+        fr: >-
+          Annonce la loi sous la forme de l'anagramme « ceiiinosssttuv » pour garantir sa priorité
+          sur la découverte.
+        zh: >-
+          以字谜'ceiiinosssttuv'的形式公布这条定律，以保留发现优先权。
+        ja: >-
+          発見の優先権を確保するため、アナグラム「ceiiinosssttuv」として法則を発表する。
+    - year: "1678"
+      label:
+        es: >-
+          Publica el anagrama resuelto en 'De Potentia Restitutiva', la formulación completa de la
+          ley.
+        en: >-
+          Publishes the solved anagram in 'De Potentia Restitutiva', the full statement of the law.
+        pt: >-
+          Publica o anagrama resolvido em 'De Potentia Restitutiva', a formulação completa da lei.
+        fr: >-
+          Publie l'anagramme résolu dans « De Potentia Restitutiva », l'énoncé complet de la loi.
+        zh: >-
+          在《恢复力论》中发表解开的字谜，即这条定律的完整表述。
+        ja: >-
+          『回復力について』で解読したアナグラム、すなわち法則の完全な記述を発表する。
+    - year: Hoy
+      label:
+        es: >-
+          Todo resorte, viga y cable que se deforma dentro de su límite elástico sigue esta
+          relación.
+        en: >-
+          Every spring, beam, and cable that deforms within its elastic limit still follows this
+          relationship.
+        pt: >-
+          Toda mola, viga e cabo que se deforma dentro de seu limite elástico segue essa relação.
+        fr: >-
+          Tout ressort, poutre et câble qui se déforme dans sa limite d'élasticité suit encore
+          cette relation.
+        zh: >-
+          凡是弹性限度内发生形变的弹簧、梁和缆线，至今都遵循这一关系。
+        ja: >-
+          弾性限界内で変形するバネ、梁、ケーブルは、すべて今もこの関係に従う。
+  useCases:
+    - title:
+        es: Suspensiones y aislamiento de vibraciones
+        en: Suspensions and vibration isolation
+        pt: Suspensões e isolamento de vibrações
+        fr: Suspensions et isolation des vibrations
+        zh: 悬挂与减振
+        ja: サスペンションと防振
+      description:
+        es: >-
+          Muelles y elastómeros absorben vibraciones en maquinaria, edificios y equipos sensibles
+          deformándose elásticamente.
+        en: >-
+          Springs and elastomers absorb vibrations in machinery, buildings, and sensitive equipment
+          by deforming elastically.
+        pt: >-
+          Molas e elastômeros absorvem vibrações em máquinas, edifícios e equipamentos sensíveis ao
+          se deformarem elasticamente.
+        fr: >-
+          Ressorts et élastomères absorbent les vibrations dans les machines, les bâtiments et les
+          équipements sensibles en se déformant élastiquement.
+        zh: >-
+          弹簧与弹性体通过弹性形变吸收机械、建筑和精密设备中的振动。
+        ja: >-
+          バネや弾性体が弾性変形することで、機械・建物・精密機器の振動を吸収する。
+    - title:
+        es: Amortiguadores y suspensiones de autos
+        en: Shock absorbers and car suspensions
+        pt: Amortecedores e suspensões de carros
+        fr: Amortisseurs et suspensions automobiles
+        zh: 减震器与汽车悬挂
+        ja: ショックアブソーバーと車両サスペンション
+      description:
+        es: >-
+          Los amortiguadores combinan un muelle, que sigue la ley, con un fluido que disipa la
+          energía de cada bache.
+        en: >-
+          Shock absorbers pair a spring, which follows the law, with a fluid that dissipates the
+          energy of each bump.
+        pt: >-
+          Os amortecedores combinam uma mola, que segue a lei, com um fluido que dissipa a energia
+          de cada buraco.
+        fr: >-
+          Les amortisseurs associent un ressort, qui suit la loi, à un fluide qui dissipe l'énergie
+          de chaque bosse.
+        zh: >-
+          减震器将遵循该定律的弹簧与一种耗散颠簸能量的流体组合在一起。
+        ja: >-
+          ショックアブソーバーは、法則に従うバネと、衝撃のエネルギーを散逸させる流体を組み合わせたものだ。
+    - title:
+        es: Balanzas de resorte e instrumentos
+        en: Spring scales and instruments
+        pt: Balanças de mola e instrumentos
+        fr: Balances à ressort et instruments
+        zh: 弹簧秤与仪器
+        ja: ばねばかりと計器
+      description:
+        es: >-
+          Las balanzas de resorte y muchos sensores de fuerza traducen una deformación medible en
+          una lectura de fuerza.
+        en: >-
+          Spring scales and many force sensors turn a measurable deformation into a force reading.
+        pt: >-
+          As balanças de mola e muitos sensores de força convertem uma deformação mensurável em uma
+          leitura de força.
+        fr: >-
+          Les balances à ressort et de nombreux capteurs de force convertissent une déformation
+          mesurable en une lecture de force.
+        zh: >-
+          弹簧秤和许多力传感器将可测量的形变换算为力的读数。
+        ja: >-
+          ばねばかりや多くの力センサーは、測定可能な変形を力の読み値に変換する。
+    - title:
+        es: Sismología
+        en: Seismology
+        pt: Sismologia
+        fr: Sismologie
+        zh: 地震学
+        ja: 地震学
+      description:
+        es: >-
+          Los sismógrafos cuelgan una masa de un muelle para registrar el movimiento del suelo con
+          gran precisión.
+        en: >-
+          Seismographs suspend a mass from a spring to record ground motion with great precision.
+        pt: >-
+          Os sismógrafos suspendem uma massa de uma mola para registrar o movimento do solo com
+          grande precisão.
+        fr: >-
+          Les sismographes suspendent une masse à un ressort pour enregistrer le mouvement du sol
+          avec une grande précision.
+        zh: >-
+          地震仪将质量悬挂在弹簧上，以高精度记录地面的运动。
+        ja: >-
+          地震計はバネで質量を支え、地面の動きを高い精度で記録する。
+  example:
+    title:
+      es: Un resorte estirado 5 cm
+      en: A spring stretched 5 cm
+      pt: Uma mola esticada 5 cm
+      fr: Un ressort étiré de 5 cm
+      zh: 拉伸5厘米的弹簧
+      ja: 5cm伸ばしたバネ
+    lines:
+      - es: k = 200 N/m
+        en: k = 200 N/m
+        pt: k = 200 N/m
+        fr: k = 200 N/m
+        zh: k = 200 N/m
+        ja: k = 200 N/m
+      - es: x = 0,05 m
+        en: x = 0.05 m
+        pt: x = 0,05 m
+        fr: x = 0,05 m
+        zh: x = 0.05 m
+        ja: x = 0.05 m
+      - es: F = −k · x
+        en: F = −k · x
+        pt: F = −k · x
+        fr: F = −k · x
+        zh: F = −k · x
+        ja: F = −k · x
+      - es: F = −200 × 0,05
+        en: F = −200 × 0.05
+        pt: F = −200 × 0,05
+        fr: F = −200 × 0,05
+        zh: F = −200 × 0.05
+        ja: F = −200 × 0.05
+      - es: F = −10 N (magnitud 10 N opuesta al estiramiento)
+        en: F = −10 N (magnitude 10 N opposing the stretch)
+        pt: F = −10 N (magnitude de 10 N oposta ao estiramento)
+        fr: F = −10 N (magnitude de 10 N opposée à l'étirement)
+        zh: F = −10 牛（大小为10牛，方向与拉伸相反）
+        ja: F = −10 N（大きさ10 N、伸ばす方向と逆向き）

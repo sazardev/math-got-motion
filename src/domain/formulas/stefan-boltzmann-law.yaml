@@ -1,0 +1,353 @@
+id: stefan-boltzmann-law
+title:
+  es: Ley de Stefan-Boltzmann
+  en: Stefan–Boltzmann Law
+  pt: Lei de Stefan-Boltzmann
+  fr: Loi de Stefan-Boltzmann
+  zh: 斯特藩-玻尔兹曼定律
+  ja: シュテファン=ボルツマンの法則
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: p
+    type: variable
+    value: P
+    explanation:
+      es: La potencia total que radia el cuerpo negro por segundo.
+      en: The total power the black body radiates per second.
+      pt: A potência total que o corpo negro irradia por segundo.
+      fr: La puissance totale rayonnée par le corps noir par seconde.
+      zh: 黑体每秒辐射出的总功率。
+      ja: 黒体が毎秒放射する全出力。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: sigma
+    type: constant
+    value: σ
+    explanation:
+      es: La constante de Stefan-Boltzmann, un número universal que fija la escala de la radiación.
+      en: The Stefan-Boltzmann constant, a universal number that sets the scale of radiation.
+      pt: A constante de Stefan-Boltzmann, um número universal que fixa a escala da radiação.
+      fr: La constante de Stefan-Boltzmann, un nombre universel qui fixe l'échelle du rayonnement.
+      zh: 斯特藩-玻尔兹曼常数，一个确定辐射尺度的普适常数。
+      ja: シュテファン=ボルツマン定数。放射の規模を定める普遍定数。
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 次を掛ける。
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: El área de la superficie que radia.
+      en: The area of the radiating surface.
+      pt: A área da superfície que irradia.
+      fr: L'aire de la surface rayonnante.
+      zh: 辐射表面的面积。
+      ja: 放射する表面の面積。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 次を掛ける。
+  - id: t
+    type: variable
+    value: T
+    explanation:
+      es: La temperatura absoluta de la superficie, medida en kelvin.
+      en: The surface's absolute temperature, measured in kelvin.
+      pt: A temperatura absoluta da superfície, medida em kelvin.
+      fr: La température absolue de la surface, mesurée en kelvins.
+      zh: 表面的绝对温度，以开尔文为单位。
+      ja: 表面の絶対温度。単位はケルビン。
+  - id: exp-4
+    type: superscript
+    value: "4"
+    explanation:
+      es: "Elevada a la cuarta potencia: duplicar la temperatura multiplica la radiación por dieciséis."
+      en: "Raised to the fourth power: doubling the temperature multiplies the radiation by sixteen."
+      pt: "Elevada à quarta potência: dobrar a temperatura multiplica a radiação por dezesseis."
+      fr: "Élevée à la quatrième puissance : doubler la température multiplie le rayonnement par seize."
+      zh: "四次方：温度加倍，辐射量变为原来的十六倍。"
+      ja: "4乗。温度を2倍にすると放射は16倍になる。"
+context:
+  author:
+    es: Josef Stefan y Ludwig Boltzmann
+    en: Josef Stefan and Ludwig Boltzmann
+    pt: Josef Stefan e Ludwig Boltzmann
+    fr: Josef Stefan et Ludwig Boltzmann
+    zh: 约瑟夫·斯特藩与路德维希·玻尔兹曼
+    ja: ヨーゼフ・シュテファンとルートヴィッヒ・ボルツマン
+  era:
+    es: Austria, 1879–1884 · descubierta por Stefan en 1879
+    en: Austria, 1879–1884 · discovered by Stefan in 1879
+    pt: Áustria, 1879–1884 · descoberta por Stefan em 1879
+    fr: Autriche, 1879–1884 · découverte par Stefan en 1879
+    zh: 奥地利，1879–1884年 · 1879年由斯特藩发现
+    ja: オーストリア、1879–1884年・1879年にシュテファンが発見
+  history:
+    es: >-
+      Josef Stefan observó en 1879, midiendo la emisión de un alambre incandescente, que la
+      potencia total radiada por un cuerpo negro crece con la cuarta potencia de su temperatura
+      absoluta. En 1884 su discípulo Ludwig Boltzmann la derivó a partir de la termodinámica y de
+      la teoría electromagnética de Maxwell, dándole fundamento teórico. La ley gobierna desde el
+      brillo de las estrellas hasta el diseño de hornos industriales, y explica por qué un cuerpo a
+      2000 K radia dieciséis veces más que uno a 1000 K.
+    en: >-
+      In 1879 Josef Stefan observed, measuring the emission of an incandescent wire, that the total
+      power radiated by a black body grows with the fourth power of its absolute temperature. In
+      1884 his student Ludwig Boltzmann derived it from thermodynamics and Maxwell's theory of
+      electromagnetism, giving it a theoretical foundation. The law governs everything from the
+      brightness of stars to the design of industrial furnaces, and explains why a body at 2000 K
+      radiates sixteen times more than one at 1000 K.
+    pt: >-
+      Em 1879, Josef Stefan observou, medindo a emissão de um fio incandescente, que a potência
+      total irradiada por um corpo negro cresce com a quarta potência de sua temperatura absoluta.
+      Em 1884, seu aluno Ludwig Boltzmann a derivou a partir da termodinâmica e da teoria
+      eletromagnética de Maxwell, dando-lhe fundamento teórico. A lei governa desde o brilho das
+      estrelas até o projeto de fornos industriais, e explica por que um corpo a 2000 K irradia
+      dezesseis vezes mais que um a 1000 K.
+    fr: >-
+      En 1879, Josef Stefan observa, en mesurant l'émission d'un fil incandescent, que la puissance
+      totale rayonnée par un corps noir croît comme la quatrième puissance de sa température
+      absolue. En 1884, son élève Ludwig Boltzmann la dériva à partir de la thermodynamique et de
+      la théorie électromagnétique de Maxwell, lui donnant un fondement théorique. La loi régit
+      aussi bien l'éclat des étoiles que la conception des fours industriels, et explique pourquoi
+      un corps à 2000 K rayonne seize fois plus qu'un corps à 1000 K.
+    zh: >-
+      1879年，约瑟夫·斯特藩通过测量白炽灯丝的辐射发现，黑体辐射的总功率与其绝对温度的四次方成正比。
+      1884年，他的学生路德维希·玻尔兹曼从热力学和麦克斯韦电磁理论出发推导出这一定律，为其奠定了理论基础。
+      从恒星的亮度到工业炉的设计，这一定律无处不在，也解释了为什么2000 K的物体辐射量是1000 K物体的十六倍。
+    ja: >-
+      1879年、ヨーゼフ・シュテファンは白熱線の放射を測定し、黒体が放出する全放射出力が絶対温度の4乗に比例して
+      増大することを見いだした。1884年、弟子のルートヴィッヒ・ボルツマンが熱力学とマクスウェルの電磁気理論から
+      これを導き、理論的基盤を与えた。この法則は恒星の明るさから工業用炉の設計までを支配し、2000 Kの物体が
+      1000 Kの物体の16倍も多く放射する理由を説明する。
+  timeline:
+    - year: "1879"
+      label:
+        es: >-
+          Josef Stefan publica la ley empírica tras medir la radiación de un alambre de platino
+          incandescente.
+        en: >-
+          Josef Stefan publishes the empirical law after measuring the radiation of an incandescent
+          platinum wire.
+        pt: >-
+          Josef Stefan publica a lei empírica após medir a radiação de um fio de platina
+          incandescente.
+        fr: >-
+          Josef Stefan publie la loi empirique après avoir mesuré le rayonnement d'un fil de platine
+          incandescent.
+        zh: >-
+          约瑟夫·斯特藩在测量白炽铂丝的辐射后，发表了这一定律的经验形式。
+        ja: >-
+          ヨーゼフ・シュテファンが白熱のプラチナ線の放射を測定し、経験則として法則を発表する。
+    - year: "1884"
+      label:
+        es: >-
+          Ludwig Boltzmann la deriva desde la termodinámica, dándole forma teórica definitiva.
+        en: >-
+          Ludwig Boltzmann derives it from thermodynamics, giving it a definitive theoretical form.
+        pt: >-
+          Ludwig Boltzmann a deriva a partir da termodinâmica, dando-lhe forma teórica definitiva.
+        fr: >-
+          Ludwig Boltzmann la dérive de la thermodynamique, lui donnant une forme théorique
+          définitive.
+        zh: >-
+          路德维希·玻尔兹曼从热力学出发推导出该定律，使其有了确定的理论形式。
+        ja: >-
+          ルートヴィッヒ・ボルツマンが熱力学からこれを導き、決定的な理論的形を与える。
+    - year: "1900"
+      label:
+        es: >-
+          La ley de radiación de Planck reproduce esta fórmula al integrar todas las frecuencias,
+          uniendo la ley con la física cuántica.
+        en: >-
+          Planck's radiation law reproduces this formula when integrated over all frequencies,
+          linking it to quantum physics.
+        pt: >-
+          A lei de radiação de Planck reproduz essa fórmula ao integrar todas as frequências,
+          ligando a lei à física quântica.
+        fr: >-
+          La loi de rayonnement de Planck reproduit cette formule en l'intégrant sur toutes les
+          fréquences, reliant la loi à la physique quantique.
+        zh: >-
+          普朗克辐射定律对所有频率积分后即可还原出此公式，将它与量子物理联系起来。
+        ja: >-
+          プランクの放射法則は全周波数で積分するとこの式を再現し、法則を量子物理学と結びつける。
+    - year: Hoy
+      label:
+        es: >-
+          La astrofísica la usa para deducir el radio y la temperatura de las estrellas, y la
+          ingeniería para diseñar hornos y lámparas.
+        en: >-
+          Astrophysics uses it to infer the radius and temperature of stars, and engineering to
+          design furnaces and lamps.
+        pt: >-
+          A astrofísica a usa para deduzir o raio e a temperatura das estrelas, e a engenharia para
+          projetar fornos e lâmpadas.
+        fr: >-
+          L'astrophysique l'utilise pour déduire le rayon et la température des étoiles, et
+          l'ingénierie pour concevoir fours et lampes.
+        zh: >-
+          天体物理学用它推算恒星的半径与温度，工程学用它设计炉子和灯具。
+        ja: >-
+          天体物理学では恒星の半径と温度の推定に、工学では炉やランプの設計に用いられる。
+  useCases:
+    - title:
+        es: Astrofísica
+        en: Astrophysics
+        pt: Astrofísica
+        fr: Astrophysique
+        zh: 天体物理学
+        ja: 天体物理学
+      description:
+        es: >-
+          Combinada con la luminosidad medida, permite deducir el radio y la temperatura de las
+          estrellas.
+        en: >-
+          Combined with measured luminosity, it lets astronomers infer the radius and temperature of
+          stars.
+        pt: >-
+          Combinada com a luminosidade medida, permite deduzir o raio e a temperatura das estrelas.
+        fr: >-
+          Combinée à la luminosité mesurée, elle permet de déduire le rayon et la température des
+          étoiles.
+        zh: >-
+          与测得的亮度相结合，可以推算出恒星的半径与温度。
+        ja: >-
+          測定された光度と組み合わせることで、恒星の半径と温度を推定できる。
+    - title:
+        es: Hornos industriales
+        en: Industrial furnaces
+        pt: Fornos industriais
+        fr: Fours industriels
+        zh: 工业炉
+        ja: 工業用炉
+      description:
+        es: >-
+          Dimensiona la potencia necesaria para mantener un horno a alta temperatura y la pérdida
+          por radiación.
+        en: >-
+          It sizes the power needed to hold a furnace at high temperature and the loss through
+          radiation.
+        pt: >-
+          Dimensiona a potência necessária para manter um forno em alta temperatura e a perda por
+          radiação.
+        fr: >-
+          Elle dimensionne la puissance nécessaire pour maintenir un four à haute température et la
+          perte par rayonnement.
+        zh: >-
+          用于计算将炉子保持在高温度所需的功率以及辐射损失。
+        ja: >-
+          炉を高温に保つのに必要な電力と、放射による損失を計算する。
+    - title:
+        es: Termografía
+        en: Thermography
+        pt: Termografia
+        fr: Thermographie
+        zh: 热成像
+        ja: サーモグラフィ
+      description:
+        es: >-
+          Los sensores infrarrojos estiman la temperatura de una superficie a partir de la potencia
+          que emite.
+        en: >-
+          Infrared sensors estimate a surface's temperature from the power it emits.
+        pt: >-
+          Sensores infravermelhos estimam a temperatura de uma superfície a partir da potência que
+          ela emite.
+        fr: >-
+          Les capteurs infrarouges estiment la température d'une surface à partir de la puissance
+          qu'elle émet.
+        zh: >-
+          红外传感器根据表面发出的功率来估算其温度。
+        ja: >-
+          赤外線センサーは、表面が発する出力からその温度を推定する。
+    - title:
+        es: Diseño de lámparas
+        en: Lamp design
+        pt: Projeto de lâmpadas
+        fr: Conception de lampes
+        zh: 灯具设计
+        ja: ランプ設計
+      description:
+        es: >-
+          Explica por qué un filamento incandescente debe operar muy caliente para emitir luz
+          visible eficiente.
+        en: >-
+          It explains why an incandescent filament must run very hot to emit efficient visible
+          light.
+        pt: >-
+          Explica por que um filamento incandescente precisa operar muito quente para emitir luz
+          visível eficiente.
+        fr: >-
+          Elle explique pourquoi un filament incandescent doit fonctionner très chaud pour émettre
+          une lumière visible efficace.
+        zh: >-
+          它解释了为什么白炽灯丝必须工作在极高温度下才能高效发出可见光。
+        ja: >-
+          白熱フィラメントが効率的な可視光を発するために非常に高温で動作しなければならない理由を説明する。
+  example:
+    title:
+      es: Radiación de un cuerpo negro
+      en: Radiation of a black body
+      pt: Radiação de um corpo negro
+      fr: Rayonnement d'un corps noir
+      zh: 黑体的辐射
+      ja: 黒体の放射
+    lines:
+      - es: A = 1 m²
+        en: A = 1 m²
+        pt: A = 1 m²
+        fr: A = 1 m²
+        zh: A = 1 平方米
+        ja: A = 1 m²
+      - es: T = 1000 K
+        en: T = 1000 K
+        pt: T = 1000 K
+        fr: T = 1000 K
+        zh: T = 1000 开
+        ja: T = 1000 K
+      - es: σ = 5.67×10⁻⁸ W/(m²·K⁴)
+        en: σ = 5.67×10⁻⁸ W/(m²·K⁴)
+        pt: σ = 5,67×10⁻⁸ W/(m²·K⁴)
+        fr: σ = 5,67×10⁻⁸ W/(m²·K⁴)
+        zh: σ = 5.67×10⁻⁸ W/(m²·K⁴)
+        ja: σ = 5.67×10⁻⁸ W/(m²·K⁴)
+      - es: P = σ · A · T⁴ = 5.67×10⁻⁸ · 1 · 1000⁴
+        en: P = σ · A · T⁴ = 5.67×10⁻⁸ · 1 · 1000⁴
+        pt: P = σ · A · T⁴ = 5,67×10⁻⁸ · 1 · 1000⁴
+        fr: P = σ · A · T⁴ = 5,67×10⁻⁸ · 1 · 1000⁴
+        zh: P = σ · A · T⁴ = 5.67×10⁻⁸ · 1 · 1000⁴
+        ja: P = σ · A · T⁴ = 5.67×10⁻⁸ · 1 · 1000⁴
+      - es: P = 5.67×10⁴ W
+        en: P = 5.67×10⁴ W
+        pt: P = 5,67×10⁴ W
+        fr: P = 5,67×10⁴ W
+        zh: P = 5.67×10⁴ 瓦
+        ja: P = 5.67×10⁴ W

@@ -1,0 +1,374 @@
+id: capacitor-series
+title:
+  es: Condensadores en Serie
+  en: Capacitors in Series
+  pt: Capacitores em Série
+  fr: Condensateurs en série
+  zh: 串联电容器
+  ja: 直列コンデンサ
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: El número uno, el numerador de cada fracción de recíprocos.
+      en: The number one, the numerator of each reciprocal fraction.
+      pt: O número um, o numerador de cada fração de recíprocos.
+      fr: Le nombre un, numérateur de chaque fraction de réciproques.
+      zh: 数字一,每个倒数分数的分子。
+      ja: 数字の1。各逆数の分数の分子である。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: La división, aquí escrita como fracción.
+      en: The division, written here as a fraction.
+      pt: A divisão, escrita aqui como fração.
+      fr: La division, écrite ici sous forme de fraction.
+      zh: 除法,这里写成分数形式。
+      ja: 除算。ここでは分数として表している。
+  - id: c
+    type: variable
+    value: C
+    explanation:
+      es: La capacitancia equivalente de toda la conexión en serie.
+      en: The equivalent capacitance of the whole series connection.
+      pt: A capacitância equivalente de toda a ligação em série.
+      fr: La capacité équivalente de tout le montage en série.
+      zh: 整个串联连接的总电容。
+      ja: 直列接続全体の合成静電容量。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: one-2
+    type: number
+    value: "1"
+    explanation:
+      es: El numerador del recíproco del primer condensador.
+      en: The numerator of the reciprocal of the first capacitor.
+      pt: O numerador do recíproco do primeiro capacitor.
+      fr: Le numérateur du réciproque du premier condensateur.
+      zh: 第一个电容器倒数的分子。
+      ja: 最初のコンデンサの逆数の分子。
+  - id: slash-2
+    type: operator
+    value: /
+    explanation:
+      es: La división del primero de los recíprocos.
+      en: The division of the first of the reciprocals.
+      pt: A divisão do primeiro dos recíprocos.
+      fr: La division du premier des réciproques.
+      zh: 第一个倒数的除法。
+      ja: 最初の逆数の除算。
+  - id: c-1
+    type: variable
+    value: C₁
+    explanation:
+      es: La capacitancia del primer condensador.
+      en: The capacitance of the first capacitor.
+      pt: A capacitância do primeiro capacitor.
+      fr: La capacité du premier condensateur.
+      zh: 第一个电容器的电容。
+      ja: 最初のコンデンサの静電容量。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: La suma de los recíprocos de todos los condensadores.
+      en: The sum of the reciprocals of all the capacitors.
+      pt: A soma dos recíprocos de todos os capacitores.
+      fr: La somme des réciproques de tous les condensateurs.
+      zh: 所有电容器倒数的和。
+      ja: すべてのコンデンサの逆数の和。
+  - id: one-3
+    type: number
+    value: "1"
+    explanation:
+      es: El numerador del recíproco del segundo condensador.
+      en: The numerator of the reciprocal of the second capacitor.
+      pt: O numerador do recíproco do segundo capacitor.
+      fr: Le numérateur du réciproque du deuxième condensateur.
+      zh: 第二个电容器倒数的分子。
+      ja: 2番目のコンデンサの逆数の分子。
+  - id: slash-3
+    type: operator
+    value: /
+    explanation:
+      es: La división del segundo de los recíprocos.
+      en: The division of the second of the reciprocals.
+      pt: A divisão do segundo dos recíprocos.
+      fr: La division du deuxième des réciproques.
+      zh: 第二个倒数的除法。
+      ja: 2番目の逆数の除算。
+  - id: c-2
+    type: variable
+    value: C₂
+    explanation:
+      es: La capacitancia del segundo condensador.
+      en: The capacitance of the second capacitor.
+      pt: A capacitância do segundo capacitor.
+      fr: La capacité du deuxième condensateur.
+      zh: 第二个电容器的电容。
+      ja: 2番目のコンデンサの静電容量。
+  - id: plus-2
+    type: operator
+    value: +
+    explanation:
+      es: Y así sucesivamente con todos los condensadores de la cadena.
+      en: And so on for every capacitor in the chain.
+      pt: E assim sucessivamente com todos os capacitores da cadeia.
+      fr: Et ainsi de suite pour tous les condensateurs de la chaîne.
+      zh: 以此类推,链上的每个电容器都是如此。
+      ja: 以後、鎖内のすべてのコンデンサについて同様に続く。
+  - id: dots
+    type: operator
+    value: …
+    explanation:
+      es: Los puntos suspensivos, que indican que la cadena puede continuar.
+      en: The ellipsis, indicating the chain can go on.
+      pt: As reticências, que indicam que a cadeia pode continuar.
+      fr: Les points de suspension, qui indiquent que la chaîne peut continuer.
+      zh: 省略号,表示链可以继续延伸。
+      ja: 省略記号。鎖がさらに続くことを示す。
+context:
+  author:
+    es: Basada en la teoría de la capacitancia
+    en: Based on the theory of capacitance
+    pt: Baseada na teoria da capacitância
+    fr: Basée sur la théorie de la capacité électrique
+    zh: 基于电容理论
+    ja: 静電容量の理論に基づく
+  era:
+    es: Europa, s. XVIII–XIX
+    en: Europe, 18th–19th century
+    pt: Europa, séc. XVIII–XIX
+    fr: Europe, XVIIIe–XIXe siècle
+    zh: 欧洲,18–19世纪
+    ja: ヨーロッパ、18〜19世紀
+  history:
+    es: >-
+      La capacitancia fue estudiada en Europa entre los siglos XVIII y XIX, desde la botella de Leyden
+      y los experimentos de Benjamin Franklin hasta las investigaciones de Michael Faraday. Cuando
+      dos condensadores se conectan en serie, la carga almacenada es la misma en ambos y el voltaje
+      total se reparte entre ellos, por lo que la capacitancia equivalente se obtiene sumando los
+      recíprocos. De ahí derivan los divisores capacitivos de alta tensión y los bancos de
+      condensadores de las redes eléctricas.
+    en: >-
+      Capacitance was studied in Europe between the eighteenth and nineteenth centuries, from the
+      Leyden jar and the experiments of Benjamin Franklin to the investigations of Michael Faraday.
+      When two capacitors are connected in series, both store the same charge and the total voltage
+      is shared between them, so the equivalent capacitance comes from adding the reciprocals. From
+      this come high-voltage capacitive dividers and the capacitor banks of power networks.
+    pt: >-
+      A capacitância foi estudada na Europa entre os séculos XVIII e XIX, da garrafa de Leiden e dos
+      experimentos de Benjamin Franklin às investigações de Michael Faraday. Quando dois capacitores
+      são ligados em série, ambos armazenam a mesma carga e a tensão total é dividida entre eles, de
+      modo que a capacitância equivalente é obtida somando os recíprocos. Daí derivam os divisores
+      capacitivos de alta tensão e os bancos de capacitores das redes elétricas.
+    fr: >-
+      La capacité électrique a été étudiée en Europe entre les XVIIIe et XIXe siècles, de la bouteille
+      de Leyde et des expériences de Benjamin Franklin aux travaux de Michael Faraday. Lorsque deux
+      condensateurs sont connectés en série, ils stockent tous deux la même charge et la tension
+      totale se répartit entre eux, si bien que la capacité équivalente s'obtient en additionnant les
+      réciproques. De là viennent les diviseurs capacitifs haute tension et les bancs de condensateurs
+      des réseaux électriques.
+    zh: >-
+      电容在欧洲于18至19世纪间得到研究,从莱顿瓶和本杰明·富兰克林的实验,到迈克尔·法拉第的研究。当两个
+      电容器串联时,它们储存相同的电荷,总电压在两者之间分配,因此等效电容通过对倒数求和求得。高压电容
+      分压器和电网中的电容器组都由此而来。
+    ja: >-
+      静電容量は18世紀から19世紀にかけてヨーロッパで研究が進んだ。ライデン瓶やベンジャミン・フランクリン
+      の実験から、マイケル・ファラデーの研究に至るまでである。2つのコンデンサを直列に接続すると、両者は
+      同じ電荷を蓄え、全電圧がそれぞれに分割される。したがって合成静電容量は逆数の和から求められる。
+      高電圧の容量分圧器や送電網のコンデンサ・バンクはこの原理に由来する。
+  timeline:
+    - year: "1745"
+      label:
+        es: >-
+          Se inventa la botella de Leyden, el primer condensador, de forma independiente en Alemania
+          y Holanda.
+        en: >-
+          The Leyden jar, the first capacitor, is invented independently in Germany and Holland.
+        pt: >-
+          A garrafa de Leiden, o primeiro capacitor, é inventada independentemente na Alemanha e na
+          Holanda.
+        fr: >-
+          La bouteille de Leyde, premier condensateur, est inventée indépendamment en Allemagne et
+          aux Pays-Bas.
+        zh: >-
+          莱顿瓶,第一个电容器,在德国和荷兰被独立发明。
+        ja: >-
+          最初のコンデンサであるライデン瓶が、ドイツとオランダで独立に発明される。
+    - year: "1837"
+      label:
+        es: >-
+          Faraday introduce el concepto de capacidad eléctrica y estudia los dieléctricos.
+        en: >-
+          Faraday introduces the concept of electrical capacity and studies dielectrics.
+        pt: >-
+          Faraday introduz o conceito de capacidade elétrica e estuda os dielétricos.
+        fr: >-
+          Faraday introduit la notion de capacité électrique et étudie les diélectriques.
+        zh: >-
+          法拉第引入电容概念,并研究电介质。
+        ja: >-
+          ファラデーが電気容量の概念を導入し、誘電体を研究する。
+    - year: Hoy
+      label:
+        es: >-
+          Los condensadores en serie forman divisores de alta tensión y bancos de compensación en
+          las redes.
+        en: >-
+          Series capacitors form high-voltage dividers and compensation banks in power networks.
+        pt: >-
+          Os capacitores em série formam divisores de alta tensão e bancos de compensação nas redes.
+        fr: >-
+          Les condensateurs en série forment des diviseurs haute tension et des bancs de compensation
+          dans les réseaux.
+        zh: >-
+          串联电容器在电网中构成高压分压器和补偿组。
+        ja: >-
+          直列コンデンサは送電網で高電圧分圧器や補償バンクを構成する。
+  useCases:
+    - title:
+        es: Divisores capacitivos de alta tensión
+        en: High-voltage capacitive dividers
+        pt: Divisores capacitivos de alta tensão
+        fr: Diviseurs capacitifs haute tension
+        zh: 高压电容分压器
+        ja: 高電圧容量分圧器
+      description:
+        es: >-
+          Varios condensadores en serie reparten la tensión de línea y permiten medirla de forma
+          segura.
+        en: >-
+          Several capacitors in series share the line voltage, allowing it to be measured safely.
+        pt: >-
+          Vários capacitores em série repartem a tensão de linha e permitem medi-la com segurança.
+        fr: >-
+          Plusieurs condensateurs en série répartissent la tension de ligne et permettent de la
+          mesurer en sécurité.
+        zh: >-
+          多个串联电容器分担线路电压,从而可以安全地测量它。
+        ja: >-
+          複数の直列コンデンサが線間電圧を分担し、安全に測定できるようにする。
+    - title:
+        es: Compensación de potencia reactiva
+        en: Reactive power compensation
+        pt: Compensação de potência reativa
+        fr: Compensation de puissance réactive
+        zh: 无功补偿
+        ja: 無効電力補償
+      description:
+        es: >-
+          Los bancos de condensadores conectados en las redes mejoran el factor de potencia de la
+          instalación.
+        en: >-
+          Capacitor banks connected to the grid improve the power factor of the installation.
+        pt: >-
+          Os bancos de capacitores ligados às redes melhoram o fator de potência da instalação.
+        fr: >-
+          Les bancs de condensateurs connectés aux réseaux améliorent le facteur de puissance de
+          l'installation.
+        zh: >-
+          接入电网的电容器组可提高设施设备的功率因数。
+        ja: >-
+          電力系統に接続されたコンデンサ・バンクが、設備の力率を改善する。
+    - title:
+        es: Inversores de vehículos eléctricos
+        en: EV inverters
+        pt: Inversores de veículos elétricos
+        fr: Onduleurs des véhicules électriques
+        zh: 电动汽车逆变器
+        ja: 電気自動車のインバータ
+      description:
+        es: >-
+          El bus de continua del inversor usa cadenas de condensadores en serie para repartir
+          tensiones y filtrar el rizado.
+        en: >-
+          The inverter's DC bus uses series capacitor strings to divide voltages and filter ripple.
+        pt: >-
+          O barramento CC do inversor usa cadeias de capacitores em série para repartir tensões e
+          filtrar a ondulação.
+        fr: >-
+          Le bus continu de l'onduleur utilise des chaînes de condensateurs en série pour répartir
+          les tensions et filtrer l'ondulation.
+        zh: >-
+          逆变器的直流母线使用串联电容器组来分压并滤除纹波。
+        ja: >-
+          インバータの直流バスは直列コンデンサ列を用いて電圧を分割し、リプルを除去する。
+    - title:
+        es: Fuentes de alimentación electrónicas
+        en: Electronic power supplies
+        pt: Fontes de alimentação eletrônicas
+        fr: Alimentations électroniques
+        zh: 电子电源
+        ja: 電子電源
+      description:
+        es: >-
+          Las cadenas de condensadores en serie soportan tensiones que un solo componente no podría
+          aguantar.
+        en: >-
+          Series strings of capacitors withstand voltages a single component could not handle.
+        pt: >-
+          Cadeias de capacitores em série suportam tensões que um único componente não aguentaria.
+        fr: >-
+          Des chaînes de condensateurs en série supportent des tensions qu'un seul composant ne
+          pourrait encaisser.
+        zh: >-
+          串联电容器组能够承受单个元件无法承受的电压。
+        ja: >-
+          直列のコンデンサ列は、単一の部品では耐えられない電圧に耐える。
+  example:
+    title:
+      es: Dos condensadores en serie
+      en: Two capacitors in series
+      pt: Dois capacitores em série
+      fr: Deux condensateurs en série
+      zh: 两个串联电容器
+      ja: 直列の2つのコンデンサ
+    lines:
+      - es: C₁ = 6 µF
+        en: C₁ = 6 µF
+        pt: C₁ = 6 µF
+        fr: C₁ = 6 µF
+        zh: C₁ = 6 µF
+        ja: C₁ = 6 µF
+      - es: C₂ = 12 µF
+        en: C₂ = 12 µF
+        pt: C₂ = 12 µF
+        fr: C₂ = 12 µF
+        zh: C₂ = 12 µF
+        ja: C₂ = 12 µF
+      - es: 1/C = 1/6 + 1/12
+        en: 1/C = 1/6 + 1/12
+        pt: 1/C = 1/6 + 1/12
+        fr: 1/C = 1/6 + 1/12
+        zh: 1/C = 1/6 + 1/12
+        ja: 1/C = 1/6 + 1/12
+      - es: 1/C = 2/12 + 1/12 = 3/12
+        en: 1/C = 2/12 + 1/12 = 3/12
+        pt: 1/C = 2/12 + 1/12 = 3/12
+        fr: 1/C = 2/12 + 1/12 = 3/12
+        zh: 1/C = 2/12 + 1/12 = 3/12
+        ja: 1/C = 2/12 + 1/12 = 3/12
+      - es: C = 4 µF
+        en: C = 4 µF
+        pt: C = 4 µF
+        fr: C = 4 µF
+        zh: C = 4 µF
+        ja: C = 4 µF

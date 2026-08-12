@@ -1,0 +1,358 @@
+id: net-present-value
+title:
+  es: Valor Actual Neto
+  en: Net Present Value
+  pt: Valor Presente Líquido
+  fr: Valeur Actuelle Nette
+  zh: 净现值
+  ja: 正味現在価値
+category:
+  es: Finanzas
+  en: Finance
+  pt: Finanças
+  fr: Finance
+  zh: 金融
+  ja: 金融
+nodes:
+  - id: npv
+    type: variable
+    value: NPV
+    explanation:
+      es: "NPV: el valor actual neto del proyecto."
+      en: "NPV: the project's net present value."
+      pt: "NPV: o valor presente líquido do projeto."
+      fr: "NPV : la valeur actuelle nette du projet."
+      zh: "NPV:项目的净现值。"
+      ja: "NPV:プロジェクトの正味現在価値。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: sigma
+    type: operator
+    value: Σ
+    explanation:
+      es: Suma todos los flujos descontados.
+      en: Sums all discounted cash flows.
+      pt: Soma todos os fluxos descontados.
+      fr: Additionne tous les flux actualisés.
+      zh: 对所有折现现金流求和。
+      ja: 割り引いたキャッシュフローをすべて合計する。
+  - id: cf
+    type: variable
+    value: CFₜ
+    explanation:
+      es: "CFₜ: el flujo de caja en el periodo t."
+      en: "CFₜ: the cash flow in period t."
+      pt: "CFₜ: o fluxo de caixa no período t."
+      fr: "CFₜ : le flux de trésorerie de la période t."
+      zh: "CFₜ:第t期的现金流。"
+      ja: "CFₜ:第t期のキャッシュフロー。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el factor de descuento.
+      en: Opens the discount factor.
+      pt: Abre o fator de desconto.
+      fr: Ouvre le facteur d'actualisation.
+      zh: 打开折现因子。
+      ja: 割引係数を開く括弧。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: La unidad base.
+      en: The base unit.
+      pt: A unidade base.
+      fr: L'unité de base.
+      zh: 基础单位1。
+      ja: 基準の1。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Más la tasa.
+      en: Plus the rate.
+      pt: Mais a taxa.
+      fr: Plus le taux.
+      zh: 加上利率。
+      ja: 金利を加える。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "r: la tasa de descuento por periodo."
+      en: "r: the discount rate per period."
+      pt: "r: a taxa de desconto por período."
+      fr: "r : le taux d'actualisation par période."
+      zh: "r:每期的折现率。"
+      ja: "r:期間あたりの割引率。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el factor de descuento.
+      en: Closes the discount factor.
+      pt: Fecha o fator de desconto.
+      fr: Ferme le facteur d'actualisation.
+      zh: 关闭折现因子。
+      ja: 割引係数を閉じる括弧。
+  - id: t
+    type: superscript
+    value: ᵗ
+    explanation:
+      es: "ᵗ: eleva el factor al periodo t."
+      en: "ᵗ: raises the factor to period t."
+      pt: "ᵗ: eleva o fator ao período t."
+      fr: "ᵗ : élève le facteur à la période t."
+      zh: "ᵗ:将因子提高到第t期。"
+      ja: "ᵗ:係数を第t期のべき乗にする。"
+context:
+  author:
+    es: Basada en la teoría de Irving Fisher
+    en: Based on Irving Fisher's theory
+    pt: Baseada na teoria de Irving Fisher
+    fr: Basée sur la théorie d'Irving Fisher
+    zh: 基于欧文·费雪的理论
+    ja: アーヴィング・フィッシャーの理論に基づく
+  era:
+    es: EE. UU., 1867–1947 · popularizada en el s. XX
+    en: USA, 1867–1947 · popularized in the 20th century
+    pt: EUA, 1867–1947 · popularizada no séc. XX
+    fr: États-Unis, 1867–1947 · popularisée au XXe siècle
+    zh: 美国,1867–1947年 · 20世纪推广
+    ja: アメリカ、1867–1947年・20世紀に普及
+  history:
+    es: >-
+      El valor actual neto resume la esencia de la inversión: un peso hoy vale más que un peso mañana.
+      La fórmula descuenta cada flujo de caja futuro con la tasa r y los suma; restar la inversión
+      inicial da el valor actual neto. Si es positivo, el proyecto crea valor; si es negativo, lo
+      destruye. Irving Fisher sentó sus bases a principios del siglo XX y hoy es el estándar de oro del
+      presupuesto de capital, preferido a reglas simples como el periodo de recuperación porque respeta
+      el valor del dinero en el tiempo.
+    en: >-
+      Net present value captures the essence of investing: a dollar today is worth more than a dollar
+      tomorrow. The formula discounts each future cash flow at rate r and adds them together;
+      subtracting the initial investment yields the net present value. If positive, the project creates
+      value; if negative, it destroys it. Irving Fisher laid its foundations in the early 20th century,
+      and today it is the gold standard of capital budgeting, preferred over simple rules such as the
+      payback period because it respects the time value of money.
+    pt: >-
+      O valor presente líquido resume a essência do investimento: um real hoje vale mais do que um real
+      amanhã. A fórmula desconta cada fluxo de caixa futuro à taxa r e os soma; subtrair o investimento
+      inicial resulta no valor presente líquido. Se for positivo, o projeto cria valor; se for negativo,
+      destrói. Irving Fisher lançou suas bases no início do século XX e hoje é o padrão de ouro do
+      orçamento de capital, preferido a regras simples como o período de retorno, porque respeita o
+      valor do dinheiro no tempo.
+    fr: >-
+      La valeur actuelle nette résume l'essence de l'investissement : un euro aujourd'hui vaut plus
+      qu'un euro demain. La formule actualise chaque flux de trésorerie futur au taux r puis les
+      additionne ; soustraire l'investissement initial donne la valeur actuelle nette. Si elle est
+      positive, le projet crée de la valeur ; sinon, il la détruit. Irving Fisher en posa les bases au
+      début du XXe siècle et elle est aujourd'hui la référence du budget d'investissement, préférée aux
+      règles simples comme le délai de récupération, car elle respecte la valeur temps de l'argent.
+    zh: >-
+      净现值概括了投资的本质:今天的钱比明天的钱更值钱。该公式以利率r将每一笔未来现金流折现后相加,再减去初始投资,
+      即得到净现值。若为正,项目创造价值;若为负,则毁损价值。欧文·费雪在20世纪初奠定了它的基础,如今它是资本预算的
+      金标准,之所以优于回收期等简单规则,是因为它尊重了货币的时间价值。
+    ja: >-
+      正味現在価値は投資の本質を一言で表す:今日の1円は明日の1円より価値がある。この式は各将来キャッシュフローを
+      利率rで割り引いて合計し、初期投資を差し引いて正味現在価値を求める。正ならプロジェクトは価値を生み、負なら価値を
+      壊す。アーヴィング・フィッシャーが20世紀初頭にその基礎を築き、今日では資本予算の金標準となっている。回収期間の
+      ような単純なルールより好まれるのは、貨幣の時間価値を尊重しているからだ。
+  timeline:
+    - year: "1907"
+      label:
+        es: >-
+          Irving Fisher publica La tasa de interés, que formaliza el descuento de flujos futuros.
+        en: >-
+          Irving Fisher publishes The Rate of Interest, formalizing the discounting of future flows.
+        pt: >-
+          Irving Fisher publica A Taxa de Juros, formalizando o desconto de fluxos futuros.
+        fr: >-
+          Irving Fisher publie Le Taux d'intérêt, formalisant l'actualisation des flux futurs.
+        zh: >-
+          欧文·费雪出版《利率》,将未来现金流的折现形式化。
+        ja: >-
+          アーヴィング・フィッシャーが『利子率』を出版し、将来キャッシュフローの割引を定式化する。
+    - year: "1951"
+      label:
+        es: >-
+          Joel Dean populariza el valor actual neto en la gestión de inversiones empresariales.
+        en: >-
+          Joel Dean popularizes net present value in corporate investment management.
+        pt: >-
+          Joel Dean populariza o valor presente líquido na gestão de investimentos empresariais.
+        fr: >-
+          Joel Dean popularise la valeur actuelle nette dans la gestion des investissements
+          d'entreprise.
+        zh: >-
+          乔尔·迪恩在公司投资管理中推广净现值。
+        ja: >-
+          ジョエル・ディーンが企業投資管理に正味現在価値を普及させる。
+    - year: Hoy
+      label:
+        es: >-
+          Es el estándar de oro para decidir si un proyecto de inversión vale la pena.
+        en: >-
+          It is the gold standard for deciding whether an investment project is worthwhile.
+        pt: >-
+          É o padrão de ouro para decidir se um projeto de investimento vale a pena.
+        fr: >-
+          C'est la référence pour décider si un projet d'investissement en vaut la peine.
+        zh: >-
+          它是判断投资项目是否值得的金标准。
+        ja: >-
+          投資プロジェクトに価値があるかを判断する金標準である。
+  useCases:
+    - title:
+        es: Presupuesto de capital
+        en: Capital budgeting
+        pt: Orçamento de capital
+        fr: Budgétisation des investissements
+        zh: 资本预算
+        ja: 資本予算
+      description:
+        es: >-
+          Las empresas aceptan proyectos solo si su valor actual neto es positivo, el criterio central
+          de inversión.
+        en: >-
+          Companies accept projects only if their net present value is positive, the central investment
+          criterion.
+        pt: >-
+          Empresas aceitam projetos apenas se seu valor presente líquido for positivo, o critério
+          central de investimento.
+        fr: >-
+          Les entreprises n'acceptent un projet que si sa valeur actuelle nette est positive, le
+          critère central d'investissement.
+        zh: >-
+          只有当项目的净现值为正时,企业才会接受它,这是核心的投资标准。
+        ja: >-
+          企業は正味現在価値が正のプロジェクトだけを採用する。これは投資判断の中心的な基準だ。
+    - title:
+        es: Valoración de empresas
+        en: Company valuation
+        pt: Avaliação de empresas
+        fr: Évaluation d'entreprise
+        zh: 企业估值
+        ja: 企業評価
+      description:
+        es: >-
+          Los analistas descuentan los flujos futuros de una empresa para estimar cuánto vale hoy.
+        en: >-
+          Analysts discount a company's future cash flows to estimate what it is worth today.
+        pt: >-
+          Analistas descontam os fluxos futuros de uma empresa para estimar quanto ela vale hoje.
+        fr: >-
+          Les analystes actualisent les flux futurs d'une entreprise pour estimer ce qu'elle vaut
+          aujourd'hui.
+        zh: >-
+          分析师对企业的未来现金流折现,以估算其当前价值。
+        ja: >-
+          アナリストは企業の将来キャッシュフローを割り引いて、今日の価値を推定する。
+    - title:
+        es: Finanzas públicas
+        en: Public finance
+        pt: Finanças públicas
+        fr: Finances publiques
+        zh: 公共财政
+        ja: 公共財政
+      description:
+        es: >-
+          El análisis de costo-beneficio de obras públicas usa el valor actual neto social para decidir
+          su ejecución.
+        en: >-
+          Cost-benefit analysis of public works uses social net present value to decide whether to
+          proceed.
+        pt: >-
+          A análise de custo-benefício de obras públicas usa o valor presente líquido social para
+          decidir sua execução.
+        fr: >-
+          L'analyse coût-bénéfice des ouvrages publics utilise la valeur actuelle nette sociale pour
+          décider de leur réalisation.
+        zh: >-
+          公共工程的社会成本效益分析用社会净现值决定是否实施。
+        ja: >-
+          公共事業の費用便益分析は、社会的正味現在価値を使って実施の可否を決める。
+    - title:
+        es: Banca y seguros
+        en: Banking and insurance
+        pt: Banca e seguros
+        fr: Banque et assurance
+        zh: 银行与保险
+        ja: 銀行と保険
+      description:
+        es: >-
+          Las aseguradoras comparan el valor actual de las primas con el de los siniestros esperados.
+        en: >-
+          Insurers compare the present value of premiums with that of expected claims.
+        pt: >-
+          Seguradoras comparam o valor presente dos prêmios com o dos sinistros esperados.
+        fr: >-
+          Les assureurs comparent la valeur actuelle des primes à celle des sinistres attendus.
+        zh: >-
+          保险公司将保费的现值与预期赔付的现值进行比较。
+        ja: >-
+          保険会社は保険料の現在価値を予想保険金支払額の現在価値と比較する。
+  example:
+    title:
+      es: Invertir 1000 hoy
+      en: Investing 1000 today
+      pt: Investir 1000 hoje
+      fr: Investir 1000 aujourd'hui
+      zh: 今天投资1000
+      ja: 今日1000を投資
+    lines:
+      - es: "Inversión inicial = 1000"
+        en: "Initial investment = 1000"
+        pt: "Investimento inicial = 1000"
+        fr: "Investissement initial = 1000"
+        zh: "初始投资 = 1000"
+        ja: "初期投資 = 1000"
+      - es: "r = 10% = 0.10"
+        en: "r = 10% = 0.10"
+        pt: "r = 10 % = 0,10"
+        fr: "r = 10 % = 0,10"
+        zh: "r = 10% = 0.10"
+        ja: "r = 10% = 0.10"
+      - es: "NPV = 600/(1.10)¹ + 600/(1.10)² − 1000"
+        en: "NPV = 600/(1.10)¹ + 600/(1.10)² − 1000"
+        pt: "NPV = 600/(1,10)¹ + 600/(1,10)² − 1000"
+        fr: "NPV = 600/(1,10)¹ + 600/(1,10)² − 1000"
+        zh: "NPV = 600/(1.10)¹ + 600/(1.10)² − 1000"
+        ja: "NPV = 600/(1.10)¹ + 600/(1.10)² − 1000"
+      - es: "NPV = 545.45 + 495.87 − 1000"
+        en: "NPV = 545.45 + 495.87 − 1000"
+        pt: "NPV = 545,45 + 495,87 − 1000"
+        fr: "NPV = 545,45 + 495,87 − 1000"
+        zh: "NPV = 545.45 + 495.87 − 1000"
+        ja: "NPV = 545.45 + 495.87 − 1000"
+      - es: "NPV = 1041.32 − 1000"
+        en: "NPV = 1041.32 − 1000"
+        pt: "NPV = 1041,32 − 1000"
+        fr: "NPV = 1041,32 − 1000"
+        zh: "NPV = 1041.32 − 1000"
+        ja: "NPV = 1041.32 − 1000"
+      - es: "NPV ≈ 41.3 > 0 → aceptar"
+        en: "NPV ≈ 41.3 > 0 → accept"
+        pt: "NPV ≈ 41,3 > 0 → aceitar"
+        fr: "NPV ≈ 41,3 > 0 → accepter"
+        zh: "NPV ≈ 41.3 > 0 → 接受"
+        ja: "NPV ≈ 41.3 > 0 → 採用"

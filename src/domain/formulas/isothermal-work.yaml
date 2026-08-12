@@ -1,0 +1,392 @@
+id: isothermal-work
+title:
+  es: Trabajo Isotérmico de un Gas
+  en: Isothermal Gas Work
+  pt: Trabalho Isotérmico de um Gás
+  fr: Travail isotherme d'un gaz
+  zh: 气体等温功
+  ja: 等温過程における気体の仕事
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: w
+    type: variable
+    value: W
+    explanation:
+      es: "El trabajo realizado por el gas durante el proceso, medido en joules."
+      en: "The work done by the gas during the process, measured in joules."
+      pt: "O trabalho realizado pelo gás durante o processo, medido em joules."
+      fr: "Le travail réalisé par le gaz au cours du processus, mesuré en joules."
+      zh: 过程中气体所做的功，以焦耳为单位。
+      ja: 過程の間に気体が行う仕事。単位はジュール。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: "La cantidad de gas, medida en moles."
+      en: "The amount of gas, measured in moles."
+      pt: "A quantidade de gás, medida em mols."
+      fr: "La quantité de gaz, mesurée en moles."
+      zh: 气体的物质的量，以摩尔为单位。
+      ja: 気体の物質量。単位はモル。
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: r
+    type: constant
+    value: R
+    explanation:
+      es: "La constante de los gases ideales: 8.314 J/(mol·K)."
+      en: "The ideal gas constant: 8.314 J/(mol·K)."
+      pt: "A constante dos gases ideais: 8,314 J/(mol·K)."
+      fr: "La constante des gaz parfaits : 8,314 J/(mol·K)."
+      zh: "理想气体常数：8.314 J/(mol·K)。"
+      ja: "理想気体定数。8.314 J/(mol·K)。"
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: t
+    type: variable
+    value: T
+    explanation:
+      es: "La temperatura absoluta del gas, en kelvin, que permanece constante en el proceso."
+      en: "The gas's absolute temperature, in kelvin, which stays constant during the process."
+      pt: "A temperatura absoluta do gás, em kelvin, que permanece constante no processo."
+      fr: "La température absolue du gaz, en kelvins, qui reste constante pendant le processus."
+      zh: 气体的绝对温度，单位为开尔文，在过程中保持不变。
+      ja: 気体の絶対温度。単位はケルビン。この過程では一定に保たれる。
+  - id: dot-3
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: ln
+    type: operator
+    value: ln
+    explanation:
+      es: "Logaritmo natural: surge de integrar la presión respecto del volumen a temperatura constante."
+      en: "Natural logarithm: it arises from integrating pressure over volume at constant temperature."
+      pt: "Logaritmo natural: surge ao integrar a pressão em relação ao volume a temperatura constante."
+      fr: "Logarithme naturel : il provient de l'intégration de la pression sur le volume à température constante."
+      zh: 自然对数：由恒温条件下压力对体积积分得出。
+      ja: 自然対数。温度一定の下で圧力を体積について積分することから現れる。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre la expresión.
+      en: Opens the expression.
+      pt: Abre a expressão.
+      fr: Ouvre l'expression.
+      zh: 打开表达式。
+      ja: 式を開く括弧。
+  - id: v-2
+    type: variable
+    value: V₂
+    explanation:
+      es: "El volumen final del gas, al terminar la expansión o compresión."
+      en: "The gas's final volume, at the end of the expansion or compression."
+      pt: "O volume final do gás, ao terminar a expansão ou compressão."
+      fr: "Le volume final du gaz, à la fin de la détente ou de la compression."
+      zh: 气体在膨胀或压缩结束时的最终体积。
+      ja: 膨張または圧縮が終わった時点の気体の体積。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: v-1
+    type: variable
+    value: V₁
+    explanation:
+      es: "El volumen inicial del gas, antes de comenzar el proceso."
+      en: "The gas's initial volume, before the process begins."
+      pt: "O volume inicial do gás, antes de o processo começar."
+      fr: "Le volume initial du gaz, avant le début du processus."
+      zh: 过程开始前气体的初始体积。
+      ja: 過程が始まる前の気体の体積。
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra la expresión.
+      en: Closes the expression.
+      pt: Fecha a expressão.
+      fr: Ferme l'expression.
+      zh: 关闭表达式。
+      ja: 式を閉じる括弧。
+context:
+  author:
+    es: Basada en la ley de los gases ideales
+    en: Based on the ideal gas law
+    pt: Baseada na lei dos gases ideais
+    fr: Basée sur la loi des gaz parfaits
+    zh: 基于理想气体定律
+    ja: 理想気体の法則に基づく
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, séc. XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲，19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      El trabajo isotérmico mide cuánto trabajo realiza un gas ideal al expandirse o comprimirse sin
+      cambiar de temperatura. Se obtiene integrando la presión respecto del volumen: como P·V = n·R·T y
+      la temperatura es constante, la presión varía como 1/V y la integral produce un logaritmo natural.
+      La idea maduró en el siglo XIX, y Sadi Carnot la convirtió en el paso central de su ciclo, donde la
+      expansión isotérmica transforma calor en trabajo de la manera más eficiente posible. Sigue siendo
+      el modelo de compresores, motores neumáticos y procesos químicos a temperatura constante.
+    en: >-
+      Isothermal work measures how much work an ideal gas does while expanding or compressing without
+      changing temperature. It is obtained by integrating pressure against volume: since P·V = n·R·T and
+      the temperature stays constant, pressure varies as 1/V and the integral yields a natural logarithm.
+      The idea matured in the 19th century, and Sadi Carnot made it the central step of his cycle, where
+      isothermal expansion turns heat into work as efficiently as possible. It still models compressors,
+      pneumatic motors, and chemical processes at constant temperature.
+    pt: >-
+      O trabalho isotérmico mede quanto trabalho um gás ideal realiza ao se expandir ou comprimir sem
+      mudar de temperatura. Obtém-se integrando a pressão em relação ao volume: como P·V = n·R·T e a
+      temperatura é constante, a pressão varia como 1/V e a integral resulta em um logaritmo natural. A
+      ideia amadureceu no século XIX, e Sadi Carnot a transformou no passo central de seu ciclo, onde a
+      expansão isotérmica converte calor em trabalho da forma mais eficiente possível. Ela ainda modela
+      compressores, motores pneumáticos e processos químicos a temperatura constante.
+    fr: >-
+      Le travail isotherme mesure le travail qu'un gaz parfait effectue en se dilatant ou en se
+      comprimant sans changer de température. On l'obtient en intégrant la pression en fonction du
+      volume : comme P·V = n·R·T et que la température reste constante, la pression varie en 1/V et
+      l'intégrale donne un logarithme naturel. L'idée a mûri au XIXe siècle, et Sadi Carnot en a fait
+      l'étape centrale de son cycle, où la détente isotherme transforme la chaleur en travail de la façon
+      la plus efficace possible. Elle modélise encore les compresseurs, les moteurs pneumatiques et les
+      procédés chimiques à température constante.
+    zh: >-
+      等温功衡量理想气体在温度不变的情况下膨胀或压缩时所做的功。通过对压力关于体积积分得到：由于P·V = n·R·T
+      且温度恒定，压力按1/V变化，积分结果就是自然对数。这一概念在19世纪成熟，萨迪·卡诺将其作为其循环的核心步骤
+      ——等温膨胀以尽可能高的效率把热量转化为功。它至今仍是压缩机、气动马达以及恒温化学过程的模型。
+    ja: >-
+      等温仕事は、理想気体が温度を変えずに膨張・圧縮するときに行う仕事を測るものである。圧力を体積で積分して
+      得られる。P·V = n·R·T で温度が一定なら、圧力は1/Vのように変化し、積分結果は自然対数になる。この考えは
+      19世紀に成熟し、サディ・カノーが彼のサイクルの中心的な過程とした。等温膨張では、熱を可能な限り効率よく
+      仕事に変換できる。今もコンプレッサーや空気圧モーター、定温の化学プロセスのモデルとして使われている。
+  timeline:
+    - year: "1662"
+      label:
+        es: >-
+          Boyle publica que a temperatura constante el producto P·V se mantiene constante, la base del
+          proceso isotérmico.
+        en: >-
+          Boyle publishes that P·V stays constant at constant temperature, the basis of the isothermal
+          process.
+        pt: >-
+          Boyle publica que, a temperatura constante, o produto P·V se mantém constante, a base do
+          processo isotérmico.
+        fr: >-
+          Boyle publie que P·V reste constant à température constante, la base du processus isotherme.
+        zh: >-
+          玻意耳发表成果：温度恒定时P·V保持不变，这是等温过程的基础。
+        ja: >-
+          ボイルが、温度一定ならP·Vが一定に保たれることを発表。等温過程の基礎となる。
+    - year: "1824"
+      label:
+        es: >-
+          Carnot introduce la expansión y la compresión isotérmicas como pasos centrales de su ciclo.
+        en: >-
+          Carnot introduces isothermal expansion and compression as central steps of his cycle.
+        pt: >-
+          Carnot introduz a expansão e a compressão isotérmicas como passos centrais de seu ciclo.
+        fr: >-
+          Carnot introduit la détente et la compression isothermes comme étapes centrales de son cycle.
+        zh: >-
+          卡诺将等温膨胀和等温压缩引入其循环，作为核心步骤。
+        ja: >-
+          カノーがサイクルの中心的な過程として等温膨張と等温圧縮を導入する。
+    - year: Hoy
+      label:
+        es: >-
+          Los compresores y los sistemas neumáticos modelan el trabajo del gas con esta ecuación.
+        en: >-
+          Compressors and pneumatic systems model gas work with this equation today.
+        pt: >-
+          Compressores e sistemas pneumáticos modelam hoje o trabalho do gás com esta equação.
+        fr: >-
+          Compresseurs et systèmes pneumatiques modélisent aujourd'hui le travail du gaz avec cette
+          équation.
+        zh: >-
+          如今，压缩机和气动系统用这个方程来建模气体功。
+        ja: >-
+          今日、コンプレッサーや空気圧システムはこの式で気体の仕事をモデル化している。
+  useCases:
+    - title:
+        es: Compresores de aire
+        en: Air compressors
+        pt: Compressores de ar
+        fr: Compresseurs d'air
+        zh: 空气压缩机
+        ja: 空気圧縮機
+      description:
+        es: >-
+          Calcula el trabajo necesario para comprimir un gas lentamente, manteniendo su temperatura
+          estable.
+        en: >-
+          It computes the work needed to compress a gas slowly, keeping its temperature steady.
+        pt: >-
+          Calcula o trabalho necessário para comprimir um gás lentamente, mantendo sua temperatura
+          estável.
+        fr: >-
+          Elle calcule le travail nécessaire pour comprimer lentement un gaz, en gardant sa température
+          stable.
+        zh: >-
+          计算缓慢压缩气体并保持温度稳定所需的功。
+        ja: >-
+          温度を一定に保ちながら気体をゆっくり圧縮するのに必要な仕事を計算する。
+    - title:
+        es: Motores térmicos y refrigeración
+        en: Heat engines and refrigeration
+        pt: Motores térmicos e refrigeração
+        fr: Moteurs thermiques et réfrigération
+        zh: 热机与制冷
+        ja: 熱機関と冷凍
+      description:
+        es: >-
+          El paso isotérmico de los ciclos de Carnot y de Stirling limita el trabajo útil que cada ciclo
+          puede entregar.
+        en: >-
+          The isothermal step of the Carnot and Stirling cycles bounds the useful work each cycle can
+          deliver.
+        pt: >-
+          O passo isotérmico dos ciclos de Carnot e de Stirling limita o trabalho útil que cada ciclo
+          pode entregar.
+        fr: >-
+          L'étape isotherme des cycles de Carnot et de Stirling borne le travail utile que chaque cycle
+          peut fournir.
+        zh: >-
+          卡诺循环和斯特林循环中的等温步骤决定了每个循环能提供的净功上限。
+        ja: >-
+          カノーサイクルとスターリングサイクルの等温過程が、各サイクルが取り出せる有効な仕事の上限を決める。
+    - title:
+        es: Ingeniería química
+        en: Chemical engineering
+        pt: Engenharia química
+        fr: Génie chimique
+        zh: 化学工程
+        ja: 化学工学
+      description:
+        es: >-
+          Modela compresiones a temperatura controlada en reactores y sistemas de almacenamiento de gas.
+        en: >-
+          It models controlled-temperature compression in reactors and gas storage systems.
+        pt: >-
+          Modela compressões a temperatura controlada em reatores e sistemas de armazenamento de gás.
+        fr: >-
+          Elle modélise des compressions à température contrôlée dans les réacteurs et les stockages de
+          gaz.
+        zh: >-
+          为反应器和储气系统中的恒温压缩过程建模。
+        ja: >-
+          反応器やガス貯蔵システムにおける温度制御下の圧縮をモデル化する。
+    - title:
+        es: Sistemas neumáticos
+        en: Pneumatic systems
+        pt: Sistemas pneumáticos
+        fr: Systèmes pneumatiques
+        zh: 气动系统
+        ja: 空圧システム
+      description:
+        es: >-
+          Dimensiona cilindros y actuadores que expanden o comprimen aire a temperatura casi constante.
+        en: >-
+          It sizes cylinders and actuators that expand or compress air at nearly constant temperature.
+        pt: >-
+          Dimensiona cilindros e atuadores que expandem ou comprimem ar a temperatura quase constante.
+        fr: >-
+          Elle dimensionne les vérins et actionneurs qui détendent ou compriment l'air à température
+          presque constante.
+        zh: >-
+          为在近似恒温条件下膨胀或压缩空气的气缸和执行器确定规格。
+        ja: >-
+          ほぼ一定の温度で空気を膨張・圧縮するシリンダーやアクチュエーターの寸法を決める。
+  example:
+    title:
+      es: Compresión isotérmica de un mol
+      en: Isothermal compression of one mole
+      pt: Compressão isotérmica de um mol
+      fr: Compression isotherme d'une mole
+      zh: 一摩尔气体的等温压缩
+      ja: 1モルの気体の等温圧縮
+    lines:
+      - es: "n = 1 mol, R = 8.314 J/(mol·K), T = 300 K"
+        en: "n = 1 mol, R = 8.314 J/(mol·K), T = 300 K"
+        pt: "n = 1 mol, R = 8,314 J/(mol·K), T = 300 K"
+        fr: "n = 1 mol, R = 8,314 J/(mol·K), T = 300 K"
+        zh: "n = 1 mol，R = 8.314 J/(mol·K)，T = 300 K"
+        ja: "n = 1 mol、R = 8.314 J/(mol·K)、T = 300 K"
+      - es: V₂/V₁ = 2
+        en: V₂/V₁ = 2
+        pt: V₂/V₁ = 2
+        fr: V₂/V₁ = 2
+        zh: V₂/V₁ = 2
+        ja: V₂/V₁ = 2
+      - es: W = n·R·T·ln(V₂/V₁)
+        en: W = n·R·T·ln(V₂/V₁)
+        pt: W = n·R·T·ln(V₂/V₁)
+        fr: W = n·R·T·ln(V₂/V₁)
+        zh: W = n·R·T·ln(V₂/V₁)
+        ja: W = n·R·T·ln(V₂/V₁)
+      - es: "W = 1 × 8.314 × 300 × ln(2)"
+        en: "W = 1 × 8.314 × 300 × ln(2)"
+        pt: "W = 1 × 8,314 × 300 × ln(2)"
+        fr: "W = 1 × 8,314 × 300 × ln(2)"
+        zh: "W = 1 × 8.314 × 300 × ln(2)"
+        ja: "W = 1 × 8.314 × 300 × ln(2)"
+      - es: "W = 2494.2 × 0.693"
+        en: "W = 2494.2 × 0.693"
+        pt: "W = 2494,2 × 0,693"
+        fr: "W = 2494,2 × 0,693"
+        zh: "W = 2494.2 × 0.693"
+        ja: "W = 2494.2 × 0.693"
+      - es: "W ≈ 1729 J"
+        en: "W ≈ 1729 J"
+        pt: "W ≈ 1729 J"
+        fr: "W ≈ 1729 J"
+        zh: "W ≈ 1729 J"
+        ja: "W ≈ 1729 J"

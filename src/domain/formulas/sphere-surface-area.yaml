@@ -1,0 +1,309 @@
+id: sphere-surface-area
+title:
+  es: Área de una Esfera
+  en: Surface Area of a Sphere
+  pt: Área de uma Esfera
+  fr: Aire d'une Sphère
+  zh: 球体的表面积
+  ja: 球の表面積
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: area
+    type: variable
+    value: A
+    explanation:
+      es: "El área: la superficie total que envuelve la esfera."
+      en: "The area: the total surface enclosing the sphere."
+      pt: "A área: a superfície total que envolve a esfera."
+      fr: "L'aire : la surface totale qui enveloppe la sphère."
+      zh: "面积：包裹球体的总表面。"
+      ja: "面積：球を包む表面全体。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: ちょうど等しい。
+  - id: four
+    type: number
+    value: "4"
+    explanation:
+      es: "Cuatro: el área de la esfera es cuatro veces la de su círculo máximo."
+      en: "Four: a sphere's area is four times that of its great circle."
+      pt: "Quatro: a área da esfera é quatro vezes a de seu círculo máximo."
+      fr: "Quatre : l'aire d'une sphère vaut quatre fois celle de son grand cercle."
+      zh: "四：球的表面积是其大圆面积的四倍。"
+      ja: "4：球の表面積は、その大円の面積の4倍である。"
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: Pi, la razón constante entre la circunferencia de un círculo y su diámetro.
+      en: Pi, the constant ratio between a circle's circumference and its diameter.
+      pt: Pi, a razão constante entre a circunferência de um círculo e seu diâmetro.
+      fr: Pi, le rapport constant entre la circonférence d'un cercle et son diamètre.
+      zh: 圆周率π，圆的周长与直径之比的常数。
+      ja: 円周率π。円の円周と直径の一定な比。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "El radio: la distancia desde el centro de la esfera hasta su superficie."
+      en: "The radius: the distance from the sphere's center to its surface."
+      pt: "O raio: a distância do centro da esfera à sua superfície."
+      fr: "Le rayon : la distance du centre de la sphère à sa surface."
+      zh: "半径：从球心到球面的距离。"
+      ja: "半径：球の中心から表面までの距離。"
+  - id: r-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Elevado al cuadrado: el radio multiplicado por sí mismo."
+      en: "Squared: the radius multiplied by itself."
+      pt: "Elevado ao quadrado: o raio multiplicado por si mesmo."
+      fr: "Élevé au carré : le rayon multiplié par lui-même."
+      zh: "平方：半径与自身相乘。"
+      ja: "2乗：半径を自分自身に掛けたもの。"
+context:
+  author:
+    es: Arquímedes de Siracusa
+    en: Archimedes of Syracuse
+    pt: Arquimedes de Siracusa
+    fr: Archimède de Syracuse
+    zh: 叙拉古的阿基米德
+    ja: シラクサのアルキメデス
+  era:
+    es: Siracusa, c. 287–212 a.C. · demostrado en Sobre la esfera y el cilindro
+    en: Syracuse, c. 287–212 BC · proved in On the Sphere and Cylinder
+    pt: Siracusa, c. 287–212 a.C. · demonstrado em Sobre a esfera e o cilindro
+    fr: Syracuse, v. 287–212 av. J.-C. · démontré dans De la sphère et du cylindre
+    zh: 叙拉古，约公元前287–212年·在《论球与圆柱》中证明
+    ja: シラクサ、紀元前287年頃〜前212年・『球と円柱について』で証明
+  history:
+    es: >-
+      Arquímedes demostró en Sobre la esfera y el cilindro que la superficie de la esfera es cuatro
+      veces el área de su círculo máximo, uno de sus resultados más admirados. Con él calculó la
+      superficie de los planetas en la antigüedad, y hoy sigue midiendo desde burbujas de jabón
+      hasta bolas de molienda.
+    en: >-
+      Archimedes proved in On the Sphere and the Cylinder that a sphere's surface is four times the
+      area of its great circle — one of his most admired results. With it he sized planets in
+      antiquity, and it still measures everything from soap bubbles to grinding balls today.
+    pt: >-
+      Arquimedes demonstrou em Sobre a esfera e o cilindro que a superfície da esfera é quatro vezes
+      a área de seu círculo máximo, um de seus resultados mais admirados. Com ele calculou a
+      superfície dos planetas na Antiguidade, e hoje ele ainda mede desde bolhas de sabão até bolas
+      de moagem.
+    fr: >-
+      Archimède démontra dans De la sphère et du cylindre que la surface d'une sphère vaut quatre
+      fois l'aire de son grand cercle — l'un de ses résultats les plus admirés. Il s'en servit pour
+      mesurer la surface des planètes dans l'Antiquité, et il sert encore aujourd'hui des bulles de
+      savon aux boulets de broyage.
+    zh: >-
+      阿基米德在《论球与圆柱》中证明，球的表面积等于其大圆面积的四倍，这是他最引以为傲的成果之一。
+      他由此计算了古时候行星的表面积，如今从肥皂泡到研磨球体，仍用它来测量。
+    ja: >-
+      アルキメデスは『球と円柱について』の中で、球の表面積がその大円の面積の4倍であることを証明した。
+      これは彼が最も誇りにした成果の一つである。古代には惑星の表面積の計算に用いられ、今日では石鹸の泡から
+      粉砕用ボールまで、さまざまな対象の計測に使われている。
+  timeline:
+    - year: c. 250 a.C.
+      label:
+        es: >-
+          Arquímedes demuestra A = 4πr² en Sobre la esfera y el cilindro, relacionando la esfera con
+          su cilindro circunscrito.
+        en: >-
+          Archimedes proves A = 4πr² in On the Sphere and the Cylinder, linking the sphere to its
+          circumscribed cylinder.
+        pt: >-
+          Arquimedes demonstra A = 4πr² em Sobre a esfera e o cilindro, relacionando a esfera com
+          seu cilindro circunscrito.
+        fr: >-
+          Archimède démontre A = 4πr² dans De la sphère et du cylindre, reliant la sphère à son
+          cylindre circonscrit.
+        zh: >-
+          阿基米德在《论球与圆柱》中证明A = 4πr²，把球与它的外接圆柱联系起来。
+        ja: >-
+          アルキメデスが『球と円柱について』でA = 4πr²を証明し、球と外接する円柱との関係を示す。
+    - year: "1888"
+      label:
+        es: >-
+          Stefan y Boltzmann formulan la ley de radiación del cuerpo negro, cuyo flujo depende de la
+          superficie 4πr².
+        en: >-
+          Stefan and Boltzmann formulate the black-body radiation law, whose flux depends on the
+          surface 4πr².
+        pt: >-
+          Stefan e Boltzmann formulam a lei da radiação do corpo negro, cujo fluxo depende da
+          superfície 4πr².
+        fr: >-
+          Stefan et Boltzmann formulent la loi du rayonnement du corps noir, dont le flux dépend de
+          la surface 4πr².
+        zh: >-
+          斯特藩和玻尔兹曼提出黑体辐射定律，其能量通量取决于表面积4πr²。
+        ja: >-
+          シュテファンとボルツマンが黒体放射の法則を定式化。その束は表面積4πr²に依存する。
+    - year: Hoy
+      label:
+        es: >-
+          Desde la física planetaria hasta el diseño de depósitos esféricos, esta fórmula calcula
+          superficies en cualquier escala.
+        en: >-
+          From planetary physics to the design of spherical tanks, this formula computes surfaces at
+          any scale.
+        pt: >-
+          Da física planetária ao projeto de tanques esféricos, esta fórmula calcula superfícies em
+          qualquer escala.
+        fr: >-
+          De la physique planétaire à la conception de réservoirs sphériques, cette formule calcule
+          des surfaces à toutes les échelles.
+        zh: >-
+          从行星物理学到球形储罐的设计，这一公式在任意尺度上计算表面积。
+        ja: >-
+          惑星物理学から球形タンクの設計まで、この公式はあらゆる規模の表面積を計算する。
+  useCases:
+    - title:
+        es: Ciencia planetaria
+        en: Planetary science
+        pt: Ciência planetária
+        fr: Science planétaire
+        zh: 行星科学
+        ja: 惑星科学
+      description:
+        es: >-
+          El área de la superficie terrestre y de otros cuerpos esféricos se estima con 4πr² a
+          partir del radio medio.
+        en: >-
+          The surface area of Earth and other spherical bodies is estimated with 4πr² from the mean
+          radius.
+        pt: >-
+          A área da superfície terrestre e de outros corpos esféricos é estimada com 4πr² a partir
+          do raio médio.
+        fr: >-
+          L'aire de la surface terrestre et d'autres corps sphériques est estimée avec 4πr² à partir
+          du rayon moyen.
+        zh: >-
+          地球及其他球形天体的表面积，都依据平均半径用4πr²来估算。
+        ja: >-
+          地球や他の球形の天体の表面積は、平均半径から4πr²で推定される。
+    - title:
+        es: Radiación térmica
+        en: Thermal radiation
+        pt: Radiação térmica
+        fr: Rayonnement thermique
+        zh: 热辐射
+        ja: 熱放射
+      description:
+        es: >-
+          La ley de Stefan-Boltzmann usa el área de la superficie para calcular la energía emitida
+          por estrellas y cuerpos calientes.
+        en: >-
+          The Stefan-Boltzmann law uses surface area to compute the energy emitted by stars and hot
+          bodies.
+        pt: >-
+          A lei de Stefan-Boltzmann usa a área da superfície para calcular a energia emitida por
+          estrelas e corpos quentes.
+        fr: >-
+          La loi de Stefan-Boltzmann utilise l'aire de la surface pour calculer l'énergie émise par
+          les étoiles et les corps chauds.
+        zh: >-
+          斯特藩-玻尔兹曼定律用表面积来计算恒星和炽热物体辐射的能量。
+        ja: >-
+          シュテファン・ボルツマンの法則は、恒星や高温の物体が放射するエネルギーを表面積から計算する。
+    - title:
+        es: Gotas y bolas
+        en: Droplets and balls
+        pt: Gotas e bolas
+        fr: Gouttes et boules
+        zh: 液滴与球体
+        ja: 液滴とボール
+      description:
+        es: >-
+          Reactores con gotas esféricas, bolas de molienda y rodamientos dimensionan su superficie
+          para calor o desgaste.
+        en: >-
+          Reactors with spherical droplets, grinding balls, and bearings size their surface for heat
+          transfer or wear.
+        pt: >-
+          Reatores com gotas esféricas, bolas de moagem e rolamentos dimensionam sua superfície
+          para calor ou desgaste.
+        fr: >-
+          Les réacteurs à gouttes sphériques, les boulets de broyage et les roulements dimensionnent
+          leur surface pour le transfert de chaleur ou l'usure.
+        zh: >-
+          含球形液滴的反应器、研磨球和轴承，都以表面积来确定传热或磨损性能。
+        ja: >-
+          球形の液滴を用いる反応器や粉砕用ボール、ベアリングは、伝熱や摩耗のために表面積を設計する。
+    - title:
+        es: Pintura y recubrimiento
+        en: Painting and coating
+        pt: Pintura e revestimento
+        fr: Peinture et revêtement
+        zh: 喷漆与涂覆
+        ja: 塗装と被覆
+      description:
+        es: >-
+          El material para pintar o recubrir un objeto esférico — tanque, cúpula, balón — se
+          presupuesta a partir de su área.
+        en: >-
+          The material for painting or coating a spherical object — tank, dome, ball — is budgeted
+          from its area.
+        pt: >-
+          O material para pintar ou revestir um objeto esférico — tanque, cúpula, bola — é orçado a
+          partir de sua área.
+        fr: >-
+          La matière pour peindre ou recouvrir un objet sphérique — réservoir, coupole, ballon — se
+          chiffre à partir de son aire.
+        zh: >-
+          为球形物体——储罐、穹顶、球——喷漆或涂覆所需的材料，都依据其表面积来预算。
+        ja: >-
+          球形の物体（タンク、ドーム、ボール）の塗装・被覆に必要な材料は、その表面積から見積もられる。
+  example:
+    title:
+      es: Una esfera de radio 3
+      en: A sphere of radius 3
+      pt: Uma esfera de raio 3
+      fr: Une sphère de rayon 3
+      zh: 半径为3的球体
+      ja: 半径3の球
+    lines:
+      - es: r = 3
+        en: r = 3
+        pt: r = 3
+        fr: r = 3
+        zh: r = 3
+        ja: r = 3
+      - es: A = 4 · π · r²
+        en: A = 4 · π · r²
+        pt: A = 4 · π · r²
+        fr: A = 4 · π · r²
+        zh: A = 4 · π · r²
+        ja: A = 4 · π · r²
+      - es: A = 4 · π · 9
+        en: A = 4 · π · 9
+        pt: A = 4 · π · 9
+        fr: A = 4 · π · 9
+        zh: A = 4 · π · 9
+        ja: A = 4 · π · 9
+      - es: A = 36π
+        en: A = 36π
+        pt: A = 36π
+        fr: A = 36π
+        zh: A = 36π
+        ja: A = 36π
+      - es: A ≈ 113.10
+        en: A ≈ 113.10
+        pt: A ≈ 113,10
+        fr: A ≈ 113,10
+        zh: A ≈ 113.10
+        ja: A ≈ 113.10

@@ -1,0 +1,408 @@
+id: stopping-distance
+title:
+  es: Distancia de Frenado
+  en: Stopping Distance
+  pt: Distância de Frenagem
+  fr: Distance d'arrêt
+  zh: 制动距离
+  ja: 制動距離
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: d
+    type: variable
+    value: d
+    explanation:
+      es: "La distancia de frenado: la distancia que recorre el cuerpo desde que empieza a frenar hasta que se detiene."
+      en: "The stopping distance: the distance the body travels from the start of braking until it stops."
+      pt: "A distância de frenagem: a distância percorrida pelo corpo desde o início da frenagem até parar."
+      fr: "La distance d'arrêt : la distance parcourue par le corps depuis le début du freinage jusqu'à l'arrêt."
+      zh: "制动距离：物体从开始刹车到停下所经过的距离。"
+      ja: 制動距離。ブレーキをかけ始めてから停止するまでに進む距離。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La velocidad del cuerpo en el momento en que comienza a frenar.
+      en: The body's velocity at the moment it starts braking.
+      pt: A velocidade do corpo no momento em que começa a frear.
+      fr: La vitesse du corps au moment où il commence à freiner.
+      zh: 物体开始刹车那一刻的速度。
+      ja: ブレーキをかけ始めた瞬間の物体の速度。
+  - id: v-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Elevada al cuadrado: la distancia crece con el cuadrado de la velocidad."
+      en: "Squared: the distance grows with the square of the velocity."
+      pt: "Elevada ao quadrado: a distância cresce com o quadrado da velocidade."
+      fr: "Élevée au carré : la distance croît avec le carré de la vitesse."
+      zh: "平方：制动距离随速度的平方增长。"
+      ja: 二乗。距離は速度の二乗に比例して伸びる。
+  - id: divide
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: 次で割る。
+  - id: paren-open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el denominador.
+      en: Opens the denominator.
+      pt: Abre o denominador.
+      fr: Ouvre le dénominateur.
+      zh: 打开分母的括号。
+      ja: 分母の括弧を始める。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "El dos del denominador: proviene de la relación entre trabajo y energía cinética."
+      en: "The two in the denominator: it comes from the relation between work and kinetic energy."
+      pt: "O dois do denominador: vem da relação entre trabalho e energia cinética."
+      fr: "Le deux du dénominateur : il provient de la relation entre travail et énergie cinétique."
+      zh: "分母中的2：来自功与动能的关系。"
+      ja: 分母の2。仕事と運動エネルギーの関係に由来する。
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: mu
+    type: variable
+    value: μ
+    explanation:
+      es: El coeficiente de fricción entre los neumáticos y la carretera.
+      en: The coefficient of friction between the tires and the road.
+      pt: O coeficiente de atrito entre os pneus e a estrada.
+      fr: Le coefficient de frottement entre les pneus et la route.
+      zh: 轮胎与路面之间的摩擦系数。
+      ja: タイヤと路面の間の摩擦係数。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: g
+    type: constant
+    value: g
+    explanation:
+      es: La aceleración de la gravedad, 9.81 m/s² en la superficie de la Tierra.
+      en: The acceleration of gravity, 9.81 m/s² at Earth's surface.
+      pt: A aceleração da gravidade, 9,81 m/s² na superfície da Terra.
+      fr: L'accélération de la pesanteur, 9,81 m/s² à la surface de la Terre.
+      zh: 重力加速度，在地球表面约为9.81米/秒²。
+      ja: 重力加速度。地表では約9.81 m/s²。
+  - id: paren-close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el denominador.
+      en: Closes the denominator.
+      pt: Fecha o denominador.
+      fr: Ferme le dénominateur.
+      zh: 关闭分母的括号。
+      ja: 分母の括弧を閉じる。
+context:
+  author:
+    es: Derivada de la cinemática y la fricción
+    en: Derived from kinematics and friction
+    pt: Derivada da cinemática e do atrito
+    fr: Dérivée de la cinématique et du frottement
+    zh: 由运动学与摩擦推导得出
+    ja: 運動学と摩擦から導出される
+  era:
+    es: Europa, s. XVIII–XIX
+    en: Europe, 18th–19th century
+    pt: Europa, s. XVIII–XIX
+    fr: Europe, XVIIIe–XIXe siècle
+    zh: 欧洲，18–19世纪
+    ja: ヨーロッパ、18〜19世紀
+  history:
+    es: >-
+      La distancia de frenado combina la cinemática del movimiento uniformemente decelerado con la ley
+      de fricción de Coulomb. Como la energía cinética disipada por los frenos crece con el cuadrado de
+      la velocidad, la distancia de frenado crece también con su cuadrado: si un auto dobla su
+      velocidad, necesita cuatro veces más espacio para detenerse. Esta relación, derivada por los
+      físicos del movimiento de los siglos XVIII y XIX, es la base de las reglas de distancia de
+      seguridad: a 100 km/h se necesitan mucho más que el doble de metros que a 50 km/h. Es también la
+      razón por la que los sistemas de asistencia al frenado y los límites de velocidad urbanos salvan
+      vidas.
+    en: >-
+      Stopping distance combines the kinematics of uniformly decelerated motion with Coulomb's law of
+      friction. Because the kinetic energy dissipated by the brakes grows with the square of speed, the
+      stopping distance also grows with its square: a car doubling its speed needs four times more
+      space to stop. This relation, worked out by the physicists of motion in the 18th and 19th
+      centuries, underlies the rules for safe following distance: at 100 km/h you need far more than
+      twice the meters you need at 50 km/h. It is also why braking assistance systems and urban speed
+      limits save lives.
+    pt: >-
+      A distância de frenagem combina a cinemática do movimento uniformemente desacelerado com a lei do
+      atrito de Coulomb. Como a energia cinética dissipada pelos freios cresce com o quadrado da
+      velocidade, a distância de frenagem também cresce com o seu quadrado: se um carro dobra a
+      velocidade, precisa de quatro vezes mais espaço para parar. Essa relação, deduzida pelos físicos
+      do movimento nos séculos XVIII e XIX, é a base das regras de distância de segurança: a 100 km/h
+      são necessários muito mais que o dobro dos metros do que a 50 km/h. É também por isso que os
+      sistemas de assistência à frenagem e os limites de velocidade urbanos salvam vidas.
+    fr: >-
+      La distance d'arrêt combine la cinématique du mouvement uniformément décéléré avec la loi de
+      frottement de Coulomb. Comme l'énergie cinétique dissipée par les freins croît avec le carré de
+      la vitesse, la distance d'arrêt croît aussi avec son carré : une voiture qui double sa vitesse a
+      besoin de quatre fois plus d'espace pour s'arrêter. Cette relation, établie par les physiciens du
+      mouvement des XVIIIe et XIXe siècles, est à la base des règles de distance de sécurité : à
+      100 km/h, il faut bien plus que le double de mètres qu'à 50 km/h. C'est aussi pourquoi les aides
+      au freinage et les limites de vitesse en ville sauvent des vies.
+    zh: >-
+      制动距离将匀减速运动的运动学与库仑摩擦定律结合在一起。由于刹车所耗散的动能随速度的平方增长，制动距离也随之以
+      平方关系增长：汽车速度加倍，就需要四倍的空间才能停下。这一关系由18至19世纪的物理学家推导得出，是安全跟车距离
+      规则的基础：在100公里/小时下需要的刹车距离，远远超过50公里/小时下的两倍。这也是为什么制动辅助系统和城市限速
+      能够挽救生命。
+    ja: >-
+      制動距離は、等加速度の減速運動の運動学とクーロンの摩擦の法則を組み合わせたものである。ブレーキが散逸する運動
+      エネルギーは速度の二乗に比例するため、制動距離も速度の二乗に比例して伸びる。速度が2倍になれば、止まるのに必要な
+      距離は4倍になる。18〜19世紀の運動の物理学者たちが導いたこの関係は、安全な車間距離の規則の根拠となっている。
+      時速100kmでの制動距離は、時速50kmでの単純に2倍をはるかに超える。制動支援システムや市街地の速度制限が命を救う
+      理由もここにある。
+  timeline:
+    - year: "1781"
+      label:
+        es: >-
+          Coulomb establece experimentalmente la ley de fricción que interviene en la distancia de
+          frenado.
+        en: >-
+          Coulomb establishes experimentally the friction law involved in the stopping distance.
+        pt: >-
+          Coulomb estabelece experimentalmente a lei do atrito que intervém na distância de frenagem.
+        fr: >-
+          Coulomb établit expérimentalement la loi de frottement qui intervient dans la distance
+          d'arrêt.
+        zh: >-
+          库仑通过实验确立了制动距离计算所依据的摩擦定律。
+        ja: >-
+          クーロンが制動距離に関わる摩擦の法則を実験的に確立する。
+    - year: "1920"
+      label:
+        es: >-
+          Los frenos hidráulicos de cuatro ruedas se vuelven estándar, permitiendo detener el auto con
+          fuerza controlada y uniforme.
+        en: >-
+          Four-wheel hydraulic brakes become standard, letting drivers stop the car with controlled,
+          even force.
+        pt: >-
+          Os freios hidráulicos nas quatro rodas se tornam padrão, permitindo parar o carro com força
+          controlada e uniforme.
+        fr: >-
+          Les freins hydrauliques aux quatre roues deviennent la norme, permettant d'arrêter la
+          voiture avec une force contrôlée et uniforme.
+        zh: >-
+          四轮液压制动成为标配，让驾驶者能够以可控、均匀的制动力停车。
+        ja: >-
+          4輪油圧ブレーキが標準となり、制御された均一な力で車を止められるようになる。
+    - year: "1978"
+      label:
+        es: >-
+          Bosch lanza el primer ABS de serie, que preserva la máxima adherencia al evitar el bloqueo de
+          las ruedas.
+        en: >-
+          Bosch launches the first production ABS, preserving peak grip by preventing wheel lock-up.
+        pt: >-
+          A Bosch lança o primeiro ABS de série, que preserva a aderência máxima ao evitar o travamento
+          das rodas.
+        fr: >-
+          Bosch lance le premier ABS de série, qui préserve l'adhérence maximale en évitant le blocage
+          des roues.
+        zh: >-
+          博世推出首款量产ABS，通过防止车轮抱死来保持最大抓地力。
+        ja: >-
+          ボッシュが初の量産ABSを投入。ホイールロックを防いで最大のグリップを維持する。
+    - year: Hoy
+      label:
+        es: >-
+          El frenado autónomo de emergencia calcula la distancia de frenado en tiempo real para evitar
+          o mitigar colisiones.
+        en: >-
+          Autonomous emergency braking computes the stopping distance in real time to avoid or mitigate
+          collisions.
+        pt: >-
+          A frenagem autônoma de emergência calcula a distância de frenagem em tempo real para evitar
+          ou mitigar colisões.
+        fr: >-
+          Le freinage d'urgence autonome calcule la distance d'arrêt en temps réel pour éviter ou
+          atténuer les collisions.
+        zh: >-
+          自动紧急制动系统实时计算制动距离，以避开或减轻碰撞。
+        ja: >-
+          自動緊急ブレーキが制動距離をリアルタイムで計算し、衝突を回避または軽減する。
+  useCases:
+    - title:
+        es: Frenado autónomo de emergencia
+        en: Autonomous emergency braking
+        pt: Frenagem autônoma de emergência
+        fr: Freinage d'urgence automatique
+        zh: 自动紧急制动
+        ja: 自動緊急ブレーキ
+      description:
+        es: >-
+          Los sistemas AEB calculan la distancia de frenado en tiempo real para decidir si frenar
+          alcanza para evitar el choque.
+        en: >-
+          AEB systems compute the stopping distance in real time to decide whether braking is enough to
+          avoid the crash.
+        pt: >-
+          Os sistemas AEB calculam a distância de frenagem em tempo real para decidir se frear é
+          suficiente para evitar o choque.
+        fr: >-
+          Les systèmes AEB calculent la distance d'arrêt en temps réel pour décider si le freinage
+          suffit à éviter la collision.
+        zh: >-
+          AEB系统实时计算制动距离，以判断刹车是否足以避免碰撞。
+        ja: >-
+          AEBシステムは制動距離をリアルタイムで計算し、ブレーキで衝突を避けられるかを判断する。
+    - title:
+        es: Distancia de seguimiento
+        en: Safe following distance
+        pt: Distância de seguimento
+        fr: Distance de sécurité
+        zh: 安全跟车距离
+        ja: 安全な車間距離
+      description:
+        es: >-
+          La regla de los dos segundos garantiza espacio suficiente, porque la distancia de frenado
+          crece con el cuadrado de la velocidad.
+        en: >-
+          The two-second rule guarantees enough space, because the stopping distance grows with the
+          square of speed.
+        pt: >-
+          A regra dos dois segundos garante espaço suficiente, porque a distância de frenagem cresce
+          com o quadrado da velocidade.
+        fr: >-
+          La règle des deux secondes garantit un espace suffisant, car la distance d'arrêt croît avec
+          le carré de la vitesse.
+        zh: >-
+          两秒规则能确保足够的车间距，因为制动距离随速度的平方增长。
+        ja: >-
+          制動距離が速度の二乗に比例して伸びるため、2秒ルールは十分な車間距離を保証する。
+    - title:
+        es: Límites de velocidad
+        en: Speed limits
+        pt: Limites de velocidade
+        fr: Limitations de vitesse
+        zh: 限速
+        ja: 速度制限
+      description:
+        es: >-
+          Al bajar de 60 a 50 km/h, la distancia de frenado se reduce notablemente; por eso los límites
+          se reducen cerca de escuelas y zonas urbanas.
+        en: >-
+          Dropping from 60 to 50 km/h cuts the stopping distance markedly; that is why limits drop near
+          schools and in urban areas.
+        pt: >-
+          Ao baixar de 60 para 50 km/h, a distância de frenagem cai bastante; por isso os limites
+          caem perto de escolas e áreas urbanas.
+        fr: >-
+          Passer de 60 à 50 km/h réduit fortement la distance d'arrêt ; c'est pourquoi les limites
+          baissent près des écoles et en ville.
+        zh: >-
+          从60降到50公里/小时，制动距离会明显缩短；这就是学校附近和市区降低限速的原因。
+        ja: >-
+          時速60kmから50kmへの低下で制動距離は大きく縮む。学校の近くや市街地で制限が下がるのはそのためだ。
+    - title:
+        es: Reconstrucción de accidentes
+        en: Crash reconstruction
+        pt: Reconstrução de acidentes
+        fr: Reconstruction d'accidents
+        zh: 事故重建
+        ja: 事故調査・再現
+      description:
+        es: >-
+          A partir de las marcas de frenado en el asfalto, los peritos estiman la velocidad previa al
+          choque despejando v de la fórmula.
+        en: >-
+          From the skid marks on the asphalt, investigators estimate the pre-crash speed by solving the
+          formula for v.
+        pt: >-
+          A partir das marcas de frenagem no asfalto, os peritos estimam a velocidade anterior ao
+          choque isolando v na fórmula.
+        fr: >-
+          À partir des traces de freinage sur l'asphalte, les experts estiment la vitesse avant le choc
+          en isolant v dans la formule.
+        zh: >-
+          调查人员根据沥青路面上的刹车痕迹，将公式中的v解出来，从而估算碰撞前的速度。
+        ja: >-
+          アスファルトのスキッドマークから、調査員は公式をvについて解いて衝突前の速度を推定する。
+  example:
+    title:
+      es: Un auto que frena
+      en: A car braking
+      pt: Um carro freando
+      fr: Une voiture qui freine
+      zh: 一辆制动的汽车
+      ja: ブレーキをかける自動車
+    lines:
+      - es: v = 20 m/s, μ = 0.7
+        en: v = 20 m/s, μ = 0.7
+        pt: v = 20 m/s, μ = 0,7
+        fr: v = 20 m/s, μ = 0,7
+        zh: v = 20 m/s, μ = 0.7
+        ja: v = 20 m/s, μ = 0.7
+      - es: g = 9.81 m/s²
+        en: g = 9.81 m/s²
+        pt: g = 9,81 m/s²
+        fr: g = 9,81 m/s²
+        zh: g = 9.81 m/s²
+        ja: g = 9.81 m/s²
+      - es: d = v² / (2 · μ · g)
+        en: d = v² / (2 · μ · g)
+        pt: d = v² / (2 · μ · g)
+        fr: d = v² / (2 · μ · g)
+        zh: d = v² / (2 · μ · g)
+        ja: d = v² / (2 · μ · g)
+      - es: d = 400 / (2 × 0.7 × 9.81)
+        en: d = 400 / (2 × 0.7 × 9.81)
+        pt: d = 400 / (2 × 0,7 × 9,81)
+        fr: d = 400 / (2 × 0,7 × 9,81)
+        zh: d = 400 / (2 × 0.7 × 9.81)
+        ja: d = 400 / (2 × 0.7 × 9.81)
+      - es: d = 400 / 13.734
+        en: d = 400 / 13.734
+        pt: d = 400 / 13,734
+        fr: d = 400 / 13,734
+        zh: d = 400 / 13.734
+        ja: d = 400 / 13.734
+      - es: d ≈ 29 m
+        en: d ≈ 29 m
+        pt: d ≈ 29 m
+        fr: d ≈ 29 m
+        zh: d ≈ 29 m
+        ja: d ≈ 29 m

@@ -1,0 +1,285 @@
+id: mole-mass
+title:
+  es: Cantidad de Sustancia (Moles)
+  en: Moles from Mass
+  pt: Quantidade de Substância (Mols)
+  fr: Quantité de Matière (Moles)
+  zh: 物质的量（摩尔）
+  ja: 物質量（モル）
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: amount
+    type: variable
+    value: n
+    explanation:
+      es: La cantidad de sustancia, medida en moles, que conecta la masa con el número de partículas.
+      en: The amount of substance, measured in moles, which connects mass to the number of particles.
+      pt: A quantidade de substância, medida em mols, que conecta a massa ao número de partículas.
+      fr: La quantité de matière, mesurée en moles, qui relie la masse au nombre de particules.
+      zh: 物质的量,单位是摩尔,它将质量与粒子数联系起来。
+      ja: 物質量。モルで測り、質量と粒子数をつなぐ量。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: mass
+    type: variable
+    value: m
+    explanation:
+      es: La masa de la muestra, en gramos.
+      en: The mass of the sample, in grams.
+      pt: A massa da amostra, em gramas.
+      fr: La masse de l'échantillon, en grammes.
+      zh: 样品的质量,单位是克。
+      ja: 試料の質量。単位はグラム。
+  - id: molar-mass
+    type: constant
+    value: M
+    explanation:
+      es: La masa molar, la masa de un mol de la sustancia, en gramos por mol.
+      en: The molar mass, the mass of one mole of the substance, in grams per mole.
+      pt: A massa molar, a massa de um mol da substância, em gramas por mol.
+      fr: La masse molaire, la masse d'une mole de la substance, en grammes par mole.
+      zh: 摩尔质量,即一摩尔物质的质量,单位是克每摩尔。
+      ja: モル質量。その物質1モルの質量で、単位はg/mol。
+context:
+  author:
+    es: Amedeo Avogadro
+    en: Amedeo Avogadro
+    pt: Amedeo Avogadro
+    fr: Amedeo Avogadro
+    zh: 阿梅代奥·阿伏伽德罗
+    ja: アメデオ・アボガドロ
+  era:
+    es: Italia, 1776–1856 · hipótesis en 1811
+    en: Italy, 1776–1856 · hypothesis in 1811
+    pt: Itália, 1776–1856 · hipótese em 1811
+    fr: Italie, 1776–1856 · hypothèse en 1811
+    zh: 意大利,1776–1856年 · 1811年提出假说
+    ja: イタリア、1776–1856年・1811年に仮説を発表
+  history:
+    es: >-
+      El mol es la unidad que convierte el mundo macroscópico de la balanza en el mundo microscópico de
+      los átomos y las moléculas. La relación n = m/M indica que la cantidad de sustancia es la masa
+      dividida por la masa molar, expresada en gramos por mol. En 1811 Amedeo Avogadro propuso su
+      hipótesis, según la cual volúmenes iguales de gases a igual presión y temperatura contienen el
+      mismo número de moléculas, idea que permitió deducir masas moleculares y que hoy sigue siendo el
+      puente entre la balanza de cocina y las ecuaciones químicas.
+    en: >-
+      The mole is the unit that bridges the macroscopic world of the balance scale and the microscopic
+      world of atoms and molecules. The relation n = m/M says the amount of substance is the mass
+      divided by the molar mass, expressed in grams per mole. In 1811 Amedeo Avogadro proposed his
+      hypothesis that equal volumes of gases at the same pressure and temperature contain the same
+      number of molecules, an idea that allowed molecular masses to be deduced and that remains the
+      bridge between a kitchen scale and a chemical equation.
+    pt: >-
+      O mol é a unidade que liga o mundo macroscópico da balança ao mundo microscópico dos átomos e das
+      moléculas. A relação n = m/M indica que a quantidade de substância é a massa dividida pela massa
+      molar, expressa em gramas por mol. Em 1811, Amedeo Avogadro propôs sua hipótese, segundo a qual
+      volumes iguais de gases a mesma pressão e temperatura contêm o mesmo número de moléculas, ideia
+      que permitiu deduzir massas moleculares e que segue sendo a ponte entre a balança de cozinha e as
+      equações químicas.
+    fr: >-
+      La mole est l'unité qui relie le monde macroscopique de la balance au monde microscopique des
+      atomes et des molécules. La relation n = m/M indique que la quantité de matière est la masse
+      divisée par la masse molaire, exprimée en grammes par mole. En 1811, Amedeo Avogadro proposa son
+      hypothèse selon laquelle des volumes égaux de gaz, à pression et température égales, contiennent
+      le même nombre de molécules, une idée qui permit de déduire les masses moléculaires et qui reste
+      le pont entre la balance de cuisine et les équations chimiques.
+    zh: >-
+      摩尔是连接天平所代表的宏观世界与原子、分子所代表的微观世界的单位。关系式n = m/M表明,物质的量等于质量除以摩尔质量,摩尔质量以克每摩尔为单位。
+      1811年,阿梅代奥·阿伏伽德罗提出假说,在相同的压强和温度下,相同体积的气体含有相同数目的分子。这一思想使科学家能够推算出分子量,至今仍是厨房天平
+      与化学方程式之间的桥梁。
+    ja: >-
+      モルは、天秤が扱うマクロな世界と原子・分子のミクロな世界をつなぐ単位である。n = m/M の関係は、物質量が質量をモル質量(g/mol)で割ったものであることを示す。1811年、
+      アメデオ・アボガドロは、同じ圧力・温度で同体積の気体には同じ数の分子が含まれるという仮説を発表した。この考えにより分子量の決定が可能になり、今日でも台所の天秤と
+      化学反応式を結ぶ橋となっている。
+  timeline:
+    - year: "1811"
+      label:
+        es: >-
+          Avogadro publica su hipótesis sobre los gases, que más tarde daría lugar a la masa molar.
+        en: >-
+          Avogadro publishes his hypothesis on gases, which would later give rise to the molar mass.
+        pt: >-
+          Avogadro publica sua hipótese sobre os gases, que mais tarde daria origem à massa molar.
+        fr: >-
+          Avogadro publie son hypothèse sur les gaz, qui donnera plus tard naissance à la masse molaire.
+        zh: >-
+          阿伏伽德罗发表关于气体的假说,它后来促成了摩尔质量的诞生。
+        ja: >-
+          アボガドロが気体に関する仮説を発表し、後にモル質量の概念へと発展する。
+    - year: "1860"
+      label:
+        es: >-
+          Cannizzaro relanza la hipótesis en el congreso de Karlsruhe y logra calcular masas atómicas coherentes.
+        en: >-
+          Cannizzaro revives the hypothesis at the Karlsruhe congress and obtains consistent atomic masses.
+        pt: >-
+          Cannizzaro retoma a hipótese no congresso de Karlsruhe e obtém massas atômicas coerentes.
+        fr: >-
+          Cannizzaro relance l'hypothèse au congrès de Karlsruhe et obtient des masses atomiques cohérentes.
+        zh: >-
+          坎尼扎罗在卡尔斯鲁厄会议上重新提出该假说,得到了自洽的原子量。
+        ja: >-
+          カニッツァーロがカールスルーエ会議で仮説を再提起し、整合的な原子量を導き出す。
+    - year: "1971"
+      label:
+        es: >-
+          El mol se adopta como unidad base del SI para la cantidad de sustancia.
+        en: >-
+          The mole is adopted as the SI base unit for amount of substance.
+        pt: >-
+          O mol é adotado como unidade base do SI para a quantidade de substância.
+        fr: >-
+          La mole est adoptée comme unité de base du SI pour la quantité de matière.
+        zh: >-
+          摩尔被采纳为国际单位制中物质的量的基本单位。
+        ja: >-
+          モルが物質量のSI基本単位として採用される。
+    - year: Hoy
+      label:
+        es: >-
+          Cada reacción en el laboratorio pasa de gramos a moles con esta relación.
+        en: >-
+          Every reaction in the laboratory goes from grams to moles with this relation.
+        pt: >-
+          Toda reação no laboratório passa de gramas para mols com esta relação.
+        fr: >-
+          Toute réaction au laboratoire passe des grammes aux moles grâce à cette relation.
+        zh: >-
+          实验室中的每一次反应都用这个关系式把克换算成摩尔。
+        ja: >-
+          実験室でのすべての反応が、この関係式でグラムからモルへ換算される。
+  useCases:
+    - title:
+        es: Estequiometría
+        en: Stoichiometry
+        pt: Estequiometria
+        fr: Stœchiométrie
+        zh: 化学计量学
+        ja: 化学量論
+      description:
+        es: >-
+          Convierte los gramos medidos en la balanza a moles para balancear y predecir las reacciones.
+        en: >-
+          It converts grams measured on a scale into moles to balance and predict reactions.
+        pt: >-
+          Converte os gramas medidos na balança em mols para balancear e prever reações.
+        fr: >-
+          Elle convertit les grammes pesés en moles pour équilibrer et prévoir les réactions.
+        zh: >-
+          把天平上称出的克数换算成摩尔,以便配平并预测反应。
+        ja: >-
+          天秤で量ったグラムをモルに換算し、反応の係数を合わせて予測する。
+    - title:
+        es: Farmacia
+        en: Pharmacy
+        pt: Farmácia
+        fr: Pharmacie
+        zh: 药学
+        ja: 製薬
+      description:
+        es: >-
+          Permite preparar disoluciones con concentración exacta a partir de la masa de soluto pesado.
+        en: >-
+          It allows solutions of exact concentration to be prepared from the weighed mass of solute.
+        pt: >-
+          Permite preparar soluções com concentração exata a partir da massa de soluto pesado.
+        fr: >-
+          Elle permet de préparer des solutions de concentration exacte à partir de la masse de soluté pesée.
+        zh: >-
+          根据称取的溶质质量,可以配制出浓度精确的溶液。
+        ja: >-
+          秤量した溶質の質量から、濃度の正確な溶液を調製できる。
+    - title:
+        es: Industria alimentaria
+        en: Food industry
+        pt: Indústria alimentícia
+        fr: Industrie agroalimentaire
+        zh: 食品工业
+        ja: 食品産業
+      description:
+        es: >-
+          Fija la cantidad de aditivos y nutrientes a partir de la masa de cada ingrediente.
+        en: >-
+          It sets additive and nutrient quantities from the mass of each ingredient.
+        pt: >-
+          Define a quantidade de aditivos e nutrientes a partir da massa de cada ingrediente.
+        fr: >-
+          Elle fixe les quantités d'additifs et de nutriments à partir de la masse de chaque ingrédient.
+        zh: >-
+          根据每种配料的质量确定添加剂和营养素的用量。
+        ja: >-
+          各原材料の質量から添加物や栄養素の量を定める。
+    - title:
+        es: Síntesis industrial
+        en: Industrial synthesis
+        pt: Síntese industrial
+        fr: Synthèse industrielle
+        zh: 工业合成
+        ja: 工業合成
+      description:
+        es: >-
+          Escala una receta de laboratorio de gramos a toneladas manteniendo las mismas proporciones de moles.
+        en: >-
+          It scales a laboratory recipe from grams to tonnes while keeping the same mole ratios.
+        pt: >-
+          Escala uma receita de laboratório de gramas para toneladas mantendo as mesmas proporções de mols.
+        fr: >-
+          Elle transpose une recette de laboratoire des grammes aux tonnes en conservant les mêmes proportions de moles.
+        zh: >-
+          将实验室配方按同样的摩尔比例从克放大到吨。
+        ja: >-
+          実験室のレシピを同じモル比のままグラム単位からトン単位へ拡大する。
+  example:
+    title:
+      es: Un mol de agua
+      en: One mole of water
+      pt: Um mol de água
+      fr: Une mole d'eau
+      zh: 一摩尔水
+      ja: 水1モル
+    lines:
+      - es: m = 18 g (agua, H₂O)
+        en: m = 18 g (water, H₂O)
+        pt: m = 18 g (água, H₂O)
+        fr: m = 18 g (eau, H₂O)
+        zh: m = 18 g（水,H₂O）
+        ja: m = 18 g（水、H₂O）
+      - es: M = 18 g/mol
+        en: M = 18 g/mol
+        pt: M = 18 g/mol
+        fr: M = 18 g/mol
+        zh: M = 18 g/mol
+        ja: M = 18 g/mol
+      - es: n = m / M
+        en: n = m / M
+        pt: n = m / M
+        fr: n = m / M
+        zh: n = m / M
+        ja: n = m / M
+      - es: n = 18 / 18
+        en: n = 18 / 18
+        pt: n = 18 / 18
+        fr: n = 18 / 18
+        zh: n = 18 / 18
+        ja: n = 18 / 18
+      - es: n = 1 mol
+        en: n = 1 mol
+        pt: n = 1 mol
+        fr: n = 1 mol
+        zh: n = 1 mol
+        ja: n = 1 mol

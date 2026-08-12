@@ -1,0 +1,408 @@
+id: simple-pendulum-period
+title:
+  es: Periodo del Péndulo Simple
+  en: Simple Pendulum Period
+  pt: Período do Pêndulo Simples
+  fr: Période du pendule simple
+  zh: 单摆周期
+  ja: 単振り子の周期
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: t
+    type: variable
+    value: T
+    explanation:
+      es: "El período: el tiempo que tarda el péndulo en completar una oscilación completa, en segundos."
+      en: "The period: the time a pendulum takes to complete one full swing, in seconds."
+      pt: "O período: o tempo que o pêndulo leva para completar uma oscilação completa, em segundos."
+      fr: "La période : le temps que met le pendule pour accomplir une oscillation complète, en secondes."
+      zh: 周期：摆完成一次完整摆动所需的时间，以秒为单位。
+      ja: 周期。振り子が1往復するのにかかる時間。単位は秒。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "El factor 2: un período completo incluye la ida y la vuelta del péndulo."
+      en: "The factor 2: one full period includes both the swing out and back."
+      pt: "O fator 2: um período completo inclui a ida e a volta do pêndulo."
+      fr: "Le facteur 2 : une période complète comprend l'aller et le retour du pendule."
+      zh: 因数2：一个完整周期包含摆的前去和返回。
+      ja: 係数の2。1周期には行きと帰りが含まれる。
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: Pi, la constante que relaciona la circunferencia con su diámetro, unos 3.1416.
+      en: Pi, the constant relating a circle's circumference to its diameter, about 3.1416.
+      pt: Pi, a constante que relaciona a circunferência com o diâmetro, cerca de 3,1416.
+      fr: Pi, la constante reliant la circonférence d'un cercle à son diamètre, environ 3,1416.
+      zh: 圆周率π，即圆的周长与直径之比，约为3.1416。
+      ja: 円周率。円の円周と直径の比で、約3.1416。
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: La raíz cuadrada de la razón entre la longitud y la gravedad.
+      en: The square root of the ratio of length to gravity.
+      pt: A raiz quadrada da razão entre o comprimento e a gravidade.
+      fr: La racine carrée du rapport entre la longueur et la gravité.
+      zh: 对长度与重力加速度之比开平方根。
+      ja: 長さと重力の比の平方根。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el agrupamiento bajo la raíz.
+      en: Opens the grouping under the root.
+      pt: Abre o agrupamento sob a raiz.
+      fr: Ouvre le groupement sous la racine.
+      zh: 打开根号下的括号。
+      ja: 根号の中を開く括弧。
+  - id: l
+    type: variable
+    value: L
+    explanation:
+      es: La longitud del hilo, desde el punto de suspensión hasta el centro de masa del péndulo.
+      en: The length of the string, from the suspension point to the pendulum's center of mass.
+      pt: O comprimento do fio, do ponto de suspensão ao centro de massa do pêndulo.
+      fr: La longueur du fil, du point de suspension au centre de masse du pendule.
+      zh: 摆线长度，即从悬挂点到摆的重心的距离。
+      ja: ひもの長さ。支点から振り子の重心までの距離。
+  - id: div
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por la aceleración de la gravedad.
+      en: Divided by the gravitational acceleration.
+      pt: Dividido pela aceleração da gravidade.
+      fr: Divisé par l'accélération de la pesanteur.
+      zh: 除以重力加速度。
+      ja: 重力加速度で割る。
+  - id: g
+    type: variable
+    value: g
+    explanation:
+      es: La aceleración de la gravedad, unos 9,81 m/s² en la superficie terrestre.
+      en: The gravitational acceleration, about 9.81 m/s² at Earth's surface.
+      pt: A aceleração da gravidade, cerca de 9,81 m/s² na superfície terrestre.
+      fr: L'accélération de la pesanteur, environ 9,81 m/s² à la surface de la Terre.
+      zh: 重力加速度，地球表面约为9.81米/秒²。
+      ja: 重力加速度。地表では約9.81 m/s²。
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el agrupamiento bajo la raíz.
+      en: Closes the grouping under the root.
+      pt: Fecha o agrupamento sob a raiz.
+      fr: Ferme le groupement sous la racine.
+      zh: 关闭根号下的括号。
+      ja: 根号の中を閉じる括弧。
+context:
+  author:
+    es: Galileo Galilei y Christiaan Huygens
+    en: Galileo Galilei and Christiaan Huygens
+    pt: Galileo Galilei e Christiaan Huygens
+    fr: Galilée et Christiaan Huygens
+    zh: 伽利略·伽利莱与克里斯蒂安·惠更斯
+    ja: ガリレオ・ガリレイとクリスティアーン・ホイヘンス
+  era:
+    es: Italia y Países Bajos, siglos XVI–XVII · relojes de péndulo en 1656
+    en: Italy and the Netherlands, 16th–17th century · pendulum clocks in 1656
+    pt: Itália e Países Baixos, séculos XVI–XVII · relógios de pêndulo em 1656
+    fr: Italie et Pays-Bas, XVIe–XVIIe siècle · horloges à pendule en 1656
+    zh: 意大利与荷兰，16–17世纪 · 1656年摆钟问世
+    ja: イタリアとオランダ、16〜17世紀・1656年振り子時計
+  history:
+    es: >-
+      Galileo, según su propio relato, notó hacia 1583 que una lámpara que se balanceaba en la
+      catedral de Pisa marcaba el compás con su pulso, y luego propuso que las oscilaciones pequeñas
+      son isócronas — cada vaivén dura lo mismo — sin importar la amplitud. En 1656 Christiaan
+      Huygens construyó el primer reloj de péndulo, y en su Horologium Oscillatorium de 1673 dedujo
+      la fórmula exacta, válida para ángulos pequeños, mostrando que el período no depende de la
+      masa del péndulo. La aproximación de ángulos pequeños vuelve el período casi independiente de
+      la amplitud, lo que permite al reloj marcar un tiempo constante.
+    en: >-
+      Galileo, by his own account, noticed around 1583 that a swinging chandelier in the Pisa
+      cathedral kept time with his pulse, and later proposed that small oscillations are isochronous
+      — each swing takes the same time — regardless of amplitude. In 1656 Christiaan Huygens built
+      the first pendulum clock, and in his Horologium Oscillatorium of 1673 he derived the exact
+      formula, valid for small angles, showing that the period does not depend on the bob's mass.
+      The small-angle approximation makes the period nearly independent of amplitude, which is what
+      lets a clock keep steady time.
+    pt: >-
+      Galileu, segundo seu próprio relato, percebeu por volta de 1583 que um lampadário que balançava
+      na catedral de Pisa marcava o compasso com seu pulso e, mais tarde, propôs que pequenas
+      oscilações são isócronas — cada vaivém dura o mesmo tempo — independentemente da amplitude. Em
+      1656 Christiaan Huygens construiu o primeiro relógio de pêndulo e, em seu Horologium
+      Oscillatorium de 1673, deduziu a fórmula exata, válida para ângulos pequenos, mostrando que o
+      período não depende da massa do pêndulo. A aproximação de pequenos ângulos torna o período
+      quase independente da amplitude, o que permite ao relógio marcar um tempo constante.
+    fr: >-
+      Galilée, selon son propre récit, remarqua vers 1583 qu'un lustre se balançant dans la
+      cathédrale de Pise battait la mesure avec son pouls, puis avança que les petites oscillations
+      sont isochrones — chaque balancement dure le même temps — quelle que soit l'amplitude. En 1656,
+      Christiaan Huygens construisit la première horloge à pendule et, dans son Horologium
+      Oscillatorium de 1673, il en déduisit la formule exacte, valable pour les petits angles,
+      montrant que la période ne dépend pas de la masse du pendule. L'approximation des petits
+      angles rend la période quasi indépendante de l'amplitude, ce qui permet à l'horloge de battre
+      un temps régulier.
+    zh: >-
+      据伽利略自己的记述，大约在1583年，他注意到比萨大教堂中摆动的吊灯与自己的脉搏同步，并由此提出小幅摆动是等时的
+      ——每次摆动耗时相同——与振幅无关。1656年，克里斯蒂安·惠更斯制造了第一台摆钟，并在1673年的《摆钟论》中
+      推导出适用于小角度的精确公式，指出周期与摆锤的质量无关。小角度近似使周期几乎与振幅无关，这正是摆钟能稳定
+      计时的原因。
+    ja: >-
+      ガリレオは自身の記述によれば、1583年頃、ピサ大聖堂で揺れるランプが自分の脈拍と一致することに気づき、小さな
+      振れは振幅にかかわらず等時的である（どの揺れも同じ時間がかかる）と主張した。1656年、クリスティアーン・
+      ホイヘンスは最初の振り子時計を作り、1673年の『振り子時計論』で小さい角度について成り立つ正確な公式を導出し、
+      周期が錘の質量に依存しないことを示した。小角近似によって周期は振幅にほぼ依存しなくなり、時計が安定して時を
+      刻めるのはこのためである。
+  timeline:
+    - year: c. 1583
+      label:
+        es: >-
+          Según el relato de Galileo, observa un candelabro oscilante en la catedral de Pisa y nota
+          que sus oscilaciones duran lo mismo.
+        en: >-
+          By his own account, Galileo watches a swinging chandelier in the Pisa cathedral and
+          notices its swings take the same time.
+        pt: >-
+          Segundo o relato de Galileu, ele observa um candelabro oscilante na catedral de Pisa e
+          nota que as oscilações duram o mesmo tempo.
+        fr: >-
+          Selon le récit de Galilée, il observe un lustre oscillant dans la cathédrale de Pise et
+          remarque que ses oscillations durent le même temps.
+        zh: >-
+          据伽利略自述，他观察比萨大教堂中摆动的吊灯，发现每次摆动耗时相同。
+        ja: >-
+          ガリレオの記述によれば、ピサ大聖堂で揺れるランプを観察し、揺れにかかる時間が常に同じだと気づく。
+    - year: "1602"
+      label:
+        es: >-
+          Galileo estudia el péndulo de forma sistemática y deduce que el período depende de la
+          longitud, no de la masa.
+        en: >-
+          Galileo studies the pendulum systematically and finds the period depends on length, not
+          mass.
+        pt: >-
+          Galileu estuda o pêndulo de forma sistemática e conclui que o período depende do
+          comprimento, não da massa.
+        fr: >-
+          Galilée étudie le pendule de façon systématique et en déduit que la période dépend de la
+          longueur, pas de la masse.
+        zh: >-
+          伽利略系统地研究摆，发现周期取决于摆长而非质量。
+        ja: >-
+          ガリレオが振り子を系統的に研究し、周期は質量ではなく長さに依存することを見出す。
+    - year: "1656"
+      label:
+        es: >-
+          Christiaan Huygens construye el primer reloj de péndulo, que reduce enormemente el error
+          diario.
+        en: >-
+          Christiaan Huygens builds the first pendulum clock, cutting the daily error dramatically.
+        pt: >-
+          Christiaan Huygens constrói o primeiro relógio de pêndulo, reduzindo drasticamente o erro
+          diário.
+        fr: >-
+          Christiaan Huygens construit la première horloge à pendule, réduisant considérablement
+          l'erreur quotidienne.
+        zh: >-
+          克里斯蒂安·惠更斯制造出第一台摆钟，大幅减小了每日误差。
+        ja: >-
+          クリスティアーン・ホイヘンスが最初の振り子時計を製作し、日差を劇的に縮める。
+    - year: "1673"
+      label:
+        es: >-
+          Publica el Horologium Oscillatorium, donde deduce la fórmula del período, incluida la de
+          los péndulos cicloidales.
+        en: >-
+          Publishes the Horologium Oscillatorium, where he derives the period formula, including
+          for cycloidal pendulums.
+        pt: >-
+          Publica o Horologium Oscillatorium, onde deduz a fórmula do período, inclusive para
+          pêndulos cicloidais.
+        fr: >-
+          Publie l'Horologium Oscillatorium, où il déduit la formule de la période, y compris pour
+          les pendules cycloïdaux.
+        zh: >-
+          出版《摆钟论》，推导出摆的周期公式，包括摆线摆的情形。
+        ja: >-
+          『振り子時計論』を出版し、周期の公式を導出する。サイクロイド振り子についても扱っている。
+    - year: Hoy
+      label:
+        es: >-
+          Sigue siendo la base de metrónomos, relojes de péndulo y todo instrumento que mide el
+          tiempo o el movimiento.
+        en: >-
+          It remains the basis of metronomes, pendulum clocks, and any instrument measuring time or
+          motion.
+        pt: >-
+          Continua sendo a base de metrônomos, relógios de pêndulo e todo instrumento que mede tempo
+          ou movimento.
+        fr: >-
+          Elle reste la base des métronomes, des horloges à pendule et de tout instrument mesurant
+          le temps ou le mouvement.
+        zh: >-
+          它至今仍是节拍器、摆钟以及一切计时和测运动仪器的基础。
+        ja: >-
+          現在もメトロノームや振り子時計など、時間や運動を測るあらゆる計器の基礎であり続けている。
+  useCases:
+    - title:
+        es: Relojería mecánica
+        en: Mechanical clockmaking
+        pt: Relojoaria mecânica
+        fr: Horlogerie mécanique
+        zh: 机械钟表
+        ja: 機械式時計
+      description:
+        es: >-
+          Los relojes de péndulo ajustan la longitud del péndulo para marcar un segundo exacto,
+          regulando el tren de engranajes.
+        en: >-
+          Pendulum clocks tune the pendulum's length to beat out an exact second, regulating the
+          gear train.
+        pt: >-
+          Os relógios de pêndulo ajustam o comprimento do pêndulo para marcar um segundo exato,
+          regulando o trem de engrenagens.
+        fr: >-
+          Les horloges à pendule ajustent la longueur du pendule pour battre une seconde exacte,
+          réglant le rouage.
+        zh: >-
+          摆钟通过调节摆长来精确走秒，从而控制齿轮系的运转。
+        ja: >-
+          振り子時計は振り子の長さを調整して正確な1秒を刻み、歯車機構を制御する。
+    - title:
+        es: Metrónomos
+        en: Metronomes
+        pt: Metrônomos
+        fr: Métronomes
+        zh: 节拍器
+        ja: メトロノーム
+      description:
+        es: >-
+          El metrónomo usa un péndulo con una masa deslizante para generar un tempo musical preciso
+          y estable.
+        en: >-
+          The metronome uses a pendulum with a sliding mass to produce a precise, steady musical
+          tempo.
+        pt: >-
+          O metrônomo usa um pêndulo com massa deslizante para produzir um andamento musical preciso
+          e estável.
+        fr: >-
+          Le métronome utilise un pendule à masse coulissante pour produire un tempo musical précis
+          et régulier.
+        zh: >-
+          节拍器利用带滑动重物的摆来产生精确、稳定的音乐节拍。
+        ja: >-
+          メトロノームは、スライドする重り付き振り子で正確で安定したテンポを作り出す。
+    - title:
+        es: Instrumentación sismológica
+        en: Seismic instrumentation
+        pt: Instrumentação sismológica
+        fr: Instrumentation sismologique
+        zh: 地震仪器
+        ja: 地震計測機器
+      description:
+        es: >-
+          Los sismómetros usan un péndulo cuya inercia mantiene fija una masa mientras el suelo se
+          mueve debajo.
+        en: >-
+          Seismometers use a pendulum whose inertia keeps a mass fixed while the ground moves
+          beneath it.
+        pt: >-
+          Os sismômetros usam um pêndulo cuja inércia mantém uma massa fixa enquanto o solo se move
+          sob ela.
+        fr: >-
+          Les sismomètres utilisent un pendule dont l'inertie maintient une masse fixe pendant que
+          le sol bouge en dessous.
+        zh: >-
+          地震仪利用摆的惯性保持重物静止，而地面在其下方运动。
+        ja: >-
+          地震計は、地面が動いても慣性で質量が静止したままになる振り子を利用している。
+    - title:
+        es: Ingeniería y parques de atracciones
+        en: Engineering and amusement parks
+        pt: Engenharia e parques de diversões
+        fr: Ingénierie et parcs d'attractions
+        zh: 工程与游乐园
+        ja: 工学と遊園地
+      description:
+        es: >-
+          Péndulos gigantes como los 'barcos piratas' siguen esta fórmula para dimensionar su
+          estructura y su movimiento.
+        en: >-
+          Giant pendulums such as pirate-ship rides follow this formula for sizing their structure
+          and motion.
+        pt: >-
+          Pêndulos gigantes como os 'navios piratas' seguem essa fórmula para dimensionar sua
+          estrutura e seu movimento.
+        fr: >-
+          Les pendules géants comme les bateaux-pirates suivent cette formule pour dimensionner leur
+          structure et leur mouvement.
+        zh: >-
+          海盗船等巨型摆依照这一公式来设计其结构与运动。
+        ja: >-
+          海賊船のような巨大な振り子は、構造と動きの設計にこの公式を使っている。
+  example:
+    title:
+      es: Un péndulo de 1 metro
+      en: A 1-meter pendulum
+      pt: Um pêndulo de 1 metro
+      fr: Un pendule d'un mètre
+      zh: 一米长的摆
+      ja: 長さ1mの振り子
+    lines:
+      - es: L = 1 m
+        en: L = 1 m
+        pt: L = 1 m
+        fr: L = 1 m
+        zh: L = 1 m
+        ja: L = 1 m
+      - es: g = 9,81 m/s²
+        en: g = 9.81 m/s²
+        pt: g = 9,81 m/s²
+        fr: g = 9,81 m/s²
+        zh: g = 9.81 m/s²
+        ja: g = 9.81 m/s²
+      - es: T = 2π√(L/g)
+        en: T = 2π√(L/g)
+        pt: T = 2π√(L/g)
+        fr: T = 2π√(L/g)
+        zh: T = 2π√(L/g)
+        ja: T = 2π√(L/g)
+      - es: T = 2π√(1/9,81)
+        en: T = 2π√(1/9.81)
+        pt: T = 2π√(1/9,81)
+        fr: T = 2π√(1/9,81)
+        zh: T = 2π√(1/9.81)
+        ja: T = 2π√(1/9.81)
+      - es: T ≈ 2π × 0,3193
+        en: T ≈ 2π × 0.3193
+        pt: T ≈ 2π × 0,3193
+        fr: T ≈ 2π × 0,3193
+        zh: T ≈ 2π × 0.3193
+        ja: T ≈ 2π × 0.3193
+      - es: T ≈ 2,006 s
+        en: T ≈ 2.006 s
+        pt: T ≈ 2,006 s
+        fr: T ≈ 2,006 s
+        zh: T ≈ 2.006 秒
+        ja: T ≈ 2.006 秒

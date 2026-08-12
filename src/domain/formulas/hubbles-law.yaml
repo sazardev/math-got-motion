@@ -1,0 +1,276 @@
+id: hubbles-law
+title:
+  es: Ley de Hubble
+  en: Hubble's Law
+  pt: Lei de Hubble
+  fr: Loi de Hubble
+  zh: 哈勃定律
+  ja: ハッブルの法則
+category:
+  es: Astronomía
+  en: Astronomy
+  pt: Astronomia
+  fr: Astronomie
+  zh: 天文学
+  ja: 天文学
+nodes:
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: "v: la velocidad de recesión de una galaxia."
+      en: "v: the recession speed of a galaxy."
+      pt: "v: a velocidade de recessão de uma galáxia."
+      fr: "v : la vitesse de fuite d'une galaxie."
+      zh: "v：星系的退行速度。"
+      ja: "v：銀河の後退速度。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: h0
+    type: constant
+    value: H₀
+    explanation:
+      es: "H₀: la constante de Hubble, que mide la expansión."
+      en: "H₀: the Hubble constant, measuring the expansion."
+      pt: "H₀: a constante de Hubble, que mede a expansão."
+      fr: "H₀ : la constante de Hubble, qui mesure l'expansion."
+      zh: "H₀：哈勃常数，度量膨胀。"
+      ja: "H₀：ハッブル定数。膨張を測る。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: d
+    type: variable
+    value: d
+    explanation:
+      es: "d: la distancia a la galaxia."
+      en: "d: the distance to the galaxy."
+      pt: "d: a distância até a galáxia."
+      fr: "d : la distance à la galaxie."
+      zh: "d：到星系的距离。"
+      ja: "d：銀河までの距離。"
+context:
+  author:
+    es: Edwin Hubble (sobre trabajo de Lemaître)
+    en: Edwin Hubble (building on Lemaître's work)
+    pt: Edwin Hubble (com base no trabalho de Lemaître)
+    fr: Edwin Hubble (en s'appuyant sur les travaux de Lemaître)
+    zh: 埃德温·哈勃（基于勒梅特的工作）
+    ja: エドウィン・ハッブル（ルメートルの業績に基づく）
+  era:
+    es: Estados Unidos, 1889–1953 · publicada en 1929
+    en: United States, 1889–1953 · published in 1929
+    pt: Estados Unidos, 1889–1953 · publicada em 1929
+    fr: États-Unis, 1889–1953 · publiée en 1929
+    zh: 美国，1889–1953年·1929年发表
+    ja: アメリカ、1889–1953年・1929年発表
+  history:
+    es: >-
+      En 1929, Edwin Hubble descubrió que las galaxias distantes se alejan de nosotros con una
+      velocidad proporcional a su distancia: v = H₀·d. Georges Lemaître ya lo había previsto en 1927
+      interpretando las ecuaciones de Einstein como un universo en expansión. El descubrimiento cambió
+      la cosmología: el universo no es estático. Hoy, medir H₀ con precisión es uno de los grandes
+      retos de la astrofísica.
+    en: >-
+      In 1929, Edwin Hubble discovered that distant galaxies recede from us at a speed proportional to
+      their distance: v = H₀·d. Georges Lemaître had already anticipated it in 1927 by interpreting
+      Einstein's equations as an expanding universe. The discovery changed cosmology: the universe is
+      not static. Today, measuring H₀ precisely is one of astrophysics' great challenges.
+    pt: >-
+      Em 1929, Edwin Hubble descobriu que galáxias distantes se afastam de nós com velocidade
+      proporcional à sua distância: v = H₀·d. Georges Lemaître já o previra em 1927 ao interpretar as
+      equações de Einstein como um universo em expansão. A descoberta mudou a cosmologia: o universo
+      não é estático. Hoje, medir H₀ com precisão é um dos grandes desafios da astrofísica.
+    fr: >-
+      En 1929, Edwin Hubble découvrit que les galaxies lointaines s'éloignent de nous à une vitesse
+      proportionnelle à leur distance : v = H₀·d. Georges Lemaître l'avait déjà anticipé en 1927 en
+      interprétant les équations d'Einstein comme un univers en expansion. La découverte changea la
+      cosmologie : l'univers n'est pas statique. Aujourd'hui, mesurer H₀ avec précision est l'un des
+      grands défis de l'astrophysique.
+    zh: >-
+      1929年，埃德温·哈勃发现，遥远星系以与其距离成正比的速度远离我们：v = H₀·d。勒梅特早在1927年把爱因斯坦
+      方程解释为膨胀宇宙时就已预见这一点。这一发现改变了宇宙学：宇宙并非静止。如今，精确测量H₀是天体物理学的
+      重大挑战之一。
+    ja: >-
+      1929年、エドウィン・ハッブルは、遠い銀河が距離に比例した速度で我々から遠ざかることを発見した：
+      v = H₀・d。ジョルジュ・ルメートルは1927年、アインシュタインの方程式を膨張する宇宙として解釈し、すでに
+      これを予見していた。この発見は宇宙論を変えた。宇宙は静的ではない。今日、H₀を正確に測ることは天体物理学の
+      大きな課題の一つである。
+  timeline:
+    - year: "1927"
+      label:
+        es: >-
+          Lemaître publica la idea de un universo en expansión desde la relatividad general.
+        en: >-
+          Lemaître publishes the expanding-universe idea from general relativity.
+        pt: >-
+          Lemaître publica a ideia de um universo em expansão a partir da relatividade geral.
+        fr: >-
+          Lemaître publie l'idée d'un univers en expansion issue de la relativité générale.
+        zh: >-
+          勒梅特从广义相对论出发发表宇宙膨胀的思想。
+        ja: >-
+          ルメートルが一般相対性理論から膨張宇宙の考えを発表する。
+    - year: "1929"
+      label:
+        es: >-
+          Hubble publica la relación v = H₀·d con sus observaciones de galaxias.
+        en: >-
+          Hubble publishes the v = H₀·d relation with his galaxy observations.
+        pt: >-
+          Hubble publica a relação v = H₀·d com suas observações de galáxias.
+        fr: >-
+          Hubble publie la relation v = H₀·d avec ses observations de galaxies.
+        zh: >-
+          哈勃发表基于星系观测的v = H₀·d关系。
+        ja: >-
+          ハッブルが銀河の観測に基づいてv = H₀・dの関係を発表する。
+    - year: "1998"
+      label:
+        es: >-
+          Se descubre que la expansión se acelera, dando lugar a la energía oscura.
+        en: >-
+          The expansion is found to accelerate, giving rise to dark energy.
+        pt: >-
+          Descobre-se que a expansão acelera, dando origem à energia escura.
+        fr: >-
+          On découvre que l'expansion s'accélère, donnant naissance à l'énergie sombre.
+        zh: >-
+          人们发现膨胀在加速，由此引出暗能量。
+        ja: >-
+          膨張が加速していることが発見され、ダークエネルギーが提唱される。
+    - year: Hoy
+      label:
+        es: >-
+          La tensión de Hubble: medir H₀ sigue dividiendo a los cosmólogos.
+        en: >-
+          The Hubble tension: measuring H₀ still divides cosmologists.
+        pt: >-
+          A tensão de Hubble: medir H₀ ainda divide os cosmólogos.
+        fr: >-
+          La tension de Hubble : mesurer H₀ divise encore les cosmologistes.
+        zh: >-
+          哈勃张力：如何测量H₀仍让宇宙学家们争论不休。
+        ja: >-
+          ハッブル張力。H₀の測定は今も宇宙学者たちを二分している。
+  useCases:
+    - title:
+        es: Medición de distancias cósmicas
+        en: Cosmic distance measurement
+        pt: Medição de distâncias cósmicas
+        fr: Mesure des distances cosmiques
+        zh: 宇宙距离测量
+        ja: 宇宙距離の測定
+      description:
+        es: >-
+          La velocidad de una galaxia da su distancia con esta ley.
+        en: >-
+          A galaxy's speed gives its distance with this law.
+        pt: >-
+          A velocidade de uma galáxia dá sua distância com essa lei.
+        fr: >-
+          La vitesse d'une galaxie donne sa distance avec cette loi.
+        zh: >-
+          用这条定律，星系的速度即可给出其距离。
+        ja: >-
+          この法則で、銀河の速度からその距離がわかる。
+    - title:
+        es: Cosmología
+        en: Cosmology
+        pt: Cosmologia
+        fr: Cosmologie
+        zh: 宇宙学
+        ja: 宇宙論
+      description:
+        es: >-
+          Invertir la expansión estima la edad del universo.
+        en: >-
+          Reversing the expansion estimates the universe's age.
+        pt: >-
+          Inverter a expansão estima a idade do universo.
+        fr: >-
+          Inverser l'expansion estime l'âge de l'univers.
+        zh: >-
+          逆转膨胀可估算宇宙的年龄。
+        ja: >-
+          膨張を逆にたどることで宇宙の年齢が推定される。
+    - title:
+        es: Astrofísica observacional
+        en: Observational astrophysics
+        pt: Astrofísica observacional
+        fr: Astrophysique observationnelle
+        zh: 观测天体物理学
+        ja: 観測天文学
+      description:
+        es: >-
+          Los grandes relevamientos de galaxias mapean el cosmos con esta relación.
+        en: >-
+          Large galaxy surveys map the cosmos with this relation.
+        pt: >-
+          Grandes levantamentos de galáxias mapeiam o cosmos com essa relação.
+        fr: >-
+          Les grands relevés de galaxies cartographient le cosmos avec cette relation.
+        zh: >-
+          大型星系巡天借助这一关系绘制宇宙图谱。
+        ja: >-
+          大規模な銀河サーベイが、この関係で宇宙の地図を作る。
+  example:
+    title:
+      es: Una galaxia a 100 Mpc
+      en: A galaxy at 100 Mpc
+      pt: Uma galáxia a 100 Mpc
+      fr: Une galaxie à 100 Mpc
+      zh: 距离100百万秒差距的星系
+      ja: 100 Mpcの銀河
+    lines:
+      - es: H₀ ≈ 70 km/s/Mpc
+        en: H₀ ≈ 70 km/s/Mpc
+        pt: H₀ ≈ 70 km/s/Mpc
+        fr: H₀ ≈ 70 km/s/Mpc
+        zh: H₀ ≈ 70 千米/秒/百万秒差距
+        ja: H₀ ≈ 70 km/s/Mpc
+      - es: d = 100 Mpc
+        en: d = 100 Mpc
+        pt: d = 100 Mpc
+        fr: d = 100 Mpc
+        zh: d = 100 百万秒差距
+        ja: d = 100 Mpc
+      - es: v = H₀ · d
+        en: v = H₀ · d
+        pt: v = H₀ · d
+        fr: v = H₀ · d
+        zh: v = H₀ · d
+        ja: v = H₀ · d
+      - es: v = 70 · 100
+        en: v = 70 · 100
+        pt: v = 70 · 100
+        fr: v = 70 · 100
+        zh: v = 70 · 100
+        ja: v = 70 · 100
+      - es: v ≈ 7000 km/s
+        en: v ≈ 7000 km/s
+        pt: v ≈ 7000 km/s
+        fr: v ≈ 7000 km/s
+        zh: v ≈ 7000 千米/秒
+        ja: v ≈ 7000 km/s
+      - es: La galaxia se aleja a 7 millones de km/h
+        en: The galaxy recedes at 7 million km/h
+        pt: A galáxia se afasta a 7 milhões de km/h
+        fr: La galaxie s'éloigne à 7 millions de km/h
+        zh: 该星系以每小时700万千米的速度远离
+        ja: その銀河は時速700万kmで遠ざかっている

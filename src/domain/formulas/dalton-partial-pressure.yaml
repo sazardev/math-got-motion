@@ -1,0 +1,320 @@
+id: dalton-partial-pressure
+title:
+  es: Ley de Dalton de las Presiones Parciales
+  en: Dalton's Law of Partial Pressures
+  pt: Lei de Dalton das Pressões Parciais
+  fr: Loi de Dalton des Pressions Partielles
+  zh: 道尔顿分压定律
+  ja: ドルトンの分圧の法則
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: p-total
+    type: variable
+    value: P
+    explanation:
+      es: "P: la presión total que ejerce la mezcla de gases sobre las paredes del recipiente."
+      en: "P: the total pressure the gas mixture exerts on the container walls."
+      pt: "P: a pressão total que a mistura de gases exerce nas paredes do recipiente."
+      fr: "P : la pression totale exercée par le mélange de gaz sur les parois du récipient."
+      zh: "P：气体混合物施加在容器壁上的总压力。"
+      ja: "P：気体混合物が容器の壁に及ぼす全圧。"
+  - id: total-subscript
+    type: superscript
+    value: total
+    explanation:
+      es: Un subíndice que indica que es la presión de todos los gases juntos.
+      en: A subscript indicating this is the pressure of all the gases together.
+      pt: Um subscrito que indica que é a pressão de todos os gases juntos.
+      fr: Un indice indiquant qu'il s'agit de la pression de tous les gaz réunis.
+      zh: 下标表示这是所有气体加在一起的压力。
+      ja: すべての気体を合わせた圧力であることを示す添字。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: sigma
+    type: variable
+    value: Σ
+    explanation:
+      es: "Σ: la letra griega sigma, que indica que hay que sumar todas las presiones parciales."
+      en: "Σ: the Greek letter sigma, meaning all the partial pressures are added up."
+      pt: "Σ: a letra grega sigma, que indica que todas as pressões parciais devem ser somadas."
+      fr: "Σ : la lettre grecque sigma, qui indique que toutes les pressions partielles s'additionnent."
+      zh: "Σ：希腊字母西格玛,表示把所有分压加在一起。"
+      ja: "Σ：ギリシャ文字のシグマ。すべての分圧を合計することを示す。"
+  - id: p-partial
+    type: variable
+    value: Pᵢ
+    explanation:
+      es: "Pᵢ: la presión parcial que ejerce cada gas i de la mezcla."
+      en: "Pᵢ: the partial pressure exerted by each gas i in the mixture."
+      pt: "Pᵢ: a pressão parcial exercida por cada gás i da mistura."
+      fr: "Pᵢ : la pression partielle exercée par chaque gaz i du mélange."
+      zh: "Pᵢ：混合物中每种气体i所施加的分压。"
+      ja: "Pᵢ：混合物中の各気体iが及ぼす分圧。"
+context:
+  author:
+    es: John Dalton
+    en: John Dalton
+    pt: John Dalton
+    fr: John Dalton
+    zh: 约翰·道尔顿
+    ja: ジョン・ドルトン
+  era:
+    es: Inglaterra, 1766–1844 · publicada en 1801
+    en: England, 1766–1844 · published in 1801
+    pt: Inglaterra, 1766–1844 · publicada em 1801
+    fr: Angleterre, 1766–1844 · publiée en 1801
+    zh: 英国,1766–1844年 · 1801年发表
+    ja: イギリス、1766–1844年・1801年発表
+  history:
+    es: >-
+      En 1801, John Dalton, el mismo químico que propuso la teoría atómica, formuló que en una mezcla de
+      gases cada componente ejerce su propia presión como si estuviera solo en el recipiente, y que la
+      presión total es la suma de esas presiones parciales. Hoy la ley es esencial en medicina y buceo:
+      el aire comprimido respirado bajo el agua contiene nitrógeno cuya presión parcial crece con la
+      profundidad, y calcularla permite evitar la enfermedad por descompresión. También gobierna los
+      cálculos de mezclas respiratorias en anestesia y en aviación.
+    en: >-
+      In 1801, John Dalton, the same chemist who proposed atomic theory, stated that in a gas mixture
+      each component exerts its own pressure as if it alone filled the container, and that the total
+      pressure is the sum of those partial pressures. Today the law is essential in medicine and diving:
+      the compressed air breathed underwater contains nitrogen whose partial pressure grows with depth,
+      and calculating it prevents decompression sickness. It also governs breathing-gas calculations in
+      anesthesia and aviation.
+    pt: >-
+      Em 1801, John Dalton, o mesmo químico que propôs a teoria atômica, afirmou que em uma mistura de
+      gases cada componente exerce sua própria pressão como se estivesse sozinho no recipiente, e que a
+      pressão total é a soma dessas pressões parciais. Hoje a lei é essencial em medicina e mergulho: o
+      ar comprimido respirado debaixo d'água contém nitrogênio cuja pressão parcial cresce com a
+      profundidade, e calculá-la previne a doença da descompressão. Ela também rege o cálculo de
+      misturas respiratórias em anestesia e na aviação.
+    fr: >-
+      En 1801, John Dalton, le même chimiste qui proposa la théorie atomique, énonça que dans un mélange
+      de gaz, chaque composant exerce sa propre pression comme s'il était seul dans le récipient, et que
+      la pression totale est la somme de ces pressions partielles. Aujourd'hui la loi est essentielle en
+      médecine et en plongée : l'air comprimé respiré sous l'eau contient de l'azote dont la pression
+      partielle croît avec la profondeur, et son calcul évite l'accident de décompression. Elle régit
+      aussi le calcul des mélanges respiratoires en anesthésie et en aviation.
+    zh: >-
+      1801年,提出原子理论的约翰·道尔顿指出,在气体混合物中,每种组分都像独自占据整个容器一样施加自身的压力,
+      而总压力等于这些分压之和。今天,该定律在医学和潜水领域不可或缺:水下呼吸的压缩空气中含有氮气,其分压随深度
+      而增大,计算出分压就能避免减压病。它也支配着麻醉和航空中呼吸混合气的计算。
+    ja: >-
+      1801年、原子論を提唱したジョン・ドルトンは、気体の混合物では各成分が単独で容器を満たしているかのように
+      自身の圧力を及ぼし、全圧はそれらの分圧の合計に等しいと述べた。今日、この法則は医療と潜水に欠かせない。
+      水中で呼吸する圧縮空気には窒素が含まれ、その分圧は深さとともに増大し、これを計算することで減圧症を防げる。
+      また、麻酔や航空における呼吸用混合気の計算もこの法則に基づく。
+  timeline:
+    - year: "1801"
+      label:
+        es: >-
+          Dalton presenta su ley de las presiones parciales ante la Sociedad Literaria y Filosófica de
+          Mánchester.
+        en: >-
+          Dalton presents his law of partial pressures to the Manchester Literary and Philosophical
+          Society.
+        pt: >-
+          Dalton apresenta sua lei das pressões parciais à Sociedade Literária e Filosófica de Manchester.
+        fr: >-
+          Dalton présente sa loi des pressions partielles à la Société littéraire et philosophique de
+          Manchester.
+        zh: >-
+          道尔顿向曼彻斯特文学与哲学学会发表了他的分压定律。
+        ja: >-
+          ドルトンがマンチェスター文学哲学協会で分圧の法則を発表する。
+    - year: "1803"
+      label:
+        es: >-
+          Dalton presenta su teoría atómica, cuya evidencia inicial incluye los comportamientos de las
+          mezclas gaseosas.
+        en: >-
+          Dalton presents his atomic theory, whose early evidence includes gas-mixture behavior.
+        pt: >-
+          Dalton apresenta sua teoria atômica, cuja evidência inicial inclui o comportamento das
+          misturas gasosas.
+        fr: >-
+          Dalton présente sa théorie atomique, dont les premiers indices incluent le comportement des
+          mélanges gazeux.
+        zh: >-
+          道尔顿提出原子理论,其早期证据就包括气体混合物的行为。
+        ja: >-
+          ドルトンが原子論を発表。初期の根拠には気体混合物の挙動が含まれる。
+    - year: "1878"
+      label:
+        es: >-
+          Paul Bert demuestra que la enfermedad por descompresión la causa el nitrógeno disuelto en los
+          tejidos, fundando la medicina del buceo.
+        en: >-
+          Paul Bert shows decompression sickness is caused by nitrogen dissolved in tissues, founding
+          diving medicine.
+        pt: >-
+          Paul Bert demonstra que a doença da descompressão é causada pelo nitrogênio dissolvido nos
+          tecidos, fundando a medicina do mergulho.
+        fr: >-
+          Paul Bert démontre que l'accident de décompression est causé par l'azote dissous dans les
+          tissus, fondant la médecine de la plongée.
+        zh: >-
+          保罗·贝尔证明减压病由溶解在组织中的氮气引起,奠定了潜水医学的基础。
+        ja: >-
+          ポール・ベルが、減圧症が組織に溶けた窒素によって起こることを実証し、潜水医学を創始する。
+    - year: Hoy
+      label:
+        es: >-
+          Los ordenadores de buceo calculan las presiones parciales de nitrógeno y oxígeno usando esta
+          ley.
+        en: >-
+          Dive computers calculate nitrogen and oxygen partial pressures using this law.
+        pt: >-
+          Os computadores de mergulho calculam as pressões parciais de nitrogênio e oxigênio usando essa
+          lei.
+        fr: >-
+          Les ordinateurs de plongée calculent les pressions partielles d'azote et d'oxygène grâce à
+          cette loi.
+        zh: >-
+          潜水电脑使用这条定律计算氮气和氧气的分压。
+        ja: >-
+          ダイブコンピューターは、この法則を使って窒素と酸素の分圧を計算している。
+  useCases:
+    - title:
+        es: Buceo y medicina hiperbárica
+        en: Diving and hyperbaric medicine
+        pt: Mergulho e medicina hiperbárica
+        fr: Plongée et médecine hyperbare
+        zh: 潜水与高压医学
+        ja: ダイビングと高気圧医学
+      description:
+        es: >-
+          Calcula la presión parcial de nitrógeno y oxígeno en los gases respirados bajo el agua para
+          evitar accidentes de descompresión.
+        en: >-
+          It calculates the nitrogen and oxygen partial pressures in breathing gases underwater to avoid
+          decompression accidents.
+        pt: >-
+          Calcula a pressão parcial de nitrogênio e oxigênio nos gases respirados debaixo d'água para
+          evitar acidentes de descompressão.
+        fr: >-
+          Elle calcule les pressions partielles d'azote et d'oxygène des gaz respirés sous l'eau pour
+          éviter les accidents de décompression.
+        zh: >-
+          计算水下呼吸气体中氮气和氧气的分压,以避免减压事故。
+        ja: >-
+          水中で呼吸するガス中の窒素と酸素の分圧を計算し、減圧事故を防ぐ。
+    - title:
+        es: Anestesia
+        en: Anesthesia
+        pt: Anestesia
+        fr: Anesthésie
+        zh: 麻醉
+        ja: 麻酔
+      description:
+        es: >-
+          Las mezclas de anestésicos gaseosos dosifican su efecto según la presión parcial de cada
+          componente.
+        en: >-
+          Gaseous anesthetic mixtures dose their effect by each component's partial pressure.
+        pt: >-
+          As misturas de anestésicos gasosos dosam seu efeito conforme a pressão parcial de cada
+          componente.
+        fr: >-
+          Les mélanges d'anesthésiques gazeux dosent leur effet selon la pression partielle de chaque
+          composant.
+        zh: >-
+          气态麻醉混合物根据各组分的分压来调节麻醉效果。
+        ja: >-
+          ガス状麻酔薬の混合気は、各成分の分圧に応じて効果を調節する。
+    - title:
+        es: Industria de gases industriales
+        en: Industrial gas industry
+        pt: Indústria de gases industriais
+        fr: Industrie des gaz industriels
+        zh: 工业气体行业
+        ja: 産業ガス業界
+      description:
+        es: >-
+          Controla la composición de mezclas como el aire enriquecido o los gases de soldadura.
+        en: >-
+          It controls the composition of mixtures such as enriched air or welding gases.
+        pt: >-
+          Controla a composição de misturas como o ar enriquecido ou os gases de soldagem.
+        fr: >-
+          Elle contrôle la composition de mélanges comme l'air enrichi ou les gaz de soudure.
+        zh: >-
+          控制富氧空气或焊接气体等混合物的组成。
+        ja: >-
+          富化空気や溶接ガスなど、混合ガスの組成を管理する。
+    - title:
+        es: Aviación y grandes altitudes
+        en: Aviation and high altitude
+        pt: Aviação e grandes altitudes
+        fr: Aviation et haute altitude
+        zh: 航空与高海拔
+        ja: 航空と高地
+      description:
+        es: >-
+          Explica por qué la presión parcial de oxígeno cae con la altitud y obliga a presurizar cabinas
+          o usar máscaras.
+        en: >-
+          It explains why oxygen partial pressure falls with altitude, forcing cabin pressurization or
+          masks.
+        pt: >-
+          Explica por que a pressão parcial de oxigênio cai com a altitude, obrigando a pressurizar
+          cabines ou usar máscaras.
+        fr: >-
+          Elle explique pourquoi la pression partielle d'oxygène chute avec l'altitude, imposant la
+          pressurisation des cabines ou des masques.
+        zh: >-
+          解释了为什么氧气分压随海拔升高而下降,从而需要座舱增压或佩戴氧气面罩。
+        ja: >-
+          高度が上がるほど酸素分圧が下がり、客室の加圧やマスクの着用が必要になる理由を説明する。
+  example:
+    title:
+      es: Aire a nivel del mar
+      en: Air at sea level
+      pt: Ar ao nível do mar
+      fr: L'air au niveau de la mer
+      zh: 海平面上的空气
+      ja: 海面の空気
+    lines:
+      - es: P_N₂ = 78 kPa · P_O₂ = 21 kPa · P_Ar = 1 kPa
+        en: P_N₂ = 78 kPa · P_O₂ = 21 kPa · P_Ar = 1 kPa
+        pt: P_N₂ = 78 kPa · P_O₂ = 21 kPa · P_Ar = 1 kPa
+        fr: P_N₂ = 78 kPa · P_O₂ = 21 kPa · P_Ar = 1 kPa
+        zh: P_N₂ = 78 千帕 · P_O₂ = 21 千帕 · P_Ar = 1 千帕
+        ja: P_N₂ = 78 kPa · P_O₂ = 21 kPa · P_Ar = 1 kPa
+      - es: P_total = P_N₂ + P_O₂ + P_Ar
+        en: P_total = P_N₂ + P_O₂ + P_Ar
+        pt: P_total = P_N₂ + P_O₂ + P_Ar
+        fr: P_total = P_N₂ + P_O₂ + P_Ar
+        zh: P_total = P_N₂ + P_O₂ + P_Ar
+        ja: P_total = P_N₂ + P_O₂ + P_Ar
+      - es: P_total = 78 + 21 + 1
+        en: P_total = 78 + 21 + 1
+        pt: P_total = 78 + 21 + 1
+        fr: P_total = 78 + 21 + 1
+        zh: P_total = 78 + 21 + 1
+        ja: P_total = 78 + 21 + 1
+      - es: P_total = 100 kPa
+        en: P_total = 100 kPa
+        pt: P_total = 100 kPa
+        fr: P_total = 100 kPa
+        zh: P_total = 100 千帕
+        ja: P_total = 100 kPa
+      - es: Cerca de 100 kPa, la presión atmosférica al nivel del mar
+        en: About 100 kPa, the atmospheric pressure at sea level
+        pt: Cerca de 100 kPa, a pressão atmosférica ao nível do mar
+        fr: Environ 100 kPa, la pression atmosphérique au niveau de la mer
+        zh: 约100千帕,即海平面的大气压力
+        ja: 約100 kPa。海面での大気圧に相当する

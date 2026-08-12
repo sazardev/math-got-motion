@@ -1,0 +1,378 @@
+id: slope
+title:
+  es: Pendiente de una Recta
+  en: Slope of a Line
+  pt: Inclinação de uma Reta
+  fr: Pente d'une Droite
+  zh: 直线的斜率
+  ja: 直線の傾き
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: La pendiente, la inclinación de la recta.
+      en: The slope, the steepness of the line.
+      pt: A inclinação, o declive da reta.
+      fr: La pente, l'inclinaison de la droite.
+      zh: 斜率，即直线的倾斜程度。
+      ja: 傾き。直線の傾斜の度合い。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre la diferencia de las coordenadas y.
+      en: Opens the difference of the y-coordinates.
+      pt: Abre a diferença das coordenadas y.
+      fr: Ouvre la différence des coordonnées y.
+      zh: 打开 y 坐标之差的括号。
+      ja: y座標の差を開く括弧。
+  - id: y-2
+    type: variable
+    value: y₂
+    explanation:
+      es: La coordenada y del segundo punto.
+      en: The y-coordinate of the second point.
+      pt: A coordenada y do segundo ponto.
+      fr: La coordonnée y du deuxième point.
+      zh: 第二个点的 y 坐标。
+      ja: 2番目の点のy座標。
+  - id: minus-1
+    type: operator
+    value: −
+    explanation:
+      es: Resta la coordenada del primer punto.
+      en: Subtracts the coordinate of the first point.
+      pt: Subtrai a coordenada do primeiro ponto.
+      fr: Soustrait la coordonnée du premier point.
+      zh: 减去第一个点的坐标。
+      ja: 最初の点の座標を引く。
+  - id: y-1
+    type: variable
+    value: y₁
+    explanation:
+      es: La coordenada y del primer punto.
+      en: The y-coordinate of the first point.
+      pt: A coordenada y do primeiro ponto.
+      fr: La coordonnée y du premier point.
+      zh: 第一个点的 y 坐标。
+      ja: 最初の点のy座標。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la diferencia de las coordenadas y.
+      en: Closes the difference of the y-coordinates.
+      pt: Fecha a diferença das coordenadas y.
+      fr: Ferme la différence des coordonnées y.
+      zh: 关闭 y 坐标之差的括号。
+      ja: y座標の差を閉じる括弧。
+  - id: fraction-bar
+    type: operator
+    value: /
+    explanation:
+      es: Se divide entre la diferencia de las coordenadas x.
+      en: Divided by the difference of the x-coordinates.
+      pt: Divide pela diferença das coordenadas x.
+      fr: Divisé par la différence des coordonnées x.
+      zh: 除以 x 坐标之差。
+      ja: x座標の差で割る。
+  - id: open-paren-2
+    type: operator
+    value: (
+    explanation:
+      es: Abre la diferencia de las coordenadas x.
+      en: Opens the difference of the x-coordinates.
+      pt: Abre a diferença das coordenadas x.
+      fr: Ouvre la différence des coordonnées x.
+      zh: 打开 x 坐标之差的括号。
+      ja: x座標の差を開く括弧。
+  - id: x-2
+    type: variable
+    value: x₂
+    explanation:
+      es: La coordenada x del segundo punto.
+      en: The x-coordinate of the second point.
+      pt: A coordenada x do segundo ponto.
+      fr: La coordonnée x du deuxième point.
+      zh: 第二个点的 x 坐标。
+      ja: 2番目の点のx座標。
+  - id: minus-2
+    type: operator
+    value: −
+    explanation:
+      es: Resta la coordenada x del primer punto.
+      en: Subtracts the x-coordinate of the first point.
+      pt: Subtrai a coordenada x do primeiro ponto.
+      fr: Soustrait la coordonnée x du premier point.
+      zh: 减去第一个点的 x 坐标。
+      ja: 最初の点のx座標を引く。
+  - id: x-1
+    type: variable
+    value: x₁
+    explanation:
+      es: La coordenada x del primer punto.
+      en: The x-coordinate of the first point.
+      pt: A coordenada x do primeiro ponto.
+      fr: La coordonnée x du premier point.
+      zh: 第一个点的 x 坐标。
+      ja: 最初の点のx座標。
+  - id: close-paren-2
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la diferencia de las coordenadas x.
+      en: Closes the difference of the x-coordinates.
+      pt: Fecha a diferença das coordenadas x.
+      fr: Ferme la différence des coordonnées x.
+      zh: 关闭 x 坐标之差的括号。
+      ja: x座標の差を閉じる括弧。
+context:
+  author:
+    es: Origen colectivo de la geometría analítica
+    en: Collective origin of analytic geometry
+    pt: Origem coletiva da geometria analítica
+    fr: Origine collective de la géométrie analytique
+    zh: 解析几何的集体起源
+    ja: 解析幾何学の集団的起源
+  era:
+    es: Europa, 1637 (Descartes)
+    en: Europe, 1637 (Descartes)
+    pt: Europa, 1637 (Descartes)
+    fr: Europe, 1637 (Descartes)
+    zh: 欧洲，1637年（笛卡尔）
+    ja: ヨーロッパ、1637年（デカルト）
+  history:
+    es: >-
+      La pendiente mide la inclinación de una recta: cuánto sube por cada unidad que avanza, el
+      cociente entre la subida y el recorrido. En 1637 Descartes publicó La Géométrie, que dio
+      coordenadas a los puntos y permitió describir rectas con ecuaciones como y = mx + b, donde m es
+      la pendiente. Del concepto nacieron las rampas, el diseño de carreteras con pendientes máximas
+      y las líneas de tendencia de los datos. Al llevar el cociente de diferencias al límite cuando
+      los puntos se acercan, se obtiene la derivada, el primer concepto del cálculo.
+    en: >-
+      The slope measures how steep a line is: how much it rises per unit it advances, the ratio of
+      rise to run. In 1637 Descartes published La Géométrie, which gave coordinates to points and
+      made it possible to describe lines with equations like y = mx + b, where m is the slope. The
+      concept gave birth to ramps, road design with maximum grades, and trend lines in data. Taking
+      the ratio of differences to the limit as the points approach each other yields the derivative,
+      the founding concept of calculus.
+    pt: >-
+      A inclinação mede o declive de uma reta: quanto ela sobe a cada unidade que avança, a razão
+      entre a subida e o percurso. Em 1637 Descartes publicou La Géométrie, que deu coordenadas aos
+      pontos e permitiu descrever retas com equações como y = mx + b, onde m é a inclinação. Desse
+      conceito nasceram as rampas, o projeto de estradas com declives máximos e as linhas de tendência
+      dos dados. Ao levar a razão das diferenças ao limite quando os pontos se aproximam, obtém-se a
+      derivada, o primeiro conceito do cálculo.
+    fr: >-
+      La pente mesure l'inclinaison d'une droite : de combien elle monte par unité avancée, le rapport
+      de l'élévation au déplacement. En 1637 Descartes publia La Géométrie, qui donna des coordonnées
+      aux points et permit de décrire les droites par des équations comme y = mx + b, où m est la
+      pente. De ce concept sont nés les rampes, la conception de routes à pentes maximales et les
+      lignes de tendance des données. En portant le rapport des différences à la limite lorsque les
+      points se rapprochent, on obtient la dérivée, le premier concept du calcul.
+    zh: >-
+      斜率衡量一条直线的倾斜程度：每前进一个单位上升多少，即纵坐标之差与横坐标之差的比值。1637年，
+      笛卡尔发表《几何学》，赋予点以坐标，使人们可以用 y = mx + b 这样的方程来描述直线，其中 m 就是
+      斜率。这个概念催生了坡道、限坡公路设计和数据的趋势线。当两点不断靠近时，把差值之比取极限，便得到
+      导数——微积分的第一个概念。
+    ja: >-
+      傾きは直線の傾斜の度合いを測る。1単位進むごとにどれだけ上がるか、すなわち上昇量と移動量の比だ。
+      1637年、デカルトは『幾何学』を発表し、点に座標を与えて、y = mx + b のような方程式で直線を記述できる
+      ようにした。m が傾きである。この概念から、スロープ、最大勾配を考慮した道路設計、データのトレンド線が
+      生まれた。2点が近づくにつれて差の比の極限をとると、微分係数、すなわち微積分の最初の概念が得られる。
+  timeline:
+    - year: "1637"
+      label:
+        es: >-
+          Descartes publica La Géométrie y da coordenadas a los puntos, permitiendo describir rectas
+          con ecuaciones.
+        en: >-
+          Descartes publishes La Géométrie and gives coordinates to points, making it possible to
+          describe lines with equations.
+        pt: >-
+          Descartes publica La Géométrie e dá coordenadas aos pontos, permitindo descrever retas com
+          equações.
+        fr: >-
+          Descartes publie La Géométrie et donne des coordonnées aux points, permettant de décrire
+          les droites par des équations.
+        zh: >-
+          笛卡尔发表《几何学》，赋予点以坐标，从而可以用方程描述直线。
+        ja: >-
+          デカルトが『幾何学』を発表し、点に座標を与えて、方程式で直線を記述できるようにする。
+    - year: s. XVIII
+      label:
+        es: >-
+          Se difunde la notación y = mx + b, que fija a m como la pendiente de la recta.
+        en: >-
+          The y = mx + b notation spreads, fixing m as the slope of the line.
+        pt: >-
+          Difunde-se a notação y = mx + b, que fixa m como a inclinação da reta.
+        fr: >-
+          La notation y = mx + b se diffuse, fixant m comme la pente de la droite.
+        zh: >-
+          y = mx + b 的记法广为流传，m 被固定为直线的斜率。
+        ja: >-
+          y = mx + b という記法が広まり、m が直線の傾きとして定着する。
+    - year: Hoy
+      label:
+        es: >-
+          La pendiente impulsa las líneas de tendencia, las rampas, el diseño de carreteras y la
+          derivada en ingeniería y ciencia de datos.
+        en: >-
+          The slope drives trend lines, ramps, road design, and the derivative in engineering and
+          data science.
+        pt: >-
+          A inclinação impulsiona as linhas de tendência, as rampas, o projeto de estradas e a
+          derivada na engenharia e na ciência de dados.
+        fr: >-
+          La pente anime les lignes de tendance, les rampes, la conception de routes et la dérivée en
+          ingénierie et en science des données.
+        zh: >-
+          斜率驱动着趋势线、坡道、公路设计，以及工程和数据科学中的导数。
+        ja: >-
+          傾きは、トレンド線、スロープ、道路設計、そして工学やデータサイエンスにおける微分係数を支えている。
+  useCases:
+    - title:
+        es: Diseño de carreteras
+        en: Road design
+        pt: Projeto de estradas
+        fr: Conception de routes
+        zh: 公路设计
+        ja: 道路設計
+      description:
+        es: >-
+          Define pendientes máximas de rampas y carreteras para que vehículos y peatones puedan
+          transitarlas con seguridad.
+        en: >-
+          Sets maximum grades for ramps and roads so vehicles and pedestrians can travel them safely.
+        pt: >-
+          Define declives máximos de rampas e estradas para que veículos e pedestres possam
+          transitá-las com segurança.
+        fr: >-
+          Fixe les pentes maximales des rampes et des routes pour que véhicules et piétons puissent
+          les emprunter en sécurité.
+        zh: >-
+          为坡道和公路设定最大坡度，使车辆和行人能够安全通行。
+        ja: >-
+          車両や歩行者が安全に通行できるよう、スロープや道路の最大勾配を定める。
+    - title:
+        es: Estadística
+        en: Statistics
+        pt: Estatística
+        fr: Statistique
+        zh: 统计学
+        ja: 統計学
+      description:
+        es: >-
+          La pendiente de la recta de regresión cuantifica la tendencia de los datos: cuánto cambia
+          una variable por unidad de la otra.
+        en: >-
+          The slope of the regression line quantifies the trend in the data: how much one variable
+          changes per unit of the other.
+        pt: >-
+          A inclinação da reta de regressão quantifica a tendência dos dados: quanto uma variável muda
+          por unidade da outra.
+        fr: >-
+          La pente de la droite de régression quantifie la tendance des données : de combien une
+          variable change par unité de l'autre.
+        zh: >-
+          回归直线的斜率量化了数据的趋势：另一个变量每变化一个单位，该变量变化多少。
+        ja: >-
+          回帰直線の傾きはデータの傾向を定量化する。一方の変数が1単位増えると、他方がどれだけ変わるかを示す。
+    - title:
+        es: Arquitectura
+        en: Architecture
+        pt: Arquitetura
+        fr: Architecture
+        zh: 建筑
+        ja: 建築
+      description:
+        es: >-
+          Define la inclinación de techos y escaleras para garantizar drenaje y accesibilidad.
+        en: >-
+          Sets the inclination of roofs and stairs to ensure drainage and accessibility.
+        pt: >-
+          Define a inclinação de telhados e escadas para garantir drenagem e acessibilidade.
+        fr: >-
+          Fixe l'inclinaison des toits et des escaliers pour assurer le drainage et l'accessibilité.
+        zh: >-
+          设定屋顶和楼梯的倾斜角度，以确保排水顺畅和无障碍通行。
+        ja: >-
+          排水とアクセシビリティを確保するため、屋根や階段の傾斜を定める。
+    - title:
+        es: Cálculo
+        en: Calculus
+        pt: Cálculo
+        fr: Calcul
+        zh: 微积分
+        ja: 微分積分学
+      description:
+        es: >-
+          Es la base de la derivada: la pendiente instantánea de una curva en un punto.
+        en: >-
+          It is the basis of the derivative: the instantaneous slope of a curve at a point.
+        pt: >-
+          É a base da derivada: a inclinação instantânea de uma curva em um ponto.
+        fr: >-
+          Elle est à la base de la dérivée : la pente instantanée d'une courbe en un point.
+        zh: >-
+          它是导数的基础：曲线在一点处的瞬时斜率。
+        ja: >-
+          微分係数の基礎である。曲線のある点における瞬間的な傾きのことだ。
+  example:
+    title:
+      es: Pendiente entre dos puntos
+      en: Slope between two points
+      pt: Inclinação entre dois pontos
+      fr: Pente entre deux points
+      zh: 两点之间的斜率
+      ja: 2点間の傾き
+    lines:
+      - es: "Puntos: (1, 2) y (3, 8)"
+        en: "Points: (1, 2) and (3, 8)"
+        pt: "Pontos: (1, 2) e (3, 8)"
+        fr: "Points : (1, 2) et (3, 8)"
+        zh: "点：(1, 2) 和 (3, 8)"
+        ja: "点：(1, 2) と (3, 8)"
+      - es: Δy = 8 − 2 = 6
+        en: Δy = 8 − 2 = 6
+        pt: Δy = 8 − 2 = 6
+        fr: Δy = 8 − 2 = 6
+        zh: Δy = 8 − 2 = 6
+        ja: Δy = 8 − 2 = 6
+      - es: Δx = 3 − 1 = 2
+        en: Δx = 3 − 1 = 2
+        pt: Δx = 3 − 1 = 2
+        fr: Δx = 3 − 1 = 2
+        zh: Δx = 3 − 1 = 2
+        ja: Δx = 3 − 1 = 2
+      - es: m = 6 / 2
+        en: m = 6 / 2
+        pt: m = 6 / 2
+        fr: m = 6 / 2
+        zh: m = 6 / 2
+        ja: m = 6 / 2
+      - es: m = 3
+        en: m = 3
+        pt: m = 3
+        fr: m = 3
+        zh: m = 3
+        ja: m = 3

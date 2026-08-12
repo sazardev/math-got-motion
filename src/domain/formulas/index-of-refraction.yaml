@@ -1,0 +1,324 @@
+id: index-of-refraction
+title:
+  es: Índice de Refracción
+  en: Index of Refraction
+  pt: Índice de Refração
+  fr: Indice de Réfraction
+  zh: 折射率
+  ja: 屈折率
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: El índice de refracción del medio, que mide cuánto frena la luz.
+      en: The medium's index of refraction, which measures how much it slows light.
+      pt: O índice de refração do meio, que mede o quanto ele desacelera a luz.
+      fr: L'indice de réfraction du milieu, qui mesure combien la lumière ralentit.
+      zh: 介质的折射率，表示光被减慢的程度。
+      ja: 媒質の屈折率。光がどれほど遅くなるかを表す。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: c
+    type: constant
+    value: c
+    explanation:
+      es: La velocidad de la luz en el vacío, unos 3×10⁸ m/s.
+      en: The speed of light in vacuum, about 3×10⁸ m/s.
+      pt: A velocidade da luz no vácuo, cerca de 3×10⁸ m/s.
+      fr: La vitesse de la lumière dans le vide, environ 3×10⁸ m/s.
+      zh: 真空中的光速，约3×10⁸ m/s。
+      ja: 真空中の光速。およそ3×10⁸ m/s。
+  - id: division
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La velocidad de la luz dentro del medio.
+      en: The speed of light inside the medium.
+      pt: A velocidade da luz dentro do meio.
+      fr: La vitesse de la lumière dans le milieu.
+      zh: 光在介质中的速度。
+      ja: 媒質中の光速。
+context:
+  author:
+    es: Basada en el trabajo de Snell y Descartes
+    en: Based on the work of Snell and Descartes
+    pt: Baseada no trabalho de Snell e Descartes
+    fr: Basée sur les travaux de Snell et Descartes
+    zh: 基于斯涅尔和笛卡儿的工作
+    ja: スネルとデカルトの研究に基づく
+  era:
+    es: Europa, s. XVII
+    en: Europe, 17th century
+    pt: Europa, séc. XVII
+    fr: Europe, XVIIe siècle
+    zh: 欧洲，17世纪
+    ja: ヨーロッパ、17世紀
+  history:
+    es: >-
+      Cuando la luz atraviesa un medio distinto del vacío, su velocidad disminuye: en el agua es un
+      25% menor y en el vidrio alrededor de un 33%. El índice de refracción n mide cuánto se frena,
+      como n = c/v, donde c es la velocidad de la luz en el vacío y v la velocidad dentro del medio.
+      La luz cambia de dirección al pasar de un medio a otro precisamente porque su velocidad
+      cambia, por eso una pajita parece doblada en un vaso de agua y por eso las lentes enfocan. De
+      esta propiedad dependen la fibra óptica, los prismas y todos los instrumentos que desvían la
+      luz.
+    en: >-
+      When light travels through a medium other than vacuum, it slows down: about 25% slower in
+      water and roughly 33% slower in glass. The index of refraction n measures how much it slows,
+      as n = c/v, where c is the speed of light in vacuum and v is its speed inside the medium.
+      Light changes direction when crossing between media precisely because its speed changes, which
+      is why a straw looks bent in a glass of water and why lenses focus. Fiber optics, prisms, and
+      every instrument that bends light depend on this property.
+    pt: >-
+      Quando a luz atravessa um meio diferente do vácuo, sua velocidade diminui: cerca de 25% a
+      menos na água e aproximadamente 33% a menos no vidro. O índice de refração n mede o quanto ela
+      desacelera, como n = c/v, em que c é a velocidade da luz no vácuo e v é a velocidade dentro do
+      meio. A luz muda de direção ao passar de um meio para outro justamente porque sua velocidade
+      muda, por isso um canudo parece torto num copo de água e por isso as lentes focam. A fibra
+      óptica, os prismas e todos os instrumentos que desviam a luz dependem dessa propriedade.
+    fr: >-
+      Lorsque la lumière traverse un milieu autre que le vide, elle ralentit : environ 25 % de moins
+      dans l'eau et à peu près 33 % de moins dans le verre. L'indice de réfraction n mesure ce
+      ralentissement, comme n = c/v, où c est la vitesse de la lumière dans le vide et v sa vitesse
+      dans le milieu. La lumière change de direction en passant d'un milieu à l'autre précisément
+      parce que sa vitesse change, d'où la paille qui semble tordue dans un verre d'eau et la mise
+      au point des lentilles. La fibre optique, les prismes et tous les instruments qui dévient la
+      lumière en dépendent.
+    zh: >-
+      光在真空中速度最快，进入其他介质时速度会降低：在水中约减慢25%，在玻璃中约减慢33%。
+      折射率n衡量光被减慢的程度，即n = c/v，其中c是真空中的光速，v是光在介质中的速度。
+      光在不同介质间传播时之所以改变方向，正是因为速度改变了——所以吸管在水中看起来是弯折的，
+      透镜也因此能聚焦。光纤、棱镜以及所有使光偏转的仪器都依赖这一性质。
+    ja: >-
+      光は真空中で最も速く、他の媒質の中では遅くなる。水の中では約25%、ガラスの中では約33%
+      遅くなる。屈折率nはその遅さの程度を表し、n = c/vで定義される。cは真空中の光速、
+      vは媒質中の光速である。光が媒質の境目を通過するときに方向を変えるのは、まさに速度が
+      変わるからである——ストローが水の中で曲がって見えるのも、レンズが光を集めるのもこのためだ。
+      光ファイバー、プリズム、そして光を曲げるあらゆる機器はこの性質に依存している。
+  timeline:
+    - year: "1621"
+      label:
+        es: >-
+          Willebrord Snellius deduce la ley de la refracción, relacionando ángulos y velocidades de
+          la luz.
+        en: >-
+          Willebrord Snellius derives the law of refraction, relating angles and the speeds of
+          light.
+        pt: >-
+          Willebrord Snellius deduz a lei da refração, relacionando ângulos e velocidades da luz.
+        fr: >-
+          Willebrord Snellius déduit la loi de la réfraction, reliant angles et vitesses de la
+          lumière.
+        zh: >-
+          威理博·斯涅尔推导出折射定律，将光线角度与速度联系起来。
+        ja: >-
+          ウィレブロルト・スネルが屈折の法則を導き、光の角度と速度を結びつける。
+    - year: "1678"
+      label:
+        es: >-
+          Huygens explica la refracción con su teoría ondulatoria, aclarando el cambio de
+          velocidad.
+        en: >-
+          Huygens explains refraction with his wave theory, clarifying the speed change.
+        pt: >-
+          Huygens explica a refração com sua teoria ondulatória, esclarecendo a mudança de
+          velocidade.
+        fr: >-
+          Huygens explique la réfraction par sa théorie ondulatoire, éclairant le changement de
+          vitesse.
+        zh: >-
+          惠更斯用他的波动理论解释折射，阐明速度的变化。
+        ja: >-
+          ホイヘンスが波動説で屈折を説明し、速度の変化を明らかにする。
+    - year: "1966"
+      label:
+        es: >-
+          Kao y Hockham proponen la comunicación por fibra óptica, que usa el índice para confinar
+          la luz.
+        en: >-
+          Kao and Hockham propose fiber-optic communication, which uses the index to confine
+          light.
+        pt: >-
+          Kao e Hockham propõem a comunicação por fibra óptica, que usa o índice para confinar a
+          luz.
+        fr: >-
+          Kao et Hockham proposent la communication par fibre optique, qui utilise l'indice pour
+          confiner la lumière.
+        zh: >-
+          高锟和霍克哈姆提出光纤通信，利用折射率将光约束在光纤内。
+        ja: >-
+          カオとホッカムが光ファイバー通信を提案。屈折率を利用して光を閉じ込める。
+    - year: Hoy
+      label:
+        es: >-
+          El índice gobierna los cables submarinos, los anteojos y todo instrumento óptico.
+        en: >-
+          The index governs submarine cables, eyeglasses, and every optical instrument.
+        pt: >-
+          O índice rege os cabos submarinos, os óculos e todo instrumento óptico.
+        fr: >-
+          L'indice régit les câbles sous-marins, les lunettes et tout instrument optique.
+        zh: >-
+          折射率支配着海底光缆、眼镜和所有光学仪器。
+        ja: >-
+          屈折率は海底ケーブルや眼鏡、あらゆる光学機器を支配している。
+  useCases:
+    - title:
+        es: Fibra óptica
+        en: Fiber optics
+        pt: Fibra óptica
+        fr: Fibre optique
+        zh: 光纤
+        ja: 光ファイバー
+      description:
+        es: >-
+          Los cables submarinos guían pulsos de luz por kilómetros aprovechando la reflexión total,
+          gobernada por el índice.
+        en: >-
+          Submarine cables guide light pulses for kilometers using total internal reflection,
+          governed by the index.
+        pt: >-
+          Os cabos submarinos guiam pulsos de luz por quilômetros usando a reflexão total,
+          governada pelo índice.
+        fr: >-
+          Les câbles sous-marins guident les impulsions lumineuses sur des kilomètres grâce à la
+          réflexion totale, régie par l'indice.
+        zh: >-
+          海底光缆利用由折射率决定的全反射，将光脉冲传送数公里。
+        ja: >-
+          海底ケーブルは、屈折率が支配する全反射を利用して光パルスを数キロメートルにわたって導く。
+    - title:
+        es: Lentes y anteojos
+        en: Lenses and eyeglasses
+        pt: Lentes e óculos
+        fr: Lentilles et lunettes
+        zh: 透镜与眼镜
+        ja: レンズと眼鏡
+      description:
+        es: >-
+          Cada vidrio tiene un índice propio con el que se calcula cuánto desvía la luz para
+          enfocar.
+        en: >-
+          Each glass has its own index used to calculate how much it bends light to focus.
+        pt: >-
+          Cada vidro tem um índice próprio usado para calcular o quanto desvia a luz para focar.
+        fr: >-
+          Chaque verre a son propre indice, utilisé pour calculer de combien il dévie la lumière
+          pour focaliser.
+        zh: >-
+          每种玻璃都有各自的折射率，用它可以计算光线偏折多少以实现聚焦。
+        ja: >-
+          ガラスごとに固有の屈折率があり、それが光をどれだけ曲げて焦点を合わせるかを計算するのに使われる。
+    - title:
+        es: Prismas y espectroscopía
+        en: Prisms and spectroscopy
+        pt: Prismas e espectroscopia
+        fr: Prismes et spectroscopie
+        zh: 棱镜与光谱学
+        ja: プリズムと分光法
+      description:
+        es: >-
+          La dispersión de la luz blanca en colores depende de cómo varía el índice con la longitud
+          de onda.
+        en: >-
+          The dispersion of white light into colors depends on how the index varies with
+          wavelength.
+        pt: >-
+          A dispersão da luz branca em cores depende de como o índice varia com o comprimento de
+          onda.
+        fr: >-
+          La dispersion de la lumière blanche en couleurs dépend de la variation de l'indice avec
+          la longueur d'onde.
+        zh: >-
+          白光色散成彩色光谱，取决于折射率如何随波长变化。
+        ja: >-
+          白色光が色に分かれる分散は、屈折率が波長によってどう変わるかに依存する。
+    - title:
+        es: Recubrimientos ópticos
+        en: Optical coatings
+        pt: Revestimentos ópticos
+        fr: Revêtements optiques
+        zh: 光学镀膜
+        ja: 光学コーティング
+      description:
+        es: >-
+          Los antirreflejos y los espejos se diseñan con capas de índices distintos calculados con
+          esta relación.
+        en: >-
+          Anti-reflective coatings and mirrors are built from layers of different indices computed
+          with this relation.
+        pt: >-
+          Antirreflexos e espelhos são feitos de camadas de índices diferentes calculadas com essa
+          relação.
+        fr: >-
+          Les couches antireflet et les miroirs sont conçus avec des couches d'indices différents
+          calculés à partir de cette relation.
+        zh: >-
+          增透膜和镜面由不同折射率的薄膜层构成，这些层通过这一关系计算。
+        ja: >-
+          反射防止膜や鏡は、この関係から計算した異なる屈折率の層で作られる。
+  example:
+    title:
+      es: Luz en el vidrio
+      en: Light in glass
+      pt: Luz no vidro
+      fr: Lumière dans le verre
+      zh: 光在玻璃中
+      ja: ガラス中の光
+    lines:
+      - es: c = 3×10⁸ m/s
+        en: c = 3×10⁸ m/s
+        pt: c = 3×10⁸ m/s
+        fr: c = 3×10⁸ m/s
+        zh: c = 3×10⁸ m/s
+        ja: c = 3×10⁸ m/s
+      - es: v = 2×10⁸ m/s (en el vidrio)
+        en: v = 2×10⁸ m/s (in glass)
+        pt: v = 2×10⁸ m/s (no vidro)
+        fr: v = 2×10⁸ m/s (dans le verre)
+        zh: v = 2×10⁸ m/s（在玻璃中）
+        ja: v = 2×10⁸ m/s（ガラス中）
+      - es: n = c/v
+        en: n = c/v
+        pt: n = c/v
+        fr: n = c/v
+        zh: n = c/v
+        ja: n = c/v
+      - es: n = (3×10⁸)/(2×10⁸)
+        en: n = (3×10⁸)/(2×10⁸)
+        pt: n = (3×10⁸)/(2×10⁸)
+        fr: n = (3×10⁸)/(2×10⁸)
+        zh: n = (3×10⁸)/(2×10⁸)
+        ja: n = (3×10⁸)/(2×10⁸)
+      - es: n = 1.5
+        en: n = 1.5
+        pt: n = 1,5
+        fr: n = 1,5
+        zh: n = 1.5
+        ja: n = 1.5

@@ -1,0 +1,309 @@
+id: electric-field
+title:
+  es: Campo Eléctrico
+  en: Electric Field
+  pt: Campo Elétrico
+  fr: Champ Électrique
+  zh: 电场
+  ja: 電界
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: La intensidad del campo eléctrico, en newtons por culombio.
+      en: The strength of the electric field, in newtons per coulomb.
+      pt: A intensidade do campo elétrico, em newtons por coulomb.
+      fr: L'intensité du champ électrique, en newtons par coulomb.
+      zh: 电场强度,单位为牛顿每库仑。
+      ja: 電界の強さ。単位はニュートン毎クーロン。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: La fuerza que el campo ejerce sobre una carga de prueba.
+      en: The force the field exerts on a test charge.
+      pt: A força que o campo exerce sobre uma carga de prova.
+      fr: La force que le champ exerce sur une charge d'essai.
+      zh: 电场对试探电荷所施加的力。
+      ja: 電界が試験電荷に及ぼす力。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por la magnitud de la carga de prueba.
+      en: Divided by the magnitude of the test charge.
+      pt: Dividido pela magnitude da carga de prova.
+      fr: Divisée par la grandeur de la charge d'essai.
+      zh: 除以试探电荷的电荷量。
+      ja: 試験電荷の大きさで割る。
+  - id: q
+    type: variable
+    value: q
+    explanation:
+      es: La magnitud de la carga de prueba que detecta el campo.
+      en: The magnitude of the test charge that senses the field.
+      pt: A magnitude da carga de prova que sente o campo.
+      fr: La grandeur de la charge d'essai qui détecte le champ.
+      zh: 感知电场的试探电荷的电荷量。
+      ja: 電界を感じる試験電荷の大きさ。
+context:
+  author:
+    es: Michael Faraday
+    en: Michael Faraday
+    pt: Michael Faraday
+    fr: Michael Faraday
+    zh: 迈克尔·法拉第
+    ja: マイケル・ファラデー
+  era:
+    es: Inglaterra, 1791–1867
+    en: England, 1791–1867
+    pt: Inglaterra, 1791–1867
+    fr: Angleterre, 1791–1867
+    zh: 英国,1791–1867年
+    ja: イギリス、1791–1867年
+  history:
+    es: >-
+      Michael Faraday introdujo en el siglo XIX el campo eléctrico como una entidad física que
+      transmite la fuerza entre cargas sin contacto directo. Su intensidad E mide la fuerza por
+      unidad de carga de prueba que el campo ejerce: E = F/q. El concepto revolucionó la física:
+      permitió entender los condensadores, gobernar los tubos de rayos catódicos de los antiguos
+      televisores y, en manos de Maxwell, dio forma a la teoría moderna del electromagnetismo.
+    en: >-
+      Michael Faraday introduced the electric field in the 19th century as a physical entity that
+      transmits force between charges with no direct contact. Its strength E measures the force per
+      unit of test charge that the field exerts: E = F/q. The concept revolutionised physics: it
+      explained capacitors, steered the cathode-ray tubes of old televisions, and, in Maxwell's
+      hands, shaped the modern theory of electromagnetism.
+    pt: >-
+      Michael Faraday introduziu o campo elétrico no século XIX como uma entidade física que transmite
+      a força entre cargas sem contato direto. Sua intensidade E mede a força por unidade de carga de
+      prova que o campo exerce: E = F/q. O conceito revolucionou a física: permitiu entender os
+      capacitores, governar os tubos de raios catódicos das antigas televisões e, nas mãos de
+      Maxwell, moldou a teoria moderna do eletromagnetismo.
+    fr: >-
+      Michael Faraday a introduit au XIXᵉ siècle le champ électrique comme une entité physique qui
+      transmet la force entre les charges sans contact direct. Son intensité E mesure la force par
+      unité de charge d'essai qu'exerce le champ : E = F/q. Ce concept a révolutionné la physique :
+      il a permis de comprendre les condensateurs, de piloter les tubes cathodiques des anciens
+      téléviseurs et, entre les mains de Maxwell, de façonner la théorie moderne de
+      l'électromagnétisme.
+    zh: >-
+      19世纪,迈克尔·法拉第引入了电场这一概念,把它看作在电荷之间无需直接接触即可传递力的物理实体。其强度 E 衡量电场对
+      单位试探电荷所施加的力:E = F/q。这一概念彻底改变了物理学:它帮助人们理解电容器、控制旧电视机的阴极射线管,并在
+      麦克斯韦手中塑造了现代电磁理论。
+    ja: >-
+      19世紀、マイケル・ファラデーは電界を、電荷の間に直接接触なしで力を伝える物理的実体として導入した。その強さEは、
+      電界が単位試験電荷に及ぼす力を表す:E = F/q。この概念は物理学を一変させ、コンデンサの理解を可能にし、旧型テレビの
+      ブラウン管を制御し、マクスウェルによって現代電磁気学の理論へと結実した。
+  timeline:
+    - year: "1831"
+      label:
+        es: >-
+          Faraday concibe las líneas de fuerza para visualizar cómo actúa la fuerza eléctrica a
+          distancia.
+        en: >-
+          Faraday conceives lines of force to visualise how electric force acts at a distance.
+        pt: >-
+          Faraday concebe as linhas de força para visualizar como a força elétrica age à distância.
+        fr: >-
+          Faraday conçoit les lignes de force pour visualiser comment la force électrique agit à
+          distance.
+        zh: >-
+          法拉第构想出力线,用以可视化电力如何远距离作用。
+        ja: >-
+          ファラデーが力線の概念を考案し、電気力が距離を隔てて働く様子を可視化する。
+    - year: "1861"
+      label:
+        es: >-
+          Maxwell unifica electricidad y magnetismo y el campo eléctrico pasa a ser una entidad
+          central de la física.
+        en: >-
+          Maxwell unifies electricity and magnetism, making the electric field a central entity of
+          physics.
+        pt: >-
+          Maxwell unifica eletricidade e magnetismo e o campo elétrico passa a ser uma entidade
+          central da física.
+        fr: >-
+          Maxwell unifie l'électricité et le magnétisme, faisant du champ électrique une entité
+          centrale de la physique.
+        zh: >-
+          麦克斯韦统一了电与磁,电场成为物理学的核心实体。
+        ja: >-
+          マクスウェルが電気と磁気を統一し、電界が物理学の中心的概念となる。
+    - year: "1897"
+      label:
+        es: >-
+          Braun construye el primer tubo de rayos catódicos, que desvía electrones con campos
+          eléctricos.
+        en: >-
+          Braun builds the first cathode-ray tube, deflecting electrons with electric fields.
+        pt: >-
+          Braun constrói o primeiro tubo de raios catódicos, que desvia elétrons com campos
+          elétricos.
+        fr: >-
+          Braun construit le premier tube cathodique, qui dévie des électrons à l'aide de champs
+          électriques.
+        zh: >-
+          布劳恩制成第一根阴极射线管,用电场偏转电子。
+        ja: >-
+          ブラウンが初のブラウン管を製作。電界で電子を偏向させる。
+    - year: Hoy
+      label:
+        es: >-
+          E = F/q sigue siendo la definición que abre cualquier curso de electromagnetismo.
+        en: >-
+          E = F/q remains the definition that opens any course on electromagnetism.
+        pt: >-
+          E = F/q continua sendo a definição que abre qualquer curso de eletromagnetismo.
+        fr: >-
+          E = F/q reste la définition qui ouvre tout cours d'électromagnétisme.
+        zh: >-
+          E = F/q 至今仍是任何电磁学课程的开篇定义。
+        ja: >-
+          E = F/q は、今も電磁気学のどの教科書でも最初に学ぶ定義である。
+  useCases:
+    - title:
+        es: Impresión electrostática
+        en: Electrostatic printing
+        pt: Impressão eletrostática
+        fr: Impression électrostatique
+        zh: 静电打印
+        ja: 静電印刷
+      description:
+        es: >-
+          Fotocopiadoras e impresoras láser usan campos eléctricos para depositar tóner sobre el
+          papel.
+        en: >-
+          Copiers and laser printers use electric fields to deposit toner onto paper.
+        pt: >-
+          Fotocopiadoras e impressoras laser usam campos elétricos para depositar toner no papel.
+        fr: >-
+          Les photocopieurs et imprimantes laser utilisent des champs électriques pour déposer le
+          toner sur le papier.
+        zh: >-
+          复印机和激光打印机利用电场把碳粉沉积到纸上。
+        ja: >-
+          コピー機やレーザープリンタは電界を使って紙にトナーを付着させる。
+    - title:
+        es: Pantallas de rayos catódicos
+        en: Cathode-ray screens
+        pt: Telas de raios catódicos
+        fr: Écrans à rayons cathodiques
+        zh: 阴极射线屏
+        ja: ブラウン管ディスプレイ
+      description:
+        es: >-
+          Los campos eléctricos desvían el haz de electrones que dibuja la imagen en los tubos de
+          rayos catódicos.
+        en: >-
+          Electric fields steer the electron beam that draws the picture on cathode-ray tubes.
+        pt: >-
+          Os campos elétricos desviam o feixe de elétrons que desenha a imagem nos tubos de raios
+          catódicos.
+        fr: >-
+          Les champs électriques dévient le faisceau d'électrons qui dessine l'image dans les tubes
+          cathodiques.
+        zh: >-
+          电场偏转电子束,在阴极射线管上画出图像。
+        ja: >-
+          電界がブラウン管で画像を描く電子ビームを偏向させる。
+    - title:
+        es: Diseño de condensadores
+        en: Capacitor design
+        pt: Projeto de capacitores
+        fr: Conception de condensateurs
+        zh: 电容器设计
+        ja: コンデンサ設計
+      description:
+        es: >-
+          La intensidad del campo entre placas fija la tensión máxima que un condensador soporta.
+        en: >-
+          The field strength between plates sets the maximum voltage a capacitor can withstand.
+        pt: >-
+          A intensidade do campo entre placas fixa a tensão máxima que um capacitor suporta.
+        fr: >-
+          L'intensité du champ entre les armatures fixe la tension maximale que supporte un
+          condensateur.
+        zh: >-
+          极板间的场强决定了电容器能承受的最高电压。
+        ja: >-
+          極板間の電界の強さが、コンデンサが耐えられる最大電圧を決める。
+    - title:
+        es: Aceleradores de partículas
+        en: Particle accelerators
+        pt: Aceleradores de partículas
+        fr: Accélérateurs de particules
+        zh: 粒子加速器
+        ja: 粒子加速器
+      description:
+        es: >-
+          Los campos eléctricos impulsan las partículas cargadas en los aceleradores de
+          investigación.
+        en: >-
+          Electric fields accelerate charged particles in research accelerators.
+        pt: >-
+          Os campos elétricos aceleram as partículas carregadas nos aceleradores de pesquisa.
+        fr: >-
+          Les champs électriques accélèrent les particules chargées dans les accélérateurs de
+          recherche.
+        zh: >-
+          电场在研究用的粒子加速器中推动带电粒子。
+        ja: >-
+          研究用加速器では電界が荷電粒子を加速する。
+  example:
+    title:
+      es: Campo que siente una carga de prueba
+      en: Field felt by a test charge
+      pt: Campo sentido por uma carga de prova
+      fr: Champ ressenti par une charge d'essai
+      zh: 试探电荷所感受到的电场
+      ja: 試験電荷が感じる電界
+    lines:
+      - es: F = 3 N
+        en: F = 3 N
+        pt: F = 3 N
+        fr: F = 3 N
+        zh: F = 3 N
+        ja: F = 3 N
+      - es: q = 1,5 C
+        en: q = 1.5 C
+        pt: q = 1,5 C
+        fr: q = 1,5 C
+        zh: q = 1.5 C
+        ja: q = 1.5 C
+      - es: E = F / q
+        en: E = F / q
+        pt: E = F / q
+        fr: E = F / q
+        zh: E = F / q
+        ja: E = F / q
+      - es: E = 3 / 1,5
+        en: E = 3 / 1.5
+        pt: E = 3 / 1,5
+        fr: E = 3 / 1,5
+        zh: E = 3 / 1.5
+        ja: E = 3 / 1.5
+      - es: E = 2 N/C
+        en: E = 2 N/C
+        pt: E = 2 N/C
+        fr: E = 2 N/C
+        zh: E = 2 N/C
+        ja: E = 2 N/C

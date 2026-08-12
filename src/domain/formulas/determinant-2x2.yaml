@@ -1,0 +1,323 @@
+id: determinant-2x2
+title:
+  es: Determinante de una Matriz 2×2
+  en: Determinant of a 2×2 Matrix
+  pt: Determinante de uma Matriz 2×2
+  fr: Déterminant d'une matrice 2×2
+  zh: 2×2 矩阵的行列式
+  ja: 2×2行列の行列式
+category:
+  es: Álgebra lineal
+  en: Linear algebra
+  pt: Álgebra linear
+  fr: Algèbre linéaire
+  zh: 线性代数
+  ja: 線形代数
+nodes:
+  - id: det
+    type: operator
+    value: det
+    explanation:
+      es: "det: el determinante de la matriz."
+      en: "det: the determinant of the matrix."
+      pt: "det: o determinante da matriz."
+      fr: "det : le déterminant de la matrice."
+      zh: "det：矩阵的行列式。"
+      ja: "det：行列の行列式。"
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre la matriz.
+      en: Opens the matrix.
+      pt: Abre a matriz.
+      fr: Ouvre la matrice.
+      zh: 打开矩阵。
+      ja: 行列を開く括弧。
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: La entrada de arriba a la izquierda.
+      en: The top-left entry.
+      pt: A entrada no canto superior esquerdo.
+      fr: L'entrée en haut à gauche.
+      zh: 左上方的元素。
+      ja: 左上の成分。
+  - id: b
+    type: variable
+    value: b
+    explanation:
+      es: La entrada de arriba a la derecha.
+      en: The top-right entry.
+      pt: A entrada no canto superior direito.
+      fr: L'entrée en haut à droite.
+      zh: 右上方的元素。
+      ja: 右上の成分。
+  - id: c
+    type: variable
+    value: c
+    explanation:
+      es: La entrada de abajo a la izquierda.
+      en: The bottom-left entry.
+      pt: A entrada no canto inferior esquerdo.
+      fr: L'entrée en bas à gauche.
+      zh: 左下方的元素。
+      ja: 左下の成分。
+  - id: d
+    type: variable
+    value: d
+    explanation:
+      es: La entrada de abajo a la derecha.
+      en: The bottom-right entry.
+      pt: A entrada no canto inferior direito.
+      fr: L'entrée en bas à droite.
+      zh: 右下方的元素。
+      ja: 右下の成分。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la matriz.
+      en: Closes the matrix.
+      pt: Fecha a matriz.
+      fr: Ferme la matrice.
+      zh: 关闭矩阵。
+      ja: 行列を閉じる括弧。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: ad
+    type: variable
+    value: ad
+    explanation:
+      es: El producto de la diagonal principal.
+      en: The product of the main diagonal.
+      pt: O produto da diagonal principal.
+      fr: Le produit de la diagonale principale.
+      zh: 主对角线的乘积。
+      ja: 主対角の積。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: Menos el producto de la otra diagonal.
+      en: Minus the product of the other diagonal.
+      pt: Menos o produto da outra diagonal.
+      fr: Moins le produit de l'autre diagonale.
+      zh: 减去另一条对角线的乘积。
+      ja: もう一方の対角の積を引く。
+  - id: bc
+    type: variable
+    value: bc
+    explanation:
+      es: El producto de la diagonal secundaria.
+      en: The product of the secondary diagonal.
+      pt: O produto da diagonal secundária.
+      fr: Le produit de la diagonale secondaire.
+      zh: 副对角线的乘积。
+      ja: 副対角の積。
+context:
+  author:
+    es: Seki Kōwa y Gottfried Leibniz
+    en: Seki Kōwa and Gottfried Leibniz
+    pt: Seki Kōwa e Gottfried Leibniz
+    fr: Seki Kōwa et Gottfried Leibniz
+    zh: 关孝和与戈特弗里德·莱布尼茨
+    ja: 関孝和とゴットフリート・ライプニッツ
+  era:
+    es: Japón y Alemania, 1683 · teoría desarrollada en el s. XIX
+    en: Japan and Germany, 1683 · theory developed in the 19th century
+    pt: Japão e Alemanha, 1683 · teoria desenvolvida no séc. XIX
+    fr: Japon et Allemagne, 1683 · théorie développée au XIXe siècle
+    zh: 日本与德国，1683年·理论于19世纪发展
+    ja: 日本とドイツ、1683年・理論は19世紀に発展
+  history:
+    es: >-
+      Los determinantes fueron descubiertos de forma independiente por Seki Kōwa en Japón y por
+      Leibniz en Alemania, ambos alrededor de 1683. El caso 2×2, det = ad − bc, mide el factor de
+      escala del área bajo la transformación de la matriz, y su signo indica si la transformación
+      invierte la orientación. En el siglo XIX, Cauchy y otros construyeron la teoría general que hoy
+      alimenta al álgebra lineal y la computación.
+    en: >-
+      Determinants were discovered independently by Seki Kōwa in Japan and Leibniz in Germany, both
+      around 1683. The 2×2 case, det = ad − bc, measures the area scale factor under the matrix
+      transformation, and its sign tells whether the transformation flips orientation. In the 19th
+      century, Cauchy and others built the general theory that today powers linear algebra and
+      computing.
+    pt: >-
+      Os determinantes foram descobertos de forma independente por Seki Kōwa no Japão e por Leibniz na
+      Alemanha, ambos por volta de 1683. O caso 2×2, det = ad − bc, mede o fator de escala da área sob
+      a transformação da matriz, e seu sinal indica se a transformação inverte a orientação. No século
+      XIX, Cauchy e outros construíram a teoria geral que hoje alimenta a álgebra linear e a
+      computação.
+    fr: >-
+      Les déterminants furent découverts indépendamment par Seki Kōwa au Japon et Leibniz en
+      Allemagne, tous deux vers 1683. Le cas 2×2, det = ad − bc, mesure le facteur d'échelle de l'aire
+      sous la transformation de la matrice, et son signe indique si la transformation inverse
+      l'orientation. Au XIXe siècle, Cauchy et d'autres construisirent la théorie générale qui
+      alimente aujourd'hui l'algèbre linéaire et le calcul.
+    zh: >-
+      行列式由日本的关孝和与德国的莱布尼茨于1683年前后独立发现。2×2的情形det = ad − bc度量矩阵变换下面积的比例因子，
+      其符号表示变换是否翻转方向。19世纪，柯西等人建立了完整的理论，至今支撑着线性代数和计算。
+    ja: >-
+      行列式は、1683年頃に日本の関孝和とドイツのライプニッツが独立に発見した。2×2の場合、det = ad − bcは、行列の
+      変換による面積の拡大率を測り、その符号は変換が向きを反転させるかどうかを示す。19世紀、コーシーらが、今日の
+      線形代数と計算を支える一般的な理論を築いた。
+  timeline:
+    - year: "1683"
+      label:
+        es: >-
+          Seki Kōwa y Leibniz descubren los determinantes por separado al estudiar sistemas lineales.
+        en: >-
+          Seki Kōwa and Leibniz independently discover determinants while studying linear systems.
+        pt: >-
+          Seki Kōwa e Leibniz descobrem os determinantes separadamente ao estudar sistemas lineares.
+        fr: >-
+          Seki Kōwa et Leibniz découvrent indépendamment les déterminants en étudiant les systèmes
+          linéaires.
+        zh: >-
+          关孝和与莱布尼茨在研究线性方程组时各自独立发现行列式。
+        ja: >-
+          関孝和とライプニッツが線形方程式系の研究の中で、独立に行列式を発見する。
+    - year: s. XIX
+      label:
+        es: >-
+          Cauchy sistematiza la teoría general del determinante para matrices de cualquier tamaño.
+        en: >-
+          Cauchy systematizes the general determinant theory for matrices of any size.
+        pt: >-
+          Cauchy sistematiza a teoria geral do determinante para matrizes de qualquer tamanho.
+        fr: >-
+          Cauchy systématise la théorie générale du déterminant pour les matrices de toute taille.
+        zh: >-
+          柯西为任意大小的矩阵系统化了一般行列式理论。
+        ja: >-
+          コーシーが任意サイズの行列に対する行列式の一般的な理論を体系化する。
+    - year: Hoy
+      label:
+        es: >-
+          Se calcula por miles de millones de veces por segundo en los solvers lineales modernos.
+        en: >-
+          It is computed billions of times per second in modern linear solvers.
+        pt: >-
+          É calculado bilhões de vezes por segundo nos solvers lineares modernos.
+        fr: >-
+          Il est calculé des milliards de fois par seconde dans les solveurs linéaires modernes.
+        zh: >-
+          在现代线性求解器中，它每秒钟被计算数十亿次。
+        ja: >-
+          現代の線形ソルバーで、毎秒何十億回も計算されている。
+  useCases:
+    - title:
+        es: Resolución de sistemas
+        en: Solving linear systems
+        pt: Resolução de sistemas lineares
+        fr: Résolution de systèmes linéaires
+        zh: 求解线性方程组
+        ja: 線形方程式系の解法
+      description:
+        es: >-
+          La regla de Cramer usa determinantes para resolver sistemas de dos ecuaciones.
+        en: >-
+          Cramer's rule uses determinants to solve two-equation systems.
+        pt: >-
+          A regra de Cramer usa determinantes para resolver sistemas de duas equações.
+        fr: >-
+          La règle de Cramer utilise des déterminants pour résoudre des systèmes de deux équations.
+        zh: >-
+          克莱姆法则用行列式解二元方程组。
+        ja: >-
+          クラメルの公式は、行列式を用いて2元連立方程式を解く。
+    - title:
+        es: Comprobación de invertibilidad
+        en: Checking invertibility
+        pt: Verificação de invertibilidade
+        fr: Vérification d'inversibilité
+        zh: 检查可逆性
+        ja: 逆行列の存在判定
+      description:
+        es: >-
+          Una matriz es invertible si y solo si su determinante no es cero.
+        en: >-
+          A matrix is invertible if and only if its determinant is nonzero.
+        pt: >-
+          Uma matriz é invertível se e somente se seu determinante não é zero.
+        fr: >-
+          Une matrice est inversible si et seulement si son déterminant est non nul.
+        zh: >-
+          矩阵可逆当且仅当其行列式不为零。
+        ja: >-
+          行列が可逆であるための必要十分条件は、行列式が0でないことである。
+    - title:
+        es: Gráficos por computadora
+        en: Computer graphics
+        pt: Computação gráfica
+        fr: Infographie
+        zh: 计算机图形学
+        ja: コンピューターグラフィックス
+      description:
+        es: >-
+          El área del paralelogramo formado por dos vectores es el valor absoluto del determinante.
+        en: >-
+          The area of the parallelogram spanned by two vectors is the absolute determinant.
+        pt: >-
+          A área do paralelogramo formado por dois vetores é o determinante em valor absoluto.
+        fr: >-
+          L'aire du parallélogramme engendré par deux vecteurs est la valeur absolue du déterminant.
+        zh: >-
+          两个向量张成的平行四边形的面积等于行列式的绝对值。
+        ja: >-
+          2つのベクトルが張る平行四辺形の面積は、行列式の絶対値である。
+  example:
+    title:
+      es: Determinante de [[1,2],[3,4]]
+      en: Determinant of [[1,2],[3,4]]
+      pt: Determinante de [[1,2],[3,4]]
+      fr: Déterminant de [[1,2],[3,4]]
+      zh: "[[1,2],[3,4]] 的行列式"
+      ja: "[[1,2],[3,4]] の行列式"
+    lines:
+      - es: "a = 1, b = 2, c = 3, d = 4"
+        en: "a = 1, b = 2, c = 3, d = 4"
+        pt: "a = 1, b = 2, c = 3, d = 4"
+        fr: "a = 1, b = 2, c = 3, d = 4"
+        zh: "a = 1，b = 2，c = 3，d = 4"
+        ja: "a = 1、b = 2、c = 3、d = 4"
+      - es: det = ad − bc
+        en: det = ad − bc
+        pt: det = ad − bc
+        fr: det = ad − bc
+        zh: det = ad − bc
+        ja: det = ad − bc
+      - es: det = 1·4 − 2·3
+        en: det = 1·4 − 2·3
+        pt: det = 1·4 − 2·3
+        fr: det = 1·4 − 2·3
+        zh: det = 1·4 − 2·3
+        ja: det = 1·4 − 2·3
+      - es: det = 4 − 6
+        en: det = 4 − 6
+        pt: det = 4 − 6
+        fr: det = 4 − 6
+        zh: det = 4 − 6
+        ja: det = 4 − 6
+      - es: det = −2
+        en: det = −2
+        pt: det = −2
+        fr: det = −2
+        zh: det = −2
+        ja: det = −2
+      - es: El signo negativo indica que invierte la orientación
+        en: The negative sign means it flips orientation
+        pt: O sinal negativo indica que inverte a orientação
+        fr: Le signe négatif indique qu'elle inverse l'orientation
+        zh: 负号表示它翻转方向
+        ja: 負の符号は向きが反転することを示す

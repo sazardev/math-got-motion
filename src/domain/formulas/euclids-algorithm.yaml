@@ -1,0 +1,335 @@
+id: euclids-algorithm
+title:
+  es: Algoritmo de Euclides
+  en: Euclid's Algorithm
+  pt: Algoritmo de Euclides
+  fr: Algorithme d'Euclide
+  zh: 欧几里得算法
+  ja: ユークリッドの互除法
+category:
+  es: Teoría de números
+  en: Number theory
+  pt: Teoria dos números
+  fr: Théorie des nombres
+  zh: 数论
+  ja: 数論
+nodes:
+  - id: gcd
+    type: operator
+    value: gcd
+    explanation:
+      es: "gcd: el máximo común divisor de dos números."
+      en: "gcd: the greatest common divisor of two numbers."
+      pt: "gcd: o máximo divisor comum de dois números."
+      fr: "gcd : le plus grand commun diviseur de deux nombres."
+      zh: "gcd：两个数的最大公约数。"
+      ja: "gcd：2つの数の最大公約数。"
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre los argumentos.
+      en: Opens the arguments.
+      pt: Abre os argumentos.
+      fr: Ouvre les arguments.
+      zh: 打开参数。
+      ja: 引数を開く括弧。
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: "a: el primer número."
+      en: "a: the first number."
+      pt: "a: o primeiro número."
+      fr: "a : le premier nombre."
+      zh: "a：第一个数。"
+      ja: "a：最初の数。"
+  - id: comma
+    type: operator
+    value: ","
+    explanation:
+      es: Separa los argumentos.
+      en: Separates the arguments.
+      pt: Separa os argumentos.
+      fr: Sépare les arguments.
+      zh: 分隔参数。
+      ja: 引数を区切る。
+  - id: b
+    type: variable
+    value: b
+    explanation:
+      es: "b: el segundo número."
+      en: "b: the second number."
+      pt: "b: o segundo número."
+      fr: "b : le second nombre."
+      zh: "b：第二个数。"
+      ja: "b：2番目の数。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra los argumentos.
+      en: Closes the arguments.
+      pt: Fecha os argumentos.
+      fr: Ferme les arguments.
+      zh: 关闭参数。
+      ja: 引数を閉じる括弧。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: gcd-2
+    type: operator
+    value: gcd
+    explanation:
+      es: El mismo máximo común divisor.
+      en: The same greatest common divisor.
+      pt: O mesmo máximo divisor comum.
+      fr: Le même plus grand commun diviseur.
+      zh: 同一个最大公约数。
+      ja: 同じ最大公約数。
+  - id: open-paren-2
+    type: operator
+    value: (
+    explanation:
+      es: Abre los argumentos reducidos.
+      en: Opens the reduced arguments.
+      pt: Abre os argumentos reduzidos.
+      fr: Ouvre les arguments réduits.
+      zh: 打开约化后的参数。
+      ja: 縮小した引数を開く括弧。
+  - id: b-2
+    type: variable
+    value: b
+    explanation:
+      es: El segundo número pasa a primer lugar.
+      en: The second number moves to first place.
+      pt: O segundo número passa ao primeiro lugar.
+      fr: Le second nombre passe en première place.
+      zh: 第二个数移到第一位。
+      ja: 2番目の数が1番目に移る。
+  - id: comma-2
+    type: operator
+    value: ","
+    explanation:
+      es: Separa los argumentos.
+      en: Separates the arguments.
+      pt: Separa os argumentos.
+      fr: Sépare les arguments.
+      zh: 分隔参数。
+      ja: 引数を区切る。
+  - id: a-mod-b
+    type: variable
+    value: a mod b
+    explanation:
+      es: El resto de dividir a entre b.
+      en: The remainder of dividing a by b.
+      pt: O resto da divisão de a por b.
+      fr: Le reste de la division de a par b.
+      zh: a除以b的余数。
+      ja: aをbで割った余り。
+  - id: close-paren-2
+    type: operator
+    value: )
+    explanation:
+      es: Cierra los argumentos reducidos.
+      en: Closes the reduced arguments.
+      pt: Fecha os argumentos reduzidos.
+      fr: Ferme les arguments réduits.
+      zh: 关闭约化后的参数。
+      ja: 縮小した引数を閉じる括弧。
+context:
+  author:
+    es: Euclides
+    en: Euclid
+    pt: Euclides
+    fr: Euclide
+    zh: 欧几里得
+    ja: ユークリッド
+  era:
+    es: Alejandría, c. 300 a.C. · en los Elementos
+    en: Alexandria, c. 300 BC · in the Elements
+    pt: Alexandria, c. 300 a.C. · nos Elementos
+    fr: Alexandrie, v. 300 av. J.-C. · dans les Éléments
+    zh: 亚历山大港，约公元前300年·载于《几何原本》
+    ja: アレクサンドリア、紀元前300年頃・『原論』に記載
+  history:
+    es: >-
+      Es el algoritmo más antiguo que sobrevive intacto, descrito en el libro VII de los Elementos de
+      Euclides (c. 300 a.C.). Consiste en reemplazar repetidamente un número por el resto de dividirlo
+      por el otro, hasta que el resto sea cero. Dos mil años después sigue siendo el método que usan
+      las computadoras para simplificar fracciones y, en la forma extendida, para calcular inversos
+      modulares en criptografía.
+    en: >-
+      It is the oldest algorithm to survive intact, described in Book VII of Euclid's Elements (c. 300
+      BC). It repeatedly replaces one number by the remainder of dividing it by the other, until the
+      remainder is zero. Two thousand years later it is still the method computers use to simplify
+      fractions and, in its extended form, to compute modular inverses in cryptography.
+    pt: >-
+      É o algoritmo mais antigo que sobrevive intacto, descrito no livro VII dos Elementos de Euclides
+      (c. 300 a.C.). Ele substitui repetidamente um número pelo resto de sua divisão pelo outro, até o
+      resto ser zero. Dois mil anos depois, continua sendo o método que os computadores usam para
+      simplificar frações e, na forma estendida, para calcular inversos modulares em criptografia.
+    fr: >-
+      C'est le plus ancien algorithme à survivre intact, décrit au livre VII des Éléments d'Euclide
+      (v. 300 av. J.-C.). Il remplace sans cesse un nombre par le reste de sa division par l'autre,
+      jusqu'à ce que le reste soit nul. Deux mille ans plus tard, c'est encore la méthode qu'utilisent
+      les ordinateurs pour simplifier les fractions et, sous sa forme étendue, pour calculer les
+      inverses modulaires en cryptographie.
+    zh: >-
+      它是完整幸存的最古老算法，见于欧几里得《几何原本》第七卷（约公元前300年）。该算法反复将一个数替换为它除以
+      另一个数的余数，直至余数为零。两千年后，它仍是计算机化简分数所使用的方法；其扩展形式还用于密码学中计算
+      模逆元。
+    ja: >-
+      これは完全な形で現存する最古のアルゴリズムであり、ユークリッドの『原論』第7巻（紀元前300年頃）に記されて
+      いる。一方の数を他方で割った余りで置き換えることを、余りが0になるまで繰り返す。二千年後の今も、分数の
+      簡約にコンピューターが使う方法であり、拡張版は暗号技術でモジュラ逆数を計算するために使われている。
+  timeline:
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides lo describe en el libro VII de los Elementos mediante sustracciones repetidas.
+        en: >-
+          Euclid describes it in Book VII of the Elements by repeated subtraction.
+        pt: >-
+          Euclides o descreve no livro VII dos Elementos por subtrações repetidas.
+        fr: >-
+          Euclide le décrit au livre VII des Éléments par soustractions répétées.
+        zh: >-
+          欧几里得在《几何原本》第七卷通过反复相减来描述它。
+        ja: >-
+          ユークリッドが『原論』第7巻で、繰り返しの引き算によってこれを記述する。
+    - year: "1977"
+      label:
+        es: >-
+          RSA usa el algoritmo de Euclides extendido para calcular claves de cifrado.
+        en: >-
+          RSA uses the extended Euclidean algorithm to compute encryption keys.
+        pt: >-
+          O RSA usa o algoritmo de Euclides estendido para calcular chaves de cifração.
+        fr: >-
+          RSA utilise l'algorithme d'Euclide étendu pour calculer les clés de chiffrement.
+        zh: >-
+          RSA用扩展欧几里得算法计算加密密钥。
+        ja: >-
+          RSAが拡張ユークリッドの互除法で暗号鍵を計算する。
+    - year: Hoy
+      label:
+        es: >-
+          Es el algoritmo más antiguo en uso continuo y uno de los más estudiados.
+        en: >-
+          It is the oldest algorithm in continuous use and one of the most studied.
+        pt: >-
+          É o algoritmo mais antigo em uso contínuo e um dos mais estudados.
+        fr: >-
+          C'est le plus ancien algorithme en usage continu et l'un des plus étudiés.
+        zh: >-
+          它是持续使用时间最长的算法，也是被研究最多的算法之一。
+        ja: >-
+          継続使用される最古のアルゴリズムであり、最も研究されたものの一つである。
+  useCases:
+    - title:
+        es: Criptografía RSA
+        en: RSA cryptography
+        pt: Criptografia RSA
+        fr: Cryptographie RSA
+        zh: RSA 密码学
+        ja: RSA暗号
+      description:
+        es: >-
+          El algoritmo extendido calcula el inverso modular que firma y descifra mensajes.
+        en: >-
+          The extended algorithm computes the modular inverse that signs and decrypts messages.
+        pt: >-
+          O algoritmo estendido calcula o inverso modular que assina e decifra mensagens.
+        fr: >-
+          L'algorithme étendu calcule l'inverse modulaire qui signe et déchiffre les messages.
+        zh: >-
+          扩展算法计算对消息签名和解密的模逆元。
+        ja: >-
+          拡張アルゴリズムが、メッセージの署名と復号に使うモジュラ逆数を計算する。
+    - title:
+        es: Simplificación de fracciones
+        en: Simplifying fractions
+        pt: Simplificação de frações
+        fr: Simplification de fractions
+        zh: 化简分数
+        ja: 分数の約分
+      description:
+        es: >-
+          Dividir numerador y denominador por su gcd es la forma de simplificar cualquier fracción.
+        en: >-
+          Dividing numerator and denominator by their gcd is how any fraction is simplified.
+        pt: >-
+          Dividir numerador e denominador pelo seu mdc é como se simplifica qualquer fração.
+        fr: >-
+          Diviser numérateur et dénominateur par leur pgcd est la façon de simplifier toute fraction.
+        zh: >-
+          用最大公约数除分子和分母，就是化简任何分数的方法。
+        ja: >-
+          分子と分母を最大公約数で割ることが、分数を約分する方法である。
+    - title:
+        es: Diseño de engranajes
+        en: Gear design
+        pt: Projeto de engrenagens
+        fr: Conception d'engrenages
+        zh: 齿轮设计
+        ja: 歯車の設計
+      description:
+        es: >-
+          El gcd de los dientes de dos ruedas fija su relación de transmisión mínima.
+        en: >-
+          The gcd of two wheels' teeth sets their minimal gear ratio.
+        pt: >-
+          O mdc dos dentes de duas rodas define sua relação de transmissão mínima.
+        fr: >-
+          Le pgcd des dents de deux roues fixe leur rapport de transmission minimal.
+        zh: >-
+          两轮齿数的最大公约数决定其最小传动比。
+        ja: >-
+          2つの歯車の歯数の最大公約数が、最小の歯車比を決める。
+  example:
+    title:
+      es: gcd(252, 105)
+      en: gcd(252, 105)
+      pt: mdc(252, 105)
+      fr: pgcd(252, 105)
+      zh: gcd(252, 105)
+      ja: gcd(252, 105)
+    lines:
+      - es: 252 mod 105 = 42
+        en: 252 mod 105 = 42
+        pt: 252 mod 105 = 42
+        fr: 252 mod 105 = 42
+        zh: 252 mod 105 = 42
+        ja: 252 mod 105 = 42
+      - es: 105 mod 42 = 21
+        en: 105 mod 42 = 21
+        pt: 105 mod 42 = 21
+        fr: 105 mod 42 = 21
+        zh: 105 mod 42 = 21
+        ja: 105 mod 42 = 21
+      - es: 42 mod 21 = 0
+        en: 42 mod 21 = 0
+        pt: 42 mod 21 = 0
+        fr: 42 mod 21 = 0
+        zh: 42 mod 21 = 0
+        ja: 42 mod 21 = 0
+      - es: El último resto no nulo es 21
+        en: The last nonzero remainder is 21
+        pt: O último resto não nulo é 21
+        fr: Le dernier reste non nul est 21
+        zh: 最后一个非零余数是21
+        ja: 最後の0でない余りは21
+      - es: gcd(252, 105) = 21
+        en: gcd(252, 105) = 21
+        pt: mdc(252, 105) = 21
+        fr: pgcd(252, 105) = 21
+        zh: gcd(252, 105) = 21
+        ja: gcd(252, 105) = 21

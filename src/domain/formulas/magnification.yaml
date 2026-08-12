@@ -1,0 +1,319 @@
+id: magnification
+title:
+  es: Aumento de una Lente
+  en: Lens Magnification
+  pt: Aumento de uma Lente
+  fr: Grandissement d'une Lentille
+  zh: 透镜放大率
+  ja: レンズの倍率
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: El aumento de la lente, que dice cuántas veces más grande se forma la imagen.
+      en: The lens magnification, which tells how many times larger the image forms.
+      pt: O aumento da lente, que indica quantas vezes maior a imagem se forma.
+      fr: Le grandissement de la lentille, qui indique combien de fois l'image est plus grande.
+      zh: 透镜的放大率，表示像被放大了多少倍。
+      ja: レンズの倍率。像が何倍大きくなるかを示す。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "El signo menos: convención que indica una imagen invertida."
+      en: "The minus sign: a convention indicating an inverted image."
+      pt: "O sinal de menos: uma convenção que indica imagem invertida."
+      fr: "Le signe moins : une convention qui indique une image renversée."
+      zh: "负号：表示倒立像的约定。"
+      ja: "マイナス記号：倒立像を意味する約束事。"
+  - id: di
+    type: variable
+    value: dᵢ
+    explanation:
+      es: La distancia de la imagen a la lente.
+      en: The image's distance from the lens.
+      pt: A distância da imagem à lente.
+      fr: La distance de l'image à la lentille.
+      zh: 像到透镜的距离（像距）。
+      ja: レンズから像までの距離（像距離）。
+  - id: division
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: do
+    type: variable
+    value: dₒ
+    explanation:
+      es: La distancia del objeto a la lente.
+      en: The object's distance from the lens.
+      pt: A distância do objeto à lente.
+      fr: La distance de l'objet à la lentille.
+      zh: 物体到透镜的距离（物距）。
+      ja: レンズから物体までの距離（物体距離）。
+context:
+  author:
+    es: Basada en la óptica de Descartes
+    en: Based on Descartes's optics
+    pt: Baseada na óptica de Descartes
+    fr: Basée sur l'optique de Descartes
+    zh: 基于笛卡儿的光学
+    ja: デカルトの光学に基づく
+  era:
+    es: Francia, s. XVII
+    en: France, 17th century
+    pt: França, séc. XVII
+    fr: France, XVIIe siècle
+    zh: 法国，17世纪
+    ja: フランス、17世紀
+  history:
+    es: >-
+      El aumento de una lente dice cuántas veces más grande, o más pequeña, se forma la imagen
+      comparada con el objeto. Para una lente delgada, m = −dᵢ/dₒ, donde dᵢ y dₒ son las distancias
+      de la imagen y del objeto a la lente. El signo es un convenio: negativo significa imagen
+      invertida y real, como la que un proyector pinta en la pantalla; positivo significa imagen
+      derecha y virtual, como la de una lupa. Con esta relación se diseñan telescopios, microscopios
+      y el zoom de las cámaras, y se calcula el tamaño de las imágenes proyectadas.
+    en: >-
+      A lens's magnification tells how many times larger, or smaller, the image forms compared with
+      the object. For a thin lens, m = −dᵢ/dₒ, where dᵢ and dₒ are the image and object distances
+      from the lens. The sign is a convention: negative means an inverted, real image, like the one
+      a projector paints on a screen; positive means an upright, virtual image, like a magnifying
+      glass. Telescopes, microscopes, and camera zoom are designed with this relation, which also
+      sizes projected images.
+    pt: >-
+      O aumento de uma lente indica quantas vezes maior, ou menor, a imagem se forma em relação ao
+      objeto. Para uma lente delgada, m = −dᵢ/dₒ, em que dᵢ e dₒ são as distâncias da imagem e do
+      objeto à lente. O sinal é uma convenção: negativo significa imagem invertida e real, como a
+      que um projetor desenha na tela; positivo significa imagem direita e virtual, como a de uma
+      lupa. Com essa relação se projetam telescópios, microscópios e o zoom das câmeras, e se calcula
+      o tamanho das imagens projetadas.
+    fr: >-
+      Le grandissement d'une lentille indique combien de fois l'image se forme plus grande, ou plus
+      petite, que l'objet. Pour une lentille mince, m = −dᵢ/dₒ, où dᵢ et dₒ sont les distances de
+      l'image et de l'objet à la lentille. Le signe est une convention : négatif signifie image
+      renversée et réelle, comme celle qu'un projecteur peint sur un écran ; positif signifie image
+      droite et virtuelle, comme celle d'une loupe. Télescopes, microscopes et zoom de caméras se
+      conçoivent avec cette relation, qui dimensionne aussi les images projetées.
+    zh: >-
+      透镜的放大率表示像比物体大多少倍，或小多少倍。对于薄透镜，m = −dᵢ/dₒ，其中dᵢ和dₒ分别是像距
+      和物距。正负号是一种约定：负号表示倒立实像，如投影仪在屏幕上投出的像；正号表示正立虚像，
+      如放大镜看到的像。望远镜、显微镜和相机的变焦都依赖这一关系，投影图像的大小也是用它计算的。
+    ja: >-
+      レンズの倍率は、像が物体と比べて何倍大きくなるか（小さくなるか）を示す。薄レンズでは
+      m = −dᵢ/dₒで表され、dᵢは像距離、dₒは物体距離である。符号は約束事で、負は実像で上下逆さま
+      になる像——プロジェクターがスクリーンに映す像のこと——を意味し、正はルーペのように正立した
+      虚像を意味する。望遠鏡や顕微鏡、カメラのズームはこの関係で設計され、投影される像の大きさも
+      これで計算される。
+  timeline:
+    - year: "1609"
+      label:
+        es: >-
+          Galileo apunta su telescopio al cielo, demostrando en la práctica el poder de las lentes
+          para aumentar.
+        en: >-
+          Galileo points his telescope at the sky, demonstrating the magnifying power of lenses in
+          practice.
+        pt: >-
+          Galileu aponta seu telescópio ao céu, demonstrando na prática o poder de ampliação das
+          lentes.
+        fr: >-
+          Galilée pointe son télescope vers le ciel, démontrant en pratique le pouvoir
+          grossissant des lentilles.
+        zh: >-
+          伽利略将他的望远镜对准天空，在实践中展示了透镜的放大能力。
+        ja: >-
+          ガリレオが望遠鏡を空に向け、レンズの拡大能力を実際に示す。
+    - year: "1637"
+      label:
+        es: >-
+          Descartes deduce las relaciones de la imagen en lentes delgadas en su Dioptrique.
+        en: >-
+          Descartes derives the image relations for thin lenses in his Dioptrique.
+        pt: >-
+          Descartes deduz as relações da imagem em lentes delgadas em sua Dioptrique.
+        fr: >-
+          Descartes déduit les relations de l'image pour les lentilles minces dans sa Dioptrique.
+        zh: >-
+          笛卡儿在《屈光学》中推导出薄透镜的成像关系。
+        ja: >-
+          デカルトが『屈折光学』の中で薄レンズの結像の関係を導出する。
+    - year: "1839"
+      label:
+        es: >-
+          La fotografía populariza la proyección de imágenes a través de lentes.
+        en: >-
+          Photography popularizes the projection of images through lenses.
+        pt: >-
+          A fotografia populariza a projeção de imagens através de lentes.
+        fr: >-
+          La photographie popularise la projection d'images à travers les lentilles.
+        zh: >-
+          摄影使通过透镜投影图像变得普及。
+        ja: >-
+          写真がレンズによる像の投影を広く普及させる。
+    - year: Hoy
+      label:
+        es: >-
+          Microscopios, telescopios y el zoom de las cámaras se calculan con esta relación.
+        en: >-
+          Microscopes, telescopes, and camera zoom are computed with this relation.
+        pt: >-
+          Microscópios, telescópios e o zoom das câmeras são calculados com essa relação.
+        fr: >-
+          Microscopes, télescopes et zoom de caméras se calculent avec cette relation.
+        zh: >-
+          显微镜、望远镜和相机的变焦都用这一关系计算。
+        ja: >-
+          顕微鏡、望遠鏡、カメラのズームは、この関係から計算される。
+  useCases:
+    - title:
+        es: Microscopía
+        en: Microscopy
+        pt: Microscopia
+        fr: Microscopie
+        zh: 显微观察
+        ja: 顕微鏡観察
+      description:
+        es: >-
+          El aumento del objetivo por el del ocular define cuántas veces se agranda la muestra.
+        en: >-
+          The objective's magnification times the eyepiece's defines how many times the sample is
+          enlarged.
+        pt: >-
+          O aumento da objetiva vezes o da ocular define quantas vezes a amostra é ampliada.
+        fr: >-
+          Le grandissement de l'objectif multiplié par celui de l'oculaire définit de combien
+          l'échantillon est agrandi.
+        zh: >-
+          物镜放大率乘以目镜放大率，决定了样品被放大的倍数。
+        ja: >-
+          対物レンズの倍率と接眼レンズの倍率の積が、試料が何倍に拡大されるかを決める。
+    - title:
+        es: Telescopios
+        en: Telescopes
+        pt: Telescópios
+        fr: Télescopes
+        zh: 望远镜
+        ja: 望遠鏡
+      description:
+        es: >-
+          La relación entre focal de objetivo y ocular determina el aumento del instrumento.
+        en: >-
+          The ratio of objective to eyepiece focal length sets the instrument's magnification.
+        pt: >-
+          A relação entre a focal da objetiva e a do ocular determina o aumento do instrumento.
+        fr: >-
+          Le rapport entre les focales de l'objectif et de l'oculaire fixe le grandissement de
+          l'instrument.
+        zh: >-
+          物镜与目镜焦距之比决定了仪器的放大率。
+        ja: >-
+          対物レンズと接眼レンズの焦点距離の比が、望遠鏡の倍率を決める。
+    - title:
+        es: Fotografía y zoom
+        en: Photography and zoom
+        pt: Fotografia e zoom
+        fr: Photographie et zoom
+        zh: 摄影与变焦
+        ja: 写真とズーム
+      description:
+        es: >-
+          El zoom mueve grupos de lentes para cambiar la focal y, con ella, el tamaño de la imagen
+          en el sensor.
+        en: >-
+          Zoom moves lens groups to change the focal length and, with it, the image size on the
+          sensor.
+        pt: >-
+          O zoom move grupos de lentes para mudar a focal e, com ela, o tamanho da imagem no
+          sensor.
+        fr: >-
+          Le zoom déplace des groupes de lentilles pour changer la focale et, avec elle, la taille
+          de l'image sur le capteur.
+        zh: >-
+          变焦通过移动镜组改变焦距，从而改变像在传感器上的大小。
+        ja: >-
+          ズームはレンズ群を動かして焦点距離を変え、それに伴ってセンサー上の像の大きさを変える。
+    - title:
+        es: Proyectores de imagen
+        en: Image projectors
+        pt: Projetores de imagem
+        fr: Projecteurs d'images
+        zh: 图像投影仪
+        ja: 画像プロジェクター
+      description:
+        es: >-
+          Calculan la distancia y el tamaño del lienzo a partir del aumento de su lente.
+        en: >-
+          They compute the distance and size of the screen from their lens's magnification.
+        pt: >-
+          Calculam a distância e o tamanho da tela a partir do aumento de sua lente.
+        fr: >-
+          Ils calculent la distance et la taille de l'écran à partir du grandissement de leur
+          lentille.
+        zh: >-
+          根据透镜的放大率计算屏幕的距离和尺寸。
+        ja: >-
+          レンズの倍率からスクリーンまでの距離と大きさを計算する。
+  example:
+    title:
+      es: Una lente que duplica
+      en: A lens that doubles
+      pt: Uma lente que dobra
+      fr: Une lentille qui double
+      zh: 放大两倍的透镜
+      ja: 2倍にするレンズ
+    lines:
+      - es: dₒ = 30 cm
+        en: dₒ = 30 cm
+        pt: dₒ = 30 cm
+        fr: dₒ = 30 cm
+        zh: dₒ = 30 厘米
+        ja: dₒ = 30 cm
+      - es: dᵢ = 60 cm
+        en: dᵢ = 60 cm
+        pt: dᵢ = 60 cm
+        fr: dᵢ = 60 cm
+        zh: dᵢ = 60 厘米
+        ja: dᵢ = 60 cm
+      - es: m = −dᵢ/dₒ
+        en: m = −dᵢ/dₒ
+        pt: m = −dᵢ/dₒ
+        fr: m = −dᵢ/dₒ
+        zh: m = −dᵢ/dₒ
+        ja: m = −dᵢ/dₒ
+      - es: m = −60/30
+        en: m = −60/30
+        pt: m = −60/30
+        fr: m = −60/30
+        zh: m = −60/30
+        ja: m = −60/30
+      - es: "m = −2: imagen invertida y doble de grande"
+        en: "m = −2: an inverted image, twice as large"
+        pt: "m = −2: imagem invertida e duas vezes maior"
+        fr: "m = −2 : une image renversée, deux fois plus grande"
+        zh: m = −2：倒立且放大的两倍大的像
+        ja: m = −2：上下逆さま、2倍に拡大された像

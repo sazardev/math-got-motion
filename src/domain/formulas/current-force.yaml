@@ -1,0 +1,372 @@
+id: current-force
+title:
+  es: Fuerza sobre un Conductor
+  en: Force on a Current-Carrying Wire
+  pt: Força sobre um Condutor
+  fr: Force sur un Conducteur
+  zh: 载流导线受到的力
+  ja: 導線に働く力
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: La fuerza que el campo magnético ejerce sobre el conductor.
+      en: The force the magnetic field exerts on the conductor.
+      pt: A força que o campo magnético exerce sobre o condutor.
+      fr: La force que le champ magnétique exerce sur le conducteur.
+      zh: 磁场作用在导体上的力。
+      ja: 磁場が導体に及ぼす力。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: b
+    type: variable
+    value: B
+    explanation:
+      es: El campo magnético que atraviesa el conductor.
+      en: The magnetic field crossing the conductor.
+      pt: O campo magnético que atravessa o condutor.
+      fr: Le champ magnétique qui traverse le conducteur.
+      zh: 穿过导体的磁场。
+      ja: 導体を貫く磁場。
+  - id: dot-1
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: i
+    type: variable
+    value: I
+    explanation:
+      es: La corriente eléctrica que circula por el cable.
+      en: The electric current flowing through the wire.
+      pt: A corrente elétrica que circula pelo fio.
+      fr: Le courant électrique qui circule dans le fil.
+      zh: 流过导线的电流。
+      ja: 導線を流れる電流。
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: l
+    type: variable
+    value: L
+    explanation:
+      es: La longitud del tramo de cable sumergido en el campo.
+      en: The length of wire immersed in the field.
+      pt: O comprimento do trecho de fio imerso no campo.
+      fr: La longueur de fil immergé dans le champ.
+      zh: 处于磁场中的那段导线的长度。
+      ja: 磁場中にある導線の長さ。
+  - id: dot-3
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: sin
+    type: operator
+    value: sin
+    explanation:
+      es: El seno del ángulo entre el cable y el campo.
+      en: The sine of the angle between the wire and the field.
+      pt: O seno do ângulo entre o fio e o campo.
+      fr: Le sinus de l'angle entre le fil et le champ.
+      zh: 导线与磁场夹角的正弦。
+      ja: 導線と磁場のなす角の正弦。
+  - id: theta
+    type: variable
+    value: θ
+    explanation:
+      es: El ángulo entre el cable y el campo magnético.
+      en: The angle between the wire and the magnetic field.
+      pt: O ângulo entre o fio e o campo magnético.
+      fr: L'angle entre le fil et le champ magnétique.
+      zh: 导线与磁场之间的夹角。
+      ja: 導線と磁場の間の角度。
+context:
+  author:
+    es: André-Marie Ampère
+    en: André-Marie Ampère
+    pt: André-Marie Ampère
+    fr: André-Marie Ampère
+    zh: 安德烈-马里·安培
+    ja: アンドレ＝マリー・アンペール
+  era:
+    es: Francia, 1775–1836 · descubierta en 1820
+    en: France, 1775–1836 · discovered in 1820
+    pt: França, 1775–1836 · descoberta em 1820
+    fr: France, 1775–1836 · découverte en 1820
+    zh: 法国，1775–1836年 · 1820年发现
+    ja: フランス、1775–1836年・1820年に発見
+  history:
+    es: >-
+      En 1820, Hans Christian Oersted observó que la aguja de una brújula se desviaba cerca de un
+      alambre con corriente, la primera prueba de que electricidad y magnetismo estaban conectados.
+      Poco después, André-Marie Ampère demostró que dos conductores paralelos con corriente se
+      atraen o se repelen, y dedujo la fuerza que un campo magnético ejerce sobre un cable. La
+      fuerza es máxima cuando el cable es perpendicular al campo y se anula si es paralelo. Es la
+      base del efecto motor: por eso giran los motores eléctricos, vibran los parlantes y los rieles
+      de un riel aceleran proyectiles al magnetizarse con corrientes enormes.
+    en: >-
+      In 1820, Hans Christian Oersted noticed that a compass needle deflected near a
+      current-carrying wire, the first proof that electricity and magnetism were linked. Soon after,
+      André-Marie Ampère showed that parallel conductors attract or repel each other and derived the
+      force a magnetic field exerts on a wire. The force is greatest when the wire is perpendicular
+      to the field and vanishes when parallel. It is the basis of the motor effect: electric motors
+      turn, loudspeakers vibrate, and a railgun accelerates projectiles when its rails are
+      magnetized by enormous currents.
+    pt: >-
+      Em 1820, Hans Christian Oersted observou que a agulha de uma bússola se desviava perto de um
+      fio com corrente, a primeira prova de que eletricidade e magnetismo estavam ligados. Logo
+      depois, André-Marie Ampère mostrou que dois condutores paralelos se atraem ou se repelem e
+      deduziu a força que um campo magnético exerce sobre um fio. A força é máxima quando o fio é
+      perpendicular ao campo e se anula quando paralelo. É a base do efeito motor: é por isso que
+      giram os motores elétricos, vibram os alto-falantes e o railgun acelera projéteis quando seus
+      trilhos são magnetizados por correntes enormes.
+    fr: >-
+      En 1820, Hans Christian Oersted remarqua que l'aiguille d'une boussole déviait près d'un fil
+      parcouru par un courant, la première preuve que l'électricité et le magnétisme étaient liés.
+      Peu après, André-Marie Ampère montra que deux conducteurs parallèles s'attirent ou se
+      repoussent et déduisit la force qu'un champ magnétique exerce sur un fil. La force est
+      maximale quand le fil est perpendiculaire au champ et nulle quand il lui est parallèle. C'est
+      la base de l'effet moteur : les moteurs électriques tournent, les haut-parleurs vibrent et un
+      railgun accélère ses projectiles quand ses rails sont aimantés par d'énormes courants.
+    zh: >-
+      1820年，汉斯·克里斯蒂安·奥斯特发现通有电流的导线会使指南针的指针偏转，这是电与磁存在联系的
+      首个证据。不久后，安德烈-马里·安培证明两根平行载流导线会相互吸引或排斥，并推导出磁场对导线
+      作用力的公式。导线与磁场垂直时力最大，平行时力为零。它是电动机效应的基础：电动机因此转动、
+      扬声器因此振动，而轨道炮正是利用轨道中巨大的电流产生磁场来加速弹丸。
+    ja: >-
+      1820年、ハンス・クリスティアン・エルステッドは電流を流した導線の近くで方位磁針が振れるのを
+      観察した——電気と磁気が結びついていることを示す最初の証拠である。その後まもなく、アンドレ＝
+      マリー・アンペールは平行な導線どうしが引き合ったり反発しあったりすることを示し、磁場が導線に
+      及ぼす力を導いた。力は導線が磁場と垂直のとき最大になり、平行のときはゼロになる。これは
+      モーター効果の基礎であり、電動モーターが回転し、スピーカーが振動し、レールガンがレールに流れる
+      巨大な電流の磁場によって弾体を加速する原理である。
+  timeline:
+    - year: "1820"
+      label:
+        es: >-
+          Oersted observa que una corriente desvía la aguja de una brújula, uniendo electricidad y
+          magnetismo.
+        en: >-
+          Oersted observes that a current deflects a compass needle, linking electricity and
+          magnetism.
+        pt: >-
+          Oersted observa que uma corrente desvia a agulha de uma bússola, ligando eletricidade e
+          magnetismo.
+        fr: >-
+          Oersted observe qu'un courant dévie l'aiguille d'une boussole, reliant électricité et
+          magnétisme.
+        zh: >-
+          奥斯特观察到电流会使指南针的指针偏转，将电与磁联系起来。
+        ja: >-
+          エルステッドが、電流が方位磁針を振れさせるのを観察し、電気と磁気を結びつける。
+    - year: "1826"
+      label:
+        es: >-
+          Ampère publica su teoría de la electrodinámica, con la ley de la fuerza entre
+          conductores.
+        en: >-
+          Ampère publishes his theory of electrodynamics, with the force law between conductors.
+        pt: >-
+          Ampère publica sua teoria da eletrodinâmica, com a lei da força entre condutores.
+        fr: >-
+          Ampère publie sa théorie de l'électrodynamique, avec la loi de force entre conducteurs.
+        zh: >-
+          安培发表他的电动力学理论，其中包括导体之间的作用力定律。
+        ja: >-
+          アンペールが、導体間の力の法則を含む電気力学の理論を発表する。
+    - year: "1888"
+      label:
+        es: >-
+          Tesla patenta el motor de inducción de corriente alterna, primera gran aplicación del
+          efecto motor.
+        en: >-
+          Tesla patents the alternating-current induction motor, the first large-scale use of the
+          motor effect.
+        pt: >-
+          Tesla patenteia o motor de indução de corrente alternada, primeiro grande uso do efeito
+          motor.
+        fr: >-
+          Tesla brevète le moteur à induction à courant alternatif, premier grand usage de
+          l'effet moteur.
+        zh: >-
+          特斯拉获得交流感应电动机专利，这是电动机效应的首次大规模应用。
+        ja: >-
+          テスラが交流誘導モーターの特許を取得。モーター効果の最初の大規模な応用である。
+    - year: Hoy
+      label:
+        es: >-
+          Los motores lineales de los trenes Maglev y los rieles disparan proyectiles con esta
+          fuerza.
+        en: >-
+          The linear motors of Maglev trains and railguns launch projectiles with this force.
+        pt: >-
+          Os motores lineais dos trens Maglev e os railguns lançam projéteis com essa força.
+        fr: >-
+          Les moteurs linéaires des trains Maglev et les railguns propulsent des projectiles avec
+          cette force.
+        zh: >-
+          磁悬浮列车的直线电机和轨道炮都利用这一力发射物体。
+        ja: >-
+          リニアモーターカーやレールガンが、この力によって物体を加速する。
+  useCases:
+    - title:
+        es: Motores eléctricos
+        en: Electric motors
+        pt: Motores elétricos
+        fr: Moteurs électriques
+        zh: 电动机
+        ja: 電動モーター
+      description:
+        es: >-
+          La fuerza de esta ley hace girar las bobinas del rotor en casi todo motor eléctrico.
+        en: >-
+          The force from this law spins the rotor windings in nearly every electric motor.
+        pt: >-
+          A força desta lei faz girar as bobinas do rotor em quase todo motor elétrico.
+        fr: >-
+          La force issue de cette loi fait tourner les bobines du rotor dans presque tout moteur
+          électrique.
+        zh: >-
+          这条定律给出的力使几乎所有电动机的转子绕组旋转。
+        ja: >-
+          この法則による力が、ほぼすべての電動モーターの回転子巻線を回転させる。
+    - title:
+        es: Altavoces y micrófonos
+        en: Loudspeakers and microphones
+        pt: Alto-falantes e microfones
+        fr: Haut-parleurs et microphones
+        zh: 扬声器和麦克风
+        ja: スピーカーとマイク
+      description:
+        es: >-
+          Una bobina dentro de un campo magnético vibra con la señal de audio y mueve el cono del
+          parlante.
+        en: >-
+          A coil inside a magnetic field vibrates with the audio signal and moves the speaker cone.
+        pt: >-
+          Uma bobina dentro de um campo magnético vibra com o sinal de áudio e move o cone do
+          alto-falante.
+        fr: >-
+          Une bobine dans un champ magnétique vibre avec le signal audio et déplace la membrane du
+          haut-parleur.
+        zh: >-
+          位于磁场中的线圈随音频信号振动，并带动扬声器振膜运动。
+        ja: >-
+          磁場内のコイルが音声信号に合わせて振動し、スピーカーの振動板を動かす。
+    - title:
+        es: Lanzadores electromagnéticos
+        en: Electromagnetic launchers
+        pt: Lançadores eletromagnéticos
+        fr: Lanceurs électromagnétiques
+        zh: 电磁发射器
+        ja: 電磁加速装置
+      description:
+        es: >-
+          En un railgun, los rieles llevan una corriente enorme cuyo campo acelera el proyectil por
+          esta fuerza.
+        en: >-
+          In a railgun, the rails carry an enormous current whose field accelerates the projectile
+          with this force.
+        pt: >-
+          No railgun, os trilhos conduzem uma corrente enorme cujo campo acelera o projétil com
+          essa força.
+        fr: >-
+          Dans un railgun, les rails portent un courant énorme dont le champ accélère le projectile
+          avec cette force.
+        zh: >-
+          在轨道炮中，轨道承载着巨大电流，其磁场用这一力加速弹丸。
+        ja: >-
+          レールガンでは、レールに巨大な電流を流し、その磁場がこの力によって弾体を加速する。
+    - title:
+        es: Trenes Maglev
+        en: Maglev trains
+        pt: Trens Maglev
+        fr: Trains Maglev
+        zh: 磁悬浮列车
+        ja: リニアモーターカー
+      description:
+        es: >-
+          Los motores lineales de los trenes Maglev empujan el tren sin ruedas ni fricción.
+        en: >-
+          The linear motors of Maglev trains push the train without wheels or friction.
+        pt: >-
+          Os motores lineais dos trens Maglev empurram o trem sem rodas nem fricção.
+        fr: >-
+          Les moteurs linéaires des trains Maglev poussent le train sans roues ni friction.
+        zh: >-
+          磁悬浮列车的直线电机无需车轮和摩擦即可推动列车。
+        ja: >-
+          リニアモーターカーのリニアモーターは、車輪も摩擦もなしに列車を押し進める。
+  example:
+    title:
+      es: Fuerza sobre un cable
+      en: Force on a wire
+      pt: Força sobre um fio
+      fr: Force sur un fil
+      zh: 作用在导线上的力
+      ja: 導線に働く力
+    lines:
+      - es: B = 0.5 T, I = 10 A, L = 0.2 m
+        en: B = 0.5 T, I = 10 A, L = 0.2 m
+        pt: B = 0,5 T, I = 10 A, L = 0,2 m
+        fr: B = 0,5 T, I = 10 A, L = 0,2 m
+        zh: B = 0.5 T，I = 10 A，L = 0.2 m
+        ja: B = 0.5 T、I = 10 A、L = 0.2 m
+      - es: θ = 90°
+        en: θ = 90°
+        pt: θ = 90°
+        fr: θ = 90°
+        zh: θ = 90°
+        ja: θ = 90°
+      - es: F = B · I · L · sen(θ)
+        en: F = B · I · L · sin(θ)
+        pt: F = B · I · L · sen(θ)
+        fr: F = B · I · L · sin(θ)
+        zh: F = B · I · L · sin(θ)
+        ja: F = B · I · L · sin(θ)
+      - es: F = 0.5 × 10 × 0.2 × sen(90°)
+        en: F = 0.5 × 10 × 0.2 × sin(90°)
+        pt: F = 0,5 × 10 × 0,2 × sen(90°)
+        fr: F = 0,5 × 10 × 0,2 × sin(90°)
+        zh: F = 0.5 × 10 × 0.2 × sin(90°)
+        ja: F = 0.5 × 10 × 0.2 × sin(90°)
+      - es: sen(90°) = 1 → F = 1 N
+        en: sin(90°) = 1 → F = 1 N
+        pt: sen(90°) = 1 → F = 1 N
+        fr: sin(90°) = 1 → F = 1 N
+        zh: sin(90°) = 1 → F = 1 N
+        ja: sin(90°) = 1 → F = 1 N

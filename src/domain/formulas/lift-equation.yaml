@@ -1,0 +1,387 @@
+id: lift-equation
+title:
+  es: Ecuación de Sustentación
+  en: Lift Equation
+  pt: Equação de Sustentação
+  fr: Équation de portance
+  zh: 升力方程
+  ja: 揚力の式
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: l
+    type: variable
+    value: L
+    explanation:
+      es: "L: la fuerza de sustentación que levanta al ala."
+      en: "L: the lift force that raises the wing."
+      pt: "L: a força de sustentação que ergue a asa."
+      fr: "L : la force de portance qui soulève l'aile."
+      zh: "L：使机翼上升的升力。"
+      ja: "L：翼を持ち上げる揚力。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: half
+    type: number
+    value: ½
+    explanation:
+      es: "½: un medio. La fórmula usa la mitad de la presión dinámica."
+      en: "½: one half. The formula uses half of the dynamic pressure."
+      pt: "½: um meio. A fórmula usa metade da pressão dinâmica."
+      fr: "½ : un demi. La formule utilise la moitié de la pression dynamique."
+      zh: "½：二分之一。公式使用动压的一半。"
+      ja: "½：2分の1。式は動圧の半分を使う。"
+  - id: dot-rho
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: rho
+    type: variable
+    value: ρ
+    explanation:
+      es: "ρ: la densidad del aire que rodea al ala."
+      en: "ρ: the density of the air around the wing."
+      pt: "ρ: a densidade do ar ao redor da asa."
+      fr: "ρ : la densité de l'air autour de l'aile."
+      zh: "ρ：机翼周围空气的密度。"
+      ja: "ρ：翼の周囲の空気の密度。"
+  - id: dot-v
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: "v: la velocidad del aire respecto al ala."
+      en: "v: the airspeed relative to the wing."
+      pt: "v: a velocidade do ar em relação à asa."
+      fr: "v : la vitesse de l'air par rapport à l'aile."
+      zh: "v：空气相对于机翼的速度。"
+      ja: "v：翼に対する空気の速度。"
+  - id: v-squared
+    type: superscript
+    value: "2"
+    explanation:
+      es: Elevado al cuadrado. La velocidad se multiplica por sí misma.
+      en: Raised to the second power. The speed multiplied by itself.
+      pt: Elevado ao quadrado. A velocidade é multiplicada por si mesma.
+      fr: Élevé au carré. La vitesse est multipliée par elle-même.
+      zh: 平方。速度与自身相乘。
+      ja: 二乗。速度を自分自身と掛け合わせる。
+  - id: dot-cl
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: cl
+    type: variable
+    value: CL
+    explanation:
+      es: "CL: el coeficiente de sustentación, que describe la forma del ala."
+      en: "CL: the lift coefficient, which describes the wing's shape."
+      pt: "CL: o coeficiente de sustentação, que descreve a forma da asa."
+      fr: "CL : le coefficient de portance, qui décrit la forme de l'aile."
+      zh: "CL：升力系数，描述机翼的形状。"
+      ja: "CL：翼の形を表す揚力係数。"
+  - id: dot-a
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: "A: el área de la superficie alar, la huella del ala vista desde arriba."
+      en: "A: the wing area, the wing's footprint seen from above."
+      pt: "A: a área da superfície da asa, a pegada da asa vista de cima."
+      fr: "A : la surface alaire, l'empreinte de l'aile vue de dessus."
+      zh: "A：机翼面积，即从上方看到的机翼轮廓。"
+      ja: "A：翼面積。上から見た翼の輪郭。"
+context:
+  author:
+    es: Basada en el trabajo de Kutta y Zhukovsky
+    en: Based on the work of Kutta and Zhukovsky
+    pt: Baseada no trabalho de Kutta e Zhukovsky
+    fr: Basée sur les travaux de Kutta et Joukovski
+    zh: 基于库塔和茹科夫斯基的研究
+    ja: クッタとジューコフスキーの研究に基づく
+  era:
+    es: Europa y Rusia, 1902–1906
+    en: Europe and Russia, 1902–1906
+    pt: Europa e Rússia, 1902–1906
+    fr: Europe et Russie, 1902–1906
+    zh: 欧洲和俄国，1902–1906年
+    ja: ヨーロッパとロシア、1902–1906年
+  history:
+    es: >-
+      La sustentación nace de la circulación del aire alrededor del ala: el flujo acelera sobre el
+      extradós y frena bajo el intradós, generando una diferencia de presión que empuja el ala hacia
+      arriba. Kutta y Zhukovsky formalizaron esta idea entre 1902 y 1906, demostrando que la fuerza
+      es proporcional a la densidad, al cuadrado de la velocidad, a la superficie alar y al
+      coeficiente de sustentación. Por eso un avión necesita velocidad para volar y por eso los
+      flaps, al cambiar la forma del ala, permiten volar lento en el aterrizaje. Rige el diseño de
+      toda ala, hélice y rotor.
+    en: >-
+      Lift arises from the circulation of air around the wing: the flow speeds up over the top
+      surface and slows below it, creating a pressure difference that pushes the wing upward. Kutta
+      and Zhukovsky formalized this idea between 1902 and 1906, showing the force is proportional to
+      air density, the square of the speed, the wing area, and the lift coefficient. That is why a
+      plane needs speed to fly, and why flaps, by changing the wing's shape, let it fly slowly when
+      landing. It governs the design of every wing, propeller, and rotor.
+    pt: >-
+      A sustentação nasce da circulação do ar ao redor da asa: o fluxo acelera sobre o extradorso e
+      desacelera sob o intradorso, gerando uma diferença de pressão que empurra a asa para cima.
+      Kutta e Zhukovsky formalizaram essa ideia entre 1902 e 1906, mostrando que a força é
+      proporcional à densidade, ao quadrado da velocidade, à área da asa e ao coeficiente de
+      sustentação. Por isso um avião precisa de velocidade para voar, e por isso os flaps, ao mudar
+      a forma da asa, permitem voar devagar no pouso. Ela rege o projeto de toda asa, hélice e rotor.
+    fr: >-
+      La portance naît de la circulation de l'air autour de l'aile : le flux accélère sur l'extrados
+      et ralentit sous l'intrados, créant une différence de pression qui pousse l'aile vers le haut.
+      Kutta et Joukovski ont formalisé cette idée entre 1902 et 1906, montrant que la force est
+      proportionnelle à la densité, au carré de la vitesse, à la surface alaire et au coefficient de
+      portance. C'est pourquoi un avion a besoin de vitesse pour voler, et pourquoi les volets, en
+      modifiant la forme de l'aile, lui permettent de voler lentement à l'atterrissage. Elle régit
+      la conception de chaque aile, hélice et rotor.
+    zh: >-
+      升力源自空气绕机翼的环流：气流在上表面加速、在下表面减速，产生向上推动机翼的压力差。
+      库塔和茹科夫斯基在1902至1906年间将这一思想形式化，证明升力与空气密度、速度平方、机翼面积
+      和升力系数成正比。因此飞机需要速度才能飞行，而襟翼通过改变机翼形状，使飞机在着陆时能低速飞行。
+      它支配着每一副机翼、螺旋桨和旋翼的设计。
+    ja: >-
+      揚力は翼の周りの空気の循環から生じる。気流は翼上面で加速し、下面で減速するため、翼を上へ押す
+      圧力差が生まれる。クッタとジューコフスキーは1902年から1906年にかけてこの考えを定式化し、力が
+      空気密度、速度の二乗、翼面積、揚力係数に比例することを示した。だからこそ飛行機は速度を必要とし、
+      フラップが翼の形を変えることで着陸時の低速飛行を可能にする。あらゆる翼、プロペラ、ローターの
+      設計を支配している。
+  timeline:
+    - year: "1902"
+      label:
+        es: >-
+          Wilhelm Kutta publica su teoría de la circulación, primer paso matemático hacia la
+          sustentación.
+        en: >-
+          Wilhelm Kutta publishes his circulation theory, the first mathematical step toward lift.
+        pt: >-
+          Wilhelm Kutta publica sua teoria da circulação, primeiro passo matemático rumo à
+          sustentação.
+        fr: >-
+          Wilhelm Kutta publie sa théorie de la circulation, premier pas mathématique vers la
+          portance.
+        zh: >-
+          威廉·库塔发表环流理论，这是通向升力的第一步数学工作。
+        ja: >-
+          ヴィルヘルム・クッタが循環理論を発表する。揚力へ向けた数学上の第一歩。
+    - year: "1904"
+      label:
+        es: >-
+          Ludwig Prandtl presenta la teoría de la capa límite, que explica la fricción real del aire
+          sobre el ala.
+        en: >-
+          Ludwig Prandtl presents boundary layer theory, explaining the real friction of air on the
+          wing.
+        pt: >-
+          Ludwig Prandtl apresenta a teoria da camada limite, que explica o atrito real do ar sobre a
+          asa.
+        fr: >-
+          Ludwig Prandtl présente la théorie de la couche limite, qui explique le frottement réel de
+          l'air sur l'aile.
+        zh: >-
+          路德维希·普朗特提出边界层理论，解释了空气在机翼上的真实摩擦。
+        ja: >-
+          ルートヴィヒ・プラントルが境界層理論を発表し、翼上の空気の実際の摩擦を説明する。
+    - year: "1906"
+      label:
+        es: >-
+          Nikolái Zhukovsky demuestra su teorema: la sustentación es proporcional a la circulación.
+        en: >-
+          Nikolai Zhukovsky proves his theorem: lift is proportional to circulation.
+        pt: >-
+          Nikolai Jukovski demonstra seu teorema: a sustentação é proporcional à circulação.
+        fr: >-
+          Nikolaï Joukovski démontre son théorème : la portance est proportionnelle à la circulation.
+        zh: >-
+          尼古拉·茹科夫斯基证明了他的定理：升力与环量成正比。
+        ja: >-
+          ニコライ・ジューコフスキーが、揚力が循環に比例するという定理を証明する。
+    - year: Hoy
+      label:
+        es: >-
+          Es la ecuación central del diseño aerodinámico de alas, hélices, rotores y turbofanes.
+        en: >-
+          It is the central equation in the aerodynamic design of wings, propellers, rotors, and
+          turbofans.
+        pt: >-
+          É a equação central do projeto aerodinâmico de asas, hélices, rotores e turbofans.
+        fr: >-
+          C'est l'équation centrale de la conception aérodynamique des ailes, hélices, rotors et
+          turbofans.
+        zh: >-
+          它是机翼、螺旋桨、旋翼和涡扇气动设计的核心方程。
+        ja: >-
+          翼、プロペラ、ローター、ターボファンの空力設計の中核となる方程式である。
+  useCases:
+    - title:
+        es: Diseño de alas de avión
+        en: Aircraft wing design
+        pt: Projeto de asas de avião
+        fr: Conception d'ailes d'avion
+        zh: 飞机机翼设计
+        ja: 航空機の翼設計
+      description:
+        es: >-
+          Dimensiona la superficie alar necesaria para sostener el peso del avión a su velocidad de
+          crucero.
+        en: >-
+          Sizes the wing area needed to support the aircraft's weight at cruise speed.
+        pt: >-
+          Dimensiona a área da asa necessária para sustentar o peso da aeronave na velocidade de
+          cruzeiro.
+        fr: >-
+          Dimensionne la surface alaire nécessaire pour porter le poids de l'avion à sa vitesse de
+          croisière.
+        zh: >-
+          确定巡航速度下支撑飞机重量所需的机翼面积。
+        ja: >-
+          巡航速度で機体の重量を支えるために必要な翼面積を設計する。
+    - title:
+        es: Despegue y aterrizaje
+        en: Takeoff and landing
+        pt: Decolagem e pouso
+        fr: Décollage et atterrissage
+        zh: 起飞与着陆
+        ja: 離着陸
+      description:
+        es: >-
+          Los flaps modifican el coeficiente de sustentación para volar lento y seguro en pista.
+        en: >-
+          Flaps change the lift coefficient so the plane can fly slowly and safely on the runway.
+        pt: >-
+          Os flaps alteram o coeficiente de sustentação para voar devagar e com segurança na pista.
+        fr: >-
+          Les volets modifient le coefficient de portance pour voler lentement et en sécurité en
+          piste.
+        zh: >-
+          襟翼改变升力系数，使飞机在跑道上能低速安全飞行。
+        ja: >-
+          フラップが揚力係数を変え、滑走路上を低速で安全に飛行できるようにする。
+    - title:
+        es: Rotores de helicóptero
+        en: Helicopter rotors
+        pt: Rotores de helicóptero
+        fr: Rotors d'hélicoptère
+        zh: 直升机旋翼
+        ja: ヘリコプターのローター
+      description:
+        es: >-
+          Cada pala del rotor es un ala: la ecuación gobierna la sustentación que vence el peso del
+          aparato.
+        en: >-
+          Each rotor blade is a wing: the equation governs the lift that overcomes the craft's
+          weight.
+        pt: >-
+          Cada pá do rotor é uma asa: a equação rege a sustentação que vence o peso do aparelho.
+        fr: >-
+          Chaque pale du rotor est une aile : l'équation régit la portance qui vainc le poids de
+          l'appareil.
+        zh: >-
+          每片旋翼桨叶都是一只机翼：方程支配着克服机身重量的升力。
+        ja: >-
+          ローターの各ブレードは翼であり、機体の重量を支える揚力をこの式が支配する。
+    - title:
+        es: Hélices y turbofanes
+        en: Propellers and turbofans
+        pt: Hélices e turbofans
+        fr: Hélices et turbofans
+        zh: 螺旋桨与涡扇发动机
+        ja: プロペラとターボファン
+      description:
+        es: >-
+          La sustentación de las palas genera el empuje de las hélices y de los ventiladores de los
+          motores.
+        en: >-
+          The blades' lift produces the thrust of propellers and of turbofan fans.
+        pt: >-
+          A sustentação das pás gera o empuxo de hélices e dos ventiladores dos motores.
+        fr: >-
+          La portance des pales produit la poussée des hélices et des soufflantes des turbofans.
+        zh: >-
+          桨叶的升力产生螺旋桨和涡扇发动机风扇的推力。
+        ja: >-
+          ブレードの揚力が、プロペラやターボファンのファンの推力を生み出す。
+  example:
+    title:
+      es: Un avión ligero en vuelo
+      en: A light aircraft in flight
+      pt: Uma aeronave leve em voo
+      fr: Un avion léger en vol
+      zh: 轻型飞机飞行
+      ja: 軽飛行機の飛行
+    lines:
+      - es: ρ = 1.225 kg/m³, v = 70 m/s, C_L = 1.0, A = 20 m²
+        en: ρ = 1.225 kg/m³, v = 70 m/s, C_L = 1.0, A = 20 m²
+        pt: ρ = 1,225 kg/m³, v = 70 m/s, C_L = 1,0, A = 20 m²
+        fr: ρ = 1,225 kg/m³, v = 70 m/s, C_L = 1,0, A = 20 m²
+        zh: ρ = 1.225 kg/m³，v = 70 m/s，C_L = 1.0，A = 20 m²
+        ja: ρ = 1.225 kg/m³、v = 70 m/s、C_L = 1.0、A = 20 m²
+      - es: v² = 70² = 4900
+        en: v² = 70² = 4900
+        pt: v² = 70² = 4900
+        fr: v² = 70² = 4900
+        zh: v² = 70² = 4900
+        ja: v² = 70² = 4900
+      - es: ½·ρ·v² = ½ · 1.225 · 4900 ≈ 3001 N/m²
+        en: ½·ρ·v² = ½ · 1.225 · 4900 ≈ 3001 N/m²
+        pt: ½·ρ·v² = ½ · 1,225 · 4900 ≈ 3001 N/m²
+        fr: ½·ρ·v² = ½ · 1,225 · 4900 ≈ 3001 N/m²
+        zh: ½·ρ·v² = ½ · 1.225 · 4900 ≈ 3001 N/m²
+        ja: ½·ρ·v² = ½ · 1.225 · 4900 ≈ 3001 N/m²
+      - es: L = 3001 × 1.0 × 20
+        en: L = 3001 × 1.0 × 20
+        pt: L = 3001 × 1,0 × 20
+        fr: L = 3001 × 1,0 × 20
+        zh: L = 3001 × 1.0 × 20
+        ja: L = 3001 × 1.0 × 20
+      - es: L ≈ 60,020 N ≈ 60 kN
+        en: L ≈ 60,020 N ≈ 60 kN
+        pt: L ≈ 60 020 N ≈ 60 kN
+        fr: L ≈ 60 020 N ≈ 60 kN
+        zh: L ≈ 60,020 N ≈ 60 kN
+        ja: L ≈ 60,020 N ≈ 60 kN

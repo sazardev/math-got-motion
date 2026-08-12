@@ -1,0 +1,418 @@
+id: stirlings-approximation
+title:
+  es: Aproximación de Stirling
+  en: Stirling's Approximation
+  pt: Aproximação de Stirling
+  fr: Approximation de Stirling
+  zh: 斯特林近似
+  ja: スターリングの近似
+category:
+  es: Cálculo
+  en: Calculus
+  pt: Cálculo
+  fr: Calcul
+  zh: 微积分
+  ja: 微積分
+nodes:
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: El entero cuyo factorial se quiere estimar.
+      en: The integer whose factorial is being estimated.
+      pt: O inteiro cujo fatorial se quer estimar.
+      fr: L'entier dont on veut estimer la factorielle.
+      zh: 要估算阶乘的那个整数。
+      ja: 階乗を推定したい整数。
+  - id: factorial-sign
+    type: operator
+    value: "!"
+    explanation:
+      es: "El factorial: n! es el producto de todos los enteros de 1 a n."
+      en: "The factorial: n! is the product of every integer from 1 to n."
+      pt: "O fatorial: n! é o produto de todos os inteiros de 1 até n."
+      fr: "La factorielle : n! est le produit de tous les entiers de 1 à n."
+      zh: "阶乘：n! 是从 1 到 n 所有整数的乘积。"
+      ja: "階乗：n! は1からnまでのすべての整数の積。"
+  - id: approx
+    type: operator
+    value: ≈
+    explanation:
+      es: "Aproximadamente igual a: la relación mejora al crecer n."
+      en: "Approximately equal to: the relation improves as n grows."
+      pt: "Aproximadamente igual a: a relação melhora à medida que n cresce."
+      fr: "Approximativement égal à : la relation s'améliore quand n grandit."
+      zh: 约等于：n 越大，近似越精确。
+      ja: ほぼ等しい。nが大きくなるほど精度が良くなる。
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: La raíz cuadrada que aporta el factor de escala √(2πn).
+      en: The square root that supplies the scale factor √(2πn).
+      pt: A raiz quadrada que fornece o fator de escala √(2πn).
+      fr: La racine carrée qui fournit le facteur d'échelle √(2πn).
+      zh: 提供比例因子 √(2πn) 的平方根。
+      ja: スケール因子 √(2πn) を与える平方根。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el contenido de la raíz.
+      en: Opens the content of the root.
+      pt: Abre o conteúdo da raiz.
+      fr: Ouvre le contenu de la racine.
+      zh: 打开根号内的内容。
+      ja: 根号の中身を開く括弧。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "La constante 2 del factor 2π."
+      en: "The constant 2 in the factor 2π."
+      pt: "A constante 2 do fator 2π."
+      fr: "La constante 2 du facteur 2π."
+      zh: "因子 2π 中的常数 2。"
+      ja: "2π の因子に含まれる定数2。"
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: Pi, la constante que aparece en el factor de escala de la aproximación.
+      en: Pi, the constant that appears in the approximation's scale factor.
+      pt: Pi, a constante que aparece no fator de escala da aproximação.
+      fr: Pi, la constante qui apparaît dans le facteur d'échelle de l'approximation.
+      zh: 圆周率 π,出现在近似的比例因子中。
+      ja: 円周率π。近似のスケール因子に現れる。
+  - id: n-in-sqrt
+    type: variable
+    value: n
+    explanation:
+      es: "El mismo n, dentro de la raíz."
+      en: "The same n, inside the root."
+      pt: "O mesmo n, dentro da raiz."
+      fr: "Le même n, dans la racine."
+      zh: "同一个 n,在根号内。"
+      ja: "同じ n。根号の中にある。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la raíz.
+      en: Closes the root.
+      pt: Fecha a raiz.
+      fr: Ferme la racine.
+      zh: 闭合根号。
+      ja: 根号を閉じる括弧。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por el siguiente factor.
+      en: Multiplied by the next factor.
+      pt: Multiplicado pelo próximo fator.
+      fr: Multiplié par le facteur suivant.
+      zh: 乘以下一个因子。
+      ja: 次の因子を掛ける。
+  - id: open-paren-2
+    type: operator
+    value: (
+    explanation:
+      es: Abre el factor exponencial.
+      en: Opens the exponential factor.
+      pt: Abre o fator exponencial.
+      fr: Ouvre le facteur exponentiel.
+      zh: 打开指数因子。
+      ja: 指数の因子を開く括弧。
+  - id: n-over-e
+    type: variable
+    value: n/e
+    explanation:
+      es: "El cociente de n entre e, la base de los logaritmos naturales."
+      en: "The quotient of n over e, the base of natural logarithms."
+      pt: "O quociente de n por e, a base dos logaritmos naturais."
+      fr: "Le quotient de n par e, la base des logarithmes naturels."
+      zh: "n 除以 e 的商,e 是自然对数的底。"
+      ja: "nをeで割った商。eは自然対数の底。"
+  - id: close-paren-2
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el factor exponencial.
+      en: Closes the exponential factor.
+      pt: Fecha o fator exponencial.
+      fr: Ferme le facteur exponentiel.
+      zh: 闭合指数因子。
+      ja: 指数の因子を閉じる括弧。
+  - id: power-n
+    type: superscript
+    value: ⁿ
+    explanation:
+      es: Todo el factor elevado a la n.
+      en: The whole factor raised to the nth power.
+      pt: Todo o fator elevado à n-ésima potência.
+      fr: Tout le facteur élevé à la puissance n.
+      zh: 整个因子提升到 n 次幂。
+      ja: 因子全体をn乗する。
+context:
+  author:
+    es: James Stirling
+    en: James Stirling
+    pt: James Stirling
+    fr: James Stirling
+    zh: 詹姆斯·斯特林
+    ja: ジェームズ・スターリング
+  era:
+    es: Escocia, 1692–1770 · publicada en 1730
+    en: Scotland, 1692–1770 · published in 1730
+    pt: Escócia, 1692–1770 · publicada em 1730
+    fr: Écosse, 1692–1770 · publiée en 1730
+    zh: 苏格兰,1692–1770年 · 1730年发表
+    ja: スコットランド、1692–1770年・1730年発表
+  history:
+    es: >-
+      El factorial crece más rápido que cualquier exponencial, y la aproximación de Stirling captura
+      cómo: n! ≈ √(2πn)·(n/e)ⁿ. James Stirling la publicó en 1730 en "Methodus Differentialis",
+      mientras estudiaba series infinitas; Abraham de Moivre había obtenido antes la forma esencial,
+      pero fue Stirling quien determinó la constante √(2π). Surge formalmente de la función gamma y
+      del método de Laplace para estimar integrales. Es la base de la mecánica estadística, de la
+      campana de Gauss de De Moivre y del análisis de la complejidad de algoritmos.
+    en: >-
+      Factorials grow faster than any exponential, and Stirling's approximation captures how:
+      n! ≈ √(2πn)·(n/e)ⁿ. James Stirling published it in 1730 in "Methodus Differentialis" while
+      studying infinite series; Abraham de Moivre had already obtained the essential form, but it
+      was Stirling who determined the constant √(2π). It arises formally from the gamma function
+      and from Laplace's method for estimating integrals. It underlies statistical mechanics, De
+      Moivre's normal bell curve, and the analysis of algorithm complexity.
+    pt: >-
+      O fatorial cresce mais rápido do que qualquer exponencial, e a aproximação de Stirling captura
+      como: n! ≈ √(2πn)·(n/e)ⁿ. James Stirling a publicou em 1730 em "Methodus Differentialis",
+      enquanto estudava séries infinitas; Abraham de Moivre já havia obtido a forma essencial, mas
+      foi Stirling quem determinou a constante √(2π). Ela surge formalmente da função gama e do
+      método de Laplace para estimar integrais. É a base da mecânica estatística, da campânula de
+      Gauss de De Moivre e da análise da complexidade de algoritmos.
+    fr: >-
+      La factorielle croît plus vite que toute exponentielle, et l'approximation de Stirling capture
+      ce comportement : n! ≈ √(2πn)·(n/e)ⁿ. James Stirling la publia en 1730 dans « Methodus
+      Differentialis », en étudiant les séries infinies ; Abraham de Moivre avait déjà obtenu la
+      forme essentielle, mais c'est Stirling qui détermina la constante √(2π). Elle découle
+      formellement de la fonction gamma et de la méthode de Laplace pour estimer les intégrales.
+      Elle est à la base de la mécanique statistique, de la courbe en cloche de De Moivre et de
+      l'analyse de la complexité des algorithmes.
+    zh: >-
+      阶乘的增长快于任何指数函数，而斯特林近似精确刻画了这一点：n! ≈ √(2πn)·(n/e)ⁿ。詹姆斯·斯特林于
+      1730年在《微分法》中发表该式，当时他正在研究无穷级数；亚伯拉罕·棣莫弗此前已得到本质上的形式，
+      但正是斯特林确定了常数 √(2π)。该式可由伽马函数和拉普拉斯积分估计方法严格推出。它是统计力学、
+      棣莫弗正态钟形曲线以及算法复杂度分析的基础。
+    ja: >-
+      階乗はどの指数関数よりも速く増大する。スターリングの近似はその様子を n! ≈ √(2πn)·(n/e)ⁿ と
+      して捉える。ジェームズ・スターリングは1730年、無限級数の研究の過程で『微分法』にこれを発表した。
+      エイブラハム・ド・モアブルが本質的な形を先に得ていたが、定数 √(2π) を定めたのはスターリングだった。
+      この式は、ガンマ関数とラプラスの方法による積分の評価から形式的に導かれる。統計力学、ド・モアブルの
+      正規分布の鐘形曲線、そしてアルゴリズムの複雑度解析の基礎である。
+  timeline:
+    - year: "1730"
+      label:
+        es: >-
+          Stirling publica la serie asintótica en "Methodus Differentialis", determinando la
+          constante √(2π).
+        en: >-
+          Stirling publishes the asymptotic series in "Methodus Differentialis", determining the
+          constant √(2π).
+        pt: >-
+          Stirling publica a série assintótica em "Methodus Differentialis", determinando a
+          constante √(2π).
+        fr: >-
+          Stirling publie la série asymptotique dans « Methodus Differentialis », déterminant la
+          constante √(2π).
+        zh: >-
+          斯特林在《微分法》中发表渐近级数,确定了常数 √(2π)。
+        ja: >-
+          スターリングが『微分法』で漸近級数を発表し、定数 √(2π) を定める。
+    - year: "1733"
+      label:
+        es: >-
+          De Moivre usa la aproximación para derivar la curva normal, primera versión del teorema
+          central del límite.
+        en: >-
+          De Moivre uses the approximation to derive the normal curve, an early central limit
+          theorem.
+        pt: >-
+          De Moivre usa a aproximação para derivar a curva normal, versão inicial do teorema
+          central do limite.
+        fr: >-
+          De Moivre utilise l'approximation pour dériver la courbe normale, version précoce du
+          théorème central limite.
+        zh: >-
+          棣莫弗利用该近似推导出正态曲线,这是中心极限定理的早期版本。
+        ja: >-
+          ド・モアブルがこの近似を用いて正規曲線を導出する。中心極限定理の初期の形。
+    - year: s. XVIII–XIX
+      label:
+        es: >-
+          El método de Laplace generaliza la idea a integrales, base del análisis asintótico
+          moderno.
+        en: >-
+          Laplace's method generalizes the idea to integrals, the basis of modern asymptotic
+          analysis.
+        pt: >-
+          O método de Laplace generaliza a ideia para integrais, base da análise assintótica
+          moderna.
+        fr: >-
+          La méthode de Laplace généralise l'idée aux intégrales, base de l'analyse asymptotique
+          moderne.
+        zh: >-
+          拉普拉斯方法将该思想推广到积分,成为现代渐近分析的基础。
+        ja: >-
+          ラプラスの方法がこの考えを積分へ一般化する。近代漸近解析の基礎。
+    - year: Hoy
+      label:
+        es: >-
+          La mecánica estadística y la complejidad de algoritmos usan ln n! ≈ n ln n − n para
+          analizar sistemas y cómputos.
+        en: >-
+          Statistical mechanics and algorithm complexity use ln n! ≈ n ln n − n to analyze systems
+          and computations.
+        pt: >-
+          A mecânica estatística e a complexidade de algoritmos usam ln n! ≈ n ln n − n para
+          analisar sistemas e cálculos.
+        fr: >-
+          La mécanique statistique et la complexité algorithmique utilisent ln n! ≈ n ln n − n pour
+          analyser systèmes et calculs.
+        zh: >-
+          统计力学和算法复杂度用 ln n! ≈ n ln n − n 来分析系统与计算。
+        ja: >-
+          統計力学とアルゴリズム複雑度は、ln n! ≈ n ln n − n を用いて系と計算を解析する。
+  useCases:
+    - title:
+        es: Estadística y probabilidad
+        en: Statistics and probability
+        pt: Estatística e probabilidade
+        fr: Statistiques et probabilités
+        zh: 统计与概率
+        ja: 統計と確率
+      description:
+        es: >-
+          La distribución normal de De Moivre–Laplace aproxima probabilidades binomiales para n
+          grande.
+        en: >-
+          The De Moivre–Laplace normal distribution approximates binomial probabilities for large n.
+        pt: >-
+          A distribuição normal de De Moivre–Laplace aproxima probabilidades binomiais para n
+          grande.
+        fr: >-
+          La loi normale de De Moivre–Laplace approxime les probabilités binomiales pour n grand.
+        zh: >-
+          棣莫弗–拉普拉斯正态分布可近似大 n 下的二项概率。
+        ja: >-
+          ド・モアブル–ラプラスの正規分布が、大きなnに対する二項確率を近似する。
+    - title:
+        es: Mecánica estadística
+        en: Statistical mechanics
+        pt: Mecânica estatística
+        fr: Mécanique statistique
+        zh: 统计力学
+        ja: 統計力学
+      description:
+        es: >-
+          La entropía de Boltzmann S = k ln W usa ln n! ≈ n ln n − n para contar microestados.
+        en: >-
+          Boltzmann entropy S = k ln W uses ln n! ≈ n ln n − n to count microstates.
+        pt: >-
+          A entropia de Boltzmann S = k ln W usa ln n! ≈ n ln n − n para contar microestados.
+        fr: >-
+          L'entropie de Boltzmann S = k ln W utilise ln n! ≈ n ln n − n pour compter les
+          micro-états.
+        zh: >-
+          玻尔兹曼熵 S = k ln W 用 ln n! ≈ n ln n − n 来计数微观状态。
+        ja: >-
+          ボルツマンのエントロピー S = k ln W は、ln n! ≈ n ln n − n で微視的状態を数える。
+    - title:
+        es: Análisis de algoritmos
+        en: Algorithm analysis
+        pt: Análise de algoritmos
+        fr: Analyse d'algorithmes
+        zh: 算法分析
+        ja: アルゴリズム解析
+      description:
+        es: >-
+          Estima el costo de algoritmos que exploran permutaciones y el orden de n! en el peor caso.
+        en: >-
+          It estimates the cost of algorithms that explore permutations and the order of n! in the
+          worst case.
+        pt: >-
+          Estima o custo de algoritmos que exploram permutações e a ordem de n! no pior caso.
+        fr: >-
+          Elle estime le coût des algorithmes qui explorent des permutations et l'ordre de n! au
+          pire cas.
+        zh: >-
+          估算遍历排列的算法成本,以及最坏情况下 n! 的阶次。
+        ja: >-
+          順列を探索するアルゴリズムのコストや、最悪時の n! の位数を見積もる。
+    - title:
+        es: Matemática computacional
+        en: Computational mathematics
+        pt: Matemática computacional
+        fr: Mathématiques numériques
+        zh: 计算数学
+        ja: 数値計算
+      description:
+        es: >-
+          Aproxima factoriales y coeficientes binomiales de n grande sin enumerar productos.
+        en: >-
+          It approximates factorials and binomial coefficients of large n without enumerating
+          products.
+        pt: >-
+          Aproxima fatoriais e coeficientes binomiais de n grande sem enumerar produtos.
+        fr: >-
+          Elle approxime factorielles et coefficients binomiaux de grand n sans énumérer les
+          produits.
+        zh: >-
+          在不逐个列出乘积的情况下近似大 n 的阶乘和二项式系数。
+        ja: >-
+          積を列挙せずに、大きなnの階乗や二項係数を近似する。
+  example:
+    title:
+      es: Calcular 10!
+      en: Computing 10!
+      pt: Calculando 10!
+      fr: Calcul de 10!
+      zh: 计算 10!
+      ja: 10! の計算
+    lines:
+      - es: n = 10
+        en: n = 10
+        pt: n = 10
+        fr: n = 10
+        zh: n = 10
+        ja: n = 10
+      - es: 10! = 3628800
+        en: 10! = 3628800
+        pt: 10! = 3628800
+        fr: 10! = 3628800
+        zh: 10! = 3628800
+        ja: 10! = 3628800
+      - es: 10! ≈ √(2·π·10)·(10/e)¹⁰
+        en: 10! ≈ √(2·π·10)·(10/e)¹⁰
+        pt: 10! ≈ √(2·π·10)·(10/e)¹⁰
+        fr: 10! ≈ √(2·π·10)·(10/e)¹⁰
+        zh: 10! ≈ √(2·π·10)·(10/e)¹⁰
+        ja: 10! ≈ √(2·π·10)·(10/e)¹⁰
+      - es: 10! ≈ 3598696
+        en: 10! ≈ 3598696
+        pt: 10! ≈ 3598696
+        fr: 10! ≈ 3598696
+        zh: 10! ≈ 3598696
+        ja: 10! ≈ 3598696
+      - es: "Error: |3628800 − 3598696| / 3628800"
+        en: "Error: |3628800 − 3598696| / 3628800"
+        pt: "Erro: |3628800 − 3598696| / 3628800"
+        fr: "Erreur : |3628800 − 3598696| / 3628800"
+        zh: "误差：|3628800 − 3598696| / 3628800"
+        ja: "誤差：|3628800 − 3598696| / 3628800"
+      - es: Error ≈ 0.83 % (< 1 %)
+        en: Error ≈ 0.83 % (< 1 %)
+        pt: Erro ≈ 0,83 % (< 1 %)
+        fr: Erreur ≈ 0,83 % (< 1 %)
+        zh: 误差 ≈ 0.83 % (< 1 %)
+        ja: 誤差 ≈ 0.83 % (< 1 %)

@@ -1,0 +1,323 @@
+id: heat-engine-work
+title:
+  es: Trabajo Neto de una Máquina Térmica
+  en: Heat Engine Net Work
+  pt: Trabalho Líquido de uma Máquina Térmica
+  fr: Travail net d'une machine thermique
+  zh: 热机净功
+  ja: 熱機関の正味仕事
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: w
+    type: variable
+    value: W
+    explanation:
+      es: "El trabajo neto: la energía mecánica útil que entrega la máquina en cada ciclo, en joules."
+      en: "The net work: the useful mechanical energy the engine delivers each cycle, in joules."
+      pt: "O trabalho líquido: a energia mecânica útil que a máquina entrega a cada ciclo, em joules."
+      fr: "Le travail net : l'énergie mécanique utile que la machine fournit à chaque cycle, en joules."
+      zh: "净功：机器每个循环输出的有用机械能，以焦耳为单位。"
+      ja: "正味仕事。各サイクルで機関が取り出す有効な力学的エネルギー。単位はジュール。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: q-h
+    type: variable
+    value: Q_h
+    explanation:
+      es: "El calor absorbido del foco caliente: el combustible o la fuente de energía."
+      en: "The heat absorbed from the hot reservoir: the fuel or the energy source."
+      pt: "O calor absorvido do foco quente: o combustível ou a fonte de energia."
+      fr: "La chaleur absorbée de la source chaude : le combustible ou la source d'énergie."
+      zh: 从高温热源吸收的热量：燃料或能量来源。
+      ja: 高温熱源から吸収した熱。燃料やエネルギー源に相当する。
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: "Menos: lo que se resta."
+      en: "Minus: what is subtracted."
+      pt: "Menos: o que se subtrai."
+      fr: "Moins : ce qui est soustrait."
+      zh: 减号：被减去的部分。
+      ja: 引くこと。差し引かれるもの。
+  - id: q-c
+    type: variable
+    value: Q_c
+    explanation:
+      es: "El calor cedido al foco frío: el ambiente o el sistema de refrigeración."
+      en: "The heat rejected to the cold reservoir: the surroundings or the cooling system."
+      pt: "O calor cedido ao foco frio: o ambiente ou o sistema de refrigeração."
+      fr: "La chaleur cédée à la source froide : le milieu ambiant ou le système de refroidissement."
+      zh: 排向低温热源的热量：环境或冷却系统。
+      ja: 低温熱源に捨てた熱。周囲の環境や冷却システムに相当する。
+context:
+  author:
+    es: Basada en la primera ley de la termodinámica
+    en: Based on the first law of thermodynamics
+    pt: Baseada na primeira lei da termodinâmica
+    fr: Basée sur la première loi de la thermodynamique
+    zh: 基于热力学第一定律
+    ja: 熱力学第一法則に基づく
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, séc. XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲，19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      Una máquina térmica toma calor de un foco caliente, cede parte a un foco frío y convierte la
+      diferencia en trabajo: esa diferencia es W = Q_h − Q_c. La ecuación resume la primera ley de la
+      termodinámica aplicada a un ciclo, y su corolario es implacable: como Q_c nunca es cero, el trabajo
+      siempre es menor que el calor absorbido y la eficiencia nunca llega al 100%, límite precisado por
+      Carnot en 1824 y formalizado por Clausius y Kelvin a mediados del siglo XIX. Es la base del diseño
+      de centrales eléctricas y motores de automóvil.
+    en: >-
+      A heat engine takes heat from a hot reservoir, rejects part of it to a cold reservoir, and turns
+      the difference into work: that difference is W = Q_h − Q_c. The equation sums up the first law of
+      thermodynamics applied to a cycle, and its corollary is unforgiving: since Q_c is never zero, the
+      work is always less than the heat absorbed and efficiency never reaches 100%, a limit pinpointed by
+      Carnot in 1824 and formalized by Clausius and Kelvin in the mid-19th century. It underpins the
+      design of power plants and car engines.
+    pt: >-
+      Uma máquina térmica retira calor de um foco quente, cede parte a um foco frio e converte a
+      diferença em trabalho: essa diferença é W = Q_h − Q_c. A equação resume a primeira lei da
+      termodinâmica aplicada a um ciclo, e seu corolário é implacável: como Q_c nunca é zero, o trabalho
+      é sempre menor que o calor absorvido e a eficiência nunca chega a 100%, limite apontado por Carnot
+      em 1824 e formalizado por Clausius e Kelvin em meados do século XIX. É a base do projeto de usinas
+      e motores de automóveis.
+    fr: >-
+      Une machine thermique prend de la chaleur à une source chaude, en cède une partie à une source
+      froide et transforme la différence en travail : cette différence est W = Q_h − Q_c. L'équation
+      résume la première loi de la thermodynamique appliquée à un cycle, et son corollaire est
+      impitoyable : comme Q_c n'est jamais nul, le travail est toujours inférieur à la chaleur absorbée
+      et l'efficacité n'atteint jamais 100 %, limite précisée par Carnot en 1824 et formalisée par
+      Clausius et Kelvin au milieu du XIXe siècle. Elle fonde la conception des centrales électriques et
+      des moteurs automobiles.
+    zh: >-
+      热机从高温热源吸收热量，将其中一部分排向低温热源，并把差值转化为功，这个差值就是W = Q_h − Q_c。该方程
+      概括了热力学第一定律在循环中的应用，其推论是严酷的：由于Q_c永不为零，功总是小于吸收的热量，效率永远
+      达不到100%——这一极限由卡诺于1824年指出，并在19世纪中叶由克劳修斯和开尔文加以系统化。它是电厂和汽车
+      发动机设计的基石。
+    ja: >-
+      熱機関は高温熱源から熱を取り込み、その一部を低温熱源に捨て、その差を仕事に変換する。この差が
+      W = Q_h − Q_c である。この式はサイクルに適用した熱力学の第一法則を要約したもので、その帰結は厳しい。
+      Q_cが決してゼロにならないため、仕事は吸収した熱よりも常に小さく、効率は決して100%には達しない。この
+      限界は1824年にカノーが指摘し、19世紀半ばにクラウジウスとケルビンが体系化した。火力発電所や自動車エンジン
+      の設計の基盤である。
+  timeline:
+    - year: "1824"
+      label:
+        es: >-
+          Carnot publica sus 'Reflexiones sobre la potencia motriz del fuego', mostrando que el trabajo
+          proviene del flujo de calor entre dos focos.
+        en: >-
+          Carnot publishes his 'Reflections on the Motive Power of Fire', showing that work comes from
+          heat flowing between two reservoirs.
+        pt: >-
+          Carnot publica suas 'Reflexões sobre a Potência Motriz do Fogo', mostrando que o trabalho vem
+          do fluxo de calor entre dois focos.
+        fr: >-
+          Carnot publie ses « Réflexions sur la puissance motrice du feu », montrant que le travail vient
+          du flux de chaleur entre deux sources.
+        zh: >-
+          卡诺发表《关于火的动力的思考》，指出功来自两个热源之间的热量流动。
+        ja: >-
+          カノーが『火の動力についての考察』を発表し、仕事が二つの熱源間の熱の流れから生じることを示す。
+    - year: "1850"
+      label:
+        es: >-
+          Clausius enuncia la segunda ley de la termodinámica, fijando el límite de eficiencia de toda
+          máquina térmica.
+        en: >-
+          Clausius states the second law of thermodynamics, setting the efficiency limit of every heat
+          engine.
+        pt: >-
+          Clausius enuncia a segunda lei da termodinâmica, fixando o limite de eficiência de toda máquina
+          térmica.
+        fr: >-
+          Clausius énonce la deuxième loi de la thermodynamique, fixant la limite d'efficacité de toute
+          machine thermique.
+        zh: >-
+          克劳修斯提出热力学第二定律，确定了所有热机的效率上限。
+        ja: >-
+          クラウジウスが熱力学の第二法則を述べ、あらゆる熱機関の効率の上限を定める。
+    - year: "1876"
+      label:
+        es: >-
+          Otto construye el motor de cuatro tiempos, convirtiendo la ecuación en la base del automóvil.
+        en: >-
+          Otto builds the four-stroke engine, making the equation the basis of the automobile.
+        pt: >-
+          Otto constrói o motor de quatro tempos, tornando a equação a base do automóvel.
+        fr: >-
+          Otto construit le moteur à quatre temps, faisant de l'équation la base de l'automobile.
+        zh: >-
+          奥托制造出四冲程发动机，使该方程成为汽车的基础。
+        ja: >-
+          オットーが4ストロークエンジンを完成させ、この式を自動車の基盤とする。
+    - year: Hoy
+      label:
+        es: >-
+          Las centrales eléctricas y los motores de combustión calculan su trabajo neto con esta
+          diferencia.
+        en: >-
+          Power plants and combustion engines compute their net work with this difference today.
+        pt: >-
+          Usinas elétricas e motores de combustão calculam hoje seu trabalho líquido com essa diferença.
+        fr: >-
+          Centrales électriques et moteurs à combustion calculent aujourd'hui leur travail net avec cette
+          différence.
+        zh: >-
+          如今，发电厂和内燃机都用这个差值计算它们的净功。
+        ja: >-
+          今日、発電所や内燃機関はこの差で正味仕事を計算している。
+  useCases:
+    - title:
+        es: Centrales eléctricas
+        en: Power plants
+        pt: Usinas elétricas
+        fr: Centrales électriques
+        zh: 发电厂
+        ja: 発電所
+      description:
+        es: >-
+          Una planta de carbón, gas o nuclear toma calor de la combustión, lo cede al condensador y
+          convierte la diferencia en electricidad.
+        en: >-
+          A coal, gas, or nuclear plant takes heat from combustion, rejects it to the condenser, and
+          turns the difference into electricity.
+        pt: >-
+          Uma usina a carvão, gás ou nuclear retira calor da combustão, cede ao condensador e converte a
+          diferença em eletricidade.
+        fr: >-
+          Une centrale à charbon, au gaz ou nucléaire prend la chaleur de la combustion, la cède au
+          condenseur et convertit la différence en électricité.
+        zh: >-
+          燃煤、燃气或核电站从燃烧中吸取热量，排向冷凝器，并将差值转化为电力。
+        ja: >-
+          石炭・ガス・原子力発電所は燃焼の熱を取り込み、復水器に捨て、その差を電力に変換する。
+    - title:
+        es: Motores de combustión interna
+        en: Internal combustion engines
+        pt: Motores de combustão interna
+        fr: Moteurs à combustion interne
+        zh: 内燃机
+        ja: 内燃機関
+      description:
+        es: >-
+          Un motor de automóvil quema combustible, expulsa calor por el escape y el radiador, y entrega
+          como trabajo el resto.
+        en: >-
+          A car engine burns fuel, rejects heat through the exhaust and radiator, and delivers the rest
+          as work.
+        pt: >-
+          Um motor de carro queima combustível, rejeita calor pelo escapamento e radiador e entrega o
+          resto como trabalho.
+        fr: >-
+          Un moteur automobile brûle du carburant, rejette la chaleur par l'échappement et le radiateur,
+          et fournit le reste comme travail.
+        zh: >-
+          汽车发动机燃烧燃料，通过排气和散热器排出热量，并将其余部分作为功输出。
+        ja: >-
+          自動車エンジンは燃料を燃やし、排気とラジエーターで熱を捨て、残りを仕事として取り出す。
+    - title:
+        es: Turbinas de aviación
+        en: Aviation turbines
+        pt: Turbinas de aviação
+        fr: Turbines d'aviation
+        zh: 航空涡轮发动机
+        ja: 航空用タービン
+      description:
+        es: >-
+          El empuje de un turborreactor proviene del trabajo neto entre el calor de la cámara de
+          combustión y el calor expulsado en el escape.
+        en: >-
+          A jet engine's thrust comes from the net work between the heat released in the combustor and
+          the heat expelled in the exhaust.
+        pt: >-
+          O empuxo de um turbojato vem do trabalho líquido entre o calor da câmara de combustão e o calor
+          expelido no escapamento.
+        fr: >-
+          La poussée d'un turboréacteur provient du travail net entre la chaleur de la chambre de
+          combustion et celle rejetée dans l'échappement.
+        zh: >-
+          涡喷发动机的推力来自燃烧室释放的热量与排气排出的热量之间的净功。
+        ja: >-
+          ターボジェットの推力は、燃焼器で放出された熱と排気で捨てられる熱の差である正味仕事に由来する。
+    - title:
+        es: Auditoría energética
+        en: Energy auditing
+        pt: Auditoria energética
+        fr: Audit énergétique
+        zh: 能源审计
+        ja: 省エネルギー診断
+      description:
+        es: >-
+          Compara el calor de entrada con el trabajo obtenido para diagnosticar pérdidas en plantas y
+          motores.
+        en: >-
+          It compares input heat with useful work to diagnose losses in plants and engines.
+        pt: >-
+          Compara o calor de entrada com o trabalho útil para diagnosticar perdas em usinas e motores.
+        fr: >-
+          Elle compare la chaleur d'entrée au travail utile pour diagnostiquer les pertes des centrales
+          et des moteurs.
+        zh: >-
+          比较输入的热量与有效功，以诊断电厂和发动机中的损失。
+        ja: >-
+          投入熱と有効な仕事を比べて、発電所やエンジンの損失を診断する。
+  example:
+    title:
+      es: Ciclo de un motor simple
+      en: A simple engine cycle
+      pt: Ciclo de um motor simples
+      fr: Cycle d'un moteur simple
+      zh: 一个简单的发动机循环
+      ja: 単純なエンジンサイクル
+    lines:
+      - es: "Q_h = 1000 J, Q_c = 600 J"
+        en: "Q_h = 1000 J, Q_c = 600 J"
+        pt: "Q_h = 1000 J, Q_c = 600 J"
+        fr: "Q_h = 1000 J, Q_c = 600 J"
+        zh: "Q_h = 1000 J，Q_c = 600 J"
+        ja: "Q_h = 1000 J、Q_c = 600 J"
+      - es: W = Q_h − Q_c
+        en: W = Q_h − Q_c
+        pt: W = Q_h − Q_c
+        fr: W = Q_h − Q_c
+        zh: W = Q_h − Q_c
+        ja: W = Q_h − Q_c
+      - es: W = 1000 − 600
+        en: W = 1000 − 600
+        pt: W = 1000 − 600
+        fr: W = 1000 − 600
+        zh: W = 1000 − 600
+        ja: W = 1000 − 600
+      - es: W = 400 J
+        en: W = 400 J
+        pt: W = 400 J
+        fr: W = 400 J
+        zh: W = 400 J
+        ja: W = 400 J
+      - es: "η = W / Q_h = 400 / 1000 = 40%"
+        en: "η = W / Q_h = 400 / 1000 = 40%"
+        pt: "η = W / Q_h = 400 / 1000 = 40%"
+        fr: "η = W / Q_h = 400 / 1000 = 40%"
+        zh: "η = W / Q_h = 400 / 1000 = 40%"
+        ja: "η = W / Q_h = 400 / 1000 = 40%"

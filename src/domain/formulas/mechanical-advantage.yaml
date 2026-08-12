@@ -1,0 +1,292 @@
+id: mechanical-advantage
+title:
+  es: Ventaja Mecánica
+  en: Mechanical Advantage
+  pt: Vantagem Mecânica
+  fr: Avantage mécanique
+  zh: 机械利益
+  ja: 機械的優位
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: ma
+    type: variable
+    value: MA
+    explanation:
+      es: La ventaja mecánica, cuántas veces la máquina multiplica la fuerza aplicada.
+      en: The mechanical advantage, how many times the machine multiplies the applied force.
+      pt: A vantagem mecânica, quantas vezes a máquina multiplica a força aplicada.
+      fr: L'avantage mécanique, combien de fois la machine multiplie la force appliquée.
+      zh: 机械利益,即机械把所施加的力放大的倍数。
+      ja: 機械的優位。機械が加えた力を何倍に増幅するか。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: f-out
+    type: variable
+    value: Fₒ
+    explanation:
+      es: La fuerza de salida, la que la máquina entrega en el otro extremo.
+      en: The output force, what the machine delivers at the other end.
+      pt: A força de saída, a que a máquina entrega na outra extremidade.
+      fr: La force de sortie, celle que la machine fournit à l'autre extrémité.
+      zh: 输出力,即机械在另一端输出的力。
+      ja: 出力側の力。機械が反対側の端で生み出す力。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: División.
+      en: Division.
+      pt: Divisão.
+      fr: Division.
+      zh: 除法。
+      ja: 除算。
+  - id: f-in
+    type: variable
+    value: Fᵢ
+    explanation:
+      es: La fuerza de entrada, la que la persona o el motor aplica.
+      en: The input force, what the person or motor applies.
+      pt: A força de entrada, a que a pessoa ou o motor aplica.
+      fr: La force d'entrée, celle qu'appliquent la personne ou le moteur.
+      zh: 输入力,即人或发动机施加的力。
+      ja: 入力側の力。人やモーターが加える力。
+context:
+  author:
+    es: Basada en las máquinas simples de Arquímedes
+    en: Based on Archimedes' simple machines
+    pt: Baseada nas máquinas simples de Arquimedes
+    fr: Basée sur les machines simples d'Archimède
+    zh: 基于阿基米德的简单机械
+    ja: アルキメデスの単純機械に基づく
+  era:
+    es: Siracusa, c. 250 a.C.
+    en: Syracuse, c. 250 BC
+    pt: Siracusa, c. 250 a.C.
+    fr: Syracuse, c. 250 av. J.-C.
+    zh: 叙拉古,约公元前250年
+    ja: シュラクサイ、紀元前250年頃
+  history:
+    es: >-
+      Una máquina multiplica una fuerza aplicada: la ventaja mecánica mide cuántas veces la amplifica.
+      Arquímedes mostró ya en el siglo III a.C. cómo palancas, poleas y engranajes podían mover pesos
+      enormes con fuerzas pequeñas. Cuando la ventaja supera 1, la fuerza de salida es mayor que la de
+      entrada, pero el extremo movido recorre una distancia menor: la energía de entrada nunca es
+      gratis. Por eso la regla de oro de las máquinas afirma que lo que se gana en fuerza se pierde en
+      distancia, y nadie obtiene trabajo sin aportar energía.
+    en: >-
+      A machine multiplies an applied force: mechanical advantage measures how many times it amplifies
+      it. As early as the 3rd century BC, Archimedes showed how levers, pulleys, and gears could move
+      enormous weights with small forces. When the advantage exceeds 1, the output force is greater
+      than the input force, but the moved end travels a shorter distance: input energy is never free.
+      That is why the golden rule of machines states that what is gained in force is lost in distance,
+      and no one gets work without supplying energy.
+    pt: >-
+      Uma máquina multiplica uma força aplicada: a vantagem mecânica mede quantas vezes ela a
+      amplifica. Arquimedes mostrou, já no século III a.C., como alavancas, polias e engrenagens
+      podiam mover pesos enormes com forças pequenas. Quando a vantagem supera 1, a força de saída é
+      maior que a de entrada, mas a extremidade movida percorre uma distância menor: a energia de
+      entrada nunca é de graça. Por isso a regra de ouro das máquinas afirma que o que se ganha em
+      força se perde em distância, e ninguém obtém trabalho sem fornecer energia.
+    fr: >-
+      Une machine multiplie une force appliquée : l'avantage mécanique mesure combien de fois il
+      l'amplifie. Dès le IIIe siècle av. J.-C., Archimède montra comment leviers, poulies et
+      engrenages pouvaient déplacer des poids énormes avec de petites forces. Lorsque l'avantage
+      dépasse 1, la force de sortie est supérieure à la force d'entrée, mais l'extrémité déplacée
+      parcourt une distance moindre : l'énergie d'entrée n'est jamais gratuite. C'est pourquoi la règle
+      d'or des machines veut que ce qui est gagné en force soit perdu en distance, et que nul n'obtient
+      de travail sans fournir d'énergie.
+    zh: >-
+      机械能放大所施加的力:机械利益衡量它把力放大了多少倍。早在公元前3世纪,阿基米德就展示了杠杆、
+      滑轮和齿轮如何用很小的力搬动巨大的重物。当机械利益大于1时,输出力大于输入力,但被移动的一端
+      走过的距离更短:输入的能量永远不会白得。这就是机械的黄金法则——力上有所得,距离上必有所失,
+      不提供能量就拿不到功。
+    ja: >-
+      機械は加えられた力を何倍にも増幅する。機械的優位とは、その力を何倍に増幅できるかを測る量だ。
+      アルキメデスは紀元前3世紀にはすでに、てこ・滑車・歯車を使えば小さな力で巨大な重りを動かせる
+      と示していた。機械的優位が1を超えると、出力側の力は入力側より大きくなるが、動かされる端の移動
+      距離は短くなる。入力エネルギーがただになることは決してない。これこそ「力で得たものは距離で失う」
+      という機械の黄金律であり、エネルギーを供給せずに仕事を得ることは誰にもできない。
+  timeline:
+    - year: c. 250 a.C.
+      label:
+        es: >-
+          Arquímedes demuestra el principio de la palanca y de las poleas compuestas en Siracusa.
+        en: >-
+          Archimedes demonstrates the principle of the lever and of compound pulleys in Syracuse.
+        pt: >-
+          Arquimedes demonstra o princípio da alavanca e das polias compostas em Siracusa.
+        fr: >-
+          Archimède démontre le principe du levier et des poulies composées à Syracuse.
+        zh: >-
+          阿基米德在叙拉古演示了杠杆和复合滑轮的原理。
+        ja: >-
+          アルキメデスがシュラクサイでてこの原理と複合滑車を実証する。
+    - year: "1600"
+      label:
+        es: >-
+          Galileo sistematiza las máquinas simples en su tratado Le Meccaniche.
+        en: >-
+          Galileo systematizes simple machines in his treatise Le Meccaniche.
+        pt: >-
+          Galileu sistematiza as máquinas simples em seu tratado Le Meccaniche.
+        fr: >-
+          Galilée systématise les machines simples dans son traité Le Meccaniche.
+        zh: >-
+          伽利略在《力学》论著中系统整理了简单机械。
+        ja: >-
+          ガリレオが『機械学』で単純機械を体系化する。
+    - year: Hoy
+      label:
+        es: >-
+          La ventaja mecánica guía el diseño de palancas, poleas y cajas de cambios en autos y grúas.
+        en: >-
+          Mechanical advantage guides the design of levers, pulleys, and gearboxes in cars and cranes.
+        pt: >-
+          A vantagem mecânica orienta o projeto de alavancas, polias e caixas de câmbio em carros e
+          guindastes.
+        fr: >-
+          L'avantage mécanique guide la conception de leviers, de poulies et de boîtes de vitesses
+          dans les voitures et les grues.
+        zh: >-
+          机械利益指导着汽车和起重机中杠杆、滑轮与变速箱的设计。
+        ja: >-
+          機械的優位が、自動車やクレーンのてこ、滑車、変速機の設計を導いている。
+  useCases:
+    - title:
+        es: Gatos hidráulicos
+        en: Hydraulic jacks
+        pt: Macacos hidráulicos
+        fr: Crics hydrauliques
+        zh: 液压千斤顶
+        ja: 油圧ジャッキ
+      description:
+        es: >-
+          Levantan autos y maquinaria pesada multiplicando una pequeña fuerza manual en una fuerza de
+          salida enorme.
+        en: >-
+          They lift cars and heavy machinery, multiplying a small hand force into a huge output force.
+        pt: >-
+          Levantam carros e máquinas pesadas multiplicando uma pequena força manual em uma enorme
+          força de saída.
+        fr: >-
+          Ils soulèvent voitures et machines lourdes en multipliant une petite force manuelle en une
+          force de sortie énorme.
+        zh: >-
+          把很小的手力放大成巨大的输出力,用于顶起汽车和重型机械。
+        ja: >-
+          小さな手の力を大きな出力へと増幅し、自動車や重機を持ち上げる。
+    - title:
+        es: Grúas
+        en: Cranes
+        pt: Guindastes
+        fr: Grues
+        zh: 起重机
+        ja: クレーン
+      description:
+        es: >-
+          Las poleas y aparejos de la pluma permiten izar cargas muy superiores a la fuerza del motor.
+        en: >-
+          Pulleys and tackle on the boom let cranes lift loads far exceeding the motor's force.
+        pt: >-
+          Polias e talhas na lança permitem içar cargas muito superiores à força do motor.
+        fr: >-
+          Poulies et palans sur la flèche permettent de lever des charges très supérieures à la force
+          du moteur.
+        zh: >-
+          吊臂上的滑轮组使起重机能够吊起远超发动机能力的重物。
+        ja: >-
+          ブームの滑車や巻上げ装置が、モーターの力の何倍もの荷物を持ち上げる。
+    - title:
+        es: Cambios de bicicleta
+        en: Bicycle gears
+        pt: Marchas de bicicleta
+        fr: Vitesses de vélo
+        zh: 自行车变速
+        ja: 自転車の変速機
+      description:
+        es: >-
+          Platos y piñones ajustan la ventaja mecánica para subir cuestas o ganar velocidad.
+        en: >-
+          Chainrings and sprockets adjust the mechanical advantage to climb hills or gain speed.
+        pt: >-
+          Coroas e catracas ajustam a vantagem mecânica para subir ladeiras ou ganhar velocidade.
+        fr: >-
+          Plateaux et pignons ajustent l'avantage mécanique pour grimper ou prendre de la vitesse.
+        zh: >-
+          牙盘和飞轮通过改变机械利益来爬坡或提速。
+        ja: >-
+          チェーンリングとスプロケットが機械的優位を調整し、登坂や加速に対応する。
+    - title:
+        es: Cajas de cambio
+        en: Gearboxes
+        pt: Caixas de câmbio
+        fr: Boîtes de vitesses
+        zh: 变速箱
+        ja: 変速機
+      description:
+        es: >-
+          En autos y máquinas herramienta, cambian la relación de fuerzas entre el motor y la rueda.
+        en: >-
+          In cars and machine tools, they change the force ratio between engine and wheel.
+        pt: >-
+          Em carros e máquinas-ferramenta, mudam a relação de forças entre motor e roda.
+        fr: >-
+          Dans les voitures et machines-outils, elles modifient le rapport de forces entre moteur et
+          roue.
+        zh: >-
+          在汽车和机床中,它们改变发动机与车轮之间的力比。
+        ja: >-
+          自動車や工作機械で、エンジンと車輪の力の比を変える。
+  example:
+    title:
+      es: Polipasto de poleas
+      en: Pulley system
+      pt: Talha de polias
+      fr: Mouflage de poulies
+      zh: 滑轮组
+      ja: 滑車装置
+    lines:
+      - es: Fₒ = 200 N
+        en: Fₒ = 200 N
+        pt: Fₒ = 200 N
+        fr: Fₒ = 200 N
+        zh: Fₒ = 200 N
+        ja: Fₒ = 200 N
+      - es: Fᵢ = 50 N
+        en: Fᵢ = 50 N
+        pt: Fᵢ = 50 N
+        fr: Fᵢ = 50 N
+        zh: Fᵢ = 50 N
+        ja: Fᵢ = 50 N
+      - es: MA = Fₒ / Fᵢ
+        en: MA = Fₒ / Fᵢ
+        pt: MA = Fₒ / Fᵢ
+        fr: MA = Fₒ / Fᵢ
+        zh: MA = Fₒ / Fᵢ
+        ja: MA = Fₒ / Fᵢ
+      - es: MA = 200 / 50
+        en: MA = 200 / 50
+        pt: MA = 200 / 50
+        fr: MA = 200 / 50
+        zh: MA = 200 / 50
+        ja: MA = 200 / 50
+      - es: MA = 4
+        en: MA = 4
+        pt: MA = 4
+        fr: MA = 4
+        zh: MA = 4
+        ja: MA = 4

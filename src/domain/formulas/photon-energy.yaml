@@ -1,0 +1,278 @@
+id: photon-energy
+title:
+  es: Energía del Fotón
+  en: Photon Energy
+  pt: Energia do Fóton
+  fr: Énergie du Photon
+  zh: 光子能量
+  ja: 光子のエネルギー
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: "E: la energía que transporta un solo fotón."
+      en: "E: the energy carried by a single photon."
+      pt: "E: a energia transportada por um único fóton."
+      fr: "E : l'énergie portée par un seul photon."
+      zh: "E：单个光子所携带的能量。"
+      ja: "E：光子1個が運ぶエネルギー。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: h
+    type: constant
+    value: h
+    explanation:
+      es: "h: la constante de Planck, el cuanto de acción de la naturaleza."
+      en: "h: Planck's constant, nature's quantum of action."
+      pt: "h: a constante de Planck, o quantum de ação da natureza."
+      fr: "h : la constante de Planck, le quantum d'action de la nature."
+      zh: "h：普朗克常数,自然界的作用量子。"
+      ja: "h：プランク定数。自然界の作用量子。"
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: 次を掛ける。
+  - id: c
+    type: constant
+    value: c
+    explanation:
+      es: "c: la velocidad de la luz en el vacío, 3×10⁸ m/s."
+      en: "c: the speed of light in vacuum, 3×10⁸ m/s."
+      pt: "c: a velocidade da luz no vácuo, 3×10⁸ m/s."
+      fr: "c : la vitesse de la lumière dans le vide, 3×10⁸ m/s."
+      zh: "c：真空中的光速,3×10⁸ 米/秒。"
+      ja: "c：真空中の光の速度、3×10⁸ m/s。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: lambda
+    type: variable
+    value: λ
+    explanation:
+      es: "λ: la longitud de onda de la luz, la distancia entre dos crestas de la onda."
+      en: "λ: the wavelength of the light, the distance between two wave crests."
+      pt: "λ: o comprimento de onda da luz, a distância entre duas cristas da onda."
+      fr: "λ : la longueur d'onde de la lumière, la distance entre deux crêtes de l'onde."
+      zh: "λ：光的波长,即两个波峰之间的距离。"
+      ja: "λ：光の波長。波の山と山の間の距離。"
+context:
+  author:
+    es: Max Planck y Albert Einstein
+    en: Max Planck and Albert Einstein
+    pt: Max Planck e Albert Einstein
+    fr: Max Planck et Albert Einstein
+    zh: 马克斯·普朗克与阿尔伯特·爱因斯坦
+    ja: マックス・プランクとアルベルト・アインシュタイン
+  era:
+    es: Alemania y Suiza, 1900–1905
+    en: Germany and Switzerland, 1900–1905
+    pt: Alemanha e Suíça, 1900–1905
+    fr: Allemagne et Suisse, 1900–1905
+    zh: 德国与瑞士,1900–1905年
+    ja: ドイツとスイス、1900–1905年
+  history:
+    es: >-
+      En 1900 Max Planck introdujo la constante h para explicar la radiación del cuerpo negro,
+      suponiendo que la energía se intercambia en paquetes discretos. En 1905 Albert Einstein fue
+      más lejos: la luz misma está hecha de cuantos, los fotones, cuya energía es inversamente
+      proporcional a la longitud de onda. Por eso la luz ultravioleta, de onda corta, es
+      energética y dañina para la piel, mientras que las ondas de radio, largas, apenas
+      transportan energía. Esta relación explica el efecto fotoeléctrico, que valió a Einstein el
+      Nobel de 1921 y subyace en los sensores de luz.
+    en: >-
+      In 1900 Max Planck introduced the constant h to explain blackbody radiation, assuming
+      energy is exchanged in discrete packets. In 1905 Albert Einstein went further: light itself
+      is made of quanta, photons, whose energy is inversely proportional to wavelength. That is
+      why ultraviolet light, with its short wavelength, is energetic and harmful to skin, while
+      long radio waves carry barely any energy. This relation explains the photoelectric effect,
+      which earned Einstein the 1921 Nobel Prize and underlies light sensors.
+    pt: >-
+      Em 1900 Max Planck introduziu a constante h para explicar a radiação de corpo negro,
+      supondo que a energia é trocada em pacotes discretos. Em 1905 Albert Einstein foi além: a
+      própria luz é feita de quanta, os fótons, cuja energia é inversamente proporcional ao
+      comprimento de onda. Por isso a luz ultravioleta, de onda curta, é energética e prejudicial
+      à pele, enquanto as ondas de rádio, longas, quase não transportam energia. Essa relação
+      explica o efeito fotoelétrico, que rendeu a Einstein o Nobel de 1921 e está na base dos
+      sensores de luz.
+    fr: >-
+      En 1900, Max Planck introduisit la constante h pour expliquer le rayonnement du corps noir,
+      en supposant que l'énergie s'échange par paquets discrets. En 1905, Albert Einstein alla
+      plus loin : la lumière elle-même est faite de quanta, les photons, dont l'énergie est
+      inversement proportionnelle à la longueur d'onde. C'est pourquoi la lumière ultraviolette,
+      à courte longueur d'onde, est énergétique et nocive pour la peau, tandis que les ondes
+      radio, longues, ne transportent presque aucune énergie. Cette relation explique l'effet
+      photoélectrique, qui valut à Einstein le prix Nobel de 1921 et sous-tend les capteurs de
+      lumière.
+    zh: >-
+      1900年,马克斯·普朗克引入了常数h来解释黑体辐射,假设能量以离散的能量包进行交换。1905年,阿尔伯特·爱因斯坦更进一步:
+      光本身就是由量子——即光子——构成的,其能量与波长成反比。因此,波长短的紫外线能量高、对皮肤有害,而波长长的无线电波
+      几乎不携带能量。这一关系解释了光电效应,使爱因斯坦获得1921年诺贝尔奖,也是光传感器的基础。
+    ja: >-
+      1900年、マックス・プランクは黒体放射を説明するため定数hを導入し、エネルギーが離散的な塊として交換されると仮定した。
+      1905年、アルベルト・アインシュタインはさらに踏み込み、光そのものが光子という量子から成り、そのエネルギーは波長に
+      反比例すると提唱した。だからこそ波長の短い紫外線はエネルギーが高く皮膚に有害な一方、波長の長い電波はほとんどエネルギーを
+      運ばない。この関係は光電効果を説明し、アインシュタインに1921年のノーベル賞をもたらし、光センサーの根底にある。
+  timeline:
+    - year: "1900"
+      label:
+        es: Planck introduce la constante h y la cuantización de la energía para resolver la radiación del cuerpo negro.
+        en: Planck introduces the constant h and energy quantization to solve blackbody radiation.
+        pt: Planck introduz a constante h e a quantização da energia para resolver a radiação de corpo negro.
+        fr: Planck introduit la constante h et la quantification de l'énergie pour résoudre le rayonnement du corps noir.
+        zh: 普朗克引入常数h和能量量子化,以解决黑体辐射问题。
+        ja: プランクが黒体放射を解決するため定数hとエネルギーの量子化を導入する。
+    - year: "1905"
+      label:
+        es: Einstein propone que la luz viaja en cuantos, los fotones, cuya energía depende de la longitud de onda.
+        en: Einstein proposes light travels in quanta, photons, whose energy depends on wavelength.
+        pt: Einstein propõe que a luz viaja em quanta, os fótons, cuja energia depende do comprimento de onda.
+        fr: Einstein propose que la lumière voyage en quanta, les photons, dont l'énergie dépend de la longueur d'onde.
+        zh: 爱因斯坦提出光以量子——光子——的形式传播,其能量取决于波长。
+        ja: アインシュタインが光は量子、すなわち光子として伝わり、そのエネルギーは波長に依存すると提唱する。
+    - year: "1916"
+      label:
+        es: Robert Millikan verifica experimentalmente la ecuación fotoeléctrica de Einstein.
+        en: Robert Millikan experimentally verifies Einstein's photoelectric equation.
+        pt: Robert Millikan verifica experimentalmente a equação fotoelétrica de Einstein.
+        fr: Robert Millikan vérifie expérimentalement l'équation photoélectrique d'Einstein.
+        zh: 罗伯特·密立根通过实验验证了爱因斯坦的光电效应方程。
+        ja: ロバート・ミリカンがアインシュタインの光電方程式を実験的に検証する。
+    - year: "1921"
+      label:
+        es: Einstein recibe el Premio Nobel de Física por su explicación del efecto fotoeléctrico.
+        en: Einstein receives the Nobel Prize in Physics for his explanation of the photoelectric effect.
+        pt: Einstein recebe o Prêmio Nobel de Física por sua explicação do efeito fotoelétrico.
+        fr: Einstein reçoit le prix Nobel de physique pour son explication de l'effet photoélectrique.
+        zh: 爱因斯坦因对光电效应的解释而获得诺贝尔物理学奖。
+        ja: アインシュタインが光電効果の説明によりノーベル物理学賞を受賞する。
+  useCases:
+    - title:
+        es: Energía solar
+        en: Solar energy
+        pt: Energia solar
+        fr: Énergie solaire
+        zh: 太阳能
+        ja: 太陽光発電
+      description:
+        es: Las celdas fotovoltaicas liberan electrones solo si la energía del fotón supera un umbral, calculado con esta fórmula.
+        en: Photovoltaic cells release electrons only if the photon's energy exceeds a threshold, calculated with this formula.
+        pt: Células fotovoltaicas liberam elétrons apenas se a energia do fóton superar um limiar, calculado com essa fórmula.
+        fr: Les cellules photovoltaïques ne libèrent des électrons que si l'énergie du photon dépasse un seuil, calculé avec cette formule.
+        zh: 只有当光子能量超过某一阈值时,光伏电池才会释放电子,该阈值由这个公式计算得出。
+        ja: 太陽電池は光子のエネルギーがこの式で計算されるしきい値を超えたときのみ電子を放出する。
+    - title:
+        es: Espectroscopía
+        en: Spectroscopy
+        pt: Espectroscopia
+        fr: Spectroscopie
+        zh: 光谱学
+        ja: 分光法
+      description:
+        es: La energía de cada línea espectral revela los niveles atómicos del elemento que emite la luz.
+        en: The energy of each spectral line reveals the atomic levels of the element emitting the light.
+        pt: A energia de cada linha espectral revela os níveis atômicos do elemento que emite a luz.
+        fr: L'énergie de chaque raie spectrale révèle les niveaux atomiques de l'élément qui émet la lumière.
+        zh: 每条谱线的能量揭示了发出该光的元素的原子能级。
+        ja: 各スペクトル線のエネルギーは、その光を放つ元素の原子準位を明らかにする。
+    - title:
+        es: Seguridad frente a la radiación
+        en: Radiation safety
+        pt: Segurança contra radiação
+        fr: Sécurité contre les rayonnements
+        zh: 辐射安全
+        ja: 放射線防護
+      description:
+        es: Los fotones UV y de rayos X son lo bastante energéticos para ionizar moléculas; los de radio no lo son.
+        en: UV and X-ray photons are energetic enough to ionize molecules; radio photons are not.
+        pt: Fótons UV e de raios X são energéticos o bastante para ionizar moléculas; os de rádio não são.
+        fr: Les photons UV et X sont assez énergétiques pour ioniser des molécules ; ceux des ondes radio ne le sont pas.
+        zh: 紫外线和X射线光子能量足以电离分子,而无线电波光子不能。
+        ja: 紫外線やX線の光子は分子を電離するのに十分なエネルギーを持つが、電波の光子は持たない。
+    - title:
+        es: Astronomía
+        en: Astronomy
+        pt: Astronomia
+        fr: Astronomie
+        zh: 天文学
+        ja: 天文学
+      description:
+        es: La energía de los fotones recibidos de estrellas lejanas revela su temperatura y composición.
+        en: The energy of photons received from distant stars reveals their temperature and composition.
+        pt: A energia dos fótons recebidos de estrelas distantes revela sua temperatura e composição.
+        fr: L'énergie des photons reçus d'étoiles lointaines révèle leur température et leur composition.
+        zh: 来自遥远恒星的光子能量揭示了它们的温度和组成。
+        ja: 遠くの恒星から届く光子のエネルギーは、その温度と組成を明らかにする。
+  example:
+    title:
+      es: Energía de un fotón de luz verde
+      en: Energy of a green light photon
+      pt: Energia de um fóton de luz verde
+      fr: Énergie d'un photon de lumière verte
+      zh: 绿光光子的能量
+      ja: 緑色光の光子のエネルギー
+    lines:
+      - es: λ = 500 nm (luz verde)
+        en: λ = 500 nm (green light)
+        pt: λ = 500 nm (luz verde)
+        fr: λ = 500 nm (lumière verte)
+        zh: λ = 500 nm(绿光)
+        ja: λ = 500 nm(緑色光)
+      - es: c = 3×10⁸ m/s, h = 6.626×10⁻³⁴ J·s
+        en: c = 3×10⁸ m/s, h = 6.626×10⁻³⁴ J·s
+        pt: c = 3×10⁸ m/s, h = 6,626×10⁻³⁴ J·s
+        fr: c = 3×10⁸ m/s, h = 6,626×10⁻³⁴ J·s
+        zh: c = 3×10⁸ 米/秒, h = 6.626×10⁻³⁴ J·s
+        ja: c = 3×10⁸ m/s、h = 6.626×10⁻³⁴ J·s
+      - es: E = h · c / λ
+        en: E = h · c / λ
+        pt: E = h · c / λ
+        fr: E = h · c / λ
+        zh: E = h · c / λ
+        ja: E = h · c / λ
+      - es: E = 6.626×10⁻³⁴ · 3×10⁸ / 5×10⁻⁷
+        en: E = 6.626×10⁻³⁴ · 3×10⁸ / 5×10⁻⁷
+        pt: E = 6,626×10⁻³⁴ · 3×10⁸ / 5×10⁻⁷
+        fr: E = 6,626×10⁻³⁴ · 3×10⁸ / 5×10⁻⁷
+        zh: E = 6.626×10⁻³⁴ · 3×10⁸ / 5×10⁻⁷
+        ja: E = 6.626×10⁻³⁴ · 3×10⁸ / 5×10⁻⁷
+      - es: E ≈ 3.98×10⁻¹⁹ J
+        en: E ≈ 3.98×10⁻¹⁹ J
+        pt: E ≈ 3,98×10⁻¹⁹ J
+        fr: E ≈ 3,98×10⁻¹⁹ J
+        zh: E ≈ 3.98×10⁻¹⁹ 焦耳
+        ja: E ≈ 3.98×10⁻¹⁹ ジュール
+      - es: E ≈ 2.48 eV
+        en: E ≈ 2.48 eV
+        pt: E ≈ 2,48 eV
+        fr: E ≈ 2,48 eV
+        zh: E ≈ 2.48 eV
+        ja: E ≈ 2.48 eV

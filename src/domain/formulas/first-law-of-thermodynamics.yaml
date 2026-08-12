@@ -1,0 +1,320 @@
+id: first-law-of-thermodynamics
+title:
+  es: Primera Ley de la Termodinámica
+  en: First Law of Thermodynamics
+  pt: Primeira Lei da Termodinâmica
+  fr: Première loi de la thermodynamique
+  zh: 热力学第一定律
+  ja: 熱力学の第一法則
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: du
+    type: variable
+    value: ΔU
+    explanation:
+      es: El cambio de energía interna del sistema entre dos estados.
+      en: The change in the system's internal energy between two states.
+      pt: A variação da energia interna do sistema entre dois estados.
+      fr: La variation de l'énergie interne du système entre deux états.
+      zh: 系统在两个状态之间内能的改变。
+      ja: 系の内部エネルギーの、二つの状態間での変化。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a la diferencia entre lo que entra y lo que sale.
+      en: Equals the difference between what goes in and what goes out.
+      pt: É igual à diferença entre o que entra e o que sai.
+      fr: Est égal à la différence entre ce qui entre et ce qui sort.
+      zh: 等于输入与输出之差。
+      ja: 入るものと出るものの差に等しい。
+  - id: q
+    type: variable
+    value: Q
+    explanation:
+      es: El calor neto intercambiado con el entorno.
+      en: The net heat exchanged with the surroundings.
+      pt: O calor líquido trocado com o ambiente.
+      fr: La chaleur nette échangée avec l'environnement.
+      zh: 与外界交换的净热量。
+      ja: 周囲との間でやり取りされる正味の熱。
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: "Menos: el trabajo resta de la energía disponible."
+      en: "Minus: work subtracts from the available energy."
+      pt: "Menos: o trabalho subtrai da energia disponível."
+      fr: "Moins : le travail soustrait de l'énergie disponible."
+      zh: 减号：功从可用能量中扣除。
+      ja: マイナス。仕事は利用可能なエネルギーから差し引かれる。
+  - id: w
+    type: variable
+    value: W
+    explanation:
+      es: El trabajo neto realizado por el sistema sobre el entorno.
+      en: The net work the system does on its surroundings.
+      pt: O trabalho líquido realizado pelo sistema sobre o ambiente.
+      fr: Le travail net réalisé par le système sur son environnement.
+      zh: 系统对外界所做的净功。
+      ja: 系が外界に対して行う正味の仕事。
+context:
+  author:
+    es: James Prescott Joule y Hermann von Helmholtz
+    en: James Prescott Joule and Hermann von Helmholtz
+    pt: James Prescott Joule e Hermann von Helmholtz
+    fr: James Prescott Joule et Hermann von Helmholtz
+    zh: 詹姆斯·焦耳和赫尔曼·亥姆霍兹
+    ja: ジェームズ・ジュールとヘルマン・フォン・ヘルムホルツ
+  era:
+    es: Inglaterra y Alemania, s. XIX · formalizada en 1850
+    en: England and Germany, 19th century · formalized in 1850
+    pt: Inglaterra e Alemanha, séc. XIX · formalizada em 1850
+    fr: Angleterre et Allemagne, XIXe siècle · formalisée en 1850
+    zh: 英格兰与德国，19世纪 · 于1850年正式确立
+    ja: イギリスとドイツ、19世紀・1850年に定式化
+  history:
+    es: >-
+      La conservación de la energía se consolidó durante el siglo XIX. En 1843 James Prescott
+      Joule midió el equivalente mecánico del calor, mostrando que trabajo y calor son formas
+      intercambiables de la misma magnitud. Hermann von Helmholtz generalizó la idea en 1847,
+      y hacia 1850 la comunidad, con Clausius y Rankine, le dio su forma matemática definitiva.
+      La primera ley sustenta las máquinas térmicas y los refrigeradores: el calor entregado a
+      un sistema se reparte entre el cambio de su energía interna y el trabajo que realiza.
+    en: >-
+      The conservation of energy was consolidated during the 19th century. In 1843 James
+      Prescott Joule measured the mechanical equivalent of heat, showing that work and heat are
+      interchangeable forms of the same quantity. Hermann von Helmholtz generalized the idea in
+      1847, and around 1850 the community, with Clausius and Rankine, gave it its definitive
+      mathematical form. The first law underlies heat engines and refrigerators: the heat
+      supplied to a system is split between the change in its internal energy and the work it
+      does.
+    pt: >-
+      A conservação da energia consolidou-se durante o século XIX. Em 1843, James Prescott
+      Joule mediu o equivalente mecânico do calor, mostrando que trabalho e calor são formas
+      intercambiáveis da mesma grandeza. Hermann von Helmholtz generalizou a ideia em 1847 e,
+      por volta de 1850, a comunidade, com Clausius e Rankine, deu-lhe forma matemática
+      definitiva. A primeira lei sustenta as máquinas térmicas e os refrigeradores: o calor
+      fornecido a um sistema se reparte entre a variação de sua energia interna e o trabalho
+      que ele realiza.
+    fr: >-
+      La conservation de l'énergie s'est consolidée au cours du XIXe siècle. En 1843, James
+      Prescott Joule mesura l'équivalent mécanique de la chaleur, montrant que le travail et la
+      chaleur sont des formes interchangeables d'une même grandeur. Hermann von Helmholtz
+      généralisa l'idée en 1847 et, vers 1850, la communauté, avec Clausius et Rankine, lui
+      donna sa forme mathématique définitive. La première loi sous-tend les moteurs thermiques
+      et les réfrigérateurs : la chaleur fournie à un système se répartit entre la variation de
+      son énergie interne et le travail qu'il effectue.
+    zh: >-
+      能量守恒在19世纪得以确立。1843年，詹姆斯·焦耳测量了热功当量，证明功与热是同一量的可互换形式。
+      赫尔曼·亥姆霍兹于1847年将这一思想加以推广，到1850年前后，在克劳修斯和兰金的推动下，
+      这一定律获得了最终的数学形式。第一定律是热机和制冷机的基础：系统吸收的热量，一部分转化为内能的改变，
+      一部分用于对外做功。
+    ja: >-
+      エネルギー保存は19世紀に確立された。1843年、ジェームズ・プレスコット・ジュールは熱の仕事当量を測定し、
+      仕事と熱が同一の量の交換可能な形態であることを示した。ヘルマン・フォン・ヘルムホルツは1847年に
+      この考えを一般化し、1850年頃にはクラウジウスとランキンの貢献により最終的な数学的形が整った。
+      第一法則は熱機関と冷凍機の基盤であり、系に与えられた熱は内部エネルギーの変化と外部への仕事に分かれる。
+  timeline:
+    - year: "1798"
+      label:
+        es: >-
+          Benjamin Thompson (conde de Rumford) perfora cañones y muestra que el calor no es una
+          sustancia sino una forma de movimiento.
+        en: >-
+          Benjamin Thompson (Count Rumford) bores cannons and shows that heat is not a substance
+          but a form of motion.
+        pt: >-
+          Benjamin Thompson (conde de Rumford) perfura canhões e mostra que o calor não é uma
+          substância, mas uma forma de movimento.
+        fr: >-
+          Benjamin Thompson (comte de Rumford) perce des canons et montre que la chaleur n'est
+          pas une substance, mais une forme de mouvement.
+        zh: >-
+          本杰明·汤普森（拉姆福德伯爵）钻削炮筒，证明热不是一种物质，而是一种运动形式。
+        ja: >-
+          ベンジャミン・トンプソン（ランフォード伯）が砲身を鑚削し、熱が物質ではなく運動の一形態であることを示す。
+    - year: "1843"
+      label:
+        es: >-
+          Joule publica su determinación del equivalente mecánico del calor tras agitación
+          mecánica del agua.
+        en: >-
+          Joule publishes his determination of the mechanical equivalent of heat from mechanical
+          stirring of water.
+        pt: >-
+          Joule publica sua determinação do equivalente mecânico do calor a partir da agitação
+          mecânica da água.
+        fr: >-
+          Joule publie sa détermination de l'équivalent mécanique de la chaleur obtenu en
+          agitant mécaniquement de l'eau.
+        zh: >-
+          焦耳发表了通过机械搅拌水而测定的热功当量。
+        ja: >-
+          ジュールが水の機械的撹拌から熱の仕事当量を決定し、その結果を発表する。
+    - year: "1847"
+      label:
+        es: >-
+          Helmholtz publica "Sobre la conservación de la fuerza", la primera formulación general
+          del principio.
+        en: >-
+          Helmholtz publishes "On the Conservation of Force", the first general formulation of
+          the principle.
+        pt: >-
+          Helmholtz publica "Sobre a Conservação da Força", a primeira formulação geral do
+          princípio.
+        fr: >-
+          Helmholtz publie « Über die Erhaltung der Kraft », la première formulation générale du
+          principe.
+        zh: >-
+          亥姆霍兹发表《论力的守恒》，这是该原理的第一个一般性表述。
+        ja: >-
+          ヘルムホルツが『力の保存について』を発表し、この原理の最初の一般的定式化を行う。
+    - year: "1850"
+      label:
+        es: >-
+          Clausius y Rankine dan a la ley su forma matemática definitiva, base de la
+          termodinámica moderna.
+        en: >-
+          Clausius and Rankine give the law its definitive mathematical form, the foundation of
+          modern thermodynamics.
+        pt: >-
+          Clausius e Rankine dão à lei sua forma matemática definitiva, base da termodinâmica
+          moderna.
+        fr: >-
+          Clausius et Rankine donnent à la loi sa forme mathématique définitive, fondement de la
+          thermodynamique moderne.
+        zh: >-
+          克劳修斯与兰金为这一定律确立了最终的数学形式，成为现代热力学的基础。
+        ja: >-
+          クラウジウスとランキンがこの法則に最終的な数学的形式を与え、現代熱力学の基礎を築く。
+  useCases:
+    - title:
+        es: Motores de combustión interna
+        en: Internal combustion engines
+        pt: Motores de combustão interna
+        fr: Moteurs à combustion interne
+        zh: 内燃机
+        ja: 内燃機関
+      description:
+        es: >-
+          Modela cuánto del calor de la combustión se convierte en trabajo útil en cada ciclo.
+        en: >-
+          Models how much of the combustion heat becomes useful work in each cycle.
+        pt: >-
+          Modela quanto do calor da combustão se converte em trabalho útil em cada ciclo.
+        fr: >-
+          Elle modélise la part de la chaleur de combustion convertie en travail utile à chaque
+          cycle.
+        zh: >-
+          用于建模每个循环中燃烧热量有多少转化为有用功。
+        ja: >-
+          各サイクルで燃焼熱のどれだけが有効な仕事になるかをモデル化する。
+    - title:
+        es: Refrigeración y aire acondicionado
+        en: Refrigeration and air conditioning
+        pt: Refrigeração e ar-condicionado
+        fr: Réfrigération et climatisation
+        zh: 制冷与空调
+        ja: 冷凍・空調
+      description:
+        es: >-
+          La primera ley cuantifica el calor que un compresor mueve y el trabajo que consume.
+        en: >-
+          The first law quantifies the heat a compressor moves and the work it consumes.
+        pt: >-
+          A primeira lei quantifica o calor que um compressor move e o trabalho que consome.
+        fr: >-
+          La première loi quantifie la chaleur déplacée par un compresseur et le travail qu'il
+          consomme.
+        zh: >-
+          第一定律用于量化压缩机搬运的热量及其消耗的功。
+        ja: >-
+          第一法則は、圧縮機が移動させる熱と消費する仕事を定量化する。
+    - title:
+        es: Ingeniería de procesos químicos
+        en: Chemical process engineering
+        pt: Engenharia de processos químicos
+        fr: Génie des procédés chimiques
+        zh: 化学工艺工程
+        ja: 化学プロセス工学
+      description:
+        es: >-
+          Hace balances de energía en reactores, calderas e intercambiadores de calor.
+        en: >-
+          It balances energy in reactors, boilers and heat exchangers.
+        pt: >-
+          Faz balanços de energia em reatores, caldeiras e trocadores de calor.
+        fr: >-
+          Elle établit les bilans d'énergie dans les réacteurs, chaudières et échangeurs de
+          chaleur.
+        zh: >-
+          用于反应器、锅炉和换热器中的能量衡算。
+        ja: >-
+          反応器やボイラー、熱交換器におけるエネルギー収支の計算に使われる。
+    - title:
+        es: Meteorología
+        en: Meteorology
+        pt: Meteorologia
+        fr: Météorologie
+        zh: 气象学
+        ja: 気象学
+      description:
+        es: >-
+          Explica cómo el calor del Sol se transforma en trabajo al ascender el aire húmedo.
+        en: >-
+          It explains how solar heat is converted into work as moist air rises.
+        pt: >-
+          Explica como o calor do Sol se converte em trabalho quando o ar úmido ascende.
+        fr: >-
+          Elle explique comment la chaleur solaire se transforme en travail lorsque l'air humide
+          s'élève.
+        zh: >-
+          用于解释潮湿空气上升时太阳热量如何转化为功。
+        ja: >-
+          湿った空気が上昇する際に太陽熱が仕事へと変換される仕組みを説明する。
+  example:
+    title:
+      es: Calor absorbido por un gas
+      en: Heat absorbed by a gas
+      pt: Calor absorvido por um gás
+      fr: Chaleur absorbée par un gaz
+      zh: 气体吸收的热量
+      ja: 気体が吸収する熱
+    lines:
+      - es: El gas absorbe Q = 500 J de calor
+        en: The gas absorbs Q = 500 J of heat
+        pt: O gás absorve Q = 500 J de calor
+        fr: Le gaz absorbe Q = 500 J de chaleur
+        zh: 气体吸收热量 Q = 500 J
+        ja: 気体は Q = 500 J の熱を吸収する
+      - es: El gas realiza W = 200 J de trabajo
+        en: The gas does W = 200 J of work
+        pt: O gás realiza W = 200 J de trabalho
+        fr: Le gaz effectue W = 200 J de travail
+        zh: 气体对外做功 W = 200 J
+        ja: 気体は W = 200 J の仕事をする
+      - es: ΔU = Q − W
+        en: ΔU = Q − W
+        pt: ΔU = Q − W
+        fr: ΔU = Q − W
+        zh: ΔU = Q − W
+        ja: ΔU = Q − W
+      - es: ΔU = 500 − 200
+        en: ΔU = 500 − 200
+        pt: ΔU = 500 − 200
+        fr: ΔU = 500 − 200
+        zh: ΔU = 500 − 200
+        ja: ΔU = 500 − 200
+      - es: ΔU = 300 J
+        en: ΔU = 300 J
+        pt: ΔU = 300 J
+        fr: ΔU = 300 J
+        zh: ΔU = 300 J
+        ja: ΔU = 300 J

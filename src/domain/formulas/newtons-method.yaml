@@ -1,0 +1,411 @@
+id: newtons-method
+title:
+  es: Método de Newton
+  en: Newton's Method
+  pt: Método de Newton
+  fr: Méthode de Newton
+  zh: 牛顿迭代法
+  ja: ニュートン法
+category:
+  es: Cálculo
+  en: Calculus
+  pt: Cálculo
+  fr: Calcul
+  zh: 微积分
+  ja: 微積分
+nodes:
+  - id: x-n-plus-1
+    type: variable
+    value: xₙ₊₁
+    explanation:
+      es: "La siguiente aproximación, una mejora del valor actual hacia la raíz."
+      en: "The next approximation, an improvement over the current value toward the root."
+      pt: "A próxima aproximação, uma melhora do valor atual em direção à raiz."
+      fr: "L'approximation suivante, une amélioration de la valeur actuelle vers la racine."
+      zh: "下一个近似值，是当前值向根方向改进的结果。"
+      ja: "次の近似値。現在の値から根に向かって改良したもの。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: x-n
+    type: variable
+    value: xₙ
+    explanation:
+      es: "El valor actual, la aproximación que se quiere refinar."
+      en: "The current value, the approximation being refined."
+      pt: "O valor atual, a aproximação que se quer refinar."
+      fr: "La valeur actuelle, l'approximation que l'on souhaite affiner."
+      zh: "当前值，即待改进的近似值。"
+      ja: "現在の値。改良したい近似値。"
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "Menos: se resta la corrección calculada con la recta tangente."
+      en: "Minus: subtracts the correction computed from the tangent line."
+      pt: "Menos: subtrai a correção calculada pela reta tangente."
+      fr: "Moins : on soustrait la correction calculée à partir de la tangente."
+      zh: "减号：减去由切线计算出的修正量。"
+      ja: "マイナス。接線から計算した補正を引く。"
+  - id: f
+    type: variable
+    value: f
+    explanation:
+      es: "La función cuya raíz se busca, evaluada en la aproximación actual."
+      en: "The function whose root is being sought, evaluated at the current approximation."
+      pt: "A função cuja raiz se busca, avaliada na aproximação atual."
+      fr: "La fonction dont on cherche la racine, évaluée à l'approximation actuelle."
+      zh: "所求根的函数，在当前近似值处求值。"
+      ja: "根を求めたい関数。現在の近似値で評価する。"
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: "Abre la evaluación de la función en el argumento que sigue."
+      en: "Opens the evaluation of the function at the following argument."
+      pt: "Abre a avaliação da função no argumento que segue."
+      fr: "Ouvre l'évaluation de la fonction à l'argument qui suit."
+      zh: "打开函数在后续自变量处的求值括号。"
+      ja: "続く引数における関数の評価を開く括弧。"
+  - id: x-arg-1
+    type: variable
+    value: xₙ
+    explanation:
+      es: "La aproximación actual xₙ, el punto donde se evalúan la función y su tangente."
+      en: "The current guess xₙ, the point where the function and its tangent are evaluated."
+      pt: "A aproximação atual xₙ, o ponto onde a função e sua tangente são avaliadas."
+      fr: "L'approximation actuelle xₙ, le point où la fonction et sa tangente sont évaluées."
+      zh: "当前的猜测值 xₙ，即函数及其切线求值的点。"
+      ja: "現在の近似値 xₙ。関数とその接線を評価する点。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: "Cierra la evaluación de la función."
+      en: "Closes the evaluation of the function."
+      pt: "Fecha a avaliação da função."
+      fr: "Ferme l'évaluation de la fonction."
+      zh: "闭合函数的求值括号。"
+      ja: "関数の評価を閉じる括弧。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: "Dividido entre la derivada; el cociente f(xₙ)/f′(xₙ) es la corrección que se resta."
+      en: "Divided by the derivative; the quotient f(xₙ)/f′(xₙ) is the correction being subtracted."
+      pt: "Dividido pela derivada; o quociente f(xₙ)/f′(xₙ) é a correção que se subtrai."
+      fr: "Divisé par la dérivée ; le quotient f(xₙ)/f′(xₙ) est la correction que l'on soustrait."
+      zh: "除以导数；商 f(xₙ)/f′(xₙ) 就是要减去的修正量。"
+      ja: "導関数で割る。商 f(xₙ)/f′(xₙ) が引き算する補正量である。"
+  - id: f-prime
+    type: variable
+    value: f′
+    explanation:
+      es: "La derivada de f: la pendiente de la recta tangente en xₙ, siempre que no sea cero."
+      en: "The derivative of f: the slope of the tangent line at xₙ, provided it is not zero."
+      pt: "A derivada de f: a inclinação da reta tangente em xₙ, desde que não seja zero."
+      fr: "La dérivée de f : la pente de la tangente en xₙ, pourvu qu'elle ne soit pas nulle."
+      zh: "f 的导数：xₙ 处切线的斜率，前提是它不为零。"
+      ja: "fの導関数。xₙにおける接線の傾き。ただしゼロでないことが条件。"
+  - id: open-paren-2
+    type: operator
+    value: (
+    explanation:
+      es: "Abre la evaluación de la derivada en la aproximación actual."
+      en: "Opens the evaluation of the derivative at the current approximation."
+      pt: "Abre a avaliação da derivada na aproximação atual."
+      fr: "Ouvre l'évaluation de la dérivée à l'approximation actuelle."
+      zh: "打开导数在当前近似值处的求值括号。"
+      ja: "現在の近似値における導関数の評価を開く括弧。"
+  - id: x-arg-2
+    type: variable
+    value: xₙ
+    explanation:
+      es: "De nuevo xₙ, evaluado esta vez dentro de la derivada."
+      en: "Again xₙ, this time evaluated inside the derivative."
+      pt: "Novamente xₙ, avaliado desta vez dentro da derivada."
+      fr: "Encore xₙ, évalué cette fois à l'intérieur de la dérivée."
+      zh: "再次出现 xₙ，这次是在导数内部求值。"
+      ja: "再びxₙ。今回は導関数の中に入って評価される。"
+  - id: close-paren-2
+    type: operator
+    value: )
+    explanation:
+      es: "Cierra la evaluación de la derivada; el paso completo repite la corrección."
+      en: "Closes the evaluation of the derivative; the full step repeats the correction."
+      pt: "Fecha a avaliação da derivada; o passo completo repete a correção."
+      fr: "Ferme l'évaluation de la dérivée ; le pas complet répète la correction."
+      zh: "闭合导数的求值括号；整个步骤不断重复这一修正。"
+      ja: "導関数の評価を閉じる括弧。この一連の操作で補正を繰り返す。"
+context:
+  author:
+    es: Isaac Newton y Joseph Raphson
+    en: Isaac Newton and Joseph Raphson
+    pt: Isaac Newton e Joseph Raphson
+    fr: Isaac Newton et Joseph Raphson
+    zh: 艾萨克·牛顿与约瑟夫·拉夫森
+    ja: アイザック・ニュートンとジョゼフ・ラプソン
+  era:
+    es: Inglaterra, 1643–1727 · método publicado por Raphson en 1690
+    en: England, 1643–1727 · method published by Raphson in 1690
+    pt: Inglaterra, 1643–1727 · método publicado por Raphson em 1690
+    fr: Angleterre, 1643–1727 · méthode publiée par Raphson en 1690
+    zh: 英格兰，1643–1727 · 1690年由拉夫森发表
+    ja: イギリス、1643–1727年・1690年にラプソンが発表
+  history:
+    es: >-
+      Newton describió el método en su tratado De analysi (1669), resolviendo ecuaciones con
+      sucesivas aproximaciones basadas en tangentes, y Raphson lo simplificó en 1690 hasta la forma
+      iterativa que se usa hoy: cada paso parte del valor actual y lo corrige evaluando la función y
+      su derivada. Cuando el valor inicial está cerca, la convergencia es cuadrática: los decimales
+      correctos se duplican en cada iteración, lo que lo convierte en la base moderna para hallar
+      raíces en computación.
+    en: >-
+      Newton described the method in his treatise De analysi (1669), solving equations through
+      successive tangent-based approximations, and Raphson simplified it in 1690 into the iterative
+      form used today: each step takes the current value and corrects it by evaluating the function
+      and its derivative. When the starting guess is close, convergence is quadratic — correct
+      digits double at each iteration — making it the modern backbone of root-finding in computing.
+    pt: >-
+      Newton descreveu o método em seu tratado De analysi (1669), resolvendo equações por
+      aproximações sucessivas baseadas em tangentes, e Raphson o simplificou em 1690 até a forma
+      iterativa usada hoje: cada passo parte do valor atual e o corrige avaliando a função e sua
+      derivada. Quando a estimativa inicial está próxima, a convergência é quadrática — os dígitos
+      corretos dobram a cada iteração —, o que o torna a base moderna para encontrar raízes em
+      computação.
+    fr: >-
+      Newton décrivit la méthode dans son traité De analysi (1669), résolvant des équations par
+      approximations successives fondées sur les tangentes, et Raphson la simplifia en 1690 jusqu'à
+      la forme itérative utilisée aujourd'hui : chaque étape part de la valeur courante et la corrige
+      en évaluant la fonction et sa dérivée. Lorsque l'estimation initiale est proche, la convergence
+      est quadratique — les décimales correctes doublent à chaque itération —, ce qui en fait la base
+      moderne de la recherche de racines en informatique.
+    zh: >-
+      牛顿在1669年的《解析论》（De analysi）中描述了这一方法，通过逐次作切线逼近来求解方程；
+      1690年拉夫森将其简化为今天使用的迭代形式：每一步从当前值出发，通过计算函数及其导数来
+      修正该值。当初值足够接近时，收敛是二次的——每次迭代正确的位数都会翻倍，因此它成为现代
+      计算中求根的基础方法。
+    ja: >-
+      ニュートンは1669年の著作『解析論』（De analysi）で、接線による逐次近似で方程式を解く方法を
+      述べ、1690年にラプソンが今日使われる反復形式へと簡略化した。各ステップでは現在の値から始め、
+      関数とその導関数を評価して値を修正する。初期値が十分近ければ収束は2次であり、反復ごとに正しい
+      桁数が倍になるため、今日の計算機における求根の基盤となっている。
+  timeline:
+    - year: "1669"
+      label:
+        es: >-
+          Newton escribe De analysi, donde describe cómo aproximar raíces mediante sucesivas rectas
+          tangentes.
+        en: >-
+          Newton writes De analysi, describing how to approximate roots with successive tangent
+          lines.
+        pt: >-
+          Newton escreve De analysi, onde descreve como aproximar raízes com sucessivas retas
+          tangentes.
+        fr: >-
+          Newton écrit De analysi, où il décrit comment approximer les racines par des tangentes
+          successives.
+        zh: >-
+          牛顿撰写《解析论》，描述了如何用逐次切线来逼近方程的根。
+        ja: >-
+          ニュートンが『解析論』を著し、接線を繰り返し用いて根を近似する方法を述べる。
+    - year: "1690"
+      label:
+        es: >-
+          Raphson publica una versión iterativa simplificada, la misma estructura
+          xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ) que se usa hoy.
+        en: >-
+          Raphson publishes a simplified iterative version, the same
+          xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ) structure used today.
+        pt: >-
+          Raphson publica uma versão iterativa simplificada, a mesma estrutura
+          xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ) usada hoje.
+        fr: >-
+          Raphson publie une version itérative simplifiée, la même structure
+          xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ) utilisée aujourd'hui.
+        zh: >-
+          拉夫森发表了一种简化的迭代版本，即今天仍在使用的形式 xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ)。
+        ja: >-
+          ラプソンが簡略化された反復形式を発表。今日使われている xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ) と同じ
+          構造である。
+    - year: "1740"
+      label:
+        es: >-
+          Thomas Simpson generaliza el método a su forma moderna, aplicándolo como un procedimiento
+          general para resolver ecuaciones.
+        en: >-
+          Thomas Simpson generalizes the method to its modern form, applying it as a general
+          procedure for solving equations.
+        pt: >-
+          Thomas Simpson generaliza o método à sua forma moderna, aplicando-o como um procedimento
+          geral para resolver equações.
+        fr: >-
+          Thomas Simpson généralise la méthode à sa forme moderne, en l'appliquant comme procédé
+          général de résolution d'équations.
+        zh: >-
+          托马斯·辛普森将该方法推广为现代形式，将其作为求解方程的一般程序。
+        ja: >-
+          トーマス・シンプソンがこの方法を現代的な形へ一般化し、方程式を解く一般的な手続きとして
+          応用する。
+    - year: Hoy
+      label:
+        es: >-
+          Es el algoritmo de referencia para resolver ecuaciones no lineales en ingeniería, gráficos
+          y aprendizaje automático.
+        en: >-
+          It is the go-to algorithm for solving nonlinear equations across engineering, graphics, and
+          machine learning.
+        pt: >-
+          É o algoritmo de referência para resolver equações não lineares em engenharia, computação
+          gráfica e aprendizado de máquina.
+        fr: >-
+          C'est l'algorithme de référence pour résoudre des équations non linéaires en ingénierie, en
+          infographie et en apprentissage automatique.
+        zh: >-
+          它是工程、图形学和机器学习中求解非线性方程的首选算法。
+        ja: >-
+          工学、グラフィックス、機械学習の分野で非線形方程式を解く際の標準アルゴリズムとなっている。
+  useCases:
+    - title:
+        es: Ecuaciones sin solución algebraica
+        en: Equations with no closed form
+        pt: Equações sem solução algébrica
+        fr: Équations sans forme fermée
+        zh: 无闭合解方程
+        ja: 閉形式のない方程式
+      description:
+        es: >-
+          Resuelve ecuaciones como x = cos x, que no pueden despejarse de forma exacta por métodos
+          algebraicos.
+        en: >-
+          Solves equations like x = cos x that cannot be solved exactly by algebraic methods.
+        pt: >-
+          Resolve equações como x = cos x, que não podem ser resolvidas exatamente por métodos
+          algébricos.
+        fr: >-
+          Résout des équations comme x = cos x, qui ne peuvent être résolues exactement par des
+          méthodes algébriques.
+        zh: >-
+          求解 x = cos x 这类无法用代数方法精确求解的方程。
+        ja: >-
+          x = cos x のような、代数的な方法では正確に解けない方程式を解く。
+    - title:
+        es: Optimización y aprendizaje automático
+        en: Optimization and machine learning
+        pt: Otimização e aprendizado de máquina
+        fr: Optimisation et apprentissage automatique
+        zh: 优化与机器学习
+        ja: 最適化と機械学習
+      description:
+        es: >-
+          La raíz del gradiente señala el mínimo o el máximo de una función de costo durante el
+          entrenamiento.
+        en: >-
+          The root of the gradient points to the minimum or maximum of a cost function during
+          training.
+        pt: >-
+          A raiz do gradiente aponta o mínimo ou o máximo de uma função de custo durante o
+          treinamento.
+        fr: >-
+          La racine du gradient désigne le minimum ou le maximum d'une fonction de coût pendant
+          l'entraînement.
+        zh: >-
+          训练过程中，梯度的零点指向损失函数的最小值或最大值。
+        ja: >-
+          勾配がゼロになる点は、学習中にコスト関数の最小値または最大値を示す。
+    - title:
+        es: Gráficos por computadora
+        en: Computer graphics
+        pt: Computação gráfica
+        fr: Infographie
+        zh: 计算机图形学
+        ja: コンピューターグラフィックス
+      description:
+        es: >-
+          Calcula la intersección de rayos con superficies implícitas para renderizado y trazado de
+          rayos.
+        en: >-
+          Computes ray intersections with implicit surfaces for rendering and ray tracing.
+        pt: >-
+          Calcula a interseção de raios com superfícies implícitas para renderização e ray tracing.
+        fr: >-
+          Calcule l'intersection des rayons avec des surfaces implicites pour le rendu et le lancer
+          de rayons.
+        zh: >-
+          用于渲染和光线追踪，计算光线与隐式曲面的交点。
+        ja: >-
+          レンダリングやレイトレーシングで、光線と陰関数曲面の交点を計算する。
+    - title:
+        es: Finanzas
+        en: Finance
+        pt: Finanças
+        fr: Finance
+        zh: 金融
+        ja: 金融
+      description:
+        es: >-
+          Calcula la tasa interna de retorno, la tasa que hace nulo el beneficio neto de una
+          inversión.
+        en: >-
+          Computes the internal rate of return, the rate that makes an investment's net gain zero.
+        pt: >-
+          Calcula a taxa interna de retorno, a taxa que torna nulo o ganho líquido de um
+          investimento.
+        fr: >-
+          Calcule le taux de rendement interne, le taux qui annule le gain net d'un investissement.
+        zh: >-
+          计算内部收益率，即令一项投资的净收益为零的利率。
+        ja: >-
+          投資の正味の利益をゼロにする金利、内部収益率を計算する。
+  example:
+    title:
+      es: Calcular √2 con el método de Newton
+      en: Finding √2 with Newton's method
+      pt: Calculando √2 com o método de Newton
+      fr: Calcul de √2 par la méthode de Newton
+      zh: 用牛顿法求 √2
+      ja: ニュートン法で√2を求める
+    lines:
+      - es: f(x) = x² − 2, f′(x) = 2x
+        en: f(x) = x² − 2, f′(x) = 2x
+        pt: f(x) = x² − 2, f′(x) = 2x
+        fr: f(x) = x² − 2, f′(x) = 2x
+        zh: f(x) = x² − 2, f′(x) = 2x
+        ja: f(x) = x² − 2, f′(x) = 2x
+      - es: Punto inicial x₀ = 1.5
+        en: Starting point x₀ = 1.5
+        pt: Ponto inicial x₀ = 1,5
+        fr: Point initial x₀ = 1,5
+        zh: 初始点 x₀ = 1.5
+        ja: 初期値 x₀ = 1.5
+      - es: x₁ = 1.5 − (1.5² − 2) / (2 × 1.5)
+        en: x₁ = 1.5 − (1.5² − 2) / (2 × 1.5)
+        pt: x₁ = 1,5 − (1,5² − 2) / (2 × 1,5)
+        fr: x₁ = 1,5 − (1,5² − 2) / (2 × 1,5)
+        zh: x₁ = 1.5 − (1.5² − 2) / (2 × 1.5)
+        ja: x₁ = 1.5 − (1.5² − 2) / (2 × 1.5)
+      - es: x₁ = 1.5 − 0.25 / 3 ≈ 1.4167
+        en: x₁ = 1.5 − 0.25 / 3 ≈ 1.4167
+        pt: x₁ = 1,5 − 0,25 / 3 ≈ 1,4167
+        fr: x₁ = 1,5 − 0,25 / 3 ≈ 1,4167
+        zh: x₁ = 1.5 − 0.25 / 3 ≈ 1.4167
+        ja: x₁ = 1.5 − 0.25 / 3 ≈ 1.4167
+      - es: x₂ = 1.4167 − (1.4167² − 2) / (2 × 1.4167) ≈ 1.4142
+        en: x₂ = 1.4167 − (1.4167² − 2) / (2 × 1.4167) ≈ 1.4142
+        pt: x₂ = 1,4167 − (1,4167² − 2) / (2 × 1,4167) ≈ 1,4142
+        fr: x₂ = 1,4167 − (1,4167² − 2) / (2 × 1,4167) ≈ 1,4142
+        zh: x₂ = 1.4167 − (1.4167² − 2) / (2 × 1.4167) ≈ 1.4142
+        ja: x₂ = 1.4167 − (1.4167² − 2) / (2 × 1.4167) ≈ 1.4142
+      - es: √2 ≈ 1.4142 ✓
+        en: √2 ≈ 1.4142 ✓
+        pt: √2 ≈ 1,4142 ✓
+        fr: √2 ≈ 1,4142 ✓
+        zh: √2 ≈ 1.4142 ✓
+        ja: √2 ≈ 1.4142 ✓

@@ -1,0 +1,260 @@
+id: electric-current
+title:
+  es: Corriente Eléctrica
+  en: Electric Current
+  pt: Corrente Elétrica
+  fr: Courant électrique
+  zh: 电流
+  ja: 電流
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: i
+    type: variable
+    value: I
+    explanation:
+      es: "I: la corriente eléctrica, la carga que cruza una sección del circuito por segundo."
+      en: "I: the electric current, the charge crossing a section of the circuit per second."
+      pt: "I: a corrente elétrica, a carga que atravessa uma seção do circuito por segundo."
+      fr: "I : le courant électrique, la charge traversant une section du circuit par seconde."
+      zh: "I：电流，即每秒通过电路某横截面的电荷量。"
+      ja: "I：電流。回路の断面を1秒あたりに通過する電荷。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: q
+    type: variable
+    value: Q
+    explanation:
+      es: "Q: la carga eléctrica total que pasa por ese punto."
+      en: "Q: the total electric charge passing that point."
+      pt: "Q: a carga elétrica total que passa por esse ponto."
+      fr: "Q : la charge électrique totale qui passe par ce point."
+      zh: "Q：经过该点的总电荷量。"
+      ja: "Q：その点を通過する総電荷量。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: t
+    type: variable
+    value: t
+    explanation:
+      es: "t: el tiempo durante el cual fluye esa carga."
+      en: "t: the time over which that charge flows."
+      pt: "t: o tempo durante o qual essa carga flui."
+      fr: "t : le temps pendant lequel cette charge circule."
+      zh: "t：该电荷流动所经过的时间。"
+      ja: "t：その電荷が流れるのにかかる時間。"
+context:
+  author:
+    es: André-Marie Ampère
+    en: André-Marie Ampère
+    pt: André-Marie Ampère
+    fr: André-Marie Ampère
+    zh: 安德烈-马里·安培
+    ja: アンドレ＝マリー・アンペール
+  era:
+    es: Francia, 1775–1836
+    en: France, 1775–1836
+    pt: França, 1775–1836
+    fr: France, 1775–1836
+    zh: 法国,1775–1836年
+    ja: フランス、1775–1836年
+  history:
+    es: >-
+      Desde el siglo XVIII se sabía que la carga fluía por un alambre, pero medirla es obra de
+      André-Marie Ampère, que en los años 1820 definió la corriente como la carga que atraviesa
+      una sección por segundo y fundó la electrodinámica. El flujo exige un circuito cerrado: los
+      electrones deben volver a la fuente para que sea continuo. En 1881 la unidad recibió su
+      nombre, el amperio, y desde 2019 el SI la define a partir de la carga elemental fija. Los
+      amperímetros, que la miden por el campo magnético que genera, se basan en esta relación.
+    en: >-
+      Since the 18th century it was known that charge could flow through a wire, but measuring it
+      is the work of André-Marie Ampère, who in the 1820s defined current as the charge crossing
+      a section per second and founded electrodynamics. Flow demands a closed circuit: electrons
+      must return to the source for it to continue. In 1881 the unit was named after him, the
+      ampere, and since 2019 the SI defines it from the fixed elementary charge. Ammeters, which
+      measure it by the magnetic field it creates, rest on this relation.
+    pt: >-
+      Desde o século XVIII sabia-se que a carga fluía por um fio, mas medi-la é obra de
+      André-Marie Ampère, que nos anos 1820 definiu a corrente como a carga que atravessa uma
+      seção por segundo e fundou a eletrodinâmica. O fluxo exige um circuito fechado: os elétrons
+      precisam voltar à fonte para que ele seja contínuo. Em 1881 a unidade recebeu seu nome, o
+      ampère, e desde 2019 o SI a define a partir da carga elementar fixa. Os amperímetros, que a
+      medem pelo campo magnético que ela gera, baseiam-se nessa relação.
+    fr: >-
+      Depuis le XVIIIe siècle, on savait que la charge circulait dans un fil, mais sa mesure est
+      l'œuvre d'André-Marie Ampère, qui dans les années 1820 définit le courant comme la charge
+      traversant une section par seconde et fonda l'électrodynamique. Le flux exige un circuit
+      fermé : les électrons doivent revenir à la source pour qu'il soit continu. En 1881,
+      l'unité prit son nom, l'ampère, et depuis 2019 le SI la définit à partir de la charge
+      élémentaire fixe. Les ampèremètres, qui mesurent le courant par le champ magnétique qu'il
+      crée, reposent sur cette relation.
+    zh: >-
+      早在18世纪,人们就知道电荷能在导线中流动,但对其进行测量则归功于安德烈-马里·安培。他在19世纪20年代将电流定义为每秒
+      通过某一横截面的电荷量,并创立了电动力学。电流的流动需要闭合回路:电子必须返回电源,流动才能持续。1881年,该单位以安培的
+      名字命名,2019年起,国际单位制(SI)改用固定的基本电荷来定义安培,不再依赖实物基准。安培计通过测量电流产生的磁场来测电流,
+      其原理正基于这一关系。
+    ja: >-
+      18世紀にはすでに電荷が導線を流れることは知られていたが、その測定はアンドレ＝マリー・アンペールの功績である。彼は1820年代に
+      電流を「断面を1秒あたりに通過する電荷」と定義し、電気力学を築いた。流れには閉じた回路が必要で、電子が電源に戻らなければ
+      持続しない。1881年には単位が彼にちなんでアンペールと名付けられ、2019年以降のSIでは固定された素電荷から定義されている。
+      電流計は電流が作る磁場から電流を測定しており、この関係に基づく。
+  timeline:
+    - year: "1820"
+      label:
+        es: Ørsted observa que una corriente eléctrica desvía la aguja de una brújula, uniendo electricidad y magnetismo.
+        en: Ørsted observes that an electric current deflects a compass needle, linking electricity and magnetism.
+        pt: Ørsted observa que uma corrente elétrica desvia a agulha de uma bússola, unindo eletricidade e magnetismo.
+        fr: Ørsted observe qu'un courant électrique dévie l'aiguille d'une boussole, unissant électricité et magnétisme.
+        zh: 奥斯特观察到电流会使指南针的磁针偏转,将电与磁联系起来。
+        ja: エールステッドが電流が方位磁針の針を振らせることを観察し、電気と磁気が結びつく。
+    - year: "1826"
+      label:
+        es: Ampère publica su tratado de electrodinámica y define la corriente como un flujo de carga medible.
+        en: Ampère publishes his treatise on electrodynamics and defines current as a measurable charge flow.
+        pt: Ampère publica seu tratado de eletrodinâmica e define a corrente como um fluxo de carga mensurável.
+        fr: Ampère publie son traité d'électrodynamique et définit le courant comme un flux de charge mesurable.
+        zh: 安培发表电动力学专著,将电流定义为可测量的电荷流动。
+        ja: アンペールが電気力学の論文を発表し、電流を測定可能な電荷の流れと定義する。
+    - year: "1881"
+      label:
+        es: El Congreso Internacional de Electricistas de París nombra la unidad de corriente en honor a Ampère.
+        en: The International Congress of Electricians in Paris names the unit of current in honor of Ampère.
+        pt: O Congresso Internacional de Eletricistas de Paris nomeia a unidade de corrente em homenagem a Ampère.
+        fr: Le Congrès international des électriciens de Paris nomme l'unité de courant en l'honneur d'Ampère.
+        zh: 巴黎国际电学家大会以安培的名字命名电流的单位。
+        ja: パリの国際電気技術者会議が、アンペールにちなんで電流の単位を命名する。
+    - year: "2019"
+      label:
+        es: El SI redefine el amperio a partir de la carga elemental fija, sin depender de un artefacto físico.
+        en: The SI redefines the ampere from the fixed elementary charge, no longer relying on a physical artifact.
+        pt: O SI redefine o ampère a partir da carga elementar fixa, sem depender de um artefato físico.
+        fr: Le SI redéfinit l'ampère à partir de la charge élémentaire fixe, sans dépendre d'un artefact physique.
+        zh: 国际单位制改用固定的基本电荷重新定义安培,不再依赖实物基准。
+        ja: SIが固定された素電荷からアンペールを再定義し、物理的な標準器に依存しなくなる。
+  useCases:
+    - title:
+        es: Medición eléctrica
+        en: Electrical measurement
+        pt: Medição elétrica
+        fr: Mesure électrique
+        zh: 电测量
+        ja: 電気計測
+      description:
+        es: >-
+          Los amperímetros y multímetros determinan la corriente midiendo el campo magnético que
+          genera o la caída en una resistencia de derivación.
+        en: >-
+          Ammeters and multimeters determine current by measuring the magnetic field it creates or
+          the drop across a shunt resistor.
+        pt: >-
+          Amperímetros e multímetros determinam a corrente medindo o campo magnético que ela gera
+          ou a queda em um resistor de derivação.
+        fr: >-
+          Les ampèremètres et multimètres déterminent le courant en mesurant le champ magnétique
+          qu'il crée ou la chute aux bornes d'une résistance de shunt.
+        zh: >-
+          安培计和万用表通过测量电流产生的磁场或分流电阻上的压降来确定电流大小。
+        ja: >-
+          電流計やマルチメータは、電流が作る磁場やシャント抵抗での電圧降下を測って電流を求める。
+    - title:
+        es: Instalaciones eléctricas domésticas
+        en: Home electrical wiring
+        pt: Instalações elétricas residenciais
+        fr: Installations électriques domestiques
+        zh: 家庭电气布线
+        ja: 家庭用電気配線
+      description:
+        es: Los disyuntores y fusibles se clasifican por la corriente que pueden interrumpir de forma segura.
+        en: Circuit breakers and fuses are rated by the current they can safely interrupt.
+        pt: Disjuntores e fusíveis são classificados pela corrente que podem interromper com segurança.
+        fr: Les disjoncteurs et fusibles sont calibrés selon le courant qu'ils peuvent interrompre en toute sécurité.
+        zh: 断路器和保险丝按它们能安全切断的电流大小来分等级。
+        ja: ブレーカーやヒューズは、安全に遮断できる電流値で定格が定められている。
+    - title:
+        es: Baterías y carga de dispositivos
+        en: Batteries and device charging
+        pt: Baterias e carga de dispositivos
+        fr: Batteries et charge d'appareils
+        zh: 电池与设备充电
+        ja: バッテリーと機器の充電
+      description:
+        es: "La corriente de carga se expresa como fracción de la capacidad: una batería de 3 Ah a 1.5 A se carga en unas 2 horas."
+        en: "Charging current is expressed as a fraction of capacity: a 3 Ah battery at 1.5 A charges in about 2 hours."
+        pt: "A corrente de carga é expressa como fração da capacidade: uma bateria de 3 Ah a 1.5 A carrega em cerca de 2 horas."
+        fr: "Le courant de charge s'exprime en fraction de la capacité : une batterie de 3 Ah à 1,5 A se recharge en environ 2 heures."
+        zh: "充电电流用容量的分数表示:3安时电池以1.5安充电约需2小时。"
+        ja: "充電電流は容量に対する割合で表される:3 Ahのバッテリーを1.5 Aで充電すると約2時間かかる。"
+    - title:
+        es: Redes de distribución eléctrica
+        en: Electrical power grids
+        pt: Redes de distribuição elétrica
+        fr: Réseaux de distribution électrique
+        zh: 电力输配电网
+        ja: 電力配電網
+      description:
+        es: Los operadores de red dimensionan transformadores y conductores por la corriente que deben transportar.
+        en: Grid operators size transformers and conductors by the current they must carry.
+        pt: Operadores de rede dimensionam transformadores e condutores pela corrente que devem transportar.
+        fr: Les opérateurs de réseau dimensionnent transformateurs et conducteurs selon le courant qu'ils doivent transporter.
+        zh: 电网运营商根据必须输送的电流来设计变压器和导线的规格。
+        ja: 送電事業者は、流す必要のある電流に基づいて変圧器や導体の寸法を決める。
+  example:
+    title:
+      es: Carga que cruza un punto
+      en: Charge crossing a point
+      pt: Carga que atravessa um ponto
+      fr: Charge traversant un point
+      zh: 穿过一点的电荷
+      ja: 一点を通過する電荷
+    lines:
+      - es: Q = 3 C
+        en: Q = 3 C
+        pt: Q = 3 C
+        fr: Q = 3 C
+        zh: Q = 3 C
+        ja: Q = 3 C
+      - es: t = 2 s
+        en: t = 2 s
+        pt: t = 2 s
+        fr: t = 2 s
+        zh: t = 2 秒
+        ja: t = 2 s
+      - es: I = Q / t
+        en: I = Q / t
+        pt: I = Q / t
+        fr: I = Q / t
+        zh: I = Q / t
+        ja: I = Q / t
+      - es: I = 3 / 2
+        en: I = 3 / 2
+        pt: I = 3 / 2
+        fr: I = 3 / 2
+        zh: I = 3 / 2
+        ja: I = 3 / 2
+      - es: I = 1.5 A
+        en: I = 1.5 A
+        pt: I = 1,5 A
+        fr: I = 1,5 A
+        zh: I = 1.5 A
+        ja: I = 1.5 A

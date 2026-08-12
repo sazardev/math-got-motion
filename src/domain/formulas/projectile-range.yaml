@@ -1,0 +1,276 @@
+id: projectile-range
+title:
+  es: Alcance de un Proyectil
+  en: Projectile Range
+  pt: Alcance de um Projétil
+  fr: Portée d'un projectile
+  zh: 抛体射程
+  ja: 放物運動の射程
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: r
+    type: variable
+    value: R
+    explanation:
+      es: "R: la distancia horizontal total recorrida."
+      en: "R: the total horizontal distance traveled."
+      pt: "R: a distância horizontal total percorrida."
+      fr: "R : la distance horizontale totale parcourue."
+      zh: "R：总的水平飞行距离。"
+      ja: "R：水平方向の総飛行距離。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: v0
+    type: variable
+    value: v₀²
+    explanation:
+      es: La velocidad inicial al cuadrado.
+      en: The initial speed squared.
+      pt: A velocidade inicial ao quadrado.
+      fr: La vitesse initiale au carré.
+      zh: 初速度的平方。
+      ja: 初速の2乗。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: sin
+    type: variable
+    value: sin 2θ
+    explanation:
+      es: El seno del doble del ángulo de lanzamiento.
+      en: The sine of twice the launch angle.
+      pt: O seno do dobro do ângulo de lançamento.
+      fr: Le sinus du double de l'angle de lancement.
+      zh: 发射角两倍的正弦。
+      ja: 投射角の2倍の正弦。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: g
+    type: variable
+    value: g
+    explanation:
+      es: "g: la aceleración de la gravedad."
+      en: "g: the acceleration of gravity."
+      pt: "g: a aceleração da gravidade."
+      fr: "g : l'accélération de la pesanteur."
+      zh: "g：重力加速度。"
+      ja: "g：重力加速度。"
+context:
+  author:
+    es: Galileo Galilei
+    en: Galileo Galilei
+    pt: Galileu Galilei
+    fr: Galilée
+    zh: 伽利略·伽利雷
+    ja: ガリレオ・ガリレイ
+  era:
+    es: Italia, 1564–1642 · publicada en 1638
+    en: Italy, 1564–1642 · published in 1638
+    pt: Itália, 1564–1642 · publicada em 1638
+    fr: Italie, 1564–1642 · publiée en 1638
+    zh: 意大利，1564–1642年·1638年发表
+    ja: イタリア、1564–1642年・1638年発表
+  history:
+    es: >-
+      Galileo demostró en 1638, en sus Discorsi (Dos nuevas ciencias), que el movimiento de un
+      proyectil combina un movimiento horizontal uniforme con uno vertical acelerado, y que la
+      trayectoria es una parábola. El alcance máximo ocurre con ángulo de 45°, un resultado que aún
+      gobierna el deporte, la artillería y la ingeniería de cohetes. Fue una de las primeras leyes de
+      la física expresadas de forma matemática moderna.
+    en: >-
+      Galileo showed in 1638, in his Discorsi (Two New Sciences), that a projectile's motion combines a
+      uniform horizontal motion with an accelerated vertical one, and that the trajectory is a
+      parabola. Maximum range occurs at a 45° angle, a result that still governs sports, artillery, and
+      rocket engineering. It was one of the first laws of physics expressed in modern mathematical form.
+    pt: >-
+      Galileu demonstrou em 1638, em seus Discorsi (Duas Novas Ciências), que o movimento de um
+      projétil combina um movimento horizontal uniforme com um vertical acelerado, e que a trajetória é
+      uma parábola. O alcance máximo ocorre com ângulo de 45°, um resultado que ainda governa o
+      esporte, a artilharia e a engenharia de foguetes. Foi uma das primeiras leis da física expressas
+      em forma matemática moderna.
+    fr: >-
+      Galilée montra en 1638, dans ses Discorsi (Deux sciences nouvelles), que le mouvement d'un
+      projectile combine un mouvement horizontal uniforme et un mouvement vertical accéléré, et que la
+      trajectoire est une parabole. La portée maximale est atteinte à 45°, un résultat qui régit encore
+      le sport, l'artillerie et l'ingénierie des fusées. Ce fut l'une des premières lois de la physique
+      exprimées sous forme mathématique moderne.
+    zh: >-
+      伽利略在1638年的《对话录》（《两种新科学》）中证明，抛体的运动由匀速水平运动与匀加速竖直运动合成，
+      轨迹为抛物线。最大射程出现在45°发射角，这一结果至今仍支配着体育、火炮和火箭工程。它是物理学中最早用
+      现代数学形式表达的定律之一。
+    ja: >-
+      ガリレオは1638年の『新科学対話』で、投射物の運動が等速の水平運動と加速する鉛直運動の組み合わせであり、
+      その軌跡が放物線になることを示した。最大射程は45°の投射角で得られる。この結果は今もスポーツ、砲兵、
+      ロケット工学を支配している。これは物理学の法則として最初に近代的な数学の形で表現されたものの一つである。
+  timeline:
+    - year: "1604"
+      label:
+        es: >-
+          Galileo deduce que la trayectoria de un proyectil es una parábola.
+        en: >-
+          Galileo derives that a projectile's trajectory is a parabola.
+        pt: >-
+          Galileu deduz que a trajetória de um projétil é uma parábola.
+        fr: >-
+          Galilée déduit que la trajectoire d'un projectile est une parabole.
+        zh: >-
+          伽利略推导出抛体轨迹是抛物线。
+        ja: >-
+          ガリレオが、投射物の軌跡が放物線であることを導く。
+    - year: "1638"
+      label:
+        es: >-
+          Publica los Discorsi con la teoría completa del movimiento de proyectiles.
+        en: >-
+          He publishes the Discorsi with the full theory of projectile motion.
+        pt: >-
+          Publica os Discorsi com a teoria completa do movimento de projéteis.
+        fr: >-
+          Il publie les Discorsi avec la théorie complète du mouvement des projectiles.
+        zh: >-
+          他发表《对话录》，给出抛体运动的完整理论。
+        ja: >-
+          投射物の運動の完全な理論を『新科学対話』で発表する。
+    - year: Hoy
+      label:
+        es: >-
+          La fórmula rige el diseño de lanzadores, la artillería y los análisis deportivos.
+        en: >-
+          The formula governs launchers, artillery, and sports analytics.
+        pt: >-
+          A fórmula rege lançadores, artilharia e análises esportivas.
+        fr: >-
+          La formule régit les lanceurs, l'artillerie et l'analyse sportive.
+        zh: >-
+          该公式支配着发射装置、火炮和体育分析。
+        ja: >-
+          この公式は、発射装置、砲兵、スポーツ分析を支配している。
+  useCases:
+    - title:
+        es: Deportes
+        en: Sports
+        pt: Esportes
+        fr: Sports
+        zh: 体育运动
+        ja: スポーツ
+      description:
+        es: >-
+          El ángulo óptimo del tiro libre o del lanzamiento de jabalina sale de esta fórmula.
+        en: >-
+          The optimal angle of a free throw or javelin throw comes from this formula.
+        pt: >-
+          O ângulo ideal do lance livre ou do dardo sai dessa fórmula.
+        fr: >-
+          L'angle optimal du lancer franc ou du javelot vient de cette formule.
+        zh: >-
+          罚球或标枪的最佳出手角度正来自这条公式。
+        ja: >-
+          フリースローややり投げの最適角度は、この公式から導かれる。
+    - title:
+        es: Artillería
+        en: Artillery
+        pt: Artilharia
+        fr: Artillerie
+        zh: 火炮
+        ja: 砲兵
+      description:
+        es: >-
+          El alcance de un proyectil de artillería se calcula con esta fórmula.
+        en: >-
+          The range of an artillery shell is computed with this formula.
+        pt: >-
+          O alcance de um projétil de artilharia é calculado com essa fórmula.
+        fr: >-
+          La portée d'un obus se calcule avec cette formule.
+        zh: >-
+          炮弹的射程用这条公式计算。
+        ja: >-
+          砲弾の射程は、この公式で計算される。
+    - title:
+        es: Ingeniería de cohetes
+        en: Rocket engineering
+        pt: Engenharia de foguetes
+        fr: Ingénierie des fusées
+        zh: 火箭工程
+        ja: ロケット工学
+      description:
+        es: >-
+          La guía de un cohete sonda o de un agua de celebración usa la misma física.
+        en: >-
+          Guiding a sounding rocket or a celebratory water rocket uses the same physics.
+        pt: >-
+          A orientação de um foguete sonda ou de um foguete de água usa a mesma física.
+        fr: >-
+          Guider une fusée-sonde ou une fusée à eau utilise la même physique.
+        zh: >-
+          探空火箭或水火箭的制导用同一套物理。
+        ja: >-
+          観測ロケットや水ロケットの誘導にも同じ物理が使われる。
+  example:
+    title:
+      es: Lanzamiento a 45°
+      en: A 45° launch
+      pt: Um lançamento a 45°
+      fr: Un lancement à 45°
+      zh: 45°发射
+      ja: 45°の投射
+    lines:
+      - es: v₀ = 20 m/s, θ = 45°, g = 9.81 m/s²
+        en: v₀ = 20 m/s, θ = 45°, g = 9.81 m/s²
+        pt: v₀ = 20 m/s, θ = 45°, g = 9,81 m/s²
+        fr: v₀ = 20 m/s, θ = 45°, g = 9,81 m/s²
+        zh: v₀ = 20 米/秒，θ = 45°，g = 9.81 米/秒²
+        ja: v₀ = 20 m/s、θ = 45°、g = 9.81 m/s²
+      - es: R = 400 · sin(90°) / 9.81
+        en: R = 400 · sin(90°) / 9.81
+        pt: R = 400 · sen(90°) / 9,81
+        fr: R = 400 · sin(90°) / 9,81
+        zh: R = 400 · sin(90°) / 9.81
+        ja: R = 400 · sin(90°) / 9.81
+      - es: sin 90° = 1
+        en: sin 90° = 1
+        pt: sen 90° = 1
+        fr: sin 90° = 1
+        zh: sin 90° = 1
+        ja: sin 90° = 1
+      - es: R = 400 / 9.81
+        en: R = 400 / 9.81
+        pt: R = 400 / 9,81
+        fr: R = 400 / 9,81
+        zh: R = 400 / 9.81
+        ja: R = 400 / 9.81
+      - es: R ≈ 40.77 m
+        en: R ≈ 40.77 m
+        pt: R ≈ 40,77 m
+        fr: R ≈ 40,77 m
+        zh: R ≈ 40.77 米
+        ja: R ≈ 40.77 m

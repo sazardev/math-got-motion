@@ -1,0 +1,346 @@
+id: geometric-mean
+title:
+  es: Media Geométrica
+  en: Geometric Mean
+  pt: Média Geométrica
+  fr: Moyenne Géométrique
+  zh: 几何平均数
+  ja: 幾何平均
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率統計
+nodes:
+  - id: g
+    type: variable
+    value: g
+    explanation:
+      es: La media geométrica de los números multiplicados bajo la raíz.
+      en: The geometric mean of the numbers multiplied under the root.
+      pt: A média geométrica dos números multiplicados sob a raiz.
+      fr: La moyenne géométrique des nombres multipliés sous la racine.
+      zh: 根号下所有数相乘的几何平均数。
+      ja: 根号の中で掛け合わされた数の幾何平均。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: La raíz cuadrada del producto de los dos números.
+      en: The square root of the product of the two numbers.
+      pt: A raiz quadrada do produto dos dois números.
+      fr: La racine carrée du produit des deux nombres.
+      zh: 两个数乘积的平方根。
+      ja: 2つの数の積の平方根。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el producto de los dos números.
+      en: Opens the product of the two numbers.
+      pt: Abre o produto dos dois números.
+      fr: Ouvre le produit des deux nombres.
+      zh: 打开两个数乘积的括号。
+      ja: 2つの数の積を開く括弧。
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: El primer número o factor.
+      en: The first number or factor.
+      pt: O primeiro número ou fator.
+      fr: Le premier nombre ou facteur.
+      zh: 第一个数或因子。
+      ja: 最初の数、すなわち因子。
+  - id: mid-dot
+    type: operator
+    value: ·
+    explanation:
+      es: Se multiplica por el siguiente factor.
+      en: Multiplied by the next factor.
+      pt: Multiplicado pelo próximo fator.
+      fr: Multiplié par le facteur suivant.
+      zh: 乘以下一个因子。
+      ja: 次の因子と掛ける。
+  - id: b
+    type: variable
+    value: b
+    explanation:
+      es: El segundo número o factor.
+      en: The second number or factor.
+      pt: O segundo número ou fator.
+      fr: Le deuxième nombre ou facteur.
+      zh: 第二个数或因子。
+      ja: 2番目の数、すなわち因子。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el producto de los dos números.
+      en: Closes the product of the two numbers.
+      pt: Fecha o produto dos dois números.
+      fr: Ferme le produit des deux nombres.
+      zh: 关闭两个数乘积的括号。
+      ja: 2つの数の積を閉じる括弧。
+context:
+  author:
+    es: Origen colectivo
+    en: Collective origin
+    pt: Origem coletiva
+    fr: Origine collective
+    zh: 集体起源
+    ja: 集団的起源
+  era:
+    es: Grecia antigua · usada en la proporción áurea
+    en: Ancient Greece · used in the golden ratio
+    pt: Grécia Antiga · usada na proporção áurea
+    fr: Grèce antique · utilisée dans le nombre d'or
+    zh: 古希腊 · 用于黄金比例
+    ja: 古代ギリシャ · 黄金比に使用
+  history:
+    es: >-
+      La media geométrica es el término del medio de una progresión geométrica: la raíz n-ésima del
+      producto de n números. Los griegos la estudiaron en la geometría, donde la media proporcional
+      entre dos segmentos, la que cumple a/x = x/b, aparece en el trazado de la proporción áurea. Es
+      la media correcta para promedios de tasas: un crecimiento de 10% y luego de 20% no da un 15%
+      aritmético, sino la raíz del producto de los factores, 14,8%. Por la desigualdad de las medias,
+      siempre es menor o igual que la aritmética, salvo cuando todos los valores son iguales.
+    en: >-
+      The geometric mean is the middle term of a geometric progression: the nth root of the product
+      of n numbers. The Greeks studied it in geometry, where the mean proportional between two
+      segments, the one satisfying a/x = x/b, appears in the construction of the golden ratio. It is
+      the right mean for averaging rates: a 10% growth followed by 20% does not give an arithmetic
+      15%, but the root of the product of the factors, 14.8%. By the inequality of means, it is
+      always less than or equal to the arithmetic mean, except when all values are equal.
+    pt: >-
+      A média geométrica é o termo do meio de uma progressão geométrica: a raiz n-ésima do produto de
+      n números. Os gregos a estudaram na geometria, onde a média proporcional entre dois segmentos,
+      aquela que satisfaz a/x = x/b, aparece na construção da proporção áurea. É a média correta para
+      médias de taxas: um crescimento de 10% seguido de 20% não dá um 15% aritmético, mas a raiz do
+      produto dos fatores, 14,8%. Pela desigualdade das médias, ela é sempre menor ou igual à
+      aritmética, exceto quando todos os valores são iguais.
+    fr: >-
+      La moyenne géométrique est le terme du milieu d'une progression géométrique : la racine
+      n-ième du produit de n nombres. Les Grecs l'ont étudiée en géométrie, où la moyenne
+      proportionnelle entre deux segments, celle qui vérifie a/x = x/b, apparaît dans la construction
+      du nombre d'or. C'est la moyenne correcte pour des taux : une croissance de 10 % suivie de 20 %
+      ne donne pas 15 % arithmétique, mais la racine du produit des facteurs, 14,8 %. Par l'inégalité
+      des moyennes, elle est toujours inférieure ou égale à la moyenne arithmétique, sauf si toutes
+      les valeurs sont égales.
+    zh: >-
+      几何平均数是等比数列的中间项：n个数的乘积开n次方。古希腊人在几何学中研究过它——满足 a/x = x/b
+      的两个线段之间的比例中项，正出现在黄金比例的构造中。它是平均增长率时的正确选择：先增长10%再增长
+      20%，平均并不是算术的15%，而是两个因子乘积的平方根，约14.8%。根据均值不等式，几何平均数总是小于
+      或等于算术平均数，除非所有数值都相等。
+    ja: >-
+      幾何平均は等比数列の中央の項である。n個の数の積のn乗根だ。古代ギリシャ人はこれを幾何学で研究した。
+      黄金比の作図に現れる、a/x = x/b を満たす二つの線分の比例中項がそれである。増加率の平均にはこれが正しい
+      平均だ。10%の成長の後に20%の成長があっても、平均は算術の15%にはならず、因子の積の平方根である約14.8%
+      になる。平均の不等式により、幾何平均はすべての値が等しい場合を除き、常に算術平均以下である。
+  timeline:
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides define en los Elementos la media proporcional entre dos segmentos, fundamento de
+          la media geométrica.
+        en: >-
+          Euclid defines the mean proportional between two segments in the Elements, the foundation
+          of the geometric mean.
+        pt: >-
+          Euclides define nos Elementos a média proporcional entre dois segmentos, fundamento da
+          média geométrica.
+        fr: >-
+          Euclide définit dans les Éléments la moyenne proportionnelle entre deux segments, fondement
+          de la moyenne géométrique.
+        zh: >-
+          欧几里得在《几何原本》中定义了两个线段之间的比例中项，这是几何平均数的基础。
+        ja: >-
+          エウクレイデスが『原論』で二つの線分の比例中項を定義する。幾何平均の基礎である。
+    - year: s. XVIII
+      label:
+        es: >-
+          Astrónomos y actuarios comienzan a usar medias geométricas para promediar tasas y
+          proporciones.
+        en: >-
+          Astronomers and actuaries begin using geometric means to average rates and proportions.
+        pt: >-
+          Astrônomos e atuários começam a usar médias geométricas para medir taxas e proporções.
+        fr: >-
+          Astronomes et actuaires commencent à utiliser les moyennes géométriques pour moyenner des
+          taux et des proportions.
+        zh: >-
+          天文学家和精算师开始用几何平均数来平均各种比率和比例。
+        ja: >-
+          天文学者やアクチュアリーが、率や割合の平均に幾何平均を使い始める。
+    - year: s. XX
+      label:
+        es: >-
+          El rendimiento compuesto anual (CAGR) convierte a la media geométrica en el estándar de las
+          finanzas.
+        en: >-
+          Compound annual growth (CAGR) makes the geometric mean the standard in finance.
+        pt: >-
+          O crescimento anual composto (CAGR) torna a média geométrica o padrão nas finanças.
+        fr: >-
+          Le taux de croissance annuel composé (TCAC) fait de la moyenne géométrique la norme en
+          finance.
+        zh: >-
+          复合年增长率（CAGR）使几何平均数成为金融领域的标准。
+        ja: >-
+          年平均複利成長率（CAGR）により、幾何平均が金融の標準となる。
+    - year: Hoy
+      label:
+        es: >-
+          Es estándar para promediar índices, tasas de crecimiento y procesamiento de imágenes.
+        en: >-
+          It is the standard for averaging indexes, growth rates, and image processing.
+        pt: >-
+          É o padrão para medir índices, taxas de crescimento e processamento de imagens.
+        fr: >-
+          Elle est la norme pour moyenner des indices, des taux de croissance et en traitement
+          d'images.
+        zh: >-
+          它是平均指数、增长率以及图像处理的标准方法。
+        ja: >-
+          指数、成長率の平均、画像処理における標準的な手法である。
+  useCases:
+    - title:
+        es: Finanzas
+        en: Finance
+        pt: Finanças
+        fr: Finance
+        zh: 金融
+        ja: 金融
+      description:
+        es: >-
+          Calcula el rendimiento anual compuesto (CAGR) de una inversión a partir de sus factores de
+          crecimiento.
+        en: >-
+          Computes the compound annual growth rate (CAGR) of an investment from its growth factors.
+        pt: >-
+          Calcula a taxa de crescimento anual composta (CAGR) de um investimento a partir de seus
+          fatores de crescimento.
+        fr: >-
+          Calcule le taux de croissance annuel composé (TCAC) d'un investissement à partir de ses
+          facteurs de croissance.
+        zh: >-
+          根据各年的增长因子，计算一项投资的复合年增长率（CAGR）。
+        ja: >-
+          成長因子から投資の年平均複利成長率（CAGR）を計算する。
+    - title:
+        es: Estadística
+        en: Statistics
+        pt: Estatística
+        fr: Statistique
+        zh: 统计学
+        ja: 統計学
+      description:
+        es: >-
+          Es la forma correcta de promediar ratios, índices y tasas que se multiplican entre sí.
+        en: >-
+          It is the right way to average ratios, indexes, and rates that multiply together.
+        pt: >-
+          É a forma correta de medir razões, índices e taxas que se multiplicam entre si.
+        fr: >-
+          C'est la bonne façon de moyenner des ratios, des indices et des taux qui se multiplient.
+        zh: >-
+          对彼此相乘的比率、指数和增长率求平均时，这是正确的方法。
+        ja: >-
+          互いに掛け合わされる比率、指数、率の平均をとる正しい方法である。
+    - title:
+        es: Procesamiento de imágenes
+        en: Image processing
+        pt: Processamento de imagens
+        fr: Traitement d'images
+        zh: 图像处理
+        ja: 画像処理
+      description:
+        es: >-
+          El filtro de media geométrica reduce el ruido de una imagen preservando mejor los detalles
+          que el filtro aritmético.
+        en: >-
+          The geometric mean filter reduces image noise while preserving detail better than the
+          arithmetic filter.
+        pt: >-
+          O filtro de média geométrica reduz o ruído de uma imagem preservando melhor os detalhes que
+          o filtro aritmético.
+        fr: >-
+          Le filtre de moyenne géométrique réduit le bruit d'une image en préservant mieux les détails
+          que le filtre arithmétique.
+        zh: >-
+          几何均值滤波器在降噪的同时，比算术滤波器更好地保留图像细节。
+        ja: >-
+          幾何平均フィルタは、算術フィルタよりも細部を保ちながら画像のノイズを減らす。
+    - title:
+        es: Ingeniería
+        en: Engineering
+        pt: Engenharia
+        fr: Ingénierie
+        zh: 工程
+        ja: 工学
+      description:
+        es: >-
+          Promedia ganancias y atenuaciones de señales en decibelios, que se combinan de forma
+          multiplicativa.
+        en: >-
+          Averages signal gains and attenuations in decibels, which combine multiplicatively.
+        pt: >-
+          Mede ganhos e atenuações de sinais em decibéis, que se combinam de forma multiplicativa.
+        fr: >-
+          Fait la moyenne de gains et d'atténuations en décibels, qui se combinent de manière
+          multiplicative.
+        zh: >-
+          以分贝为单位对信号增益和衰减求平均，它们以乘法方式组合。
+        ja: >-
+          乗算的に組み合わされるデシベル単位の信号利得や減衰を平均する。
+  example:
+    title:
+      es: Crecimiento de 2 años
+      en: 2 years of growth
+      pt: Crescimento de 2 anos
+      fr: Croissance sur 2 ans
+      zh: 两年的增长
+      ja: 2年間の成長
+    lines:
+      - es: "Crecimiento: 10% y 20%"
+        en: "Growth: 10% and 20%"
+        pt: "Crescimento: 10% e 20%"
+        fr: "Croissance : 10 % et 20 %"
+        zh: "增长率：10% 和 20%"
+        ja: "成長率：10% と 20%"
+      - es: "Factores: 1.1 y 1.2"
+        en: "Factors: 1.1 and 1.2"
+        pt: "Fatores: 1,1 e 1,2"
+        fr: "Facteurs : 1,1 et 1,2"
+        zh: "因子：1.1 和 1.2"
+        ja: "係数：1.1 と 1.2"
+      - es: 1.1 · 1.2 = 1.32
+        en: 1.1 · 1.2 = 1.32
+        pt: 1,1 · 1,2 = 1,32
+        fr: 1,1 · 1,2 = 1,32
+        zh: 1.1 · 1.2 = 1.32
+        ja: 1.1 · 1.2 = 1.32
+      - es: g = √1.32 ≈ 1.148
+        en: g = √1.32 ≈ 1.148
+        pt: g = √1,32 ≈ 1,148
+        fr: g = √1,32 ≈ 1,148
+        zh: g = √1.32 ≈ 1.148
+        ja: g = √1.32 ≈ 1.148
+      - es: Media ≈ 14.8% anual
+        en: Mean ≈ 14.8% per year
+        pt: Média ≈ 14,8% ao ano
+        fr: Moyenne ≈ 14,8 % par an
+        zh: 均值 ≈ 14.8%/年
+        ja: 平均 ≈ 14.8% 年率

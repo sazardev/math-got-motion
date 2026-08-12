@@ -1,0 +1,266 @@
+id: time-dilation
+title:
+  es: Dilatación del Tiempo
+  en: Time Dilation
+  pt: Dilatação do Tempo
+  fr: Dilatation du temps
+  zh: 时间膨胀
+  ja: 時間の遅れ
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: dt-prime
+    type: variable
+    value: Δt′
+    explanation:
+      es: El tiempo medido por un observador en movimiento.
+      en: The time measured by an observer in motion.
+      pt: O tempo medido por um observador em movimento.
+      fr: Le temps mesuré par un observateur en mouvement.
+      zh: 运动中的观察者测得的时间。
+      ja: 運動する観測者が測る時間。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: dt
+    type: variable
+    value: Δt
+    explanation:
+      es: El tiempo propio, medido en reposo.
+      en: The proper time, measured at rest.
+      pt: O tempo próprio, medido em repouso.
+      fr: Le temps propre, mesuré au repos.
+      zh: 固有时间，在静止时测得。
+      ja: 静止して測る固有時間。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: La raíz cuadrada del factor relativista.
+      en: The square root of the relativistic factor.
+      pt: A raiz quadrada do fator relativístico.
+      fr: La racine carrée du facteur relativiste.
+      zh: 相对论因子的平方根。
+      ja: 相対論的因子の平方根。
+  - id: factor
+    type: variable
+    value: 1−v²/c²
+    explanation:
+      es: "1−v²/c²: v es la velocidad relativa y c la de la luz."
+      en: "1−v²/c²: v is the relative speed and c the speed of light."
+      pt: "1−v²/c²: v é a velocidade relativa e c a da luz."
+      fr: "1−v²/c² : v est la vitesse relative et c celle de la lumière."
+      zh: "1−v²/c²：v为相对速度，c为光速。"
+      ja: "1−v²/c²：vは相対速度、cは光速。"
+context:
+  author:
+    es: Albert Einstein
+    en: Albert Einstein
+    pt: Albert Einstein
+    fr: Albert Einstein
+    zh: 阿尔伯特·爱因斯坦
+    ja: アルベルト・アインシュタイン
+  era:
+    es: Suiza, 1879–1955 · publicada en 1905
+    en: Switzerland, 1879–1955 · published in 1905
+    pt: Suíça, 1879–1955 · publicada em 1905
+    fr: Suisse, 1879–1955 · publiée en 1905
+    zh: 瑞士，1879–1955年·1905年发表
+    ja: スイス、1879–1955年・1905年発表
+  history:
+    es: >-
+      En 1905, en su artículo sobre la relatividad especial, Einstein mostró que el tiempo no es
+      absoluto: un reloj en movimiento corre más lento que uno en reposo. El efecto se vuelve notable
+      a velocidades cercanas a la de la luz. Se confirmó con relojes atómicos en aviones (1971) y es
+      esencial para el GPS, cuyos satélites deben corregir sus relojes por este efecto y por la
+      gravedad.
+    en: >-
+      In 1905, in his paper on special relativity, Einstein showed that time is not absolute: a moving
+      clock runs slower than one at rest. The effect becomes significant at speeds close to light's.
+      It was confirmed with atomic clocks on airplanes (1971) and is essential for GPS, whose
+      satellites must correct their clocks for this effect and for gravity.
+    pt: >-
+      Em 1905, em seu artigo sobre a relatividade especial, Einstein mostrou que o tempo não é
+      absoluto: um relógio em movimento corre mais devagar do que um em repouso. O efeito se torna
+      notável em velocidades próximas à da luz. Foi confirmado com relógios atômicos em aviões (1971) e
+      é essencial para o GPS, cujos satélites precisam corrigir seus relógios por esse efeito e pela
+      gravidade.
+    fr: >-
+      En 1905, dans son article sur la relativité restreinte, Einstein montra que le temps n'est pas
+      absolu : une horloge en mouvement avance plus lentement qu'une horloge au repos. L'effet devient
+      notable aux vitesses proches de celle de la lumière. Il fut confirmé avec des horloges atomiques
+      en avion (1971) et il est essentiel au GPS, dont les satellites doivent corriger leurs horloges
+      pour cet effet et pour la gravité.
+    zh: >-
+      1905年，爱因斯坦在关于狭义相对论的论文中指出，时间不是绝对的：运动的钟比静止的钟走得慢。当速度接近光速时，
+      这一效应变得显著。1971年用飞机上的原子钟证实了它。它对GPS至关重要，因为卫星必须同时针对这一效应和引力
+      来校正其钟表。
+    ja: >-
+      1905年、アインシュタインは特殊相対性理論の論文で、時間は絶対ではないことを示した。運動する時計は静止して
+      いる時計より遅く進む。この効果は光速に近い速度で顕著になる。1971年に飛行機に載せた原子時計で確認され、
+      衛星がこの効果と重力の両方に対して時計を補正しなければならないGPSにとって不可欠である。
+  timeline:
+    - year: "1905"
+      label:
+        es: >-
+          Einstein publica la relatividad especial y predice la dilatación del tiempo.
+        en: >-
+          Einstein publishes special relativity and predicts time dilation.
+        pt: >-
+          Einstein publica a relatividade especial e prevê a dilatação do tempo.
+        fr: >-
+          Einstein publie la relativité restreinte et prédit la dilatation du temps.
+        zh: >-
+          爱因斯坦发表狭义相对论并预言时间膨胀。
+        ja: >-
+          アインシュタインが特殊相対性理論を発表し、時間の遅れを予言する。
+    - year: "1971"
+      label:
+        es: >-
+          Hafele y Keating confirman el efecto con relojes atómicos en vuelo.
+        en: >-
+          Hafele and Keating confirm the effect with atomic clocks in flight.
+        pt: >-
+          Hafele e Keating confirmam o efeito com relógios atômicos em voo.
+        fr: >-
+          Hafele et Keating confirment l'effet avec des horloges atomiques en vol.
+        zh: >-
+          哈费勒和基廷用飞行中的原子钟证实了这一效应。
+        ja: >-
+          ハフェレとキーティングが飛行中の原子時計でこの効果を確認する。
+    - year: Hoy
+      label:
+        es: >-
+          El GPS corrige a diario sus relojes por dilatación relativista.
+        en: >-
+          GPS corrects its clocks daily for relativistic dilation.
+        pt: >-
+          O GPS corrige diariamente seus relógios pela dilatação relativística.
+        fr: >-
+          Le GPS corrige chaque jour ses horloges pour la dilatation relativiste.
+        zh: >-
+          GPS每天都在针对相对论性膨胀校正其钟表。
+        ja: >-
+          GPSは毎日、相対論的な時間の遅れに対して時計を補正している。
+  useCases:
+    - title:
+        es: Sistema GPS
+        en: GPS system
+        pt: Sistema GPS
+        fr: Système GPS
+        zh: GPS 系统
+        ja: GPSシステム
+      description:
+        es: >-
+          Sin la corrección por dilatación del tiempo, el GPS fallaría metros en minutos.
+        en: >-
+          Without the time-dilation correction, GPS would drift meters in minutes.
+        pt: >-
+          Sem a correção pela dilatação do tempo, o GPS erraria metros em minutos.
+        fr: >-
+          Sans la correction de dilatation du temps, le GPS dériverait de plusieurs mètres en minutes.
+        zh: >-
+          若不进行时间膨胀校正，GPS会在几分钟内偏差数米。
+        ja: >-
+          時間の遅れの補正がないと、GPSは数分で数メートルずれてしまう。
+    - title:
+        es: Física de partículas
+        en: Particle physics
+        pt: Física de partículas
+        fr: Physique des particules
+        zh: 粒子物理学
+        ja: 素粒子物理学
+      description:
+        es: >-
+          Los muones creados en la atmósfera llegan al suelo porque su vida se dilata.
+        en: >-
+          Muons created in the atmosphere reach the ground because their lifetime dilates.
+        pt: >-
+          Múons criados na atmosfera chegam ao solo porque sua vida se dilata.
+        fr: >-
+          Les muons créés dans l'atmosphère atteignent le sol parce que leur durée de vie se dilate.
+        zh: >-
+          大气层中产生的μ子能到达地面，正是因为其寿命发生膨胀。
+        ja: >-
+          大気中で生成されたミューオンが地表に届くのは、その寿命が伸びるからである。
+    - title:
+        es: Relojes atómicos
+        en: Atomic clocks
+        pt: Relógios atômicos
+        fr: Horloges atomiques
+        zh: 原子钟
+        ja: 原子時計
+      description:
+        es: >-
+          Los estándares de tiempo más precisos deben considerar este efecto.
+        en: >-
+          The most precise time standards must account for this effect.
+        pt: >-
+          Os padrões de tempo mais precisos precisam considerar esse efeito.
+        fr: >-
+          Les étalons de temps les plus précis doivent tenir compte de cet effet.
+        zh: >-
+          最精确的时间标准也必须考虑这一效应。
+        ja: >-
+          最も正確な時間の標準も、この効果を考慮しなければならない。
+  example:
+    title:
+      es: Un reloj que viaja al 80% de la luz
+      en: A clock traveling at 80% of light speed
+      pt: Um relógio viajando a 80% da velocidade da luz
+      fr: Une horloge voyageant à 80 % de la vitesse de la lumière
+      zh: 以80%光速飞行的钟
+      ja: 光速の80%で飛ぶ時計
+    lines:
+      - es: v = 0.8c
+        en: v = 0.8c
+        pt: v = 0,8c
+        fr: v = 0,8c
+        zh: v = 0.8c
+        ja: v = 0.8c
+      - es: 1 − v²/c² = 1 − 0.64 = 0.36
+        en: 1 − v²/c² = 1 − 0.64 = 0.36
+        pt: 1 − v²/c² = 1 − 0,64 = 0,36
+        fr: 1 − v²/c² = 1 − 0,64 = 0,36
+        zh: 1 − v²/c² = 1 − 0.64 = 0.36
+        ja: 1 − v²/c² = 1 − 0.64 = 0.36
+      - es: √0.36 = 0.6
+        en: √0.36 = 0.6
+        pt: √0,36 = 0,6
+        fr: √0,36 = 0,6
+        zh: √0.36 = 0.6
+        ja: √0.36 = 0.6
+      - es: "Δt = 1 s → Δt′ = 1 / 0.6 ≈ 1.667 s"
+        en: "Δt = 1 s → Δt′ = 1 / 0.6 ≈ 1.667 s"
+        pt: "Δt = 1 s → Δt′ = 1 / 0,6 ≈ 1,667 s"
+        fr: "Δt = 1 s → Δt′ = 1 / 0,6 ≈ 1,667 s"
+        zh: "Δt = 1 秒 → Δt′ = 1 / 0.6 ≈ 1.667 秒"
+        ja: "Δt = 1 s → Δt′ = 1 / 0.6 ≈ 1.667 s"
+      - es: El reloj en movimiento corre un 67% más lento
+        en: The moving clock runs about 67% slower
+        pt: O relógio em movimento corre cerca de 67% mais devagar
+        fr: L'horloge en mouvement avance environ 67 % plus lentement
+        zh: 运动的钟慢约67%
+        ja: 運動する時計は約67%遅く進む

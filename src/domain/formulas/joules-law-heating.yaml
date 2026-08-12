@@ -1,0 +1,334 @@
+id: joules-law-heating
+title:
+  es: Calentamiento de Joule
+  en: Joule Heating
+  pt: Aquecimento de Joule
+  fr: Effet Joule
+  zh: 焦耳加热
+  ja: ジュール熱
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: p
+    type: variable
+    value: P
+    explanation:
+      es: La potencia disipada como calor por el conductor.
+      en: The power dissipated as heat by the conductor.
+      pt: A potência dissipada como calor pelo condutor.
+      fr: La puissance dissipée en chaleur par le conducteur.
+      zh: 导体以热量形式耗散的功率。
+      ja: 導体が熱として散逸する電力。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: i
+    type: variable
+    value: I
+    explanation:
+      es: La corriente eléctrica que atraviesa el conductor.
+      en: The electric current flowing through the conductor.
+      pt: A corrente elétrica que atravessa o condutor.
+      fr: Le courant électrique traversant le conducteur.
+      zh: 流经导体的电流。
+      ja: 導体を流れる電流。
+  - id: squared
+    type: superscript
+    value: "²"
+    explanation:
+      es: El cuadrado de la corriente, por eso el calor crece rápido con la corriente.
+      en: The square of the current, which is why the heat grows quickly with current.
+      pt: O quadrado da corrente, por isso o calor cresce rápido com a corrente.
+      fr: Le carré du courant, c'est pourquoi la chaleur croît vite avec le courant.
+      zh: 电流的平方,这就是热量随电流快速增长的原因。
+      ja: 電流の二乗。だから発熱は電流とともに急速に大きくなる。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: La multiplicación entre la corriente al cuadrado y la resistencia.
+      en: The multiplication of the squared current and the resistance.
+      pt: A multiplicação entre a corrente ao quadrado e a resistência.
+      fr: La multiplication du courant au carré par la résistance.
+      zh: 电流平方与电阻相乘。
+      ja: 二乗した電流と抵抗の乗算。
+  - id: r
+    type: variable
+    value: R
+    explanation:
+      es: La resistencia eléctrica del conductor que se calienta.
+      en: The electrical resistance of the conductor that heats up.
+      pt: A resistência elétrica do condutor que se aquece.
+      fr: La résistance électrique du conducteur qui s'échauffe.
+      zh: 发热导体的电阻。
+      ja: 発熱する導体の電気抵抗。
+context:
+  author:
+    es: James Prescott Joule
+    en: James Prescott Joule
+    pt: James Prescott Joule
+    fr: James Prescott Joule
+    zh: 詹姆斯·普雷斯科特·焦耳
+    ja: ジェームズ・プレスコット・ジュール
+  era:
+    es: Inglaterra, 1818–1889 · publicada en 1841
+    en: England, 1818–1889 · published in 1841
+    pt: Inglaterra, 1818–1889 · publicada em 1841
+    fr: Angleterre, 1818–1889 · publiée en 1841
+    zh: 英格兰,1818–1889年 · 1841年发表
+    ja: イギリス、1818–1889年・1841年発表
+  history:
+    es: >-
+      James Prescott Joule, cervecero y físico inglés, estableció en 1841 que el calor generado por
+      una corriente eléctrica en un conductor crece con el cuadrado de la corriente, resultado que
+      presentó ante la Royal Society. La relación explica por qué se calientan los cables, por qué
+      brillan las tostadoras y por qué las líneas de transmisión pierden energía al transportar
+      corriente. También fundamenta los fusibles, los calefactores y las pérdidas que limitan el
+      transporte de energía a alta tensión.
+    en: >-
+      James Prescott Joule, an English brewer and physicist, established in 1841 that the heat
+      produced by an electric current in a conductor grows with the square of the current, a result
+      he presented to the Royal Society. The relation explains why wires heat up, why toasters glow,
+      and why transmission lines lose energy as they carry current. It also underpins fuses, electric
+      heaters, and the losses that limit the transport of energy at high voltage.
+    pt: >-
+      James Prescott Joule, cervejeiro e físico inglês, estabeleceu em 1841 que o calor gerado por
+      uma corrente elétrica em um condutor cresce com o quadrado da corrente, resultado que
+      apresentou à Royal Society. A relação explica por que os fios se aquecem, por que as torradeiras
+      brilham e por que as linhas de transmissão perdem energia ao transportar corrente. Também
+      fundamenta fusíveis, aquecedores elétricos e as perdas que limitam o transporte de energia em
+      alta tensão.
+    fr: >-
+      James Prescott Joule, brasseur et physicien anglais, établit en 1841 que la chaleur produite
+      par un courant électrique dans un conducteur croît avec le carré du courant, résultat qu'il
+      présenta à la Royal Society. Cette relation explique pourquoi les fils chauffent, pourquoi les
+      grille-pain rougissent et pourquoi les lignes de transmission perdent de l'énergie en
+      transportant le courant. Elle fonde aussi les fusibles, les chauffages électriques et les pertes
+      qui limitent le transport de l'énergie à haute tension.
+    zh: >-
+      英国酿酒师兼物理学家詹姆斯·普雷斯科特·焦耳于1841年确定,电流通过导体时产生的热量随电流的平方增长,
+      这一结果提交给了英国皇家学会。该关系解释了电线为何发热、烤面包机为何发红,以及输电线在输送电流时
+      为何损耗能量。它还构成了保险丝、电加热器以及限制高压输电损耗的基础。
+    ja: >-
+      英国の醸造家にして物理学者ジェームズ・プレスコット・ジュールは1841年、導体を流れる電流が生み出す
+      熱が電流の二乗に比例して増えることを明らかにし、王立協会に発表した。この関係は電線がなぜ発熱するのか、
+      トースターがなぜ赤熱するのか、送電線が電流を送る際になぜエネルギーを失うのかを説明する。ヒューズや
+      電気ヒーターの根拠でもあり、高電圧送電の損失を制限する根拠にもなっている。
+  timeline:
+    - year: "1841"
+      label:
+        es: >-
+          Joule publica su medición del calor producido por una corriente eléctrica, la primera
+          versión de la ley.
+        en: >-
+          Joule publishes his measurement of the heat produced by an electric current, the first
+          version of the law.
+        pt: >-
+          Joule publica sua medição do calor produzido por uma corrente elétrica, a primeira versão
+          da lei.
+        fr: >-
+          Joule publie sa mesure de la chaleur produite par un courant électrique, première version
+          de la loi.
+        zh: >-
+          焦耳发表他对电流产生热量的测量结果,这是该定律的初版。
+        ja: >-
+          ジュールが電流による発熱の測定結果を発表する。法則の最初の形である。
+    - year: "1843"
+      label:
+        es: >-
+          Joule presenta el equivalente mecánico del calor, uniendo calor y energía en una misma
+          magnitud.
+        en: >-
+          Joule reports the mechanical equivalent of heat, linking heat and energy as one quantity.
+        pt: >-
+          Joule apresenta o equivalente mecânico do calor, unindo calor e energia em uma mesma
+          grandeza.
+        fr: >-
+          Joule présente l'équivalent mécanique de la chaleur, reliant chaleur et énergie en une
+          seule grandeur.
+        zh: >-
+          焦耳提出热功当量,将热量和能量统一为同一物理量。
+        ja: >-
+          ジュールが熱の仕事当量を発表し、熱とエネルギーを同一の量として結びつける。
+    - year: "1889"
+      label:
+        es: >-
+          El Congreso Internacional de Electricistas adopta el joule como unidad de energía en honor
+          a Joule.
+        en: >-
+          The International Electrical Congress adopts the joule as the unit of energy in Joule's
+          honor.
+        pt: >-
+          O Congresso Internacional de Eletricistas adota o joule como unidade de energia em
+          homenagem a Joule.
+        fr: >-
+          Le Congrès international des électriciens adopte le joule comme unité d'énergie en
+          l'honneur de Joule.
+        zh: >-
+          国际电学家大会采用焦耳作为能量单位,以纪念焦耳。
+        ja: >-
+          国際電気技術者会議がジュールの栄誉をたたえ、エネルギーの単位としてジュールを採用する。
+    - year: Hoy
+      label:
+        es: >-
+          Las pérdidas I²R limitan la capacidad de las líneas de transmisión y guían el diseño de
+          fusibles y cables.
+        en: >-
+          I²R losses limit transmission line capacity and guide the design of fuses and cables.
+        pt: >-
+          As perdas I²R limitam a capacidade das linhas de transmissão e orientam o projeto de
+          fusíveis e cabos.
+        fr: >-
+          Les pertes I²R limitent la capacité des lignes de transmission et guident la conception des
+          fusibles et des câbles.
+        zh: >-
+          I²R损耗限制了输电线路的容量,并指导保险丝和电缆的设计。
+        ja: >-
+          I²R損が送電線の容量を制限し、ヒューズやケーブルの設計を導く。
+  useCases:
+    - title:
+        es: Fusibles y protección
+        en: Fuses and protection
+        pt: Fusíveis e proteção
+        fr: Fusibles et protection
+        zh: 保险丝与保护
+        ja: ヒューズと保護
+      description:
+        es: >-
+          La potencia disipada como calor en un fusible se calcula con esta ley para que funda antes
+          de que el cable peligre.
+        en: >-
+          The heat dissipated in a fuse is computed with this law so it melts before the wire is at
+          risk.
+        pt: >-
+          A potência dissipada como calor em um fusível é calculada com esta lei para que ele funda
+          antes que o fio corra risco.
+        fr: >-
+          La puissance dissipée en chaleur dans un fusible se calcule avec cette loi pour qu'il fonde
+          avant que le câble ne soit en danger.
+        zh: >-
+          用该定律计算保险丝中以热量形式耗散的功率,使其在电线面临危险之前熔断。
+        ja: >-
+          ヒューズ内で熱として散逸する電力はこの法則で計算され、電線が危険になる前に溶断するようにする。
+    - title:
+        es: Calefacción eléctrica
+        en: Electric heating
+        pt: Aquecimento elétrico
+        fr: Chauffage électrique
+        zh: 电加热
+        ja: 電気暖房
+      description:
+        es: >-
+          Tostadoras, planchas y hornos eléctricos dimensionan sus resistencias para generar la
+          potencia de calor deseada.
+        en: >-
+          Toasters, irons, and electric ovens size their elements to produce the desired heating
+          power.
+        pt: >-
+          Torradeiras, ferros de passar e fornos elétricos dimensionam seus resistores para gerar a
+          potência de calor desejada.
+        fr: >-
+          Grille-pain, fers à repasser et fours électriques dimensionnent leurs résistances pour
+          produire la puissance de chaleur souhaitée.
+        zh: >-
+          烤面包机、熨斗和电烤箱通过设计加热元件来产生所需的加热功率。
+        ja: >-
+          トースターやアイロン、電気オーブンは、望みの発熱電力を生み出すように発熱体を設計する。
+    - title:
+        es: Transmisión de energía
+        en: Power transmission
+        pt: Transmissão de energia
+        fr: Transport d'énergie
+        zh: 电力传输
+        ja: 電力輸送
+      description:
+        es: >-
+          Las pérdidas I²R en las líneas explican por qué la energía se transmite a alta tensión y
+          baja corriente.
+        en: >-
+          I²R losses in lines explain why energy is transmitted at high voltage and low current.
+        pt: >-
+          As perdas I²R nas linhas explicam por que a energia é transmitida em alta tensão e baixa
+          corrente.
+        fr: >-
+          Les pertes I²R dans les lignes expliquent pourquoi l'énergie est transportée en haute
+          tension et faible courant.
+        zh: >-
+          线路中的I²R损耗解释了为什么电力要以高电压低电流传输。
+        ja: >-
+          送電線のI²R損は、電気が高電圧・低電流で送られる理由を説明する。
+    - title:
+        es: Baterías de vehículos eléctricos
+        en: EV battery packs
+        pt: Baterias de veículos elétricos
+        fr: Batteries de véhicules électriques
+        zh: 电动汽车电池组
+        ja: 電気自動車のバッテリーパック
+      description:
+        es: >-
+          Durante la carga rápida se estima el calor generado en celdas y conectores para
+          dimensionar el sistema de enfriamiento.
+        en: >-
+          During fast charging, the heat generated in cells and connectors is estimated to size the
+          cooling system.
+        pt: >-
+          Durante a carga rápida, estima-se o calor gerado em células e conectores para dimensionar
+          o sistema de refrigeração.
+        fr: >-
+          Pendant la charge rapide, la chaleur générée dans les cellules et les connecteurs est
+          estimée pour dimensionner le refroidissement.
+        zh: >-
+          在快速充电期间,需要估算电芯和连接器产生的热量,以确定冷却系统的规格。
+        ja: >-
+          急速充電中にセルやコネクタで生じる熱を推定し、冷却システムを設計する。
+  example:
+    title:
+      es: Potencia de un calefactor
+      en: Power of a heater
+      pt: Potência de um aquecedor
+      fr: Puissance d'un chauffage
+      zh: 电热器的功率
+      ja: ヒーターの電力
+    lines:
+      - es: I = 2 A
+        en: I = 2 A
+        pt: I = 2 A
+        fr: I = 2 A
+        zh: I = 2 A
+        ja: I = 2 A
+      - es: R = 10 Ω
+        en: R = 10 Ω
+        pt: R = 10 Ω
+        fr: R = 10 Ω
+        zh: R = 10 Ω
+        ja: R = 10 Ω
+      - es: P = I² · R
+        en: P = I² · R
+        pt: P = I² · R
+        fr: P = I² · R
+        zh: P = I² · R
+        ja: P = I² · R
+      - es: P = 2² × 10 = 4 × 10
+        en: P = 2² × 10 = 4 × 10
+        pt: P = 2² × 10 = 4 × 10
+        fr: P = 2² × 10 = 4 × 10
+        zh: P = 2² × 10 = 4 × 10
+        ja: P = 2² × 10 = 4 × 10
+      - es: P = 40 W
+        en: P = 40 W
+        pt: P = 40 W
+        fr: P = 40 W
+        zh: P = 40 W
+        ja: P = 40 W

@@ -1,0 +1,396 @@
+id: sum-of-cubes
+title:
+  es: Suma de Cubos
+  en: Sum of Cubes
+  pt: Soma de Cubos
+  fr: Somme de cubes
+  zh: 立方和公式
+  ja: 立方数の和
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: a-cubed
+    type: variable
+    value: a³
+    explanation:
+      es: El primer cubo, a elevado al cubo.
+      en: The first cube, a cubed.
+      pt: O primeiro cubo, a ao cubo.
+      fr: Le premier cube, a au cube.
+      zh: 第一个立方，即 a 的立方。
+      ja: 最初の立方、aの3乗。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado al segundo cubo.
+      en: Added to the second cube.
+      pt: Somado ao segundo cubo.
+      fr: Ajouté au second cube.
+      zh: 与第二个立方相加。
+      ja: 2つ目の立方と足す。
+  - id: b-cubed
+    type: variable
+    value: b³
+    explanation:
+      es: El segundo cubo, b elevado al cubo.
+      en: The second cube, b cubed.
+      pt: O segundo cubo, b ao cubo.
+      fr: Le second cube, b au cube.
+      zh: 第二个立方，即 b 的立方。
+      ja: 2つ目の立方、bの3乗。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual al producto de la suma por el trinomio incompleto.
+      en: Is equal to the product of the sum and the incomplete trinomial.
+      pt: É igual ao produto da soma pelo trinômio incompleto.
+      fr: Est égal au produit de la somme par le trinôme incomplet.
+      zh: 等于两数之和与一个不完全三项式的乘积。
+      ja: 和と不完全な三項式の積に等しい。
+  - id: sum-factor
+    type: variable
+    value: (a+b)
+    explanation:
+      es: El primer factor, la suma de las dos bases.
+      en: The first factor, the sum of the two bases.
+      pt: O primeiro fator, a soma das duas bases.
+      fr: Le premier facteur, la somme des deux bases.
+      zh: 第一个因式，即两个底数之和。
+      ja: 最初の因数。二つの底の和。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por el segundo factor.
+      en: Multiplied by the second factor.
+      pt: Multiplicado pelo segundo fator.
+      fr: Multiplié par le second facteur.
+      zh: 乘以第二个因式。
+      ja: 2つ目の因数を掛ける。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el segundo factor, el trinomio.
+      en: Opens the second factor, the trinomial.
+      pt: Abre o segundo fator, o trinômio.
+      fr: Ouvre le second facteur, le trinôme.
+      zh: 打开第二个因式，即三项式。
+      ja: 2つ目の因数である三項式の括弧を開く。
+  - id: a-squared
+    type: variable
+    value: a²
+    explanation:
+      es: La primera base, elevada al cuadrado.
+      en: The first base, squared.
+      pt: A primeira base, elevada ao quadrado.
+      fr: La première base, élevée au carré.
+      zh: 第一个底数的平方。
+      ja: 最初の底を2乗する。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: Menos el producto de las dos bases.
+      en: Minus the product of the two bases.
+      pt: Menos o produto das duas bases.
+      fr: Moins le produit des deux bases.
+      zh: 减去两个底数的乘积。
+      ja: 二つの底の積を引く。
+  - id: ab
+    type: variable
+    value: ab
+    explanation:
+      es: El producto de las dos bases, el término cruzado que lleva el signo negativo.
+      en: The product of the two bases, the crossed term that carries the negative sign.
+      pt: O produto das duas bases, o termo cruzado que carrega o sinal negativo.
+      fr: Le produit des deux bases, le terme croisé qui porte le signe négatif.
+      zh: 两个底数的乘积，即带负号的交叉项。
+      ja: 二つの底の積。負号を持つ交叉項。
+  - id: plus-2
+    type: operator
+    value: +
+    explanation:
+      es: Sumado al cuadrado de la segunda base.
+      en: Added to the square of the second base.
+      pt: Somado ao quadrado da segunda base.
+      fr: Ajouté au carré de la seconde base.
+      zh: 加上第二个底数的平方。
+      ja: 2つ目の底の2乗を足す。
+  - id: b-squared
+    type: variable
+    value: b²
+    explanation:
+      es: La segunda base, elevada al cuadrado.
+      en: The second base, squared.
+      pt: A segunda base, elevada ao quadrado.
+      fr: La seconde base, élevée au carré.
+      zh: 第二个底数的平方。
+      ja: 2つ目の底を2乗する。
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el trinomio.
+      en: Closes the trinomial.
+      pt: Fecha o trinômio.
+      fr: Ferme le trinôme.
+      zh: 闭合三项式括号。
+      ja: 三項式の括弧を閉じる。
+context:
+  author:
+    es: Origen colectivo del álgebra
+    en: Collective origin of algebra
+    pt: Origem coletiva da álgebra
+    fr: Origine collective de l'algèbre
+    zh: 代数的集体起源
+    ja: 代数の集合的起源
+  era:
+    es: Europa, s. XVI
+    en: Europe, 16th century
+    pt: Europa, séc. XVI
+    fr: Europe, XVIe siècle
+    zh: 欧洲，16世纪
+    ja: ヨーロッパ、16世紀
+  history:
+    es: >-
+      La factorización de la suma de dos cubos es un resultado clásico del álgebra elemental,
+      consolidado en la Europa del siglo XVI cuando la resolución de ecuaciones cúbicas, de Tartaglia
+      a Cardano, obligó a dominar las identidades polinómicas. La identidad a³ + b³ = (a+b)(a² − ab +
+      b²) recuerda a la diferencia de cuadrados, pero el factor de tres términos conserva el signo
+      negativo solo en el término cruzado ab, lo que hace que el producto dé una suma, no una
+      diferencia. Es la herramienta básica para factorizar polinomios y aparece en integrales donde se
+      simplifican sumas de cubos.
+    en: >-
+      The factorization of the sum of two cubes is a classic result of elementary algebra, consolidated
+      in 16th-century Europe when the solution of cubic equations, from Tartaglia to Cardano, made
+      mastery of polynomial identities essential. The identity a³ + b³ = (a+b)(a² − ab + b²) echoes
+      the difference of squares, but the three-term factor keeps the negative sign only on the crossed
+      term ab, so the product yields a sum rather than a difference. It is the basic tool for factoring
+      polynomials and appears in integrals where sums of cubes are simplified.
+    pt: >-
+      A fatoração da soma de dois cubos é um resultado clássico da álgebra elementar, consolidado na
+      Europa do século XVI, quando a resolução das equações cúbicas, de Tartaglia a Cardano, tornou
+      essencial o domínio das identidades polinomiais. A identidade a³ + b³ = (a+b)(a² − ab + b²)
+      lembra a diferença de quadrados, mas o fator de três termos mantém o sinal negativo apenas no
+      termo cruzado ab, de modo que o produto gera uma soma, não uma diferença. É a ferramenta básica
+      para fatorar polinômios e aparece em integrais em que se simplificam somas de cubos.
+    fr: >-
+      La factorisation de la somme de deux cubes est un résultat classique de l'algèbre élémentaire,
+      consolidé dans l'Europe du XVIe siècle, lorsque la résolution des équations cubiques, de
+      Tartaglia à Cardan, rendit indispensable la maîtrise des identités polynomiales. L'identité a³ +
+      b³ = (a+b)(a² − ab + b²) évoque la différence de carrés, mais le facteur à trois termes ne
+      conserve le signe négatif que sur le terme croisé ab, si bien que le produit donne une somme, et
+      non une différence. C'est l'outil de base pour factoriser les polynômes, et elle apparaît dans
+      les intégrales où l'on simplifie des sommes de cubes.
+    zh: >-
+      两立方之和的因式分解是初等代数的经典结果，在16世纪的欧洲得到定型——当时从塔尔塔利亚到卡尔达诺求解三次
+      方程，使得掌握多项式恒等式成为必须。恒等式 a³ + b³ = (a+b)(a² − ab + b²) 让人想起平方差公式，但三项
+      因式中只有交叉项 ab 带负号，因此乘积得到的是和而非差。它是分解多项式因式的基本工具，在积分中化简两立方
+      之和时也经常出现。
+    ja: >-
+      二つの立方数の和の因数分解は初等代数の古典的な結果であり、タルタリアからカルダーノに至る三次方程式の
+      解法が必須となった16世紀のヨーロッパで確立された。恒等式 a³ + b³ = (a+b)(a² − ab + b²) は平方の差を
+      思わせるが、三項からなる因数では負号が交叉項abにだけ付いており、そのため積は差ではなく和になる。これは
+      多項式の因数分解の基本道具であり、立方数の和を簡単にする積分にも登場する。
+  timeline:
+    - year: "1202"
+      label:
+        es: >-
+          El Liber Abaci difunde en Europa las identidades algebraicas conocidas en India y el mundo
+          islámico.
+        en: >-
+          The Liber Abaci spreads across Europe the algebraic identities known in India and the
+          Islamic world.
+        pt: >-
+          O Liber Abaci difunde na Europa as identidades algébricas conhecidas na Índia e no mundo
+          islâmico.
+        fr: >-
+          Le Liber Abaci diffuse en Europe les identités algébriques connues en Inde et dans le monde
+          islamique.
+        zh: >-
+          《计算之书》把印度和伊斯兰世界已知的代数恒等式传播到欧洲。
+        ja: >-
+          『計算の書』が、インドとイスラーム世界で知られていた代数学の恒等式をヨーロッパに広める。
+    - year: "1545"
+      label:
+        es: >-
+          Tartaglia y Cardano resuelven la cúbica y popularizan la manipulación de polinomios y sus
+          factorizaciones.
+        en: >-
+          Tartaglia and Cardano solve the cubic and popularize the manipulation and factoring of
+          polynomials.
+        pt: >-
+          Tartaglia e Cardano resolvem a cúbica e popularizam a manipulação de polinômios e suas
+          fatorações.
+        fr: >-
+          Tartaglia et Cardan résolvent la cubique et popularisent la manipulation et la factorisation
+          des polynômes.
+        zh: >-
+          塔尔塔利亚与卡尔达诺解出三次方程，普及了多项式的运算与因式分解。
+        ja: >-
+          タルタリアとカルダーノが三次方程式を解き、多項式の操作と因数分解を広めた。
+    - year: "1600s"
+      label:
+        es: >-
+          Viète y Descartes fundan el álgebra simbólica, dando forma definitiva a identidades como la
+          suma de cubos.
+        en: >-
+          Viète and Descartes found symbolic algebra, giving definitive form to identities like the
+          sum of cubes.
+        pt: >-
+          Viète e Descartes fundam a álgebra simbólica, dando forma definitiva a identidades como a
+          soma de cubos.
+        fr: >-
+          Viète et Descartes fondent l'algèbre symbolique, donnant une forme définitive à des
+          identités comme la somme de cubes.
+        zh: >-
+          韦达与笛卡尔创立了符号代数，为立方和等恒等式确立了最终形式。
+        ja: >-
+          ヴィエタとデカルトが記号代数を創始し、立方数の和のような恒等式に決定的な形を与えた。
+    - year: Hoy
+      label:
+        es: >-
+          Es una identidad básica de la factorización y del cálculo integral, y aparece en la teoría
+          de números.
+        en: >-
+          It is a basic identity in factoring and integral calculus, and appears in number theory.
+        pt: >-
+          É uma identidade básica da fatoração e do cálculo integral, e aparece na teoria dos números.
+        fr: >-
+          C'est une identité de base de la factorisation et du calcul intégral, présente aussi en
+          théorie des nombres.
+        zh: >-
+          它是因式分解和积分学中的基本恒等式，也出现在数论之中。
+        ja: >-
+          因数分解と積分法の基本恒等式であり、整数論にも登場する。
+  useCases:
+    - title:
+        es: Factorización
+        en: Factoring
+        pt: Fatoração
+        fr: Factorisation
+        zh: 因式分解
+        ja: 因数分解
+      description:
+        es: >-
+          Descompone un binomio de la forma a³ + b³ en el producto de una suma y un trinomio.
+        en: >-
+          Breaks a binomial of the form a³ + b³ into the product of a sum and a trinomial.
+        pt: >-
+          Decompõe um binômio da forma a³ + b³ no produto de uma soma por um trinômio.
+        fr: >-
+          Décompose un binôme de la forme a³ + b³ en le produit d'une somme et d'un trinôme.
+        zh: >-
+          把形如 a³ + b³ 的二项式分解为一个和与一个三项式的乘积。
+        ja: >-
+          a³ + b³ の形の二項式を、和と三項式の積に分解する。
+    - title:
+        es: Cálculo integral
+        en: Integral calculus
+        pt: Cálculo integral
+        fr: Calcul intégral
+        zh: 积分学
+        ja: 積分法
+      description:
+        es: >-
+          En muchas integrales el integrando se simplifica factorizando sumas de cubos.
+        en: >-
+          In many integrals the integrand is simplified by factoring sums of cubes.
+        pt: >-
+          Em muitas integrais, o integrando é simplificado fatorando somas de cubos.
+        fr: >-
+          Dans de nombreuses intégrales, l'intégrande se simplifie en factorisant des sommes de cubes.
+        zh: >-
+          许多积分中，被积函数通过分解立方和而得到化简。
+        ja: >-
+          多くの積分では、立方数の和の因数分解で被積分関数が簡単になる。
+    - title:
+        es: Teoría de números
+        en: Number theory
+        pt: Teoria dos números
+        fr: Théorie des nombres
+        zh: 数论
+        ja: 整数論
+      description:
+        es: >-
+          La suma de dos cubos genera números notables, como el número del taxi 1729 = 1³ + 12³ = 9³ +
+          10³.
+        en: >-
+          Sums of two cubes yield famous numbers, like the taxicab number 1729 = 1³ + 12³ = 9³ + 10³.
+        pt: >-
+          Somas de dois cubos geram números notáveis, como o número do táxi 1729 = 1³ + 12³ = 9³ + 10³.
+        fr: >-
+          Les sommes de deux cubes donnent des nombres célèbres, comme le nombre du taxi 1729 = 1³ +
+          12³ = 9³ + 10³.
+        zh: >-
+          两立方之和产生著名的数，例如的士数 1729 = 1³ + 12³ = 9³ + 10³。
+        ja: >-
+          二つの立方数の和は有名な数を作る。タクシー数 1729 = 1³ + 12³ = 9³ + 10³ がその例だ。
+    - title:
+        es: Álgebra computacional
+        en: Computer algebra
+        pt: Álgebra computacional
+        fr: Calcul formel
+        zh: 计算机代数
+        ja: 数式処理
+      description:
+        es: >-
+          Los sistemas de álgebra computacional simplifican automáticamente a³ + b³ con esta
+          identidad.
+        en: >-
+          Computer algebra systems automatically simplify a³ + b³ with this identity.
+        pt: >-
+          Sistemas de álgebra computacional simplificam automaticamente a³ + b³ com esta identidade.
+        fr: >-
+          Les systèmes de calcul formel simplifient automatiquement a³ + b³ grâce à cette identité.
+        zh: >-
+          计算机代数系统利用这条恒等式自动化简 a³ + b³。
+        ja: >-
+          数式処理システムはこの恒等式を使って a³ + b³ を自動的に簡単化する。
+  example:
+    title:
+      es: Calcular 1³ + 2³
+      en: Computing 1³ + 2³
+      pt: Calculando 1³ + 2³
+      fr: Calcul de 1³ + 2³
+      zh: 计算 1³ + 2³
+      ja: 1³ + 2³ の計算
+    lines:
+      - es: a = 1, b = 2
+        en: a = 1, b = 2
+        pt: a = 1, b = 2
+        fr: a = 1, b = 2
+        zh: a = 1, b = 2
+        ja: a = 1, b = 2
+      - es: 1³ + 2³ = (1 + 2)(1² − 1·2 + 2²)
+        en: 1³ + 2³ = (1 + 2)(1² − 1·2 + 2²)
+        pt: 1³ + 2³ = (1 + 2)(1² − 1·2 + 2²)
+        fr: 1³ + 2³ = (1 + 2)(1² − 1·2 + 2²)
+        zh: 1³ + 2³ = (1 + 2)(1² − 1·2 + 2²)
+        ja: 1³ + 2³ = (1 + 2)(1² − 1·2 + 2²)
+      - es: 1 + 8 = 3 · (1 − 2 + 4)
+        en: 1 + 8 = 3 · (1 − 2 + 4)
+        pt: 1 + 8 = 3 · (1 − 2 + 4)
+        fr: 1 + 8 = 3 · (1 − 2 + 4)
+        zh: 1 + 8 = 3 · (1 − 2 + 4)
+        ja: 1 + 8 = 3 · (1 − 2 + 4)
+      - es: 9 = 3 · 3
+        en: 9 = 3 · 3
+        pt: 9 = 3 · 3
+        fr: 9 = 3 · 3
+        zh: 9 = 3 · 3
+        ja: 9 = 3 · 3
+      - es: "Resultado: 9"
+        en: "Result: 9"
+        pt: "Resultado: 9"
+        fr: "Résultat : 9"
+        zh: 结果：9
+        ja: 結果：9

@@ -1,0 +1,358 @@
+id: sample-variance
+title:
+  es: Varianza Muestral
+  en: Sample Variance
+  pt: Variância Amostral
+  fr: Variance d'échantillon
+  zh: 样本方差
+  ja: 標本分散
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率統計
+nodes:
+  - id: s2
+    type: variable
+    value: s²
+    explanation:
+      es: La varianza muestral, la dispersión media de los datos de la muestra en unidades al cuadrado.
+      en: The sample variance, the average spread of the sample data in squared units.
+      pt: A variância amostral, a dispersão média dos dados da amostra em unidades ao quadrado.
+      fr: La variance d'échantillon, la dispersion moyenne des données de l'échantillon en unités au carré.
+      zh: 样本方差，样本数据在平方单位下的平均离散程度。
+      ja: 標本分散。標本データの平均的な散らばりを、2乗の単位で表したもの。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: 次の値に等しい。
+  - id: sigma
+    type: operator
+    value: Σ
+    explanation:
+      es: Sigma mayúscula, suma un término por cada valor de la muestra.
+      en: Capital sigma, sums one term for each value in the sample.
+      pt: Sigma maiúsculo, soma um termo para cada valor da amostra.
+      fr: Sigma majuscule, additionne un terme pour chaque valeur de l'échantillon.
+      zh: 大写西格玛，对样本中的每一个值求和。
+      ja: 大文字のシグマ。標本の各値について一項ずつ合計する。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre la desviación de cada dato respecto a la media.
+      en: Opens the deviation of each data point from the mean.
+      pt: Abre o desvio de cada dado em relação à média.
+      fr: Ouvre l'écart de chaque donnée par rapport à la moyenne.
+      zh: 打开每个数据相对于均值的偏差。
+      ja: 各データの平均からの偏差を開く括弧。
+  - id: x-minus-xbar
+    type: variable
+    value: x−x̄
+    explanation:
+      es: La desviación de cada valor x respecto a la media muestral x̄.
+      en: The deviation of each value x from the sample mean x̄.
+      pt: O desvio de cada valor x em relação à média amostral x̄.
+      fr: L'écart de chaque valeur x par rapport à la moyenne d'échantillon x̄.
+      zh: 每个值x相对于样本均值x̄的偏差。
+      ja: 各値xの標本平均x̄からの偏差。
+  - id: square
+    type: superscript
+    value: "2"
+    explanation:
+      es: Al cuadrado, para que las desviaciones positivas y negativas no se cancelen.
+      en: Squared, so positive and negative deviations do not cancel out.
+      pt: Ao quadrado, para que desvios positivos e negativos não se cancelem.
+      fr: Au carré, pour que les écarts positifs et négatifs ne s'annulent pas.
+      zh: 取平方，使正负偏差不会相互抵消。
+      ja: 2乗。正と負の偏差が打ち消し合わないようにする。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la desviación elevada al cuadrado.
+      en: Closes the squared deviation.
+      pt: Fecha o desvio ao quadrado.
+      fr: Ferme l'écart au carré.
+      zh: 关闭平方后的偏差。
+      ja: 2乗した偏差を閉じる括弧。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: n-minus-one
+    type: variable
+    value: n−1
+    explanation:
+      es: El tamaño de la muestra menos uno, la corrección de Bessel que compensa haber estimado la media.
+      en: The sample size minus one, Bessel's correction that compensates for estimating the mean.
+      pt: O tamanho da amostra menos um, a correção de Bessel que compensa o fato de a média ser estimada.
+      fr: La taille de l'échantillon moins un, la correction de Bessel qui compense l'estimation de la moyenne.
+      zh: 样本量减一，即贝塞尔校正，补偿因估计均值而引入的偏差。
+      ja: 標本の大きさから1を引いた値。平均を推定したことを補正するベッセルの補正。
+context:
+  author:
+    es: Ronald Fisher
+    en: Ronald Fisher
+    pt: Ronald Fisher
+    fr: Ronald Fisher
+    zh: 罗纳德·费雪
+    ja: ロナルド・フィッシャー
+  era:
+    es: Inglaterra, 1890–1962 · formalizada en el s. XX
+    en: England, 1890–1962 · formalized in the 20th century
+    pt: Inglaterra, 1890–1962 · formalizada no séc. XX
+    fr: Angleterre, 1890–1962 · formalisée au XXe siècle
+    zh: 英格兰，1890–1962年·20世纪正式确立
+    ja: イングランド、1890–1962年・20世紀に体系化
+  history:
+    es: >-
+      La varianza muestral estima cuánto se dispersa una población entera a partir de un puñado de
+      datos. Como la media se calcula de los mismos datos, las desviaciones tienden a subestimarse;
+      dividir por n−1, la corrección de Bessel, compensa ese sesgo. Con muestras pequeñas la
+      diferencia entre dividir por n o por n−1 es notable, y la incertidumbre crece. Ronald Fisher
+      formalizó la estimación de parámetros en los años 1920, y la varianza muestral es hoy la base
+      de los tests t, del ANOVA y de casi toda estadística aplicada.
+    en: >-
+      Sample variance estimates how spread out an entire population is from a handful of data points.
+      Because the mean is computed from the same data, deviations tend to be underestimated; dividing
+      by n−1, Bessel's correction, compensates for that bias. With small samples the difference
+      between dividing by n or n−1 is noticeable, and uncertainty grows. Ronald Fisher formalized
+      parameter estimation in the 1920s, and sample variance is today the basis of t-tests, ANOVA,
+      and most applied statistics.
+    pt: >-
+      A variância amostral estima o quanto uma população inteira se dispersa a partir de um punhado
+      de dados. Como a média é calculada a partir dos mesmos dados, os desvios tendem a ser
+      subestimados; dividir por n−1, a correção de Bessel, compensa esse viés. Com amostras pequenas
+      a diferença entre dividir por n ou por n−1 é notável, e a incerteza cresce. Ronald Fisher
+      formalizou a estimação de parâmetros na década de 1920, e a variância amostral é hoje a base
+      dos testes t, da ANOVA e de quase toda estatística aplicada.
+    fr: >-
+      La variance d'échantillon estime la dispersion d'une population entière à partir d'une poignée
+      de données. Comme la moyenne est calculée à partir des mêmes données, les écarts tendent à être
+      sous-estimés ; diviser par n−1, la correction de Bessel, compense ce biais. Avec de petits
+      échantillons, la différence entre diviser par n ou par n−1 est sensible, et l'incertitude
+      augmente. Ronald Fisher a formalisé l'estimation des paramètres dans les années 1920, et la
+      variance d'échantillon est aujourd'hui la base des tests t, de l'ANOVA et de l'essentiel de la
+      statistique appliquée.
+    zh: >-
+      样本方差从少量数据出发，估计整个总体的离散程度。由于均值也是由同一批数据计算出来的，偏差往往会被
+      低估；除以n−1（贝塞尔校正）正是为了补偿这一偏差。当样本较小时，除以n还是n−1的差别相当明显，
+      不确定性也随之增大。20世纪20年代，罗纳德·费雪正式确立了参数估计理论，而样本方差如今是t检验、
+      方差分析以及几乎一切应用统计的基础。
+    ja: >-
+      標本分散は、わずかなデータから母集団全体の散らばりを推定する。平均も同じデータから計算されるため、
+      偏差は過小評価されがちである。n−1で割るベッセルの補正は、その偏りを補う。標本が小さいと、nで割るか
+      n−1で割るかの違いは無視できず、不確実性も大きくなる。ロナルド・フィッシャーは1920年代にパラメータ
+      推定を定式化し、標本分散は今日、t検定やANOVAをはじめとする応用統計学のほとんどすべての基盤となっている。
+  timeline:
+    - year: "1846"
+      label:
+        es: >-
+          Friedrich Bessel introduce la corrección que lleva su nombre al estimar errores de medición
+          en astronomía.
+        en: >-
+          Friedrich Bessel introduces his correction while estimating measurement errors in astronomy.
+        pt: >-
+          Friedrich Bessel introduz a correção que leva seu nome ao estimar erros de medição em
+          astronomia.
+        fr: >-
+          Friedrich Bessel introduit la correction qui porte son nom en estimant les erreurs de mesure
+          en astronomie.
+        zh: >-
+          弗里德里希·贝塞尔在估算天文测量误差时提出以其名字命名的校正。
+        ja: >-
+          フリードリヒ・ベッセルが天文学における測定誤差の推定の中で、自身の名を冠した補正を導入する。
+    - year: "1918"
+      label:
+        es: >-
+          Ronald Fisher acuña el término "varianza" en su estudio sobre genética.
+        en: >-
+          Ronald Fisher coins the term "variance" in his study of genetics.
+        pt: >-
+          Ronald Fisher cunha o termo "variância" em seu estudo sobre genética.
+        fr: >-
+          Ronald Fisher invente le terme « variance » dans son étude de génétique.
+        zh: >-
+          罗纳德·费雪在遗传学研究中创造了"方差"一词。
+        ja: >-
+          ロナルド・フィッシャーが遺伝学の研究の中で「分散」という用語を作る。
+    - year: "1925"
+      label:
+        es: >-
+          Fisher publica el análisis de la varianza en Statistical Methods, basado en la varianza
+          muestral.
+        en: >-
+          Fisher publishes analysis of variance in Statistical Methods, built on the sample variance.
+        pt: >-
+          Fisher publica a análise de variância em Statistical Methods, baseada na variância amostral.
+        fr: >-
+          Fisher publie l'analyse de la variance dans Statistical Methods, fondée sur la variance
+          d'échantillon.
+        zh: >-
+          费雪在《统计方法》中发表方差分析，其基础正是样本方差。
+        ja: >-
+          フィッシャーが『統計的方法』で分散分析を発表する。その基盤は標本分散である。
+    - year: Hoy
+      label:
+        es: >-
+          Toda hoja de cálculo y software estadístico la calcula con un clic, de los tests t al
+          machine learning.
+        en: >-
+          Every spreadsheet and statistics package computes it in one click, from t-tests to machine
+          learning.
+        pt: >-
+          Toda planilha e software estatístico a calcula com um clique, dos testes t ao machine
+          learning.
+        fr: >-
+          Chaque tableur et logiciel statistique la calcule en un clic, des tests t au machine
+          learning.
+        zh: >-
+          从t检验到机器学习，每款电子表格和统计软件都能一键计算它。
+        ja: >-
+          t検定から機械学習まで、あらゆる表計算ソフトや統計ソフトウェアがワンクリックで計算する。
+  useCases:
+    - title:
+        es: Control de calidad
+        en: Quality control
+        pt: Controle de qualidade
+        fr: Contrôle qualité
+        zh: 质量控制
+        ja: 品質管理
+      description:
+        es: >-
+          Monitorea la variación de un proceso de fabricación y detecta cuándo se sale de tolerancia.
+        en: >-
+          It monitors the variation of a manufacturing process and flags when it drifts out of
+          tolerance.
+        pt: >-
+          Monitora a variação de um processo de fabricação e sinaliza quando sai da tolerância.
+        fr: >-
+          Elle surveille la variation d'un processus de fabrication et signale toute dérive hors
+          tolérance.
+        zh: >-
+          监测制造过程的变异，并标记何时超出公差范围。
+        ja: >-
+          製造工程のばらつきを監視し、許容範囲を外れたときに警告する。
+    - title:
+        es: Finanzas
+        en: Finance
+        pt: Finanças
+        fr: Finance
+        zh: 金融
+        ja: 金融
+      description:
+        es: >-
+          La varianza de un activo estima su volatilidad y, con ella, el riesgo de una inversión.
+        en: >-
+          An asset's variance estimates its volatility and, with it, the risk of an investment.
+        pt: >-
+          A variância de um ativo estima sua volatilidade e, com ela, o risco de um investimento.
+        fr: >-
+          La variance d'un actif estime sa volatilité et, avec elle, le risque d'un investissement.
+        zh: >-
+          资产的方差用于估算其波动率，进而评估投资风险。
+        ja: >-
+          資産の分散はそのボラティリティを推定し、それによって投資リスクを測る。
+    - title:
+        es: Ciencia de datos
+        en: Data science
+        pt: Ciência de dados
+        fr: Science des données
+        zh: 数据科学
+        ja: データサイエンス
+      description:
+        es: >-
+          La dispersión de cada característica se evalúa con la varianza muestral antes de entrenar
+          modelos.
+        en: >-
+          The spread of each feature is assessed with the sample variance before training models.
+        pt: >-
+          A dispersão de cada característica é avaliada com a variância amostral antes de treinar
+          modelos.
+        fr: >-
+          La dispersion de chaque variable est évaluée avec la variance d'échantillon avant
+          d'entraîner des modèles.
+        zh: >-
+          在训练模型之前，用样本方差评估每个特征的离散程度。
+        ja: >-
+          モデルを学習させる前に、各特徴量の散らばりを標本分散で評価する。
+    - title:
+        es: Investigación en salud
+        en: Health research
+        pt: Pesquisa em saúde
+        fr: Recherche en santé
+        zh: 健康研究
+        ja: 健康研究
+      description:
+        es: >-
+          Estima la variabilidad de una medición en un grupo pequeño de pacientes.
+        en: >-
+          It estimates the variability of a measurement in a small group of patients.
+        pt: >-
+          Estima a variabilidade de uma medição em um pequeno grupo de pacientes.
+        fr: >-
+          Elle estime la variabilité d'une mesure dans un petit groupe de patients.
+        zh: >-
+          估算小规模患者群体中某项测量的变异程度。
+        ja: >-
+          少数の患者集団における測定値のばらつきを推定する。
+  example:
+    title:
+      es: Varianza de ocho calificaciones
+      en: Sample variance of eight scores
+      pt: Variância amostral de oito notas
+      fr: Variance d'échantillon de huit notes
+      zh: 八个分数的样本方差
+      ja: 8つの点数の標本分散
+    lines:
+      - es: "Datos: 2, 4, 4, 4, 5, 5, 7, 9"
+        en: "Data: 2, 4, 4, 4, 5, 5, 7, 9"
+        pt: "Dados: 2, 4, 4, 4, 5, 5, 7, 9"
+        fr: "Données : 2, 4, 4, 4, 5, 5, 7, 9"
+        zh: "数据：2, 4, 4, 4, 5, 5, 7, 9"
+        ja: "データ：2, 4, 4, 4, 5, 5, 7, 9"
+      - es: "n = 8; media x̄ = 40/8 = 5"
+        en: "n = 8; mean x̄ = 40/8 = 5"
+        pt: "n = 8; média x̄ = 40/8 = 5"
+        fr: "n = 8 ; moyenne x̄ = 40/8 = 5"
+        zh: "n = 8；均值 x̄ = 40/8 = 5"
+        ja: "n = 8；平均 x̄ = 40/8 = 5"
+      - es: Σ(x−x̄)² = 9+1+1+1+0+0+4+16 = 32
+        en: Σ(x−x̄)² = 9+1+1+1+0+0+4+16 = 32
+        pt: Σ(x−x̄)² = 9+1+1+1+0+0+4+16 = 32
+        fr: Σ(x−x̄)² = 9+1+1+1+0+0+4+16 = 32
+        zh: Σ(x−x̄)² = 9+1+1+1+0+0+4+16 = 32
+        ja: Σ(x−x̄)² = 9+1+1+1+0+0+4+16 = 32
+      - es: s² = 32/(8−1)
+        en: s² = 32/(8−1)
+        pt: s² = 32/(8−1)
+        fr: s² = 32/(8−1)
+        zh: s² = 32/(8−1)
+        ja: s² = 32/(8−1)
+      - es: s² = 32/7
+        en: s² = 32/7
+        pt: s² = 32/7
+        fr: s² = 32/7
+        zh: s² = 32/7
+        ja: s² = 32/7
+      - es: s² ≈ 4.57
+        en: s² ≈ 4.57
+        pt: s² ≈ 4,57
+        fr: s² ≈ 4,57
+        zh: s² ≈ 4.57
+        ja: s² ≈ 4.57

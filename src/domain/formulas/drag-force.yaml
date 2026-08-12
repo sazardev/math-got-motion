@@ -1,0 +1,406 @@
+id: drag-force
+title:
+  es: Fuerza de Arrastre
+  en: Drag Force
+  pt: Força de Arrasto
+  fr: Force de traînée
+  zh: 阻力
+  ja: 抗力
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: "La fuerza de arrastre: la resistencia que el fluido opone al movimiento del cuerpo."
+      en: "The drag force: the resistance the fluid opposes to the body's motion."
+      pt: "A força de arrasto: a resistência que o fluido opõe ao movimento do corpo."
+      fr: "La force de traînée : la résistance que le fluide oppose au mouvement du corps."
+      zh: "阻力：流体阻碍物体运动的力。"
+      ja: 抗力。流体が物体の運動に抵抗する力。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: half
+    type: number
+    value: "½"
+    explanation:
+      es: "Un medio: el factor que surge de la presión dinámica del fluido."
+      en: "One half: the factor that arises from the fluid's dynamic pressure."
+      pt: "Um meio: o fator que surge da pressão dinâmica do fluido."
+      fr: "Un demi : le facteur issu de la pression dynamique du fluide."
+      zh: "二分之一：来自流体动压的系数。"
+      ja: 2分の1。流体の動圧から生じる係数。
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: rho
+    type: variable
+    value: ρ
+    explanation:
+      es: "La densidad del fluido: 1.225 kg/m³ para el aire a nivel del mar."
+      en: "The density of the fluid: 1.225 kg/m³ for air at sea level."
+      pt: "A densidade do fluido: 1,225 kg/m³ para o ar ao nível do mar."
+      fr: "La masse volumique du fluide : 1,225 kg/m³ pour l'air au niveau de la mer."
+      zh: "流体的密度：海平面空气约为1.225千克/米³。"
+      ja: 流体の密度。海面の空気では約1.225 kg/m³。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La velocidad relativa entre el cuerpo y el fluido.
+      en: The relative velocity between the body and the fluid.
+      pt: A velocidade relativa entre o corpo e o fluido.
+      fr: La vitesse relative entre le corps et le fluide.
+      zh: 物体与流体之间的相对速度。
+      ja: 物体と流体の相対速度。
+  - id: v-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Al cuadrado: duplicar la velocidad cuadruplica la fuerza de arrastre."
+      en: "Squared: doubling the velocity quadruples the drag force."
+      pt: "Ao quadrado: dobrar a velocidade quadruplica a força de arrasto."
+      fr: "Au carré : doubler la vitesse quadruple la force de traînée."
+      zh: "平方：速度加倍，阻力增至四倍。"
+      ja: 二乗。速度を2倍にすると抗力は4倍になる。
+  - id: dot-3
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: cd
+    type: constant
+    value: Cd
+    explanation:
+      es: "El coeficiente de arrastre: un número sin unidades que depende de la forma del cuerpo."
+      en: "The drag coefficient: a dimensionless number that depends on the body's shape."
+      pt: "O coeficiente de arrasto: um número adimensional que depende da forma do corpo."
+      fr: "Le coefficient de traînée : un nombre sans dimension qui dépend de la forme du corps."
+      zh: "阻力系数：一个无单位、取决于物体形状的数。"
+      ja: 抗力係数。物体の形状に依存する無次元の数。
+  - id: dot-4
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: "El área frontal: la sección transversal que el cuerpo presenta al flujo."
+      en: "The frontal area: the cross-section the body presents to the flow."
+      pt: "A área frontal: a seção transversal que o corpo apresenta ao fluxo."
+      fr: "La surface frontale : la section transversale que le corps présente à l'écoulement."
+      zh: "迎风面积：物体面向气流的横截面积。"
+      ja: 前面投影面積。物体が流れに向ける断面積。
+context:
+  author:
+    es: Basada en el trabajo de Newton y Lord Rayleigh
+    en: Based on the work of Newton and Lord Rayleigh
+    pt: Baseada no trabalho de Newton e Lord Rayleigh
+    fr: Fondée sur les travaux de Newton et de Lord Rayleigh
+    zh: 基于牛顿和瑞利勋爵的研究
+    ja: ニュートンとレイリー卿の研究に基づく
+  era:
+    es: Europa, s. XVIII–XIX
+    en: Europe, 18th–19th century
+    pt: Europa, s. XVIII–XIX
+    fr: Europe, XVIIIe–XIXe siècle
+    zh: 欧洲，18–19世纪
+    ja: ヨーロッパ、18〜19世紀
+  history:
+    es: >-
+      Newton ya estudió la resistencia del aire en los Principia, proponiendo una fuerza proporcional
+      al cuadrado de la velocidad, y en el siglo XVIII Jean le Rond d'Alembert señaló su naturaleza
+      paradójica. Fue Lord Rayleigh quien en 1876 dio su forma moderna al introducir el coeficiente de
+      arrastre Cd, que resume cómo la forma del cuerpo modifica la resistencia. Como la fuerza crece
+      con el cuadrado de la velocidad, el consumo de combustible de un auto se dispara en autopista: a
+      120 km/h la resistencia es casi el doble que a 85 km/h. Es la base de la aerodinámica de autos y
+      aviones, del diseño de fuselajes y de la optimización del consumo.
+    en: >-
+      Newton already studied air resistance in the Principia, proposing a force proportional to the
+      square of velocity, and in the 18th century Jean le Rond d'Alembert pointed out its paradoxical
+      nature. It was Lord Rayleigh who gave it its modern form in 1876 by introducing the drag
+      coefficient Cd, which summarizes how a body's shape alters the resistance. Since the force grows
+      with the square of speed, a car's fuel consumption soars on the highway: at 120 km/h the drag is
+      nearly double that at 85 km/h. It underlies the aerodynamics of cars and planes, the shaping of
+      fuselages, and the optimization of fuel economy.
+    pt: >-
+      Newton já havia estudado a resistência do ar nos Principia, propondo uma força proporcional ao
+      quadrado da velocidade, e no século XVIII Jean le Rond d'Alembert apontou sua natureza
+      paradoxal. Foi Lord Rayleigh quem deu a ela sua forma moderna em 1876, ao introduzir o
+      coeficiente de arrasto Cd, que resume como a forma do corpo modifica a resistência. Como a força
+      cresce com o quadrado da velocidade, o consumo de combustível de um carro dispara na rodovia: a
+      120 km/h o arrasto é quase o dobro do que a 85 km/h. É a base da aerodinâmica de carros e aviões,
+      do desenho das fuselagens e da otimização do consumo.
+    fr: >-
+      Newton avait déjà étudié la résistance de l'air dans les Principia, proposant une force
+      proportionnelle au carré de la vitesse, et au XVIIIe siècle Jean le Rond d'Alembert en souligna
+      le caractère paradoxal. C'est Lord Rayleigh qui lui donna sa forme moderne en 1876 en introduisant
+      le coefficient de traînée Cd, qui résume comment la forme du corps modifie la résistance. Comme la
+      force croît avec le carré de la vitesse, la consommation de carburant d'une voiture s'envole sur
+      autoroute : à 120 km/h la traînée est presque le double de celle à 85 km/h. Elle est à la base de
+      l'aérodynamique des voitures et des avions, du profilage des fuselages et de l'optimisation de la
+      consommation.
+    zh: >-
+      牛顿在《自然哲学的数学原理》中已研究过空气阻力，提出了阻力与速度平方成正比的设想；18世纪，让·勒朗·达朗贝尔
+      指出了其自相矛盾之处。1876年，瑞利勋爵引入了阻力系数Cd，赋予该定律现代形式——该系数概括了物体形状如何改变阻力。
+      由于阻力随速度的平方增长，汽车在高速公路上油耗会激增：时速120公里时的阻力几乎是85公里时的两倍。它构成了汽车与
+      飞机空气动力学、机身外形设计以及油耗优化的基础。
+    ja: >-
+      ニュートンは『プリンキピア』で空気抵抗をすでに研究し、速度の二乗に比例する力を提案していた。18世紀にはジャン・
+      ル・ロン・ダランベールがその逆説的な性質を指摘した。現代的な形を与えたのはレイリー卿で、1876年に物体の形状が
+      抵抗をどう変えるかを集約した抗力係数Cdを導入した。抗力は速度の二乗に比例するため、高速道路では燃費が急落する。
+      時速120kmでの抗力は時速85kmのほぼ2倍である。これは自動車や飛行機の空気力学、機体の形状設計、燃費最適化の基礎と
+      なっている。
+  timeline:
+    - year: "1687"
+      label:
+        es: >-
+          Newton analiza en los Principia la resistencia del aire y propone una fuerza proporcional al
+          cuadrado de la velocidad.
+        en: >-
+          Newton analyzes air resistance in the Principia and proposes a force proportional to the
+          square of velocity.
+        pt: >-
+          Newton analisa nos Principia a resistência do ar e propõe uma força proporcional ao quadrado
+          da velocidade.
+        fr: >-
+          Newton analyse dans les Principia la résistance de l'air et propose une force proportionnelle
+          au carré de la vitesse.
+        zh: >-
+          牛顿在《自然哲学的数学原理》中分析了空气阻力，提出阻力与速度的平方成正比。
+        ja: >-
+          ニュートンが『プリンキピア』で空気抵抗を分析し、速度の二乗に比例する力を提唱する。
+    - year: "1876"
+      label:
+        es: >-
+          Lord Rayleigh introduce el coeficiente de arrastre Cd, dando a la ecuación su forma moderna.
+        en: >-
+          Lord Rayleigh introduces the drag coefficient Cd, giving the equation its modern form.
+        pt: >-
+          Lord Rayleigh introduz o coeficiente de arrasto Cd, dando à equação sua forma moderna.
+        fr: >-
+          Lord Rayleigh introduit le coefficient de traînée Cd, donnant à l'équation sa forme moderne.
+        zh: >-
+          瑞利勋爵引入阻力系数Cd，使该方程有了现代形式。
+        ja: >-
+          レイリー卿が抗力係数Cdを導入し、方程式に現代的な形を与える。
+    - year: "1903"
+      label:
+        es: >-
+          Los hermanos Wright logran el primer vuelo motorizado aplicando principios aerodinámicos
+          basados en la resistencia.
+        en: >-
+          The Wright brothers achieve the first powered flight applying aerodynamic principles grounded
+          in drag.
+        pt: >-
+          Os irmãos Wright realizam o primeiro voo motorizado aplicando princípios aerodinâmicos
+          baseados no arrasto.
+        fr: >-
+          Les frères Wright réussissent le premier vol motorisé en appliquant des principes
+          aérodynamiques fondés sur la traînée.
+        zh: >-
+          莱特兄弟应用基于阻力的空气动力学原理，完成了首次动力飞行。
+        ja: >-
+          ライト兄弟が、抗力に基づく空気力学の原理を応用して初の動力飛行を成功させる。
+    - year: Hoy
+      label:
+        es: >-
+          La dinámica de fluidos computacional simula la forma de autos y aviones para minimizar el
+          arrastre.
+        en: >-
+          Computational fluid dynamics simulates the shapes of cars and planes to minimize drag.
+        pt: >-
+          A dinâmica de fluidos computacional simula a forma de carros e aviões para minimizar o
+          arrasto.
+        fr: >-
+          La dynamique des fluides numérique simule les formes des voitures et des avions pour
+          minimiser la traînée.
+        zh: >-
+          计算流体力学对汽车和飞机的外形进行仿真，以尽量减小阻力。
+        ja: >-
+          数値流体力学が自動車や飛行機の形状をシミュレーションし、抗力を最小化する。
+  useCases:
+    - title:
+        es: Aerodinámica automotriz
+        en: Automotive aerodynamics
+        pt: Aerodinâmica automotiva
+        fr: Aérodynamique automobile
+        zh: 汽车空气动力学
+        ja: 自動車の空気力学
+      description:
+        es: >-
+          Reducir el coeficiente de arrastre de un auto baja el consumo en autopista, donde la
+          resistencia crece con el cuadrado de la velocidad.
+        en: >-
+          Lowering a car's drag coefficient cuts highway fuel consumption, where resistance grows with
+          the square of speed.
+        pt: >-
+          Reduzir o coeficiente de arrasto de um carro diminui o consumo na rodovia, onde a resistência
+          cresce com o quadrado da velocidade.
+        fr: >-
+          Réduire le coefficient de traînée d'une voiture baisse la consommation sur autoroute, où la
+          résistance croît avec le carré de la vitesse.
+        zh: >-
+          降低汽车的阻力系数可以节省高速油耗，因为在高速下阻力随速度的平方增长。
+        ja: >-
+          自動車の抗力係数を下げると、抗力が速度の二乗で増える高速道路での燃費が改善する。
+    - title:
+        es: Aviación
+        en: Aviation
+        pt: Aviação
+        fr: Aviation
+        zh: 航空
+        ja: 航空
+      description:
+        es: >-
+          El diseño de alas y fuselajes busca minimizar la tracción para lograr un vuelo eficiente y
+          ahorrar combustible.
+        en: >-
+          The design of wings and fuselages seeks to minimize drag for efficient flight and fuel
+          savings.
+        pt: >-
+          O projeto de asas e fuselagens busca minimizar o arrasto para um voo eficiente e economia de
+          combustível.
+        fr: >-
+          La conception des ailes et des fuselages cherche à minimiser la traînée pour un vol efficace
+          et des économies de carburant.
+        zh: >-
+          机翼与机身的设计力求减小阻力，以实现高效飞行并节省燃油。
+        ja: >-
+          主翼や機体の設計は抗力を最小化し、効率的な飛行と燃料節約を目指す。
+    - title:
+        es: Ciclismo y deportes
+        en: Cycling and sports
+        pt: Ciclismo e esportes
+        fr: Cyclisme et sports
+        zh: 自行车与运动
+        ja: 自転車とスポーツ
+      description:
+        es: >-
+          La posición agazapada y los cascos aerodinámicos reducen el área frontal y, con ella, la
+          fuerza de arrastre.
+        en: >-
+          Tucked positions and aerodynamic helmets reduce the frontal area and, with it, the drag
+          force.
+        pt: >-
+          A posição agachada e os capacetes aerodinâmicos reduzem a área frontal e, com ela, a força de
+          arrasto.
+        fr: >-
+          La position repliée et les casques aérodynamiques réduisent la surface frontale et, avec
+          elle, la force de traînée.
+        zh: >-
+          压低身体的骑行姿势和流线型头盔都能减小迎风面积，从而减小阻力。
+        ja: >-
+          体を沈める姿勢やエアロダイナミクス型ヘルメットは前面投影面積を減らし、それに伴い抗力も減らす。
+    - title:
+        es: Energía eólica y navegación
+        en: Wind energy and sailing
+        pt: Energia eólica e navegação
+        fr: Énergie éolienne et navigation
+        zh: 风能与航海
+        ja: 風力エネルギーと帆走
+      description:
+        es: >-
+          Las palas de las turbinas y las velas aprovechan la misma relación entre velocidad del viento
+          y fuerza para generar potencia.
+        en: >-
+          Turbine blades and sails exploit the same relation between wind speed and force to generate
+          power.
+        pt: >-
+          As pás das turbinas e as velas aproveitam a mesma relação entre velocidade do vento e força
+          para gerar potência.
+        fr: >-
+          Les pales des éoliennes et les voiles exploitent la même relation entre vitesse du vent et
+          force pour produire de la puissance.
+        zh: >-
+          涡轮叶片与船帆利用风力和速度之间的同一关系来产生动力。
+        ja: >-
+          タービンのブレードや帆は、風速と力の同じ関係を利用して動力を生み出している。
+  example:
+    title:
+      es: Arrastre sobre un auto
+      en: Drag on a car
+      pt: Arrasto sobre um carro
+      fr: Traînée sur une voiture
+      zh: 汽车所受的阻力
+      ja: 自動車にはたらく抗力
+    lines:
+      - es: ρ = 1.225 kg/m³, v = 30 m/s
+        en: ρ = 1.225 kg/m³, v = 30 m/s
+        pt: ρ = 1,225 kg/m³, v = 30 m/s
+        fr: ρ = 1,225 kg/m³, v = 30 m/s
+        zh: ρ = 1.225 kg/m³, v = 30 m/s
+        ja: ρ = 1.225 kg/m³, v = 30 m/s
+      - es: Cd = 0.3, A = 2 m²
+        en: Cd = 0.3, A = 2 m²
+        pt: Cd = 0,3, A = 2 m²
+        fr: Cd = 0,3, A = 2 m²
+        zh: Cd = 0.3, A = 2 m²
+        ja: Cd = 0.3, A = 2 m²
+      - es: F = ½ · ρ · v² · Cd · A
+        en: F = ½ · ρ · v² · Cd · A
+        pt: F = ½ · ρ · v² · Cd · A
+        fr: F = ½ · ρ · v² · Cd · A
+        zh: F = ½ · ρ · v² · Cd · A
+        ja: F = ½ · ρ · v² · Cd · A
+      - es: F = ½ × 1.225 × 900 × 0.3 × 2
+        en: F = ½ × 1.225 × 900 × 0.3 × 2
+        pt: F = ½ × 1,225 × 900 × 0,3 × 2
+        fr: F = ½ × 1,225 × 900 × 0,3 × 2
+        zh: F = ½ × 1.225 × 900 × 0.3 × 2
+        ja: F = ½ × 1.225 × 900 × 0.3 × 2
+      - es: F = 0.5 × 1.225 × 900 × 0.6
+        en: F = 0.5 × 1.225 × 900 × 0.6
+        pt: F = 0,5 × 1,225 × 900 × 0,6
+        fr: F = 0,5 × 1,225 × 900 × 0,6
+        zh: F = 0.5 × 1.225 × 900 × 0.6
+        ja: F = 0.5 × 1.225 × 900 × 0.6
+      - es: F ≈ 330.75 N
+        en: F ≈ 330.75 N
+        pt: F ≈ 330,75 N
+        fr: F ≈ 330,75 N
+        zh: F ≈ 330.75 N
+        ja: F ≈ 330.75 N

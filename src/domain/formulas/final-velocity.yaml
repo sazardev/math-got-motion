@@ -1,0 +1,386 @@
+id: final-velocity
+title:
+  es: Velocidad Final sin Tiempo
+  en: Final Velocity (No Time)
+  pt: Velocidade Final sem Tempo
+  fr: Vitesse Finale sans Temps
+  zh: 不含时间的末速度
+  ja: 時間を含まない最終速度
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La velocidad final del cuerpo, la que tiene al terminar el movimiento.
+      en: The body's final velocity, the one it has when the motion ends.
+      pt: A velocidade final do corpo, a que ele tem ao terminar o movimento.
+      fr: La vitesse finale du corps, celle qu'il a à la fin du mouvement.
+      zh: 物体的末速度，即运动结束时具有的速度。
+      ja: 物体の最終速度。運動が終わったときの速度。
+  - id: v-squared
+    type: superscript
+    value: "2"
+    explanation:
+      es: Elevado al cuadrado, porque la velocidad se compara en términos de su cuadrado.
+      en: Squared, because velocity is compared in terms of its square.
+      pt: Elevado ao quadrado, pois a velocidade se compara em termos de seu quadrado.
+      fr: Au carré, car la vitesse se compare par son carré.
+      zh: 平方，因为速度是以其平方的形式相互比较的。
+      ja: 二乗。速度はその二乗の形で比較される。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: v0
+    type: variable
+    value: v₀
+    explanation:
+      es: La velocidad inicial, con la que el objeto empezó a moverse.
+      en: The initial speed, with which the object started moving.
+      pt: A velocidade inicial, com a qual o objeto começou a se mover.
+      fr: La vitesse initiale, avec laquelle l'objet a commencé à se déplacer.
+      zh: 初速度,即物体开始运动时的速度。
+      ja: 初速度。物体が動き始めたときの速度。
+  - id: v0-squared
+    type: superscript
+    value: "2"
+    explanation:
+      es: La velocidad inicial elevada al cuadrado.
+      en: The initial velocity, squared.
+      pt: A velocidade inicial elevada ao quadrado.
+      fr: La vitesse initiale au carré.
+      zh: 初速度的平方。
+      ja: 初速度の二乗。
+  - id: plus
+    type: operator
+    value: "+"
+    explanation:
+      es: La suma de la velocidad inicial y la ganada por la aceleración.
+      en: The sum of the initial speed and the speed gained from acceleration.
+      pt: A soma da velocidade inicial com a velocidade ganha pela aceleração.
+      fr: La somme de la vitesse initiale et de la vitesse gagnée par l'accélération.
+      zh: 初速度与加速获得的速度之和。
+      ja: 初速度と加速度で得た速度の和。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: El factor dos, resultado de eliminar el tiempo entre las dos ecuaciones del movimiento.
+      en: The factor two, from eliminating time between the two equations of motion.
+      pt: O fator dois, resultado de eliminar o tempo entre as duas equações do movimento.
+      fr: Le facteur deux, issu de l'élimination du temps entre les deux équations du mouvement.
+      zh: 因数2，由两条运动方程联立消去时间所得。
+      ja: 係数の2。二つの運動方程式から時間を消去して得られる。
+  - id: dot-a
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por la aceleración.
+      en: Multiplied by the acceleration.
+      pt: Multiplicado pela aceleração.
+      fr: Multiplié par l'accélération.
+      zh: 乘以加速度。
+      ja: 加速度を掛ける。
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: La aceleración constante, el cambio de velocidad por cada segundo.
+      en: The constant acceleration, the change in speed each second.
+      pt: A aceleração constante, a variação de velocidade a cada segundo.
+      fr: L'accélération constante, le changement de vitesse à chaque seconde.
+      zh: 恒定的加速度,即每秒速度的变化量。
+      ja: 一定の加速度。毎秒あたりの速度の変化量。
+  - id: dot-dx
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por el desplazamiento.
+      en: Multiplied by the displacement.
+      pt: Multiplicado pelo deslocamento.
+      fr: Multiplié par le déplacement.
+      zh: 乘以位移。
+      ja: 変位を掛ける。
+  - id: dx
+    type: variable
+    value: Δx
+    explanation:
+      es: El desplazamiento, la distancia total recorrida en la dirección del movimiento.
+      en: The displacement, the total distance traveled in the direction of motion.
+      pt: O deslocamento, a distância total percorrida na direção do movimento.
+      fr: Le déplacement, la distance totale parcourue dans la direction du mouvement.
+      zh: 位移,即沿运动方向通过的总距离。
+      ja: 変位。運動の方向に進んだ距離の合計。
+context:
+  author:
+    es: Galileo Galilei
+    en: Galileo Galilei
+    pt: Galileu Galilei
+    fr: Galilée
+    zh: 伽利略·伽利莱
+    ja: ガリレオ・ガリレイ
+  era:
+    es: Italia, 1564–1642 · en los Discorsi, 1638
+    en: Italy, 1564–1642 · in the Discorsi, 1638
+    pt: Itália, 1564–1642 · nos Discorsi, 1638
+    fr: Italie, 1564–1642 · dans les Discorsi, 1638
+    zh: 意大利,1564–1642年 · 载于《关于两门新科学的对话》,1638年
+    ja: イタリア、1564–1642年・『新科学対話』、1638年
+  history:
+    es: >-
+      Esta relación del movimiento uniformemente acelerado nace al combinar v = v₀ + a·t con la
+      ecuación del desplazamiento y eliminar el tiempo. Su forma, atribuida a Galileo por sus
+      estudios de caída en los Discorsi (1638), expresa la velocidad final sin depender de cuánto
+      dura el movimiento. Es la herramienta más rápida para el análisis de choques y de la
+      distancia de frenado, y los peritos la usan para reconstruir colisiones a partir de las
+      marcas que los vehículos dejan en el asfalto.
+    en: >-
+      This relation of uniformly accelerated motion is born by combining v = v₀ + a·t with the
+      displacement equation and eliminating time. Its form, credited to Galileo from his
+      falling-body studies in the Discorsi (1638), gives the final velocity without depending on
+      how long the motion lasts. It is the quickest tool for crash analysis and braking distance,
+      and investigators use it to reconstruct collisions from the marks vehicles leave on the
+      asphalt.
+    pt: >-
+      Essa relação do movimento uniformemente acelerado nasce ao combinar v = v₀ + a·t com a
+      equação do deslocamento e eliminar o tempo. Sua forma, atribuída a Galileu por seus estudos
+      de queda nos Discorsi (1638), dá a velocidade final sem depender de quanto tempo dura o
+      movimento. É a ferramenta mais rápida para análise de colisões e de distância de frenagem,
+      e os peritos a usam para reconstruir acidentes a partir das marcas que os veículos deixam
+      no asfalto.
+    fr: >-
+      Cette relation du mouvement uniformément accéléré naît en combinant v = v₀ + a·t avec
+      l'équation du déplacement et en éliminant le temps. Sa forme, attribuée à Galilée d'après
+      ses études de chute dans les Discorsi (1638), donne la vitesse finale sans dépendre de la
+      durée du mouvement. C'est l'outil le plus rapide pour l'analyse des chocs et de la distance
+      de freinage, et les experts s'en servent pour reconstruire les collisions à partir des
+      traces que les véhicules laissent sur l'asphalte.
+    zh: >-
+      这条匀加速运动的关系式由 v = v₀ + a·t 与位移方程合并、消去时间而得。其形式归于伽利略，
+      源自《关于两门新科学的对话》(1638)中他对落体的研究，可以在不依赖运动时长的情况下给出末速度。
+      这是碰撞分析和制动距离计算最快捷的工具，调查人员常依据车辆在路面上留下的痕迹用它重建碰撞过程。
+    ja: >-
+      この等加速度運動の関係式は、v = v₀ + a·tと変位の式を組み合わせて時間を消去することで生まれる。
+      その形は『新科学対話』(1638年)における落下の研究に基づきガリレオに帰され、運動の長さに依存せずに
+      最終速度を求める。衝突解析や制動距離の計算で最も手早い道具であり、調査員は車両が路面に残した痕跡から
+      衝突を再現するのにこれを利用する。
+  timeline:
+    - year: "1604"
+      label:
+        es: >-
+          Galileo formula la ley de la aceleración uniforme a partir de experimentos con planos
+          inclinados.
+        en: >-
+          Galileo formulates the law of uniform acceleration from experiments with inclined
+          planes.
+        pt: >-
+          Galileu formula a lei da aceleração uniforme a partir de experimentos com planos
+          inclinados.
+        fr: >-
+          Galilée formule la loi de l'accélération uniforme à partir d'expériences avec des plans
+          inclinés.
+        zh: >-
+          伽利略通过斜面实验,提出了匀加速运动的定律。
+        ja: >-
+          ガリレオが斜面の実験から等加速度運動の法則を定式化する。
+    - year: "1638"
+      label:
+        es: >-
+          Se publican los Discorsi en Leiden, donde aparece el estudio del movimiento acelerado.
+        en: >-
+          The Discorsi are published in Leiden, presenting the study of accelerated motion.
+        pt: >-
+          Os Discorsi são publicados em Leiden, apresentando o estudo do movimento acelerado.
+        fr: >-
+          Les Discorsi sont publiés à Leyde, présentant l'étude du mouvement accéléré.
+        zh: >-
+          《关于两门新科学的对话》在莱顿出版,呈现了对加速运动的研究。
+        ja: >-
+          『新科学対話』がライデンで出版され、加速運動の研究が示される。
+    - year: s. XX
+      label:
+        es: >-
+          La reconstrucción de accidentes adopta la ecuación para estimar velocidades a partir de
+          las marcas de frenado.
+        en: >-
+          Crash reconstruction adopts the equation to estimate speeds from skid marks.
+        pt: >-
+          A reconstrução de acidentes adota a equação para estimar velocidades a partir das marcas
+          de frenagem.
+        fr: >-
+          La reconstruction d'accidents adopte l'équation pour estimer les vitesses à partir des
+          traces de freinage.
+        zh: >-
+          事故重建开始用这个方程,根据刹车痕迹估算车速。
+        ja: >-
+          事故調査がこの式を採用し、スキッドマークから速度を推定するようになる。
+    - year: Hoy
+      label:
+        es: >-
+          Todo software de reconstrucción de colisiones y de análisis de frenado la resuelve de
+          forma automática.
+        en: >-
+          Every collision-reconstruction and braking-analysis software solves it automatically.
+        pt: >-
+          Todo software de reconstrução de colisões e de análise de frenagem a resolve
+          automaticamente.
+        fr: >-
+          Tout logiciel de reconstruction de collisions et d'analyse du freinage la résout
+          automatiquement.
+        zh: >-
+          一切碰撞重建与制动分析软件都会自动求解该方程。
+        ja: >-
+          衝突再現や制動解析のソフトウェアはすべて、これを自動的に解く。
+  useCases:
+    - title:
+        es: Reconstrucción de accidentes
+        en: Crash reconstruction
+        pt: Reconstrução de acidentes
+        fr: Reconstruction d'accidents
+        zh: 事故重建
+        ja: 事故調査・再現
+      description:
+        es: >-
+          A partir de las marcas de frenado en el asfalto, los peritos estiman la velocidad previa
+          al choque despejando v de la fórmula.
+        en: >-
+          From the skid marks on the asphalt, investigators estimate the pre-crash speed by solving
+          the formula for v.
+        pt: >-
+          A partir das marcas de frenagem no asfalto, os peritos estimam a velocidade anterior ao
+          choque isolando v na fórmula.
+        fr: >-
+          À partir des traces de freinage sur l'asphalte, les experts estiment la vitesse avant le
+          choc en isolant v dans la formule.
+        zh: >-
+          调查人员根据路面刹车痕迹,将公式中的v解出来,从而估算碰撞前的速度。
+        ja: >-
+          アスファルトのスキッドマークから、調査員は公式をvについて解いて衝突前の速度を推定する。
+    - title:
+        es: Sistemas de frenado
+        en: Braking systems
+        pt: Sistemas de frenagem
+        fr: Systèmes de freinage
+        zh: 制动系统
+        ja: 制動システム
+      description:
+        es: >-
+          Los cálculos de distancia de frenado usan esta forma de la ecuación para evitar medir el
+          tiempo de frenado.
+        en: >-
+          Stopping-distance calculations use this form of the equation to avoid measuring braking
+          time.
+        pt: >-
+          Os cálculos de distância de frenagem usam essa forma da equação para evitar medir o
+          tempo de frenagem.
+        fr: >-
+          Les calculs de distance de freinage utilisent cette forme de l'équation pour éviter de
+          mesurer le temps de freinage.
+        zh: >-
+          制动距离的计算使用这种形式的方程,以避免测量制动时间。
+        ja: >-
+          制動距離の計算では、制動時間を測らずに済むこの形の式を使う。
+    - title:
+        es: Seguridad vial
+        en: Road safety
+        pt: Segurança viária
+        fr: Sécurité routière
+        zh: 道路安全
+        ja: 交通安全
+      description:
+        es: >-
+          Permite predecir qué velocidad máxima evita un impacto en tramos de visibilidad
+          limitada.
+        en: >-
+          It predicts the maximum speed that avoids an impact on stretches of limited visibility.
+        pt: >-
+          Permite prever a velocidade máxima que evita um impacto em trechos de visibilidade
+          limitada.
+        fr: >-
+          Elle permet de prédire la vitesse maximale qui évite un impact sur les tronçons à
+          visibilité limitée.
+        zh: >-
+          用于预测在能见度受限路段避免撞击的最大速度。
+        ja: >-
+          視界が限られる区間で衝突を避けられる最大速度を予測する。
+    - title:
+        es: Deportes de motor
+        en: Motorsports
+        pt: Esportes a motor
+        fr: Sports mécaniques
+        zh: 赛车运动
+        ja: モータースポーツ
+      description:
+        es: >-
+          Los ingenieros la usan para calcular la velocidad de entrada en una curva a partir de la
+          distancia de frenado disponible.
+        en: >-
+          Engineers use it to compute corner entry speed from the available braking distance.
+        pt: >-
+          Os engenheiros a usam para calcular a velocidade de entrada em uma curva a partir da
+          distância de frenagem disponível.
+        fr: >-
+          Les ingénieurs s'en servent pour calculer la vitesse d'entrée en virage à partir de la
+          distance de freinage disponible.
+        zh: >-
+          工程师根据可用的制动距离,用它计算入弯速度。
+        ja: >-
+          エンジニアは利用可能な制動距離からコーナー進入速度を計算するのにこれを使う。
+  example:
+    title:
+      es: Caída libre desde 10 metros
+      en: Free fall from 10 meters
+      pt: Queda livre de 10 metros
+      fr: Chute libre de 10 mètres
+      zh: 从10米高处自由下落
+      ja: 10メートルの自由落下
+    lines:
+      - es: v₀ = 0 m/s, a = 9.81 m/s², Δx = 10 m
+        en: v₀ = 0 m/s, a = 9.81 m/s², Δx = 10 m
+        pt: v₀ = 0 m/s, a = 9,81 m/s², Δx = 10 m
+        fr: v₀ = 0 m/s, a = 9,81 m/s², Δx = 10 m
+        zh: v₀ = 0 m/s, a = 9.81 m/s², Δx = 10 m
+        ja: v₀ = 0 m/s, a = 9.81 m/s², Δx = 10 m
+      - es: v² = v₀² + 2 · a · Δx
+        en: v² = v₀² + 2 · a · Δx
+        pt: v² = v₀² + 2 · a · Δx
+        fr: v² = v₀² + 2 · a · Δx
+        zh: v² = v₀² + 2 · a · Δx
+        ja: v² = v₀² + 2 · a · Δx
+      - es: v² = 0 + 2 × 9.81 × 10
+        en: v² = 0 + 2 × 9.81 × 10
+        pt: v² = 0 + 2 × 9,81 × 10
+        fr: v² = 0 + 2 × 9,81 × 10
+        zh: v² = 0 + 2 × 9.81 × 10
+        ja: v² = 0 + 2 × 9.81 × 10
+      - es: v² = 196.2
+        en: v² = 196.2
+        pt: v² = 196,2
+        fr: v² = 196,2
+        zh: v² = 196.2
+        ja: v² = 196.2
+      - es: v = √196.2 ≈ 14.0 m/s
+        en: v = √196.2 ≈ 14.0 m/s
+        pt: v = √196,2 ≈ 14,0 m/s
+        fr: v = √196,2 ≈ 14,0 m/s
+        zh: v = √196.2 ≈ 14.0 m/s
+        ja: v = √196.2 ≈ 14.0 m/s
+      - es: v ≈ 50 km/h
+        en: v ≈ 50 km/h
+        pt: v ≈ 50 km/h
+        fr: v ≈ 50 km/h
+        zh: v ≈ 50 千米/小时
+        ja: v ≈ 50 km/h

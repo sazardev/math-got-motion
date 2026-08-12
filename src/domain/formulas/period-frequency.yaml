@@ -1,0 +1,311 @@
+id: period-frequency
+title:
+  es: Periodo y Frecuencia
+  en: Period and Frequency
+  pt: Período e Frequência
+  fr: Période et fréquence
+  zh: 周期与频率
+  ja: 周期と周波数
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: t
+    type: variable
+    value: T
+    explanation:
+      es: "El período: el tiempo que dura un ciclo completo, en segundos."
+      en: "The period: how long one full cycle lasts, in seconds."
+      pt: "O período: o tempo que dura um ciclo completo, em segundos."
+      fr: "La période : la durée d'un cycle complet, en secondes."
+      zh: 周期：一个完整循环持续的时间，以秒为单位。
+      ja: 周期。1サイクルが続く時間。単位は秒。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: "El número 1: un solo ciclo, medido contra la frecuencia."
+      en: "The number 1: a single cycle, counted against the frequency."
+      pt: "O número 1: um único ciclo, contado contra a frequência."
+      fr: "Le nombre 1 : un seul cycle, compté face à la fréquence."
+      zh: "数字1：以频率衡量的一个循环。"
+      ja: "数字の1。周波数に対して数える1サイクル。"
+  - id: div
+    type: operator
+    value: /
+    explanation:
+      es: "Dividido por la frecuencia: el período es su inverso exacto."
+      en: "Divided by the frequency: the period is its exact inverse."
+      pt: "Dividido pela frequência: o período é seu inverso exato."
+      fr: "Divisé par la fréquence : la période est son inverse exact."
+      zh: "除以频率：周期是频率的精确倒数。"
+      ja: "周波数で割る。周期はそのちょうど逆数。"
+  - id: f
+    type: variable
+    value: f
+    explanation:
+      es: La frecuencia, cuántos ciclos completos ocurren por segundo, en hercios (Hz).
+      en: The frequency, how many full cycles occur per second, in hertz (Hz).
+      pt: A frequência, quantos ciclos completos ocorrem por segundo, em hertz (Hz).
+      fr: La fréquence, combien de cycles complets se produisent par seconde, en hertz (Hz).
+      zh: 频率，即每秒钟发生的完整周期数，单位为赫兹（Hz）。
+      ja: 周波数。1秒間に起きる完全な周期の数。単位はヘルツ（Hz）。
+context:
+  author:
+    es: Origen colectivo
+    en: Collective origin
+    pt: Origem coletiva
+    fr: Origine collective
+    zh: 集体起源
+    ja: 集団的起源
+  era:
+    es: Europa, s. XVIII–XIX
+    en: Europe, 18th–19th century
+    pt: Europa, séculos XVIII–XIX
+    fr: Europe, XVIIIe–XIXe siècle
+    zh: 欧洲，18–19世纪
+    ja: ヨーロッパ、18〜19世紀
+  history:
+    es: >-
+      El período y la frecuencia describen lo mismo desde dos extremos: el período T es el tiempo que
+      dura un ciclo, y la frecuencia f cuántos ciclos ocurren por segundo; uno es exactamente el inverso
+      del otro. El péndulo de un segundo — cuya oscilación dura 1 s y marca un "tic" cada segundo — hizo
+      tangible esta relación en los relojes del siglo XVII, y las ondas y la corriente alterna la
+      generalizaron en el XIX. El mismo vínculo gobierna todo lo periódico, desde los latidos del corazón
+      y las notas musicales hasta las ondas de radio, porque medir el período equivale a medir la
+      frecuencia.
+    en: >-
+      Period and frequency describe the same thing from opposite ends: the period T is how long one cycle
+      lasts, and the frequency f how many cycles occur per second; one is exactly the inverse of the
+      other. The seconds pendulum — whose swing lasts 1 s and ticks once each second — made this
+      relationship tangible in the clocks of the 17th century, and waves and alternating current
+      generalized it in the 19th. The same link governs everything periodic, from heartbeats and musical
+      notes to radio waves, because measuring the period is measuring the frequency.
+    pt: >-
+      Período e frequência descrevem a mesma coisa de extremos opostos: o período T é o tempo que dura um
+      ciclo, e a frequência f é quantos ciclos ocorrem por segundo; um é exatamente o inverso do outro. O
+      pêndulo de um segundo — cuja oscilação dura 1 s e bate um "tique" a cada segundo — tornou tangível
+      essa relação nos relógios do século XVII, e as ondas e a corrente alternada a generalizaram no
+      século XIX. O mesmo vínculo governa tudo que é periódico, dos batimentos cardíacos e notas musicais
+      às ondas de rádio, pois medir o período é o mesmo que medir a frequência.
+    fr: >-
+      Période et fréquence décrivent la même chose sous deux angles opposés : la période T est le temps
+      que dure un cycle, et la fréquence f le nombre de cycles par seconde ; l'une est exactement
+      l'inverse de l'autre. Le pendule à secondes — dont l'oscillation dure 1 s et bat « tic » à chaque
+      seconde — a rendu cette relation tangible dans les horloges du XVIIe siècle, et les ondes ainsi que
+      le courant alternatif l'ont généralisée au XIXe. Le même lien gouverne tout ce qui est périodique,
+      des battements du cœur et des notes de musique aux ondes radio, car mesurer la période revient à
+      mesurer la fréquence.
+    zh: >-
+      周期和频率从两个相反的方向描述同一件事：周期T是一个循环持续的时间，频率f是每秒发生的循环数；二者互为倒数。
+      一秒摆——摆动持续1秒、每秒钟发出一次"滴答"——在17世纪的钟表中使这一关系变得具体可感，而波动和交变电流在
+      19世纪将它推广开来。同样的联系支配着一切周期性现象，从心跳、音符到无线电波，因为测量周期就等于测量频率。
+    ja: >-
+      周期と周波数は、同じものを反対の側から表している。周期Tは1サイクルが続く時間、周波数fは1秒間に何サイクル
+      起こるかで、一方は他方のちょうど逆数である。1秒振り子（振れに1秒かかり、毎秒「チク」と刻む）は、17世紀の
+      時計でこの関係を具体的に示し、波と交流電流が19世紀にこれを一般化した。同じ関係は、心拍や音符から電波まで、
+      あらゆる周期的なものを支配する。周期を測ることは周波数を測ることと同じだからだ。
+  timeline:
+    - year: "1656"
+      label:
+        es: >-
+          Huygens construye el primer reloj de péndulo; un péndulo de un segundo marca 1 Hz mucho antes
+          de existir el término.
+        en: >-
+          Huygens builds the first pendulum clock; a seconds pendulum beats 1 Hz long before the term
+          exists.
+        pt: >-
+          Huygens constrói o primeiro relógio de pêndulo; um pêndulo de um segundo bate 1 Hz muito antes
+          de o termo existir.
+        fr: >-
+          Huygens construit la première horloge à pendule ; un pendule à secondes bat 1 Hz bien avant
+          que le terme n'existe.
+        zh: >-
+          惠更斯制造出第一台摆钟；一秒摆以1赫兹摆动，远早于该术语出现。
+        ja: >-
+          ホイヘンスが最初の振り子時計を製作。1秒振り子は、この用語が生まれるはるか前に1 Hzを刻んでいた。
+    - year: "1791"
+      label:
+        es: >-
+          La Academia Francesa propone el péndulo de un segundo como base para definir el metro.
+        en: >-
+          The French Academy proposes the seconds pendulum as a basis for defining the metre.
+        pt: >-
+          A Academia Francesa propõe o pêndulo de um segundo como base para definir o metro.
+        fr: >-
+          L'Académie française propose le pendule à secondes comme base pour définir le mètre.
+        zh: >-
+          法国科学院提议用一秒摆作为定义米的基础。
+        ja: >-
+          フランス科学アカデミーが、メートルを定義する基準として1秒振り子を提案する。
+    - year: "1888"
+      label:
+        es: >-
+          Heinrich Hertz demuestra las ondas electromagnéticas; su nombre pasará a la unidad de
+          frecuencia.
+        en: >-
+          Heinrich Hertz demonstrates electromagnetic waves; his name will go to the unit of frequency.
+        pt: >-
+          Heinrich Hertz demonstra as ondas eletromagnéticas; seu nome passará à unidade de frequência.
+        fr: >-
+          Heinrich Hertz démontre les ondes électromagnétiques ; son nom passera à l'unité de fréquence.
+        zh: >-
+          海因里希·赫兹证明电磁波的存在；他的名字将用于频率单位。
+        ja: >-
+          ハインリヒ・ヘルツが電磁波を実証。彼の名前は周波数の単位に冠されることになる。
+    - year: "1960"
+      label:
+        es: >-
+          El hercio (Hz) se adopta oficialmente como unidad de frecuencia del Sistema Internacional.
+        en: >-
+          The hertz (Hz) is officially adopted as the SI unit of frequency.
+        pt: >-
+          O hertz (Hz) é adotado oficialmente como unidade de frequência do Sistema Internacional.
+        fr: >-
+          Le hertz (Hz) est officiellement adopté comme unité de fréquence du Système international.
+        zh: >-
+          赫兹（Hz）被正式采纳为国际单位制的频率单位。
+        ja: >-
+          ヘルツ（Hz）が国際単位系の周波数の単位として正式に採用される。
+  useCases:
+    - title:
+        es: Red eléctrica
+        en: Mains power
+        pt: Rede elétrica
+        fr: Réseau électrique
+        zh: 电网
+        ja: 電力網
+      description:
+        es: >-
+          En la red de 50 o 60 Hz, el período define el parpadeo, la resonancia y la marcha de los
+          relojes eléctricos.
+        en: >-
+          On a 50 or 60 Hz grid, the period sets flicker, resonance, and how electric clocks keep time.
+        pt: >-
+          Na rede de 50 ou 60 Hz, o período define a oscilação, a ressonância e a marcha dos relógios
+          elétricos.
+        fr: >-
+          Sur un réseau à 50 ou 60 Hz, la période fixe le scintillement, la résonance et la marche des
+          horloges électriques.
+        zh: >-
+          在50或60赫兹的电网上，周期决定了闪烁、谐振以及电钟的走时。
+        ja: >-
+          50または60 Hzの電力網では、周期がちらつき、共振、電気時計の歩度を決める。
+    - title:
+        es: Medicina y salud
+        en: Medicine and health
+        pt: Medicina e saúde
+        fr: Médecine et santé
+        zh: 医学与健康
+        ja: 医学と健康
+      description:
+        es: >-
+          La frecuencia cardíaca se mide en latidos por minuto; el ECG mide el período entre ondas R.
+        en: >-
+          Heart rate is measured in beats per minute; an ECG measures the period between R waves.
+        pt: >-
+          A frequência cardíaca é medida em batimentos por minuto; o ECG mede o período entre ondas R.
+        fr: >-
+          La fréquence cardiaque se mesure en battements par minute ; l'ECG mesure la période entre les
+          ondes R.
+        zh: >-
+          心率以每分钟跳动次数来测量；心电图测量R波之间的周期。
+        ja: >-
+          心拍数は1分間の拍動数で測り、心電図はR波とR波の間の周期を測る。
+    - title:
+        es: Música y acústica
+        en: Music and acoustics
+        pt: Música e acústica
+        fr: Musique et acoustique
+        zh: 音乐与声学
+        ja: 音楽と音響
+      description:
+        es: >-
+          Cada nota es una frecuencia; su período es el intervalo entre ondas de presión consecutivas.
+        en: >-
+          Each note is a frequency; its period is the interval between successive pressure waves.
+        pt: >-
+          Cada nota é uma frequência; seu período é o intervalo entre ondas de pressão sucessivas.
+        fr: >-
+          Chaque note est une fréquence ; sa période est l'intervalle entre ondes de pression
+          successives.
+        zh: >-
+          每个音符都是一个频率；其周期是相邻压力波之间的时间间隔。
+        ja: >-
+          音はそれぞれ周波数を持ち、その周期が連続する圧力波の間隔となる。
+    - title:
+        es: Radiocomunicaciones
+        en: Radio communications
+        pt: Radiocomunicações
+        fr: Radiocommunications
+        zh: 无线电通信
+        ja: 無線通信
+      description:
+        es: >-
+          Las frecuencias de portadora son enormes, así que su período se mide en nanosegundos o
+          menos.
+        en: >-
+          Carrier frequencies are enormous, so their period is measured in nanoseconds or less.
+        pt: >-
+          As frequências de portadora são enormes, então seu período é medido em nanossegundos ou
+          menos.
+        fr: >-
+          Les fréquences porteuses sont énormes, si bien que leur période se mesure en nanosecondes ou
+          moins.
+        zh: >-
+          载波频率极高，其周期以纳秒或更短来度量。
+        ja: >-
+          搬送波の周波数は非常に大きいため、その周期はナノ秒以下で測られる。
+  example:
+    title:
+      es: La red europea a 50 Hz
+      en: Europe's 50 Hz mains
+      pt: A rede europeia a 50 Hz
+      fr: Le réseau européen à 50 Hz
+      zh: 50赫兹的欧洲电网
+      ja: 50 Hzの欧州電力網
+    lines:
+      - es: f = 50 Hz
+        en: f = 50 Hz
+        pt: f = 50 Hz
+        fr: f = 50 Hz
+        zh: f = 50 赫兹
+        ja: f = 50 Hz
+      - es: T = 1/f
+        en: T = 1/f
+        pt: T = 1/f
+        fr: T = 1/f
+        zh: T = 1/f
+        ja: T = 1/f
+      - es: T = 1/50
+        en: T = 1/50
+        pt: T = 1/50
+        fr: T = 1/50
+        zh: T = 1/50
+        ja: T = 1/50
+      - es: T = 0,02 s
+        en: T = 0.02 s
+        pt: T = 0,02 s
+        fr: T = 0,02 s
+        zh: T = 0.02 秒
+        ja: T = 0.02 秒
+      - es: Cada ciclo dura 20 ms
+        en: Each cycle lasts 20 ms
+        pt: Cada ciclo dura 20 ms
+        fr: Chaque cycle dure 20 ms
+        zh: 每个循环持续20毫秒
+        ja: 1サイクルは20ミリ秒

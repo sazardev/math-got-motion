@@ -1,0 +1,317 @@
+id: electric-potential-energy
+title:
+  es: Energía Potencial Eléctrica
+  en: Electric Potential Energy
+  pt: Energia Potencial Elétrica
+  fr: Énergie potentielle électrique
+  zh: 电势能
+  ja: 電気的位置エネルギー
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: u
+    type: variable
+    value: U
+    explanation:
+      es: La energía que almacena una carga por su posición en un campo eléctrico.
+      en: The energy a charge stores because of its position in an electric field.
+      pt: A energia que uma carga armazena por sua posição em um campo elétrico.
+      fr: L'énergie qu'une charge emmagasine du fait de sa position dans un champ électrique.
+      zh: 电荷因其在电场中的位置而储存的能量。
+      ja: 電界中の位置によって電荷が蓄えるエネルギー。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: q
+    type: variable
+    value: q
+    explanation:
+      es: La carga eléctrica, medida en culombios.
+      en: The electric charge, measured in coulombs.
+      pt: A carga elétrica, medida em coulombs.
+      fr: La charge électrique, mesurée en coulombs.
+      zh: 电荷量，以库仑为单位。
+      ja: 電荷。単位はクーロン。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: v
+    type: variable
+    value: V
+    explanation:
+      es: El potencial eléctrico en el punto donde se encuentra la carga.
+      en: The electric potential at the point where the charge sits.
+      pt: O potencial elétrico no ponto onde se encontra a carga.
+      fr: Le potentiel électrique au point où se trouve la charge.
+      zh: 电荷所在位置处的电势。
+      ja: 電荷がある位置の電位。
+context:
+  author:
+    es: Basada en el trabajo de Volta y Coulomb
+    en: Based on the work of Volta and Coulomb
+    pt: Baseada no trabalho de Volta e Coulomb
+    fr: Basée sur les travaux de Volta et Coulomb
+    zh: 基于伏打和库仑的工作
+    ja: ボルタとクーロンの業績に基づく
+  era:
+    es: Europa, s. XVIII
+    en: Europe, 18th century
+    pt: Europa, séc. XVIII
+    fr: Europe, XVIIIe siècle
+    zh: 欧洲，18世纪
+    ja: ヨーロッパ、18世紀
+  history:
+    es: >-
+      En el siglo XVIII, Volta inventó la pila, que separa cargas y les da energía potencial: cada
+      culombio de carga recibe una energía fijada por el potencial, de modo que U = q·V. Una batería
+      empuja los electrones hacia un potencial más alto y, al fluir por un circuito, esa energía se
+      libera como corriente. La misma relación gobierna los condensadores, que almacenan energía en un
+      campo eléctrico, y los tubos de rayos catódicos, que aceleraban electrones hacia la pantalla.
+    en: >-
+      In the 18th century Volta invented the battery, which separates charges and gives them potential
+      energy: each coulomb of charge receives energy set by the potential, so U = q·V. A battery
+      pushes electrons toward a higher potential, and as they flow through a circuit that energy is
+      released as current. The same relation governs capacitors, which store energy in an electric
+      field, and cathode-ray tubes, which accelerated electrons toward a screen.
+    pt: >-
+      No século XVIII, Volta inventou a pilha, que separa cargas e lhes dá energia potencial: cada
+      coulomb de carga recebe uma energia determinada pelo potencial, de modo que U = q·V. Uma bateria
+      empurra os elétrons em direção a um potencial mais alto e, ao fluírem por um circuito, essa
+      energia é liberada como corrente. A mesma relação governa os capacitores, que armazenam energia
+      em um campo elétrico, e os tubos de raios catódicos, que aceleravam elétrons em direção à tela.
+    fr: >-
+      Au XVIIIe siècle, Volta inventa la pile, qui sépare les charges et leur donne de l'énergie
+      potentielle : chaque coulomb de charge reçoit une énergie fixée par le potentiel, d'où U = q·V.
+      Une batterie pousse les électrons vers un potentiel plus élevé et, lorsqu'ils circulent dans un
+      circuit, cette énergie est libérée sous forme de courant. La même relation régit les
+      condensateurs, qui stockent de l'énergie dans un champ électrique, et les tubes cathodiques, qui
+      accéléraient des électrons vers un écran.
+    zh: >-
+      18世纪，伏打发明了电池，它把电荷分开并赋予它们势能：每库仑电荷从电势中获得能量，即U = q·V。电池把电子推向更高的
+      电势，当它们流过电路时，这部分能量就以电流的形式释放出来。同样的关系也支配着电容器——它们在电场中储存能量——以及
+      阴极射线管——它把电子加速射向屏幕。
+    ja: >-
+      18世紀、ボルタは電池を発明した。電池は電荷を分離し、それに位置エネルギーを与える。電荷1クーロンは電位によって決まる
+      エネルギーを受け取るので、U = q・Vとなる。電池は電子をより高い電位へ押し出し、回路を流れるとそのエネルギーは電流として
+      放出される。同じ関係は、電界中にエネルギーを蓄えるコンデンサや、電子を画面に向けて加速するブラウン管にも成り立つ。
+  timeline:
+    - year: "1746"
+      label:
+        es: >-
+          Pieter van Musschenbroek inventa la botella de Leyden, el primer condensador, que almacena
+          carga y energía eléctrica.
+        en: >-
+          Pieter van Musschenbroek invents the Leyden jar, the first capacitor, storing electric
+          charge and energy.
+        pt: >-
+          Pieter van Musschenbroek inventa a garrafa de Leiden, o primeiro capacitor, que armazena
+          carga e energia elétrica.
+        fr: >-
+          Pieter van Musschenbroek invente la bouteille de Leyde, le premier condensateur, qui stocke
+          charge et énergie électriques.
+        zh: >-
+          皮特·范·穆森布鲁克发明莱顿瓶——第一只电容器，用以储存电荷与电能。
+        ja: >-
+          ピーテル・ファン・ミュッセンブルークが、最初のコンデンサであるライデン瓶を発明し、電荷と電気エネルギーを蓄える。
+    - year: "1785"
+      label:
+        es: >-
+          Coulomb formula la ley de la fuerza entre cargas, que subyace al potencial eléctrico.
+        en: >-
+          Coulomb formulates the law of force between charges, which underlies the electric
+          potential.
+        pt: >-
+          Coulomb formula a lei da força entre cargas, que está na base do potencial elétrico.
+        fr: >-
+          Coulomb formule la loi de la force entre charges, qui sous-tend le potentiel électrique.
+        zh: >-
+          库仑提出电荷间作用力的定律，为电势概念奠定了基础。
+        ja: >-
+          クーロンが電荷間の力の法則を定式化し、電位の基礎を築く。
+    - year: "1800"
+      label:
+        es: >-
+          Volta presenta su pila, la primera batería, que da energía potencial a las cargas.
+        en: >-
+          Volta presents his pile, the first battery, giving potential energy to charges.
+        pt: >-
+          Volta apresenta sua pilha, a primeira bateria, que dá energia potencial às cargas.
+        fr: >-
+          Volta présente sa pile, la première batterie, qui donne de l'énergie potentielle aux
+          charges.
+        zh: >-
+          伏打展示了他的电堆——第一只电池，它赋予电荷以势能。
+        ja: >-
+          ボルタが最初の電池であるボルタ電池を発表し、電荷に位置エネルギーを与える。
+    - year: Hoy
+      label:
+        es: >-
+          Los condensadores y las baterías, piedras angulares de la electrónica, funcionan con esta
+          misma relación.
+        en: >-
+          Capacitors and batteries, cornerstones of electronics, run on this same relation.
+        pt: >-
+          Os capacitores e as baterias, pedras angulares da eletrônica, funcionam com essa mesma
+          relação.
+        fr: >-
+          Les condensateurs et les batteries, pierres angulaires de l'électronique, fonctionnent sur
+          cette même relation.
+        zh: >-
+          电容器与电池是电子技术的基石，它们都依据这一关系工作。
+        ja: >-
+          電子工学の要であるコンデンサと電池は、この同じ関係で動作している。
+  useCases:
+    - title:
+        es: Condensadores
+        en: Capacitors
+        pt: Capacitores
+        fr: Condensateurs
+        zh: 电容器
+        ja: コンデンサ
+      description:
+        es: >-
+          Almacenan energía en el campo eléctrico entre sus placas, proporcional a la carga y al
+          potencial aplicado.
+        en: >-
+          They store energy in the electric field between their plates, proportional to the charge
+          and the applied potential.
+        pt: >-
+          Armazenam energia no campo elétrico entre suas placas, proporcional à carga e ao potencial
+          aplicado.
+        fr: >-
+          Ils stockent de l'énergie dans le champ électrique entre leurs plaques, proportionnellement
+          à la charge et au potentiel appliqué.
+        zh: >-
+          在极板之间的电场中储存能量，其大小与电荷和所加电势成正比。
+        ja: >-
+          極板間の電界中にエネルギーを蓄える。その大きさは電荷と加えられた電位に比例する。
+    - title:
+        es: Baterías
+        en: Batteries
+        pt: Baterias
+        fr: Batteries
+        zh: 电池
+        ja: 電池
+      description:
+        es: >-
+          Convierten energía química en energía potencial eléctrica para los electrones que luego
+          fluyen por el circuito.
+        en: >-
+          They convert chemical energy into electric potential energy for the electrons that later
+          flow through the circuit.
+        pt: >-
+          Convertem energia química em energia potencial elétrica para os elétrons que depois fluem
+          pelo circuito.
+        fr: >-
+          Elles convertissent l'énergie chimique en énergie potentielle électrique pour les électrons
+          qui circuleront ensuite dans le circuit.
+        zh: >-
+          把化学能转化为电子所需的电势能，随后这些电子沿电路流动。
+        ja: >-
+          化学エネルギーを、後で回路を流れる電子の電気的位置エネルギーに変換する。
+    - title:
+        es: Electrónica de consumo
+        en: Consumer electronics
+        pt: Eletrônica de consumo
+        fr: Électronique grand public
+        zh: 消费电子产品
+        ja: 家電・電子機器
+      description:
+        es: >-
+          Cada voltio aplicado a un chip determina cuánta energía guarda cada carga dentro de sus
+          transistores.
+        en: >-
+          Each volt applied to a chip sets how much energy every charge holds inside its
+          transistors.
+        pt: >-
+          Cada volt aplicado a um chip determina quanta energia cada carga guarda dentro de seus
+          transistores.
+        fr: >-
+          Chaque volt appliqué à une puce détermine l'énergie que chaque charge retient dans ses
+          transistors.
+        zh: >-
+          施加在芯片上的每一伏特，都决定了其晶体管中每份电荷所携带的能量。
+        ja: >-
+          チップに加えられる1ボルトごとに、トランジスタ内部の電荷が持つエネルギーが決まる。
+    - title:
+        es: Aparatos de rayos catódicos
+        en: Cathode-ray devices
+        pt: Dispositivos de raios catódicos
+        fr: Appareils à rayons cathodiques
+        zh: 阴极射线装置
+        ja: ブラウン管装置
+      description:
+        es: >-
+          Aceleraban electrones hacia una pantalla aprovechando la energía que ganan al caer a través
+          de un potencial.
+        en: >-
+          They accelerated electrons toward a screen, using the energy gained by falling through a
+          potential.
+        pt: >-
+          Aceleravam elétrons em direção a uma tela, aproveitando a energia ganha ao cair através de
+          um potencial.
+        fr: >-
+          Ils accéléraient des électrons vers un écran en tirant parti de l'énergie gagnée en
+          chutant à travers un potentiel.
+        zh: >-
+          它们利用电子在电势差中下落获得的能量，把电子加速射向屏幕。
+        ja: >-
+          電位差の中を落下することで得たエネルギーを利用して、電子を画面に向けて加速する。
+  example:
+    title:
+      es: Energía de una carga en un potencial
+      en: Energy of a charge in a potential
+      pt: Energia de uma carga em um potencial
+      fr: Énergie d'une charge dans un potentiel
+      zh: 电荷在电势中的能量
+      ja: 電位中にある電荷のエネルギー
+    lines:
+      - es: q = 1×10⁻⁶ C
+        en: q = 1×10⁻⁶ C
+        pt: q = 1×10⁻⁶ C
+        fr: q = 1×10⁻⁶ C
+        zh: q = 1×10⁻⁶ 库仑
+        ja: q = 1×10⁻⁶ C
+      - es: V = 100 V
+        en: V = 100 V
+        pt: V = 100 V
+        fr: V = 100 V
+        zh: V = 100 V
+        ja: V = 100 V
+      - es: U = q · V
+        en: U = q · V
+        pt: U = q · V
+        fr: U = q · V
+        zh: U = q · V
+        ja: U = q · V
+      - es: U = 1×10⁻⁶ × 100
+        en: U = 1×10⁻⁶ × 100
+        pt: U = 1×10⁻⁶ × 100
+        fr: U = 1×10⁻⁶ × 100
+        zh: U = 1×10⁻⁶ × 100
+        ja: U = 1×10⁻⁶ × 100
+      - es: U = 1×10⁻⁴ J
+        en: U = 1×10⁻⁴ J
+        pt: U = 1×10⁻⁴ J
+        fr: U = 1×10⁻⁴ J
+        zh: U = 1×10⁻⁴ 焦耳
+        ja: U = 1×10⁻⁴ J

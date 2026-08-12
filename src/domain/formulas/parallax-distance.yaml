@@ -1,0 +1,314 @@
+id: parallax-distance
+title:
+  es: Distancia por Paralaje
+  en: Parallax Distance
+  pt: Distância por Paralaxe
+  fr: Distance par parallaxe
+  zh: 视差测距
+  ja: 年周視差による距離
+category:
+  es: Astronomía
+  en: Astronomy
+  pt: Astronomia
+  fr: Astronomie
+  zh: 天文学
+  ja: 天文学
+nodes:
+  - id: d
+    type: variable
+    value: d
+    explanation:
+      es: La distancia a la estrella, medida en parsecs.
+      en: The distance to the star, measured in parsecs.
+      pt: A distância até a estrela, medida em parsecs.
+      fr: La distance à l'étoile, mesurée en parsecs.
+      zh: 到恒星的距离，单位为秒差距。
+      ja: 恒星までの距離。単位はパーセク。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: "El numerador 1 fija la escala: un parsec es la distancia con paralaje de un segundo de arco."
+      en: "The numerator 1 sets the scale: one parsec is the distance with a parallax of one arcsecond."
+      pt: "O numerador 1 fixa a escala: um parsec é a distância com paralaxe de um segundo de arco."
+      fr: "Le numérateur 1 fixe l'échelle : un parsec est la distance avec une parallaxe d'une seconde d'arc."
+      zh: 分子1确定尺度：一秒差距就是视差为一角秒时的距离。
+      ja: 分子の1は基準を決める。1パーセクは視差が1秒角となる距離。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: p
+    type: variable
+    value: p
+    explanation:
+      es: "La paralaje anual: el ángulo aparente, en segundos de arco, con que la estrella se desplaza al orbitar la Tierra."
+      en: "The annual parallax: the apparent angle, in arcseconds, by which the star shifts as Earth orbits."
+      pt: "A paralaxe anual: o ângulo aparente, em segundos de arco, com que a estrela se desloca conforme a Terra orbita."
+      fr: "La parallaxe annuelle : l'angle apparent, en secondes d'arc, dont l'étoile se décale lorsque la Terre orbite."
+      zh: 周年视差：随着地球公转，恒星在天空中的视位移，单位是角秒。
+      ja: 年周視差。地球の公転によって恒星が動いて見える角度。単位は秒角。
+context:
+  author:
+    es: Friedrich Bessel
+    en: Friedrich Bessel
+    pt: Friedrich Bessel
+    fr: Friedrich Bessel
+    zh: 弗里德里希·贝塞尔
+    ja: フリードリヒ・ベッセル
+  era:
+    es: Alemania, 1784–1846 · primera paralaje en 1838
+    en: Germany, 1784–1846 · first parallax in 1838
+    pt: Alemanha, 1784–1846 · primeira paralaxe em 1838
+    fr: Allemagne, 1784–1846 · première parallaxe en 1838
+    zh: 德国，1784–1846年 · 1838年首次测得视差
+    ja: ドイツ、1784–1846年・1838年に最初の年周視差
+  history:
+    es: >-
+      Al girar la Tierra alrededor del Sol, las estrellas cercanas parecen desplazarse levemente
+      frente al fondo lejano: ese desplazamiento angular es la paralaje. Cuanto más cercana la
+      estrella, mayor el ángulo. Friedrich Bessel logró en 1838 la primera medida fiable, la de la
+      estrella 61 Cygni, con una paralaje de apenas 0.31 segundos de arco, y así se conoció la
+      primera distancia estelar real. La paralaje es el primer eslabón de la escalera de distancias
+      del cosmos: todo lo demás, de las Cefeidas a las supernovas, se calibra contra ella.
+    en: >-
+      As Earth orbits the Sun, nearby stars seem to drift slightly against the distant background:
+      that angular shift is the parallax. The nearer the star, the larger the angle. In 1838
+      Friedrich Bessel achieved the first reliable measurement, that of the star 61 Cygni, with a
+      parallax of just 0.31 arcseconds, revealing the first true stellar distance. Parallax is the
+      first rung of the cosmic distance ladder: everything else, from Cepheids to supernovae, is
+      calibrated against it.
+    pt: >-
+      Ao girar a Terra em torno do Sol, as estrelas próximas parecem se deslocar levemente diante do
+      fundo distante: esse deslocamento angular é a paralaxe. Quanto mais próxima a estrela, maior o
+      ângulo. Friedrich Bessel conseguiu em 1838 a primeira medida confiável, a da estrela 61 Cygni,
+      com uma paralaxe de apenas 0,31 segundo de arco, revelando a primeira distância estelar real. A
+      paralaxe é o primeiro degrau da escada de distâncias do cosmos: todo o resto, das Cefeidas às
+      supernovas, é calibrado contra ela.
+    fr: >-
+      Lorsque la Terre orbite autour du Soleil, les étoiles proches semblent dériver légèrement sur
+      le fond lointain : ce déplacement angulaire est la parallaxe. Plus l'étoile est proche, plus
+      l'angle est grand. Friedrich Bessel obtint en 1838 la première mesure fiable, celle de l'étoile
+      61 Cygni, avec une parallaxe de seulement 0,31 seconde d'arc, révélant la première distance
+      stellaire réelle. La parallaxe est le premier échelon de l'échelle des distances du cosmos :
+      tout le reste, des Céphéides aux supernovae, est calibré sur elle.
+    zh: >-
+      当地球绕太阳公转时，近处的恒星看起来会在遥远的背景前微微移动：这个角位移就是视差。恒星越近，角度越大。
+      1838年，弗里德里希·贝塞尔首次实现了可靠的测量——天鹅座61，其视差只有0.31角秒，由此得到了第一个真实的
+      恒星距离。视差是宇宙距离阶梯的第一级：从造父变星到超新星，一切都以它为基准来校准。
+    ja: >-
+      地球が太陽の周りを公転すると、近くの恒星は遠い背景に対してわずかに動いて見える。この角変位が年周視差である。
+      恒星が近いほど角度は大きくなる。1838年、フリードリヒ・ベッセルが最初の信頼できる測定に成功した。はくちょう座
+      61番星の視差はわずか0.31秒角で、これが最初の真の恒星距離となった。年周視差は宇宙の距離はしごの最初の段であり、
+      ケフェイドから超新星まで、あらゆる距離指標がこれを基準に較正される。
+  timeline:
+    - year: "1838"
+      label:
+        es: >-
+          Bessel mide la paralaje de 61 Cygni, la primera medición fiable de una distancia estelar.
+        en: >-
+          Bessel measures the parallax of 61 Cygni, the first reliable stellar distance measurement.
+        pt: >-
+          Bessel mede a paralaxe de 61 Cygni, a primeira medição confiável de uma distância estelar.
+        fr: >-
+          Bessel mesure la parallaxe de 61 Cygni, la première mesure fiable d'une distance stellaire.
+        zh: >-
+          贝塞尔测出天鹅座61的视差，这是首次可靠地测量恒星距离。
+        ja: >-
+          ベッセルがはくちょう座61番星の視差を測定し、初めて信頼できる恒星距離を得る。
+    - year: "1989"
+      label:
+        es: >-
+          El satélite Hipparcos de la ESA mide con precisión la paralaje de unas 118.000 estrellas.
+        en: >-
+          ESA's Hipparcos satellite accurately measures the parallax of about 118,000 stars.
+        pt: >-
+          O satélite Hipparcos da ESA mede com precisão a paralaxe de cerca de 118 mil estrelas.
+        fr: >-
+          Le satellite Hipparcos de l'ESA mesure avec précision la parallaxe d'environ 118 000
+          étoiles.
+        zh: >-
+          欧空局的依巴谷卫星精确测出了约11.8万颗恒星的视差。
+        ja: >-
+          ESAのヒッパルコス衛星が約11万8000個の恒星の視差を精密に測定する。
+    - year: "2013"
+      label:
+        es: >-
+          La misión Gaia comienza a cartografiar la posición y la paralaje de más de mil millones de
+          estrellas.
+        en: >-
+          The Gaia mission starts mapping the position and parallax of over a billion stars.
+        pt: >-
+          A missão Gaia começa a mapear a posição e a paralaxe de mais de um bilhão de estrelas.
+        fr: >-
+          La mission Gaia commence à cartographier la position et la parallaxe de plus d'un milliard
+          d'étoiles.
+        zh: >-
+          盖亚任务开始测绘超过十亿颗恒星的位置和视差。
+        ja: >-
+          ガイア計画が10億を超える恒星の位置と視差のマッピングを開始する。
+    - year: Hoy
+      label:
+        es: >-
+          La paralaje sigue calibrando todos los peldaños de la escala de distancias cósmicas.
+        en: >-
+          Parallax still calibrates every rung of the cosmic distance scale.
+        pt: >-
+          A paralaxe continua calibrando todos os degraus da escala de distâncias cósmicas.
+        fr: >-
+          La parallaxe calibre encore tous les échelons de l'échelle des distances cosmiques.
+        zh: >-
+          视差至今仍是校准宇宙距离尺度各级的基准。
+        ja: >-
+          年周視差は今も宇宙の距離尺度のすべての段を較正している。
+  useCases:
+    - title:
+        es: Astronomía estelar
+        en: Stellar astronomy
+        pt: Astronomia estelar
+        fr: Astronomie stellaire
+        zh: 恒星天文学
+        ja: 恒星天文学
+      description:
+        es: >-
+          Mide distancias directas a las estrellas cercanas, hasta unos cien parsecs, con precisión
+          de fracciones de segundo de arco.
+        en: >-
+          It measures direct distances to nearby stars, out to about a hundred parsecs, with
+          arcsecond-fraction precision.
+        pt: >-
+          Mede distâncias diretas até estrelas próximas, até cerca de cem parsecs, com precisão de
+          frações de segundo de arco.
+        fr: >-
+          Elle mesure des distances directes aux étoiles proches, jusqu'à environ cent parsecs, avec
+          une précision d'une fraction de seconde d'arc.
+        zh: >-
+          可精确到角秒的几分之一，直接测量约一百秒差距以内近距恒星的距离。
+        ja: >-
+          約100パーセク以内の近い恒星までの距離を、秒角の数分の一の精度で直接測る。
+    - title:
+        es: Misión Gaia
+        en: Gaia mission
+        pt: Missão Gaia
+        fr: Mission Gaia
+        zh: 盖亚任务
+        ja: ガイア計画
+      description:
+        es: >-
+          La astrometría de mil millones de estrellas que realiza Gaia refina el mapa tridimensional
+          de la galaxia.
+        en: >-
+          Gaia's astrometry of a billion stars refines the three-dimensional map of the galaxy.
+        pt: >-
+          A astrometria de um bilhão de estrelas feita pela Gaia refina o mapa tridimensional da
+          galáxia.
+        fr: >-
+          L'astrométrie d'un milliard d'étoiles réalisée par Gaia affine la carte tridimensionnelle
+          de la galaxie.
+        zh: >-
+          盖亚对十亿颗恒星的测量，使银河系的三维星图更加精确。
+        ja: >-
+          ガイアによる10億個の恒星の位置天文学が、銀河の三次元地図を精密化する。
+    - title:
+        es: Escalera de distancias
+        en: Distance ladder
+        pt: Escada de distâncias
+        fr: Échelle des distances
+        zh: 距离阶梯
+        ja: 距離はしご
+      description:
+        es: >-
+          Sirve de calibración absoluta para las Cefeidas, las supernovas y todas las técnicas de
+          distancias mayores.
+        en: >-
+          It provides the absolute calibration for Cepheids, supernovae, and all larger-distance
+          techniques.
+        pt: >-
+          Serve de calibração absoluta para as Cefeidas, as supernovas e todas as técnicas de
+          distâncias maiores.
+        fr: >-
+          Elle sert de calibrage absolu pour les Céphéides, les supernovae et toutes les techniques
+          de distances plus grandes.
+        zh: >-
+          为造父变星、超新星以及所有更远距离的测量技术提供绝对校准。
+        ja: >-
+          ケフェイドや超新星、さらに遠い距離のすべての測定手法に対する絶対較正を提供する。
+    - title:
+        es: Cúmulos estelares
+        en: Star clusters
+        pt: Aglomerados estelares
+        fr: Amas stellaires
+        zh: 星团
+        ja: 星団
+      description:
+        es: >-
+          Determina la distancia a cúmulos abiertos como las Híades, clave para calibrar modelos de
+          evolución estelar.
+        en: >-
+          It determines the distance to open clusters like the Hyades, key for calibrating stellar
+          evolution models.
+        pt: >-
+          Determina a distância a aglomerados abertos como as Híades, chave para calibrar modelos de
+          evolução estelar.
+        fr: >-
+          Elle détermine la distance des amas ouverts comme les Hyades, essentielle pour calibrer les
+          modèles d'évolution stellaire.
+        zh: >-
+          测定毕星团这类疏散星团的距离，这对校准恒星演化模型至关重要。
+        ja: >-
+          ヒアデス星団などの散開星団までの距離を求め、恒星進化モデルの較正に欠かせない役割を果たす。
+  example:
+    title:
+      es: Una estrella a 10 pc
+      en: A star 10 pc away
+      pt: Uma estrela a 10 pc
+      fr: Une étoile à 10 pc
+      zh: 距离10秒差距的恒星
+      ja: 10パーセク離れた恒星
+    lines:
+      - es: p = 0.1″ (décima de segundo de arco)
+        en: p = 0.1″ (a tenth of an arcsecond)
+        pt: p = 0,1″ (um décimo de segundo de arco)
+        fr: p = 0,1″ (un dixième de seconde d'arc)
+        zh: p = 0.1″（十分之一角秒）
+        ja: p = 0.1″（1秒角の10分の1）
+      - es: d = 1 / p = 1 / 0.1
+        en: d = 1 / p = 1 / 0.1
+        pt: d = 1 / p = 1 / 0,1
+        fr: d = 1 / p = 1 / 0,1
+        zh: d = 1 / p = 1 / 0.1
+        ja: d = 1 / p = 1 / 0.1
+      - es: d = 10 pc
+        en: d = 10 pc
+        pt: d = 10 pc
+        fr: d = 10 pc
+        zh: d = 10 秒差距
+        ja: d = 10 パーセク
+      - es: 1 pc ≈ 3.26 años luz
+        en: 1 pc ≈ 3.26 light-years
+        pt: 1 pc ≈ 3,26 anos-luz
+        fr: 1 pc ≈ 3,26 années-lumière
+        zh: 1 pc ≈ 3.26 光年
+        ja: 1 pc ≈ 3.26 光年
+      - es: d ≈ 32.6 años luz
+        en: d ≈ 32.6 light-years
+        pt: d ≈ 32,6 anos-luz
+        fr: d ≈ 32,6 années-lumière
+        zh: d ≈ 32.6 光年
+        ja: d ≈ 32.6 光年

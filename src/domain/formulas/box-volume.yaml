@@ -1,0 +1,350 @@
+id: box-volume
+title:
+  es: Volumen de una Caja
+  en: Volume of a Box
+  pt: Volume de uma Caixa
+  fr: Volume d'une Boîte
+  zh: 箱子的体积
+  ja: 箱の体積
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: volume
+    type: variable
+    value: V
+    explanation:
+      es: El volumen de la caja, el espacio tridimensional que ocupa.
+      en: The volume of the box, the three-dimensional space it occupies.
+      pt: O volume da caixa, o espaço tridimensional que ela ocupa.
+      fr: Le volume de la boîte, l'espace tridimensionnel qu'elle occupe.
+      zh: 箱子的体积,即它所占据的三维空间。
+      ja: 箱の体積、つまりそれが占める三次元の空間。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: length
+    type: variable
+    value: l
+    explanation:
+      es: El largo, la primera dimensión de la caja.
+      en: The length, the first dimension of the box.
+      pt: O comprimento, a primeira dimensão da caixa.
+      fr: La longueur, la première dimension de la boîte.
+      zh: 长,盒子的第一个维度。
+      ja: 縦(長さ)。箱の第一の次元。
+  - id: times-1
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicación entre el largo y el ancho.
+      en: Multiplication of the length and the width.
+      pt: Multiplicação entre o comprimento e a largura.
+      fr: Multiplication de la longueur par la largeur.
+      zh: 长与宽相乘。
+      ja: 長さと幅の乗算。
+  - id: width
+    type: variable
+    value: w
+    explanation:
+      es: El ancho, la segunda dimensión de la caja.
+      en: The width, the second dimension of the box.
+      pt: A largura, a segunda dimensão da caixa.
+      fr: La largeur, la deuxième dimension de la boîte.
+      zh: 宽,盒子的第二个维度。
+      ja: 幅。箱の第二の次元。
+  - id: times-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicación que incorpora la altura.
+      en: Multiplication that brings in the height.
+      pt: Multiplicação que incorpora a altura.
+      fr: Multiplication qui fait entrer la hauteur.
+      zh: 将高度也乘进来。
+      ja: 高さを掛け合わせる乗算。
+  - id: height
+    type: variable
+    value: h
+    explanation:
+      es: La altura, la tercera dimensión de la caja.
+      en: The height, the third dimension of the box.
+      pt: A altura, a terceira dimensão da caixa.
+      fr: La hauteur, la troisième dimension de la boîte.
+      zh: 高,盒子的第三个维度。
+      ja: 高さ。箱の第三の次元。
+context:
+  author:
+    es: Origen colectivo
+    en: Collective origin
+    pt: Origem coletiva
+    fr: Origine collective
+    zh: 集体起源
+    ja: 集団的起源
+  era:
+    es: Antigüedad · formalizada en la geometría euclidiana
+    en: Antiquity · formalized in Euclidean geometry
+    pt: Antiguidade · formalizada na geometria euclidiana
+    fr: Antiquité · formalisée dans la géométrie euclidienne
+    zh: 古代 · 在欧几里得几何中正式化
+    ja: 古代・ユークリッド幾何学において定式化
+  history:
+    es: >-
+      El volumen de una caja es el producto de su largo por su ancho por su alto, las tres
+      dimensiones que la definen. Es una de las fórmulas más antiguas que se conocen: egipcios y
+      babilonios ya calculaban volúmenes de graneros y cisternas multiplicando sus medidas, y los
+      Elementos de Euclides la presentan como el caso más simple de los cuerpos prismáticos. Hoy
+      es la base de los precios del flete, del dimensionado de habitaciones y de las mezclas de
+      hormigón, y su idea —cortar en capas y sumar— es la semilla del cálculo integral.
+    en: >-
+      The volume of a box is the product of its length, its width and its height, the three
+      dimensions that define it. It is one of the oldest formulas known: Egyptians and
+      Babylonians already found the volume of granaries and cisterns by multiplying their
+      measures, and Euclid's Elements presents it as the simplest case of prismatic solids. Today
+      it prices shipping, sizes rooms, and meters out concrete, water tanks and cargo, and its
+      idea — cutting into layers and adding them up — is the seed of integral calculus.
+    pt: >-
+      O volume de uma caixa é o produto do comprimento pela largura pela altura, as três
+      dimensões que a definem. É uma das fórmulas mais antigas que se conhece: egípcios e
+      babilônios já calculavam o volume de celeiros e cisternas multiplicando suas medidas, e os
+      Elementos de Euclides a apresentam como o caso mais simples dos sólidos prismáticos. Hoje
+      ela baseia o preço do frete, o dimensionamento de cômodos e as misturas de concreto, e sua
+      ideia — cortar em camadas e somar — é a semente do cálculo integral.
+    fr: >-
+      Le volume d'une boîte est le produit de sa longueur par sa largeur par sa hauteur, les
+      trois dimensions qui la définissent. C'est l'une des formules les plus anciennes connues :
+      les Égyptiens et les Babyloniens calculaient déjà le volume de greniers et de citernes en
+      multipliant leurs mesures, et les Éléments d'Euclide la présentent comme le cas le plus
+      simple des solides prismatiques. Aujourd'hui, elle sert à tarifer le fret, à dimensionner
+      les pièces et à doser le béton, les réservoirs d'eau et les cargaisons, et son idée —
+      découper en couches et additionner — est la graine du calcul intégral.
+    zh: >-
+      箱子的体积等于长乘宽乘高,即定义它的三个维度相乘。这是已知最古老的公式之一:古埃及人和古巴比伦人
+      早已通过将谷仓、粮囤和水池的三条边相乘来计算容积,欧几里得《几何原本》则把它作为棱柱体中最简单的
+      情形加以论述。今天,它支撑着运费的计算、房间尺寸的确定、混凝土的调配、水箱的设计和货物的配载;
+      而它所蕴含的思想——把物体切成薄层再求和——正是积分学的种子。
+    ja: >-
+      箱の体積は、縦・横・高さの三つの次元を掛け合わせたものだ。これは既知の最も古い公式の一つで、
+      エジプト人やバビロニア人はすでに穀倉や水槽の辺を掛け合わせて容積を求めていた。ユークリッドの
+      『原論』では、角柱の中でもっとも単純な場合として示されている。今日では運送料金の計算、部屋の
+      寸法決め、コンクリートの調合、貯水タンクや積み荷の計量に使われる。そして、層に切り分けて足し
+      合わせるというその考え方が、積分法の種子となった。
+  timeline:
+    - year: c. 1550 a.C.
+      label:
+        es: >-
+          El papiro de Rhind recoge problemas de volumen de graneros que se resuelven
+          multiplicando sus tres medidas.
+        en: >-
+          The Rhind Papyrus records granary-volume problems solved by multiplying the three
+          dimensions.
+        pt: >-
+          O papiro de Rhind registra problemas de volume de celeiros resolvidos multiplicando as
+          três medidas.
+        fr: >-
+          Le papyrus Rhind consigne des problèmes de volume de greniers résolus en multipliant
+          les trois dimensions.
+        zh: >-
+          莱因德纸草书记载了通过三边相乘求解谷仓体积的问题。
+        ja: >-
+          リンド・パピルスには、三辺を掛け合わせて穀倉の体積を求める問題が記されている。
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides formaliza en los Elementos el volumen de los sólidos prismáticos, con la caja
+          como caso más simple.
+        en: >-
+          Euclid formalizes in the Elements the volume of prismatic solids, with the box as the
+          simplest case.
+        pt: >-
+          Euclides formaliza nos Elementos o volume dos sólidos prismáticos, com a caixa como
+          caso mais simples.
+        fr: >-
+          Euclide formalise dans les Éléments le volume des solides prismatiques, la boîte étant
+          le cas le plus simple.
+        zh: >-
+          欧几里得在《几何原本》中正式论述棱柱体的体积,以盒子为最简单的情形。
+        ja: >-
+          ユークリッドが『原論』で角柱の体積を体系化し、箱を最も単純な場合とする。
+    - year: "1635"
+      label:
+        es: >-
+          Cavalieri muestra que apilar capas infinitesimales reproduce el volumen de una caja,
+          semilla del cálculo integral.
+        en: >-
+          Cavalieri shows that stacking infinitesimal layers reproduces the volume of a box, a
+          seed of integral calculus.
+        pt: >-
+          Cavalieri mostra que empilhar camadas infinitesimais reproduz o volume de uma caixa,
+          semente do cálculo integral.
+        fr: >-
+          Cavalieri montre qu'empiler des couches infinitésimales reproduit le volume d'une
+          boîte, graine du calcul intégral.
+        zh: >-
+          卡瓦列里表明,叠加无穷薄的层可以重现箱子的体积,这是积分学的种子。
+        ja: >-
+          カヴァリエーリが、微小な層を積み重ねると箱の体積が再現されることを示し、積分法の種子となる。
+    - year: Hoy
+      label:
+        es: >-
+          El volumen de una caja fija el precio del flete, la capacidad de tanques y la mezcla de
+          hormigón.
+        en: >-
+          The volume of a box sets shipping prices, tank capacity and concrete mixes.
+        pt: >-
+          O volume de uma caixa define o preço do frete, a capacidade de tanques e a mistura de
+          concreto.
+        fr: >-
+          Le volume d'une boîte fixe le prix du fret, la capacité des réservoirs et le dosage du
+          béton.
+        zh: >-
+          箱子的体积决定了运费、水箱容量和混凝土配比。
+        ja: >-
+          箱の体積が運送料金、タンクの容量、コンクリートの調合を決める。
+  useCases:
+    - title:
+        es: Logística y flete
+        en: Shipping and freight
+        pt: Logística e frete
+        fr: Logistique et fret
+        zh: 物流与货运
+        ja: 物流・貨物輸送
+      description:
+        es: >-
+          El flete de carga se cobra por volumen: los metros cúbicos (CBM) de cada bulto se
+          calculan multiplicando sus tres lados.
+        en: >-
+          Freight is billed by volume: the cubic meters (CBM) of each package are found by
+          multiplying its three sides.
+        pt: >-
+          O frete é cobrado por volume: os metros cúbicos (CBM) de cada bulto são calculados
+          multiplicando seus três lados.
+        fr: >-
+          Le fret est facturé au volume : les mètres cubes (CBM) de chaque colis se calculent en
+          multipliant ses trois côtés.
+        zh: >-
+          运费按体积计收:每件货物的立方米数(CBM)通过三边相乘得出。
+        ja: >-
+          運送料金は体積に基づいて請求され、各荷物の立方メートル数(CBM)は三辺の積で計算される。
+    - title:
+        es: Construcción
+        en: Construction
+        pt: Construção civil
+        fr: Construction
+        zh: 建筑施工
+        ja: 建設
+      description:
+        es: >-
+          Dimensiona habitaciones y calcula el hormigón de una losa, cimiento o columna
+          multiplicando sus medidas.
+        en: >-
+          It sizes rooms and computes the concrete of a slab, foundation or column by multiplying
+          its measures.
+        pt: >-
+          Dimensiona cômodos e calcula o concreto de uma laje, fundação ou coluna multiplicando
+          suas medidas.
+        fr: >-
+          Elle dimensionne les pièces et calcule le béton d'une dalle, d'une fondation ou d'un
+          poteau en multipliant ses mesures.
+        zh: >-
+          用于确定房间尺寸,并通过三边相乘计算楼板、地基或柱子的混凝土用量。
+        ja: >-
+          部屋の寸法を決め、スラブ・基礎・柱のコンクリート量を三辺の積で計算する。
+    - title:
+        es: Almacenamiento de agua
+        en: Water storage
+        pt: Armazenamento de água
+        fr: Stockage de l'eau
+        zh: 储水
+        ja: 貯水
+      description:
+        es: >-
+          La capacidad de un tanque o cisterna se obtiene multiplicando largo, ancho y alto del
+          depósito.
+        en: >-
+          The capacity of a tank or cistern is the product of the length, width and height of the
+          container.
+        pt: >-
+          A capacidade de um tanque ou cisterna é o produto do comprimento, da largura e da
+          altura do reservatório.
+        fr: >-
+          La capacité d'un réservoir ou d'une citerne est le produit de la longueur, de la
+          largeur et de la hauteur du contenant.
+        zh: >-
+          水箱或蓄水池的容量等于容器长、宽、高三者的乘积。
+        ja: >-
+          タンクや貯水槽の容量は、容器の長さ・幅・高さの積で求められる。
+    - title:
+        es: Empaque y transporte
+        en: Packaging and transport
+        pt: Embalagem e transporte
+        fr: Emballage et transport
+        zh: 包装与运输
+        ja: 梱包・輸送
+      description:
+        es: >-
+          El peso volumétrico de un paquete compara su volumen con su peso para tarifar envíos
+          aéreos y terrestres.
+        en: >-
+          The volumetric weight of a package compares its volume with its weight to price air and
+          ground shipping.
+        pt: >-
+          O peso volumétrico de um pacote compara seu volume com seu peso para tarifar envios
+          aéreos e terrestres.
+        fr: >-
+          Le poids volumétrique d'un colis compare son volume à son poids pour tarifer les envois
+          aériens et terrestres.
+        zh: >-
+          包裹的体积重量将其体积与重量相比,用于航空和陆运的计费。
+        ja: >-
+          荷物の容積重量は体積と実重量を比較し、航空便・陸上便の料金を決める。
+  example:
+    title:
+      es: Depósito de 2 m × 3 m × 4 m
+      en: Tank of 2 m × 3 m × 4 m
+      pt: Depósito de 2 m × 3 m × 4 m
+      fr: Réservoir de 2 m × 3 m × 4 m
+      zh: 2米×3米×4米的水箱
+      ja: 縦2m×横3m×高さ4mの水槽
+    lines:
+      - es: l = 2 m, w = 3 m, h = 4 m
+        en: l = 2 m, w = 3 m, h = 4 m
+        pt: l = 2 m, w = 3 m, h = 4 m
+        fr: l = 2 m, w = 3 m, h = 4 m
+        zh: l = 2 m, w = 3 m, h = 4 m
+        ja: l = 2 m, w = 3 m, h = 4 m
+      - es: V = l · w · h
+        en: V = l · w · h
+        pt: V = l · w · h
+        fr: V = l · w · h
+        zh: V = l · w · h
+        ja: V = l · w · h
+      - es: V = 2 × 3 × 4
+        en: V = 2 × 3 × 4
+        pt: V = 2 × 3 × 4
+        fr: V = 2 × 3 × 4
+        zh: V = 2 × 3 × 4
+        ja: V = 2 × 3 × 4
+      - es: V = 6 × 4
+        en: V = 6 × 4
+        pt: V = 6 × 4
+        fr: V = 6 × 4
+        zh: V = 6 × 4
+        ja: V = 6 × 4
+      - es: V = 24 m³
+        en: V = 24 m³
+        pt: V = 24 m³
+        fr: V = 24 m³
+        zh: V = 24 m³
+        ja: V = 24 m³

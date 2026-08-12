@@ -1,0 +1,337 @@
+id: triangle-area
+title:
+  es: Área de un Triángulo
+  en: Area of a Triangle
+  pt: Área de um Triângulo
+  fr: Aire d'un Triangle
+  zh: 三角形的面积
+  ja: 三角形の面積
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: area
+    type: variable
+    value: A
+    explanation:
+      es: "El área: la superficie plana encerrada por el triángulo."
+      en: "The area: the flat surface enclosed by the triangle."
+      pt: "A área: a superfície plana delimitada pelo triângulo."
+      fr: "L'aire : la surface plane délimitée par le triangle."
+      zh: "面积：三角形所围成的平面区域。"
+      ja: "面積：三角形で囲まれた平面の広さ。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: ちょうど等しい。
+  - id: half
+    type: number
+    value: "½"
+    explanation:
+      es: "Un medio: todo triángulo ocupa la mitad de un rectángulo o paralelogramo de su misma base y altura."
+      en: "One half: any triangle occupies half of a rectangle or parallelogram with the same base and height."
+      pt: "Um meio: todo triângulo ocupa a metade de um retângulo ou paralelogramo de mesma base e altura."
+      fr: "Un demi : tout triangle occupe la moitié d'un rectangle ou parallélogramme de même base et de même hauteur."
+      zh: "二分之一：任何三角形都等于同底等高矩形或平行四边形面积的一半。"
+      ja: "半分：どの三角形も、同じ底辺と高さの長方形・平行四辺形の半分である。"
+  - id: mul-b
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: b
+    type: variable
+    value: b
+    explanation:
+      es: "La base: cualquiera de los lados del triángulo, tomado como referencia."
+      en: "The base: any side of the triangle, taken as the reference."
+      pt: "A base: qualquer um dos lados do triângulo, tomado como referência."
+      fr: "La base : n'importe quel côté du triangle, pris comme référence."
+      zh: "底边：三角形的任一条边，作为基准。"
+      ja: "底辺：三角形のどの辺でもよく、基準としてとる。"
+  - id: mul-h
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: h
+    type: variable
+    value: h
+    explanation:
+      es: "La altura: la distancia perpendicular desde la base hasta el vértice opuesto."
+      en: "The height: the perpendicular distance from the base to the opposite vertex."
+      pt: "A altura: a distância perpendicular da base ao vértice oposto."
+      fr: "La hauteur : la distance perpendiculaire de la base au sommet opposé."
+      zh: "高：从底边到对顶点的垂直距离。"
+      ja: "高さ：底辺から向かい合う頂点までの垂直距離。"
+context:
+  author:
+    es: Origen colectivo (Egipto y Grecia antiguas)
+    en: Collective origin (ancient Egypt and Greece)
+    pt: Origem coletiva (antigo Egito e Grécia)
+    fr: Origine collective (Égypte et Grèce antiques)
+    zh: 集体起源（古埃及与古希腊）
+    ja: 集団的起源（古代エジプトとギリシャ）
+  era:
+    es: Egipto y Grecia antiguas, c. 2000–300 a.C.
+    en: Ancient Egypt and Greece, c. 2000–300 BC
+    pt: Antigo Egito e Grécia, c. 2000–300 a.C.
+    fr: Égypte et Grèce antiques, v. 2000–300 av. J.-C.
+    zh: 古埃及与古希腊，约公元前2000–300年
+    ja: 古代エジプトとギリシャ、紀元前2000〜300年頃
+  history:
+    es: >-
+      El área del triángulo ya aparece en el papiro de Rhind (c. 1650 a.C.), donde los escribas
+      egipcios resolvían problemas de terrenos triangulares. Euclides la formalizó en la Proposición
+      I.41 de los Elementos, demostrando que todo triángulo equivale a la mitad de un paralelogramo
+      de igual base y altura.
+    en: >-
+      Triangle area already appears in the Rhind papyrus (c. 1650 BC), where Egyptian scribes solved
+      problems about triangular fields. Euclid formalized it in Proposition I.41 of the Elements,
+      proving that every triangle is half of a parallelogram with the same base and height.
+    pt: >-
+      A área do triângulo já aparece no papiro de Rhind (c. 1650 a.C.), onde os escribas egípcios
+      resolviam problemas de terrenos triangulares. Euclides a formalizou na Proposição I.41 dos
+      Elementos, demonstrando que todo triângulo equivale à metade de um paralelogramo de mesma base
+      e altura.
+    fr: >-
+      L'aire du triangle apparaît déjà dans le papyrus de Rhind (v. 1650 av. J.-C.), où les scribes
+      égyptiens résolvaient des problèmes de champs triangulaires. Euclide la formalisa dans la
+      Proposition I.41 des Éléments, démontrant que tout triangle vaut la moitié d'un
+      parallélogramme de même base et de même hauteur.
+    zh: >-
+      三角形的面积计算已出现在莱因德纸草书（约公元前1650年）中，当时的埃及书吏用它解决三角形田地的问题。
+      欧几里得在《几何原本》第一卷命题41中将其形式化，证明任何三角形都等于同底等高平行四边形面积的一半。
+    ja: >-
+      三角形の面積は、リンド・パピルス（紀元前1650年頃）にすでに登場し、エジプトの書記は三角形の土地の
+      問題をこれで解いていた。ユークリッドは『原論』第1巻命題41でこれを定式化し、どの三角形も同じ底辺と
+      高さを持つ平行四辺形の半分であることを証明した。
+  timeline:
+    - year: c. 1650 a.C.
+      label:
+        es: >-
+          El papiro de Rhind registra problemas de áreas de triángulos, resueltos con métodos
+          prácticos equivalentes a A = ½·b·h.
+        en: >-
+          The Rhind papyrus records triangle area problems, solved with practical methods equivalent
+          to A = ½·b·h.
+        pt: >-
+          O papiro de Rhind registra problemas de áreas de triângulos, resolvidos com métodos
+          práticos equivalentes a A = ½·b·h.
+        fr: >-
+          Le papyrus de Rhind consigne des problèmes d'aires de triangles, résolus par des méthodes
+          pratiques équivalentes à A = ½·b·h.
+        zh: >-
+          莱因德纸草书记载了三角形面积问题，用等价于A = ½·b·h的实用方法求解。
+        ja: >-
+          リンド・パピルスには三角形の面積の問題が記録され、A = ½·b·hと同等の実用的な方法で解かれていた。
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides demuestra en la Proposición I.41 de los Elementos que el triángulo es la mitad de
+          un paralelogramo de igual base y altura.
+        en: >-
+          Euclid proves in Proposition I.41 of the Elements that a triangle is half a parallelogram
+          of equal base and height.
+        pt: >-
+          Euclides demonstra na Proposição I.41 dos Elementos que o triângulo é a metade de um
+          paralelogramo de mesma base e altura.
+        fr: >-
+          Euclide démontre dans la Proposition I.41 des Éléments qu'un triangle vaut la moitié d'un
+          parallélogramme de même base et de même hauteur.
+        zh: >-
+          欧几里得在《几何原本》第一卷命题41中证明，三角形是同底等高平行四边形面积的一半。
+        ja: >-
+          ユークリッドが『原論』第1巻命題41で、三角形は同じ底辺と高さを持つ平行四辺形の半分であることを
+          証明する。
+    - year: s. XVII
+      label:
+        es: >-
+          Con la geometría de coordenadas, el área se calcula a partir de los vértices del triángulo,
+          sin necesidad de medir la altura.
+        en: >-
+          With coordinate geometry, the area is computed from the triangle's vertices, without
+          measuring the height.
+        pt: >-
+          Com a geometria de coordenadas, a área é calculada a partir dos vértices do triângulo, sem
+          medir a altura.
+        fr: >-
+          Avec la géométrie de coordonnées, l'aire se calcule à partir des sommets du triangle, sans
+          mesurer la hauteur.
+        zh: >-
+          借助坐标几何，只需三角形的顶点坐标即可计算面积，无需测量高。
+        ja: >-
+          座標幾何学により、高さを測らなくても三角形の頂点から面積を計算できるようになった。
+    - year: Hoy
+      label:
+        es: >-
+          Es la base para medir parcelas, presupuestar materiales y calcular superficies en miles de
+          aplicaciones de diseño.
+        en: >-
+          It underpins land measurement, material budgeting, and surface calculations in thousands
+          of design applications.
+        pt: >-
+          É a base para medir terrenos, calcular materiais e estimar superfícies em milhares de
+          aplicações de projeto.
+        fr: >-
+          Elle est à la base de la mesure des parcelles, du calcul des matériaux et de l'estimation
+          des surfaces dans des milliers d'applications de conception.
+        zh: >-
+          它是土地测量、材料预算以及无数设计应用中面积计算的基础。
+        ja: >-
+          土地の測量や材料の見積もり、無数の設計アプリケーションでの面積計算の基礎となっている。
+  useCases:
+    - title:
+        es: Agrimensura
+        en: Land surveying
+        pt: Agrimensura
+        fr: Arpentage
+        zh: 土地测量
+        ja: 測量
+      description:
+        es: >-
+          Un terreno irregular se divide en triángulos y se suman sus áreas para obtener la
+          superficie total solo con medir distancias.
+        en: >-
+          An irregular plot is split into triangles whose areas are added to get the total surface
+          from distance measurements alone.
+        pt: >-
+          Um terreno irregular é dividido em triângulos e suas áreas são somadas para obter a
+          superfície total apenas com medições de distância.
+        fr: >-
+          Une parcelle irrégulière est découpée en triangles dont on additionne les aires pour
+          obtenir la surface totale à partir de seules mesures de distances.
+        zh: >-
+          不规则地块被分割成三角形，把各个面积相加，仅凭距离测量即可得到总面积。
+        ja: >-
+          不規則な土地を三角形に分割し、距離の測定だけでそれぞれの面積を足し合わせて全体の面積を求める。
+    - title:
+        es: Techos y pavimentos
+        en: Roofs and pavements
+        pt: Telhados e pavimentos
+        fr: Toitures et chaussées
+        zh: 屋顶与路面
+        ja: 屋根と舗装
+      description:
+        es: >-
+          Techos a dos aguas, buhardillas y losetas triangulares se miden con esta fórmula para
+          presupuestar material.
+        en: >-
+          Gable roofs, dormers, and triangular tiles are sized with this formula to budget material.
+        pt: >-
+          Telhados de duas águas, águas-furtadas e lajotas triangulares são medidos com esta fórmula
+          para orçar o material.
+        fr: >-
+          Toitures à deux versants, lucarnes et carrelages triangulaires se mesurent avec cette
+          formule pour chiffrer les matériaux.
+        zh: >-
+          双坡屋顶、老虎窗和三角形瓷砖都用此公式来计算材料用量。
+        ja: >-
+          切妻屋根やドーマー窓、三角形のタイルは、この式で材料を見積もる。
+    - title:
+        es: Secciones transversales
+        en: Cross-sections
+        pt: Seções transversais
+        fr: Sections transversales
+        zh: 横截面
+        ja: 断面
+      description:
+        es: >-
+          En ingeniería, vigas y terraplenes se aproximan con secciones triangulares para calcular
+          área y volumen.
+        en: >-
+          In engineering, beams and embankments are approximated with triangular sections to
+          compute area and volume.
+        pt: >-
+          Em engenharia, vigas e aterros são aproximados por seções triangulares para calcular área
+          e volume.
+        fr: >-
+          En ingénierie, poutres et remblais sont approximés par des sections triangulaires pour
+          calculer l'aire et le volume.
+        zh: >-
+          在工程中，梁和路堤常以三角形截面近似，用以计算面积和体积。
+        ja: >-
+          工学では、梁や盛土を三角形の断面で近似して面積と体積を計算する。
+    - title:
+        es: Arquitectura
+        en: Architecture
+        pt: Arquitetura
+        fr: Architecture
+        zh: 建筑学
+        ja: 建築学
+      description:
+        es: >-
+          Fachadas triangulares, tragaluces y celosías se dimensionan a partir del área de sus
+          elementos.
+        en: >-
+          Triangular facades, skylights, and lattice structures are sized from the area of their
+          elements.
+        pt: >-
+          Fachadas triangulares, claraboias e treliças são dimensionadas a partir da área de seus
+          elementos.
+        fr: >-
+          Façades triangulaires, puits de lumière et treillis se dimensionnent à partir de l'aire
+          de leurs éléments.
+        zh: >-
+          三角形立面、天窗和格构结构都依据其构件的面积来确定尺寸。
+        ja: >-
+          三角形のファサードや天窓、ラチス構造は、構成要素の面積から寸法を決める。
+  example:
+    title:
+      es: Un triángulo con base 6 y altura 4
+      en: A triangle with base 6 and height 4
+      pt: Um triângulo com base 6 e altura 4
+      fr: Un triangle de base 6 et de hauteur 4
+      zh: 底为6、高为4的三角形
+      ja: 底辺6、高さ4の三角形
+    lines:
+      - es: b = 6, h = 4
+        en: b = 6, h = 4
+        pt: b = 6, h = 4
+        fr: b = 6, h = 4
+        zh: b = 6, h = 4
+        ja: b = 6, h = 4
+      - es: A = ½ · b · h
+        en: A = ½ · b · h
+        pt: A = ½ · b · h
+        fr: A = ½ · b · h
+        zh: A = ½ · b · h
+        ja: A = ½ · b · h
+      - es: A = ½ · 6 · 4
+        en: A = ½ · 6 · 4
+        pt: A = ½ · 6 · 4
+        fr: A = ½ · 6 · 4
+        zh: A = ½ · 6 · 4
+        ja: A = ½ · 6 · 4
+      - es: A = ½ · 24
+        en: A = ½ · 24
+        pt: A = ½ · 24
+        fr: A = ½ · 24
+        zh: A = ½ · 24
+        ja: A = ½ · 24
+      - es: A = 12
+        en: A = 12
+        pt: A = 12
+        fr: A = 12
+        zh: A = 12
+        ja: A = 12

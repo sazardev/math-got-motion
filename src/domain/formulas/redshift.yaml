@@ -1,0 +1,313 @@
+id: redshift
+title:
+  es: Corrimiento al Rojo
+  en: Redshift
+  pt: Desvio para o Vermelho
+  fr: Décalage vers le rouge
+  zh: 红移
+  ja: 赤方偏移
+category:
+  es: Astronomía
+  en: Astronomy
+  pt: Astronomia
+  fr: Astronomie
+  zh: 天文学
+  ja: 天文学
+nodes:
+  - id: z
+    type: variable
+    value: z
+    explanation:
+      es: "El corrimiento al rojo: cuánto se ha estirado la luz por la expansión del universo."
+      en: "The redshift: how much the light has been stretched by the expansion of the universe."
+      pt: "O desvio para o vermelho: quanto a luz foi esticada pela expansão do universo."
+      fr: "Le décalage vers le rouge : l'allongement de la lumière dû à l'expansion de l'univers."
+      zh: 红移：宇宙膨胀使光波被拉长的程度。
+      ja: 赤方偏移。宇宙の膨張によって光が引き伸ばされた量。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: delta-lambda
+    type: variable
+    value: "Δλ"
+    explanation:
+      es: "El cambio de longitud de onda observado: la longitud medida menos la emitida."
+      en: "The observed change in wavelength: the measured wavelength minus the emitted one."
+      pt: "A variação do comprimento de onda observado: o medido menos o emitido."
+      fr: "La variation de longueur d'onde observée : la longueur mesurée moins celle émise."
+      zh: 观测到的波长变化：测得的波长减去发射时的波长。
+      ja: 観測された波長の変化量。測定した波長から放出時の波長を引いたもの。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: lambda
+    type: variable
+    value: "λ"
+    explanation:
+      es: La longitud de onda de reposo de la luz, tal como fue emitida.
+      en: The rest wavelength of the light, as it was emitted.
+      pt: O comprimento de onda de repouso da luz, como foi emitida.
+      fr: La longueur d'onde au repos de la lumière, telle qu'elle fut émise.
+      zh: 光的静止波长，即它被发出时的波长。
+      ja: 光の静止波長。放出された当時の波長。
+context:
+  author:
+    es: Basada en el efecto Doppler y Hubble
+    en: Based on the Doppler effect and Hubble
+    pt: Baseada no efeito Doppler e em Hubble
+    fr: Basée sur l'effet Doppler et Hubble
+    zh: 基于多普勒效应和哈勃定律
+    ja: ドップラー効果とハッブルに基づく
+  era:
+    es: EE. UU., 1929 · formalizada en el s. XX
+    en: United States, 1929 · formalized in the 20th century
+    pt: EUA, 1929 · formalizada no séc. XX
+    fr: États-Unis, 1929 · formalisée au XXe siècle
+    zh: 美国，1929年 · 20世纪正式确立
+    ja: 米国、1929年・20世紀に確立
+  history:
+    es: >-
+      El corrimiento al rojo mide cuánto se estira la luz de un objeto lejano: cuando el universo se
+      expande, las ondas viajan a través de un espacio que crece y su longitud aumenta hacia el rojo.
+      En 1929 Edwin Hubble demostró que las galaxias se alejan con velocidad proporcional a su
+      distancia, usando los corrimientos al rojo que Vesto Slipher había medido antes. Esa relación
+      es hoy la ley de Hubble y la piedra angular de la cosmología moderna; desde 1998, las supernovas
+      tipo Ia mostraron que la expansión se acelera, dando lugar a la idea de la energía oscura.
+    en: >-
+      Redshift measures how much the light of a distant object is stretched: as the universe expands,
+      waves travel through growing space and their wavelength lengthens toward the red. In 1929 Edwin
+      Hubble showed that galaxies recede with velocity proportional to their distance, using the
+      redshifts Vesto Slipher had measured earlier. That relation is today Hubble's law and the
+      cornerstone of modern cosmology; since 1998, Type Ia supernovae have shown that the expansion is
+      accelerating, giving rise to the idea of dark energy.
+    pt: >-
+      O desvio para o vermelho mede quanto a luz de um objeto distante é esticada: quando o universo
+      se expande, as ondas viajam por um espaço que cresce e seu comprimento aumenta em direção ao
+      vermelho. Em 1929, Edwin Hubble mostrou que as galáxias se afastam com velocidade proporcional
+      à distância, usando os desvios para o vermelho que Vesto Slipher havia medido antes. Essa
+      relação é hoje a lei de Hubble e a pedra angular da cosmologia moderna; desde 1998, as supernovas
+      tipo Ia mostraram que a expansão se acelera, dando origem à ideia da energia escura.
+    fr: >-
+      Le décalage vers le rouge mesure l'allongement de la lumière d'un objet lointain : quand
+      l'univers s'étend, les ondes traversent un espace qui grandit et leur longueur d'onde augmente
+      vers le rouge. En 1929, Edwin Hubble montra que les galaxies s'éloignent à une vitesse
+      proportionnelle à leur distance, en utilisant les décalages vers le rouge mesurés auparavant
+      par Vesto Slipher. Cette relation est aujourd'hui la loi de Hubble et la pierre angulaire de la
+      cosmologie moderne ; depuis 1998, les supernovae de type Ia ont montré que l'expansion
+      s'accélère, donnant naissance à l'idée de l'énergie sombre.
+    zh: >-
+      红移衡量遥远天体的光被拉长了多少：随着宇宙膨胀，光波在逐渐增大的空间中传播，其波长向红端增加。1929年，
+      埃德温·哈勃利用维斯托·斯里弗早先测得的红移，证明了星系退行的速度与其距离成正比。这条关系今天被称为哈勃定律，
+      是现代宇宙学的基石；自1998年以来，Ia型超新星表明宇宙膨胀在加速，由此产生了暗能量的概念。
+    ja: >-
+      赤方偏移は、遠くの天体の光がどれだけ引き伸ばされたかを測る量である。宇宙が膨張すると、光波は広がる空間を進み、
+      その波長は赤い方へと伸びる。1929年、エドウィン・ハッブルは、ヴェスト・スライファーが先に測定していた赤方偏移
+      を用いて、銀河が距離に比例する速さで遠ざかっていることを示した。この関係は今日ハッブルの法則と呼ばれ、現代宇宙論
+      の要となっている。1998年以降、Ia型超新星の観測から宇宙の膨張が加速していることが判明し、ダークエネルギーの考え方が
+      生まれた。
+  timeline:
+    - year: "1842"
+      label:
+        es: >-
+          Christian Doppler describe el efecto que lleva su nombre, que años después se aplicaría a
+          la luz de las estrellas.
+        en: >-
+          Christian Doppler describes the effect bearing his name, later applied to starlight.
+        pt: >-
+          Christian Doppler descreve o efeito que leva seu nome, depois aplicado à luz das estrelas.
+        fr: >-
+          Christian Doppler décrit l'effet qui porte son nom, appliqué plus tard à la lumière des
+          étoiles.
+        zh: >-
+          克里斯蒂安·多普勒描述了他命名的效应，后来被应用于恒星的光。
+        ja: >-
+          クリスチャン・ドップラーがその名を冠する効果を記述し、後に恒星の光へ応用される。
+    - year: "1929"
+      label:
+        es: >-
+          Hubble publica la relación entre velocidad de recesión y distancia de las galaxias.
+        en: >-
+          Hubble publishes the relation between galaxy recession velocity and distance.
+        pt: >-
+          Hubble publica a relação entre a velocidade de recessão e a distância das galáxias.
+        fr: >-
+          Hubble publie la relation entre vitesse de récession et distance des galaxies.
+        zh: >-
+          哈勃发表了星系退行速度与距离之间的关系。
+        ja: >-
+          ハッブルが、銀河の後退速度と距離の関係を発表する。
+    - year: "1998"
+      label:
+        es: >-
+          Las supernovas tipo Ia revelan que la expansión del universo se acelera, lo que sugiere la
+          energía oscura.
+        en: >-
+          Type Ia supernovae reveal that the universe's expansion is accelerating, suggesting dark
+          energy.
+        pt: >-
+          Supernovas tipo Ia revelam que a expansão do universo se acelera, sugerindo a energia
+          escura.
+        fr: >-
+          Les supernovae de type Ia révèlent que l'expansion de l'univers s'accélère, suggérant
+          l'énergie sombre.
+        zh: >-
+          Ia型超新星揭示宇宙膨胀正在加速，由此提出暗能量的存在。
+        ja: >-
+          Ia型超新星が宇宙の膨張が加速していることを明らかにし、ダークエネルギーの存在が示唆される。
+    - year: Hoy
+      label:
+        es: >-
+          Los telescopios miden el corrimiento al rojo de galaxias y cuásares situados a miles de
+          millones de años luz.
+        en: >-
+          Telescopes measure the redshift of galaxies and quasars billions of light-years away.
+        pt: >-
+          Telescópios medem o desvio para o vermelho de galáxias e quasares a bilhões de anos-luz.
+        fr: >-
+          Les télescopes mesurent le décalage vers le rouge de galaxies et de quasars à des
+          milliards d'années-lumière.
+        zh: >-
+          望远镜测量着数十亿光年外星系和类星体的红移。
+        ja: >-
+          望遠鏡が数十億光年彼方の銀河やクエーサーの赤方偏移を測定している。
+  useCases:
+    - title:
+        es: Cosmología
+        en: Cosmology
+        pt: Cosmologia
+        fr: Cosmologie
+        zh: 宇宙学
+        ja: 宇宙論
+      description:
+        es: >-
+          Con la ley de Hubble, el corrimiento al rojo da la velocidad y la distancia de las galaxias.
+        en: >-
+          With Hubble's law, redshift yields a galaxy's velocity and distance.
+        pt: >-
+          Com a lei de Hubble, o desvio para o vermelho fornece a velocidade e a distância das
+          galáxias.
+        fr: >-
+          Avec la loi de Hubble, le décalage vers le rouge donne la vitesse et la distance des
+          galaxies.
+        zh: >-
+          结合哈勃定律，红移可给出星系的速度和距离。
+        ja: >-
+          ハッブルの法則と合わせることで、銀河の速度と距離が得られる。
+    - title:
+        es: Supernovas tipo Ia
+        en: Type Ia supernovae
+        pt: Supernovas tipo Ia
+        fr: Supernovae de type Ia
+        zh: Ia型超新星
+        ja: Ia型超新星
+      description:
+        es: >-
+          Sus corrimientos al rojo revelaron la aceleración de la expansión cósmica y la energía
+          oscura.
+        en: >-
+          Their redshifts revealed the acceleration of cosmic expansion and dark energy.
+        pt: >-
+          Seus desvios para o vermelho revelaram a aceleração da expansão cósmica e a energia escura.
+        fr: >-
+          Leurs décalages vers le rouge ont révélé l'accélération de l'expansion cosmique et
+          l'énergie sombre.
+        zh: >-
+          它们的红移揭示了宇宙膨胀的加速和暗能量的存在。
+        ja: >-
+          その赤方偏移から、宇宙膨張の加速とダークエネルギーが明らかになった。
+    - title:
+        es: Galaxias lejanas
+        en: Distant galaxies
+        pt: Galáxias distantes
+        fr: Galaxies lointaines
+        zh: 遥远星系
+        ja: 遠方の銀河
+      description:
+        es: >-
+          Los sondeos profundos identifican galaxias antiguas por su gran corrimiento al rojo y
+          estudian el universo temprano.
+        en: >-
+          Deep surveys identify ancient galaxies by their high redshift and study the early universe.
+        pt: >-
+          Levantamentos profundos identificam galáxias antigas por seu alto desvio para o vermelho e
+          estudam o universo primordial.
+        fr: >-
+          Les sondages profonds identifient les galaxies anciennes par leur fort décalage vers le
+          rouge et étudient l'univers primordial.
+        zh: >-
+          深空巡天通过很高的红移识别古老星系，研究早期宇宙。
+        ja: >-
+          深宇宙探査は、高い赤方偏移を持つ古い銀河を識別し、初期宇宙を研究する。
+    - title:
+        es: Cuásares
+        en: Quasars
+        pt: Quasares
+        fr: Quasars
+        zh: 类星体
+        ja: クエーサー
+      description:
+        es: >-
+          Sus corrimientos al rojo extremos marcan los límites observables del universo.
+        en: >-
+          Their extreme redshifts mark the observable limits of the universe.
+        pt: >-
+          Seus desvios extremos para o vermelho marcam os limites observáveis do universo.
+        fr: >-
+          Leurs décalages vers le rouge extrêmes marquent les limites observables de l'univers.
+        zh: >-
+          它们极高的红移标定了宇宙的可观测边界。
+        ja: >-
+          その極端な赤方偏移は、宇宙の観測可能な限界を示す。
+  example:
+    title:
+      es: Una galaxia que se aleja
+      en: A receding galaxy
+      pt: Uma galáxia que se afasta
+      fr: Une galaxie qui s'éloigne
+      zh: 正在远离的星系
+      ja: 遠ざかる銀河
+    lines:
+      - es: λ₀ = 500 nm, λ = 510 nm
+        en: λ₀ = 500 nm, λ = 510 nm
+        pt: λ₀ = 500 nm, λ = 510 nm
+        fr: λ₀ = 500 nm, λ = 510 nm
+        zh: λ₀ = 500 纳米，λ = 510 纳米
+        ja: λ₀ = 500 nm、λ = 510 nm
+      - es: Δλ = 510 − 500 = 10 nm
+        en: Δλ = 510 − 500 = 10 nm
+        pt: Δλ = 510 − 500 = 10 nm
+        fr: Δλ = 510 − 500 = 10 nm
+        zh: Δλ = 510 − 500 = 10 纳米
+        ja: Δλ = 510 − 500 = 10 nm
+      - es: z = Δλ / λ₀
+        en: z = Δλ / λ₀
+        pt: z = Δλ / λ₀
+        fr: z = Δλ / λ₀
+        zh: z = Δλ / λ₀
+        ja: z = Δλ / λ₀
+      - es: z = 10 / 500
+        en: z = 10 / 500
+        pt: z = 10 / 500
+        fr: z = 10 / 500
+        zh: z = 10 / 500
+        ja: z = 10 / 500
+      - es: z = 0.02
+        en: z = 0.02
+        pt: z = 0,02
+        fr: z = 0,02
+        zh: z = 0.02
+        ja: z = 0.02

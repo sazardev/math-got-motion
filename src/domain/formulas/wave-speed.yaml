@@ -1,0 +1,252 @@
+id: wave-speed
+title:
+  es: Velocidad de una Onda
+  en: Wave Speed
+  pt: Velocidade de uma Onda
+  fr: Vitesse d'une Onde
+  zh: 波速
+  ja: 波の速度
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: "v: la velocidad a la que avanza la onda, en metros por segundo."
+      en: "v: the speed at which the wave advances, in meters per second."
+      pt: "v: a velocidade com que a onda avança, em metros por segundo."
+      fr: "v : la vitesse à laquelle l'onde avance, en mètres par seconde."
+      zh: "v：波前进的速度,单位为米/秒。"
+      ja: "v：波が進む速度。単位はメートル毎秒。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: f
+    type: variable
+    value: f
+    explanation:
+      es: "f: la frecuencia, cuántas oscilaciones completa la onda por segundo."
+      en: "f: the frequency, how many oscillations the wave completes per second."
+      pt: "f: a frequência, quantas oscilações a onda completa por segundo."
+      fr: "f : la fréquence, le nombre d'oscillations que l'onde effectue par seconde."
+      zh: "f：频率,即波每秒完成的振荡次数。"
+      ja: "f：振動数。波が1秒あたりに完了する振動の回数。"
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: 次を掛ける。
+  - id: lambda
+    type: variable
+    value: λ
+    explanation:
+      es: "λ: la longitud de onda, la distancia que avanza la onda en una oscilación completa."
+      en: "λ: the wavelength, the distance the wave advances in one full oscillation."
+      pt: "λ: o comprimento de onda, a distância que a onda avança em uma oscilação completa."
+      fr: "λ : la longueur d'onde, la distance parcourue par l'onde en une oscillation complète."
+      zh: "λ：波长,即波完成一次完整振荡所前进的距离。"
+      ja: "λ：波長。波が1回の完全な振動で進む距離。"
+context:
+  author:
+    es: Origen colectivo de la mecánica ondulatoria
+    en: Collective origin of wave mechanics
+    pt: Origem coletiva da mecânica ondulatória
+    fr: Origine collective de la mécanique ondulatoire
+    zh: 波动学的集体起源
+    ja: 波動力学の集団的起源
+  era:
+    es: Europa, s. XVII–XIX
+    en: Europe, 17th–19th century
+    pt: Europa, séc. XVII–XIX
+    fr: Europe, XVIIe–XIXe siècle
+    zh: 欧洲,17–19世纪
+    ja: ヨーロッパ、17–19世紀
+  history:
+    es: >-
+      Que el sonido, la luz y el agua comparten una misma descripción ondulatoria se estableció
+      entre los siglos XVII y XIX: Huygens propuso en 1690 que la luz es una onda, y Young
+      demostró su interferencia en 1801. La relación v = f·λ expresa una propiedad universal: la
+      velocidad de cualquier onda es el producto de su frecuencia por su longitud de onda. Al
+      sintonizar una radio se cambia la frecuencia de oscilación del circuito, y la antena capta
+      la longitud de onda correspondiente. Es, además, un caso particular de la ecuación de onda,
+      formalizada por d'Alembert en 1747.
+    en: >-
+      That sound, light, and water share a common wave description was established between the
+      17th and 19th centuries: Huygens proposed in 1690 that light is a wave, and Young
+      demonstrated its interference in 1801. The relation v = f·λ expresses a universal property:
+      the speed of any wave is the product of its frequency and its wavelength. When you tune a
+      radio you change the circuit's oscillation frequency, and the antenna picks up the
+      corresponding wavelength. It is also a particular case of the wave equation, formalized by
+      d'Alembert in 1747.
+    pt: >-
+      Que o som, a luz e a água compartilham uma mesma descrição ondulatória foi estabelecido
+      entre os séculos XVII e XIX: Huygens propôs em 1690 que a luz é uma onda, e Young
+      demonstrou sua interferência em 1801. A relação v = f·λ expressa uma propriedade universal:
+      a velocidade de qualquer onda é o produto da frequência pelo comprimento de onda. Ao
+      sintonizar um rádio, muda-se a frequência de oscilação do circuito, e a antena capta o
+      comprimento de onda correspondente. É, além disso, um caso particular da equação de onda,
+      formalizada por d'Alembert em 1747.
+    fr: >-
+      Que le son, la lumière et l'eau partagent une même description ondulatoire fut établi entre
+      les XVIIe et XIXe siècles : Huygens proposa en 1690 que la lumière est une onde, et Young
+      démontra son interférence en 1801. La relation v = f·λ exprime une propriété universelle :
+      la vitesse de toute onde est le produit de sa fréquence par sa longueur d'onde. Quand on
+      règle une radio, on change la fréquence d'oscillation du circuit, et l'antenne capte la
+      longueur d'onde correspondante. C'est aussi un cas particulier de l'équation d'onde,
+      formalisée par d'Alembert en 1747.
+    zh: >-
+      声、光和水具有相同的波动描述,这一点在17至19世纪间得到确立:惠更斯在1690年提出光是波,杨在1801年演示了光的干涉。
+      关系式v = f·λ表达了一个普遍性质:任何波的速度都等于其频率乘以波长。调谐收音机时,改变的是电路的振荡频率,天线则接收
+      对应的波长。它还是波动方程的一个特例,该方程由达朗贝尔于1747年形式化。
+    ja: >-
+      音・光・水が共通の波動として記述できることは、17世紀から19世紀にかけて確立された。1690年にホイヘンスは光が波であると
+      提唱し、1801年にヤングがその干渉を実証した。v = f·λという関係は普遍的な性質を表している:あらゆる波の速度は振動数と
+      波長の積である。ラジオを合わせるとは回路の振動数を変えることであり、アンテナは対応する波長を受け取る。これはまた、
+      1747年にダランベールが定式化した波動方程式の特殊な場合でもある。
+  timeline:
+    - year: "1690"
+      label:
+        es: Huygens publica su teoría ondulatoria de la luz en el "Tratado de la luz".
+        en: Huygens publishes his wave theory of light in the "Treatise on Light".
+        pt: Huygens publica sua teoria ondulatória da luz no "Tratado da Luz".
+        fr: Huygens publie sa théorie ondulatoire de la lumière dans le « Traité de la lumière ».
+        zh: 惠更斯在《光论》中发表了他的光的波动理论。
+        ja: ホイヘンスが『光についての論考』で光の波動理論を発表する。
+    - year: "1747"
+      label:
+        es: d'Alembert formula la ecuación de onda, de la que v = f·λ es un caso particular.
+        en: d'Alembert formulates the wave equation, of which v = f·λ is a particular case.
+        pt: d'Alembert formula a equação de onda, da qual v = f·λ é um caso particular.
+        fr: d'Alembert formule l'équation d'onde, dont v = f·λ est un cas particulier.
+        zh: 达朗贝尔提出波动方程,v = f·λ 是它的一个特例。
+        ja: ダランベールが波動方程式を定式化する。v = f·λはその特殊な場合である。
+    - year: "1801"
+      label:
+        es: Thomas Young demuestra la interferencia de la luz, confirmando que es una onda.
+        en: Thomas Young demonstrates light interference, confirming it is a wave.
+        pt: Thomas Young demonstra a interferência da luz, confirmando que ela é uma onda.
+        fr: Thomas Young démontre l'interférence de la lumière, confirmant qu'elle est une onde.
+        zh: 托马斯·杨演示了光的干涉,证实光是波。
+        ja: トーマス・ヤングが光の干渉を実証し、光が波であることを確認する。
+    - year: "1865"
+      label:
+        es: Maxwell identifica la luz como una onda electromagnética que viaja a velocidad constante.
+        en: Maxwell identifies light as an electromagnetic wave traveling at constant speed.
+        pt: Maxwell identifica a luz como uma onda eletromagnética que viaja a velocidade constante.
+        fr: Maxwell identifie la lumière comme une onde électromagnétique voyageant à vitesse constante.
+        zh: 麦克斯韦指出光是电磁波,以恒定速度传播。
+        ja: マクスウェルが光を一定速度で伝わる電磁波と特定する。
+  useCases:
+    - title:
+        es: Audio y acústica
+        en: Audio and acoustics
+        pt: Áudio e acústica
+        fr: Audio et acoustique
+        zh: 音频与声学
+        ja: オーディオと音響
+      description:
+        es: Los diseñadores de altavoces y salas usan v = f·λ para predecir cómo se comporta cada frecuencia en un espacio.
+        en: Speaker and room designers use v = f·λ to predict how each frequency behaves in a space.
+        pt: Projetistas de alto-falantes e salas usam v = f·λ para prever como cada frequência se comporta em um espaço.
+        fr: Les concepteurs d'enceintes et de salles utilisent v = f·λ pour prédire le comportement de chaque fréquence dans un espace.
+        zh: 音箱和室内声学设计师用 v = f·λ 预测每个频率在空间中的表现。
+        ja: スピーカーや室内の設計者は v = f·λ を使って、各周波数が空間でどう振る舞うかを予測する。
+    - title:
+        es: Telecomunicaciones
+        en: Telecommunications
+        pt: Telecomunicações
+        fr: Télécommunications
+        zh: 电信
+        ja: 通信
+      description:
+        es: Las antenas se dimensionan con la longitud de onda de la frecuencia que transmiten o reciben.
+        en: Antennas are sized with the wavelength of the frequency they transmit or receive.
+        pt: Antenas são dimensionadas com o comprimento de onda da frequência que transmitem ou recebem.
+        fr: Les antennes sont dimensionnées selon la longueur d'onde de la fréquence qu'elles émettent ou reçoivent.
+        zh: 天线按其所发射或接收频率的波长来确定尺寸。
+        ja: アンテナは送受信する周波数の波長に合わせて寸法が決められる。
+    - title:
+        es: Sismología
+        en: Seismology
+        pt: Sismologia
+        fr: Sismologie
+        zh: 地震学
+        ja: 地震学
+      description:
+        es: La diferencia de llegada de ondas P y S permite localizar el epicentro de un terremoto.
+        en: The arrival difference of P and S waves allows locating an earthquake's epicenter.
+        pt: A diferença de chegada das ondas P e S permite localizar o epicentro de um terremoto.
+        fr: La différence d'arrivée des ondes P et S permet de localiser l'épicentre d'un séisme.
+        zh: P波和S波到达时间之差可用于确定地震的震中。
+        ja: P波とS波の到着時間差から、地震の震源を特定できる。
+    - title:
+        es: Óptica
+        en: Optics
+        pt: Óptica
+        fr: Optique
+        zh: 光学
+        ja: 光学
+      description:
+        es: En un medio dado, la luz de cada color tiene una frecuencia distinta y, por tanto, una longitud de onda distinta.
+        en: In a given medium, each color of light has a distinct frequency and therefore a distinct wavelength.
+        pt: Em um dado meio, cada cor de luz tem uma frequência distinta e, portanto, um comprimento de onda distinto.
+        fr: Dans un milieu donné, chaque couleur de la lumière a une fréquence distincte et donc une longueur d'onde distincte.
+        zh: 在给定介质中,每种颜色的光频率不同,因此波长也不同。
+        ja: 同じ媒質でも、光の色ごとに振動数が異なるため波長も異なる。
+  example:
+    title:
+      es: Velocidad del sonido en el aire
+      en: Speed of sound in air
+      pt: Velocidade do som no ar
+      fr: Vitesse du son dans l'air
+      zh: 空气中的声速
+      ja: 空気中の音速
+    lines:
+      - es: f = 440 Hz (nota la)
+        en: f = 440 Hz (note A)
+        pt: f = 440 Hz (nota lá)
+        fr: f = 440 Hz (note la)
+        zh: f = 440 Hz(A音)
+        ja: f = 440 Hz(ラの音)
+      - es: λ = 0.78 m
+        en: λ = 0.78 m
+        pt: λ = 0,78 m
+        fr: λ = 0,78 m
+        zh: λ = 0.78 米
+        ja: λ = 0.78 m
+      - es: v = f · λ
+        en: v = f · λ
+        pt: v = f · λ
+        fr: v = f · λ
+        zh: v = f · λ
+        ja: v = f · λ
+      - es: v = 440 × 0.78
+        en: v = 440 × 0.78
+        pt: v = 440 × 0,78
+        fr: v = 440 × 0,78
+        zh: v = 440 × 0.78
+        ja: v = 440 × 0.78
+      - es: v ≈ 343 m/s
+        en: v ≈ 343 m/s
+        pt: v ≈ 343 m/s
+        fr: v ≈ 343 m/s
+        zh: v ≈ 343 米/秒
+        ja: v ≈ 343 m/s

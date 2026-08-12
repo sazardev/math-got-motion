@@ -1,0 +1,358 @@
+id: rhombus-area
+title:
+  es: Área de un Rombo
+  en: Area of a Rhombus
+  pt: Área de um Losango
+  fr: Aire d'un Losange
+  zh: 菱形的面积
+  ja: ひし形の面積
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: area
+    type: variable
+    value: A
+    explanation:
+      es: El área del rombo.
+      en: The area of the rhombus.
+      pt: A área do losango.
+      fr: L'aire du losange.
+      zh: 菱形的面积。
+      ja: ひし形の面積。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el producto de las dos diagonales.
+      en: Opens the product of the two diagonals.
+      pt: Abre o produto das duas diagonais.
+      fr: Ouvre le produit des deux diagonales.
+      zh: 打开两条对角线乘积的括号。
+      ja: 2つの対角線の積を開く括弧。
+  - id: d1
+    type: variable
+    value: d₁
+    explanation:
+      es: "La diagonal mayor: el segmento que une dos vértices opuestos."
+      en: "The longer diagonal: the segment joining two opposite vertices."
+      pt: "A diagonal maior: o segmento que une dois vértices opostos."
+      fr: "La grande diagonale : le segment reliant deux sommets opposés."
+      zh: "较长的那条对角线：连接两个相对顶点的线段。"
+      ja: "長い方の対角線。向かい合う2つの頂点を結ぶ線分。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por la otra diagonal.
+      en: Multiplied by the other diagonal.
+      pt: Multiplicado pela outra diagonal.
+      fr: Multiplié par l'autre diagonale.
+      zh: 乘以另一条对角线。
+      ja: もう一方の対角線を掛ける。
+  - id: d2
+    type: variable
+    value: d₂
+    explanation:
+      es: "La diagonal menor: el segmento que une los otros dos vértices opuestos."
+      en: "The shorter diagonal: the segment joining the other two opposite vertices."
+      pt: "A diagonal menor: o segmento que une os outros dois vértices opostos."
+      fr: "La petite diagonale : le segment reliant les deux autres sommets opposés."
+      zh: "较短的那条对角线：连接另两个相对顶点的线段。"
+      ja: "短い方の対角線。残りの2つの頂点を結ぶ線分。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el producto de las diagonales.
+      en: Closes the product of the diagonals.
+      pt: Fecha o produto das diagonais.
+      fr: Ferme le produit des diagonales.
+      zh: 闭合对角线乘积的括号。
+      ja: 対角線の積を閉じる括弧。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: "Dividido entre dos: el rombo ocupa la mitad del rectángulo de lados d₁ y d₂."
+      en: "Divided by two: the rhombus fills half of the rectangle of sides d₁ and d₂."
+      pt: "Dividido por dois: o losango ocupa a metade do retângulo de lados d₁ e d₂."
+      fr: "Divisé par deux : le losange occupe la moitié du rectangle de côtés d₁ et d₂."
+      zh: "除以 2：菱形占以 d₁、d₂ 为边的矩形面积的一半。"
+      ja: "2で割る。ひし形は、辺d₁とd₂の長方形の半分を占める。"
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: El divisor constante de la fórmula.
+      en: The constant divisor of the formula.
+      pt: O divisor constante da fórmula.
+      fr: Le diviseur constant de la formule.
+      zh: 公式中的常数除数。
+      ja: 公式の定数の除数。
+context:
+  author:
+    es: Origen colectivo
+    en: Collective origin
+    pt: Origem coletiva
+    fr: Origine collective
+    zh: 集体起源
+    ja: 集団的起源
+  era:
+    es: Grecia antigua
+    en: Ancient Greece
+    pt: Grécia Antiga
+    fr: Grèce antique
+    zh: 古希腊
+    ja: 古代ギリシャ
+  history:
+    es: >-
+      Un rombo es un paralelogramo con sus cuatro lados iguales, y su área se obtiene como la mitad
+      del producto de sus diagonales. La clave es que las diagonales de un rombo son perpendiculares
+      y se cortan en su punto medio, dividiéndolo en cuatro triángulos rectángulos iguales: el
+      rectángulo que los rodea tiene área d₁·d₂ y el rombo ocupa exactamente la mitad. Euclides
+      define el rombo en los Elementos, y la fórmula se difundió en la geometría griega y en la
+      india, donde Brahmagupta recogió el área de cuadriláteros por sus diagonales. La figura,
+      emparentada con el "diamante", aparece en caras de cristales y en teselados islámicos.
+    en: >-
+      A rhombus is a parallelogram with four equal sides, and its area is half the product of its
+      diagonals. The key fact is that the diagonals of a rhombus are perpendicular and bisect each
+      other, splitting it into four equal right triangles: the rectangle that surrounds them has
+      area d₁·d₂, and the rhombus fills exactly half. Euclid defines the rhombus in the Elements,
+      and the formula spread through Greek and Indian geometry, where Brahmagupta recorded the area
+      of quadrilaterals from their diagonals. The figure, kin to the "diamond", appears on crystal
+      faces and in Islamic tessellations.
+    pt: >-
+      Um losango é um paralelogramo com os quatro lados iguais, e sua área é obtida como a metade do
+      produto de suas diagonais. A chave é que as diagonais de um losango são perpendiculares e se
+      cruzam no ponto médio, dividindo-o em quatro triângulos retângulos iguais: o retângulo que os
+      envolve tem área d₁·d₂ e o losango ocupa exatamente a metade. Euclides define o losango nos
+      Elementos, e a fórmula se difundiu na geometria grega e na indiana, onde Brahmagupta registrou
+      a área de quadriláteros a partir de suas diagonais. A figura, aparentada com o "diamante",
+      aparece em faces de cristais e em teselados islâmicos.
+    fr: >-
+      Un losange est un parallélogramme à quatre côtés égaux, et son aire vaut la moitié du produit
+      de ses diagonales. Le point clé est que les diagonales d'un losange sont perpendiculaires et
+      se coupent en leur milieu, le partageant en quatre triangles rectangles égaux : le rectangle
+      qui les entoure a pour aire d₁·d₂ et le losange en occupe exactement la moitié. Euclide définit
+      le losange dans les Éléments, et la formule se diffusa dans la géométrie grecque et indienne,
+      où Brahmagupta consigna l'aire des quadrilatères à partir de leurs diagonales. La figure,
+      parente du « diamant », apparaît sur des faces de cristaux et dans les pavages islamiques.
+    zh: >-
+      菱形是四条边都相等的平行四边形,其面积等于两条对角线乘积的一半。关键在于,菱形的对角线互相垂直且在
+      中点处平分,把它分成四个全等的直角三角形：环绕它们的矩形面积为 d₁·d₂,而菱形恰好占其一半。欧几里得
+      在《几何原本》中定义了菱形,这一公式在希腊几何和印度几何中流传,婆罗摩笈多就记录了由对角线求四边形
+      面积的方法。这种与"钻石"同源的图形,出现在晶体面上,也出现在伊斯兰镶嵌图案中。
+    ja: >-
+      ひし形は4つの辺がすべて等しい平行四辺形であり、その面積は2本の対角線の積の半分で求められる。鍵となる
+      のは、ひし形の対角線が互いに直交し、中点で交わって、4つの合同な直角三角形に分割されることだ。それらを
+      囲む長方形の面積は d₁·d₂ で、ひし形はちょうどその半分を占める。ユークリッドは『原論』でひし形を定義し、
+      この公式はギリシャとインドの幾何学に広まった。インドではブラフマグプタが対角線から四角形の面積を求める
+      方法を記録している。「ダイヤ」と同族のこの図形は、結晶の面やイスラームのタイル模様に現れる。
+  timeline:
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides define el rombo y trata el área de paralelogramos en el libro I de los Elementos.
+        en: >-
+          Euclid defines the rhombus and treats parallelogram areas in Book I of the Elements.
+        pt: >-
+          Euclides define o losango e trata da área de paralelogramos no livro I dos Elementos.
+        fr: >-
+          Euclide définit le losange et traite de l'aire des parallélogrammes au livre I des
+          Éléments.
+        zh: >-
+          欧几里得在《几何原本》第一卷定义菱形,并讨论平行四边形的面积。
+        ja: >-
+          ユークリッドが『原論』第1巻でひし形を定義し、平行四辺形の面積を扱う。
+    - year: s. VII
+      label:
+        es: >-
+          Brahmagupta recoge en la matemática india el área de cuadriláteros a partir de sus
+          diagonales.
+        en: >-
+          Brahmagupta records in Indian mathematics the area of quadrilaterals from their
+          diagonals.
+        pt: >-
+          Brahmagupta registra na matemática indiana a área de quadriláteros a partir de suas
+          diagonais.
+        fr: >-
+          Brahmagupta consigne dans les mathématiques indiennes l'aire des quadrilatères à partir de
+          leurs diagonales.
+        zh: >-
+          婆罗摩笈多在印度数学中记载了由对角线求四边形面积的方法。
+        ja: >-
+          ブラフマグプタが、インド数学で対角線から四角形の面積を求める方法を記す。
+    - year: s. XI
+      label:
+        es: >-
+          El arte geométrico islámico, con sus teselados girih, hace del rombo un motivo recurrente.
+        en: >-
+          Islamic geometric art, with its girih tiling, makes the rhombus a recurring motif.
+        pt: >-
+          A arte geométrica islâmica, com seus teselados girih, torna o losango um motivo
+          recorrente.
+        fr: >-
+          L'art géométrique islamique, avec ses pavages girih, fait du losange un motif récurrent.
+        zh: >-
+          伊斯兰几何艺术中的吉里赫镶嵌使菱形成为反复出现的图案。
+        ja: >-
+          イスラームの幾何学芸術、ギリ・タイル張りはひし形を繰り返し登場するモチーフにする。
+    - year: Hoy
+      label:
+        es: >-
+          La fórmula dimensiona caras de cristales, cortes de diamante y baldosas romboidales.
+        en: >-
+          The formula sizes crystal faces, diamond cuts, and rhombic tiles.
+        pt: >-
+          A fórmula dimensiona faces de cristais, cortes de diamante e ladrilhos romboidais.
+        fr: >-
+          La formule dimensionne les faces de cristaux, les tailles de diamant et les carreaux
+          losangés.
+        zh: >-
+          该公式用于计算晶体面、钻石切面和菱形瓷砖的尺寸。
+        ja: >-
+          この公式は結晶面、ダイヤモンドのカット、菱形タイルの寸法を決める。
+  useCases:
+    - title:
+        es: Cristalografía
+        en: Crystallography
+        pt: Cristalografia
+        fr: Cristallographie
+        zh: 晶体学
+        ja: 結晶学
+      description:
+        es: >-
+          Muchas caras cristalinas son rombos; su área se calcula a partir de las diagonales
+          medidas en el microscopio.
+        en: >-
+          Many crystal faces are rhombi; their area is computed from diagonals measured under the
+          microscope.
+        pt: >-
+          Muitas faces de cristais são losangos; sua área é calculada a partir das diagonais
+          medidas no microscópio.
+        fr: >-
+          Beaucoup de faces cristallines sont des losanges ; leur aire se calcule à partir des
+          diagonales mesurées au microscope.
+        zh: >-
+          许多晶面是菱形,其面积由显微镜下测得的对角线计算。
+        ja: >-
+          多くの結晶面はひし形であり、その面積は顕微鏡で測った対角線から計算される。
+    - title:
+        es: Patrones y teselados
+        en: Patterns and tiling
+        pt: Padrões e teselamentos
+        fr: Motifs et pavages
+        zh: 图案与镶嵌
+        ja: パターンとタイル
+      description:
+        es: >-
+          Baldosas y pisos romboidales cubren superficies calculando el área de cada pieza.
+        en: >-
+          Rhombic tiles and floors cover surfaces by computing the area of each piece.
+        pt: >-
+          Pisos e ladrilhos romboidais cobrem superfícies calculando a área de cada peça.
+        fr: >-
+          Carreaux et sols losangés couvrent les surfaces en calculant l'aire de chaque pièce.
+        zh: >-
+          菱形瓷砖和地面通过计算每块的面积来铺满表面。
+        ja: >-
+          ひし形のタイルや床は、各ピースの面積を計算して面を敷き詰める。
+    - title:
+        es: Joyería
+        en: Jewelry
+        pt: Joalheria
+        fr: Joaillerie
+        zh: 珠宝业
+        ja: 宝石加工
+      description:
+        es: >-
+          Las facetas de diamantes y gemas cortadas en forma de rombo se dimensionan con esta
+          fórmula.
+        en: >-
+          Diamond and gemstone facets cut as rhombi are sized with this formula.
+        pt: >-
+          As facetas de diamantes e gemas cortadas em losango são dimensionadas com esta fórmula.
+        fr: >-
+          Les facettes de diamants et de pierres taillées en losange sont dimensionnées avec cette
+          formule.
+        zh: >-
+          切割成菱形的钻石和宝石刻面用该公式确定尺寸。
+        ja: >-
+          ひし形にカットされたダイヤや宝石のファセットの寸法は、この公式で決まる。
+    - title:
+        es: Aeroespacial y deportes
+        en: Aerospace and sports
+        pt: Aeroespacial e esportes
+        fr: Aérospatial et sports
+        zh: 航空航天与体育
+        ja: 航空宇宙とスポーツ
+      description:
+        es: >-
+          Cometas y velas suelen ser superficies romboidales cuya área fija el empuje y la
+          sustentación.
+        en: >-
+          Kites and sails are often rhombic surfaces whose area sets thrust and lift.
+        pt: >-
+          Cometas e velas costumam ser superfícies romboidais cuja área define o empuxo e a
+          sustentação.
+        fr: >-
+          Cerfs-volants et voiles sont souvent des surfaces losangées dont l'aire fixe poussée et
+          portance.
+        zh: >-
+          风筝和帆通常是菱形表面,其面积决定推力和升力。
+        ja: >-
+          凧や帆はしばしばひし形の表面を持ち、その面積が推力と揚力を決める。
+  example:
+    title:
+      es: Rombo de diagonales 8 y 6
+      en: Rhombus with diagonals 8 and 6
+      pt: Losango de diagonais 8 e 6
+      fr: Losange de diagonales 8 et 6
+      zh: 对角线为8和6的菱形
+      ja: 対角線が8と6のひし形
+    lines:
+      - es: d₁ = 8, d₂ = 6
+        en: d₁ = 8, d₂ = 6
+        pt: d₁ = 8, d₂ = 6
+        fr: d₁ = 8, d₂ = 6
+        zh: d₁ = 8, d₂ = 6
+        ja: d₁ = 8, d₂ = 6
+      - es: A = (d₁ · d₂) / 2
+        en: A = (d₁ · d₂) / 2
+        pt: A = (d₁ · d₂) / 2
+        fr: A = (d₁ · d₂) / 2
+        zh: A = (d₁ · d₂) / 2
+        ja: A = (d₁ · d₂) / 2
+      - es: A = (8 · 6) / 2
+        en: A = (8 · 6) / 2
+        pt: A = (8 · 6) / 2
+        fr: A = (8 · 6) / 2
+        zh: A = (8 · 6) / 2
+        ja: A = (8 · 6) / 2
+      - es: A = 48 / 2
+        en: A = 48 / 2
+        pt: A = 48 / 2
+        fr: A = 48 / 2
+        zh: A = 48 / 2
+        ja: A = 48 / 2
+      - es: "Resultado: A = 24"
+        en: "Result: A = 24"
+        pt: "Resultado: A = 24"
+        fr: "Résultat : A = 24"
+        zh: 结果：A = 24
+        ja: 結果：A = 24

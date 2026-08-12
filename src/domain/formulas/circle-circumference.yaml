@@ -1,0 +1,335 @@
+id: circle-circumference
+title:
+  es: Circunferencia de un Círculo
+  en: Circle Circumference
+  pt: Comprimento da Circunferência
+  fr: Circonférence d'un cercle
+  zh: 圆的周长
+  ja: 円周の長さ
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: c
+    type: variable
+    value: C
+    explanation:
+      es: "El perímetro del círculo: la longitud de su borde, en unidades de longitud."
+      en: "The circle's perimeter: the length of its boundary, in units of length."
+      pt: "O perímetro do círculo: o comprimento de sua borda, em unidades de comprimento."
+      fr: "Le périmètre du cercle : la longueur de son contour, en unités de longueur."
+      zh: "圆的周长：圆边界的长度，以长度单位计量。"
+      ja: "円の周りの長さ、つまり円周。長さの単位で表す。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "El 2 proviene de que el diámetro es el doble del radio."
+      en: "The 2 comes from the diameter being twice the radius."
+      pt: "O 2 vem do fato de o diâmetro ser o dobro do raio."
+      fr: "Le 2 vient du fait que le diamètre vaut deux fois le rayon."
+      zh: "数字2来自直径等于半径的两倍。"
+      ja: "直径が半径の2倍であることから来る2。"
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: "Pi: la razón constante entre la circunferencia y el diámetro de cualquier círculo."
+      en: "Pi: the constant ratio between any circle's circumference and its diameter."
+      pt: "Pi: a razão constante entre a circunferência e o diâmetro de qualquer círculo."
+      fr: "Pi : le rapport constant entre la circonférence et le diamètre de tout cercle."
+      zh: "圆周率π：任意圆的周长与其直径之比，为常数。"
+      ja: "円周率。どの円でも円周と直径の比は一定で、それがπである。"
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "El radio: la distancia del centro del círculo a cualquier punto del borde."
+      en: "The radius: the distance from the circle's center to any point on the edge."
+      pt: "O raio: a distância do centro do círculo a qualquer ponto da borda."
+      fr: "Le rayon : la distance du centre du cercle à n'importe quel point du bord."
+      zh: "半径：从圆心到圆周上任意一点的距离。"
+      ja: "半径。円の中心から円周上の任意の点までの距離。"
+context:
+  author:
+    es: Origen colectivo, atribuida a los geómetras griegos
+    en: Collective origin, attributed to the Greek geometers
+    pt: Origem coletiva, atribuída aos geômetras gregos
+    fr: Origine collective, attribuée aux géomètres grecs
+    zh: 集体起源，通常归功于古希腊几何学家
+    ja: 集団的起源であり、古代ギリシャの幾何学者に帰される
+  era:
+    es: Mesopotamia y Grecia antiguas · formalizada por Euclides c. 300 a.C.
+    en: Ancient Mesopotamia and Greece · formalized by Euclid c. 300 BC
+    pt: Antiga Mesopotâmia e Grécia · formalizada por Euclides c. 300 a.C.
+    fr: Mésopotamie et Grèce antiques · formalisée par Euclide v. 300 av. J.-C.
+    zh: 古代美索不达米亚与希腊·由欧几里得约公元前300年系统化
+    ja: 古代メソポタミアとギリシャ・ユークリッドにより紀元前300年頃に体系化
+  history:
+    es: >-
+      La relación entre la circunferencia y el diámetro fascinó a las civilizaciones antiguas: el
+      papiro de Rhind (c. 1650 a.C.) aproxima la razón a 256/81, mientras que Arquímedes, hacia el
+      250 a.C., la acotó entre 223/71 y 22/7 inscribiendo y circunscribiendo polígonos a un círculo.
+      El símbolo π para esta constante fue propuesto por William Jones en 1706 y popularizado por
+      Euler. Durante siglos, calcular sus dígitos fue una obsesión; hoy es solo un problema de
+      computación de récord.
+    en: >-
+      The relationship between circumference and diameter fascinated ancient civilizations: the
+      Rhind papyrus (c. 1650 BC) approximates the ratio as 256/81, while Archimedes, around 250 BC,
+      bounded it between 223/71 and 22/7 by inscribing and circumscribing polygons around a circle.
+      The symbol π for this constant was proposed by William Jones in 1706 and popularized by Euler.
+      For centuries, computing its digits was an obsession; today it is simply a record-setting
+      computing problem.
+    pt: >-
+      A relação entre a circunferência e o diâmetro fascinou as civilizações antigas: o papiro de
+      Rhind (c. 1650 a.C.) aproxima a razão como 256/81, enquanto Arquimedes, por volta de 250 a.C.,
+      a limitou entre 223/71 e 22/7, inscrevendo e circunscrevendo polígonos em torno de um círculo.
+      O símbolo π para essa constante foi proposto por William Jones em 1706 e popularizado por
+      Euler. Durante séculos, calcular seus dígitos foi uma obsessão; hoje é apenas um problema de
+      computação de recorde.
+    fr: >-
+      Le rapport entre la circonférence et le diamètre fascinait les civilisations anciennes : le
+      papyrus de Rhind (v. 1650 av. J.-C.) en approche la valeur par 256/81, tandis qu'Archimède,
+      vers 250 av. J.-C., l'encadra entre 223/71 et 22/7 en inscrivant et circonscrivant des polygones
+      autour d'un cercle. Le symbole π de cette constante fut proposé par William Jones en 1706 et
+      popularisé par Euler. Pendant des siècles, calculer ses décimales fut une obsession ;
+      aujourd'hui, ce n'est plus qu'un problème de calcul battant des records.
+    zh: >-
+      周长与直径的关系曾让古代文明着迷：莱因德纸草书（约公元前1650年）将这一比值近似为256/81；而阿基米德在
+      约公元前250年通过圆内接和外切多边形，将该比值限定在223/71与22/7之间。常数π的符号由威廉·琼斯于1706年提出，
+      并由欧拉推广。数百年来，计算π的小数位曾是执念；如今，它不过是破纪录的计算问题而已。
+    ja: >-
+      円周と直径の関係は古代文明を魅了してきた。リンド・パピルス（紀元前1650年頃）はその比を256/81と近似し、
+      紀元前250年頃のアルキメデスは、円に内接・外接する多角形を用いて、この比を223/71と22/7の間に挟んだ。
+      この定数を表す記号πは、1706年にウィリアム・ジョーンズが提唱し、オイラーが広めた。何世紀もの間、その桁を
+      計算することは執念となっていたが、今日では記録的な計算問題にすぎない。
+  timeline:
+    - year: c. 1650 a.C.
+      label:
+        es: >-
+          El papiro de Rhind aproxima el área y la circunferencia de un círculo usando el valor
+          256/81 ≈ 3.16 para π.
+        en: >-
+          The Rhind papyrus approximates the circle's area and circumference using 256/81 ≈ 3.16 for π.
+        pt: >-
+          O papiro de Rhind aproxima a área e a circunferência de um círculo usando o valor 256/81 ≈ 3,16
+          para π.
+        fr: >-
+          Le papyrus de Rhind approche l'aire et la circonférence d'un cercle en utilisant 256/81 ≈ 3,16
+          pour π.
+        zh: >-
+          莱因德纸草书用256/81 ≈ 3.16来近似计算圆的面积和周长。
+        ja: >-
+          リンド・パピルスはπに256/81 ≈ 3.16を用いて円の面積と円周を近似している。
+    - year: c. 250 a.C.
+      label:
+        es: >-
+          Arquímedes encuadra π entre 223/71 y 22/7 con su método de polígonos inscritos y
+          circunscritos.
+        en: >-
+          Archimedes bounds π between 223/71 and 22/7 using inscribed and circumscribed polygons.
+        pt: >-
+          Arquimedes limita π entre 223/71 e 22/7 usando polígonos inscritos e circunscritos.
+        fr: >-
+          Archimède encadre π entre 223/71 et 22/7 à l'aide de polygones inscrits et circonscrits.
+        zh: >-
+          阿基米德用内接和外切多边形将π限定在223/71与22/7之间。
+        ja: >-
+          アルキメデスが内接・外接する多角形を用いてπを223/71と22/7の間に挟んだ。
+    - year: "1706"
+      label:
+        es: >-
+          William Jones introduce el símbolo π en su obra Syn palmorum; Euler lo populariza a partir
+          de 1736.
+        en: >-
+          William Jones introduces the symbol π in his work Synopsis palmariorum; Euler popularizes it
+          from 1736.
+        pt: >-
+          William Jones introduz o símbolo π em sua obra Synopsis palmariorum; Euler o populariza a
+          partir de 1736.
+        fr: >-
+          William Jones introduit le symbole π dans son ouvrage Synopsis palmariorum ; Euler le
+          popularise à partir de 1736.
+        zh: >-
+          威廉·琼斯在其著作中引入π符号；从1736年起欧拉将其推广开来。
+        ja: >-
+          ウィリアム・ジョーンズが著書『Synopsis palmariorum』で記号πを導入。1736年以降、オイラーが普及させる。
+    - year: "1761"
+      label:
+        es: >-
+          Johann Lambert demuestra que π es irracional; en 1882 Lindemann prueba que es trascendente.
+        en: >-
+          Johann Lambert proves π is irrational; in 1882 Lindemann shows it is transcendental.
+        pt: >-
+          Johann Lambert demonstra que π é irracional; em 1882 Lindemann prova que é transcendente.
+        fr: >-
+          Johann Lambert démontre que π est irrationnel ; en 1882, Lindemann prouve qu'il est
+          transcendant.
+        zh: >-
+          约翰·兰伯特证明π是无理数；1882年林德曼证明π是超越数。
+        ja: >-
+          ヨハン・ランベルトがπが無理数であることを証明。1882年にはリンデマンが超越数であることを示す。
+    - year: Hoy
+      label:
+        es: >-
+          La circunferencia C = 2πr se enseña en todo el mundo y π se calcula con más de 200 billones
+          de dígitos.
+        en: >-
+          C = 2πr is taught worldwide and π has been computed to over 200 trillion digits.
+        pt: >-
+          C = 2πr é ensinada no mundo todo e π já foi calculada com mais de 200 trilhões de dígitos.
+        fr: >-
+          C = 2πr s'enseigne dans le monde entier et π a été calculé avec plus de 200 billions de
+          chiffres.
+        zh: >-
+          C = 2πr在全世界被传授，π已被计算到超过200万亿位数字。
+        ja: >-
+          C = 2πrは世界中で教えられ、πは200兆桁以上計算されている。
+  useCases:
+    - title:
+        es: Ruedas y maquinaria
+        en: Wheels and machinery
+        pt: Rodas e maquinário
+        fr: Roues et machines
+        zh: 车轮与机械
+        ja: 車輪と機械
+      description:
+        es: >-
+          El cuentakilómetros calcula la distancia recorrida multiplicando el número de vueltas por
+          la circunferencia de la rueda.
+        en: >-
+          An odometer computes distance traveled by multiplying wheel rotations by the wheel's
+          circumference.
+        pt: >-
+          O odômetro calcula a distância percorrida multiplicando o número de voltas pela
+          circunferência da roda.
+        fr: >-
+          Un compteur kilométrique calcule la distance parcourue en multipliant les tours de roue par
+          la circonférence de celle-ci.
+        zh: >-
+          里程表通过将车轮转数乘以车轮周长来计算行驶距离。
+        ja: >-
+          走行距離計は、車輪の回転数に車輪の円周を掛けて走行距離を算出する。
+    - title:
+        es: Diseño de engranajes y poleas
+        en: Gear and pulley design
+        pt: Projeto de engrenagens e polias
+        fr: Conception d'engrenages et de poulies
+        zh: 齿轮与滑轮设计
+        ja: 歯車・滑車の設計
+      description:
+        es: >-
+          Define la relación de transmisión entre engranajes y la longitud de correas o cadenas que
+          los conectan.
+        en: >-
+          It sets the gear ratio between cogwheels and the length of the belts or chains linking them.
+        pt: >-
+          Define a relação de transmissão entre engrenagens e o comprimento de correias ou correntes
+          que as conectam.
+        fr: >-
+          Elle fixe le rapport de transmission entre les engrenages et la longueur des courroies ou
+          chaînes qui les relient.
+        zh: >-
+          它决定了齿轮之间的传动比，以及连接它们的皮带或链条的长度。
+        ja: >-
+          歯車間の伝達比や、それらをつなぐベルトやチェーンの長さを決める。
+    - title:
+        es: Movimiento circular
+        en: Circular motion
+        pt: Movimento circular
+        fr: Mouvement circulaire
+        zh: 圆周运动
+        ja: 円運動
+      description:
+        es: >-
+          La distancia que recorre un punto de una rueda o de una órbita circular se calcula con esta
+          fórmula.
+        en: >-
+          The distance a point on a wheel or a circular orbit travels is computed with this formula.
+        pt: >-
+          A distância percorrida por um ponto em uma roda ou em uma órbita circular é calculada com
+          essa fórmula.
+        fr: >-
+          La distance parcourue par un point d'une roue ou d'une orbite circulaire se calcule avec
+          cette formule.
+        zh: >-
+          轮子或圆形轨道上某一点所经过的距离都用此公式计算。
+        ja: >-
+          車輪や円軌道上の一点が進む距離は、この公式で計算される。
+    - title:
+        es: Cálculo de récords de π
+        en: Computing π records
+        pt: Cálculo de recordes de π
+        fr: Calculs de records de π
+        zh: 计算π的纪录
+        ja: πの桁数記録
+      description:
+        es: >-
+          La fórmula del círculo convierte cada nuevo récord de dígitos de π en una validación del
+          hardware y el software de cómputo.
+        en: >-
+          The circle formula turns each new π digit record into a validation of computing hardware
+          and software.
+        pt: >-
+          A fórmula do círculo transforma cada novo recorde de dígitos de π em uma validação de
+          hardware e software de computação.
+        fr: >-
+          La formule du cercle fait de chaque nouveau record de chiffres de π une validation du
+          matériel et des logiciels de calcul.
+        zh: >-
+          圆的公式将每一个π数字纪录都转化为对计算硬件与软件的检验。
+        ja: >-
+          円の公式は、πの桁数の新記録を計算ハードウェアとソフトウェアの検証に変える。
+  example:
+    title:
+      es: Una rueda de radio 7
+      en: A wheel of radius 7
+      pt: Uma roda de raio 7
+      fr: Une roue de rayon 7
+      zh: 半径为7的轮子
+      ja: 半径7の車輪
+    lines:
+      - es: r = 7 m
+        en: r = 7 m
+        pt: r = 7 m
+        fr: r = 7 m
+        zh: r = 7 米
+        ja: r = 7 m
+      - es: C = 2π · r
+        en: C = 2π · r
+        pt: C = 2π · r
+        fr: C = 2π · r
+        zh: C = 2π · r
+        ja: C = 2π · r
+      - es: C = 2π · 7
+        en: C = 2π · 7
+        pt: C = 2π · 7
+        fr: C = 2π · 7
+        zh: C = 2π · 7
+        ja: C = 2π · 7
+      - es: C = 14π
+        en: C = 14π
+        pt: C = 14π
+        fr: C = 14π
+        zh: C = 14π
+        ja: C = 14π
+      - es: C ≈ 43.98 m
+        en: C ≈ 43.98 m
+        pt: C ≈ 43,98 m
+        fr: C ≈ 43,98 m
+        zh: C ≈ 43.98 米
+        ja: C ≈ 43.98 m

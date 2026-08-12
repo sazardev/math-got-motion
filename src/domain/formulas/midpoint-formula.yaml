@@ -1,0 +1,358 @@
+id: midpoint-formula
+title:
+  es: Punto Medio
+  en: Midpoint Formula
+  pt: Ponto Médio
+  fr: Formule du Milieu
+  zh: 中点公式
+  ja: 中点の公式
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: m
+    type: variable
+    value: M
+    explanation:
+      es: El punto medio, el punto situado a la mitad del segmento.
+      en: The midpoint, the point located halfway along the segment.
+      pt: O ponto médio, o ponto situado na metade do segmento.
+      fr: Le point milieu, le point situé à mi-chemin du segment.
+      zh: 中点，即位于线段中间位置的点。
+      ja: 中点。線分のちょうど中間に位置する点。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el par de coordenadas del punto medio.
+      en: Opens the coordinate pair of the midpoint.
+      pt: Abre o par de coordenadas do ponto médio.
+      fr: Ouvre la paire de coordonnées du point milieu.
+      zh: 打开中点坐标对的括号。
+      ja: 中点の座標の組を開く括弧。
+  - id: x-sum
+    type: variable
+    value: x₁+x₂
+    explanation:
+      es: La suma de las coordenadas x de los dos puntos.
+      en: The sum of the x-coordinates of the two points.
+      pt: A soma das coordenadas x dos dois pontos.
+      fr: La somme des coordonnées x des deux points.
+      zh: 两个点 x 坐标之和。
+      ja: 2点のx座標の合計。
+  - id: div-x
+    type: operator
+    value: /
+    explanation:
+      es: Se divide entre 2, el número de puntos promediados.
+      en: Divided by 2, the number of points being averaged.
+      pt: Divide por 2, o número de pontos calculados na média.
+      fr: Divisé par 2, le nombre de points moyennés.
+      zh: 除以 2，即所取平均的点的个数。
+      ja: 平均する点の数である2で割る。
+  - id: two-x
+    type: number
+    value: "2"
+    explanation:
+      es: Dos, el número de coordenadas x que se promedian.
+      en: Two, the number of x-coordinates being averaged.
+      pt: Dois, o número de coordenadas x que entram na média.
+      fr: Deux, le nombre de coordonnées x que l'on moyenne.
+      zh: 二，参与平均的 x 坐标的个数。
+      ja: 平均するx座標の個数である2。
+  - id: comma
+    type: operator
+    value: ","
+    explanation:
+      es: Separa la coordenada x de la coordenada y del punto medio.
+      en: Separates the x-coordinate from the y-coordinate of the midpoint.
+      pt: Separa a coordenada x da coordenada y do ponto médio.
+      fr: Sépare la coordonnée x de la coordonnée y du point milieu.
+      zh: 分隔中点的 x 坐标与 y 坐标。
+      ja: 中点のx座標とy座標を区切る。
+  - id: y-sum
+    type: variable
+    value: y₁+y₂
+    explanation:
+      es: La suma de las coordenadas y de los dos puntos.
+      en: The sum of the y-coordinates of the two points.
+      pt: A soma das coordenadas y dos dois pontos.
+      fr: La somme des coordonnées y des deux points.
+      zh: 两个点 y 坐标之和。
+      ja: 2点のy座標の合計。
+  - id: div-y
+    type: operator
+    value: /
+    explanation:
+      es: Se divide entre 2, el número de puntos promediados.
+      en: Divided by 2, the number of points being averaged.
+      pt: Divide por 2, o número de pontos calculados na média.
+      fr: Divisé par 2, le nombre de points moyennés.
+      zh: 除以 2，即所取平均的点的个数。
+      ja: 平均する点の数である2で割る。
+  - id: two-y
+    type: number
+    value: "2"
+    explanation:
+      es: Dos, el número de coordenadas y que se promedian.
+      en: Two, the number of y-coordinates being averaged.
+      pt: Dois, o número de coordenadas y que entram na média.
+      fr: Deux, le nombre de coordonnées y que l'on moyenne.
+      zh: 二，参与平均的 y 坐标的个数。
+      ja: 平均するy座標の個数である2。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el par de coordenadas del punto medio.
+      en: Closes the coordinate pair of the midpoint.
+      pt: Fecha o par de coordenadas do ponto médio.
+      fr: Ferme la paire de coordonnées du point milieu.
+      zh: 关闭中点坐标对的括号。
+      ja: 中点の座標の組を閉じる括弧。
+context:
+  author:
+    es: Origen colectivo de la geometría analítica
+    en: Collective origin of analytic geometry
+    pt: Origem coletiva da geometria analítica
+    fr: Origine collective de la géométrie analytique
+    zh: 解析几何的集体起源
+    ja: 解析幾何学の集団的起源
+  era:
+    es: Europa, s. XVII
+    en: Europe, 17th century
+    pt: Europa, séc. XVII
+    fr: Europe, XVIIe siècle
+    zh: 欧洲，17世纪
+    ja: ヨーロッパ、17世紀
+  history:
+    es: >-
+      El punto medio es el punto situado exactamente a la mitad del segmento que une dos puntos: su
+      coordenada x es el promedio de las x y su coordenada y el promedio de las y. La idea es tan
+      antigua como la geometría — los griegos ya dividían segmentos en partes iguales con regla y
+      compás — pero tomó su forma algebraica con la geometría analítica de Descartes en el siglo XVII.
+      Hoy lo usan el CAD para centrar piezas, los sistemas de mapas para hallar el centro de una ruta
+      y la geometría para bisecar segmentos. En estadística, el promedio de coordenadas es pariente
+      directo de la mediana.
+    en: >-
+      The midpoint is the point exactly halfway along the segment joining two points: its x-coordinate
+      is the average of the x's and its y-coordinate the average of the y's. The idea is as old as
+      geometry — the Greeks already divided segments into equal parts with ruler and compass — but it
+      took its algebraic form with Descartes' analytic geometry in the 17th century. Today CAD uses it
+      to center parts, mapping systems use it to find the center of a route, and geometry uses it to
+      bisect segments. In statistics, averaging coordinates is a direct relative of the median.
+    pt: >-
+      O ponto médio é o ponto situado exatamente na metade do segmento que une dois pontos: sua
+      coordenada x é a média das coordenadas x e sua coordenada y a média das coordenadas y. A ideia é
+      tão antiga quanto a geometria — os gregos já dividiam segmentos em partes iguais com régua e
+      compasso — mas tomou sua forma algébrica com a geometria analítica de Descartes no século XVII.
+      Hoje o CAD o usa para centralizar peças, os sistemas de mapas para achar o centro de uma rota e
+      a geometria para bissectar segmentos. Na estatística, a média das coordenadas é parente direta
+      da mediana.
+    fr: >-
+      Le point milieu est le point situé exactement à mi-chemin du segment joignant deux points : sa
+      coordonnée x est la moyenne des x et sa coordonnée y la moyenne des y. L'idée est aussi vieille
+      que la géométrie — les Grecs divisaient déjà les segments en parties égales à la règle et au
+      compas — mais elle prit sa forme algébrique avec la géométrie analytique de Descartes au XVIIe
+      siècle. Aujourd'hui la CAO l'utilise pour centrer des pièces, les systèmes de cartographie pour
+      trouver le centre d'un itinéraire et la géométrie pour bissecter les segments. En statistique,
+      la moyenne des coordonnées est une parente directe de la médiane.
+    zh: >-
+      中点是连接两点的线段正中间的那个点：它的 x 坐标是两个 x 坐标的平均值，y 坐标是两个 y 坐标的平均值。
+      这个想法和几何学一样古老——古希腊人已经用直尺和圆规把线段分成相等的部分——但直到17世纪才以笛卡尔的
+      解析几何形式用代数表达。如今，CAD 用它来居中对齐零件，地图系统用它寻找路线的中心，几何学用它平分
+      线段。在统计学中，坐标的平均与中位数直接相关。
+    ja: >-
+      中点とは、2点を結ぶ線分のちょうど中間にある点のことだ。そのx座標は2つのx座標の平均であり、y座標は
+      2つのy座標の平均である。この考え方は幾何学と同じくらい古い。古代ギリシャ人はすでに定規とコンパスで
+      線分を等分していた。しかし代数的な形を得たのは、17世紀のデカルトによる解析幾何学においてである。
+      今日、CADは部品の中心合わせに、地図システムは経路の中心を見つけるのに、幾何学は線分の二等分に使う。
+      統計学では、座標の平均は中央値の直接の類縁である。
+  timeline:
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides muestra en los Elementos cómo bisecar un segmento con regla y compás.
+        en: >-
+          Euclid shows in the Elements how to bisect a segment with ruler and compass.
+        pt: >-
+          Euclides mostra nos Elementos como bissectar um segmento com régua e compasso.
+        fr: >-
+          Euclide montre dans les Éléments comment bissecter un segment à la règle et au compas.
+        zh: >-
+          欧几里得在《几何原本》中展示了如何用直尺和圆规平分一条线段。
+        ja: >-
+          エウクレイデスが『原論』で、定規とコンパスによる線分の二等分法を示す。
+    - year: "1637"
+      label:
+        es: >-
+          La geometría analítica de Descartes permite expresar el punto medio con coordenadas y
+          promedios.
+        en: >-
+          Descartes' analytic geometry lets the midpoint be expressed with coordinates and averages.
+        pt: >-
+          A geometria analítica de Descartes permite expressar o ponto médio com coordenadas e médias.
+        fr: >-
+          La géométrie analytique de Descartes permet d'exprimer le point milieu avec des coordonnées
+          et des moyennes.
+        zh: >-
+          笛卡尔的解析几何使中点能够用坐标和平均值来表达。
+        ja: >-
+          デカルトの解析幾何学により、中点を座標と平均で表すことができるようになる。
+    - year: Hoy
+      label:
+        es: >-
+          Es rutina en el CAD, los sistemas de mapas y los gráficos por computadora para centrar y
+          dividir elementos.
+        en: >-
+          It is routine in CAD, mapping systems, and computer graphics for centering and dividing
+          elements.
+        pt: >-
+          É rotina no CAD, nos sistemas de mapas e na computação gráfica para centralizar e dividir
+          elementos.
+        fr: >-
+          Elle est courante en CAO, dans les systèmes de cartographie et en infographie pour centrer
+          et diviser des éléments.
+        zh: >-
+          在 CAD、地图系统和计算机图形学中，它是居中和分割元素的常用操作。
+        ja: >-
+          CAD、地図システム、コンピューターグラフィックスで要素を中央に置いたり分割したりする日常的な
+          操作である。
+  useCases:
+    - title:
+        es: Diseño CAD
+        en: CAD design
+        pt: Projeto CAD
+        fr: Conception CAO
+        zh: CAD 设计
+        ja: CAD設計
+      description:
+        es: >-
+          Encuentra el punto medio de aristas y caras para centrar piezas y alinear elementos.
+        en: >-
+          Finds the midpoint of edges and faces to center parts and align elements.
+        pt: >-
+          Encontra o ponto médio de arestas e faces para centralizar peças e alinhar elementos.
+        fr: >-
+          Trouve le point milieu des arêtes et des faces pour centrer les pièces et aligner les
+          éléments.
+        zh: >-
+          查找边和面的中点，以便居中对齐零件和元素。
+        ja: >-
+          辺や面の中点を見つけて、部品の中心合わせや要素の整列を行う。
+    - title:
+        es: Sistemas de mapas
+        en: Mapping systems
+        pt: Sistemas de mapas
+        fr: Systèmes de cartographie
+        zh: 地图系统
+        ja: 地図システム
+      description:
+        es: >-
+          Calcula el punto central de una ruta o de una región a partir de sus extremos.
+        en: >-
+          Computes the central point of a route or region from its endpoints.
+        pt: >-
+          Calcula o ponto central de uma rota ou região a partir de seus extremos.
+        fr: >-
+          Calcule le point central d'un itinéraire ou d'une région à partir de ses extrémités.
+        zh: >-
+          由路线的端点计算其中心点，或由区域边界计算其中心。
+        ja: >-
+          経路の端点や領域の境界から、その中心点を計算する。
+    - title:
+        es: Gráficos por computadora
+        en: Computer graphics
+        pt: Computação gráfica
+        fr: Infographie
+        zh: 计算机图形学
+        ja: コンピューターグラフィックス
+      description:
+        es: >-
+          Divide segmentos y polígonos a la mitad en algoritmos de subdivisión e interpolación.
+        en: >-
+          Splits segments and polygons in half in subdivision and interpolation algorithms.
+        pt: >-
+          Divide segmentos e polígonos ao meio em algoritmos de subdivisão e interpolação.
+        fr: >-
+          Divise segments et polygones en deux dans les algorithmes de subdivision et d'interpolation.
+        zh: >-
+          在细分和插值算法中将线段与多边形一分为二。
+        ja: >-
+          細分割や補間のアルゴリズムで、線分や多角形を半分に分割する。
+    - title:
+        es: Geometría
+        en: Geometry
+        pt: Geometria
+        fr: Géométrie
+        zh: 几何学
+        ja: 幾何学
+      description:
+        es: >-
+          Permite bisecar segmentos y localizar el centro de figuras al promediar sus extremos.
+        en: >-
+          Makes it possible to bisect segments and locate the center of figures by averaging their
+          endpoints.
+        pt: >-
+          Permite bissectar segmentos e localizar o centro de figuras ao calcular a média de seus
+          extremos.
+        fr: >-
+          Permet de bissecter des segments et de localiser le centre de figures en moyennant leurs
+          extrémités.
+        zh: >-
+          通过对端点取平均来平分线段，并确定图形的中心位置。
+        ja: >-
+          端点の平均をとることで線分を二等分し、図形の中心を求めることを可能にする。
+  example:
+    title:
+      es: Punto medio de un segmento
+      en: Midpoint of a segment
+      pt: Ponto médio de um segmento
+      fr: Milieu d'un segment
+      zh: 一条线段的中点
+      ja: 線分の中点
+    lines:
+      - es: "Puntos: (2, 4) y (6, 10)"
+        en: "Points: (2, 4) and (6, 10)"
+        pt: "Pontos: (2, 4) e (6, 10)"
+        fr: "Points : (2, 4) et (6, 10)"
+        zh: "点：(2, 4) 和 (6, 10)"
+        ja: "点：(2, 4) と (6, 10)"
+      - es: "x: (2 + 6) / 2"
+        en: "x: (2 + 6) / 2"
+        pt: "x: (2 + 6) / 2"
+        fr: "x : (2 + 6) / 2"
+        zh: "x： (2 + 6) / 2"
+        ja: "x： (2 + 6) / 2"
+      - es: "y: (4 + 10) / 2"
+        en: "y: (4 + 10) / 2"
+        pt: "y: (4 + 10) / 2"
+        fr: "y : (4 + 10) / 2"
+        zh: "y： (4 + 10) / 2"
+        ja: "y： (4 + 10) / 2"
+      - es: M = (8/2, 14/2)
+        en: M = (8/2, 14/2)
+        pt: M = (8/2, 14/2)
+        fr: M = (8/2, 14/2)
+        zh: M = (8/2, 14/2)
+        ja: M = (8/2, 14/2)
+      - es: M = (4, 7)
+        en: M = (4, 7)
+        pt: M = (4, 7)
+        fr: M = (4, 7)
+        zh: M = (4, 7)
+        ja: M = (4, 7)

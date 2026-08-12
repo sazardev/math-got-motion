@@ -1,0 +1,327 @@
+id: momentum
+title:
+  es: Momento Lineal
+  en: Momentum
+  pt: Momento Linear
+  fr: Quantité de mouvement
+  zh: 动量
+  ja: 運動量
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: p
+    type: variable
+    value: p
+    explanation:
+      es: "El momento lineal del cuerpo: la cantidad de movimiento que lleva, igual a la masa por la velocidad."
+      en: "The body's linear momentum: the quantity of motion it carries, equal to mass times velocity."
+      pt: "O momento linear do corpo: a quantidade de movimento que ele carrega, igual à massa vezes a velocidade."
+      fr: "La quantité de mouvement du corps : la quantité de mouvement qu'il transporte, égale à la masse fois la vitesse."
+      zh: "物体的线性动量：其所携带的运动量，等于质量乘以速度。"
+      ja: 物体の線形運動量。質量と速度の積に等しい、運動の量。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: La masa del cuerpo, en kilogramos.
+      en: The body's mass, in kilograms.
+      pt: A massa do corpo, em quilogramas.
+      fr: La masse du corps, en kilogrammes.
+      zh: 物体的质量，以千克为单位。
+      ja: 物体の質量。単位はキログラム。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: "La velocidad del cuerpo: un vector que indica qué tan rápido se mueve y en qué dirección."
+      en: "The body's velocity: a vector indicating how fast it moves and in which direction."
+      pt: "A velocidade do corpo: um vetor que indica o quão rápido ele se move e em que direção."
+      fr: "La vitesse du corps : un vecteur indiquant à quelle vitesse il se déplace et dans quelle direction."
+      zh: "物体的速度：一个表示其移动快慢和方向的矢量。"
+      ja: 物体の速度。どれだけ速く、どの向きに動くかを示すベクトル。
+context:
+  author:
+    es: Isaac Newton (quantitas motus)
+    en: Isaac Newton (quantitas motus)
+    pt: Isaac Newton (quantitas motus)
+    fr: Isaac Newton (quantitas motus)
+    zh: 艾萨克·牛顿（quantitas motus）
+    ja: アイザック・ニュートン（quantitas motus）
+  era:
+    es: Inglaterra, 1643–1727 · en los Principia, 1687
+    en: England, 1643–1727 · in the Principia, 1687
+    pt: Inglaterra, 1643–1727 · nos Principia, 1687
+    fr: Angleterre, 1643–1727 · dans les Principia, 1687
+    zh: 英国，1643–1727年 · 载于《自然哲学的数学原理》，1687年
+    ja: イギリス、1643–1727年 · 『プリンキピア』1687年
+  history:
+    es: >-
+      En los Principia de 1687, Newton definió el momento lineal como la "cantidad de movimiento" de un
+      cuerpo — el producto de su masa por su velocidad — y demostró que se conserva cuando dos cuerpos
+      chocan, siempre que no actúen fuerzas externas. Esa conservación convierte a esta magnitud en una
+      de las más poderosas de la física: un camión a gran velocidad golpea mucho más fuerte que una
+      bicicleta porque su momento es muchísimo mayor. Hoy es la base del análisis de colisiones y del
+      diseño de airbags, que extienden la duración del impacto para reducir la fuerza.
+    en: >-
+      In his 1687 Principia, Newton defined linear momentum as the "quantity of motion" of a body — the
+      product of its mass and velocity — and showed that it is conserved when two bodies collide, as
+      long as no external forces act. This conservation makes momentum one of the most powerful
+      quantities in physics: a truck moving at speed hits far harder than a bicycle because its
+      momentum is vastly greater. Today it underpins crash analysis and airbag design, which extend the
+      duration of an impact to reduce the force.
+    pt: >-
+      Nos Principia de 1687, Newton definiu o momento linear como a "quantidade de movimento" de um
+      corpo — o produto de sua massa pela sua velocidade — e mostrou que ele se conserva quando dois
+      corpos colidem, desde que nenhuma força externa atue. Essa conservação torna essa grandeza uma
+      das mais poderosas da física: um caminhão em alta velocidade atinge muito mais forte do que uma
+      bicicleta, pois seu momento é muito maior. Hoje ela é a base da análise de colisões e do projeto
+      de airbags, que prolongam a duração do impacto para reduzir a força.
+    fr: >-
+      Dans les Principia de 1687, Newton définit la quantité de mouvement d'un corps comme la "quantité
+      de mouvement" — le produit de sa masse par sa vitesse — et démontre qu'elle se conserve lorsque
+      deux corps se heurtent, pourvu qu'aucune force extérieure n'agisse. Cette conservation fait de
+      cette grandeur l'une des plus puissantes de la physique : un camion lancé à grande vitesse heurte
+      bien plus fort qu'une bicyclette parce que sa quantité de mouvement est bien plus grande.
+      Aujourd'hui, elle fonde l'analyse des collisions et la conception des airbags, qui allongent la
+      durée du choc pour en réduire la force.
+    zh: >-
+      在1687年的《自然哲学的数学原理》中，牛顿将动量定义为物体的"运动量"——质量与速度的乘积——并证明只要没有外力
+      作用，两个物体碰撞时动量守恒。这种守恒性使动量成为物理学中最有力的量之一：高速行驶的卡车比自行车撞击更猛烈，
+      因为它的动量要大得多。今天，动量是碰撞分析和安全气囊设计的基础——安全气囊通过延长撞击持续时间来减小作用力。
+    ja: >-
+      1687年の『プリンキピア』において、ニュートンは物体の運動量を、質量と速度の積である「運動の量」と定義し、外力が
+      働かない限り二つの物体が衝突しても運動量が保存されることを示した。この保存則により、運動量は物理学でも最も強力な
+      量の一つとなっている。高速で走るトラックが自転車よりはるかに激しく衝突するのは、運動量がはるかに大きいからだ。
+      今日、運動量は衝突解析やエアバッグ設計の基盤であり、エアバッグは衝突時間を延ばして力を弱める。
+  timeline:
+    - year: "1687"
+      label:
+        es: >-
+          Newton publica los Principia, donde define la cantidad de movimiento y demuestra su
+          conservación en las colisiones.
+        en: >-
+          Newton publishes the Principia, defining the quantity of motion and demonstrating its
+          conservation in collisions.
+        pt: >-
+          Newton publica os Principia, onde define a quantidade de movimento e demonstra sua
+          conservação nas colisões.
+        fr: >-
+          Newton publie les Principia, où il définit la quantité de mouvement et démontre sa
+          conservation lors des collisions.
+        zh: >-
+          牛顿发表《自然哲学的数学原理》，定义了运动量并证明其在碰撞中守恒。
+        ja: >-
+          ニュートンが『プリンキピア』を発表し、運動の量を定義して衝突におけるその保存を示す。
+    - year: "1905"
+      label:
+        es: >-
+          Einstein generaliza el momento para velocidades cercanas a la luz en la relatividad especial.
+        en: >-
+          Einstein generalizes momentum to speeds near that of light in special relativity.
+        pt: >-
+          Einstein generaliza o momento para velocidades próximas à da luz na relatividade especial.
+        fr: >-
+          Einstein généralise la quantité de mouvement pour des vitesses proches de celle de la lumière
+          dans la relativité restreinte.
+        zh: >-
+          爱因斯坦在狭义相对论中将动量推广到接近光速的情形。
+        ja: >-
+          アインシュタインが特殊相対性理論で光速に近い速度にも運動量を拡張する。
+    - year: "1959"
+      label:
+        es: >-
+          John Hetrick patenta un diseño temprano de airbag, que aplica la física del momento y el
+          impulso en los choques.
+        en: >-
+          John Hetrick patents an early airbag design, applying the physics of momentum and impulse to
+          crashes.
+        pt: >-
+          John Hetrick patenteia um projeto inicial de airbag, aplicando a física do momento e do
+          impulso às colisões.
+        fr: >-
+          John Hetrick brevète un premier modèle d'airbag, appliquant la physique de la quantité de
+          mouvement et de l'impulsion aux chocs.
+        zh: >-
+          约翰·赫特里克为早期的安全气囊设计申请专利，将动量与冲量的物理原理应用于碰撞。
+        ja: >-
+          ジョン・ヘトリックが初期のエアバッグの設計を特許出願し、衝突に運動量と力積の物理を応用する。
+    - year: Hoy
+      label:
+        es: >-
+          El análisis de accidentes usa la conservación del momento para estimar velocidades de impacto
+          a partir de las deformaciones.
+        en: >-
+          Crash analysis uses momentum conservation to estimate impact speeds from vehicle deformation.
+        pt: >-
+          A análise de acidentes usa a conservação do momento para estimar velocidades de impacto a
+          partir das deformações.
+        fr: >-
+          L'analyse des accidents utilise la conservation de la quantité de mouvement pour estimer les
+          vitesses d'impact à partir des déformations.
+        zh: >-
+          事故分析利用动量守恒，根据车辆形变估算碰撞速度。
+        ja: >-
+          事故解析は運動量保存則を用い、車両の変形から衝突速度を推定する。
+  useCases:
+    - title:
+        es: Airbags y seguridad pasiva
+        en: Airbags and passive safety
+        pt: Airbags e segurança passiva
+        fr: Airbags et sécurité passive
+        zh: 安全气囊与被动安全
+        ja: エアバッグとパッシブセーフティ
+      description:
+        es: >-
+          En un choque, el cuerpo del ocupante lleva un momento que debe anularse; el airbag extiende
+          la duración del impacto para reducir la fuerza sin cambiar la variación de momento.
+        en: >-
+          In a crash the occupant's body carries momentum that must be canceled; the airbag extends the
+          impact duration to reduce force without changing the change in momentum.
+        pt: >-
+          Em uma colisão, o corpo do ocupante carrega um momento que precisa ser anulado; o airbag
+          prolonga a duração do impacto para reduzir a força sem alterar a variação do momento.
+        fr: >-
+          Lors d'un choc, le corps de l'occupant porte une quantité de mouvement qu'il faut annuler ;
+          l'airbag allonge la durée de l'impact pour réduire la force sans changer la variation de
+          quantité de mouvement.
+        zh: >-
+          碰撞中，乘员的身体带有必须被抵消的动量；安全气囊延长撞击持续时间，在不改变动量变化的情况下减小作用力。
+        ja: >-
+          衝突の際、搭乗者の身体は打ち消すべき運動量を担う。エアバッグは運動量の変化を変えずに衝突時間を延ばし、
+          力を小さくする。
+    - title:
+        es: Reconstrucción de accidentes
+        en: Crash reconstruction
+        pt: Reconstrução de acidentes
+        fr: Reconstruction d'accidents
+        zh: 事故重建
+        ja: 事故調査・再現
+      description:
+        es: >-
+          La conservación del momento permite estimar las velocidades previas al impacto a partir de
+          las masas y las velocidades posteriores de los vehículos.
+        en: >-
+          Momentum conservation lets investigators estimate pre-impact speeds from the masses and
+          post-impact velocities of the vehicles.
+        pt: >-
+          A conservação do momento permite estimar as velocidades anteriores ao impacto a partir das
+          massas e das velocidades posteriores dos veículos.
+        fr: >-
+          La conservation de la quantité de mouvement permet d'estimer les vitesses avant l'impact à
+          partir des masses et des vitesses après l'impact des véhicules.
+        zh: >-
+          利用动量守恒，调查人员可根据车辆的质量和碰撞后的速度估算碰撞前的速度。
+        ja: >-
+          運動量保存則により、車両の質量と衝突後の速度から衝突前の速度を推定できる。
+    - title:
+        es: Propulsión de cohetes
+        en: Rocket propulsion
+        pt: Propulsão de foguetes
+        fr: Propulsion de fusées
+        zh: 火箭推进
+        ja: ロケット推進
+      description:
+        es: >-
+          Un cohete avanza expulsando masa hacia atrás: como el momento total se conserva, gana
+          velocidad hacia adelante.
+        en: >-
+          A rocket moves forward by expelling mass backward: since total momentum is conserved, it gains
+          forward velocity.
+        pt: >-
+          Um foguete avança expelindo massa para trás: como o momento total se conserva, ele ganha
+          velocidade para frente.
+        fr: >-
+          Une fusée avance en expulsant de la masse vers l'arrière : comme la quantité de mouvement
+          totale se conserve, elle gagne de la vitesse vers l'avant.
+        zh: >-
+          火箭通过向后喷出物质向前推进：由于总动量守恒，它获得向前的速度。
+        ja: >-
+          ロケットは質量を後方に噴出して前進する。全運動量が保存されるため、前方への速度を得るのである。
+    - title:
+        es: Deportes y biomecánica
+        en: Sports and biomechanics
+        pt: Esportes e biomecânica
+        fr: Sports et biomécanique
+        zh: 运动与生物力学
+        ja: スポーツとバイオメカニクス
+      description:
+        es: >-
+          En un golpe o lanzamiento, el momento que se transfiere entre el implemento y el cuerpo
+          determina la fuerza del impacto.
+        en: >-
+          In a strike or throw, the momentum transferred between the implement and the body determines
+          the force of the impact.
+        pt: >-
+          Em um golpe ou arremesso, o momento transferido entre o implemento e o corpo determina a
+          força do impacto.
+        fr: >-
+          Lors d'un coup ou d'un lancer, la quantité de mouvement échangée entre l'engin et le corps
+          détermine la force de l'impact.
+        zh: >-
+          在一次击打或投掷中，器械与身体之间传递的动量决定了冲击力的大小。
+        ja: >-
+          打撃や投擲では、用具と身体の間でやり取りされる運動量が衝撃の大きさを決める。
+  example:
+    title:
+      es: Momento de un auto
+      en: Momentum of a car
+      pt: Momento de um carro
+      fr: Quantité de mouvement d'une voiture
+      zh: 汽车的动量
+      ja: 自動車の運動量
+    lines:
+      - es: m = 1200 kg
+        en: m = 1200 kg
+        pt: m = 1200 kg
+        fr: m = 1200 kg
+        zh: m = 1200 kg
+        ja: m = 1200 kg
+      - es: v = 20 m/s
+        en: v = 20 m/s
+        pt: v = 20 m/s
+        fr: v = 20 m/s
+        zh: v = 20 m/s
+        ja: v = 20 m/s
+      - es: p = m · v
+        en: p = m · v
+        pt: p = m · v
+        fr: p = m · v
+        zh: p = m · v
+        ja: p = m · v
+      - es: p = 1200 × 20
+        en: p = 1200 × 20
+        pt: p = 1200 × 20
+        fr: p = 1200 × 20
+        zh: p = 1200 × 20
+        ja: p = 1200 × 20
+      - es: p = 24 000 kg·m/s
+        en: p = 24,000 kg·m/s
+        pt: p = 24.000 kg·m/s
+        fr: p = 24 000 kg·m/s
+        zh: p = 24,000 kg·m/s
+        ja: p = 24,000 kg·m/s

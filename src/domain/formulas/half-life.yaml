@@ -1,0 +1,254 @@
+id: half-life
+title:
+  es: Vida Media
+  en: Half-Life
+  pt: Meia-Vida
+  fr: Demi-vie
+  zh: 半衰期
+  ja: 半減期
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: t
+    type: variable
+    value: t½
+    explanation:
+      es: "t½: el tiempo en que queda la mitad de una sustancia."
+      en: "t½: the time for half of a substance to remain."
+      pt: "t½: o tempo para restar metade de uma substância."
+      fr: "t½ : le temps au bout duquel il reste la moitié d'une substance."
+      zh: "t½：物质剩下一半所需的时间。"
+      ja: "t½：物質が半分残るまでの時間。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: ln2
+    type: variable
+    value: ln 2
+    explanation:
+      es: "ln 2: el logaritmo natural de 2, ≈ 0.693."
+      en: "ln 2: the natural logarithm of 2, ≈ 0.693."
+      pt: "ln 2: o logaritmo natural de 2, ≈ 0,693."
+      fr: "ln 2 : le logarithme naturel de 2, ≈ 0,693."
+      zh: "ln 2：2的自然对数，约0.693。"
+      ja: "ln 2：2の自然対数。約0.693。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: lambda
+    type: variable
+    value: λ
+    explanation:
+      es: "λ: la constante de decaimiento de la sustancia."
+      en: "λ: the substance's decay constant."
+      pt: "λ: a constante de decaimento da substância."
+      fr: "λ : la constante de décroissance de la substance."
+      zh: "λ：该物质的衰变常数。"
+      ja: "λ：その物質の崩壊定数。"
+context:
+  author:
+    es: Ernest Rutherford
+    en: Ernest Rutherford
+    pt: Ernest Rutherford
+    fr: Ernest Rutherford
+    zh: 欧内斯特·卢瑟福
+    ja: アーネスト・ラザフォード
+  era:
+    es: Inglaterra, 1871–1937 · concepto acuñado c. 1907
+    en: England, 1871–1937 · concept coined c. 1907
+    pt: Inglaterra, 1871–1937 · conceito cunhado c. 1907
+    fr: Angleterre, 1871–1937 · concept inventé v. 1907
+    zh: 英国，1871–1937年·约1907年提出概念
+    ja: イングランド、1871–1937年・1907年頃に概念を提唱
+  history:
+    es: >-
+      Rutherford descubrió hacia 1907 que cada sustancia radiactiva tiene un tiempo característico en
+      el que su actividad se reduce a la mitad, al que llamó "período de semidesintegración" o vida
+      media. La vida media se relaciona con la constante de decaimiento λ por t½ = ln 2 / λ. Es el
+      parámetro más citado de la radiactividad: el carbono-14 tiene 5730 años y el uranio-238 unos 4500
+      millones.
+    en: >-
+      Rutherford discovered around 1907 that each radioactive substance has a characteristic time in
+      which its activity halves, which he called the "half-life period". Half-life relates to the decay
+      constant λ by t½ = ln 2 / λ. It is the most quoted parameter of radioactivity: carbon-14 has
+      5,730 years and uranium-238 about 4.5 billion.
+    pt: >-
+      Rutherford descobriu por volta de 1907 que cada substância radioativa tem um tempo característico
+      em que sua atividade se reduz à metade, que chamou de "período de meia-vida". A meia-vida se
+      relaciona com a constante de decaimento λ por t½ = ln 2 / λ. É o parâmetro mais citado da
+      radioatividade: o carbono-14 tem 5730 anos e o urânio-238 cerca de 4,5 bilhões.
+    fr: >-
+      Rutherford découvrit vers 1907 que chaque substance radioactive possède un temps caractéristique
+      au bout duquel son activité diminue de moitié, qu'il appela « période de demi-vie ». La demi-vie
+      est liée à la constante de décroissance λ par t½ = ln 2 / λ. C'est le paramètre le plus cité de
+      la radioactivité : le carbone 14 a 5730 ans et l'uranium 238 environ 4,5 milliards.
+    zh: >-
+      卢瑟福在1907年前后发现，每种放射性物质都有一个特征时间，在此时间内其活度减半，他称之为"半衰期"。
+      半衰期与衰变常数λ的关系为t½ = ln 2 / λ。它是放射性中被引用最多的参数：碳-14为5730年，铀-238约为
+      45亿年。
+    ja: >-
+      ラザフォードは1907年頃、各放射性物質には、その放射能が半分になる特徴的な時間があり、それを「半減期」と
+      呼んだ。半減期は、崩壊定数λとt½ = ln 2 / λで結ばれる。これは放射能の中で最もよく引用されるパラメータで、
+      炭素14は5730年、ウラン238は約45億年である。
+  timeline:
+    - year: c. 1907
+      label:
+        es: >-
+          Rutherford introduce el concepto de vida media al estudiar la radiactividad.
+        en: >-
+          Rutherford introduces the half-life concept while studying radioactivity.
+        pt: >-
+          Rutherford introduz o conceito de meia-vida ao estudar a radioatividade.
+        fr: >-
+          Rutherford introduit le concept de demi-vie en étudiant la radioactivité.
+        zh: >-
+          卢瑟福在研究放射性时提出半衰期的概念。
+        ja: >-
+          ラザフォードが放射能の研究の中で半減期の概念を導入する。
+    - year: "1949"
+      label:
+        es: >-
+          La vida media del carbono-14 se vuelve el reloj estándar de la arqueología.
+        en: >-
+          Carbon-14's half-life becomes the standard clock of archaeology.
+        pt: >-
+          A meia-vida do carbono-14 vira o relógio padrão da arqueologia.
+        fr: >-
+          La demi-vie du carbone 14 devient l'horloge standard de l'archéologie.
+        zh: >-
+          碳-14的半衰期成为考古学的标准时钟。
+        ja: >-
+          炭素14の半減期が、考古学の標準的な時計になる。
+    - year: Hoy
+      label:
+        es: >-
+          Es el dato clave de la medicina nuclear, la geología y la gestión de residuos.
+        en: >-
+          It is the key datum of nuclear medicine, geology, and waste management.
+        pt: >-
+          É o dado-chave da medicina nuclear, da geologia e da gestão de resíduos.
+        fr: >-
+          C'est la donnée clé de la médecine nucléaire, de la géologie et de la gestion des déchets.
+        zh: >-
+          它是核医学、地质学和废物管理的关键数据。
+        ja: >-
+          核医学、地質学、廃棄物管理の重要なデータである。
+  useCases:
+    - title:
+        es: Fechado de rocas
+        en: Rock dating
+        pt: Datação de rochas
+        fr: Datation des roches
+        zh: 岩石定年
+        ja: 岩石の年代測定
+      description:
+        es: >-
+          El uranio y el potasio de las rocas datan la edad de la Tierra.
+        en: >-
+          Uranium and potassium in rocks date the age of Earth.
+        pt: >-
+          O urânio e o potássio das rochas datam a idade da Terra.
+        fr: >-
+          L'uranium et le potassium des roches datent l'âge de la Terre.
+        zh: >-
+          岩石中的铀和钾可以测定地球的年龄。
+        ja: >-
+          岩石のウランやカリウムが地球の年齢を決定する。
+    - title:
+        es: Medicina nuclear
+        en: Nuclear medicine
+        pt: Medicina nuclear
+        fr: Médecine nucléaire
+        zh: 核医学
+        ja: 核医学
+      description:
+        es: >-
+          El isótopo elegido para un escáner debe durar lo que dura el estudio.
+        en: >-
+          The isotope chosen for a scan must last as long as the exam.
+        pt: >-
+          O isótopo escolhido para um exame deve durar o tempo do exame.
+        fr: >-
+          L'isotope choisi pour un examen doit durer le temps de l'examen.
+        zh: >-
+          扫描所选的同位素必须持续到检查结束。
+        ja: >-
+          検査に選ばれる同位体は、検査の間持続しなければならない。
+    - title:
+        es: Residuos nucleares
+        en: Nuclear waste
+        pt: Resíduos nucleares
+        fr: Déchets nucléaires
+        zh: 核废物
+        ja: 核廃棄物
+      description:
+        es: >-
+          Saber cuánto hay que aislar un residuo depende de su vida media.
+        en: >-
+          How long waste must be isolated depends on its half-life.
+        pt: >-
+          Quanto tempo um resíduo deve ser isolado depende de sua meia-vida.
+        fr: >-
+          La durée d'isolement d'un déchet dépend de sa demi-vie.
+        zh: >-
+          废物需要隔离多久，取决于其半衰期。
+        ja: >-
+          廃棄物をどれだけ隔離すべきかは、その半減期に依存する。
+  example:
+    title:
+      es: Con λ = 0.1
+      en: With λ = 0.1
+      pt: Com λ = 0,1
+      fr: Avec λ = 0,1
+      zh: 取 λ = 0.1
+      ja: λ = 0.1 の場合
+    lines:
+      - es: λ = 0.1 (por unidad de tiempo)
+        en: λ = 0.1 (per unit of time)
+        pt: λ = 0,1 (por unidade de tempo)
+        fr: λ = 0,1 (par unité de temps)
+        zh: λ = 0.1（每单位时间）
+        ja: λ = 0.1（単位時間あたり）
+      - es: t½ = ln 2 / λ
+        en: t½ = ln 2 / λ
+        pt: t½ = ln 2 / λ
+        fr: t½ = ln 2 / λ
+        zh: t½ = ln 2 / λ
+        ja: t½ = ln 2 / λ
+      - es: t½ = 0.6931 / 0.1
+        en: t½ = 0.6931 / 0.1
+        pt: t½ = 0,6931 / 0,1
+        fr: t½ = 0,6931 / 0,1
+        zh: t½ = 0.6931 / 0.1
+        ja: t½ = 0.6931 / 0.1
+      - es: t½ ≈ 6.93
+        en: t½ ≈ 6.93
+        pt: t½ ≈ 6,93
+        fr: t½ ≈ 6,93
+        zh: t½ ≈ 6.93
+        ja: t½ ≈ 6.93
+      - es: "Cada 6.93 unidades de tiempo la sustancia se reduce a la mitad"
+        en: "Every 6.93 time units the substance halves"
+        pt: "A cada 6,93 unidades de tempo a substância se reduz à metade"
+        fr: "Toutes les 6,93 unités de temps, la substance diminue de moitié"
+        zh: "每6.93个时间单位，物质减少一半"
+        ja: "6.93の時間単位ごとに、物質は半分になる"

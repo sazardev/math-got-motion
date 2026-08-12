@@ -1,0 +1,335 @@
+id: cardiac-output
+title:
+  es: Gasto Cardíaco
+  en: Cardiac Output
+  pt: Débito Cardíaco
+  fr: Débit Cardiaque
+  zh: 心输出量
+  ja: 心拍出量
+category:
+  es: Salud y medicina
+  en: Health and medicine
+  pt: Saúde e medicina
+  fr: Santé et médecine
+  zh: 健康与医学
+  ja: 健康と医学
+nodes:
+  - id: co
+    type: variable
+    value: CO
+    explanation:
+      es: "CO: el gasto cardíaco, el volumen de sangre que el corazón bombea por minuto."
+      en: "CO: cardiac output, the volume of blood the heart pumps per minute."
+      pt: "DC: o débito cardíaco, o volume de sangue bombeado pelo coração por minuto."
+      fr: "DC : le débit cardiaque, le volume de sang pompé par le cœur par minute."
+      zh: "CO：心输出量，即心脏每分钟泵出的血液量。"
+      ja: "CO：心拍出量。心臓が毎分送り出す血液量。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: hr
+    type: variable
+    value: HR
+    explanation:
+      es: "HR: la frecuencia cardíaca, los latidos por minuto."
+      en: "HR: heart rate, the beats per minute."
+      pt: "FC: a frequência cardíaca, os batimentos por minuto."
+      fr: "FC : la fréquence cardiaque, les battements par minute."
+      zh: "HR：心率，即每分钟的心跳次数。"
+      ja: "HR：心拍数。毎分の拍動数。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: かける。
+  - id: sv
+    type: variable
+    value: SV
+    explanation:
+      es: "SV: el volumen sistólico, la sangre que bombea el corazón en cada latido."
+      en: "SV: stroke volume, the blood the heart pumps with each beat."
+      pt: "VS: o volume sistólico, o sangue bombeado pelo coração a cada batimento."
+      fr: "VS : le volume d'éjection systolique, le sang pompé par le cœur à chaque battement."
+      zh: "SV：每搏输出量，即心脏每次搏动泵出的血量。"
+      ja: "SV：一回拍出量。心臓が1回の拍動で送り出す血液量。"
+context:
+  author:
+    es: Basada en la fisiología de Harvey
+    en: Based on Harvey's physiology
+    pt: Baseada na fisiologia de Harvey
+    fr: Basée sur la physiologie de Harvey
+    zh: 基于哈维的生理学研究
+    ja: ハーヴェイの生理学に基づく
+  era:
+    es: Inglaterra, 1578–1657 · cuantificada en el s. XX
+    en: England, 1578–1657 · quantified in the 20th century
+    pt: Inglaterra, 1578–1657 · quantificada no século XX
+    fr: Angleterre, 1578–1657 · quantifiée au XXe siècle
+    zh: 英国,1578–1657年 · 20世纪量化
+    ja: イングランド、1578–1657年・20世紀に定量化
+  history:
+    es: >-
+      En 1628 William Harvey demostró que la sangre circula, saliendo del corazón por las
+      arterias y regresando por las venas, y calculó que el volumen expulsado en una hora supera
+      varias veces la masa corporal, lo que solo es posible si el mismo líquido se recircula. El
+      gasto cardíaco, el volumen que el corazón bombea por minuto, se cuantificó en el siglo XX y
+      en reposo ronda los 5 litros por minuto. Es el producto de la frecuencia cardíaca por el
+      volumen sistólico, y sustenta la fisiología del ejercicio y el monitoreo de pacientes
+      críticos.
+    en: >-
+      In 1628 William Harvey showed that blood circulates, leaving the heart through the arteries
+      and returning through the veins, and he calculated that the volume expelled in one hour
+      exceeds body mass several times over, which is only possible if the same fluid recirculates.
+      Cardiac output, the volume the heart pumps per minute, was quantified in the 20th century
+      and is about 5 liters per minute at rest. It is the product of heart rate and stroke volume,
+      and it underpins exercise physiology and critical care monitoring.
+    pt: >-
+      Em 1628 William Harvey demonstrou que o sangue circula, saindo do coração pelas artérias e
+      voltando pelas veias, e calculou que o volume expelido em uma hora supera várias vezes a
+      massa corporal, o que só é possível se o mesmo líquido se recircula. O débito cardíaco, o
+      volume que o coração bombeia por minuto, foi quantificado no século XX e, em repouso, ronda
+      os 5 litros por minuto. É o produto da frequência cardíaca pelo volume sistólico e sustenta
+      a fisiologia do exercício e o monitoramento de pacientes críticos.
+    fr: >-
+      En 1628, William Harvey montra que le sang circule, puisqu'il quitte le cœur par les
+      artères et revient par les veines, et il calcula que le volume expulsé en une heure dépasse
+      plusieurs fois la masse corporelle, ce qui n'est possible que si le même liquide se
+      recircule. Le débit cardiaque, le volume que le cœur pompe par minute, fut quantifié au XXe
+      siècle et avoisine les 5 litres par minute au repos. C'est le produit de la fréquence
+      cardiaque et du volume d'éjection systolique, et il fonde la physiologie de l'exercice et la
+      surveillance des patients critiques.
+    zh: >-
+      1628年，威廉·哈维证明血液在循环，它从心脏经动脉流出，再经静脉返回。他计算出心脏一小时排出的
+      血量数倍于身体的质量，这只有同一液体被反复循环才可能实现。心输出量，即心脏每分钟泵出的血量，
+      在20世纪被量化，静息时约为每分钟5升。它等于心率与每搏输出量的乘积，是运动生理学和重症监护
+      监测的基础。
+    ja: >-
+      1628年、ウィリアム・ハーヴェイは血液が循環することを示した。血液は心臓から動脈へ出て静脈から
+      戻る。彼は、心臓が1時間に送り出す血液量が体重の数倍に達すると計算し、これは同じ液体が循環して
+      いる場合にのみ可能だと論じた。心拍出量、すなわち心臓が毎分送り出す血液量は20世紀に定量化され、
+      安静時には毎分約5リットルである。これは心拍数と一回拍出量の積であり、運動生理学と集中治療の
+      モニタリングを支えている。
+  timeline:
+    - year: "1628"
+      label:
+        es: >-
+          Harvey publica "De Motu Cordis", donde demuestra que la sangre circula por el cuerpo.
+        en: >-
+          Harvey publishes "De Motu Cordis", where he shows that blood circulates through the
+          body.
+        pt: >-
+          Harvey publica "De Motu Cordis", onde demonstra que o sangue circula pelo corpo.
+        fr: >-
+          Harvey publie « De Motu Cordis », où il montre que le sang circule dans le corps.
+        zh: >-
+          哈维发表《心血运动论》，证明血液在体内循环。
+        ja: >-
+          ハーヴェイが『心臓と血液の運動について』を発表し、血液が体内を循環することを示す。
+    - year: "1870"
+      label:
+        es: >-
+          Fick describe el principio que permite medir el gasto cardíaco a partir del consumo de
+          oxígeno.
+        en: >-
+          Fick describes the principle that allows cardiac output to be measured from oxygen
+          uptake.
+        pt: >-
+          Fick descreve o princípio que permite medir o débito cardíaco a partir do consumo de
+          oxigênio.
+        fr: >-
+          Fick décrit le principe qui permet de mesurer le débit cardiaque à partir de la
+          consommation d'oxygène.
+        zh: >-
+          费克提出可根据耗氧量测量心输出量的原理。
+        ja: >-
+          フィックが、酸素消費量から心拍出量を測定することを可能にする原理を記述する。
+    - year: "1940"
+      label:
+        es: >-
+          El cateterismo cardíaco permite medir el gasto cardíaco directamente en humanos.
+        en: >-
+          Cardiac catheterization allows cardiac output to be measured directly in humans.
+        pt: >-
+          O cateterismo cardíaco permite medir o débito cardíaco diretamente em humanos.
+        fr: >-
+          Le cathétérisme cardiaque permet de mesurer le débit cardiaque directement chez
+          l'humain.
+        zh: >-
+          心导管术使心输出量可以在人体上直接测量。
+        ja: >-
+          心臓カテーテル検査により、ヒトで心拍出量を直接測定できるようになる。
+    - year: Hoy
+      label:
+        es: >-
+          Es una medición rutinaria en las unidades de cuidados intensivos y en los estudios de
+          fisiología del ejercicio.
+        en: >-
+          It is a routine measurement in intensive care units and in exercise physiology studies.
+        pt: >-
+          É uma medição rotineira nas unidades de terapia intensiva e nos estudos de fisiologia do
+          exercício.
+        fr: >-
+          C'est une mesure de routine dans les unités de soins intensifs et dans les études de
+          physiologie de l'exercice.
+        zh: >-
+          它是重症监护病房和运动生理学研究中的常规测量。
+        ja: >-
+          集中治療室や運動生理学の研究では、日常的な測定値である。
+  useCases:
+    - title:
+        es: Medicina intensiva
+        en: Intensive care
+        pt: Medicina intensiva
+        fr: Soins intensifs
+        zh: 重症监护
+        ja: 集中治療
+      description:
+        es: >-
+          En pacientes críticos el gasto cardíaco se mide para ajustar la reposición de fluidos y
+          los fármacos vasoactivos.
+        en: >-
+          In critically ill patients cardiac output is measured to adjust fluid replacement and
+          vasoactive drugs.
+        pt: >-
+          Em pacientes críticos o débito cardíaco é medido para ajustar a reposição de fluidos e
+          os fármacos vasoativos.
+        fr: >-
+          Chez les patients critiques, le débit cardiaque est mesuré pour ajuster le remplissage
+          vasculaire et les médicaments vasoactifs.
+        zh: >-
+          在危重病人中，测量心输出量以调整补液和血管活性药物的用量。
+        ja: >-
+          重症患者では、輸液と血管作動薬を調整するために心拍出量を測定する。
+    - title:
+        es: Fisiología del ejercicio
+        en: Exercise physiology
+        pt: Fisiologia do exercício
+        fr: Physiologie de l'exercice
+        zh: 运动生理学
+        ja: 運動生理学
+      description:
+        es: >-
+          El aumento del gasto cardíaco durante el esfuerzo explica cómo el organismo entrega
+          oxígeno a los músculos.
+        en: >-
+          The rise in cardiac output during effort explains how the body delivers oxygen to the
+          muscles.
+        pt: >-
+          O aumento do débito cardíaco durante o esforço explica como o organismo entrega oxigênio
+          aos músculos.
+        fr: >-
+          L'augmentation du débit cardiaque à l'effort explique comment l'organisme livre
+          l'oxygène aux muscles.
+        zh: >-
+          运动时心输出量的增加，解释了身体如何向肌肉输送氧气。
+        ja: >-
+          運動時の心拍出量の増加が、身体が筋肉へ酸素を届ける仕組みを説明する。
+    - title:
+        es: Cardiología
+        en: Cardiology
+        pt: Cardiologia
+        fr: Cardiologie
+        zh: 心脏病学
+        ja: 心臓病学
+      description:
+        es: >-
+          En la insuficiencia cardíaca el gasto cardíaco baja y su medición guía el diagnóstico y
+          el tratamiento.
+        en: >-
+          In heart failure cardiac output drops, and measuring it guides diagnosis and treatment.
+        pt: >-
+          Na insuficiência cardíaca o débito cardíaco cai, e sua medição orienta o diagnóstico e o
+          tratamento.
+        fr: >-
+          Dans l'insuffisance cardiaque, le débit cardiaque baisse et sa mesure guide le
+          diagnostic et le traitement.
+        zh: >-
+          心力衰竭时心输出量下降，测量它可指导诊断和治疗。
+        ja: >-
+          心不全では心拍出量が低下し、その測定が診断と治療を導く。
+    - title:
+        es: Anestesiología
+        en: Anesthesiology
+        pt: Anestesiologia
+        fr: Anesthésiologie
+        zh: 麻醉学
+        ja: 麻酔科学
+      description:
+        es: >-
+          Durante cirugías mayores se monitoriza el gasto cardíaco para mantener una perfusión
+          adecuada de los órganos.
+        en: >-
+          During major surgery cardiac output is monitored to keep adequate organ perfusion.
+        pt: >-
+          Durante cirurgias de grande porte o débito cardíaco é monitorado para manter uma
+          perfusão adequada dos órgãos.
+        fr: >-
+          Pendant les interventions majeures, le débit cardiaque est surveillé pour maintenir une
+          perfusion adéquate des organes.
+        zh: >-
+          在大型手术中监测心输出量，以维持器官的充分灌注。
+        ja: >-
+          大手術中は、臓器の適切な灌流を保つために心拍出量を監視する。
+  example:
+    title:
+      es: En reposo
+      en: At rest
+      pt: Em repouso
+      fr: Au repos
+      zh: 静息时
+      ja: 安静時の場合
+    lines:
+      - es: FC = 70 bpm (latidos por minuto)
+        en: HR = 70 bpm (beats per minute)
+        pt: FC = 70 bpm (batimentos por minuto)
+        fr: FC = 70 bpm (battements par minute)
+        zh: 心率 = 70 次/分
+        ja: 心拍数 = 70 bpm
+      - es: VS = 70 mL (por latido)
+        en: SV = 70 mL (per beat)
+        pt: VS = 70 mL (por batimento)
+        fr: VS = 70 mL (par battement)
+        zh: 每搏输出量 = 70 mL
+        ja: 一回拍出量 = 70 mL
+      - es: CO = FC · VS
+        en: CO = HR · SV
+        pt: CO = FC · VS
+        fr: CO = FC · VS
+        zh: CO = 心率 · 每搏输出量
+        ja: CO = 心拍数 · 一回拍出量
+      - es: CO = 70 × 70
+        en: CO = 70 × 70
+        pt: CO = 70 × 70
+        fr: CO = 70 × 70
+        zh: CO = 70 × 70
+        ja: CO = 70 × 70
+      - es: CO = 4900 mL/min
+        en: CO = 4900 mL/min
+        pt: CO = 4900 mL/min
+        fr: CO = 4900 mL/min
+        zh: CO = 4900 mL/min
+        ja: CO = 4900 mL/min
+      - es: CO ≈ 4.9 L/min
+        en: CO ≈ 4.9 L/min
+        pt: CO ≈ 4,9 L/min
+        fr: CO ≈ 4,9 L/min
+        zh: CO ≈ 4.9 L/min
+        ja: CO ≈ 4.9 L/min
+      - es: "En reposo, un corazón adulto bombea unos 5 litros por minuto"
+        en: "At rest, an adult heart pumps about 5 liters per minute"
+        pt: "Em repouso, um coração adulto bombeia cerca de 5 litros por minuto"
+        fr: "Au repos, un cœur adulte pompe environ 5 litres par minute"
+        zh: "静息时，成人的心脏每分钟泵出约5升血"
+        ja: "安静時、成人の心臓は毎分約5リットルを送り出す"

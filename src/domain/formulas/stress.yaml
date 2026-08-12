@@ -1,0 +1,322 @@
+id: stress
+title:
+  es: Esfuerzo (Tensión)
+  en: Stress
+  pt: Tensão
+  fr: Contrainte
+  zh: 应力
+  ja: 応力
+category:
+  es: Ingeniería
+  en: Engineering
+  pt: Engenharia
+  fr: Ingénierie
+  zh: 工程学
+  ja: 工学
+nodes:
+  - id: sigma
+    type: variable
+    value: σ
+    explanation:
+      es: "σ: el esfuerzo, la fuerza que actúa sobre cada unidad de área de la sección."
+      en: "σ: the stress, the force acting on each unit of area of the cross-section."
+      pt: "σ: a tensão, a força que atua sobre cada unidade de área da seção."
+      fr: "σ : la contrainte, la force agissant sur chaque unité de surface de la section."
+      zh: "σ：应力，即作用在截面每一单位面积上的力。"
+      ja: "σ：応力。断面の単位面積あたりに働く力。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: "F: la fuerza aplicada sobre la sección."
+      en: "F: the force applied on the section."
+      pt: "F: a força aplicada sobre a seção."
+      fr: "F : la force appliquée sur la section."
+      zh: "F：施加在截面上的力。"
+      ja: "F：断面に加わる力。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: "A: el área de la sección transversal, perpendicular a la fuerza."
+      en: "A: the cross-sectional area, perpendicular to the force."
+      pt: "A: a área da seção transversal, perpendicular à força."
+      fr: "A : l'aire de la section transversale, perpendiculaire à la force."
+      zh: "A：垂直于力的横截面积。"
+      ja: "A：力に垂直な断面積。"
+context:
+  author:
+    es: Basada en el trabajo de Coulomb y Navier
+    en: Based on the work of Coulomb and Navier
+    pt: Baseada no trabalho de Coulomb e Navier
+    fr: Basée sur les travaux de Coulomb et Navier
+    zh: 基于库仑和纳维的研究
+    ja: クーロンとナビエの研究に基づく
+  era:
+    es: Francia, s. XVIII–XIX
+    en: France, 18th–19th century
+    pt: França, séc. XVIII–XIX
+    fr: France, XVIIIe–XIXe siècle
+    zh: 法国，18–19世纪
+    ja: フランス、18～19世紀
+  history:
+    es: >-
+      El esfuerzo es la fuerza que siente cada unidad de área de un material. Charles-Augustin de
+      Coulomb sentó sus bases en 1773 al estudiar la fricción interna de los sólidos, y Claude-Louis
+      Navier la consolidó en 1826 en su 'Résumé des leçons', que hizo de la resistencia de materiales
+      una disciplina matemática. Explica por qué se parten los cables finos: concentran la carga en
+      pocos milímetros cuadrados. Y define cuánta carga rompe un puente: todo depende de la sección
+      que reparte la fuerza. Hoy σ = F/A abre cualquier cálculo estructural.
+    en: >-
+      Stress is the force felt by each unit of area of a material. Charles-Augustin de Coulomb laid
+      its foundations in 1773 by studying the internal friction of solids, and Claude-Louis Navier
+      consolidated it in 1826 in his 'Résumé des leçons', which made strength of materials a
+      mathematical discipline. It explains why thin cables snap: they concentrate the load into a few
+      square millimeters. And it defines how much load breaks a bridge: it all depends on the section
+      spreading the force. Today σ = F/A opens any structural calculation.
+    pt: >-
+      A tensão é a força sentida por cada unidade de área de um material. Charles-Augustin de Coulomb
+      lançou suas bases em 1773, ao estudar o atrito interno dos sólidos, e Claude-Louis Navier a
+      consolidou em 1826 em seu 'Résumé des leçons', que tornou a resistência dos materiais uma
+      disciplina matemática. Ela explica por que cabos finos se rompem: concentram a carga em poucos
+      milímetros quadrados. E define quanta carga rompe uma ponte: tudo depende da seção que
+      distribui a força. Hoje σ = F/A abre qualquer cálculo estrutural.
+    fr: >-
+      La contrainte est la force ressentie par chaque unité de surface d'un matériau.
+      Charles-Augustin de Coulomb en posa les fondements en 1773 en étudiant le frottement interne
+      des solides, et Claude-Louis Navier la consolida en 1826 dans son « Résumé des leçons », qui fit
+      de la résistance des matériaux une discipline mathématique. Elle explique pourquoi les câbles
+      fins cassent : ils concentrent la charge sur quelques millimètres carrés. Et elle définit la
+      charge qui rompt un pont : tout dépend de la section qui répartit la force. Aujourd'hui, σ = F/A
+      ouvre tout calcul de structure.
+    zh: >-
+      应力是材料每一单位面积所承受的力。1773年，夏尔-奥古斯丁·库仑通过研究固体的内摩擦奠定了它的基础；
+      1826年，克劳德-路易·纳维在其《课程纲要》中将其完善，使材料力学成为一门数学学科。它解释了细缆为何会断：
+      载荷被集中在几个平方毫米上。它也决定了多大的载荷会压垮桥梁：一切都取决于分散力的截面。今天，σ = F/A
+      是一切结构计算的开端。
+    ja: >-
+      応力とは、材料の単位面積あたりに感じる力のことである。1773年、シャルル＝オーギュスタン・クーロンが固体の
+      内部摩擦の研究でその基礎を築き、1826年にはクロード＝ルイ・ナビエが『講義要約』でこれを体系化し、材料力学を
+      数学的な学問とした。細いケーブルが切れる理由はこれで説明できる。荷重が数平方ミリメートルに集中するからだ。
+      また、橋がどれだけの荷重で壊れるかを決めるのも応力であり、力を分散する断面積にすべて依存する。今日、
+      σ = F/A はあらゆる構造計算の出発点である。
+  timeline:
+    - year: "1773"
+      label:
+        es: >-
+          Coulomb presenta su memoria sobre la fricción interna y la resistencia de los materiales a
+          la compresión.
+        en: >-
+          Coulomb presents his memoir on internal friction and the strength of materials under
+          compression.
+        pt: >-
+          Coulomb apresenta sua memória sobre o atrito interno e a resistência dos materiais à
+          compressão.
+        fr: >-
+          Coulomb présente son mémoire sur le frottement interne et la résistance des matériaux à la
+          compression.
+        zh: >-
+          库仑发表了关于内摩擦和材料抗压强度的论文。
+        ja: >-
+          クーロンが内部摩擦と材料の圧縮強度に関する論考を発表する。
+    - year: "1826"
+      label:
+        es: >-
+          Navier publica su 'Résumé des leçons', que formaliza el esfuerzo y funda la resistencia de
+          materiales.
+        en: >-
+          Navier publishes his 'Résumé des leçons', formalizing stress and founding the strength of
+          materials.
+        pt: >-
+          Navier publica seu 'Résumé des leçons', que formaliza a tensão e funda a resistência dos
+          materiais.
+        fr: >-
+          Navier publie son « Résumé des leçons », qui formalise la contrainte et fonde la résistance
+          des matériaux.
+        zh: >-
+          纳维出版《课程纲要》，将应力概念形式化，创立了材料力学。
+        ja: >-
+          ナビエが『講義要約』を出版し、応力を定式化して材料力学を創始する。
+    - year: "1830"
+      label:
+        es: >-
+          Los primeros puentes de hierro forjado se calculan con la nueva teoría, y los ferrocarriles
+          exigen secciones seguras.
+        en: >-
+          The first wrought-iron bridges are calculated with the new theory, and railroads demand safe
+          cross-sections.
+        pt: >-
+          As primeiras pontes de ferro forjado são calculadas com a nova teoria, e as ferrovias exigem
+          seções seguras.
+        fr: >-
+          Les premiers ponts en fer forgé sont calculés avec la nouvelle théorie, et les chemins de
+          fer exigent des sections sûres.
+        zh: >-
+          首批锻铁桥梁用新理论计算，铁路要求安全的截面。
+        ja: >-
+          最初の錬鉄製の橋が新理論で設計され、鉄道が安全な断面を要求するようになる。
+    - year: Hoy
+      label:
+        es: >-
+          Cualquier edificio, puente o avión se verifica calculando que su esfuerzo máximo no supere
+          el admisible del material.
+        en: >-
+          Every building, bridge, or aircraft is checked by ensuring its maximum stress stays below
+          the material's allowable limit.
+        pt: >-
+          Qualquer edifício, ponte ou avião é verificado garantindo que sua tensão máxima não
+          ultrapasse a admissível do material.
+        fr: >-
+          Tout bâtiment, pont ou avion est vérifié en s'assurant que sa contrainte maximale ne
+          dépasse pas celle admissible du matériau.
+        zh: >-
+          任何建筑、桥梁或飞机都要通过验算，确保最大应力不超过材料的许用应力。
+        ja: >-
+          あらゆる建物・橋・航空機は、最大応力が材料の許容応力を超えないことを確認して検証される。
+  useCases:
+    - title:
+        es: Puentes y estructuras
+        en: Bridges and structures
+        pt: Pontes e estruturas
+        fr: Ponts et structures
+        zh: 桥梁与结构
+        ja: 橋梁と構造物
+      description:
+        es: >-
+          Cada barra y viga se dimensiona para que el esfuerzo no supere el límite del material.
+        en: >-
+          Every bar and beam is sized so the stress stays below the material's limit.
+        pt: >-
+          Cada barra e viga é dimensionada para que a tensão não ultrapasse o limite do material.
+        fr: >-
+          Chaque barre et poutre est dimensionnée pour que la contrainte reste sous la limite du
+          matériau.
+        zh: >-
+          每根杆件和梁都按应力不超过材料极限的原则来确定尺寸。
+        ja: >-
+          すべての部材や梁は、応力が材料の限界を超えないように寸法を決める。
+    - title:
+        es: Selección de materiales
+        en: Materials selection
+        pt: Seleção de materiais
+        fr: Choix des matériaux
+        zh: 材料选择
+        ja: 材料の選定
+      description:
+        es: >-
+          Se compara la resistencia específica de acero, aluminio, hormigón y polímeros antes de
+          elegir.
+        en: >-
+          The specific strength of steel, aluminum, concrete, and polymers is compared before choosing.
+        pt: >-
+          Compara-se a resistência específica de aço, alumínio, concreto e polímeros antes de escolher.
+        fr: >-
+          On compare la résistance spécifique de l'acier, de l'aluminium, du béton et des polymères
+          avant de choisir.
+        zh: >-
+          在选材前比较钢、铝、混凝土和聚合物的比强度。
+        ja: >-
+          選定前に、鋼、アルミニウム、コンクリート、ポリマーの比強度を比較する。
+    - title:
+        es: Cables y tendones
+        en: Cables and tendons
+        pt: Cabos e tendões
+        fr: Câbles et torons
+        zh: 缆索与钢绞线
+        ja: ケーブルと緊張材
+      description:
+        es: >-
+          La resistencia de un cable depende de su sección: al duplicarla, soporta el doble de carga.
+        en: >-
+          A cable's strength depends on its section: doubling it doubles the load it can carry.
+        pt: >-
+          A resistência de um cabo depende de sua seção: ao dobrá-la, ele suporta o dobro da carga.
+        fr: >-
+          La résistance d'un câble dépend de sa section : en la doublant, il supporte le double de
+          charge.
+        zh: >-
+          缆索的强度取决于其截面：截面加倍，承载能力也加倍。
+        ja: >-
+          ケーブルの強度は断面に依存する。断面を2倍にすると、支えられる荷重も2倍になる。
+    - title:
+        es: Edificios de gran altura
+        en: Tall buildings
+        pt: Edifícios de grande altura
+        fr: Gratte-ciel
+        zh: 高层建筑
+        ja: 超高層ビル
+      description:
+        es: >-
+          Las columnas de los pisos bajos soportan el peso de todos los de arriba y exigen el mayor
+          esfuerzo.
+        en: >-
+          Lower-floor columns carry the weight of everything above, experiencing the highest stress.
+        pt: >-
+          As colunas dos andares inferiores sustentam o peso de todos os de cima e sofrem a maior
+          tensão.
+        fr: >-
+          Les colonnes des étages inférieurs portent le poids de tous les étages au-dessus et subissent
+          la contrainte maximale.
+        zh: >-
+          低层柱承受其上所有楼层的重量，所受应力最大。
+        ja: >-
+          低層階の柱は上にあるすべての階の重量を支え、最大の応力を受ける。
+  example:
+    title:
+      es: Tensión de un cable
+      en: Stress in a cable
+      pt: Tensão em um cabo
+      fr: Contrainte dans un câble
+      zh: 缆索中的应力
+      ja: ケーブルの応力
+    lines:
+      - es: F = 10,000 N, A = 0.002 m²
+        en: F = 10,000 N, A = 0.002 m²
+        pt: F = 10.000 N, A = 0,002 m²
+        fr: F = 10 000 N, A = 0,002 m²
+        zh: F = 10,000 N，A = 0.002 米²
+        ja: F = 10,000 N、A = 0.002 m²
+      - es: σ = F / A
+        en: σ = F / A
+        pt: σ = F / A
+        fr: σ = F / A
+        zh: σ = F / A
+        ja: σ = F / A
+      - es: σ = 10,000 / 0.002
+        en: σ = 10,000 / 0.002
+        pt: σ = 10.000 / 0,002
+        fr: σ = 10 000 / 0,002
+        zh: σ = 10,000 / 0.002
+        ja: σ = 10,000 / 0.002
+      - es: σ = 5,000,000 N/m² = 5 MPa
+        en: σ = 5,000,000 N/m² = 5 MPa
+        pt: σ = 5.000.000 N/m² = 5 MPa
+        fr: σ = 5 000 000 N/m² = 5 MPa
+        zh: σ = 5,000,000 牛/米² = 5 MPa
+        ja: σ = 5,000,000 N/m² = 5 MPa
+      - es: La barra soporta si el material resiste más de 5 MPa
+        en: The bar holds if the material withstands more than 5 MPa
+        pt: A barra resiste se o material suportar mais de 5 MPa
+        fr: La barre tient si le matériau résiste à plus de 5 MPa
+        zh: 只要材料能承受超过 5 MPa，杆件就安全
+        ja: 材料が5 MPa以上に耐えられれば、棒は持ちこたえる

@@ -1,0 +1,349 @@
+id: michaelis-menten
+title:
+  es: Ecuación de Michaelis-Menten
+  en: Michaelis–Menten Equation
+  pt: Equação de Michaelis-Menten
+  fr: Équation de Michaelis-Menten
+  zh: 米氏方程
+  ja: ミカエリス・メンテン式
+category:
+  es: Biología
+  en: Biology
+  pt: Biologia
+  fr: Biologie
+  zh: 生物学
+  ja: 生物学
+nodes:
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La velocidad de la reacción enzimática en el instante dado.
+      en: The rate of the enzyme-catalyzed reaction at the given moment.
+      pt: A velocidade da reação enzimática no instante dado.
+      fr: La vitesse de la réaction enzymatique à l'instant donné.
+      zh: 给定时刻酶促反应的速率。
+      ja: 与えられた時点での酵素反応の速度。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: vmax
+    type: variable
+    value: Vmax
+    explanation:
+      es: "Vmax: la velocidad máxima, cuando todo el enzima está ocupado por sustrato."
+      en: "Vmax: the maximum rate, when every enzyme is occupied by substrate."
+      pt: "Vmax: a velocidade máxima, quando toda a enzima está ocupada pelo substrato."
+      fr: "Vmax : la vitesse maximale, quand tout l'enzyme est occupé par le substrat."
+      zh: "Vmax：最大速率，即所有酶都被底物占据时的速率。"
+      ja: "Vmax：最大速度。すべての酵素が基質に占められたときの速度。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: s
+    type: variable
+    value: "[S]"
+    explanation:
+      es: La concentración del sustrato, el reactivo que el enzima transforma.
+      en: The substrate concentration, the reactant the enzyme transforms.
+      pt: A concentração do substrato, o reagente que a enzima transforma.
+      fr: La concentration du substrat, le réactif que l'enzyme transforme.
+      zh: 底物浓度，即酶所转化的反应物。
+      ja: 基質の濃度。酵素が変換する反応物。
+  - id: div
+    type: operator
+    value: /
+    explanation:
+      es: "Dividido por: el denominador frena la velocidad al saturarse."
+      en: "Divided by: the denominator caps the rate as saturation sets in."
+      pt: "Dividido por: o denominador limita a velocidade à medida que satura."
+      fr: "Divisé par : le dénominateur freine la vitesse au fur et à mesure de la saturation."
+      zh: "除以：随着饱和发生，分母限制了速率。"
+      ja: "で割る。飽和に伴い、分母が速度を抑える。"
+  - id: km
+    type: variable
+    value: Km
+    explanation:
+      es: "Km: la constante de Michaelis, el sustrato que da la mitad de Vmax."
+      en: "Km: the Michaelis constant, the substrate giving half of Vmax."
+      pt: "Km: a constante de Michaelis, o substrato que dá metade de Vmax."
+      fr: "Km : la constante de Michaelis, le substrat qui donne la moitié de Vmax."
+      zh: "Km：米氏常数，即达到Vmax一半时的底物浓度。"
+      ja: "Km：ミカエリス定数。Vmaxの半分を与える基質濃度。"
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Más.
+      en: Plus.
+      pt: Mais.
+      fr: Plus.
+      zh: 加。
+      ja: たす。
+  - id: s2
+    type: variable
+    value: "[S]"
+    explanation:
+      es: La misma concentración de sustrato del numerador, en el denominador.
+      en: The same substrate concentration as the numerator, in the denominator.
+      pt: A mesma concentração de substrato do numerador, no denominador.
+      fr: La même concentration de substrat que le numérateur, au dénominateur.
+      zh: 与分子中相同的底物浓度，位于分母。
+      ja: 分子と同じ基質濃度。分母にある。
+context:
+  author:
+    es: Leonor Michaelis y Maud Menten
+    en: Leonor Michaelis and Maud Menten
+    pt: Leonor Michaelis e Maud Menten
+    fr: Leonor Michaelis et Maud Menten
+    zh: 莱昂诺尔·米夏埃利斯与莫德·门滕
+    ja: レオノール・ミカエリスとモード・メンテン
+  era:
+    es: Alemania y Canadá, 1913
+    en: Germany and Canada, 1913
+    pt: Alemanha e Canadá, 1913
+    fr: Allemagne et Canada, 1913
+    zh: 德国与加拿大,1913年
+    ja: ドイツとカナダ、1913年
+  history:
+    es: >-
+      En 1913, el químico Leonor Michaelis y la médica Maud Menten describieron la velocidad de una
+      reacción enzimática en función de la concentración de sustrato: la velocidad crece con el
+      sustrato hasta saturarse en un máximo Vmax, y Km es la concentración de sustrato a la que se
+      alcanza la mitad de esa velocidad. Publicada en alemán en una revista alemana, la ecuación tardó
+      décadas en difundirse, pero hoy es el modelo estándar de la cinética enzimática y la base del
+      ajuste de dosis de fármacos y del estudio del metabolismo.
+    en: >-
+      In 1913, the chemist Leonor Michaelis and the physician Maud Menten described the rate of an
+      enzyme-catalyzed reaction as a function of substrate concentration: the rate rises with substrate
+      until it saturates at a maximum Vmax, and Km is the substrate concentration at which half of
+      that maximum rate is reached. Published in German in a German journal, the equation took decades
+      to spread, but today it is the standard model of enzyme kinetics and the basis of drug dosing and
+      metabolism studies.
+    pt: >-
+      Em 1913, o químico Leonor Michaelis e a médica Maud Menten descreveram a velocidade de uma
+      reação enzimática em função da concentração de substrato: a velocidade cresce com o substrato até
+      saturar em um máximo Vmax, e Km é a concentração de substrato na qual se atinge a metade dessa
+      velocidade máxima. Publicada em alemão numa revista alemã, a equação levou décadas para se
+      difundir, mas hoje é o modelo padrão da cinética enzimática e a base do ajuste de doses de
+      fármacos e do estudo do metabolismo.
+    fr: >-
+      En 1913, le chimiste Leonor Michaelis et la médecin Maud Menten décrivirent la vitesse d'une
+      réaction enzymatique en fonction de la concentration en substrat : la vitesse croît avec le
+      substrat jusqu'à saturer à un maximum Vmax, et Km est la concentration de substrat à laquelle on
+      atteint la moitié de cette vitesse maximale. Publiée en allemand dans une revue allemande,
+      l'équation mit des décennies à se diffuser, mais elle est aujourd'hui le modèle standard de la
+      cinétique enzymatique et la base de l'ajustement des doses de médicaments et de l'étude du
+      métabolisme.
+    zh: >-
+      1913年，化学家莱昂诺尔·米夏埃利斯与医生莫德·门滕描述了酶催化反应速率随底物浓度变化的关系：
+      速率随底物浓度上升，直至达到最大值Vmax而饱和，Km则是达到最大速率一半时的底物浓度。该方程发表
+      在一份德语期刊上，因用德语撰写而传播缓慢，但如今它已成为酶动力学标准模型，是药物剂量调整和
+      代谢研究的基础。
+    ja: >-
+      1913年、化学者のレオノール・ミカエリスと医師のモード・メンテンは、酵素反応の速度が基質濃度に
+      よってどう変わるかを記述した。速度は基質の増加とともに上がり、最大値Vmaxで飽和する。Kmはその
+      最大速度の半分に達するときの基質濃度である。ドイツの学術誌にドイツ語で発表されたこの式は普及に
+      数十年を要したが、現在では酵素反応速度論の標準モデルであり、薬剤投与量の調整や代謝研究の基盤と
+      なっている。
+  timeline:
+    - year: "1903"
+      label:
+        es: >-
+          Victor Henri deriva una ecuación precursora con una constante de velocidad enzimática.
+        en: >-
+          Victor Henri derives a precursor equation involving an enzyme rate constant.
+        pt: >-
+          Victor Henri deriva uma equação precursora com uma constante de velocidade enzimática.
+        fr: >-
+          Victor Henri dérive une équation précurseur avec une constante de vitesse enzymatique.
+        zh: >-
+          维克多·亨利推导出包含酶速率常数的前驱方程。
+        ja: >-
+          ヴィクトール・アンリが酵素反応速度定数を含む先駆的な方程式を導く。
+    - year: "1913"
+      label:
+        es: >-
+          Michaelis y Menten publican la ecuación completa en el Biochemische Zeitschrift.
+        en: >-
+          Michaelis and Menten publish the full equation in the Biochemische Zeitschrift.
+        pt: >-
+          Michaelis e Menten publicam a equação completa no Biochemische Zeitschrift.
+        fr: >-
+          Michaelis et Menten publient l'équation complète dans le Biochemische Zeitschrift.
+        zh: >-
+          米夏埃利斯和门滕在《生物化学杂志》上发表了完整的方程。
+        ja: >-
+          ミカエリスとメンテンがBiochemische Zeitschrift誌に完全な式を発表する。
+    - year: "1925"
+      label:
+        es: >-
+          Briggs y Haldane la reformulan con la hipótesis del estado estacionario.
+        en: >-
+          Briggs and Haldane reformulate it with the steady-state assumption.
+        pt: >-
+          Briggs e Haldane a reformulam com a hipótese do estado estacionário.
+        fr: >-
+          Briggs et Haldane la reformulent avec l'hypothèse de l'état stationnaire.
+        zh: >-
+          布里格斯和霍尔丹以稳态假设对其进行了重新表述。
+        ja: >-
+          ブリッグスとハルデインが定常状態の仮定でこれを再定式化する。
+    - year: Hoy
+      label:
+        es: >-
+          Es la primera ecuación de la farmacología y de la bioquímica metabólica.
+        en: >-
+          It is the first equation of pharmacology and metabolic biochemistry.
+        pt: >-
+          É a primeira equação da farmacologia e da bioquímica metabólica.
+        fr: >-
+          C'est la première équation de la pharmacologie et de la biochimie métabolique.
+        zh: >-
+          它是药理学和代谢生物化学的第一方程。
+        ja: >-
+          薬理学と代謝生化学の第一の方程式である。
+  useCases:
+    - title:
+        es: Farmacología
+        en: Pharmacology
+        pt: Farmacologia
+        fr: Pharmacologie
+        zh: 药理学
+        ja: 薬理学
+      description:
+        es: >-
+          Estima la dosis de un fármaco según su afinidad (Km) y su eficacia máxima (Vmax).
+        en: >-
+          It estimates a drug dose from its affinity (Km) and maximum efficacy (Vmax).
+        pt: >-
+          Estima a dose de um fármaco conforme sua afinidade (Km) e eficácia máxima (Vmax).
+        fr: >-
+          Elle estime la dose d'un médicament selon son affinité (Km) et son efficacité maximale
+          (Vmax).
+        zh: >-
+          根据药物的亲和力（Km）和最大效能（Vmax）估算剂量。
+        ja: >-
+          薬剤の親和性（Km）と最大効果（Vmax）から投与量を推定する。
+    - title:
+        es: Bioquímica clínica
+        en: Clinical biochemistry
+        pt: Bioquímica clínica
+        fr: Biochimie clinique
+        zh: 临床生物化学
+        ja: 臨床生化学
+      description:
+        es: >-
+          Interpreta enzimas sanguíneas, como las hepáticas, para diagnosticar enfermedades.
+        en: >-
+          It interprets blood enzymes, such as liver enzymes, to diagnose diseases.
+        pt: >-
+          Interpreta enzimas sanguíneas, como as hepáticas, para diagnosticar doenças.
+        fr: >-
+          Elle interprète les enzymes sanguines, comme les enzymes hépatiques, pour diagnostiquer des
+          maladies.
+        zh: >-
+          通过解读血液中的酶（如肝酶）来诊断疾病。
+        ja: >-
+          肝酵素などの血中酵素を解釈し、疾患を診断する。
+    - title:
+        es: Biotecnología
+        en: Biotechnology
+        pt: Biotecnologia
+        fr: Biotechnologie
+        zh: 生物技术
+        ja: バイオテクノロジー
+      description:
+        es: >-
+          Diseña biorreactores que mantienen la concentración de sustrato cerca de la óptima.
+        en: >-
+          It designs bioreactors that keep substrate concentration near the optimum.
+        pt: >-
+          Projeta biorreatores que mantêm a concentração de substrato próxima da ótima.
+        fr: >-
+          Elle conçoit des bioréacteurs qui maintiennent la concentration de substrat près de
+          l'optimum.
+        zh: >-
+          设计使底物浓度保持在最优附近的生物反应器。
+        ja: >-
+          基質濃度を最適値付近に保つバイオリアクターを設計する。
+    - title:
+        es: Metabolismo
+        en: Metabolism
+        pt: Metabolismo
+        fr: Métabolisme
+        zh: 新陈代谢
+        ja: 代謝
+      description:
+        es: >-
+          Cuantifica cómo las enzimas aceleran y regulan las rutas metabólicas de la célula.
+        en: >-
+          It quantifies how enzymes accelerate and regulate the cell's metabolic pathways.
+        pt: >-
+          Quantifica como as enzimas aceleram e regulam as vias metabólicas da célula.
+        fr: >-
+          Elle quantifie comment les enzymes accélèrent et régulent les voies métaboliques de la
+          cellule.
+        zh: >-
+          定量描述酶如何加速并调节细胞的代谢途径。
+        ja: >-
+          酵素が細胞の代謝経路をどう加速し、調節するかを定量化する。
+  example:
+    title:
+      es: Velocidad con [S] = Km
+      en: Rate with [S] = Km
+      pt: Velocidade com [S] = Km
+      fr: Vitesse avec [S] = Km
+      zh: "[S] = Km时的速率"
+      ja: "[S] = Kmの場合の速度"
+    lines:
+      - es: "Vmax = 100, Km = 5, [S] = 5"
+        en: "Vmax = 100, Km = 5, [S] = 5"
+        pt: "Vmax = 100, Km = 5, [S] = 5"
+        fr: "Vmax = 100, Km = 5, [S] = 5"
+        zh: "Vmax = 100，Km = 5，[S] = 5"
+        ja: "Vmax = 100、Km = 5、[S] = 5"
+      - es: v = Vmax · [S] / (Km + [S])
+        en: v = Vmax · [S] / (Km + [S])
+        pt: v = Vmax · [S] / (Km + [S])
+        fr: v = Vmax · [S] / (Km + [S])
+        zh: v = Vmax · [S] / (Km + [S])
+        ja: v = Vmax · [S] / (Km + [S])
+      - es: v = 100 × 5 / (5 + 5)
+        en: v = 100 × 5 / (5 + 5)
+        pt: v = 100 × 5 / (5 + 5)
+        fr: v = 100 × 5 / (5 + 5)
+        zh: v = 100 × 5 / (5 + 5)
+        ja: v = 100 × 5 / (5 + 5)
+      - es: v = 500 / 10
+        en: v = 500 / 10
+        pt: v = 500 / 10
+        fr: v = 500 / 10
+        zh: v = 500 / 10
+        ja: v = 500 / 10
+      - es: v = 50
+        en: v = 50
+        pt: v = 50
+        fr: v = 50
+        zh: v = 50
+        ja: v = 50
+      - es: Con [S] = Km la velocidad es la mitad de Vmax.
+        en: With [S] = Km the rate is half of Vmax.
+        pt: Com [S] = Km a velocidade é metade de Vmax.
+        fr: Avec [S] = Km, la vitesse est la moitié de Vmax.
+        zh: 当[S] = Km时，速率是Vmax的一半。
+        ja: "[S] = Kmのとき、速度はVmaxの半分になる。"

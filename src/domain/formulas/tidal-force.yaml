@@ -1,0 +1,423 @@
+id: tidal-force
+title:
+  es: Fuerza de Marea
+  en: Tidal Force
+  pt: Força de Maré
+  fr: Force de marée
+  zh: 潮汐力
+  ja: 潮汐力
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: La fuerza de marea, la diferencia de atracción gravitatoria que estira a un cuerpo.
+      en: The tidal force, the difference in gravitational attraction that stretches a body.
+      pt: A força de maré, a diferença de atração gravitacional que estica um corpo.
+      fr: La force de marée, la différence d'attraction gravitationnelle qui étire un corps.
+      zh: 潮汐力,即拉伸物体的引力差。
+      ja: 潮汐力、天体を引き伸ばす重力の差。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "El factor dos: la marea se produce en ambos lados del cuerpo, a favor y en contra del astro."
+      en: "The factor of two: tides act on both sides of the body, toward and away from the object."
+      pt: "O fator dois: a maré age dos dois lados do corpo, a favor e contra o astro."
+      fr: "Le facteur deux : la marée agit des deux côtés du corps, vers et à l'opposé de l'astre."
+      zh: "系数2:潮汐作用于物体的两侧,分别朝向和背离天体。"
+      ja: "係数2:潮汐力は天体に近い側と遠い側の両方に働く。"
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación.
+      en: Multiplication.
+      pt: Multiplicação.
+      fr: Multiplication.
+      zh: 乘法。
+      ja: 乗算。
+  - id: g
+    type: constant
+    value: G
+    explanation:
+      es: La constante de gravitación universal, que fija la fuerza entre dos masas.
+      en: The universal gravitational constant, which sets the force between two masses.
+      pt: A constante da gravitação universal, que define a força entre duas massas.
+      fr: La constante de gravitation universelle, qui fixe la force entre deux masses.
+      zh: 万有引力常数,决定两质量之间的引力大小。
+      ja: 万有引力定数。ふたつの質量間の力の強さを決める。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación.
+      en: Multiplication.
+      pt: Multiplicação.
+      fr: Multiplication.
+      zh: 乘法。
+      ja: 乗算。
+  - id: big-m
+    type: variable
+    value: M
+    explanation:
+      es: La masa del cuerpo que provoca la marea, por ejemplo la Luna.
+      en: The mass of the body raising the tide, such as the Moon.
+      pt: A massa do corpo que provoca a maré, por exemplo a Lua.
+      fr: La masse du corps qui soulève la marée, par exemple la Lune.
+      zh: 引起潮汐的天体的质量,例如月球。
+      ja: 潮汐を起こす天体の質量。たとえば月。
+  - id: dot-3
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación.
+      en: Multiplication.
+      pt: Multiplicação.
+      fr: Multiplication.
+      zh: 乘法。
+      ja: 乗算。
+  - id: small-m
+    type: variable
+    value: m
+    explanation:
+      es: La masa del cuerpo sobre el que actúa la marea.
+      en: The mass of the body on which the tide acts.
+      pt: A massa do corpo sobre o qual a maré age.
+      fr: La masse du corps sur lequel agit la marée.
+      zh: 受到潮汐作用的物体的质量。
+      ja: 潮汐力を受ける天体の質量。
+  - id: dot-4
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación.
+      en: Multiplication.
+      pt: Multiplicação.
+      fr: Multiplication.
+      zh: 乘法。
+      ja: 乗算。
+  - id: big-r
+    type: variable
+    value: R
+    explanation:
+      es: "El radio del cuerpo que se estira: a mayor tamaño, mayor fuerza de marea."
+      en: "The radius of the stretched body: larger size means greater tidal force."
+      pt: "O raio do corpo esticado: quanto maior o tamanho, maior a força de maré."
+      fr: "Le rayon du corps étiré : plus il est grand, plus la force de marée est forte."
+      zh: "被拉伸物体的半径:物体越大,潮汐力越大。"
+      ja: 引き伸ばされる天体の半径。大きいほど潮汐力は強くなる。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: División.
+      en: Division.
+      pt: Divisão.
+      fr: Division.
+      zh: 除法。
+      ja: 除算。
+  - id: small-r
+    type: variable
+    value: r
+    explanation:
+      es: La distancia entre los centros de los dos cuerpos.
+      en: The distance between the centers of the two bodies.
+      pt: A distância entre os centros dos dois corpos.
+      fr: La distance entre les centres des deux corps.
+      zh: 两个天体中心之间的距离。
+      ja: ふたつの天体の中心間の距離。
+  - id: cubed
+    type: superscript
+    value: "³"
+    explanation:
+      es: "Al cubo: la fuerza de marea decae con la tercera potencia de la distancia."
+      en: "Cubed: the tidal force decays with the third power of the distance."
+      pt: "Ao cubo: a força de maré decai com a terceira potência da distância."
+      fr: "Au cube : la force de marée décroît avec la troisième puissance de la distance."
+      zh: "立方:潮汐力随距离的三次方衰减。"
+      ja: "3乗:潮汐力は距離の3乗に反比例して減衰する。"
+context:
+  author:
+    es: Basada en la gravitación de Newton
+    en: Based on Newton's gravitation
+    pt: Baseada na gravitação de Newton
+    fr: Basée sur la gravitation de Newton
+    zh: 基于牛顿万有引力定律
+    ja: ニュートンの万有引力に基づく
+  era:
+    es: Inglaterra, 1687 · analizada por Laplace en el s. XVIII
+    en: England, 1687 · analysed by Laplace in the 18th century
+    pt: Inglaterra, 1687 · analisada por Laplace no séc. XVIII
+    fr: Angleterre, 1687 · analysée par Laplace au XVIIIe siècle
+    zh: 英国,1687年 · 拉普拉斯在18世纪分析
+    ja: イギリス、1687年・18世紀にラプラスが分析
+  history:
+    es: >-
+      La gravedad no es uniforme: el lado de un cuerpo cercano a otro siente una atracción mayor que
+      el lado lejano, y esa diferencia, la gravedad diferencial, lo estira. Sobre la Tierra, la Luna
+      levanta dos abultamientos oceánicos, uno frente a ella y otro opuesto, por lo que la mayoría de
+      las costas tiene dos mareas altas al día. La fricción de las mareas frena la rotación de los
+      cuerpos: la Luna, ya acoplada, siempre muestra la misma cara, mientras que la Tierra ralentiza
+      su giro. Cerca de un agujero negro, este gradiente se vuelve extremo y desgarra a los objetos en
+      un proceso llamado espaguetificación.
+    en: >-
+      Gravity is not uniform: the near side of a body facing another feels a stronger pull than the far
+      side, and that difference, differential gravity, stretches it. On Earth, the Moon raises two
+      oceanic bulges, one facing it and one opposite, so most coasts experience two high tides a day.
+      Tidal friction slows the rotation of bodies: the Moon, already tidally locked, always shows the
+      same face, while Earth's spin gradually slows. Near a black hole this gradient becomes extreme
+      and tears objects apart in a process called spaghettification.
+    pt: >-
+      A gravidade não é uniforme: o lado de um corpo mais próximo de outro sente uma atração maior do
+      que o lado oposto, e essa diferença, a gravidade diferencial, o estica. Na Terra, a Lua ergue
+      duas protuberâncias oceânicas, uma voltada para ela e outra oposta, então a maioria das costas
+      tem duas marés altas por dia. O atrito das marés desacelera a rotação dos corpos: a Lua, já
+      acoplada por marés, mostra sempre a mesma face, enquanto a rotação da Terra diminui aos poucos.
+      Perto de um buraco negro, esse gradiente se torna extremo e despedaça os objetos num processo
+      chamado espaguetificação.
+    fr: >-
+      La gravité n'est pas uniforme : le côté d'un corps face à un autre subit une attraction plus
+      forte que le côté opposé, et cette différence, la gravité différentielle, l'étire. Sur Terre, la
+      Lune soulève deux renflements océaniques, l'un en face d'elle et l'autre opposé, si bien que la
+      plupart des côtes connaissent deux marées hautes par jour. Le frottement des marées ralentit la
+      rotation des corps : la Lune, déjà en verrouillage de marée, montre toujours la même face, tandis
+      que la rotation de la Terre décélère peu à peu. Près d'un trou noir, ce gradient devient extrême
+      et déchire les objets dans un processus appelé spaghettification.
+    zh: >-
+      引力并不均匀:一个物体靠近另一个物体的一侧受到更强的引力,远离的一侧较弱,这种差异即引力差,
+      会把物体拉长。在地球上,月球引起两个海洋隆起,一个正对月球,一个在其对面,因此大多数海岸每天有
+      两次高潮。潮汐摩擦会减缓天体的自转:月球已被潮汐锁定,总是以同一面朝向地球,而地球的自转也在
+      逐渐变慢。在黑洞附近,这种梯度变得极其剧烈,会撕裂天体,这一过程称为"面条化"。
+    ja: >-
+      重力は一様ではない。ある天体のもう一方に近い側は遠い側より強い引力を受け、その差(潮汐力)が
+      天体を引き伸ばす。地球上では月が海面を隆起させ、月に面した側とその反対側にふたつの膨らみが
+      できるため、多くの海岸では1日2回満潮になる。潮汐摩擦は天体の自転を遅らせる。月はすでに潮汐
+      ロックされ、常に同じ面を地球に向けている。ブラックホールの近くではこの勾配が極端になり、
+      天体はスパゲッティフィケーションと呼ばれる過程で引き裂かれる。
+  timeline:
+    - year: "1687"
+      label:
+        es: >-
+          Newton publica la ley de gravitación universal en los Principia, la base matemática de las
+          mareas.
+        en: >-
+          Newton publishes the law of universal gravitation in the Principia, the mathematical basis
+          of tides.
+        pt: >-
+          Newton publica a lei da gravitação universal nos Principia, a base matemática das marés.
+        fr: >-
+          Newton publie la loi de la gravitation universelle dans les Principia, la base mathématique
+          des marées.
+        zh: >-
+          牛顿在《自然哲学的数学原理》中发表万有引力定律,这是潮汐的数学基础。
+        ja: >-
+          ニュートンが『プリンキピア』で万有引力の法則を発表。潮汐の数学的基礎となる。
+    - year: "1775"
+      label:
+        es: >-
+          Laplace desarrolla la teoría dinámica de las mareas, que explica su movimiento con mayor
+          precisión.
+        en: >-
+          Laplace develops the dynamical theory of tides, explaining their motion with greater
+          precision.
+        pt: >-
+          Laplace desenvolve a teoria dinâmica das marés, explicando seu movimento com maior precisão.
+        fr: >-
+          Laplace développe la théorie dynamique des marées, expliquant leur mouvement avec plus de
+          précision.
+        zh: >-
+          拉普拉斯发展了潮汐动力学理论,更精确地解释了潮汐的运动。
+        ja: >-
+          ラプラスが潮汐の動力学理論を発展させ、その運動をより正確に説明する。
+    - year: "1879"
+      label:
+        es: >-
+          George Darwin publica su teoría de la evolución de las mareas, que explica el acoplamiento
+          de la Luna.
+        en: >-
+          George Darwin publishes his theory of tidal evolution, explaining the Moon's tidal locking.
+        pt: >-
+          George Darwin publica sua teoria da evolução das marés, explicando o acoplamento da Lua.
+        fr: >-
+          George Darwin publie sa théorie de l'évolution des marées, expliquant le verrouillage de la
+          Lune.
+        zh: >-
+          乔治·达尔文发表潮汐演化理论,解释了月球的潮汐锁定。
+        ja: >-
+          ジョージ・ダーウィンが潮汐進化の理論を発表し、月の潮汐ロックを説明する。
+    - year: Hoy
+      label:
+        es: >-
+          Las mareas generan energía renovable y la espaguetificación se observa cerca de agujeros
+          negros.
+        en: >-
+          Tides generate renewable energy, and spaghettification is observed near black holes.
+        pt: >-
+          As marés geram energia renovável, e a espaguetificação é observada perto de buracos negros.
+        fr: >-
+          Les marées produisent de l'énergie renouvelable, et la spaghettification est observée près
+          des trous noirs.
+        zh: >-
+          潮汐用于发电,黑洞附近的"面条化"现象也已被观测到。
+        ja: >-
+          潮汐が再生可能エネルギーを生み、ブラックホール近傍でスパゲッティフィケーションが
+          観測されている。
+  useCases:
+    - title:
+        es: Energía mareomotriz
+        en: Tidal power
+        pt: Energia das marés
+        fr: Énergie marémotrice
+        zh: 潮汐能
+        ja: 潮汐発電
+      description:
+        es: >-
+          Centrales de energía mareomotriz aprovechan el ciclo de subida y bajada de las mareas para
+          mover turbinas y generar electricidad.
+        en: >-
+          Tidal power plants harness the rising and falling of the tides to drive turbines and
+          generate electricity.
+        pt: >-
+          Usinas de energia das marés aproveitam o ciclo de subida e descida das marés para mover
+          turbinas e gerar eletricidade.
+        fr: >-
+          Les centrales marémotrices exploitent la montée et la descente des marées pour entraîner des
+          turbines et produire de l'électricité.
+        zh: >-
+          潮汐发电站利用潮汐的涨落推动水轮机发电。
+        ja: >-
+          潮汐発電所は潮の満ち引きを利用してタービンを回し、電力を生み出す。
+    - title:
+        es: Astronomía orbital
+        en: Orbital astronomy
+        pt: Astronomia orbital
+        fr: Astronomie orbitale
+        zh: 轨道天文学
+        ja: 軌道天文学
+      description:
+        es: >-
+          Calcula cómo las mareas frenan rotaciones y alteran órbitas, clave para estudiar exoplanetas
+          y satélites.
+        en: >-
+          It calculates how tides slow rotations and alter orbits, key to studying exoplanets and
+          satellites.
+        pt: >-
+          Calcula como as marés desaceleram rotações e alteram órbitas, essencial para estudar
+          exoplanetas e satélites.
+        fr: >-
+          Elle calcule comment les marées ralentissent les rotations et modifient les orbites,
+          essentiel pour étudier exoplanètes et satellites.
+        zh: >-
+          计算潮汐如何减慢自转并改变轨道,是研究系外行星和卫星的关键。
+        ja: >-
+          潮汐が自転を遅らせ軌道を変える様子を計算する。系外惑星や衛星の研究に不可欠。
+    - title:
+        es: Oceanografía
+        en: Oceanography
+        pt: Oceanografia
+        fr: Océanographie
+        zh: 海洋学
+        ja: 海洋学
+      description:
+        es: >-
+          Predice las mareas y corrientes costeras para la navegación, la pesca y la gestión de la
+          costa.
+        en: >-
+          It predicts tides and coastal currents for navigation, fishing, and coastal management.
+        pt: >-
+          Prevê marés e correntes costeiras para navegação, pesca e gestão do litoral.
+        fr: >-
+          Elle prédit les marées et les courants côtiers pour la navigation, la pêche et la gestion du
+          littoral.
+        zh: >-
+          预测潮汐和近岸洋流,用于航海、渔业和海岸管理。
+        ja: >-
+          航海、漁業、沿岸管理のために潮汐や沿岸流を予測する。
+    - title:
+        es: Astrofísica
+        en: Astrophysics
+        pt: Astrofísica
+        fr: Astrophysique
+        zh: 天体物理学
+        ja: 天体物理学
+      description:
+        es: >-
+          Modela la espaguetificación de estrellas que caen en agujeros negros, observada con
+          telescopios modernos.
+        en: >-
+          It models the spaghettification of stars falling into black holes, observed with modern
+          telescopes.
+        pt: >-
+          Modela a espaguetificação de estrelas que caem em buracos negros, observada com telescópios
+          modernos.
+        fr: >-
+          Elle modélise la spaghettification d'étoiles tombant dans des trous noirs, observée avec les
+          télescopes modernes.
+        zh: >-
+          为落入黑洞的恒星发生的"面条化"建模,这一现象已由现代望远镜观测到。
+        ja: >-
+          ブラックホールに落ちる恒星のスパゲッティフィケーションをモデル化する。現代の望遠鏡で
+          観測されている。
+  example:
+    title:
+      es: Aceleración de marea Tierra–Luna
+      en: Earth–Moon tidal acceleration
+      pt: Aceleração de maré Terra–Lua
+      fr: Accélération de marée Terre–Lune
+      zh: 地月潮汐加速度
+      ja: 地球と月の潮汐加速度
+    lines:
+      - es: G = 6.67 × 10⁻¹¹ N·m²/kg²
+        en: G = 6.67 × 10⁻¹¹ N·m²/kg²
+        pt: G = 6,67 × 10⁻¹¹ N·m²/kg²
+        fr: G = 6,67 × 10⁻¹¹ N·m²/kg²
+        zh: G = 6.67 × 10⁻¹¹ N·m²/kg²
+        ja: G = 6.67 × 10⁻¹¹ N·m²/kg²
+      - es: M = 7.35 × 10²² kg · Luna
+        en: M = 7.35 × 10²² kg · Moon
+        pt: M = 7,35 × 10²² kg · Lua
+        fr: M = 7,35 × 10²² kg · Lune
+        zh: M = 7.35 × 10²² kg · 月球
+        ja: M = 7.35 × 10²² kg · 月
+      - es: R = 6.37 × 10⁶ m · radio de la Tierra
+        en: R = 6.37 × 10⁶ m · Earth radius
+        pt: R = 6,37 × 10⁶ m · raio da Terra
+        fr: R = 6,37 × 10⁶ m · rayon de la Terre
+        zh: R = 6.37 × 10⁶ m · 地球半径
+        ja: R = 6.37 × 10⁶ m · 地球の半径
+      - es: r = 3.84 × 10⁸ m · distancia Tierra–Luna
+        en: r = 3.84 × 10⁸ m · Earth–Moon distance
+        pt: r = 3,84 × 10⁸ m · distância Terra–Lua
+        fr: r = 3,84 × 10⁸ m · distance Terre–Lune
+        zh: r = 3.84 × 10⁸ m · 地月距离
+        ja: r = 3.84 × 10⁸ m · 地球と月の距離
+      - es: a = 2·G·M·R / r³
+        en: a = 2·G·M·R / r³
+        pt: a = 2·G·M·R / r³
+        fr: a = 2·G·M·R / r³
+        zh: a = 2·G·M·R / r³
+        ja: a = 2·G·M·R / r³
+      - es: a ≈ 1.10 × 10⁻⁶ m/s²
+        en: a ≈ 1.10 × 10⁻⁶ m/s²
+        pt: a ≈ 1,10 × 10⁻⁶ m/s²
+        fr: a ≈ 1,10 × 10⁻⁶ m/s²
+        zh: a ≈ 1.10 × 10⁻⁶ m/s²
+        ja: a ≈ 1.10 × 10⁻⁶ m/s²

@@ -1,0 +1,277 @@
+id: gravitational-potential-energy
+title:
+  es: Energía Potencial Gravitatoria
+  en: Gravitational Potential Energy
+  pt: Energia Potencial Gravitacional
+  fr: Énergie potentielle de pesanteur
+  zh: 重力势能
+  ja: 重力による位置エネルギー
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: u
+    type: variable
+    value: U
+    explanation:
+      es: "U: la energía potencial gravitatoria."
+      en: "U: the gravitational potential energy."
+      pt: "U: a energia potencial gravitacional."
+      fr: "U : l'énergie potentielle de pesanteur."
+      zh: "U：重力势能。"
+      ja: "U：重力による位置エネルギー。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: "m: la masa del objeto."
+      en: "m: the mass of the object."
+      pt: "m: a massa do objeto."
+      fr: "m : la masse de l'objet."
+      zh: "m：物体的质量。"
+      ja: "m：物体の質量。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: g
+    type: variable
+    value: g
+    explanation:
+      es: "g: la aceleración de la gravedad (9.81 m/s²)."
+      en: "g: the acceleration of gravity (9.81 m/s²)."
+      pt: "g: a aceleração da gravidade (9,81 m/s²)."
+      fr: "g : l'accélération de la pesanteur (9,81 m/s²)."
+      zh: "g：重力加速度（9.81米/秒²）。"
+      ja: "g：重力加速度（9.81 m/s²）。"
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: h
+    type: variable
+    value: h
+    explanation:
+      es: "h: la altura respecto al nivel de referencia."
+      en: "h: the height above the reference level."
+      pt: "h: a altura em relação ao nível de referência."
+      fr: "h : la hauteur au-dessus du niveau de référence."
+      zh: "h：相对于参考平面的高度。"
+      ja: "h：基準面からの高さ。"
+context:
+  author:
+    es: Isaac Newton
+    en: Isaac Newton
+    pt: Isaac Newton
+    fr: Isaac Newton
+    zh: 艾萨克·牛顿
+    ja: アイザック・ニュートン
+  era:
+    es: Inglaterra, 1643–1727 · formalizada con la mecánica newtoniana
+    en: England, 1643–1727 · formalized with Newtonian mechanics
+    pt: Inglaterra, 1643–1727 · formalizada com a mecânica newtoniana
+    fr: Angleterre, 1643–1727 · formalisée avec la mécanique newtonienne
+    zh: 英国，1643–1727年·随牛顿力学形式化
+    ja: イングランド、1643–1727年・ニュートン力学とともに定式化
+  history:
+    es: >-
+      La energía potencial gravitatoria nace con la mecánica de Newton: al elevar un objeto, el
+      trabajo invertido queda almacenado y puede recuperarse al caer. La forma U = mgh es la versión de
+      alturas pequeñas, válida cerca de la superficie terrestre. Es la energía que mueve el agua de las
+      represas hidroeléctricas, la que libera un objeto al caer y la que convierte una montaña rusa en
+      una sucesión de altos y aceleraciones.
+    en: >-
+      Gravitational potential energy is born with Newtonian mechanics: when you lift an object, the
+      work invested is stored and can be recovered as it falls. The form U = mgh is the small-height
+      version, valid near Earth's surface. It is the energy that moves water in hydroelectric dams, that
+      a falling object releases, and that turns a roller coaster into a sequence of climbs and
+      accelerations.
+    pt: >-
+      A energia potencial gravitacional nasce com a mecânica de Newton: ao elevar um objeto, o trabalho
+      investido fica armazenado e pode ser recuperado na queda. A forma U = mgh é a versão de alturas
+      pequenas, válida perto da superfície terrestre. É a energia que move a água das represas
+      hidrelétricas, que um objeto solto libera e que transforma uma montanha-russa em uma sequência de
+      subidas e acelerações.
+    fr: >-
+      L'énergie potentielle de pesanteur naît avec la mécanique de Newton : en élevant un objet, le
+      travail investi est stocké et peut être récupéré à la chute. La forme U = mgh est la version des
+      petites hauteurs, valable près de la surface terrestre. C'est l'énergie qui meut l'eau des
+      barrages hydroélectriques, que libère un objet en chute et qui fait d'un grand huit une succession
+      de montées et d'accélérations.
+    zh: >-
+      重力势能随牛顿力学而诞生：当你举起物体时，投入的功被储存起来，可在下落时收回。U = mgh的形式适用于小高度，
+      在地表附近成立。它正是水电站中推动水、下落物体所释放、并把过山车变成一连串爬升与加速的那种能量。
+    ja: >-
+      重力による位置エネルギーはニュートン力学とともに生まれた。物体を持ち上げると、費やした仕事が蓄えられ、
+      落下するときに取り戻せる。U = mghの形は高さが小さい場合の版であり、地球の表面近くで成り立つ。これは、
+      水力発電所で水を動かすエネルギー、落下する物体が放出するエネルギー、ジェットコースターを一連の上りと加速に
+      変えるエネルギーである。
+  timeline:
+    - year: "1687"
+      label:
+        es: >-
+          Newton publica los Principia con la mecánica que hace posible el concepto.
+        en: >-
+          Newton publishes the Principia with the mechanics that make the concept possible.
+        pt: >-
+          Newton publica os Principia com a mecânica que torna o conceito possível.
+        fr: >-
+          Newton publie les Principia avec la mécanique qui rend le concept possible.
+        zh: >-
+          牛顿发表《自然哲学的数学原理》，其力学使这一概念成为可能。
+        ja: >-
+          ニュートンが『プリンキピア』を発表し、この概念を可能にする力学を示す。
+    - year: s. XIX
+      label:
+        es: >-
+          La conservación de la energía unifica la energía potencial con el calor y el trabajo.
+        en: >-
+          Energy conservation unifies potential energy with heat and work.
+        pt: >-
+          A conservação da energia unifica a energia potencial com o calor e o trabalho.
+        fr: >-
+          La conservation de l'énergie unit l'énergie potentielle à la chaleur et au travail.
+        zh: >-
+          能量守恒将势能与热和功统一起来。
+        ja: >-
+          エネルギー保存則が、位置エネルギーを熱や仕事と統一する。
+    - year: Hoy
+      label:
+        es: >-
+          Es la base de la hidroeléctrica, de los péndulos y del cálculo de presas.
+        en: >-
+          It is the basis of hydroelectric power, pendulums, and dam calculations.
+        pt: >-
+          É a base da hidrelétrica, dos pêndulos e do cálculo de barragens.
+        fr: >-
+          Elle est à la base de l'hydroélectricité, des pendules et du calcul des barrages.
+        zh: >-
+          它是水电、单摆和坝体计算的基础。
+        ja: >-
+          水力発電、振り子、ダム計算の基礎である。
+  useCases:
+    - title:
+        es: Energía hidroeléctrica
+        en: Hydroelectric power
+        pt: Energia hidrelétrica
+        fr: Énergie hydroélectrique
+        zh: 水力发电
+        ja: 水力発電
+      description:
+        es: >-
+          El agua de una represa almacena mgh y lo convierte en electricidad al caer.
+        en: >-
+          Dam water stores mgh and converts it to electricity as it falls.
+        pt: >-
+          A água de uma represa armazena mgh e o converte em eletricidade ao cair.
+        fr: >-
+          L'eau d'un barrage stocke mgh et le convertit en électricité en tombant.
+        zh: >-
+          坝内蓄水储存mgh，下落时将其转化为电能。
+        ja: >-
+          ダムの水はmghを蓄え、落ちるときに電気に変える。
+    - title:
+        es: Parques de atracciones
+        en: Amusement parks
+        pt: Parques de diversão
+        fr: Parcs d'attractions
+        zh: 游乐园
+        ja: 遊園地
+      description:
+        es: >-
+          La primera subida de una montaña rusa carga la energía del resto del viaje.
+        en: >-
+          The first climb of a roller coaster charges the rest of the ride.
+        pt: >-
+          A primeira subida de uma montanha-russa carrega o resto do percurso.
+        fr: >-
+          La première montée d'un grand huit fournit l'énergie du reste du parcours.
+        zh: >-
+          过山车的第一次爬升为后续行程提供能量。
+        ja: >-
+          ジェットコースターの最初の上りが、残りの行程のエネルギーをまかなう。
+    - title:
+        es: Deportes de altura
+        en: Height sports
+        pt: Esportes de altura
+        fr: Sports de hauteur
+        zh: 高空运动
+        ja: 高所スポーツ
+      description:
+        es: >-
+          Saltos, clavados y puenting se analizan convirtiendo mgh en velocidad de caída.
+        en: >-
+          Jumps, dives, and bungee are analyzed by converting mgh into falling speed.
+        pt: >-
+          Saltos, mergulhos e bungee são analisados convertendo mgh em velocidade de queda.
+        fr: >-
+          Sauts, plongeons et saut à l'élastique s'analysent en convertissant mgh en vitesse de chute.
+        zh: >-
+          跳跃、跳水和高空弹跳都通过把mgh转化为下落速度来分析。
+        ja: >-
+          跳躍、飛び込み、バンジーは、mghを落下速度に変換して解析される。
+  example:
+    title:
+      es: Una caja de 5 kg a 10 m
+      en: A 5 kg box at 10 m
+      pt: Uma caixa de 5 kg a 10 m
+      fr: Une caisse de 5 kg à 10 m
+      zh: 5千克的箱子在10米高处
+      ja: 5 kgの箱が10 mの高さに
+    lines:
+      - es: m = 5 kg, g = 9.81 m/s², h = 10 m
+        en: m = 5 kg, g = 9.81 m/s², h = 10 m
+        pt: m = 5 kg, g = 9,81 m/s², h = 10 m
+        fr: m = 5 kg, g = 9,81 m/s², h = 10 m
+        zh: m = 5 千克，g = 9.81 米/秒²，h = 10 米
+        ja: m = 5 kg、g = 9.81 m/s²、h = 10 m
+      - es: U = m · g · h
+        en: U = m · g · h
+        pt: U = m · g · h
+        fr: U = m · g · h
+        zh: U = m · g · h
+        ja: U = m · g · h
+      - es: U = 5 · 9.81 · 10
+        en: U = 5 · 9.81 · 10
+        pt: U = 5 · 9,81 · 10
+        fr: U = 5 · 9,81 · 10
+        zh: U = 5 · 9.81 · 10
+        ja: U = 5 · 9.81 · 10
+      - es: U = 490.5 joules
+        en: U = 490.5 joules
+        pt: U = 490,5 joules
+        fr: U = 490,5 joules
+        zh: U = 490.5 焦耳
+        ja: U = 490.5 ジュール
+      - es: Al caer, esa energía se vuelve cinética
+        en: As it falls, that energy becomes kinetic
+        pt: Ao cair, essa energia se torna cinética
+        fr: En tombant, cette énergie devient cinétique
+        zh: 下落时，该能量转变为动能
+        ja: 落ちるとき、このエネルギーは運動エネルギーに変わる

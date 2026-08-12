@@ -1,0 +1,374 @@
+id: terminal-velocity
+title:
+  es: Velocidad Terminal
+  en: Terminal Velocity
+  pt: Velocidade Terminal
+  fr: Vitesse limite
+  zh: 终端速度
+  ja: 終端速度
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: v-t
+    type: variable
+    value: vₜ
+    explanation:
+      es: "La velocidad terminal: la velocidad máxima y constante que alcanza el cuerpo al caer."
+      en: "The terminal velocity: the constant maximum speed the body reaches while falling."
+      pt: "A velocidade terminal: a velocidade máxima e constante que o corpo atinge ao cair."
+      fr: "La vitesse limite : la vitesse maximale et constante atteinte par le corps en chute."
+      zh: 终端速度：物体下落时达到的最大恒定速度。
+      ja: 終端速度。物体が落下中に達する最大の一定速度。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: Raíz cuadrada de.
+      en: Square root of.
+      pt: Raiz quadrada de.
+      fr: Racine carrée de.
+      zh: 的平方根。
+      ja: の平方根。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre la expresión.
+      en: Opens the expression.
+      pt: Abre a expressão.
+      fr: Ouvre l'expression.
+      zh: 打开表达式。
+      ja: 式を開く括弧。
+  - id: two-mg
+    type: variable
+    value: 2mg
+    explanation:
+      es: "2·m·g: dos veces el peso, la fuerza que empuja el cuerpo hacia abajo."
+      en: "2·m·g: twice the weight, the force pulling the body downward."
+      pt: "2·m·g: duas vezes o peso, a força que puxa o corpo para baixo."
+      fr: "2·m·g : deux fois le poids, la force qui tire le corps vers le bas."
+      zh: "2·m·g：两倍的重力，即把物体向下拉的力。"
+      ja: "2・m・g：重力の2倍。物体を下に引く力。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: rho
+    type: variable
+    value: ρ
+    explanation:
+      es: "La densidad del fluido: unos 1.225 kg/m³ para el aire a nivel del mar."
+      en: "The density of the fluid: about 1.225 kg/m³ for air at sea level."
+      pt: "A densidade do fluido: cerca de 1,225 kg/m³ para o ar ao nível do mar."
+      fr: "La densité du fluide : environ 1,225 kg/m³ pour l'air au niveau de la mer."
+      zh: "流体的密度：海平面空气约为1.225 kg/m³。"
+      ja: "流体の密度。海面付近の空気は約1.225 kg/m³。"
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: cd
+    type: constant
+    value: Cd
+    explanation:
+      es: "El coeficiente de arrastre: depende de la forma del objeto."
+      en: "The drag coefficient: it depends on the object's shape."
+      pt: "O coeficiente de arrasto: depende da forma do objeto."
+      fr: "Le coefficient de traînée : il dépend de la forme de l'objet."
+      zh: "阻力系数：取决于物体的形状。"
+      ja: "抗力係数。物体の形によって決まる。"
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: "El área frontal efectiva del objeto, vista perpendicular a la caída."
+      en: "The object's effective frontal area, seen perpendicular to the fall."
+      pt: "A área frontal efetiva do objeto, vista perpendicular à queda."
+      fr: "La surface frontale effective de l'objet, vue perpendiculairement à la chute."
+      zh: 物体垂直于下落方向的有效迎风面积。
+      ja: 落下方向に対して垂直に見た物体の有効な前面投影面積。
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra la expresión.
+      en: Closes the expression.
+      pt: Fecha a expressão.
+      fr: Ferme l'expression.
+      zh: 关闭表达式。
+      ja: 式を閉じる括弧。
+context:
+  author:
+    es: Basada en el arrastre de Newton
+    en: Based on Newton's drag
+    pt: Baseada no arrasto de Newton
+    fr: Basée sur la traînée de Newton
+    zh: 基于牛顿阻力
+    ja: ニュートンの抗力に基づく
+  era:
+    es: Europa, s. XVIII–XIX
+    en: Europe, 18th–19th century
+    pt: Europa, séc. XVIII–XIX
+    fr: Europe, XVIIIe–XIXe siècle
+    zh: 欧洲，18–19世纪
+    ja: ヨーロッパ、18–19世紀
+  history:
+    es: >-
+      Un objeto que cae acelera hasta que la fuerza de arrastre del aire iguala su peso; a partir de ahí
+      la velocidad deja de crecer y se mantiene constante: esa es la velocidad terminal. La idea
+      proviene del estudio de Newton sobre la resistencia de los fluidos en los Principia (1687) y se
+      desarrolló durante los siglos XVIII y XIX. Un paracaidista en posición de caída llega a unos
+      55 m/s. El mismo balance explica las gotas de lluvia y guía el diseño de paracaídas y las pruebas
+      de caída de balas y componentes.
+    en: >-
+      A falling object accelerates until the drag force of the air equals its weight; from then on its
+      speed stops growing and stays constant: that is terminal velocity. The idea traces back to
+      Newton's study of fluid resistance in the Principia (1687) and was developed through the 18th and
+      19th centuries. A skydiver in a flat position reaches about 55 m/s. The same balance explains
+      raindrops and guides the design of parachutes and of bullet and component drop tests.
+    pt: >-
+      Um objeto em queda acelera até que a força de arrasto do ar iguale seu peso; a partir daí a
+      velocidade deixa de crescer e se mantém constante: essa é a velocidade terminal. A ideia remonta
+      ao estudo de Newton sobre a resistência dos fluidos nos Principia (1687) e se desenvolveu ao
+      longo dos séculos XVIII e XIX. Um paraquedista em posição plana atinge cerca de 55 m/s. O mesmo
+      equilíbrio explica as gotas de chuva e orienta o projeto de paraquedas e os testes de queda de
+      projéteis e componentes.
+    fr: >-
+      Un objet en chute accélère jusqu'à ce que la force de traînée de l'air égale son poids ; à partir
+      de là, sa vitesse cesse de croître et reste constante : c'est la vitesse limite. L'idée remonte à
+      l'étude de Newton sur la résistance des fluides dans les Principia (1687) et s'est développée aux
+      XVIIIe et XIXe siècles. Un parachutiste en position à plat atteint environ 55 m/s. Le même
+      équilibre explique les gouttes de pluie et guide la conception des parachutes ainsi que les tests
+      de chute de projectiles et de composants.
+    zh: >-
+      下落的物体会一直加速，直到空气的阻力等于其重力；此后速度不再增长而保持恒定，这就是终端速度。这一思想
+      可追溯到牛顿在《原理》（1687年）中对流体阻力的研究，并在18、19世纪得到发展。平躺姿势跳伞者的终端速度
+      约为55米/秒。同样的平衡解释了雨滴的下落，并指导着降落伞的设计以及子弹和部件落体测试。
+    ja: >-
+      落下する物体は、空気の抗力が重力と釣り合うまで加速を続け、そこから速度は増えず一定に保たれる。これが
+      終端速度である。この考えはニュートンが『プリンキピア』（1687年）で流体抵抗を研究したことに由来し、18～
+      19世紀にかけて発展した。水平姿勢のスカイダイバーは約55 m/sに達する。同じ釣り合いが雨粒の落下を説明し、
+      パラシュートの設計や弾丸・部品の落下試験の指針となっている。
+  timeline:
+    - year: "1687"
+      label:
+        es: >-
+          Newton estudia la resistencia de los fluidos en los Principia, sentando la base del arrastre
+          cuadrático.
+        en: >-
+          Newton studies fluid resistance in the Principia, laying the basis of quadratic drag.
+        pt: >-
+          Newton estuda a resistência dos fluidos nos Principia, lançando a base do arrasto quadrático.
+        fr: >-
+          Newton étudie la résistance des fluides dans les Principia, posant les bases de la traînée
+          quadratique.
+        zh: >-
+          牛顿在《原理》中研究流体阻力，奠定了二次阻力的基础。
+        ja: >-
+          ニュートンが『プリンキピア』で流体抵抗を研究し、二次抗力の基礎を築く。
+    - year: "1851"
+      label:
+        es: >-
+          George Gabriel Stokes publica su ley de arrastre para esferas pequeñas, clave para gotas y
+          partículas.
+        en: >-
+          George Gabriel Stokes publishes his drag law for small spheres, key for droplets and
+          particles.
+        pt: >-
+          George Gabriel Stokes publica sua lei de arrasto para esferas pequenas, fundamental para gotas
+          e partículas.
+        fr: >-
+          George Gabriel Stokes publie sa loi de traînée pour les petites sphères, essentielle pour les
+          gouttes et les particules.
+        zh: >-
+          乔治·加布里埃尔·斯托克斯发表小球阻力定律，对液滴和颗粒至关重要。
+        ja: >-
+          ジョージ・ガブリエル・ストークスが小球に対する抵抗則を発表し、水滴や粒子の理解に不可欠となる。
+    - year: Hoy
+      label:
+        es: >-
+          El diseño de paracaídas, el paracaidismo y las pruebas de caída dependen de la velocidad
+          terminal.
+        en: >-
+          Parachute design, skydiving, and drop testing all rely on terminal velocity.
+        pt: >-
+          O projeto de paraquedas, o paraquedismo e os testes de queda dependem da velocidade terminal.
+        fr: >-
+          La conception des parachutes, le parachutisme et les essais de chute reposent sur la vitesse
+          limite.
+        zh: >-
+          降落伞设计、跳伞运动和落体测试都依赖终端速度。
+        ja: >-
+          パラシュートの設計、スカイダイビング、落下試験はすべて終端速度に依存している。
+  useCases:
+    - title:
+        es: Paracaidismo
+        en: Skydiving
+        pt: Paraquedismo
+        fr: Parachutisme
+        zh: 跳伞运动
+        ja: スカイダイビング
+      description:
+        es: >-
+          Determina la velocidad de caída de un paracaidista y el tamaño de paracaídas necesario para
+          aterrizar con seguridad.
+        en: >-
+          It sets a skydiver's fall speed and the parachute size needed to land safely.
+        pt: >-
+          Determina a velocidade de queda de um paraquedista e o tamanho de paraquedas necessário para
+          pousar com segurança.
+        fr: >-
+          Elle fixe la vitesse de chute d'un parachutiste et la taille de parachute nécessaire pour
+          atterrir en sécurité.
+        zh: >-
+          决定跳伞者的下落速度以及安全着陆所需的降落伞尺寸。
+        ja: >-
+          スカイダイバーの落下速度と、安全に着地するために必要なパラシュートの大きさを決める。
+    - title:
+        es: Ingeniería aeronáutica
+        en: Aeronautical engineering
+        pt: Engenharia aeronáutica
+        fr: Ingénierie aéronautique
+        zh: 航空工程
+        ja: 航空工学
+      description:
+        es: >-
+          Modela la velocidad máxima de drones y de paracaídas de emergencia en caída libre.
+        en: >-
+          It models the top speed of drones and of emergency parachutes in free fall.
+        pt: >-
+          Modela a velocidade máxima de drones e de paraquedas de emergência em queda livre.
+        fr: >-
+          Elle modélise la vitesse maximale des drones et des parachutes de secours en chute libre.
+        zh: >-
+          为无人机和应急降落伞在自由落体中的最大速度建模。
+        ja: >-
+          ドローンや緊急用パラシュートの自由落下中の最大速度をモデル化する。
+    - title:
+        es: Meteorología
+        en: Meteorology
+        pt: Meteorologia
+        fr: Météorologie
+        zh: 气象学
+        ja: 気象学
+      description:
+        es: >-
+          Explica por qué las gotas de lluvia y el granizo caen a velocidad constante en lugar de
+          acelerar sin límite.
+        en: >-
+          It explains why raindrops and hail fall at constant speed rather than accelerating without
+          limit.
+        pt: >-
+          Explica por que as gotas de chuva e o granizo caem a velocidade constante em vez de acelerar
+          sem limite.
+        fr: >-
+          Elle explique pourquoi gouttes de pluie et grêlons tombent à vitesse constante plutôt que
+          d'accélérer sans limite.
+        zh: >-
+          解释雨滴和冰雹为何以恒定速度下落，而不是无限加速。
+        ja: >-
+          雨粒や雹が際限なく加速せず、一定速度で落ちる理由を説明する。
+    - title:
+        es: Balística y pruebas de caída
+        en: Ballistics and drop testing
+        pt: Balística e testes de queda
+        fr: Balistique et essais de chute
+        zh: 弹道与落体测试
+        ja: 弾道学と落下試験
+      description:
+        es: >-
+          Predice la velocidad de impacto de proyectiles y componentes electrónicos soltados desde una
+          altura dada.
+        en: >-
+          It predicts the impact speed of projectiles and electronics dropped from a given height.
+        pt: >-
+          Prevê a velocidade de impacto de projéteis e eletrônicos soltos de uma dada altura.
+        fr: >-
+          Elle prédit la vitesse d'impact de projectiles et d'appareils électroniques lâchés d'une
+          hauteur donnée.
+        zh: >-
+          预测弹体和电子产品从给定高度坠落时的撞击速度。
+        ja: >-
+          飛翔体や電子機器を一定の高さから落としたときの衝突速度を予測する。
+  example:
+    title:
+      es: Caída de un paracaidista
+      en: A skydiver's fall
+      pt: Queda de um paraquedista
+      fr: La chute d'un parachutiste
+      zh: 跳伞者的下落
+      ja: スカイダイバーの落下
+    lines:
+      - es: "m = 70 kg, g = 9.81 m/s², ρ = 1.225 kg/m³"
+        en: "m = 70 kg, g = 9.81 m/s², ρ = 1.225 kg/m³"
+        pt: "m = 70 kg, g = 9,81 m/s², ρ = 1,225 kg/m³"
+        fr: "m = 70 kg, g = 9,81 m/s², ρ = 1,225 kg/m³"
+        zh: "m = 70 kg, g = 9.81 m/s², ρ = 1.225 kg/m³"
+        ja: "m = 70 kg, g = 9.81 m/s², ρ = 1.225 kg/m³"
+      - es: "Cd = 1.0, A = 0.7 m²"
+        en: "Cd = 1.0, A = 0.7 m²"
+        pt: "Cd = 1,0, A = 0,7 m²"
+        fr: "Cd = 1,0, A = 0,7 m²"
+        zh: "Cd = 1.0, A = 0.7 m²"
+        ja: "Cd = 1.0, A = 0.7 m²"
+      - es: vₜ = √(2·m·g / (ρ·Cd·A))
+        en: vₜ = √(2·m·g / (ρ·Cd·A))
+        pt: vₜ = √(2·m·g / (ρ·Cd·A))
+        fr: vₜ = √(2·m·g / (ρ·Cd·A))
+        zh: vₜ = √(2·m·g / (ρ·Cd·A))
+        ja: vₜ = √(2·m·g / (ρ·Cd·A))
+      - es: "vₜ = √(2 × 70 × 9.81 / (1.225 × 1.0 × 0.7))"
+        en: "vₜ = √(2 × 70 × 9.81 / (1.225 × 1.0 × 0.7))"
+        pt: "vₜ = √(2 × 70 × 9,81 / (1,225 × 1,0 × 0,7))"
+        fr: "vₜ = √(2 × 70 × 9,81 / (1,225 × 1,0 × 0,7))"
+        zh: "vₜ = √(2 × 70 × 9.81 / (1.225 × 1.0 × 0.7))"
+        ja: "vₜ = √(2 × 70 × 9.81 / (1.225 × 1.0 × 0.7))"
+      - es: "vₜ = √(1373.4 / 0.8575)"
+        en: "vₜ = √(1373.4 / 0.8575)"
+        pt: "vₜ = √(1373,4 / 0,8575)"
+        fr: "vₜ = √(1373,4 / 0,8575)"
+        zh: "vₜ = √(1373.4 / 0.8575)"
+        ja: "vₜ = √(1373.4 / 0.8575)"
+      - es: "vₜ ≈ √1601.6 ≈ 40 m/s"
+        en: "vₜ ≈ √1601.6 ≈ 40 m/s"
+        pt: "vₜ ≈ √1601,6 ≈ 40 m/s"
+        fr: "vₜ ≈ √1601,6 ≈ 40 m/s"
+        zh: "vₜ ≈ √1601.6 ≈ 40 m/s"
+        ja: "vₜ ≈ √1601.6 ≈ 40 m/s"

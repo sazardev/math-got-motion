@@ -1,0 +1,340 @@
+id: richter-magnitude
+title:
+  es: Magnitud de Richter
+  en: Richter Magnitude
+  pt: Magnitude Richter
+  fr: Magnitude de Richter
+  zh: 里氏震级
+  ja: リヒター・マグニチュード
+category:
+  es: Ciencias de la Tierra
+  en: Earth science
+  pt: Ciências da Terra
+  fr: Sciences de la Terre
+  zh: 地球科学
+  ja: 地球科学
+nodes:
+  - id: m
+    type: variable
+    value: M
+    explanation:
+      es: "M: la magnitud, el tamaño del terremoto en la escala de Richter."
+      en: "M: the magnitude, the size of the earthquake on the Richter scale."
+      pt: "M: a magnitude, o tamanho do terremoto na escala Richter."
+      fr: "M : la magnitude, la taille du séisme sur l'échelle de Richter."
+      zh: "M：震级，即里氏震级标度上地震的大小。"
+      ja: "M：マグニチュード。リヒター・スケールでの地震の大きさ。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: log10
+    type: operator
+    value: log₁₀
+    explanation:
+      es: El logaritmo en base 10, que comprime la enorme variación de amplitudes.
+      en: The base-10 logarithm, which compresses the enormous variation in amplitudes.
+      pt: O logaritmo na base 10, que comprime a enorme variação das amplitudes.
+      fr: Le logarithme en base 10, qui compresse l'énorme variation des amplitudes.
+      zh: 以10为底的对数，可压缩振幅的巨大变化范围。
+      ja: 底10の対数。振幅の巨大な変動を圧縮する。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre la razón entre la amplitud medida y la de referencia.
+      en: Opens the ratio of the measured amplitude to the reference one.
+      pt: Abre a razão entre a amplitude medida e a de referência.
+      fr: Ouvre le rapport entre l'amplitude mesurée et celle de référence.
+      zh: 打开实测振幅与参考振幅之比。
+      ja: 測定した振幅と基準の振幅の比を開く括弧。
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: "A: la amplitud máxima de las ondas sísmicas registradas por el sismógrafo."
+      en: "A: the maximum amplitude of the seismic waves recorded by the seismograph."
+      pt: "A: a amplitude máxima das ondas sísmicas registradas pelo sismógrafo."
+      fr: "A : l'amplitude maximale des ondes sismiques enregistrées par le sismographe."
+      zh: "A：地震仪记录的震波最大振幅。"
+      ja: "A：地震計が記録した地震波の最大振幅。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por la amplitud de referencia.
+      en: Divided by the reference amplitude.
+      pt: Dividido pela amplitude de referência.
+      fr: Divisé par l'amplitude de référence.
+      zh: 除以参考振幅。
+      ja: 基準の振幅で割る。
+  - id: a0
+    type: variable
+    value: A₀
+    explanation:
+      es: "A₀: la amplitud de un sismo de magnitud cero, el punto de referencia de la escala."
+      en: "A₀: the amplitude of a zero-magnitude quake, the reference point of the scale."
+      pt: "A₀: a amplitude de um sismo de magnitude zero, o ponto de referência da escala."
+      fr: "A₀ : l'amplitude d'un séisme de magnitude zéro, le point de référence de l'échelle."
+      zh: "A₀：零级地震的振幅，即该标度的参考点。"
+      ja: "A₀：マグニチュード0の地震の振幅。このスケールの基準点。"
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra la razón de amplitudes.
+      en: Closes the amplitude ratio.
+      pt: Fecha a razão de amplitudes.
+      fr: Ferme le rapport d'amplitudes.
+      zh: 关闭振幅之比。
+      ja: 振幅の比を閉じる括弧。
+context:
+  author:
+    es: Charles Francis Richter
+    en: Charles Francis Richter
+    pt: Charles Francis Richter
+    fr: Charles Francis Richter
+    zh: 查尔斯·弗朗西斯·里克特
+    ja: チャールズ・フランシス・リヒター
+  era:
+    es: Estados Unidos, 1900–1985 · definida en 1935
+    en: United States, 1900–1985 · defined in 1935
+    pt: Estados Unidos, 1900–1985 · definida em 1935
+    fr: États-Unis, 1900–1985 · définie en 1935
+    zh: 美国，1900–1985年·1935年定义
+    ja: アメリカ合衆国、1900–1985年・1935年に定義
+  history:
+    es: >-
+      En 1935 el sismólogo Charles Richter, del Instituto de Tecnología de California, diseñó una
+      escala para clasificar los terremotos del sur de California a partir de la amplitud registrada
+      por los sismógrafos. Como las amplitudes reales varían millones de veces, tomó su logaritmo en
+      base diez: cada unidad de magnitud multiplica la amplitud por diez, de modo que un 4 es diez
+      veces más grande que un 3. Fue la primera escala en popularizarse y la prensa la hizo universal.
+      Hoy se prefiere la magnitud de momento, pero la idea de Richter sigue viva en cómo se comunican
+      los terremotos.
+    en: >-
+      In 1935 seismologist Charles Richter, of the California Institute of Technology, designed a scale
+      to classify earthquakes in Southern California from the amplitude recorded by seismographs.
+      Because real amplitudes vary over millions of times, he took their base-10 logarithm: each unit
+      of magnitude multiplies the amplitude by ten, so a 4 is ten times larger than a 3. It was the
+      first scale to catch on, and the press made it universal. Today the moment magnitude is
+      preferred, but Richter's idea lives on in how earthquakes are reported.
+    pt: >-
+      Em 1935 o sismólogo Charles Richter, do Instituto de Tecnologia da Califórnia, criou uma escala
+      para classificar os terremotos do sul da Califórnia a partir da amplitude registrada pelos
+      sismógrafos. Como as amplitudes reais variam milhões de vezes, ele usou seu logaritmo na base
+      10: cada unidade de magnitude multiplica a amplitude por dez, de modo que um 4 é dez vezes maior
+      que um 3. Foi a primeira escala a se popularizar e a imprensa a tornou universal. Hoje se prefere
+      a magnitude de momento, mas a ideia de Richter segue viva na forma como os terremotos são
+      comunicados.
+    fr: >-
+      En 1935, le sismologue Charles Richter, du California Institute of Technology, conçut une échelle
+      pour classer les séismes du sud de la Californie à partir de l'amplitude enregistrée par les
+      sismographes. Comme les amplitudes réelles varient des millions de fois, il en prit le logarithme
+      en base 10 : chaque unité de magnitude multiplie l'amplitude par dix, si bien qu'un 4 est dix fois
+      plus fort qu'un 3. Ce fut la première échelle à s'imposer, et la presse la rendit universelle.
+      Aujourd'hui, la magnitude de moment est préférée, mais l'idée de Richter perdure dans la façon
+      dont on communique les séismes.
+    zh: >-
+      1935年，加州理工学院的震学家查尔斯·里克特设计了一种尺度，用地震仪记录的振幅对南加州的地震分级。由于真实
+      振幅相差数百万倍，他对振幅取以10为底的对数：震级每增加1，振幅就乘以10，因此4级比3级强十倍。这是第一个
+      广为流行的震级尺度，媒体使它家喻户晓。如今更常用矩震级，但里克特的思想仍体现在人们报道地震的方式中。
+    ja: >-
+      1935年、カリフォルニア工科大学の地震学者チャールズ・リヒターは、地震計が記録する振幅を使って南カリフォルニア
+      の地震を分類する尺度を考案した。実際の振幅は数百万倍も異なるため、彼は底10の対数をとった。マグニチュードが
+      1増えるごとに振幅は10倍になり、4は3の10倍の大きさとなる。最初に広く普及した尺度であり、マスコミが世界的に
+      知られる存在にした。今日ではモーメント・マグニチュードが好まれるが、リヒターの考えは地震の伝え方に今も生きている。
+  timeline:
+    - year: "1935"
+      label:
+        es: >-
+          Richter define la magnitud local en el Instituto de Tecnología de California para los
+          terremotos del sur del estado.
+        en: >-
+          Richter defines local magnitude at Caltech for earthquakes in Southern California.
+        pt: >-
+          Richter define a magnitude local no Instituto de Tecnologia da Califórnia para os terremotos
+          do sul do estado.
+        fr: >-
+          Richter définit la magnitude locale au Caltech pour les séismes du sud de la Californie.
+        zh: >-
+          里克特在加州理工学院定义了用于南加州地震的局部震级。
+        ja: >-
+          リヒターがカリフォルニア工科大学で南カリフォルニアの地震用のローカル・マグニチュードを定義する。
+    - year: "1960"
+      label:
+        es: >-
+          El gran terremoto de Chile, de magnitud 9.5, lleva las magnitudes logarítmicas al gran
+          público.
+        en: >-
+          The great Chilean earthquake, magnitude 9.5, brings logarithmic magnitudes to the public.
+        pt: >-
+          O grande terremoto do Chile, de magnitude 9,5, leva as magnitudes logarítmicas ao grande
+          público.
+        fr: >-
+          Le grand séisme du Chili, de magnitude 9,5, fait connaître les magnitudes logarithmiques au
+          grand public.
+        zh: >-
+          智利9.5级大地震使对数震级进入大众视野。
+        ja: >-
+          マグニチュード9.5のチリ大地震が、対数目盛りのマグニチュードを一般に知らしめる。
+    - year: "1979"
+      label:
+        es: >-
+          Kanamori y Hanks proponen la magnitud de momento, que la sismología adopta como estándar.
+        en: >-
+          Kanamori and Hanks propose the moment magnitude, adopted by seismology as the standard.
+        pt: >-
+          Kanamori e Hanks propõem a magnitude de momento, adotada pela sismologia como padrão.
+        fr: >-
+          Kanamori et Hanks proposent la magnitude de moment, adoptée comme standard par la sismologie.
+        zh: >-
+          金森博雄与汉克斯提出矩震级，成为地震学的标准。
+        ja: >-
+          金森とハンクスがモーメント・マグニチュードを提案し、地震学の標準として採用される。
+    - year: Hoy
+      label:
+        es: >-
+          La prensa aún informa "magnitud en la escala de Richter", aunque los sismólogos usen la
+          magnitud de momento.
+        en: >-
+          The press still reports "magnitude on the Richter scale," though seismologists use the moment
+          magnitude.
+        pt: >-
+          A imprensa ainda informa "magnitude na escala Richter", embora os sismólogos usem a magnitude
+          de momento.
+        fr: >-
+          La presse annonce encore une « magnitude sur l'échelle de Richter », bien que les sismologues
+          utilisent la magnitude de moment.
+        zh: >-
+          媒体仍以"里氏震级"报道地震，尽管震学家使用的是矩震级。
+        ja: >-
+          地震学者はモーメント・マグニチュードを用いるが、報道では今も「リヒター・スケールでマグニチュード」と
+          伝えられる。
+  useCases:
+    - title:
+        es: Sismología
+        en: Seismology
+        pt: Sismologia
+        fr: Sismologie
+        zh: 地震学
+        ja: 地震学
+      description:
+        es: >-
+          La magnitud permite comparar terremotos del pasado y del presente en una misma escala.
+        en: >-
+          Magnitude allows comparing past and present earthquakes on a single scale.
+        pt: >-
+          A magnitude permite comparar terremotos do passado e do presente em uma mesma escala.
+        fr: >-
+          La magnitude permet de comparer les séismes passés et présents sur une même échelle.
+        zh: >-
+          震级让我们可以在同一标度上比较过去和现在的地震。
+        ja: >-
+          マグニチュードは、過去と現在の地震を同じ目盛りで比較することを可能にする。
+    - title:
+        es: Ingeniería antisísmica
+        en: Earthquake engineering
+        pt: Engenharia sísmica
+        fr: Génie parasismique
+        zh: 抗震工程
+        ja: 耐震工学
+      description:
+        es: >-
+          Los códigos de construcción dimensionan el diseño según la magnitud esperada de la zona.
+        en: >-
+          Building codes size the design according to the magnitude expected in the region.
+        pt: >-
+          Os códigos de construção dimensionam o projeto conforme a magnitude esperada da região.
+        fr: >-
+          Les codes du bâtiment dimensionnent la conception selon la magnitude attendue dans la région.
+        zh: >-
+          建筑规范根据该地区预期的震级来设计结构尺寸。
+        ja: >-
+          建築基準法は、その地域で想定されるマグニチュードに応じて設計を決める。
+    - title:
+        es: Seguros y riesgo
+        en: Insurance and risk
+        pt: Seguros e risco
+        fr: Assurance et risque
+        zh: 保险与风险
+        ja: 保険とリスク
+      description:
+        es: >-
+          Las primas y los modelos de catástrofe se basan en la distribución histórica de magnitudes.
+        en: >-
+          Premiums and catastrophe models rely on the historical distribution of magnitudes.
+        pt: >-
+          Prêmios e modelos de catástrofe se baseiam na distribuição histórica de magnitudes.
+        fr: >-
+          Les primes et les modèles de catastrophe s'appuient sur la distribution historique des
+          magnitudes.
+        zh: >-
+          保险费率和灾害模型都依赖震级的历史分布。
+        ja: >-
+          保険料や災害モデルは、マグニチュードの歴史的分布に基づく。
+    - title:
+        es: Medios de comunicación
+        en: News media
+        pt: Mídia
+        fr: Médias
+        zh: 新闻媒体
+        ja: 報道機関
+      description:
+        es: >-
+          La escala sigue siendo la forma en que se informa la fuerza de un sismo al público.
+        en: >-
+          The scale remains how a quake's strength is reported to the public.
+        pt: >-
+          A escala segue sendo a forma de informar a força de um sismo ao público.
+        fr: >-
+          L'échelle reste la façon dont la force d'un séisme est annoncée au public.
+        zh: >-
+          该标度至今仍是向公众报道地震强度的方式。
+        ja: >-
+          地震の強さを一般に伝える手段として、今もこのスケールが使われる。
+  example:
+    title:
+      es: Amplitud y magnitud
+      en: Amplitude and magnitude
+      pt: Amplitude e magnitude
+      fr: Amplitude et magnitude
+      zh: 振幅与震级
+      ja: 振幅とマグニチュード
+    lines:
+      - es: "Amplitud: A = 100·A₀"
+        en: "Amplitude: A = 100·A₀"
+        pt: "Amplitude: A = 100·A₀"
+        fr: "Amplitude : A = 100·A₀"
+        zh: "振幅：A = 100·A₀"
+        ja: "振幅：A = 100·A₀"
+      - es: A/A₀ = 100
+        en: A/A₀ = 100
+        pt: A/A₀ = 100
+        fr: A/A₀ = 100
+        zh: A/A₀ = 100
+        ja: A/A₀ = 100
+      - es: M = log₁₀(100) = 2
+        en: M = log₁₀(100) = 2
+        pt: M = log₁₀(100) = 2
+        fr: M = log₁₀(100) = 2
+        zh: M = log₁₀(100) = 2
+        ja: M = log₁₀(100) = 2
+      - es: "Con A = 1000·A₀: M = log₁₀(1000) = 3"
+        en: "With A = 1000·A₀: M = log₁₀(1000) = 3"
+        pt: "Com A = 1000·A₀: M = log₁₀(1000) = 3"
+        fr: "Avec A = 1000·A₀ : M = log₁₀(1000) = 3"
+        zh: "若 A = 1000·A₀：M = log₁₀(1000) = 3"
+        ja: "A = 1000·A₀ なら：M = log₁₀(1000) = 3"
+      - es: Cada unidad de magnitud ≈ 10× la amplitud
+        en: Each magnitude unit ≈ 10× the amplitude
+        pt: Cada unidade de magnitude ≈ 10× a amplitude
+        fr: Chaque unité de magnitude ≈ 10× l'amplitude
+        zh: 震级每增加1 ≈ 振幅的10倍
+        ja: マグニチュード1の差 ≈ 振幅の10倍

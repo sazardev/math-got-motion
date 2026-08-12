@@ -1,0 +1,293 @@
+id: eigenvector-equation
+title:
+  es: Ecuación de Autovalores y Autovectores
+  en: Eigenvalue and Eigenvector Equation
+  pt: Equação de Autovalores e Autovetores
+  fr: Équation des valeurs et vecteurs propres
+  zh: 特征值与特征向量方程
+  ja: 固有値・固有ベクトルの方程式
+category:
+  es: Álgebra lineal
+  en: Linear algebra
+  pt: Álgebra linear
+  fr: Algèbre linéaire
+  zh: 线性代数
+  ja: 線形代数
+nodes:
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: "A: la matriz de la transformación lineal."
+      en: "A: the matrix of the linear transformation."
+      pt: "A: a matriz da transformação linear."
+      fr: "A : la matrice de la transformation linéaire."
+      zh: "A：线性变换的矩阵。"
+      ja: "A：線形変換の行列。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Aplicada a.
+      en: Applied to.
+      pt: Aplicada a.
+      fr: Appliquée à.
+      zh: 作用于。
+      ja: を適用する。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: "v: el autovector, un vector de dirección especial."
+      en: "v: the eigenvector, a special direction vector."
+      pt: "v: o autovetor, um vetor de direção especial."
+      fr: "v : le vecteur propre, un vecteur de direction particulier."
+      zh: "v：特征向量，一个特殊的方向向量。"
+      ja: "v：固有ベクトル。特別な方向のベクトル。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: lambda
+    type: constant
+    value: λ
+    explanation:
+      es: "λ: el autovalor, cuánto se estira la dirección."
+      en: "λ: the eigenvalue, how much the direction stretches."
+      pt: "λ: o autovalor, quanto a direção estica."
+      fr: "λ : la valeur propre, combien la direction s'étire."
+      zh: "λ：特征值，该方向被拉伸的程度。"
+      ja: "λ：固有値。その方向がどれだけ伸びるか。"
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: v-2
+    type: variable
+    value: v
+    explanation:
+      es: El mismo autovector.
+      en: The same eigenvector.
+      pt: O mesmo autovetor.
+      fr: Le même vecteur propre.
+      zh: 同一个特征向量。
+      ja: 同じ固有ベクトル。
+context:
+  author:
+    es: Leonhard Euler y Camille Jordan
+    en: Leonhard Euler and Camille Jordan
+    pt: Leonhard Euler e Camille Jordan
+    fr: Leonhard Euler et Camille Jordan
+    zh: 莱昂哈德·欧拉与卡米尔·若尔当
+    ja: レオンハルト・オイラーとカミーユ・ジョルダン
+  era:
+    es: Europa, s. XVIII · sistematizada por Jordan en 1870
+    en: Europe, 18th century · systematized by Jordan in 1870
+    pt: Europa, séc. XVIII · sistematizada por Jordan em 1870
+    fr: Europe, XVIIIe siècle · systématisée par Jordan en 1870
+    zh: 欧洲，18世纪·1870年由若尔当系统化
+    ja: ヨーロッパ、18世紀・1870年にジョルダンが体系化
+  history:
+    es: >-
+      Euler ya usaba autovalores en la década de 1750 para estudiar la rotación de cuerpos rígidos;
+      Lagrange los encontró en sistemas de oscilación. El nombre y la teoría sistemática llegaron con
+      Camille Jordan y otros en el siglo XIX. La ecuación Av = λv dice que la transformación solo
+      estira ciertas direcciones sin torcerlas. Hoy es el motor del PageRank, del análisis de
+      componentes principales y de la mecánica cuántica.
+    en: >-
+      Euler already used eigenvalues in the 1750s to study rigid-body rotation; Lagrange found them in
+      oscillation systems. The name and systematic theory came with Camille Jordan and others in the
+      19th century. The equation Av = λv says the transformation only stretches certain directions
+      without twisting them. Today it powers PageRank, principal component analysis, and quantum
+      mechanics.
+    pt: >-
+      Euler já usava autovalores na década de 1750 para estudar a rotação de corpos rígidos; Lagrange
+      os encontrou em sistemas de oscilação. O nome e a teoria sistemática chegaram com Camille Jordan
+      e outros no século XIX. A equação Av = λv diz que a transformação apenas estica certas direções
+      sem torcê-las. Hoje é o motor do PageRank, da análise de componentes principais e da mecânica
+      quântica.
+    fr: >-
+      Euler utilisait déjà les valeurs propres dans les années 1750 pour étudier la rotation des corps
+      rigides ; Lagrange les trouva dans les systèmes d'oscillation. Le nom et la théorie
+      systématique vinrent avec Camille Jordan et d'autres au XIXe siècle. L'équation Av = λv dit que
+      la transformation ne fait qu'étirer certaines directions sans les tordre. Aujourd'hui, elle
+      anime PageRank, l'analyse en composantes principales et la mécanique quantique.
+    zh: >-
+      欧拉早在18世纪50年代就用特征值研究刚体转动；拉格朗日在振动系统中发现了它们。特征值的名称和系统理论则于
+      19世纪由卡米尔·若尔当等人建立。方程Av = λv表明，变换只是把某些方向拉伸而不扭转它们。如今它是PageRank、
+      主成分分析和量子力学的引擎。
+    ja: >-
+      オイラーは1750年代に、剛体の回転を研究するために固有値をすでに用いていた。ラグランジュは振動系でこれを見出した。
+      固有値という名前と体系的な理論は、19世紀にカミーユ・ジョルダンらによってもたらされた。方程式Av = λvは、
+      変換が特定の方向をねじることなく伸ばすだけであることを示す。今日、これはPageRank、主成分分析、量子力学を
+      支えている。
+  timeline:
+    - year: 1750s
+      label:
+        es: >-
+          Euler estudia la rotación de cuerpos con ejes principales, el primer uso de autovalores.
+        en: >-
+          Euler studies rigid rotation with principal axes, the first use of eigenvalues.
+        pt: >-
+          Euler estuda a rotação de corpos com eixos principais, o primeiro uso de autovalores.
+        fr: >-
+          Euler étudie la rotation des corps avec des axes principaux, premier usage des valeurs
+          propres.
+        zh: >-
+          欧拉用主轴研究刚体转动，这是特征值的首次使用。
+        ja: >-
+          オイラーが主軸を用いて剛体の回転を研究。固有値の最初の使用。
+    - year: "1870"
+      label:
+        es: >-
+          Jordan publica la teoría sistemática de formas canónicas y matrices.
+        en: >-
+          Jordan publishes the systematic theory of canonical forms and matrices.
+        pt: >-
+          Jordan publica a teoria sistemática de formas canônicas e matrizes.
+        fr: >-
+          Jordan publie la théorie systématique des formes canoniques et des matrices.
+        zh: >-
+          若尔当发表规范形与矩阵的系统理论。
+        ja: >-
+          ジョルダンが標準形と行列の体系的な理論を発表する。
+    - year: "1998"
+      label:
+        es: >-
+          PageRank, el algoritmo que ordenó Google, es un autovector de la web.
+        en: >-
+          PageRank, the algorithm behind Google, is an eigenvector of the web.
+        pt: >-
+          PageRank, o algoritmo por trás do Google, é um autovetor da web.
+        fr: >-
+          PageRank, l'algorithme derrière Google, est un vecteur propre du web.
+        zh: >-
+          Google背后的算法PageRank，正是网络的一个特征向量。
+        ja: >-
+          Googleの背後にあるアルゴリズムPageRankは、ウェブの固有ベクトルである。
+    - year: Hoy
+      label:
+        es: >-
+          Es la base del PCA, de la mecánica cuántica y del análisis de vibraciones.
+        en: >-
+          It underpins PCA, quantum mechanics, and vibration analysis.
+        pt: >-
+          É a base do PCA, da mecânica quântica e da análise de vibrações.
+        fr: >-
+          Elle est à la base de l'ACP, de la mécanique quantique et de l'analyse des vibrations.
+        zh: >-
+          它是PCA、量子力学和振动分析的基础。
+        ja: >-
+          PCA、量子力学、振動解析の基盤である。
+  useCases:
+    - title:
+        es: PageRank de Google
+        en: Google PageRank
+        pt: PageRank do Google
+        fr: PageRank de Google
+        zh: Google PageRank
+        ja: GoogleのPageRank
+      description:
+        es: >-
+          El vector de importancia de cada página web es un autovector de la matriz de enlaces.
+        en: >-
+          The importance vector of each webpage is an eigenvector of the link matrix.
+        pt: >-
+          O vetor de importância de cada página web é um autovetor da matriz de links.
+        fr: >-
+          Le vecteur d'importance de chaque page web est un vecteur propre de la matrice des liens.
+        zh: >-
+          每个网页的重要性向量，是链接矩阵的一个特征向量。
+        ja: >-
+          各ウェブページの重要度ベクトルは、リンク行列の固有ベクトルである。
+    - title:
+        es: Análisis de componentes principales
+        en: Principal component analysis
+        pt: Análise de componentes principais
+        fr: Analyse en composantes principales
+        zh: 主成分分析
+        ja: 主成分分析
+      description:
+        es: >-
+          Los autovectores de la covarianza son las direcciones de mayor variación de los datos.
+        en: >-
+          Eigenvectors of the covariance matrix are the directions of greatest data variation.
+        pt: >-
+          Autovetores da covariância são as direções de maior variação dos dados.
+        fr: >-
+          Les vecteurs propres de la covariance sont les directions de plus grande variation.
+        zh: >-
+          协方差矩阵的特征向量就是数据变化最大的方向。
+        ja: >-
+          共分散行列の固有ベクトルは、データの変動が最も大きい方向である。
+    - title:
+        es: Mecánica cuántica
+        en: Quantum mechanics
+        pt: Mecânica quântica
+        fr: Mécanique quantique
+        zh: 量子力学
+        ja: 量子力学
+      description:
+        es: >-
+          Los niveles de energía de un átomo son autovalores del operador hamiltoniano.
+        en: >-
+          The energy levels of an atom are eigenvalues of the Hamiltonian operator.
+        pt: >-
+          Os níveis de energia de um átomo são autovalores do operador hamiltoniano.
+        fr: >-
+          Les niveaux d'énergie d'un atome sont des valeurs propres de l'opérateur hamiltonien.
+        zh: >-
+          原子的能级就是哈密顿算符的特征值。
+        ja: >-
+          原子のエネルギー準位は、ハミルトニアンの固有値である。
+  example:
+    title:
+      es: Autovalor de [[2,1],[1,2]]
+      en: Eigenvalue of [[2,1],[1,2]]
+      pt: Autovalor de [[2,1],[1,2]]
+      fr: Valeur propre de [[2,1],[1,2]]
+      zh: "[[2,1],[1,2]] 的特征值"
+      ja: "[[2,1],[1,2]] の固有値"
+    lines:
+      - es: "A = [[2,1],[1,2]], v = (1,1)"
+        en: "A = [[2,1],[1,2]], v = (1,1)"
+        pt: "A = [[2,1],[1,2]], v = (1,1)"
+        fr: "A = [[2,1],[1,2]], v = (1,1)"
+        zh: "A = [[2,1],[1,2]]，v = (1,1)"
+        ja: "A = [[2,1],[1,2]]、v = (1,1)"
+      - es: A·v = (2·1+1·1, 1·1+2·1)
+        en: A·v = (2·1+1·1, 1·1+2·1)
+        pt: A·v = (2·1+1·1, 1·1+2·1)
+        fr: A·v = (2·1+1·1, 1·1+2·1)
+        zh: A·v = (2·1+1·1, 1·1+2·1)
+        ja: A·v = (2·1+1·1, 1·1+2·1)
+      - es: A·v = (3, 3)
+        en: A·v = (3, 3)
+        pt: A·v = (3, 3)
+        fr: A·v = (3, 3)
+        zh: A·v = (3, 3)
+        ja: A·v = (3, 3)
+      - es: (3, 3) = 3 · (1, 1)
+        en: (3, 3) = 3 · (1, 1)
+        pt: (3, 3) = 3 · (1, 1)
+        fr: (3, 3) = 3 · (1, 1)
+        zh: (3, 3) = 3 · (1, 1)
+        ja: (3, 3) = 3 · (1, 1)
+      - es: "Av = λv con λ = 3: la dirección solo se estira"
+        en: "Av = λv with λ = 3: the direction only stretches"
+        pt: "Av = λv com λ = 3: a direção apenas estica"
+        fr: "Av = λv avec λ = 3 : la direction ne fait que s'étirer"
+        zh: "Av = λv，λ = 3：该方向只被拉伸"
+        ja: "Av = λv、λ = 3：方向は単に伸びるだけ"

@@ -1,0 +1,392 @@
+id: resistors-in-parallel
+title:
+  es: Resistencias en Paralelo
+  en: Resistors in Parallel
+  pt: Resistores em Paralelo
+  fr: Résistances en parallèle
+  zh: 并联电阻
+  ja: 並列接続の抵抗
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: one-a
+    type: number
+    value: "1"
+    explanation:
+      es: El numerador uno del lado izquierdo, pues la resistencia equivalente se escribe invertida.
+      en: The numerator one on the left, as the equivalent resistance is written inverted.
+      pt: O numerador um do lado esquerdo, pois a resistência equivalente é escrita invertida.
+      fr: Le numérateur un du côté gauche, la résistance équivalente s'écrivant inversée.
+      zh: 左侧的分子1，因为等效电阻以倒数的形式写出。
+      ja: 左辺の分子の1。等価抵抗は逆数で書かれるため。
+  - id: slash-a
+    type: operator
+    value: "/"
+    explanation:
+      es: División, la unidad partida por la resistencia equivalente total.
+      en: Division, one divided by the total equivalent resistance.
+      pt: Divisão, a unidade dividida pela resistência equivalente total.
+      fr: Division, l'unité divisée par la résistance équivalente totale.
+      zh: 除法，1除以等效总电阻。
+      ja: 除算。1を合計等価抵抗で割る。
+  - id: r-total
+    type: variable
+    value: R
+    explanation:
+      es: La resistencia equivalente de todo el conjunto en paralelo.
+      en: The equivalent resistance of the whole parallel combination.
+      pt: A resistência equivalente de todo o conjunto em paralelo.
+      fr: La résistance équivalente de tout le groupement en parallèle.
+      zh: 整个并联组合的等效电阻。
+      ja: 並列接続全体の等価抵抗。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: one-b
+    type: number
+    value: "1"
+    explanation:
+      es: El numerador del primer inverso, la primera rama escrita como uno partido por su resistencia.
+      en: The numerator of the first reciprocal, the first branch written as one over its resistance.
+      pt: O numerador do primeiro inverso, o primeiro ramo escrito como um dividido pela sua resistência.
+      fr: Le numérateur du premier inverse, la première branche écrite comme l'unité sur sa résistance.
+      zh: 第一个倒数的分子，即第一条支路写成1除以它的电阻。
+      ja: 最初の逆数の分子。最初の枝路を1割る抵抗として書いたもの。
+  - id: slash-b
+    type: operator
+    value: "/"
+    explanation:
+      es: División, la unidad partida por la resistencia de la primera rama.
+      en: Division, one divided by the first branch's resistance.
+      pt: Divisão, a unidade dividida pela resistência do primeiro ramo.
+      fr: Division, l'unité divisée par la résistance de la première branche.
+      zh: 除法，1除以第一条支路的电阻。
+      ja: 除算。1を最初の枝路の抵抗で割る。
+  - id: r1
+    type: variable
+    value: R₁
+    explanation:
+      es: La primera resistencia, que define una de las ramas del circuito.
+      en: The first resistor, which defines one of the circuit's branches.
+      pt: O primeiro resistor, que define um dos ramos do circuito.
+      fr: La première résistance, qui définit l'une des branches du circuit.
+      zh: 第一个电阻，定义了电路中的一条支路。
+      ja: 最初の抵抗。回路の枝路の1つを決める。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Suma de los inversos de cada rama, no de las resistencias mismas.
+      en: Addition of the reciprocals of each branch, not of the resistors themselves.
+      pt: Soma dos inversos de cada ramo, não das resistências em si.
+      fr: Addition des inverses de chaque branche, et non des résistances elles-mêmes.
+      zh: 是各支路倒数的和，而不是电阻本身的和。
+      ja: 各枝路の逆数を足し合わせる。抵抗そのものの和ではない。
+  - id: one-c
+    type: number
+    value: "1"
+    explanation:
+      es: El numerador del segundo inverso, la segunda rama escrita también invertida.
+      en: The numerator of the second reciprocal, the second branch also written inverted.
+      pt: O numerador do segundo inverso, o segundo ramo escrito também invertido.
+      fr: Le numérateur du deuxième inverse, la deuxième branche écrite aussi inversée.
+      zh: 第二个倒数的分子，第二条支路同样写成倒数形式。
+      ja: 2番目の逆数の分子。2番目の枝路も逆数で書かれる。
+  - id: slash-c
+    type: operator
+    value: "/"
+    explanation:
+      es: División, la unidad partida por la resistencia de la segunda rama.
+      en: Division, one divided by the second branch's resistance.
+      pt: Divisão, a unidade dividida pela resistência do segundo ramo.
+      fr: Division, l'unité divisée par la résistance de la deuxième branche.
+      zh: 除法，1除以第二条支路的电阻。
+      ja: 除算。1を2番目の枝路の抵抗で割る。
+  - id: r2
+    type: variable
+    value: R₂
+    explanation:
+      es: La segunda resistencia, que define la otra rama del circuito.
+      en: The second resistor, which defines the other branch of the circuit.
+      pt: O segundo resistor, que define o outro ramo do circuito.
+      fr: La deuxième résistance, qui définit l'autre branche du circuit.
+      zh: 第二个电阻，定义了电路中的另一条支路。
+      ja: 2番目の抵抗。回路のもう1つの枝路を決める。
+context:
+  author:
+    es: Basada en la ley de Ohm
+    en: Based on Ohm's law
+    pt: Baseada na lei de Ohm
+    fr: Fondée sur la loi d'Ohm
+    zh: 基于欧姆定律
+    ja: オームの法則に基づく
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, s. XIX
+    fr: Europe, XIXᵉ siècle
+    zh: 欧洲，19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      Cuando las resistencias se conectan lado a lado, la corriente se reparte entre las ramas y la
+      resistencia equivalente resulta menor que la de cada una. La regla se obtiene invirtiendo la
+      suma de los inversos, 1/R = 1/R₁ + 1/R₂ + …, y se deduce de la ley de Ohm de 1827 junto con la
+      ley de corrientes de Kirchhoff de 1845. Es el motivo por el cual las instalaciones domésticas
+      se conectan en paralelo: si un aparato falla, la corriente sigue circulando por los demás. La
+      misma relación permite construir divisores de corriente, que reparten una intensidad entre
+      ramas en proporción inversa a sus resistencias.
+    en: >-
+      When resistors are connected side by side, the current splits between the branches and the
+      equivalent resistance ends up smaller than each one. The rule comes from inverting the sum of
+      reciprocals, 1/R = 1/R₁ + 1/R₂ + …, and follows from Ohm's law of 1827 together with
+      Kirchhoff's current law of 1845. This is why household wiring is done in parallel: if one
+      appliance fails, current keeps flowing through the others. The same relation builds current
+      dividers, which split a current between branches in inverse proportion to their resistances.
+    pt: >-
+      Quando os resistores são conectados lado a lado, a corrente se divide entre os ramos e a
+      resistência equivalente acaba sendo menor que a de cada um. A regra vem da soma dos inversos,
+      1/R = 1/R₁ + 1/R₂ + …, e é deduzida da lei de Ohm de 1827 em conjunto com a lei das correntes
+      de Kirchhoff de 1845. É por isso que as instalações residenciais são ligadas em paralelo: se
+      um aparelho falha, a corrente continua circulando pelos demais. A mesma relação permite
+      construir divisores de corrente, que repartem uma intensidade entre ramos na proporção inversa
+      de suas resistências.
+    fr: >-
+      Lorsque les résistances sont branchées côte à côte, le courant se répartit entre les branches
+      et la résistance équivalente s'avère plus petite que chacune d'elles. La règle s'obtient en
+      inversant la somme des inverses, 1/R = 1/R₁ + 1/R₂ + …, et découle de la loi d'Ohm de 1827 et
+      de la loi des courants de Kirchhoff de 1845. C'est pourquoi les installations domestiques sont
+      branchées en parallèle : si un appareil tombe en panne, le courant continue de circuler dans
+      les autres. La même relation permet de construire des diviseurs de courant, qui répartissent
+      une intensité entre des branches en proportion inverse de leurs résistances.
+    zh: >-
+      当电阻并排连接时，电流在支路之间分流，等效电阻反而小于其中任何一个。这条规则来自对倒数之和取倒数，
+      1/R = 1/R₁ + 1/R₂ + …，由1827年的欧姆定律结合1845年基尔霍夫电流定律推导而来。这正是家庭布线采用并联的原因：
+      如果一台电器坏了，电流仍会继续流过其他电器。同样的关系还可以构成分流器，把电流按各支路电阻的反比分配。
+    ja: >-
+      抵抗を並列に接続すると、電流は各枝路に分かれて流れ、等価抵抗はどの1つよりも小さくなる。この規則は
+      逆数の和の逆数、1/R = 1/R₁ + 1/R₂ + … から得られ、1827年のオームの法則と1845年のキルヒホッフの電流則から
+      導かれる。家庭の配線が並列なのはこのためである。1つの機器が故障しても、他の機器には電流が流れ続ける。
+      同じ関係から分流器も構成でき、各枝路の抵抗に反比例して電流を分割する。
+  timeline:
+    - year: "1827"
+      label:
+        es: >-
+          Ohm publica su ley, fundamento para analizar tanto los circuitos en serie como en paralelo.
+        en: >-
+          Ohm publishes his law, the foundation for analyzing both series and parallel circuits.
+        pt: >-
+          Ohm publica sua lei, fundamento para analisar tanto circuitos em série quanto em paralelo.
+        fr: >-
+          Ohm publie sa loi, fondement de l'analyse des circuits en série comme en parallèle.
+        zh: >-
+          欧姆发表其定律，为分析串联和并联电路奠定基础。
+        ja: >-
+          オームが法則を発表。直列・並列どちらの回路解析にも基礎を与える。
+    - year: "1845"
+      label:
+        es: >-
+          Kirchhoff formula su ley de corrientes, que establece cómo se reparte la intensidad entre
+          las ramas en paralelo.
+        en: >-
+          Kirchhoff states his current law, establishing how the current splits among parallel
+          branches.
+        pt: >-
+          Kirchhoff formula sua lei das correntes, que estabelece como a intensidade se divide entre
+          os ramos em paralelo.
+        fr: >-
+          Kirchhoff énonce sa loi des courants, qui établit comment l'intensité se répartit entre
+          les branches en parallèle.
+        zh: >-
+          基尔霍夫提出电流定律，确立了电流在并联支路间的分配规律。
+        ja: >-
+          キルヒホッフが電流則を定式化し、並列の枝路に電流がどう分かれるかを確立する。
+    - year: "1882"
+      label:
+        es: >-
+          El sistema de tres hilos de Edison alimenta circuitos domésticos en paralelo, fijando el
+          estándar del cableado residencial.
+        en: >-
+          Edison's three-wire system feeds parallel domestic circuits, setting the standard for home
+          wiring.
+        pt: >-
+          O sistema de três fios de Edison alimenta circuitos domésticos em paralelo, fixando o
+          padrão da fiação residencial.
+        fr: >-
+          Le système à trois fils d'Edison alimente des circuits domestiques en parallèle, fixant le
+          standard du câblage résidentiel.
+        zh: >-
+          爱迪生的三线制系统为并联的家庭电路供电，确立了住宅布线的标准。
+        ja: >-
+          エジソンの三線式システムが並列の家庭用回路に給電し、住宅配線の標準を定める。
+    - year: Hoy
+      label:
+        es: >-
+          Cada toma, lámpara y electrodoméstico del hogar se conecta en paralelo, de modo que una
+          sola falla nunca deja a oscuras la casa.
+        en: >-
+          Every home outlet, lamp, and appliance connects in parallel, so a single failure never
+          blacks out the house.
+        pt: >-
+          Cada tomada, lâmpada e eletrodoméstico se conecta em paralelo, de modo que uma única falha
+          nunca apaga a casa inteira.
+        fr: >-
+          Chaque prise, lampe et appareil se branche en parallèle, si bien qu'une seule défaillance
+          ne plonge jamais toute la maison dans le noir.
+        zh: >-
+          家里的每个插座、灯具和电器都采用并联，单个故障绝不会让整屋断电。
+        ja: >-
+          家庭のコンセント、ランプ、電化製品はすべて並列接続で、1つの故障で家全体が停電することはない。
+  useCases:
+    - title:
+        es: Instalaciones eléctricas domésticas
+        en: Home electrical wiring
+        pt: Instalações elétricas residenciais
+        fr: Installations électriques domestiques
+        zh: 家庭电气布线
+        ja: 家庭用電気配線
+      description:
+        es: >-
+          Tomas y lámparas se conectan en paralelo para que cada aparato reciba la tensión completa
+          y funcione de forma independiente.
+        en: >-
+          Outlets and lamps connect in parallel so each appliance gets the full voltage and works
+          independently.
+        pt: >-
+          Tomadas e lâmpadas se conectam em paralelo para que cada aparelho receba a tensão completa
+          e funcione de forma independente.
+        fr: >-
+          Prises et lampes se branchent en parallèle pour que chaque appareil reçoive la tension
+          complète et fonctionne indépendamment.
+        zh: >-
+          插座和灯具并联连接，使每台电器都能获得完整电压并独立工作。
+        ja: >-
+          コンセントやランプは並列接続され、各機器が全電圧を受けて独立に動作する。
+    - title:
+        es: Divisores de corriente
+        en: Current dividers
+        pt: Divisores de corrente
+        fr: Divisieurs de courant
+        zh: 分流器
+        ja: 分流器
+      description:
+        es: >-
+          Reparten la intensidad entre ramas en proporción inversa a sus resistencias, base de las
+          derivaciones de los amperímetros.
+        en: >-
+          They split current between branches in inverse proportion to resistance, the basis of
+          ammeter shunts.
+        pt: >-
+          Repartem a intensidade entre ramos na proporção inversa de suas resistências, base das
+          derivações dos amperímetros.
+        fr: >-
+          Ils répartissent l'intensité entre les branches en proportion inverse des résistances, à la
+          base des shunts des ampèremètres.
+        zh: >-
+          按电阻的反比把电流分配在各支路之间，是电流表分流器的原理基础。
+        ja: >-
+          抵抗の反比例に応じて枝路間で電流を分割する。電流計のシャントの原理。
+    - title:
+        es: Baterías de vehículos eléctricos
+        en: Electric vehicle batteries
+        pt: Baterias de veículos elétricos
+        fr: Batteries de véhicules électriques
+        zh: 电动汽车电池
+        ja: 電気自動車のバッテリー
+      description:
+        es: >-
+          Las celdas se agrupan en paralelo para sumar capacidad de corriente sin cambiar el voltaje
+          del paquete.
+        en: >-
+          Cells are grouped in parallel to add current capacity without changing the pack's voltage.
+        pt: >-
+          Células são agrupadas em paralelo para somar capacidade de corrente sem alterar a tensão do
+          conjunto.
+        fr: >-
+          Les cellules se groupent en parallèle pour additionner la capacité en courant sans changer
+          la tension du bloc.
+        zh: >-
+          电池芯并联成组，可在不改变电池组电压的情况下增加电流容量。
+        ja: >-
+          セルを並列にまとめることで、パックの電圧を変えずに電流容量を増やす。
+    - title:
+        es: Redes de distribución
+        en: Distribution grids
+        pt: Redes de distribuição
+        fr: Réseaux de distribution
+        zh: 配电网络
+        ja: 配電網
+      description:
+        es: >-
+          Los consumidores se conectan en paralelo entre las fases, y la carga total es la suma de
+          las admitancias de cada rama.
+        en: >-
+          Consumers connect in parallel across the phases, and the total load is the sum of each
+          branch's admittance.
+        pt: >-
+          Consumidores se conectam em paralelo entre as fases, e a carga total é a soma das
+          admitâncias de cada ramo.
+        fr: >-
+          Les consommateurs se branchent en parallèle entre les phases, et la charge totale est la
+          somme des admittances de chaque branche.
+        zh: >-
+          用电户在相线之间并联连接，总负荷为各支路导纳之和。
+        ja: >-
+          需要家は相間に並列接続され、総負荷は各枝路のアドミタンスの和となる。
+  example:
+    title:
+      es: Dos resistencias en paralelo
+      en: Two resistors in parallel
+      pt: Dois resistores em paralelo
+      fr: Deux résistances en parallèle
+      zh: 两个并联电阻
+      ja: 並列の2つの抵抗
+    lines:
+      - es: R₁ = 6 Ω
+        en: R₁ = 6 Ω
+        pt: R₁ = 6 Ω
+        fr: R₁ = 6 Ω
+        zh: R₁ = 6 Ω
+        ja: R₁ = 6 Ω
+      - es: R₂ = 12 Ω
+        en: R₂ = 12 Ω
+        pt: R₂ = 12 Ω
+        fr: R₂ = 12 Ω
+        zh: R₂ = 12 Ω
+        ja: R₂ = 12 Ω
+      - es: 1/R = 1/R₁ + 1/R₂
+        en: 1/R = 1/R₁ + 1/R₂
+        pt: 1/R = 1/R₁ + 1/R₂
+        fr: 1/R = 1/R₁ + 1/R₂
+        zh: 1/R = 1/R₁ + 1/R₂
+        ja: 1/R = 1/R₁ + 1/R₂
+      - es: 1/R = 1/6 + 1/12
+        en: 1/R = 1/6 + 1/12
+        pt: 1/R = 1/6 + 1/12
+        fr: 1/R = 1/6 + 1/12
+        zh: 1/R = 1/6 + 1/12
+        ja: 1/R = 1/6 + 1/12
+      - es: 1/R = 2/12 + 1/12 = 3/12
+        en: 1/R = 2/12 + 1/12 = 3/12
+        pt: 1/R = 2/12 + 1/12 = 3/12
+        fr: 1/R = 2/12 + 1/12 = 3/12
+        zh: 1/R = 2/12 + 1/12 = 3/12
+        ja: 1/R = 2/12 + 1/12 = 3/12
+      - es: R = 12/3 = 4 Ω
+        en: R = 12/3 = 4 Ω
+        pt: R = 12/3 = 4 Ω
+        fr: R = 12/3 = 4 Ω
+        zh: R = 12/3 = 4 Ω
+        ja: R = 12/3 = 4 Ω

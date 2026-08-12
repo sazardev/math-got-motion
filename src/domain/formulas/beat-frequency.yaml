@@ -1,0 +1,362 @@
+id: beat-frequency
+title:
+  es: Frecuencia de Batido
+  en: Beat Frequency
+  pt: Frequência de Batimento
+  fr: Fréquence de Battement
+  zh: 拍频
+  ja: うなり周波数
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: f-b
+    type: variable
+    value: "f"
+    explanation:
+      es: "La frecuencia de batido: cuántas veces por segundo el volumen sube y baja."
+      en: "The beat frequency: how many times per second the volume swells and fades."
+      pt: "A frequência de batimento: quantas vezes por segundo o volume cresce e diminui."
+      fr: "La fréquence de battement : combien de fois par seconde le volume enfle et décroît."
+      zh: "拍频：音量每秒起伏多少次。"
+      ja: "うなり周波数：音量が毎秒何回盛り上がって衰えるか。"
+  - id: f-b-sub
+    type: superscript
+    value: "b"
+    explanation:
+      es: "El subíndice b: batido."
+      en: "Subscript b: beat."
+      pt: "O subíndice b: batimento."
+      fr: "L'indice b : battement."
+      zh: "下标b：拍。"
+      ja: "下付きb：うなり。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: abs-open
+    type: operator
+    value: "|"
+    explanation:
+      es: "El valor absoluto: la frecuencia de batido siempre es positiva."
+      en: "Absolute value: the beat frequency is always positive."
+      pt: "O valor absoluto: a frequência de batimento é sempre positiva."
+      fr: "La valeur absolue : la fréquence de battement est toujours positive."
+      zh: "绝对值：拍频总是正的。"
+      ja: "絶対値：うなり周波数は常に正になる。"
+  - id: f1
+    type: variable
+    value: "f"
+    explanation:
+      es: "La primera frecuencia, la de una de las ondas que se suman."
+      en: "The first frequency, one of the two waves being combined."
+      pt: "A primeira frequência, a de uma das ondas que se somam."
+      fr: "La première fréquence, celle d'une des ondes combinées."
+      zh: "第一个频率，即叠加的两列波之一的频率。"
+      ja: "一つ目の周波数。重ね合わせる波の一方。"
+  - id: f1-sub
+    type: superscript
+    value: "1"
+    explanation:
+      es: "El subíndice 1: la primera onda."
+      en: "Subscript 1: the first wave."
+      pt: "O subíndice 1: a primeira onda."
+      fr: "L'indice 1 : la première onde."
+      zh: "下标1：第一列波。"
+      ja: "下付き1：一つ目の波。"
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: "La resta: el batido usa la diferencia entre las frecuencias."
+      en: "Subtraction: the beat uses the difference between the frequencies."
+      pt: "A subtração: o batimento usa a diferença entre as frequências."
+      fr: "La soustraction : le battement utilise la différence entre les fréquences."
+      zh: "减法：拍取两个频率之差。"
+      ja: "引き算：うなりは周波数の差を使う。"
+  - id: f2
+    type: variable
+    value: "f"
+    explanation:
+      es: "La segunda frecuencia, muy cercana a la primera."
+      en: "The second frequency, very close to the first."
+      pt: "A segunda frequência, muito próxima da primeira."
+      fr: "La deuxième fréquence, très proche de la première."
+      zh: "第二个频率，与第一个非常接近。"
+      ja: "二つ目の周波数。一つ目に非常に近い。"
+  - id: f2-sub
+    type: superscript
+    value: "2"
+    explanation:
+      es: "El subíndice 2: la segunda onda."
+      en: "Subscript 2: the second wave."
+      pt: "O subíndice 2: a segunda onda."
+      fr: "L'indice 2 : la deuxième onde."
+      zh: "下标2：第二列波。"
+      ja: "下付き2：二つ目の波。"
+  - id: abs-close
+    type: operator
+    value: "|"
+    explanation:
+      es: Cierra el valor absoluto.
+      en: Closes the absolute value.
+      pt: Fecha o valor absoluto.
+      fr: Ferme la valeur absolue.
+      zh: 绝对值结束。
+      ja: 絶対値を閉じる。
+context:
+  author:
+    es: Basada en el estudio de la acústica
+    en: Based on the study of acoustics
+    pt: Baseada no estudo da acústica
+    fr: Basée sur l'étude de l'acoustique
+    zh: 基于声学研究
+    ja: 音響学の研究に基づく
+  era:
+    es: Europa, s. XVII–XIX
+    en: Europe, 17th–19th century
+    pt: Europa, séc. XVII–XIX
+    fr: Europe, XVIIe–XIXe siècle
+    zh: 欧洲，17至19世纪
+    ja: ヨーロッパ、17〜19世紀
+  history:
+    es: >-
+      Cuando dos sonidos de frecuencia cercana se superponen, su suma sube y baja de volumen en un
+      pulso regular: el batido, cuya frecuencia es la diferencia entre las dos. Los músicos afinan
+      desde hace siglos escuchando si los batidos desaparecen, y las sirenas usan el efecto para
+      sonar más presentes. El mismo principio se aprovecha en acústica y en radar para detectar
+      pequeñas diferencias de frecuencia entre una onda emitida y su eco.
+    en: >-
+      When two tones of nearly equal frequency are combined, their sum swells and fades in a regular
+      pulse: the beat, whose frequency is the difference between the two. Musicians have tuned
+      instruments for centuries by listening for the beats to vanish, and sirens exploit the effect
+      to sound more present. The same principle underlies acoustic analysis and radar, which detect
+      small frequency differences between an emitted wave and its echo.
+    pt: >-
+      Quando dois sons de frequências próximas se sobrepõem, a soma deles cresce e diminui em um
+      pulso regular: o batimento, cuja frequência é a diferença entre os dois. Músicos afinam
+      instrumentos há séculos escutando os batimentos até eles sumirem, e as sirenes exploram o
+      efeito para soar mais presentes. O mesmo princípio está na base da análise acústica e do
+      radar, que detecta pequenas diferenças de frequência entre uma onda emitida e seu eco.
+    fr: >-
+      Quand deux sons de fréquences voisines se superposent, leur somme enfle et décroît en un
+      battement régulier : le battement, dont la fréquence est la différence entre les deux. Les
+      musiciens accordent leurs instruments depuis des siècles en écoutant les battements disparaître
+      et les sirènes exploitent l'effet pour paraître plus présentes. Le même principe est à la base
+      de l'analyse acoustique et du radar, qui détecte de petites différences de fréquence entre une
+      onde émise et son écho.
+    zh: >-
+      当两个频率相近的声音叠加时，合成声会以规则的脉冲忽强忽弱：这就是拍，其频率等于两个声源频率之差。
+      几个世纪以来，音乐家们就是通过听拍音是否消失来给乐器调音，警报器也利用这一效应使其声音更醒目。
+      同样的原理还用于声学分析和雷达，用以探测发射波与回声之间微小的频率差。
+    ja: >-
+      周波数が近い二つの音を重ねると、合成された音は規則的な脈動で大きく小さくなる。これがうなりであり、
+      その周波数は二つの音の差に等しい。音楽家は何世紀にもわたって、うなりが消えるかどうかを聴きながら楽器を
+      調律してきた。サイレンも、より耳を引く音にするためにこの効果を利用している。同じ原理は音響分析や、
+      送信波とそのエコーのわずかな周波数差を検出するレーダーの基礎となっている。
+  timeline:
+    - year: "1638"
+      label:
+        es: >-
+          Galileo describe en sus Discorsi cómo el oído percibe las pulsaciones de los tonos
+          cercanos.
+        en: >-
+          Galileo describes in his Discorsi how the ear perceives the pulsing of close tones.
+        pt: >-
+          Galileu descreve em seus Discorsi como o ouvido percebe as pulsações de tons próximos.
+        fr: >-
+          Galilée décrit dans ses Discorsi comment l'oreille perçoit les battements de tons proches.
+        zh: >-
+          伽利略在《两种新科学》中描述了人耳如何感知相近音调的脉动。
+        ja: >-
+          ガリレオが『新科学対話』の中で、近い音の脈動を耳がどう知覚するかを述べる。
+    - year: "1744"
+      label:
+        es: >-
+          El organista alemán Georg Andreas Sorge estudia matemáticamente las pulsaciones.
+        en: >-
+          German organist Georg Andreas Sorge studies the beats mathematically.
+        pt: >-
+          O organista alemão Georg Andreas Sorge estuda matematicamente os batimentos.
+        fr: >-
+          L'organiste allemand Georg Andreas Sorge étudie mathématiquement les battements.
+        zh: >-
+          德国风琴师格奥尔格·安德烈亚斯·索尔格从数学上研究拍音。
+        ja: >-
+          ドイツのオルガニスト、ゲオルク・アンドレアス・ゾルゲがうなりを数学的に研究する。
+    - year: "1877"
+      label:
+        es: >-
+          Lord Rayleigh formaliza el análisis de los batidos en The Theory of Sound.
+        en: >-
+          Lord Rayleigh formalizes the analysis of beats in The Theory of Sound.
+        pt: >-
+          Lord Rayleigh formaliza a análise dos batimentos em The Theory of Sound.
+        fr: >-
+          Lord Rayleigh formalise l'analyse des battements dans The Theory of Sound.
+        zh: >-
+          瑞利勋爵在《声学理论》中系统阐述了拍的解析。
+        ja: >-
+          レイリー卿が『音の理論』でうなりの解析を体系化する。
+    - year: Hoy
+      label:
+        es: >-
+          Los radares de onda continua y los afinadores digitales miden diferencias de frecuencia
+          con este principio.
+        en: >-
+          Continuous-wave radars and digital tuners measure frequency differences with this
+          principle.
+        pt: >-
+          Radares de onda contínua e afinadores digitais medem diferenças de frequência com esse
+          princípio.
+        fr: >-
+          Les radars à onde continue et les accordeurs numériques mesurent les différences de
+          fréquence grâce à ce principe.
+        zh: >-
+          连续波雷达和数字调音器正是利用这一原理测量频率差。
+        ja: >-
+          連続波レーダーやデジタルチューナーは、この原理で周波数の差を測っている。
+  useCases:
+    - title:
+        es: Afinación de instrumentos
+        en: Instrument tuning
+        pt: Afinação de instrumentos
+        fr: Accordage des instruments
+        zh: 乐器调音
+        ja: 楽器の調律
+      description:
+        es: >-
+          Se ajusta una cuerda hasta que el batido con la nota de referencia desaparece, señal de
+          que están iguales.
+        en: >-
+          A string is adjusted until the beat with the reference note disappears, a sign they match.
+        pt: >-
+          A corda é ajustada até o batimento com a nota de referência desaparecer, sinal de que
+          estão iguais.
+        fr: >-
+          Une corde est réglée jusqu'à ce que le battement avec la note de référence disparaisse,
+          signe qu'elles coïncident.
+        zh: >-
+          调整琴弦直到与参考音的拍音消失，即说明两者音高一致。
+        ja: >-
+          基準音とのうなりが消えるまで弦を調整する。これで両者が一致したことがわかる。
+    - title:
+        es: Órganos y sirenas
+        en: Organs and sirens
+        pt: Órgãos e sirenes
+        fr: Orgues et sirènes
+        zh: 管风琴与警报器
+        ja: パイプオルガンとサイレン
+      description:
+        es: >-
+          Tocar dos tubos o dos sirenas cercanos crea un batido que hace el sonido más envolvente y
+          fácil de detectar.
+        en: >-
+          Playing two close pipes or sirens creates a beat that makes the sound richer and easier to
+          detect.
+        pt: >-
+          Tocar dois tubos ou duas sirenes próximas cria um batimento que torna o som mais rico e
+          fácil de detectar.
+        fr: >-
+          Jouer deux tuyaux ou deux sirènes proches crée un battement qui rend le son plus riche et
+          plus facile à détecter.
+        zh: >-
+          同时发出两个相近的管音或警报音会形成拍，使声音更浑厚、更易察觉。
+        ja: >-
+          近い音のパイプやサイレンを二つ鳴らすとうなりが生まれ、音がより豊かで知覚しやすくなる。
+    - title:
+        es: Radar y comunicaciones
+        en: Radar and communications
+        pt: Radar e comunicações
+        fr: Radar et communications
+        zh: 雷达与通信
+        ja: レーダーと通信
+      description:
+        es: >-
+          El radar de onda continua mezcla la onda emitida con su eco y mide la frecuencia de batido
+          para hallar la velocidad.
+        en: >-
+          Continuous-wave radar mixes the emitted wave with its echo and measures the beat frequency
+          to find speed.
+        pt: >-
+          O radar de onda contínua mistura a onda emitida com seu eco e mede a frequência de
+          batimento para achar a velocidade.
+        fr: >-
+          Le radar à onde continue mélange l'onde émise à son écho et mesure la fréquence de
+          battement pour trouver la vitesse.
+        zh: >-
+          连续波雷达将发射波与回波混合，通过测量拍频来求出速度。
+        ja: >-
+          連続波レーダーは送信波とそのエコーを重ね、うなり周波数を測って速度を求める。
+    - title:
+        es: Análisis acústico
+        en: Acoustic analysis
+        pt: Análise acústica
+        fr: Analyse acoustique
+        zh: 声学分析
+        ja: 音響分析
+      description:
+        es: >-
+          En audio, el batido deja ver diferencias mínimas de frecuencia entre dos señales o dos
+          micrófonos.
+        en: >-
+          In audio, beating reveals minute frequency differences between two signals or microphones.
+        pt: >-
+          Em áudio, o batimento revela diferenças mínimas de frequência entre dois sinais ou
+          microfones.
+        fr: >-
+          En audio, le battement révèle de minuscules différences de fréquence entre deux signaux ou
+          deux microphones.
+        zh: >-
+          在音频领域，拍音能揭示两路信号或两只麦克风之间细微的频率差。
+        ja: >-
+          音響分野では、うなりから二つの信号やマイクのわずかな周波数差が見えてくる。
+  example:
+    title:
+      es: Dos diapasones casi iguales
+      en: Two nearly equal tuning forks
+      pt: Dois diapasões quase iguais
+      fr: Deux diapasons presque identiques
+      zh: 两个几乎相同的音叉
+      ja: ほぼ同じ二つの音叉
+    lines:
+      - es: f1 = 440 Hz, f2 = 443 Hz
+        en: f1 = 440 Hz, f2 = 443 Hz
+        pt: f1 = 440 Hz, f2 = 443 Hz
+        fr: f1 = 440 Hz, f2 = 443 Hz
+        zh: f1 = 440 赫兹，f2 = 443 赫兹
+        ja: f1 = 440 Hz、f2 = 443 Hz
+      - es: fb = |f1 − f2|
+        en: fb = |f1 − f2|
+        pt: fb = |f1 − f2|
+        fr: fb = |f1 − f2|
+        zh: fb = |f1 − f2|
+        ja: fb = |f1 − f2|
+      - es: fb = |440 − 443|
+        en: fb = |440 − 443|
+        pt: fb = |440 − 443|
+        fr: fb = |440 − 443|
+        zh: fb = |440 − 443|
+        ja: fb = |440 − 443|
+      - es: fb = |−3|
+        en: fb = |−3|
+        pt: fb = |−3|
+        fr: fb = |−3|
+        zh: fb = |−3|
+        ja: fb = |−3|
+      - es: "fb = 3 Hz: tres pulsos por segundo"
+        en: "fb = 3 Hz: three pulses per second"
+        pt: "fb = 3 Hz: três pulsações por segundo"
+        fr: "fb = 3 Hz : trois battements par seconde"
+        zh: "fb = 3 赫兹：每秒三个拍"
+        ja: "fb = 3 Hz：毎秒3回のうなり"

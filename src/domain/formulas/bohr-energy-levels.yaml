@@ -1,0 +1,346 @@
+id: bohr-energy-levels
+title:
+  es: Niveles de Energía de Bohr
+  en: Bohr Energy Levels
+  pt: Níveis de Energia de Bohr
+  fr: Niveaux d'énergie de Bohr
+  zh: 玻尔能级
+  ja: ボーアのエネルギー準位
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: La energía de una órbita permitida del electrón en el átomo de hidrógeno.
+      en: The energy of a permitted orbit of the electron in the hydrogen atom.
+      pt: A energia de uma órbita permitida do elétron no átomo de hidrogênio.
+      fr: L'énergie d'une orbite permise de l'électron dans l'atome d'hydrogène.
+      zh: 氢原子中电子被允许占据的轨道能量。
+      ja: 水素原子における電子の許容軌道のエネルギー。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: El signo negativo indica que el electrón está ligado al núcleo.
+      en: The negative sign means the electron is bound to the nucleus.
+      pt: O sinal negativo indica que o elétron está ligado ao núcleo.
+      fr: Le signe négatif indique que l'électron est lié au noyau.
+      zh: 负号表示电子被束缚在原子核上。
+      ja: 負の符号は、電子が原子核に束縛されていることを示す。
+  - id: thirteen-six
+    type: number
+    value: "13.6"
+    explanation:
+      es: La energía de ionización del hidrógeno en electronvoltios, la energía del estado base.
+      en: Hydrogen's ionization energy in electronvolts, the energy of the ground state.
+      pt: A energia de ionização do hidrogênio em elétron-volts, a energia do estado fundamental.
+      fr: L'énergie d'ionisation de l'hydrogène en électronvolts, l'énergie de l'état fondamental.
+      zh: 氢的电离能(以电子伏特为单位),即基态的能量。
+      ja: 水素のイオン化エネルギー(単位は電子ボルト)。基底状態のエネルギー。
+  - id: div
+    type: operator
+    value: /
+    explanation:
+      es: "División: la energía se divide entre el cuadrado del número cuántico."
+      en: "Division: the energy is divided by the square of the quantum number."
+      pt: "Divisão: a energia é dividida pelo quadrado do número quântico."
+      fr: "Division : l'énergie est divisée par le carré du nombre quantique."
+      zh: 除法:能量除以量子数的平方。
+      ja: 割り算:エネルギーを量子数の2乗で割る。
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: "El número cuántico principal, que numera las órbitas permitidas: 1, 2, 3..."
+      en: "The principal quantum number, which numbers the permitted orbits: 1, 2, 3..."
+      pt: "O número quântico principal, que numera as órbitas permitidas: 1, 2, 3..."
+      fr: "Le nombre quantique principal, qui numérote les orbites permises : 1, 2, 3..."
+      zh: 主量子数,为允许的轨道编号:1、2、3…
+      ja: 許容軌道に番号を付ける主量子数:1、2、3…
+  - id: squared
+    type: superscript
+    value: ²
+    explanation:
+      es: "Al cuadrado: la energía decae con el cuadrado de n, no con n."
+      en: "Squared: the energy falls off with n squared, not n itself."
+      pt: "Ao quadrado: a energia decai com o quadrado de n, não com n."
+      fr: "Au carré : l'énergie décroît avec n au carré, pas avec n lui-même."
+      zh: 平方:能量随n的平方而非n本身衰减。
+      ja: 2乗:エネルギーはnそのものではなく、nの2乗に比例して減少する。
+context:
+  author:
+    es: Niels Bohr
+    en: Niels Bohr
+    pt: Niels Bohr
+    fr: Niels Bohr
+    zh: 尼尔斯·玻尔
+    ja: ニールス・ボーア
+  era:
+    es: Dinamarca, 1885–1962 · publicada en 1913
+    en: Denmark, 1885–1962 · published in 1913
+    pt: Dinamarca, 1885–1962 · publicada em 1913
+    fr: Danemark, 1885–1962 · publiée en 1913
+    zh: 丹麦,1885–1962年 · 1913年发表
+    ja: デンマーク、1885–1962年・1913年発表
+  history:
+    es: >-
+      En 1913 Niels Bohr publicó un modelo del átomo de hidrógeno en el que el electrón solo puede
+      ocupar órbitas de energía bien definida: la energía está cuantizada y vale E = −13.6/n² eV. Al
+      saltar de una órbita a otra, el átomo emite o absorbe luz de una longitud de onda exacta, lo que
+      explica por qué los espectros de los gases son líneas discretas. El modelo, nacido en la
+      Copenhague de Rutherford, fue un puente entre la física clásica y la mecánica cuántica que luego
+      desarrollaron Schrödinger y Heisenberg.
+    en: >-
+      In 1913 Niels Bohr published a model of the hydrogen atom in which the electron can only occupy
+      orbits with sharply defined energies: energy is quantized and equals E = −13.6/n² eV. When
+      jumping between orbits the atom emits or absorbs light of an exact wavelength, which explains why
+      the spectra of gases are discrete lines. The model, born in Rutherford's Copenhagen, was a
+      bridge between classical physics and the quantum mechanics later developed by Schrödinger and
+      Heisenberg.
+    pt: >-
+      Em 1913, Niels Bohr publicou um modelo do átomo de hidrogênio no qual o elétron só pode ocupar
+      órbitas de energia bem definida: a energia é quantizada e vale E = −13,6/n² eV. Ao saltar de uma
+      órbita para outra, o átomo emite ou absorve luz de comprimento de onda exato, o que explica por
+      que os espectros dos gases são linhas discretas. O modelo, nascido no Copenhague de Rutherford,
+      foi uma ponte entre a física clássica e a mecânica quântica desenvolvida depois por Schrödinger
+      e Heisenberg.
+    fr: >-
+      En 1913, Niels Bohr publia un modèle de l'atome d'hydrogène dans lequel l'électron ne peut
+      occuper que des orbites d'énergie strictement définie : l'énergie est quantifiée et vaut
+      E = −13,6/n² eV. Lorsqu'il saute d'une orbite à l'autre, l'atome émet ou absorbe une lumière de
+      longueur d'onde exacte, ce qui explique pourquoi les spectres des gaz sont des raies discrètes.
+      Le modèle, né dans le Copenhague de Rutherford, fut un pont entre la physique classique et la
+      mécanique quantique développée plus tard par Schrödinger et Heisenberg.
+    zh: >-
+      1913年,尼尔斯·玻尔发表了氢原子模型,认为电子只能占据能量严格确定的轨道:能量是量子化的,
+      等于E = −13.6/n² eV。电子在轨道间跃迁时,原子会发射或吸收精确波长的光,这解释了为什么气体光谱
+      是离散的谱线。该模型诞生于卢瑟福所在的哥本哈根,是经典物理与后来由薛定谔和海森堡发展的量子力学
+      之间的桥梁。
+    ja: >-
+      1913年、ニールス・ボーアは電子が明確に決まったエネルギーを持つ軌道にしか存在できない水素原子モデルを発表した。
+      エネルギーは量子化されており、E = −13.6/n² eVとなる。電子が軌道間を移動するとき、原子は正確な波長の光を
+      放出または吸収する。これが気体のスペクトルが線になる理由だ。ラザフォードのいたコペンハーゲンで生まれたこの
+      モデルは、後にシュレーディンガーとハイゼンベルクが築いた量子力学への橋渡しとなった。
+  timeline:
+    - year: "1913"
+      label:
+        es: >-
+          Bohr publica su modelo atómico, que reproduce las frecuencias observadas del espectro del
+          hidrógeno.
+        en: >-
+          Bohr publishes his atomic model, which reproduces the observed frequencies of hydrogen's
+          spectrum.
+        pt: >-
+          Bohr publica seu modelo atômico, que reproduz as frequências observadas do espectro do
+          hidrogênio.
+        fr: >-
+          Bohr publie son modèle atomique, qui reproduit les fréquences observées du spectre de
+          l'hydrogène.
+        zh: >-
+          玻尔发表了他的原子模型,再现了氢光谱中观测到的频率。
+        ja: >-
+          ボーアが原子モデルを発表し、水素スペクトルの観測される周波数を再現する。
+    - year: "1922"
+      label:
+        es: >-
+          Bohr recibe el Premio Nobel de Física por sus investigaciones sobre la estructura del átomo
+          y su radiación.
+        en: >-
+          Bohr receives the Nobel Prize in Physics for his investigations into atomic structure and
+          its radiation.
+        pt: >-
+          Bohr recebe o Prêmio Nobel de Física por suas investigações sobre a estrutura do átomo e
+          sua radiação.
+        fr: >-
+          Bohr reçoit le prix Nobel de physique pour ses recherches sur la structure de l'atome et son
+          rayonnement.
+        zh: >-
+          玻尔因对原子结构及其辐射的研究而获得诺贝尔物理学奖。
+        ja: >-
+          ボーアが原子構造とその放射に関する研究でノーベル物理学賞を受賞する。
+    - year: "1925"
+      label:
+        es: >-
+          Heisenberg y Schrödinger desarrollan la mecánica cuántica moderna, que sustituye el modelo
+          de órbitas de Bohr.
+        en: >-
+          Heisenberg and Schrödinger develop modern quantum mechanics, which supersedes Bohr's orbit
+          model.
+        pt: >-
+          Heisenberg e Schrödinger desenvolvem a mecânica quântica moderna, que substitui o modelo de
+          órbitas de Bohr.
+        fr: >-
+          Heisenberg et Schrödinger développent la mécanique quantique moderne, qui remplace le modèle
+          d'orbites de Bohr.
+        zh: >-
+          海森堡和薛定谔发展了现代量子力学,取代了玻尔的轨道模型。
+        ja: >-
+          ハイゼンベルクとシュレーディンガーが現代量子力学を発展させ、ボーアの軌道モデルを置き換える。
+    - year: Hoy
+      label:
+        es: >-
+          Los niveles discretos de energía explican los láseres, los LEDs y las técnicas modernas de
+          espectroscopia.
+        en: >-
+          Discrete energy levels explain lasers, LEDs, and modern spectroscopic techniques.
+        pt: >-
+          Os níveis discretos de energia explicam lasers, LEDs e técnicas modernas de espectroscopia.
+        fr: >-
+          Les niveaux d'énergie discrets expliquent les lasers, les LED et les techniques modernes de
+          spectroscopie.
+        zh: >-
+          离散的能级解释了激光、发光二极管和现代光谱学技术。
+        ja: >-
+          離散的なエネルギー準位が、レーザー、LED、現代の分光法を説明している。
+  useCases:
+    - title:
+        es: Espectroscopia atómica
+        en: Atomic spectroscopy
+        pt: Espectroscopia atômica
+        fr: Spectroscopie atomique
+        zh: 原子光谱学
+        ja: 原子分光
+      description:
+        es: >-
+          Predice las longitudes de onda de las líneas del hidrógeno, usadas para identificar el
+          elemento en laboratorios y observatorios.
+        en: >-
+          It predicts the wavelengths of hydrogen's lines, used to identify the element in laboratories
+          and observatories.
+        pt: >-
+          Prevê os comprimentos de onda das linhas do hidrogênio, usados para identificar o elemento
+          em laboratórios e observatórios.
+        fr: >-
+          Elle prédit les longueurs d'onde des raies de l'hydrogène, utilisées pour identifier
+          l'élément dans les laboratoires et observatoires.
+        zh: >-
+          预测氢谱线的波长,用于在实验室和天文台中识别该元素。
+        ja: >-
+          水素のスペクトル線の波長を予測し、実験室や天文台での元素同定に使われる。
+    - title:
+        es: Astrofísica estelar
+        en: Stellar astrophysics
+        pt: Astrofísica estelar
+        fr: Astrophysique stellaire
+        zh: 恒星天体物理学
+        ja: 恒星天体物理学
+      description:
+        es: >-
+          Se usa para modelar el interior y la temperatura de las estrellas a partir de su luz y sus
+          niveles de energía.
+        en: >-
+          It is used to model a star's interior and temperature from its light and its energy levels.
+        pt: >-
+          É usada para modelar o interior e a temperatura das estrelas a partir de sua luz e de seus
+          níveis de energia.
+        fr: >-
+          Elle sert à modéliser l'intérieur et la température des étoiles à partir de leur lumière et
+          de leurs niveaux d'énergie.
+        zh: >-
+          用于根据恒星的光和能级,对其内部和温度进行建模。
+        ja: >-
+          恒星の光とエネルギー準位から、その内部構造や温度をモデル化するために使われる。
+    - title:
+        es: Láseres y LED
+        en: Lasers and LEDs
+        pt: Lasers e LEDs
+        fr: Lasers et LED
+        zh: 激光与发光二极管
+        ja: レーザーとLED
+      description:
+        es: >-
+          La luz emitida al caer entre niveles de energía fija el color del láser y de los diodos
+          emisores.
+        en: >-
+          The light emitted when falling between energy levels sets the color of lasers and
+          light-emitting diodes.
+        pt: >-
+          A luz emitida ao cair entre níveis de energia define a cor dos lasers e dos diodos emissores
+          de luz.
+        fr: >-
+          La lumière émise en descendant entre des niveaux d'énergie fixe la couleur des lasers et des
+          diodes électroluminescentes.
+        zh: >-
+          电子在能级之间跃迁时发出的光,决定了激光和发光二极管的颜色。
+        ja: >-
+          エネルギー準位間を落ちるときに放出される光が、レーザーや発光ダイオードの色を決める。
+    - title:
+        es: Enseñanza de la física cuántica
+        en: Quantum physics education
+        pt: Ensino de física quântica
+        fr: Enseignement de la physique quantique
+        zh: 量子物理教学
+        ja: 量子物理学の教育
+      description:
+        es: >-
+          Es el primer modelo cuantitativo del átomo que se estudia, base de cualquier curso de
+          mecánica cuántica.
+        en: >-
+          It is the first quantitative model of the atom students meet, the basis of any quantum
+          mechanics course.
+        pt: >-
+          É o primeiro modelo quantitativo do átomo que se estuda, base de qualquer curso de mecânica
+          quântica.
+        fr: >-
+          C'est le premier modèle quantitatif de l'atome étudié, la base de tout cours de mécanique
+          quantique.
+        zh: >-
+          这是学生学习的第一个定量原子模型,也是任何量子力学课程的基础。
+        ja: >-
+          学生が最初に学ぶ定量的な原子モデルであり、量子力学のあらゆる講義の基礎である。
+  example:
+    title:
+      es: El nivel n = 3 del hidrógeno
+      en: Hydrogen's n = 3 level
+      pt: O nível n = 3 do hidrogênio
+      fr: Le niveau n = 3 de l'hydrogène
+      zh: 氢的n = 3能级
+      ja: 水素のn = 3準位
+    lines:
+      - es: E = −13.6/n² eV
+        en: E = −13.6/n² eV
+        pt: E = −13,6/n² eV
+        fr: E = −13,6/n² eV
+        zh: E = −13.6/n² eV
+        ja: E = −13.6/n² eV
+      - es: Para n = 2 → E = −13.6/4
+        en: For n = 2 → E = −13.6/4
+        pt: Para n = 2 → E = −13,6/4
+        fr: Pour n = 2 → E = −13,6/4
+        zh: 当n = 2 → E = −13.6/4
+        ja: n = 2のとき → E = −13.6/4
+      - es: E = −3.4 eV
+        en: E = −3.4 eV
+        pt: E = −3,4 eV
+        fr: E = −3,4 eV
+        zh: E = −3.4 eV
+        ja: E = −3.4 eV
+      - es: Para n = 3 → E = −13.6/9
+        en: For n = 3 → E = −13.6/9
+        pt: Para n = 3 → E = −13,6/9
+        fr: Pour n = 3 → E = −13,6/9
+        zh: 当n = 3 → E = −13.6/9
+        ja: n = 3のとき → E = −13.6/9
+      - es: E ≈ −1.51 eV
+        en: E ≈ −1.51 eV
+        pt: E ≈ −1,51 eV
+        fr: E ≈ −1,51 eV
+        zh: E ≈ −1.51 eV
+        ja: E ≈ −1.51 eV

@@ -1,0 +1,337 @@
+id: de-moivres-theorem
+title:
+  es: Teorema de De Moivre
+  en: De Moivre's Theorem
+  pt: Teorema de De Moivre
+  fr: Théorème de De Moivre
+  zh: 棣莫弗定理
+  ja: ド・モアブルの定理
+category:
+  es: Análisis complejo
+  en: Complex analysis
+  pt: Análise complexa
+  fr: Analyse complexe
+  zh: 复分析
+  ja: 複素解析
+nodes:
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el número complejo de módulo 1.
+      en: Opens the unit-modulus complex number.
+      pt: Abre o número complexo de módulo 1.
+      fr: Ouvre le nombre complexe de module 1.
+      zh: 打开模为1的复数。
+      ja: 絶対値1の複素数を開く括弧。
+  - id: cos
+    type: variable
+    value: cos θ
+    explanation:
+      es: La parte real del número complejo.
+      en: The real part of the complex number.
+      pt: A parte real do número complexo.
+      fr: La partie réelle du nombre complexe.
+      zh: 复数的实部。
+      ja: 複素数の実部。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumada a la parte imaginaria.
+      en: Added to the imaginary part.
+      pt: Somada à parte imaginária.
+      fr: Ajoutée à la partie imaginaire.
+      zh: 加上虚部。
+      ja: 虚部に加える。
+  - id: i
+    type: constant
+    value: i
+    explanation:
+      es: "i: la unidad imaginaria, i² = −1."
+      en: "i: the imaginary unit, i² = −1."
+      pt: "i: a unidade imaginária, i² = −1."
+      fr: "i : l'unité imaginaire, i² = −1."
+      zh: "i：虚数单位，i² = −1。"
+      ja: "i：虚数単位。i² = −1。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: sin
+    type: variable
+    value: sin θ
+    explanation:
+      es: La parte imaginaria del número complejo.
+      en: The imaginary part of the complex number.
+      pt: A parte imaginária do número complexo.
+      fr: La partie imaginaire du nombre complexe.
+      zh: 复数的虚部。
+      ja: 複素数の虚部。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el número complejo.
+      en: Closes the complex number.
+      pt: Fecha o número complexo.
+      fr: Ferme le nombre complexe.
+      zh: 关闭复数。
+      ja: 複素数を閉じる括弧。
+  - id: n-pow
+    type: superscript
+    value: n
+    explanation:
+      es: "Elevado a n: multiplicar por sí mismo n veces."
+      en: "Raised to n: multiplied by itself n times."
+      pt: "Elevado a n: multiplicado por si mesmo n vezes."
+      fr: "Élevé à n : multiplié par lui-même n fois."
+      zh: "的n次方：自乘n次。"
+      ja: "n乗。n回自分自身を掛ける。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: cos-n
+    type: variable
+    value: cos nθ
+    explanation:
+      es: El coseno del ángulo multiplicado por n.
+      en: The cosine of the angle multiplied by n.
+      pt: O cosseno do ângulo multiplicado por n.
+      fr: Le cosinus de l'angle multiplié par n.
+      zh: 角度乘以n后的余弦。
+      ja: 角をn倍した余弦。
+  - id: plus-2
+    type: operator
+    value: +
+    explanation:
+      es: Sumada a la parte imaginaria.
+      en: Added to the imaginary part.
+      pt: Somada à parte imaginária.
+      fr: Ajoutée à la partie imaginaire.
+      zh: 加上虚部。
+      ja: 虚部に加える。
+  - id: i-2
+    type: constant
+    value: i
+    explanation:
+      es: La unidad imaginaria.
+      en: The imaginary unit.
+      pt: A unidade imaginária.
+      fr: L'unité imaginaire.
+      zh: 虚数单位。
+      ja: 虚数単位。
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: sin-n
+    type: variable
+    value: sin nθ
+    explanation:
+      es: El seno del ángulo multiplicado por n.
+      en: The sine of the angle multiplied by n.
+      pt: O seno do ângulo multiplicado por n.
+      fr: Le sinus de l'angle multiplié par n.
+      zh: 角度乘以n后的正弦。
+      ja: 角をn倍した正弦。
+context:
+  author:
+    es: Abraham de Moivre
+    en: Abraham de Moivre
+    pt: Abraham de Moivre
+    fr: Abraham de Moivre
+    zh: 亚伯拉罕·棣莫弗
+    ja: アブラハム・ド・モアブル
+  era:
+    es: Inglaterra, 1667–1754 · publicado en 1722
+    en: England, 1667–1754 · published in 1722
+    pt: Inglaterra, 1667–1754 · publicado em 1722
+    fr: Angleterre, 1667–1754 · publié en 1722
+    zh: 英国，1667–1754年·1722年发表
+    ja: イングランド、1667–1754年・1722年発表
+  history:
+    es: >-
+      En 1722, Abraham de Moivre anunció que las potencias de un número complejo sobre el círculo
+      unitario rotan su ángulo: elevarlo a n multiplica el argumento por n. El resultado anticipa la
+      fórmula de Euler, que lo resume en una línea. Con él se calculan raíces de números complejos,
+      las raíces de la unidad del análisis de Fourier y potencias de fasores en ingeniería eléctrica.
+    en: >-
+      In 1722 Abraham de Moivre announced that powers of a complex number on the unit circle rotate
+      its angle: raising it to n multiplies the argument by n. The result anticipates Euler's formula,
+      which summarizes it in a line. It computes roots of complex numbers, the roots of unity of
+      Fourier analysis, and powers of phasors in electrical engineering.
+    pt: >-
+      Em 1722, Abraham de Moivre anunciou que as potências de um número complexo sobre o círculo
+      unitário rotacionam seu ângulo: elevá-lo a n multiplica o argumento por n. O resultado antecipa
+      a fórmula de Euler, que o resume em uma linha. Com ele se calculam raízes de números complexos,
+      as raízes da unidade da análise de Fourier e potências de fasores em engenharia elétrica.
+    fr: >-
+      En 1722, Abraham de Moivre annonça que les puissances d'un nombre complexe sur le cercle
+      unitaire font tourner son angle : l'élever à n multiplie l'argument par n. Le résultat anticipe
+      la formule d'Euler, qui le résume en une ligne. Il permet de calculer les racines des nombres
+      complexes, les racines de l'unité de l'analyse de Fourier et les puissances des phaseurs en
+      génie électrique.
+    zh: >-
+      1722年，亚伯拉罕·棣莫弗指出，单位圆上复数的幂会旋转其角度：将其自乘n次，就把辐角乘以n。这一结果预示了
+      欧拉公式，后者一行即可概括它。借助该定理可以计算复数的根、傅里叶分析中的单位根，以及电气工程中相量的幂。
+    ja: >-
+      1722年、アブラハム・ド・モアブルは、単位円上の複素数の冪がその角を回転させることを発表した。すなわち、
+      n乗すると偏角がn倍される。この結果はオイラーの公式を先取りしており、後者はこれを1行にまとめる。この定理で、
+      複素数の冪根、フーリエ解析の1の冪根、電気工学のフェーザの冪が計算される。
+  timeline:
+    - year: "1722"
+      label:
+        es: >-
+          De Moivre presenta su fórmula en una nota a la Royal Society de Londres.
+        en: >-
+          De Moivre presents his formula in a note to the Royal Society of London.
+        pt: >-
+          De Moivre apresenta sua fórmula em uma nota à Royal Society de Londres.
+        fr: >-
+          De Moivre présente sa formule dans une note à la Royal Society de Londres.
+        zh: >-
+          棣莫弗在提交给伦敦皇家学会的札记中提出该公式。
+        ja: >-
+          ド・モアブルがロンドン王立協会へのノートでこの公式を発表する。
+    - year: "1748"
+      label:
+        es: >-
+          Euler publica su fórmula e^(iθ), de la cual el teorema de De Moivre es un caso inmediato.
+        en: >-
+          Euler publishes his formula e^(iθ), of which De Moivre's theorem is an immediate case.
+        pt: >-
+          Euler publica sua fórmula e^(iθ), da qual o teorema de De Moivre é um caso imediato.
+        fr: >-
+          Euler publie sa formule e^(iθ), dont le théorème de De Moivre est un cas immédiat.
+        zh: >-
+          欧拉发表e^(iθ)公式，棣莫弗定理正是它的直接特例。
+        ja: >-
+          オイラーがe^(iθ)の公式を発表し、ド・モアブルの定理はその直接的な帰結となる。
+    - year: Hoy
+      label:
+        es: >-
+          La transformada rápida de Fourier usa las raíces de la unidad que este teorema describe.
+        en: >-
+          The fast Fourier transform uses the roots of unity this theorem describes.
+        pt: >-
+          A transformada rápida de Fourier usa as raízes da unidade que esse teorema descreve.
+        fr: >-
+          La transformée de Fourier rapide utilise les racines de l'unité décrites par ce théorème.
+        zh: >-
+          快速傅里叶变换使用该定理所描述的单位根。
+        ja: >-
+          高速フーリエ変換は、この定理が記述する1の冪根を利用する。
+  useCases:
+    - title:
+        es: Procesamiento digital de señales
+        en: Digital signal processing
+        pt: Processamento digital de sinais
+        fr: Traitement numérique du signal
+        zh: 数字信号处理
+        ja: ディジタル信号処理
+      description:
+        es: >-
+          Las raíces de la unidad que este teorema describe son el corazón de la FFT.
+        en: >-
+          The roots of unity this theorem describes are the heart of the FFT.
+        pt: >-
+          As raízes da unidade que esse teorema descreve são o coração da FFT.
+        fr: >-
+          Les racines de l'unité décrites par ce théorème sont le cœur de la FFT.
+        zh: >-
+          该定理描述的单位根是FFT的核心。
+        ja: >-
+          この定理が記述する1の冪根は、FFTの心臓部である。
+    - title:
+        es: Ingeniería eléctrica
+        en: Electrical engineering
+        pt: Engenharia elétrica
+        fr: Génie électrique
+        zh: 电气工程
+        ja: 電気工学
+      description:
+        es: >-
+          Elevar fasores a potencias equivale a multiplicar sus ángulos con esta identidad.
+        en: >-
+          Raising phasors to powers means multiplying their angles with this identity.
+        pt: >-
+          Elevar fasores a potências equivale a multiplicar seus ângulos com essa identidade.
+        fr: >-
+          Élever des phaseurs à des puissances revient à multiplier leurs angles avec cette identité.
+        zh: >-
+          用这条恒等式，把相量取幂就等于把它们的角度相乘。
+        ja: >-
+          フェーザの冪をとることは、この恒等式でその角を掛け合わせることと同じである。
+    - title:
+        es: Gráficos 3D
+        en: 3D graphics
+        pt: Gráficos 3D
+        fr: Infographie 3D
+        zh: 3D 图形
+        ja: 3Dグラフィックス
+      description:
+        es: >-
+          Las rotaciones con cuaterniones generalizan esta rotación de ángulos al espacio.
+        en: >-
+          Quaternion rotations generalize this angle rotation to space.
+        pt: >-
+          Rotações com quatérnios generalizam essa rotação de ângulos ao espaço.
+        fr: >-
+          Les rotations par quaternions généralisent cette rotation d'angles à l'espace.
+        zh: >-
+          四元数旋转将这种角度旋转推广到三维空间。
+        ja: >-
+          クォータニオンによる回転は、この角の回転を空間へ一般化する。
+  example:
+    title:
+      es: Cuadrado de cos30° + i·sin30°
+      en: Square of cos30° + i·sin30°
+      pt: Quadrado de cos30° + i·sen30°
+      fr: Carré de cos30° + i·sin30°
+      zh: cos30° + i·sin30° 的平方
+      ja: cos30° + i·sin30° の2乗
+    lines:
+      - es: (cos 30° + i sin 30°)² = cos 60° + i sin 60°
+        en: (cos 30° + i sin 30°)² = cos 60° + i sin 60°
+        pt: (cos 30° + i sen 30°)² = cos 60° + i sen 60°
+        fr: (cos 30° + i sin 30°)² = cos 60° + i sin 60°
+        zh: (cos 30° + i sin 30°)² = cos 60° + i sin 60°
+        ja: (cos 30° + i sin 30°)² = cos 60° + i sin 60°
+      - es: cos 60° = 0.5, sin 60° ≈ 0.866
+        en: cos 60° = 0.5, sin 60° ≈ 0.866
+        pt: cos 60° = 0,5, sen 60° ≈ 0,866
+        fr: cos 60° = 0,5, sin 60° ≈ 0,866
+        zh: cos 60° = 0.5，sin 60° ≈ 0.866
+        ja: cos 60° = 0.5、sin 60° ≈ 0.866
+      - es: "Resultado: 0.5 + 0.866i"
+        en: "Result: 0.5 + 0.866i"
+        pt: "Resultado: 0,5 + 0,866i"
+        fr: "Résultat : 0,5 + 0,866i"
+        zh: "结果为：0.5 + 0.866i"
+        ja: "結果：0.5 + 0.866i"
+      - es: "El ángulo se duplicó: de 30° a 60°"
+        en: "The angle doubled: from 30° to 60°"
+        pt: "O ângulo dobrou: de 30° para 60°"
+        fr: "L'angle a doublé : de 30° à 60°"
+        zh: "角度翻倍：从30°变为60°"
+        ja: "角が30°から60°に倍になった。"

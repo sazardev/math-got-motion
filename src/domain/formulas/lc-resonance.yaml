@@ -1,0 +1,434 @@
+id: lc-resonance
+title:
+  es: Frecuencia de Resonancia LC
+  en: LC Resonance Frequency
+  pt: Frequência de Ressonância LC
+  fr: Fréquence de Résonance LC
+  zh: LC谐振频率
+  ja: LC共振周波数
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: f
+    type: variable
+    value: f
+    explanation:
+      es: La frecuencia natural de oscilación del circuito, en hercios.
+      en: The natural oscillation frequency of the circuit, in hertz.
+      pt: A frequência natural de oscilação do circuito, em hertz.
+      fr: La fréquence naturelle d'oscillation du circuit, en hertz.
+      zh: 电路的自然振荡频率,单位为赫兹。
+      ja: 回路の固有振動数。単位はヘルツ。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: El numerador de la fracción que define la frecuencia.
+      en: The numerator of the fraction that defines the frequency.
+      pt: O numerador da fração que define a frequência.
+      fr: Le numérateur de la fraction qui définit la fréquence.
+      zh: 定义频率的分数的分子。
+      ja: 周波数を定義する分数の分子。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por el resto de la expresión.
+      en: Divided by the rest of the expression.
+      pt: Dividido pelo restante da expressão.
+      fr: Divisée par le reste de l'expression.
+      zh: 除以表达式的其余部分。
+      ja: 式の残りの部分で割る。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el denominador de la fracción.
+      en: Opens the denominator of the fraction.
+      pt: Abre o denominador da fração.
+      fr: Ouvre le dénominateur de la fraction.
+      zh: 打开分数的分母。
+      ja: 分数の分母を始める括弧。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: El factor dos, que proviene de la oscilación completa de ida y vuelta.
+      en: The factor two, coming from the full back-and-forth oscillation.
+      pt: O fator dois, que vem da oscilação completa de ida e volta.
+      fr: Le facteur deux, issu de l'oscillation complète aller-retour.
+      zh: 因数二,来自完整的一来一回振荡。
+      ja: 完全な往復振動に由来する係数2。
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación de magnitudes.
+      en: Multiplication of quantities.
+      pt: Multiplicação de grandezas.
+      fr: Multiplication de grandeurs.
+      zh: 数量相乘。
+      ja: 量の掛け算。
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: Pi, la constante que relaciona la circunferencia con su diámetro, unos 3.1416.
+      en: Pi, the constant relating a circle's circumference to its diameter, about 3.1416.
+      pt: Pi, a constante que relaciona a circunferência com o diâmetro, cerca de 3,1416.
+      fr: Pi, la constante reliant la circonférence d'un cercle à son diamètre, environ 3,1416.
+      zh: 圆周率π,即圆的周长与直径之比,约为3.1416。
+      ja: 円周率。円の円周と直径の比で、約3.1416。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación de magnitudes.
+      en: Multiplication of quantities.
+      pt: Multiplicação de grandezas.
+      fr: Multiplication de grandeurs.
+      zh: 数量相乘。
+      ja: 量の掛け算。
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: La raíz cuadrada del producto de la inductancia y la capacitancia.
+      en: The square root of the product of inductance and capacitance.
+      pt: A raiz quadrada do produto da indutância pela capacitância.
+      fr: La racine carrée du produit de l'inductance et de la capacité.
+      zh: 电感与电容乘积的平方根。
+      ja: インダクタンスと静電容量の積の平方根。
+  - id: open-paren-2
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el argumento de la raíz.
+      en: Opens the argument of the root.
+      pt: Abre o argumento da raiz.
+      fr: Ouvre l'argument de la racine.
+      zh: 打开根号内的表达式。
+      ja: 根号の中身を始める括弧。
+  - id: l
+    type: variable
+    value: L
+    explanation:
+      es: La inductancia del circuito, en henrios.
+      en: The inductance of the circuit, in henries.
+      pt: A indutância do circuito, em henries.
+      fr: L'inductance du circuit, en henrys.
+      zh: 电路的电感,单位为亨利。
+      ja: 回路のインダクタンス。単位はヘンリー。
+  - id: dot-3
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación de magnitudes.
+      en: Multiplication of quantities.
+      pt: Multiplicação de grandezas.
+      fr: Multiplication de grandeurs.
+      zh: 数量相乘。
+      ja: 量の掛け算。
+  - id: c
+    type: variable
+    value: C
+    explanation:
+      es: La capacitancia del circuito, en faradios.
+      en: The capacitance of the circuit, in farads.
+      pt: A capacitância do circuito, em farads.
+      fr: La capacité du circuit, en farads.
+      zh: 电路的电容,单位为法拉。
+      ja: 回路の静電容量。単位はファラッド。
+  - id: close-paren-2
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el argumento de la raíz.
+      en: Closes the argument of the root.
+      pt: Fecha o argumento da raiz.
+      fr: Ferme l'argument de la racine.
+      zh: 关闭根号内的表达式。
+      ja: 根号の中身を終える括弧。
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el denominador de la fracción.
+      en: Closes the denominator of the fraction.
+      pt: Fecha o denominador da fração.
+      fr: Ferme le dénominateur de la fraction.
+      zh: 关闭分数的分母。
+      ja: 分数の分母を閉じる括弧。
+context:
+  author:
+    es: Basada en el trabajo de Maxwell y Lord Rayleigh
+    en: Based on the work of Maxwell and Lord Rayleigh
+    pt: Baseada no trabalho de Maxwell e Lord Rayleigh
+    fr: D'après les travaux de Maxwell et Lord Rayleigh
+    zh: 基于麦克斯韦和瑞利勋爵的研究成果
+    ja: マクスウェルとレイリー卿の研究に基づく
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, séc. XIX
+    fr: Europe, XIXᵉ siècle
+    zh: 欧洲,19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      Un circuito formado por una bobina y un condensador intercambia energía entre el campo
+      magnético del inductor y el campo eléctrico del condensador, oscilando con una frecuencia
+      natural propia. Esa frecuencia, f = 1/(2·π·√(L·C)), es la que los receptores de radio ajustan
+      cuando giran el mando del sintonizador: cada estación emite a una frecuencia distinta y el
+      circuito solo responde a la suya. El mismo principio está detrás de los osciladores que generan
+      la señal, de los filtros que separan frecuencias y de la carga inalámbrica moderna, que
+      transfiere energía por resonancia entre dos bobinas.
+    en: >-
+      A circuit made of a coil and a capacitor swaps energy between the inductor's magnetic field
+      and the capacitor's electric field, oscillating at its own natural frequency. That frequency,
+      f = 1/(2·π·√(L·C)), is what radio receivers adjust when the tuning knob is turned: each
+      station broadcasts on a different frequency and the circuit responds only to its own. The same
+      principle sits behind the oscillators that generate the signal, the filters that separate
+      frequencies, and modern wireless charging, which transfers energy by resonance between two
+      coils.
+    pt: >-
+      Um circuito formado por uma bobina e um capacitor troca energia entre o campo magnético do
+      indutor e o campo elétrico do capacitor, oscilando com uma frequência natural própria. Essa
+      frequência, f = 1/(2·π·√(L·C)), é a que os receptores de rádio ajustam ao girar o botão de
+      sintonia: cada estação emite em uma frequência diferente e o circuito só responde à sua. O
+      mesmo princípio está por trás dos osciladores que geram o sinal, dos filtros que separam
+      frequências e do carregamento sem fio moderno, que transfere energia por ressonância entre
+      duas bobinas.
+    fr: >-
+      Un circuit formé d'une bobine et d'un condensateur échange de l'énergie entre le champ
+      magnétique de l'inducteur et le champ électrique du condensateur, en oscillant à sa propre
+      fréquence naturelle. Cette fréquence, f = 1/(2·π·√(L·C)), est celle que les récepteurs radio
+      ajustent lorsqu'on tourne le bouton de syntonisation : chaque station émet sur une fréquence
+      différente et le circuit ne répond qu'à la sienne. Le même principe est à l'origine des
+      oscillateurs qui produisent le signal, des filtres qui séparent les fréquences et du
+      chargement sans fil moderne, qui transfère l'énergie par résonance entre deux bobines.
+    zh: >-
+      由线圈和电容器组成的电路在电感器的磁场与电容器的电场之间交换能量,以自身的固有频率振荡。这个频率
+      f = 1/(2·π·√(L·C)) 正是收音机转动调谐旋钮时调整的对象:每个电台以不同的频率广播,电路只对自身的频率作出
+      响应。同一原理也存在于产生信号的振荡器、分离频率的滤波器,以及现代的无线充电技术之中——后者通过两个线圈之间
+      的谐振来传输能量。
+    ja: >-
+      コイルとコンデンサからなる回路は、インダクタの磁界とコンデンサの電界の間でエネルギーを交換しながら、固有の
+      周波数で振動する。この周波数 f = 1/(2·π·√(L·C)) は、ラジオ受信機が選局ダイヤルを回すときに調整しているもの
+      だ。各放送局は異なる周波数で電波を送り、回路は自分の周波数にだけ応答する。同じ原理は、信号を作る発振器、周波数
+      を分離するフィルタ、そして2つのコイル間の共振でエネルギーを伝える現代のワイヤレス充電の背後にもある。
+  timeline:
+    - year: "1853"
+      label:
+        es: >-
+          William Thomson (Lord Kelvin) describe la descarga oscilatoria de un condensador a través
+          de una bobina.
+        en: >-
+          William Thomson (Lord Kelvin) describes the oscillatory discharge of a capacitor through a
+          coil.
+        pt: >-
+          William Thomson (Lord Kelvin) descreve a descarga oscilatória de um capacitor através de
+          uma bobina.
+        fr: >-
+          William Thomson (lord Kelvin) décrit la décharge oscillatoire d'un condensateur à travers
+          une bobine.
+        zh: >-
+          威廉·汤姆森(开尔文勋爵)描述电容器通过线圈的振荡放电。
+        ja: >-
+          ウィリアム・トムソン(ケルビン卿)が、コンデンサがコイルを通して振動放電することを記述する。
+    - year: "1864"
+      label:
+        es: >-
+          Maxwell publica su teoría dinámica del campo electromagnético, marco de toda la radio.
+        en: >-
+          Maxwell publishes his dynamical theory of the electromagnetic field, the framework of all
+          radio.
+        pt: >-
+          Maxwell publica sua teoria dinâmica do campo eletromagnético, base de todo o rádio.
+        fr: >-
+          Maxwell publie sa théorie dynamique du champ électromagnétique, cadre de toute la radio.
+        zh: >-
+          麦克斯韦发表其电磁场动力学理论,成为全部无线电的基础框架。
+        ja: >-
+          マクスウェルが電磁場の動力学的理論を発表し、すべての無線の枠組みとなる。
+    - year: "1895"
+      label:
+        es: >-
+          Marconi logra las primeras transmisiones inalámbricas y los circuitos sintonizados se
+          vuelven esenciales.
+        en: >-
+          Marconi achieves the first wireless transmissions and tuned circuits become essential.
+        pt: >-
+          Marconi consegue as primeiras transmissões sem fio e os circuitos sintonizados se tornam
+          essenciais.
+        fr: >-
+          Marconi réalise les premières transmissions sans fil et les circuits accordés deviennent
+          essentiels.
+        zh: >-
+          马可尼实现最初的无线传输,调谐电路从此不可或缺。
+        ja: >-
+          マルコーニが最初の無線通信に成功し、同調回路が不可欠となる。
+    - year: Hoy
+      label:
+        es: >-
+          Osciladores, filtros y cargadores inalámbricos usan la resonancia LC desde kilohercios
+          hasta gigahercios.
+        en: >-
+          Oscillators, filters, and wireless chargers use LC resonance from kilohertz to gigahertz.
+        pt: >-
+          Osciladores, filtros e carregadores sem fio usam a ressonância LC de quilo-hertz a
+          giga-hertz.
+        fr: >-
+          Oscillateurs, filtres et chargeurs sans fil utilisent la résonance LC du kilohertz au
+          gigahertz.
+        zh: >-
+          振荡器、滤波器和无线充电器都在从千赫到吉赫的频率范围内使用LC谐振。
+        ja: >-
+          発振器、フィルタ、ワイヤレス充電器は、kHzからGHzまでの範囲でLC共振を利用する。
+  useCases:
+    - title:
+        es: Sintonización de radio
+        en: Radio tuning
+        pt: Sintonia de rádio
+        fr: Syntonisation radio
+        zh: 无线电调谐
+        ja: ラジオ同調
+      description:
+        es: >-
+          El receptor ajusta su capacitancia para resonar solo con la frecuencia de la estación
+          elegida.
+        en: >-
+          The receiver tunes its capacitance to resonate only with the chosen station's frequency.
+        pt: >-
+          O receptor ajusta sua capacitância para ressoar somente com a frequência da estação
+          escolhida.
+        fr: >-
+          Le récepteur ajuste sa capacité pour ne résonner qu'avec la fréquence de la station
+          choisie.
+        zh: >-
+          接收机调节电容,使其只与所选电台的频率谐振。
+        ja: >-
+          受信機は静電容量を調整し、選んだ放送局の周波数のみと共振させる。
+    - title:
+        es: Osciladores electrónicos
+        en: Electronic oscillators
+        pt: Osciladores eletrônicos
+        fr: Oscillateurs électroniques
+        zh: 电子振荡器
+        ja: 電子発振器
+      description:
+        es: >-
+          Un circuito LC define la frecuencia de reloj de procesadores, radios y sistemas de
+          comunicación.
+        en: >-
+          An LC circuit sets the clock frequency of processors, radios, and communication systems.
+        pt: >-
+          Um circuito LC define a frequência de clock de processadores, rádios e sistemas de
+          comunicação.
+        fr: >-
+          Un circuit LC fixe la fréquence d'horloge des processeurs, radios et systèmes de
+          communication.
+        zh: >-
+          LC电路设定处理器、无线电和通信系统的时钟频率。
+        ja: >-
+          LC回路は、プロセッサやラジオ、通信システムのクロック周波数を決める。
+    - title:
+        es: Filtros de frecuencia
+        en: Frequency filters
+        pt: Filtros de frequência
+        fr: Filtres de fréquence
+        zh: 频率滤波器
+        ja: 周波数フィルタ
+      description:
+        es: >-
+          Los filtros resonantes dejan pasar su frecuencia natural y atenúan el resto.
+        en: >-
+          Resonant filters pass their natural frequency and attenuate the rest.
+        pt: >-
+          Filtros ressonantes deixam passar sua frequência natural e atenuam o restante.
+        fr: >-
+          Les filtres résonants laissent passer leur fréquence naturelle et atténuent le reste.
+        zh: >-
+          谐振滤波器只让自身固有频率通过,并衰减其余频率。
+        ja: >-
+          共振フィルタは固有周波数を通し、それ以外を減衰させる。
+    - title:
+        es: Carga inalámbrica
+        en: Wireless charging
+        pt: Carregamento sem fio
+        fr: Chargement sans fil
+        zh: 无线充电
+        ja: ワイヤレス充電
+      description:
+        es: >-
+          Dos bobinas resonantes a la misma frecuencia transfieren energía sin conexión física.
+        en: >-
+          Two coils resonating at the same frequency transfer energy with no physical contact.
+        pt: >-
+          Duas bobinas ressonantes na mesma frequência transferem energia sem contato físico.
+        fr: >-
+          Deux bobines résonnant à la même fréquence transfèrent l'énergie sans contact physique.
+        zh: >-
+          两个同频谐振的线圈无需物理接触即可传输能量。
+        ja: >-
+          同じ周波数で共振する2つのコイルが、物理的な接触なしにエネルギーを伝える。
+  example:
+    title:
+      es: Resonancia de un circuito LC
+      en: Resonance of an LC circuit
+      pt: Ressonância de um circuito LC
+      fr: Résonance d'un circuit LC
+      zh: LC电路的谐振
+      ja: LC回路の共振
+    lines:
+      - es: L = 1 mH
+        en: L = 1 mH
+        pt: L = 1 mH
+        fr: L = 1 mH
+        zh: L = 1 mH
+        ja: L = 1 mH
+      - es: C = 1 nF
+        en: C = 1 nF
+        pt: C = 1 nF
+        fr: C = 1 nF
+        zh: C = 1 nF
+        ja: C = 1 nF
+      - es: √(L · C) = √(10⁻¹²) = 10⁻⁶
+        en: √(L · C) = √(10⁻¹²) = 10⁻⁶
+        pt: √(L · C) = √(10⁻¹²) = 10⁻⁶
+        fr: √(L · C) = √(10⁻¹²) = 10⁻⁶
+        zh: √(L · C) = √(10⁻¹²) = 10⁻⁶
+        ja: √(L · C) = √(10⁻¹²) = 10⁻⁶
+      - es: f = 1/(2 · π · 10⁻⁶)
+        en: f = 1/(2 · π · 10⁻⁶)
+        pt: f = 1/(2 · π · 10⁻⁶)
+        fr: f = 1/(2 · π · 10⁻⁶)
+        zh: f = 1/(2 · π · 10⁻⁶)
+        ja: f = 1/(2 · π · 10⁻⁶)
+      - es: f = 1/(6,2832 × 10⁻⁶)
+        en: f = 1/(6.2832 × 10⁻⁶)
+        pt: f = 1/(6,2832 × 10⁻⁶)
+        fr: f = 1/(6,2832 × 10⁻⁶)
+        zh: f = 1/(6.2832 × 10⁻⁶)
+        ja: f = 1/(6.2832 × 10⁻⁶)
+      - es: f ≈ 159 kHz
+        en: f ≈ 159 kHz
+        pt: f ≈ 159 kHz
+        fr: f ≈ 159 kHz
+        zh: f ≈ 159 kHz
+        ja: f ≈ 159 kHz

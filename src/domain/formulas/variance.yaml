@@ -1,0 +1,279 @@
+id: variance
+title:
+  es: Varianza
+  en: Variance
+  pt: Variância
+  fr: Variance
+  zh: 方差
+  ja: 分散
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率統計
+nodes:
+  - id: var
+    type: variable
+    value: Var(X)
+    explanation:
+      es: La varianza de la variable aleatoria X.
+      en: The variance of the random variable X.
+      pt: A variância da variável aleatória X.
+      fr: La variance de la variable aléatoire X.
+      zh: 随机变量X的方差。
+      ja: 確率変数Xの分散。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Se define como.
+      en: Is defined as.
+      pt: É definida como.
+      fr: Est définie comme.
+      zh: 定义为。
+      ja: 次のように定義される。
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: La esperanza matemática.
+      en: The expected value.
+      pt: O valor esperado.
+      fr: L'espérance mathématique.
+      zh: 数学期望。
+      ja: 期待値。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el cuadrado de la desviación.
+      en: Opens the squared deviation.
+      pt: Abre o quadrado do desvio.
+      fr: Ouvre le carré de l'écart.
+      zh: 打开偏差的平方。
+      ja: 偏差の2乗を開く括弧。
+  - id: x-mu
+    type: variable
+    value: X−μ
+    explanation:
+      es: La desviación de X respecto a su media μ.
+      en: The deviation of X from its mean μ.
+      pt: O desvio de X em relação à sua média μ.
+      fr: L'écart de X par rapport à sa moyenne μ.
+      zh: X与其均值μ的偏差。
+      ja: Xの平均μからの偏差。
+  - id: square
+    type: superscript
+    value: "2"
+    explanation:
+      es: Al cuadrado, para que las desviaciones no se cancelen.
+      en: Squared, so deviations do not cancel out.
+      pt: Ao quadrado, para que os desvios não se cancelem.
+      fr: Au carré, pour que les écarts ne s'annulent pas.
+      zh: 平方，使偏差不会相互抵消。
+      ja: 2乗。偏差が打ち消し合わないようにする。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la desviación al cuadrado.
+      en: Closes the squared deviation.
+      pt: Fecha o desvio ao quadrado.
+      fr: Ferme l'écart au carré.
+      zh: 关闭偏差的平方。
+      ja: 偏差の2乗を閉じる括弧。
+context:
+  author:
+    es: Ronald Fisher
+    en: Ronald Fisher
+    pt: Ronald Fisher
+    fr: Ronald Fisher
+    zh: 罗纳德·费雪
+    ja: ロナルド・フィッシャー
+  era:
+    es: Inglaterra, 1890–1962 · término acuñado en 1918
+    en: England, 1890–1962 · term coined in 1918
+    pt: Inglaterra, 1890–1962 · termo cunhado em 1918
+    fr: Angleterre, 1890–1962 · terme inventé en 1918
+    zh: 英国，1890–1962年·1918年命名
+    ja: イングランド、1890–1962年・1918年に命名
+  history:
+    es: >-
+      El concepto de dispersión es antiguo, pero el nombre "varianza" lo acuñó Ronald Fisher en 1918,
+      en un artículo sobre genética y selección natural. La varianza mide cuánto se dispersan los
+      valores alrededor de la media, elevando las desviaciones al cuadrado para que no se anulen. Su
+      raíz cuadrada es la desviación estándar, y el análisis de la varianza (ANOVA) nació de la
+      pregunta de Fisher sobre qué parte de la variación se debe a qué causa.
+    en: >-
+      The concept of dispersion is old, but the name "variance" was coined by Ronald Fisher in 1918, in
+      a paper on genetics and natural selection. Variance measures how spread out the values are around
+      the mean, squaring the deviations so they do not cancel. Its square root is the standard
+      deviation, and analysis of variance (ANOVA) grew from Fisher's question about how much of the
+      variation is due to which cause.
+    pt: >-
+      O conceito de dispersão é antigo, mas o nome "variância" foi cunhado por Ronald Fisher em 1918,
+      em um artigo sobre genética e seleção natural. A variância mede o quanto os valores se dispersam
+      em torno da média, elevando os desvios ao quadrado para que não se cancelem. Sua raiz quadrada é o
+      desvio padrão, e a análise de variância (ANOVA) nasceu da pergunta de Fisher sobre quanto da
+      variação se deve a qual causa.
+    fr: >-
+      Le concept de dispersion est ancien, mais le nom « variance » fut inventé par Ronald Fisher en
+      1918, dans un article sur la génétique et la sélection naturelle. La variance mesure la
+      dispersion des valeurs autour de la moyenne, en élevant les écarts au carré pour qu'ils ne
+      s'annulent pas. Sa racine carrée est l'écart type, et l'analyse de la variance (ANOVA) est née de
+      la question de Fisher sur la part de variation due à chaque cause.
+    zh: >-
+      离散度的概念由来已久，但"方差"一词是罗纳德·费雪于1918年在关于遗传与自然选择的论文中创造的。方差度量
+      数值围绕均值的离散程度，将偏差平方以避免相互抵消。其平方根就是标准差，而方差分析（ANOVA）正源于费雪
+      关于"多少变异由何种原因造成"的问题。
+    ja: >-
+      ばらつきの概念は古いが、「分散」という名前は1918年、ロナルド・フィッシャーが遺伝と自然淘汰に関する論文で
+      作った。分散は、値が平均の周りにどれだけ散らばっているかを測る。偏差を2乗して打ち消し合わないようにする。
+      その平方根が標準偏差であり、分散分析（ANOVA）は、変動のどのくらいがどの原因によるのかというフィッシャーの
+      問いから生まれた。
+  timeline:
+    - year: "1918"
+      label:
+        es: >-
+          Fisher acuña el término "varianza" en su estudio de genética.
+        en: >-
+          Fisher coins the term "variance" in his genetics study.
+        pt: >-
+          Fisher cunha o termo "variância" em seu estudo de genética.
+        fr: >-
+          Fisher invente le terme « variance » dans son étude de génétique.
+        zh: >-
+          费雪在其遗传学研究中创造"方差"一词。
+        ja: >-
+          フィッシャーが遺伝学の研究で「分散」という用語を作る。
+    - year: "1925"
+      label:
+        es: >-
+          Fisher publica el análisis de la varianza (ANOVA) en Statistical Methods.
+        en: >-
+          Fisher publishes analysis of variance (ANOVA) in Statistical Methods.
+        pt: >-
+          Fisher publica a análise de variância (ANOVA) em Statistical Methods.
+        fr: >-
+          Fisher publie l'analyse de la variance (ANOVA) dans Statistical Methods.
+        zh: >-
+          费雪在《统计方法》中发表方差分析（ANOVA）。
+        ja: >-
+          フィッシャーが『統計的方法』で分散分析（ANOVA）を発表する。
+    - year: Hoy
+      label:
+        es: >-
+          Es la base de todo test estadístico, del riesgo financiero y del machine learning.
+        en: >-
+          It is the basis of every statistical test, financial risk, and machine learning.
+        pt: >-
+          É a base de todo teste estatístico, do risco financeiro e do aprendizado de máquina.
+        fr: >-
+          Elle est à la base de tout test statistique, du risque financier et de l'apprentissage
+          automatique.
+        zh: >-
+          它是所有统计检验、金融风险和机器学习的基础。
+        ja: >-
+          あらゆる統計検定、金融リスク、機械学習の基盤である。
+  useCases:
+    - title:
+        es: Gestión de riesgo financiero
+        en: Financial risk management
+        pt: Gestão de risco financeiro
+        fr: Gestion du risque financier
+        zh: 金融风险管理
+        ja: 金融リスク管理
+      description:
+        es: >-
+          La varianza de un activo mide su volatilidad, el riesgo de su retorno.
+        en: >-
+          An asset's variance measures its volatility, the risk of its return.
+        pt: >-
+          A variância de um ativo mede sua volatilidade, o risco do seu retorno.
+        fr: >-
+          La variance d'un actif mesure sa volatilité, le risque de son rendement.
+        zh: >-
+          资产的方差度量其波动率，即回报的风险。
+        ja: >-
+          資産の分散はそのボラティリティ、すなわちリターンのリスクを測る。
+    - title:
+        es: Control de calidad
+        en: Quality control
+        pt: Controle de qualidade
+        fr: Contrôle qualité
+        zh: 质量控制
+        ja: 品質管理
+      description:
+        es: >-
+          La variación de un proceso de fabricación se vigila con la varianza.
+        en: >-
+          The variation of a manufacturing process is monitored with variance.
+        pt: >-
+          A variação de um processo de fabricação é monitorada com a variância.
+        fr: >-
+          La variation d'un processus de fabrication se surveille avec la variance.
+        zh: >-
+          制造过程的变异用方差来监控。
+        ja: >-
+          製造工程のばらつきは分散で監視される。
+    - title:
+        es: Ciencia de datos
+        en: Data science
+        pt: Ciência de dados
+        fr: Science des données
+        zh: 数据科学
+        ja: データサイエンス
+      description:
+        es: >-
+          El PCA y la selección de características usan la varianza de cada dimensión.
+        en: >-
+          PCA and feature selection use the variance of each dimension.
+        pt: >-
+          O PCA e a seleção de características usam a variância de cada dimensão.
+        fr: >-
+          L'ACP et la sélection de caractéristiques utilisent la variance de chaque dimension.
+        zh: >-
+          PCA和特征选择使用每个维度的方差。
+        ja: >-
+          PCAや特徴選択は、各次元の分散を利用する。
+  example:
+    title:
+      es: Varianza de un dado
+      en: Variance of a die
+      pt: Variância de um dado
+      fr: Variance d'un dé
+      zh: 一枚骰子的方差
+      ja: サイコロの分散
+    lines:
+      - es: "μ = 3.5 (esperanza del dado)"
+        en: "μ = 3.5 (expected value of the die)"
+        pt: "μ = 3,5 (valor esperado do dado)"
+        fr: "μ = 3,5 (espérance du dé)"
+        zh: "μ = 3.5（骰子的期望）"
+        ja: "μ = 3.5（サイコロの期待値）"
+      - es: Var = Σ (x−μ)² · 1/6
+        en: Var = Σ (x−μ)² · 1/6
+        pt: Var = Σ (x−μ)² · 1/6
+        fr: Var = Σ (x−μ)² · 1/6
+        zh: Var = Σ (x−μ)² · 1/6
+        ja: Var = Σ (x−μ)² · 1/6
+      - es: Suma de cuadrados = 17.5
+        en: Sum of squares = 17.5
+        pt: Soma dos quadrados = 17,5
+        fr: Somme des carrés = 17,5
+        zh: 平方和为17.5
+        ja: 平方和 = 17.5
+      - es: Var = 17.5 · 1/6
+        en: Var = 17.5 · 1/6
+        pt: Var = 17,5 · 1/6
+        fr: Var = 17,5 · 1/6
+        zh: Var = 17.5 · 1/6
+        ja: Var = 17.5 · 1/6
+      - es: Var ≈ 2.917
+        en: Var ≈ 2.917
+        pt: Var ≈ 2,917
+        fr: Var ≈ 2,917
+        zh: Var ≈ 2.917
+        ja: Var ≈ 2.917

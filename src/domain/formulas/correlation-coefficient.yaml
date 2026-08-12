@@ -1,0 +1,259 @@
+id: correlation-coefficient
+title:
+  es: Coeficiente de Correlación
+  en: Correlation Coefficient
+  pt: Coeficiente de Correlação
+  fr: Coefficient de corrélation
+  zh: 相关系数
+  ja: 相関係数
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率統計
+nodes:
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "r: el coeficiente de correlación de Pearson."
+      en: "r: the Pearson correlation coefficient."
+      pt: "r: o coeficiente de correlação de Pearson."
+      fr: "r : le coefficient de corrélation de Pearson."
+      zh: "r：皮尔逊相关系数。"
+      ja: "r：ピアソンの相関係数。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Se define como.
+      en: Is defined as.
+      pt: É definido como.
+      fr: Est défini comme.
+      zh: 定义为。
+      ja: 次のように定義される。
+  - id: cov
+    type: variable
+    value: cov(X,Y)
+    explanation:
+      es: La covarianza de X e Y.
+      en: The covariance of X and Y.
+      pt: A covariância de X e Y.
+      fr: La covariance de X et Y.
+      zh: X和Y的协方差。
+      ja: XとYの共分散。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividida entre.
+      en: Divided by.
+      pt: Dividida por.
+      fr: Divisée par.
+      zh: 除以。
+      ja: で割る。
+  - id: sigma-x
+    type: variable
+    value: σₓ·σᵧ
+    explanation:
+      es: El producto de las desviaciones estándar de X e Y.
+      en: The product of the standard deviations of X and Y.
+      pt: O produto dos desvios padrão de X e Y.
+      fr: Le produit des écarts types de X et Y.
+      zh: X和Y的标准差之积。
+      ja: XとYの標準偏差の積。
+context:
+  author:
+    es: Karl Pearson
+    en: Karl Pearson
+    pt: Karl Pearson
+    fr: Karl Pearson
+    zh: 卡尔·皮尔逊
+    ja: カール・ピアソン
+  era:
+    es: Inglaterra, 1857–1936 · publicado en 1895
+    en: England, 1857–1936 · published in 1895
+    pt: Inglaterra, 1857–1936 · publicado em 1895
+    fr: Angleterre, 1857–1936 · publié en 1895
+    zh: 英国，1857–1936年·1895年发表
+    ja: イングランド、1857–1936年・1895年発表
+  history:
+    es: >-
+      Francis Galton había estudiado cómo se hereda la estatura y, en 1888, definió la correlación.
+      Karl Pearson la formalizó en 1895 con el coeficiente que lleva su nombre, normalizando la
+      covarianza entre −1 y 1. Un valor cercano a 1 indica asociación lineal creciente, cercano a −1
+      decreciente y 0 ninguna lineal. Es, quizá, la estadística más citada de la ciencia: con ella se
+      mide desde el efecto de un fármaco hasta el vínculo entre variables económicas.
+    en: >-
+      Francis Galton had studied how height is inherited and, in 1888, defined correlation. Karl
+      Pearson formalized it in 1895 with the coefficient bearing his name, normalizing covariance
+      between −1 and 1. A value near 1 indicates increasing linear association, near −1 decreasing,
+      and 0 none. It is perhaps the most cited statistic in science, measuring everything from a drug's
+      effect to the link between economic variables.
+    pt: >-
+      Francis Galton havia estudado como a estatura é herdada e, em 1888, definiu a correlação. Karl
+      Pearson a formalizou em 1895 com o coeficiente que leva seu nome, normalizando a covariância entre
+      −1 e 1. Um valor próximo de 1 indica associação linear crescente, próximo de −1 decrescente e 0
+      nenhuma. É, talvez, a estatística mais citada da ciência: com ela se mede desde o efeito de um
+      fármaco até o vínculo entre variáveis econômicas.
+    fr: >-
+      Francis Galton avait étudié l'hérédité de la taille et, en 1888, défini la corrélation. Karl
+      Pearson la formalisa en 1895 avec le coefficient qui porte son nom, normalisant la covariance
+      entre −1 et 1. Une valeur proche de 1 indique une association linéaire croissante, proche de −1
+      décroissante et 0 aucune. C'est peut-être la statistique la plus citée de la science : elle mesure
+      aussi bien l'effet d'un médicament que le lien entre variables économiques.
+    zh: >-
+      弗朗西斯·高尔顿曾研究身高的遗传，并于1888年定义了相关。1895年，卡尔·皮尔逊以他的名字正式提出这一系数，
+      将协方差归一化到−1与1之间。接近1表示正线性相关，接近−1表示负相关，0表示无线性相关。它或许是科学中
+      被引用最多的统计量：从药物效果到经济变量之间的联系，都用它来衡量。
+    ja: >-
+      フランシス・ゴルトンは身長がどのように遺伝するかを研究し、1888年に相関を定義した。カール・ピアソンは1895年、
+      彼の名を冠した係数でこれを定式化し、共分散を−1から1の間に正規化した。1に近い値は正の線形関係、−1に近い
+      値は負の関係、0は線形関係なしを示す。これはおそらく科学で最も引用される統計量であり、薬の効果から経済変数
+      の関係まで、何でも測定する。
+  timeline:
+    - year: "1888"
+      label:
+        es: >-
+          Galton define la correlación al estudiar la herencia de la estatura.
+        en: >-
+          Galton defines correlation while studying the inheritance of height.
+        pt: >-
+          Galton define a correlação ao estudar a herança da estatura.
+        fr: >-
+          Galton définit la corrélation en étudiant l'hérédité de la taille.
+        zh: >-
+          高尔顿在研究身高遗传时定义了相关。
+        ja: >-
+          ゴルトンが身長の遺伝の研究の中で相関を定義する。
+    - year: "1895"
+      label:
+        es: >-
+          Pearson publica el coeficiente r y su método de cálculo.
+        en: >-
+          Pearson publishes the coefficient r and its computation method.
+        pt: >-
+          Pearson publica o coeficiente r e seu método de cálculo.
+        fr: >-
+          Pearson publie le coefficient r et sa méthode de calcul.
+        zh: >-
+          皮尔逊发表系数r及其计算方法。
+        ja: >-
+          ピアソンが係数rとその計算方法を発表する。
+    - year: Hoy
+      label:
+        es: >-
+          Es estándar en biología, economía, psicología y ciencia de datos.
+        en: >-
+          It is standard in biology, economics, psychology, and data science.
+        pt: >-
+          É padrão em biologia, economia, psicologia e ciência de dados.
+        fr: >-
+          Il est standard en biologie, économie, psychologie et science des données.
+        zh: >-
+          它是生物学、经济学、心理学和数据科学中的标准。
+        ja: >-
+          生物学、経済学、心理学、データサイエンスで標準となっている。
+  useCases:
+    - title:
+        es: Investigación médica
+        en: Medical research
+        pt: Pesquisa médica
+        fr: Recherche médicale
+        zh: 医学研究
+        ja: 医学研究
+      description:
+        es: >-
+          Mide la asociación entre una dosis y su efecto o entre dos biomarcadores.
+        en: >-
+          It measures the association between a dose and its effect, or between two biomarkers.
+        pt: >-
+          Mede a associação entre uma dose e seu efeito, ou entre dois biomarcadores.
+        fr: >-
+          Il mesure l'association entre une dose et son effet, ou entre deux biomarqueurs.
+        zh: >-
+          它衡量剂量与效果之间或两个生物标志物之间的关联。
+        ja: >-
+          用量と効果、または2つのバイオマーカー間の関連を測る。
+    - title:
+        es: Economía
+        en: Economics
+        pt: Economia
+        fr: Économie
+        zh: 经济学
+        ja: 経済学
+      description:
+        es: >-
+          La correlación entre consumo e ingreso, o entre inflación y desempleo, guía decisiones.
+        en: >-
+          The correlation between consumption and income, or inflation and unemployment, guides
+          decisions.
+        pt: >-
+          A correlação entre consumo e renda, ou inflação e desemprego, orienta decisões.
+        fr: >-
+          La corrélation entre consommation et revenu, ou inflation et chômage, guide les décisions.
+        zh: >-
+          消费与收入、或通胀与失业之间的相关，为决策提供指导。
+        ja: >-
+          消費と所得、あるいはインフレと失業の相関が意思決定を導く。
+    - title:
+        es: Ciencia de datos
+        en: Data science
+        pt: Ciência de dados
+        fr: Science des données
+        zh: 数据科学
+        ja: データサイエンス
+      description:
+        es: >-
+          Se usa para detectar variables redundantes antes de entrenar un modelo.
+        en: >-
+          It detects redundant variables before training a model.
+        pt: >-
+          É usado para detectar variáveis redundantes antes de treinar um modelo.
+        fr: >-
+          Il sert à détecter les variables redondantes avant d'entraîner un modèle.
+        zh: >-
+          在训练模型之前，用它来检测冗余变量。
+        ja: >-
+          モデルを訓練する前に、冗長な変数を検出するために使われる。
+  example:
+    title:
+      es: Datos perfectamente alineados
+      en: Perfectly aligned data
+      pt: Dados perfeitamente alinhados
+      fr: Données parfaitement alignées
+      zh: 完全共线的数据
+      ja: 完全に一直線のデータ
+    lines:
+      - es: "Datos: (1,2), (2,4), (3,6)"
+        en: "Data: (1,2), (2,4), (3,6)"
+        pt: "Dados: (1,2), (2,4), (3,6)"
+        fr: "Données : (1,2), (2,4), (3,6)"
+        zh: "数据：(1,2)、(2,4)、(3,6)"
+        ja: "データ：(1,2)、(2,4)、(3,6)"
+      - es: "Cada y es el doble de x: relación lineal perfecta"
+        en: "Each y is twice x: a perfect linear relationship"
+        pt: "Cada y é o dobro de x: relação linear perfeita"
+        fr: "Chaque y vaut deux fois x : relation linéaire parfaite"
+        zh: 每个y都是x的两倍：完全线性关系
+        ja: 各yはxの2倍：完全な線形関係
+      - es: cov(X,Y) = σₓ·σᵧ (máxima covarianza posible)
+        en: cov(X,Y) = σₓ·σᵧ (the maximum possible covariance)
+        pt: cov(X,Y) = σₓ·σᵧ (a covariância máxima possível)
+        fr: cov(X,Y) = σₓ·σᵧ (la covariance maximale possible)
+        zh: cov(X,Y) = σₓ·σᵧ（可能的最大协方差）
+        ja: cov(X,Y) = σₓ·σᵧ（取りうる最大の共分散）
+      - es: r = σₓ·σᵧ / σₓ·σᵧ = 1
+        en: r = σₓ·σᵧ / σₓ·σᵧ = 1
+        pt: r = σₓ·σᵧ / σₓ·σᵧ = 1
+        fr: r = σₓ·σᵧ / σₓ·σᵧ = 1
+        zh: r = σₓ·σᵧ / σₓ·σᵧ = 1
+        ja: r = σₓ·σᵧ / σₓ·σᵧ = 1
+      - es: "r = 1: correlación positiva perfecta"
+        en: "r = 1: perfect positive correlation"
+        pt: "r = 1: correlação positiva perfeita"
+        fr: "r = 1 : corrélation positive parfaite"
+        zh: r = 1：完全正相关
+        ja: r = 1：完全な正の相関

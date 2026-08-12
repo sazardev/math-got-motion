@@ -1,0 +1,346 @@
+id: earthquake-energy
+title:
+  es: Energía de un Terremoto
+  en: Earthquake Energy
+  pt: Energia de um Terremoto
+  fr: Énergie d'un séisme
+  zh: 地震能量
+  ja: 地震のエネルギー
+category:
+  es: Ciencias de la Tierra
+  en: Earth science
+  pt: Ciências da Terra
+  fr: Sciences de la Terre
+  zh: 地球科学
+  ja: 地球科学
+nodes:
+  - id: log
+    type: operator
+    value: log
+    explanation:
+      es: El logaritmo en base 10, que comprime la inmensa energía de los terremotos.
+      en: The base-10 logarithm, which compresses the immense energy of earthquakes.
+      pt: O logaritmo na base 10, que comprime a imensa energia dos terremotos.
+      fr: Le logarithme en base 10, qui comprime l'énergie immense des séismes.
+      zh: 以10为底的对数，可压缩地震的巨大能量。
+      ja: 底10の対数。地震の莫大なエネルギーを圧縮する。
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: "E: la energía liberada por el terremoto, medida en joules."
+      en: "E: the energy released by the earthquake, measured in joules."
+      pt: "E: a energia liberada pelo terremoto, medida em joules."
+      fr: "E : l'énergie libérée par le séisme, mesurée en joules."
+      zh: "E：地震释放的能量，单位为焦耳。"
+      ja: "E：地震が解放するエネルギー。単位はジュール。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: one-five
+    type: number
+    value: "1.5"
+    explanation:
+      es: "1.5: la pendiente de la relación, que hace crecer la energía con mucha rapidez."
+      en: "1.5: the slope of the relation, which makes energy grow very fast."
+      pt: "1,5: a inclinação da relação, que faz a energia crescer com muita rapidez."
+      fr: "1,5 : la pente de la relation, qui fait croître l'énergie très rapidement."
+      zh: "1.5：该关系的斜率，使能量增长得非常快。"
+      ja: "1.5：この関係の傾き。エネルギーを急激に増大させる。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por la magnitud.
+      en: Multiplied by the magnitude.
+      pt: Multiplicado pela magnitude.
+      fr: Multiplié par la magnitude.
+      zh: 乘以震级。
+      ja: マグニチュードを掛ける。
+  - id: m
+    type: variable
+    value: M
+    explanation:
+      es: "M: la magnitud del terremoto."
+      en: "M: the magnitude of the earthquake."
+      pt: "M: a magnitude do terremoto."
+      fr: "M : la magnitude du séisme."
+      zh: "M：地震的震级。"
+      ja: "M：地震のマグニチュード。"
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Más la constante de calibración.
+      en: Plus the calibration constant.
+      pt: Mais a constante de calibração.
+      fr: Plus la constante d'étalonnage.
+      zh: 加上校准常数。
+      ja: 較正定数を加える。
+  - id: four-eight
+    type: number
+    value: "4.8"
+    explanation:
+      es: "4.8: la constante ajustada por Gutenberg y Richter a partir de datos observados."
+      en: "4.8: the constant fit by Gutenberg and Richter to observed data."
+      pt: "4,8: a constante ajustada por Gutenberg e Richter a partir de dados observados."
+      fr: "4,8 : la constante ajustée par Gutenberg et Richter sur les données observées."
+      zh: "4.8：古登堡和里克特根据观测数据拟合出的常数。"
+      ja: "4.8：グーテンベルクとリヒターが観測データから求めた定数。"
+context:
+  author:
+    es: Basada en el trabajo de Gutenberg y Richter
+    en: Based on the work of Gutenberg and Richter
+    pt: Baseada no trabalho de Gutenberg e Richter
+    fr: Fondée sur les travaux de Gutenberg et Richter
+    zh: 基于古登堡和里克特的研究
+    ja: グーテンベルクとリヒターの研究に基づく
+  era:
+    es: EE. UU., 1941–1956
+    en: United States, 1941–1956
+    pt: EUA, 1941–1956
+    fr: États-Unis, 1941–1956
+    zh: 美国，1941–1956年
+    ja: アメリカ合衆国、1941–1956年
+  history:
+    es: >-
+      En 1941 los geofísicos Beno Gutenberg y Charles Richter, del Instituto de Tecnología de
+      California, publicaron la relación entre la magnitud de un terremoto y la energía que libera.
+      Gracias al logaritmo, la escala comprime un rango de energía inmenso: la energía crece con mucha
+      más rapidez que la magnitud, y cada unidad de M libera unas 32 veces más energía que la anterior.
+      Por eso un terremoto de magnitud 9 supera con creces a uno de 7, y por eso esta relación se
+      convirtió en la base de los estudios de peligrosidad sísmica, que estiman cuánta energía puede
+      liberar cada falla para dimensionar edificios y demás infraestructura.
+    en: >-
+      In 1941 geophysicists Beno Gutenberg and Charles Richter, of the California Institute of
+      Technology, published the relation between an earthquake's magnitude and the energy it releases.
+      Thanks to the logarithm, the scale compresses an immense range of energy: energy grows much
+      faster than magnitude, and each unit of M releases about 32 times more energy than the previous
+      one. That is why a magnitude-9 quake dwarfs a 7, and why this relation became the basis of
+      seismic hazard studies, which estimate how much energy each fault can release to size buildings
+      and other infrastructure.
+    pt: >-
+      Em 1941 os geofísicos Beno Gutenberg e Charles Richter, do Instituto de Tecnologia da Califórnia,
+      publicaram a relação entre a magnitude de um terremoto e a energia que ele libera. Graças ao
+      logaritmo, a escala comprime um intervalo de energia imenso: a energia cresce muito mais rápido
+      que a magnitude, e cada unidade de M libera cerca de 32 vezes mais energia que a anterior. Por
+      isso um terremoto de magnitude 9 supera em muito um de 7, e por isso essa relação se tornou a
+      base dos estudos de perigosidade sísmica, que estimam quanta energia cada falha pode liberar
+      para dimensionar prédios e demais infraestrutura.
+    fr: >-
+      En 1941, les géophysiciens Beno Gutenberg et Charles Richter, du California Institute of
+      Technology, publièrent la relation entre la magnitude d'un séisme et l'énergie qu'il libère.
+      Grâce au logarithme, l'échelle comprime une plage d'énergie immense : l'énergie croît bien plus
+      vite que la magnitude, et chaque unité de M libère environ 32 fois plus d'énergie que la
+      précédente. C'est pourquoi un séisme de magnitude 9 éclipse largement un 7, et pourquoi cette
+      relation est devenue la base des études d'aléa sismique, qui estiment l'énergie que chaque faille
+      peut libérer pour dimensionner les bâtiments et autres infrastructures.
+    zh: >-
+      1941年，加州理工学院的两位地球物理学家贝诺·古登堡和查尔斯·里克特发表了地震震级与其释放能量之间的关系。
+      由于取了对数，该公式把巨大的能量范围压缩成方便的刻度：能量的增长速度远快于震级，M每增加1，释放的能量约为
+      上一级震级的32倍。因此9级地震的能量远超7级，也正是因此，这一关系成为地震危险性研究的基础——估算每条断层
+      可能释放多少能量，以设计建筑物等基础设施。
+    ja: >-
+      1941年、カリフォルニア工科大学の地球物理学者ベノー・グーテンベルクとチャールズ・リヒターは、地震のマグニ
+      チュードと解放エネルギーの関係を発表した。対数のおかげで、この式は莫大なエネルギーの範囲を扱いやすい目盛りに
+      圧縮する。エネルギーはマグニチュードよりもはるかに速く増大し、Mが1増えるごとに約32倍のエネルギーになる。
+      だからこそマグニチュード9の地震は7をはるかに凌ぐ。また、この関係は地震ハザード研究の基礎となり、各断層が
+      どれだけのエネルギーを解放し得るかを推定して、建物などのインフラを設計するのに使われる。
+  timeline:
+    - year: "1941"
+      label:
+        es: >-
+          Gutenberg y Richter publican la relación entre magnitud y energía de los terremotos.
+        en: >-
+          Gutenberg and Richter publish the relation between earthquake magnitude and energy.
+        pt: >-
+          Gutenberg e Richter publicam a relação entre magnitude e energia dos terremotos.
+        fr: >-
+          Gutenberg et Richter publient la relation entre la magnitude des séismes et leur énergie.
+        zh: >-
+          古登堡和里克特发表了地震震级与能量的关系。
+        ja: >-
+          グーテンベルクとリヒターが、地震のマグニチュードとエネルギーの関係を発表する。
+    - year: "1956"
+      label:
+        es: >-
+          La relación se refina y consolida como herramienta estándar de la sismología.
+        en: >-
+          The relation is refined and consolidated as a standard tool of seismology.
+        pt: >-
+          A relação é refinada e consolidada como ferramenta padrão da sismologia.
+        fr: >-
+          La relation est affinée et consolidée comme outil standard de la sismologie.
+        zh: >-
+          该关系被完善并确立为地震学的标准工具。
+        ja: >-
+          この関係が洗練され、地震学の標準的な道具として確立される。
+    - year: "1979"
+      label:
+        es: >-
+          La magnitud de momento permite estimar la energía con mayor precisión, manteniendo la misma
+          forma logarítmica.
+        en: >-
+          Moment magnitude allows estimating energy more precisely, keeping the same logarithmic form.
+        pt: >-
+          A magnitude de momento permite estimar a energia com mais precisão, mantendo a mesma forma
+          logarítmica.
+        fr: >-
+          La magnitude de moment permet d'estimer l'énergie avec plus de précision, en gardant la même
+          forme logarithmique.
+        zh: >-
+          矩震级使能量的估算更加精确，同时保持同样的对数形式。
+        ja: >-
+          モーメント・マグニチュードにより、同じ対数形式を保ったまま、より正確にエネルギーを推定できるようになる。
+    - year: Hoy
+      label:
+        es: >-
+          Es la base de los mapas de peligrosidad sísmica y de los códigos de construcción.
+        en: >-
+          It underpins seismic hazard maps and building codes.
+        pt: >-
+          É a base dos mapas de perigosidade sísmica e dos códigos de construção.
+        fr: >-
+          Elle est à la base des cartes d'aléa sismique et des codes du bâtiment.
+        zh: >-
+          它是地震危险性图和建筑规范的基础。
+        ja: >-
+          地震ハザードマップや建築基準の基盤となっている。
+  useCases:
+    - title:
+        es: Peligrosidad sísmica
+        en: Seismic hazard
+        pt: Perigosidade sísmica
+        fr: Aléa sismique
+        zh: 地震危险性
+        ja: 地震ハザード
+      description:
+        es: >-
+          Los mapas de peligro estiman la energía máxima que cada falla puede liberar para
+          dimensionar infraestructura.
+        en: >-
+          Hazard maps estimate the maximum energy each fault can release to size infrastructure.
+        pt: >-
+          Os mapas de perigo estimam a energia máxima que cada falha pode liberar para dimensionar
+          infraestrutura.
+        fr: >-
+          Les cartes d'aléa estiment l'énergie maximale que chaque faille peut libérer pour dimensionner
+          les infrastructures.
+        zh: >-
+          危险性图估算每条断层可能释放的最大能量，以确定基础设施的设计规模。
+        ja: >-
+          ハザードマップは、各断層が解放し得る最大エネルギーを推定し、インフラの設計に役立てる。
+    - title:
+        es: Ingeniería sísmica
+        en: Seismic engineering
+        pt: Engenharia sísmica
+        fr: Génie sismique
+        zh: 抗震工程
+        ja: 耐震工学
+      description:
+        es: >-
+          La energía esperada de un sismo define cuánta resistencia deben tener los edificios.
+        en: >-
+          The expected energy of a quake defines how much resistance buildings must have.
+        pt: >-
+          A energia esperada de um sismo define quanta resistência os prédios devem ter.
+        fr: >-
+          L'énergie attendue d'un séisme définit la résistance que doivent avoir les bâtiments.
+        zh: >-
+          地震的预期能量决定了建筑物必须具有多大的抗性。
+        ja: >-
+          想定される地震のエネルギーが、建物に必要な強度を決める。
+    - title:
+        es: Riesgo de tsunamis
+        en: Tsunami risk
+        pt: Risco de tsunamis
+        fr: Risque de tsunami
+        zh: 海啸风险
+        ja: 津波リスク
+      description:
+        es: >-
+          La energía de un sismo submarino está directamente ligada a la del tsunami que puede generar.
+        en: >-
+          The energy of an offshore quake is directly tied to the tsunami it can generate.
+        pt: >-
+          A energia de um sismo submarino está diretamente ligada à do tsunami que pode gerar.
+        fr: >-
+          L'énergie d'un séisme sous-marin est directement liée à celle du tsunami qu'il peut
+          déclencher.
+        zh: >-
+          海底地震的能量与其可能引发的海啸能量直接相关。
+        ja: >-
+          海底地震のエネルギーは、発生し得る津波のエネルギーと直接結びついている。
+    - title:
+        es: Sismología global
+        en: Global seismology
+        pt: Sismologia global
+        fr: Sismologie globale
+        zh: 全球地震学
+        ja: 地球規模の地震学
+      description:
+        es: >-
+          Compara la energía liberada por sismos de distintas regiones y épocas en una sola escala.
+        en: >-
+          It compares the energy released by quakes from different regions and eras on one scale.
+        pt: >-
+          Compara a energia liberada por sismos de diferentes regiões e épocas em uma única escala.
+        fr: >-
+          Elle compare l'énergie libérée par les séismes de différentes régions et époques sur une même
+          échelle.
+        zh: >-
+          在同一标度上比较不同地区和不同时期地震释放的能量。
+        ja: >-
+          異なる地域・時代の地震が解放したエネルギーを、一つの目盛りで比較する。
+  example:
+    title:
+      es: Energía de magnitud 5 y 6
+      en: Energy of magnitudes 5 and 6
+      pt: Energia de magnitude 5 e 6
+      fr: Énergie de magnitude 5 et 6
+      zh: 5级与6级的能量
+      ja: マグニチュード5と6のエネルギー
+    lines:
+      - es: "Para M = 5: log E = 1.5×5 + 4.8"
+        en: "For M = 5: log E = 1.5×5 + 4.8"
+        pt: "Para M = 5: log E = 1,5×5 + 4,8"
+        fr: "Pour M = 5 : log E = 1,5×5 + 4,8"
+        zh: "当 M = 5：log E = 1.5×5 + 4.8"
+        ja: "M = 5 のとき：log E = 1.5×5 + 4.8"
+      - es: log E = 7.5 + 4.8 = 12.3
+        en: log E = 7.5 + 4.8 = 12.3
+        pt: log E = 7,5 + 4,8 = 12,3
+        fr: log E = 7,5 + 4,8 = 12,3
+        zh: log E = 7.5 + 4.8 = 12.3
+        ja: log E = 7.5 + 4.8 = 12.3
+      - es: E = 10^12.3 ≈ 2×10¹² J
+        en: E = 10^12.3 ≈ 2×10¹² J
+        pt: E = 10^12,3 ≈ 2×10¹² J
+        fr: E = 10^12,3 ≈ 2×10¹² J
+        zh: E = 10^12.3 ≈ 2×10¹² 焦耳
+        ja: E = 10^12.3 ≈ 2×10¹² J
+      - es: "Para M = 6: log E = 1.5×6 + 4.8 = 13.8"
+        en: "For M = 6: log E = 1.5×6 + 4.8 = 13.8"
+        pt: "Para M = 6: log E = 1,5×6 + 4,8 = 13,8"
+        fr: "Pour M = 6 : log E = 1,5×6 + 4,8 = 13,8"
+        zh: "当 M = 6：log E = 1.5×6 + 4.8 = 13.8"
+        ja: "M = 6 のとき：log E = 1.5×6 + 4.8 = 13.8"
+      - es: E ≈ 6.3×10¹³ J
+        en: E ≈ 6.3×10¹³ J
+        pt: E ≈ 6,3×10¹³ J
+        fr: E ≈ 6,3×10¹³ J
+        zh: E ≈ 6.3×10¹³ 焦耳
+        ja: E ≈ 6.3×10¹³ J
+      - es: "Un punto más de magnitud ≈ 32× la energía"
+        en: "One more magnitude unit ≈ 32× the energy"
+        pt: "Um ponto a mais de magnitude ≈ 32× a energia"
+        fr: "Une unité de magnitude de plus ≈ 32× l'énergie"
+        zh: "震级增加1 ≈ 能量的32倍"
+        ja: "マグニチュードが1上がる ≈ エネルギーの32倍"

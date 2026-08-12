@@ -1,0 +1,429 @@
+id: poiseuilles-law
+title:
+  es: Ley de Poiseuille
+  en: Poiseuille's Law
+  pt: Lei de Poiseuille
+  fr: Loi de Poiseuille
+  zh: 泊肃叶定律
+  ja: ポアズイユの法則
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: q
+    type: variable
+    value: Q
+    explanation:
+      es: El caudal, el volumen de fluido que atraviesa el tubo por unidad de tiempo.
+      en: The flow rate, the volume of fluid passing through the tube per unit of time.
+      pt: A vazão, o volume de fluido que atravessa o tubo por unidade de tempo.
+      fr: Le débit, le volume de fluide traversant le tube par unité de temps.
+      zh: 流量,即单位时间内通过管道的流体体积。
+      ja: 流量。単位時間あたりに管を通過する流体の体積。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: La constante pi, aproximadamente 3.1416.
+      en: The constant pi, approximately 3.1416.
+      pt: A constante pi, aproximadamente 3,1416.
+      fr: La constante pi, environ 3,1416.
+      zh: 圆周率 π,约等于 3.1416。
+      ja: 円周率 π。およそ3.1416。
+  - id: mult
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛け算。
+  - id: dp
+    type: variable
+    value: ΔP
+    explanation:
+      es: La diferencia de presión entre los dos extremos del tubo.
+      en: The pressure difference between the two ends of the tube.
+      pt: A diferença de pressão entre as duas extremidades do tubo.
+      fr: La différence de pression entre les deux extrémités du tube.
+      zh: 管道两端的压力差。
+      ja: 管の両端の圧力差。
+  - id: mult2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛け算。
+  - id: r4
+    type: superscript
+    value: r⁴
+    explanation:
+      es: El radio del tubo elevado a la cuarta potencia, el término que hace al flujo tan sensible al tamaño.
+      en: The radius of the tube raised to the fourth power, the term that makes flow so sensitive to size.
+      pt: O raio do tubo elevado à quarta potência, o termo que torna o escoamento tão sensível ao tamanho.
+      fr: Le rayon du tube à la puissance quatre, le terme qui rend l'écoulement si sensible à la taille.
+      zh: 管道半径的四次方,正是这一项使流量对尺寸如此敏感。
+      ja: 管の半径の4乗。流量が大きさにこれほど敏感なのはこの項のためだ。
+  - id: div
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: 割り算。
+  - id: paren-open
+    type: operator
+    value: "("
+    explanation:
+      es: Comienza el denominador de la fracción.
+      en: It opens the denominator of the fraction.
+      pt: Abre o denominador da fração.
+      fr: Il ouvre le dénominateur de la fraction.
+      zh: 分数的分母从这里开始。
+      ja: 分数の分母を始める括弧。
+  - id: eight
+    type: number
+    value: "8"
+    explanation:
+      es: El número 8, una constante que surge de integrar el flujo sobre la sección del tubo.
+      en: The number 8, a constant that arises from integrating the flow over the tube's section.
+      pt: O número 8, uma constante que surge ao integrar o escoamento sobre a seção do tubo.
+      fr: Le nombre 8, une constante issue de l'intégration de l'écoulement sur la section du tube.
+      zh: 数字8,是在对管道截面的流动进行积分时出现的常数。
+      ja: 数8。管の断面で流れを積分するときに現れる定数。
+  - id: mult3
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛け算。
+  - id: eta
+    type: variable
+    value: η
+    explanation:
+      es: La viscosidad dinámica del fluido, que mide su resistencia a fluir.
+      en: The dynamic viscosity of the fluid, a measure of its resistance to flowing.
+      pt: A viscosidade dinâmica do fluido, que mede sua resistência ao escoamento.
+      fr: La viscosité dynamique du fluide, qui mesure sa résistance à s'écouler.
+      zh: 流体的动力黏度,衡量其流动阻力的大小。
+      ja: 流体の動的粘度。流れにくさの尺度。
+  - id: mult4
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛け算。
+  - id: l
+    type: variable
+    value: L
+    explanation:
+      es: La longitud del tubo; a mayor longitud, menor flujo.
+      en: The length of the tube; the longer it is, the less flow.
+      pt: O comprimento do tubo; quanto maior, menor o escoamento.
+      fr: La longueur du tube ; plus elle est grande, moins il y a de débit.
+      zh: 管道的长度;管道越长,流量越小。
+      ja: 管の長さ。長いほど流量は少なくなる。
+  - id: paren-close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el denominador de la fracción.
+      en: It closes the denominator of the fraction.
+      pt: Fecha o denominador da fração.
+      fr: Il ferme le dénominateur de la fraction.
+      zh: 分数的分母在这里结束。
+      ja: 分数の分母を閉じる括弧。
+context:
+  author:
+    es: Jean Léonard Marie Poiseuille
+    en: Jean Léonard Marie Poiseuille
+    pt: Jean Léonard Marie Poiseuille
+    fr: Jean Léonard Marie Poiseuille
+    zh: 让·伦纳德·玛丽·泊肃叶
+    ja: ジャン・レオナール・マリー・ポアズイユ
+  era:
+    es: Francia, 1797–1869 · publicada en 1838
+    en: France, 1797–1869 · published in 1838
+    pt: França, 1797–1869 · publicada em 1838
+    fr: France, 1797–1869 · publiée en 1838
+    zh: 法国,1797–1869年 · 1838年发表
+    ja: フランス、1797–1869年・1838年発表
+  history:
+    es: >-
+      Jean Léonard Marie Poiseuille, médico y fisiólogo francés, estudió el flujo de la sangre por
+      los vasos capilares y publicó en 1838 su ley sobre el flujo de líquidos por tubos estrechos.
+      Su resultado más notable es que el caudal crece con la cuarta potencia del radio: duplicar el
+      radio multiplica el flujo por dieciséis. Por eso un pequeño estrechamiento de una arteria
+      reduce drásticamente el flujo sanguíneo y las vías intravenosas se diseñan con esta fórmula.
+    en: >-
+      Jean Léonard Marie Poiseuille, a French physician and physiologist, studied the flow of blood
+      through capillary vessels and published his law on liquids flowing through narrow tubes in
+      1838. Its most striking result is that the flow rate grows with the fourth power of the
+      radius: doubling the radius multiplies the flow by sixteen. This is why a small narrowing in
+      an artery drastically cuts blood flow, and why IV lines are sized with this formula.
+    pt: >-
+      Jean Léonard Marie Poiseuille, médico e fisiologista francês, estudou o fluxo de sangue pelos
+      vasos capilares e publicou em 1838 sua lei sobre o escoamento de líquidos por tubos estreitos.
+      Seu resultado mais notável é que a vazão cresce com a quarta potência do raio: dobrar o raio
+      multiplica o fluxo por dezesseis. Por isso um pequeno estreitamento de uma artéria reduz
+      drasticamente o fluxo sanguíneo e os soros intravenosos são dimensionados com esta fórmula.
+    fr: >-
+      Jean Léonard Marie Poiseuille, médecin et physiologiste français, étudia l'écoulement du sang
+      dans les vaisseaux capillaires et publia en 1838 sa loi sur l'écoulement des liquides dans des
+      tubes étroits. Son résultat le plus frappant est que le débit croît avec la quatrième
+      puissance du rayon : doubler le rayon multiplie le débit par seize. C'est pourquoi un léger
+      rétrécissement d'une artère réduit fortement le débit sanguin et pourquoi les perfusions
+      intraveineuses sont dimensionnées avec cette formule.
+    zh: >-
+      法国医生兼生理学家让·伦纳德·玛丽·泊肃叶研究了血液在毛细血管中的流动,并于1838年发表了关于液体在细管中
+      流动的定律。其最引人注目的结论是,流量随半径的四次方增长:半径加倍,流量乘以十六。这就是为什么动脉的轻微
+      狭窄会大幅减少血流量,也是静脉输液管线按此公式设计的原因。
+    ja: >-
+      フランスの医師・生理学者ジャン・レオナール・マリー・ポアズイユは、毛細血管を流れる血液を研究し、
+      1838年に細い管の中の液体の流れに関する法則を発表した。最も際立った結論は、流量が半径の4乗に比例して
+      増えることだ。半径を2倍にすると流量は16倍になる。動脈がわずかに狭くなるだけで血流が大きく減るのは
+      このためであり、静脈内輸液の設計にもこの式が使われる。
+  timeline:
+    - year: "1838"
+      label:
+        es: >-
+          Poiseuille publica su ley a partir de experimentos con tubos capilares, para entender el
+          flujo de la sangre.
+        en: >-
+          Poiseuille publishes his law from experiments with capillary tubes, aimed at
+          understanding blood flow.
+        pt: >-
+          Poiseuille publica sua lei a partir de experimentos com tubos capilares, para entender o
+          fluxo do sangue.
+        fr: >-
+          Poiseuille publie sa loi à partir d'expériences avec des tubes capillaires, pour
+          comprendre l'écoulement du sang.
+        zh: >-
+          泊肃叶基于毛细血管实验发表了他的定律,目的是理解血流。
+        ja: >-
+          ポアズイユが、血流を理解するための毛細管実験に基づいて法則を発表する。
+    - year: "1840"
+      label:
+        es: >-
+          Gotthilf Hagen deduce de forma independiente la misma relación para el agua en tuberías,
+          confirmando el resultado.
+        en: >-
+          Gotthilf Hagen independently derives the same relation for water in pipes, confirming the
+          result.
+        pt: >-
+          Gotthilf Hagen deduz de forma independente a mesma relação para a água em tubulações,
+          confirmando o resultado.
+        fr: >-
+          Gotthilf Hagen déduit indépendamment la même relation pour l'eau dans les conduites,
+          confirmant le résultat.
+        zh: >-
+          戈特希尔夫·哈根独立地推导出适用于管道中水的同一关系,证实了这一结果。
+        ja: >-
+          ゴットヒルフ・ハーゲンがパイプ内の水について同じ関係を独自に導き出し、この結果を裏付ける。
+    - year: "1950"
+      label:
+        es: >-
+          La terapia intravenosa se vuelve rutinaria en los hospitales y dimensiona sus líneas y
+          bombas de infusión con esta ley.
+        en: >-
+          Intravenous therapy becomes routine in hospitals, sizing its lines and infusion pumps
+          with this law.
+        pt: >-
+          A terapia intravenosa torna-se rotina nos hospitais e dimensiona suas linhas e bombas de
+          infusão com esta lei.
+        fr: >-
+          La thérapie intraveineuse devient courante dans les hôpitaux et dimensionne ses lignes et
+          pompes à perfusion avec cette loi.
+        zh: >-
+          静脉输液疗法在医院成为常规,其管路和输液泵都按此定律确定规格。
+        ja: >-
+          静脈内輸液療法が病院で日常的になり、そのラインや輸液ポンプがこの法則に基づいて設計される。
+    - year: Hoy
+      label:
+        es: >-
+          Es la base del diseño de vías intravenosas, del estudio de la hipertensión y de los
+          dispositivos microfluídicos.
+        en: >-
+          It is the basis for designing IV lines, studying hypertension, and building microfluidic
+          devices.
+        pt: >-
+          É a base do projeto de vias intravenosas, do estudo da hipertensão e dos dispositivos
+          microfluídicos.
+        fr: >-
+          Elle est la base de la conception des perfusions, de l'étude de l'hypertension et des
+          dispositifs microfluidiques.
+        zh: >-
+          它是静脉输液管线设计、高血压研究以及微流控器件制造的基础。
+        ja: >-
+          静脈内輸液の設計、高血圧の研究、マイクロ流体デバイスの製作の基礎である。
+  useCases:
+    - title:
+        es: Medicina y fisiología
+        en: Medicine and physiology
+        pt: Medicina e fisiologia
+        fr: Médecine et physiologie
+        zh: 医学与生理学
+        ja: 医学と生理学
+      description:
+        es: >-
+          Cuantifica el flujo sanguíneo por los vasos y explica cómo un estrechamiento pequeño
+          eleva la presión.
+        en: >-
+          It quantifies blood flow through vessels and explains how a small narrowing raises
+          pressure.
+        pt: >-
+          Quantifica o fluxo sanguíneo pelos vasos e explica como um pequeno estreitamento eleva a
+          pressão.
+        fr: >-
+          Elle quantifie le débit sanguin dans les vaisseaux et explique comment un léger
+          rétrécissement élève la pression.
+        zh: >-
+          量化血管中的血流量,并解释为何微小的狭窄会升高血压。
+        ja: >-
+          血管内の血流を定量化し、わずかな狭窄がどう圧力を上げるかを説明する。
+    - title:
+        es: Medicina intravenosa
+        en: Intravenous therapy
+        pt: Medicina intravenosa
+        fr: Médecine intraveineuse
+        zh: 静脉输液疗法
+        ja: 静脈内輸液
+      description:
+        es: >-
+          Dimensiona el calibre de las agujas y la presión de las bombas de infusión para que el
+          líquido llegue al ritmo correcto.
+        en: >-
+          It sizes needle gauges and infusion pump pressure so fluid is delivered at the right
+          rate.
+        pt: >-
+          Dimensiona o calibre das agulhas e a pressão das bombas de infusão para que o líquido
+          chegue no ritmo certo.
+        fr: >-
+          Elle dimensionne le calibre des aiguilles et la pression des pompes à perfusion pour
+          délivrer le liquide au bon débit.
+        zh: >-
+          确定针头的粗细和输液泵的压力,使液体以正确的速率输注。
+        ja: >-
+          針の太さや輸液ポンプの圧力を決め、液体を正しい速度で投与する。
+    - title:
+        es: Microfluídica
+        en: Microfluidics
+        pt: Microfluídica
+        fr: Microfluidique
+        zh: 微流控
+        ja: マイクロ流体工学
+      description:
+        es: >-
+          Diseña los canales de los laboratorios en un chip, donde todo fluye en régimen laminar
+          predecible.
+        en: >-
+          It designs the channels of lab-on-a-chip devices, where everything flows in predictable
+          laminar regime.
+        pt: >-
+          Projeta os canais dos laboratórios em um chip, onde tudo escoa em regime laminar
+          previsível.
+        fr: >-
+          Elle conçoit les canaux des laboratoires sur puce, où tout s'écoule en régime laminaire
+          prévisible.
+        zh: >-
+          设计芯片实验室中的微通道,那里的流动始终处于可预测的层流状态。
+        ja: >-
+          ラボ・オン・チップの流路を設計する。そこではすべてが予測可能な層流で流れる。
+    - title:
+        es: Hidráulica industrial
+        en: Industrial hydraulics
+        pt: Hidráulica industrial
+        fr: Hydraulique industrielle
+        zh: 工业液压
+        ja: 産業用油圧
+      description:
+        es: >-
+          Describe el flujo de aceite por los espacios capilares de cojinetes y bombas de
+          precisión.
+        en: >-
+          It describes oil flow through the capillary gaps of bearings and precision pumps.
+        pt: >-
+          Descreve o escoamento de óleo pelos espaços capilares de mancais e bombas de precisão.
+        fr: >-
+          Elle décrit l'écoulement d'huile dans les espaces capillaires des paliers et des pompes
+          de précision.
+        zh: >-
+          描述油液流经轴承和精密泵毛细间隙的流动。
+        ja: >-
+          軸受や精密ポンプの毛細管隙間を流れるオイルの流れを表す。
+  example:
+    title:
+      es: El radio a la mitad
+      en: Radius cut in half
+      pt: O raio pela metade
+      fr: Le rayon réduit de moitié
+      zh: 半径减半
+      ja: 半径を半分にする
+    lines:
+      - es: Q = π · ΔP · r⁴ / (8 · η · L)
+        en: Q = π · ΔP · r⁴ / (8 · η · L)
+        pt: Q = π · ΔP · r⁴ / (8 · η · L)
+        fr: Q = π · ΔP · r⁴ / (8 · η · L)
+        zh: Q = π · ΔP · r⁴ / (8 · η · L)
+        ja: Q = π · ΔP · r⁴ / (8 · η · L)
+      - es: r₁ = 1, r₂ = 0.5 → el radio se reduce a la mitad
+        en: r₁ = 1, r₂ = 0.5 → the radius is halved
+        pt: r₁ = 1, r₂ = 0,5 → o raio é reduzido pela metade
+        fr: r₁ = 1, r₂ = 0,5 → le rayon est réduit de moitié
+        zh: r₁ = 1, r₂ = 0.5 → 半径减半
+        ja: r₁ = 1, r₂ = 0.5 → 半径は半分に
+      - es: Q₂/Q₁ = r₂⁴ / r₁⁴
+        en: Q₂/Q₁ = r₂⁴ / r₁⁴
+        pt: Q₂/Q₁ = r₂⁴ / r₁⁴
+        fr: Q₂/Q₁ = r₂⁴ / r₁⁴
+        zh: Q₂/Q₁ = r₂⁴ / r₁⁴
+        ja: Q₂/Q₁ = r₂⁴ / r₁⁴
+      - es: Q₂/Q₁ = (0.5)⁴ / (1)⁴
+        en: Q₂/Q₁ = (0.5)⁴ / (1)⁴
+        pt: Q₂/Q₁ = (0,5)⁴ / (1)⁴
+        fr: Q₂/Q₁ = (0,5)⁴ / (1)⁴
+        zh: Q₂/Q₁ = (0.5)⁴ / (1)⁴
+        ja: Q₂/Q₁ = (0.5)⁴ / (1)⁴
+      - es: Q₂/Q₁ = 0.0625
+        en: Q₂/Q₁ = 0.0625
+        pt: Q₂/Q₁ = 0,0625
+        fr: Q₂/Q₁ = 0,0625
+        zh: Q₂/Q₁ = 0.0625
+        ja: Q₂/Q₁ = 0.0625
+      - es: Q₂ = Q₁ / 16 → el flujo se divide por dieciséis
+        en: Q₂ = Q₁ / 16 → the flow is divided by sixteen
+        pt: Q₂ = Q₁ / 16 → o fluxo é dividido por dezesseis
+        fr: Q₂ = Q₁ / 16 → le débit est divisé par seize
+        zh: Q₂ = Q₁ / 16 → 流量除以十六
+        ja: Q₂ = Q₁ / 16 → 流量は16分の1になる

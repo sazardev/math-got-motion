@@ -1,0 +1,337 @@
+id: ellipse-area
+title:
+  es: Área de una Elipse
+  en: Area of an Ellipse
+  pt: Área de uma Elipse
+  fr: Aire d'une Ellipse
+  zh: 椭圆的面积
+  ja: 楕円の面積
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: area
+    type: variable
+    value: A
+    explanation:
+      es: El área de la elipse, la superficie que encierra.
+      en: The area of the ellipse, the surface it encloses.
+      pt: A área da elipse, a superfície que ela encerra.
+      fr: L'aire de l'ellipse, la surface qu'elle enferme.
+      zh: 椭圆的面积,即它所围成的表面。
+      ja: 楕円の面積、すなわちそれが囲む面。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: Pi, la constante que relaciona toda circunferencia con su diámetro.
+      en: Pi, the constant relating every circumference to its diameter.
+      pt: Pi, a constante que relaciona toda circunferência ao seu diâmetro.
+      fr: Pi, la constante qui relie toute circonférence à son diamètre.
+      zh: 圆周率,连接任何圆周与其直径的常数。
+      ja: 円周率。あらゆる円周を直径と結びつける定数。
+  - id: times-1
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicación entre π y el semieje mayor.
+      en: Multiplication of π and the semi-major axis.
+      pt: Multiplicação entre π e o semieixo maior.
+      fr: Multiplication de π par le demi-grand axe.
+      zh: π与长半轴相乘。
+      ja: πと長半径の乗算。
+  - id: semi-major
+    type: variable
+    value: a
+    explanation:
+      es: El semieje mayor, la mitad del diámetro más largo de la elipse.
+      en: The semi-major axis, half the longest diameter of the ellipse.
+      pt: O semieixo maior, metade do diâmetro mais longo da elipse.
+      fr: Le demi-grand axe, la moitié du plus long diamètre de l'ellipse.
+      zh: 长半轴,即椭圆最长直径的一半。
+      ja: 長半径。楕円の最も長い直径の半分。
+  - id: times-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicación que incorpora el semieje menor.
+      en: Multiplication that brings in the semi-minor axis.
+      pt: Multiplicação que incorpora o semieixo menor.
+      fr: Multiplication qui fait entrer le demi-petit axe.
+      zh: 将短半轴也乘进来。
+      ja: 短半径を掛け合わせる乗算。
+  - id: semi-minor
+    type: variable
+    value: b
+    explanation:
+      es: El semieje menor, la mitad del diámetro más corto de la elipse.
+      en: The semi-minor axis, half the shortest diameter of the ellipse.
+      pt: O semieixo menor, metade do diâmetro mais curto da elipse.
+      fr: Le demi-petit axe, la moitié du plus court diamètre de l'ellipse.
+      zh: 短半轴,即椭圆最短直径的一半。
+      ja: 短半径。楕円の最も短い直径の半分。
+context:
+  author:
+    es: Basada en la obra de Arquímedes
+    en: Based on the work of Archimedes
+    pt: Baseada na obra de Arquimedes
+    fr: Basée sur l'œuvre d'Archimède
+    zh: 基于阿基米德的著作
+    ja: アルキメデスの業績に基づく
+  era:
+    es: Grecia, c. 250 a.C. · formalizada en el s. XVII
+    en: Greece, c. 250 BC · formalized in the 17th century
+    pt: Grécia, c. 250 a.C. · formalizada no séc. XVII
+    fr: Grèce, c. 250 av. J.-C. · formalisée au XVIIe s.
+    zh: 希腊,约公元前250年 · 在17世纪正式确立
+    ja: ギリシャ、紀元前250年頃・17世紀に定式化
+  history:
+    es: >-
+      Una elipse es un círculo estirado, y su área πab se obtiene multiplicando el área de un
+      círculo de radio a por el factor b/a con que se comprimió. Arquímedes calculó el área de la
+      elipse en su tratado Sobre los conoides y esferoides, hacia el 250 a.C. Siglos después,
+      Kepler descubrió que los planetas recorren órbitas elípticas con el Sol en un foco, y sus
+      leyes hacen del área de esos barridos el corazón de la mecánica celeste. Hoy la misma
+      fórmula mide estadios, lentes y las huellas de los satélites en el suelo.
+    en: >-
+      An ellipse is a stretched circle, and its area πab follows from multiplying the area of a
+      circle of radius a by the factor b/a by which it was squeezed. Archimedes found the area of
+      the ellipse in his treatise On Conoids and Spheroids, around 250 BC. Centuries later Kepler
+      discovered that planets travel elliptical orbits with the Sun at one focus, and his laws
+      make the areas of those sweeps the heart of celestial mechanics. Today the same formula
+      measures stadiums, lenses and the footprints of satellites on the ground.
+    pt: >-
+      Uma elipse é um círculo esticado, e sua área πab decorre de multiplicar a área de um
+      círculo de raio a pelo fator b/a pelo qual ele foi comprimido. Arquimedes calculou a área
+      da elipse em seu tratado Sobre Conoides e Esferoides, por volta de 250 a.C. Séculos depois,
+      Kepler descobriu que os planetas percorrem órbitas elípticas com o Sol em um dos focos, e
+      suas leis fazem das áreas varridas o coração da mecânica celeste. Hoje a mesma fórmula mede
+      estádios, lentes e as pegadas dos satélites no solo.
+    fr: >-
+      Une ellipse est un cercle étiré, et son aire πab provient du produit de l'aire d'un cercle
+      de rayon a par le facteur b/a selon lequel il a été comprimé. Archimède a calculé l'aire de
+      l'ellipse dans son traité Sur les conoïdes et les sphéroïdes, vers 250 av. J.-C. Des
+      siècles plus tard, Kepler a découvert que les planètes parcourent des orbites elliptiques
+      avec le Soleil en un foyer, et ses lois font des aires balayées le cœur de la mécanique
+      céleste. Aujourd'hui, la même formule mesure les stades, les lentilles et les empreintes
+      des satellites au sol.
+    zh: >-
+      椭圆是被拉伸的圆,其面积πab可以通过把半径为a的圆的面积乘以压缩比b/a来得到。阿基米德在约公元前250年
+      的著作《论锥体与球体》中计算了椭圆的面积。几个世纪之后,开普勒发现行星沿椭圆轨道绕太阳运行,太阳位于
+      其中一个焦点上,他的行星运动定律使这些被扫过的面积成为天体力学的核心。直到今天,同一公式仍然用来测量
+      体育场的场地、透镜的曲面以及卫星在地面上的覆盖区域。
+    ja: >-
+      楕円は円を引き延ばしたもので、その面積πabは、半径aの円の面積に圧縮率b/aを掛けることで得られる。
+      アルキメデスは紀元前250年頃、著書『円錐体と回転楕円体について』で楕円の面積を求めた。数世紀後、
+      ケプラーは惑星が太陽を一つの焦点とする楕円軌道を描くことを発見し、彼の法則はその掃過面積を天体力学の
+      中心とした。今日でも同じ公式が、スタジアム、レンズ、衛星の地上カバレッジの計測に使われている。
+  timeline:
+    - year: c. 250 a.C.
+      label:
+        es: >-
+          Arquímedes calcula el área de la elipse en Sobre los conoides y esferoides.
+        en: >-
+          Archimedes computes the area of the ellipse in On Conoids and Spheroids.
+        pt: >-
+          Arquimedes calcula a área da elipse em Sobre Conoides e Esferoides.
+        fr: >-
+          Archimède calcule l'aire de l'ellipse dans Sur les conoïdes et les sphéroïdes.
+        zh: >-
+          阿基米德在《论锥体与球体》中计算了椭圆的面积。
+        ja: >-
+          アルキメデスが『円錐体と回転楕円体について』で楕円の面積を求める。
+    - year: "1609"
+      label:
+        es: >-
+          Kepler publica Astronomia Nova, donde muestra que los planetas recorren órbitas
+          elípticas.
+        en: >-
+          Kepler publishes Astronomia Nova, showing that planets travel in elliptical orbits.
+        pt: >-
+          Kepler publica Astronomia Nova, mostrando que os planetas percorrem órbitas elípticas.
+        fr: >-
+          Kepler publie l'Astronomia Nova, où il montre que les planètes parcourent des orbites
+          elliptiques.
+        zh: >-
+          开普勒发表《新天文学》,指出行星沿椭圆轨道运行。
+        ja: >-
+          ケプラーが『新天文学』を発表し、惑星が楕円軌道を描くことを示す。
+    - year: s. XVII
+      label:
+        es: >-
+          La geometría analítica formaliza la elipse y el cálculo integral confirma la fórmula
+          πab.
+        en: >-
+          Analytic geometry formalizes the ellipse and the calculus confirms the formula πab.
+        pt: >-
+          A geometria analítica formaliza a elipse e o cálculo integral confirma a fórmula πab.
+        fr: >-
+          La géométrie analytique formalise l'ellipse et le calcul intégral confirme la formule
+          πab.
+        zh: >-
+          解析几何使椭圆得以正式表述,微积分证实了πab公式。
+        ja: >-
+          解析幾何が楕円を定式化し、積分法がπabの公式を裏付ける。
+    - year: Hoy
+      label:
+        es: >-
+          La fórmula mide estadios, lentes, órbitas de satélites y huellas de cobertura en el
+          suelo.
+        en: >-
+          The formula measures stadiums, lenses, satellite orbits and ground-coverage footprints.
+        pt: >-
+          A fórmula mede estádios, lentes, órbitas de satélites e pegadas de cobertura no solo.
+        fr: >-
+          La formule mesure les stades, les lentilles, les orbites de satellites et les empreintes
+          de couverture au sol.
+        zh: >-
+          该公式用于测量体育场、透镜、卫星轨道和地面覆盖范围。
+        ja: >-
+          この公式はスタジアム、レンズ、衛星軌道、地上カバレッジの計測に使われる。
+  useCases:
+    - title:
+        es: Astronomía
+        en: Astronomy
+        pt: Astronomia
+        fr: Astronomie
+        zh: 天文学
+        ja: 天文学
+      description:
+        es: >-
+          Las órbitas planetarias y de satélites son elipses, y las leyes de Kepler miden el área
+          barrida por el planeta en cada intervalo.
+        en: >-
+          Planetary and satellite orbits are ellipses, and Kepler's laws measure the area the
+          planet sweeps in each interval.
+        pt: >-
+          As órbitas planetárias e de satélites são elipses, e as leis de Kepler medem a área
+          varrida pelo planeta em cada intervalo.
+        fr: >-
+          Les orbites planétaires et de satellites sont des ellipses, et les lois de Kepler
+          mesurent l'aire balayée par la planète à chaque intervalle.
+        zh: >-
+          行星和卫星的轨道是椭圆,开普勒定律测量行星在每个时间间隔内扫过的面积。
+        ja: >-
+          惑星や衛星の軌道は楕円であり、ケプラーの法則は各時間間隔で惑星が掃過する面積を測る。
+    - title:
+        es: Deportes y construcción
+        en: Sports and construction
+        pt: Esportes e construção
+        fr: Sports et construction
+        zh: 体育与建筑
+        ja: スポーツと建設
+      description:
+        es: >-
+          Dimensiona campos de fútbol americano, plazas y piscinas con contornos elípticos.
+        en: >-
+          It sizes football fields, plazas and pools with elliptical outlines.
+        pt: >-
+          Dimensiona campos de futebol americano, praças e piscinas com contornos elípticos.
+        fr: >-
+          Elle dimensionne les terrains de football américain, places et piscines à contours
+          elliptiques.
+        zh: >-
+          用于确定美式橄榄球场、广场和椭圆形泳池的尺寸。
+        ja: >-
+          楕円形の輪郭を持つアメリカンフットボール場、広場、プールの寸法を決める。
+    - title:
+        es: Óptica
+        en: Optics
+        pt: Óptica
+        fr: Optique
+        zh: 光学
+        ja: 光学
+      description:
+        es: >-
+          Lentes y espejos elípticos concentran luz o sonido en uno de sus focos; su área fija la
+          abertura útil.
+        en: >-
+          Elliptical lenses and mirrors focus light or sound at one of their foci; their area sets
+          the useful aperture.
+        pt: >-
+          Lentes e espelhos elípticos concentram luz ou som em um de seus focos; sua área define a
+          abertura útil.
+        fr: >-
+          Lentilles et miroirs elliptiques concentrent lumière ou son en un de leurs foyers ; leur
+          aire fixe l'ouverture utile.
+        zh: >-
+          椭圆透镜和反射镜将光或声聚焦于一个焦点;其面积决定了有效孔径。
+        ja: >-
+          楕円形のレンズや鏡は光や音を一つの焦点に集め、その面積が有効な開口を決める。
+    - title:
+        es: Telecomunicaciones
+        en: Telecommunications
+        pt: Telecomunicações
+        fr: Télécommunications
+        zh: 电信
+        ja: 電気通信
+      description:
+        es: >-
+          La huella de cobertura de un satélite sobre el suelo se aproxima como una elipse, cuyo
+          área estima la zona servida.
+        en: >-
+          A satellite's ground-coverage footprint is approximated as an ellipse, whose area
+          estimates the served zone.
+        pt: >-
+          A pegada de cobertura de um satélite no solo é aproximada como uma elipse, cuja área
+          estima a zona atendida.
+        fr: >-
+          L'empreinte de couverture d'un satellite au sol s'approxime par une ellipse, dont l'aire
+          estime la zone desservie.
+        zh: >-
+          卫星在地面的覆盖足迹近似为椭圆,其面积用于估算服务区域。
+        ja: >-
+          衛星の地上カバレッジのフットプリントは楕円で近似され、その面積がサービス範囲の推定に使われる。
+  example:
+    title:
+      es: Campo elíptico con semiejes 5 y 3
+      en: Elliptical field with semi-axes 5 and 3
+      pt: Campo elíptico com semieixos 5 e 3
+      fr: Terrain elliptique de demi-axes 5 et 3
+      zh: 半轴为5和3的椭圆场地
+      ja: 半軸5と3の楕円形フィールド
+    lines:
+      - es: a = 5, b = 3
+        en: a = 5, b = 3
+        pt: a = 5, b = 3
+        fr: a = 5, b = 3
+        zh: a = 5, b = 3
+        ja: a = 5, b = 3
+      - es: A = π · a · b
+        en: A = π · a · b
+        pt: A = π · a · b
+        fr: A = π · a · b
+        zh: A = π · a · b
+        ja: A = π · a · b
+      - es: A = π × 5 × 3
+        en: A = π × 5 × 3
+        pt: A = π × 5 × 3
+        fr: A = π × 5 × 3
+        zh: A = π × 5 × 3
+        ja: A = π × 5 × 3
+      - es: A = 15π
+        en: A = 15π
+        pt: A = 15π
+        fr: A = 15π
+        zh: A = 15π
+        ja: A = 15π
+      - es: A ≈ 47.12
+        en: A ≈ 47.12
+        pt: A ≈ 47,12
+        fr: A ≈ 47,12
+        zh: A ≈ 47.12
+        ja: A ≈ 47.12

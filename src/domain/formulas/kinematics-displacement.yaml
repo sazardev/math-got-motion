@@ -1,0 +1,404 @@
+id: kinematics-displacement
+title:
+  es: Desplazamiento con Aceleración
+  en: Displacement with Constant Acceleration
+  pt: Deslocamento com Aceleração Constante
+  fr: Déplacement à Accélération Constante
+  zh: 匀加速运动的位移
+  ja: 等加速度運動の変位
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: delta-x
+    type: variable
+    value: Δx
+    explanation:
+      es: El desplazamiento total del objeto, medido en metros.
+      en: The total displacement of the object, measured in meters.
+      pt: O deslocamento total do objeto, medido em metros.
+      fr: Le déplacement total de l'objet, mesuré en mètres.
+      zh: 物体的总位移，单位是米。
+      ja: 物体の全変位。単位はメートル。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: v0
+    type: variable
+    value: v₀
+    explanation:
+      es: La velocidad inicial del objeto.
+      en: The initial velocity of the object.
+      pt: A velocidade inicial do objeto.
+      fr: La vitesse initiale de l'objet.
+      zh: 物体的初速度。
+      ja: 物体の初速度。
+  - id: mul-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por el tiempo transcurrido.
+      en: Multiplied by the elapsed time.
+      pt: Multiplicado pelo tempo decorrido.
+      fr: Multiplié par le temps écoulé.
+      zh: 乘以经过的时间。
+      ja: 経過時間を掛ける。
+  - id: t-1
+    type: variable
+    value: t
+    explanation:
+      es: El tiempo transcurrido desde que comenzó el movimiento, en segundos.
+      en: The time elapsed since the motion began, in seconds.
+      pt: O tempo decorrido desde o início do movimento, em segundos.
+      fr: Le temps écoulé depuis le début du mouvement, en secondes.
+      zh: 自运动开始以来经过的时间，单位是秒。
+      ja: 運動が始まってからの経過時間。単位は秒。
+  - id: plus
+    type: operator
+    value: "+"
+    explanation:
+      es: Se suma la parte que aporta la aceleración.
+      en: Added to the part contributed by the acceleration.
+      pt: Soma-se a parte que a aceleração contribui.
+      fr: S'ajoute la part apportée par l'accélération.
+      zh: 加上加速度所贡献的部分。
+      ja: 加速度による寄与を加える。
+  - id: half
+    type: number
+    value: "½"
+    explanation:
+      es: "Un medio: surge del área triangular bajo el gráfico de velocidad."
+      en: "One half: arises from the triangular area under the velocity graph."
+      pt: "Um meio: surge da área triangular sob o gráfico de velocidade."
+      fr: "Un demi : issu de l'aire triangulaire sous le graphique de vitesse."
+      zh: "二分之一：来自速度图线下方的三角形面积。"
+      ja: "2分の1。速度グラフの下の三角形の面積から生じる。"
+  - id: mul-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por la aceleración.
+      en: Multiplied by the acceleration.
+      pt: Multiplicado pela aceleração.
+      fr: Multiplié par l'accélération.
+      zh: 乘以加速度。
+      ja: 加速度を掛ける。
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: La aceleración constante, el cambio de velocidad por cada segundo.
+      en: The constant acceleration, the change in speed each second.
+      pt: A aceleração constante, a variação de velocidade a cada segundo.
+      fr: L'accélération constante, le changement de vitesse à chaque seconde.
+      zh: 恒定的加速度，即每秒速度的变化量。
+      ja: 一定の加速度。毎秒あたりの速度の変化量。
+  - id: mul-3
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por el cuadrado del tiempo.
+      en: Multiplied by the square of the time.
+      pt: Multiplicado pelo quadrado do tempo.
+      fr: Multiplié par le carré du temps.
+      zh: 乘以时间的平方。
+      ja: 時間の二乗を掛ける。
+  - id: t-2
+    type: variable
+    value: t
+    explanation:
+      es: El mismo tiempo transcurrido, ahora elevado al cuadrado.
+      en: The same elapsed time, now squared.
+      pt: O mesmo tempo decorrido, agora ao quadrado.
+      fr: Le même temps écoulé, désormais au carré.
+      zh: 相同的时间，现在取平方。
+      ja: 同じ経過時間。今度は二乗される。
+  - id: exp-2
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Al cuadrado: el desplazamiento acelerado crece con el cuadrado del tiempo."
+      en: "Squared: the accelerated displacement grows with the square of time."
+      pt: "Ao quadrado: o deslocamento acelerado cresce com o quadrado do tempo."
+      fr: "Au carré : le déplacement accéléré croît avec le carré du temps."
+      zh: "平方：加速产生的位移随时间平方增长。"
+      ja: "二乗。加速度による変位は時間の二乗に比例して増える。"
+context:
+  author:
+    es: Galileo Galilei
+    en: Galileo Galilei
+    pt: Galileu Galilei
+    fr: Galilée
+    zh: 伽利略·伽利莱
+    ja: ガリレオ・ガリレイ
+  era:
+    es: Italia, 1564–1642
+    en: Italy, 1564–1642
+    pt: Itália, 1564–1642
+    fr: Italie, 1564–1642
+    zh: 意大利，1564–1642年
+    ja: イタリア、1564–1642年
+  history:
+    es: >-
+      Galileo Galilei descubrió en sus experimentos con planos inclinados que un cuerpo en caída o
+      deslizamiento gana velocidad de manera uniforme, y demostró que el espacio recorrido es
+      proporcional al cuadrado del tiempo. Su ley de la caída de los cuerpos, publicada en los
+      Discorsi (1638), es el caso más simple de esta ecuación: con velocidad inicial nula, el
+      desplazamiento se reduce a ½·a·t². La fórmula general añade el término v₀·t, el
+      desplazamiento que ya aporta la velocidad inicial. Geométricamente, ambos términos son las
+      áreas del rectángulo y del triángulo bajo el gráfico velocidad-tiempo. Es la base de la
+      distancia de frenado y de la física de proyectiles.
+    en: >-
+      Galileo Galilei discovered in his inclined-plane experiments that a falling or sliding body
+      gains speed uniformly, and showed that the distance traveled is proportional to the square of
+      time. His law of falling bodies, published in the Discorsi (1638), is the simplest case of this
+      equation: with zero initial velocity, the displacement reduces to ½·a·t². The general formula
+      adds the term v₀·t, the displacement the initial velocity already contributes. Geometrically,
+      both terms are the areas of the rectangle and the triangle under the velocity-time graph. It is
+      the basis of braking distance and of projectile physics.
+    pt: >-
+      Galileu Galilei descobriu em seus experimentos com planos inclinados que um corpo em queda ou
+      deslizamento ganha velocidade de maneira uniforme, e demonstrou que o espaço percorrido é
+      proporcional ao quadrado do tempo. Sua lei da queda dos corpos, publicada nos Discorsi (1638),
+      é o caso mais simples dessa equação: com velocidade inicial nula, o deslocamento se reduz a
+      ½·a·t². A fórmula geral acrescenta o termo v₀·t, o deslocamento que a velocidade inicial já
+      contribui. Geometricamente, ambos os termos são as áreas do retângulo e do triângulo sob o
+      gráfico velocidade-tempo. É a base da distância de frenagem e da física dos projéteis.
+    fr: >-
+      Galilée découvrit dans ses expériences sur les plans inclinés qu'un corps en chute ou en
+      glissement gagne de la vitesse de manière uniforme, et montra que la distance parcourue est
+      proportionnelle au carré du temps. Sa loi de la chute des corps, publiée dans les Discorsi
+      (1638), est le cas le plus simple de cette équation : avec une vitesse initiale nulle, le
+      déplacement se réduit à ½·a·t². La formule générale ajoute le terme v₀·t, le déplacement que
+      la vitesse initiale apporte déjà. Géométriquement, les deux termes sont les aires du rectangle
+      et du triangle sous le graphique vitesse-temps. C'est la base de la distance de freinage et de
+      la physique des projectiles.
+    zh: >-
+      伽利略·伽利莱在斜面实验中发现了自由下落或滑动的物体均匀地获得速度，并证明了所经过的距离与时间的平方成正比。
+      他在《关于两门新科学的对话》(1638年)中发表的自由落体定律正是这一方程最简单的特例：当初速度为零时，位移就简化为
+      ½·a·t²。一般公式则增加了v₀·t这一项，即初速度本身贡献的位移。从几何上看，这两项正是速度-时间图像下方矩形和三角形
+      的面积。它是制动距离和抛体运动物理的基础。
+    ja: >-
+      ガリレオ・ガリレイは斜面の実験で、落下する物体や滑る物体が一様に速度を増すことを発見し、進んだ距離が時間の二乗に
+      比例することを示した。『新科学対話』(1638年)に発表された自由落下の法則は、この方程式の最も単純な場合である。
+      初速度がゼロなら、変位は½·a·t²になる。一般の式はv₀·tの項、つまり初速度がすでに寄与する変位を加える。幾何学的には、
+      この二つの項は速度・時間グラフの下の長方形と三角形の面積に当たる。これは制動距離と投射体の物理の基礎である。
+  timeline:
+    - year: "1604"
+      label:
+        es: >-
+          Galileo formula la ley de la aceleración uniforme a partir de sus experimentos con planos
+          inclinados.
+        en: >-
+          Galileo formulates the law of uniform acceleration from his inclined-plane experiments.
+        pt: >-
+          Galileu formula a lei da aceleração uniforme a partir de seus experimentos com planos
+          inclinados.
+        fr: >-
+          Galilée formule la loi de l'accélération uniforme à partir de ses expériences sur les plans
+          inclinés.
+        zh: >-
+          伽利略通过斜面实验提出了匀加速运动的定律。
+        ja: >-
+          ガリレオが斜面の実験から等加速度運動の法則を定式化する。
+    - year: "1638"
+      label:
+        es: >-
+          Se publican los Discorsi en Leiden, con la ley de caída y la proporción del espacio con el
+          cuadrado del tiempo.
+        en: >-
+          The Discorsi are published in Leiden, with the law of fall and the square-time law of
+          distance.
+        pt: >-
+          Os Discorsi são publicados em Leiden, com a lei da queda e a proporção do espaço com o
+          quadrado do tempo.
+        fr: >-
+          Les Discorsi sont publiés à Leyde, avec la loi de chute et la proportionnalité de l'espace
+          au carré du temps.
+        zh: >-
+          《关于两门新科学的对话》在莱顿出版，其中包含落体定律和距离与时间平方成正比的规律。
+        ja: >-
+          『新科学対話』がライデンで出版され、落下の法則と距離が時間の二乗に比例することが示される。
+    - year: "1687"
+      label:
+        es: >-
+          Newton la incorpora al marco del cálculo en los Principia, generalizándola a cualquier
+          movimiento.
+        en: >-
+          Newton folds it into the calculus framework of the Principia, generalizing it to any
+          motion.
+        pt: >-
+          Newton a incorpora ao quadro do cálculo nos Principia, generalizando-a para qualquer
+          movimento.
+        fr: >-
+          Newton l'intègre au cadre du calcul dans les Principia, la généralisant à tout mouvement.
+        zh: >-
+          牛顿在《原理》中将其纳入微积分的框架，把它推广到一切运动。
+        ja: >-
+          ニュートンが『プリンキピア』の中でこれを微積分の枠組みに組み込み、あらゆる運動へと一般化する。
+    - year: Hoy
+      label:
+        es: >-
+          Rige la distancia de frenado, la trayectoria de proyectiles y el control de movimiento de
+          robots.
+        en: >-
+          It governs braking distance, projectile trajectories, and robot motion control.
+        pt: >-
+          Rege a distância de frenagem, a trajetória de projéteis e o controle de movimento de robôs.
+        fr: >-
+          Elle régit la distance de freinage, les trajectoires de projectiles et le contrôle de
+          mouvement des robots.
+        zh: >-
+          它支配着制动距离、抛体轨迹和机器人的运动控制。
+        ja: >-
+          制動距離、投射体の軌道、ロボットの運動制御を支配する。
+  useCases:
+    - title:
+        es: Seguridad vial
+        en: Road safety
+        pt: Segurança viária
+        fr: Sécurité routière
+        zh: 道路安全
+        ja: 交通安全
+      description:
+        es: >-
+          Calcula la distancia que recorre un vehículo durante el frenado a partir de su velocidad y
+          desaceleración.
+        en: >-
+          It calculates the distance a vehicle travels while braking from its speed and deceleration.
+        pt: >-
+          Calcula a distância que um veículo percorre durante a frenagem a partir de sua velocidade e
+          desaceleração.
+        fr: >-
+          Elle calcule la distance parcourue par un véhicule au freinage à partir de sa vitesse et de
+          sa décélération.
+        zh: >-
+          根据车辆的速度和减速度计算制动过程中行驶的距离。
+        ja: >-
+          速度と減速度から、制動中に車両が進む距離を計算する。
+    - title:
+        es: Balística y proyectiles
+        en: Ballistics and projectiles
+        pt: Balística e projéteis
+        fr: Balistique et projectiles
+        zh: 弹道与抛体
+        ja: 弾道と投射体
+      description:
+        es: >-
+          Describe el desplazamiento de un proyectil bajo la gravedad, base de trayectorias de armas
+          y deportes.
+        en: >-
+          It describes a projectile's displacement under gravity, the basis of weapon and sport
+          trajectories.
+        pt: >-
+          Descreve o deslocamento de um projétil sob a gravidade, base das trajetórias de armas e
+          esportes.
+        fr: >-
+          Elle décrit le déplacement d'un projectile sous l'effet de la gravité, base des trajectoires
+          d'armes et de sports.
+        zh: >-
+          它描述抛体在重力作用下的位移，是武器和运动弹道的基础。
+        ja: >-
+          重力下での投射体の変位を記述する。武器やスポーツの軌道の基礎である。
+    - title:
+        es: Atletismo y saltos
+        en: Athletics and jumps
+        pt: Atletismo e saltos
+        fr: Athlétisme et sauts
+        zh: 田径与跳跃
+        ja: 陸上競技と跳躍
+      description:
+        es: >-
+          Los entrenadores estiman la distancia de un salto o lanzamiento desde la velocidad y
+          aceleración del despegue.
+        en: >-
+          Coaches estimate the distance of a jump or throw from the takeoff speed and acceleration.
+        pt: >-
+          Os treinadores estimam a distância de um salto ou arremesso a partir da velocidade e
+          aceleração do impulso.
+        fr: >-
+          Les entraîneurs estiment la distance d'un saut ou d'un lancer à partir de la vitesse et de
+          l'accélération de l'impulsion.
+        zh: >-
+          教练根据起跳的速度和加速度来估算跳跃或投掷的距离。
+        ja: >-
+          コーチは踏み切りの速度と加速度から、ジャンプや投擲の距離を推定する。
+    - title:
+        es: Robótica y automatización
+        en: Robotics and automation
+        pt: Robótica e automação
+        fr: Robotique et automatisation
+        zh: 机器人与自动化
+        ja: ロボット工学と自動化
+      description:
+        es: >-
+          Planifica los desplazamientos punto a punto de brazos y ejes con perfiles de aceleración
+          controlada.
+        en: >-
+          It plans point-to-point moves of arms and axes with controlled acceleration profiles.
+        pt: >-
+          Planeja os deslocamentos ponto a ponto de braços e eixos com perfis de aceleração
+          controlada.
+        fr: >-
+          Elle planifie les déplacements point à point des bras et des axes avec des profils
+          d'accélération maîtrisés.
+        zh: >-
+          用于规划机械臂和轴在受控加速度曲线下的点对点位移。
+        ja: >-
+          制御された加速度プロファイルで、アームや軸の点間移動を計画する。
+  example:
+    title:
+      es: Un auto que acelera 4 segundos
+      en: A car accelerating for 4 seconds
+      pt: Um carro acelerando por 4 segundos
+      fr: Une voiture qui accélère pendant 4 secondes
+      zh: 加速4秒的汽车
+      ja: 4秒間加速する車
+    lines:
+      - es: v₀ = 10 m/s · a = 2 m/s² · t = 4 s
+        en: v₀ = 10 m/s · a = 2 m/s² · t = 4 s
+        pt: v₀ = 10 m/s · a = 2 m/s² · t = 4 s
+        fr: v₀ = 10 m/s · a = 2 m/s² · t = 4 s
+        zh: v₀ = 10 米/秒 · a = 2 米/秒² · t = 4 秒
+        ja: v₀ = 10 m/s · a = 2 m/s² · t = 4 s
+      - es: Δx = v₀ · t + ½ · a · t²
+        en: Δx = v₀ · t + ½ · a · t²
+        pt: Δx = v₀ · t + ½ · a · t²
+        fr: Δx = v₀ · t + ½ · a · t²
+        zh: Δx = v₀ · t + ½ · a · t²
+        ja: Δx = v₀ · t + ½ · a · t²
+      - es: Δx = 10 × 4 + ½ × 2 × 4²
+        en: Δx = 10 × 4 + ½ × 2 × 4²
+        pt: Δx = 10 × 4 + ½ × 2 × 4²
+        fr: Δx = 10 × 4 + ½ × 2 × 4²
+        zh: Δx = 10 × 4 + ½ × 2 × 4²
+        ja: Δx = 10 × 4 + ½ × 2 × 4²
+      - es: Δx = 40 + ½ × 2 × 16
+        en: Δx = 40 + ½ × 2 × 16
+        pt: Δx = 40 + ½ × 2 × 16
+        fr: Δx = 40 + ½ × 2 × 16
+        zh: Δx = 40 + ½ × 2 × 16
+        ja: Δx = 40 + ½ × 2 × 16
+      - es: Δx = 40 + 16
+        en: Δx = 40 + 16
+        pt: Δx = 40 + 16
+        fr: Δx = 40 + 16
+        zh: Δx = 40 + 16
+        ja: Δx = 40 + 16
+      - es: Δx = 56 m
+        en: Δx = 56 m
+        pt: Δx = 56 m
+        fr: Δx = 56 m
+        zh: Δx = 56 米
+        ja: Δx = 56 m

@@ -1,0 +1,329 @@
+id: parallelogram-area
+title:
+  es: Área de un Paralelogramo
+  en: Area of a Parallelogram
+  pt: Área de um Paralelogramo
+  fr: Aire d'un Parallélogramme
+  zh: 平行四边形的面积
+  ja: 平行四辺形の面積
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: area
+    type: variable
+    value: A
+    explanation:
+      es: El área del paralelogramo, la superficie que encierra.
+      en: The area of the parallelogram, the surface it encloses.
+      pt: A área do paralelogramo, a superfície que ele encerra.
+      fr: L'aire du parallélogramme, la surface qu'il enferme.
+      zh: 平行四边形的面积,即它所围成的表面。
+      ja: 平行四辺形の面積、すなわちそれが囲む面。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: base
+    type: variable
+    value: b
+    explanation:
+      es: La base, cualquiera de los lados sobre el que se apoya la figura.
+      en: The base, either side the figure rests on.
+      pt: A base, qualquer um dos lados sobre os quais a figura se apoia.
+      fr: La base, l'un des côtés sur lesquels la figure repose.
+      zh: 底边,即图形所依托的任一条边。
+      ja: 底辺。図形が乗る辺のいずれか。
+  - id: times
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicación entre la base y la altura.
+      en: Multiplication of the base and the height.
+      pt: Multiplicação entre a base e a altura.
+      fr: Multiplication de la base par la hauteur.
+      zh: 底边与高相乘。
+      ja: 底辺と高さの乗算。
+  - id: height
+    type: variable
+    value: h
+    explanation:
+      es: La altura, la distancia perpendicular entre la base y su lado paralelo.
+      en: The height, the perpendicular distance between the base and its parallel side.
+      pt: A altura, a distância perpendicular entre a base e seu lado paralelo.
+      fr: La hauteur, la distance perpendiculaire entre la base et son côté parallèle.
+      zh: 高,即底边与其对边之间的垂直距离。
+      ja: 高さ。底辺とそれに平行な辺との間の垂直距離。
+context:
+  author:
+    es: Origen colectivo (geometría griega)
+    en: Collective origin (Greek geometry)
+    pt: Origem coletiva (geometria grega)
+    fr: Origine collective (géométrie grecque)
+    zh: 集体起源(希腊几何学)
+    ja: 集団的起源(古代ギリシャ幾何学)
+  era:
+    es: Grecia, c. 300 a.C. · en los Elementos
+    en: Greece, c. 300 BC · in the Elements
+    pt: Grécia, c. 300 a.C. · nos Elementos
+    fr: Grèce, c. 300 av. J.-C. · dans les Éléments
+    zh: 希腊,约公元前300年 · 《几何原本》
+    ja: ギリシャ、紀元前300年頃・『原論』
+  history:
+    es: >-
+      El área de un paralelogramo se calcula multiplicando su base por su altura, la distancia
+      perpendicular entre dos lados paralelos, y no lado por lado: esa es justamente la
+      diferencia con un rectángulo. Euclides lo demostró en el libro I de los Elementos
+      (proposición I.35), donde muestra que dos paralelogramos con la misma base y la misma
+      altura tienen igual área aunque sus lados estén inclinados. Ese principio, de que al
+      "cizallar" una figura su área no cambia, es el mismo que hoy permite medir la distancia
+      recorrida como el área bajo una curva de velocidad-tiempo.
+    en: >-
+      The area of a parallelogram is its base times its height, the perpendicular distance
+      between two parallel sides, not side times side — that is precisely what distinguishes it
+      from a rectangle. Euclid proved this in Book I of the Elements (proposition I.35), showing
+      that two parallelograms on the same base and with the same height have equal area even if
+      their sides are slanted. That principle, that shearing a figure does not change its area,
+      is the same one that today lets us read the distance travelled as the area under a
+      velocity–time graph.
+    pt: >-
+      A área de um paralelogramo é a base vezes a altura, a distância perpendicular entre dois
+      lados paralelos, e não lado vezes lado: é exatamente isso que o distingue de um retângulo.
+      Euclides provou isso no livro I dos Elementos (proposição I.35), mostrando que dois
+      paralelogramos de mesma base e mesma altura têm áreas iguais ainda que seus lados estejam
+      inclinados. Esse princípio, de que "cisalhar" uma figura não muda sua área, é o mesmo que
+      hoje permite medir a distância percorrida como a área sob uma curva de velocidade-tempo.
+    fr: >-
+      L'aire d'un parallélogramme se calcule en multipliant sa base par sa hauteur, la distance
+      perpendiculaire entre deux côtés parallèles, et non côté par côté : c'est précisément ce
+      qui le distingue d'un rectangle. Euclide l'a démontré dans le livre I des Éléments
+      (proposition I.35), en montrant que deux parallélogrammes de même base et de même hauteur
+      ont même aire même si leurs côtés sont inclinés. Ce principe, selon lequel cisailer une
+      figure ne change pas son aire, est celui qui permet aujourd'hui de lire la distance
+      parcourue comme l'aire sous une courbe vitesse-temps.
+    zh: >-
+      平行四边形的面积等于底乘高,即两条平行对边之间的垂直距离,而不是边乘边——这正是它与长方形之间的
+      根本区别。欧几里得在《几何原本》第一卷的命题I.35中证明了这一结论:同底等高的两个平行四边形,即使
+      侧边倾斜,面积也相等。这种把图形"剪切"变形而不改变面积的原理,也正是今天人们把匀加速运动中的位移
+      读作速度-时间曲线下的面积、从而打通几何与微积分的基础。
+    ja: >-
+      平行四辺形の面積は、底辺に高さを掛けて求める。高さとは二本の平行な辺の間の垂直距離であり、辺と辺
+      を掛けるのではない——それが長方形との決定的な違いだ。ユークリッドは『原論』第1巻の命題I.35で、
+      同じ底辺と同じ高さを持つ二つの平行四辺形は、辺が傾いていても面積が等しいことを示した。図形を
+      「せん断」しても面積が変わらないというこの原理こそ、今日、速度-時間グラフの下の面積として移動距離
+      を読み取る考え方の土台である。
+  timeline:
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides demuestra en los Elementos que dos paralelogramos con la misma base y la
+          misma altura tienen igual área.
+        en: >-
+          Euclid proves in the Elements that two parallelograms with the same base and the same
+          height have equal area.
+        pt: >-
+          Euclides prova nos Elementos que dois paralelogramos com a mesma base e a mesma altura
+          têm áreas iguais.
+        fr: >-
+          Euclide démontre dans les Éléments que deux parallélogrammes de même base et de même
+          hauteur ont même aire.
+        zh: >-
+          欧几里得在《几何原本》中证明,同底等高的两个平行四边形面积相等。
+        ja: >-
+          ユークリッドが『原論』で、同じ底辺と同じ高さを持つ二つの平行四辺形は面積が等しいことを証明する。
+    - year: "1635"
+      label:
+        es: >-
+          Cavalieri publica su método de los indivisibles, que generaliza la idea de que
+          desplazar capas no cambia el área.
+        en: >-
+          Cavalieri publishes his method of indivisibles, generalizing the idea that sliding
+          layers does not change the area.
+        pt: >-
+          Cavalieri publica seu método dos indivisíveis, que generaliza a ideia de que deslizar
+          camadas não muda a área.
+        fr: >-
+          Cavalieri publie sa méthode des indivisibles, qui généralise l'idée que glisser des
+          couches ne change pas l'aire.
+        zh: >-
+          卡瓦列里发表不可分量法,将"平移薄层不改变面积"的思想加以推广。
+        ja: >-
+          カヴァリエーリが不可分の方法を発表し、層をずらしても面積が変わらないという考えを一般化する。
+    - year: s. XVII
+      label:
+        es: >-
+          Newton y Leibniz convierten el área bajo una curva en el concepto central del cálculo
+          integral.
+        en: >-
+          Newton and Leibniz turn the area under a curve into the central concept of integral
+          calculus.
+        pt: >-
+          Newton e Leibniz transformam a área sob uma curva no conceito central do cálculo
+          integral.
+        fr: >-
+          Newton et Leibniz font de l'aire sous une courbe le concept central du calcul intégral.
+        zh: >-
+          牛顿和莱布尼茨把曲线下的面积变成微积分中积分的核心概念。
+        ja: >-
+          ニュートンとライプニッツが曲線の下の面積を積分法の中心概念へと変える。
+    - year: Hoy
+      label:
+        es: >-
+          El área bajo la curva de velocidad-tiempo sigue siendo la forma estándar de medir la
+          distancia recorrida.
+        en: >-
+          The area under a velocity–time graph is still the standard way to measure distance
+          travelled.
+        pt: >-
+          A área sob a curva de velocidade-tempo segue sendo a forma padrão de medir a distância
+          percorrida.
+        fr: >-
+          L'aire sous la courbe vitesse-temps reste la façon standard de mesurer la distance
+          parcourue.
+        zh: >-
+          速度-时间曲线下的面积至今仍是测量位移的标准方法。
+        ja: >-
+          速度-時間グラフの下の面積は、今でも移動距離を測る標準的な方法である。
+  useCases:
+    - title:
+        es: Física y cinemática
+        en: Physics and kinematics
+        pt: Física e cinemática
+        fr: Physique et cinématique
+        zh: 物理与运动学
+        ja: 物理学・運動学
+      description:
+        es: >-
+          La distancia recorrida por un móvil se lee como el área bajo la curva de
+          velocidad-tiempo, base de la cinemática.
+        en: >-
+          The distance travelled is read as the area under the velocity–time graph, a cornerstone
+          of kinematics.
+        pt: >-
+          A distância percorrida é lida como a área sob a curva de velocidade-tempo, base da
+          cinemática.
+        fr: >-
+          La distance parcourue se lit comme l'aire sous la courbe vitesse-temps, fondement de la
+          cinématique.
+        zh: >-
+          位移被读作速度-时间曲线下的面积,这是运动学的基础。
+        ja: >-
+          移動距離は速度-時間グラフの下の面積として読み取られ、運動学の基礎となる。
+    - title:
+        es: Construcción
+        en: Construction
+        pt: Construção civil
+        fr: Construction
+        zh: 建筑施工
+        ja: 建設
+      description:
+        es: >-
+          Mide superficies de suelos, paredes y terrenos inclinados donde los lados no forman
+          ángulos rectos.
+        en: >-
+          It measures floors, walls and sloped plots where the sides do not form right angles.
+        pt: >-
+          Mede superfícies de pisos, paredes e terrenos inclinados onde os lados não formam
+          ângulos retos.
+        fr: >-
+          Elle mesure les sols, murs et terrains en pente dont les côtés ne forment pas d'angles
+          droits.
+        zh: >-
+          用于测量边长不成直角的倾斜地面、墙面和地块的面积。
+        ja: >-
+          辺が直角を成さない傾斜した床・壁・敷地の面積を測る。
+    - title:
+        es: Ingeniería estructural
+        en: Structural engineering
+        pt: Engenharia estrutural
+        fr: Génie des structures
+        zh: 结构工程
+        ja: 構造工学
+      description:
+        es: >-
+          El área bajo el diagrama de fuerza cortante de una viga da el momento flector en cada
+          sección.
+        en: >-
+          The area under a beam's shear-force diagram gives the bending moment at every section.
+        pt: >-
+          A área sob o diagrama de força cortante de uma viga dá o momento fletor em cada seção.
+        fr: >-
+          L'aire sous le diagramme d'effort tranchant d'une poutre donne le moment fléchissant à
+          chaque section.
+        zh: >-
+          梁的剪力图下的面积给出每个截面的弯矩。
+        ja: >-
+          梁のせん断力図の下の面積が、各断面の曲げモーメントを与える。
+    - title:
+        es: Cartografía y SIG
+        en: Cartography and GIS
+        pt: Cartografia e SIG
+        fr: Cartographie et SIG
+        zh: 制图与GIS
+        ja: 地図作成とGIS
+      description:
+        es: >-
+          Calcula el área de parcelas y polígonos sobre planos, descomponiendo figuras inclinadas
+          en paralelogramos y triángulos.
+        en: >-
+          It computes the area of plots and polygons on maps by breaking slanted figures into
+          parallelograms and triangles.
+        pt: >-
+          Calcula a área de lotes e polígonos em plantas, decompondo figuras inclinadas em
+          paralelogramos e triângulos.
+        fr: >-
+          Elle calcule l'aire de parcelles et de polygones sur les plans en décomposant les
+          figures inclinées en parallélogrammes et triangles.
+        zh: >-
+          在地图上计算地块和多边形的面积,将倾斜图形分解为平行四边形和三角形。
+        ja: >-
+          地図上で区画やポリゴンの面積を計算し、傾いた図形を平行四辺形と三角形に分解する。
+  example:
+    title:
+      es: Suelo de 8 m de base y 5 m de altura
+      en: Floor with base 8 m and height 5 m
+      pt: Piso com base de 8 m e altura de 5 m
+      fr: Sol de 8 m de base et 5 m de hauteur
+      zh: 底8米、高5米的场地
+      ja: 底辺8m・高さ5mの床
+    lines:
+      - es: b = 8 m, h = 5 m
+        en: b = 8 m, h = 5 m
+        pt: b = 8 m, h = 5 m
+        fr: b = 8 m, h = 5 m
+        zh: b = 8 m, h = 5 m
+        ja: b = 8 m, h = 5 m
+      - es: A = b · h
+        en: A = b · h
+        pt: A = b · h
+        fr: A = b · h
+        zh: A = b · h
+        ja: A = b · h
+      - es: A = 8 × 5
+        en: A = 8 × 5
+        pt: A = 8 × 5
+        fr: A = 8 × 5
+        zh: A = 8 × 5
+        ja: A = 8 × 5
+      - es: A = 40
+        en: A = 40
+        pt: A = 40
+        fr: A = 40
+        zh: A = 40
+        ja: A = 40
+      - es: A = 40 m²
+        en: A = 40 m²
+        pt: A = 40 m²
+        fr: A = 40 m²
+        zh: A = 40 m²
+        ja: A = 40 m²

@@ -1,0 +1,397 @@
+id: hesss-law
+title:
+  es: Ley de Hess
+  en: Hess's Law
+  pt: Lei de Hess
+  fr: Loi de Hess
+  zh: 赫斯定律
+  ja: ヘスの法則
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: dh
+    type: variable
+    value: "ΔH"
+    explanation:
+      es: El cambio de entalpía de la reacción, el calor intercambiado a presión constante.
+      en: The reaction's enthalpy change, the heat exchanged at constant pressure.
+      pt: A variação de entalpia da reação, o calor trocado a pressão constante.
+      fr: La variation d'enthalpie de la réaction, la chaleur échangée à pression constante.
+      zh: 反应的焓变,即恒压条件下交换的热量。
+      ja: 反応のエンタルピー変化。定圧下でやり取りされる熱量。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a la diferencia entre los productos y los reactivos.
+      en: Is equal to the difference between products and reactants.
+      pt: É igual à diferença entre os produtos e os reagentes.
+      fr: Est égal à la différence entre les produits et les réactifs.
+      zh: 等于产物与反应物之差。
+      ja: 生成物と反応物の差に等しい。
+  - id: sigma-1
+    type: operator
+    value: "Σ"
+    explanation:
+      es: La suma de las entalpías de formación de todos los compuestos.
+      en: The sum of the enthalpies of formation of all the compounds.
+      pt: A soma das entalpias de formação de todos os compostos.
+      fr: La somme des enthalpies de formation de tous les composés.
+      zh: 所有化合物的生成焓之和。
+      ja: すべての化合物の生成エンタルピーの合計。
+  - id: dhf
+    type: constant
+    value: "ΔHf"
+    explanation:
+      es: La entalpía de formación estándar de cada compuesto.
+      en: The standard enthalpy of formation of each compound.
+      pt: A entalpia de formação padrão de cada composto.
+      fr: L'enthalpie de formation standard de chaque composé.
+      zh: 每个化合物的标准生成焓。
+      ja: 各化合物の標準生成エンタルピー。
+  - id: paren-1
+    type: operator
+    value: "("
+    explanation:
+      es: Agrupa la lista de productos de la reacción.
+      en: Groups the list of reaction products.
+      pt: Agrupa a lista de produtos da reação.
+      fr: Regroupe la liste des produits de la réaction.
+      zh: 将反应产物列表括在一起。
+      ja: 反応の生成物の一覧をまとめる括弧。
+  - id: prod
+    type: variable
+    value: prod
+    explanation:
+      es: Los productos de la reacción, con su coeficiente estequiométrico.
+      en: The reaction products, each with its stoichiometric coefficient.
+      pt: Os produtos da reação, cada um com seu coeficiente estequiométrico.
+      fr: Les produits de la réaction, chacun avec son coefficient stœchiométrique.
+      zh: 反应产物,各带其化学计量系数。
+      ja: 反応の生成物。それぞれ化学量論係数を伴う。
+  - id: paren-2
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra la lista de productos.
+      en: Closes the list of products.
+      pt: Fecha a lista de produtos.
+      fr: Ferme la liste des produits.
+      zh: 结束产物列表。
+      ja: 生成物の一覧を閉じる括弧。
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: Menos la suma correspondiente a los reactivos.
+      en: Minus the corresponding sum for the reactants.
+      pt: Menos a soma correspondente aos reagentes.
+      fr: Moins la somme correspondante pour les réactifs.
+      zh: 减去反应物对应的和。
+      ja: 反応物についての同様の合計を引く。
+  - id: sigma-2
+    type: operator
+    value: "Σ"
+    explanation:
+      es: La suma de las entalpías de formación de los reactivos.
+      en: The sum of the enthalpies of formation of the reactants.
+      pt: A soma das entalpias de formação dos reagentes.
+      fr: La somme des enthalpies de formation des réactifs.
+      zh: 反应物的生成焓之和。
+      ja: 反応物の生成エンタルピーの合計。
+  - id: dhf-2
+    type: constant
+    value: "ΔHf"
+    explanation:
+      es: La entalpía de formación estándar de cada reactivo.
+      en: The standard enthalpy of formation of each reactant.
+      pt: A entalpia de formação padrão de cada reagente.
+      fr: L'enthalpie de formation standard de chaque réactif.
+      zh: 每个反应物的标准生成焓。
+      ja: 各反応物の標準生成エンタルピー。
+  - id: paren-3
+    type: operator
+    value: "("
+    explanation:
+      es: Agrupa la lista de reactivos de la reacción.
+      en: Groups the list of reaction reactants.
+      pt: Agrupa a lista de reagentes da reação.
+      fr: Regroupe la liste des réactifs de la réaction.
+      zh: 将反应物列表括在一起。
+      ja: 反応の反応物の一覧をまとめる括弧。
+  - id: react
+    type: variable
+    value: react
+    explanation:
+      es: Los reactivos de la reacción, con su coeficiente estequiométrico.
+      en: The reaction reactants, each with its stoichiometric coefficient.
+      pt: Os reagentes da reação, cada um com seu coeficiente estequiométrico.
+      fr: Les réactifs de la réaction, chacun avec son coefficient stœchiométrique.
+      zh: 反应的反应物,各带其化学计量系数。
+      ja: 反応の反応物。それぞれ化学量論係数を伴う。
+  - id: paren-4
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra la lista de reactivos.
+      en: Closes the list of reactants.
+      pt: Fecha a lista de reagentes.
+      fr: Ferme la liste des réactifs.
+      zh: 结束反应物列表。
+      ja: 反応物の一覧を閉じる括弧。
+context:
+  author:
+    es: Germain Henri Hess
+    en: Germain Henri Hess
+    pt: Germain Henri Hess
+    fr: Germain Henri Hess
+    zh: 日尔曼·亨利·赫斯
+    ja: ジェルマン・アンリ・ヘス
+  era:
+    es: Suiza y Rusia, 1802–1850 · publicada en 1840
+    en: Switzerland and Russia, 1802–1850 · published in 1840
+    pt: Suíça e Rússia, 1802–1850 · publicada em 1840
+    fr: Suisse et Russie, 1802–1850 · publiée en 1840
+    zh: 瑞士和俄罗斯,1802–1850年 · 1840年发表
+    ja: スイスとロシア、1802–1850年・1840年発表
+  history:
+    es: >-
+      Germain Henri Hess, químico suizo que desarrolló toda su carrera en San
+      Petersburgo, propuso en 1840 que el calor liberado o absorbido en una
+      reacción depende únicamente de los estados inicial y final, no del camino
+      seguido. Esta idea, hoy conocida como ley de Hess, permitió calcular
+      calores de reacción que no se podían medir directamente y se convirtió en
+      la base del cálculo de energías de enlace y del poder calorífico de los
+      combustibles. Es además la razón por la que la entalpía es una función de
+      estado.
+    en: >-
+      Germain Henri Hess, a Swiss chemist who spent his entire career in Saint
+      Petersburg, proposed in 1840 that the heat released or absorbed in a
+      reaction depends only on the initial and final states, not on the path
+      taken. This idea, now known as Hess's law, allowed chemists to calculate
+      reaction heats that could not be measured directly and became the basis of
+      bond-energy and fuel-calorific calculations. It is also the reason enthalpy
+      is a state function.
+    pt: >-
+      Germain Henri Hess, químico suíço que desenvolveu toda a sua carreira em
+      São Petersburgo, propôs em 1840 que o calor liberado ou absorvido em uma
+      reação depende apenas dos estados inicial e final, e não do caminho
+      percorrido. Essa ideia, hoje conhecida como lei de Hess, permitiu calcular
+      calores de reação que não podiam ser medidos diretamente e tornou-se a base
+      do cálculo de energias de ligação e do poder calorífico dos combustíveis. É
+      também a razão pela qual a entalpia é uma função de estado.
+    fr: >-
+      Germain Henri Hess, chimiste suisse qui a passé toute sa carrière à
+      Saint-Pétersbourg, a proposé en 1840 que la chaleur libérée ou absorbée par
+      une réaction ne dépend que des états initial et final, et non du chemin
+      parcouru. Cette idée, connue aujourd'hui sous le nom de loi de Hess, a
+      permis de calculer des chaleurs de réaction non mesurables directement et
+      est devenue la base du calcul des énergies de liaison et du pouvoir
+      calorifique des combustibles. C'est aussi la raison pour laquelle
+      l'enthalpie est une fonction d'état.
+    zh: >-
+      日尔曼·亨利·赫斯是瑞士化学家,在圣彼得堡度过了整个职业生涯。1840年他提出,
+      化学反应释放或吸收的热量只取决于反应的始态和终态,而与反应路径无关。这一
+      思想后来被称为赫斯定律,使化学家能够计算无法直接测量的反应热,并成为键能
+      和燃料热值计算的基础。它也是焓是状态函数的原因所在。
+    ja: >-
+      サンクトペテルブルクで全キャリアを築いたスイス出身の化学者ジェルマン・アンリ・ヘスは、
+      1840年に、反応で放出・吸収される熱は反応の経路ではなく始状態と終状態のみに依存すると提唱した。
+      この考えはヘスの法則として知られるようになり、直接測定できない反応熱の計算を可能にし、
+      結合エネルギーや燃料の発熱量の計算の基礎となった。エンタルピーが状態関数である理由でもある。
+  timeline:
+    - year: "1840"
+      label:
+        es: >-
+          Hess publica su ley tras medir calores de reacción de compuestos de
+          azufre y reacciones ácido-base en San Petersburgo.
+        en: >-
+          Hess publishes his law after measuring reaction heats of sulfur
+          compounds and acid-base reactions in Saint Petersburg.
+        pt: >-
+          Hess publica sua lei após medir calores de reação de compostos de
+          enxofre e reações ácido-base em São Petersburgo.
+        fr: >-
+          Hess publie sa loi après avoir mesuré des chaleurs de réaction de
+          composés du soufre et des réactions acido-basiques à Saint-Pétersbourg.
+        zh: >-
+          赫斯在圣彼得堡测量硫化合物和酸碱反应的反应热之后,发表了他的定律。
+        ja: >-
+          サンクトペテルブルクで硫黄化合物や酸塩基反応の反応熱を測定したのち、ヘスが自身の法則を発表する。
+    - year: "1852"
+      label:
+        es: >-
+          La comunidad acepta que la ley es una consecuencia de la conservación
+          de la energía, la primera ley de la termodinámica.
+        en: >-
+          The community accepts that the law follows from energy conservation, the
+          first law of thermodynamics.
+        pt: >-
+          A comunidade aceita que a lei decorre da conservação da energia, a
+          primeira lei da termodinâmica.
+        fr: >-
+          La communauté accepte que la loi découle de la conservation de l'énergie,
+          la première loi de la thermodynamique.
+        zh: >-
+          科学界认可该定律是能量守恒——热力学第一定律——的推论。
+        ja: >-
+          この法則が熱力学の第一法則であるエネルギー保存の帰結であることが広く受け入れられる。
+    - year: Hoy
+      label:
+        es: >-
+          Los ciclos de Hess son una herramienta estándar para estimar calores de
+          reacción en química computacional y de combustibles.
+        en: >-
+          Hess cycles are a standard tool for estimating reaction heats in
+          computational and fuel chemistry.
+        pt: >-
+          Os ciclos de Hess são uma ferramenta padrão para estimar calores de
+          reação em química computacional e de combustíveis.
+        fr: >-
+          Les cycles de Hess sont un outil standard pour estimer les chaleurs de
+          réaction en chimie computationnelle et des combustibles.
+        zh: >-
+          赫斯循环是计算化学和燃料化学中估算反应热的标准工具。
+        ja: >-
+          ヘスのサイクルは、計算化学や燃料化学で反応熱を推定する標準的な手法である。
+  useCases:
+    - title:
+        es: Química de combustibles
+        en: Fuel chemistry
+        pt: Química de combustíveis
+        fr: Chimie des combustibles
+        zh: 燃料化学
+        ja: 燃料化学
+      description:
+        es: >-
+          Calcula el poder calorífico de combustibles combinando calores de
+          combustión ya conocidos.
+        en: >-
+          It calculates the calorific value of fuels by combining known
+          combustion heats.
+        pt: >-
+          Calcula o poder calorífico de combustíveis combinando calores de
+          combustão já conhecidos.
+        fr: >-
+          Elle calcule le pouvoir calorifique des combustibles en combinant des
+          chaleurs de combustion déjà connues.
+        zh: >-
+          通过组合已知的燃烧热,计算燃料的热值。
+        ja: >-
+          既知の燃焼熱を組み合わせて、燃料の発熱量を計算する。
+    - title:
+        es: Energía de enlace
+        en: Bond energy
+        pt: Energia de ligação
+        fr: Énergie de liaison
+        zh: 键能
+        ja: 結合エネルギー
+      description:
+        es: >-
+          Estima la energía necesaria para romper enlaces sumando entalpías de
+          formación medidas.
+        en: >-
+          It estimates the energy needed to break bonds by summing measured
+          enthalpies of formation.
+        pt: >-
+          Estima a energia necessária para romper ligações somando entalpias de
+          formação medidas.
+        fr: >-
+          Elle estime l'énergie nécessaire pour rompre des liaisons en sommant des
+          enthalpies de formation mesurées.
+        zh: >-
+          通过累加实测的生成焓,估算破坏化学键所需的能量。
+        ja: >-
+          測定された生成エンタルピーを合計して、結合を切断するのに必要なエネルギーを推定する。
+    - title:
+        es: Química computacional
+        en: Computational chemistry
+        pt: Química computacional
+        fr: Chimie computationnelle
+        zh: 计算化学
+        ja: 計算化学
+      description:
+        es: >-
+          Obtiene calores de reacción de procesos difíciles de medir sumando
+          pasos intermedios conocidos.
+        en: >-
+          It derives reaction heats for processes that are hard to measure by
+          summing known intermediate steps.
+        pt: >-
+          Obtém calores de reação de processos difíceis de medir somando etapas
+          intermediárias conhecidas.
+        fr: >-
+          Elle déduit les chaleurs de réaction de procédés difficiles à mesurer en
+          sommant des étapes intermédiaires connues.
+        zh: >-
+          通过累加已知的中间步骤,推导出难以测量的过程的反应热。
+        ja: >-
+          既知の中間段階を合計して、測定が難しいプロセスの反応熱を導き出す。
+    - title:
+        es: Síntesis química industrial
+        en: Industrial synthesis
+        pt: Síntese química industrial
+        fr: Synthèse chimique industrielle
+        zh: 工业合成
+        ja: 工業合成
+      description:
+        es: >-
+          Predice si una reacción industrial será exotérmica o endotérmica antes
+          de escalarla a producción.
+        en: >-
+          It predicts whether an industrial reaction is exothermic or endothermic
+          before scaling it up to production.
+        pt: >-
+          Prevê se uma reação industrial será exotérmica ou endotérmica antes de
+          escalá-la para produção.
+        fr: >-
+          Elle prédit si une réaction industrielle sera exothermique ou
+          endothermique avant de la passer à l'échelle de production.
+        zh: >-
+          在工业反应放大到生产规模之前,预测其是放热还是吸热。
+        ja: >-
+          工業反応を生産規模に拡大する前に、発熱か吸熱かを予測する。
+  example:
+    title:
+      es: Un mismo calor por dos caminos
+      en: The same heat by two paths
+      pt: O mesmo calor por dois caminhos
+      fr: Une même chaleur par deux chemins
+      zh: 两条路径,同样的热量
+      ja: 二つの経路で同じ熱量
+    lines:
+      - es: C + O₂ → CO₂, ΔH = −393.5 kJ
+        en: C + O₂ → CO₂, ΔH = −393.5 kJ
+        pt: C + O₂ → CO₂, ΔH = −393,5 kJ
+        fr: C + O₂ → CO₂, ΔH = −393,5 kJ
+        zh: C + O₂ → CO₂, ΔH = −393.5 kJ
+        ja: C + O₂ → CO₂, ΔH = −393.5 kJ
+      - es: "Primer paso: C + ½O₂ → CO, ΔH₁ = −110.5 kJ"
+        en: "First step: C + ½O₂ → CO, ΔH₁ = −110.5 kJ"
+        pt: "Primeira etapa: C + ½O₂ → CO, ΔH₁ = −110,5 kJ"
+        fr: "Première étape : C + ½O₂ → CO, ΔH₁ = −110,5 kJ"
+        zh: "第一步: C + ½O₂ → CO, ΔH₁ = −110.5 kJ"
+        ja: "第一段階: C + ½O₂ → CO, ΔH₁ = −110.5 kJ"
+      - es: CO + ½O₂ → CO₂, ΔH₂ = −283.0 kJ
+        en: CO + ½O₂ → CO₂, ΔH₂ = −283.0 kJ
+        pt: CO + ½O₂ → CO₂, ΔH₂ = −283,0 kJ
+        fr: CO + ½O₂ → CO₂, ΔH₂ = −283,0 kJ
+        zh: CO + ½O₂ → CO₂, ΔH₂ = −283.0 kJ
+        ja: CO + ½O₂ → CO₂, ΔH₂ = −283.0 kJ
+      - es: ΔH₁ + ΔH₂ = −110.5 + (−283.0) = −393.5 kJ
+        en: ΔH₁ + ΔH₂ = −110.5 + (−283.0) = −393.5 kJ
+        pt: ΔH₁ + ΔH₂ = −110,5 + (−283,0) = −393,5 kJ
+        fr: ΔH₁ + ΔH₂ = −110,5 + (−283,0) = −393,5 kJ
+        zh: ΔH₁ + ΔH₂ = −110.5 + (−283.0) = −393.5 kJ
+        ja: ΔH₁ + ΔH₂ = −110.5 + (−283.0) = −393.5 kJ
+      - es: El mismo ΔH que el camino directo
+        en: The same ΔH as the direct path
+        pt: O mesmo ΔH que o caminho direto
+        fr: Le même ΔH que le chemin direct
+        zh: 与直接路径相同的ΔH
+        ja: 直接経路と同じΔH

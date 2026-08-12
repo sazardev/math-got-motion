@@ -1,0 +1,328 @@
+id: capacitance
+title:
+  es: Capacitancia
+  en: Capacitance
+  pt: Capacitância
+  fr: Capacité électrique
+  zh: 电容
+  ja: 静電容量
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: q
+    type: variable
+    value: Q
+    explanation:
+      es: La carga eléctrica almacenada en el capacitor.
+      en: The electric charge stored in the capacitor.
+      pt: A carga elétrica armazenada no capacitor.
+      fr: La charge électrique emmagasinée par le condensateur.
+      zh: 电容器中储存的电荷。
+      ja: コンデンサーに蓄えられた電荷。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: c
+    type: variable
+    value: C
+    explanation:
+      es: La capacitancia, una medida de cuánta carga puede almacenar el dispositivo por voltio.
+      en: The capacitance, a measure of how much charge the device can store per volt.
+      pt: A capacitância, uma medida de quanta carga o dispositivo pode armazenar por volt.
+      fr: La capacitance, une mesure de la charge que le dispositif peut emmagasiner par volt.
+      zh: 电容，衡量器件每伏特能储存多少电荷。
+      ja: 静電容量。素子が1ボルトあたりどれだけの電荷を蓄えられるかを表す。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: "Multiplicación: la capacitancia se multiplica por el voltaje."
+      en: "Multiplication: the capacitance is multiplied by the voltage."
+      pt: "Multiplicação: a capacitância é multiplicada pela tensão."
+      fr: "Multiplication : la capacitance est multipliée par la tension."
+      zh: "乘法：电容乘以电压。"
+      ja: "乗算。静電容量に電圧を掛け合わせる。"
+  - id: v
+    type: variable
+    value: V
+    explanation:
+      es: El voltaje aplicado entre las placas del capacitor.
+      en: The voltage applied between the capacitor's plates.
+      pt: A tensão aplicada entre as placas do capacitor.
+      fr: La tension appliquée entre les armatures du condensateur.
+      zh: 施加在电容器两极板之间的电压。
+      ja: コンデンサーの電極間に加わる電圧。
+context:
+  author:
+    es: Basada en el trabajo de Faraday y Volta
+    en: Based on the work of Faraday and Volta
+    pt: Baseada no trabalho de Faraday e Volta
+    fr: Fondée sur les travaux de Faraday et de Volta
+    zh: 基于法拉第和伏打的研究
+    ja: ファラデーとボルタの研究に基づく
+  era:
+    es: Europa, s. XVIII–XIX
+    en: Europe, 18th–19th century
+    pt: Europa, s. XVIII–XIX
+    fr: Europe, XVIIIᵉ–XIXᵉ siècle
+    zh: 欧洲，18–19世纪
+    ja: ヨーロッパ、18〜19世紀
+  history:
+    es: >-
+      La capacitancia mide la capacidad de un dispositivo para almacenar carga eléctrica, y la
+      relación Q = C·V la liga con el voltaje aplicado. El primer capacitor fue la botella de Leyden,
+      inventada en 1745 por Pieter van Musschenbroek y Ewald von Kleist, un frasco de vidrio
+      recubierto por dentro y por fuera que acumulaba carga y podía descargarse de golpe. En el siglo
+      XIX, Michael Faraday estudió cómo la carga acumulada dependía del material entre las placas y,
+      en la década de 1830, midió la "capacidad eléctrica" de distintos dieléctricos. Hoy, los
+      capacitores alimentan el destello de las cámaras, detectan el toque en las pantallas táctiles y
+      guardan cada bit de la memoria RAM.
+    en: >-
+      Capacitance measures a device's ability to store electric charge, and the relation Q = C·V
+      links it to the applied voltage. The first capacitor was the Leyden jar, invented in 1745 by
+      Pieter van Musschenbroek and Ewald von Kleist, a glass flask coated inside and out that
+      accumulated charge and could release it at once. In the nineteenth century, Michael Faraday
+      studied how stored charge depended on the material between the plates and, in the 1830s,
+      measured the "electric capacity" of different dielectrics. Today, capacitors feed the flash of
+      cameras, sense the touch on touchscreens, and store every bit of RAM memory.
+    pt: >-
+      A capacitância mede a capacidade de um dispositivo de armazenar carga elétrica, e a relação Q =
+      C·V a liga à tensão aplicada. O primeiro capacitor foi a garrafa de Leyden, inventada em 1745
+      por Pieter van Musschenbroek e Ewald von Kleist, um frasco de vidro revestido por dentro e por
+      fora que acumulava carga e podia descarregá-la de uma só vez. No século XIX, Michael Faraday
+      estudou como a carga acumulada dependia do material entre as placas e, na década de 1830, mediu
+      a "capacidade elétrica" de diferentes dielétricos. Hoje, os capacitores alimentam o flash das
+      câmeras, detectam o toque nas telas sensíveis ao toque e guardam cada bit da memória RAM.
+    fr: >-
+      La capacitance mesure la capacité d'un dispositif à emmagasiner une charge électrique, et la
+      relation Q = C·V la relie à la tension appliquée. Le premier condensateur fut la bouteille de
+      Leyde, inventée en 1745 par Pieter van Musschenbroek et Ewald von Kleist, une fiole de verre
+      recouverte à l'intérieur comme à l'extérieur qui accumulait la charge et pouvait la libérer
+      d'un coup. Au XIXᵉ siècle, Michael Faraday étudia comment la charge accumulée dépendait du
+      matériau entre les armatures et, dans les années 1830, mesura la « capacité électrique » de
+      différents diélectriques. Aujourd'hui, les condensateurs alimentent le flash des appareils
+      photo, détectent le toucher sur les écrans tactiles et mémorisent chaque bit de la mémoire
+      vive.
+    zh: >-
+      电容衡量器件储存电荷的能力，公式 Q = C·V 将其与所加电压联系起来。第一个电容器是莱顿瓶，
+      由皮特·范·穆森布鲁克和埃瓦尔德·冯·克莱斯特于1745年发明：一个内外都覆有金属的玻璃瓶，能储存电荷并可瞬间释放。
+      19世纪，迈克尔·法拉第研究了储存的电荷如何取决于极板之间的材料，并在1830年代测量了不同电介质的"电容量"。
+      如今，电容器为相机的闪光灯供电，感知触摸屏上的触碰，并存储着RAM存储器中的每一个比特。
+    ja: >-
+      静電容量は、素子が電荷を蓄える能力を表し、Q = C·V という関係で印加電圧と結びつく。最初のコンデンサーは
+      ライデン瓶である。1745年にピーター・ファン・ミュッセンブルークとエヴァルト・フォン・クライストが発明した、
+      内外を金属で覆ったガラス瓶で、電荷を蓄え、一気に放電できた。19世紀、マイケル・ファラデーは蓄えられた
+      電荷が電極間の材料に依存することを研究し、1830年代には様々な誘電体の「電気容量」を測定した。
+      今日、コンデンサーはカメラのフラッシュに電力を供給し、タッチスクリーンの接触を感知し、
+      RAM メモリーの1ビット1ビットを保存している。
+  timeline:
+    - year: "1745"
+      label:
+        es: >-
+          Musschenbroek y Kleist inventan la botella de Leyden, el primer capacitor, capaz de
+          almacenar y soltar una descarga eléctrica.
+        en: >-
+          Musschenbroek and Kleist invent the Leyden jar, the first capacitor, able to store and
+          release an electric discharge.
+        pt: >-
+          Musschenbroek e Kleist inventam a garrafa de Leyden, o primeiro capacitor, capaz de
+          armazenar e soltar uma descarga elétrica.
+        fr: >-
+          Musschenbroek et Kleist inventent la bouteille de Leyde, le premier condensateur, capable
+          d'emmagasiner et de relâcher une décharge électrique.
+        zh: >-
+          穆森布鲁克和克莱斯特发明了莱顿瓶，即第一个电容器，能储存并释放放电。
+        ja: >-
+          ミュッセンブルークとクライストが最初のコンデンサーであるライデン瓶を発明。放電を蓄えて解放できた。
+    - year: "1837"
+      label:
+        es: >-
+          Faraday publica sus experimentos sobre la capacidad eléctrica y los dieléctricos,
+          mostrando que el material entre las placas es decisivo.
+        en: >-
+          Faraday publishes his experiments on electric capacity and dielectrics, showing that the
+          material between the plates matters.
+        pt: >-
+          Faraday publica seus experimentos sobre capacidade elétrica e dielétricos, mostrando que o
+          material entre as placas é decisivo.
+        fr: >-
+          Faraday publie ses expériences sur la capacité électrique et les diélectriques, montrant
+          que le matériau entre les armatures est décisif.
+        zh: >-
+          法拉第发表关于电容量和电介质的实验，表明极板之间的材料至关重要。
+        ja: >-
+          ファラデーが電気容量と誘電体に関する実験を発表。電極間の材料が決定的に重要であることを示す。
+    - year: "1893"
+      label:
+        es: >-
+          Oliver Heaviside difunde el término "capacitor", que reemplaza al antiguo "condensador".
+        en: >-
+          Oliver Heaviside popularizes the word "capacitor", replacing the older "condenser".
+        pt: >-
+          Oliver Heaviside difunde o termo "capacitor", que substitui o antigo "condensador".
+        fr: >-
+          Oliver Heaviside popularise le mot « condensateur », qui remplace l'ancien « condenseur ».
+        zh: >-
+          奥利弗·海维赛德推广"capacitor"一词，取代了旧的"condenser"。
+        ja: >-
+          オリバー・ヘヴィサイドが「capacitor（コンデンサー）」という語を広め、旧称の「condenser」に取って代わる。
+    - year: Hoy
+      label:
+        es: >-
+          Los capacitores están en el flash de cada cámara, en cada pantalla táctil y en cada celda
+          de memoria RAM.
+        en: >-
+          Capacitors sit in every camera flash, every touchscreen, and every RAM memory cell.
+        pt: >-
+          Capacitores estão no flash de cada câmera, em cada tela sensível ao toque e em cada célula
+          de memória RAM.
+        fr: >-
+          Les condensateurs se trouvent dans le flash de chaque appareil photo, chaque écran tactile
+          et chaque cellule de mémoire vive.
+        zh: >-
+          电容器存在于每台相机的闪光灯、每块触摸屏和每个RAM存储单元中。
+        ja: >-
+          コンデンサーはあらゆるカメラのフラッシュ、タッチスクリーン、RAMの各メモリーセルに搭載されている。
+  useCases:
+    - title:
+        es: Fotografía
+        en: Photography
+        pt: Fotografia
+        fr: Photographie
+        zh: 摄影
+        ja: 写真・撮影
+      description:
+        es: >-
+          El flash de las cámaras carga un capacitor y lo descarga en milisegundos para emitir un
+          destello intenso.
+        en: >-
+          A camera flash charges a capacitor and discharges it in milliseconds to emit an intense
+          burst of light.
+        pt: >-
+          O flash das câmeras carrega um capacitor e o descarrega em milissegundos para emitir um
+          clarão intenso.
+        fr: >-
+          Le flash des appareils photo charge un condensateur et le décharge en quelques millisecondes
+          pour émettre une lumière intense.
+        zh: >-
+          相机闪光灯先给电容器充电，再在几毫秒内放电，发出强烈闪光。
+        ja: >-
+          カメラのフラッシュはコンデンサーを充電し、数ミリ秒で放電して強い光を放つ。
+    - title:
+        es: Pantallas táctiles
+        en: Touchscreens
+        pt: Telas sensíveis ao toque
+        fr: Écrans tactiles
+        zh: 触摸屏
+        ja: タッチスクリーン
+      description:
+        es: >-
+          La pantalla mide el cambio de capacitancia que produce el dedo, y así localiza el toque.
+        en: >-
+          The screen measures the change in capacitance caused by a finger, locating the touch.
+        pt: >-
+          A tela mede a variação de capacitância provocada pelo dedo, localizando o toque.
+        fr: >-
+          L'écran mesure la variation de capacitance provoquée par le doigt, ce qui localise le
+          toucher.
+        zh: >-
+          屏幕测量手指引起的电容变化，从而定位触摸位置。
+        ja: >-
+          画面は指によって生じる静電容量の変化を測定し、タッチ位置を特定する。
+    - title:
+        es: Memoria RAM
+        en: RAM memory
+        pt: Memória RAM
+        fr: Mémoire vive
+        zh: 随机存储器（RAM）
+        ja: RAMメモリー
+      description:
+        es: >-
+          Cada celda de la memoria dinámica es un diminuto capacitor que guarda un bit, y debe
+          refrescarse constantemente.
+        en: >-
+          Every cell of dynamic memory is a tiny capacitor holding one bit, and it must be constantly
+          refreshed.
+        pt: >-
+          Cada célula da memória dinâmica é um diminuto capacitor que guarda um bit, e precisa ser
+          constantemente renovada.
+        fr: >-
+          Chaque cellule de la mémoire dynamique est un minuscule condensateur qui retient un bit, et
+          doit être constamment rafraîchi.
+        zh: >-
+          动态存储器的每个单元都是一个保存一个比特的微小电容器，需要不断刷新。
+        ja: >-
+          ダイナミックメモリーの各セルは1ビットを保持する微小なコンデンサーで、常にリフレッシュが必要である。
+    - title:
+        es: Fuentes de alimentación
+        en: Power supplies
+        pt: Fontes de alimentação
+        fr: Alimentations électriques
+        zh: 电源
+        ja: 電源装置
+      description:
+        es: >-
+          Los capacitores alisan el rizado de los convertidores de voltaje y estabilizan la tensión
+          de salida.
+        en: >-
+          Capacitors smooth the ripple of voltage converters and stabilize the output voltage.
+        pt: >-
+          Capacitores alisam a ondulação dos conversores de tensão e estabilizam a tensão de saída.
+        fr: >-
+          Les condensateurs lissent l'ondulation des convertisseurs de tension et stabilisent la
+          tension de sortie.
+        zh: >-
+          电容器平滑电压转换器的纹波，稳定输出电压。
+        ja: >-
+          コンデンサーは電圧変換器のリップルを平滑化し、出力電圧を安定させる。
+  example:
+    title:
+      es: Carga de un capacitor
+      en: Charge of a capacitor
+      pt: Carga de um capacitor
+      fr: Charge d'un condensateur
+      zh: 电容器的电荷
+      ja: コンデンサーの電荷
+    lines:
+      - es: C = 10 µF
+        en: C = 10 µF
+        pt: C = 10 µF
+        fr: C = 10 µF
+        zh: C = 10 µF
+        ja: C = 10 µF
+      - es: V = 12 V
+        en: V = 12 V
+        pt: V = 12 V
+        fr: V = 12 V
+        zh: V = 12 V
+        ja: V = 12 V
+      - es: Q = C · V
+        en: Q = C · V
+        pt: Q = C · V
+        fr: Q = C · V
+        zh: Q = C · V
+        ja: Q = C · V
+      - es: Q = 10 µF × 12 V
+        en: Q = 10 µF × 12 V
+        pt: Q = 10 µF × 12 V
+        fr: Q = 10 µF × 12 V
+        zh: Q = 10 µF × 12 V
+        ja: Q = 10 µF × 12 V
+      - es: Q = 120 µC
+        en: Q = 120 µC
+        pt: Q = 120 µC
+        fr: Q = 120 µC
+        zh: Q = 120 µC
+        ja: Q = 120 µC

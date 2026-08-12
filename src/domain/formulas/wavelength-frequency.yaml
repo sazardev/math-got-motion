@@ -1,0 +1,274 @@
+id: wavelength-frequency
+title:
+  es: Longitud de Onda a partir de Frecuencia
+  en: Wavelength from Frequency
+  pt: Comprimento de Onda a partir da Frequência
+  fr: Longueur d'onde à partir de la fréquence
+  zh: 由频率求波长
+  ja: 周波数から波長を求める
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: lambda
+    type: variable
+    value: λ
+    explanation:
+      es: La longitud de onda, el ciclo espacial de la onda, medida en metros.
+      en: The wavelength, the wave's spatial cycle, measured in meters.
+      pt: O comprimento de onda, o ciclo espacial da onda, medido em metros.
+      fr: La longueur d'onde, le cycle spatial de l'onde, mesurée en mètres.
+      zh: 波长,即波的空间周期,单位为米。
+      ja: 波長。波の空間的な周期。単位はメートル。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La velocidad de propagación de la onda, en metros por segundo.
+      en: The wave's propagation speed, in meters per second.
+      pt: A velocidade de propagação da onda, em metros por segundo.
+      fr: La vitesse de propagation de l'onde, en mètres par seconde.
+      zh: 波的传播速度,单位为米/秒。
+      ja: 波の伝播速度。単位はメートル毎秒。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: f
+    type: variable
+    value: f
+    explanation:
+      es: La frecuencia, cuántas oscilaciones completa la onda por segundo.
+      en: The frequency, how many oscillations the wave completes per second.
+      pt: A frequência, quantas oscilações a onda completa por segundo.
+      fr: La fréquence, le nombre d'oscillations que l'onde effectue par seconde.
+      zh: 频率,即波每秒完成的振荡次数。
+      ja: 振動数。波が1秒あたりに完了する振動の回数。
+context:
+  author:
+    es: Origen colectivo de la mecánica ondulatoria
+    en: Collective origin of wave mechanics
+    pt: Origem coletiva da mecânica ondulatória
+    fr: Origine collective de la mécanique ondulatoire
+    zh: 波动学的集体起源
+    ja: 波動力学の集団的起源
+  era:
+    es: Europa, s. XVII–XIX
+    en: Europe, 17th–19th century
+    pt: Europa, séc. XVII–XIX
+    fr: Europe, XVIIe–XIXe siècle
+    zh: 欧洲,17–19世纪
+    ja: ヨーロッパ、17–19世紀
+  history:
+    es: >-
+      La longitud de onda es el ciclo espacial de una onda: la distancia entre dos crestas
+      consecutivas. Esta fórmula es simplemente la relación v = f·λ despejada para λ, y sirve cuando
+      lo que se conocen son la velocidad de propagación y la frecuencia. Es la base del diseño de las
+      antenas y de la sintonización de la radio: la antena se dimensiona con la longitud de onda de
+      la frecuencia deseada. También explica por qué las ondas largas viajan tan lejos: al rodear
+      obstáculos y seguir la curvatura terrestre, cubren distancias que las ondas cortas no alcanzan.
+    en: >-
+      Wavelength is a wave's spatial cycle: the distance between two consecutive crests. This formula
+      is simply the relation v = f·λ solved for λ, and it applies when what is known are the
+      propagation speed and the frequency. It is the basis of antenna design and radio tuning: the
+      antenna is sized with the wavelength of the desired frequency. It also explains why long waves
+      travel so far: bending around obstacles and following Earth's curvature, they cover distances
+      that short waves cannot reach.
+    pt: >-
+      O comprimento de onda é o ciclo espacial de uma onda: a distância entre duas cristas
+      consecutivas. Esta fórmula é simplesmente a relação v = f·λ isolada para λ, e serve quando o
+      que se conhece são a velocidade de propagação e a frequência. É a base do projeto de antenas e
+      da sintonização do rádio: a antena é dimensionada com o comprimento de onda da frequência
+      desejada. Também explica por que ondas longas viajam tão longe: contornando obstáculos e
+      seguindo a curvatura da Terra, cobrem distâncias que ondas curtas não alcançam.
+    fr: >-
+      La longueur d'onde est le cycle spatial d'une onde : la distance entre deux crêtes
+      consécutives. Cette formule n'est que la relation v = f·λ résolue pour λ, et elle sert quand on
+      connaît la vitesse de propagation et la fréquence. C'est la base de la conception des antennes
+      et de l'accord de la radio : l'antenne se dimensionne avec la longueur d'onde de la fréquence
+      souhaitée. Elle explique aussi pourquoi les ondes longues voyagent si loin : contournant les
+      obstacles et suivant la courbure de la Terre, elles couvrent des distances que les ondes
+      courtes n'atteignent pas.
+    zh: >-
+      波长是波的空间周期:即两个相邻波峰之间的距离。这个公式其实就是把关系式v = f·λ对λ解出来,在已知传播速度和频率时使用。
+      它是天线设计和收音机调谐的基础:天线按所需频率的波长来确定尺寸。它还解释了为什么长波能传播很远:长波绕过障碍物、
+      沿地球的曲率行进,能覆盖短波无法达到的距离。
+    ja: >-
+      波長は波の空間的な周期、すなわち隣り合う二つの山の間の距離である。この式は v = f·λ を λ について解いたものにすぎず、
+      伝播速度と振動数がわかっているときに使う。アンテナ設計やラジオの同調の基礎である:アンテナは目的の周波数の波長に合わせて
+      寸法が決まる。また、長波が遠くまで届く理由も説明する。障害物を回り込み、地球の湾曲に沿って進むため、短波では届かない
+      距離をカバーできるのだ。
+  timeline:
+    - year: "1801"
+      label:
+        es: Thomas Young mide las longitudes de onda de la luz con su experimento de doble rendija.
+        en: Thomas Young measures the wavelengths of light with his double-slit experiment.
+        pt: Thomas Young mede os comprimentos de onda da luz com seu experimento de dupla fenda.
+        fr: Thomas Young mesure les longueurs d'onde de la lumière avec son expérience des fentes d'Young.
+        zh: 托马斯·杨用双缝实验测量了光的波长。
+        ja: トーマス・ヤングが二重スリットの実験で光の波長を測定する。
+    - year: "1865"
+      label:
+        es: Maxwell identifica la luz como onda electromagnética, con velocidad y frecuencia relacionadas.
+        en: Maxwell identifies light as an electromagnetic wave, linking its speed and frequency.
+        pt: Maxwell identifica a luz como onda eletromagnética, relacionando velocidade e frequência.
+        fr: Maxwell identifie la lumière comme onde électromagnétique, liant vitesse et fréquence.
+        zh: 麦克斯韦指出光是电磁波,将速度与频率联系起来。
+        ja: マクスウェルが光を電磁波と特定し、速度と振動数を結びつける。
+    - year: "1901"
+      label:
+        es: Marconi cruza el Atlántico con ondas largas, que viajan lejos envolviendo la Tierra.
+        en: Marconi crosses the Atlantic with long waves, which travel far around the Earth.
+        pt: Marconi cruza o Atlântico com ondas longas, que viajam longe contornando a Terra.
+        fr: Marconi traverse l'Atlantique avec des ondes longues, qui voyagent loin autour de la Terre.
+        zh: 马可尼用长波横跨大西洋,长波能沿地球绕行传到远方。
+        ja: マルコーニが長波で大西洋を横断する。長波は地球を回って遠くまで届く。
+    - year: Hoy
+      label:
+        es: Cada banda de telecomunicaciones se elige por la longitud de onda que mejor cubre su uso.
+        en: Every telecom band is chosen by the wavelength that best fits its use.
+        pt: Cada faixa de telecomunicações é escolhida pelo comprimento de onda que melhor atende seu uso.
+        fr: Chaque bande de télécommunications est choisie selon la longueur d'onde qui convient le mieux à son usage.
+        zh: 每一段电信频段,都是按最适合其用途的波长来选择的。
+        ja: すべての通信帯域は、その用途に最も適した波長で選ばれる。
+  useCases:
+    - title:
+        es: Diseño de antenas y radio
+        en: Antenna and radio design
+        pt: Projeto de antenas e rádio
+        fr: Conception d'antennes et de radio
+        zh: 天线与无线电设计
+        ja: アンテナと無線の設計
+      description:
+        es: >-
+          La antena se dimensiona con un medio o un cuarto de la longitud de onda de la señal.
+        en: >-
+          The antenna is sized with half or a quarter of the signal's wavelength.
+        pt: >-
+          A antena é dimensionada com metade ou um quarto do comprimento de onda do sinal.
+        fr: >-
+          L'antenne se dimensionne avec la moitié ou le quart de la longueur d'onde du signal.
+        zh: >-
+          天线的尺寸取信号波长的二分之一或四分之一。
+        ja: >-
+          アンテナは、信号の波長の2分の1または4分の1で寸法が決められる。
+    - title:
+        es: Radar y teledetección
+        en: Radar and remote sensing
+        pt: Radar e sensoriamento remoto
+        fr: Radar et télédétection
+        zh: 雷达与遥感
+        ja: レーダーとリモートセンシング
+      description:
+        es: >-
+          La resolución de una antena de radar depende de la longitud de onda que utiliza.
+        en: >-
+          A radar antenna's resolution depends on the wavelength it uses.
+        pt: >-
+          A resolução de uma antena de radar depende do comprimento de onda que utiliza.
+        fr: >-
+          La résolution d'une antenne radar dépend de la longueur d'onde qu'elle utilise.
+        zh: >-
+          雷达天线的分辨率取决于它所使用的波长。
+        ja: >-
+          レーダーアンテナの分解能は、使用する波長に依存する。
+    - title:
+        es: Óptica y fotónica
+        en: Optics and photonics
+        pt: Óptica e fotônica
+        fr: Optique et photonique
+        zh: 光学与光子学
+        ja: 光学とフォトニクス
+      description:
+        es: >-
+          El color de cada luz corresponde a una longitud de onda distinta en el mismo medio.
+        en: >-
+          Each light's color corresponds to a different wavelength in the same medium.
+        pt: >-
+          A cor de cada luz corresponde a um comprimento de onda diferente no mesmo meio.
+        fr: >-
+          La couleur de chaque lumière correspond à une longueur d'onde différente dans le même
+          milieu.
+        zh: >-
+          在相同介质中,每种光的颜色对应不同的波长。
+        ja: >-
+          同じ媒質中では、光の色ごとに波長が異なる。
+    - title:
+        es: Acústica arquitectónica
+        en: Architectural acoustics
+        pt: Acústica arquitetônica
+        fr: Acoustique architecturale
+        zh: 建筑声学
+        ja: 建築音響
+      description:
+        es: >-
+          El tamaño de las salas se compara con la longitud de onda del sonido para evitar ecos.
+        en: >-
+          Room sizes are compared with the sound's wavelength to avoid echoes.
+        pt: >-
+          O tamanho das salas é comparado com o comprimento de onda do som para evitar ecos.
+        fr: >-
+          La taille des salles est comparée à la longueur d'onde du son pour éviter les échos.
+        zh: >-
+          将房间尺寸与声音波长比较,以避免回声。
+        ja: >-
+          部屋の大きさを音の波長と比べ、こだまを防ぐ。
+  example:
+    title:
+      es: Señal de radio de 100 MHz
+      en: A 100 MHz radio signal
+      pt: Sinal de rádio de 100 MHz
+      fr: Signal radio de 100 MHz
+      zh: 100 MHz的无线电信号
+      ja: 100 MHzの無線信号
+    lines:
+      - es: v = 3×10⁸ m/s (velocidad de la luz)
+        en: v = 3×10⁸ m/s (speed of light)
+        pt: v = 3×10⁸ m/s (velocidade da luz)
+        fr: v = 3×10⁸ m/s (vitesse de la lumière)
+        zh: v = 3×10⁸ 米/秒(光速)
+        ja: v = 3×10⁸ m/s(光速)
+      - es: f = 100 MHz = 10⁸ Hz
+        en: f = 100 MHz = 10⁸ Hz
+        pt: f = 100 MHz = 10⁸ Hz
+        fr: f = 100 MHz = 10⁸ Hz
+        zh: f = 100 MHz = 10⁸ Hz
+        ja: f = 100 MHz = 10⁸ Hz
+      - es: λ = v / f
+        en: λ = v / f
+        pt: λ = v / f
+        fr: λ = v / f
+        zh: λ = v / f
+        ja: λ = v / f
+      - es: λ = 3×10⁸ / 10⁸
+        en: λ = 3×10⁸ / 10⁸
+        pt: λ = 3×10⁸ / 10⁸
+        fr: λ = 3×10⁸ / 10⁸
+        zh: λ = 3×10⁸ / 10⁸
+        ja: λ = 3×10⁸ / 10⁸
+      - es: λ = 3 metros
+        en: λ = 3 meters
+        pt: λ = 3 metros
+        fr: λ = 3 mètres
+        zh: λ = 3 米
+        ja: λ = 3 m

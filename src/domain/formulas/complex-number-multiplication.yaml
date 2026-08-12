@@ -1,0 +1,289 @@
+id: complex-number-multiplication
+title:
+  es: Multiplicación de Números Complejos
+  en: Multiplying Complex Numbers
+  pt: Multiplicação de Números Complexos
+  fr: Multiplication de nombres complexes
+  zh: 复数的乘法
+  ja: 複素数の掛け算
+category:
+  es: Análisis complejo
+  en: Complex analysis
+  pt: Análise complexa
+  fr: Analyse complexe
+  zh: 复分析
+  ja: 複素解析
+nodes:
+  - id: a-bi
+    type: variable
+    value: a+bi
+    explanation:
+      es: "El primer número complejo: parte real a e imaginaria b."
+      en: "The first complex number: real part a and imaginary part b."
+      pt: "O primeiro número complexo: parte real a e imaginária b."
+      fr: "Le premier nombre complexe : partie réelle a et imaginaire b."
+      zh: "第一个复数：实部a，虚部b。"
+      ja: "最初の複素数。実部a、虚部b。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: c-di
+    type: variable
+    value: c+di
+    explanation:
+      es: "El segundo número complejo: parte real c e imaginaria d."
+      en: "The second complex number: real part c and imaginary part d."
+      pt: "O segundo número complexo: parte real c e imaginária d."
+      fr: "Le second nombre complexe : partie réelle c et imaginaire d."
+      zh: "第二个复数：实部c，虚部d。"
+      ja: "2番目の複素数。実部c、虚部d。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: real
+    type: variable
+    value: ac−bd
+    explanation:
+      es: "La parte real: ac − bd, con el signo menos por i² = −1."
+      en: "The real part: ac − bd, with the minus from i² = −1."
+      pt: "A parte real: ac − bd, com o sinal de menos por i² = −1."
+      fr: "La partie réelle : ac − bd, avec le moins dû à i² = −1."
+      zh: "实部：ac − bd，其中减号来自i² = −1。"
+      ja: "実部：ac − bd。i² = −1からマイナスになる。"
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumada a la parte imaginaria.
+      en: Added to the imaginary part.
+      pt: Somada à parte imaginária.
+      fr: Ajoutée à la partie imaginaire.
+      zh: 加上虚部。
+      ja: 虚部に加える。
+  - id: imag
+    type: variable
+    value: ad+bc
+    explanation:
+      es: "La parte imaginaria: ad + bc."
+      en: "The imaginary part: ad + bc."
+      pt: "A parte imaginária: ad + bc."
+      fr: "La partie imaginaire : ad + bc."
+      zh: "虚部：ad + bc。"
+      ja: "虚部：ad + bc。"
+  - id: i
+    type: constant
+    value: i
+    explanation:
+      es: "i: la unidad imaginaria que marca la parte imaginaria."
+      en: "i: the imaginary unit marking the imaginary part."
+      pt: "i: a unidade imaginária que marca a parte imaginária."
+      fr: "i : l'unité imaginaire qui marque la partie imaginaire."
+      zh: "i：标记虚部的虚数单位。"
+      ja: "i：虚部を示す虚数単位。"
+context:
+  author:
+    es: Rafael Bombelli y Carl Friedrich Gauss
+    en: Rafael Bombelli and Carl Friedrich Gauss
+    pt: Rafael Bombelli e Carl Friedrich Gauss
+    fr: Rafael Bombelli et Carl Friedrich Gauss
+    zh: 拉斐尔·邦贝利与卡尔·弗里德里希·高斯
+    ja: ラファエル・ボンベリとカール・フリードリヒ・ガウス
+  era:
+    es: Italia, 1526–1572 · fundamentados por Gauss en 1831
+    en: Italy, 1526–1572 · founded rigorously by Gauss in 1831
+    pt: Itália, 1526–1572 · fundamentados por Gauss em 1831
+    fr: Italie, 1526–1572 · fondés rigoureusement par Gauss en 1831
+    zh: 意大利，1526–1572年·1831年由高斯奠定严格基础
+    ja: イタリア、1526–1572年・1831年にガウスが厳密に基礎づけ
+  history:
+    es: >-
+      Los números imaginarios aparecieron para resolver ecuaciones cúbicas: Bombelli los usó en 1572,
+      aunque llamándolos "raíces de números negativos". Gauss, en 1831, les dio un fundamento riguroso
+      al representarlos como puntos del plano: multiplicar complejos equivale a rotar y escalar
+      vectores. Esta regla convierte operaciones geométricas en álgebra simple y es la base de los
+      circuitos de corriente alterna y de la mecánica cuántica.
+    en: >-
+      Imaginary numbers appeared to solve cubic equations: Bombelli used them in 1572, though calling
+      them "roots of negative numbers". Gauss, in 1831, gave them a rigorous basis by representing
+      them as points in the plane: multiplying complex numbers means rotating and scaling vectors.
+      This rule turns geometric operations into simple algebra and underlies AC circuits and quantum
+      mechanics.
+    pt: >-
+      Os números imaginários apareceram para resolver equações cúbicas: Bombelli os usou em 1572,
+      embora os chamasse de "raízes de números negativos". Gauss, em 1831, deu-lhes um fundamento
+      rigoroso ao representá-los como pontos do plano: multiplicar complexos equivale a rotacionar e
+      escalar vetores. Essa regra transforma operações geométricas em álgebra simples e é a base dos
+      circuitos de corrente alternada e da mecânica quântica.
+    fr: >-
+      Les nombres imaginaires sont apparus pour résoudre les équations cubiques : Bombelli les utilisa
+      en 1572, bien qu'il les appelât « racines de nombres négatifs ». Gauss, en 1831, leur donna un
+      fondement rigoureux en les représentant comme des points du plan : multiplier des complexes
+      revient à faire tourner et dilater des vecteurs. Cette règle transforme les opérations
+      géométriques en algèbre simple et est à la base des circuits à courant alternatif et de la
+      mécanique quantique.
+    zh: >-
+      虚数是为求解三次方程而出现的：邦贝利在1572年使用它们，尽管他称之为"负数的根"。1831年，高斯将复数表示为
+      平面上的点，从而为它们奠定了严格基础：复数相乘等于对向量作旋转和缩放。这条规则把几何运算变成简单代数，
+      是交流电路与量子力学的基础。
+    ja: >-
+      虚数は三次方程式を解くために現れた。ボンベリは1572年にこれを「負の数の根」と呼んで用いた。1831年、
+      ガウスは複素数を平面上の点として表すことで厳密な基礎を与えた。複素数の掛け算は、ベクトルの回転と拡大に
+      相当する。この規則は幾何学的な操作を単純な代数に変え、交流回路と量子力学の基礎となっている。
+  timeline:
+    - year: "1572"
+      label:
+        es: >-
+          Bombelli publica su Álgebra, usando raíces de negativos para resolver cúbicas.
+        en: >-
+          Bombelli publishes his Algebra, using roots of negatives to solve cubics.
+        pt: >-
+          Bombelli publica sua Álgebra, usando raízes de negativos para resolver cúbicas.
+        fr: >-
+          Bombelli publie son Algebra, utilisant des racines de négatifs pour résoudre les cubiques.
+        zh: >-
+          邦贝利出版《代数学》，用负数的根来解三次方程。
+        ja: >-
+          ボンベリが『代数学』を出版し、三次方程式を解くために負の数の根を用いる。
+    - year: "1831"
+      label:
+        es: >-
+          Gauss establece la representación de los complejos como puntos del plano.
+        en: >-
+          Gauss establishes complex numbers as points in the plane.
+        pt: >-
+          Gauss estabelece a representação dos complexos como pontos do plano.
+        fr: >-
+          Gauss établit la représentation des complexes comme points du plan.
+        zh: >-
+          高斯确立复数作为平面上点的表示。
+        ja: >-
+          ガウスが複素数を平面上の点として表すことを確立する。
+    - year: Hoy
+      label:
+        es: >-
+          La multiplicación compleja alimenta la ingeniería eléctrica, la señal y la cuántica.
+        en: >-
+          Complex multiplication powers electrical, signal, and quantum engineering.
+        pt: >-
+          A multiplicação complexa alimenta a engenharia elétrica, de sinais e quântica.
+        fr: >-
+          La multiplication complexe alimente l'ingénierie électrique, du signal et quantique.
+        zh: >-
+          复数乘法支撑着电气、信号与量子工程。
+        ja: >-
+          複素数の掛け算は、電気工学、信号工学、量子工学を支えている。
+  useCases:
+    - title:
+        es: Circuitos de corriente alterna
+        en: AC circuits
+        pt: Circuitos de corrente alternada
+        fr: Circuits à courant alternatif
+        zh: 交流电路
+        ja: 交流回路
+      description:
+        es: >-
+          Voltajes y corrientes se multiplican como fasores complejos en el dominio de la frecuencia.
+        en: >-
+          Voltages and currents are multiplied as complex phasors in the frequency domain.
+        pt: >-
+          Tensões e correntes são multiplicadas como fasores complexos no domínio da frequência.
+        fr: >-
+          Tensions et courants se multiplient comme des phaseurs complexes dans le domaine
+          fréquentiel.
+        zh: >-
+          在频域中，电压和电流作为复数相量进行相乘。
+        ja: >-
+          電圧と電流は、周波数領域で複素数フェーザとして掛け合わされる。
+    - title:
+        es: Mecánica cuántica
+        en: Quantum mechanics
+        pt: Mecânica quântica
+        fr: Mécanique quantique
+        zh: 量子力学
+        ja: 量子力学
+      description:
+        es: >-
+          Las amplitudes de probabilidad se combinan con multiplicación compleja.
+        en: >-
+          Probability amplitudes combine with complex multiplication.
+        pt: >-
+          As amplitudes de probabilidade se combinam com multiplicação complexa.
+        fr: >-
+          Les amplitudes de probabilité se combinent par multiplication complexe.
+        zh: >-
+          概率振幅通过复数乘法进行组合。
+        ja: >-
+          確率振幅は複素数の掛け算で合成される。
+    - title:
+        es: Procesamiento de señales
+        en: Signal processing
+        pt: Processamento de sinais
+        fr: Traitement du signal
+        zh: 信号处理
+        ja: 信号処理
+      description:
+        es: >-
+          La transformada de Fourier multiplica muestras por raíces complejas de la unidad.
+        en: >-
+          The Fourier transform multiplies samples by complex roots of unity.
+        pt: >-
+          A transformada de Fourier multiplica amostras por raízes complexas da unidade.
+        fr: >-
+          La transformée de Fourier multiplie les échantillons par des racines complexes de l'unité.
+        zh: >-
+          傅里叶变换将样本乘以复数单位根。
+        ja: >-
+          フーリエ変換は、標本に複素数の1の冪根を掛ける。
+  example:
+    title:
+      es: Multiplicar (2+3i)(4+5i)
+      en: Multiplying (2+3i)(4+5i)
+      pt: Multiplicando (2+3i)(4+5i)
+      fr: Multiplication de (2+3i)(4+5i)
+      zh: 计算 (2+3i)(4+5i)
+      ja: (2+3i)(4+5i) の計算
+    lines:
+      - es: (2+3i)(4+5i) = 2·4 + 2·5i + 3i·4 + 3i·5i
+        en: (2+3i)(4+5i) = 2·4 + 2·5i + 3i·4 + 3i·5i
+        pt: (2+3i)(4+5i) = 2·4 + 2·5i + 3i·4 + 3i·5i
+        fr: (2+3i)(4+5i) = 2·4 + 2·5i + 3i·4 + 3i·5i
+        zh: (2+3i)(4+5i) = 2·4 + 2·5i + 3i·4 + 3i·5i
+        ja: (2+3i)(4+5i) = 2·4 + 2·5i + 3i·4 + 3i·5i
+      - es: = 8 + 10i + 12i + 15i²
+        en: = 8 + 10i + 12i + 15i²
+        pt: = 8 + 10i + 12i + 15i²
+        fr: = 8 + 10i + 12i + 15i²
+        zh: = 8 + 10i + 12i + 15i²
+        ja: = 8 + 10i + 12i + 15i²
+      - es: "i² = −1, entonces 15i² = −15"
+        en: "i² = −1, so 15i² = −15"
+        pt: "i² = −1, então 15i² = −15"
+        fr: "i² = −1, donc 15i² = −15"
+        zh: "i² = −1，所以15i² = −15"
+        ja: "i² = −1、よって15i² = −15"
+      - es: = (8 − 15) + (10 + 12)i
+        en: = (8 − 15) + (10 + 12)i
+        pt: = (8 − 15) + (10 + 12)i
+        fr: = (8 − 15) + (10 + 12)i
+        zh: = (8 − 15) + (10 + 12)i
+        ja: = (8 − 15) + (10 + 12)i
+      - es: = −7 + 22i
+        en: = −7 + 22i
+        pt: = −7 + 22i
+        fr: = −7 + 22i
+        zh: = −7 + 22i
+        ja: = −7 + 22i

@@ -1,0 +1,268 @@
+id: expected-value
+title:
+  es: Esperanza Matemática
+  en: Expected Value
+  pt: Valor Esperado
+  fr: Espérance mathématique
+  zh: 期望值
+  ja: 期待値
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率統計
+nodes:
+  - id: e
+    type: variable
+    value: E[X]
+    explanation:
+      es: La esperanza o valor esperado de la variable X.
+      en: The expected value of the random variable X.
+      pt: O valor esperado da variável aleatória X.
+      fr: L'espérance de la variable aléatoire X.
+      zh: 随机变量X的期望值。
+      ja: 確率変数Xの期待値。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Se calcula como.
+      en: Is computed as.
+      pt: É calculado como.
+      fr: Se calcule comme.
+      zh: 计算为。
+      ja: 次のように計算される。
+  - id: sum
+    type: operator
+    value: Σ
+    explanation:
+      es: La suma sobre todos los valores posibles.
+      en: The sum over all possible values.
+      pt: A soma sobre todos os valores possíveis.
+      fr: La somme sur toutes les valeurs possibles.
+      zh: 对所有可能值求和。
+      ja: すべての可能な値についての和。
+  - id: x
+    type: variable
+    value: xᵢ
+    explanation:
+      es: "xᵢ: cada valor posible que toma la variable."
+      en: "xᵢ: each possible value the variable takes."
+      pt: "xᵢ: cada valor possível que a variável assume."
+      fr: "xᵢ : chaque valeur possible prise par la variable."
+      zh: "xᵢ：变量可能取的每个值。"
+      ja: "xᵢ：変数がとりうる各値。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: p
+    type: variable
+    value: P(xᵢ)
+    explanation:
+      es: La probabilidad de que ocurra ese valor.
+      en: The probability that this value occurs.
+      pt: A probabilidade de que esse valor ocorra.
+      fr: La probabilité que cette valeur se produise.
+      zh: 该值发生的概率。
+      ja: その値が起こる確率。
+context:
+  author:
+    es: Christiaan Huygens
+    en: Christiaan Huygens
+    pt: Christiaan Huygens
+    fr: Christiaan Huygens
+    zh: 克里斯蒂安·惠更斯
+    ja: クリスティアーン・ホイヘンス
+  era:
+    es: Países Bajos, 1629–1695 · publicada en 1657
+    en: Netherlands, 1629–1695 · published in 1657
+    pt: Países Baixos, 1629–1695 · publicada em 1657
+    fr: Pays-Bas, 1629–1695 · publiée en 1657
+    zh: 荷兰，1629–1695年·1657年发表
+    ja: オランダ、1629–1695年・1657年発表
+  history:
+    es: >-
+      Huygens publicó en 1657 el primer tratado de probabilidad aplicada, De ratiociniis in ludo aleae,
+      donde definió el valor esperado para analizar juegos de azar: el valor "justo" de un juego, la
+      media ponderada de sus resultados por sus probabilidades. La idea nació del intercambio epistolar
+      entre Pascal y Fermat sobre el problema de los puntos. Hoy es la base de la teoría de decisiones,
+      los seguros y la finanza cuantitativa.
+    en: >-
+      In 1657 Huygens published the first applied probability treatise, De ratiociniis in ludo aleae,
+      defining the expected value to analyze games of chance: the "fair" value of a game, the weighted
+      mean of its outcomes by their probabilities. The idea grew out of the Pascal–Fermat correspondence
+      on the problem of points. Today it underpins decision theory, insurance, and quantitative finance.
+    pt: >-
+      Huygens publicou em 1657 o primeiro tratado de probabilidade aplicada, De ratiociniis in ludo
+      aleae, definindo o valor esperado para analisar jogos de azar: o valor "justo" de um jogo, a média
+      ponderada de seus resultados pelas probabilidades. A ideia nasceu da troca de cartas entre Pascal e
+      Fermat sobre o problema dos pontos. Hoje é a base da teoria da decisão, dos seguros e das finanças
+      quantitativas.
+    fr: >-
+      Huygens publia en 1657 le premier traité de probabilité appliquée, De ratiociniis in ludo aleae,
+      définissant l'espérance pour analyser les jeux de hasard : la valeur « équitable » d'un jeu, la
+      moyenne de ses issues pondérées par leurs probabilités. L'idée naquit de la correspondance entre
+      Pascal et Fermat sur le problème des partis. Aujourd'hui, elle est à la base de la théorie de la
+      décision, de l'assurance et de la finance quantitative.
+    zh: >-
+      惠更斯于1657年发表第一部应用概率论著作《论赌博中的推理》，在其中定义了期望值来分析机会游戏：一个游戏
+      "公平"的价值，即各结果按概率加权后的均值。这一思想源于帕斯卡与费马就"点数问题"的通信。如今它是决策理论、
+      保险和量化金融的基础。
+    ja: >-
+      ホイヘンスは1657年、応用確率論の最初の著作『賭博における推理』を発表し、偶然のゲームを分析するために
+      期待値を定義した。すなわち、ゲームの「公平な」価値、各結果の確率による加重平均である。この考えは、
+      パスカルとフェルマーが「点の問題」について交わした書簡から生まれた。今日、これは意思決定理論、保険、
+      クオンツ金融の基盤である。
+  timeline:
+    - year: "1654"
+      label:
+        es: >-
+          Pascal y Fermat intercambian cartas sobre el problema de los puntos, origen de la
+          probabilidad.
+        en: >-
+          Pascal and Fermat exchange letters on the problem of points, the origin of probability.
+        pt: >-
+          Pascal e Fermat trocam cartas sobre o problema dos pontos, origem da probabilidade.
+        fr: >-
+          Pascal et Fermat échangent des lettres sur le problème des partis, origine des probabilités.
+        zh: >-
+          帕斯卡与费马就"点数问题"通信，这是概率论的起源。
+        ja: >-
+          パスカルとフェルマーが「点の問題」について手紙を交わす。確率論の起源。
+    - year: "1657"
+      label:
+        es: >-
+          Huygens publica el primer tratado y define la esperanza matemática.
+        en: >-
+          Huygens publishes the first treatise and defines the expected value.
+        pt: >-
+          Huygens publica o primeiro tratado e define o valor esperado.
+        fr: >-
+          Huygens publie le premier traité et définit l'espérance mathématique.
+        zh: >-
+          惠更斯发表第一部著作，并定义数学期望。
+        ja: >-
+          ホイヘンスが最初の著作を発表し、期待値を定義する。
+    - year: Hoy
+      label:
+        es: >-
+          Es el criterio de decisión en seguros, finanzas y teoría de juegos.
+        en: >-
+          It is the decision criterion in insurance, finance, and game theory.
+        pt: >-
+          É o critério de decisão em seguros, finanças e teoria dos jogos.
+        fr: >-
+          C'est le critère de décision en assurance, finance et théorie des jeux.
+        zh: >-
+          它是保险、金融和博弈论中的决策准则。
+        ja: >-
+          保険、金融、ゲーム理論における意思決定の基準である。
+  useCases:
+    - title:
+        es: Seguros
+        en: Insurance
+        pt: Seguros
+        fr: Assurance
+        zh: 保险
+        ja: 保険
+      description:
+        es: >-
+          La prima de un seguro es el valor esperado de los siniestros más el margen.
+        en: >-
+          An insurance premium is the expected value of claims plus a margin.
+        pt: >-
+          O prêmio de um seguro é o valor esperado dos sinistros mais uma margem.
+        fr: >-
+          La prime d'assurance est l'espérance des sinistres plus une marge.
+        zh: >-
+          保险费就是理赔额的期望值加上一定的利润率。
+        ja: >-
+          保険料は、保険金支払いの期待値にマージンを加えたものである。
+    - title:
+        es: Finanzas cuantitativas
+        en: Quantitative finance
+        pt: Finanças quantitativas
+        fr: Finance quantitative
+        zh: 量化金融
+        ja: クオンツ金融
+      description:
+        es: >-
+          El retorno esperado de una cartera pondera los retornos por su probabilidad.
+        en: >-
+          A portfolio's expected return weights returns by their probability.
+        pt: >-
+          O retorno esperado de uma carteira pondera os retornos por sua probabilidade.
+        fr: >-
+          Le rendement espéré d'un portefeuille pondère les rendements par leur probabilité.
+        zh: >-
+          投资组合的预期收益按概率加权各回报。
+        ja: >-
+          ポートフォリオの期待リターンは、各リターンを確率で加重したものである。
+    - title:
+        es: Teoría de juegos
+        en: Game theory
+        pt: Teoria dos jogos
+        fr: Théorie des jeux
+        zh: 博弈论
+        ja: ゲーム理論
+      description:
+        es: >-
+          El valor esperado decide qué estrategia maximiza la ganancia media.
+        en: >-
+          Expected value decides which strategy maximizes average gain.
+        pt: >-
+          O valor esperado decide qual estratégia maximiza o ganho médio.
+        fr: >-
+          L'espérance décide quelle stratégie maximise le gain moyen.
+        zh: >-
+          期望值决定哪种策略能最大化平均收益。
+        ja: >-
+          期待値が、平均利得を最大化する戦略を決める。
+  example:
+    title:
+      es: Lanzar un dado
+      en: Rolling a die
+      pt: Lançar um dado
+      fr: Lancer un dé
+      zh: 掷一枚骰子
+      ja: サイコロを1回振る
+    lines:
+      - es: "Resultados: 1, 2, 3, 4, 5, 6, cada uno con P = 1/6"
+        en: "Outcomes: 1, 2, 3, 4, 5, 6, each with P = 1/6"
+        pt: "Resultados: 1, 2, 3, 4, 5, 6, cada um com P = 1/6"
+        fr: "Issues : 1, 2, 3, 4, 5, 6, chacune avec P = 1/6"
+        zh: 结果：1、2、3、4、5、6，每个概率P = 1/6
+        ja: 出目：1, 2, 3, 4, 5, 6、それぞれP = 1/6
+      - es: E[X] = (1+2+3+4+5+6) · 1/6
+        en: E[X] = (1+2+3+4+5+6) · 1/6
+        pt: E[X] = (1+2+3+4+5+6) · 1/6
+        fr: E[X] = (1+2+3+4+5+6) · 1/6
+        zh: E[X] = (1+2+3+4+5+6) · 1/6
+        ja: E[X] = (1+2+3+4+5+6) · 1/6
+      - es: E[X] = 21 · 1/6
+        en: E[X] = 21 · 1/6
+        pt: E[X] = 21 · 1/6
+        fr: E[X] = 21 · 1/6
+        zh: E[X] = 21 · 1/6
+        ja: E[X] = 21 · 1/6
+      - es: E[X] = 3.5
+        en: E[X] = 3.5
+        pt: E[X] = 3,5
+        fr: E[X] = 3,5
+        zh: E[X] = 3.5
+        ja: E[X] = 3.5
+      - es: El promedio de muchos lanzamientos se acerca a 3.5
+        en: The average of many rolls approaches 3.5
+        pt: A média de muitos lançamentos se aproxima de 3,5
+        fr: La moyenne de nombreux lancers s'approche de 3,5
+        zh: 大量投掷的平均值趋近于3.5
+        ja: 何度も振ったときの平均は3.5に近づく

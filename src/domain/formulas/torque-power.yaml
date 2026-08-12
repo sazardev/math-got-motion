@@ -1,0 +1,327 @@
+id: torque-power
+title:
+  es: Potencia del Torque
+  en: Torque and Power
+  pt: Potência do Torque
+  fr: Couple et Puissance
+  zh: 扭矩与功率
+  ja: トルクと出力
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: p
+    type: variable
+    value: P
+    explanation:
+      es: La potencia entregada por el eje rotatorio, en vatios.
+      en: The power delivered by the rotating shaft, in watts.
+      pt: A potência entregue pelo eixo rotativo, em watts.
+      fr: La puissance délivrée par l'arbre rotatif, en watts.
+      zh: 旋转轴输出的功率,以瓦特为单位。
+      ja: 回転軸が供給する出力。単位はワット。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: tau
+    type: variable
+    value: τ
+    explanation:
+      es: El torque, fuerza de giro que ejerce el motor, medida en newtons por metro.
+      en: The torque, the twisting force the motor exerts, measured in newton-meters.
+      pt: O torque, a força de giro exercida pelo motor, medido em newtons por metro.
+      fr: Le couple, la force de rotation exercée par le moteur, mesuré en newtons-mètres.
+      zh: 扭矩,发动机施加的扭转力,以牛·米为单位。
+      ja: トルク。モーターが生み出す回転力で、単位はニュートンメートル。
+  - id: times
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación de dos magnitudes.
+      en: Multiplication of two quantities.
+      pt: Multiplicação de duas grandezas.
+      fr: Multiplication de deux grandeurs.
+      zh: 两个量相乘。
+      ja: 二つの量の掛け算。
+  - id: omega
+    type: variable
+    value: ω
+    explanation:
+      es: La velocidad angular del eje, en radianes por segundo.
+      en: The angular speed of the shaft, in radians per second.
+      pt: A velocidade angular do eixo, em radianos por segundo.
+      fr: La vitesse angulaire de l'arbre, en radians par seconde.
+      zh: 轴的角速度,以弧度每秒为单位。
+      ja: 軸の角速度。単位はラジアン毎秒。
+context:
+  author:
+    es: Basada en la mecánica rotacional de Euler
+    en: Based on Euler's rotational mechanics
+    pt: Baseada na mecânica rotacional de Euler
+    fr: Basée sur la mécanique rotationnelle d'Euler
+    zh: 基于欧拉的旋转力学
+    ja: オイラーの回転力学に基づく
+  era:
+    es: Europa, s. XVIII
+    en: Europe, 18th century
+    pt: Europa, século XVIII
+    fr: Europe, XVIIIe siècle
+    zh: 欧洲,18世纪
+    ja: ヨーロッパ、18世紀
+  history:
+    es: >-
+      La potencia de un eje rotatorio equivale al torque multiplicado por la velocidad angular, un
+      resultado de la mecánica rotacional que Leonhard Euler formalizó en el siglo XVIII al estudiar
+      el giro de los cuerpos rígidos. Con la Revolución Industrial la medida se volvió cotidiana,
+      los motores de vapor entregaban su esfuerzo como giro de un eje y los ingenieros aprendieron a
+      leer esa entrega como torque en N·m y potencia en kW. Las cajas de cambio son su aplicación más
+      visible, intercambian torque por velocidad para mantener constante la potencia, y por eso los
+      motores de combustión y los eléctricos modernos se describen con la misma curva P = τ·ω.
+    en: >-
+      The power of a rotating shaft equals torque times angular speed, a result of rotational
+      mechanics that Leonhard Euler helped formalize in the 18th century while studying the motion
+      of rigid bodies. With the Industrial Revolution the measure became everyday, steam engines
+      delivered their effort as shaft rotation and engineers learned to read that output as torque
+      in N·m and power in kW. Gearboxes are its most visible application, trading torque for speed
+      to keep power constant, which is why combustion engines and modern electric motors are both
+      described by the same curve P = τ·ω.
+    pt: >-
+      A potência de um eixo rotativo equivale ao torque vezes a velocidade angular, um resultado da
+      mecânica rotacional que Leonhard Euler ajudou a formalizar no século XVIII ao estudar o
+      movimento dos corpos rígidos. Com a Revolução Industrial a medida virou cotidiana, as máquinas
+      a vapor entregavam seu esforço como rotação de um eixo e os engenheiros aprenderam a ler essa
+      entrega como torque em N·m e potência em kW. As caixas de câmbio são sua aplicação mais
+      visível, trocam torque por velocidade para manter a potência constante, e por isso motores a
+      combustão e elétricos modernos são descritos pela mesma curva P = τ·ω.
+    fr: >-
+      La puissance d'un arbre rotatif équivaut au couple multiplié par la vitesse angulaire, un
+      résultat de la mécanique rotationnelle que Leonhard Euler contribua à formaliser au XVIIIe
+      siècle en étudiant le mouvement des corps rigides. Avec la Révolution industrielle, la mesure
+      devint quotidienne, les machines à vapeur fournissaient leur effort sous forme de rotation
+      d'un arbre et les ingénieurs apprirent à lire cette sortie comme un couple en N·m et une
+      puissance en kW. Les boîtes de vitesses en sont l'application la plus visible, elles échangent
+      du couple contre de la vitesse pour garder la puissance constante, et c'est pourquoi les
+      moteurs thermiques et les moteurs électriques modernes sont décrits par la même courbe
+      P = τ·ω.
+    zh: >-
+      旋转轴的功率等于扭矩乘以角速度,这是欧拉在18世纪研究刚体转动时帮助建立起来的旋转力学结论。
+      工业革命使这一测量变得日常化,蒸汽机以轴的转动来输出力,工程师学会了把这种输出读作以牛·米计的扭矩和以千瓦计的功率。
+      变速箱是其最明显的应用,它以转速换扭矩来保持功率恒定,因此内燃机和现代电动机都用同一条曲线P = τ·ω来描述。
+    ja: >-
+      回転軸の出力はトルク×角速度に等しい。これは、オイラーが18世紀に剛体の回転運動を研究する中で定式化に貢献した
+      回転力学の結果である。産業革命によってこの尺度は日常的になり、蒸気機関は軸の回転として力を出力し、
+      技術者たちはその出力をN·mのトルクとkWの仕事率として読み取るようになった。変速機はその最も身近な応用であり、
+      出力を一定に保つためにトルクと速度を交換する。内燃機関も現代の電動モーターも同じ曲線P = τ·ωで記述される。
+  timeline:
+    - year: "1765"
+      label:
+        es: >-
+          Euler publica su teoría del movimiento de los cuerpos rígidos, base de la mecánica
+          rotacional moderna.
+        en: >-
+          Euler publishes his theory of the motion of rigid bodies, the basis of modern rotational
+          mechanics.
+        pt: >-
+          Euler publica sua teoria do movimento dos corpos rígidos, base da mecânica rotacional
+          moderna.
+        fr: >-
+          Euler publie sa théorie du mouvement des corps rigides, base de la mécanique rotationnelle
+          moderne.
+        zh: >-
+          欧拉发表刚体运动理论,这是现代旋转力学的基础。
+        ja: >-
+          オイラーが剛体の運動理論を発表。現代の回転力学の基礎となる。
+    - year: "1780"
+      label:
+        es: >-
+          Las máquinas de vapor de Watt entregan su potencia como giro de un cigüeñal,
+          popularizando la noción de torque de eje.
+        en: >-
+          Watt's steam engines deliver their power as crankshaft rotation, popularizing the notion
+          of shaft torque.
+        pt: >-
+          As máquinas a vapor de Watt entregam sua potência como rotação de um virabrequim,
+          popularizando a noção de torque de eixo.
+        fr: >-
+          Les machines à vapeur de Watt fournissent leur puissance sous forme de rotation d'un
+          vilebrequin, popularisant la notion de couple d'arbre.
+        zh: >-
+          瓦特的蒸汽机以曲轴旋转的方式输出功率,轴扭矩的概念因此普及。
+        ja: >-
+          ワットの蒸気機関がクランクシャフトの回転として出力を供給し、軸トルクの概念が普及する。
+    - year: "1884"
+      label:
+        es: >-
+          Se adopta el vatio como unidad de potencia, y la industria comienza a especificar sus
+          máquinas en kW.
+        en: >-
+          The watt is adopted as the unit of power, and industry begins rating its machines in kW.
+        pt: >-
+          O watt é adotado como unidade de potência, e a indústria passa a especificar suas máquinas
+          em kW.
+        fr: >-
+          Le watt est adopté comme unité de puissance, et l'industrie commence à spécifier ses
+          machines en kW.
+        zh: >-
+          瓦特被采用为功率单位,工业界开始以千瓦来标定机器。
+        ja: >-
+          ワットが仕事率の単位として採用され、産業界は機械をkWで表記し始める。
+    - year: Hoy
+      label:
+        es: >-
+          Todo auto y todo motor eléctrico anuncia su torque en N·m y su potencia en kW, con la
+          misma curva P = τ·ω.
+        en: >-
+          Every car and every electric motor advertises torque in N·m and power in kW, along the
+          same curve P = τ·ω.
+        pt: >-
+          Todo carro e todo motor elétrico anuncia seu torque em N·m e sua potência em kW, na mesma
+          curva P = τ·ω.
+        fr: >-
+          Chaque voiture et chaque moteur électrique annonce son couple en N·m et sa puissance en
+          kW, le long de la même courbe P = τ·ω.
+        zh: >-
+          每辆汽车和每台电动机都沿同一条曲线P = τ·ω,以牛·米标称扭矩、以千瓦标称功率。
+        ja: >-
+          すべての車と電動モーターは、同じ曲線P = τ·ωに沿ってトルクをN·m、出力をkWで表示する。
+  useCases:
+    - title:
+        es: Motores de automóviles
+        en: Car engines
+        pt: Motores de automóveis
+        fr: Moteurs automobiles
+        zh: 汽车发动机
+        ja: 自動車エンジン
+      description:
+        es: >-
+          Las fichas técnicas citan el torque máximo en N·m y la potencia en kW, y la curva P = τ·ω
+          explica cuándo se siente el empuje.
+        en: >-
+          Spec sheets quote peak torque in N·m and power in kW, and the P = τ·ω curve explains when
+          the push is felt.
+        pt: >-
+          As fichas técnicas citam o torque máximo em N·m e a potência em kW, e a curva P = τ·ω
+          explica quando o empurrão é sentido.
+        fr: >-
+          Les fiches techniques indiquent le couple maximal en N·m et la puissance en kW, et la
+          courbe P = τ·ω explique quand la poussée se fait sentir.
+        zh: >-
+          规格表标明最大扭矩(牛·米)和功率(千瓦),P = τ·ω曲线解释了推力何时显现。
+        ja: >-
+          スペック表には最大トルクをN·m、出力をkWで記載し、P = τ·ωの曲線がいつ加速感を得られるかを説明する。
+    - title:
+        es: Cajas de cambio
+        en: Gearboxes
+        pt: Caixas de câmbio
+        fr: Boîtes de vitesses
+        zh: 变速箱
+        ja: 変速機
+      description:
+        es: >-
+          Cada marcha intercambia torque por velocidad angular manteniendo la potencia, por eso
+          primera acelera y quinta va rápido.
+        en: >-
+          Each gear trades torque for angular speed while keeping power, which is why first gear
+          accelerates and fifth gear goes fast.
+        pt: >-
+          Cada marcha troca torque por velocidade angular mantendo a potência, por isso a primeira
+          acelera e a quinta anda rápido.
+        fr: >-
+          Chaque rapport échange du couple contre de la vitesse angulaire en conservant la
+          puissance, c'est pourquoi la première accélère et la cinquième va vite.
+        zh: >-
+          每个挡位都在保持功率的同时以转速换扭矩,因此一挡提速、五挡跑得快。
+        ja: >-
+          各ギアは出力を保ちながらトルクと角速度を交換する。そのため1速は加速し、5速は高速に達する。
+    - title:
+        es: Motores eléctricos de vehículos
+        en: Vehicle electric motors
+        pt: Motores elétricos de veículos
+        fr: Moteurs électriques de véhicules
+        zh: 车辆用电机
+        ja: 車両用電動モーター
+      description:
+        es: >-
+          Los motores EV ofrecen torque pleno desde bajas vueltas, y la fórmula dimensiona la curva
+          de potencia que siente el conductor.
+        en: >-
+          EV motors deliver full torque from low RPM, and the formula sizes the power curve the
+          driver feels.
+        pt: >-
+          Motores EV entregam torque pleno em baixas rotações, e a fórmula dimensiona a curva de
+          potência sentida pelo motorista.
+        fr: >-
+          Les moteurs de VE délivrent un couple maximal dès les bas régimes, et la formule
+          dimensionne la courbe de puissance ressentie par le conducteur.
+        zh: >-
+          电动汽车电机在低转速下即输出满扭矩,该公式决定了驾驶员感受到的功率曲线。
+        ja: >-
+          EVモーターは低回転から最大トルクを発揮し、この式がドライバーの感じる出力曲線を形づくる。
+    - title:
+        es: Maquinaria y ejes industriales
+        en: Machinery and industrial shafts
+        pt: Maquinário e eixos industriais
+        fr: Machines et arbres industriels
+        zh: 机械与工业转轴
+        ja: 機械と産業用シャフト
+      description:
+        es: >-
+          Motores, bombas y generadores se seleccionan por el producto torque por velocidad que
+          necesita cada aplicación.
+        en: >-
+          Motors, pumps and generators are selected by the torque-times-speed product each
+          application needs.
+        pt: >-
+          Motores, bombas e geradores são selecionados pelo produto torque vezes velocidade que cada
+          aplicação precisa.
+        fr: >-
+          Moteurs, pompes et générateurs sont choisis selon le produit couple fois vitesse dont
+          chaque application a besoin.
+        zh: >-
+          电机、水泵和发电机都按各应用所需的扭矩乘速度之积来选型。
+        ja: >-
+          モーター、ポンプ、発電機は、各用途に必要なトルク×速度の積で選定される。
+  example:
+    title:
+      es: El motor de un auto
+      en: A car engine
+      pt: O motor de um carro
+      fr: Le moteur d'une voiture
+      zh: 汽车发动机
+      ja: 自動車エンジン
+    lines:
+      - es: τ = 200 N·m · ω = 300 rad/s
+        en: τ = 200 N·m · ω = 300 rad/s
+        pt: τ = 200 N·m · ω = 300 rad/s
+        fr: τ = 200 N·m · ω = 300 rad/s
+        zh: τ = 200 N·m · ω = 300 rad/s
+        ja: τ = 200 N·m · ω = 300 rad/s
+      - es: P = τ · ω
+        en: P = τ · ω
+        pt: P = τ · ω
+        fr: P = τ · ω
+        zh: P = τ · ω
+        ja: P = τ · ω
+      - es: P = 200 × 300
+        en: P = 200 × 300
+        pt: P = 200 × 300
+        fr: P = 200 × 300
+        zh: P = 200 × 300
+        ja: P = 200 × 300
+      - es: P = 60000 W = 60 kW
+        en: P = 60000 W = 60 kW
+        pt: P = 60000 W = 60 kW
+        fr: P = 60000 W = 60 kW
+        zh: P = 60000 W = 60 kW
+        ja: P = 60000 W = 60 kW

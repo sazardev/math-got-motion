@@ -1,0 +1,358 @@
+id: work
+title:
+  es: Trabajo Mecánico
+  en: Mechanical Work
+  pt: Trabalho Mecânico
+  fr: Travail Mécanique
+  zh: 机械功
+  ja: 機械的仕事
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: w
+    type: variable
+    value: W
+    explanation:
+      es: El trabajo realizado por la fuerza, medido en julios.
+      en: The work done by the force, measured in joules.
+      pt: O trabalho realizado pela força, medido em joules.
+      fr: Le travail effectué par la force, mesuré en joules.
+      zh: 力所做的功，单位是焦耳。
+      ja: 力が行う仕事。単位はジュール。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: La fuerza aplicada al objeto, medida en newtons.
+      en: The force applied to the object, measured in newtons.
+      pt: A força aplicada ao objeto, medida em newtons.
+      fr: La force appliquée à l'objet, mesurée en newtons.
+      zh: 施加在物体上的力，单位是牛顿。
+      ja: 物体に加えられる力。単位はニュートン。
+  - id: mul-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por la distancia.
+      en: Multiplied by the distance.
+      pt: Multiplicado pela distância.
+      fr: Multiplié par la distance.
+      zh: 乘以距离。
+      ja: 距離を掛ける。
+  - id: d
+    type: variable
+    value: d
+    explanation:
+      es: El desplazamiento del objeto, medido en metros.
+      en: The displacement of the object, measured in meters.
+      pt: O deslocamento do objeto, medido em metros.
+      fr: Le déplacement de l'objet, mesuré en mètres.
+      zh: 物体的位移，单位是米。
+      ja: 物体の変位。単位はメートル。
+  - id: mul-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por el coseno del ángulo.
+      en: Multiplied by the cosine of the angle.
+      pt: Multiplicado pelo cosseno do ângulo.
+      fr: Multiplié par le cosinus de l'angle.
+      zh: 乘以角度的余弦。
+      ja: 角度の余弦を掛ける。
+  - id: cos
+    type: operator
+    value: cos
+    explanation:
+      es: La función coseno, que proyecta la fuerza sobre la dirección del movimiento.
+      en: The cosine function, which projects the force onto the direction of motion.
+      pt: A função cosseno, que projeta a força na direção do movimento.
+      fr: La fonction cosinus, qui projette la force sur la direction du mouvement.
+      zh: 余弦函数，将力投影到运动方向上。
+      ja: 余弦関数。力を運動の方向に射影する。
+  - id: theta
+    type: variable
+    value: θ
+    explanation:
+      es: El ángulo entre la fuerza y la dirección del desplazamiento.
+      en: The angle between the force and the direction of displacement.
+      pt: O ângulo entre a força e a direção do deslocamento.
+      fr: L'angle entre la force et la direction du déplacement.
+      zh: 力与位移方向之间的夹角。
+      ja: 力と変位の方向のなす角。
+context:
+  author:
+    es: Basada en los Principia; término acuñado por Coriolis
+    en: Based on the Principia; term coined by Coriolis
+    pt: Baseada nos Principia; termo cunhado por Coriolis
+    fr: Basée sur les Principia; terme forgé par Coriolis
+    zh: 以《原理》为基础；术语由科里奥利提出
+    ja: 『プリンキピア』に基づく；用語はコリオリが命名
+  era:
+    es: 'Francia, 1792–1843 · el término "trabajo" en 1826'
+    en: 'France, 1792–1843 · the term "work" coined in 1826'
+    pt: 'França, 1792–1843 · o termo "trabalho" em 1826'
+    fr: 'France, 1792–1843 · le terme "travail" en 1826'
+    zh: '法国，1792–1843年 · "功"一词于1826年提出'
+    ja: "フランス、1792–1843年・1826年に「仕事」という用語"
+  history:
+    es: >-
+      El concepto de trabajo mecánico nace de los Principia de Newton (1687), donde el producto de
+      fuerza por desplazamiento aparecía implícito al estudiar máquinas simples. El término
+      "trabajo" fue acuñado en 1826 por el ingeniero francés Gaspard-Gustave de Coriolis, que
+      necesitaba cuantificar la energía transferida a un mecanismo. El factor cos θ expresa que solo
+      la componente de la fuerza paralela al desplazamiento aporta trabajo: empujar de costado,
+      perpendicular al movimiento, no realiza trabajo alguno. La definición dio a la física una
+      medida del esfuerzo útil, base del concepto moderno de energía.
+    en: >-
+      The concept of mechanical work comes from Newton's Principia (1687), where the product of
+      force and displacement was implicit in the study of simple machines. The term "work" was coined
+      in 1826 by the French engineer Gaspard-Gustave de Coriolis, who needed to quantify the energy
+      transferred to a mechanism. The factor cos θ expresses that only the component of the force
+      parallel to the displacement does work: pushing sideways, perpendicular to the motion, does no
+      work at all. The definition gave physics a measure of useful effort, the basis of the modern
+      concept of energy.
+    pt: >-
+      O conceito de trabalho mecânico nasce dos Principia de Newton (1687), em que o produto de
+      força por deslocamento estava implícito no estudo das máquinas simples. O termo "trabalho" foi
+      cunhado em 1826 pelo engenheiro francês Gaspard-Gustave de Coriolis, que precisava quantificar
+      a energia transferida a um mecanismo. O fator cos θ expressa que apenas a componente da força
+      paralela ao deslocamento realiza trabalho: empurrar de lado, perpendicular ao movimento, não
+      realiza trabalho algum. A definição deu à física uma medida do esforço útil, base do conceito
+      moderno de energia.
+    fr: >-
+      Le concept de travail mécanique vient des Principia de Newton (1687), où le produit de la force
+      par le déplacement était implicite dans l'étude des machines simples. Le terme "travail" a été
+      forgé en 1826 par l'ingénieur français Gaspard-Gustave de Coriolis, qui avait besoin de
+      quantifier l'énergie transférée à un mécanisme. Le facteur cos θ exprime que seule la
+      composante de la force parallèle au déplacement fournit un travail : pousser de côté,
+      perpendiculairement au mouvement, ne produit aucun travail. La définition a donné à la physique
+      une mesure de l'effort utile, base du concept moderne d'énergie.
+    zh: >-
+      机械功的概念源自牛顿的《原理》(1687年)，其中力与位移的乘积在研究简单机械时已隐含其中。"功"一词于1826年
+      由法国工程师加斯帕-古斯塔夫·德·科里奥利提出，他需要量化传递到机械上的能量。cos θ这一因子表示只有与位移方向
+      平行的分力才做功：垂直于运动方向从侧面推物体，并不做功。这一定义为物理学提供了衡量有用功的标准，是现代能量概念
+      的基础。
+    ja: >-
+      機械的仕事の概念は、ニュートンの『プリンキピア』(1687年)に端を発する。そこでは簡単な機械の研究において、
+      力と変位の積が暗黙のうちに扱われていた。「仕事」という用語は1826年、フランスの技術者ガスパール＝ギュスターヴ・
+      ド・コリオリが、機械に伝わるエネルギーを定量化する必要から造語した。cos θという因子は、変位に平行な力の成分だけ
+      が仕事をすることを表す。つまり運動と垂直な方向から横に押しても、仕事は一切なされない。この定義は物理学に「有用な
+      労力」の尺度を与え、現代のエネルギー概念の基盤となった。
+  timeline:
+    - year: "1687"
+      label:
+        es: >-
+          Newton publica los Principia, donde el producto de fuerza por desplazamiento aparece al
+          estudiar palancas y máquinas simples.
+        en: >-
+          Newton publishes the Principia, where the force-times-displacement product appears in the
+          study of levers and simple machines.
+        pt: >-
+          Newton publica os Principia, em que o produto de força por deslocamento aparece no estudo
+          de alavancas e máquinas simples.
+        fr: >-
+          Newton publie les Principia, où le produit force par déplacement apparaît dans l'étude des
+          leviers et des machines simples.
+        zh: >-
+          牛顿发表《原理》，力与位移的乘积出现在对杠杆和简单机械的研究中。
+        ja: >-
+          ニュートンが『プリンキピア』を発表。てこや簡単な機械の研究に、力×変位の積が登場する。
+    - year: "1826"
+      label:
+        es: >-
+          Gaspard-Gustave de Coriolis introduce el término "trabajo" en sus cursos de mecánica de
+          máquinas.
+        en: >-
+          Gaspard-Gustave de Coriolis introduces the term "work" in his machine mechanics courses.
+        pt: >-
+          Gaspard-Gustave de Coriolis introduz o termo "trabalho" em seus cursos de mecânica das
+          máquinas.
+        fr: >-
+          Gaspard-Gustave de Coriolis introduit le terme "travail" dans ses cours de mécanique des
+          machines.
+        zh: >-
+          加斯帕-古斯塔夫·德·科里奥利在其机械力学课程中引入"功"一词。
+        ja: >-
+          ガスパール＝ギュスターヴ・ド・コリオリが機械力学の講義で「仕事」という用語を導入する。
+    - year: "1829"
+      label:
+        es: >-
+          Coriolis publica "Du calcul de l'effet des machines", que formaliza el trabajo y su
+          relación con la energía.
+        en: >-
+          Coriolis publishes "Du calcul de l'effet des machines", formalizing work and its relation
+          to energy.
+        pt: >-
+          Coriolis publica "Du calcul de l'effet des machines", formalizando o trabalho e sua relação
+          com a energia.
+        fr: >-
+          Coriolis publie « Du calcul de l'effet des machines », qui formalise le travail et sa
+          relation avec l'énergie.
+        zh: >-
+          科里奥利发表《论机械效应的计算》，正式确立功及其与能量的关系。
+        ja: >-
+          コリオリが『機械の効果の計算について』を発表し、仕事とエネルギーとの関係を体系化する。
+    - year: Hoy
+      label:
+        es: >-
+          El trabajo mecánico es la medida estándar de transferencia de energía en toda la ingeniería.
+        en: >-
+          Mechanical work is the standard measure of energy transfer throughout engineering.
+        pt: >-
+          O trabalho mecânico é a medida padrão de transferência de energia em toda a engenharia.
+        fr: >-
+          Le travail mécanique est la mesure standard du transfert d'énergie dans toute l'ingénierie.
+        zh: >-
+          机械功是整个工程领域中能量传递的标准度量。
+        ja: >-
+          機械的仕事は、工学の全域におけるエネルギー伝達の標準的な尺度である。
+  useCases:
+    - title:
+        es: Máquinas y motores
+        en: Machines and engines
+        pt: Máquinas e motores
+        fr: Machines et moteurs
+        zh: 机械与发动机
+        ja: 機械とエンジン
+      description:
+        es: >-
+          Cuantifica la energía útil que un motor o una máquina entrega, comparándola con la energía
+          que consume.
+        en: >-
+          It quantifies the useful energy an engine or machine delivers, compared with the energy it
+          consumes.
+        pt: >-
+          Quantifica a energia útil que um motor ou máquina entrega, em comparação com a energia que
+          consome.
+        fr: >-
+          Elle quantifie l'énergie utile qu'un moteur ou une machine fournit, par rapport à l'énergie
+          qu'il consomme.
+        zh: >-
+          用于量化发动机或机械输出的有用能量，并与它们消耗的能量相比较。
+        ja: >-
+          エンジンや機械が供給する有効なエネルギーを、消費するエネルギーと比較して定量化する。
+    - title:
+        es: Grúas y construcción
+        en: Cranes and construction
+        pt: Guindastes e construção
+        fr: Grues et construction
+        zh: 起重机与建筑
+        ja: クレーンと建設
+      description:
+        es: >-
+          Calcula el trabajo necesario para izar cargas a determinada altura y dimensiona los motores
+          de las grúas.
+        en: >-
+          It calculates the work needed to lift loads to a given height and sizes the crane motors.
+        pt: >-
+          Calcula o trabalho necessário para elevar cargas a determinada altura e dimensiona os
+          motores dos guindastes.
+        fr: >-
+          Elle calcule le travail nécessaire pour soulever des charges à une hauteur donnée et
+          dimensionne les moteurs des grues.
+        zh: >-
+          计算将货物提升到一定高度所需的功，并为起重机选配电机。
+        ja: >-
+          荷物を一定の高さまで持ち上げるのに必要な仕事を計算し、クレーンのモーターを設計する。
+    - title:
+        es: Transporte ferroviario
+        en: Rail transport
+        pt: Transporte ferroviário
+        fr: Transport ferroviaire
+        zh: 铁路运输
+        ja: 鉄道輸送
+      description:
+        es: >-
+          Estima la energía que una locomotora debe aportar para arrastrar un tren, dependiendo de la
+          fuerza de tracción.
+        en: >-
+          It estimates the energy a locomotive must supply to haul a train, depending on the traction
+          force.
+        pt: >-
+          Estima a energia que uma locomotiva deve fornecer para puxar um trem, dependendo da força
+          de tração.
+        fr: >-
+          Elle estime l'énergie qu'une locomotive doit fournir pour remorquer un train, selon la
+          force de traction.
+        zh: >-
+          估算机车牵引列车所需提供的能量，这取决于牵引力的大小。
+        ja: >-
+          牽引力に応じて、列車を牽引するために機関車が供給すべきエネルギーを推定する。
+    - title:
+        es: Biomecánica del ejercicio
+        en: Exercise biomechanics
+        pt: Biomecânica do exercício
+        fr: Biomécanique de l'exercice
+        zh: 运动生物力学
+        ja: 運動バイオメカニクス
+      description:
+        es: >-
+          Estima el trabajo que un atleta realiza al levantar o desplazar cargas, base de los
+          programas de entrenamiento.
+        en: >-
+          It estimates the work an athlete does lifting or moving loads, the basis of training
+          programs.
+        pt: >-
+          Estima o trabalho que um atleta realiza ao levantar ou deslocar cargas, base dos programas
+          de treinamento.
+        fr: >-
+          Elle estime le travail qu'un athlète fournit en soulevant ou en déplaçant des charges, base
+          des programmes d'entraînement.
+        zh: >-
+          估算运动员举起或移动重物所做的功，这是制定训练计划的基础。
+        ja: >-
+          アスリートが重量を持ち上げたり運んだりする際の仕事を推定する。トレーニング計画の基礎となる。
+  example:
+    title:
+      es: Empujar una caja 5 metros
+      en: Pushing a box 5 meters
+      pt: Empurrar uma caixa por 5 metros
+      fr: Pousser une caisse sur 5 mètres
+      zh: 将箱子推动5米
+      ja: 箱を5m押す
+    lines:
+      - es: F = 100 N
+        en: F = 100 N
+        pt: F = 100 N
+        fr: F = 100 N
+        zh: F = 100 牛
+        ja: F = 100 N
+      - es: d = 5 m
+        en: d = 5 m
+        pt: d = 5 m
+        fr: d = 5 m
+        zh: d = 5 米
+        ja: d = 5 m
+      - es: θ = 0° → cos θ = 1
+        en: θ = 0° → cos θ = 1
+        pt: θ = 0° → cos θ = 1
+        fr: θ = 0° → cos θ = 1
+        zh: θ = 0° → cos θ = 1
+        ja: θ = 0° → cos θ = 1
+      - es: W = 100 × 5 × 1
+        en: W = 100 × 5 × 1
+        pt: W = 100 × 5 × 1
+        fr: W = 100 × 5 × 1
+        zh: W = 100 × 5 × 1
+        ja: W = 100 × 5 × 1
+      - es: W = 500 J
+        en: W = 500 J
+        pt: W = 500 J
+        fr: W = 500 J
+        zh: W = 500 焦耳
+        ja: W = 500 J

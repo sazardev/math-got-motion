@@ -1,0 +1,379 @@
+id: newtons-law-of-cooling
+title:
+  es: Ley de Enfriamiento de Newton
+  en: Newton's Law of Cooling
+  pt: Lei do Resfriamento de Newton
+  fr: Loi de refroidissement de Newton
+  zh: 牛顿冷却定律
+  ja: ニュートンの冷却の法則
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: t-of-t
+    type: variable
+    value: "T(t)"
+    explanation:
+      es: La temperatura del objeto en el instante t, que tiende exponencialmente a la del entorno.
+      en: The temperature of the object at time t, which decays exponentially toward that of the surroundings.
+      pt: A temperatura do objeto no instante t, que tende exponencialmente à do ambiente.
+      fr: La température de l'objet à l'instant t, qui tend exponentiellement vers celle du milieu.
+      zh: 物体在时刻t的温度，它呈指数衰减并趋近环境温度。
+      ja: 時刻tにおける物体の温度。指数関数的に環境の温度へ近づいていく。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: ts
+    type: variable
+    value: "Tₛ"
+    explanation:
+      es: La temperatura del entorno, que se considera constante durante el enfriamiento.
+      en: The temperature of the surroundings, taken as constant during the cooling.
+      pt: A temperatura do ambiente, considerada constante durante o resfriamento.
+      fr: La température du milieu environnant, considérée comme constante pendant le refroidissement.
+      zh: 周围环境的温度，在冷却过程中视为恒定。
+      ja: 周囲の環境の温度。冷却の間は一定とみなす。
+  - id: plus
+    type: operator
+    value: "+"
+    explanation:
+      es: Sumado a.
+      en: Added to.
+      pt: Somado a.
+      fr: Ajouté à.
+      zh: 加上。
+      ja: 加える。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el paréntesis que agrupa la diferencia de temperaturas iniciales.
+      en: Opens the parenthesis grouping the initial temperature difference.
+      pt: Abre o parêntese que agrupa a diferença de temperaturas iniciais.
+      fr: Ouvre la parenthèse qui regroupe la différence de températures initiales.
+      zh: 左括号，将初始温差括起来。
+      ja: 初期温度差をまとめる括弧の始まり。
+  - id: t0
+    type: variable
+    value: "T₀"
+    explanation:
+      es: La temperatura inicial del objeto en el instante t = 0.
+      en: The initial temperature of the object at time t = 0.
+      pt: A temperatura inicial do objeto no instante t = 0.
+      fr: La température initiale de l'objet à l'instant t = 0.
+      zh: 物体在时刻t = 0时的初始温度。
+      ja: 時刻t = 0における物体の初期温度。
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: Menos.
+      en: Minus.
+      pt: Menos.
+      fr: Moins.
+      zh: 减去。
+      ja: 引く。
+  - id: ts-2
+    type: variable
+    value: "Tₛ"
+    explanation:
+      es: De nuevo la temperatura del entorno, ahora restando la diferencia inicial.
+      en: Again the surroundings' temperature, now subtracting the initial difference.
+      pt: Novamente a temperatura do ambiente, agora subtraindo a diferença inicial.
+      fr: Encore la température du milieu, qui soustrait ici la différence initiale.
+      zh: 同样是环境温度，这里被用来求初始温差。
+      ja: 再び環境の温度。ここでは初期温度差を引いている。
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el paréntesis.
+      en: Closes the parenthesis.
+      pt: Fecha o parêntese.
+      fr: Ferme la parenthèse.
+      zh: 右括号。
+      ja: 括弧を閉じる。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: exp
+    type: constant
+    value: "e^(−kt)"
+    explanation:
+      es: "El factor exponencial: e elevado a −k·t, que atenúa la diferencia con el paso del tiempo."
+      en: "The exponential factor: e raised to −k·t, which dampens the difference as time passes."
+      pt: "O fator exponencial: e elevado a −k·t, que atenua a diferença com o passar do tempo."
+      fr: "Le facteur exponentiel : e élevé à la puissance −k·t, qui amortit la différence au fil du temps."
+      zh: 指数因子：e的−k·t次幂，随时间推移衰减温差。
+      ja: 指数関数の因子。eを−k·t乗したもので、時間の経過とともに差を弱める。
+context:
+  author:
+    es: Isaac Newton
+    en: Isaac Newton
+    pt: Isaac Newton
+    fr: Isaac Newton
+    zh: 艾萨克·牛顿
+    ja: アイザック・ニュートン
+  era:
+    es: Inglaterra, 1643–1727 · publicada en 1701
+    en: England, 1643–1727 · published in 1701
+    pt: Inglaterra, 1643–1727 · publicada em 1701
+    fr: Angleterre, 1643–1727 · publiée en 1701
+    zh: 英国，1643–1727年 · 1701年发表
+    ja: イギリス、1643–1727年・1701年発表
+  history:
+    es: >-
+      Isaac Newton publicó en 1701, en las "Philosophical Transactions" de la Royal Society, un breve
+      estudio sobre cómo los cuerpos calientes se enfrían al aire libre. Propuso que la velocidad de
+      enfriamiento es proporcional a la diferencia entre la temperatura del cuerpo y la del entorno, lo
+      que hoy se llama ley de enfriamiento de Newton. En su época fue un resultado puramente empírico,
+      pero más tarde se dedujo a partir de la ley de conducción de Fourier y de la radiación térmica. Se
+      usa para modelar desde una taza de café que se enfría hasta la estimación de la hora de la muerte en
+      medicina forense.
+    en: >-
+      Isaac Newton published a short study in 1701, in the Royal Society's "Philosophical Transactions",
+      on how hot bodies cool in the open air. He proposed that the rate of cooling is proportional to the
+      difference between the body's temperature and that of the surroundings, which today is called
+      Newton's law of cooling. In his day it was a purely empirical result, but it was later derived from
+      Fourier's law of conduction and from thermal radiation. It is used to model everything from a
+      cooling cup of coffee to estimating the time of death in forensic medicine.
+    pt: >-
+      Isaac Newton publicou em 1701, nas "Philosophical Transactions" da Royal Society, um breve estudo
+      sobre como os corpos quentes esfriam ao ar livre. Ele propôs que a velocidade de resfriamento é
+      proporcional à diferença entre a temperatura do corpo e a do ambiente, o que hoje se chama lei do
+      resfriamento de Newton. Em sua época foi um resultado puramente empírico, mas depois foi deduzida a
+      partir da lei de condução de Fourier e da radiação térmica. Ela é usada para modelar desde uma
+      xícara de café esfriando até a estimativa da hora da morte na medicina forense.
+    fr: >-
+      Isaac Newton publia en 1701, dans les « Philosophical Transactions » de la Royal Society, une brève
+      étude sur la manière dont les corps chauds refroidissent à l'air libre. Il proposa que la vitesse de
+      refroidissement est proportionnelle à la différence entre la température du corps et celle du milieu,
+      ce qu'on appelle aujourd'hui la loi de refroidissement de Newton. À son époque, ce fut un résultat
+      purement empirique, mais il fut ensuite dérivé de la loi de conduction de Fourier et du rayonnement
+      thermique. Elle sert à modéliser aussi bien une tasse de café qui refroidit que l'estimation de
+      l'heure de la mort en médecine légale.
+    zh: >-
+      艾萨克·牛顿于1701年在皇家学会的《哲学汇刊》上发表了一项关于热物体在空气中如何冷却的简短研究。
+      他提出，冷却速度与物体温度和环境温度之差成正比，这就是今天所说的牛顿冷却定律。
+      在当时这纯属经验结果，但后来人们从傅里叶热传导定律和热辐射出发推导出了它。
+      从冷却的咖啡杯到法医学中的死亡时间推定，它都被用来建模。
+    ja: >-
+      アイザック・ニュートンは1701年、王立協会の『フィロソフィカル・トランザクションズ』に、高温の物体が
+      大気中でどのように冷えるかについての短い研究を発表した。彼は、冷却速度が物体と環境の温度差に比例すると
+      提唱した。これは今日、ニュートンの冷却の法則と呼ばれる。当時は純粋に経験的な結果だったが、後にフーリエの
+      熱伝導則と熱放射から導かれた。冷めていくコーヒーカップから法医学の死亡時刻推定まで、さまざまな場面で
+      モデル化に使われている。
+  timeline:
+    - year: "1701"
+      label:
+        es: >-
+          Newton publica su estudio sobre el enfriamiento de los cuerpos en las "Philosophical
+          Transactions" de la Royal Society.
+        en: >-
+          Newton publishes his study of cooling bodies in the Royal Society's "Philosophical
+          Transactions".
+        pt: >-
+          Newton publica seu estudo sobre o resfriamento dos corpos nas "Philosophical Transactions" da
+          Royal Society.
+        fr: >-
+          Newton publie son étude sur le refroidissement des corps dans les « Philosophical Transactions »
+          de la Royal Society.
+        zh: >-
+          牛顿在皇家学会的《哲学汇刊》上发表了关于物体冷却的研究。
+        ja: >-
+          ニュートンが王立協会の『フィロソフィカル・トランザクションズ』に物体の冷却についての研究を発表。
+    - year: "1822"
+      label:
+        es: >-
+          La ley se deduce teóricamente a partir de la teoría de conducción del calor de Fourier.
+        en: >-
+          The law is derived theoretically from Fourier's theory of heat conduction.
+        pt: >-
+          A lei é deduzida teoricamente a partir da teoria de condução de calor de Fourier.
+        fr: >-
+          La loi est dérivée théoriquement de la théorie de la conduction de la chaleur de Fourier.
+        zh: >-
+          该定律从傅里叶的热传导理论中在理论上推导出来。
+        ja: >-
+          この法則がフーリエの熱伝導の理論から理論的に導かれる。
+    - year: "1880"
+      label:
+        es: >-
+          La medicina forense empieza a usar el enfriamiento del cuerpo para estimar la hora de la
+          muerte.
+        en: >-
+          Forensic medicine begins using body cooling to estimate the time of death.
+        pt: >-
+          A medicina forense começa a usar o resfriamento do corpo para estimar a hora da morte.
+        fr: >-
+          La médecine légale commence à utiliser le refroidissement du corps pour estimer l'heure de la
+          mort.
+        zh: >-
+          法医学开始利用尸体冷却来推定死亡时间。
+        ja: >-
+          法医学が死亡時刻の推定に体温の低下を利用し始める。
+    - year: Hoy
+      label:
+        es: >-
+          Modela el enfriamiento de café, dispositivos electrónicos y cuerpos en medicina forense.
+        en: >-
+          It models the cooling of coffee, electronic devices, and bodies in forensic medicine.
+        pt: >-
+          Modela o resfriamento de café, dispositivos eletrônicos e corpos na medicina forense.
+        fr: >-
+          Elle modélise le refroidissement du café, des appareils électroniques et des corps en médecine
+          légale.
+        zh: >-
+          它为咖啡、电子设备和法医学中尸体的冷却建模。
+        ja: >-
+          コーヒーや電子機器、法医学における死体の冷却をモデル化する。
+  useCases:
+    - title:
+        es: Medicina forense
+        en: Forensic medicine
+        pt: Medicina forense
+        fr: Médecine légale
+        zh: 法医学
+        ja: 法医学
+      description:
+        es: >-
+          El enfriamiento del cuerpo tras la muerte, llamado algor mortis, permite estimar la hora del
+          deceso.
+        en: >-
+          The cooling of the body after death, called algor mortis, helps estimate the time of death.
+        pt: >-
+          O resfriamento do corpo após a morte, chamado algor mortis, permite estimar a hora do óbito.
+        fr: >-
+          Le refroidissement du corps après la mort, dit algor mortis, permet d'estimer l'heure du décès.
+        zh: >-
+          死后身体的冷却（即尸体冷却现象）有助于推定死亡时间。
+        ja: >-
+          死亡後の体温低下（アルゴル・モルティス）から死亡時刻を推定できる。
+    - title:
+        es: Industria alimentaria
+        en: Food industry
+        pt: Indústria alimentícia
+        fr: Industrie agroalimentaire
+        zh: 食品工业
+        ja: 食品産業
+      description:
+        es: >-
+          Calcula el tiempo necesario para enfriar alimentos y bebidas hasta la temperatura de
+          conservación.
+        en: >-
+          It computes the time needed to cool food and beverages down to their storage temperature.
+        pt: >-
+          Calcula o tempo necessário para resfriar alimentos e bebidas até a temperatura de conservação.
+        fr: >-
+          Elle calcule le temps nécessaire pour refroidir aliments et boissons jusqu'à la température de
+          conservation.
+        zh: >-
+          用于计算食物和饮料冷却到储存温度所需的时间。
+        ja: >-
+          食品や飲料を保存温度まで冷やすのに必要な時間を計算する。
+    - title:
+        es: Electrónica
+        en: Electronics
+        pt: Eletrônica
+        fr: Électronique
+        zh: 电子学
+        ja: エレクトロニクス
+      description:
+        es: >-
+          Estima la temperatura de equilibrio de dispositivos que se enfrían por convección natural.
+        en: >-
+          It estimates the steady-state temperature of devices cooled by natural convection.
+        pt: >-
+          Estima a temperatura de equilíbrio de dispositivos resfriados por convecção natural.
+        fr: >-
+          Elle estime la température d'équilibre des appareils refroidis par convection naturelle.
+        zh: >-
+          用于估算自然对流冷却设备的平衡温度。
+        ja: >-
+          自然対流で冷やされる機器の平衡温度を推定する。
+    - title:
+        es: Ingeniería de procesos
+        en: Process engineering
+        pt: Engenharia de processos
+        fr: Ingénierie des procédés
+        zh: 过程工程
+        ja: プロセス工学
+      description:
+        es: >-
+          Dimensiona torres de enfriamiento y tanques agitados que deben evacuar calor a temperatura
+          controlada.
+        en: >-
+          It sizes cooling towers and stirred tanks that must reject heat at a controlled temperature.
+        pt: >-
+          Dimensiona torres de resfriamento e tanques agitados que precisam rejeitar calor a temperatura
+          controlada.
+        fr: >-
+          Elle dimensionne les tours de refroidissement et les cuves agitées qui doivent évacuer la
+          chaleur à température contrôlée.
+        zh: >-
+          用于确定必须在受控温度下排热的冷却塔和搅拌槽的规格。
+        ja: >-
+          制御された温度で熱を排出する必要がある冷却塔や撹拌槽の設計に使われる。
+  example:
+    title:
+      es: Enfriamiento de una taza de café
+      en: Cooling of a cup of coffee
+      pt: Resfriamento de uma xícara de café
+      fr: Refroidissement d'une tasse de café
+      zh: 一杯咖啡的冷却
+      ja: コーヒーカップの冷却
+    lines:
+      - es: T₀ = 90 °C, Tₛ = 20 °C, k = 0.1 min⁻¹
+        en: T₀ = 90 °C, Tₛ = 20 °C, k = 0.1 min⁻¹
+        pt: T₀ = 90 °C, Tₛ = 20 °C, k = 0,1 min⁻¹
+        fr: T₀ = 90 °C, Tₛ = 20 °C, k = 0,1 min⁻¹
+        zh: T₀ = 90 °C, Tₛ = 20 °C, k = 0.1 min⁻¹
+        ja: T₀ = 90 °C, Tₛ = 20 °C, k = 0.1 min⁻¹
+      - es: t = 10 min
+        en: t = 10 min
+        pt: t = 10 min
+        fr: t = 10 min
+        zh: t = 10 min
+        ja: t = 10 min
+      - es: T = Tₛ + (T₀ − Tₛ) · e^(−k·t)
+        en: T = Tₛ + (T₀ − Tₛ) · e^(−k·t)
+        pt: T = Tₛ + (T₀ − Tₛ) · e^(−k·t)
+        fr: T = Tₛ + (T₀ − Tₛ) · e^(−k·t)
+        zh: T = Tₛ + (T₀ − Tₛ) · e^(−k·t)
+        ja: T = Tₛ + (T₀ − Tₛ) · e^(−k·t)
+      - es: T = 20 + 70 · e^(−0.1 × 10)
+        en: T = 20 + 70 · e^(−0.1 × 10)
+        pt: T = 20 + 70 · e^(−0,1 × 10)
+        fr: T = 20 + 70 · e^(−0,1 × 10)
+        zh: T = 20 + 70 · e^(−0.1 × 10)
+        ja: T = 20 + 70 · e^(−0.1 × 10)
+      - es: T = 20 + 70 · e^(−1)
+        en: T = 20 + 70 · e^(−1)
+        pt: T = 20 + 70 · e^(−1)
+        fr: T = 20 + 70 · e^(−1)
+        zh: T = 20 + 70 · e^(−1)
+        ja: T = 20 + 70 · e^(−1)
+      - es: T ≈ 20 + 70 × 0.368 ≈ 45.8 °C
+        en: T ≈ 20 + 70 × 0.368 ≈ 45.8 °C
+        pt: T ≈ 20 + 70 × 0,368 ≈ 45,8 °C
+        fr: T ≈ 20 + 70 × 0,368 ≈ 45,8 °C
+        zh: T ≈ 20 + 70 × 0.368 ≈ 45.8 °C
+        ja: T ≈ 20 + 70 × 0.368 ≈ 45.8 °C

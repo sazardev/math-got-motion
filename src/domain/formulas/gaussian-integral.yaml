@@ -1,0 +1,291 @@
+id: gaussian-integral
+title:
+  es: Integral de Gauss
+  en: Gaussian Integral
+  pt: Integral de Gauss
+  fr: Intégrale de Gauss
+  zh: 高斯积分
+  ja: ガウス積分
+category:
+  es: Cálculo
+  en: Calculus
+  pt: Cálculo
+  fr: Calcul
+  zh: 微积分
+  ja: 微積分
+nodes:
+  - id: integral
+    type: operator
+    value: ∫
+    explanation:
+      es: La integral sobre toda la recta real.
+      en: The integral over the whole real line.
+      pt: A integral sobre toda a reta real.
+      fr: L'intégrale sur toute la droite réelle.
+      zh: 在整个实数轴上的积分。
+      ja: 実数直線全体にわたる積分。
+  - id: bounds
+    type: variable
+    value: −∞→∞
+    explanation:
+      es: Desde menos infinito hasta más infinito.
+      en: From minus infinity to plus infinity.
+      pt: De menos infinito a mais infinito.
+      fr: De moins l'infini à plus l'infini.
+      zh: 从负无穷到正无穷。
+      ja: マイナス無限大からプラス無限大まで。
+  - id: e
+    type: constant
+    value: e
+    explanation:
+      es: "e: la base de los logaritmos naturales."
+      en: "e: the base of natural logarithms."
+      pt: "e: a base dos logaritmos naturais."
+      fr: "e : la base des logarithmes naturels."
+      zh: "e：自然对数的底。"
+      ja: "e：自然対数の底。"
+  - id: exponent
+    type: superscript
+    value: −x²
+    explanation:
+      es: "Elevado a −x²: una campana que decae simétricamente."
+      en: "Raised to −x²: a symmetric decaying bell."
+      pt: "Elevado a −x²: um sino que decai simetricamente."
+      fr: "Élevé à −x² : une cloche symétrique qui décroît."
+      zh: "的−x²次方：对称衰减的钟形曲线。"
+      ja: "−x²乗。対称に減衰する鐘形。"
+  - id: dx
+    type: variable
+    value: dx
+    explanation:
+      es: El elemento de integración.
+      en: The element of integration.
+      pt: O elemento de integração.
+      fr: L'élément d'intégration.
+      zh: 积分元素。
+      ja: 積分の要素。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: La raíz cuadrada del resultado.
+      en: The square root of the result.
+      pt: A raiz quadrada do resultado.
+      fr: La racine carrée du résultat.
+      zh: 结果的平方根。
+      ja: 結果の平方根。
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: "π: la constante del círculo, sorprendentemente en el resultado."
+      en: "π: the circle constant, surprisingly in the result."
+      pt: "π: a constante do círculo, surpreendentemente no resultado."
+      fr: "π : la constante du cercle, étonnamment dans le résultat."
+      zh: "π：圆的常数，竟出现在结果中。"
+      ja: "π：円の定数。結果に現れるのは驚きである。"
+context:
+  author:
+    es: Johann Carl Friedrich Gauss
+    en: Johann Carl Friedrich Gauss
+    pt: Johann Carl Friedrich Gauss
+    fr: Johann Carl Friedrich Gauss
+    zh: 约翰·卡尔·弗里德里希·高斯
+    ja: ヨハン・カール・フリードリヒ・ガウス
+  era:
+    es: Alemania, 1777–1855 · calculada c. 1809
+    en: Germany, 1777–1855 · computed c. 1809
+    pt: Alemanha, 1777–1855 · calculada c. 1809
+    fr: Allemagne, 1777–1855 · calculée v. 1809
+    zh: 德国，1777–1855年·约1809年算出
+    ja: ドイツ、1777–1855年・1809年頃に計算
+  history:
+    es: >-
+      La función e^(−x²) no tiene antiderivada elemental, así que su integral parecía incalculable.
+      Gauss la resolvió en su estudio de la distribución normal: al elevar la integral al cuadrado y
+      cambiar a coordenadas polares, el problema se convierte en una integral sencilla. El resultado,
+      √π, es la constante de normalización de la campana de Gauss y aparece en física, estadística y
+      mecánica cuántica.
+    en: >-
+      The function e^(−x²) has no elementary antiderivative, so its integral seemed uncomputable.
+      Gauss solved it while studying the normal distribution: by squaring the integral and switching
+      to polar coordinates, the problem becomes a simple integral. The result, √π, is the
+      normalization constant of the Gaussian bell and appears in physics, statistics, and quantum
+      mechanics.
+    pt: >-
+      A função e^(−x²) não tem antiderivada elementar, então sua integral parecia incalculável. Gauss
+      a resolveu ao estudar a distribuição normal: ao elevar a integral ao quadrado e mudar para
+      coordenadas polares, o problema se torna uma integral simples. O resultado, √π, é a constante de
+      normalização do sino de Gauss e aparece na física, na estatística e na mecânica quântica.
+    fr: >-
+      La fonction e^(−x²) n'a pas de primitive élémentaire, si bien que son intégrale semblait
+      incalculable. Gauss la résolut en étudiant la distribution normale : en élevant l'intégrale au
+      carré et en passant aux coordonnées polaires, le problème devient une intégrale simple. Le
+      résultat, √π, est la constante de normalisation de la cloche de Gauss et apparaît en physique,
+      en statistique et en mécanique quantique.
+    zh: >-
+      函数e^(−x²)没有初等原函数，因此它的积分似乎无法计算。高斯在研究正态分布时解决了它：将积分平方并改用极坐标，
+      问题就变成一个简单的积分。结果√π正是高斯钟形曲线的归一化常数，出现在物理学、统计学和量子力学中。
+    ja: >-
+      関数e^(−x²)には初等関数の原始関数がなく、その積分は計算不能に見えた。ガウスは正規分布の研究の中でこれを
+      解いた。積分を2乗して極座標に変換すると、問題は簡単な積分になる。結果の√πはガウスの鐘形曲線の規格化定数
+      であり、物理学、統計学、量子力学に現れる。
+  timeline:
+    - year: "1733"
+      label:
+        es: >-
+          De Moivre usa la curva e^(−x²) para aproximar la distribución binomial.
+        en: >-
+          De Moivre uses the e^(−x²) curve to approximate the binomial distribution.
+        pt: >-
+          De Moivre usa a curva e^(−x²) para aproximar a distribuição binomial.
+        fr: >-
+          De Moivre utilise la courbe e^(−x²) pour approximer la loi binomiale.
+        zh: >-
+          棣莫弗用e^(−x²)曲线近似二项分布。
+        ja: >-
+          ド・モアブルがe^(−x²)の曲線で二項分布を近似する。
+    - year: c. 1809
+      label:
+        es: >-
+          Gauss calcula la integral en su teoría de errores de observación.
+        en: >-
+          Gauss computes the integral in his theory of observation errors.
+        pt: >-
+          Gauss calcula a integral em sua teoria de erros de observação.
+        fr: >-
+          Gauss calcule l'intégrale dans sa théorie des erreurs d'observation.
+        zh: >-
+          高斯在其观测误差理论中算出该积分。
+        ja: >-
+          ガウスが観測誤差の理論の中でこの積分を計算する。
+    - year: Hoy
+      label:
+        es: >-
+          Normaliza toda distribución normal y aparece en la integral de trayectoria de Feynman.
+        en: >-
+          It normalizes every normal distribution and appears in Feynman's path integral.
+        pt: >-
+          Normaliza toda distribuição normal e aparece na integral de caminho de Feynman.
+        fr: >-
+          Elle normalise toute distribution normale et apparaît dans l'intégrale de chemin de Feynman.
+        zh: >-
+          它归一化一切正态分布，并出现在费曼路径积分中。
+        ja: >-
+          あらゆる正規分布を規格化し、ファインマンの経路積分にも現れる。
+  useCases:
+    - title:
+        es: Probabilidad y estadística
+        en: Probability and statistics
+        pt: Probabilidade e estatística
+        fr: Probabilités et statistiques
+        zh: 概率与统计
+        ja: 確率と統計
+      description:
+        es: >-
+          La constante que normaliza la densidad normal es exactamente 1/√(2π).
+        en: >-
+          The constant normalizing the normal density is exactly 1/√(2π).
+        pt: >-
+          A constante que normaliza a densidade normal é exatamente 1/√(2π).
+        fr: >-
+          La constante qui normalise la densité normale vaut exactement 1/√(2π).
+        zh: >-
+          归一化正态密度的常数恰好是1/√(2π)。
+        ja: >-
+          正規密度を規格化する定数はちょうど1/√(2π)である。
+    - title:
+        es: Mecánica cuántica
+        en: Quantum mechanics
+        pt: Mecânica quântica
+        fr: Mécanique quantique
+        zh: 量子力学
+        ja: 量子力学
+      description:
+        es: >-
+          Las funciones de onda del oscilador armónico se normalizan con esta integral.
+        en: >-
+          Harmonic oscillator wavefunctions are normalized with this integral.
+        pt: >-
+          As funções de onda do oscilador harmônico são normalizadas com essa integral.
+        fr: >-
+          Les fonctions d'onde de l'oscillateur harmonique se normalisent avec cette intégrale.
+        zh: >-
+          谐振子波函数用这个积分归一化。
+        ja: >-
+          調和振動子の波動関数は、この積分で規格化される。
+    - title:
+        es: Difusión y calor
+        en: Diffusion and heat
+        pt: Difusão e calor
+        fr: Diffusion et chaleur
+        zh: 扩散与热
+        ja: 拡散と熱
+      description:
+        es: >-
+          La solución fundamental de la ecuación del calor es una gaussiana normalizada.
+        en: >-
+          The fundamental solution of the heat equation is a normalized Gaussian.
+        pt: >-
+          A solução fundamental da equação do calor é uma gaussiana normalizada.
+        fr: >-
+          La solution fondamentale de l'équation de la chaleur est une gaussienne normalisée.
+        zh: >-
+          热方程的基本解就是归一化的高斯函数。
+        ja: >-
+          熱方程式の基本解は、規格化されたガウス関数である。
+  example:
+    title:
+      es: El truco del cuadrado
+      en: The squaring trick
+      pt: O truque do quadrado
+      fr: L'astuce du carré
+      zh: 平方技巧
+      ja: 2乗のトリック
+    lines:
+      - es: Sea I = ∫e^(−x²) dx
+        en: Let I = ∫e^(−x²) dx
+        pt: Seja I = ∫e^(−x²) dx
+        fr: Soit I = ∫e^(−x²) dx
+        zh: 令 I = ∫e^(−x²) dx
+        ja: I = ∫e^(−x²) dx とする
+      - es: I² = (∫e^(−x²) dx)·(∫e^(−y²) dy)
+        en: I² = (∫e^(−x²) dx)·(∫e^(−y²) dy)
+        pt: I² = (∫e^(−x²) dx)·(∫e^(−y²) dy)
+        fr: I² = (∫e^(−x²) dx)·(∫e^(−y²) dy)
+        zh: I² = (∫e^(−x²) dx)·(∫e^(−y²) dy)
+        ja: I² = (∫e^(−x²) dx)·(∫e^(−y²) dy)
+      - es: I² = ∬e^(−(x²+y²)) dx dy, con coordenadas polares
+        en: I² = ∬e^(−(x²+y²)) dx dy, in polar coordinates
+        pt: I² = ∬e^(−(x²+y²)) dx dy, em coordenadas polares
+        fr: I² = ∬e^(−(x²+y²)) dx dy, en coordonnées polaires
+        zh: I² = ∬e^(−(x²+y²)) dx dy，改用极坐标
+        ja: I² = ∬e^(−(x²+y²)) dx dy、極座標で
+      - es: x²+y² = r², dx dy = r dr dθ
+        en: x²+y² = r², dx dy = r dr dθ
+        pt: x²+y² = r², dx dy = r dr dθ
+        fr: x²+y² = r², dx dy = r dr dθ
+        zh: x²+y² = r²，dx dy = r dr dθ
+        ja: x²+y² = r²、dx dy = r dr dθ
+      - es: I² = ∫₀^{2π} dθ · ∫₀^∞ r·e^(−r²) dr = 2π · ½
+        en: I² = ∫₀^{2π} dθ · ∫₀^∞ r·e^(−r²) dr = 2π · ½
+        pt: I² = ∫₀^{2π} dθ · ∫₀^∞ r·e^(−r²) dr = 2π · ½
+        fr: I² = ∫₀^{2π} dθ · ∫₀^∞ r·e^(−r²) dr = 2π · ½
+        zh: I² = ∫₀^{2π} dθ · ∫₀^∞ r·e^(−r²) dr = 2π · ½
+        ja: I² = ∫₀^{2π} dθ · ∫₀^∞ r·e^(−r²) dr = 2π · ½
+      - es: I² = π → I = √π ≈ 1.772
+        en: I² = π → I = √π ≈ 1.772
+        pt: I² = π → I = √π ≈ 1,772
+        fr: I² = π → I = √π ≈ 1,772
+        zh: I² = π → I = √π ≈ 1.772
+        ja: I² = π → I = √π ≈ 1.772

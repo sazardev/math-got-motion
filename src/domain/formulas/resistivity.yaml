@@ -1,0 +1,273 @@
+id: resistivity
+title:
+  es: Resistividad
+  en: Resistivity
+  pt: Resistividade
+  fr: Résistivité
+  zh: 电阻率
+  ja: 抵抗率
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: r
+    type: variable
+    value: R
+    explanation:
+      es: "R: la resistencia eléctrica total del hilo, medida en ohmios."
+      en: "R: the total electrical resistance of the wire, measured in ohms."
+      pt: "R: a resistência elétrica total do fio, medida em ohms."
+      fr: "R : la résistance électrique totale du fil, mesurée en ohms."
+      zh: "R：导线的总电阻,单位为欧姆。"
+      ja: "R：導線全体の電気抵抗。単位はオーム。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: rho
+    type: constant
+    value: ρ
+    explanation:
+      es: "ρ: la resistividad, la propiedad intrínseca del material, medida en ohmios por metro."
+      en: "ρ: the resistivity, the material's intrinsic property, measured in ohm-meters."
+      pt: "ρ: a resistividade, a propriedade intrínseca do material, medida em ohm-metro."
+      fr: "ρ : la résistivité, propriété intrinsèque du matériau, mesurée en ohms-mètres."
+      zh: "ρ：电阻率,材料本身的固有属性,单位为欧姆·米。"
+      ja: "ρ：抵抗率。材料に固有の性質で、単位はオーム・メートル。"
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: 次を掛ける。
+  - id: l
+    type: variable
+    value: L
+    explanation:
+      es: "L: la longitud del hilo: cuanto más largo, mayor la resistencia."
+      en: "L: the length of the wire: the longer it is, the greater the resistance."
+      pt: "L: o comprimento do fio: quanto mais longo, maior a resistência."
+      fr: "L : la longueur du fil : plus elle est grande, plus la résistance est élevée."
+      zh: "L：导线的长度:越长,电阻越大。"
+      ja: "L：導線の長さ。長いほど抵抗が大きくなる。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: "A: el área de la sección transversal: cuanto mayor, menor la resistencia."
+      en: "A: the cross-sectional area: the larger it is, the lower the resistance."
+      pt: "A: a área da seção transversal: quanto maior, menor a resistência."
+      fr: "A : la section transversale : plus elle est grande, plus la résistance est faible."
+      zh: "A：横截面积:越大,电阻越小。"
+      ja: "A：断面積。大きいほど抵抗が小さくなる。"
+context:
+  author:
+    es: Basada en la ley de Ohm
+    en: Based on Ohm's law
+    pt: Baseada na lei de Ohm
+    fr: Basée sur la loi d'Ohm
+    zh: 基于欧姆定律
+    ja: オームの法則に基づく
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, séc. XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲,19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      Tras la ley de Ohm (1827) quedó claro que la resistencia de un hilo depende del material y
+      de su geometría. La resistividad ρ es la propiedad intrínseca del material: el cobre la
+      tiene muy baja y por eso domina el cableado eléctrico, mientras que el nicromio, con ρ
+      alta, convierte la electricidad en calor y sirve para hornos y resistencias. Medir
+      resistividades bajas con solo dos cables arrastra errores de contacto; la técnica de cuatro
+      puntas separa la inyección de corriente de la medida de tensión y elimina ese error. Su
+      inversa, la conductividad, es la magnitud que suelen tabular los ingenieros.
+    en: >-
+      After Ohm's law (1827) it became clear that a wire's resistance depends on its material and
+      its geometry. Resistivity ρ is the material's intrinsic property: copper has a very low one,
+      which is why it dominates electrical wiring, while nichrome, with a high ρ, turns
+      electricity into heat and is used in ovens and resistors. Measuring low resistivities with
+      only two wires drags in contact errors; the four-point method separates current injection
+      from voltage measurement and removes that error. Its inverse, conductivity, is the quantity
+      engineers usually tabulate.
+    pt: >-
+      Após a lei de Ohm (1827), ficou claro que a resistência de um fio depende do material e da
+      sua geometria. A resistividade ρ é a propriedade intrínseca do material: o cobre a tem muito
+      baixa e por isso domina o cabeamento elétrico, enquanto o nicrômio, com ρ alta, converte
+      eletricidade em calor e serve para fornos e resistores. Medir resistividades baixas com
+      apenas dois fios arrasta erros de contato; a técnica de quatro pontas separa a injeção de
+      corrente da medição de tensão e elimina esse erro. Sua inversa, a condutividade, é a
+      grandeza que os engenheiros costumam tabelar.
+    fr: >-
+      Après la loi d'Ohm (1827), il apparut que la résistance d'un fil dépend de son matériau et
+      de sa géométrie. La résistivité ρ est la propriété intrinsèque du matériau : le cuivre en a
+      une très faible, ce qui explique sa domination dans le câblage électrique, tandis que le
+      nichrome, à ρ élevée, transforme l'électricité en chaleur et sert dans les fours et les
+      résistances. Mesurer de faibles résistivités avec seulement deux fils introduit des erreurs
+      de contact ; la méthode des quatre pointes sépare l'injection du courant de la mesure de la
+      tension et élimine cette erreur. Son inverse, la conductivité, est la grandeur que les
+      ingénieurs tabulent le plus souvent.
+    zh: >-
+      在欧姆定律(1827年)提出后,人们明白了导线的电阻取决于材料及其几何形状。电阻率ρ是材料的固有属性:铜的电阻率很低,
+      因此主导了电气布线;而镍铬合金的ρ较高,能把电能转化为热能,用于烤箱和电阻器。仅用两根导线测量低电阻率会引入接触误差;
+      四探针法将电流注入与电压测量分开,从而消除了这一误差。其倒数——电导率,是工程师们最常列成表格的量。
+    ja: >-
+      オームの法則(1827年)以降、導線の抵抗が材料と形状に依存することが明らかになった。抵抗率ρは材料固有の性質で、
+      銅は非常に低いため電気配線を支配し、ニクロムはρが高いため電気を熱に変え、オーブンや抵抗器に使われる。
+      低い抵抗率を2本の導線だけで測定すると接触誤差が混入する。四探針法は電流の注入と電圧の測定を分離し、その誤差を除く。
+      その逆数である導電率が、技術者が通常表にまとめる量である。
+  timeline:
+    - year: "1827"
+      label:
+        es: Ohm publica su ley, que relaciona la resistencia de un conductor con su material y dimensiones.
+        en: Ohm publishes his law, relating a conductor's resistance to its material and dimensions.
+        pt: Ohm publica sua lei, que relaciona a resistência de um condutor ao material e às dimensões.
+        fr: Ohm publie sa loi, reliant la résistance d'un conducteur à son matériau et à ses dimensions.
+        zh: 欧姆发表其定律,将导体的电阻与材料和尺寸联系起来。
+        ja: オームが法則を発表し、導体の抵抗と材料・寸法を結びつける。
+    - year: "1861"
+      label:
+        es: Lord Kelvin propone el puente doble para medir resistencias muy bajas sin errores de contacto.
+        en: Lord Kelvin proposes the double bridge to measure very low resistances without contact errors.
+        pt: Lord Kelvin propõe a ponte dupla para medir resistências muito baixas sem erros de contato.
+        fr: Lord Kelvin propose le pont double pour mesurer de très faibles résistances sans erreurs de contact.
+        zh: 开尔文勋爵提出双桥,用于测量极低电阻而不受接触误差影响。
+        ja: ケルビン卿が接触誤差なしで極めて低い抵抗を測る二重ブリッジを提案する。
+    - year: "1915"
+      label:
+        es: Frank Wenner publica la técnica de cuatro sondas, estándar para medir la resistividad de materiales.
+        en: Frank Wenner publishes the four-point probe technique, standard for measuring material resistivity.
+        pt: Frank Wenner publica a técnica de quatro pontas, padrão para medir a resistividade de materiais.
+        fr: Frank Wenner publie la technique des quatre pointes, devenue standard pour mesurer la résistivité des matériaux.
+        zh: 温纳发表四探针技术,成为测量材料电阻率的标准方法。
+        ja: フランク・ウェナーが材料の抵抗率を測る標準的手法となる四探針法を発表する。
+    - year: Hoy
+      label:
+        es: La resistividad gobierna el diseño de cables, calefactores y la calidad de las obleas semiconductoras.
+        en: Resistivity governs the design of cables, heaters, and the quality of semiconductor wafers.
+        pt: A resistividade governa o projeto de cabos, aquecedores e a qualidade de pastilhas semicondutoras.
+        fr: La résistivité gouverne la conception des câbles, des radiateurs et la qualité des plaquettes semi-conductrices.
+        zh: 电阻率决定电线、加热器以及半导体晶圆质量的设计。
+        ja: 抵抗率はケーブルやヒーターの設計、半導体ウエハーの品質を左右する。
+  useCases:
+    - title:
+        es: Cableado eléctrico
+        en: Electrical wiring
+        pt: Cabeamento elétrico
+        fr: Câblage électrique
+        zh: 电气布线
+        ja: 電気配線
+      description:
+        es: El cobre y el aluminio se eligen por su baja resistividad para minimizar pérdidas en conductores.
+        en: Copper and aluminum are chosen for their low resistivity to minimize losses in conductors.
+        pt: Cobre e alumínio são escolhidos pela baixa resistividade para minimizar perdas nos condutores.
+        fr: Le cuivre et l'aluminium sont choisis pour leur faible résistivité afin de minimiser les pertes dans les conducteurs.
+        zh: 铜和铝因其低电阻率而被选用,以减少导体中的损耗。
+        ja: 銅とアルミは抵抗率が低いため導体の損失を抑えられ、配線に選ばれる。
+    - title:
+        es: Elementos calefactores
+        en: Heating elements
+        pt: Elementos de aquecimento
+        fr: Résistances chauffantes
+        zh: 加热元件
+        ja: 発熱体
+      description:
+        es: El nicromio, con alta resistividad y resistencia al calor, convierte la corriente en calor útil.
+        en: Nichrome, with high resistivity and heat resistance, turns current into useful heat.
+        pt: O nicrômio, com alta resistividade e resistência ao calor, converte corrente em calor útil.
+        fr: Le nichrome, à forte résistivité et résistant à la chaleur, transforme le courant en chaleur utile.
+        zh: 镍铬合金电阻率高且耐热,能把电流转化为有用的热量。
+        ja: ニクロムは抵抗率が高く耐熱性もあるため、電流を有用な熱に変える。
+    - title:
+        es: Industria de semiconductores
+        en: Semiconductor industry
+        pt: Indústria de semicondutores
+        fr: Industrie des semi-conducteurs
+        zh: 半导体产业
+        ja: 半導体産業
+      description:
+        es: La técnica de cuatro sondas verifica la resistividad de las obleas de silicio antes del grabado.
+        en: The four-point probe verifies silicon wafer resistivity before patterning.
+        pt: A técnica de quatro pontas verifica a resistividade de pastilhas de silício antes da gravação.
+        fr: La méthode des quatre pointes vérifie la résistivité des plaquettes de silicium avant la gravure.
+        zh: 四探针技术在刻蚀前检验硅晶圆的电阻率。
+        ja: 四探針法により、パターニング前にシリコンウエハーの抵抗率を検査する。
+    - title:
+        es: Termómetros de resistencia
+        en: Resistance thermometers
+        pt: Termômetros de resistência
+        fr: Thermomètres à résistance
+        zh: 电阻温度计
+        ja: 測温抵抗体
+      description:
+        es: Como la resistividad del platino cambia con la temperatura, se usa para medirla con precisión.
+        en: Since platinum's resistivity changes with temperature, it is used to measure temperature precisely.
+        pt: Como a resistividade da platina varia com a temperatura, ela é usada para medi-la com precisão.
+        fr: Comme la résistivité du platine varie avec la température, elle sert à la mesurer avec précision.
+        zh: 由于铂的电阻率随温度变化,因此被用来精确测量温度。
+        ja: 白金は温度によって抵抗率が変わるため、温度を正確に測るのに使われる。
+  example:
+    title:
+      es: Resistencia de un hilo de cobre
+      en: Resistance of a copper wire
+      pt: Resistência de um fio de cobre
+      fr: Résistance d'un fil de cuivre
+      zh: 铜导线的电阻
+      ja: 銅線の抵抗
+    lines:
+      - es: ρ = 1.68×10⁻⁸ Ω·m (cobre)
+        en: ρ = 1.68×10⁻⁸ Ω·m (copper)
+        pt: ρ = 1,68×10⁻⁸ Ω·m (cobre)
+        fr: ρ = 1,68×10⁻⁸ Ω·m (cuivre)
+        zh: ρ = 1.68×10⁻⁸ Ω·m(铜)
+        ja: ρ = 1.68×10⁻⁸ Ω·m(銅)
+      - es: L = 100 m, A = 1×10⁻⁶ m²
+        en: L = 100 m, A = 1×10⁻⁶ m²
+        pt: L = 100 m, A = 1×10⁻⁶ m²
+        fr: L = 100 m, A = 1×10⁻⁶ m²
+        zh: L = 100 米, A = 1×10⁻⁶ 米²
+        ja: L = 100 m、A = 1×10⁻⁶ m²
+      - es: R = ρ · L / A
+        en: R = ρ · L / A
+        pt: R = ρ · L / A
+        fr: R = ρ · L / A
+        zh: R = ρ · L / A
+        ja: R = ρ · L / A
+      - es: R = 1.68×10⁻⁸ × 100 / 10⁻⁶
+        en: R = 1.68×10⁻⁸ × 100 / 10⁻⁶
+        pt: R = 1,68×10⁻⁸ × 100 / 10⁻⁶
+        fr: R = 1,68×10⁻⁸ × 100 / 10⁻⁶
+        zh: R = 1.68×10⁻⁸ × 100 / 10⁻⁶
+        ja: R = 1.68×10⁻⁸ × 100 / 10⁻⁶
+      - es: R = 1.68 Ω
+        en: R = 1.68 Ω
+        pt: R = 1,68 Ω
+        fr: R = 1,68 Ω
+        zh: R = 1.68 Ω
+        ja: R = 1.68 Ω

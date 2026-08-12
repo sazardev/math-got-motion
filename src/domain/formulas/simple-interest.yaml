@@ -1,0 +1,354 @@
+id: simple-interest
+title:
+  es: Interés Simple
+  en: Simple Interest
+  pt: Juros Simples
+  fr: Intérêt Simple
+  zh: 单利
+  ja: 単利
+category:
+  es: Finanzas
+  en: Finance
+  pt: Finanças
+  fr: Finance
+  zh: 金融
+  ja: 金融
+nodes:
+  - id: interest
+    type: variable
+    value: I
+    explanation:
+      es: El interés total que produce el capital durante el período.
+      en: The total interest that the principal earns over the period.
+      pt: O juro total que o capital rende ao longo do período.
+      fr: L'intérêt total produit par le capital sur la période.
+      zh: 本金在期间内产生的总利息。
+      ja: 元金が期間中に生み出す総利息。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: principal
+    type: variable
+    value: P
+    explanation:
+      es: El capital inicial, la cantidad prestada o depositada al comienzo.
+      en: The initial principal, the amount loaned or deposited at the start.
+      pt: O capital inicial, o valor emprestado ou depositado no início.
+      fr: Le capital initial, la somme prêtée ou déposée au départ.
+      zh: 初始本金,即开始时借出或存入的金额。
+      ja: 最初に貸し出される、あるいは預け入れられる元金。
+  - id: times-1
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicación que une el capital y la tasa.
+      en: Multiplication joining the principal and the rate.
+      pt: Multiplicação que une o capital e a taxa.
+      fr: Multiplication qui relie le capital et le taux.
+      zh: 将本金与利率相乘。
+      ja: 元金と利率を掛け合わせる乗算。
+  - id: rate
+    type: variable
+    value: r
+    explanation:
+      es: La tasa de interés por período, expresada como decimal (5 % = 0,05).
+      en: The interest rate per period, written as a decimal (5 % = 0.05).
+      pt: A taxa de juros por período, escrita como decimal (5 % = 0,05).
+      fr: Le taux d'intérêt par période, écrit en décimal (5 % = 0,05).
+      zh: 每期的利率,以小数的形式表示(5 % = 0.05)。
+      ja: 各期間の利率を小数で表したもの(5 % = 0.05)。
+  - id: times-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicación que une la tasa y el tiempo.
+      en: Multiplication joining the rate and the time.
+      pt: Multiplicação que une a taxa e o tempo.
+      fr: Multiplication qui relie le taux et le temps.
+      zh: 将利率与时间相乘。
+      ja: 利率と時間を掛け合わせる乗算。
+  - id: time
+    type: variable
+    value: t
+    explanation:
+      es: El tiempo del préstamo, en las mismas unidades que la tasa.
+      en: The time of the loan, in the same units as the rate.
+      pt: O tempo do empréstimo, nas mesmas unidades da taxa.
+      fr: Le temps du prêt, dans les mêmes unités que le taux.
+      zh: 贷款的时间,单位与利率一致。
+      ja: 貸付期間。利率と同じ単位で表す。
+context:
+  author:
+    es: Origen colectivo de la banca
+    en: Collective origin of banking
+    pt: Origem coletiva da banca
+    fr: Origine collective du secteur bancaire
+    zh: 银行业集体起源
+    ja: 銀行業の集団的起源
+  era:
+    es: Babilonia a Europa, c. 2000 a.C.–s. XVII
+    en: Babylon to Europe, c. 2000 BC–17th century
+    pt: Babilônia à Europa, c. 2000 a.C.–séc. XVII
+    fr: Babylone à l'Europe, c. 2000 av. J.-C.–XVIIe s.
+    zh: 从巴比伦到欧洲,约公元前2000年至17世纪
+    ja: バビロニアからヨーロッパへ、紀元前2000年頃–17世紀
+  history:
+    es: >-
+      El interés simple cobra interés solo sobre el capital original, nunca sobre intereses ya
+      ganados. Es más antiguo que el compuesto: en tablillas babilónicas de hace más de cuatro
+      mil años ya hay préstamos con interés proporcional al tiempo, y durante siglos fue el
+      cálculo estándar de mercaderes y banqueros por ser predecible y fácil de auditar. Por eso
+      los préstamos a corto plazo, los bonos con cupón y la financiación rápida al consumo
+      siguen cotizándose con interés simple: en plazos cortos la diferencia con el compuesto es
+      despreciable, y simplifica los contratos.
+    en: >-
+      Simple interest charges interest only on the original principal, never on interest already
+      earned. It is older than compound interest: Babylonian tablets from more than four thousand
+      years ago already record loans whose interest grows in proportion to time, and for
+      centuries it was the standard calculation of merchants and bankers because it is
+      predictable and easy to audit. That is why short-term loans, coupon bonds and quick
+      consumer finance are still quoted at simple interest: over short terms the difference from
+      compound interest is negligible, and it keeps contracts simple.
+    pt: >-
+      Os juros simples incidem apenas sobre o capital original, nunca sobre juros já recebidos.
+      São mais antigos que os juros compostos: tabuletas babilônicas de mais de quatro mil anos
+      já registram empréstimos com juros proporcionais ao tempo, e por séculos esse foi o
+      cálculo padrão de mercadores e banqueiros, por ser previsível e fácil de auditar. Por isso,
+      empréstimos de curto prazo, títulos com cupom e o crédito rápido ao consumidor ainda são
+      cotados a juros simples: em prazos curtos a diferença para os juros compostos é
+      desprezível, e isso simplifica os contratos.
+    fr: >-
+      L'intérêt simple porte uniquement sur le capital initial, jamais sur les intérêts déjà
+      gagnés. Il est plus ancien que l'intérêt composé : des tablettes babyloniennes de plus de
+      quatre mille ans consignent déjà des prêts dont l'intérêt croît proportionnellement au
+      temps, et pendant des siècles il fut le calcul standard des marchands et des banquiers, car
+      prévisible et facile à vérifier. C'est pourquoi les prêts à court terme, les obligations à
+      coupon et le crédit à la consommation rapide restent cotés à intérêt simple : sur des
+      durées courtes, l'écart avec l'intérêt composé est négligeable, et cela simplifie les
+      contrats.
+    zh: >-
+      单利只对本金计息,不对已产生的利息计息。它比复利更古老:四千多年前的巴比伦泥板上就已记载利息随时间
+      成比例增长,几个世纪以来,因计算可预期、易于审计,它一直是商人和银行家的标准算法。正因如此,短期贷款、
+      带息票的债券以及快速消费信贷(如发薪日贷款)至今仍按单利报价:在短期限内单利与复利的差异可忽略不计,
+      而且让合同更简单。
+    ja: >-
+      単利は元金に対してのみ利息を計算し、生じた利息に利息は付かない。複利より古く、四千年前のバビロニア
+      の粘土板にはすでに時間に比例して利息が増える貸付けが記録されており、何世紀にもわたって商人や銀行家の
+      標準的な計算だった。計算が予測可能で監査が容易だからだ。そのため短期融資、クーポン付き債券、給料日前
+      融資のような速い消費者金融は今でも単利で取引される。短期では複利との差は無視できるほど小さく、契約も
+      単純になる。
+  timeline:
+    - year: c. 2000 a.C.
+      label:
+        es: >-
+          En Mesopotamia, tablillas cuneiformes registran préstamos de grano y plata cuyo interés
+          crece en proporción al tiempo.
+        en: >-
+          In Mesopotamia, cuneiform tablets record loans of grain and silver whose interest grows
+          in proportion to time.
+        pt: >-
+          Na Mesopotâmia, tabuletas cuneiformes registram empréstimos de grãos e prata cujos
+          juros crescem em proporção ao tempo.
+        fr: >-
+          En Mésopotamie, des tablettes cunéiformes consignent des prêts de grain et d'argent
+          dont l'intérêt croît en proportion du temps.
+        zh: >-
+          美索不达米亚的楔形文字泥板记载了谷物和白银贷款,其利息随时间成比例增长。
+        ja: >-
+          メソポタミアの楔形文字の粘土板には、時間に比例して利息が増える穀物・銀の貸付けが記録されている。
+    - year: s. XVI
+      label:
+        es: >-
+          Los mercaderes europeos sistematizan el interés simple en letras de cambio y crédito a
+          corto plazo, con tablas de interés por día.
+        en: >-
+          European merchants systematize simple interest in bills of exchange and short-term
+          credit, with daily interest tables.
+        pt: >-
+          Os mercadores europeus sistematizam os juros simples em letras de câmbio e crédito de
+          curto prazo, com tabelas de juros por dia.
+        fr: >-
+          Les marchands européens systématisent l'intérêt simple dans les lettres de change et le
+          crédit à court terme, avec des tables d'intérêt par jour.
+        zh: >-
+          欧洲商人将单利系统化地用于汇票和短期信贷,并编制按日计息的表。
+        ja: >-
+          ヨーロッパの商人たちは為替手形や短期融資で単利を体系化し、日単位の利率表を作った。
+    - year: s. XVII
+      label:
+        es: >-
+          Tratados de aritmética mercantil y bancos consolidan el interés simple como estándar
+          para préstamos a corto plazo y bonos.
+        en: >-
+          Commercial arithmetic treatises and banks consolidate simple interest as the standard
+          for short-term loans and bonds.
+        pt: >-
+          Tratados de aritmética mercantil e bancos consolidam os juros simples como padrão para
+          empréstimos de curto prazo e títulos.
+        fr: >-
+          Les traités d'arithmétique commerciale et les banques consacrent l'intérêt simple comme
+          standard pour les prêts à court terme et les obligations.
+        zh: >-
+          商业算术著作和银行将单利确立为短期贷款与债券的标准计息方式。
+        ja: >-
+          商業算術の書物と銀行が、短期融資と債券の標準として単利を確立した。
+    - year: Hoy
+      label:
+        es: >-
+          Sigue siendo la base de los bonos con cupón, los préstamos a corto plazo y la
+          financiación rápida al consumo.
+        en: >-
+          It remains the basis of coupon bonds, short-term loans and quick consumer finance.
+        pt: >-
+          Continua sendo a base dos títulos com cupom, dos empréstimos de curto prazo e do
+          crédito rápido ao consumidor.
+        fr: >-
+          Elle reste la base des obligations à coupon, des prêts à court terme et du crédit
+          rapide à la consommation.
+        zh: >-
+          它仍然是息票债券、短期贷款和快速消费金融的基础。
+        ja: >-
+          今でもクーポン付き債券、短期融資、迅速な消費者金融の基盤となっている。
+  useCases:
+    - title:
+        es: Banca y préstamos
+        en: Banking and lending
+        pt: Banca e empréstimos
+        fr: Banque et prêts
+        zh: 银行与贷款
+        ja: 銀行・融資
+      description:
+        es: >-
+          Calcula los intereses de préstamos a corto plazo, descubiertos y líneas de crédito,
+          que se devengan día a día sobre el capital prestado.
+        en: >-
+          It computes the interest on short-term loans, overdrafts and credit lines, accruing
+          day by day on the amount borrowed.
+        pt: >-
+          Calcula os juros de empréstimos de curto prazo, cheques especiais e linhas de crédito,
+          que incidem dia a dia sobre o valor emprestado.
+        fr: >-
+          Elle calcule les intérêts des prêts à court terme, des découverts et des lignes de
+          crédit, courus jour après jour sur le capital emprunté.
+        zh: >-
+          计算短期贷款、透支和信贷额度按天在本金上累积的利息。
+        ja: >-
+          短期融資、当座貸越、クレジットラインの利息を、借入額に対して日々積算して計算する。
+    - title:
+        es: Bonos y obligaciones
+        en: Bonds
+        pt: Títulos de dívida
+        fr: Obligations
+        zh: 债券
+        ja: 債券
+      description:
+        es: >-
+          El cupón de muchos bonos se paga con interés simple sobre el valor nominal, en períodos
+          fijos hasta el vencimiento.
+        en: >-
+          The coupon of many bonds is paid as simple interest on the face value, in fixed periods
+          until maturity.
+        pt: >-
+          O cupom de muitos títulos é pago com juros simples sobre o valor de face, em períodos
+          fixos até o vencimento.
+        fr: >-
+          Le coupon de nombreuses obligations est versé en intérêt simple sur la valeur nominale,
+          par périodes fixes jusqu'à l'échéance.
+        zh: >-
+          许多债券的票息按面值的单利支付,分期固定直至到期。
+        ja: >-
+          多くの債券のクーポンは、額面に対する単利として、満期まで一定期間ごとに支払われる。
+    - title:
+        es: Financiación al consumo
+        en: Consumer finance
+        pt: Crédito ao consumidor
+        fr: Crédit à la consommation
+        zh: 消费金融
+        ja: 消費者金融
+      description:
+        es: >-
+          Los préstamos de nómina y muchas financiaciones de electrodomésticos cotizan con
+          interés simple sobre plazos de días o semanas.
+        en: >-
+          Payday loans and many appliance financing plans are quoted at simple interest over
+          terms of days or weeks.
+        pt: >-
+          Os empréstimos de pagamento quinzenal e muitos financiamentos de eletrodomésticos são
+          cotados a juros simples em prazos de dias ou semanas.
+        fr: >-
+          Les prêts sur salaire et nombre de financements d'électroménager sont cotés à intérêt
+          simple sur des durées de jours ou de semaines.
+        zh: >-
+          发薪日贷款和许多家电分期付款按天或周的期限以单利报价。
+        ja: >-
+          給料日前融資や家電の分割払いの多くは、日数・週数単位の期間で単利により取引される。
+    - title:
+        es: Cuentas de ahorro
+        en: Savings accounts
+        pt: Contas de poupança
+        fr: Comptes d'épargne
+        zh: 储蓄账户
+        ja: 普通預金
+      description:
+        es: >-
+          Muchos bancos devengan a diario el interés de las cuentas de ahorro con interés simple
+          y lo acreditan al final del mes.
+        en: >-
+          Many banks accrue savings-account interest daily at simple interest and credit it at
+          the end of the month.
+        pt: >-
+          Muitos bancos acumulam diariamente os juros das contas de poupança com juros simples e
+          os creditam ao fim do mês.
+        fr: >-
+          De nombreuses banques calculent quotidiennement les intérêts des comptes d'épargne en
+          intérêt simple et les créditent en fin de mois.
+        zh: >-
+          许多银行按单利逐日累积储蓄账户利息,并在月底入账。
+        ja: >-
+          多くの銀行は普通預金の利息を単利で日々積算し、月末に記帳する。
+  example:
+    title:
+      es: Préstamo de 1000 al 5 % durante 3 años
+      en: Loan of 1000 at 5 % for 3 years
+      pt: Empréstimo de 1000 a 5 % por 3 anos
+      fr: Prêt de 1000 à 5 % sur 3 ans
+      zh: 按5 %借出1000元、为期3年
+      ja: 1000を年5 %で3年間借りる
+    lines:
+      - es: P = 1000, r = 5 % = 0.05, t = 3
+        en: P = 1000, r = 5 % = 0.05, t = 3
+        pt: P = 1000, r = 5 % = 0,05, t = 3
+        fr: P = 1000, r = 5 % = 0,05, t = 3
+        zh: P = 1000, r = 5 % = 0.05, t = 3
+        ja: P = 1000, r = 5 % = 0.05, t = 3
+      - es: I = P · r · t
+        en: I = P · r · t
+        pt: I = P · r · t
+        fr: I = P · r · t
+        zh: I = P · r · t
+        ja: I = P · r · t
+      - es: I = 1000 × 0.05 × 3
+        en: I = 1000 × 0.05 × 3
+        pt: I = 1000 × 0,05 × 3
+        fr: I = 1000 × 0,05 × 3
+        zh: I = 1000 × 0.05 × 3
+        ja: I = 1000 × 0.05 × 3
+      - es: I = 50 × 3
+        en: I = 50 × 3
+        pt: I = 50 × 3
+        fr: I = 50 × 3
+        zh: I = 50 × 3
+        ja: I = 50 × 3
+      - es: I = 150
+        en: I = 150
+        pt: I = 150
+        fr: I = 150
+        zh: I = 150
+        ja: I = 150

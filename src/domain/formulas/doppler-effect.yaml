@@ -1,0 +1,310 @@
+id: doppler-effect
+title:
+  es: Efecto Doppler
+  en: Doppler Effect
+  pt: Efeito Doppler
+  fr: Effet Doppler
+  zh: 多普勒效应
+  ja: ドップラー効果
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: f-prime
+    type: variable
+    value: f′
+    explanation:
+      es: "f′: la frecuencia percibida por el observador."
+      en: "f′: the frequency perceived by the observer."
+      pt: "f′: a frequência percebida pelo observador."
+      fr: "f′ : la fréquence perçue par l'observateur."
+      zh: "f′：观察者感知到的频率。"
+      ja: "f′：観測者が知覚する振動数。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: f
+    type: variable
+    value: f
+    explanation:
+      es: "f: la frecuencia emitida por la fuente."
+      en: "f: the frequency emitted by the source."
+      pt: "f: a frequência emitida pela fonte."
+      fr: "f : la fréquence émise par la source."
+      zh: "f：声源发出的频率。"
+      ja: "f：源が発する振動数。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: v-plus
+    type: variable
+    value: v+v₀
+    explanation:
+      es: "v+v₀: velocidad del sonido más la del observador que se acerca."
+      en: "v+v₀: sound speed plus the speed of an approaching observer."
+      pt: "v+v₀: velocidade do som mais a do observador que se aproxima."
+      fr: "v+v₀ : vitesse du son plus celle d'un observateur qui s'approche."
+      zh: "v+v₀：声速加上接近中的观察者的速度。"
+      ja: "v+v₀：音速に近づく観測者の速さを足したもの。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: v-minus
+    type: variable
+    value: v−vₛ
+    explanation:
+      es: "v−vₛ: velocidad del sonido menos la de la fuente que se acerca."
+      en: "v−vₛ: sound speed minus the speed of an approaching source."
+      pt: "v−vₛ: velocidade do som menos a da fonte que se aproxima."
+      fr: "v−vₛ : vitesse du son moins celle d'une source qui s'approche."
+      zh: "v−vₛ：声速减去接近中的声源的速度。"
+      ja: "v−vₛ：音速から近づく源の速さを引いたもの。"
+context:
+  author:
+    es: Christian Doppler
+    en: Christian Doppler
+    pt: Christian Doppler
+    fr: Christian Doppler
+    zh: 克里斯蒂安·多普勒
+    ja: クリスチャン・ドップラー
+  era:
+    es: Austria, 1803–1853 · publicado en 1842
+    en: Austria, 1803–1853 · published in 1842
+    pt: Áustria, 1803–1853 · publicado em 1842
+    fr: Autriche, 1803–1853 · publié en 1842
+    zh: 奥地利，1803–1853年·1842年发表
+    ja: オーストリア、1803–1853年・1842年発表
+  history:
+    es: >-
+      En 1842, Christian Doppler explicó por qué el sonido de una fuente que se acerca suena más agudo
+      y se hace grave al alejarse: las ondas se comprimen o estiran según el movimiento relativo. En
+      1845, Buys Ballot lo verificó con músicos en un tren. Hoy, el mismo efecto se usa para medir la
+      velocidad de los coches con radar, la sangre con ecografía y la expansión del universo con la luz
+      de las galaxias.
+    en: >-
+      In 1842, Christian Doppler explained why the sound of an approaching source rises in pitch and
+      falls as it recedes: the waves compress or stretch with relative motion. In 1845, Buys Ballot
+      verified it with musicians on a train. Today the same effect measures car speed with radar, blood
+      with ultrasound, and the expansion of the universe with galaxy light.
+    pt: >-
+      Em 1842, Christian Doppler explicou por que o som de uma fonte que se aproxima fica mais agudo e
+      grave ao se afastar: as ondas se comprimem ou esticam com o movimento relativo. Em 1845, Buys
+      Ballot o verificou com músicos em um trem. Hoje, o mesmo efeito mede a velocidade dos carros com
+      radar, o sangue com ultrassom e a expansão do universo com a luz das galáxias.
+    fr: >-
+      En 1842, Christian Doppler expliqua pourquoi le son d'une source qui s'approche devient plus aigu
+      et grave en s'éloignant : les ondes se compriment ou s'étirent selon le mouvement relatif. En
+      1845, Buys Ballot le vérifia avec des musiciens dans un train. Aujourd'hui, le même effet mesure
+      la vitesse des voitures au radar, le sang à l'échographie et l'expansion de l'univers avec la
+      lumière des galaxies.
+    zh: >-
+      1842年，克里斯蒂安·多普勒解释了为什么接近的声源声音更尖锐、远离时变低沉：波随相对运动而压缩或拉伸。
+      1845年，拜斯·巴洛特让音乐家坐上火车加以验证。如今，同一效应被用来用雷达测车速、用超声测血流，以及用
+      星系的光来测宇宙膨胀。
+    ja: >-
+      1842年、クリスチャン・ドップラーは、近づく源の音が高く聞こえ、遠ざかると低く聞こえる理由を説明した。
+      波が相対運動によって圧縮・伸長されるのである。1845年、バイス・バロットが列車に乗せた音楽家たちでこれを
+      検証した。今日、同じ効果はレーダーで車の速度を測り、超音波で血流を測り、銀河の光で宇宙の膨張を測るために
+      使われている。
+  timeline:
+    - year: "1842"
+      label:
+        es: >-
+          Doppler publica su teoría sobre el cambio de tono con el movimiento.
+        en: >-
+          Doppler publishes his theory of pitch change with motion.
+        pt: >-
+          Doppler publica sua teoria sobre a mudança de tom com o movimento.
+        fr: >-
+          Doppler publie sa théorie du changement de ton avec le mouvement.
+        zh: >-
+          多普勒发表关于运动引起音调变化的理论。
+        ja: >-
+          ドップラーが運動による音の高低の変化についての理論を発表する。
+    - year: "1845"
+      label:
+        es: >-
+          Buys Ballot lo confirma experimentalmente con trompetistas en un tren.
+        en: >-
+          Buys Ballot confirms it experimentally with trumpeters on a train.
+        pt: >-
+          Buys Ballot o confirma experimentalmente com trompetistas em um trem.
+        fr: >-
+          Buys Ballot le confirme expérimentalement avec des trompettistes dans un train.
+        zh: >-
+          拜斯·巴洛特用火车上的小号手在实验上加以证实。
+        ja: >-
+          バイス・バロットが列車のトランペット奏者で実験的にこれを確認する。
+    - year: "1929"
+      label:
+        es: >-
+          Hubble aplica el desplazamiento al rojo para medir la expansión del universo.
+        en: >-
+          Hubble applies the redshift to measure the expansion of the universe.
+        pt: >-
+          Hubble aplica o deslocamento para o vermelho para medir a expansão do universo.
+        fr: >-
+          Hubble applique le décalage vers le rouge pour mesurer l'expansion de l'univers.
+        zh: >-
+          哈勃利用红移来测量宇宙的膨胀。
+        ja: >-
+          ハッブルが赤方偏移を適用し、宇宙の膨張を測る。
+    - year: Hoy
+      label:
+        es: >-
+          Radar, sonar, ecografía y astronomía lo usan a diario.
+        en: >-
+          Radar, sonar, ultrasound, and astronomy use it daily.
+        pt: >-
+          Radar, sonar, ultrassom e astronomia o usam diariamente.
+        fr: >-
+          Radar, sonar, échographie et astronomie l'utilisent au quotidien.
+        zh: >-
+          雷达、声呐、超声和天文学每天都在使用它。
+        ja: >-
+          レーダー、ソナー、超音波、天文学が毎日これを使っている。
+  useCases:
+    - title:
+        es: Radar de velocidad
+        en: Speed radar
+        pt: Radar de velocidade
+        fr: Radar de vitesse
+        zh: 测速雷达
+        ja: 速度レーダー
+      description:
+        es: >-
+          La diferencia entre la onda emitida y reflejada da la velocidad del vehículo.
+        en: >-
+          The difference between the emitted and reflected wave gives the vehicle's speed.
+        pt: >-
+          A diferença entre a onda emitida e a refletida dá a velocidade do veículo.
+        fr: >-
+          La différence entre l'onde émise et réfléchie donne la vitesse du véhicule.
+        zh: >-
+          发射波与反射波之差给出车辆的速度。
+        ja: >-
+          発射波と反射波の差から車両の速度がわかる。
+    - title:
+        es: Ecografía Doppler
+        en: Doppler ultrasound
+        pt: Ultrassom Doppler
+        fr: Échographie Doppler
+        zh: 多普勒超声
+        ja: ドップラー超音波
+      description:
+        es: >-
+          Mide la velocidad de la sangre en venas y arterias sin cirugía.
+        en: >-
+          It measures blood speed in veins and arteries without surgery.
+        pt: >-
+          Mede a velocidade do sangue em veias e artérias sem cirurgia.
+        fr: >-
+          Elle mesure la vitesse du sang dans les veines et artères sans chirurgie.
+        zh: >-
+          无需手术即可测量静脉和动脉中的血流速度。
+        ja: >-
+          手術なしで静脈や動脈の血流速度を測る。
+    - title:
+        es: Astronomía
+        en: Astronomy
+        pt: Astronomia
+        fr: Astronomie
+        zh: 天文学
+        ja: 天文学
+      description:
+        es: >-
+          El desplazamiento de las líneas espectrales revela movimiento de estrellas y galaxias.
+        en: >-
+          The shift of spectral lines reveals the motion of stars and galaxies.
+        pt: >-
+          O deslocamento das linhas espectrais revela o movimento de estrelas e galáxias.
+        fr: >-
+          Le décalage des raies spectrales révèle le mouvement des étoiles et des galaxies.
+        zh: >-
+          谱线的移动揭示恒星和星系的运动。
+        ja: >-
+          スペクトル線のずれが、恒星や銀河の運動を明らかにする。
+    - title:
+        es: Meteorología
+        en: Weather radar
+        pt: Meteorologia
+        fr: Météorologie
+        zh: 气象学
+        ja: 気象学
+      description:
+        es: >-
+          Los radares meteorológicos estiman la velocidad del viento en tormentas.
+        en: >-
+          Weather radars estimate wind speed inside storms.
+        pt: >-
+          Radares meteorológicos estimam a velocidade do vento em tempestades.
+        fr: >-
+          Les radars météo estiment la vitesse du vent dans les tempêtes.
+        zh: >-
+          气象雷达估算风暴内部的风速。
+        ja: >-
+          気象レーダーが嵐の中の風速を推定する。
+  example:
+    title:
+      es: Una ambulancia que se acerca
+      en: An approaching ambulance
+      pt: Uma ambulância que se aproxima
+      fr: Une ambulance qui s'approche
+      zh: 驶近的救护车
+      ja: 近づく救急車
+    lines:
+      - es: f = 600 Hz, v = 343 m/s, v₀ = 0, vₛ = 20 m/s
+        en: f = 600 Hz, v = 343 m/s, v₀ = 0, vₛ = 20 m/s
+        pt: f = 600 Hz, v = 343 m/s, v₀ = 0, vₛ = 20 m/s
+        fr: f = 600 Hz, v = 343 m/s, v₀ = 0, vₛ = 20 m/s
+        zh: f = 600 赫兹，v = 343 米/秒，v₀ = 0，vₛ = 20 米/秒
+        ja: f = 600 Hz、v = 343 m/s、v₀ = 0、vₛ = 20 m/s
+      - es: f′ = 600 · (343 + 0) / (343 − 20)
+        en: f′ = 600 · (343 + 0) / (343 − 20)
+        pt: f′ = 600 · (343 + 0) / (343 − 20)
+        fr: f′ = 600 · (343 + 0) / (343 − 20)
+        zh: f′ = 600 · (343 + 0) / (343 − 20)
+        ja: f′ = 600 · (343 + 0) / (343 − 20)
+      - es: f′ = 600 · 343 / 323
+        en: f′ = 600 · 343 / 323
+        pt: f′ = 600 · 343 / 323
+        fr: f′ = 600 · 343 / 323
+        zh: f′ = 600 · 343 / 323
+        ja: f′ = 600 · 343 / 323
+      - es: f′ ≈ 600 · 1.062
+        en: f′ ≈ 600 · 1.062
+        pt: f′ ≈ 600 · 1,062
+        fr: f′ ≈ 600 · 1,062
+        zh: f′ ≈ 600 · 1.062
+        ja: f′ ≈ 600 · 1.062
+      - es: "f′ ≈ 637 Hz: suena más aguda"
+        en: "f′ ≈ 637 Hz: it sounds higher"
+        pt: "f′ ≈ 637 Hz: soa mais aguda"
+        fr: "f′ ≈ 637 Hz : elle sonne plus aiguë"
+        zh: f′ ≈ 637 赫兹：听起来更尖锐
+        ja: f′ ≈ 637 Hz：高く聞こえる

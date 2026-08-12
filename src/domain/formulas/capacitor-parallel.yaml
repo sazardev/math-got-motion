@@ -1,0 +1,332 @@
+id: capacitor-parallel
+title:
+  es: Condensadores en Paralelo
+  en: Capacitors in Parallel
+  pt: Capacitores em Paralelo
+  fr: Condensateurs en parallèle
+  zh: 并联电容器
+  ja: 並列コンデンサ
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: c
+    type: variable
+    value: C
+    explanation:
+      es: La capacitancia equivalente de toda la conexión en paralelo.
+      en: The equivalent capacitance of the whole parallel connection.
+      pt: A capacitância equivalente de toda a ligação em paralelo.
+      fr: La capacité équivalente de tout le montage en parallèle.
+      zh: 整个并联连接的总电容。
+      ja: 並列接続全体の合成静電容量。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: c-1
+    type: variable
+    value: C₁
+    explanation:
+      es: La capacitancia del primer condensador.
+      en: The capacitance of the first capacitor.
+      pt: A capacitância do primeiro capacitor.
+      fr: La capacité du premier condensateur.
+      zh: 第一个电容器的电容。
+      ja: 最初のコンデンサの静電容量。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: La suma directa de todas las capacitancias.
+      en: The direct sum of all the capacitances.
+      pt: A soma direta de todas as capacitâncias.
+      fr: La somme directe de toutes les capacités.
+      zh: 所有电容的直接相加。
+      ja: すべての静電容量を直接足す和。
+  - id: c-2
+    type: variable
+    value: C₂
+    explanation:
+      es: La capacitancia del segundo condensador.
+      en: The capacitance of the second capacitor.
+      pt: A capacitância do segundo capacitor.
+      fr: La capacité du deuxième condensateur.
+      zh: 第二个电容器的电容。
+      ja: 2番目のコンデンサの静電容量。
+  - id: plus-2
+    type: operator
+    value: +
+    explanation:
+      es: Y así sucesivamente con todos los condensadores del banco.
+      en: And so on for every capacitor in the bank.
+      pt: E assim sucessivamente com todos os capacitores do banco.
+      fr: Et ainsi de suite pour tous les condensateurs du banc.
+      zh: 以此类推,组内的每个电容器都是如此。
+      ja: 以後、バンク内のすべてのコンデンサについて同様に続く。
+  - id: dots
+    type: operator
+    value: …
+    explanation:
+      es: Los puntos suspensivos, que indican que la cadena puede continuar.
+      en: The ellipsis, indicating the chain can go on.
+      pt: As reticências, que indicam que a cadeia pode continuar.
+      fr: Les points de suspension, qui indiquent que la chaîne peut continuer.
+      zh: 省略号,表示链可以继续延伸。
+      ja: 省略記号。鎖がさらに続くことを示す。
+context:
+  author:
+    es: Basada en la teoría de la capacitancia
+    en: Based on the theory of capacitance
+    pt: Baseada na teoria da capacitância
+    fr: Basée sur la théorie de la capacité électrique
+    zh: 基于电容理论
+    ja: 静電容量の理論に基づく
+  era:
+    es: Europa, s. XVIII–XIX
+    en: Europe, 18th–19th century
+    pt: Europa, séc. XVIII–XIX
+    fr: Europe, XVIIIe–XIXe siècle
+    zh: 欧洲,18–19世纪
+    ja: ヨーロッパ、18〜19世紀
+  history:
+    es: >-
+      Cuando varios condensadores se conectan en paralelo, sus placas quedan unidas a los mismos
+      terminales, de modo que el área total de las placas se suma y se puede almacenar más carga a la
+      misma tensión. La capacitancia equivalente es entonces la suma directa de las individuales, el
+      complemento exacto de la regla de la serie, donde se suman los recíprocos. Por eso los bancos de
+      condensadores de las redes y los flashes de las cámaras combinan varios condensadores en
+      paralelo: necesitan mucha capacitancia a baja tensión, más de la que un solo componente podría
+      ofrecer.
+    en: >-
+      When several capacitors are connected in parallel, their plates share the same terminals, so
+      the total plate area adds up and more charge can be stored at the same voltage. The equivalent
+      capacitance is then the direct sum of the individual ones, the exact complement of the series
+      rule, where reciprocals are added. That is why grid capacitor banks and camera flashes combine
+      several capacitors in parallel: they need large capacitance at low voltage, more than a single
+      component could offer.
+    pt: >-
+      Quando vários capacitores são ligados em paralelo, suas placas ficam unidas aos mesmos
+      terminais, de modo que a área total das placas se soma e mais carga pode ser armazenada com a
+      mesma tensão. A capacitância equivalente é então a soma direta das individuais, o complemento
+      exato da regra da série, em que se somam os recíprocos. Por isso os bancos de capacitores das
+      redes e os flashes de câmeras combinam vários capacitores em paralelo: precisam de grande
+      capacitância em baixa tensão, mais do que um único componente poderia oferecer.
+    fr: >-
+      Lorsque plusieurs condensateurs sont connectés en parallèle, leurs armatures sont reliées aux
+      mêmes bornes, si bien que la surface totale des armatures s'additionne et qu'une plus grande
+      charge peut être stockée à tension égale. La capacité équivalente est alors la somme directe
+      des capacités individuelles, l'exact complément de la règle de la série, où l'on additionne les
+      réciproques. C'est pourquoi les bancs de condensateurs des réseaux et les flashs d'appareils
+      photo combinent plusieurs condensateurs en parallèle : il leur faut une grande capacité sous
+      faible tension, plus que ne pourrait en offrir un seul composant.
+    zh: >-
+      当多个电容器并联时,它们的极板连接到相同的端子,因此极板总面积相加,在相同电压下能储存更多电荷。等效电容等于
+      各电容的直接之和,这正是串联规则(对倒数求和)的互补。因此电网的电容器组和相机的闪光灯都采用多个电容器并联:
+      它们需要在低电压下获得大电容,超过单个元件所能提供的量。
+    ja: >-
+      複数のコンデンサを並列に接続すると、極板が同じ端子に繋がるため、極板の総面積が足し合わされ、同じ電圧でより
+      多くの電荷を蓄えられる。合成静電容量は個々の容量の直接の和となり、逆数を足す直列規則のちょうど相補的な関係に
+      ある。だから電力網のコンデンサ・バンクやカメラのフラッシュは複数のコンデンサを並列に組み合わせる。単一の部品
+      ではまかなえない大容量を低電圧で必要とするからだ。
+  timeline:
+    - year: "1745"
+      label:
+        es: >-
+          Se inventa la botella de Leyden, el primer condensador, de forma independiente en Alemania
+          y Holanda.
+        en: >-
+          The Leyden jar, the first capacitor, is invented independently in Germany and Holland.
+        pt: >-
+          A garrafa de Leiden, o primeiro capacitor, é inventada independentemente na Alemanha e na
+          Holanda.
+        fr: >-
+          La bouteille de Leyde, premier condensateur, est inventée indépendamment en Allemagne et
+          aux Pays-Bas.
+        zh: >-
+          莱顿瓶,第一个电容器,在德国和荷兰被独立发明。
+        ja: >-
+          最初のコンデンサであるライデン瓶が、ドイツとオランダで独立に発明される。
+    - year: "1837"
+      label:
+        es: >-
+          Faraday introduce el concepto de capacidad eléctrica y estudia los dieléctricos.
+        en: >-
+          Faraday introduces the concept of electrical capacity and studies dielectrics.
+        pt: >-
+          Faraday introduz o conceito de capacidade elétrica e estuda os dielétricos.
+        fr: >-
+          Faraday introduit la notion de capacité électrique et étudie les diélectriques.
+        zh: >-
+          法拉第引入电容概念,并研究电介质。
+        ja: >-
+          ファラデーが電気容量の概念を導入し、誘電体を研究する。
+    - year: "1938"
+      label:
+        es: >-
+          El flash electrónico comercial combina varios condensadores para liberar un destello
+          intenso.
+        en: >-
+          The commercial electronic flash combines several capacitors to fire an intense burst of
+          light.
+        pt: >-
+          O flash eletrônico comercial combina vários capacitores para disparar um clarão intenso.
+        fr: >-
+          Le flash électronique commercial combine plusieurs condensateurs pour émettre un éclat
+          intense.
+        zh: >-
+          商用电子闪光灯组合多个电容器,发出强烈的闪光。
+        ja: >-
+          商業用電子フラッシュが複数のコンデンサを組み合わせて強い閃光を放つ。
+    - year: Hoy
+      label:
+        es: >-
+          Los bancos de condensadores de las redes y de los vehículos agrupan celdas en paralelo.
+        en: >-
+          The capacitor banks of power grids and vehicles group cells in parallel.
+        pt: >-
+          Os bancos de capacitores das redes e dos veículos agrupam células em paralelo.
+        fr: >-
+          Les bancs de condensateurs des réseaux et des véhicules regroupent des cellules en
+          parallèle.
+        zh: >-
+          电网和车辆的电容器组把单元并联在一起。
+        ja: >-
+          送電網や車両のコンデンサ・バンクはセルを並列にまとめる。
+  useCases:
+    - title:
+        es: Bancos de compensación de redes
+        en: Grid compensation banks
+        pt: Bancos de compensação de redes
+        fr: Bancs de compensation des réseaux
+        zh: 电网补偿组
+        ja: 系統補償バンク
+      description:
+        es: >-
+          Varios condensadores en paralelo aportan la capacitancia necesaria para corregir el factor
+          de potencia.
+        en: >-
+          Several capacitors in parallel provide the capacitance needed to correct the power factor.
+        pt: >-
+          Vários capacitores em paralelo fornecem a capacitância necessária para corrigir o fator de
+          potência.
+        fr: >-
+          Plusieurs condensateurs en parallèle fournissent la capacité nécessaire pour corriger le
+          facteur de puissance.
+        zh: >-
+          多个并联电容器提供校正功率因数所需的电容。
+        ja: >-
+          複数の並列コンデンサが、力率を改善するために必要な静電容量を供給する。
+    - title:
+        es: Fotografía con flash
+        en: Flash photography
+        pt: Fotografia com flash
+        fr: Photographie au flash
+        zh: 闪光摄影
+        ja: フラッシュ撮影
+      description:
+        es: >-
+          Un banco de condensadores paralelos acumula carga y la entrega en un destello instantáneo.
+        en: >-
+          A bank of parallel capacitors builds up charge and delivers it in an instant flash.
+        pt: >-
+          Um banco de capacitores em paralelo acumula carga e a entrega em um flash instantâneo.
+        fr: >-
+          Un banc de condensateurs en parallèle accumule la charge et la restitue en un éclair
+          instantané.
+        zh: >-
+          一组并联电容器积累电荷,并以瞬间的闪光释放。
+        ja: >-
+          並列コンデンサ群が電荷を蓄え、瞬時のフラッシュで放出する。
+    - title:
+        es: Fuentes de alimentación
+        en: Power supplies
+        pt: Fontes de alimentação
+        fr: Alimentations électriques
+        zh: 电源
+        ja: 電源装置
+      description:
+        es: >-
+          Los condensadores en paralelo ofrecen gran capacitancia y baja resistencia equivalente para
+          filtrar.
+        en: >-
+          Parallel capacitors offer large capacitance and low equivalent resistance for filtering.
+        pt: >-
+          Capacitores em paralelo oferecem grande capacitância e baixa resistência equivalente para
+          filtrar.
+        fr: >-
+          Les condensateurs en parallèle offrent une grande capacité et une faible résistance
+          équivalente pour filtrer.
+        zh: >-
+          并联电容器提供大电容和低等效电阻,用于滤波。
+        ja: >-
+          並列コンデンサは、フィルタリング用に大きな静電容量と低い等価抵抗を提供する。
+    - title:
+        es: Supercondensadores de vehículos
+        en: Vehicle supercapacitors
+        pt: Supercapacitores de veículos
+        fr: Supercondensateurs de véhicules
+        zh: 车载超级电容器
+        ja: 車両用スーパーキャパシタ
+      description:
+        es: >-
+          Las celdas en paralelo multiplican la capacidad de almacenar energía de frenado.
+        en: >-
+          Cells in parallel multiply the ability to store braking energy.
+        pt: >-
+          Células em paralelo multiplicam a capacidade de armazenar energia de frenagem.
+        fr: >-
+          Les cellules en parallèle multiplient la capacité de stocker l'énergie de freinage.
+        zh: >-
+          并联单元放大了储存制动能量的能力。
+        ja: >-
+          並列のセルが制動エネルギーの蓄電能力を高める。
+  example:
+    title:
+      es: Dos condensadores en paralelo
+      en: Two capacitors in parallel
+      pt: Dois capacitores em paralelo
+      fr: Deux condensateurs en parallèle
+      zh: 两个并联电容器
+      ja: 並列の2つのコンデンサ
+    lines:
+      - es: C₁ = 6 µF
+        en: C₁ = 6 µF
+        pt: C₁ = 6 µF
+        fr: C₁ = 6 µF
+        zh: C₁ = 6 µF
+        ja: C₁ = 6 µF
+      - es: C₂ = 12 µF
+        en: C₂ = 12 µF
+        pt: C₂ = 12 µF
+        fr: C₂ = 12 µF
+        zh: C₂ = 12 µF
+        ja: C₂ = 12 µF
+      - es: C = C₁ + C₂
+        en: C = C₁ + C₂
+        pt: C = C₁ + C₂
+        fr: C = C₁ + C₂
+        zh: C = C₁ + C₂
+        ja: C = C₁ + C₂
+      - es: C = 6 + 12
+        en: C = 6 + 12
+        pt: C = 6 + 12
+        fr: C = 6 + 12
+        zh: C = 6 + 12
+        ja: C = 6 + 12
+      - es: C = 18 µF
+        en: C = 18 µF
+        pt: C = 18 µF
+        fr: C = 18 µF
+        zh: C = 18 µF
+        ja: C = 18 µF

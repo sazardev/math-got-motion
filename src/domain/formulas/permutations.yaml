@@ -1,0 +1,336 @@
+id: permutations
+
+title:
+  es: Permutaciones
+  en: Permutations
+  pt: Permutações
+  fr: Permutations
+  zh: 排列
+  ja: 順列
+
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+
+nodes:
+  - id: pnk
+    type: variable
+    value: P(n,k)
+    explanation:
+      es: "El número de permutaciones: cuántas secuencias ordenadas de k elementos se pueden formar a partir de n disponibles."
+      en: "The number of permutations: how many ordered sequences of k elements can be formed from n available ones."
+      pt: "O número de permutações: quantas sequências ordenadas de k elementos podem ser formadas a partir de n disponíveis."
+      fr: "Le nombre de permutations : combien de séquences ordonnées de k éléments peuvent être formées à partir de n disponibles."
+      zh: 排列数：从 n 个可用元素中取出 k 个，共能组成多少种有序序列。
+      ja: 順列の総数。n個のうちからk個を取り出して作れる順序付きの並びがいくつあるかを表す。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: n-factorial
+    type: variable
+    value: n!
+    explanation:
+      es: "El factorial de n: el número total de objetos disponibles para ordenar."
+      en: "The factorial of n: the total number of objects available to arrange."
+      pt: "O fatorial de n: o número total de objetos disponíveis para ordenar."
+      fr: "La factorielle de n : le nombre total d'objets à disposition pour les ordonner."
+      zh: n 的阶乘：可供排列的对象总数。
+      ja: n の階乗。並べることのできる対象の総数。
+  - id: division
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividir por el factorial de la diferencia descarta las posiciones que quedan vacías.
+      en: Dividing by the factorial of the difference discards the positions left unused.
+      pt: Dividir pelo fatorial da diferença descarta as posições que ficam vazias.
+      fr: Diviser par la factorielle de la différence écarte les positions laissées inutilisées.
+      zh: 除以差的阶乘，舍弃未使用的空位。
+      ja: 差の階乗で割ることにより、使われずに残る位置を除く。
+  - id: difference-factorial
+    type: variable
+    value: "(n−k)!"
+    explanation:
+      es: "El factorial de n−k: cuenta los ordenamientos de los elementos que no entran en la secuencia."
+      en: "The factorial of n−k: counts the orderings of the elements that do not enter the sequence."
+      pt: "O fatorial de n−k: conta as ordenações dos elementos que não entram na sequência."
+      fr: "La factorielle de n−k : compte les ordres des éléments qui n'entrent pas dans la séquence."
+      zh: n−k 的阶乘：统计没有进入序列的元素的排列方式。
+      ja: n−k の階乗。並びに入らない要素の並べ方を数える.
+
+context:
+  author:
+    es: Origen colectivo de la combinatoria
+    en: Collective origin of combinatorics
+    pt: Origem coletiva da combinatória
+    fr: Origine collective de la combinatoire
+    zh: 组合数学的集体起源
+    ja: 組合せ論の集団的な起源
+  era:
+    es: "Europa, s. XVII–XVIII"
+    en: "Europe, 17th–18th century"
+    pt: "Europa, séc. XVII–XVIII"
+    fr: "Europe, XVIIe–XVIIIe siècle"
+    zh: "欧洲，17–18世纪"
+    ja: "ヨーロッパ、17〜18世紀"
+  history:
+    es: >-
+      Las permutaciones se estudiaron mucho antes de tener fórmula: el matemático indio Mahavira ya
+      contaba en el siglo IX el número de formas de ordenar objetos, y los tratados persas y chinos
+      manejaban problemas similares. La fórmula P(n,k) = n!/(n−k)! se formalizó en Europa durante los
+      siglos XVII y XVIII, cuando el interés por los juegos de azar y los primeros tratados de
+      probabilidad de Fermat y Pascal llevaron a contar ordenamientos de forma sistemática. Jacob
+      Bernoulli, en su Ars Conjectandi de 1713, recopiló estas reglas y les dio forma de teoría
+      autónoma. Desde entonces, las permutaciones ordenan cualquier secuencia: llaves, filas, turnos
+      y contraseñas.
+    en: >-
+      Permutations were studied long before they had a formula: the Indian mathematician Mahavira
+      already counted ways to order objects in the 9th century, and Persian and Chinese treatises
+      handled similar problems. The formula P(n,k) = n!/(n−k)! was formalized in Europe during the
+      17th and 18th centuries, when interest in games of chance and the early probability work of
+      Fermat and Pascal led to counting arrangements systematically. Jacob Bernoulli, in his Ars
+      Conjectandi of 1713, collected these rules and shaped them into an autonomous theory. Ever
+      since, permutations order any sequence: keys, queues, schedules, and passwords.
+    pt: >-
+      As permutações foram estudadas muito antes de terem uma fórmula: o matemático indiano Mahavira
+      já contava no século IX as maneiras de ordenar objetos, e tratados persas e chineses tratavam de
+      problemas semelhantes. A fórmula P(n,k) = n!/(n−k)! foi formalizada na Europa durante os séculos
+      XVII e XVIII, quando o interesse pelos jogos de azar e os primeiros trabalhos de probabilidade
+      de Fermat e Pascal levaram a contar ordenações de forma sistemática. Jacob Bernoulli, em sua Ars
+      Conjectandi de 1713, reuniu essas regras e lhes deu a forma de uma teoria autônoma. Desde então,
+      as permutações ordenam qualquer sequência: chaves, filas, escalas e senhas.
+    fr: >-
+      Les permutations furent étudiées bien avant d'avoir une formule : le mathématicien indien
+      Mahavira dénombrait déjà au IXe siècle les façons d'ordonner des objets, et des traités perses
+      et chinois traitaient de problèmes analogues. La formule P(n,k) = n!/(n−k)! fut formalisée en
+      Europe aux XVIIe et XVIIIe siècles, lorsque l'intérêt pour les jeux de hasard et les premiers
+      travaux de probabilités de Fermat et Pascal conduisirent à dénombrer les arrangements de façon
+      systématique. Jacob Bernoulli, dans son Ars Conjectandi de 1713, rassembla ces règles et leur
+      donna la forme d'une théorie autonome. Depuis, les permutations ordonnent toute séquence : clés,
+      files d'attente, plannings et mots de passe.
+    zh: >-
+      排列在被赋予公式之前早就有人研究：九世纪印度数学家摩诃毗罗就已经会计算对象排列的方式数，波斯和中国的
+      论著也处理过类似的问题。公式 P(n,k) = n!/(n−k)! 是在十七至十八世纪的欧洲得到形式化的，当时对赌博
+      的兴趣以及费马与帕斯卡早期的概率论工作促使人们系统地计数排列。雅各布·伯努利在1713年的《猜度术》中
+      汇集了这些规则，使其成为一门独立的理论。此后，排列决定了各种序列的次序：钥匙、排队、排班和密码。
+    ja: >-
+      順列は公式が生まれるずっと前から研究されていた。9世紀のインドの数学者マハーヴィーラはすでに対象の
+      並べ方を数え、ペルシアや中国の論著も同様の問題を扱っていた。公式 P(n,k) = n!/(n−k)! が確立したのは
+      17〜18世紀のヨーロッパで、賭け事への関心とフェルマー・パスカルの初期の確率論により、並べ方を系統的に
+      数えることが求められるようになってからである。ヤコブ・ベルヌーイは1713年の『推測法』でこれらの規則を
+      まとめ、独立した理論として整えた。以来、順列は鍵、行列、予定表、パスワードといったあらゆる並びの順序を決める。
+  timeline:
+    - year: "s. IX"
+      label:
+        es: >-
+          El matemático indio Mahavira publica reglas para contar permutaciones y combinaciones en su
+          Ganita-sara-samgraha.
+        en: >-
+          The Indian mathematician Mahavira publishes rules for counting permutations and
+          combinations in his Ganita-sara-samgraha.
+        pt: >-
+          O matemático indiano Mahavira publica regras para contar permutações e combinações em seu
+          Ganita-sara-samgraha.
+        fr: >-
+          Le mathématicien indien Mahavira publie des règles pour dénombrer permutations et
+          combinaisons dans son Ganita-sara-samgraha.
+        zh: >-
+          印度数学家摩诃毗罗在其《算法精粹》中给出了计数排列与组合的规则。
+        ja: >-
+          インドの数学者マハーヴィーラが『ガニタ・サーラ・サングラハ』で順列と組合せを数える規則を発表する。
+    - year: "1654"
+      label:
+        es: >-
+          La correspondencia entre Fermat y Pascal sobre juegos de azar sienta las bases de la
+          probabilidad y del conteo de ordenamientos.
+        en: >-
+          The correspondence between Fermat and Pascal on games of chance lays the groundwork for
+          probability and for counting arrangements.
+        pt: >-
+          A correspondência entre Fermat e Pascal sobre jogos de azar lança as bases da probabilidade
+          e do contagem de ordenações.
+        fr: >-
+          La correspondance entre Fermat et Pascal sur les jeux de hasard pose les fondements des
+          probabilités et du dénombrement des arrangements.
+        zh: >-
+          费马与帕斯卡关于赌博问题的通信，为概率论和排列计数奠定了基础。
+        ja: >-
+          賭け事に関するフェルマーとパスカルの往復書簡が、確率論と並び方の数え上げの基礎を築く。
+    - year: "1713"
+      label:
+        es: >-
+          Jacob Bernoulli publica Ars Conjectandi, que sistematiza las reglas de permutaciones y
+          combinaciones.
+        en: >-
+          Jacob Bernoulli publishes Ars Conjectandi, systematizing the rules of permutations and
+          combinations.
+        pt: >-
+          Jacob Bernoulli publica Ars Conjectandi, que sistematiza as regras de permutações e
+          combinações.
+        fr: >-
+          Jacob Bernoulli publie Ars Conjectandi, qui systématise les règles des permutations et des
+          combinaisons.
+        zh: >-
+          雅各布·伯努利发表《猜度术》，系统化了排列与组合的规则。
+        ja: >-
+          ヤコブ・ベルヌーイが『推測法』を発表し、順列と組合せの規則を体系化する。
+    - year: Hoy
+      label:
+        es: >-
+          Las permutaciones modelan contraseñas, ordenamientos, reordenamientos genéticos y códigos
+          de agrupamiento.
+        en: >-
+          Permutations model passwords, arrangements, genetic shuffles, and scheduling codes.
+        pt: >-
+          As permutações modelam senhas, ordenações, embaralhamentos genéticos e códigos de
+          escalonamento.
+        fr: >-
+          Les permutations modélisent mots de passe, arrangements, brassages génétiques et codes de
+          planification.
+        zh: >-
+          排列用于建模密码、排列方式、基因重排和调度编码。
+        ja: >-
+          順列はパスワード、並び替え、遺伝子のシャッフル、スケジューリング符号をモデル化する。
+  useCases:
+    - title:
+        es: Ciberseguridad
+        en: Cybersecurity
+        pt: Cibersegurança
+        fr: Cybersécurité
+        zh: 网络安全
+        ja: サイバーセキュリティ
+      description:
+        es: >-
+          La seguridad de una contraseña depende del número de permutaciones posibles del alfabeto de
+          símbolos elegido.
+        en: >-
+          Password strength depends on the number of possible permutations of the chosen symbol
+          alphabet.
+        pt: >-
+          A segurança de uma senha depende do número de permutações possíveis do alfabeto de símbolos
+          escolhido.
+        fr: >-
+          La robustesse d'un mot de passe dépend du nombre de permutations possibles de l'alphabet de
+          symboles choisi.
+        zh: >-
+          密码强度取决于所选符号表中所有可能排列的数量。
+        ja: >-
+          パスワードの強度は、選んだ記号群の可能な順列の総数に依存する。
+    - title:
+        es: Planificación
+        en: Scheduling
+        pt: Escalonamento
+        fr: Planification
+        zh: 调度
+        ja: スケジューリング
+      description:
+        es: >-
+          Ordenar tareas, turnos y rutas exige evaluar permutaciones y descartar las inviables por
+          restricciones.
+        en: >-
+          Sequencing tasks, shifts, and routes requires evaluating permutations and discarding those
+          infeasible under constraints.
+        pt: >-
+          Ordenar tarefas, turnos e rotas exige avaliar permutações e descartar as inviáveis sob
+          restrições.
+        fr: >-
+          Ordonner tâches, plannings et itinéraires exige d'évaluer des permutations et d'écarter
+          celles qui sont infaisables sous contraintes.
+        zh: >-
+          任务、班次和路径的排序需要评估各种排列，并剔除约束下不可行的方案。
+        ja: >-
+          タスク、勤務シフト、経路の順序付けには、順列の評価と制約下で実現不可能なものの除外が必要である。
+    - title:
+        es: Bioinformática
+        en: Bioinformatics
+        pt: Bioinformática
+        fr: Bio-informatique
+        zh: 生物信息学
+        ja: バイオインフォマティクス
+      description:
+        es: >-
+          El reordenamiento de cromosomas y la comparación de secuencias se modelan con
+          permutaciones.
+        en: >-
+          Chromosome rearrangements and sequence comparison are modeled with permutations.
+        pt: >-
+          O rearranjo de cromossomos e a comparação de sequências são modelados com permutações.
+        fr: >-
+          Les réarrangements de chromosomes et la comparaison de séquences sont modélisés par des
+          permutations.
+        zh: >-
+          染色体重排和序列比对都用排列来建模。
+        ja: >-
+          染色体の再配列や配列比較は順列を用いてモデル化される。
+    - title:
+        es: Estadística
+        en: Statistics
+        pt: Estatística
+        fr: Statistiques
+        zh: 统计学
+        ja: 統計学
+      description:
+        es: >-
+          Las permutaciones generan la distribución exacta de muchos tests no paramétricos por
+          remuestreo.
+        en: >-
+          Permutations generate the exact distribution of many nonparametric resampling tests.
+        pt: >-
+          As permutações geram a distribuição exata de muitos testes não paramétricos por
+          reamostragem.
+        fr: >-
+          Les permutations génèrent la distribution exacte de nombreux tests non paramétriques par
+          rééchantillonnage.
+        zh: >-
+          排列可以生成许多非参数重抽样检验的精确分布。
+        ja: >-
+          順列は多くのノンパラメトリック・リサンプリング検定の正確な分布を生成する。
+  example:
+    title:
+      es: Permutaciones de 5 en 2
+      en: Permutations of 5 take 2
+      pt: Permutações de 5 toma 2
+      fr: Permutations de 5 éléments pris 2 à 2
+      zh: 5取2的排列
+      ja: 5個から2個を取る順列
+    lines:
+      - es: "P(5,2) = 5!/3!"
+        en: "P(5,2) = 5!/3!"
+        pt: "P(5,2) = 5!/3!"
+        fr: "P(5,2) = 5!/3!"
+        zh: "P(5,2) = 5!/3!"
+        ja: "P(5,2) = 5!/3!"
+      - es: "P(5,2) = 120/6"
+        en: "P(5,2) = 120/6"
+        pt: "P(5,2) = 120/6"
+        fr: "P(5,2) = 120/6"
+        zh: "P(5,2) = 120/6"
+        ja: "P(5,2) = 120/6"
+      - es: "P(5,2) = 20"
+        en: "P(5,2) = 20"
+        pt: "P(5,2) = 20"
+        fr: "P(5,2) = 20"
+        zh: "P(5,2) = 20"
+        ja: "P(5,2) = 20"
+      - es: "P(5,2) = 5·4 = 20"
+        en: "P(5,2) = 5·4 = 20"
+        pt: "P(5,2) = 5·4 = 20"
+        fr: "P(5,2) = 5·4 = 20"
+        zh: "P(5,2) = 5·4 = 20"
+        ja: "P(5,2) = 5·4 = 20"
+      - es: "P(5,2) = 20 secuencias"
+        en: "P(5,2) = 20 sequences"
+        pt: "P(5,2) = 20 sequências"
+        fr: "P(5,2) = 20 séquences"
+        zh: "P(5,2) = 20 个序列"
+        ja: "P(5,2) = 20 個の並び"

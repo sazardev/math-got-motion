@@ -1,0 +1,295 @@
+id: freezing-point-depression
+title:
+  es: Descenso Crioscópico
+  en: Freezing Point Depression
+  pt: Descenso Crioscópico
+  fr: Abaissement Cryoscopique
+  zh: 凝固点降低
+  ja: 凝固点降下
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: delta-tf
+    type: variable
+    value: ΔTf
+    explanation:
+      es: El descenso del punto de congelación, cuánto baja la temperatura de congelación del disolvente.
+      en: The freezing point depression, how far the solvent's freezing temperature drops.
+      pt: O descenso do ponto de congelamento, o quanto a temperatura de congelamento do solvente cai.
+      fr: L'abaissement du point de congélation, la baisse de la température de congélation du solvant.
+      zh: 凝固点降低,即溶剂凝固温度下降的幅度。
+      ja: 凝固点降下。溶媒の凝固温度がどれだけ下がるかを表す。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: vanthoff
+    type: variable
+    value: i
+    explanation:
+      es: El factor de van 't Hoff, el número de partículas en que se disocia el soluto; para el NaCl vale 2.
+      en: The van 't Hoff factor, the number of particles the solute splits into; it equals 2 for NaCl.
+      pt: O fator de van 't Hoff, o número de partículas em que o soluto se dissocia; para o NaCl vale 2.
+      fr: Le facteur de van 't Hoff, le nombre de particules en lesquelles le soluté se dissocie; il vaut 2 pour NaCl.
+      zh: 范托夫因子,即溶质电离出的粒子数;对NaCl等于2。
+      ja: ファント・ホッフ係数。溶質が分かれて生じる粒子の数で、NaClでは2となる。
+  - id: cryoscopic-constant
+    type: constant
+    value: Kf
+    explanation:
+      es: La constante crioscópica del disolvente, que para el agua vale 1.86 °C·kg/mol.
+      en: The cryoscopic constant of the solvent, which equals 1.86 °C·kg/mol for water.
+      pt: A constante crioscópica do solvente, que vale 1,86 °C·kg/mol para a água.
+      fr: La constante cryoscopique du solvant, qui vaut 1,86 °C·kg/mol pour l'eau.
+      zh: 溶剂的凝固点降低常数,水的值为1.86 °C·kg/mol。
+      ja: 溶媒のモル凝固点降下定数。水では1.86 °C·kg/mol。
+  - id: molality
+    type: variable
+    value: m
+    explanation:
+      es: La molalidad del soluto, en moles de soluto por kilogramo de disolvente.
+      en: The molality of the solute, in moles of solute per kilogram of solvent.
+      pt: A molalidade do soluto, em mols de soluto por quilograma de solvente.
+      fr: La molalité du soluté, en moles de soluté par kilogramme de solvant.
+      zh: 溶质的质量摩尔浓度,单位是每千克溶剂中溶质的摩尔数。
+      ja: 質量モル濃度。溶媒1キログラムあたりの溶質のモル数。
+context:
+  author:
+    es: Basada en las propiedades coligativas
+    en: Based on colligative properties
+    pt: Baseada nas propriedades coligativas
+    fr: Basée sur les propriétés colligatives
+    zh: 基于依数性原理
+    ja: 束一的性質に基づく
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, século XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲,19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      El descenso crioscópico es una propiedad coligativa, pues depende solo del número de partículas
+      disueltas y no de su naturaleza. Al disolver un soluto, la temperatura de congelación del
+      disolvente desciende en proporción a la molalidad, con una constante Kf propia de cada disolvente.
+      Esta relación, consolidada por François-Marie Raoult a fines del siglo XIX, explica por qué se
+      echa sal a las calles heladas, por qué el anticongelante protege el motor en invierno y por qué
+      el helado necesita sal y hielo para congelarse mientras se bate.
+    en: >-
+      Freezing point depression is a colligative property, since it depends only on the number of
+      dissolved particles and not on their nature. When a solute dissolves, the solvent's freezing
+      temperature drops in proportion to the molality, with a constant Kf that is specific to each
+      solvent. This relation, consolidated by François-Marie Raoult at the end of the 19th century,
+      explains why salt is spread on icy roads, why antifreeze protects car engines in winter, and why
+      ice cream needs salt and ice to freeze while it is churned.
+    pt: >-
+      O descenso crioscópico é uma propriedade coligativa, pois depende apenas do número de partículas
+      dissolvidas e não da sua natureza. Ao se dissolver um soluto, a temperatura de congelamento do
+      solvente cai em proporção à molalidade, com uma constante Kf própria de cada solvente. Essa
+      relação, consolidada por François-Marie Raoult no fim do século XIX, explica por que se espalha
+      sal nas ruas geladas, por que o anticongelante protege o motor no inverno e por que o sorvete
+      precisa de sal e gelo para congelar enquanto é batido.
+    fr: >-
+      L'abaissement cryoscopique est une propriété colligative, car il ne dépend que du nombre de
+      particules dissoutes et non de leur nature. Lorsqu'un soluté se dissout, la température de
+      congélation du solvant baisse proportionnellement à la molalité, avec une constante Kf propre à
+      chaque solvant. Cette relation, consolidée par François-Marie Raoult à la fin du XIXe siècle,
+      explique pourquoi on répand du sel sur les routes verglacées, pourquoi l'antigel protège le moteur
+      en hiver et pourquoi la glace à l'italienne a besoin de sel et de glace pour geler pendant qu'on
+      la turbine.
+    zh: >-
+      凝固点降低是一种依数性,它只取决于溶解粒子的数目,而与粒子的种类无关。溶质溶解时,溶剂的凝固温度随质量摩尔浓度成比例下降,其中Kf是每种溶剂特有的常数。
+      这一关系由弗朗索瓦-马里·拉乌尔在19世纪末加以确立,它解释了为什么冰雪路面上要撒盐,为什么防冻液能在冬季保护汽车发动机,以及为什么冰淇淋要在搅打时用盐和冰来冷冻。
+    ja: >-
+      凝固点降下は束一的性質であり、溶質の種類ではなく溶けている粒子の数だけに依存する。溶質が溶けると、溶媒の凝固温度は質量モル濃度に比例して下がり、その比例定数Kfは
+      溶媒ごとに固有である。19世紀末にフランソワ＝マリー・ラウールが確立したこの関係は、凍った道路に塩がまかれる理由、不凍液が冬にエンジンを守る理由、そしてアイスクリームが
+      攪拌しながら塩と氷で冷やして凍らせる理由を説明する。
+  timeline:
+    - year: "1788"
+      label:
+        es: >-
+          Charles Blagden observa que las sales disueltas bajan la temperatura de congelación del agua.
+        en: >-
+          Charles Blagden observes that dissolved salts lower the freezing temperature of water.
+        pt: >-
+          Charles Blagden observa que sais dissolvidos abaixam a temperatura de congelamento da água.
+        fr: >-
+          Charles Blagden observe que les sels dissous abaissent la température de congélation de l'eau.
+        zh: >-
+          查尔斯·布莱格登观察到溶解的盐会降低水的凝固温度。
+        ja: >-
+          チャールズ・ブラグデンが、溶けた塩が水の凝固温度を下げることを観察する。
+    - year: "1882"
+      label:
+        es: >-
+          François-Marie Raoult establece la ley que relaciona el descenso crioscópico con la molalidad.
+        en: >-
+          François-Marie Raoult establishes the law relating freezing point depression to molality.
+        pt: >-
+          François-Marie Raoult estabelece a lei que relaciona o descenso crioscópico à molalidade.
+        fr: >-
+          François-Marie Raoult établit la loi reliant l'abaissement cryoscopique à la molalité.
+        zh: >-
+          弗朗索瓦-马里·拉乌尔确立了凝固点降低与质量摩尔浓度之间的关系定律。
+        ja: >-
+          フランソワ＝マリー・ラウールが、凝固点降下と質量モル濃度の関係を表す法則を確立する。
+    - year: c. 1950
+      label:
+        es: >-
+          La criopreservación usa aditivos que bajan el punto de congelación para proteger células y tejidos.
+        en: >-
+          Cryopreservation uses additives that lower the freezing point to protect cells and tissues.
+        pt: >-
+          A criopreservação usa aditivos que baixam o ponto de congelamento para proteger células e tecidos.
+        fr: >-
+          La cryoconservation utilise des additifs qui abaissent le point de congélation pour protéger cellules et tissus.
+        zh: >-
+          冷冻保存利用能降低凝固点的添加剂来保护细胞和组织。
+        ja: >-
+          凍結保存では、凝固点を下げる添加物を使って細胞や組織を保護する。
+    - year: Hoy
+      label:
+        es: >-
+          La sal para calles, el anticongelante y la elaboración de helados se basan en esta ecuación.
+        en: >-
+          Road salt, antifreeze, and ice cream making all rely on this equation.
+        pt: >-
+          O sal para ruas, o anticongelante e a fabricação de sorvetes se baseiam nessa equação.
+        fr: >-
+          Le sel de déneigement, l'antigel et la fabrication de glaces reposent tous sur cette équation.
+        zh: >-
+          道路除雪用盐、防冻液和冰淇淋制作都以这一方程为基础。
+        ja: >-
+          道路の融雪塩、不凍液、アイスクリーム製造はすべてこの式に基づいている。
+  useCases:
+    - title:
+        es: Vialidad invernal
+        en: Winter road maintenance
+        pt: Manutenção viária no inverno
+        fr: Viabilité hivernale
+        zh: 冬季道路养护
+        ja: 冬期道路管理
+      description:
+        es: >-
+          Esparcir sal sobre el hielo baja su punto de fusión y evita que se vuelva a congelar.
+        en: >-
+          Spreading salt on ice lowers its melting point and keeps it from refreezing.
+        pt: >-
+          Espalhar sal sobre o gelo baixa seu ponto de fusão e evita que congele novamente.
+        fr: >-
+          Répandre du sel sur la glace abaisse son point de fusion et l'empêche de regeler.
+        zh: >-
+          在冰上撒盐可降低其熔点,并防止再次结冰。
+        ja: >-
+          氷に塩をまくと融点が下がり、再凍結を防ぐことができる。
+    - title:
+        es: Industria automotriz
+        en: Automotive industry
+        pt: Indústria automotiva
+        fr: Industrie automobile
+        zh: 汽车工业
+        ja: 自動車産業
+      description:
+        es: >-
+          El glicol del anticongelante baja el punto de congelación del líquido refrigerante del motor.
+        en: >-
+          The glycol in antifreeze lowers the freezing point of the engine coolant.
+        pt: >-
+          O glicol do anticongelante baixa o ponto de congelamento do líquido de arrefecimento do motor.
+        fr: >-
+          Le glycol de l'antigel abaisse le point de congélation du liquide de refroidissement du moteur.
+        zh: >-
+          防冻液中的乙二醇降低了发动机冷却液的凝固点。
+        ja: >-
+          不凍液のグリコールがエンジン冷却液の凝固点を下げる。
+    - title:
+        es: Industria alimentaria
+        en: Food industry
+        pt: Indústria alimentícia
+        fr: Industrie agroalimentaire
+        zh: 食品工业
+        ja: 食品産業
+      description:
+        es: >-
+          En la elaboración del helado, la sal mezclada con hielo alcanza temperaturas bajo cero sin congelar la mezcla.
+        en: >-
+          In ice cream making, salt mixed with ice reaches sub-zero temperatures without freezing the mixture.
+        pt: >-
+          Na fabricação de sorvete, o sal misturado ao gelo atinge temperaturas abaixo de zero sem congelar a mistura.
+        fr: >-
+          Dans la fabrication de la glace, le sel mêlé à la glace atteint des températures négatives sans congeler le mélange.
+        zh: >-
+          制作冰淇淋时,盐与冰混合可在不冻结混合物的前提下达到零度以下。
+        ja: >-
+          アイスクリーム製造では、塩を混ぜた氷が混合物を凍らせずに氷点下の温度を実現する。
+    - title:
+        es: Criobiología
+        en: Cryobiology
+        pt: Criobiologia
+        fr: Cryobiologie
+        zh: 低温生物学
+        ja: 凍結生物学
+      description:
+        es: >-
+          Los aditivos crioprotectores evitan el daño por cristales de hielo al congelar células y tejidos.
+        en: >-
+          Cryoprotectant additives prevent ice crystal damage when freezing cells and tissues.
+        pt: >-
+          Aditivos crioprotetores evitam o dano por cristais de gelo ao congelar células e tecidos.
+        fr: >-
+          Les additifs cryoprotecteurs évitent les dommages dus aux cristaux de glace lors de la congélation de cellules et de tissus.
+        zh: >-
+          冷冻细胞和组织时,冷冻保护剂可避免冰晶造成损伤。
+        ja: >-
+          細胞や組織を凍らせる際、凍結保護剤が氷晶による損傷を防ぐ。
+  example:
+    title:
+      es: Sal de mesa en agua
+      en: Table salt in water
+      pt: Sal de cozinha na água
+      fr: Sel de table dans l'eau
+      zh: 食盐溶于水
+      ja: 食塩を水に溶かす
+    lines:
+      - es: m = 1 mol/kg (NaCl, i = 2)
+        en: m = 1 mol/kg (NaCl, i = 2)
+        pt: m = 1 mol/kg (NaCl, i = 2)
+        fr: m = 1 mol/kg (NaCl, i = 2)
+        zh: m = 1 mol/kg（NaCl,i = 2）
+        ja: m = 1 mol/kg（NaCl、i = 2）
+      - es: Kf = 1.86 °C·kg/mol (agua)
+        en: Kf = 1.86 °C·kg/mol (water)
+        pt: Kf = 1,86 °C·kg/mol (água)
+        fr: Kf = 1,86 °C·kg/mol (eau)
+        zh: Kf = 1.86 °C·kg/mol（水）
+        ja: Kf = 1.86 °C·kg/mol（水）
+      - es: ΔTf = i × Kf × m
+        en: ΔTf = i × Kf × m
+        pt: ΔTf = i × Kf × m
+        fr: ΔTf = i × Kf × m
+        zh: ΔTf = i × Kf × m
+        ja: ΔTf = i × Kf × m
+      - es: ΔTf = 2 × 1.86 × 1
+        en: ΔTf = 2 × 1.86 × 1
+        pt: ΔTf = 2 × 1,86 × 1
+        fr: ΔTf = 2 × 1,86 × 1
+        zh: ΔTf = 2 × 1.86 × 1
+        ja: ΔTf = 2 × 1.86 × 1
+      - es: ΔTf = 3.72 °C
+        en: ΔTf = 3.72 °C
+        pt: ΔTf = 3,72 °C
+        fr: ΔTf = 3,72 °C
+        zh: ΔTf = 3.72 °C
+        ja: ΔTf = 3.72 °C

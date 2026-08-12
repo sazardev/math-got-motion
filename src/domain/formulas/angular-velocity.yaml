@@ -1,0 +1,314 @@
+id: angular-velocity
+title:
+  es: Velocidad Angular
+  en: Angular Velocity
+  pt: Velocidade Angular
+  fr: Vitesse angulaire
+  zh: 角速度
+  ja: 角速度
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: omega
+    type: variable
+    value: ω
+    explanation:
+      es: La velocidad angular, cuántos radianes gira el cuerpo por segundo.
+      en: The angular velocity, how many radians the body rotates per second.
+      pt: A velocidade angular, quantos radianos o corpo gira por segundo.
+      fr: La vitesse angulaire, combien de radians le corps parcourt par seconde.
+      zh: 角速度，即物体每秒转过的弧度数。
+      ja: 角速度。物体が1秒間に回転するラジアン数。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: theta
+    type: variable
+    value: θ
+    explanation:
+      es: El ángulo girado, medido en radianes.
+      en: The angle swept, measured in radians.
+      pt: O ângulo girado, medido em radianos.
+      fr: L'angle balayé, mesuré en radians.
+      zh: 转过的角度，以弧度为单位。
+      ja: 回転した角度。ラジアンで測る。
+  - id: divide
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por el tiempo empleado en el giro.
+      en: Divided by the time taken for the rotation.
+      pt: Dividido pelo tempo gasto no giro.
+      fr: Divisé par le temps pris par la rotation.
+      zh: 除以转动所用的时间。
+      ja: 回転にかかった時間で割る。
+  - id: t
+    type: variable
+    value: t
+    explanation:
+      es: El tiempo en el que ocurre el giro, en segundos.
+      en: The time over which the rotation happens, in seconds.
+      pt: O tempo em que ocorre o giro, em segundos.
+      fr: Le temps pendant lequel la rotation se produit, en secondes.
+      zh: 转动发生所经过的时间，以秒为单位。
+      ja: 回転が起こる時間。単位は秒。
+context:
+  author:
+    es: Origen colectivo de la mecánica
+    en: Collective origin of mechanics
+    pt: Origem coletiva da mecânica
+    fr: Origine collective de la mécanique
+    zh: 力学的集体起源
+    ja: 力学の集団的起源
+  era:
+    es: Europa, s. XVIII
+    en: Europe, 18th century
+    pt: Europa, século XVIII
+    fr: Europe, XVIIIe siècle
+    zh: 欧洲,18世纪
+    ja: ヨーロッパ、18世紀
+  history:
+    es: >-
+      La velocidad angular ω mide cuántos radianes gira un cuerpo por segundo, es decir, qué tan
+      rápido gira o rota. Su uso se consolidó en el siglo XVIII con la mecánica racional, cuando el
+      ángulo barrido en un tiempo dado se convirtió en la forma natural de describir ruedas, poleas
+      y planetas. Está en la base de los motores y de los motores de combustión, que la expresan en
+      revoluciones por minuto (RPM), y también describe la rotación de la propia Tierra, que
+      completa sus 2π radianes cada 24 horas.
+    en: >-
+      Angular velocity ω measures how many radians a body sweeps per second, that is, how fast it
+      spins or rotates. Its use was consolidated in the 18th century with rational mechanics, when
+      the angle swept in a given time became the natural way to describe wheels, pulleys, and
+      planets. It underlies electric motors and combustion engines, which express it in revolutions
+      per minute (RPM), and it also describes the rotation of the Earth itself, which completes its
+      2π radians every 24 hours.
+    pt: >-
+      A velocidade angular ω mede quantos radianos um corpo gira por segundo, ou seja, quão rápido
+      ele gira ou rotaciona. Seu uso se consolidou no século XVIII com a mecânica racional, quando
+      o ângulo varrido em um dado tempo tornou-se a forma natural de descrever rodas, polias e
+      planetas. Está na base dos motores e dos motores de combustão, que a expressam em rotações
+      por minuto (RPM), e também descreve a rotação da própria Terra, que completa seus 2π radianos
+      a cada 24 horas.
+    fr: >-
+      La vitesse angulaire ω mesure combien de radians un corps parcourt par seconde, c'est-à-dire
+      la rapidité avec laquelle il tourne ou pivote. Son usage s'est consolidé au XVIIIe siècle
+      avec la mécanique rationnelle, quand l'angle balayé en un temps donné devint la façon
+      naturelle de décrire roues, poulies et planètes. Elle est à la base des moteurs et des
+      moteurs à combustion, qui l'expriment en tours par minute (tr/min), et décrit aussi la
+      rotation de la Terre elle-même, qui boucle ses 2π radians toutes les 24 heures.
+    zh: >-
+      角速度ω衡量物体每秒扫过多少弧度，即它旋转的快慢。18世纪随着理性力学的建立，这一用法得到确立，
+      扫过的角度成为描述车轮、滑轮和行星运动的自然方式。它是电动机和内燃机的基础，内燃机以每分钟转数
+      （RPM）来表示，它也描述地球自身的自转——地球每24小时转完2π弧度。
+    ja: >-
+      角速度ωは物体が1秒間に掃く角度をラジアンで表したもので、回転の速さを示す。18世紀の理性力学の確立とともに、
+      一定時間に掃く角度が車輪や滑車、惑星を記述する自然な方法となった。電動機や内燃機関の基礎であり、
+      毎分回転数（RPM）で表される。また地球の自転も、24時間で2πラジアンを回転する、という形で記述される。
+  timeline:
+    - year: "1714"
+      label:
+        es: >-
+          Roger Cotes introduce el radián, la unidad en la que se expresa ω.
+        en: >-
+          Roger Cotes introduces the radian, the unit in which ω is expressed.
+        pt: >-
+          Roger Cotes introduz o radiano, a unidade na qual ω é expressa.
+        fr: >-
+          Roger Cotes introduit le radian, l'unité dans laquelle ω s'exprime.
+        zh: >-
+          罗杰·科茨引入弧度，这是表达ω所用的单位。
+        ja: >-
+          ロジャー・コーツがラジアンを導入。ωを表す単位となる。
+    - year: "1765"
+      label:
+        es: >-
+          Euler publica su teoría del movimiento de los cuerpos sólidos, que sitúa a ω en el
+          centro de la rotación del cuerpo rígido.
+        en: >-
+          Euler publishes his theory of the motion of solid bodies, placing ω at the center of
+          rigid-body rotation.
+        pt: >-
+          Euler publica sua teoria do movimento dos corpos sólidos, situando ω no centro da
+          rotação do corpo rígido.
+        fr: >-
+          Euler publie sa théorie du mouvement des corps solides, plaçant ω au centre de la
+          rotation du corps rigide.
+        zh: >-
+          欧拉发表刚体运动理论，把ω置于刚体旋转的中心。
+        ja: >-
+          オイラーが剛体の運動理論を発表し、剛体の回転の中心にωを据える。
+    - year: "1876"
+      label:
+        es: >-
+          El motor de cuatro tiempos de Otto convierte las revoluciones por minuto (RPM) en el
+          idioma cotidiano de los motores.
+        en: >-
+          Otto's four-stroke engine turns revolutions per minute (RPM) into the everyday language
+          of engines.
+        pt: >-
+          O motor de quatro tempos de Otto torna as rotações por minuto (RPM) a linguagem cotidiana
+          dos motores.
+        fr: >-
+          Le moteur à quatre temps d'Otto fait des tours par minute (tr/min) le langage quotidien
+          des moteurs.
+        zh: >-
+          奥托的四冲程发动机使每分钟转数（RPM）成为发动机的日常语言。
+        ja: >-
+          オットーの4サイクルエンジンが、毎分回転数（RPM）をエンジンの日常言語にする。
+    - year: Hoy
+      label:
+        es: >-
+          ω aparece en todos los cuentarrevoluciones, las turbinas eólicas y los giroscopios.
+        en: >-
+          ω appears in every tachometer, wind turbine, and gyroscope.
+        pt: >-
+          ω aparece em todos os conta-giros, turbinas eólicas e giroscópios.
+        fr: >-
+          ω apparaît dans chaque compte-tours, éolienne et gyroscope.
+        zh: >-
+          ω出现在一切转速表、风力涡轮机和陀螺仪之中。
+        ja: >-
+          すべての回転計、風力タービン、ジャイロスコープにωが現れる。
+  useCases:
+    - title:
+        es: Motores de combustión
+        en: Combustion engines
+        pt: Motores de combustão
+        fr: Moteurs à combustion
+        zh: 内燃机
+        ja: 内燃機関
+      description:
+        es: >-
+          La velocidad del cigüeñal se mide en revoluciones por minuto, que se convierten
+          directamente en ω.
+        en: >-
+          Crank speed is measured in revolutions per minute, which convert directly into ω.
+        pt: >-
+          A velocidade do virabrequim é medida em rotações por minuto, que se convertem
+          diretamente em ω.
+        fr: >-
+          La vitesse du vilebrequin se mesure en tours par minute, qui se convertissent
+          directement en ω.
+        zh: >-
+          曲轴转速以每分钟转数计量，可直接换算成ω。
+        ja: >-
+          クランク軸の回転は毎分回転数で測られ、それを直接ωに変換できる。
+    - title:
+        es: Generación de energía eléctrica
+        en: Power generation
+        pt: Geração de energia elétrica
+        fr: Production d'électricité
+        zh: 发电
+        ja: 発電
+      description:
+        es: >-
+          Las turbinas de las centrales sincronizan su giro con la frecuencia de la red calculando
+          ω.
+        en: >-
+          Plant turbines synchronize their spin with the grid frequency by computing ω.
+        pt: >-
+          As turbinas das usinas sincronizam seu giro com a frequência da rede calculando ω.
+        fr: >-
+          Les turbines des centrales synchronisent leur rotation avec la fréquence du réseau en
+          calculant ω.
+        zh: >-
+          电厂涡轮机通过计算ω，使自身旋转与电网频率同步。
+        ja: >-
+          発電所のタービンはωを計算して回転を系統周波数に同期させる。
+    - title:
+        es: Máquinas industriales
+        en: Industrial machinery
+        pt: Máquinas industriais
+        fr: Machines industrielles
+        zh: 工业机械
+        ja: 産業機械
+      description:
+        es: >-
+          Tornos, ventiladores y aerogeneradores fijan la velocidad de su eje mediante la ω
+          deseada.
+        en: >-
+          Lathes, fans, and wind turbines set their shaft speed through the desired ω.
+        pt: >-
+          Tornos, ventiladores e aerogeradores fixam a velocidade de seu eixo por meio da ω
+          desejada.
+        fr: >-
+          Tours, ventilateurs et éoliennes règlent la vitesse de leur arbre via la ω souhaitée.
+        zh: >-
+          车床、风机和风力发电机通过所需的ω来设定轴转速。
+        ja: >-
+          旋盤、ファン、風力タービンは、目標のωによって軸の回転速度を決める。
+    - title:
+        es: Rotación de la Tierra
+        en: Earth's rotation
+        pt: Rotação da Terra
+        fr: Rotation de la Terre
+        zh: 地球自转
+        ja: 地球の自転
+      description:
+        es: >-
+          La Tierra completa 2π radianes cada 24 horas, un giro que se describe con ω y sirve para
+          definir el día y los husos horarios.
+        en: >-
+          Earth completes 2π radians every 24 hours, a spin described with ω that defines the day
+          and time zones.
+        pt: >-
+          A Terra completa 2π radianos a cada 24 horas, um giro descrito com ω que define o dia e
+          os fusos horários.
+        fr: >-
+          La Terre boucle 2π radians toutes les 24 heures, une rotation décrite avec ω qui définit
+          le jour et les fuseaux horaires.
+        zh: >-
+          地球每24小时转完2π弧度，这个用ω描述的自转定义了昼夜与时区。
+        ja: >-
+          地球は24時間ごとに2πラジアン回転する。この自転はωで記述され、日や時差を定義する。
+  example:
+    title:
+      es: La rueda de un motor
+      en: A motor wheel
+      pt: A roda de um motor
+      fr: La roue d'un moteur
+      zh: 电机的一只轮子
+      ja: モーターの車輪
+    lines:
+      - es: θ = 20 rad, t = 5 s
+        en: θ = 20 rad, t = 5 s
+        pt: θ = 20 rad, t = 5 s
+        fr: θ = 20 rad, t = 5 s
+        zh: θ = 20 rad, t = 5 s
+        ja: θ = 20 rad, t = 5 s
+      - es: ω = θ / t
+        en: ω = θ / t
+        pt: ω = θ / t
+        fr: ω = θ / t
+        zh: ω = θ / t
+        ja: ω = θ / t
+      - es: ω = 20 / 5
+        en: ω = 20 / 5
+        pt: ω = 20 / 5
+        fr: ω = 20 / 5
+        zh: ω = 20 / 5
+        ja: ω = 20 / 5
+      - es: ω = 4 rad/s
+        en: ω = 4 rad/s
+        pt: ω = 4 rad/s
+        fr: ω = 4 rad/s
+        zh: ω = 4 rad/s
+        ja: ω = 4 rad/s
+      - es: ω ≈ 38.2 RPM
+        en: ω ≈ 38.2 RPM
+        pt: ω ≈ 38,2 RPM
+        fr: ω ≈ 38,2 RPM
+        zh: ω ≈ 38.2 RPM
+        ja: ω ≈ 38.2 RPM

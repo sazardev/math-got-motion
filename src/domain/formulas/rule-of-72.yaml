@@ -1,0 +1,258 @@
+id: rule-of-72
+title:
+  es: Regla del 72
+  en: Rule of 72
+  pt: Regra do 72
+  fr: Règle de 72
+  zh: 72法则
+  ja: 72の法則
+category:
+  es: Finanzas
+  en: Finance
+  pt: Finanças
+  fr: Finance
+  zh: 金融
+  ja: 金融
+nodes:
+  - id: t
+    type: variable
+    value: t
+    explanation:
+      es: "t: los años para duplicar el capital, aproximadamente."
+      en: "t: the years to double the capital, approximately."
+      pt: "t: os anos para dobrar o capital, aproximadamente."
+      fr: "t : les années pour doubler le capital, approximativement."
+      zh: "t：本金翻倍所需年数（近似）。"
+      ja: "t：元本が2倍になる年数（近似値）。"
+  - id: approx
+    type: operator
+    value: ≈
+    explanation:
+      es: "≈: aproximadamente igual."
+      en: "≈: approximately equal."
+      pt: "≈: aproximadamente igual."
+      fr: "≈ : approximativement égal."
+      zh: "≈：约等于。"
+      ja: "≈：ほぼ等しい。"
+  - id: seventy-two
+    type: number
+    value: "72"
+    explanation:
+      es: "El 72: el número mágico de la regla."
+      en: "72: the magic number of the rule."
+      pt: "72: o número mágico da regra."
+      fr: "72 : le nombre magique de la règle."
+      zh: "72：这条法则的魔法数字。"
+      ja: "72：この法則の魔法の数字。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "r: la tasa de interés anual, en por ciento."
+      en: "r: the annual interest rate, in percent."
+      pt: "r: a taxa de juros anual, em por cento."
+      fr: "r : le taux d'intérêt annuel, en pour cent."
+      zh: "r：年利率，以百分比计。"
+      ja: "r：年利。単位はパーセント。"
+context:
+  author:
+    es: Atribuida a Luca Pacioli
+    en: Attributed to Luca Pacioli
+    pt: Atribuída a Luca Pacioli
+    fr: Attribuée à Luca Pacioli
+    zh: 通常归功于卢卡·帕乔利
+    ja: ルカ・パチョーリに帰される
+  era:
+    es: Italia, 1445–1517 · mencionada en Summa en 1494
+    en: Italy, 1445–1517 · mentioned in the Summa in 1494
+    pt: Itália, 1445–1517 · mencionada na Summa em 1494
+    fr: Italie, 1445–1517 · mentionnée dans la Summa en 1494
+    zh: 意大利，1445–1517年·1494年见于《算术大全》
+    ja: イタリア、1445–1517年・1494年に『スムマ』で言及
+  history:
+    es: >-
+      La regla del 72 es un atajo mental tan antiguo como la contabilidad moderna: para saber cuántos
+      años tarda en duplicarse un capital, divide 72 entre la tasa de interés anual en por ciento. Ya
+      aparece en la Summa de Pacioli (1494), el primer gran libro de contabilidad. Es una aproximación
+      excelente de ln(2)/ln(1+r), y su número 72 se elige porque tiene muchos divisores: 6, 8, 9 y 12
+      dan resultados exactos.
+    en: >-
+      The rule of 72 is a mental shortcut as old as modern accounting: to know how many years it takes
+      for capital to double, divide 72 by the annual interest rate in percent. It already appears in
+      Pacioli's Summa (1494), the first great accounting book. It is an excellent approximation of
+      ln(2)/ln(1+r), and its number 72 is chosen because it has many divisors: 6, 8, 9, and 12 give exact
+      results.
+    pt: >-
+      A regra do 72 é um atalho mental tão antigo quanto a contabilidade moderna: para saber em quantos
+      anos um capital dobra, divida 72 pela taxa de juros anual em por cento. Ela já aparece na Summa de
+      Pacioli (1494), o primeiro grande livro de contabilidade. É uma aproximação excelente de
+      ln(2)/ln(1+r), e seu número 72 é escolhido porque tem muitos divisores: 6, 8, 9 e 12 dão resultados
+      exatos.
+    fr: >-
+      La règle de 72 est un raccourci mental aussi vieux que la comptabilité moderne : pour savoir en
+      combien d'années un capital double, divisez 72 par le taux d'intérêt annuel en pour cent. Elle
+      apparaît déjà dans la Summa de Pacioli (1494), le premier grand livre de comptabilité. C'est une
+      excellente approximation de ln(2)/ln(1+r), et son nombre 72 est choisi parce qu'il a beaucoup de
+      diviseurs : 6, 8, 9 et 12 donnent des résultats exacts.
+    zh: >-
+      72法则是一个与近代会计学一样古老的速算技巧：要知道本金翻倍需要多少年，就用72除以年利率（百分数）。
+      它已见于帕乔利1494年的《算术大全》，这是第一部伟大的会计著作。它是ln(2)/ln(1+r)的极佳近似，而数字72
+      之所以被选中，是因为它有大量因数：6、8、9、12都能得到精确结果。
+    ja: >-
+      72の法則は、近代会計と同じくらい古い暗算の近道である。元本が2倍になる年数を知るには、72を年利（パーセント）
+      で割ればよい。これはすでに、近代会計の最初の偉大な書物であるパチョーリの『スムマ』（1494年）に現れる。
+      ln(2)/ln(1+r)の優れた近似であり、72という数が選ばれたのは約数が多く、6、8、9、12で正確な結果が得られるから
+      である。
+  timeline:
+    - year: "1494"
+      label:
+        es: >-
+          Pacioli menciona la regla en su Summa de arithmetica.
+        en: >-
+          Pacioli mentions the rule in his Summa de arithmetica.
+        pt: >-
+          Pacioli menciona a regra em sua Summa de arithmetica.
+        fr: >-
+          Pacioli mentionne la règle dans sa Summa de arithmetica.
+        zh: >-
+          帕乔利在《算术大全》中提到这条法则。
+        ja: >-
+          パチョーリが『スムマ』の中でこの法則に言及する。
+    - year: s. XVII
+      label:
+        es: >-
+          El interés compuesto se generaliza y la regla se vuelve estándar entre banqueros.
+        en: >-
+          Compound interest spreads and the rule becomes standard among bankers.
+        pt: >-
+          Os juros compostos se generalizam e a regra vira padrão entre banqueiros.
+        fr: >-
+          L'intérêt composé se généralise et la règle devient standard chez les banquiers.
+        zh: >-
+          复利普及，这条法则成为银行家的标准。
+        ja: >-
+          複利が普及し、この法則は銀行家の間で標準となる。
+    - year: Hoy
+      label:
+        es: >-
+          Sigue siendo la regla de bolsillo de inversores y asesores financieros.
+        en: >-
+          It remains the pocket rule of investors and financial advisors.
+        pt: >-
+          Continua sendo a regra de bolso de investidores e consultores financeiros.
+        fr: >-
+          Elle reste la règle de poche des investisseurs et des conseillers financiers.
+        zh: >-
+          它至今仍是投资者和财务顾问的随身法则。
+        ja: >-
+          今も投資家やファイナンシャルアドバイザーのポケットルールである。
+  useCases:
+    - title:
+        es: Planificación de inversiones
+        en: Investment planning
+        pt: Planejamento de investimentos
+        fr: Planification des investissements
+        zh: 投资规划
+        ja: 投資計画
+      description:
+        es: >-
+          Un inversor estima al instante cuándo su cartera se duplicará a cierta tasa.
+        en: >-
+          An investor instantly estimates when a portfolio will double at a given rate.
+        pt: >-
+          Um investidor estima na hora quando uma carteira dobrará a uma dada taxa.
+        fr: >-
+          Un investisseur estime instantanément quand un portefeuille doublera à un taux donné.
+        zh: >-
+          投资者可即时估算组合在给定利率下何时翻倍。
+        ja: >-
+          投資家は、ある金利でポートフォリオがいつ2倍になるかを即座に見積もる。
+    - title:
+        es: Educación financiera
+        en: Financial literacy
+        pt: Educação financeira
+        fr: Éducation financière
+        zh: 金融素养
+        ja: 金融リテラシー
+      description:
+        es: >-
+          La regla enseña de forma intuitiva el poder del interés compuesto.
+        en: >-
+          The rule intuitively teaches the power of compound interest.
+        pt: >-
+          A regra ensina intuitivamente o poder dos juros compostos.
+        fr: >-
+          La règle enseigne intuitivement la puissance des intérêts composés.
+        zh: >-
+          这条法则直观地展示了复利的力量。
+        ja: >-
+          この法則は、複利の力について直観的に教えてくれる。
+    - title:
+        es: Comparación de deudas
+        en: Comparing debts
+        pt: Comparação de dívidas
+        fr: Comparaison de dettes
+        zh: 比较债务
+        ja: 負債の比較
+      description:
+        es: >-
+          Comparar tasas de tarjetas y préstamos se vuelve inmediato con la regla.
+        en: >-
+          Comparing card and loan rates becomes immediate with the rule.
+        pt: >-
+          Comparar taxas de cartões e empréstimos fica imediato com a regra.
+        fr: >-
+          Comparer les taux de cartes et de prêts devient immédiat avec la règle.
+        zh: >-
+          用这条法则，比较信用卡和贷款利率变得一目了然。
+        ja: >-
+          この法則で、カードやローンの金利の比較がすぐにできる。
+  example:
+    title:
+      es: Doblar al 8% anual
+      en: Doubling at 8% per year
+      pt: Dobrar a 8% ao ano
+      fr: Doubler à 8 % par an
+      zh: 年利率8%翻倍
+      ja: 年利8%で2倍
+    lines:
+      - es: r = 8% anual
+        en: r = 8% per year
+        pt: r = 8% ao ano
+        fr: r = 8 % par an
+        zh: r = 每年8%
+        ja: r = 年利8%
+      - es: t = 72 / 8
+        en: t = 72 / 8
+        pt: t = 72 / 8
+        fr: t = 72 / 8
+        zh: t = 72 / 8
+        ja: t = 72 / 8
+      - es: t = 9 años
+        en: t = 9 years
+        pt: t = 9 anos
+        fr: t = 9 ans
+        zh: t = 9 年
+        ja: t = 9 年
+      - es: "Verificación: (1.08)⁹ ≈ 2.00"
+        en: "Check: (1.08)⁹ ≈ 2.00"
+        pt: "Verificação: (1,08)⁹ ≈ 2,00"
+        fr: "Vérification : (1,08)⁹ ≈ 2,00"
+        zh: 验证：(1.08)⁹ ≈ 2.00
+        ja: 検算：(1.08)⁹ ≈ 2.00
+      - es: En 9 años el capital se duplica
+        en: In 9 years the capital doubles
+        pt: Em 9 anos o capital dobra
+        fr: En 9 ans le capital double
+        zh: 9年后本金翻倍
+        ja: 9年で元本が2倍になる

@@ -1,0 +1,392 @@
+id: sine-addition
+title:
+  es: Seno de la Suma de Ángulos
+  en: Sine of a Sum of Angles
+  pt: Seno da Soma de Ângulos
+  fr: Sinus d'une somme d'angles
+  zh: 两角和的正弦公式
+  ja: 正弦の加法定理
+category:
+  es: Trigonometría
+  en: Trigonometry
+  pt: Trigonometria
+  fr: Trigonométrie
+  zh: 三角学
+  ja: 三角法
+nodes:
+  - id: sin
+    type: operator
+    value: sin
+    explanation:
+      es: La función seno del ángulo que sigue.
+      en: The sine function of the angle that follows.
+      pt: A função seno do ângulo que segue.
+      fr: La fonction sinus de l'angle qui suit.
+      zh: 后面角度的正弦函数。
+      ja: 続く角度の正弦関数。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre la suma de ángulos.
+      en: Opens the sum of angles.
+      pt: Abre a soma de ângulos.
+      fr: Ouvre la somme d'angles.
+      zh: 打开角度之和。
+      ja: 角度の和を開く括弧。
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: "a: el primer ángulo."
+      en: "a: the first angle."
+      pt: "a: o primeiro ângulo."
+      fr: "a : le premier angle."
+      zh: "a：第一个角度。"
+      ja: "a：最初の角度。"
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado al segundo ángulo.
+      en: Added to the second angle.
+      pt: Somado ao segundo ângulo.
+      fr: Ajouté au second angle.
+      zh: 加上第二个角度。
+      ja: 2番目の角度に加える。
+  - id: b
+    type: variable
+    value: b
+    explanation:
+      es: "b: el segundo ángulo."
+      en: "b: the second angle."
+      pt: "b: o segundo ângulo."
+      fr: "b : le second angle."
+      zh: "b：第二个角度。"
+      ja: "b：2番目の角度。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la suma de ángulos.
+      en: Closes the sum of angles.
+      pt: Fecha a soma de ângulos.
+      fr: Ferme la somme d'angles.
+      zh: 关闭角度之和。
+      ja: 角度の和を閉じる括弧。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: sin-a
+    type: variable
+    value: sin a
+    explanation:
+      es: El seno del primer ángulo.
+      en: The sine of the first angle.
+      pt: O seno do primeiro ângulo.
+      fr: Le sinus du premier angle.
+      zh: 第一个角度的正弦。
+      ja: 最初の角度の正弦。
+  - id: dot-1
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: cos-b
+    type: variable
+    value: cos b
+    explanation:
+      es: El coseno del segundo ángulo.
+      en: The cosine of the second angle.
+      pt: O cosseno do segundo ângulo.
+      fr: Le cosinus du second angle.
+      zh: 第二个角度的余弦。
+      ja: 2番目の角度の余弦。
+  - id: plus-2
+    type: operator
+    value: +
+    explanation:
+      es: Más.
+      en: Plus.
+      pt: Mais.
+      fr: Plus.
+      zh: 加上。
+      ja: プラス。
+  - id: cos-a
+    type: variable
+    value: cos a
+    explanation:
+      es: El coseno del primer ángulo.
+      en: The cosine of the first angle.
+      pt: O cosseno do primeiro ângulo.
+      fr: Le cosinus du premier angle.
+      zh: 第一个角度的余弦。
+      ja: 最初の角度の余弦。
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: sin-b
+    type: variable
+    value: sin b
+    explanation:
+      es: El seno del segundo ángulo.
+      en: The sine of the second angle.
+      pt: O seno do segundo ângulo.
+      fr: Le sinus du second angle.
+      zh: 第二个角度的正弦。
+      ja: 2番目の角度の正弦。
+context:
+  author:
+    es: Claudio Ptolomeo y matemáticos árabes
+    en: Claudius Ptolemy and Arabic mathematicians
+    pt: Cláudio Ptolomeu e matemáticos árabes
+    fr: Claude Ptolémée et les mathématiciens arabes
+    zh: 克罗狄斯·托勒密及阿拉伯数学家
+    ja: クラウディオス・プトレマイオスとアラブの数学者たち
+  era:
+    es: Alejandría, c. 150 · sintetizada por Euler en 1748
+    en: Alexandria, c. 150 · synthesized by Euler in 1748
+    pt: Alexandria, c. 150 · sintetizada por Euler em 1748
+    fr: Alexandrie, v. 150 · synthétisée par Euler en 1748
+    zh: 亚历山大港，约公元150年·1748年由欧拉综合
+    ja: アレクサンドリア、紀元150年頃・1748年にオイラーが集大成
+  history:
+    es: >-
+      La tabla de cuerdas del Almagesto de Ptolomeo (c. 150) contenía, en forma de cuerdas, las
+      identidades que hoy llamamos de adición. Los matemáticos árabes transformaron esas cuerdas en
+      senos y construyeron tablas cada vez más precisas. La forma exponencial e^(iθ) descubierta por
+      Euler en 1748 las reescribió como una sola identidad. Sigue siendo la llave que desarma el
+      movimiento ondulatorio en componentes.
+    en: >-
+      Ptolemy's chord table in the Almagest (c. 150) contained, in the form of chords, the identities
+      we now call addition formulas. Arabic mathematicians turned those chords into sines and built
+      ever more precise tables. Euler's exponential form e^(iθ), found in 1748, rewrote them as a
+      single identity. It remains the key that breaks wave motion into components.
+    pt: >-
+      A tabela de cordas do Almagesto de Ptolomeu (c. 150) continha, em forma de cordas, as
+      identidades que hoje chamamos de adição. Os matemáticos árabes transformaram essas cordas em
+      senos e construíram tabelas cada vez mais precisas. A forma exponencial e^(iθ), descoberta por
+      Euler em 1748, as reescreveu como uma única identidade. Continua sendo a chave que decompõe o
+      movimento ondulatório em componentes.
+    fr: >-
+      La table des cordes de l'Almageste de Ptolémée (v. 150) contenait, sous forme de cordes, les
+      identités que nous appelons aujourd'hui formules d'addition. Les mathématiciens arabes ont
+      transformé ces cordes en sinus et construit des tables toujours plus précises. La forme
+      exponentielle e^(iθ), découverte par Euler en 1748, les a réécrites comme une seule identité.
+      Elle reste la clé qui décompose le mouvement ondulatoire en composantes.
+    zh: >-
+      托勒密《天文学大成》中的弦表（约公元150年）以弦的形式记录了如今所称的加法公式。阿拉伯数学家将这些弦
+      转化为正弦，并编制出越来越精确的表格。欧拉于1748年发现的指数形式e^(iθ)把它们重写为同一恒等式。
+      它至今仍是将波动分解为分量的关键。
+    ja: >-
+      プトレマイオスの『アルマゲスト』の弦の表（紀元150年頃）には、今日加法定理と呼ばれるものが弦の形で含まれていた。
+      アラブの数学者たちは弦を正弦に置き換え、より精密な表を作り上げた。1748年にオイラーが見出した指数形式
+      e^(iθ)は、これらを一つの恒等式に書き直した。今なお波の運動を成分に分解する鍵であり続けている。
+  timeline:
+    - year: c. 150
+      label:
+        es: >-
+          Ptolomeo tabula cuerdas de ángulos sumados en el Almagesto, la forma antigua de estas
+          identidades.
+        en: >-
+          Ptolemy tabulates chords of summed angles in the Almagest, the ancient form of these
+          identities.
+        pt: >-
+          Ptolomeu tabula cordas de ângulos somados no Almagesto, a forma antiga dessas identidades.
+        fr: >-
+          Ptolémée tabule les cordes d'angles additionnés dans l'Almageste, la forme ancienne de ces
+          identités.
+        zh: >-
+          托勒密在《天文学大成》中列出了角度之和的弦，即这些恒等式的古代形式。
+        ja: >-
+          プトレマイオスが『アルマゲスト』で和の角の弦を数表化する。これが加法定理の古代形である。
+    - year: s. IX
+      label:
+        es: >-
+          Matemáticos árabes como al-Battani convierten las cuerdas en senos y usan las fórmulas de
+          adición en astronomía.
+        en: >-
+          Arabic mathematicians such as al-Battani convert chords into sines and use the addition
+          formulas in astronomy.
+        pt: >-
+          Matemáticos árabes como al-Battani convertem cordas em senos e usam as fórmulas de adição em
+          astronomia.
+        fr: >-
+          Des mathématiciens arabes comme al-Battani convertissent les cordes en sinus et utilisent
+          les formules d'addition en astronomie.
+        zh: >-
+          巴塔尼等阿拉伯数学家将弦转化为正弦，并在天文学中使用加法公式。
+        ja: >-
+          バッターニーらアラブの数学者が弦を正弦に変換し、天文学で加法定理を用いる。
+    - year: "1748"
+      label:
+        es: >-
+          Euler unifica seno y coseno en la fórmula e^(iθ), de la cual se deducen las identidades.
+        en: >-
+          Euler unifies sine and cosine in e^(iθ), from which the identities are derived.
+        pt: >-
+          Euler unifica seno e cosseno na fórmula e^(iθ), da qual as identidades são derivadas.
+        fr: >-
+          Euler unifie sinus et cosinus dans e^(iθ), d'où les identités sont déduites.
+        zh: >-
+          欧拉在e^(iθ)中统一了正弦与余弦，恒等式可由其推出。
+        ja: >-
+          オイラーがe^(iθ)の中に正弦と余弦を統合し、そこから加法定理が導かれる。
+    - year: Hoy
+      label:
+        es: >-
+          La identidad es central en el procesamiento de señales, la acústica y la ingeniería de
+          radio.
+        en: >-
+          The identity is central to signal processing, acoustics, and radio engineering.
+        pt: >-
+          A identidade é central no processamento de sinais, na acústica e na engenharia de rádio.
+        fr: >-
+          L'identité est centrale dans le traitement du signal, l'acoustique et l'ingénierie radio.
+        zh: >-
+          该恒等式在信号处理、声学和无线电工程中至关重要。
+        ja: >-
+          この恒等式は、信号処理、音響学、無線工学の中心となっている。
+  useCases:
+    - title:
+        es: Ondas de sonido
+        en: Sound waves
+        pt: Ondas sonoras
+        fr: Ondes sonores
+        zh: 声波
+        ja: 音波
+      description:
+        es: >-
+          Sumar dos tonos equivale a descomponer su suma en funciones seno con esta identidad.
+        en: >-
+          Adding two tones means decomposing their sum into sine functions with this identity.
+        pt: >-
+          Somar dois tons equivale a decompor sua soma em funções seno com essa identidade.
+        fr: >-
+          Additionner deux tonalités revient à décomposer leur somme en fonctions sinus grâce à cette
+          identité.
+        zh: >-
+          用这条恒等式，将两个音调相加就等于把它们的和分解为正弦函数。
+        ja: >-
+          2つの音を加えることは、この恒等式によってその和を正弦関数に分解することと同じである。
+    - title:
+        es: Modulación de señales
+        en: Signal modulation
+        pt: Modulação de sinais
+        fr: Modulation du signal
+        zh: 信号调制
+        ja: 信号変調
+      description:
+        es: >-
+          La radio AM multiplica una señal por una portadora; la identidad explica cómo se separan
+          las bandas laterales.
+        en: >-
+          AM radio multiplies a signal by a carrier; the identity explains how sidebands split apart.
+        pt: >-
+          O rádio AM multiplica um sinal por uma portadora; a identidade explica como as bandas
+          laterais se separam.
+        fr: >-
+          La radio AM multiplie un signal par une porteuse ; l'identité explique la séparation des
+          bandes latérales.
+        zh: >-
+          AM收音机将信号乘以载波；该恒等式解释了边带如何分离。
+        ja: >-
+          AMラジオは信号に搬送波を掛ける。この恒等式は側波帯が分かれる仕組みを説明する。
+    - title:
+        es: Navegación
+        en: Navigation
+        pt: Navegação
+        fr: Navigation
+        zh: 导航
+        ja: 航法
+      description:
+        es: >-
+          La corrección del rumbo al componer velocidades y vientos usa estas identidades
+          trigonométricas.
+        en: >-
+          Correcting course when combining velocities and winds uses these trigonometric identities.
+        pt: >-
+          A correção do rumo ao combinar velocidades e ventos usa essas identidades trigonométricas.
+        fr: >-
+          La correction de cap lors de la combinaison de vitesses et de vents utilise ces identités
+          trigonométriques.
+        zh: >-
+          组合速度与风向来修正航向时，会用到这些三角恒等式。
+        ja: >-
+          速度と風を合成して針路を補正する際、これらの三角関数の恒等式が使われる。
+    - title:
+        es: Física de ondas
+        en: Wave physics
+        pt: Física ondulatória
+        fr: Physique des ondes
+        zh: 波动物理学
+        ja: 波動の物理学
+      description:
+        es: >-
+          La interferencia y superposición de ondas se calcula combinando sinusoides con esta
+          identidad.
+        en: >-
+          Interference and superposition of waves are computed by combining sinusoids with this
+          identity.
+        pt: >-
+          A interferência e a superposição de ondas são calculadas combinando senoides com essa
+          identidade.
+        fr: >-
+          L'interférence et la superposition des ondes se calculent en combinant des sinusoïdes avec
+          cette identité.
+        zh: >-
+          波的干涉与叠加可用这条恒等式组合正弦波来计算。
+        ja: >-
+          波の干渉と重ね合わせは、この恒等式で正弦波を合成して計算される。
+  example:
+    title:
+      es: Seno de 75°
+      en: Sine of 75°
+      pt: Seno de 75°
+      fr: Sinus de 75°
+      zh: 75°的正弦
+      ja: sin 75°
+    lines:
+      - es: sin(30°+45°) = sin 30° cos 45° + cos 30° sin 45°
+        en: sin(30°+45°) = sin 30° cos 45° + cos 30° sin 45°
+        pt: sin(30°+45°) = sin 30° cos 45° + cos 30° sin 45°
+        fr: sin(30°+45°) = sin 30° cos 45° + cos 30° sin 45°
+        zh: sin(30°+45°) = sin 30° cos 45° + cos 30° sin 45°
+        ja: sin(30°+45°) = sin 30° cos 45° + cos 30° sin 45°
+      - es: = 0.5 · 0.7071 + 0.8660 · 0.7071
+        en: = 0.5 · 0.7071 + 0.8660 · 0.7071
+        pt: = 0,5 · 0,7071 + 0,8660 · 0,7071
+        fr: = 0,5 · 0,7071 + 0,8660 · 0,7071
+        zh: = 0.5 · 0.7071 + 0.8660 · 0.7071
+        ja: = 0.5 · 0.7071 + 0.8660 · 0.7071
+      - es: = 0.3536 + 0.6124
+        en: = 0.3536 + 0.6124
+        pt: = 0,3536 + 0,6124
+        fr: = 0,3536 + 0,6124
+        zh: = 0.3536 + 0.6124
+        ja: = 0.3536 + 0.6124
+      - es: sin 75° ≈ 0.966
+        en: sin 75° ≈ 0.966
+        pt: sin 75° ≈ 0,966
+        fr: sin 75° ≈ 0,966
+        zh: sin 75° ≈ 0.966
+        ja: sin 75° ≈ 0.966

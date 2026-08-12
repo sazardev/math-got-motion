@@ -1,0 +1,343 @@
+id: fouriers-heat-conduction
+title:
+  es: Ley de Fourier (Conducción)
+  en: Fourier's Law of Conduction
+  pt: Lei de Fourier (Condução)
+  fr: Loi de Fourier (Conduction)
+  zh: 傅里叶热传导定律
+  ja: フーリエの熱伝導法則
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: q
+    type: variable
+    value: Q
+    explanation:
+      es: El flujo de calor, o calor que atraviesa la superficie por unidad de tiempo, medido en vatios (W).
+      en: The heat flux, or heat crossing the surface per unit time, measured in watts (W).
+      pt: O fluxo de calor, ou calor que atravessa a superfície por unidade de tempo, medido em watts (W).
+      fr: Le flux de chaleur, soit la chaleur traversant la surface par unité de temps, mesuré en watts (W).
+      zh: 热流量，即单位时间内通过表面的热量，单位为瓦特（W）。
+      ja: 熱流量、すなわち単位時間当たりに表面を通過する熱。単位はワット（W）。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: "El signo menos: el calor fluye desde la zona caliente hacia la fría."
+      en: "The minus sign: heat flows from the hot region toward the cold one."
+      pt: "O sinal de menos: o calor flui da região quente para a fria."
+      fr: "Le signe moins : la chaleur s'écoule de la région chaude vers la région froide."
+      zh: 负号：热量从高温区域流向低温区域。
+      ja: マイナス記号。熱は高温側から低温側へ流れることを表す。
+  - id: k
+    type: variable
+    value: k
+    explanation:
+      es: La conductividad térmica del material, en vatios por metro kelvin (W/m·K).
+      en: The thermal conductivity of the material, in watts per meter-kelvin (W/m·K).
+      pt: A condutividade térmica do material, em watts por metro kelvin (W/m·K).
+      fr: La conductivité thermique du matériau, en watts par mètre-kelvin (W/m·K).
+      zh: 材料的导热系数，单位为瓦特每米开尔文（W/m·K）。
+      ja: 材料の熱伝導率。単位はワット毎メートル・ケルビン（W/m·K）。
+  - id: dot-k
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: El área de la sección transversal por la que viaja el calor, en metros cuadrados.
+      en: The cross-sectional area through which the heat travels, in square meters.
+      pt: A área da seção transversal pela qual o calor viaja, em metros quadrados.
+      fr: L'aire de la section transversale traversée par la chaleur, en mètres carrés.
+      zh: 热量通过的横截面积，单位为平方米。
+      ja: 熱が通過する断面積。単位は平方メートル。
+  - id: dot-a
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: gradient
+    type: operator
+    value: "(dT/dx)"
+    explanation:
+      es: "El gradiente de temperatura: cuánto cambia la temperatura por metro de espesor."
+      en: "The temperature gradient: how much the temperature changes per meter of thickness."
+      pt: "O gradiente de temperatura: quanto a temperatura varia por metro de espessura."
+      fr: "Le gradient de température : la variation de température par mètre d'épaisseur."
+      zh: 温度梯度：每米厚度上温度变化多少。
+      ja: 温度勾配。厚さ1メートル当たりの温度変化量。
+context:
+  author:
+    es: Jean-Baptiste Joseph Fourier
+    en: Jean-Baptiste Joseph Fourier
+    pt: Jean-Baptiste Joseph Fourier
+    fr: Jean-Baptiste Joseph Fourier
+    zh: 让-巴蒂斯特·约瑟夫·傅里叶
+    ja: ジャン＝バティスト・ジョゼフ・フーリエ
+  era:
+    es: Francia, 1768–1830 · publicada en 1822
+    en: France, 1768–1830 · published in 1822
+    pt: França, 1768–1830 · publicada em 1822
+    fr: France, 1768–1830 · publiée en 1822
+    zh: 法国，1768–1830年 · 1822年发表
+    ja: フランス、1768–1830年・1822年発表
+  history:
+    es: >-
+      Jean-Baptiste Joseph Fourier, matemático y físico francés, expuso su teoría de la conducción del
+      calor en la "Théorie analytique de la chaleur" (1822). Allí propuso que el calor fluye por un
+      material en proporción al gradiente de temperatura y al área, con la conductividad k como constante
+      de proporcionalidad. La obra además introdujo las series de Fourier, herramienta que transformaría
+      la física y la ingeniería. Su ley sigue siendo el punto de partida del diseño de aislamientos,
+      disipadores de calor y de todo sistema que deba controlar la temperatura.
+    en: >-
+      Jean-Baptiste Joseph Fourier, a French mathematician and physicist, set out his theory of heat
+      conduction in the "Théorie analytique de la chaleur" (1822). He proposed that heat flows through a
+      material in proportion to the temperature gradient and the area, with the conductivity k as the
+      constant of proportionality. The work also introduced Fourier series, a tool that would transform
+      physics and engineering. His law remains the starting point for designing insulation, heat sinks,
+      and any system that must control temperature.
+    pt: >-
+      Jean-Baptiste Joseph Fourier, matemático e físico francês, expôs sua teoria da condução de calor na
+      "Théorie analytique de la chaleur" (1822). Ele propôs que o calor flui por um material em proporção
+      ao gradiente de temperatura e à área, com a condutividade k como constante de proporcionalidade. A
+      obra também introduziu as séries de Fourier, ferramenta que transformaria a física e a engenharia.
+      Sua lei continua sendo o ponto de partida do projeto de isolamentos, dissipadores de calor e de
+      qualquer sistema que precise controlar a temperatura.
+    fr: >-
+      Jean-Baptiste Joseph Fourier, mathématicien et physicien français, exposa sa théorie de la
+      conduction de la chaleur dans la « Théorie analytique de la chaleur » (1822). Il y proposa que la
+      chaleur s'écoule dans un matériau proportionnellement au gradient de température et à la surface, la
+      conductivité k servant de constante de proportionnalité. L'ouvrage introduisit aussi les séries de
+      Fourier, un outil qui allait transformer la physique et l'ingénierie. Sa loi reste le point de
+      départ de la conception des isolants, des dissipateurs et de tout système devant contrôler la
+      température.
+    zh: >-
+      法国数学家和物理学家让-巴蒂斯特·约瑟夫·傅里叶在1822年出版的《热的解析理论》中阐述了其热传导理论。
+      他提出，热量流经材料时与温度梯度和面积成正比，导热系数k是其中的比例常数。
+      这部著作还引入了傅里叶级数，这一工具后来彻底改变了物理学和工程学。
+      他的定律至今仍是设计保温层、散热片以及任何需要控制温度的系统时的出发点。
+    ja: >-
+      フランスの数学者で物理学者のジャン＝バティスト・ジョゼフ・フーリエは、1822年の『熱の解析理論』で
+      熱伝導の理論を展開した。熱は温度勾配と面積に比例して材料の中を流れ、比例定数が熱伝導率kであると提唱した。
+      この著作はまた、物理学と工学を一変させる道具となるフーリエ級数を紹介した。
+      彼の法則は今も、断熱材やヒートシンク、温度を制御するあらゆるシステムの設計の出発点である。
+  timeline:
+    - year: "1807"
+      label:
+        es: >-
+          Presenta su primera memoria sobre la propagación del calor ante el Institut de France.
+        en: >-
+          He presents his first memoir on heat propagation to the Institut de France.
+        pt: >-
+          Ele apresenta sua primeira memória sobre a propagação do calor ao Institut de France.
+        fr: >-
+          Il présente son premier mémoire sur la propagation de la chaleur à l'Institut de France.
+        zh: >-
+          他向法国研究院提交了第一篇关于热量传播的论文。
+        ja: >-
+          熱の伝播に関する最初の論文をフランス学士院に提出する。
+    - year: "1811"
+      label:
+        es: >-
+          Gana el premio de matemáticas y física del Institut de France por su teoría de la conducción
+          del calor.
+        en: >-
+          He wins the Institut de France's mathematics and physics prize for his theory of heat
+          conduction.
+        pt: >-
+          Ele ganha o prêmio de matemática e física do Institut de France por sua teoria da condução de
+          calor.
+        fr: >-
+          Il remporte le prix de mathématiques et de physique de l'Institut de France pour sa théorie de
+          la conduction de la chaleur.
+        zh: >-
+          他凭借热传导理论获得法国研究院的数学和物理奖。
+        ja: >-
+          熱伝導の理論によりフランス学士院の数学・物理学賞を受賞する。
+    - year: "1822"
+      label:
+        es: >-
+          Publica la "Théorie analytique de la chaleur", que reúne su ley y las series de Fourier.
+        en: >-
+          He publishes the "Théorie analytique de la chaleur", collecting his law and the Fourier series.
+        pt: >-
+          Ele publica a "Théorie analytique de la chaleur", que reúne sua lei e as séries de Fourier.
+        fr: >-
+          Il publie la « Théorie analytique de la chaleur », qui réunit sa loi et les séries de Fourier.
+        zh: >-
+          他出版了《热的解析理论》，书中汇集了他的定律和傅里叶级数。
+        ja: >-
+          彼の法則とフーリエ級数をまとめた『熱の解析理論』を出版する。
+    - year: Hoy
+      label:
+        es: >-
+          Guía el diseño de aislamientos, disipadores y simulaciones térmicas.
+        en: >-
+          It guides the design of insulation, heat sinks, and thermal simulations.
+        pt: >-
+          Guia o projeto de isolamentos, dissipadores e simulações térmicas.
+        fr: >-
+          Elle guide la conception des isolants, des dissipateurs et des simulations thermiques.
+        zh: >-
+          它为保温层、散热片和热模拟的设计提供指导。
+        ja: >-
+          断熱材、ヒートシンク、熱シミュレーションの設計を導く。
+  useCases:
+    - title:
+        es: Construcción y aislamiento
+        en: Construction and insulation
+        pt: Construção e isolamento
+        fr: Construction et isolation
+        zh: 建筑与保温
+        ja: 建築と断熱
+      description:
+        es: >-
+          Permite dimensionar el espesor de muros, ventanas y aislantes para limitar la pérdida de calor.
+        en: >-
+          It sizes the thickness of walls, windows, and insulation to limit heat loss.
+        pt: >-
+          Permite dimensionar a espessura de paredes, janelas e isolantes para limitar a perda de calor.
+        fr: >-
+          Elle permet de dimensionner l'épaisseur des murs, fenêtres et isolants pour limiter les pertes
+          de chaleur.
+        zh: >-
+          用于确定墙体、窗户和保温层的厚度，以减少热量损失。
+        ja: >-
+          熱損失を抑えるために壁、窓、断熱材の厚さを決めることができる。
+    - title:
+        es: Electrónica
+        en: Electronics
+        pt: Eletrônica
+        fr: Électronique
+        zh: 电子学
+        ja: エレクトロニクス
+      description:
+        es: >-
+          Es la base del diseño de disipadores que evacuan el calor generado por chips y procesadores.
+        en: >-
+          It is the basis of heat-sink design to dissipate the heat generated by chips and processors.
+        pt: >-
+          É a base do projeto de dissipadores que evacuam o calor gerado por chips e processadores.
+        fr: >-
+          Elle est à la base de la conception des dissipateurs qui évacuent la chaleur produite par les
+          puces et les processeurs.
+        zh: >-
+          它是设计散热片的基础，用于排散芯片和处理器产生的热量。
+        ja: >-
+          チップやプロセッサが生む熱を逃がすヒートシンク設計の基礎である。
+    - title:
+        es: Metalurgia y materiales
+        en: Metallurgy and materials
+        pt: Metalurgia e materiais
+        fr: Métallurgie et matériaux
+        zh: 冶金与材料
+        ja: 冶金と材料
+      description:
+        es: >-
+          Controla los tratamientos térmicos, donde la velocidad de enfriamiento define las propiedades
+          del metal.
+        en: >-
+          It governs heat treatments, where the cooling rate defines the metal's properties.
+        pt: >-
+          Controla os tratamentos térmicos, nos quais a velocidade de resfriamento define as propriedades
+          do metal.
+        fr: >-
+          Elle régit les traitements thermiques, où la vitesse de refroidissement définit les propriétés
+          du métal.
+        zh: >-
+          它支配着热处理过程，冷却速度决定金属的性能。
+        ja: >-
+          冷却速度が金属の性質を決める熱処理を支配している。
+    - title:
+        es: Geología
+        en: Geology
+        pt: Geologia
+        fr: Géologie
+        zh: 地质学
+        ja: 地質学
+      description:
+        es: >-
+          Modela el flujo de calor que escapa del interior de la Tierra a través de la corteza.
+        en: >-
+          It models the flow of heat escaping the Earth's interior through the crust.
+        pt: >-
+          Modela o fluxo de calor que escapa do interior da Terra através da crosta.
+        fr: >-
+          Elle modélise le flux de chaleur qui s'échappe de l'intérieur de la Terre à travers la croûte.
+        zh: >-
+          用于模拟地球内部通过地壳逸出的热量流。
+        ja: >-
+          地球内部から地殻を通って逃げる熱の流れをモデル化する。
+  example:
+    title:
+      es: Conducción a través de una pared
+      en: Conduction through a wall
+      pt: Condução através de uma parede
+      fr: Conduction à travers un mur
+      zh: 通过墙壁的热传导
+      ja: 壁を通る熱伝導
+    lines:
+      - es: k = 0.8 W/m·K, A = 10 m²
+        en: k = 0.8 W/m·K, A = 10 m²
+        pt: k = 0,8 W/m·K, A = 10 m²
+        fr: k = 0,8 W/m·K, A = 10 m²
+        zh: k = 0.8 W/m·K, A = 10 m²
+        ja: k = 0.8 W/m·K, A = 10 m²
+      - es: dT = 20 K, espesor 0.2 m
+        en: dT = 20 K, thickness 0.2 m
+        pt: dT = 20 K, espessura 0,2 m
+        fr: dT = 20 K, épaisseur 0,2 m
+        zh: dT = 20 K，厚度 0.2 m
+        ja: dT = 20 K，厚さ 0.2 m
+      - es: dT/dx = 20 / 0.2 = 100 K/m
+        en: dT/dx = 20 / 0.2 = 100 K/m
+        pt: dT/dx = 20 / 0,2 = 100 K/m
+        fr: dT/dx = 20 / 0,2 = 100 K/m
+        zh: dT/dx = 20 / 0.2 = 100 K/m
+        ja: dT/dx = 20 / 0.2 = 100 K/m
+      - es: q = k · A · (dT/dx)
+        en: q = k · A · (dT/dx)
+        pt: q = k · A · (dT/dx)
+        fr: q = k · A · (dT/dx)
+        zh: q = k · A · (dT/dx)
+        ja: q = k · A · (dT/dx)
+      - es: q = 0.8 × 10 × 100
+        en: q = 0.8 × 10 × 100
+        pt: q = 0,8 × 10 × 100
+        fr: q = 0,8 × 10 × 100
+        zh: q = 0.8 × 10 × 100
+        ja: q = 0.8 × 10 × 100
+      - es: q = 800 W
+        en: q = 800 W
+        pt: q = 800 W
+        fr: q = 800 W
+        zh: q = 800 W
+        ja: q = 800 W

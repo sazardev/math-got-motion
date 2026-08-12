@@ -1,0 +1,432 @@
+id: haversine-formula
+title:
+  es: Distancia en la Esfera (Haversine)
+  en: Haversine Distance
+  pt: Distância na Esfera (Haversine)
+  fr: Distance sur la sphère (haversine)
+  zh: 球面距离（半正矢公式）
+  ja: 球面上の距離（ハバーサイン公式）
+category:
+  es: Astronomía
+  en: Astronomy
+  pt: Astronomia
+  fr: Astronomie
+  zh: 天文学
+  ja: 天文学
+nodes:
+  - id: d
+    type: variable
+    value: d
+    explanation:
+      es: "d: la distancia en línea recta a lo largo de la superficie de la esfera."
+      en: "d: the straight-line distance along the surface of the sphere."
+      pt: "d: a distância em linha reta ao longo da superfície da esfera."
+      fr: "d : la distance en ligne droite le long de la surface de la sphère."
+      zh: "d：沿球面的直线距离。"
+      ja: "d：球の表面に沿った直線距離。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: two-r
+    type: variable
+    value: 2·R
+    explanation:
+      es: "2·R: dos veces el radio, que convierte el ángulo central en longitud de arco."
+      en: "2·R: twice the radius, which turns the central angle into arc length."
+      pt: "2·R: duas vezes o raio, que converte o ângulo central em comprimento de arco."
+      fr: "2·R : deux fois le rayon, qui transforme l'angle au centre en longueur d'arc."
+      zh: "2·R：两倍半径，把圆心角转换为弧长。"
+      ja: "2·R：半径の2倍。中心角を弧の長さに変換する。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: arcsin
+    type: operator
+    value: arcsin
+    explanation:
+      es: El arco seno, la función inversa del seno.
+      en: The arcsine, the inverse of the sine function.
+      pt: O arco seno, a função inversa do seno.
+      fr: L'arc sinus, la fonction inverse du sinus.
+      zh: 反正弦，即正弦的反函数。
+      ja: アークサイン。サインの逆関数。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el argumento del arco seno.
+      en: Opens the argument of the arcsine.
+      pt: Abre o argumento do arco seno.
+      fr: Ouvre l'argument de l'arc sinus.
+      zh: 打开反正弦的自变量。
+      ja: アークサインの引数を開く括弧。
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: La raíz cuadrada del término que sigue.
+      en: The square root of the term that follows.
+      pt: A raiz quadrada do termo que segue.
+      fr: La racine carrée du terme qui suit.
+      zh: 后面一项的平方根。
+      ja: 続く項の平方根。
+  - id: open-paren-2
+    type: operator
+    value: "("
+    explanation:
+      es: Abre la suma dentro de la raíz.
+      en: Opens the sum inside the square root.
+      pt: Abre a soma dentro da raiz.
+      fr: Ouvre la somme à l'intérieur de la racine.
+      zh: 打开平方根内的和。
+      ja: 平方根の中の和を開く括弧。
+  - id: sin-sq-open
+    type: operator
+    value: sin²(
+    explanation:
+      es: El seno al cuadrado de la mitad de la diferencia de latitudes.
+      en: The squared sine of half the latitude difference.
+      pt: O seno ao quadrado da metade da diferença de latitudes.
+      fr: Le sinus au carré de la moitié de la différence de latitudes.
+      zh: 纬度差一半的正弦的平方。
+      ja: 緯度差の半分のサインの二乗。
+  - id: dphi-over-2
+    type: variable
+    value: Δφ/2)
+    explanation:
+      es: "Δφ/2: la mitad de la diferencia de latitudes φ₁ y φ₂, en radianes."
+      en: "Δφ/2: half the difference between latitudes φ₁ and φ₂, in radians."
+      pt: "Δφ/2: metade da diferença entre as latitudes φ₁ e φ₂, em radianos."
+      fr: "Δφ/2 : la moitié de la différence entre les latitudes φ₁ et φ₂, en radians."
+      zh: "Δφ/2：纬度φ₁与φ₂之差的一半，单位为弧度。"
+      ja: "Δφ/2：緯度φ₁とφ₂の差の半分。単位はラジアン。"
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado al término del coseno.
+      en: Added to the cosine term.
+      pt: Somado ao termo do cosseno.
+      fr: Ajouté au terme en cosinus.
+      zh: 加上余弦项。
+      ja: コサインの項に加える。
+  - id: cos1-dot
+    type: operator
+    value: cosφ₁·
+    explanation:
+      es: "cosφ₁: el coseno de la primera latitud, multiplicado por lo que sigue."
+      en: "cosφ₁: the cosine of the first latitude, multiplied by what follows."
+      pt: "cosφ₁: o cosseno da primeira latitude, multiplicado pelo que segue."
+      fr: "cosφ₁ : le cosinus de la première latitude, multiplié par la suite."
+      zh: "cosφ₁：第一个纬度的余弦，乘以后面的项。"
+      ja: "cosφ₁：1つ目の緯度のコサイン。続く項を掛ける。"
+  - id: cos2-dot
+    type: operator
+    value: cosφ₂·
+    explanation:
+      es: "cosφ₂: el coseno de la segunda latitud, multiplicado por lo que sigue."
+      en: "cosφ₂: the cosine of the second latitude, multiplied by what follows."
+      pt: "cosφ₂: o cosseno da segunda latitude, multiplicado pelo que segue."
+      fr: "cosφ₂ : le cosinus de la deuxième latitude, multiplié par la suite."
+      zh: "cosφ₂：第二个纬度的余弦，乘以后面的项。"
+      ja: "cosφ₂：2つ目の緯度のコサイン。続く項を掛ける。"
+  - id: sin-sq-open-2
+    type: operator
+    value: sin²(
+    explanation:
+      es: El seno al cuadrado de la mitad de la diferencia de longitudes.
+      en: The squared sine of half the longitude difference.
+      pt: O seno ao quadrado da metade da diferença de longitudes.
+      fr: Le sinus au carré de la moitié de la différence de longitudes.
+      zh: 经度差一半的正弦的平方。
+      ja: 経度差の半分のサインの二乗。
+  - id: dlambda-over-2
+    type: variable
+    value: Δλ/2))
+    explanation:
+      es: "Δλ/2: la mitad de la diferencia de longitudes λ₁ y λ₂, en radianes. Cierra la raíz y el arco seno."
+      en: "Δλ/2: half the difference between longitudes λ₁ and λ₂, in radians. It closes the root and the arcsine."
+      pt: "Δλ/2: metade da diferença entre as longitudes λ₁ e λ₂, em radianos. Fecha a raiz e o arco seno."
+      fr: "Δλ/2 : la moitié de la différence entre les longitudes λ₁ et λ₂, en radians. Il ferme la racine et l'arc sinus."
+      zh: "Δλ/2：经度λ₁与λ₂之差的一半，单位为弧度。它闭合平方根和反正弦。"
+      ja: "Δλ/2：経度λ₁とλ₂の差の半分。単位はラジアン。平方根とアークサインを閉じる。"
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el argumento del arco seno.
+      en: Closes the argument of the arcsine.
+      pt: Fecha o argumento do arco seno.
+      fr: Ferme l'argument de l'arc sinus.
+      zh: 关闭反正弦的自变量。
+      ja: アークサインの引数を閉じる括弧。
+context:
+  author:
+    es: Navegación colectiva; popularizada por R. W. Sinnott
+    en: Collective navigation; popularized by R. W. Sinnott
+    pt: Navegação coletiva; divulgada por R. W. Sinnott
+    fr: Navigation collective ; diffusée par R. W. Sinnott
+    zh: 源于航海的集体智慧；由R. W. 辛诺特推广
+    ja: 航海における集団的な起源；R. W. シノットが普及
+  era:
+    es: Reino Unido y EE. UU., s. XX
+    en: United Kingdom and United States, 20th century
+    pt: Reino Unido e EUA, século XX
+    fr: Royaume-Uni et États-Unis, XXe siècle
+    zh: 英国与美国，20世纪
+    ja: イギリスとアメリカ合衆国、20世紀
+  history:
+    es: >-
+      Calcular la distancia entre dos puntos sobre una esfera es un problema tan antiguo como la
+      navegación: los marineros llevaban siglos trazando rutas por el círculo máximo cuando la fórmula
+      recibió su nombre. "Haversine" se usó tradicionalmente en navegación astronómica, y fue
+      popularizada entre programadores por R. W. Sinnott en 1984 en la revista Sky & Telescope, en la
+      era de las primeras calculadoras de bolsillo. Hoy es la base de prácticamente todas las APIs de
+      mapas, que la usan para convertir dos coordenadas en una distancia. También explica por qué los
+      vuelos transoceánicos siguen rutas curvas: sobre la esfera, la distancia más corta es un arco de
+      círculo máximo, no una línea recta en el mapa.
+    en: >-
+      Computing the distance between two points on a sphere is as old a problem as navigation itself:
+      sailors had traced great-circle routes for centuries by the time the formula got its name.
+      "Haversine" was a staple of astronomical navigation, popularized among programmers by R. W.
+      Sinnott in a 1984 Sky & Telescope article, in the age of early pocket calculators. Today it is
+      the backbone of virtually every mapping API, which uses it to turn two coordinates into a
+      distance. It also explains why transoceanic flights follow curved routes: on the sphere, the
+      shortest path is a great-circle arc, not a straight line on the map.
+    pt: >-
+      Calcular a distância entre dois pontos sobre uma esfera é um problema tão antigo quanto a
+      própria navegação: os marinheiros traçavam rotas pelo círculo máximo havia séculos quando a
+      fórmula ganhou seu nome. "Haversine" foi um elemento básico da navegação astronômica,
+      popularizada entre programadores por R. W. Sinnott em um artigo de 1984 na Sky & Telescope, na
+      era das primeiras calculadoras de bolso. Hoje é a espinha dorsal de praticamente todas as APIs de
+      mapas, que a usam para transformar duas coordenadas em uma distância. Também explica por que os
+      voos transoceânicos seguem rotas curvas: na esfera, o caminho mais curto é um arco de círculo
+      máximo, não uma linha reta no mapa.
+    fr: >-
+      Calculer la distance entre deux points d'une sphère est un problème aussi vieux que la navigation
+      elle-même : les marins traçaient des routes de grand cercle depuis des siècles avant que la
+      formule ne reçoive son nom. « Haversine » fut un pilier de la navigation astronomique,
+      popularisé auprès des programmeurs par R. W. Sinnott dans un article de 1984 de Sky & Telescope,
+      à l'ère des premières calculatrices de poche. Aujourd'hui, c'est le fondement de pratiquement
+      toutes les API cartographiques, qui l'utilisent pour convertir deux coordonnées en une distance.
+      Elle explique aussi pourquoi les vols transocéaniques suivent des routes courbes : sur la
+      sphère, le plus court chemin est un arc de grand cercle, pas une ligne droite sur la carte.
+    zh: >-
+      计算球面上两点之间的距离，是个与航海本身一样古老的问题：当这个公式得名时，水手们循着大圆航线航行已有数百年。
+      "半正矢"（haversine）是天文航海的基本工具，1984年R. W. 辛诺特在《天空与望远镜》杂志上发表文章，正值袖珍计算器
+      问世的时代，使它广为人知。如今它几乎是所有地图API的基石，用来把两个坐标换算成一段距离。它也解释了为什么越洋航班
+      走曲线航路：在球面上，最短路径是大圆弧，而不是地图上的直线。
+    ja: >-
+      球面上の2点間の距離を計算することは、航海そのものと同じくらい古い問題である。この式が名付けられるずっと前から、
+      船乗りたちは大円の航路を辿っていた。「ハバーサイン」は天文航法の基本であり、1984年にR. W. シノットがSky &
+      Telescope誌で紹介したことで、初期の電卓時代のプログラマたちに広まった。現在では、ほとんどすべての地図APIの
+      基盤となっており、2つの座標を距離に変換している。また、大西洋横断便が曲線の航路をたどる理由も説明している。
+      球面上では、最短経路は地図上の直線ではなく大円の弧だからである。
+  timeline:
+    - year: "1955"
+      label:
+        es: >-
+          El término "haversine" se estandariza en los manuales de navegación astronómica británicos.
+        en: >-
+          The term "haversine" becomes standard in British astronomical navigation manuals.
+        pt: >-
+          O termo "haversine" se torna padrão nos manuais britânicos de navegação astronômica.
+        fr: >-
+          Le terme « haversine » devient standard dans les manuels britanniques de navigation
+          astronomique.
+        zh: >-
+          "半正矢"一词成为英国天文航海手册的标准术语。
+        ja: >-
+          英国の天文航法マニュアルで「ハバーサイン」という用語が標準となる。
+    - year: "1984"
+      label:
+        es: >-
+          R. W. Sinnott publica en Sky & Telescope la fórmula, que los programadores adoptan para
+          calcular distancias entre coordenadas.
+        en: >-
+          R. W. Sinnott publishes the formula in Sky & Telescope, and programmers adopt it to compute
+          distances between coordinates.
+        pt: >-
+          R. W. Sinnott publica a fórmula na Sky & Telescope, e programadores a adotam para calcular
+          distâncias entre coordenadas.
+        fr: >-
+          R. W. Sinnott publie la formule dans Sky & Telescope, et les programmeurs l'adoptent pour
+          calculer des distances entre coordonnées.
+        zh: >-
+          R. W. 辛诺特在《天空与望远镜》上发表该公式，程序员们采用它来计算坐标间的距离。
+        ja: >-
+          R. W. シノットがSky & Telescope誌でこの式を発表し、プログラマたちが座標間の距離の計算に採用する。
+    - year: "2010"
+      label:
+        es: >-
+          La fórmula queda incorporada de forma masiva en las API de mapas móviles y web.
+        en: >-
+          The formula becomes massively embedded in web and mobile mapping APIs.
+        pt: >-
+          A fórmula fica massivamente incorporada às APIs de mapas web e móveis.
+        fr: >-
+          La formule est massivement intégrée aux API cartographiques web et mobiles.
+        zh: >-
+          该公式被大规模嵌入到网页和移动地图API中。
+        ja: >-
+          この式がウェブ・モバイルの地図APIに広く組み込まれる。
+    - year: Hoy
+      label:
+        es: >-
+          Es el cálculo estándar de distancias en aplicaciones de mapas, logística y geolocalización.
+        en: >-
+          It is the standard distance calculation in mapping, logistics, and geolocation apps.
+        pt: >-
+          É o cálculo padrão de distâncias em aplicativos de mapas, logística e geolocalização.
+        fr: >-
+          C'est le calcul de distance standard dans les applications de cartographie, de logistique et
+          de géolocalisation.
+        zh: >-
+          它是地图、物流和定位应用中计算距离的标准方法。
+        ja: >-
+          地図・物流・位置情報アプリで距離を計算する標準的な方法である。
+  useCases:
+    - title:
+        es: Aplicaciones de mapas
+        en: Mapping apps
+        pt: Aplicativos de mapas
+        fr: Applications cartographiques
+        zh: 地图应用
+        ja: 地図アプリ
+      description:
+        es: >-
+          Las APIs de mapas la usan para mostrar la distancia en línea recta entre dos lugares.
+        en: >-
+          Mapping APIs use it to show the straight-line distance between two places.
+        pt: >-
+          As APIs de mapas a usam para mostrar a distância em linha reta entre dois lugares.
+        fr: >-
+          Les API cartographiques l'utilisent pour afficher la distance à vol d'oiseau entre deux
+          lieux.
+        zh: >-
+          地图API用它来显示两个地点之间的直线距离。
+        ja: >-
+          地図APIは、2地点間の直線距離を表示するためにこれを使う。
+    - title:
+        es: Logística y reparto
+        en: Logistics and delivery
+        pt: Logística e entregas
+        fr: Logistique et livraison
+        zh: 物流与配送
+        ja: 物流・配送
+      description:
+        es: >-
+          Estimaciones de distancia y tiempo de viaje entre puntos de entrega parten de este cálculo.
+        en: >-
+          Distance and travel-time estimates between delivery points start from this calculation.
+        pt: >-
+          Estimativas de distância e tempo de viagem entre pontos de entrega partem desse cálculo.
+        fr: >-
+          Les estimations de distance et de temps de trajet entre points de livraison partent de ce
+          calcul.
+        zh: >-
+          配送点之间的距离和行程时间估算都以该计算为基础。
+        ja: >-
+          配送地点間の距離・所要時間の見積もりは、この計算から始まる。
+    - title:
+        es: Navegación aérea
+        en: Air navigation
+        pt: Navegação aérea
+        fr: Navigation aérienne
+        zh: 航空导航
+        ja: 航空航法
+      description:
+        es: >-
+          Los planes de vuelo trazan la ruta de círculo máximo entre aeropuertos usando la misma
+          geometría.
+        en: >-
+          Flight plans trace the great-circle route between airports using the same geometry.
+        pt: >-
+          Os planos de voo traçam a rota de círculo máximo entre aeroportos usando a mesma geometria.
+        fr: >-
+          Les plans de vol tracent la route de grand cercle entre aéroports en utilisant la même
+          géométrie.
+        zh: >-
+          航班计划使用相同的几何学，在机场之间规划大圆航线。
+        ja: >-
+          飛行計画は、同じ幾何学を使って空港間の大円航路を描く。
+    - title:
+        es: Astronomía
+        en: Astronomy
+        pt: Astronomia
+        fr: Astronomie
+        zh: 天文学
+        ja: 天文学
+      description:
+        es: >-
+          Calcula la separación angular entre dos objetos celestes proyectados sobre la esfera celeste.
+        en: >-
+          It computes the angular separation between two celestial objects on the celestial sphere.
+        pt: >-
+          Calcula a separação angular entre dois objetos celestes projetados na esfera celeste.
+        fr: >-
+          Elle calcule la séparation angulaire entre deux objets célestes projetés sur la sphère
+          céleste.
+        zh: >-
+          用于计算投影在天球上的两个天体之间的角距离。
+        ja: >-
+          天球上に投影された2つの天体の角距離を計算する。
+  example:
+    title:
+      es: Distancia Madrid–Barcelona
+      en: Madrid–Barcelona distance
+      pt: Distância Madri–Barcelona
+      fr: Distance Madrid–Barcelone
+      zh: 马德里–巴塞罗那距离
+      ja: マドリード–バルセロナ間の距離
+    lines:
+      - es: φ₁ = 40.42°, λ₁ = −3.70° (Madrid)
+        en: φ₁ = 40.42°, λ₁ = −3.70° (Madrid)
+        pt: φ₁ = 40,42°, λ₁ = −3,70° (Madri)
+        fr: φ₁ = 40,42°, λ₁ = −3,70° (Madrid)
+        zh: φ₁ = 40.42°, λ₁ = −3.70°（马德里）
+        ja: φ₁ = 40.42°, λ₁ = −3.70°（マドリード）
+      - es: φ₂ = 41.39°, λ₂ = 2.17° (Barcelona)
+        en: φ₂ = 41.39°, λ₂ = 2.17° (Barcelona)
+        pt: φ₂ = 41,39°, λ₂ = 2,17° (Barcelona)
+        fr: φ₂ = 41,39°, λ₂ = 2,17° (Barcelone)
+        zh: φ₂ = 41.39°, λ₂ = 2.17°（巴塞罗那）
+        ja: φ₂ = 41.39°, λ₂ = 2.17°（バルセロナ）
+      - es: Δφ ≈ 0.97°, Δλ ≈ 5.87°
+        en: Δφ ≈ 0.97°, Δλ ≈ 5.87°
+        pt: Δφ ≈ 0,97°, Δλ ≈ 5,87°
+        fr: Δφ ≈ 0,97°, Δλ ≈ 5,87°
+        zh: Δφ ≈ 0.97°, Δλ ≈ 5.87°
+        ja: Δφ ≈ 0.97°, Δλ ≈ 5.87°
+      - es: sin²(Δφ/2) + cosφ₁·cosφ₂·sin²(Δλ/2) ≈ 1.57×10⁻³
+        en: sin²(Δφ/2) + cosφ₁·cosφ₂·sin²(Δλ/2) ≈ 1.57×10⁻³
+        pt: sin²(Δφ/2) + cosφ₁·cosφ₂·sin²(Δλ/2) ≈ 1,57×10⁻³
+        fr: sin²(Δφ/2) + cosφ₁·cosφ₂·sin²(Δλ/2) ≈ 1,57×10⁻³
+        zh: sin²(Δφ/2) + cosφ₁·cosφ₂·sin²(Δλ/2) ≈ 1.57×10⁻³
+        ja: sin²(Δφ/2) + cosφ₁·cosφ₂·sin²(Δλ/2) ≈ 1.57×10⁻³
+      - es: d = 2·R·arcsin(√1.57×10⁻³) = 2×6371×0.0396
+        en: d = 2·R·arcsin(√1.57×10⁻³) = 2×6371×0.0396
+        pt: d = 2·R·arcsin(√1,57×10⁻³) = 2×6371×0,0396
+        fr: d = 2·R·arcsin(√1,57×10⁻³) = 2×6371×0,0396
+        zh: d = 2·R·arcsin(√1.57×10⁻³) = 2×6371×0.0396
+        ja: d = 2·R·arcsin(√1.57×10⁻³) = 2×6371×0.0396
+      - es: d ≈ 505 km
+        en: d ≈ 505 km
+        pt: d ≈ 505 km
+        fr: d ≈ 505 km
+        zh: d ≈ 505 千米
+        ja: d ≈ 505 km

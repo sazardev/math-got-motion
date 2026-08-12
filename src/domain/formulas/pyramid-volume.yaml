@@ -1,0 +1,331 @@
+id: pyramid-volume
+title:
+  es: Volumen de una Pirámide
+  en: Volume of a Pyramid
+  pt: Volume de uma Pirâmide
+  fr: Volume d'une Pyramide
+  zh: 棱锥的体积
+  ja: 角錐の体積
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: volume
+    type: variable
+    value: V
+    explanation:
+      es: "El volumen: el espacio tridimensional que ocupa la pirámide."
+      en: "The volume: the three-dimensional space the pyramid occupies."
+      pt: "O volume: o espaço tridimensional que a pirâmide ocupa."
+      fr: "Le volume : l'espace tridimensionnel occupé par la pyramide."
+      zh: "体积：棱锥所占据的三维空间。"
+      ja: "体積：角錐が占める三次元の空間。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これに正確に等しい。
+  - id: third
+    type: number
+    value: "⅓"
+    explanation:
+      es: "Un tercio: la pirámide ocupa exactamente la tercera parte del prisma de igual base y altura."
+      en: "One third: a pyramid fills exactly one third of the prism with the same base and height."
+      pt: "Um terço: a pirâmide ocupa exatamente a terça parte do prisma de mesma base e altura."
+      fr: "Un tiers : la pyramide remplit exactement le tiers du prisme de même base et de même hauteur."
+      zh: "三分之一：棱锥恰好占据同底等高棱柱体积的三分之一。"
+      ja: "3分の1：角錐は同じ底面と高さを持つ角柱のちょうど3分の1を占める。"
+  - id: mul-b
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: base
+    type: variable
+    value: B
+    explanation:
+      es: "B mayúscula, el área de la base: en una base cuadrada, lado por lado."
+      en: "Capital B, the area of the base: for a square base, side times side."
+      pt: "B maiúsculo, a área da base: em uma base quadrada, lado vezes lado."
+      fr: "B majuscule, l'aire de la base : pour une base carrée, côté fois côté."
+      zh: "大写B,底面积：若是正方形底面,就是边长乘以边长。"
+      ja: "大文字のB、底面の面積。正方形の底面なら、一辺×一辺。"
+  - id: mul-h
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: height
+    type: variable
+    value: h
+    explanation:
+      es: "h, la altura: la distancia perpendicular entre la base y el vértice."
+      en: "h, the height: the perpendicular distance between the base and the apex."
+      pt: "h, a altura: a distância perpendicular entre a base e o vértice."
+      fr: "h, la hauteur : la distance perpendiculaire entre la base et le sommet."
+      zh: "h,高：底面到顶点之间的垂直距离。"
+      ja: "h、高さ：底面から頂点への垂直距離。"
+context:
+  author:
+    es: Eudoxo y Demócrito; demostrado por Arquímedes
+    en: Eudoxus and Democritus; proven by Archimedes
+    pt: Eudoxo e Demócrito; demonstrado por Arquimedes
+    fr: Eudoxe et Démocrite; démontré par Archimède
+    zh: 欧多克索斯与德谟克利特;由阿基米德证明
+    ja: エウドクソスとデモクリトス;アルキメデスが証明
+  era:
+    es: Grecia, s. IV–III a.C.
+    en: Greece, 4th–3rd century BC
+    pt: Grécia, séc. IV–III a.C.
+    fr: Grèce, IVe–IIIe s. av. J.-C.
+    zh: 古希腊,公元前4–3世纪
+    ja: ギリシャ、紀元前4–3世紀
+  history:
+    es: >-
+      Una pirámide ocupa exactamente la tercera parte del prisma que comparte su base y su altura.
+      Eudoxo y Demócrito llegaron a ese factor ⅓ con el método de agotamiento, aproximando el sólido
+      con prismas cada vez más finos, y Arquímedes lo demostró después con rigor. Esa misma regla
+      calcula el volumen de monumentos reales como la Gran Pirámide de Giza, y explica por qué techos
+      y monumentos piramidales siguen diseñándose con esta fórmula.
+    en: >-
+      A pyramid occupies exactly one third of the prism that shares its base and height. Eudoxus and
+      Democritus arrived at that factor ⅓ through the method of exhaustion, approximating the solid
+      with ever thinner prisms, and Archimedes later proved it rigorously. The same rule computes the
+      volume of real monuments such as the Great Pyramid of Giza, and explains why pyramidal roofs and
+      monuments are still designed with this formula.
+    pt: >-
+      Uma pirâmide ocupa exatamente a terça parte do prisma que compartilha sua base e sua altura.
+      Eudoxo e Demócrito chegaram a esse fator ⅓ pelo método da exaustão, aproximando o sólido com
+      prismas cada vez mais finos, e Arquimedes o demonstrou depois com rigor. Essa mesma regra
+      calcula o volume de monumentos reais como a Grande Pirâmide de Gizé, e explica por que telhados
+      e monumentos piramidais ainda são projetados com essa fórmula.
+    fr: >-
+      Une pyramide occupe exactement le tiers du prisme qui partage sa base et sa hauteur. Eudoxe et
+      Démocrite atteignirent ce facteur ⅓ par la méthode d'exhaustion, en approchant le solide par
+      des prismes de plus en plus fins, puis Archimède le démontra rigoureusement. La même règle
+      calcule le volume de monuments réels comme la Grande Pyramide de Gizeh, et explique pourquoi
+      les toits et monuments pyramidaux sont encore conçus avec cette formule.
+    zh: >-
+      棱锥恰好占据与其同底等高的棱柱体积的三分之一。欧多克索斯和德谟克利特通过穷竭法——用越来越薄的
+      棱柱逼近立体——得出这个⅓因子,后来阿基米德对此给出了严格证明。同样的规则可以计算胡夫金字塔
+      这样真实纪念碑的体积,也解释了为什么金字塔形的屋顶和纪念建筑至今仍用这个公式设计。
+    ja: >-
+      角錐は、同じ底面と高さを持つ角柱のちょうど3分の1の体積を占める。エウドクソスとデモクリトスは
+      窮竭法によって、立体をどんどん薄い角柱で近似し、その3分の1という因子に到達した。後に
+      アルキメデスがこれを厳密に証明した。同じ規則でギザの大ピラミッドのような実在の記念碑の体積も
+      計算でき、ピラミッド型の屋根や記念碑の設計に今も使われている。
+  timeline:
+    - year: c. 2560 a.C.
+      label:
+        es: >-
+          Se construye la Gran Pirámide de Giza, que encarna esta relación entre base, altura y
+          volumen.
+        en: >-
+          The Great Pyramid of Giza is built, embodying this relationship between base, height, and
+          volume.
+        pt: >-
+          A Grande Pirâmide de Gizé é construída, encarnando essa relação entre base, altura e
+          volume.
+        fr: >-
+          La Grande Pyramide de Gizeh est construite, incarnant cette relation entre base, hauteur et
+          volume.
+        zh: >-
+          胡夫大金字塔建成,它以实物体现了底面积、高与体积之间的这一关系。
+        ja: >-
+          ギザの大ピラミッドが建設され、底面積・高さ・体積の関係を体現している。
+    - year: c. 370 a.C.
+      label:
+        es: >-
+          Eudoxo formula el método de agotamiento y con él deduce el factor ⅓ del volumen piramidal.
+        en: >-
+          Eudoxus formulates the method of exhaustion and uses it to deduce the ⅓ factor of the
+          pyramid's volume.
+        pt: >-
+          Eudoxo formula o método da exaustão e com ele deduz o fator ⅓ do volume da pirâmide.
+        fr: >-
+          Eudoxe formule la méthode d'exhaustion et en déduit le facteur ⅓ du volume de la pyramide.
+        zh: >-
+          欧多克索斯提出穷竭法,并用它推导出棱锥体积中的⅓因子。
+        ja: >-
+          エウドクソスが窮竭法を定式化し、角錐の体積の⅓という因子を導き出す。
+    - year: c. 250 a.C.
+      label:
+        es: >-
+          Arquímedes demuestra rigurosamente que la pirámide es un tercio del prisma de igual base y
+          altura.
+        en: >-
+          Archimedes rigorously proves that a pyramid is one third of the prism with the same base
+          and height.
+        pt: >-
+          Arquimedes demonstra rigorosamente que a pirâmide é um terço do prisma de mesma base e
+          altura.
+        fr: >-
+          Archimède démontre rigoureusement qu'une pyramide vaut le tiers du prisme de même base et
+          de même hauteur.
+        zh: >-
+          阿基米德严格证明了棱锥的体积是同底等高棱柱体积的三分之一。
+        ja: >-
+          アルキメデスが、角錐は同じ底面と高さを持つ角柱の3分の1であることを厳密に証明する。
+    - year: Hoy
+      label:
+        es: >-
+          La fórmula sigue siendo la base del cálculo de volúmenes en arquitectura, ingeniería y
+          construcción.
+        en: >-
+          The formula remains the basis of volume calculations in architecture, engineering, and
+          construction.
+        pt: >-
+          A fórmula continua sendo a base do cálculo de volumes em arquitetura, engenharia e
+          construção.
+        fr: >-
+          La formule reste la base du calcul des volumes en architecture, en ingénierie et dans le
+          bâtiment.
+        zh: >-
+          这个公式至今仍是建筑、工程和施工中体积计算的基础。
+        ja: >-
+          この公式は今も建築・工学・建設における体積計算の基本となっている。
+  useCases:
+    - title:
+        es: Arquitectura y construcción
+        en: Architecture and construction
+        pt: Arquitetura e construção
+        fr: Architecture et construction
+        zh: 建筑与施工
+        ja: 建築・建設
+      description:
+        es: >-
+          Calcula el volumen de techo de las cubiertas piramidales y el material necesario para
+          erigirlas.
+        en: >-
+          Computes the roof volume of pyramidal roofs and the material needed to build them.
+        pt: >-
+          Calcula o volume do teto das coberturas piramidais e o material necessário para erguê-las.
+        fr: >-
+          Calcule le volume de toiture des couvertures pyramidales et le matériau nécessaire pour
+          les ériger.
+        zh: >-
+          计算金字塔形屋顶的覆盖体积,以及建造它们所需的材料量。
+        ja: >-
+          ピラミッド型の屋根の容積と、それを建てるのに必要な材料を計算する。
+    - title:
+        es: Monumentos y escultura
+        en: Monuments and sculpture
+        pt: Monumentos e escultura
+        fr: Monuments et sculpture
+        zh: 纪念建筑与雕塑
+        ja: 記念碑と彫刻
+      description:
+        es: >-
+          Permite dimensionar obeliscos, mastabas y esculturas geométricas a partir de su base y
+          altura.
+        en: >-
+          Lets designers size obelisks, mastabas, and geometric sculptures from their base and
+          height.
+        pt: >-
+          Permite dimensionar obeliscos, mastabas e esculturas geométricas a partir de sua base e
+          altura.
+        fr: >-
+          Permet de dimensionner obélisques, mastabas et sculptures géométriques à partir de leur
+          base et de leur hauteur.
+        zh: >-
+          根据底面和高度,确定方尖碑、马斯塔巴墓和几何雕塑的尺寸。
+        ja: >-
+          底面と高さから、オベリスクやマスタバ、幾何学的彫刻の寸法を決める。
+    - title:
+        es: Ingeniería civil
+        en: Civil engineering
+        pt: Engenharia civil
+        fr: Génie civil
+        zh: 土木工程
+        ja: 土木工学
+      description:
+        es: >-
+          Estima el volumen de tierra o material de una pila o terraplén de base conocida.
+        en: >-
+          Estimates the volume of earth or material in a stockpile or embankment of known base.
+        pt: >-
+          Estima o volume de terra ou material de uma pilha ou aterro de base conhecida.
+        fr: >-
+          Estime le volume de terre ou de matériau d'un tas ou d'un remblai de base connue.
+        zh: >-
+          估算具有已知底面的料堆或路堤的土方或材料体积。
+        ja: >-
+          底面が分かっている土砂山や盛土の土量や材料の体積を概算する。
+    - title:
+        es: Geodesia y topografía
+        en: Geodesy and surveying
+        pt: Geodésia e topografia
+        fr: Géodésie et topographie
+        zh: 大地测量与测绘
+        ja: 測地学と測量
+      description:
+        es: >-
+          Calcula volúmenes de desmonte y terraplén al nivelar terrenos irregulares.
+        en: >-
+          Computes cut-and-fill volumes when leveling irregular terrain.
+        pt: >-
+          Calcula volumes de corte e aterro ao nivelar terrenos irregulares.
+        fr: >-
+          Calcule les volumes de déblais et de remblais lors du nivellement de terrains irréguliers.
+        zh: >-
+          平整不规则地形时,计算挖方量和填方量。
+        ja: >-
+          起伏のある地形を整地する際の切土量と盛土量を計算する。
+  example:
+    title:
+      es: Una pirámide de base cuadrada
+      en: A square-based pyramid
+      pt: Uma pirâmide de base quadrada
+      fr: Une pyramide à base carrée
+      zh: 方底棱锥
+      ja: 正方形底面の角錐
+    lines:
+      - es: B = 4 × 4 = 16
+        en: B = 4 × 4 = 16
+        pt: B = 4 × 4 = 16
+        fr: B = 4 × 4 = 16
+        zh: B = 4 × 4 = 16
+        ja: B = 4 × 4 = 16
+      - es: h = 6
+        en: h = 6
+        pt: h = 6
+        fr: h = 6
+        zh: h = 6
+        ja: h = 6
+      - es: V = ⅓ · B · h
+        en: V = ⅓ · B · h
+        pt: V = ⅓ · B · h
+        fr: V = ⅓ · B · h
+        zh: V = ⅓ · B · h
+        ja: V = ⅓ · B · h
+      - es: V = ⅓ · 16 · 6
+        en: V = ⅓ · 16 · 6
+        pt: V = ⅓ · 16 · 6
+        fr: V = ⅓ · 16 · 6
+        zh: V = ⅓ · 16 · 6
+        ja: V = ⅓ · 16 · 6
+      - es: V = 32 unidades cúbicas
+        en: V = 32 cubic units
+        pt: V = 32 unidades cúbicas
+        fr: V = 32 unités cubiques
+        zh: V = 32 立方单位
+        ja: V = 32 立方単位

@@ -1,0 +1,370 @@
+id: signal-to-noise-ratio
+title:
+  es: Relación Señal-Ruido
+  en: Signal-to-Noise Ratio
+  pt: Relação Sinal-Ruído
+  fr: Rapport signal-bruit
+  zh: 信噪比
+  ja: S/N比
+category:
+  es: Teoría de la información
+  en: Information theory
+  pt: Teoria da informação
+  fr: Théorie de l'information
+  zh: 信息论
+  ja: 情報理論
+nodes:
+  - id: snr
+    type: variable
+    value: SNR
+    explanation:
+      es: "SNR: la relación señal-ruido, que compara la potencia útil con la del ruido de fondo."
+      en: "SNR: the signal-to-noise ratio, which compares useful signal power to background noise power."
+      pt: "SNR: a relação sinal-ruído, que compara a potência útil com a do ruído de fundo."
+      fr: "SNR : le rapport signal-bruit, qui compare la puissance utile à celle du bruit de fond."
+      zh: "SNR：信噪比，比较有用信号功率与背景噪声功率。"
+      ja: "SNR：信号対雑音比。有用な信号電力と背景ノイズの電力を比較する。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: ten
+    type: number
+    value: "10"
+    explanation:
+      es: El factor 10 convierte el cociente de potencias en decibelios.
+      en: The factor 10 converts the power ratio into decibels.
+      pt: O fator 10 converte o quociente de potências em decibéis.
+      fr: Le facteur 10 convertit le rapport de puissances en décibels.
+      zh: 因数10将功率比转换为分贝。
+      ja: 係数の10が電力比をデシベルに変換する。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por el logaritmo del cociente.
+      en: Multiplied by the logarithm of the ratio.
+      pt: Multiplicado pelo logaritmo do quociente.
+      fr: Multiplié par le logarithme du rapport.
+      zh: 乘以比值的对数。
+      ja: 比の対数を掛ける。
+  - id: log10
+    type: operator
+    value: log₁₀
+    explanation:
+      es: El logaritmo en base 10, que comprime los rangos enormes de potencia.
+      en: The base-10 logarithm, which compresses the huge range of power levels.
+      pt: O logaritmo na base 10, que comprime os enormes intervalos de potência.
+      fr: Le logarithme en base 10, qui compresse les immenses plages de puissance.
+      zh: 以10为底的对数，可压缩巨大的功率范围。
+      ja: 底10の対数。巨大な電力の範囲を圧縮する。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el cociente entre la potencia de señal y la de ruido.
+      en: Opens the ratio of signal power to noise power.
+      pt: Abre o quociente entre a potência do sinal e a do ruído.
+      fr: Ouvre le rapport entre la puissance du signal et celle du bruit.
+      zh: 打开信号功率与噪声功率之比。
+      ja: 信号電力とノイズ電力の比を開く括弧。
+  - id: ps
+    type: variable
+    value: Pₛ
+    explanation:
+      es: "Pₛ: la potencia de la señal, el dato que queremos recibir."
+      en: "Pₛ: the signal power, the data we want to receive."
+      pt: "Pₛ: a potência do sinal, o dado que queremos receber."
+      fr: "Pₛ : la puissance du signal, la donnée que l'on veut recevoir."
+      zh: "Pₛ：信号功率，即我们想要接收的数据。"
+      ja: "Pₛ：受信したいデータである信号の電力。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por la potencia del ruido.
+      en: Divided by the noise power.
+      pt: Dividido pela potência do ruído.
+      fr: Divisé par la puissance du bruit.
+      zh: 除以噪声功率。
+      ja: ノイズの電力で割る。
+  - id: pn
+    type: variable
+    value: Pₙ
+    explanation:
+      es: "Pₙ: la potencia del ruido de fondo que corrompe la señal."
+      en: "Pₙ: the background noise power that corrupts the signal."
+      pt: "Pₙ: a potência do ruído de fundo que corrompe o sinal."
+      fr: "Pₙ : la puissance du bruit de fond qui corrompt le signal."
+      zh: "Pₙ：破坏信号的背景噪声功率。"
+      ja: "Pₙ：信号を劣化させる背景ノイズの電力。"
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el cociente de potencias.
+      en: Closes the power ratio.
+      pt: Fecha o quociente de potências.
+      fr: Ferme le rapport de puissances.
+      zh: 关闭功率之比。
+      ja: 電力比を閉じる括弧。
+context:
+  author:
+    es: Origen colectivo de la ingeniería de comunicaciones
+    en: Collective origin in communications engineering
+    pt: Origem coletiva da engenharia de comunicações
+    fr: Origine collective de l'ingénierie des communications
+    zh: 通信工程领域的集体贡献
+    ja: 通信工学における集団的な起源
+  era:
+    es: EE. UU. y Europa, s. XX
+    en: United States and Europe, 20th century
+    pt: EUA e Europa, século XX
+    fr: États-Unis et Europe, XXe siècle
+    zh: 美国与欧洲，20世纪
+    ja: アメリカ合衆国とヨーロッパ、20世紀
+  history:
+    es: >-
+      La relación señal-ruido nació con la radio y la telefonía de comienzos del siglo XX: el ruido
+      atmosférico y el de los circuitos fijaba la señal más débil que un receptor podía recuperar, y
+      el cociente entre la potencia de la señal y la del ruido se volvió su medida natural. Expresarla
+      en decibelios, como diez veces el logaritmo de ese cociente, comprime rangos enormes en una
+      escala cómoda. Hoy es la métrica de calidad universal del audio, la imagen y los sensores, y en
+      astronomía o resonancia magnética decide cuán débil puede ser una señal para seguir siendo
+      medible.
+    en: >-
+      The signal-to-noise ratio was born with the radio and telephony of the early 20th century:
+      atmospheric and circuit noise set the faintest signal a receiver could recover, and the ratio of
+      signal power to noise power became its natural measure. Expressing it in decibels, as ten times
+      the logarithm of that ratio, compresses enormous ranges into a convenient scale. Today it is the
+      universal quality metric of audio, images, and sensors, and in astronomy or MRI it decides how
+      faint a signal can be and still be measurable.
+    pt: >-
+      A relação sinal-ruído nasceu com o rádio e a telefonia do começo do século XX: o ruído atmosférico
+      e o dos circuitos fixava o sinal mais fraco que um receptor podia recuperar, e o quociente entre a
+      potência do sinal e a do ruído tornou-se sua medida natural. Expressá-la em decibéis, como dez
+      vezes o logaritmo desse quociente, comprime faixas enormes em uma escala cômoda. Hoje é a métrica
+      universal de qualidade do áudio, da imagem e dos sensores, e na astronomia ou na ressonância
+      magnética decide quão fraco um sinal pode ser para continuar mensurável.
+    fr: >-
+      Le rapport signal-bruit est né avec la radio et la téléphonie du début du XXe siècle : le bruit
+      atmosphérique et celui des circuits fixait le signal le plus faible qu'un récepteur pouvait
+      extraire, et le rapport entre la puissance du signal et celle du bruit devint sa mesure naturelle.
+      L'exprimer en décibels, comme dix fois le logarithme de ce rapport, compresse d'énormes plages
+      dans une échelle commode. Aujourd'hui, c'est la métrique universelle de la qualité de l'audio, de
+      l'image et des capteurs, et en astronomie comme en IRM, il décide à quel point un signal peut être
+      faible tout en restant mesurable.
+    zh: >-
+      信噪比诞生于20世纪初的无线电和电话工程：大气噪声与电路噪声决定了接收机所能恢复的最弱信号，信号功率与噪声
+      功率之比自然成了它的度量。用分贝表示，即对该比值取对数再乘10，可将巨大的范围压缩成舒适的刻度。如今它是
+      音频、图像和传感器质量的通用度量，在天文学和磁共振成像中，它决定信号可以弱到什么程度仍能被测出。
+    ja: >-
+      SN比は20世紀初頭のラジオと電話工学とともに生まれた。大気や回路のノイズが受信機で取り出せる最も弱い信号を
+      決めており、信号電力とノイズ電力の比が自然な尺度となった。その比の対数を10倍したデシベルで表すことで、
+      巨大な範囲が扱いやすい目盛りに圧縮される。現在、SN比は音声・画像・センサーの品質を測る普遍的な指標であり、
+      天文学やMRIでは、信号がどれだけ弱くても測定可能かを左右する。
+  timeline:
+    - year: "1928"
+      label:
+        es: >-
+          Los ingenieros de los Laboratorios Bell acuñan el "bel" para medir cocientes de potencia; su
+          décima parte, el decibelio, acogerá la relación señal-ruido.
+        en: >-
+          Engineers at Bell Laboratories coin the "bel" to measure power ratios; its tenth part, the
+          decibel, will host the signal-to-noise ratio.
+        pt: >-
+          Os engenheiros dos Laboratórios Bell cunham o "bel" para medir quocientes de potência; sua
+          décima parte, o decibel, abrigará a relação sinal-ruído.
+        fr: >-
+          Des ingénieurs des Laboratoires Bell forgent le « bel » pour mesurer les rapports de
+          puissance ; sa dixième partie, le décibel, accueillera le rapport signal-bruit.
+        zh: >-
+          贝尔实验室的工程师们提出"贝尔"以衡量功率比；其十分之一——分贝——将承载信噪比。
+        ja: >-
+          ベル研究所の技術者が電力比を測る「ベル」を命名。その10分の1であるデシベルがSN比を担うことになる。
+    - year: "1948"
+      label:
+        es: >-
+          La teoría de la información de Shannon muestra que el ruido marca el límite fundamental de
+          toda comunicación confiable.
+        en: >-
+          Shannon's information theory shows that noise sets the fundamental limit of all reliable
+          communication.
+        pt: >-
+          A teoria da informação de Shannon mostra que o ruído marca o limite fundamental de toda
+          comunicação confiável.
+        fr: >-
+          La théorie de l'information de Shannon montre que le bruit fixe la limite fondamentale de
+          toute communication fiable.
+        zh: >-
+          香农的信息论表明，噪声设定了所有可靠通信的根本极限。
+        ja: >-
+          シャノンの情報理論が、ノイズがあらゆる信頼できる通信の根本的な限界を決めることを示す。
+    - year: décadas de 1960
+      label:
+        es: >-
+          La SNR se vuelve la especificación estándar de la grabación de audio y de la telefonía.
+        en: >-
+          SNR becomes the standard specification of audio recording and telephony.
+        pt: >-
+          A SNR vira a especificação padrão da gravação de áudio e da telefonia.
+        fr: >-
+          Le SNR devient la spécification standard de l'enregistrement audio et de la téléphonie.
+        zh: >-
+          信噪比成为录音与电话的标准规格。
+        ja: >-
+          SN比が音声録音と電話の標準的な仕様となる。
+    - year: Hoy
+      label:
+        es: >-
+          Es la métrica de calidad de los medios digitales, las cámaras, la astronomía y la imagen
+          médica.
+        en: >-
+          It is the quality metric of digital media, cameras, astronomy, and medical imaging.
+        pt: >-
+          É a métrica de qualidade da mídia digital, das câmeras, da astronomia e da imagem médica.
+        fr: >-
+          C'est la métrique de qualité des médias numériques, des caméras, de l'astronomie et de
+          l'imagerie médicale.
+        zh: >-
+          它是数字媒体、相机、天文学和医学影像的质量度量。
+        ja: >-
+          デジタルメディア、カメラ、天文学、医用画像の品質指標である。
+  useCases:
+    - title:
+        es: Telecomunicaciones
+        en: Telecommunications
+        pt: Telecomunicações
+        fr: Télécommunications
+        zh: 电信
+        ja: 電気通信
+      description:
+        es: >-
+          Los presupuestos de enlace calculan cuánta señal llega al receptor frente al ruido para
+          garantizar la conexión.
+        en: >-
+          Link budgets calculate how much signal reaches the receiver against noise to guarantee the
+          connection.
+        pt: >-
+          Os orçamentos de enlace calculam quanto sinal chega ao receptor diante do ruído para
+          garantir a conexão.
+        fr: >-
+          Les bilans de liaison calculent le signal qui parvient au récepteur face au bruit pour
+          garantir la connexion.
+        zh: >-
+          链路预算计算到达接收机的信号相对于噪声的强度，以保证连接质量。
+        ja: >-
+          リンクバジェットは、ノイズに対して受信機に届く信号がどれだけあるかを計算し、接続を保証する。
+    - title:
+        es: Audio e imagen
+        en: Audio and imaging
+        pt: Áudio e imagem
+        fr: Audio et image
+        zh: 音频与图像
+        ja: 音声と画像
+      description:
+        es: >-
+          Micrófonos, sensores de cámara y formatos de grabación citan su SNR como medida de calidad.
+        en: >-
+          Microphones, camera sensors, and recording formats quote their SNR as a measure of quality.
+        pt: >-
+          Microfones, sensores de câmera e formatos de gravação citam sua SNR como medida de qualidade.
+        fr: >-
+          Microphones, capteurs d'appareil photo et formats d'enregistrement citent leur SNR comme
+          mesure de la qualité.
+        zh: >-
+          麦克风、相机传感器和录音格式都以信噪比作为其质量度量。
+        ja: >-
+          マイク、カメラセンサー、録音フォーマットは、品質の尺度としてSN比を表示する。
+    - title:
+        es: Astronomía
+        en: Astronomy
+        pt: Astronomia
+        fr: Astronomie
+        zh: 天文学
+        ja: 天文学
+      description:
+        es: >-
+          La SNR de los detectores CCD decide si una señal débil de un objeto lejano se distingue del
+          ruido del detector.
+        en: >-
+          The SNR of CCD detectors decides whether a faint signal from a distant object stands out from
+          the detector noise.
+        pt: >-
+          A SNR dos detectores CCD decide se um sinal fraco de um objeto distante se destaca do ruído
+          do detector.
+        fr: >-
+          Le SNR des détecteurs CCD décide si un signal faible d'un objet lointain se distingue du
+          bruit du détecteur.
+        zh: >-
+          CCD探测器的信噪比决定来自遥远天体的微弱信号能否从探测器噪声中显现。
+        ja: >-
+          CCD検出器のSN比が、遠い天体からの微弱な信号が検出器のノイズから識別できるかを左右する。
+    - title:
+        es: Imagen médica
+        en: Medical imaging
+        pt: Imagem médica
+        fr: Imagerie médicale
+        zh: 医学影像
+        ja: 医用画像
+      description:
+        es: >-
+          En resonancia magnética y tomografía, la SNR determina la calidad de la imagen y el tiempo de
+          exploración.
+        en: >-
+          In MRI and CT, SNR determines image quality and scan time.
+        pt: >-
+          Na ressonância magnética e na tomografia, a SNR determina a qualidade da imagem e o tempo de
+          exame.
+        fr: >-
+          En IRM et en tomodensitométrie, le SNR détermine la qualité de l'image et la durée de
+          l'examen.
+        zh: >-
+          在磁共振和CT中，信噪比决定图像质量和扫描时间。
+        ja: >-
+          MRIやCTでは、SN比が画像の品質と検査時間を左右する。
+  example:
+    title:
+      es: De mW a decibelios
+      en: From milliwatts to decibels
+      pt: De mW a decibéis
+      fr: Des milliwatts aux décibels
+      zh: 从毫瓦到分贝
+      ja: mWからデシベルへ
+    lines:
+      - es: "Señal: Pₛ = 1 mW"
+        en: "Signal: Pₛ = 1 mW"
+        pt: "Sinal: Pₛ = 1 mW"
+        fr: "Signal : Pₛ = 1 mW"
+        zh: "信号：Pₛ = 1 mW"
+        ja: "信号：Pₛ = 1 mW"
+      - es: "Ruido: Pₙ = 10 µW"
+        en: "Noise: Pₙ = 10 µW"
+        pt: "Ruído: Pₙ = 10 µW"
+        fr: "Bruit : Pₙ = 10 µW"
+        zh: "噪声：Pₙ = 10 µW"
+        ja: "ノイズ：Pₙ = 10 µW"
+      - es: Pₛ/Pₙ = 1 mW / 10 µW = 100
+        en: Pₛ/Pₙ = 1 mW / 10 µW = 100
+        pt: Pₛ/Pₙ = 1 mW / 10 µW = 100
+        fr: Pₛ/Pₙ = 1 mW / 10 µW = 100
+        zh: Pₛ/Pₙ = 1 mW / 10 µW = 100
+        ja: Pₛ/Pₙ = 1 mW / 10 µW = 100
+      - es: SNR = 10·log₁₀(100) = 10×2
+        en: SNR = 10·log₁₀(100) = 10×2
+        pt: SNR = 10·log₁₀(100) = 10×2
+        fr: SNR = 10·log₁₀(100) = 10×2
+        zh: SNR = 10·log₁₀(100) = 10×2
+        ja: SNR = 10·log₁₀(100) = 10×2
+      - es: SNR = 20 dB
+        en: SNR = 20 dB
+        pt: SNR = 20 dB
+        fr: SNR = 20 dB
+        zh: SNR = 20 分贝
+        ja: SNR = 20 dB

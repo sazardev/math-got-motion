@@ -1,0 +1,293 @@
+id: youngs-modulus
+title:
+  es: Módulo de Young
+  en: Young's Modulus
+  pt: Módulo de Young
+  fr: Module de Young
+  zh: 杨氏模量
+  ja: ヤング率
+category:
+  es: Ingeniería
+  en: Engineering
+  pt: Engenharia
+  fr: Ingénierie
+  zh: 工程学
+  ja: 工学
+nodes:
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: "E: el módulo de Young, la rigidez del material frente a la deformación elástica."
+      en: "E: Young's modulus, the material's stiffness against elastic deformation."
+      pt: "E: o módulo de Young, a rigidez do material frente à deformação elástica."
+      fr: "E : le module de Young, la raideur du matériau face à la déformation élastique."
+      zh: "E：杨氏模量，材料抵抗弹性变形的刚度。"
+      ja: "E：ヤング率。弾性変形に対する材料の剛さ。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: sigma
+    type: variable
+    value: σ
+    explanation:
+      es: "σ: el esfuerzo aplicado sobre el material."
+      en: "σ: the stress applied to the material."
+      pt: "σ: a tensão aplicada sobre o material."
+      fr: "σ : la contrainte appliquée au matériau."
+      zh: "σ：施加在材料上的应力。"
+      ja: "σ：材料に加えられた応力。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: epsilon
+    type: variable
+    value: ε
+    explanation:
+      es: "ε: la deformación unitaria que esa tensión produce."
+      en: "ε: the strain that stress produces."
+      pt: "ε: a deformação específica que essa tensão produz."
+      fr: "ε : la déformation produite par cette contrainte."
+      zh: "ε：该应力所产生的应变。"
+      ja: "ε：その応力によって生じるひずみ。"
+context:
+  author:
+    es: Thomas Young
+    en: Thomas Young
+    pt: Thomas Young
+    fr: Thomas Young
+    zh: 托马斯·杨
+    ja: トーマス・ヤング
+  era:
+    es: Inglaterra, 1773–1829 · publicado en 1807
+    en: England, 1773–1829 · published in 1807
+    pt: Inglaterra, 1773–1829 · publicado em 1807
+    fr: Angleterre, 1773–1829 · publié en 1807
+    zh: 英格兰，1773–1829年 · 1807年发表
+    ja: イングランド、1773–1829年・1807年発表
+  history:
+    es: >-
+      El módulo de Young es la rigidez de un material: la pendiente de la curva esfuerzo-deformación
+      en su zona elástica. Thomas Young lo definió en 1807, en sus conferencias sobre filosofía
+      natural, como la medida de la elasticidad de un cuerpo bajo tensión o compresión. Sus valores
+      explican por qué las estructuras se construyen como se construyen: el acero ronda los 200 GPa,
+      el hormigón unos 30 GPa, y el caucho apenas un puñado de MPa. Por eso los puentes usan acero
+      donde la deformación debe ser mínima, y los resortes se diseñan con materiales de E bajo pero
+      predecible.
+    en: >-
+      Young's modulus is a material's stiffness: the slope of the stress-strain curve in its elastic
+      zone. Thomas Young defined it in 1807, in his lectures on natural philosophy, as a measure of a
+      body's elasticity under tension or compression. Its values explain why structures are built as
+      they are: steel is around 200 GPa, concrete about 30 GPa, and rubber only a handful of MPa. That
+      is why bridges use steel where deformation must be minimal, and springs are designed with
+      materials whose E is low but predictable.
+    pt: >-
+      O módulo de Young é a rigidez de um material: a inclinação da curva tensão-deformação em sua
+      zona elástica. Thomas Young o definiu em 1807, em suas conferências sobre filosofia natural,
+      como a medida da elasticidade de um corpo sob tração ou compressão. Seus valores explicam por
+      que as estruturas são construídas como são: o aço fica em torno de 200 GPa, o concreto cerca de
+      30 GPa, e a borracha apenas alguns MPa. Por isso as pontes usam aço onde a deformação deve ser
+      mínima, e as molas são projetadas com materiais de E baixo, porém previsível.
+    fr: >-
+      Le module de Young est la raideur d'un matériau : la pente de la courbe contrainte-déformation
+      dans sa zone élastique. Thomas Young le définit en 1807, dans ses conférences de philosophie
+      naturelle, comme une mesure de l'élasticité d'un corps en traction ou en compression. Ses
+      valeurs expliquent pourquoi les structures sont construites comme elles le sont : l'acier
+      avoisine les 200 GPa, le béton environ 30 GPa, et le caoutchouc à peine quelques MPa. C'est
+      pourquoi les ponts utilisent de l'acier là où la déformation doit être minimale, et les ressorts
+      sont conçus avec des matériaux dont le E est faible mais prévisible.
+    zh: >-
+      杨氏模量是材料的刚度：应力-应变曲线弹性段的斜率。托马斯·杨于1807年在其自然哲学讲座中将它定义为物体在拉伸
+      或压缩下弹性的度量。它的数值解释了结构为何这样建造：钢约为200吉帕，混凝土约30吉帕，而橡胶只有几个兆帕。
+      因此，桥梁在变形必须极小的部位使用钢；弹簧则用E值低但可预测的材料来设计。
+    ja: >-
+      ヤング率とは材料の剛さであり、応力-ひずみ曲線の弾性域での傾きに相当する。トーマス・ヤングが1807年、
+      自然哲学の講義で、物体の引張・圧縮に対する弾性の尺度としてこれを定義した。その値は、構造物がなぜそのように
+      作られるのかを説明する。鋼は約200 GPa、コンクリートは約30 GPa、ゴムはわずか数 MPa 程度だ。だから橋は、
+      変形を最小限に抑えたい箇所に鋼を使い、ばねはEが低くても予測可能な材料で設計される。
+  timeline:
+    - year: "1807"
+      label:
+        es: >-
+          Thomas Young publica su módulo de elasticidad en sus 'Conferencias de filosofía natural'.
+        en: >-
+          Thomas Young publishes his modulus of elasticity in his 'Lectures on Natural Philosophy'.
+        pt: >-
+          Thomas Young publica seu módulo de elasticidade em suas 'Conferências de filosofia natural'.
+        fr: >-
+          Thomas Young publie son module d'élasticité dans ses « Leçons de philosophie naturelle ».
+        zh: >-
+          托马斯·杨在其《自然哲学讲义》中发表了他的弹性模量。
+        ja: >-
+          トーマス・ヤングが『自然哲学講義』で弾性率を発表する。
+    - year: "1826"
+      label:
+        es: >-
+          Navier integra el módulo en sus cursos de mecánica de estructuras, extendiendo su uso entre
+          ingenieros.
+        en: >-
+          Navier brings the modulus into his structural mechanics courses, spreading its use among
+          engineers.
+        pt: >-
+          Navier incorpora o módulo em seus cursos de mecânica das estruturas, difundindo seu uso
+          entre engenheiros.
+        fr: >-
+          Navier introduit le module dans ses cours de mécanique des structures, diffusant son usage
+          chez les ingénieurs.
+        zh: >-
+          纳维将模量引入他的结构力学课程，在工程师中推广了它的使用。
+        ja: >-
+          ナビエが構造力学の講義に弾性率を取り入れ、技術者の間でその利用を広める。
+    - year: Hoy
+      label:
+        es: >-
+          El módulo de Young figura en toda ficha técnica de material y en todo software de cálculo
+          estructural.
+        en: >-
+          Young's modulus appears on every material datasheet and in every structural analysis
+          software.
+        pt: >-
+          O módulo de Young consta de toda ficha técnica de material e de todo software de análise
+          estrutural.
+        fr: >-
+          Le module de Young figure sur toute fiche technique de matériau et dans tout logiciel de
+          calcul de structures.
+        zh: >-
+          杨氏模量出现在每一份材料数据表以及每一个结构分析软件中。
+        ja: >-
+          ヤング率はあらゆる材料のデータシートや構造解析ソフトに記載されている。
+  useCases:
+    - title:
+        es: Puentes y estructuras
+        en: Bridges and structures
+        pt: Pontes e estruturas
+        fr: Ponts et structures
+        zh: 桥梁与结构
+        ja: 橋梁と構造物
+      description:
+        es: >-
+          El acero se elige en puentes por su alto E: grandes rigideces con poco material.
+        en: >-
+          Steel is chosen for bridges for its high E: great stiffness with little material.
+        pt: >-
+          O aço é escolhido em pontes pelo seu E alto: grande rigidez com pouco material.
+        fr: >-
+          L'acier est choisi pour les ponts grâce à son E élevé : une grande raideur avec peu de
+          matériau.
+        zh: >-
+          桥梁选用钢是因为其E值高：以较少的材料获得很大的刚度。
+        ja: >-
+          橋にはEの高い鋼が選ばれる。少ない材料で大きな剛性が得られるからだ。
+    - title:
+        es: Diseño de resortes
+        en: Spring design
+        pt: Projeto de molas
+        fr: Conception de ressorts
+        zh: 弹簧设计
+        ja: ばね設計
+      description:
+        es: >-
+          La constante de un resorte combina E con la geometría del alambre.
+        en: >-
+          A spring's constant combines E with the wire's geometry.
+        pt: >-
+          A constante de uma mola combina E com a geometria do fio.
+        fr: >-
+          La constante d'un ressort combine E avec la géométrie du fil.
+        zh: >-
+          弹簧刚度由E与线材的几何形状共同决定。
+        ja: >-
+          ばね定数は、Eと針金の形状を組み合わせて決まる。
+    - title:
+        es: Polímeros y elastómeros
+        en: Polymers and elastomers
+        pt: Polímeros e elastômeros
+        fr: Polymères et élastomères
+        zh: 聚合物与弹性体
+        ja: ポリマーとエラストマー
+      description:
+        es: >-
+          Su E bajo permite piezas flexibles; los datos de E guían la selección de materiales.
+        en: >-
+          Their low E enables flexible parts; E data guides material selection.
+        pt: >-
+          Seu E baixo permite peças flexíveis; os dados de E orientam a seleção de materiais.
+        fr: >-
+          Leur E faible permet des pièces flexibles ; les données de E guident le choix des matériaux.
+        zh: >-
+          它们较低的E使零件可以弯曲；E数据指导材料选择。
+        ja: >-
+          Eが低いため柔軟な部品が可能になり、Eのデータが材料選定を導く。
+    - title:
+        es: Cerámica y vidrio
+        en: Ceramics and glass
+        pt: Cerâmica e vidro
+        fr: Céramique et verre
+        zh: 陶瓷与玻璃
+        ja: セラミックスとガラス
+      description:
+        es: >-
+          Su E alto los hace muy rígidos pero frágiles: ceden poco antes de romperse.
+        en: >-
+          Their high E makes them very rigid but brittle: they give little before breaking.
+        pt: >-
+          Seu E alto os torna muito rígidos, porém frágeis: cedem pouco antes de quebrar.
+        fr: >-
+          Leur E élevé les rend très rigides mais fragiles : ils cèdent peu avant de casser.
+        zh: >-
+          它们的高E使其非常刚硬但易碎：断裂前几乎没有屈服。
+        ja: >-
+          Eが高いため非常に剛いが脆い。壊れるまでの変形が小さい。
+  example:
+    title:
+      es: Rigidez del acero
+      en: Stiffness of steel
+      pt: Rigidez do aço
+      fr: Raideur de l'acier
+      zh: 钢的刚度
+      ja: 鋼の剛さ
+    lines:
+      - es: σ = 200 MPa = 200×10⁶ Pa, ε = 0.001
+        en: σ = 200 MPa = 200×10⁶ Pa, ε = 0.001
+        pt: σ = 200 MPa = 200×10⁶ Pa, ε = 0,001
+        fr: σ = 200 MPa = 200×10⁶ Pa, ε = 0,001
+        zh: σ = 200 兆帕 = 200×10⁶ 帕，ε = 0.001
+        ja: σ = 200 MPa = 200×10⁶ Pa、ε = 0.001
+      - es: E = σ / ε
+        en: E = σ / ε
+        pt: E = σ / ε
+        fr: E = σ / ε
+        zh: E = σ / ε
+        ja: E = σ / ε
+      - es: E = 200×10⁶ / 0.001
+        en: E = 200×10⁶ / 0.001
+        pt: E = 200×10⁶ / 0,001
+        fr: E = 200×10⁶ / 0,001
+        zh: E = 200×10⁶ / 0.001
+        ja: E = 200×10⁶ / 0.001
+      - es: E = 200×10⁹ Pa
+        en: E = 200×10⁹ Pa
+        pt: E = 200×10⁹ Pa
+        fr: E = 200×10⁹ Pa
+        zh: E = 200×10⁹ 帕
+        ja: E = 200×10⁹ Pa
+      - es: E = 200 GPa (típico del acero estructural)
+        en: E = 200 GPa (typical of structural steel)
+        pt: E = 200 GPa (típico do aço estrutural)
+        fr: E = 200 GPa (typique de l'acier de construction)
+        zh: E = 200 吉帕（结构钢的典型值）
+        ja: E = 200 GPa（構造用鋼の代表値）

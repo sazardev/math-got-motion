@@ -1,0 +1,325 @@
+id: max-heart-rate
+title:
+  es: Frecuencia Cardíaca Máxima
+  en: Maximum Heart Rate
+  pt: Frequência Cardíaca Máxima
+  fr: Fréquence Cardiaque Maximale
+  zh: 最大心率
+  ja: 最大心拍数
+category:
+  es: Salud y medicina
+  en: Health and medicine
+  pt: Saúde e medicina
+  fr: Santé et médecine
+  zh: 健康与医学
+  ja: 健康と医学
+nodes:
+  - id: hrmax
+    type: variable
+    value: HRmax
+    explanation:
+      es: "HRmax: la frecuencia cardíaca máxima estimada, en latidos por minuto."
+      en: "HRmax: the estimated maximum heart rate, in beats per minute."
+      pt: "FCmáx: a frequência cardíaca máxima estimada, em batimentos por minuto."
+      fr: "FCmax : la fréquence cardiaque maximale estimée, en battements par minute."
+      zh: "HRmax：估算的最大心率，单位为次/分。"
+      ja: "HRmax：推定される最大心拍数。単位は毎分拍数。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: constant
+    type: number
+    value: "220"
+    explanation:
+      es: "220: la constante clásica de la estimación."
+      en: "220: the classic constant of the estimate."
+      pt: "220: a constante clássica da estimativa."
+      fr: "220 : la constante classique de l'estimation."
+      zh: "220：估算中的经典常数。"
+      ja: "220：推定式の古典的な定数。"
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: Menos la edad.
+      en: Minus the age.
+      pt: Menos a idade.
+      fr: Moins l'âge.
+      zh: 减去年龄。
+      ja: 年齢を引く。
+  - id: age
+    type: variable
+    value: age
+    explanation:
+      es: "age: la edad de la persona en años."
+      en: "age: the person's age in years."
+      pt: "age: a idade da pessoa em anos."
+      fr: "age : l'âge de la personne en années."
+      zh: "age：人的年龄，以岁为单位。"
+      ja: "age：その人の年齢（歳）。"
+context:
+  author:
+    es: Basada en el trabajo de Robinson y cols.
+    en: Based on the work of Robinson and colleagues
+    pt: Baseada no trabalho de Robinson e cols.
+    fr: Basée sur les travaux de Robinson et coll.
+    zh: 基于罗宾逊等人的研究
+    ja: ロビンソンらの研究に基づく
+  era:
+    es: EE. UU., s. XX
+    en: United States, 20th century
+    pt: Estados Unidos, século XX
+    fr: États-Unis, XXe siècle
+    zh: 美国,20世纪
+    ja: アメリカ合衆国、20世紀
+  history:
+    es: >-
+      La regla "220 − edad" estima la frecuencia cardíaca máxima de una persona sana. Se atribuye
+      al trabajo de Sidney Robinson, publicado en 1938, y se popularizó en los años 70 gracias a
+      las curvas de Fox y Haskell para el entrenamiento físico. Refleja que la capacidad del
+      corazón para alcanzar ritmos altos disminuye con la edad. Es un atajo útil pero impreciso;
+      la variación entre individuos es de unos 10 a 12 latidos por minuto, por lo que sirve para
+      planificar el entrenamiento, no para decisiones médicas.
+    en: >-
+      The "220 − age" rule estimates the maximum heart rate of a healthy person. It is attributed
+      to the work of Sidney Robinson, published in 1938, and was popularized in the 1970s by Fox
+      and Haskell's curves for physical training. It reflects that the heart's ability to reach
+      high rates declines with age. It is a useful but imprecise shortcut; individual variation is
+      about 10 to 12 beats per minute, so it guides training, not medical decisions.
+    pt: >-
+      A regra "220 − idade" estima a frequência cardíaca máxima de uma pessoa saudável. É
+      atribuída ao trabalho de Sidney Robinson, publicado em 1938, e se popularizou nos anos 70
+      graças às curvas de Fox e Haskell para o treinamento físico. Reflete que a capacidade do
+      coração de atingir ritmos altos diminui com a idade. É um atalho útil, mas impreciso; a
+      variação entre indivíduos é de cerca de 10 a 12 batimentos por minuto, servindo para planejar
+      o treino, não para decisões médicas.
+    fr: >-
+      La règle « 220 − âge » estime la fréquence cardiaque maximale d'une personne en bonne santé.
+      Elle est attribuée aux travaux de Sidney Robinson, publiés en 1938, et s'est popularisée dans
+      les années 1970 grâce aux courbes de Fox et Haskell pour l'entraînement physique. Elle
+      reflète le fait que la capacité du cœur à atteindre des rythmes élevés diminue avec l'âge.
+      C'est un raccourci utile mais imprécis ; la variation entre individus est de l'ordre de 10 à
+      12 battements par minute, ce qui convient à l'entraînement, pas aux décisions médicales.
+    zh: >-
+      "220 − 年龄"这一规则用于估算健康人的最大心率。它源自西德尼·罗宾逊1938年发表的研究，在20世纪
+      70年代因福克斯和哈斯凯尔为体能训练绘制的曲线而普及。它反映了心脏达到高心率的能力随年龄增长而
+      下降。这一快捷算法有用但不精确；个体之间的差异约为每分钟10至12次，因此它适用于指导训练，
+      而不适用于医疗决策。
+    ja: >-
+      「220 − 年齢」の規則は、健康な人の最大心拍数を推定する。これは1938年に発表されたシドニー・
+      ロビンソンの研究に由来し、1970年代にフォックスとハスケルがスポーツトレーニング用に描いた曲線に
+      よって広まった。心臓が高い拍数に達する能力は年齢とともに低下することを反映している。便利だが
+      正確ではない近道であり、個人差は毎分約10～12拍もあるため、トレーニング計画には使えるが
+      医療上の判断には向かない。
+  timeline:
+    - year: "1938"
+      label:
+        es: >-
+          Robinson publica en la revista Science mediciones de la frecuencia cardíaca máxima y su
+          descenso con la edad.
+        en: >-
+          Robinson publishes in Science magazine measurements of maximum heart rate and its
+          decline with age.
+        pt: >-
+          Robinson publica na revista Science medições da frequência cardíaca máxima e seu
+          declínio com a idade.
+        fr: >-
+          Robinson publie dans la revue Science des mesures de la fréquence cardiaque maximale et
+          de son déclin avec l'âge.
+        zh: >-
+          罗宾逊在《科学》杂志上发表最大心率及其随年龄下降的测量数据。
+        ja: >-
+          ロビンソンが雑誌『Science』に最大心拍数と年齢に伴うその低下の測定値を発表する。
+    - year: "1971"
+      label:
+        es: >-
+          Fox y Haskell difunden la regla "220 − edad" como guía simple para el entrenamiento
+          aeróbico.
+        en: >-
+          Fox and Haskell popularize the "220 − age" rule as a simple guide for aerobic training.
+        pt: >-
+          Fox e Haskell difundem a regra "220 − idade" como um guia simples para o treinamento
+          aeróbico.
+        fr: >-
+          Fox et Haskell diffusent la règle « 220 − âge » comme guide simple pour l'entraînement
+          aérobie.
+        zh: >-
+          福克斯和哈斯凯尔推广"220 − 年龄"规则，作为有氧训练的简便指南。
+        ja: >-
+          フォックスとハスケルが、有酸素トレーニングの簡便な目安として「220 − 年齢」の規則を広める。
+    - year: "2001"
+      label:
+        es: >-
+          Tanaka y colaboradores proponen la fórmula más precisa HRmax = 208 − 0.7·edad, sin
+          desplazar del todo a la clásica.
+        en: >-
+          Tanaka and colleagues propose the more accurate HRmax = 208 − 0.7·age, without fully
+          displacing the classic one.
+        pt: >-
+          Tanaka e colaboradores propõem a fórmula mais precisa HRmax = 208 − 0,7·idade, sem
+          deslocar totalmente a clássica.
+        fr: >-
+          Tanaka et ses collègues proposent la formule plus précise HRmax = 208 − 0,7·âge, sans
+          supplanter totalement la classique.
+        zh: >-
+          田中等人提出更精确的公式HRmax = 208 − 0.7·年龄，但并未完全取代经典公式。
+        ja: >-
+          田中らはより正確なHRmax = 208 − 0.7·年齢の式を提案するが、古典的な式は完全には
+          置き換えられない。
+    - year: Hoy
+      label:
+        es: >-
+          Los relojes y bandas de actividad usan la regla para definir las zonas de entrenamiento
+          de cada usuario.
+        en: >-
+          Smartwatches and activity bands use the rule to define each user's training zones.
+        pt: >-
+          Relógios e pulseiras de atividade usam a regra para definir as zonas de treinamento de
+          cada usuário.
+        fr: >-
+          Les montres et bracelets d'activité utilisent la règle pour définir les zones
+          d'entraînement de chaque utilisateur.
+        zh: >-
+          智能手表和运动手环用这一规则来定义每个用户的训练心率区间。
+        ja: >-
+          スマートウォッチや活動量計が、利用者ごとのトレーニングゾーンを決めるのにこの規則を使う。
+  useCases:
+    - title:
+        es: Entrenamiento deportivo
+        en: Sports training
+        pt: Treinamento esportivo
+        fr: Entraînement sportif
+        zh: 运动训练
+        ja: スポーツトレーニング
+      description:
+        es: >-
+          Las zonas de entrenamiento se calculan como porcentajes de la frecuencia cardíaca
+          máxima estimada.
+        en: >-
+          Training zones are computed as percentages of the estimated maximum heart rate.
+        pt: >-
+          As zonas de treinamento são calculadas como percentuais da frequência cardíaca máxima
+          estimada.
+        fr: >-
+          Les zones d'entraînement sont calculées en pourcentage de la fréquence cardiaque
+          maximale estimée.
+        zh: >-
+          训练心率区间按估算最大心率的百分比来计算。
+        ja: >-
+          トレーニングゾーンは、推定された最大心拍数のパーセンテージとして計算される。
+    - title:
+        es: Rehabilitación cardíaca
+        en: Cardiac rehabilitation
+        pt: Reabilitação cardíaca
+        fr: Réadaptation cardiaque
+        zh: 心脏康复
+        ja: 心臓リハビリテーション
+      description:
+        es: >-
+          Marca el techo de esfuerzo seguro de los pacientes que se recuperan de un infarto o de
+          una cirugía cardíaca.
+        en: >-
+          It sets the safe effort ceiling for patients recovering from a heart attack or cardiac
+          surgery.
+        pt: >-
+          Marca o teto de esforço seguro de pacientes em recuperação de infarto ou de cirurgia
+          cardíaca.
+        fr: >-
+          Elle fixe le plafond d'effort sûr des patients qui se remettent d'un infarctus ou d'une
+          chirurgie cardiaque.
+        zh: >-
+          它为心脏病发作或心脏手术后恢复的患者设定了安全的运动上限。
+        ja: >-
+          心筋梗塞や心臓手術から回復中の患者にとって安全な運動の上限を設定する。
+    - title:
+        es: Wearables de actividad
+        en: Fitness wearables
+        pt: Wearables de atividade
+        fr: Montres et bracelets connectés
+        zh: 运动可穿戴设备
+        ja: フィットネスウェアラブル
+      description:
+        es: >-
+          Los relojes inteligentes la usan para activar alertas y clasificar el esfuerzo de cada
+          sesión.
+        en: >-
+          Smartwatches use it to trigger alerts and classify the effort of each session.
+        pt: >-
+          Relógios inteligentes a usam para ativar alertas e classificar o esforço de cada sessão.
+        fr: >-
+          Les montres connectées l'utilisent pour déclencher des alertes et classer l'effort de
+          chaque séance.
+        zh: >-
+          智能手表用它来触发提醒，并对每次运动的强度进行分类。
+        ja: >-
+          スマートウォッチはアラートの発動やセッションごとの運動強度の分類にこれを使う。
+    - title:
+        es: Fisiología del ejercicio
+        en: Exercise physiology
+        pt: Fisiologia do exercício
+        fr: Physiologie de l'exercice
+        zh: 运动生理学
+        ja: 運動生理学
+      description:
+        es: >-
+          Permite prescribir intensidades de ejercicio individualizadas en laboratorios de
+          evaluación física.
+        en: >-
+          It allows individualized exercise intensity prescription in physical assessment
+          laboratories.
+        pt: >-
+          Permite prescrever intensidades de exercício individualizadas em laboratórios de
+          avaliação física.
+        fr: >-
+          Elle permet de prescrire des intensités d'exercice individualisées dans les laboratoires
+          d'évaluation physique.
+        zh: >-
+          它可在体能评估实验室中开出个性化的运动强度处方。
+        ja: >-
+          体力測定ラボで、個人に合わせた運動強度の処方を可能にする。
+  example:
+    title:
+      es: A los 30 años
+      en: At age 30
+      pt: Aos 30 anos
+      fr: À 30 ans
+      zh: 30岁的人
+      ja: 30歳の場合
+    lines:
+      - es: Edad = 30 años
+        en: Age = 30 years
+        pt: Idade = 30 anos
+        fr: Âge = 30 ans
+        zh: 年龄 = 30岁
+        ja: 年齢 = 30歳
+      - es: HRmax = 220 − 30
+        en: HRmax = 220 − 30
+        pt: HRmax = 220 − 30
+        fr: HRmax = 220 − 30
+        zh: HRmax = 220 − 30
+        ja: HRmax = 220 − 30
+      - es: HRmax = 190
+        en: HRmax = 190
+        pt: HRmax = 190
+        fr: HRmax = 190
+        zh: HRmax = 190
+        ja: HRmax = 190
+      - es: HRmax ≈ 190 bpm (latidos por minuto)
+        en: HRmax ≈ 190 bpm (beats per minute)
+        pt: HRmax ≈ 190 bpm (batimentos por minuto)
+        fr: HRmax ≈ 190 bpm (battements par minute)
+        zh: HRmax ≈ 190 次/分
+        ja: HRmax ≈ 190 bpm（毎分）
+      - es: "El 70% de ese máximo son unos 133 bpm, zona de entrenamiento aeróbico"
+        en: "70% of that maximum is about 133 bpm, the aerobic training zone"
+        pt: "70% desse máximo são cerca de 133 bpm, zona de treino aeróbico"
+        fr: "70 % de ce maximum, soit environ 133 bpm, correspond à la zone d'entraînement aérobie"
+        zh: "该最大值的70%约为133次/分，属于有氧训练区间"
+        ja: "その最大値の70%は約133 bpmで、有酸素トレーニングゾーンにあたる"

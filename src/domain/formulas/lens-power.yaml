@@ -1,0 +1,286 @@
+id: lens-power
+title:
+  es: Potencia de una Lente
+  en: Lens Power
+  pt: Potência de uma Lente
+  fr: Puissance d'une Lentille
+  zh: 透镜焦度
+  ja: レンズの度数
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: p
+    type: variable
+    value: P
+    explanation:
+      es: La potencia de la lente, en dioptrías.
+      en: The lens power, in diopters.
+      pt: A potência da lente, em dioptrias.
+      fr: La puissance de la lentille, en dioptries.
+      zh: 透镜的焦度，单位是屈光度。
+      ja: レンズの度数。単位はジオプトリ。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: inverse-f
+    type: variable
+    value: 1/f
+    explanation:
+      es: El inverso de la distancia focal en metros.
+      en: The inverse of the focal length in meters.
+      pt: O inverso da distância focal em metros.
+      fr: L'inverse de la distance focale en mètres.
+      zh: 以米为单位的焦距的倒数。
+      ja: メートル単位の焦点距離の逆数。
+context:
+  author:
+    es: Basada en la óptica geométrica
+    en: Based on geometrical optics
+    pt: Baseada na óptica geométrica
+    fr: Basée sur l'optique géométrique
+    zh: 基于几何光学
+    ja: 幾何光学に基づく
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, séc. XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲，19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      La potencia de una lente mide su capacidad de desviar la luz y se expresa en dioptrías
+      (m⁻¹): P = 1/f, con f en metros. Una lente con foco a 0.5 m tiene 2 dioptrías; una con foco a
+      0.25 m, 4. Los ópticos gradúan los anteojos en dioptrías: las positivas corrigen la
+      hipermetropía con lentes convergentes y las negativas la miopía con lentes divergentes. Para
+      lentes delgadas en contacto, las potencias se suman, lo que permite combinar varias
+      correcciones en un mismo cristal.
+    en: >-
+      A lens's power measures its ability to bend light and is expressed in diopters (m⁻¹): P = 1/f,
+      with f in meters. A lens with a 0.5 m focal length has 2 diopters; one with 0.25 m has 4.
+      Opticians write prescriptions in diopters: positive powers correct farsightedness with
+      converging lenses and negative powers correct nearsightedness with diverging ones. For thin
+      lenses in contact, powers add, which is how several corrections combine in a single lens.
+    pt: >-
+      A potência de uma lente mede sua capacidade de desviar a luz e é expressa em dioptrias (m⁻¹):
+      P = 1/f, com f em metros. Uma lente com foco de 0,5 m tem 2 dioptrias; uma com 0,25 m, 4. Os
+      ópticos graduam os óculos em dioptrias: as positivas corrigem a hipermetropia com lentes
+      convergentes e as negativas a miopia com lentes divergentes. Para lentes delgadas em contato,
+      as potências se somam, o que permite combinar várias correções numa mesma lente.
+    fr: >-
+      La puissance d'une lentille mesure sa capacité à dévier la lumière et s'exprime en dioptries
+      (m⁻¹) : P = 1/f, avec f en mètres. Une lentille de focale 0,5 m a 2 dioptries ; une de 0,25 m
+      en a 4. Les opticiens prescrivent les lunettes en dioptries : les puissances positives
+      corrigent l'hypermétropie avec des lentilles convergentes, les négatives la myopie avec des
+      lentilles divergentes. Pour des lentilles minces en contact, les puissances s'additionnent, ce
+      qui permet de combiner plusieurs corrections dans un même verre.
+    zh: >-
+      透镜的焦度衡量其会聚或发散光线的能力，单位为屈光度（m⁻¹）：P = 1/f，其中f以米为单位。
+      焦距为0.5米的透镜有2屈光度，0.25米的则有4屈光度。验光师以屈光度为单位开具眼镜度数：
+      正值用会聚透镜矫正远视，负值用发散透镜矫正近视。对于相互接触的薄透镜，其焦度可以相加，
+      因此能在同一镜片上组合多种矫正。
+    ja: >-
+      レンズの度数は光を曲げる能力を表し、ジオプトリ（m⁻¹）という単位で示される：P = 1/f、
+      ここでfはメートル単位の焦点距離である。焦点距離0.5 mのレンズは2ジオプトリ、0.25 mなら
+      4ジオプトリだ。眼鏡店の処方はジオプトリで表され、正の度数は凸レンズで遠視を、負の度数は
+      凹レンズで近視を矯正する。密着した薄レンズの度数は足し算できるため、1枚のレンズに複数の
+      矯正を組み合わせられる。
+  timeline:
+    - year: "1841"
+      label:
+        es: >-
+          Gauss publica sus investigaciones de óptica, formalizando la relación entre focal y
+          potencia.
+        en: >-
+          Gauss publishes his optical investigations, formalizing the relation between focal length
+          and power.
+        pt: >-
+          Gauss publica suas investigações ópticas, formalizando a relação entre focal e potência.
+        fr: >-
+          Gauss publie ses recherches d'optique, formalisant la relation entre focale et
+          puissance.
+        zh: >-
+          高斯发表他的光学研究，正式确立了焦距与焦度之间的关系。
+        ja: >-
+          ガウスが光学の研究を発表し、焦点距離と度数の関係を定式化する。
+    - year: "1872"
+      label:
+        es: >-
+          Ferdinand Monoyer propone la dioptría (m⁻¹) como unidad de potencia de las lentes.
+        en: >-
+          Ferdinand Monoyer proposes the diopter (m⁻¹) as the unit of lens power.
+        pt: >-
+          Ferdinand Monoyer propõe a dioptria (m⁻¹) como unidade de potência das lentes.
+        fr: >-
+          Ferdinand Monoyer propose la dioptrie (m⁻¹) comme unité de puissance des lentilles.
+        zh: >-
+          费迪南德·莫努瓦提出以屈光度（m⁻¹）作为透镜焦度的单位。
+        ja: >-
+          フェルディナン・モノワイエが、レンズの度数の単位としてジオプトリ（m⁻¹）を提案する。
+    - year: "1961"
+      label:
+        es: >-
+          Wichterle desarrolla la lente de contacto blanda, que se prescribe en dioptrías.
+        en: >-
+          Wichterle develops the soft contact lens, prescribed in diopters.
+        pt: >-
+          Wichterle desenvolve a lente de contato gelatinosa, prescrita em dioptrias.
+        fr: >-
+          Wichterle développe la lentille de contact souple, prescrite en dioptries.
+        zh: >-
+          维赫特尔开发出以屈光度开处方的软性隐形眼镜。
+        ja: >-
+          ウィフテルレが、ジオプトリで処方されるソフトコンタクトレンズを開発する。
+    - year: Hoy
+      label:
+        es: >-
+          Toda receta de anteojos y toda especificación de lentes de cámara usa esta fórmula.
+        en: >-
+          Every eyeglass prescription and every camera lens specification uses this formula.
+        pt: >-
+          Toda receita de óculos e toda especificação de lentes de câmera usa essa fórmula.
+        fr: >-
+          Toute prescription de lunettes et toute spécification de lentilles d'appareil photo
+          utilise cette formule.
+        zh: >-
+          每一份眼镜处方和每一份相机镜头规格都使用这个公式。
+        ja: >-
+          あらゆる眼鏡処方とカメラレンズの仕様がこの公式を使っている。
+  useCases:
+    - title:
+        es: Graduación de anteojos
+        en: Eyeglass prescriptions
+        pt: Graduação de óculos
+        fr: Correction des lunettes
+        zh: 眼镜验配
+        ja: 眼鏡処方
+      description:
+        es: >-
+          Los ópticos expresan las recetas en dioptrías positivas o negativas según la corrección
+          necesaria.
+        en: >-
+          Opticians write prescriptions in positive or negative diopters depending on the correction
+          needed.
+        pt: >-
+          Os ópticos expressam as receitas em dioptrias positivas ou negativas conforme a correção
+          necessária.
+        fr: >-
+          Les opticiens expriment les prescriptions en dioptries positives ou négatives selon la
+          correction nécessaire.
+        zh: >-
+          验光师根据所需矫正，以正或负屈光度开具处方。
+        ja: >-
+          眼鏡店は必要な矯正に応じて、正または負のジオプトリで処方を表す。
+    - title:
+        es: Lentes de contacto
+        en: Contact lenses
+        pt: Lentes de contato
+        fr: Lentilles de contact
+        zh: 隐形眼镜
+        ja: コンタクトレンズ
+      description:
+        es: >-
+          La potencia del lente se elige para llevar el punto focal al lugar correcto de la retina.
+        en: >-
+          The lens power is chosen to bring the focal point to the right spot on the retina.
+        pt: >-
+          A potência da lente é escolhida para levar o ponto focal ao lugar certo da retina.
+        fr: >-
+          La puissance de la lentille est choisie pour amener le point focal au bon endroit de la
+          rétine.
+        zh: >-
+          选择适当的焦度，使焦点落在视网膜的正确位置。
+        ja: >-
+          焦点が網膜の正しい位置に来るように、レンズの度数を選ぶ。
+    - title:
+        es: Óptica de cámaras
+        en: Camera optics
+        pt: Óptica de câmeras
+        fr: Optique des appareils photo
+        zh: 相机光学
+        ja: カメラの光学
+      description:
+        es: >-
+          La potencia de cada elemento del objetivo define la distancia focal del conjunto.
+        en: >-
+          The power of each element in the objective defines the focal length of the whole.
+        pt: >-
+          A potência de cada elemento da objetiva define a distância focal do conjunto.
+        fr: >-
+          La puissance de chaque élément de l'objectif définit la focale de l'ensemble.
+        zh: >-
+          镜头中每个镜片的焦度决定了整组的焦距。
+        ja: >-
+          レンズ系の各素子の度数が、全体の焦点距離を決める。
+    - title:
+        es: Cirugía refractiva
+        en: Refractive surgery
+        pt: Cirurgia refrativa
+        fr: Chirurgie réfractive
+        zh: 屈光手术
+        ja: 屈折矯正手術
+      description:
+        es: >-
+          El láser modela la córnea cambiando su potencia total, calculada con esta relación.
+        en: >-
+          The laser reshapes the cornea, changing its total power computed with this relation.
+        pt: >-
+          O laser modela a córnea mudando sua potência total, calculada com essa relação.
+        fr: >-
+          Le laser remodel la cornée en modifiant sa puissance totale, calculée à partir de cette
+          relation.
+        zh: >-
+          激光重塑角膜，改变用这一关系计算的角膜总焦度。
+        ja: >-
+          レーザーが角膜を削って形を変え、この関係から計算した角膜全体の度数を変化させる。
+  example:
+    title:
+      es: Lente de medio metro
+      en: A half-meter lens
+      pt: Lente de meio metro
+      fr: Lentille de demi-mètre
+      zh: 半米焦距的透镜
+      ja: 焦点距離0.5 mのレンズ
+    lines:
+      - es: f = 0.5 m
+        en: f = 0.5 m
+        pt: f = 0,5 m
+        fr: f = 0,5 m
+        zh: f = 0.5 米
+        ja: f = 0.5 m
+      - es: P = 1/f
+        en: P = 1/f
+        pt: P = 1/f
+        fr: P = 1/f
+        zh: P = 1/f
+        ja: P = 1/f
+      - es: P = 1/0.5
+        en: P = 1/0.5
+        pt: P = 1/0,5
+        fr: P = 1/0,5
+        zh: P = 1/0.5
+        ja: P = 1/0.5
+      - es: P = 2 dioptrías
+        en: P = 2 diopters
+        pt: P = 2 dioptrias
+        fr: P = 2 dioptries
+        zh: P = 2 屈光度
+        ja: P = 2 ジオプトリ
+      - es: "Foco corto, más potencia: 0.25 m daría 4 dioptrías"
+        en: "Short focus, more power: 0.25 m would give 4 diopters"
+        pt: "Foco curto, mais potência: 0,25 m daria 4 dioptrias"
+        fr: "Focale courte, plus de puissance : 0,25 m donnerait 4 dioptries"
+        zh: 焦距越短，焦度越大：0.25米可得4屈光度
+        ja: 焦点が短いほど度数は大きい：0.25 mなら4ジオプトリ

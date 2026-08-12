@@ -1,0 +1,375 @@
+id: logistic-growth
+title:
+  es: Crecimiento Logístico
+  en: Logistic Growth
+  pt: Crescimento Logístico
+  fr: Croissance logistique
+  zh: 逻辑斯谛增长
+  ja: ロジスティック成長
+category:
+  es: Biología
+  en: Biology
+  pt: Biologia
+  fr: Biologie
+  zh: 生物学
+  ja: 生物学
+nodes:
+  - id: nt
+    type: variable
+    value: N(t)
+    explanation:
+      es: El tamaño de la población en el instante t.
+      en: The population size at time t.
+      pt: O tamanho da população no instante t.
+      fr: La taille de la population à l'instant t.
+      zh: 种群在时刻t的数量。
+      ja: 時刻tにおける個体数。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: k
+    type: variable
+    value: K
+    explanation:
+      es: "K: la capacidad de carga, el tamaño máximo que el entorno puede sostener."
+      en: "K: the carrying capacity, the maximum size the environment can sustain."
+      pt: "K: a capacidade de suporte, o tamanho máximo que o ambiente consegue sustentar."
+      fr: "K : la capacité de charge, la taille maximale que l'environnement peut soutenir."
+      zh: "K：环境容纳量，即环境能维持的最大数量。"
+      ja: "K：環境収容力。環境が支えられる最大の個体数。"
+  - id: div
+    type: operator
+    value: /
+    explanation:
+      es: "Dividido por: toda la expresión del denominador modera el crecimiento."
+      en: "Divided by: the whole denominator expression tempers the growth."
+      pt: "Dividido por: toda a expressão do denominador modera o crescimento."
+      fr: "Divisé par : toute l'expression du dénominateur tempère la croissance."
+      zh: "除以：整个分母表达式缓和了增长。"
+      ja: "で割る。分母全体の式が成長を抑える。"
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: La unidad que representa el crecimiento sin ninguna restricción.
+      en: The one that represents unrestricted growth.
+      pt: O um que representa o crescimento sem nenhuma restrição.
+      fr: Le un qui représente la croissance sans aucune restriction.
+      zh: 表示无任何限制增长的1。
+      ja: 制約のない成長を表す1。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Más.
+      en: Plus.
+      pt: Mais.
+      fr: Plus.
+      zh: 加。
+      ja: たす。
+  - id: ratio-num
+    type: variable
+    value: "(K−N₀)"
+    explanation:
+      es: La distancia entre la capacidad de carga y la población inicial.
+      en: The gap between the carrying capacity and the initial population.
+      pt: A distância entre a capacidade de suporte e a população inicial.
+      fr: L'écart entre la capacité de charge et la population initiale.
+      zh: 环境容纳量与初始种群数量之差。
+      ja: 環境収容力と初期個体数の差。
+  - id: ratio-div
+    type: operator
+    value: /
+    explanation:
+      es: "Dividido por: normaliza esa distancia respecto de la población inicial."
+      en: "Divided by: it normalizes that gap relative to the initial population."
+      pt: "Dividido por: normaliza essa distância em relação à população inicial."
+      fr: "Divisé par : il normalise cet écart par rapport à la population initiale."
+      zh: "除以：将该差值相对于初始种群数量归一化。"
+      ja: "で割る。その差を初期個体数で正規化する。"
+  - id: n0
+    type: variable
+    value: N₀
+    explanation:
+      es: La población inicial, en el instante t = 0.
+      en: The initial population, at time t = 0.
+      pt: A população inicial, no instante t = 0.
+      fr: La population initiale, à l'instant t = 0.
+      zh: 初始种群数量，即t = 0时的数量。
+      ja: 初期の個体数。t = 0の時点の数。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: e
+    type: constant
+    value: e
+    explanation:
+      es: "e: la constante de Euler, base del crecimiento continuo."
+      en: "e: Euler's constant, the base of continuous growth."
+      pt: "e: a constante de Euler, base do crescimento contínuo."
+      fr: "e : la constante d'Euler, base de la croissance continue."
+      zh: "e：欧拉常数，连续增长的底。"
+      ja: "e：オイラー定数。連続的な成長の底。"
+  - id: exp
+    type: superscript
+    value: "−r·t"
+    explanation:
+      es: "Elevado a −r·t: la tasa de crecimiento por el tiempo, con signo negativo."
+      en: "Raised to −r·t: the growth rate times the time, negatively signed."
+      pt: "Elevado a −r·t: a taxa de crescimento vezes o tempo, com sinal negativo."
+      fr: "Élevé à −r·t : le taux de croissance fois le temps, avec signe négatif."
+      zh: "的−r·t次方：增长率乘以时间，且带负号。"
+      ja: "−r·t乗。成長率×時間、負の符号付き。"
+context:
+  author:
+    es: Pierre François Verhulst
+    en: Pierre François Verhulst
+    pt: Pierre François Verhulst
+    fr: Pierre François Verhulst
+    zh: 皮埃尔·弗朗索瓦·维尔乌斯特
+    ja: ピエール・フランソワ・フェルフルスト
+  era:
+    es: Bélgica, 1804–1849 · publicada en 1838
+    en: Belgium, 1804–1849 · published in 1838
+    pt: Bélgica, 1804–1849 · publicada em 1838
+    fr: Belgique, 1804–1849 · publiée en 1838
+    zh: 比利时,1804–1849年 · 1838年发表
+    ja: ベルギー、1804–1849年・1838年発表
+  history:
+    es: >-
+      El crecimiento logístico es la corrección que Pierre François Verhulst hizo al modelo de Malthus
+      en 1838: una población no puede crecer sin fin, porque el entorno impone una capacidad de carga
+      K. A medida que la población se acerca a K, el crecimiento se frena hasta estabilizarse en una
+      curva en forma de S. Ignorada durante décadas, la ecuación resurgió en los años 1920 con la
+      ecología de poblaciones, y hoy es la base del manejo de pesquerías y de los modelos que proyectan
+      la evolución de una pandemia.
+    en: >-
+      Logistic growth is the correction Pierre François Verhulst made to Malthus's model in 1838: a
+      population cannot grow forever, because the environment imposes a carrying capacity K. As the
+      population approaches K, growth slows until it stabilizes along an S-shaped curve. Ignored for
+      decades, the equation resurfaced in the 1920s with population ecology, and today it underpins
+      fisheries management and the models projecting how a pandemic unfolds.
+    pt: >-
+      O crescimento logístico é a correção que Pierre François Verhulst fez ao modelo de Malthus em
+      1838: uma população não pode crescer indefinidamente, pois o ambiente impõe uma capacidade de
+      suporte K. À medida que a população se aproxima de K, o crescimento desacelera até se
+      estabilizar em uma curva em forma de S. Ignorada por décadas, a equação ressurgiu nos anos 1920
+      com a ecologia de populações, e hoje sustenta o manejo de pescarias e os modelos que projetam a
+      evolução de uma pandemia.
+    fr: >-
+      La croissance logistique est la correction que Pierre François Verhulst apporta au modèle de
+      Malthus en 1838 : une population ne peut croître indéfiniment, car l'environnement impose une
+      capacité de charge K. À mesure que la population s'approche de K, la croissance ralentit jusqu'à
+      se stabiliser en une courbe en S. Ignorée pendant des décennies, l'équation refit surface dans
+      les années 1920 avec l'écologie des populations, et fonde aujourd'hui la gestion des pêches et
+      les modèles qui projettent l'évolution d'une pandémie.
+    zh: >-
+      逻辑斯谛增长是皮埃尔·弗朗索瓦·维尔乌斯特在1838年对马尔萨斯模型的修正：一个种群不可能无限增长，
+      因为环境会施加一个容纳量K。随着种群数量逼近K，增长率逐渐放缓，最终沿一条S形曲线趋于稳定。
+      这一方程被忽视了几十年，直到20世纪20年代随种群生态学重新崛起。如今它是渔业管理和传染病大流行
+      演化预测模型的基础。
+    ja: >-
+      ロジスティック成長は、1838年にピエール・フランソワ・フェルフルストがマルサスのモデルに対して
+      行った修正である。個体群は無限に増え続けることはできず、環境が定める環境収容力Kが上限となる。
+      個体数がKに近づくにつれて成長は鈍り、やがてS字形の曲線を描いて安定する。数十年間顧みられなかった
+      この式は、1920年代に個体群生態学とともに再び注目され、現在では水産資源管理や、パンデミックの進行を
+      予測するモデルの基盤となっている。
+  timeline:
+    - year: "1798"
+      label:
+        es: >-
+          Malthus propone un crecimiento exponencial ilimitado, punto de partida del debate.
+        en: >-
+          Malthus proposes unlimited exponential growth, the starting point of the debate.
+        pt: >-
+          Malthus propõe um crescimento exponencial ilimitado, ponto de partida do debate.
+        fr: >-
+          Malthus propose une croissance exponentielle illimitée, point de départ du débat.
+        zh: >-
+          马尔萨斯提出无界的指数增长，成为争论的起点。
+        ja: >-
+          マルサスが無限の指数関数的成長を提唱し、議論の出発点となる。
+    - year: "1838"
+      label:
+        es: >-
+          Verhulst publica la función logística en un artículo de la Academia de Bélgica.
+        en: >-
+          Verhulst publishes the logistic function in a paper of the Belgian Academy.
+        pt: >-
+          Verhulst publica a função logística em um artigo da Academia da Bélgica.
+        fr: >-
+          Verhulst publie la fonction logistique dans un mémoire de l'Académie de Belgique.
+        zh: >-
+          维尔乌斯特在比利时科学院的一篇论文中发表了逻辑斯谛函数。
+        ja: >-
+          フェルフルストがベルギー学士院の論文でロジスティック関数を発表する。
+    - year: "1920"
+      label:
+        es: >-
+          Pearl y Reed redescubren la ecuación para ajustar datos de población humana.
+        en: >-
+          Pearl and Reed rediscover the equation to fit human population data.
+        pt: >-
+          Pearl e Reed redescobrem a equação para ajustar dados de população humana.
+        fr: >-
+          Pearl et Reed redécouvrent l'équation pour ajuster des données de population humaine.
+        zh: >-
+          珀尔和里德重新发现该方程，用于拟合人口数据。
+        ja: >-
+          パールとリードが、人口データを当てはめるためにこの方程式を再発見する。
+    - year: Hoy
+      label:
+        es: >-
+          Es el núcleo de la gestión de pesquerías y de los modelos que proyectan una pandemia.
+        en: >-
+          It is central to fisheries management and the models projecting a pandemic.
+        pt: >-
+          É o núcleo do manejo de pescarias e dos modelos que projetam uma pandemia.
+        fr: >-
+          Elle est au cœur de la gestion des pêches et des modèles projetant une pandémie.
+        zh: >-
+          它是渔业管理和流行病预测模型的核心。
+        ja: >-
+          水産資源管理と、パンデミックを予測するモデルの中核である。
+  useCases:
+    - title:
+        es: Pesca y acuicultura
+        en: Fisheries and aquaculture
+        pt: Pesca e aquicultura
+        fr: Pêche et aquaculture
+        zh: 渔业与水产养殖
+        ja: 漁業・水産養殖
+      description:
+        es: >-
+          Fija cuotas de captura sostenibles teniendo en cuenta la capacidad de carga del ecosistema.
+        en: >-
+          It sets sustainable catch quotas by accounting for the ecosystem's carrying capacity.
+        pt: >-
+          Define cotas de captura sustentáveis considerando a capacidade de suporte do ecossistema.
+        fr: >-
+          Elle fixe des quotas de pêche durables en tenant compte de la capacité de charge de
+          l'écosystème.
+        zh: >-
+          根据生态系统的容纳量制定可持续的捕捞配额。
+        ja: >-
+          生態系の環境収容力を考慮して持続可能な漁獲枠を定める。
+    - title:
+        es: Epidemiología
+        en: Epidemiology
+        pt: Epidemiologia
+        fr: Épidémiologie
+        zh: 流行病学
+        ja: 疫学
+      description:
+        es: >-
+          Modela la curva de una pandemia, que se aplana al acercarse a la población susceptible.
+        en: >-
+          It models a pandemic curve, which flattens as it approaches the susceptible population.
+        pt: >-
+          Modela a curva de uma pandemia, que se achata ao se aproximar da população suscetível.
+        fr: >-
+          Elle modélise la courbe d'une pandémie, qui s'aplatit en approchant la population
+          susceptible.
+        zh: >-
+          对流行病曲线建模，曲线在接近易感人群时趋于平缓。
+        ja: >-
+          パンデミックの曲線をモデル化する。感受性人口に近づくにつれて曲線は平坦になる。
+    - title:
+        es: Ecología de poblaciones
+        en: Population ecology
+        pt: Ecologia de populações
+        fr: Écologie des populations
+        zh: 种群生态学
+        ja: 個体群生態学
+      description:
+        es: >-
+          Predice el tamaño estable de una especie según los recursos de su hábitat.
+        en: >-
+          It predicts a species' stable size according to its habitat's resources.
+        pt: >-
+          Prevê o tamanho estável de uma espécie conforme os recursos de seu habitat.
+        fr: >-
+          Elle prédit la taille stable d'une espèce selon les ressources de son habitat.
+        zh: >-
+          根据栖息地资源预测物种的稳定数量。
+        ja: >-
+          生息地の資源に基づいて、種の安定した個体数を予測する。
+    - title:
+        es: Difusión de productos
+        en: Product adoption
+        pt: Difusão de produtos
+        fr: Diffusion de produits
+        zh: 产品普及
+        ja: 製品普及
+      description:
+        es: >-
+          La adopción de nuevas tecnologías sigue la misma curva en S de saturación de mercado.
+        en: >-
+          Adoption of new technologies follows the same S-curve of market saturation.
+        pt: >-
+          A adoção de novas tecnologias segue a mesma curva em S de saturação de mercado.
+        fr: >-
+          L'adoption des nouvelles technologies suit la même courbe en S de saturation du marché.
+        zh: >-
+          新技术的采用遵循同一条市场饱和的S形曲线。
+        ja: >-
+          新技術の普及は、市場飽和の同じS字形曲線に従う。
+  example:
+    title:
+      es: Crecimiento hacia la capacidad de carga
+      en: Growth toward the carrying capacity
+      pt: Crescimento rumo à capacidade de suporte
+      fr: Croissance vers la capacité de charge
+      zh: 趋向容纳量的增长
+      ja: 環境収容力へ向かう成長
+    lines:
+      - es: "N₀ = 10, K = 1000, r = 0.5, t = 10"
+        en: "N₀ = 10, K = 1000, r = 0.5, t = 10"
+        pt: "N₀ = 10, K = 1000, r = 0,5, t = 10"
+        fr: "N₀ = 10, K = 1000, r = 0,5, t = 10"
+        zh: "N₀ = 10，K = 1000，r = 0.5，t = 10"
+        ja: "N₀ = 10、K = 1000、r = 0.5、t = 10"
+      - es: N = 1000 / (1 + ((1000−10)/10) · e^(−0.5 × 10))
+        en: N = 1000 / (1 + ((1000−10)/10) · e^(−0.5 × 10))
+        pt: N = 1000 / (1 + ((1000−10)/10) · e^(−0,5 × 10))
+        fr: N = 1000 / (1 + ((1000−10)/10) · e^(−0,5 × 10))
+        zh: N = 1000 / (1 + ((1000−10)/10) · e^(−0.5 × 10))
+        ja: N = 1000 / (1 + ((1000−10)/10) · e^(−0.5 × 10))
+      - es: N = 1000 / (1 + 99 · e^(−5))
+        en: N = 1000 / (1 + 99 · e^(−5))
+        pt: N = 1000 / (1 + 99 · e^(−5))
+        fr: N = 1000 / (1 + 99 · e^(−5))
+        zh: N = 1000 / (1 + 99 · e^(−5))
+        ja: N = 1000 / (1 + 99 · e^(−5))
+      - es: e^(−5) ≈ 0.00674
+        en: e^(−5) ≈ 0.00674
+        pt: e^(−5) ≈ 0,00674
+        fr: e^(−5) ≈ 0,00674
+        zh: e^(−5) ≈ 0.00674
+        ja: e^(−5) ≈ 0.00674
+      - es: N = 1000 / (1 + 99 × 0.00674)
+        en: N = 1000 / (1 + 99 × 0.00674)
+        pt: N = 1000 / (1 + 99 × 0,00674)
+        fr: N = 1000 / (1 + 99 × 0,00674)
+        zh: N = 1000 / (1 + 99 × 0.00674)
+        ja: N = 1000 / (1 + 99 × 0.00674)
+      - es: N = 1000 / (1 + 0.667) ≈ 1000 / 1.667 ≈ 987
+        en: N = 1000 / (1 + 0.667) ≈ 1000 / 1.667 ≈ 987
+        pt: N = 1000 / (1 + 0,667) ≈ 1000 / 1,667 ≈ 987
+        fr: N = 1000 / (1 + 0,667) ≈ 1000 / 1,667 ≈ 987
+        zh: N = 1000 / (1 + 0.667) ≈ 1000 / 1.667 ≈ 987
+        ja: N = 1000 / (1 + 0.667) ≈ 1000 / 1.667 ≈ 987

@@ -1,0 +1,336 @@
+id: musical-note-frequency
+title:
+  es: Frecuencia de una Nota Musical
+  en: Musical Note Frequency
+  pt: Frequência de uma Nota Musical
+  fr: Fréquence d'une Note de Musique
+  zh: 音符频率
+  ja: 音の周波数
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: f
+    type: variable
+    value: "f"
+    explanation:
+      es: "La frecuencia de la nota, en hercios."
+      en: "The note's frequency, in hertz."
+      pt: "A frequência da nota, em hertz."
+      fr: "La fréquence de la note, en hertz."
+      zh: "音符的频率，单位赫兹。"
+      ja: "音の周波数。単位はヘルツ。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: four-forty
+    type: number
+    value: "440"
+    explanation:
+      es: "La frecuencia de referencia: el La4, fijado en 440 Hz."
+      en: "The reference frequency: A4, fixed at 440 Hz."
+      pt: "A frequência de referência: o Lá4, fixado em 440 Hz."
+      fr: "La fréquence de référence : le la4, fixé à 440 Hz."
+      zh: "参考频率：A4音，规定为440赫兹。"
+      ja: "基準周波数：A4、440Hzと定められている。"
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: base-two
+    type: number
+    value: "2"
+    explanation:
+      es: "La base de la potencia: cada octava duplica la frecuencia."
+      en: "The power's base: each octave doubles the frequency."
+      pt: "A base da potência: cada oitava dobra a frequência."
+      fr: "La base de la puissance : chaque octave double la fréquence."
+      zh: "幂的底数：每升高一个八度，频率加倍。"
+      ja: "べき乗の底：オクターブごとに周波数は2倍になる。"
+  - id: exp-open
+    type: superscript
+    value: "("
+    explanation:
+      es: Abre el exponente, que mide la distancia desde la nota de referencia.
+      en: Opens the exponent, which measures the distance from the reference note.
+      pt: Abre o expoente, que mede a distância desde a nota de referência.
+      fr: Ouvre l'exposant, qui mesure la distance depuis la note de référence.
+      zh: 指数部分的起始括号，衡量与参考音的距离。
+      ja: 基準音からの距離を測る指数部分を開く括弧。
+  - id: exp-n-minus-69
+    type: superscript
+    value: "n−69"
+    explanation:
+      es: "n−69: cuántos semitonos separan la nota del La4."
+      en: "n−69: how many semitones separate the note from A4."
+      pt: "n−69: quantos semitons separam a nota do Lá4."
+      fr: "n−69 : combien de demi-tons séparent la note du la4."
+      zh: "n−69：该音与A4音之间相差的半音数。"
+      ja: "n−69：その音がA4から何半音離れているか。"
+  - id: exp-close
+    type: superscript
+    value: ")"
+    explanation:
+      es: Cierra el exponente.
+      en: Closes the exponent.
+      pt: Fecha o expoente.
+      fr: Ferme l'exposant.
+      zh: 指数部分结束。
+      ja: 指数を閉じる。
+  - id: exp-div-12
+    type: superscript
+    value: "/12"
+    explanation:
+      es: "/12: los 12 semitonos que forman cada octava."
+      en: "/12: the 12 semitones that make up each octave."
+      pt: "/12: os 12 semitons que formam cada oitava."
+      fr: "/12 : les 12 demi-tons qui composent chaque octave."
+      zh: "/12：构成每个八度的12个半音。"
+      ja: "/12：各オクターブを形づくる12の半音。"
+context:
+  author:
+    es: Basada en la escala temperada
+    en: Based on the equal-tempered scale
+    pt: Baseada na escala temperada
+    fr: Basée sur la gamme tempérée
+    zh: 基于十二平均律音阶
+    ja: 平均律音階に基づく
+  era:
+    es: Europa, s. XVII–XIX
+    en: Europe, 17th–19th century
+    pt: Europa, séc. XVII–XIX
+    fr: Europe, XVIIe–XIXe siècle
+    zh: 欧洲，17至19世纪
+    ja: ヨーロッパ、17〜19世紀
+  history:
+    es: >-
+      El oído percibe una octava como una duplicación de la frecuencia, y la escala temperada divide
+      esa octava en 12 semitonos iguales, de modo que cada uno multiplica la frecuencia por 2^(1/12).
+      Desde 1955 la nota de referencia A4 se estandarizó en 440 Hz. La fórmula convierte un número
+      de tecla MIDI en hercios y es el corazón de los sintetizadores, los afinadores digitales y de
+      todo software de música que deba calcular qué frecuencia tocar.
+    en: >-
+      The ear hears one octave as a doubling of frequency, and the equal-tempered scale divides that
+      octave into 12 identical semitones, so each one multiplies the frequency by 2^(1/12). Since
+      1955 the reference note A4 has been standardized at 440 Hz. The formula turns a MIDI key number
+      into hertz and is the heart of synthesizers, digital tuners, and any music software that must
+      work out which frequency to play.
+    pt: >-
+      O ouvido percebe uma oitava como uma duplicação da frequência, e a escala temperada divide
+      essa oitava em 12 semitons iguais, de modo que cada um multiplica a frequência por 2^(1/12).
+      Desde 1955 a nota de referência Lá4 foi padronizada em 440 Hz. A fórmula converte um número de
+      tecla MIDI em hertz e é o coração dos sintetizadores, afinadores digitais e de todo software
+      de música que precise calcular qual frequência tocar.
+    fr: >-
+      L'oreille perçoit une octave comme un doublement de la fréquence, et la gamme tempérée divise
+      cette octave en 12 demi-tons égaux, de sorte que chacun multiplie la fréquence par 2^(1/12).
+      Depuis 1955, la note de référence A4 est normalisée à 440 Hz. La formule convertit un numéro de
+      touche MIDI en hertz et est au cœur des synthétiseurs, des accordeurs numériques et de tout
+      logiciel de musique qui doit calculer quelle fréquence jouer.
+    zh: >-
+      人耳把八度感知为频率的加倍，十二平均律将这个八度平均分成12个相等的半音，每升高一个半音频率乘以
+      2^(1/12)。自1955年起，参考音A4被标准化为440赫兹。该公式把MIDI键位编号换算成赫兹，是合成器、
+      数字调音器以及所有需要计算该演奏哪个频率的音乐软件的核心。
+    ja: >-
+      人間の耳はオクターブを周波数の2倍として知覚する。平均律はそのオクターブを12等分の半音に分け、
+      半音ごとに周波数が2^(1/12)倍される。1955年以降、基準音A4は440Hzと定められている。この公式は
+      MIDIの鍵盤番号をヘルツに変換するもので、シンセサイザー、デジタルチューナー、そして演奏すべき
+      周波数を計算しなければならないあらゆる音楽ソフトウェアの核となっている。
+  timeline:
+    - year: "1691"
+      label:
+        es: Andreas Werckmeister describe la temperación igual de 12 semitonos.
+        en: Andreas Werckmeister describes equal temperament with 12 semitones.
+        pt: Andreas Werckmeister descreve a temperação igual de 12 semitons.
+        fr: Andreas Werckmeister décrit le tempérament égal à 12 demi-tons.
+        zh: 安德烈亚斯·韦克迈斯特提出十二平均律。
+        ja: アンドレアス・ヴェルクマイスターが12半音の平均律を論じる。
+    - year: "1834"
+      label:
+        es: La Conferencia de Stuttgart propone 440 Hz como frecuencia del La de referencia.
+        en: The Stuttgart Conference proposes 440 Hz for the reference A.
+        pt: A Conferência de Stuttgart propõe 440 Hz para o Lá de referência.
+        fr: La conférence de Stuttgart propose 440 Hz pour le la de référence.
+        zh: 斯图加特会议提议以440赫兹作为标准音A的频率。
+        ja: シュトゥットガルト会議が基準音Aを440Hzと提案する。
+    - year: "1955"
+      label:
+        es: La ISO estandariza el A4 = 440 Hz a nivel internacional.
+        en: The ISO standardizes A4 = 440 Hz internationally.
+        pt: A ISO padroniza o Lá4 = 440 Hz internacionalmente.
+        fr: L'ISO normalise le A4 = 440 Hz au niveau international.
+        zh: 国际标准化组织将A4=440赫兹定为国际标准。
+        ja: ISOがA4 = 440Hzを国際規格として標準化する。
+    - year: "1983"
+      label:
+        es: >-
+          El estándar MIDI fija el número 69 para el La4 y adopta esta fórmula en los sintetizadores.
+        en: >-
+          The MIDI standard assigns 69 to A4 and adopts this formula in synthesizers.
+        pt: >-
+          O padrão MIDI fixa o número 69 para o Lá4 e adota essa fórmula nos sintetizadores.
+        fr: >-
+          Le standard MIDI attribue le numéro 69 au A4 et adopte cette formule dans les
+          synthétiseurs.
+        zh: >-
+          MIDI标准将A4编号为69，并在合成器中采用这一公式。
+        ja: >-
+          MIDI規格がA4を69番とし、シンセサイザーでこの公式を採用する。
+  useCases:
+    - title:
+        es: Sintetizadores MIDI
+        en: MIDI synthesizers
+        pt: Sintetizadores MIDI
+        fr: Synthétiseurs MIDI
+        zh: MIDI合成器
+        ja: MIDIシンセサイザー
+      description:
+        es: >-
+          Cada tecla recibe un número y la fórmula convierte ese número en la frecuencia exacta que
+          debe sonar.
+        en: >-
+          Each key gets a number and the formula turns that number into the exact frequency to
+          sound.
+        pt: >-
+          Cada tecla recebe um número e a fórmula converte esse número na frequência exata que deve
+          soar.
+        fr: >-
+          Chaque touche reçoit un numéro et la formule convertit ce numéro en la fréquence exacte à
+          jouer.
+        zh: >-
+          每个琴键对应一个编号，公式把这个编号换算成应当发出的精确频率。
+        ja: >-
+          各鍵盤に番号が割り当てられ、この公式がその番号を鳴らすべき正確な周波数に変換する。
+    - title:
+        es: Afinadores digitales
+        en: Digital tuners
+        pt: Afinadores digitais
+        fr: Accordeurs numériques
+        zh: 数字调音器
+        ja: デジタルチューナー
+      description:
+        es: >-
+          Miden la frecuencia de la nota tocada y la comparan con la esperada para mostrar si hay
+          que subir o bajar.
+        en: >-
+          They measure the played note's frequency and compare it with the expected one to show
+          whether to go up or down.
+        pt: >-
+          Medem a frequência da nota tocada e a comparam com a esperada para mostrar se é preciso
+          subir ou descer.
+        fr: >-
+          Ils mesurent la fréquence de la note jouée et la comparent à celle attendue pour indiquer
+          s'il faut monter ou descendre.
+        zh: >-
+          调音器测量所弹音符的频率，并与期望值比较，以指示应升高还是降低。
+        ja: >-
+          弾いた音の周波数を測り、期待値と比べて上げるべきか下げるべきかを示す。
+    - title:
+        es: Software musical
+        en: Music software
+        pt: Software musical
+        fr: Logiciels de musique
+        zh: 音乐软件
+        ja: 音楽ソフトウェア
+      description:
+        es: >-
+          DAWs, secuenciadores y apps de afinación usan la fórmula cada vez que dibujan o reproducen
+          una nota.
+        en: >-
+          DAWs, sequencers, and tuning apps use the formula every time they draw or play a note.
+        pt: >-
+          DAWs, sequenciadores e apps de afinação usam a fórmula sempre que desenham ou tocam uma
+          nota.
+        fr: >-
+          Les DAW, séquenceurs et applications d'accordage utilisent la formule chaque fois qu'ils
+          dessinent ou jouent une note.
+        zh: >-
+          数字音频工作站、音序器和调音应用每绘制或播放一个音符都要用到该公式。
+        ja: >-
+          DAWやシーケンサー、調律アプリは、音符を描いたり再生したりするたびにこの公式を使う。
+    - title:
+        es: Física de instrumentos
+        en: Instrument physics
+        pt: Física de instrumentos
+        fr: Physique des instruments
+        zh: 乐器物理
+        ja: 楽器の物理学
+      description:
+        es: >-
+          Los cálculos de tensión y longitud de cuerdas o tubos parten de la frecuencia que cada nota
+          debe producir.
+        en: >-
+          Calculations of string or tube tension and length start from the frequency each note must
+          produce.
+        pt: >-
+          Cálculos de tensão e comprimento de cordas ou tubos partem da frequência que cada nota
+          deve produzir.
+        fr: >-
+          Les calculs de tension et de longueur des cordes ou des tuyaux partent de la fréquence que
+          chaque note doit produire.
+        zh: >-
+          琴弦或管道的张力与长度计算，都以每个音符应产生的频率为出发点。
+        ja: >-
+          弦や管の張力・長さの計算は、各音符が生み出すべき周波数から出発する。
+  example:
+    title:
+      es: De la tecla 69 al La4
+      en: From key 69 to A4
+      pt: Da tecla 69 ao Lá4
+      fr: De la touche 69 au la4
+      zh: 从69号键到A4音
+      ja: 鍵盤番号69からラの音へ
+    lines:
+      - es: n = 69 (La4)
+        en: n = 69 (A4)
+        pt: n = 69 (Lá4)
+        fr: n = 69 (la4)
+        zh: n = 69（A4）
+        ja: n = 69（A4）
+      - es: f = 440 · 2^((69−69)/12)
+        en: f = 440 · 2^((69−69)/12)
+        pt: f = 440 · 2^((69−69)/12)
+        fr: f = 440 · 2^((69−69)/12)
+        zh: f = 440 · 2^((69−69)/12)
+        ja: f = 440 · 2^((69−69)/12)
+      - es: f = 440 · 2^0
+        en: f = 440 · 2^0
+        pt: f = 440 · 2^0
+        fr: f = 440 · 2^0
+        zh: f = 440 · 2^0
+        ja: f = 440 · 2^0
+      - es: f = 440 · 1 = 440 Hz
+        en: f = 440 · 1 = 440 Hz
+        pt: f = 440 · 1 = 440 Hz
+        fr: f = 440 · 1 = 440 Hz
+        zh: f = 440 · 1 = 440 赫兹
+        ja: f = 440 · 1 = 440 Hz
+      - es: "n = 81 (La5): f = 440 · 2^((81−69)/12)"
+        en: "n = 81 (A5): f = 440 · 2^((81−69)/12)"
+        pt: "n = 81 (Lá5): f = 440 · 2^((81−69)/12)"
+        fr: "n = 81 (la5) : f = 440 · 2^((81−69)/12)"
+        zh: "n = 81(A5)：f = 440 · 2^((81−69)/12)"
+        ja: "n = 81（A5）：f = 440 · 2^((81−69)/12)"
+      - es: f = 440 · 2 = 880 Hz
+        en: f = 440 · 2 = 880 Hz
+        pt: f = 440 · 2 = 880 Hz
+        fr: f = 440 · 2 = 880 Hz
+        zh: f = 440 · 2 = 880 赫兹
+        ja: f = 440 · 2 = 880 Hz

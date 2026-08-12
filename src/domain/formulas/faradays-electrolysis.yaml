@@ -1,0 +1,431 @@
+id: faradays-electrolysis
+title:
+  es: Ley de Faraday de la Electrólisis
+  en: Faraday's Law of Electrolysis
+  pt: Lei de Faraday da Eletrólise
+  fr: Loi de Faraday de l'Électrolyse
+  zh: 法拉第电解定律
+  ja: ファラデーの電気分解の法則
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: La masa de sustancia depositada o liberada en el electrodo.
+      en: The mass of substance deposited or liberated at the electrode.
+      pt: A massa de substância depositada ou liberada no eletrodo.
+      fr: La masse de substance déposée ou libérée à l'électrode.
+      zh: 在电极上沉积或释放的物质质量。
+      ja: 電極に析出・放出される物質の質量。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a la masa molar por la carga, dividida entre n y F.
+      en: Is equal to the molar mass times the charge, divided by n and F.
+      pt: É igual à massa molar vezes a carga, dividida por n e F.
+      fr: Est égal à la masse molaire fois la charge, divisé par n et F.
+      zh: 等于摩尔质量乘以电荷,再除以n和F。
+      ja: モル質量×電荷をnとFで割ったものに等しい。
+  - id: paren-1
+    type: operator
+    value: "("
+    explanation:
+      es: Agrupa el numerador de la fracción.
+      en: Groups the numerator of the fraction.
+      pt: Agrupa o numerador da fração.
+      fr: Regroupe le numérateur de la fraction.
+      zh: 将分数的分子括起来。
+      ja: 分数の分子をまとめる括弧。
+  - id: cap-m
+    type: constant
+    value: M
+    explanation:
+      es: La masa molar de la sustancia, en gramos por mol.
+      en: The molar mass of the substance, in grams per mole.
+      pt: A massa molar da substância, em gramas por mol.
+      fr: La masse molaire de la substance, en grammes par mole.
+      zh: 物质的摩尔质量,单位为克每摩尔。
+      ja: 物質のモル質量。グラム毎モルで表す。
+  - id: times-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por la corriente eléctrica.
+      en: Multiplied by the electric current.
+      pt: Multiplicado pela corrente elétrica.
+      fr: Multiplié par le courant électrique.
+      zh: 乘以电流。
+      ja: 電流を掛ける。
+  - id: cap-i
+    type: variable
+    value: I
+    explanation:
+      es: La corriente eléctrica en amperios.
+      en: The electric current in amperes.
+      pt: A corrente elétrica em ampères.
+      fr: Le courant électrique en ampères.
+      zh: 电流,单位为安培。
+      ja: 電流。単位はアンペア。
+  - id: times-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por el tiempo.
+      en: Multiplied by the time.
+      pt: Multiplicado pelo tempo.
+      fr: Multiplié par le temps.
+      zh: 乘以时间。
+      ja: 時間を掛ける。
+  - id: t
+    type: variable
+    value: t
+    explanation:
+      es: El tiempo durante el cual circula la corriente, en segundos.
+      en: The time the current flows, in seconds.
+      pt: O tempo durante o qual a corrente circula, em segundos.
+      fr: Le temps pendant lequel circule le courant, en secondes.
+      zh: 电流流过的时间,单位为秒。
+      ja: 電流が流れる時間。単位は秒。
+  - id: paren-2
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el numerador de la fracción.
+      en: Closes the numerator of the fraction.
+      pt: Fecha o numerador da fração.
+      fr: Ferme le numérateur de la fraction.
+      zh: 结束分数的分子。
+      ja: 分数の分子を閉じる括弧。
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido por el denominador.
+      en: Divided by the denominator.
+      pt: Dividido pelo denominador.
+      fr: Divisé par le dénominateur.
+      zh: 除以分母。
+      ja: 分母で割る。
+  - id: paren-3
+    type: operator
+    value: "("
+    explanation:
+      es: Agrupa el producto n·F del denominador.
+      en: Groups the product n·F in the denominator.
+      pt: Agrupa o produto n·F no denominador.
+      fr: Regroupe le produit n·F au dénominateur.
+      zh: 将分母中的n·F括起来。
+      ja: 分母のn·Fをまとめる括弧。
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: El número de electrones que intervienen por ion de la sustancia.
+      en: The number of electrons involved per ion of the substance.
+      pt: O número de elétrons que intervêm por íon da substância.
+      fr: Le nombre d'électrons mis en jeu par ion de la substance.
+      zh: 该物质每个离子所涉及的电子数。
+      ja: 物質のイオン1個あたりに関わる電子の数。
+  - id: times-3
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por la constante de Faraday.
+      en: Multiplied by the Faraday constant.
+      pt: Multiplicado pela constante de Faraday.
+      fr: Multiplié par la constante de Faraday.
+      zh: 乘以法拉第常数。
+      ja: ファラデー定数を掛ける。
+  - id: cap-f
+    type: constant
+    value: F
+    explanation:
+      es: La constante de Faraday, 96.485 C/mol, la carga de un mol de electrones.
+      en: The Faraday constant, 96,485 C/mol, the charge of one mole of electrons.
+      pt: A constante de Faraday, 96.485 C/mol, a carga de um mol de elétrons.
+      fr: La constante de Faraday, 96 485 C/mol, la charge d'une mole d'électrons.
+      zh: 法拉第常数,96,485 C/mol,一摩尔电子的电荷量。
+      ja: ファラデー定数。96,485 C/mol。1モルの電子の電荷量。
+  - id: paren-4
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el denominador de la fracción.
+      en: Closes the denominator of the fraction.
+      pt: Fecha o denominador da fração.
+      fr: Ferme le dénominateur de la fraction.
+      zh: 结束分数的分母。
+      ja: 分数の分母を閉じる括弧。
+context:
+  author:
+    es: Michael Faraday
+    en: Michael Faraday
+    pt: Michael Faraday
+    fr: Michael Faraday
+    zh: 迈克尔·法拉第
+    ja: マイケル・ファラデー
+  era:
+    es: Inglaterra, 1791–1867 · publicada en 1834
+    en: England, 1791–1867 · published in 1834
+    pt: Inglaterra, 1791–1867 · publicada em 1834
+    fr: Angleterre, 1791–1867 · publiée en 1834
+    zh: 英格兰,1791–1867年 · 1834年发表
+    ja: イギリス、1791–1867年・1834年発表
+  history:
+    es: >-
+      Michael Faraday, autodidacta y uno de los grandes experimentadores del
+      siglo XIX, estableció en 1834 las leyes de la electrólisis que llevan su
+      nombre tras estudiar cuánto material se deposita en los electrodos al pasar
+      corriente por una disolución. La primera ley afirma que la masa depositada
+      es proporcional a la carga total; la segunda, que esa proporción depende de
+      la masa molar y de la valencia del ion. La constante de Faraday, 96.485
+      culombios por mol, cuantifica la carga de un mol de electrones. Sobre estas
+      leyes descansan el electroplateado, la obtención de aluminio y la carga de
+      baterías.
+    en: >-
+      Michael Faraday, a self-taught man and one of the great experimenters of
+      the nineteenth century, established the laws of electrolysis bearing his
+      name in 1834 after studying how much material is deposited on electrodes
+      when current passes through a solution. The first law states that the
+      deposited mass is proportional to the total charge; the second, that this
+      proportion depends on the molar mass and valence of the ion. The Faraday
+      constant, 96,485 coulombs per mole, quantifies the charge of one mole of
+      electrons. Electroplating, aluminum smelting, and battery charging all rest
+      on these laws.
+    pt: >-
+      Michael Faraday, autodidata e um dos grandes experimentadores do século
+      XIX, estabeleceu em 1834 as leis da eletrólise que levam seu nome após
+      estudar quanto material se deposita nos eletrodos ao passar corrente por
+      uma solução. A primeira lei afirma que a massa depositada é proporcional à
+      carga total; a segunda, que essa proporção depende da massa molar e da
+      valência do íon. A constante de Faraday, 96.485 coulombs por mol, quantifica
+      a carga de um mol de elétrons. O eletroplateamento, a obtenção de alumínio e
+      a carga de baterias baseiam-se nessas leis.
+    fr: >-
+      Michael Faraday, autodidacte et l'un des plus grands expérimentateurs du
+      XIXe siècle, établit en 1834 les lois de l'électrolyse qui portent son nom
+      après avoir étudié la quantité de matière déposée sur les électrodes
+      lorsqu'un courant traverse une solution. La première loi énonce que la masse
+      déposée est proportionnelle à la charge totale ; la seconde, que cette
+      proportion dépend de la masse molaire et de la valence de l'ion. La constante
+      de Faraday, 96 485 coulombs par mole, quantifie la charge d'une mole
+      d'électrons. L'électroplacage, l'obtention de l'aluminium et la charge des
+      batteries reposent sur ces lois.
+    zh: >-
+      迈克尔·法拉第自学成才,是十九世纪最伟大的实验科学家之一。在研究了电流
+      通过溶液时电极上会沉积多少物质之后,他于1834年确立了以他名字命名的电解
+      定律。第一定律指出,沉积质量与总电荷成正比;第二定律指出,这一比例取决于
+      离子的摩尔质量和化合价。法拉第常数96,485库仑每摩尔,量化了一摩尔电子的
+      电荷量。电镀、铝的冶炼以及电池充电都建立在这些定律之上。
+    ja: >-
+      独学で身を立てたマイケル・ファラデーは、19世紀を代表する実験科学者の一人である。
+      溶液に電流を流したときに電極にどれだけの物質が析出するかを研究し、1834年に彼の名を
+      冠した電気分解の法則を確立した。第一法則は析出質量が総電荷量に比例することを、
+      第二法則はその比例がイオンのモル質量と価数に依存することを述べる。ファラデー定数
+      96,485 クーロン毎モルは、1モルの電子の電荷量を表す。電気めっき、アルミニウムの
+      精錬、電池の充電はすべてこれらの法則に基づいている。
+  timeline:
+    - year: "1834"
+      label:
+        es: >-
+          Faraday publica sus dos leyes de la electrólisis tras experimentos con
+          disoluciones salinas.
+        en: >-
+          Faraday publishes his two laws of electrolysis after experiments with
+          salt solutions.
+        pt: >-
+          Faraday publica suas duas leis da eletrólise após experimentos com
+          soluções salinas.
+        fr: >-
+          Faraday publie ses deux lois de l'électrolyse après des expériences
+          avec des solutions salines.
+        zh: >-
+          法拉第在对盐溶液进行实验之后,发表了他的两条电解定律。
+        ja: >-
+          塩溶液での実験の後、ファラデーが電気分解の二法則を発表する。
+    - year: "1886"
+      label:
+        es: >-
+          Charles Hall y Paul Héroult, por separado, desarrollan el proceso que
+          industrializa la obtención de aluminio.
+        en: >-
+          Charles Hall and Paul Héroult, independently, develop the process that
+          industrializes aluminum production.
+        pt: >-
+          Charles Hall e Paul Héroult, de forma independente, desenvolvem o
+          processo que industrializa a obtenção de alumínio.
+        fr: >-
+          Charles Hall et Paul Héroult développent, indépendamment, le procédé qui
+          industrialise l'obtention de l'aluminium.
+        zh: >-
+          查尔斯·霍尔和保罗·埃鲁各自独立地开发出使铝的工业生产成为可能的工艺。
+        ja: >-
+          チャールズ・ホールとポール・エルーがそれぞれ独立に、アルミニウム製造を工業化するプロセスを開発する。
+    - year: Hoy
+      label:
+        es: >-
+          El electroplateado, la carga de baterías y el análisis electroquímico
+          cotidiano siguen usando su ecuación.
+        en: >-
+          Electroplating, battery charging, and everyday electrochemical analysis
+          still use his equation.
+        pt: >-
+          O eletroplateamento, a carga de baterias e a análise eletroquímica
+          cotidiana ainda usam sua equação.
+        fr: >-
+          L'électroplacage, la charge des batteries et l'analyse électrochimique
+          courante utilisent encore son équation.
+        zh: >-
+          电镀、电池充电以及日常的电化学分析至今仍在使用他的方程。
+        ja: >-
+          電気めっき、電池の充電、日常の電気化学分析は今も彼の式を使っている。
+  useCases:
+    - title:
+        es: Electroplateado
+        en: Electroplating
+        pt: Eletroplateamento
+        fr: Électroplacage
+        zh: 电镀
+        ja: 電気めっき
+      description:
+        es: >-
+          Calcula la masa de oro o plata depositada sobre una pieza según la
+          corriente y el tiempo.
+        en: >-
+          It calculates the mass of gold or silver deposited on a part from the
+          current and time.
+        pt: >-
+          Calcula a massa de ouro ou prata depositada sobre uma peça conforme a
+          corrente e o tempo.
+        fr: >-
+          Elle calcule la masse d'or ou d'argent déposée sur une pièce selon le
+          courant et le temps.
+        zh: >-
+          根据电流和时间,计算沉积在工件上的金或银的质量。
+        ja: >-
+          電流と時間から、部品に析出する金や銀の質量を計算する。
+    - title:
+        es: Metalurgia del aluminio
+        en: Aluminum smelting
+        pt: Metalurgia do alumínio
+        fr: Métallurgie de l'aluminium
+        zh: 铝冶金
+        ja: アルミニウム精錬
+      description:
+        es: >-
+          Dimensiona las cubas electrolíticas del proceso Hall-Héroult que
+          producen aluminio a gran escala.
+        en: >-
+          It sizes the electrolytic cells of the Hall-Héroult process that
+          produce aluminum at scale.
+        pt: >-
+          Dimensiona as cubas eletrolíticas do processo Hall-Héroult que produzem
+          alumínio em grande escala.
+        fr: >-
+          Elle dimensionne les cuves électrolytiques du procédé Hall-Héroult qui
+          produisent l'aluminium à grande échelle.
+        zh: >-
+          用于确定霍尔-埃鲁工艺中大规模生产铝的电解槽尺寸。
+        ja: >-
+          ホール・エルー法でアルミニウムを大量生産する電解槽の設計に用いる。
+    - title:
+        es: Baterías recargables
+        en: Rechargeable batteries
+        pt: Baterias recarregáveis
+        fr: Batteries rechargeables
+        zh: 可充电电池
+        ja: 二次電池
+      description:
+        es: >-
+          Estima cuánta masa de electrodo se consume al cargar o descargar una
+          celda.
+        en: >-
+          It estimates how much electrode mass is consumed when charging or
+          discharging a cell.
+        pt: >-
+          Estima quanta massa de eletrodo é consumida ao carregar ou descarregar
+          uma célula.
+        fr: >-
+          Elle estime la masse d'électrode consommée lors de la charge ou de la
+          décharge d'une cellule.
+        zh: >-
+          估算电池在充电或放电过程中消耗的电极质量。
+        ja: >-
+          セルを充放電する際に消費される電極の質量を推定する。
+    - title:
+        es: Análisis químico
+        en: Chemical analysis
+        pt: Análise química
+        fr: Analyse chimique
+        zh: 化学分析
+        ja: 化学分析
+      description:
+        es: >-
+          La coulometría determina la concentración de una sustancia midiendo la
+          carga total necesaria.
+        en: >-
+          Coulometry determines the concentration of a substance by measuring the
+          total charge required.
+        pt: >-
+          A coulometria determina a concentração de uma substância medindo a
+          carga total necessária.
+        fr: >-
+          La coulométrie détermine la concentration d'une substance en mesurant
+          la charge totale nécessaire.
+        zh: >-
+          库仑分析法通过测量所需的总电荷量来确定物质的浓度。
+        ja: >-
+          クーロメトリーは、必要な総電荷量を測定して物質の濃度を決定する。
+  example:
+    title:
+      es: Masa de cobre depositada
+      en: Mass of copper deposited
+      pt: Massa de cobre depositada
+      fr: Masse de cuivre déposée
+      zh: 沉积的铜的质量
+      ja: 析出する銅の質量
+    lines:
+      - es: M(Cu) = 63.5 g/mol, n = 2
+        en: M(Cu) = 63.5 g/mol, n = 2
+        pt: M(Cu) = 63,5 g/mol, n = 2
+        fr: M(Cu) = 63,5 g/mol, n = 2
+        zh: M(Cu) = 63.5 g/mol, n = 2
+        ja: M(Cu) = 63.5 g/mol, n = 2
+      - es: I = 2 A, t = 1000 s
+        en: I = 2 A, t = 1000 s
+        pt: I = 2 A, t = 1000 s
+        fr: I = 2 A, t = 1000 s
+        zh: I = 2 A, t = 1000 s
+        ja: I = 2 A, t = 1000 s
+      - es: m = (M·I·t)/(n·F)
+        en: m = (M·I·t)/(n·F)
+        pt: m = (M·I·t)/(n·F)
+        fr: m = (M·I·t)/(n·F)
+        zh: m = (M·I·t)/(n·F)
+        ja: m = (M·I·t)/(n·F)
+      - es: m = (63.5 × 2 × 1000)/(2 × 96,485)
+        en: m = (63.5 × 2 × 1000)/(2 × 96,485)
+        pt: m = (63,5 × 2 × 1000)/(2 × 96.485)
+        fr: m = (63,5 × 2 × 1000)/(2 × 96 485)
+        zh: m = (63.5 × 2 × 1000)/(2 × 96,485)
+        ja: m = (63.5 × 2 × 1000)/(2 × 96,485)
+      - es: m = 127,000 / 192,970
+        en: m = 127,000 / 192,970
+        pt: m = 127.000 / 192.970
+        fr: m = 127 000 / 192 970
+        zh: m = 127,000 / 192,970
+        ja: m = 127,000 / 192,970
+      - es: m ≈ 0.658 g
+        en: m ≈ 0.658 g
+        pt: m ≈ 0,658 g
+        fr: m ≈ 0,658 g
+        zh: m ≈ 0.658 g
+        ja: m ≈ 0.658 g

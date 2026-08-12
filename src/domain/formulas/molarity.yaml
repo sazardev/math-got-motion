@@ -1,0 +1,309 @@
+id: molarity
+title:
+  es: Molaridad
+  en: Molarity
+  pt: Molaridade
+  fr: Molarité
+  zh: 摩尔浓度
+  ja: モル濃度
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: m
+    type: variable
+    value: M
+    explanation:
+      es: "M: la molaridad, los moles de soluto por cada litro de solución."
+      en: "M: the molarity, the moles of solute per liter of solution."
+      pt: "M: a molaridade, os mols de soluto por litro de solução."
+      fr: "M : la molarité, les moles de soluté par litre de solution."
+      zh: "M：摩尔浓度，即每升溶液中的溶质摩尔数。"
+      ja: "M：モル濃度。溶液1リットルあたりの溶質のモル数。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: "n: la cantidad de soluto disuelto, expresada en moles."
+      en: "n: the amount of dissolved solute, in moles."
+      pt: "n: a quantidade de soluto dissolvido, em mols."
+      fr: "n : la quantité de soluté dissous, en moles."
+      zh: "n：溶解的溶质的量，以摩尔计。"
+      ja: "n：溶けている溶質の量（モル数）。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: v
+    type: variable
+    value: V
+    explanation:
+      es: "V: el volumen total de la solución, en litros."
+      en: "V: the total volume of the solution, in liters."
+      pt: "V: o volume total da solução, em litros."
+      fr: "V : le volume total de la solution, en litres."
+      zh: "V：溶液总体积，以升计。"
+      ja: "V：溶液全体の体積（リットル）。"
+context:
+  author:
+    es: Basada en la estequiometría de la química del s. XIX
+    en: Rooted in 19th-century stoichiometry
+    pt: Baseada na estequiometria da química do séc. XIX
+    fr: Fondée sur la stoechiométrie de la chimie du XIXe siècle
+    zh: 源于19世纪化学的化学计量学
+    ja: 19世紀の化学量論に基づく
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, séc. XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲,19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      La molaridad expresa cuántos moles de soluto hay en cada litro de solución, y se volvió el estándar
+      de los laboratorios porque vincula volúmenes medibles con moles, las unidades con las que se
+      equilibran las reacciones. Antes, los químicos usaban proporciones de masa difíciles de comparar
+      entre sustancias. Con la concentración en mol/L, una titulación calcula cuánto reactivo reacciona
+      con una muestra, y los buffers se preparan mezclando volúmenes de concentración conocida.
+    en: >-
+      Molarity expresses how many moles of solute sit in each liter of solution, and it became the
+      laboratory standard because it links measurable volumes to moles, the units chemists balance
+      reactions with. Before it, chemists used mass ratios that were hard to compare across substances.
+      With concentration in mol/L, a titration calculates exactly how much reagent reacts with a sample,
+      and buffers are made by mixing known volumes of known concentration.
+    pt: >-
+      A molaridade expressa quantos mols de soluto há em cada litro de solução, e tornou-se o padrão dos
+      laboratórios porque liga volumes mensuráveis a mols, as unidades com as quais as reações são
+      balanceadas. Antes dela, os químicos usavam proporções de massa difíceis de comparar entre
+      substâncias. Com a concentração em mol/L, uma titulação calcula quanto reagente reage com uma
+      amostra, e os tampões são preparados misturando volumes de concentração conhecida.
+    fr: >-
+      La molarité exprime combien de moles de soluté se trouvent dans chaque litre de solution, et elle
+      est devenue le standard des laboratoires car elle relie des volumes mesurables aux moles, les
+      unités avec lesquelles on équilibre les réactions. Avant elle, les chimistes utilisaient des
+      proportions de masse difficiles à comparer entre substances. Avec la concentration en mol/L, un
+      titrage calcule exactement combien de réactif réagit avec un échantillon, et les tampons se
+      préparent en mélangeant des volumes de concentration connue.
+    zh: >-
+      摩尔浓度表示每升溶液中溶解了多少摩尔的溶质,它之所以成为实验室的标准,是因为它把可测量的体积与摩尔——化学家用来配平
+      反应的单位——联系起来。在此之前,化学家使用的是难以跨物质比较的质量比例。有了以摩尔/升为单位的浓度,滴定就能算出有
+      多少试剂与样品反应,缓冲液也是通过混合已知浓度的体积来配制的。
+    ja: >-
+      モル濃度は、溶液1リットルあたりに何モルの溶質が含まれるかを表し、反応を釣り合わせる単位であるモルと測定可能な体積
+      を結びつけるため、実験室の標準となった。それ以前は、物質間で比較しにくい質量比が使われていた。モル/L単位の濃度が
+      あれば、滴定で試料と反応する試薬の量を正確に計算でき、緩衝液は既知濃度の体積を混ぜて調製される。
+  timeline:
+    - year: "1789"
+      label:
+        es: >-
+          Lavoisier publica el Tratado elemental de química, que establece la conservación de la masa y
+          funda la química cuantitativa.
+        en: >-
+          Lavoisier publishes the Traité élémentaire de chimie, establishing conservation of mass and
+          founding quantitative chemistry.
+        pt: >-
+          Lavoisier publica o Tratado Elementar de Química, que estabelece a conservação da massa e funda
+          a química quantitativa.
+        fr: >-
+          Lavoisier publie le Traité élémentaire de chimie, qui établit la conservation de la masse et
+          fonde la chimie quantitative.
+        zh: >-
+          拉瓦锡发表《化学基础论》,确立了质量守恒定律,开创了定量化学。
+        ja: >-
+          ラヴォアジエが『化学原論』を発表し、質量保存を確立して定量化学を創始する。
+    - year: "1811"
+      label:
+        es: >-
+          Avogadro propone que volúmenes iguales de gases contienen el mismo número de moléculas, clave
+          para definir más tarde el mol.
+        en: >-
+          Avogadro proposes that equal volumes of gases hold equal numbers of molecules, key to later
+          defining the mole.
+        pt: >-
+          Avogadro propõe que volumes iguais de gases contêm o mesmo número de moléculas, chave para
+          depois definir o mol.
+        fr: >-
+          Avogadro propose que des volumes égaux de gaz contiennent le même nombre de molécules, clé de
+          la définition ultérieure de la mole.
+        zh: >-
+          阿伏伽德罗提出,相同体积的气体含有相同的分子数,这为日后定义摩尔打下了基础。
+        ja: >-
+          アボガドロが、同じ体積の気体には同じ数の分子が含まれると提唱し、後のモル定義の鍵となる。
+    - year: "1894"
+      label:
+        es: >-
+          Wilhelm Ostwald introduce el término «molaridad» para la concentración expresada en moles por
+          litro.
+        en: >-
+          Wilhelm Ostwald introduces the term "molarity" for concentration expressed in moles per liter.
+        pt: >-
+          Wilhelm Ostwald introduz o termo "molaridade" para a concentração expressa em mols por litro.
+        fr: >-
+          Wilhelm Ostwald introduit le terme « molarité » pour la concentration exprimée en moles par
+          litre.
+        zh: >-
+          奥斯特瓦尔德引入了"摩尔浓度"这一术语,指以摩尔/升表示的浓度。
+        ja: >-
+          ヴィルヘルム・オストヴァルトが、1リットルあたりのモル数で表す濃度を「モル濃度」と名付ける。
+    - year: Hoy
+      label:
+        es: >-
+          El mol/L es la unidad de concentración estándar en todos los laboratorios de química.
+        en: >-
+          mol/L is the standard concentration unit in every chemistry laboratory.
+        pt: >-
+          O mol/L é a unidade padrão de concentração em todos os laboratórios de química.
+        fr: >-
+          Le mol/L est l'unité de concentration standard de tous les laboratoires de chimie.
+        zh: >-
+          摩尔/升是所有化学实验室的标准浓度单位。
+        ja: >-
+          モル/Lはすべての化学実験室で標準となる濃度単位である。
+  useCases:
+    - title:
+        es: Valoración ácido-base
+        en: Acid-base titration
+        pt: Titulação ácido-base
+        fr: Titrage acido-basique
+        zh: 酸碱滴定
+        ja: 酸塩基滴定
+      description:
+        es: >-
+          Permite calcular la concentración desconocida de una muestra a partir del volumen de reactivo
+          consumido.
+        en: >-
+          It lets you compute a sample's unknown concentration from the volume of reagent consumed.
+        pt: >-
+          Permite calcular a concentração desconhecida de uma amostra a partir do volume de reagente
+          consumido.
+        fr: >-
+          Elle permet de calculer la concentration inconnue d'un échantillon à partir du volume de
+          réactif consommé.
+        zh: >-
+          根据所消耗试剂的体积,计算出样品中未知的浓度。
+        ja: >-
+          消費された試薬の体積から、試料の未知の濃度を算出できる。
+    - title:
+        es: Sueros y medicamentos intravenosos
+        en: Intravenous fluids and drugs
+        pt: Soros e medicamentos intravenosos
+        fr: Solutions et médicaments intraveineux
+        zh: 静脉输液与药物
+        ja: 輸液と静注薬
+      description:
+        es: >-
+          Se preparan a una concentración molar exacta para dosificar con seguridad a los pacientes.
+        en: >-
+          They are prepared at an exact molar concentration so patients can be dosed safely.
+        pt: >-
+          São preparados em concentração molar exata para dosar pacientes com segurança.
+        fr: >-
+          Elles sont préparées à une concentration molaire exacte pour doser les patients en sécurité.
+        zh: >-
+          它们以精确的摩尔浓度配制,以确保对患者安全给药。
+        ja: >-
+          患者に安全に投与できるよう、正確なモル濃度で調製される。
+    - title:
+        es: Tampones y bioquímica
+        en: Buffers and biochemistry
+        pt: Tampões e bioquímica
+        fr: Tampons et biochimie
+        zh: 缓冲液与生物化学
+        ja: 緩衝液と生化学
+      description:
+        es: >-
+          Los buffers que mantienen estable el pH se preparan mezclando soluciones de molaridad conocida.
+        en: >-
+          Buffers that keep pH stable are made by mixing solutions of known molarity.
+        pt: >-
+          Os tampões que mantêm o pH estável são preparados misturando soluções de molaridade conhecida.
+        fr: >-
+          Les tampons qui maintiennent le pH stable se préparent en mélangeant des solutions de molarité
+          connue.
+        zh: >-
+          保持pH稳定的缓冲液,正是通过混合已知摩尔浓度的溶液来配制的。
+        ja: >-
+          pHを安定に保つ緩衝液は、既知のモル濃度の溶液を混ぜて調製される。
+    - title:
+        es: Industria química
+        en: Chemical industry
+        pt: Indústria química
+        fr: Industrie chimique
+        zh: 化学工业
+        ja: 化学工業
+      description:
+        es: >-
+          Las plantas controlan la molaridad de sus reactores para que las reacciones ocurran a la
+          velocidad prevista.
+        en: >-
+          Plants control reactor molarity so reactions run at the planned rate.
+        pt: >-
+          As plantas controlam a molaridade dos reatores para que as reações ocorram na velocidade
+          prevista.
+        fr: >-
+          Les usines contrôlent la molarité de leurs réacteurs pour que les réactions aillent à la
+          vitesse prévue.
+        zh: >-
+          工厂控制反应器中的摩尔浓度,使反应按预定速度进行。
+        ja: >-
+          プラントでは、反応が計画どおりの速度で進むよう反応器のモル濃度を管理する。
+  example:
+    title:
+      es: Disolver sal en agua
+      en: Dissolving salt in water
+      pt: Dissolver sal em água
+      fr: Dissoudre du sel dans l'eau
+      zh: 将盐溶于水
+      ja: 水に塩を溶かす
+    lines:
+      - es: n = 2 mol · V = 0.5 L
+        en: n = 2 mol · V = 0.5 L
+        pt: n = 2 mol · V = 0,5 L
+        fr: n = 2 mol · V = 0,5 L
+        zh: n = 2 摩尔 · V = 0.5 升
+        ja: n = 2 mol · V = 0.5 L
+      - es: M = n / V
+        en: M = n / V
+        pt: M = n / V
+        fr: M = n / V
+        zh: M = n / V
+        ja: M = n / V
+      - es: M = 2 / 0.5
+        en: M = 2 / 0.5
+        pt: M = 2 / 0,5
+        fr: M = 2 / 0,5
+        zh: M = 2 / 0.5
+        ja: M = 2 / 0.5
+      - es: M = 4 mol/L
+        en: M = 4 mol/L
+        pt: M = 4 mol/L
+        fr: M = 4 mol/L
+        zh: M = 4 摩尔/升
+        ja: M = 4 mol/L
+      - es: La disolución es 4 molar
+        en: The solution is 4 molar
+        pt: A solução é 4 molar
+        fr: La solution est 4 molaire
+        zh: 该溶液浓度为4摩尔/升
+        ja: この溶液の濃度は4 mol/Lである

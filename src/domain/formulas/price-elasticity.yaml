@@ -1,0 +1,342 @@
+id: price-elasticity
+title:
+  es: Elasticidad Precio de la Demanda
+  en: Price Elasticity of Demand
+  pt: Elasticidade-Preço da Demanda
+  fr: Élasticité-Prix de la Demande
+  zh: 需求的价格弹性
+  ja: 需要の価格弾力性
+category:
+  es: Finanzas
+  en: Finance
+  pt: Finanças
+  fr: Finance
+  zh: 金融
+  ja: 金融
+nodes:
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: "E: la elasticidad precio de la demanda."
+      en: "E: the price elasticity of demand."
+      pt: "E: a elasticidade-preço da demanda."
+      fr: "E : l'élasticité-prix de la demande."
+      zh: "E:需求的价格弹性。"
+      ja: "E:需要の価格弾力性。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: open-numerator
+    type: operator
+    value: (
+    explanation:
+      es: Abre el numerador del cociente.
+      en: Opens the numerator of the ratio.
+      pt: Abre o numerador da razão.
+      fr: Ouvre le numérateur du rapport.
+      zh: 打开比值的分子。
+      ja: 比の分子を開く括弧。
+  - id: delta-q
+    type: variable
+    value: "%ΔQ"
+    explanation:
+      es: "%ΔQ: el cambio porcentual en la cantidad demandada."
+      en: "%ΔQ: the percentage change in quantity demanded."
+      pt: "%ΔQ: a variação percentual na quantidade demandada."
+      fr: "%ΔQ : la variation en pourcentage de la quantité demandée."
+      zh: "%ΔQ:需求量的百分比变化。"
+      ja: "%ΔQ:需要量の変化率。"
+  - id: close-numerator
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el numerador.
+      en: Closes the numerator.
+      pt: Fecha o numerador.
+      fr: Ferme le numérateur.
+      zh: 关闭分子。
+      ja: 分子を閉じる括弧。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: open-denominator
+    type: operator
+    value: (
+    explanation:
+      es: Abre el denominador.
+      en: Opens the denominator.
+      pt: Abre o denominador.
+      fr: Ouvre le dénominateur.
+      zh: 打开分母。
+      ja: 分母を開く括弧。
+  - id: delta-p
+    type: variable
+    value: "%ΔP"
+    explanation:
+      es: "%ΔP: el cambio porcentual en el precio."
+      en: "%ΔP: the percentage change in price."
+      pt: "%ΔP: a variação percentual no preço."
+      fr: "%ΔP : la variation en pourcentage du prix."
+      zh: "%ΔP:价格的百分比变化。"
+      ja: "%ΔP:価格の変化率。"
+  - id: close-denominator
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el denominador.
+      en: Closes the denominator.
+      pt: Fecha o denominador.
+      fr: Ferme le dénominateur.
+      zh: 关闭分母。
+      ja: 分母を閉じる括弧。
+context:
+  author:
+    es: Alfred Marshall
+    en: Alfred Marshall
+    pt: Alfred Marshall
+    fr: Alfred Marshall
+    zh: 阿尔弗雷德·马歇尔
+    ja: アルフレッド・マーシャル
+  era:
+    es: Inglaterra, 1842–1924 · publicada en 1890
+    en: England, 1842–1924 · published in 1890
+    pt: Inglaterra, 1842–1924 · publicada em 1890
+    fr: Angleterre, 1842–1924 · publiée en 1890
+    zh: 英国,1842–1924年 · 1890年发表
+    ja: イギリス、1842–1924年・1890年発表
+  history:
+    es: >-
+      La elasticidad precio de la demanda responde una pregunta simple: si el precio sube, ¿cuánto cae
+      la cantidad demandada? Cuando |E| > 1 la demanda es elástica: los consumidores cambian de
+      producto con facilidad, como ocurre con los bienes de lujo. Cuando |E| < 1 es inelástica: la
+      compra apenas varía, como la gasolina, que sigue vendiéndose aunque suba su precio. Alfred
+      Marshall formalizó la idea en 1890 y desde entonces sustenta la estrategia de precios y la
+      política fiscal: gravar bienes inelásticos recauda más sin destruir demanda.
+    en: >-
+      Price elasticity of demand answers a simple question: if the price rises, how much does quantity
+      demanded fall? When |E| > 1 demand is elastic: consumers easily switch products, as with luxury
+      goods. When |E| < 1 it is inelastic: purchases barely change, like gasoline, which still sells
+      even when it costs more. Alfred Marshall formalized the idea in 1890, and it has since underpinned
+      pricing strategy and tax policy: taxing inelastic goods raises more revenue without destroying
+      demand.
+    pt: >-
+      A elasticidade-preço da demanda responde a uma pergunta simples: se o preço sobe, quanto cai a
+      quantidade demandada? Quando |E| > 1 a demanda é elástica: os consumidores trocam de produto com
+      facilidade, como ocorre com os bens de luxo. Quando |E| < 1 ela é inelástica: a compra quase não
+      varia, como a gasolina, que continua sendo vendida mesmo com o preço maior. Alfred Marshall
+      formalizou a ideia em 1890 e, desde então, ela sustenta a estratégia de preços e a política
+      tributária: tributar bens inelásticos arrecada mais sem destruir a demanda.
+    fr: >-
+      L'élasticité-prix de la demande répond à une question simple : si le prix monte, de combien la
+      quantité demandée baisse-t-elle ? Lorsque |E| > 1, la demande est élastique : les consommateurs
+      changent facilement de produit, comme pour les biens de luxe. Lorsque |E| < 1, elle est
+      inélastique : l'achat varie à peine, comme l'essence, qui continue de se vendre même plus chère.
+      Alfred Marshall a formalisé l'idée en 1890 et, depuis, elle fonde la stratégie de prix et la
+      politique fiscale : taxer les biens inélastiques rapporte davantage sans détruire la demande.
+    zh: >-
+      需求的价格弹性回答一个简单问题:价格上涨时,需求量会下降多少?当|E|>1时,需求富有弹性,消费者很容易转向其他产品,
+      奢侈品便是如此。当|E|<1时,需求缺乏弹性,购买量几乎不变,例如汽油即使涨价仍会有人购买。阿尔弗雷德·马歇尔于1890年
+      将这一思想形式化,此后它一直是定价策略和税收政策的基石:对缺乏弹性的商品征税,能在不摧毁需求的前提下增加收入。
+    ja: >-
+      需要の価格弾力性は単純な問いに答える:価格が上がったとき、需要量はどれだけ減るのか。|E|>1のとき需要は弾力的で、
+      消費者は容易に他の商品に乗り換える。贅沢品がその例だ。|E|<1のときは非弾力的で、購入はほとんど変わらない。
+      ガソリンは値上がりしても売れ続ける。アルフレッド・マーシャルが1890年にこの考えを定式化し、以来、価格戦略と
+      税制の基盤となっている。非弾力的な財への課税は需要を壊さずに多くの税収をもたらすのだ。
+  timeline:
+    - year: "1890"
+      label:
+        es: >-
+          Marshall publica los Principios de Economía, donde define la elasticidad precio de la demanda.
+        en: >-
+          Marshall publishes Principles of Economics, where he defines price elasticity of demand.
+        pt: >-
+          Marshall publica os Princípios de Economia, onde define a elasticidade-preço da demanda.
+        fr: >-
+          Marshall publie les Principes d'économie politique, où il définit l'élasticité-prix de la
+          demande.
+        zh: >-
+          马歇尔出版《经济学原理》,在其中定义了需求的价格弹性。
+        ja: >-
+          マーシャルが『経済学原理』を出版し、需要の価格弾力性を定義する。
+    - year: "1933"
+      label:
+        es: >-
+          Joan Robinson usa la elasticidad para estudiar la fijación de precios en mercados
+          imperfectos.
+        en: >-
+          Joan Robinson uses elasticity to study pricing in imperfect markets.
+        pt: >-
+          Joan Robinson usa a elasticidade para estudar a precificação em mercados imperfeitos.
+        fr: >-
+          Joan Robinson utilise l'élasticité pour étudier la fixation des prix dans les marchés
+          imparfaits.
+        zh: >-
+          琼·罗宾逊用弹性研究不完全市场中的定价。
+        ja: >-
+          ジョーン・ロビンソンが不完全市場での価格設定の研究に弾力性を用いる。
+    - year: Hoy
+      label:
+        es: >-
+          La elasticidad alimenta los algoritmos de precios dinámicos y el diseño de impuestos sobre
+          la gasolina y el tabaco.
+        en: >-
+          Elasticity powers dynamic-pricing algorithms and the design of taxes on gasoline and tobacco.
+        pt: >-
+          A elasticidade alimenta algoritmos de precificação dinâmica e o desenho de impostos sobre
+          gasolina e tabaco.
+        fr: >-
+          L'élasticité alimente les algorithmes de tarification dynamique et la conception des taxes
+          sur l'essence et le tabac.
+        zh: >-
+          弹性为动态定价算法以及汽油和烟草税的设计提供支撑。
+        ja: >-
+          弾力性は動的価格設定のアルゴリズムや、ガソリンとタバコの課税設計を支えている。
+  useCases:
+    - title:
+        es: Estrategia de precios
+        en: Pricing strategy
+        pt: Estratégia de preços
+        fr: Stratégie de prix
+        zh: 定价策略
+        ja: 価格戦略
+      description:
+        es: >-
+          Las aerolíneas y plataformas digitales ajustan sus precios según la elasticidad estimada de
+          cada segmento de clientes.
+        en: >-
+          Airlines and digital platforms adjust prices based on the estimated elasticity of each
+          customer segment.
+        pt: >-
+          Companhias aéreas e plataformas digitais ajustam seus preços conforme a elasticidade
+          estimada de cada segmento de clientes.
+        fr: >-
+          Les compagnies aériennes et les plateformes numériques ajustent leurs prix selon l'élasticité
+          estimée de chaque segment de clients.
+        zh: >-
+          航空公司和数字平台根据各客户群估计的弹性调整价格。
+        ja: >-
+          航空会社やデジタルプラットフォームは、顧客セグメントごとの推定弾力性に応じて価格を調整する。
+    - title:
+        es: Política tributaria
+        en: Tax policy
+        pt: Política tributária
+        fr: Politique fiscale
+        zh: 税收政策
+        ja: 税制政策
+      description:
+        es: >-
+          Los gobiernos gravan bienes inelásticos como la gasolina y el tabaco para recaudar sin
+          reducir mucho su consumo.
+        en: >-
+          Governments tax inelastic goods like gasoline and tobacco to raise revenue without greatly
+          reducing consumption.
+        pt: >-
+          Governos tributam bens inelásticos como gasolina e tabaco para arrecadar sem reduzir muito o
+          consumo.
+        fr: >-
+          Les gouvernements taxent les biens inélastiques comme l'essence et le tabac pour lever des
+          recettes sans réduire beaucoup la consommation.
+        zh: >-
+          政府对汽油和烟草等缺乏弹性的商品征税,在不大幅减少消费的情况下增加收入。
+        ja: >-
+          政府はガソリンやタバコのような非弾力的な財に課税し、消費を大きく減らさずに税収を得る。
+    - title:
+        es: Bienes de lujo
+        en: Luxury goods
+        pt: Bens de luxo
+        fr: Biens de luxe
+        zh: 奢侈品
+        ja: 贅沢品
+      description:
+        es: >-
+          Los productos opcionales tienen demanda elástica: una suba de precio desplaza el consumo
+          hacia sustitutos.
+        en: >-
+          Optional products have elastic demand: a price rise shifts consumption toward substitutes.
+        pt: >-
+          Produtos opcionais têm demanda elástica: uma alta de preço desloca o consumo para
+          substitutos.
+        fr: >-
+          Les produits facultatifs ont une demande élastique : une hausse de prix déplace la
+          consommation vers des substituts.
+        zh: >-
+          非必需品具有富有弹性的需求:价格上涨会使消费转向替代品。
+        ja: >-
+          任意商品の需要は弾力的で、値上げは消費を代替品へ移す。
+    - title:
+        es: Transporte y energía
+        en: Transport and energy
+        pt: Transporte e energia
+        fr: Transport et énergie
+        zh: 交通与能源
+        ja: 交通とエネルギー
+      description:
+        es: >-
+          El peaje en hora pico y el precio del combustible usan la elasticidad para moderar la
+          demanda.
+        en: >-
+          Peak-hour tolls and fuel prices use elasticity to moderate demand.
+        pt: >-
+          Pedágios em horário de pico e preços de combustível usam a elasticidade para moderar a
+          demanda.
+        fr: >-
+          Les péages aux heures de pointe et les prix du carburant utilisent l'élasticité pour modérer
+          la demande.
+        zh: >-
+          高峰时段通行费和燃料价格利用弹性来调节需求。
+        ja: >-
+          ピーク時の通行料や燃料価格は、弾力性を使って需要を抑える。
+  example:
+    title:
+      es: Un aumento del precio
+      en: A price increase
+      pt: Um aumento de preço
+      fr: Une hausse de prix
+      zh: 价格上涨
+      ja: 価格上昇
+    lines:
+      - es: "ΔP/P = 10% = 0.10"
+        en: "ΔP/P = 10% = 0.10"
+        pt: "ΔP/P = 10 % = 0,10"
+        fr: "ΔP/P = 10 % = 0,10"
+        zh: "ΔP/P = 10% = 0.10"
+        ja: "ΔP/P = 10% = 0.10"
+      - es: "ΔQ/Q = −20% = −0.20"
+        en: "ΔQ/Q = −20% = −0.20"
+        pt: "ΔQ/Q = −20 % = −0,20"
+        fr: "ΔQ/Q = −20 % = −0,20"
+        zh: "ΔQ/Q = −20% = −0.20"
+        ja: "ΔQ/Q = −20% = −0.20"
+      - es: "E = (%ΔQ)/(%ΔP)"
+        en: "E = (%ΔQ)/(%ΔP)"
+        pt: "E = (%ΔQ)/(%ΔP)"
+        fr: "E = (%ΔQ)/(%ΔP)"
+        zh: "E = (%ΔQ)/(%ΔP)"
+        ja: "E = (%ΔQ)/(%ΔP)"
+      - es: "E = −0.20 / 0.10"
+        en: "E = −0.20 / 0.10"
+        pt: "E = −0,20 / 0,10"
+        fr: "E = −0,20 / 0,10"
+        zh: "E = −0.20 / 0.10"
+        ja: "E = −0.20 / 0.10"
+      - es: "E = −2 → elástica (|E| > 1)"
+        en: "E = −2 → elastic (|E| > 1)"
+        pt: "E = −2 → elástica (|E| > 1)"
+        fr: "E = −2 → élastique (|E| > 1)"
+        zh: "E = −2 → 富有弹性(|E| > 1)"
+        ja: "E = −2 → 弾力的(|E| > 1)"

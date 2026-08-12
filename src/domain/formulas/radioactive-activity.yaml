@@ -1,0 +1,320 @@
+id: radioactive-activity
+title:
+  es: Actividad Radiactiva
+  en: Radioactive Activity
+  pt: Atividade Radioativa
+  fr: Activité radioactive
+  zh: 放射性活度
+  ja: 放射能
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: "La actividad radiactiva: las desintegraciones que ocurren por segundo en la muestra."
+      en: "The radioactive activity: the disintegrations occurring per second in the sample."
+      pt: "A atividade radioativa: as desintegrações que ocorrem por segundo na amostra."
+      fr: "L'activité radioactive : les désintégrations qui se produisent par seconde dans l'échantillon."
+      zh: 放射性活度:样品中每秒发生的衰变次数。
+      ja: 放射能:試料中で1秒間に起こる崩壊の数。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: lambda
+    type: constant
+    value: λ
+    explanation:
+      es: "La constante de desintegración: la probabilidad de que un núcleo se desintegre por segundo."
+      en: "The decay constant: the probability that a nucleus disintegrates each second."
+      pt: "A constante de desintegração: a probabilidade de um núcleo se desintegrar por segundo."
+      fr: "La constante de désintégration : la probabilité qu'un noyau se désintègre chaque seconde."
+      zh: 衰变常数:原子核每秒发生衰变的概率。
+      ja: 崩壊定数:原子核が毎秒崩壊する確率。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: "Multiplicación: la actividad crece con el número de núcleos presentes."
+      en: "Multiplication: activity grows with the number of nuclei present."
+      pt: "Multiplicação: a atividade cresce com o número de núcleos presentes."
+      fr: "Multiplication : l'activité croît avec le nombre de noyaux présents."
+      zh: 乘法:活度随原子核数量的增加而增大。
+      ja: 掛け算:放射能は存在する原子核の数に比例して増える。
+  - id: n
+    type: variable
+    value: N
+    explanation:
+      es: El número de núcleos radiactivos presentes en la muestra en ese instante.
+      en: The number of radioactive nuclei present in the sample at that instant.
+      pt: O número de núcleos radioativos presentes na amostra naquele instante.
+      fr: Le nombre de noyaux radioactifs présents dans l'échantillon à cet instant.
+      zh: 该时刻样品中存在的放射性原子核的数量。
+      ja: その瞬間に試料中に存在する放射性原子核の数。
+context:
+  author:
+    es: Basada en el trabajo de Rutherford
+    en: Based on the work of Rutherford
+    pt: Baseado no trabalho de Rutherford
+    fr: Basé sur les travaux de Rutherford
+    zh: 基于卢瑟福的研究
+    ja: ラザフォードの研究に基づく
+  era:
+    es: Inglaterra y Francia, s. XX
+    en: England and France, 20th century
+    pt: Inglaterra e França, séc. XX
+    fr: Angleterre et France, XXe siècle
+    zh: 英国和法国,20世纪
+    ja: イギリスとフランス、20世紀
+  history:
+    es: >-
+      La actividad radiactiva mide cuántos núcleos se desintegran por segundo en una muestra, y es
+      proporcional al número de núcleos presentes: A = λ·N, donde λ es la probabilidad de
+      desintegración de cada núcleo. Rutherford y Marie Curie, pioneros en cuantificar la radiactividad,
+      dieron forma a esta idea; hoy se mide en becquereles, desintegraciones por segundo. La actividad
+      es la magnitud que se controla en dosimetría, en la dosificación de la medicina nuclear y en los
+      límites de seguridad radiológica.
+    en: >-
+      Radioactive activity measures how many nuclei in a sample disintegrate per second, and it is
+      proportional to the number of nuclei present: A = λ·N, where λ is each nucleus's probability of
+      decaying. Rutherford and Marie Curie, pioneers in quantifying radioactivity, shaped this idea;
+      today it is measured in becquerels, disintegrations per second. Activity is the quantity tracked
+      in dosimetry, in nuclear medicine dosing, and in radiological safety limits.
+    pt: >-
+      A atividade radioativa mede quantos núcleos de uma amostra se desintegram por segundo, e é
+      proporcional ao número de núcleos presentes: A = λ·N, em que λ é a probabilidade de desintegração
+      de cada núcleo. Rutherford e Marie Curie, pioneiros em quantificar a radioatividade, deram forma
+      a essa ideia; hoje ela é medida em becqueréis, desintegrações por segundo. A atividade é a
+      grandeza controlada na dosimetria, na dosagem da medicina nuclear e nos limites de segurança
+      radiológica.
+    fr: >-
+      L'activité radioactive mesure combien de noyaux d'un échantillon se désintègrent par seconde, et
+      elle est proportionnelle au nombre de noyaux présents : A = λ·N, où λ est la probabilité de
+      désintégration de chaque noyau. Rutherford et Marie Curie, pionniers de la quantification de la
+      radioactivité, ont façonné cette idée ; aujourd'hui on la mesure en becquerels, désintégrations
+      par seconde. L'activité est la grandeur contrôlée en dosimétrie, dans le dosage de la médecine
+      nucléaire et dans les limites de sûreté radiologique.
+    zh: >-
+      放射性活度衡量样品中每秒钟有多少个原子核发生衰变,它与原子核的数量成正比:A = λ·N,其中λ是每个
+      原子核的衰变概率。卢瑟福和玛丽·居里是量化放射性的先驱,他们塑造了这一概念;如今活度以贝可勒尔
+      (每秒衰变次数)为单位。活度是剂量学、核医学给药剂量和辐射安全限值中需要控制的关键量。
+    ja: >-
+      放射能は、試料中で1秒間に何個の原子核が崩壊するかを表し、存在する原子核の数に比例する: A = λ·N。
+      ここでλは各原子核の崩壊確率である。放射能を定量化した先駆者であるラザフォードとマリ・キュリーが
+      この考えを形作った。現在はベクレル(毎秒の崩壊数)で測定される。放射能は、線量測定、核医学の投与量、
+      放射線安全基準で監視される重要な量である。
+  timeline:
+    - year: "1896"
+      label:
+        es: >-
+          Becquerel descubre que los compuestos de uranio emiten radiación espontáneamente, sin
+          excitación externa.
+        en: >-
+          Becquerel discovers that uranium compounds emit radiation spontaneously, without external
+          excitation.
+        pt: >-
+          Becquerel descobre que compostos de urânio emitem radiação espontaneamente, sem excitação
+          externa.
+        fr: >-
+          Becquerel découvre que les composés d'uranium émettent de la radiation spontanément, sans
+          excitation externe.
+        zh: >-
+          贝可勒尔发现铀化合物无需外部激发即可自发发射辐射。
+        ja: >-
+          ベクレルが、外部からの励起なしにウラン化合物が自然に放射線を放出することを発見する。
+    - year: "1898"
+      label:
+        es: >-
+          Marie y Pierre Curie bautizan el fenómeno como "radiactividad" y aíslan el polonio y el
+          radio.
+        en: >-
+          Marie and Pierre Curie name the phenomenon "radioactivity" and isolate polonium and radium.
+        pt: >-
+          Marie e Pierre Curie batizam o fenômeno de "radioatividade" e isolam o polônio e o rádio.
+        fr: >-
+          Marie et Pierre Curie nomment le phénomène « radioactivité » et isolent le polonium et le
+          radium.
+        zh: >-
+          玛丽和皮埃尔·居里将这一现象命名为"放射性",并分离出钋和镭。
+        ja: >-
+          マリ・キュリーとピエール・キュリーがこの現象を「放射能」と名付け、ポロニウムとラジウムを単離する。
+    - year: "1903"
+      label:
+        es: >-
+          Rutherford y Soddy formulan la ley de la desintegración, que da origen a la ecuación A = λ·N.
+        en: >-
+          Rutherford and Soddy formulate the decay law, from which the equation A = λ·N follows.
+        pt: >-
+          Rutherford e Soddy formulam a lei da desintegração, da qual surge a equação A = λ·N.
+        fr: >-
+          Rutherford et Soddy formulent la loi de la désintégration, d'où découle l'équation A = λ·N.
+        zh: >-
+          卢瑟福和索迪提出了衰变定律,由此得出方程A = λ·N。
+        ja: >-
+          ラザフォードとソディが崩壊の法則を定式化し、そこから方程式A = λ·Nが導かれる。
+    - year: Hoy
+      label:
+        es: >-
+          La actividad, medida en becquereles, fija las dosis de la medicina nuclear y los límites de
+          seguridad radiológica.
+        en: >-
+          Activity, measured in becquerels, sets nuclear medicine doses and radiological safety
+          limits.
+        pt: >-
+          A atividade, medida em becqueréis, define as doses da medicina nuclear e os limites de
+          segurança radiológica.
+        fr: >-
+          L'activité, mesurée en becquerels, fixe les doses de la médecine nucléaire et les limites de
+          sûreté radiologique.
+        zh: >-
+          以贝可勒尔为单位的活度,决定了核医学的剂量和辐射安全限值。
+        ja: >-
+          ベクレルで測定される放射能が、核医学の投与量と放射線安全基準を決める。
+  useCases:
+    - title:
+        es: Medicina nuclear
+        en: Nuclear medicine
+        pt: Medicina nuclear
+        fr: Médecine nucléaire
+        zh: 核医学
+        ja: 核医学
+      description:
+        es: >-
+          La dosis de un radiofármaco se calcula a partir de su actividad, expresada en becquereles,
+          para que el paciente reciba la cantidad exacta.
+        en: >-
+          The dose of a radiopharmaceutical is calculated from its activity, expressed in becquerels,
+          so the patient receives the exact amount.
+        pt: >-
+          A dose de um radiofármaco é calculada a partir de sua atividade, expressa em becqueréis,
+          para que o paciente receba a quantidade exata.
+        fr: >-
+          La dose d'un radiopharmaceutique se calcule à partir de son activité, exprimée en becquerels,
+          afin que le patient reçoive la quantité exacte.
+        zh: >-
+          放射性药物的剂量根据其活度(以贝可勒尔为单位)计算,以确保患者获得准确的剂量。
+        ja: >-
+          放射性医薬品の投与量は、ベクレルで表される放射能から計算され、患者が正確な量を受けるようにする。
+    - title:
+        es: Dosimetría y protección radiológica
+        en: Dosimetry and radiation protection
+        pt: Dosimetria e proteção radiológica
+        fr: Dosimétrie et radioprotection
+        zh: 剂量学与辐射防护
+        ja: 線量測定と放射線防護
+      description:
+        es: >-
+          Se mide la actividad de fuentes y contaminación para estimar la dosis que recibe una persona
+          y mantenerse dentro de los límites legales.
+        en: >-
+          The activity of sources and contamination is measured to estimate the dose a person receives
+          and stay within legal limits.
+        pt: >-
+          Mede-se a atividade de fontes e contaminações para estimar a dose que uma pessoa recebe e
+          permanecer dentro dos limites legais.
+        fr: >-
+          On mesure l'activité des sources et des contaminations pour estimer la dose reçue par une
+          personne et rester dans les limites réglementaires.
+        zh: >-
+          测量放射源和污染物的活度,以估算个人受到的剂量并保持在法定限值以内。
+        ja: >-
+          線源や汚染の放射能を測定し、人が受ける線量を推定して法規制の限度内に保つ。
+    - title:
+        es: Vigilancia ambiental
+        en: Environmental monitoring
+        pt: Vigilância ambiental
+        fr: Surveillance de l'environnement
+        zh: 环境监测
+        ja: 環境モニタリング
+      description:
+        es: >-
+          Se mide la actividad del aire, el agua y el suelo para detectar contaminación radiactiva
+          cerca de centrales y minas.
+        en: >-
+          The activity of air, water, and soil is measured to detect radioactive contamination near
+          power plants and mines.
+        pt: >-
+          Mede-se a atividade do ar, da água e do solo para detectar contaminação radioativa perto de
+          usinas e minas.
+        fr: >-
+          On mesure l'activité de l'air, de l'eau et du sol pour détecter les contaminations
+          radioactives près des centrales et des mines.
+        zh: >-
+          测量空气、水和土壤的活度,以检测电厂和矿山附近的放射性污染。
+        ja: >-
+          発電所や鉱山の周辺の放射性汚染を検出するため、空気、水、土壌の放射能を測定する。
+    - title:
+        es: Industria nuclear
+        en: Nuclear industry
+        pt: Indústria nuclear
+        fr: Industrie nucléaire
+        zh: 核工业
+        ja: 原子力産業
+      description:
+        es: >-
+          Se controla la actividad del combustible y los residuos para gestionar el reactor y planear
+          su almacenamiento seguro.
+        en: >-
+          Fuel and waste activity is tracked to manage the reactor and plan its safe storage.
+        pt: >-
+          Controla-se a atividade do combustível e dos resíduos para gerir o reator e planejar seu
+          armazenamento seguro.
+        fr: >-
+          L'activité du combustible et des déchets est suivie pour gérer le réacteur et planifier son
+          stockage sûr.
+        zh: >-
+          追踪燃料和废物的活度,以管理反应堆并规划其安全存放。
+        ja: >-
+          燃料や廃棄物の放射能を追跡し、原子炉の運転管理と安全な保管計画を立てる。
+  example:
+    title:
+      es: Una muestra de 1000 núcleos
+      en: A sample of 1000 nuclei
+      pt: Uma amostra de 1000 núcleos
+      fr: Un échantillon de 1000 noyaux
+      zh: 1000个原子核的样品
+      ja: 1000個の原子核の試料
+    lines:
+      - es: λ = 0.1 s⁻¹
+        en: λ = 0.1 s⁻¹
+        pt: λ = 0,1 s⁻¹
+        fr: λ = 0,1 s⁻¹
+        zh: λ = 0.1 s⁻¹
+        ja: λ = 0.1 s⁻¹
+      - es: N = 1000
+        en: N = 1000
+        pt: N = 1000
+        fr: N = 1000
+        zh: N = 1000
+        ja: N = 1000
+      - es: A = λ·N
+        en: A = λ·N
+        pt: A = λ·N
+        fr: A = λ·N
+        zh: A = λ·N
+        ja: A = λ·N
+      - es: A = 0.1 × 1000
+        en: A = 0.1 × 1000
+        pt: A = 0,1 × 1000
+        fr: A = 0,1 × 1000
+        zh: A = 0.1 × 1000
+        ja: A = 0.1 × 1000
+      - es: A = 100 Bq
+        en: A = 100 Bq
+        pt: A = 100 Bq
+        fr: A = 100 Bq
+        zh: A = 100 Bq
+        ja: A = 100 Bq

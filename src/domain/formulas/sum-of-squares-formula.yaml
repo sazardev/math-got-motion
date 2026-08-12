@@ -1,0 +1,409 @@
+id: sum-of-squares-formula
+title:
+  es: Suma de los Primeros n Cuadrados
+  en: Sum of the First n Squares
+  pt: Soma dos Primeiros n Quadrados
+  fr: Somme des n Premiers Carrés
+  zh: 前n个平方数之和
+  ja: 最初のn個の平方数の和
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: one-sq
+    type: number
+    value: 1²
+    explanation:
+      es: "El primer cuadrado: 1 elevado al cuadrado."
+      en: "The first square: 1 squared."
+      pt: "O primeiro quadrado: 1 ao quadrado."
+      fr: "Le premier carré : 1 au carré."
+      zh: "第一个平方数：1的平方。"
+      ja: "最初の平方数。1を2乗したもの。"
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado al siguiente cuadrado.
+      en: Added to the next square.
+      pt: Somado ao próximo quadrado.
+      fr: Ajouté au carré suivant.
+      zh: 加上下一个平方数。
+      ja: 次の平方数を足す。
+  - id: two-sq
+    type: number
+    value: 2²
+    explanation:
+      es: "El segundo cuadrado: 2 elevado al cuadrado."
+      en: "The second square: 2 squared."
+      pt: "O segundo quadrado: 2 ao quadrado."
+      fr: "Le second carré : 2 au carré."
+      zh: "第二个平方数：2的平方。"
+      ja: "2番目の平方数。2を2乗したもの。"
+  - id: ellipsis-plus
+    type: operator
+    value: …+
+    explanation:
+      es: "Los puntos suspensivos: la suma continúa sumando cada cuadrado siguiente hasta llegar a n²."
+      en: "The ellipsis: the sum continues adding each successive square up to n²."
+      pt: "As reticências: a soma continua somando cada quadrado seguinte até chegar a n²."
+      fr: "Les points de suspension : la somme continue d'ajouter chaque carré suivant jusqu'à n²."
+      zh: "省略号：求和继续加上后续每个平方数，直到 n²。"
+      ja: "省略記号。各平方数を順に足し続け、n² まで続くことを示す。"
+  - id: n-sq
+    type: variable
+    value: n²
+    explanation:
+      es: "El último cuadrado de la suma: n al cuadrado."
+      en: "The last square in the sum: n squared."
+      pt: "O último quadrado da soma: n ao quadrado."
+      fr: "Le dernier carré de la somme : n au carré."
+      zh: 和中的最后一个平方数：n 的平方。
+      ja: 和の最後の平方数。nを2乗したもの。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: El número de términos que se suman.
+      en: The number of terms being summed.
+      pt: O número de termos que se somam.
+      fr: Le nombre de termes que l'on additionne.
+      zh: 参与求和的项数。
+      ja: 足し合わせる項の数。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por el siguiente factor.
+      en: Multiplied by the next factor.
+      pt: Multiplicado pelo próximo fator.
+      fr: Multiplié par le facteur suivant.
+      zh: 乘以下一个因子。
+      ja: 次の因子を掛ける。
+  - id: n-plus-1
+    type: variable
+    value: "(n+1)"
+    explanation:
+      es: "El segundo factor: n más uno, la suma de los dos primeros enteros."
+      en: "The second factor: n plus one, the sum of the first two integers."
+      pt: "O segundo fator: n mais um, a soma dos dois primeiros inteiros."
+      fr: "Le second facteur : n plus un, la somme des deux premiers entiers."
+      zh: "第二个因子：n 加 1，即前两个整数之和。"
+      ja: "2番目の因子。n足す1。最初の2つの整数の和。"
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por el tercer factor.
+      en: Multiplied by the third factor.
+      pt: Multiplicado pelo terceiro fator.
+      fr: Multiplié par le troisième facteur.
+      zh: 乘以第三个因子。
+      ja: 3番目の因子を掛ける。
+  - id: two-n-plus-1
+    type: variable
+    value: "(2n+1)"
+    explanation:
+      es: "El tercer factor: el doble de n más uno."
+      en: "The third factor: twice n plus one."
+      pt: "O terceiro fator: o dobro de n mais um."
+      fr: "Le troisième facteur : le double de n plus un."
+      zh: "第三个因子：n 的两倍加 1。"
+      ja: "3番目の因子。nの2倍に1を足したもの。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Todo el producto dividido entre seis.
+      en: The whole product divided by six.
+      pt: Todo o produto dividido por seis.
+      fr: Tout le produit divisé par six.
+      zh: 整个乘积除以 6。
+      ja: 積全体を6で割る。
+  - id: six
+    type: number
+    value: "6"
+    explanation:
+      es: "El divisor constante: la fórmula siempre divide entre seis."
+      en: "The constant divisor: the formula always divides by six."
+      pt: "O divisor constante: a fórmula sempre divide por seis."
+      fr: "Le diviseur constant : la formule divise toujours par six."
+      zh: "常数除数：该公式总是除以 6。"
+      ja: "定数の除数。公式は常に6で割る。"
+context:
+  author:
+    es: Origen colectivo (Arquímedes y al-Karaji)
+    en: Collective origin (Archimedes and al-Karaji)
+    pt: Origem coletiva (Arquimedes e al-Karaji)
+    fr: Origine collective (Archimède et al-Karaji)
+    zh: 集体起源(阿基米德与卡拉吉)
+    ja: 集団的起源(アルキメデスとアル・カラジ)
+  era:
+    es: Grecia y mundo islámico, s. X–XII
+    en: Greece and the Islamic world, 10th–12th century
+    pt: Grécia e mundo islâmico, séc. X–XII
+    fr: Grèce et monde islamique, Xe–XIIe siècle
+    zh: 希腊与伊斯兰世界,10–12世纪
+    ja: ギリシャとイスラーム世界、10〜12世紀
+  history:
+    es: >-
+      La suma de los primeros n cuadrados tiene raíces antiguas: Arquímedes la usó en el siglo III
+      a.C. en sus tratados sobre espirales y sólidos, donde necesitaba acotar áreas y volúmenes
+      sumando cuadrados. En el siglo X, el matemático persa al-Karaji la demostró con un argumento
+      inductivo que hoy se enseña como el ejemplo clásico de inducción matemática. Con la suma de
+      los primeros enteros, es el bloque básico para sumar potencias, y aparece en las sumas de
+      Riemann de la integral, en la definición de la varianza y en el análisis de algoritmos.
+    en: >-
+      The sum of the first n squares has ancient roots: Archimedes used it in the 3rd century BC in
+      his treatises on spirals and solids, where he needed to bound areas and volumes by adding
+      squares. In the 10th century the Persian mathematician al-Karaji proved it with an inductive
+      argument that is now taught as the classic example of mathematical induction. Alongside the
+      sum of the first integers, it is the basic block for summing powers, and it appears in the
+      Riemann sums of the integral, in the definition of variance, and in algorithm analysis.
+    pt: >-
+      A soma dos primeiros n quadrados tem raízes antigas: Arquimedes a usou no século III a.C. em
+      seus tratados sobre espirais e sólidos, onde precisava limitar áreas e volumes somando
+      quadrados. No século X, o matemático persa al-Karaji a demonstrou com um argumento indutivo
+      que hoje se ensina como o exemplo clássico da indução matemática. Junto com a soma dos
+      primeiros inteiros, é o bloco básico para somar potências, e aparece nas somas de Riemann da
+      integral, na definição da variância e na análise de algoritmos.
+    fr: >-
+      La somme des n premiers carrés a des racines anciennes : Archimède l'utilisa au IIIe siècle
+      av. J.-C. dans ses traités sur les spirales et les solides, où il lui fallait borner aires et
+      volumes en additionnant des carrés. Au Xe siècle, le mathématicien persan al-Karaji la démontra
+      par un raisonnement inductif que l'on enseigne encore comme l'exemple classique d'induction
+      mathématique. Avec la somme des premiers entiers, elle est le bloc de base pour sommer des
+      puissances, et elle apparaît dans les sommes de Riemann de l'intégrale, dans la définition de
+      la variance et dans l'analyse d'algorithmes.
+    zh: >-
+      前n个平方数之和有着古老的渊源：公元前3世纪，阿基米德在关于螺线和立体的著作中就用到它，需要
+      累加平方数以界定面积和体积。10世纪，波斯数学家卡拉吉用归纳论证证明了它，这一论证如今被当作
+      数学归纳法的经典范例。与连续整数之和一道，它是求和幂次的基本工具，出现在积分的黎曼和、方差的
+      定义以及算法分析之中。
+    ja: >-
+      最初のn個の平方数の和には古い起源がある。紀元前3世紀、アルキメデスは螺旋や立体に関する著書で、
+      面積や体積を評価するために平方数を足し合わせてこの和を用いた。10世紀、ペルシアの数学者アル・カラジは
+      帰納的論証でこれを証明した。これは現在、数学的帰納法の古典的な例として教えられている。最初のn個の
+      整数の和と並んで、冪の和を求める基本となる式であり、積分のリーマン和、分散の定義、アルゴリズム解析に
+      登場する。
+  timeline:
+    - year: c. 250 a.C.
+      label:
+        es: >-
+          Arquímedes usa la suma de cuadrados para acotar áreas y volúmenes en sus tratados sobre
+          espirales y esferoides.
+        en: >-
+          Archimedes uses sums of squares to bound areas and volumes in his treatises on spirals
+          and spheroids.
+        pt: >-
+          Arquimedes usa a soma de quadrados para limitar áreas e volumes em seus tratados sobre
+          espirais e esferoides.
+        fr: >-
+          Archimède utilise les sommes de carrés pour borner aires et volumes dans ses traités sur
+          les spirales et les sphéroïdes.
+        zh: >-
+          阿基米德在关于螺线和旋转体的著作中，用平方和来界定面积与体积。
+        ja: >-
+          アルキメデスが螺旋と回転体に関する著書で、面積と体積を評価するために平方数の和を用いる。
+    - year: s. X
+      label:
+        es: >-
+          El matemático persa al-Karaji demuestra la fórmula con un argumento inductivo, primer
+          gran uso de la inducción matemática.
+        en: >-
+          The Persian mathematician al-Karaji proves the formula by induction, an early landmark of
+          mathematical induction.
+        pt: >-
+          O matemático persa al-Karaji demonstra a fórmula por indução, um marco inicial da indução
+          matemática.
+        fr: >-
+          Le mathématicien persan al-Karaji démontre la formule par induction, un jalon précoce de
+          l'induction mathématique.
+        zh: >-
+          波斯数学家卡拉吉用归纳法证明了该公式,这是数学归纳法的早期里程碑。
+        ja: >-
+          ペルシアの数学者アル・カラジが帰納法でこの公式を証明する。数学的帰納法の初期の画期。
+    - year: s. XVII
+      label:
+        es: >-
+          Faulhaber y otros sistematizan las sumas de potencias, generalizando la fórmula a
+          exponentes arbitrarios.
+        en: >-
+          Faulhaber and others systematize power sums, generalizing the formula to arbitrary
+          exponents.
+        pt: >-
+          Faulhaber e outros sistematizam as somas de potências, generalizando a fórmula para
+          expoentes arbitrários.
+        fr: >-
+          Faulhaber et d'autres systématisent les sommes de puissances, généralisant la formule à
+          des exposants arbitraires.
+        zh: >-
+          法乌尔哈贝尔等人系统化了幂和,将该公式推广到任意指数。
+        ja: >-
+          ファウルハーバーらが冪和を体系化し、公式を任意の指数へ一般化する。
+    - year: Hoy
+      label:
+        es: >-
+          La suma Σk² aparece en las sumas de Riemann, en la varianza muestral y en el costo de
+          bucles anidados en algoritmos.
+        en: >-
+          The sum Σk² appears in Riemann sums, in the sample variance, and in the cost of nested
+          loops in algorithms.
+        pt: >-
+          A soma Σk² aparece nas somas de Riemann, na variância amostral e no custo de loops
+          aninhados em algoritmos.
+        fr: >-
+          La somme Σk² apparaît dans les sommes de Riemann, dans la variance d'échantillon et dans
+          le coût des boucles imbriquées en algorithmique.
+        zh: >-
+          Σk² 出现在黎曼和、样本方差以及算法中嵌套循环的代价里。
+        ja: >-
+          和 Σk² はリーマン和、標本分散、アルゴリズムの入れ子ループのコストに現れる。
+  useCases:
+    - title:
+        es: Cálculo integral
+        en: Integral calculus
+        pt: Cálculo integral
+        fr: Calcul intégral
+        zh: 积分学
+        ja: 積分法
+      description:
+        es: >-
+          En las sumas de Riemann, la integral de x² sobre un intervalo se evalúa sumando
+          cuadrados.
+        en: >-
+          In Riemann sums, the integral of x² over an interval is evaluated by summing squares.
+        pt: >-
+          Nas somas de Riemann, a integral de x² sobre um intervalo é avaliada somando quadrados.
+        fr: >-
+          Dans les sommes de Riemann, l'intégrale de x² sur un intervalle s'évalue en sommant des
+          carrés.
+        zh: >-
+          在黎曼和中,x² 在一个区间上的积分通过累加平方数来求值。
+        ja: >-
+          リーマン和では、区間上の x² の積分が平方数の和として評価される。
+    - title:
+        es: Estadística
+        en: Statistics
+        pt: Estatística
+        fr: Statistiques
+        zh: 统计学
+        ja: 統計学
+      description:
+        es: >-
+          La varianza muestral es un promedio de diferencias al cuadrado; la fórmula resume esas
+          sumas de cuadrados.
+        en: >-
+          The sample variance is an average of squared differences; the formula summarizes such
+          sums of squares.
+        pt: >-
+          A variância amostral é uma média de diferenças ao quadrado; a fórmula resume essas somas
+          de quadrados.
+        fr: >-
+          La variance d'échantillon est une moyenne de différences au carré ; la formule résume ces
+          sommes de carrés.
+        zh: >-
+          样本方差是平方差之平均,该公式为这类平方和提供了封闭形式。
+        ja: >-
+          標本分散は平方された偏差の平均であり、この公式がそうした平方和をまとめて求める。
+    - title:
+        es: Análisis de algoritmos
+        en: Algorithm analysis
+        pt: Análise de algoritmos
+        fr: Analyse d'algorithmes
+        zh: 算法分析
+        ja: アルゴリズム解析
+      description:
+        es: >-
+          El costo de bucles anidados y ciertos ordenamientos crece como una suma de cuadrados, y
+          la fórmula da su orden exacto.
+        en: >-
+          The cost of nested loops and certain sorts grows like a sum of squares, and the formula
+          gives its exact order.
+        pt: >-
+          O custo de loops aninhados e de certas ordenações cresce como uma soma de quadrados, e a
+          fórmula dá sua ordem exata.
+        fr: >-
+          Le coût des boucles imbriquées et de certains tris croît comme une somme de carrés, et la
+          formule en donne l'ordre exact.
+        zh: >-
+          嵌套循环和某些排序的代价随平方和增长,该公式给出其精确阶次。
+        ja: >-
+          入れ子ループや一部のソートのコストは平方数の和のように増大し、この公式がその正確な次数を与える。
+    - title:
+        es: Ingeniería estructural
+        en: Structural engineering
+        pt: Engenharia estrutural
+        fr: Génie des structures
+        zh: 结构工程
+        ja: 構造工学
+      description:
+        es: >-
+          El momento de inercia de vigas y secciones discretizadas se calcula como una suma de
+          cuadrados de distancias.
+        en: >-
+          The moment of inertia of beams and discretized sections is computed as a sum of squares
+          of distances.
+        pt: >-
+          O momento de inércia de vigas e seções discretizadas é calculado como uma soma de
+          quadrados de distâncias.
+        fr: >-
+          Le moment d'inertie des poutres et des sections discrétisées se calcule comme une somme
+          de carrés de distances.
+        zh: >-
+          梁和离散截面的转动惯量按距离平方和来计算。
+        ja: >-
+          梁や離散化された断面の慣性モーメントは、距離の平方和として計算される。
+  example:
+    title:
+      es: Sumando hasta n = 4
+      en: Summing up to n = 4
+      pt: Somando até n = 4
+      fr: Somme jusqu'à n = 4
+      zh: 求和至 n = 4
+      ja: n = 4 まで合計
+    lines:
+      - es: n = 4
+        en: n = 4
+        pt: n = 4
+        fr: n = 4
+        zh: n = 4
+        ja: n = 4
+      - es: 1² + 2² + 3² + 4² = 1 + 4 + 9 + 16
+        en: 1² + 2² + 3² + 4² = 1 + 4 + 9 + 16
+        pt: 1² + 2² + 3² + 4² = 1 + 4 + 9 + 16
+        fr: 1² + 2² + 3² + 4² = 1 + 4 + 9 + 16
+        zh: 1² + 2² + 3² + 4² = 1 + 4 + 9 + 16
+        ja: 1² + 2² + 3² + 4² = 1 + 4 + 9 + 16
+      - es: 1 + 4 + 9 + 16 = 30
+        en: 1 + 4 + 9 + 16 = 30
+        pt: 1 + 4 + 9 + 16 = 30
+        fr: 1 + 4 + 9 + 16 = 30
+        zh: 1 + 4 + 9 + 16 = 30
+        ja: 1 + 4 + 9 + 16 = 30
+      - es: 4·5·9/6 = 180/6
+        en: 4·5·9/6 = 180/6
+        pt: 4·5·9/6 = 180/6
+        fr: 4·5·9/6 = 180/6
+        zh: 4·5·9/6 = 180/6
+        ja: 4·5·9/6 = 180/6
+      - es: "Resultado: 30"
+        en: "Result: 30"
+        pt: "Resultado: 30"
+        fr: "Résultat : 30"
+        zh: 结果：30
+        ja: 結果：30

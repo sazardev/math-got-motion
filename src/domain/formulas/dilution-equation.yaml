@@ -1,0 +1,315 @@
+id: dilution-equation
+title:
+  es: Ecuación de Dilución
+  en: Dilution Equation
+  pt: Equação de Diluição
+  fr: Équation de Dilution
+  zh: 稀释方程
+  ja: 希釈の式
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: c1
+    type: variable
+    value: C₁
+    explanation:
+      es: "C₁: la concentración inicial de la solución antes de diluir."
+      en: "C₁: the initial concentration of the solution before diluting."
+      pt: "C₁: a concentração inicial da solução antes de diluir."
+      fr: "C₁ : la concentration initiale de la solution avant dilution."
+      zh: "C₁：稀释前溶液的初始浓度。"
+      ja: "C₁：希釈前の溶液の初期濃度。"
+  - id: dot-1
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: v1
+    type: variable
+    value: V₁
+    explanation:
+      es: "V₁: el volumen inicial de la solución concentrada."
+      en: "V₁: the initial volume of the concentrated solution."
+      pt: "V₁: o volume inicial da solução concentrada."
+      fr: "V₁ : le volume initial de la solution concentrée."
+      zh: "V₁：浓缩溶液的初始体积。"
+      ja: "V₁：濃縮溶液の初期体積。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: c2
+    type: variable
+    value: C₂
+    explanation:
+      es: "C₂: la concentración final, más baja, tras añadir disolvente."
+      en: "C₂: the final, lower concentration after adding solvent."
+      pt: "C₂: a concentração final, mais baixa, após adicionar solvente."
+      fr: "C₂ : la concentration finale, plus faible, après ajout de solvant."
+      zh: "C₂：加入溶剂后的最终、更低的浓度。"
+      ja: "C₂：溶媒を加えた後の、より低い最終濃度。"
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: v2
+    type: variable
+    value: V₂
+    explanation:
+      es: "V₂: el volumen final de la solución ya diluida."
+      en: "V₂: the final volume of the diluted solution."
+      pt: "V₂: o volume final da solução já diluída."
+      fr: "V₂ : le volume final de la solution diluée."
+      zh: "V₂：稀释后溶液的最终体积。"
+      ja: "V₂：希釈後の溶液の最終体積。"
+context:
+  author:
+    es: Origen colectivo de la química analítica
+    en: Collective origin in analytical chemistry
+    pt: Origem coletiva da química analítica
+    fr: Origine collective de la chimie analytique
+    zh: 分析化学的集体智慧
+    ja: 分析化学における集合的な起源
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, séc. XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲,19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      Diluir añade disolvente sin cambiar la cantidad de soluto: los moles que hay antes y después son
+      los mismos, por eso el producto C·V se conserva. La ecuación permite partir de una solución
+      concentrada (el «stock») y calcular cuánto hay que diluirla para obtener una concentración
+      deseada. Es la base de las diluciones seriadas con las que los laboratorios preparan escalas de
+      estándares, y también explica la aritmética cotidiana de mezclar un jarabe concentrado con agua o
+      de ajustar la concentración de un medicamento.
+    en: >-
+      Diluting adds solvent without changing the amount of solute: the moles present before and after are
+      the same, which is why the product C·V is conserved. The equation lets you take a concentrated
+      stock solution and calculate how much to dilute it to reach a desired concentration. It underpins
+      the serial dilutions laboratories use to build standard scales, and it also explains the everyday
+      arithmetic of watering down a concentrated syrup or adjusting a medicine's concentration.
+    pt: >-
+      Diluir acrescenta solvente sem mudar a quantidade de soluto: os mols presentes antes e depois são
+      os mesmos, por isso o produto C·V se conserva. A equação permite partir de uma solução concentrada
+      (o "estoque") e calcular quanto diluí-la para obter uma concentração desejada. É a base das
+      diluições seriadas com as quais os laboratórios preparam escalas de padrões, e também explica a
+      aritmética cotidiana de misturar um xarope concentrado com água ou ajustar a concentração de um
+      medicamento.
+    fr: >-
+      Diluer ajoute du solvant sans changer la quantité de soluté : les moles présentes avant et après
+      sont les mêmes, c'est pourquoi le produit C·V se conserve. L'équation permet de partir d'une
+      solution concentrée (le « stock ») et de calculer combien la diluer pour obtenir une concentration
+      voulue. Elle est à la base des dilutions en série par lesquelles les laboratoires préparent des
+      gammes d'étalons, et explique aussi l'arithmétique quotidienne de couper un sirop concentré avec
+      de l'eau ou d'ajuster la concentration d'un médicament.
+    zh: >-
+      稀释是加入溶剂而不改变溶质的量:稀释前后的摩尔数相同,因此C·V之积保持不变。利用该方程,可以从浓缩原液出发,
+      计算需稀释多少才能得到目标浓度。它是实验室制备标准浓度系列所用的连续稀释法的基础,也解释了日常生活中的简单
+      算术——把浓缩糖浆兑水,或调整药物的浓度。
+    ja: >-
+      希釈は溶質の量を変えずに溶媒を加えることである。希釈前後でモル数は同じなので、C・Vの積は保存される。
+      この式を使えば、濃縮された原液から、目的の濃度を得るためにどれだけ薄めればよいかを計算できる。
+      これは、実験室で標準濃度系列を作るために用いる段階希釈の基礎であり、濃縮シロップを水で薄めたり、
+      薬の濃度を調整したりする日常の算数も説明している。
+  timeline:
+    - year: "1824"
+      label:
+        es: >-
+          Gay-Lussac publica un método de valoración volumétrica, que hace imprescindible conocer con
+          exactitud las concentraciones de las soluciones.
+        en: >-
+          Gay-Lussac publishes a volumetric titration method, making exact solution concentrations
+          essential.
+        pt: >-
+          Gay-Lussac publica um método de titulação volumétrica, tornando essencial conhecer com exatidão
+          as concentrações das soluções.
+        fr: >-
+          Gay-Lussac publie une méthode de titrage volumétrique, rendant indispensable la connaissance
+          exacte des concentrations des solutions.
+        zh: >-
+          盖-吕萨克发表了容量滴定法,使精确掌握溶液浓度成为必需。
+        ja: >-
+          ゲイ＝リュサックが容積分析による滴定法を発表し、溶液濃度を正確に把握することが不可欠になる。
+    - year: "1855"
+      label:
+        es: >-
+          El manual de Karl Friedrich Mohr estandariza el análisis volumétrico con la bureta.
+        en: >-
+          Karl Friedrich Mohr's manual standardizes volumetric analysis with the burette.
+        pt: >-
+          O manual de Karl Friedrich Mohr padroniza a análise volumétrica com a bureta.
+        fr: >-
+          Le manuel de Karl Friedrich Mohr standardise l'analyse volumétrique avec la burette.
+        zh: >-
+          卡尔·弗里德里希·莫尔的教科书用滴定管统一了容量分析的做法。
+        ja: >-
+          カール・フリードリヒ・モールの教科書がビュレットを用いた定量分析を標準化する。
+    - year: Hoy
+      label:
+        es: >-
+          La dilución seriada es rutina en todo laboratorio para preparar estándares y calibrar
+          instrumentos.
+        en: >-
+          Serial dilution is routine in every laboratory for preparing standards and calibrating
+          instruments.
+        pt: >-
+          A diluição seriada é rotina em todo laboratório para preparar padrões e calibrar instrumentos.
+        fr: >-
+          La dilution en série est une routine de tout laboratoire pour préparer des étalons et calibrer
+          les instruments.
+        zh: >-
+          连续稀释是每个实验室制备标准品和校准仪器的常规操作。
+        ja: >-
+          段階希釈は、標準液の調製や機器の校正のためにあらゆる実験室で日常的に行われている。
+  useCases:
+    - title:
+        es: Diluciones seriadas de laboratorio
+        en: Laboratory serial dilutions
+        pt: Diluições seriadas de laboratório
+        fr: Dilutions en série de laboratoire
+        zh: 实验室连续稀释
+        ja: 実験室での段階希釈
+      description:
+        es: >-
+          Preparan escalas de concentraciones estándar para curvas de calibración y cultivos celulares.
+        en: >-
+          They build standard concentration scales for calibration curves and cell cultures.
+        pt: >-
+          Preparam escalas de concentrações padrão para curvas de calibração e culturas de células.
+        fr: >-
+          Elles construisent des gammes de concentrations étalons pour les courbes de calibration et les
+          cultures cellulaires.
+        zh: >-
+          为校准曲线和细胞培养配制标准浓度梯度。
+        ja: >-
+          検量線や細胞培養のために、標準濃度の系列を調製する。
+    - title:
+        es: Preparación de medicamentos
+        en: Drug preparation
+        pt: Preparo de medicamentos
+        fr: Préparation des médicaments
+        zh: 药物配制
+        ja: 医薬品の調製
+      description:
+        es: >-
+          Ajusta la concentración de principios activos, como en las soluciones intravenosas pediátricas.
+        en: >-
+          It adjusts the concentration of active ingredients, as in pediatric intravenous solutions.
+        pt: >-
+          Ajusta a concentração de princípios ativos, como nas soluções intravenosas pediátricas.
+        fr: >-
+          Elle ajuste la concentration des principes actifs, comme dans les solutions intraveineuses
+          pédiatriques.
+        zh: >-
+          调整有效成分的浓度,例如儿科静脉输液。
+        ja: >-
+          小児用輸液のように、有効成分の濃度を調整する。
+    - title:
+        es: Industria de bebidas
+        en: Beverage industry
+        pt: Indústria de bebidas
+        fr: Industrie des boissons
+        zh: 饮料工业
+        ja: 飲料業界
+      description:
+        es: >-
+          Calcula cómo mezclar jarabes concentrados con agua para lograr la concentración de sabor de un
+          producto.
+        en: >-
+          It calculates how to mix concentrated syrups with water to hit a product's flavor
+          concentration.
+        pt: >-
+          Calcula como misturar xaropes concentrados com água para obter a concentração de sabor de um
+          produto.
+        fr: >-
+          Elle calcule comment mélanger des sirops concentrés avec de l'eau pour obtenir la
+          concentration de goût d'un produit.
+        zh: >-
+          计算如何将浓缩糖浆与水混合,以达到产品所需的调味浓度。
+        ja: >-
+          濃縮シロップと水をどう混ぜれば製品の味の濃度になるかを計算する。
+    - title:
+        es: Análisis ambiental
+        en: Environmental analysis
+        pt: Análise ambiental
+        fr: Analyse environnementale
+        zh: 环境分析
+        ja: 環境分析
+      description:
+        es: >-
+          Diluye muestras muy concentradas para llevarlas al rango de medición de los instrumentos.
+        en: >-
+          It dilutes highly concentrated samples to bring them into the instruments' measurable range.
+        pt: >-
+          Dilui amostras muito concentradas para levá-las à faixa de medição dos instrumentos.
+        fr: >-
+          Elle dilue les échantillons très concentrés pour les ramener dans la plage de mesure des
+          instruments.
+        zh: >-
+          将高浓度样品稀释,使其进入仪器的可测量范围。
+        ja: >-
+          高濃度の試料を希釈し、測定機器の測定範囲に収める。
+  example:
+    title:
+      es: Diluir una solución de ácido
+      en: Diluting an acid solution
+      pt: Diluir uma solução de ácido
+      fr: Diluer une solution acide
+      zh: 稀释酸溶液
+      ja: 酸の溶液の希釈
+    lines:
+      - es: C₁ = 2 mol/L · V₁ = 1 L · V₂ = 4 L
+        en: C₁ = 2 mol/L · V₁ = 1 L · V₂ = 4 L
+        pt: C₁ = 2 mol/L · V₁ = 1 L · V₂ = 4 L
+        fr: C₁ = 2 mol/L · V₁ = 1 L · V₂ = 4 L
+        zh: C₁ = 2 摩尔/升 · V₁ = 1 升 · V₂ = 4 升
+        ja: C₁ = 2 mol/L · V₁ = 1 L · V₂ = 4 L
+      - es: C₁ · V₁ = C₂ · V₂
+        en: C₁ · V₁ = C₂ · V₂
+        pt: C₁ · V₁ = C₂ · V₂
+        fr: C₁ · V₁ = C₂ · V₂
+        zh: C₁ · V₁ = C₂ · V₂
+        ja: C₁ · V₁ = C₂ · V₂
+      - es: C₂ = (C₁ · V₁) / V₂
+        en: C₂ = (C₁ · V₁) / V₂
+        pt: C₂ = (C₁ · V₁) / V₂
+        fr: C₂ = (C₁ · V₁) / V₂
+        zh: C₂ = (C₁ · V₁) / V₂
+        ja: C₂ = (C₁ · V₁) / V₂
+      - es: C₂ = (2 × 1) / 4
+        en: C₂ = (2 × 1) / 4
+        pt: C₂ = (2 × 1) / 4
+        fr: C₂ = (2 × 1) / 4
+        zh: C₂ = (2 × 1) / 4
+        ja: C₂ = (2 × 1) / 4
+      - es: C₂ = 0.5 mol/L — la solución queda media molar
+        en: C₂ = 0.5 mol/L — the solution is now half-molar
+        pt: C₂ = 0,5 mol/L — a solução fica meio molar
+        fr: C₂ = 0,5 mol/L — la solution devient demi-molaire
+        zh: C₂ = 0.5 摩尔/升——溶液浓度减半
+        ja: C₂ = 0.5 mol/L——溶液は半分のモル濃度になる

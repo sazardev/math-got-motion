@@ -1,0 +1,373 @@
+id: ficks-law-diffusion
+title:
+  es: Ley de Fick de la Difusión
+  en: Fick's Law of Diffusion
+  pt: Lei de Fick da Difusão
+  fr: Loi de Fick de la diffusion
+  zh: 菲克扩散定律
+  ja: フィックの拡散の法則
+category:
+  es: Biología
+  en: Biology
+  pt: Biologia
+  fr: Biologie
+  zh: 生物学
+  ja: 生物学
+nodes:
+  - id: flux
+    type: variable
+    value: J
+    explanation:
+      es: "J: el flujo de la sustancia, la cantidad que atraviesa un área por unidad de tiempo."
+      en: "J: the flux of the substance, the amount crossing an area per unit of time."
+      pt: "J: o fluxo da substância, a quantidade que atravessa uma área por unidade de tempo."
+      fr: "J : le flux de la substance, la quantité traversant une surface par unité de temps."
+      zh: "J：物质的通量，即单位时间通过单位面积的数量。"
+      ja: "J：物質のフラックス。単位時間に単位面積を通過する量。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "El signo menos: la difusión ocurre en el sentido del gradiente decreciente."
+      en: "The minus sign: diffusion happens in the direction of decreasing gradient."
+      pt: "O sinal de menos: a difusão ocorre no sentido do gradiente decrescente."
+      fr: "Le signe moins : la diffusion se produit dans le sens du gradient décroissant."
+      zh: "负号：扩散沿梯度减小的方向进行。"
+      ja: "マイナス符号。拡散は勾配が減少する向きに起こる。"
+  - id: coeff
+    type: variable
+    value: D
+    explanation:
+      es: "D: el coeficiente de difusión, que mide la movilidad de las moléculas en el medio."
+      en: "D: the diffusion coefficient, which measures the mobility of molecules in the medium."
+      pt: "D: o coeficiente de difusão, que mede a mobilidade das moléculas no meio."
+      fr: "D : le coefficient de diffusion, qui mesure la mobilité des molécules dans le milieu."
+      zh: "D：扩散系数，衡量分子在介质中的运动能力。"
+      ja: "D：拡散係数。媒体中の分子の動きやすさを表す。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: かける。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el gradiente de concentración.
+      en: Opens the concentration gradient.
+      pt: Abre o gradiente de concentração.
+      fr: Ouvre le gradient de concentration.
+      zh: 打开浓度梯度。
+      ja: 濃度勾配を開く括弧。
+  - id: gradient
+    type: variable
+    value: dC/dx
+    explanation:
+      es: "dC/dx: el gradiente de concentración, cuánto cambia la concentración por unidad de distancia."
+      en: "dC/dx: the concentration gradient, how much concentration changes per unit of distance."
+      pt: "dC/dx: o gradiente de concentração, quanto a concentração muda por unidade de distância."
+      fr: "dC/dx : le gradient de concentration, de combien la concentration varie par unité de distance."
+      zh: "dC/dx：浓度梯度，即浓度随单位距离的变化量。"
+      ja: "dC/dx：濃度勾配。濃度が単位距離あたりどれだけ変化するか。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el gradiente de concentración.
+      en: Closes the concentration gradient.
+      pt: Fecha o gradiente de concentração.
+      fr: Ferme le gradient de concentration.
+      zh: 关闭浓度梯度。
+      ja: 濃度勾配を閉じる括弧。
+context:
+  author:
+    es: Adolf Fick
+    en: Adolf Fick
+    pt: Adolf Fick
+    fr: Adolf Fick
+    zh: 阿道夫·费克
+    ja: アドルフ・フィック
+  era:
+    es: Alemania, 1829–1901 · publicada en 1855
+    en: Germany, 1829–1901 · published in 1855
+    pt: Alemanha, 1829–1901 · publicada em 1855
+    fr: Allemagne, 1829–1901 · publiée en 1855
+    zh: 德国,1829–1901年 · 1855年发表
+    ja: ドイツ、1829–1901年・1855年発表
+  history:
+    es: >-
+      En 1855 el fisiólogo alemán Adolf Fick publicó una ley según la cual el flujo de una
+      sustancia es proporcional a su gradiente de concentración, por analogía con la conducción
+      del calor descrita por Fourier. La constante de proporcionalidad D, el coeficiente de
+      difusión, mide la movilidad de las moléculas en el medio. La ley explica fenómenos tan
+      cotidianos como la propagación de los olores o la llegada del oxígeno a los tejidos, y
+      sigue siendo la base del diseño de fármacos de liberación controlada y del intercambio de
+      gases en los pulmones.
+    en: >-
+      In 1855 the German physiologist Adolf Fick published a law stating that the flux of a
+      substance is proportional to its concentration gradient, by analogy with the heat
+      conduction described by Fourier. The proportionality constant D, the diffusion coefficient,
+      measures the mobility of molecules in the medium. The law explains everyday phenomena such
+      as the spread of smells or the arrival of oxygen at the tissues, and it still underpins the
+      design of controlled-release drugs and gas exchange in the lungs.
+    pt: >-
+      Em 1855 o fisiologista alemão Adolf Fick publicou uma lei segundo a qual o fluxo de uma
+      substância é proporcional ao seu gradiente de concentração, por analogia com a condução de
+      calor descrita por Fourier. A constante de proporcionalidade D, o coeficiente de difusão,
+      mede a mobilidade das moléculas no meio. A lei explica fenômenos tão cotidianos quanto a
+      propagação de odores ou a chegada do oxigênio aos tecidos, e continua sendo a base do
+      projeto de fármacos de liberação controlada e das trocas gasosas nos pulmões.
+    fr: >-
+      En 1855, le physiologiste allemand Adolf Fick publie une loi selon laquelle le flux d'une
+      substance est proportionnel à son gradient de concentration, par analogie avec la conduction
+      de la chaleur décrite par Fourier. La constante de proportionnalité D, le coefficient de
+      diffusion, mesure la mobilité des molécules dans le milieu. La loi explique des phénomènes
+      aussi courants que la propagation des odeurs ou l'arrivée de l'oxygène aux tissus, et elle
+      reste à la base de la conception des médicaments à libération contrôlée et des échanges
+      gazeux dans les poumons.
+    zh: >-
+      1855年，德国生理学家阿道夫·费克发表了一条定律：物质的通量与其浓度梯度成正比，这是仿照傅里叶
+      描述的热传导得出的。比例常数D称为扩散系数，衡量分子在介质中的运动能力。这条定律解释了气味传播、
+      氧气到达组织等日常现象，至今仍是缓释药物设计和肺部气体交换的基础。
+    ja: >-
+      1855年、ドイツの生理学者アドルフ・フィックは、フーリエが記述した熱伝導に倣い、物質のフラックスが
+      濃度勾配に比例するという法則を発表した。比例定数Dは拡散係数と呼ばれ、媒体中の分子の動きやすさを
+      表す。この法則は匂いの広がりや酸素が組織に届くといった身近な現象を説明し、現在も徐放性医薬品の
+      設計や肺でのガス交換の基礎となっている。
+  timeline:
+    - year: "1855"
+      label:
+        es: >-
+          Fick formula sus dos leyes de la difusión en el artículo "Über Diffusion", inspiradas
+          en la conducción del calor de Fourier.
+        en: >-
+          Fick states his two laws of diffusion in the paper "Über Diffusion", inspired by
+          Fourier's heat conduction.
+        pt: >-
+          Fick formula suas duas leis da difusão no artigo "Über Diffusion", inspiradas na
+          condução de calor de Fourier.
+        fr: >-
+          Fick énonce ses deux lois de la diffusion dans l'article « Über Diffusion », inspirées
+          de la conduction de la chaleur de Fourier.
+        zh: >-
+          菲克在《论扩散》一文中提出他的两条扩散定律，其灵感来自傅里叶的热传导。
+        ja: >-
+          フィックが『拡散について』の中で拡散の二法則を提唱する。フーリエの熱伝導に触発されたもの。
+    - year: "1905"
+      label:
+        es: >-
+          Einstein vincula el coeficiente de difusión D con el movimiento térmico de las
+          moléculas, dándole un fundamento físico.
+        en: >-
+          Einstein links the diffusion coefficient D to the thermal motion of molecules, giving it
+          a physical foundation.
+        pt: >-
+          Einstein vincula o coeficiente de difusão D ao movimento térmico das moléculas,
+          dando-lhe um fundamento físico.
+        fr: >-
+          Einstein relie le coefficient de diffusion D à l'agitation thermique des molécules, lui
+          donnant un fondement physique.
+        zh: >-
+          爱因斯坦将扩散系数D与分子的热运动联系起来，为其奠定了物理基础。
+        ja: >-
+          アインシュタインが拡散係数Dを分子の熱運動と結びつけ、物理的な基礎を与える。
+    - year: "1943"
+      label:
+        es: >-
+          El riñón artificial de Kolff acerca la lógica de la ley de Fick a la clínica con la
+          primera hemodiálisis humana.
+        en: >-
+          Kolff's artificial kidney brings the logic of Fick's law into the clinic with the first
+          human hemodialysis.
+        pt: >-
+          O rim artificial de Kolff leva a lógica da lei de Fick à clínica com a primeira
+          hemodiálise em humanos.
+        fr: >-
+          Le rein artificiel de Kolff amène la logique de la loi de Fick à la clinique avec la
+          première hémodialyse humaine.
+        zh: >-
+          科尔夫的人工肾通过首次人体血液透析，将菲克定律的原理带入临床。
+        ja: >-
+          コルフの人工腎臓が初の人間への血液透析をもたらし、フィックの法則の考え方を臨床に持ち込む。
+    - year: Hoy
+      label:
+        es: >-
+          Es la base del diseño de fármacos de liberación controlada, de la ventilación pulmonar
+          y de los modelos de transporte de contaminantes.
+        en: >-
+          It underpins controlled-release drug design, lung ventilation, and models of pollutant
+          transport.
+        pt: >-
+          É a base do projeto de fármacos de liberação controlada, da ventilação pulmonar e dos
+          modelos de transporte de poluentes.
+        fr: >-
+          Elle est à la base de la conception des médicaments à libération contrôlée, de la
+          ventilation pulmonaire et des modèles de transport des polluants.
+        zh: >-
+          它是缓释药物设计、肺通气以及污染物输运模型的基础。
+        ja: >-
+          徐放性医薬品の設計、肺の換気、汚染物質輸送のモデルの基礎となっている。
+  useCases:
+    - title:
+        es: Liberación controlada de fármacos
+        en: Controlled drug delivery
+        pt: Liberação controlada de fármacos
+        fr: Libération contrôlée de médicaments
+        zh: 缓释药物
+        ja: 徐放性医薬品
+      description:
+        es: >-
+          Predice cómo un parche o una pastilla de liberación lenta libera su principio activo a
+          través de la piel o de la mucosa.
+        en: >-
+          It predicts how a patch or a slow-release pill delivers its active ingredient through
+          the skin or the mucosa.
+        pt: >-
+          Prevê como um adesivo ou um comprimido de liberação lenta entrega seu princípio ativo
+          através da pele ou da mucosa.
+        fr: >-
+          Elle prédit comment un patch ou un comprimé à libération prolongée délivre son principe
+          actif à travers la peau ou la muqueuse.
+        zh: >-
+          它可预测贴剂或缓释片如何透过皮肤或黏膜释放其活性成分。
+        ja: >-
+          貼付剤や徐放性錠剤が皮膚や粘膜を通じて有効成分を放出する様子を予測する。
+    - title:
+        es: Intercambio de gases pulmonares
+        en: Lung gas exchange
+        pt: Trocas gasosas pulmonares
+        fr: Échanges gazeux pulmonaires
+        zh: 肺部气体交换
+        ja: 肺でのガス交換
+      description:
+        es: >-
+          El oxígeno entra a la sangre y el CO₂ sale siguiendo sus gradientes, lo que los
+          ventiladores modelan con la ley de Fick.
+        en: >-
+          Oxygen enters the blood and CO₂ leaves along its gradients, which ventilators model
+          using Fick's law.
+        pt: >-
+          O oxigênio entra no sangue e o CO₂ sai seguindo seus gradientes, o que os ventiladores
+          modelam com a lei de Fick.
+        fr: >-
+          L'oxygène entre dans le sang et le CO₂ en sort en suivant ses gradients, ce que les
+          ventilateurs modélisent avec la loi de Fick.
+        zh: >-
+          氧气沿梯度进入血液、二氧化碳离开，呼吸机正是用菲克定律来模拟这一过程。
+        ja: >-
+          酸素は勾配に沿って血液に入り、CO₂は血液から出る。人工呼吸器はフィックの法則でこれを
+          モデル化する。
+    - title:
+        es: Diálisis renal
+        en: Kidney dialysis
+        pt: Diálise renal
+        fr: Dialyse rénale
+        zh: 肾脏透析
+        ja: 腎透析
+      description:
+        es: >-
+          La eficacia de una sesión de diálisis depende de la difusión de desechos desde la sangre
+          hacia el líquido de baño.
+        en: >-
+          The effectiveness of a dialysis session depends on wastes diffusing from the blood into
+          the dialysate fluid.
+        pt: >-
+          A eficácia de uma sessão de diálise depende da difusão de resíduos do sangue para o
+          líquido de diálise.
+        fr: >-
+          L'efficacité d'une séance de dialyse dépend de la diffusion des déchets du sang vers le
+          dialysat.
+        zh: >-
+          透析的效果取决于废物从血液向透析液中的扩散。
+        ja: >-
+          透析の効果は、老廃物が血液から透析液へ拡散することに依存する。
+    - title:
+        es: Transporte de contaminantes
+        en: Pollutant transport
+        pt: Transporte de poluentes
+        fr: Transport des polluants
+        zh: 污染物输运
+        ja: 汚染物質輸送
+      description:
+        es: >-
+          La dispersión de un contaminante en un acuífero o en el suelo se modela con ecuaciones
+          basadas en esta ley.
+        en: >-
+          The dispersion of a pollutant in an aquifer or soil is modeled with equations based on
+          this law.
+        pt: >-
+          A dispersão de um poluente em um aquífero ou no solo é modelada com equações baseadas
+          nessa lei.
+        fr: >-
+          La dispersion d'un polluant dans un aquifère ou dans le sol est modélisée avec des
+          équations fondées sur cette loi.
+        zh: >-
+          污染物在地下水或土壤中的扩散，可用基于这条定律的方程来模拟。
+        ja: >-
+          帯水層や土壌中の汚染物質の拡散は、この法則に基づく方程式でモデル化される。
+  example:
+    title:
+      es: Con D = 1e-9 m²/s
+      en: With D = 1e-9 m²/s
+      pt: Com D = 1e-9 m²/s
+      fr: Avec D = 1e-9 m²/s
+      zh: 取 D = 1e-9 m²/s
+      ja: D = 1e-9 m²/s の場合
+    lines:
+      - es: D = 1e-9 m²/s
+        en: D = 1e-9 m²/s
+        pt: D = 1e-9 m²/s
+        fr: D = 1e-9 m²/s
+        zh: D = 1e-9 m²/s
+        ja: D = 1e-9 m²/s
+      - es: ΔC = 0.1 mol/m³
+        en: ΔC = 0.1 mol/m³
+        pt: ΔC = 0,1 mol/m³
+        fr: ΔC = 0,1 mol/m³
+        zh: ΔC = 0.1 mol/m³
+        ja: ΔC = 0.1 mol/m³
+      - es: Δx = 1e-4 m
+        en: Δx = 1e-4 m
+        pt: Δx = 1e-4 m
+        fr: Δx = 1e-4 m
+        zh: Δx = 1e-4 m
+        ja: Δx = 1e-4 m
+      - es: J = −D · (ΔC / Δx)
+        en: J = −D · (ΔC / Δx)
+        pt: J = −D · (ΔC / Δx)
+        fr: J = −D · (ΔC / Δx)
+        zh: J = −D · (ΔC / Δx)
+        ja: J = −D · (ΔC / Δx)
+      - es: J = −1e-9 · (0.1 / 1e-4)
+        en: J = −1e-9 · (0.1 / 1e-4)
+        pt: J = −1e-9 · (0,1 / 1e-4)
+        fr: J = −1e-9 · (0,1 / 1e-4)
+        zh: J = −1e-9 · (0.1 / 1e-4)
+        ja: J = −1e-9 · (0.1 / 1e-4)
+      - es: J ≈ −1e-6 mol/(m²·s)
+        en: J ≈ −1e-6 mol/(m²·s)
+        pt: J ≈ −1e-6 mol/(m²·s)
+        fr: J ≈ −1e-6 mol/(m²·s)
+        zh: J ≈ −1e-6 mol/(m²·s)
+        ja: J ≈ −1e-6 mol/(m²·s)
+      - es: "El signo menos indica difusión hacia el gradiente decreciente"
+        en: "The minus sign indicates diffusion down the gradient"
+        pt: "O sinal de menos indica difusão no sentido do gradiente decrescente"
+        fr: "Le signe moins indique une diffusion vers le gradient décroissant"
+        zh: "负号表示扩散沿梯度减小的方向进行"
+        ja: "マイナス符号は勾配が小さくなる向きへの拡散を表す"

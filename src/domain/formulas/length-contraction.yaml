@@ -1,0 +1,311 @@
+id: length-contraction
+title:
+  es: Contracción de la Longitud
+  en: Length Contraction
+  pt: Contração do Comprimento
+  fr: Contraction des longueurs
+  zh: 长度收缩
+  ja: 長さの収縮
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: l
+    type: variable
+    value: L
+    explanation:
+      es: La longitud medida por un observador que ve el objeto en movimiento.
+      en: The length measured by an observer who sees the object in motion.
+      pt: O comprimento medido por um observador que vê o objeto em movimento.
+      fr: La longueur mesurée par un observateur qui voit l'objet en mouvement.
+      zh: 观测者看到的运动物体的长度。
+      ja: 運動する物体を観測者が測った長さ。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: l0
+    type: variable
+    value: L₀
+    explanation:
+      es: La longitud propia, medida en reposo respecto al objeto.
+      en: The proper length, measured at rest relative to the object.
+      pt: O comprimento próprio, medido em repouso em relação ao objeto.
+      fr: La longueur propre, mesurée au repos par rapport à l'objet.
+      zh: 固有长度，在与物体相对静止时测得。
+      ja: 物体に対して静止して測った固有長さ。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: La raíz cuadrada del factor relativista.
+      en: The square root of the relativistic factor.
+      pt: A raiz quadrada do fator relativístico.
+      fr: La racine carrée du facteur relativiste.
+      zh: 相对论因子的平方根。
+      ja: 相対論的因子の平方根。
+  - id: factor
+    type: variable
+    value: 1−v²/c²
+    explanation:
+      es: "1−v²/c²: v es la velocidad relativa y c la de la luz."
+      en: "1−v²/c²: v is the relative speed and c the speed of light."
+      pt: "1−v²/c²: v é a velocidade relativa e c a da luz."
+      fr: "1−v²/c² : v est la vitesse relative et c celle de la lumière."
+      zh: "1−v²/c²：v为相对速度，c为光速。"
+      ja: "1−v²/c²：vは相対速度、cは光速。"
+context:
+  author:
+    es: Hendrik Lorentz y Albert Einstein
+    en: Hendrik Lorentz and Albert Einstein
+    pt: Hendrik Lorentz e Albert Einstein
+    fr: Hendrik Lorentz et Albert Einstein
+    zh: 亨德里克·洛伦兹与阿尔伯特·爱因斯坦
+    ja: ヘンドリック・ローレンツとアルベルト・アインシュタイン
+  era:
+    es: Países Bajos y Suiza, 1892–1905
+    en: Netherlands and Switzerland, 1892–1905
+    pt: Países Baixos e Suíça, 1892–1905
+    fr: Pays-Bas et Suisse, 1892–1905
+    zh: 荷兰与瑞士，1892–1905年
+    ja: オランダとスイス、1892–1905年
+  history:
+    es: >-
+      En 1892 Lorentz introdujo la contracción para explicar el resultado del experimento de
+      Michelson y Morley, y Einstein la dedujo en 1905 desde la relatividad especial. Un objeto en
+      movimiento se acorta en la dirección de su movimiento, una especie de gemela de la dilatación
+      del tiempo. Fue difícil de creer porque el efecto es invisible a velocidades cotidianas. Se
+      confirma en experimentos con partículas aceleradas y obliga a corregir los cálculos del GPS.
+    en: >-
+      In 1892 Lorentz introduced contraction to explain the result of the Michelson–Morley
+      experiment, and Einstein derived it in 1905 from special relativity. A moving object shortens
+      along its direction of motion — a kind of twin of time dilation. It was hard to believe
+      because the effect is invisible at everyday speeds. It is confirmed in experiments with
+      accelerated particles and forces corrections in GPS calculations.
+    pt: >-
+      Em 1892, Lorentz introduziu a contração para explicar o resultado do experimento de Michelson
+      e Morley, e Einstein a deduziu em 1905 a partir da relatividade especial. Um objeto em
+      movimento se encurta na direção do seu movimento — uma espécie de gêmea da dilatação do tempo.
+      Foi difícil de acreditar porque o efeito é invisível em velocidades cotidianas. É confirmada em
+      experimentos com partículas aceleradas e obriga a corrigir os cálculos do GPS.
+    fr: >-
+      En 1892, Lorentz introduisit la contraction pour expliquer le résultat de l'expérience de
+      Michelson et Morley, et Einstein la déduisit en 1905 à partir de la relativité restreinte. Un
+      objet en mouvement se raccourcit dans le sens de son mouvement — une sorte de jumelle de la
+      dilatation du temps. Elle fut difficile à croire car l'effet est invisible aux vitesses de la
+      vie courante. Elle est confirmée par des expériences sur des particules accélérées et impose
+      des corrections dans les calculs du GPS.
+    zh: >-
+      1892年，洛伦兹提出收缩效应以解释迈克耳孙-莫雷实验的结果，1905年爱因斯坦从狭义相对论中推导出它。运动的物体沿其运动
+      方向缩短——可以说是时间膨胀的孪生效应。由于该效应在日常速度下不可见，当时很难让人相信。它已在粒子加速实验中反复得到
+      证实，并且GPS的计算也必须加以修正。
+    ja: >-
+      1892年、ローレンツはマイケルソン・モーリーの実験結果を説明するために収縮を導入し、1905年にアインシュタインが特殊相対性理論
+      からこれを導出した。運動する物体はその運動方向に沿って短くなる。これは時間の遅れの双子とも言える効果である。日常的な速度では
+      目に見えないため、信じがたいものだった。加速された粒子を使った実験で確認され、GPSの計算にも補正が必要となる。
+  timeline:
+    - year: "1892"
+      label:
+        es: >-
+          Lorentz propone la contracción para explicar el experimento de Michelson y Morley.
+        en: >-
+          Lorentz proposes contraction to explain the Michelson–Morley experiment.
+        pt: >-
+          Lorentz propõe a contração para explicar o experimento de Michelson e Morley.
+        fr: >-
+          Lorentz propose la contraction pour expliquer l'expérience de Michelson et Morley.
+        zh: >-
+          洛伦兹提出收缩效应，用以解释迈克耳孙-莫雷实验。
+        ja: >-
+          ローレンツがマイケルソン・モーリーの実験を説明するために収縮を提唱する。
+    - year: "1905"
+      label:
+        es: >-
+          Einstein la deduce de la relatividad especial, dándole fundamento teórico.
+        en: >-
+          Einstein derives it from special relativity, giving it theoretical foundation.
+        pt: >-
+          Einstein a deduz da relatividade especial, dando-lhe fundamento teórico.
+        fr: >-
+          Einstein la déduit de la relativité restreinte, lui donnant un fondement théorique.
+        zh: >-
+          爱因斯坦从狭义相对论中推导出它，为其奠定了理论基础。
+        ja: >-
+          アインシュタインが特殊相対性理論からこれを導出し、理論的基盤を与える。
+    - year: "1940"
+      label:
+        es: >-
+          Los aceleradores de partículas observan que los haces se contraen según la fórmula.
+        en: >-
+          Particle accelerators observe beams contracting according to the formula.
+        pt: >-
+          Os aceleradores de partículas observam os feixes se contraírem de acordo com a fórmula.
+        fr: >-
+          Les accélérateurs de particules observent les faisceaux se contracter selon la formule.
+        zh: >-
+          粒子加速器观察到粒子束按照该公式发生收缩。
+        ja: >-
+          粒子加速器で、ビームがこの公式どおりに収縮するのが観測される。
+    - year: Hoy
+      label:
+        es: >-
+          El GPS y los aceleradores aplican a diario esta corrección relativista.
+        en: >-
+          GPS and accelerators apply this relativistic correction every day.
+        pt: >-
+          O GPS e os aceleradores aplicam diariamente essa correção relativística.
+        fr: >-
+          Le GPS et les accélérateurs appliquent chaque jour cette correction relativiste.
+        zh: >-
+          GPS和加速器每天都在应用这一相对论修正。
+        ja: >-
+          GPSや加速器は毎日この相対論的補正を適用している。
+  useCases:
+    - title:
+        es: Aceleradores de partículas
+        en: Particle accelerators
+        pt: Aceleradores de partículas
+        fr: Accélérateurs de particules
+        zh: 粒子加速器
+        ja: 粒子加速器
+      description:
+        es: >-
+          Los paquetes de partículas se contraen en su dirección de vuelo, lo que afecta la
+          frecuencia y el tamaño de las colisiones.
+        en: >-
+          Particle bunches contract along their direction of flight, affecting collision rate and
+          size.
+        pt: >-
+          Os pacotes de partículas se contraem na direção do voo, o que afeta a frequência e o
+          tamanho das colisões.
+        fr: >-
+          Les paquets de particules se contractent dans leur direction de vol, ce qui affecte la
+          fréquence et la taille des collisions.
+        zh: >-
+          粒子束沿飞行方向收缩，影响碰撞的频率与范围。
+        ja: >-
+          粒子のバンチは飛行方向に収縮し、衝突の頻度や範囲に影響を与える。
+    - title:
+        es: Sistema GPS
+        en: GPS system
+        pt: Sistema GPS
+        fr: Système GPS
+        zh: GPS 系统
+        ja: GPSシステム
+      description:
+        es: >-
+          Las correcciones relativistas, incluida la contracción, mantienen precisa la posición.
+        en: >-
+          Relativistic corrections, including contraction, keep positioning accurate.
+        pt: >-
+          As correções relativísticas, incluindo a contração, mantêm a posição precisa.
+        fr: >-
+          Les corrections relativistes, dont la contraction, maintiennent la précision du
+          positionnement.
+        zh: >-
+          包括收缩在内的相对论修正，保证了定位的精度。
+        ja: >-
+          収縮を含む相対論的補正が、測位の精度を保っている。
+    - title:
+        es: Física de rayos cósmicos
+        en: Cosmic-ray physics
+        pt: Física de raios cósmicos
+        fr: Physique des rayons cosmiques
+        zh: 宇宙线物理学
+        ja: 宇宙線物理学
+      description:
+        es: >-
+          Los muones que crean los rayos cósmicos llegan al suelo gracias a la dilatación del tiempo
+          y la contracción de su atmósfera.
+        en: >-
+          Cosmic-ray muons reach the ground thanks to time dilation and the contraction of their
+          atmosphere.
+        pt: >-
+          Os múons criados pelos raios cósmicos chegam ao solo graças à dilatação do tempo e à
+          contração de sua atmosfera.
+        fr: >-
+          Les muons des rayons cosmiques atteignent le sol grâce à la dilatation du temps et à la
+          contraction de leur atmosphère.
+        zh: >-
+          宇宙线产生的μ子能到达地面，靠的是时间膨胀以及它们看来的大气层收缩。
+        ja: >-
+          宇宙線が生むミューオンが地表へ届くのは、時間の遅れと、彼らから見た大気の収縮のおかげである。
+    - title:
+        es: Relatividad teórica
+        en: Theoretical relativity
+        pt: Relatividade teórica
+        fr: Relativité théorique
+        zh: 相对论理论研究
+        ja: 相対性理論研究
+      description:
+        es: >-
+          Es una pieza central de la geometría del espacio-tiempo descrita por Einstein.
+        en: >-
+          It is a cornerstone of the spacetime geometry described by Einstein.
+        pt: >-
+          É uma peça central da geometria do espaço-tempo descrita por Einstein.
+        fr: >-
+          Elle est une pièce maîtresse de la géométrie de l'espace-temps décrite par Einstein.
+        zh: >-
+          它是爱因斯坦所描述的时空几何的核心组成部分。
+        ja: >-
+          アインシュタインが描いた時空の幾何学の中核を成す。
+  example:
+    title:
+      es: Una regla que viaja al 80% de la luz
+      en: A ruler traveling at 80% of light speed
+      pt: Uma régua viajando a 80% da velocidade da luz
+      fr: Une règle voyageant à 80 % de la vitesse de la lumière
+      zh: 以80%光速飞行的尺子
+      ja: 光速の80%で飛ぶ物差し
+    lines:
+      - es: v = 0.8c
+        en: v = 0.8c
+        pt: v = 0,8c
+        fr: v = 0,8c
+        zh: v = 0.8c
+        ja: v = 0.8c
+      - es: 1 − v²/c² = 1 − 0.64 = 0.36
+        en: 1 − v²/c² = 1 − 0.64 = 0.36
+        pt: 1 − v²/c² = 1 − 0,64 = 0,36
+        fr: 1 − v²/c² = 1 − 0,64 = 0,36
+        zh: 1 − v²/c² = 1 − 0.64 = 0.36
+        ja: 1 − v²/c² = 1 − 0.64 = 0.36
+      - es: √0.36 = 0.6
+        en: √0.36 = 0.6
+        pt: √0,36 = 0,6
+        fr: √0,36 = 0,6
+        zh: √0.36 = 0.6
+        ja: √0.36 = 0.6
+      - es: L = L₀ · √(1 − v²/c²)
+        en: L = L₀ · √(1 − v²/c²)
+        pt: L = L₀ · √(1 − v²/c²)
+        fr: L = L₀ · √(1 − v²/c²)
+        zh: L = L₀ · √(1 − v²/c²)
+        ja: L = L₀ · √(1 − v²/c²)
+      - es: L = 1 × 0.6 = 0.6 m
+        en: L = 1 × 0.6 = 0.6 m
+        pt: L = 1 × 0,6 = 0,6 m
+        fr: L = 1 × 0,6 = 0,6 m
+        zh: L = 1 × 0.6 = 0.6 m
+        ja: L = 1 × 0.6 = 0.6 m

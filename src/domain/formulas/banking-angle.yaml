@@ -1,0 +1,364 @@
+id: banking-angle
+title:
+  es: Peralte de Curva
+  en: Banking Angle
+  pt: Superelevação da Curva
+  fr: Angle du Dévers
+  zh: 弯道倾斜角
+  ja: バンク角
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: tan
+    type: constant
+    value: tan
+    explanation:
+      es: La tangente del ángulo, la función trigonométrica del triángulo de fuerzas.
+      en: The tangent of the angle, the trigonometric function of the force triangle.
+      pt: A tangente do ângulo, a função trigonométrica do triângulo de forças.
+      fr: La tangente de l'angle, la fonction trigonométrique du triangle de forces.
+      zh: 角的正切,即力三角形中的三角函数。
+      ja: 角のタンジェント。力の三角形における三角関数。
+  - id: theta
+    type: variable
+    value: θ
+    explanation:
+      es: El ángulo de inclinación de la pista respecto de la horizontal.
+      en: The angle at which the track is tilted from the horizontal.
+      pt: O ângulo de inclinação da pista em relação à horizontal.
+      fr: L'angle d'inclinaison de la piste par rapport à l'horizontale.
+      zh: 路面相对水平面的倾斜角。
+      ja: 路面が水平に対して傾いている角度。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: v2
+    type: variable
+    value: v²
+    explanation:
+      es: El cuadrado de la velocidad del vehículo al tomar la curva.
+      en: The square of the vehicle's speed while taking the curve.
+      pt: O quadrado da velocidade do veículo ao fazer a curva.
+      fr: Le carré de la vitesse du véhicule dans la courbe.
+      zh: 车辆过弯速度的平方。
+      ja: カーブを曲がる際の車両速度の二乗。
+  - id: divide
+    type: operator
+    value: "/"
+    explanation:
+      es: División entre el numerador y el denominador.
+      en: Division of the numerator by the denominator.
+      pt: Divisão entre o numerador e o denominador.
+      fr: Division du numérateur par le dénominateur.
+      zh: 分子除以分母。
+      ja: 分子を分母で割る。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: El radio de la curva, en metros.
+      en: The radius of the curve, in meters.
+      pt: O raio da curva, em metros.
+      fr: Le rayon de la courbe, en mètres.
+      zh: 弯道的半径,以米为单位。
+      ja: カーブの半径。単位はメートル。
+  - id: times
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación del radio por la gravedad.
+      en: Multiplication of the radius by gravity.
+      pt: Multiplicação do raio pela gravidade.
+      fr: Multiplication du rayon par la gravité.
+      zh: 半径乘以重力加速度。
+      ja: 半径に重力を掛ける。
+  - id: g
+    type: variable
+    value: g
+    explanation:
+      es: La aceleración de la gravedad, 9.81 m/s² cerca de la superficie terrestre.
+      en: The acceleration of gravity, 9.81 m/s² near Earth's surface.
+      pt: A aceleração da gravidade, 9,81 m/s² perto da superfície terrestre.
+      fr: L'accélération de la pesanteur, 9,81 m/s² près de la surface terrestre.
+      zh: 重力加速度,地球表面附近约为9.81米每秒平方。
+      ja: 重力加速度。地表付近では9.81 m/s²。
+context:
+  author:
+    es: Derivada de la dinámica circular
+    en: Derived from circular dynamics
+    pt: Derivada da dinâmica circular
+    fr: Dérivée de la dynamique circulaire
+    zh: 由圆周运动动力学推导而来
+    ja: 円運動の力学から導かれる
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, século XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲,19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      La idea de inclinar una pista para tomar curvas sin depender del rozamiento nació con los
+      velódromos de bicicleta a fines del siglo XIX y se generalizó con la llegada del automóvil. Un
+      peralte bien calculado permite que la componente horizontal de la reacción del piso provea toda
+      la aceleración centrípeta, de modo que a la velocidad exacta se gira sin usar el rozamiento.
+      Por eso las autopistas sobreelevan sus curvas, y las pistas de velocidad y los velódromos se
+      inclinan en sus peraltes. La relación tan θ = v²/(r·g) fija el ángulo exacto para cada
+      velocidad y radio, y su formulación clásica en la dinámica circular se consolidó durante el
+      siglo XIX.
+    en: >-
+      The idea of tilting a track to take curves without relying on friction was born with bicycle
+      velodromes in the late 19th century and spread with the arrival of the automobile. A properly
+      calculated banking lets the horizontal component of the track's reaction supply all the
+      centripetal acceleration, so at the right speed you turn without using friction. That is why
+      highways raise the outside of their curves, and why speed tracks and velodromes lean into
+      their bankings. The relation tan θ = v²/(r·g) fixes the exact angle for every speed and
+      radius, and its classic statement in circular dynamics was consolidated during the 19th
+      century.
+    pt: >-
+      A ideia de inclinar uma pista para fazer curvas sem depender do atrito nasceu com os
+      velódromos de bicicleta no fim do século XIX e se generalizou com a chegada do automóvel. Uma
+      superelevação bem calculada permite que a componente horizontal da reação do piso forneça toda
+      a aceleração centrípeta, de modo que na velocidade exata se gira sem usar o atrito. Por isso as
+      rodovias sobreelevam suas curvas, e as pistas de velocidade e os velódromos se inclinam em seus
+      peraltes. A relação tan θ = v²/(r·g) fixa o ângulo exato para cada velocidade e raio, e sua
+      formulação clássica na dinâmica circular se consolidou durante o século XIX.
+    fr: >-
+      L'idée d'incliner une piste pour aborder les virages sans compter sur le frottement est née
+      avec les vélodromes à la fin du XIXe siècle et s'est généralisée avec l'arrivée de
+      l'automobile. Un dévers bien calculé permet à la composante horizontale de la réaction du sol
+      de fournir toute l'accélération centripète, si bien qu'à la bonne vitesse on tourne sans
+      utiliser le frottement. C'est pourquoi les autoroutes relèvent l'extérieur de leurs virages, et
+      pourquoi les anneaux de vitesse et les vélodromes s'inclinent dans leurs relevés. La relation
+      tan θ = v²/(r·g) fixe l'angle exact pour chaque vitesse et rayon, et sa formulation classique
+      dans la dynamique circulaire s'est consolidée au cours du XIXe siècle.
+    zh: >-
+      通过倾斜跑道来不依赖摩擦力过弯的想法,始于19世纪末的自行车赛车场,并随着汽车的到来而普及。
+      精心计算的超高坡道能让地面的水平反作用力提供全部向心加速度,因此恰好在特定速度下可以不借助摩擦力转弯。
+      这就是高速公路弯道外侧被抬高、高速赛道和赛车场都向内倾斜的原因。tan θ = v²/(r·g)确定了每个速度和半径的精确角度,
+      其经典表述在19世纪于圆周运动动力学中得以确立。
+    ja: >-
+      摩擦力に頼らずにコーナーを回るために路面を傾ける考えは、19世紀末の自転車競技場で生まれ、自動車の登場とともに普及した。
+      正しく設計されたバンク角では、路面反力の水平成分が遠心加速度をすべてまかなうため、適正速度では摩擦力なしで曲がれる。
+      高速道路のカーブ外側が高くなっているのも、高速テストコースや競輪場が内側に傾いているのもこのためだ。
+      tan θ = v²/(r·g)という関係は、速度と半径のそれぞれに対して正確な角度を与え、その古典的な定式化は19世紀の円運動力学で確立された。
+  timeline:
+    - year: "1880"
+      label:
+        es: >-
+          Se popularizan en Europa los primeros velódromos de madera peraltados, que permiten curvas
+          rápidas sin frenar.
+        en: >-
+          The first banked wooden velodromes become popular in Europe, allowing fast curves without
+          braking.
+        pt: >-
+          Os primeiros velódromos de madeira com peralte se popularizam na Europa, permitindo curvas
+          rápidas sem frear.
+        fr: >-
+          Les premiers vélodromes en bois relevés se popularisent en Europe, permettant des virages
+          rapides sans freiner.
+        zh: >-
+          欧洲首批倾斜的木制赛车场流行开来,可以在不刹车的情况下快速过弯。
+        ja: >-
+          ヨーロッパで最初の傾斜木製競輪場が普及し、ブレーキなしで速いカーブが可能になる。
+    - year: "1909"
+      label:
+        es: >-
+          Se inaugura el Indianapolis Motor Speedway, con sus curvas peraltadas de ladrillo pensadas
+          para altas velocidades.
+        en: >-
+          The Indianapolis Motor Speedway opens, with banked brick turns designed for high speeds.
+        pt: >-
+          O Indianapolis Motor Speedway é inaugurado, com curvas peraltadas de tijolo pensadas para
+          altas velocidades.
+        fr: >-
+          L'Indianapolis Motor Speedway ouvre, avec ses virages relevés en brique conçus pour les
+          grandes vitesses.
+        zh: >-
+          印第安纳波利斯赛车场建成,其砖砌超高弯道专为高速而设计。
+        ja: >-
+          インディアナポリス・モーター・スピードウェイが開場。高速走行用に設計されたレンガの傾斜コーナーを持つ。
+    - year: "1924"
+      label:
+        es: >-
+          El autódromo de Montlhéry, cerca de París, inaugura sus anillos peraltados para pruebas de
+          velocidad de autos.
+        en: >-
+          The Montlhéry autodrome near Paris opens its banked rings for high-speed car testing.
+        pt: >-
+          O autódromo de Montlhéry, perto de Paris, inaugura seus anéis peraltados para testes de
+          velocidade de carros.
+        fr: >-
+          L'autodrome de Montlhéry, près de Paris, ouvre ses anneaux relevés pour les essais de
+          vitesse automobile.
+        zh: >-
+          巴黎附近的蒙莱里赛道建成倾斜环道,用于汽车高速测试。
+        ja: >-
+          パリ近郊のモンレリ・オートドロームが、自動車の高速テスト用の傾斜リングを開設する。
+    - year: Hoy
+      label:
+        es: >-
+          Autopistas y pistas de carreras calculan su peralte con esta fórmula para cada velocidad y
+          radio.
+        en: >-
+          Highways and race tracks compute their banking with this formula for every speed and
+          radius.
+        pt: >-
+          Rodovias e pistas de corrida calculam seu peralte com esta fórmula para cada velocidade e
+          raio.
+        fr: >-
+          Autoroutes et circuits de course calculent leur dévers avec cette formule pour chaque
+          vitesse et rayon.
+        zh: >-
+          高速公路和赛道都按每个速度和半径用这个公式计算超高角。
+        ja: >-
+          高速道路やレースコースは、速度と半径ごとにこの式でバンク角を計算している。
+  useCases:
+    - title:
+        es: Pistas de carreras
+        en: Race tracks
+        pt: Pistas de corrida
+        fr: Circuits de course
+        zh: 赛车赛道
+        ja: レースサーキット
+      description:
+        es: >-
+          Indianapolis, Daytona y otros óvalos peraltan sus curvas para que los autos mantengan
+          velocidad con poco desgaste de neumáticos.
+        en: >-
+          Indianapolis, Daytona and other ovals bank their turns so cars keep speed with little tire
+          wear.
+        pt: >-
+          Indianápolis, Daytona e outros ovais peraltam suas curvas para que os carros mantenham
+          velocidade com pouco desgaste de pneus.
+        fr: >-
+          Indianapolis, Daytona et d'autres ovales relèvent leurs virages pour que les voitures
+          gardent la vitesse en usant peu les pneus.
+        zh: >-
+          印第安纳波利斯、戴通纳等椭圆赛道把弯道倾斜,让赛车以较少轮胎磨损保持速度。
+        ja: >-
+          インディアナポリスやデイトナなどのオーバルコースは、タイヤの消耗を抑えながら速度を保てるようコーナーを傾ける。
+    - title:
+        es: Autopistas y carreteras
+        en: Highways and roads
+        pt: Rodovias e estradas
+        fr: Autoroutes et routes
+        zh: 高速公路与道路
+        ja: 高速道路と一般道路
+      description:
+        es: >-
+          Las curvas de autopista se sobreelevan con un peralte que permite tomarlas a la velocidad
+          máxima sin depender solo del agarre.
+        en: >-
+          Highway curves are raised with a banking that lets drivers take them at the speed limit
+          without relying on grip alone.
+        pt: >-
+          As curvas de rodovia são sobreelevadas com um peralte que permite tomá-las na velocidade
+          máxima sem depender só da aderência.
+        fr: >-
+          Les courbes d'autoroute sont relevées avec un dévers qui permet de les aborder à la vitesse
+          limite sans dépendre seulement de l'adhérence.
+        zh: >-
+          公路弯道通过超高坡道抬升,使车辆在限速下过弯而不只依赖轮胎抓地力。
+        ja: >-
+          高速道路のカーブは、グリップだけに頼らず制限速度で曲がれるようにバンクを付けて持ち上げられている。
+    - title:
+        es: Velódromos y ciclismo
+        en: Velodromes and cycling
+        pt: Velódromos e ciclismo
+        fr: Vélodromes et cyclisme
+        zh: 赛车场与自行车运动
+        ja: 競輪場と自転車競技
+      description:
+        es: >-
+          Las pistas de ciclismo se inclinan hasta 45 grados en los peraltes, y la fórmula justifica
+          el ángulo para cada velocidad.
+        en: >-
+          Cycling tracks lean up to 45 degrees in their bankings, and the formula justifies the angle
+          for each speed.
+        pt: >-
+          As pistas de ciclismo inclinam até 45 graus nos peraltes, e a fórmula justifica o ângulo
+          para cada velocidade.
+        fr: >-
+          Les pistes cyclistes penchent jusqu'à 45 degrés dans leurs relevés, et la formule justifie
+          l'angle pour chaque vitesse.
+        zh: >-
+          自行车赛道在弯道处的倾斜可达45度,该公式为每个速度给出相应的角度。
+        ja: >-
+          自転車競技のトラックはバンクで最大45度まで傾き、この式が速度ごとの角度を正当化する。
+    - title:
+        es: Ferrocarriles
+        en: Railways
+        pt: Ferrovias
+        fr: Chemins de fer
+        zh: 铁路
+        ja: 鉄道
+      description:
+        es: >-
+          Los rieles se peraltan en las curvas para que los trenes no vuelquen y los pasajeros no
+          sientan la fuerza lateral.
+        en: >-
+          Rails are superelevated on curves so trains do not tip and passengers feel no lateral
+          force.
+        pt: >-
+          Os trilhos são sobrelevados nas curvas para que os trens não tombem e os passageiros não
+          sintam a força lateral.
+        fr: >-
+          Les rails sont déversés dans les courbes pour que les trains ne basculent pas et que les
+          passagers ne ressentent pas de force latérale.
+        zh: >-
+          铁轨在弯道处设置超高,使列车不会倾覆、乘客感觉不到侧向力。
+        ja: >-
+          鉄道のカーブではレールにカントを付け、列車が転覆せず乗客が横方向の力を感じないようにする。
+  example:
+    title:
+      es: Una curva de autopista
+      en: A highway curve
+      pt: Uma curva de rodovia
+      fr: Une courbe d'autoroute
+      zh: 高速公路弯道
+      ja: 高速道路のカーブ
+    lines:
+      - es: v = 25 m/s · r = 100 m
+        en: v = 25 m/s · r = 100 m
+        pt: v = 25 m/s · r = 100 m
+        fr: v = 25 m/s · r = 100 m
+        zh: v = 25 m/s · r = 100 m
+        ja: v = 25 m/s · r = 100 m
+      - es: g = 9.81 m/s²
+        en: g = 9.81 m/s²
+        pt: g = 9,81 m/s²
+        fr: g = 9,81 m/s²
+        zh: g = 9.81 m/s²
+        ja: g = 9.81 m/s²
+      - es: tan θ = v² / (r · g) = 625 / 981
+        en: tan θ = v² / (r · g) = 625 / 981
+        pt: tan θ = v² / (r · g) = 625 / 981
+        fr: tan θ = v² / (r · g) = 625 / 981
+        zh: tan θ = v² / (r · g) = 625 / 981
+        ja: tan θ = v² / (r · g) = 625 / 981
+      - es: tan θ ≈ 0.637
+        en: tan θ ≈ 0.637
+        pt: tan θ ≈ 0,637
+        fr: tan θ ≈ 0,637
+        zh: tan θ ≈ 0.637
+        ja: tan θ ≈ 0.637
+      - es: θ ≈ 32.5°
+        en: θ ≈ 32.5°
+        pt: θ ≈ 32,5°
+        fr: θ ≈ 32,5°
+        zh: θ ≈ 32.5°
+        ja: θ ≈ 32.5°

@@ -1,0 +1,308 @@
+id: exponential-growth
+title:
+  es: Crecimiento Exponencial
+  en: Exponential Growth
+  pt: Crescimento Exponencial
+  fr: Croissance exponentielle
+  zh: 指数增长
+  ja: 指数関数的成長
+category:
+  es: Biología
+  en: Biology
+  pt: Biologia
+  fr: Biologie
+  zh: 生物学
+  ja: 生物学
+nodes:
+  - id: nt
+    type: variable
+    value: N(t)
+    explanation:
+      es: El tamaño de la población en el instante t.
+      en: The population size at time t.
+      pt: O tamanho da população no instante t.
+      fr: La taille de la population à l'instant t.
+      zh: 种群在时刻t的数量。
+      ja: 時刻tにおける個体数。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: n0
+    type: variable
+    value: N₀
+    explanation:
+      es: La población inicial, en el instante t = 0.
+      en: The initial population, at time t = 0.
+      pt: A população inicial, no instante t = 0.
+      fr: La population initiale, à l'instant t = 0.
+      zh: 初始种群数量，即t = 0时的数量。
+      ja: 初期の個体数。t = 0の時点の数。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: e
+    type: constant
+    value: e
+    explanation:
+      es: "e: la constante de Euler, base del crecimiento natural."
+      en: "e: Euler's constant, the base of natural growth."
+      pt: "e: a constante de Euler, base do crescimento natural."
+      fr: "e : la constante d'Euler, base de la croissance naturelle."
+      zh: "e：欧拉常数，自然增长的底。"
+      ja: "e：オイラー定数。自然成長の底。"
+  - id: exp
+    type: superscript
+    value: r·t
+    explanation:
+      es: "Elevado a r·t: la tasa de crecimiento por el tiempo."
+      en: "Raised to r·t: the growth rate times the time."
+      pt: "Elevado a r·t: a taxa de crescimento vezes o tempo."
+      fr: "Élevé à r·t : le taux de croissance fois le temps."
+      zh: "的r·t次方：增长率乘以时间。"
+      ja: "r·t乗。成長率×時間。"
+context:
+  author:
+    es: Thomas Robert Malthus
+    en: Thomas Robert Malthus
+    pt: Thomas Robert Malthus
+    fr: Thomas Robert Malthus
+    zh: 托马斯·罗伯特·马尔萨斯
+    ja: トマス・ロバート・マルサス
+  era:
+    es: Inglaterra, 1766–1834 · publicada en 1798
+    en: England, 1766–1834 · published in 1798
+    pt: Inglaterra, 1766–1834 · publicada em 1798
+    fr: Angleterre, 1766–1834 · publiée en 1798
+    zh: 英格兰,1766–1834年 · 1798年发表
+    ja: イングランド、1766–1834年・1798年発表
+  history:
+    es: >-
+      La ecuación del crecimiento exponencial nació como una advertencia: en 1798 Thomas Malthus
+      observó que la población humana crece de forma multiplicativa mientras los recursos lo hacen de
+      forma aritmética, por lo que su crecimiento ilimitado acabaría en hambruna y conflicto. La idea
+      se convirtió en la base de todos los modelos de crecimiento, de la demografía a la
+      epidemiología y la biología de poblaciones: cuando no hay límites, el tamaño crece en
+      proporción a sí mismo, y por eso explota.
+    en: >-
+      The equation of exponential growth was born as a warning: in 1798 Thomas Malthus observed that
+      the human population grows multiplicatively while resources grow arithmetically, so unchecked
+      growth would end in famine and conflict. The idea became the basis of all growth models, from
+      demography to epidemiology and population biology: when there are no limits, size grows in
+      proportion to itself, and therefore explodes.
+    pt: >-
+      A equação do crescimento exponencial nasceu como um alerta: em 1798 Thomas Malthus observou que
+      a população humana cresce de forma multiplicativa enquanto os recursos crescem de forma
+      aritmética, de modo que o crescimento ilimitado terminaria em fome e conflito. A ideia tornou-se
+      a base de todos os modelos de crescimento, da demografia à epidemiologia e à biologia de
+      populações: quando não há limites, o tamanho cresce proporcionalmente a si mesmo, e por isso
+      explode.
+    fr: >-
+      L'équation de la croissance exponentielle est née comme un avertissement : en 1798, Thomas
+      Malthus observa que la population humaine croît de façon multiplicative tandis que les ressources
+      croissent de façon arithmétique, si bien qu'une croissance sans limite aboutirait à la famine et
+      au conflit. L'idée devint la base de tous les modèles de croissance, de la démographie à
+      l'épidémiologie et à la biologie des populations : sans limites, la taille croît
+      proportionnellement à elle-même et explose.
+    zh: >-
+      指数增长方程诞生于一个警告：1798年，托马斯·罗伯特·马尔萨斯观察到，人口呈几何（乘法）式增长，
+      而资源只呈算术（加法）式增长，因此不加限制的人口增长终将导致饥荒与冲突。这一思想成为从人口学、
+      流行病学到种群生物学一切增长模型的基础：当没有限制时，数量与自身成正比地增长，因此会爆炸式扩张。
+    ja: >-
+      指数関数的成長の式はひとつの警告として生まれた。1798年、トマス・ロバート・マルサスは、人口は
+      幾何級数的に増える一方で資源は算術級数的にしか増えず、無制限の成長は飢饉と紛争に終わると指摘した。
+      この考えは、人口学から疫学、個体群生物学に至るあらゆる成長モデルの基礎となった。限界がなければ、
+      個体数はそれ自身に比例して増え、やがて爆発するのである。
+  timeline:
+    - year: "1798"
+      label:
+        es: >-
+          Malthus publica su Ensayo sobre el principio de la población, base del modelo exponencial.
+        en: >-
+          Malthus publishes his Essay on the Principle of Population, the basis of the exponential
+          model.
+        pt: >-
+          Malthus publica seu Ensaio sobre o Princípio da População, base do modelo exponencial.
+        fr: >-
+          Malthus publie son Essai sur le principe de population, base du modèle exponentiel.
+        zh: >-
+          马尔萨斯发表《人口论》，成为指数模型的基础。
+        ja: >-
+          マルサスが『人口論』を発表し、指数モデルの基礎となる。
+    - year: "1838"
+      label:
+        es: >-
+          Verhulst corrige el modelo exponencial ilimitado con la ecuación logística.
+        en: >-
+          Verhulst corrects the unbounded exponential model with the logistic equation.
+        pt: >-
+          Verhulst corrige o modelo exponencial ilimitado com a equação logística.
+        fr: >-
+          Verhulst corrige le modèle exponentiel illimité avec l'équation logistique.
+        zh: >-
+          维尔乌斯特用逻辑斯谛方程修正了无界的指数模型。
+        ja: >-
+          フェルフルストがロジスティック方程式で無限の指数モデルを修正する。
+    - year: "1859"
+      label:
+        es: >-
+          Darwin aplica la idea a la selección natural en El origen de las especies.
+        en: >-
+          Darwin applies the idea to natural selection in On the Origin of Species.
+        pt: >-
+          Darwin aplica a ideia à seleção natural em A Origem das Espécies.
+        fr: >-
+          Darwin applique l'idée à la sélection naturelle dans L'Origine des espèces.
+        zh: >-
+          达尔文在《物种起源》中将这一思想应用于自然选择。
+        ja: >-
+          ダーウィンが『種の起源』でこの考えを自然淘汰に応用する。
+    - year: Hoy
+      label:
+        es: >-
+          Sigue siendo el núcleo de los modelos de brotes epidémicos y del crecimiento microbiano.
+        en: >-
+          It remains the core of outbreak models and microbial growth modeling.
+        pt: >-
+          Continua sendo o núcleo dos modelos de surtos epidêmicos e do crescimento microbiano.
+        fr: >-
+          Elle reste le cœur des modèles d'épidémies et de la croissance microbienne.
+        zh: >-
+          它仍然是传染病暴发模型和微生物生长建模的核心。
+        ja: >-
+          今もなお、感染症流行モデルや微生物の成長モデルの中核をなす。
+  useCases:
+    - title:
+        es: Epidemiología
+        en: Epidemiology
+        pt: Epidemiologia
+        fr: Épidémiologie
+        zh: 流行病学
+        ja: 疫学
+      description:
+        es: >-
+          Describe la fase inicial de un brote, cuando la transmisión aún no encuentra freno.
+        en: >-
+          It describes the early phase of an outbreak, while transmission still meets no brake.
+        pt: >-
+          Descreve a fase inicial de um surto, quando a transmissão ainda não encontra freio.
+        fr: >-
+          Elle décrit la phase initiale d'une épidémie, tant que la transmission ne rencontre aucun
+          frein.
+        zh: >-
+          描述传染病暴发的初期阶段，此时传播尚未受到遏制。
+        ja: >-
+          伝播がまだ抑制されない、流行の初期段階を記述する。
+    - title:
+        es: Microbiología
+        en: Microbiology
+        pt: Microbiologia
+        fr: Microbiologie
+        zh: 微生物学
+        ja: 微生物学
+      description:
+        es: >-
+          Modela el crecimiento de bacterias y levaduras en su fase exponencial de cultivo.
+        en: >-
+          It models the growth of bacteria and yeast during the exponential phase of a culture.
+        pt: >-
+          Modela o crescimento de bactérias e leveduras na fase exponencial de uma cultura.
+        fr: >-
+          Elle modélise la croissance des bactéries et des levures en phase exponentielle de culture.
+        zh: >-
+          对细菌和酵母在培养物指数生长期的生长进行建模。
+        ja: >-
+          培養における細菌や酵母の対数増殖期の成長をモデル化する。
+    - title:
+        es: Demografía
+        en: Demography
+        pt: Demografia
+        fr: Démographie
+        zh: 人口学
+        ja: 人口学
+      description:
+        es: >-
+          Proyecta escenarios de crecimiento poblacional a corto plazo sin límites impuestos.
+        en: >-
+          It projects short-term population scenarios with no imposed limits.
+        pt: >-
+          Projeta cenários de crescimento populacional a curto prazo sem limites impostos.
+        fr: >-
+          Elle projette des scénarios de croissance démographique à court terme sans limites
+          imposées.
+        zh: >-
+          在无外加限制的情况下，对短期人口增长情景进行预测。
+        ja: >-
+          制約のない短期的な人口増加シナリオを予測する。
+    - title:
+        es: Ecología
+        en: Ecology
+        pt: Ecologia
+        fr: Écologie
+        zh: 生态学
+        ja: 生態学
+      description:
+        es: >-
+          Describe la expansión inicial de una especie invasora en un hábitat nuevo.
+        en: >-
+          It describes the initial spread of an invasive species in a new habitat.
+        pt: >-
+          Descreve a expansão inicial de uma espécie invasora em um novo habitat.
+        fr: >-
+          Elle décrit la propagation initiale d'une espèce envahissante dans un nouvel habitat.
+        zh: >-
+          描述入侵物种在新栖息地的初期扩散。
+        ja: >-
+          外来種が新しい生息地で初期に拡散する様子を記述する。
+  example:
+    title:
+      es: Crecimiento de una población
+      en: Growth of a population
+      pt: Crescimento de uma população
+      fr: Croissance d'une population
+      zh: 种群的增长
+      ja: 個体群の成長
+    lines:
+      - es: "N₀ = 100, r = 0.1, t = 20"
+        en: "N₀ = 100, r = 0.1, t = 20"
+        pt: "N₀ = 100, r = 0,1, t = 20"
+        fr: "N₀ = 100, r = 0,1, t = 20"
+        zh: "N₀ = 100，r = 0.1，t = 20"
+        ja: "N₀ = 100、r = 0.1、t = 20"
+      - es: N = 100 · e^(0.1 × 20)
+        en: N = 100 · e^(0.1 × 20)
+        pt: N = 100 · e^(0,1 × 20)
+        fr: N = 100 · e^(0,1 × 20)
+        zh: N = 100 · e^(0.1 × 20)
+        ja: N = 100 · e^(0.1 × 20)
+      - es: N = 100 · e²
+        en: N = 100 · e²
+        pt: N = 100 · e²
+        fr: N = 100 · e²
+        zh: N = 100 · e²
+        ja: N = 100 · e²
+      - es: e² ≈ 7.389
+        en: e² ≈ 7.389
+        pt: e² ≈ 7,389
+        fr: e² ≈ 7,389
+        zh: e² ≈ 7.389
+        ja: e² ≈ 7.389
+      - es: N ≈ 100 · 7.389 ≈ 739
+        en: N ≈ 100 · 7.389 ≈ 739
+        pt: N ≈ 100 · 7,389 ≈ 739
+        fr: N ≈ 100 · 7,389 ≈ 739
+        zh: N ≈ 100 · 7.389 ≈ 739
+        ja: N ≈ 100 · 7.389 ≈ 739

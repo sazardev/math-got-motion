@@ -1,0 +1,430 @@
+id: orbital-period
+title:
+  es: Periodo Orbital
+  en: Orbital Period
+  pt: Período Orbital
+  fr: Période orbitale
+  zh: 轨道周期
+  ja: 公転周期
+category:
+  es: Astronomía
+  en: Astronomy
+  pt: Astronomia
+  fr: Astronomie
+  zh: 天文学
+  ja: 天文学
+nodes:
+  - id: t
+    type: variable
+    value: T
+    explanation:
+      es: "El período orbital: el tiempo que tarda un satélite en completar una vuelta completa."
+      en: "The orbital period: the time a satellite takes to complete one full orbit."
+      pt: "O período orbital: o tempo que o satélite leva para completar uma volta completa."
+      fr: "La période orbitale : le temps que met un satellite pour accomplir une révolution complète."
+      zh: "轨道周期：卫星绕一整圈轨道所需的时间。"
+      ja: "公転周期。衛星が軌道を一周するのにかかる時間。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "El número dos: el período es 2π veces la raíz de la relación de distancias."
+      en: "The number two: the period is 2π times the root of the distance ratio."
+      pt: "O número dois: o período é 2π vezes a raiz da relação de distâncias."
+      fr: "Le nombre deux : la période vaut 2π fois la racine du rapport des distances."
+      zh: 数字2：周期是2π乘以距离比值的平方根。
+      ja: 数字の2。周期は距離の比の平方根の2π倍。
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: "Pi: la constante que relaciona la circunferencia con su diámetro, unos 3.1416."
+      en: "Pi: the constant relating a circumference to its diameter, about 3.1416."
+      pt: "Pi: a constante que relaciona a circunferência com seu diâmetro, cerca de 3,1416."
+      fr: "Pi : la constante reliant la circonférence à son diamètre, environ 3,1416."
+      zh: "圆周率π：连接圆周长与直径的常数，约为3.1416。"
+      ja: "円周率π。円周と直径を結びつける定数で、およそ3.1416。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: Raíz cuadrada de.
+      en: Square root of.
+      pt: Raiz quadrada de.
+      fr: Racine carrée de.
+      zh: 的平方根。
+      ja: の平方根。
+  - id: open-root
+    type: operator
+    value: (
+    explanation:
+      es: Abre la expresión bajo la raíz.
+      en: Opens the expression under the root.
+      pt: Abre a expressão sob a raiz.
+      fr: Ouvre l'expression sous la racine.
+      zh: 打开根号下的表达式。
+      ja: ルートの中の式を開く括弧。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "r: la distancia desde el centro del planeta hasta el satélite."
+      en: "r: the distance from the planet's center to the satellite."
+      pt: "r: a distância do centro do planeta ao satélite."
+      fr: "r : la distance du centre de la planète au satellite."
+      zh: "r：从行星中心到卫星的距离。"
+      ja: "r：惑星の中心から衛星までの距離。"
+  - id: r-cubed
+    type: superscript
+    value: "3"
+    explanation:
+      es: Elevado al cubo. El radio se multiplica por sí mismo dos veces.
+      en: Raised to the third power. The radius multiplied by itself twice.
+      pt: Elevado ao cubo. O raio é multiplicado por si mesmo duas vezes.
+      fr: Élevé au cube. Le rayon est multiplié deux fois par lui-même.
+      zh: 立方。半径与自身相乘两次。
+      ja: 三乗。半径を自分自身と二回掛け合わせる。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: open-denom
+    type: operator
+    value: (
+    explanation:
+      es: Abre el grupo del denominador.
+      en: Opens the denominator group.
+      pt: Abre o grupo do denominador.
+      fr: Ouvre le groupe du dénominateur.
+      zh: 打开分母的括号。
+      ja: 分母のグループを開く括弧。
+  - id: g
+    type: constant
+    value: G
+    explanation:
+      es: "G: la constante de gravitación universal, 6.674×10⁻¹¹."
+      en: "G: the universal gravitational constant, 6.674×10⁻¹¹."
+      pt: "G: a constante da gravitação universal, 6,674×10⁻¹¹."
+      fr: "G : la constante de gravitation universelle, 6,674×10⁻¹¹."
+      zh: "G：万有引力常数，6.674×10⁻¹¹。"
+      ja: "G：万有引力定数、6.674×10⁻¹¹。"
+  - id: dot-gm
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: m
+    type: variable
+    value: M
+    explanation:
+      es: "M: la masa del planeta central."
+      en: "M: the mass of the central planet."
+      pt: "M: a massa do planeta central."
+      fr: "M : la masse de la planète centrale."
+      zh: "M：中心行星的质量。"
+      ja: "M：中心となる惑星の質量。"
+  - id: close-denom
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el denominador.
+      en: Closes the denominator.
+      pt: Fecha o denominador.
+      fr: Ferme le dénominateur.
+      zh: 关闭分母的括号。
+      ja: 分母の括弧を閉じる。
+  - id: close-root
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la expresión bajo la raíz.
+      en: Closes the expression under the root.
+      pt: Fecha a expressão sob a raiz.
+      fr: Ferme l'expression sous la racine.
+      zh: 关闭根号下的表达式。
+      ja: ルートの中の式を閉じる括弧。
+context:
+  author:
+    es: Johannes Kepler
+    en: Johannes Kepler
+    pt: Johannes Kepler
+    fr: Johannes Kepler
+    zh: 约翰内斯·开普勒
+    ja: ヨハネス・ケプラー
+  era:
+    es: Alemania, 1571–1630 · tercera ley en 1619
+    en: Germany, 1571–1630 · third law in 1619
+    pt: Alemanha, 1571–1630 · terceira lei em 1619
+    fr: Allemagne, 1571–1630 · troisième loi en 1619
+    zh: 德国，1571–1630年 · 1619年第三定律
+    ja: ドイツ、1571–1630年・1619年第三法則
+  history:
+    es: >-
+      La tercera ley de Kepler, publicada en 1619, afirmaba que el cuadrado del período de un planeta
+      es proporcional al cubo de su distancia media al Sol. En su forma newtoniana la constante de
+      proporcionalidad es 4π²/(G·M), de modo que el período depende solo de la masa central y del
+      tamaño de la órbita. Por eso los satélites más altos tardan más: su recorrido es mayor y la
+      gravedad, más débil, los frena. A 35,786 km de altura el período iguala un día sideral, creando
+      las órbitas geoestacionarias usadas por las telecomunicaciones.
+    en: >-
+      Kepler's third law, published in 1619, stated that the square of a planet's period is
+      proportional to the cube of its mean distance from the Sun. In its Newtonian form the constant
+      of proportionality is 4π²/(G·M), so the period depends only on the central mass and the orbit's
+      size. Higher satellites therefore take longer: their path is longer and the weaker gravity
+      slows them down. At 35,786 km altitude the period equals exactly one sidereal day, producing
+      the geostationary orbits used by telecommunications.
+    pt: >-
+      A terceira lei de Kepler, publicada em 1619, afirmava que o quadrado do período de um planeta é
+      proporcional ao cubo de sua distância média ao Sol. Em sua forma newtoniana a constante de
+      proporcionalidade é 4π²/(G·M), de modo que o período depende apenas da massa central e do
+      tamanho da órbita. Por isso satélites mais altos demoram mais: seu trajeto é maior e a
+      gravidade, mais fraca, os desacelera. A 35,786 km de altitude o período iguala um dia sideral,
+      criando as órbitas geoestacionárias usadas pelas telecomunicações.
+    fr: >-
+      La troisième loi de Kepler, publiée en 1619, énonçait que le carré de la période d'une planète
+      est proportionnel au cube de sa distance moyenne au Soleil. Dans sa forme newtonienne, la
+      constante de proportionnalité vaut 4π²/(G·M) : la période ne dépend donc que de la masse
+      centrale et de la taille de l'orbite. Les satellites plus hauts mettent ainsi plus longtemps :
+      leur trajet est plus long et la gravité, plus faible, les ralentit. À 35,786 km d'altitude la
+      période égale exactement un jour sidéral, donnant les orbites géostationnaires des
+      télécommunications.
+    zh: >-
+      开普勒第三定律发表于1619年，指出行星公转周期的平方与其到太阳平均距离的立方成正比。在牛顿形式中，
+      比例常数为4π²/(G·M)，因此周期只取决于中心天体质量和轨道大小。正因如此，轨道越高的卫星周期越长：
+      它们路径更长，而较弱的引力使其更慢。在35,786公里高度，周期恰好等于一个恒星日，从而产生了通信
+      所用的地球静止轨道。
+    ja: >-
+      ケプラーの第三法則（1619年発表）は、惑星の公転周期の二乗が太陽からの平均距離の三乗に比例すると
+      述べた。ニュートン形式では比例定数が4π²/(G・M)となり、周期は中心天体の質量と軌道の大きさだけに
+      依存する。だからこそ高い軌道ほど周期が長くなる。経路が長いうえ、弱い重力で速度が落ちるからだ。
+      高度35,786 kmでは周期が恒星日とちょうど一致し、通信に使われる静止軌道が生まれる。
+  timeline:
+    - year: "1609"
+      label:
+        es: >-
+          Kepler publica sus dos primeras leyes en Astronomia Nova, con órbitas elípticas.
+        en: >-
+          Kepler publishes his first two laws in Astronomia Nova, with elliptical orbits.
+        pt: >-
+          Kepler publica suas duas primeiras leis em Astronomia Nova, com órbitas elípticas.
+        fr: >-
+          Kepler publie ses deux premières lois dans Astronomia Nova, avec des orbites elliptiques.
+        zh: >-
+          开普勒在《新天文学》中发表前两条定律，提出椭圆轨道。
+        ja: >-
+          ケプラーが『新天文学』で楕円軌道を唱える最初の二法則を発表する。
+    - year: "1619"
+      label:
+        es: >-
+          Publica la tercera ley en Harmonices Mundi: el período al cuadrado contra la distancia al
+          cubo.
+        en: >-
+          Publishes the third law in Harmonices Mundi: squared period against cubed distance.
+        pt: >-
+          Publica a terceira lei em Harmonices Mundi: período ao quadrado contra distância ao cubo.
+        fr: >-
+          Publie la troisième loi dans Harmonices Mundi : période au carré contre distance au cube.
+        zh: >-
+          在《世界的和谐》中发表第三定律：周期平方对距离立方。
+        ja: >-
+          『世界の調和』で第三法則を発表。周期の二乗と距離の三乗の関係。
+    - year: "1687"
+      label:
+        es: >-
+          Newton deduce la ley desde la gravitación universal en los Principia.
+        en: >-
+          Newton derives the law from universal gravitation in the Principia.
+        pt: >-
+          Newton deduz a lei a partir da gravitação universal nos Principia.
+        fr: >-
+          Newton établit la loi à partir de la gravitation universelle dans les Principia.
+        zh: >-
+          牛顿在《原理》中从万有引力推导出该定律。
+        ja: >-
+          ニュートンが『プリンキピア』で万有引力からこの法則を導出する。
+    - year: Hoy
+      label:
+        es: >-
+          Se usa para diseñar órbitas de satélites, como las geoestacionarias a 35,786 km.
+        en: >-
+          Used to design satellite orbits, like geostationary ones at 35,786 km.
+        pt: >-
+          Usada para projetar órbitas de satélites, como as geoestacionárias a 35,786 km.
+        fr: >-
+          Utilisée pour concevoir les orbites de satellites, comme les géostationnaires à 35,786 km.
+        zh: >-
+          用于设计卫星轨道，如35,786公里高的地球静止轨道。
+        ja: >-
+          高度35,786 kmの静止軌道など、衛星軌道の設計に使われる。
+  useCases:
+    - title:
+        es: Diseño de órbitas satelitales
+        en: Satellite orbit design
+        pt: Design de órbitas satelitais
+        fr: Conception d'orbites satellitaires
+        zh: 卫星轨道设计
+        ja: 衛星軌道の設計
+      description:
+        es: >-
+          Calcula el período de un satélite según su altitud, para planear órbitas de observación y
+          comunicación.
+        en: >-
+          Computes a satellite's period from its altitude, to plan observation and communication
+          orbits.
+        pt: >-
+          Calcula o período de um satélite conforme a altitude, para planejar órbitas de observação
+          e comunicação.
+        fr: >-
+          Calcule la période d'un satellite selon son altitude, pour planifier les orbites
+          d'observation et de communication.
+        zh: >-
+          根据卫星高度计算其轨道周期，用于规划观测和通信轨道。
+        ja: >-
+          衛星の高度から公転周期を計算し、観測・通信軌道を計画する。
+    - title:
+        es: Satélites geoestacionarios
+        en: Geostationary satellites
+        pt: Satélites geoestacionários
+        fr: Satellites géostationnaires
+        zh: 地球静止卫星
+        ja: 静止衛星
+      description:
+        es: >-
+          Fija la altitud de 35,786 km donde el satélite iguala la rotación de la Tierra y queda fijo
+          sobre un punto.
+        en: >-
+          Sets the 35,786 km altitude where the satellite matches Earth's rotation and stays fixed
+          over one point.
+        pt: >-
+          Define a altitude de 35,786 km onde o satélite acompanha a rotação da Terra e permanece
+          fixo sobre um ponto.
+        fr: >-
+          Fixe l'altitude de 35 786 km où le satellite suit la rotation de la Terre et reste fixe
+          au-dessus d'un point.
+        zh: >-
+          确定35,786公里的高度，卫星在此与地球自转同步，固定于地面上方一点。
+        ja: >-
+          高度35,786 kmで衛星が地球の自転と同期し、地上の一点の上に固定される。
+    - title:
+        es: Constelaciones de navegación
+        en: Navigation constellations
+        pt: Constelações de navegação
+        fr: Constellations de navigation
+        zh: 导航卫星星座
+        ja: 測位衛星コンステレーション
+      description:
+        es: >-
+          Constelaciones como el GPS usan períodos conocidos de unas 12 horas para posicionar con
+          precisión.
+        en: >-
+          Constellations like GPS use known periods of about 12 hours to position precisely.
+        pt: >-
+          Constelações como o GPS usam períodos conhecidos de cerca de 12 horas para posicionar com
+          precisão.
+        fr: >-
+          Des constellations comme le GPS utilisent des périodes connues d'environ 12 heures pour un
+          positionnement précis.
+        zh: >-
+          GPS等导航星座利用约12小时的已知周期进行精确定位。
+        ja: >-
+          GPSなどの測位衛星は約12時間の既知の周期を利用して正確な測位を行う。
+    - title:
+        es: Planificación de misiones espaciales
+        en: Space mission planning
+        pt: Planejamento de missões espaciais
+        fr: Planification de missions spatiales
+        zh: 太空任务规划
+        ja: 宇宙ミッションの計画
+      description:
+        es: >-
+          Calcula la duración de las transferencias entre órbitas y los tiempos de encuentro de
+          naves y estaciones.
+        en: >-
+          Computes the duration of orbit transfers and the rendezvous timing of spacecraft and
+          stations.
+        pt: >-
+          Calcula a duração de transferências entre órbitas e os tempos de encontro de naves e
+          estações.
+        fr: >-
+          Calcule la durée des transferts d'orbite et les temps de rendez-vous des engins et des
+          stations.
+        zh: >-
+          计算轨道转移的时长以及飞船与空间站会合的时间。
+        ja: >-
+          軌道遷移の所要時間や、宇宙船とステーションのランデブーのタイミングを計算する。
+  example:
+    title:
+      es: Un satélite en órbita baja
+      en: A satellite in low orbit
+      pt: Um satélite em órbita baixa
+      fr: Un satellite en orbite basse
+      zh: 低轨道卫星
+      ja: 低軌道衛星
+    lines:
+      - es: G = 6.674×10⁻¹¹, M = 5.972×10²⁴ kg, r = 6.771×10⁶ m
+        en: G = 6.674×10⁻¹¹, M = 5.972×10²⁴ kg, r = 6.771×10⁶ m
+        pt: G = 6,674×10⁻¹¹, M = 5,972×10²⁴ kg, r = 6,771×10⁶ m
+        fr: G = 6,674×10⁻¹¹, M = 5,972×10²⁴ kg, r = 6,771×10⁶ m
+        zh: G = 6.674×10⁻¹¹，M = 5.972×10²⁴ 千克，r = 6.771×10⁶ 米
+        ja: G = 6.674×10⁻¹¹、M = 5.972×10²⁴ kg、r = 6.771×10⁶ m
+      - es: G·M ≈ 3.986×10¹⁴
+        en: G·M ≈ 3.986×10¹⁴
+        pt: G·M ≈ 3,986×10¹⁴
+        fr: G·M ≈ 3,986×10¹⁴
+        zh: G·M ≈ 3.986×10¹⁴
+        ja: G·M ≈ 3.986×10¹⁴
+      - es: r³ = (6.771×10⁶)³ ≈ 3.105×10²⁰
+        en: r³ = (6.771×10⁶)³ ≈ 3.105×10²⁰
+        pt: r³ = (6,771×10⁶)³ ≈ 3,105×10²⁰
+        fr: r³ = (6,771×10⁶)³ ≈ 3,105×10²⁰
+        zh: r³ = (6.771×10⁶)³ ≈ 3.105×10²⁰
+        ja: r³ = (6.771×10⁶)³ ≈ 3.105×10²⁰
+      - es: r³/(G·M) ≈ 7.79×10⁵
+        en: r³/(G·M) ≈ 7.79×10⁵
+        pt: r³/(G·M) ≈ 7,79×10⁵
+        fr: r³/(G·M) ≈ 7,79×10⁵
+        zh: r³/(G·M) ≈ 7.79×10⁵
+        ja: r³/(G·M) ≈ 7.79×10⁵
+      - es: T = 2π·√(7.79×10⁵) ≈ 2π·882.5
+        en: T = 2π·√(7.79×10⁵) ≈ 2π·882.5
+        pt: T = 2π·√(7,79×10⁵) ≈ 2π·882,5
+        fr: T = 2π·√(7,79×10⁵) ≈ 2π·882,5
+        zh: T = 2π·√(7.79×10⁵) ≈ 2π·882.5
+        ja: T = 2π·√(7.79×10⁵) ≈ 2π·882.5
+      - es: T ≈ 5545 s ≈ 92.4 min
+        en: T ≈ 5545 s ≈ 92.4 min
+        pt: T ≈ 5545 s ≈ 92,4 min
+        fr: T ≈ 5545 s ≈ 92,4 min
+        zh: T ≈ 5545 秒 ≈ 92.4 分钟
+        ja: T ≈ 5545 秒 ≈ 92.4 分

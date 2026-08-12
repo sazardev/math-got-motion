@@ -1,0 +1,391 @@
+id: difference-of-squares
+title:
+  es: Diferencia de Cuadrados
+  en: Difference of Squares
+  pt: Diferença de Quadrados
+  fr: Différence de carrés
+  zh: 平方差公式
+  ja: 平方の差
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: a2
+    type: variable
+    value: a²
+    explanation:
+      es: El primer cuadrado, a elevado al cuadrado.
+      en: The first square, a squared.
+      pt: O primeiro quadrado, a ao quadrado.
+      fr: Le premier carré, a au carré.
+      zh: 第一个平方，即 a 的平方。
+      ja: 最初の平方、aの2乗。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: Menos el segundo cuadrado.
+      en: Minus the second square.
+      pt: Menos o segundo quadrado.
+      fr: Moins le second carré.
+      zh: 减去第二个平方。
+      ja: 2つ目の平方を引く。
+  - id: b2
+    type: variable
+    value: b²
+    explanation:
+      es: El segundo cuadrado, b elevado al cuadrado.
+      en: The second square, b squared.
+      pt: O segundo quadrado, b ao quadrado.
+      fr: Le second carré, b au carré.
+      zh: 第二个平方，即 b 的平方。
+      ja: 2つ目の平方、bの2乗。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual al producto de dos factores.
+      en: Is equal to the product of two factors.
+      pt: É igual ao produto de dois fatores.
+      fr: Est égal au produit de deux facteurs.
+      zh: 等于两个因式的乘积。
+      ja: 2つの因数の積に等しい。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el primer factor, la suma.
+      en: Opens the first factor, the sum.
+      pt: Abre o primeiro fator, a soma.
+      fr: Ouvre le premier facteur, la somme.
+      zh: 打开第一个因式，即和。
+      ja: 最初の因数である和の括弧を開く。
+  - id: a-p
+    type: variable
+    value: a
+    explanation:
+      es: La primera variable.
+      en: The first variable.
+      pt: A primeira variável.
+      fr: La première variable.
+      zh: 第一个变量。
+      ja: 最初の変数。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumada a la segunda.
+      en: Added to the second.
+      pt: Somada à segunda.
+      fr: Ajoutée à la seconde.
+      zh: 与第二个相加。
+      ja: 2つ目の変数と足す。
+  - id: b-p
+    type: variable
+    value: b
+    explanation:
+      es: La segunda variable.
+      en: The second variable.
+      pt: A segunda variável.
+      fr: La seconde variable.
+      zh: 第二个变量。
+      ja: 2つ目の変数。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el factor suma.
+      en: Closes the sum factor.
+      pt: Fecha o fator soma.
+      fr: Ferme le facteur somme.
+      zh: 闭合和因式的括号。
+      ja: 和の因数の括弧を閉じる。
+  - id: open-paren-2
+    type: operator
+    value: (
+    explanation:
+      es: Abre el segundo factor, la diferencia.
+      en: Opens the second factor, the difference.
+      pt: Abre o segundo fator, a diferença.
+      fr: Ouvre le second facteur, la différence.
+      zh: 打开第二个因式，即差。
+      ja: 2つ目の因数である差の括弧を開く。
+  - id: a-m
+    type: variable
+    value: a
+    explanation:
+      es: La misma primera variable.
+      en: The same first variable.
+      pt: A mesma primeira variável.
+      fr: La même première variable.
+      zh: 同一个第一个变量。
+      ja: 同じ最初の変数。
+  - id: minus-2
+    type: operator
+    value: −
+    explanation:
+      es: Menos la segunda.
+      en: Minus the second.
+      pt: Menos a segunda.
+      fr: Moins la seconde.
+      zh: 减去第二个。
+      ja: 2つ目の変数を引く。
+  - id: b-m
+    type: variable
+    value: b
+    explanation:
+      es: La segunda variable.
+      en: The second variable.
+      pt: A segunda variável.
+      fr: La seconde variable.
+      zh: 第二个变量。
+      ja: 2つ目の変数。
+  - id: close-paren-2
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el factor diferencia.
+      en: Closes the difference factor.
+      pt: Fecha o fator diferença.
+      fr: Ferme le facteur différence.
+      zh: 闭合差因式的括号。
+      ja: 差の因数の括弧を閉じる。
+context:
+  author:
+    es: Origen colectivo (Euclides, Elementos)
+    en: Collective origin (Euclid's Elements)
+    pt: Origem coletiva (Euclides, Elementos)
+    fr: Origine collective (Euclide, Éléments)
+    zh: 集体起源（欧几里得，《几何原本》）
+    ja: 集合的起源（ユークリッド『原論』）
+  era:
+    es: Grecia, c. 300 a.C. · publicada en Elementos
+    en: Greece, c. 300 BC · published in Elements
+    pt: Grécia, c. 300 a.C. · publicada em Os Elementos
+    fr: Grèce, v. 300 av. J.-C. · publiée dans les Éléments
+    zh: 希腊，约公元前300年 · 发表于《几何原本》
+    ja: ギリシャ、紀元前300年頃 · 『原論』に発表
+  history:
+    es: >-
+      La proposición 5 del Libro II de los Elementos de Euclides demuestra geométricamente que la
+      diferencia de dos cuadrados es el producto de su suma por su diferencia. La identidad permite
+      cálculos mentales sorprendentes, como 97×103 = (100−3)(100+3) = 100²−3², y es la clave para
+      factorizar polinomios cuadráticos. Aparece una y otra vez, del álgebra escolar a la aritmética
+      de las computadoras.
+    en: >-
+      Proposition 5 of Book II of Euclid's Elements proves geometrically that the difference of two
+      squares is the product of their sum and difference. The identity enables surprising mental
+      arithmetic, like 97×103 = (100−3)(100+3) = 100²−3², and is the key to factoring quadratic
+      polynomials. It recurs everywhere, from school algebra to computer arithmetic.
+    pt: >-
+      A Proposição 5 do Livro II dos Elementos de Euclides demonstra geometricamente que a diferença
+      de dois quadrados é o produto da soma pela diferença. A identidade permite cálculos mentais
+      surpreendentes, como 97×103 = (100−3)(100+3) = 100²−3², e é a chave para fatorar polinômios
+      quadráticos. Ela reaparece em toda parte, da álgebra escolar à aritmética dos computadores.
+    fr: >-
+      La Proposition 5 du Livre II des Éléments d'Euclide démontre géométriquement que la différence
+      de deux carrés est le produit de leur somme par leur différence. L'identité permet des calculs
+      mentaux étonnants, comme 97×103 = (100−3)(100+3) = 100²−3², et est la clé de la factorisation
+      des polynômes du second degré. On la retrouve partout, de l'algèbre scolaire à l'arithmétique
+      des ordinateurs.
+    zh: >-
+      欧几里得《几何原本》第二卷命题5从几何上证明了：两个平方之差等于它们的和乘以它们的差。利用这条恒等式
+      可以进行巧妙的快速心算，例如 97×103 = (100−3)(100+3) = 100²−3²；它也是分解二次多项式因式的关键。
+      从学校代数到计算机算术，这条公式无处不在。
+    ja: >-
+      ユークリッドの『原論』第2巻の命題5は、二つの平方数の差が、それらの和と差の積に等しいことを幾何学的に
+      証明している。この恒等式を使えば、97×103 = (100−3)(100+3) = 100²−3² のような見事な暗算が可能になり、
+      二次多項式の因数分解の鍵にもなる。学校の代数からコンピュータの演算まで、至る所に現れる。
+  timeline:
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides demuestra la proposición 5 del Libro II de los Elementos por disección geométrica.
+        en: >-
+          Euclid proves Proposition 5 of Book II of the Elements by geometric dissection.
+        pt: >-
+          Euclides demonstra a Proposição 5 do Livro II dos Elementos por dissecação geométrica.
+        fr: >-
+          Euclide démontre la Proposition 5 du Livre II des Éléments par dissection géométrique.
+        zh: >-
+          欧几里得用几何剖分法证明了《几何原本》第二卷的命题5。
+        ja: >-
+          ユークリッドが『原論』第2巻の命題5を幾何学的な分割により証明する。
+    - year: "1202"
+      label:
+        es: >-
+          El Liber Abaci de Fibonacci difunde la aritmética indoarábiga, haciendo rutinarios estos
+          cálculos algebraicos en Europa.
+        en: >-
+          Fibonacci's Liber Abaci spreads Indo-Arabic arithmetic, making these algebraic calculations
+          routine in Europe.
+        pt: >-
+          O Liber Abaci de Fibonacci difunde a aritmética indo-arábica, tornando rotineiros esses
+          cálculos algébricos na Europa.
+        fr: >-
+          Le Liber Abaci de Fibonacci diffuse l'arithmétique indo-arabe, rendant ces calculs
+          algébriques courants en Europe.
+        zh: >-
+          斐波那契的《计算之书》传播了印度-阿拉伯算术，使这类代数计算在欧洲成为家常便饭。
+        ja: >-
+          フィボナッチの『計算の書』がインド・アラビア数字の算術を広め、ヨーロッパでこうした代数計算が
+          一般的になった。
+    - year: Hoy
+      label:
+        es: >-
+          Es una herramienta estándar del álgebra escolar, el cálculo mental y el procesamiento digital
+          de señales.
+        en: >-
+          It is a standard tool in school algebra, mental arithmetic, and digital signal processing.
+        pt: >-
+          É uma ferramenta padrão da álgebra escolar, do cálculo mental e do processamento digital de
+          sinais.
+        fr: >-
+          C'est un outil standard de l'algèbre scolaire, du calcul mental et du traitement numérique du
+          signal.
+        zh: >-
+          它是学校代数、心算和数字信号处理中的标准工具。
+        ja: >-
+          学校の代数、暗算、デジタル信号処理における標準的な道具である。
+  useCases:
+    - title:
+        es: Aritmética mental
+        en: Mental arithmetic
+        pt: Aritmética mental
+        fr: Calcul mental
+        zh: 心算
+        ja: 暗算
+      description:
+        es: >-
+          Productos como 97×103 se resuelven rápido: (100−3)(100+3) = 10000 − 9 = 9991.
+        en: >-
+          Products like 97×103 are solved quickly: (100−3)(100+3) = 10000 − 9 = 9991.
+        pt: >-
+          Produtos como 97×103 são resolvidos rápido: (100−3)(100+3) = 10000 − 9 = 9991.
+        fr: >-
+          Des produits comme 97×103 se résolvent vite : (100−3)(100+3) = 10000 − 9 = 9991.
+        zh: >-
+          像 97×103 这样的乘积可以快速求解：(100−3)(100+3) = 10000 − 9 = 9991。
+        ja: >-
+          97×103 のような積はすぐに解ける：(100−3)(100+3) = 10000 − 9 = 9991。
+    - title:
+        es: Factorización
+        en: Factoring
+        pt: Fatoração
+        fr: Factorisation
+        zh: 因式分解
+        ja: 因数分解
+      description:
+        es: >-
+          Permite descomponer un binomio de la forma x² − c² en dos factores lineales, primer paso de
+          muchas ecuaciones.
+        en: >-
+          It breaks a binomial of the form x² − c² into two linear factors, the first step in many
+          equations.
+        pt: >-
+          Permite decompor um binômio da forma x² − c² em dois fatores lineares, primeiro passo de
+          muitas equações.
+        fr: >-
+          Elle décompose un binôme de la forme x² − c² en deux facteurs linéaires, première étape de
+          nombreuses équations.
+        zh: >-
+          它把形如 x² − c² 的二项式分解为两个一次因式，是许多方程求解的第一步。
+        ja: >-
+          x² − c² の形の二項式を二つの一次式に因数分解する。多くの方程式の第一歩となる。
+    - title:
+        es: Procesamiento de señales
+        en: Signal processing
+        pt: Processamento de sinais
+        fr: Traitement du signal
+        zh: 信号处理
+        ja: 信号処理
+      description:
+        es: >-
+          La mezcla de frecuencias, por ejemplo en radio, produce términos suma y diferencia de las
+          frecuencias originales.
+        en: >-
+          Frequency mixing, for instance in radio, produces the sum and difference of the original
+          frequencies.
+        pt: >-
+          A mistura de frequências, por exemplo no rádio, produz os termos soma e diferença das
+          frequências originais.
+        fr: >-
+          Le mélange de fréquences, par exemple en radio, produit les termes somme et différence des
+          fréquences d'origine.
+        zh: >-
+          混频（例如在无线电中）会得到原始频率的和频与差频分量。
+        ja: >-
+          ラジオなどの周波数混合では、元の周波数の和と差の成分が生じる。
+    - title:
+        es: Simplificación de expresiones
+        en: Simplifying expressions
+        pt: Simplificação de expressões
+        fr: Simplification d'expressions
+        zh: 化简表达式
+        ja: 式の簡約化
+      description:
+        es: >-
+          Racionalizar o cancelar términos en fracciones algebraicas suele apoyarse en la diferencia de
+          cuadrados.
+        en: >-
+          Rationalizing or canceling terms in algebraic fractions often relies on the difference of
+          squares.
+        pt: >-
+          Racionalizar ou cancelar termos em frações algébricas costuma se apoiar na diferença de
+          quadrados.
+        fr: >-
+          Rationaliser ou simplifier des fractions algébriques repose souvent sur la différence de
+          carrés.
+        zh: >-
+          化简代数分式时的有理化或约分，常常要借助平方差公式。
+        ja: >-
+          代数の分数式の有理化や約分は、しばしば平方の差に基づいている。
+  example:
+    title:
+      es: Calcular 7² − 3²
+      en: Computing 7² − 3²
+      pt: Calculando 7² − 3²
+      fr: Calcul de 7² − 3²
+      zh: 计算 7² − 3²
+      ja: 7² − 3² の計算
+    lines:
+      - es: a = 7, b = 3
+        en: a = 7, b = 3
+        pt: a = 7, b = 3
+        fr: a = 7, b = 3
+        zh: a = 7, b = 3
+        ja: a = 7, b = 3
+      - es: a² − b² = (a + b)(a − b)
+        en: a² − b² = (a + b)(a − b)
+        pt: a² − b² = (a + b)(a − b)
+        fr: a² − b² = (a + b)(a − b)
+        zh: a² − b² = (a + b)(a − b)
+        ja: a² − b² = (a + b)(a − b)
+      - es: 7² − 3² = (7 + 3)(7 − 3)
+        en: 7² − 3² = (7 + 3)(7 − 3)
+        pt: 7² − 3² = (7 + 3)(7 − 3)
+        fr: 7² − 3² = (7 + 3)(7 − 3)
+        zh: 7² − 3² = (7 + 3)(7 − 3)
+        ja: 7² − 3² = (7 + 3)(7 − 3)
+      - es: 49 − 9 = 10 × 4
+        en: 49 − 9 = 10 × 4
+        pt: 49 − 9 = 10 × 4
+        fr: 49 − 9 = 10 × 4
+        zh: 49 − 9 = 10 × 4
+        ja: 49 − 9 = 10 × 4
+      - es: 40 = 40
+        en: 40 = 40
+        pt: 40 = 40
+        fr: 40 = 40
+        zh: 40 = 40
+        ja: 40 = 40
+      - es: "Resultado: 40"
+        en: "Result: 40"
+        pt: "Resultado: 40"
+        fr: "Résultat : 40"
+        zh: 结果：40
+        ja: 結果：40

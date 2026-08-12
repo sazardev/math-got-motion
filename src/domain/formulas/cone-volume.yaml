@@ -1,0 +1,367 @@
+id: cone-volume
+title:
+  es: Volumen de un Cono
+  en: Volume of a Cone
+  pt: Volume de um Cone
+  fr: Volume d'un Cône
+  zh: 圆锥体的体积
+  ja: 円錐の体積
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: volume
+    type: variable
+    value: V
+    explanation:
+      es: "El volumen: el espacio tridimensional que ocupa el cono."
+      en: "The volume: the three-dimensional space the cone occupies."
+      pt: "O volume: o espaço tridimensional ocupado pelo cone."
+      fr: "Le volume : l'espace tridimensionnel occupé par le cône."
+      zh: "体积：圆锥体所占据的三维空间。"
+      ja: "体積：円錐が占める三次元空間。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: ちょうど等しい。
+  - id: third
+    type: number
+    value: "⅓"
+    explanation:
+      es: "Un tercio: el cono ocupa exactamente la tercera parte del cilindro de igual base y altura."
+      en: "One third: a cone fills exactly one third of the cylinder with the same base and height."
+      pt: "Um terço: o cone ocupa exatamente a terça parte do cilindro de mesma base e altura."
+      fr: "Un tiers : un cône remplit exactement le tiers du cylindre de même base et de même hauteur."
+      zh: "三分之一：圆锥恰好占据同底等高圆柱体积的三分之一。"
+      ja: "3分の1：円錐は同じ底面と高さを持つ円柱のちょうど3分の1を占める。"
+  - id: mul-pi
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: Pi, la razón constante entre la circunferencia de un círculo y su diámetro.
+      en: Pi, the constant ratio between a circle's circumference and its diameter.
+      pt: Pi, a razão constante entre a circunferência de um círculo e seu diâmetro.
+      fr: Pi, le rapport constant entre la circonférence d'un cercle et son diamètre.
+      zh: 圆周率π，圆的周长与直径之比的常数。
+      ja: 円周率π。円の円周と直径の一定な比。
+  - id: mul-r
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "El radio: la distancia desde el centro de la base circular hasta su borde."
+      en: "The radius: the distance from the center of the circular base to its edge."
+      pt: "O raio: a distância do centro da base circular até sua borda."
+      fr: "Le rayon : la distance du centre de la base circulaire à son bord."
+      zh: "半径：从圆形底面的中心到其边缘的距离。"
+      ja: "半径：円形の底面の中心から縁までの距離。"
+  - id: r-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Elevado al cuadrado: el radio multiplicado por sí mismo, que da el área de la base."
+      en: "Squared: the radius times itself, which gives the base's area."
+      pt: "Elevado ao quadrado: o raio multiplicado por si mesmo, que dá a área da base."
+      fr: "Élevé au carré : le rayon multiplié par lui-même, soit l'aire de la base."
+      zh: "平方：半径与自身相乘，即底面的面积。"
+      ja: "2乗：半径を自分自身に掛けたもの。これが底面の面積となる。"
+  - id: mul-h
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: h
+    type: variable
+    value: h
+    explanation:
+      es: "La altura: la distancia perpendicular desde el vértice hasta el centro de la base."
+      en: "The height: the perpendicular distance from the apex down to the base's center."
+      pt: "A altura: a distância perpendicular do vértice ao centro da base."
+      fr: "La hauteur : la distance perpendiculaire du sommet au centre de la base."
+      zh: "高：从顶点到底面中心的垂直距离。"
+      ja: "高さ：頂点から底面の中心までの垂直距離。"
+context:
+  author:
+    es: Eudoxo (descubierto) y Arquímedes (demostrado)
+    en: Eudoxus (found) and Archimedes (proved)
+    pt: Eudoxo (descoberto) e Arquimedes (demonstrado)
+    fr: Eudoxe (découvert) et Archimède (démontré)
+    zh: 欧多克索斯（发现）与阿基米德（证明）
+    ja: エウドクソス（発見）とアルキメデス（証明）
+  era:
+    es: Grecia, s. IV–III a.C.
+    en: Greece, 4th–3rd century BC
+    pt: Grécia, séc. IV–III a.C.
+    fr: Grèce, IVe–IIIe siècle av. J.-C.
+    zh: 古希腊，公元前4至3世纪
+    ja: ギリシャ、紀元前4〜3世紀
+  history:
+    es: >-
+      El método de exhausción de Eudoxo, hacia el 370 a.C., mostró que el cono es la tercera parte
+      del cilindro de igual base y altura; Arquímedes lo demostró con rigor. El factor ⅓ proviene
+      del volumen de la pirámide, de la que el cono es el límite circular. Hoy se usa desde acopios
+      de arena hasta el modelado de volcanes.
+    en: >-
+      Eudoxus' method of exhaustion, around 370 BC, showed that a cone is one third of a cylinder
+      with the same base and height; Archimedes proved it rigorously. The factor ⅓ comes from the
+      volume of the pyramid, of which the cone is the circular limit. Today it is used from sand
+      stockpiles to volcano modeling.
+    pt: >-
+      O método da exaustão de Eudoxo, por volta de 370 a.C., mostrou que o cone é a terça parte do
+      cilindro de mesma base e altura; Arquimedes o demonstrou com rigor. O fator ⅓ vem do volume
+      da pirâmide, da qual o cone é o limite circular. Hoje é usado de montes de areia à modelagem
+      de vulcões.
+    fr: >-
+      La méthode d'exhaustion d'Eudoxe, vers 370 av. J.-C., montra qu'un cône vaut le tiers d'un
+      cylindre de même base et de même hauteur ; Archimède le démontra rigoureusement. Le facteur ⅓
+      provient du volume de la pyramide, dont le cône est la limite circulaire. On l'emploie
+      aujourd'hui des tas de sable à la modélisation des volcans.
+    zh: >-
+      约公元前370年，欧多克索斯的穷竭法表明，圆锥是同底等高圆柱体积的三分之一；阿基米德对此给出了严格证明。
+      因子⅓源自棱锥的体积，圆锥正是棱锥的圆化极限。如今，从沙堆到火山建模都在使用这一公式。
+    ja: >-
+      紀元前370年頃、エウドクソスの取り尽くし法によって、円錐は同じ底面と高さを持つ円柱の3分の1である
+      ことが示され、アルキメデスが厳密に証明した。係数⅓は角錐の体積に由来し、円錐はその円形の極限である。
+      今日では砂の山から火山のモデリングまで、幅広く使われている。
+  timeline:
+    - year: c. 370 a.C.
+      label:
+        es: >-
+          Eudoxo, con el método de exhausción, muestra que el cono es la tercera parte del cilindro
+          de igual base y altura.
+        en: >-
+          Eudoxus, using the method of exhaustion, shows a cone is one third of a cylinder with the
+          same base and height.
+        pt: >-
+          Eudoxo, com o método da exaustão, mostra que o cone é a terça parte do cilindro de mesma
+          base e altura.
+        fr: >-
+          Eudoxe, par la méthode d'exhaustion, montre qu'un cône vaut le tiers d'un cylindre de même
+          base et de même hauteur.
+        zh: >-
+          欧多克索斯用穷竭法证明，圆锥是同底等高圆柱体积的三分之一。
+        ja: >-
+          エウドクソスが取り尽くし法により、円錐は同じ底面と高さの円柱の3分の1であることを示す。
+    - year: c. 250 a.C.
+      label:
+        es: >-
+          Arquímedes demuestra el resultado con rigor en Sobre la esfera y el cilindro.
+        en: >-
+          Archimedes proves the result rigorously in On the Sphere and the Cylinder.
+        pt: >-
+          Arquimedes demonstra o resultado com rigor em Sobre a esfera e o cilindro.
+        fr: >-
+          Archimède démontre le résultat rigoureusement dans De la sphère et du cylindre.
+        zh: >-
+          阿基米德在《论球与圆柱》中对该结果给出了严格证明。
+        ja: >-
+          アルキメデスが『球と円柱について』でこの結果を厳密に証明する。
+    - year: s. XVII
+      label:
+        es: >-
+          Cavalieri generaliza el razonamiento con su principio, base del cálculo integral moderno.
+        en: >-
+          Cavalieri generalizes the reasoning with his principle, a foundation of modern integral
+          calculus.
+        pt: >-
+          Cavalieri generaliza o raciocínio com seu princípio, base do cálculo integral moderno.
+        fr: >-
+          Cavalieri généralise le raisonnement avec son principe, fondement du calcul intégral
+          moderne.
+        zh: >-
+          卡瓦列里用其原理推广了这一推理，成为现代积分学的基础。
+        ja: >-
+          カヴァリエリがその原理でこの論法を一般化し、現代の積分法の基礎となる。
+    - year: Hoy
+      label:
+        es: >-
+          Mide acopios de material suelto, depósitos cónicos y estructuras en la industria y la
+          geología.
+        en: >-
+          It measures stockpiles of loose material, conical containers, and structures across
+          industry and geology.
+        pt: >-
+          Mede montes de material solto, recipientes cônicos e estruturas na indústria e na
+          geologia.
+        fr: >-
+          Elle mesure les tas de matériaux en vrac, les récipients coniques et les structures dans
+          l'industrie et la géologie.
+        zh: >-
+          在工业和地质学中，它用于测量松散物料堆、锥形容器和各种结构。
+        ja: >-
+          産業や地質学で、ばら積みの材料の山や円錐形の容器、さまざまな構造物の計測に使われている。
+  useCases:
+    - title:
+        es: Acopios de arena y grava
+        en: Sand and gravel stockpiles
+        pt: Montes de areia e cascalho
+        fr: Tas de sable et de gravier
+        zh: 沙石料堆
+        ja: 砂・砂利の山
+      description:
+        es: >-
+          Los montones cónicos de material suelto en obra y minería se miden con esta fórmula para
+          estimar volumen y peso.
+        en: >-
+          Conical piles of loose material in construction and mining are measured with this formula
+          to estimate volume and weight.
+        pt: >-
+          Montes cônicos de material solto em obras e mineração são medidos com esta fórmula para
+          estimar volume e peso.
+        fr: >-
+          Les tas coniques de matériaux en vrac sur les chantiers et dans les mines se mesurent avec
+          cette formule pour estimer le volume et le poids.
+        zh: >-
+          工地和矿山中的锥形散料堆用此公式估算体积和重量。
+        ja: >-
+          建設現場や鉱山の円錐形の材料の山は、この式で体積と重量を推定する。
+    - title:
+        es: Volcanes y cráteres
+        en: Volcanoes and craters
+        pt: Vulcões e crateras
+        fr: Volcans et cratères
+        zh: 火山与陨石坑
+        ja: 火山とクレーター
+      description:
+        es: >-
+          Conos volcánicos y de deyección se aproximan con este cálculo para estimar volúmenes de
+          material.
+        en: >-
+          Volcanic and debris cones are approximated with this calculation to estimate material
+          volumes.
+        pt: >-
+          Cones vulcânicos e de detritos são aproximados com esse cálculo para estimar volumes de
+          material.
+        fr: >-
+          Les cônes volcaniques et de déjection sont approchés par ce calcul pour estimer les
+          volumes de matière.
+        zh: >-
+          火山锥和堆积锥可用此计算近似估算物质体积。
+        ja: >-
+          火山錐や堆積錐は、この計算で近似して物質の体積を推定する。
+    - title:
+        es: Dispensado de líquidos
+        en: Liquid dispensing
+        pt: Dispensa de líquidos
+        fr: Distribution de liquides
+        zh: 液体分装
+        ja: 液体の注入
+      description:
+        es: >-
+          Embudos, conos de dosificación y depósitos cónicos se dimensionan para controlar el flujo
+          y la capacidad.
+        en: >-
+          Funnels, dosing cones, and conical hoppers are sized to control flow and capacity.
+        pt: >-
+          Funis, cones de dosagem e silos cônicos são dimensionados para controlar o fluxo e a
+          capacidade.
+        fr: >-
+          Entonnoirs, cônes de dosage et trémies coniques sont dimensionnés pour contrôler le débit
+          et la capacité.
+        zh: >-
+          漏斗、定量锥体和锥形料斗都以此确定尺寸，以控制流量和容量。
+        ja: >-
+          漏斗や定量用コーン、円錐形ホッパーは、流量と容量を制御するために寸法を決める。
+    - title:
+        es: Impresión 3D
+        en: 3D printing
+        pt: Impressão 3D
+        fr: Impression 3D
+        zh: 3D 打印
+        ja: 3Dプリンティング
+      description:
+        es: >-
+          Los soportes cónicos que sostienen las piezas durante la impresión se dimensionan para
+          minimizar material con estabilidad.
+        en: >-
+          The conical supports that hold parts while printing are sized to minimize material while
+          keeping stability.
+        pt: >-
+          Os suportes cônicos que seguram as peças durante a impressão são dimensionados para
+          minimizar material com estabilidade.
+        fr: >-
+          Les supports coniques qui maintiennent les pièces pendant l'impression sont dimensionnés
+          pour minimiser la matière tout en assurant la stabilité.
+        zh: >-
+          打印期间支撑工件的锥形支撑结构，其尺寸设计在保证稳定的同时尽量减少材料。
+        ja: >-
+          印刷中に部品を支える円錐形のサポートは、安定性を保ちつつ材料を最小限に抑えるよう寸法が決められる。
+  example:
+    title:
+      es: Un cono de radio 3 y altura 6
+      en: A cone with radius 3 and height 6
+      pt: Um cone de raio 3 e altura 6
+      fr: Un cône de rayon 3 et de hauteur 6
+      zh: 半径3、高6的圆锥体
+      ja: 半径3、高さ6の円錐
+    lines:
+      - es: r = 3, h = 6
+        en: r = 3, h = 6
+        pt: r = 3, h = 6
+        fr: r = 3, h = 6
+        zh: r = 3, h = 6
+        ja: r = 3, h = 6
+      - es: V = ⅓ · π · r² · h
+        en: V = ⅓ · π · r² · h
+        pt: V = ⅓ · π · r² · h
+        fr: V = ⅓ · π · r² · h
+        zh: V = ⅓ · π · r² · h
+        ja: V = ⅓ · π · r² · h
+      - es: V = ⅓ · π · 9 · 6
+        en: V = ⅓ · π · 9 · 6
+        pt: V = ⅓ · π · 9 · 6
+        fr: V = ⅓ · π · 9 · 6
+        zh: V = ⅓ · π · 9 · 6
+        ja: V = ⅓ · π · 9 · 6
+      - es: V = ⅓ · π · 54
+        en: V = ⅓ · π · 54
+        pt: V = ⅓ · π · 54
+        fr: V = ⅓ · π · 54
+        zh: V = ⅓ · π · 54
+        ja: V = ⅓ · π · 54
+      - es: V = 18π
+        en: V = 18π
+        pt: V = 18π
+        fr: V = 18π
+        zh: V = 18π
+        ja: V = 18π
+      - es: V ≈ 56.55
+        en: V ≈ 56.55
+        pt: V ≈ 56,55
+        fr: V ≈ 56,55
+        zh: V ≈ 56.55
+        ja: V ≈ 56.55

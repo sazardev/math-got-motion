@@ -1,0 +1,344 @@
+id: break-even-point
+title:
+  es: Punto de Equilibrio
+  en: Break-Even Point
+  pt: Ponto de Equilíbrio
+  fr: Seuil de rentabilité
+  zh: 盈亏平衡点
+  ja: 損益分岐点
+category:
+  es: Finanzas
+  en: Finance
+  pt: Finanças
+  fr: Finance
+  zh: 金融
+  ja: 金融
+nodes:
+  - id: q
+    type: variable
+    value: Q
+    explanation:
+      es: La cantidad de unidades que hay que vender para no perder ni ganar.
+      en: The number of units that must be sold to neither lose nor gain.
+      pt: A quantidade de unidades que é preciso vender para não perder nem ganhar.
+      fr: Le nombre d'unités à vendre pour ne ni perdre ni gagner.
+      zh: 既不亏损也不盈利时需要卖出的产品数量。
+      ja: 損も得もせずに済む売るべき製品の数量。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: 次の値に等しい。
+  - id: cf
+    type: variable
+    value: CF
+    explanation:
+      es: Los costos fijos, los gastos que no cambian con la cantidad producida.
+      en: Fixed costs, the expenses that do not change with the quantity produced.
+      pt: Os custos fixos, as despesas que não mudam com a quantidade produzida.
+      fr: Les coûts fixes, les dépenses qui ne varient pas avec la quantité produite.
+      zh: 固定成本，即不随产量变化的支出。
+      ja: 固定費。生産量に関係なく変化しない支出。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el margen de contribución por unidad.
+      en: Opens the contribution margin per unit.
+      pt: Abre a margem de contribuição por unidade.
+      fr: Ouvre la marge sur coût variable par unité.
+      zh: 打开单位边际贡献。
+      ja: 1個あたりの貢献利益を開く括弧。
+  - id: p
+    type: variable
+    value: P
+    explanation:
+      es: El precio de venta de cada unidad.
+      en: The selling price of each unit.
+      pt: O preço de venda de cada unidade.
+      fr: Le prix de vente de chaque unité.
+      zh: 每件产品的售价。
+      ja: 1個あたりの販売価格。
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: Menos, restando el costo variable de cada unidad.
+      en: Minus, subtracting the variable cost of each unit.
+      pt: Menos, subtraindo o custo variável de cada unidade.
+      fr: Moins, en soustrayant le coût variable de chaque unité.
+      zh: 减，减去每件产品的可变成本。
+      ja: マイナス。1個あたりの変動費を引く。
+  - id: cv
+    type: variable
+    value: CV
+    explanation:
+      es: El costo variable por unidad, lo que cuesta producir una unidad más.
+      en: The variable cost per unit, what it costs to produce one more unit.
+      pt: O custo variável por unidade, o custo de produzir mais uma unidade.
+      fr: Le coût variable par unité, ce que coûte la production d'une unité supplémentaire.
+      zh: 单位可变成本，即每多生产一件的成本。
+      ja: 1個あたりの変動費。もう1個生産するのにかかる費用。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el margen de contribución por unidad.
+      en: Closes the contribution margin per unit.
+      pt: Fecha a margem de contribuição por unidade.
+      fr: Ferme la marge sur coût variable par unité.
+      zh: 关闭单位边际贡献。
+      ja: 1個あたりの貢献利益を閉じる括弧。
+context:
+  author:
+    es: Origen colectivo de la contabilidad de costos
+    en: Collective origin of cost accounting
+    pt: Origem coletiva da contabilidade de custos
+    fr: Origine collective de la comptabilité analytique
+    zh: 成本会计的集体起源
+    ja: 原価会計における集合的起源
+  era:
+    es: Europa y EE. UU., s. XX
+    en: Europe and USA, 20th century
+    pt: Europa e EUA, séc. XX
+    fr: Europe et États-Unis, XXe siècle
+    zh: 欧洲和美国，20世纪
+    ja: ヨーロッパとアメリカ、20世紀
+  history:
+    es: >-
+      El punto de equilibrio proviene de la contabilidad de costos, disciplina que floreció con la
+      industrialización del siglo XX en Europa y Estados Unidos. Separar los costos fijos de los
+      variables permitió responder una pregunta práctica: cuántas unidades vender para cubrir todos
+      los gastos. Cada unidad aporta el margen de contribución P − CV, que acerca a la cobertura. Es
+      la primera herramienta de todo emprendimiento y del análisis de viabilidad de nuevos productos.
+    en: >-
+      The break-even point comes from cost accounting, a discipline that flourished with the
+      industrialization of the 20th century in Europe and the United States. Separating fixed costs
+      from variable costs made it possible to answer a practical question: how many units must be
+      sold to cover all expenses. Each unit contributes the margin P − CV, bringing the business
+      closer to coverage. It is the first tool of any startup and of new-product viability analysis.
+    pt: >-
+      O ponto de equilíbrio vem da contabilidade de custos, disciplina que floresceu com a
+      industrialização do século XX na Europa e nos Estados Unidos. Separar os custos fixos dos
+      variáveis permitiu responder uma pergunta prática: quantas unidades vender para cobrir todas
+      as despesas. Cada unidade contribui com a margem P − CV, aproximando o negócio da cobertura.
+      É a primeira ferramenta de todo empreendimento e da análise de viabilidade de novos produtos.
+    fr: >-
+      Le seuil de rentabilité vient de la comptabilité analytique, discipline qui a prospéré avec
+      l'industrialisation du XXe siècle en Europe et aux États-Unis. Séparer les coûts fixes des
+      coûts variables a permis de répondre à une question pratique : combien d'unités vendre pour
+      couvrir toutes les dépenses. Chaque unité apporte la marge sur coût variable P − CV,
+      rapprochant l'entreprise du seuil. C'est le premier outil de toute entreprise naissante et de
+      l'analyse de viabilité des nouveaux produits.
+    zh: >-
+      盈亏平衡点源于成本会计——这门学科随着20世纪欧洲和美国的工业化而蓬勃发展。将固定成本与可变成本分开，
+      使人们得以回答一个实际问题：需要卖出多少件产品才能覆盖全部支出。每件产品贡献边际贡献额P − CV，
+      使企业不断接近盈亏平衡。它是任何创业项目和新产品可行性分析的首要工具。
+    ja: >-
+      損益分岐点は、20世紀にヨーロッパとアメリカで発展した原価会計に由来する。固定費と変動費を分けることで、
+      「支出をすべて賄うには何個売らなければならないか」という実際的な問いに答えられるようになった。
+      1個あたりP − CVの貢献利益をもたらし、企業を損益分岐へ近づける。あらゆる起業や新製品の実現可能性分析に
+      おける最初のツールである。
+  timeline:
+    - year: s. XIX
+      label:
+        es: >-
+          La contabilidad industrial europea empieza a separar costos fijos y variables en sus
+          informes.
+        en: >-
+          European industrial accounting begins separating fixed and variable costs in its reports.
+        pt: >-
+          A contabilidade industrial europeia começa a separar custos fixos e variáveis em seus
+          relatórios.
+        fr: >-
+          La comptabilité industrielle européenne commence à séparer coûts fixes et variables dans
+          ses rapports.
+        zh: >-
+          欧洲工业会计开始在报表中区分固定成本与可变成本。
+        ja: >-
+          ヨーロッパの工業会計が、報告の中で固定費と変動費を分け始める。
+    - year: "1907"
+      label:
+        es: >-
+          El economista suizo Johann Friedrich Schär difunde métodos de punto de equilibrio en sus
+          libros de contabilidad.
+        en: >-
+          The Swiss economist Johann Friedrich Schär spreads break-even methods in his accounting
+          books.
+        pt: >-
+          O economista suíço Johann Friedrich Schär difunde métodos de ponto de equilíbrio em seus
+          livros de contabilidade.
+        fr: >-
+          L'économiste suisse Johann Friedrich Schär diffuse les méthodes du seuil de rentabilité
+          dans ses ouvrages de comptabilité.
+        zh: >-
+          瑞士经济学家约翰·弗里德里希·舍尔在其会计学著作中推广盈亏平衡分析方法。
+        ja: >-
+          スイスの経済学者ヨハン・フリードリヒ・シェアが、会計学の著書で損益分岐法を広める。
+    - year: s. XX
+      label:
+        es: >-
+          El análisis de punto de equilibrio se integra a la contabilidad gerencial y la educación
+          empresarial.
+        en: >-
+          Break-even analysis is integrated into managerial accounting and business education.
+        pt: >-
+          A análise do ponto de equilíbrio integra-se à contabilidade gerencial e à educação
+          empresarial.
+        fr: >-
+          L'analyse du seuil de rentabilité s'intègre à la comptabilité de gestion et à la formation
+          en gestion.
+        zh: >-
+          盈亏平衡分析被纳入管理会计与商业教育。
+        ja: >-
+          損益分岐点分析が管理会計やビジネス教育に組み込まれる。
+    - year: Hoy
+      label:
+        es: >-
+          Es la primera cifra que calcula cualquier emprendimiento antes de lanzar un producto.
+        en: >-
+          It is the first figure any startup calculates before launching a product.
+        pt: >-
+          É a primeira cifra que todo empreendimento calcula antes de lançar um produto.
+        fr: >-
+          C'est le premier chiffre que toute entreprise calcule avant de lancer un produit.
+        zh: >-
+          它是任何创业项目在推出产品前计算的第一项数字。
+        ja: >-
+          あらゆるスタートアップが製品を発売する前に最初に計算する数字である。
+  useCases:
+    - title:
+        es: Emprendimiento
+        en: Entrepreneurship
+        pt: Empreendedorismo
+        fr: Entrepreneuriat
+        zh: 创业
+        ja: 起業
+      description:
+        es: >-
+          Responde cuántas unidades vender antes de empezar a generar ganancias.
+        en: >-
+          It answers how many units must be sold before the business starts turning a profit.
+        pt: >-
+          Responde quantas unidades vender antes de começar a gerar lucro.
+        fr: >-
+          Il répond au nombre d'unités à vendre avant que l'entreprise ne devienne rentable.
+        zh: >-
+          回答企业开始盈利之前需要卖出多少件产品。
+        ja: >-
+          利益が出始めるまでに何個売らなければならないかを答える。
+    - title:
+        es: Manufactura
+        en: Manufacturing
+        pt: Manufatura
+        fr: Industrie manufacturière
+        zh: 制造业
+        ja: 製造業
+      description:
+        es: >-
+          Decide si conviene lanzar una línea de producto nueva según su demanda esperada.
+        en: >-
+          It decides whether to launch a new product line based on expected demand.
+        pt: >-
+          Decide se vale a pena lançar uma nova linha de produto conforme a demanda esperada.
+        fr: >-
+          Il décide s'il vaut la peine de lancer une nouvelle gamme selon la demande attendue.
+        zh: >-
+          根据预期需求，决定是否值得推出新的产品线。
+        ja: >-
+          期待される需要に基づいて、新しい製品ラインを投入すべきかを判断する。
+    - title:
+        es: Restauración y retail
+        en: Food service and retail
+        pt: Restaurantes e varejo
+        fr: Restauration et commerce de détail
+        zh: 餐饮与零售
+        ja: 外食・小売
+      description:
+        es: >-
+          Calcula las ventas mínimas diarias o mensuales para cubrir los costos fijos del local.
+        en: >-
+          It calculates the minimum daily or monthly sales to cover the location's fixed costs.
+        pt: >-
+          Calcula as vendas mínimas diárias ou mensais para cobrir os custos fixos do local.
+        fr: >-
+          Il calcule les ventes minimales quotidiennes ou mensuelles pour couvrir les coûts fixes du
+          lieu.
+        zh: >-
+          计算覆盖门店固定成本所需的最低日或月销售额。
+        ja: >-
+          店舗の固定費を賄うために必要な最低の日次・月次売上を計算する。
+    - title:
+        es: Planificación financiera
+        en: Financial planning
+        pt: Planejamento financeiro
+        fr: Planification financière
+        zh: 财务规划
+        ja: 財務計画
+      description:
+        es: >-
+          Proyecta la viabilidad de un negocio antes de comprometer capital.
+        en: >-
+          It projects a business's viability before committing capital.
+        pt: >-
+          Projeta a viabilidade de um negócio antes de comprometer capital.
+        fr: >-
+          Il projette la viabilité d'une entreprise avant d'engager des capitaux.
+        zh: >-
+          在投入资本之前，测算一家企业的可行性。
+        ja: >-
+          資本を投じる前に、事業の実現可能性を試算する。
+  example:
+    title:
+      es: Punto de equilibrio de un producto
+      en: Break-even of a product
+      pt: Ponto de equilíbrio de um produto
+      fr: Seuil de rentabilité d'un produit
+      zh: 一个产品的盈亏平衡点
+      ja: 製品の損益分岐点
+    lines:
+      - es: "CF = $10,000; P = $50; CV = $30"
+        en: "CF = $10,000; P = $50; CV = $30"
+        pt: "CF = US$ 10.000; P = US$ 50; CV = US$ 30"
+        fr: "CF = 10 000 $ ; P = 50 $ ; CV = 30 $"
+        zh: "CF = 10,000美元；P = 50美元；CV = 30美元"
+        ja: "CF = 10,000ドル；P = 50ドル；CV = 30ドル"
+      - es: "Margen: P − CV = 50 − 30 = 20"
+        en: "Margin: P − CV = 50 − 30 = 20"
+        pt: "Margem: P − CV = 50 − 30 = 20"
+        fr: "Marge : P − CV = 50 − 30 = 20"
+        zh: "边际贡献：P − CV = 50 − 30 = 20"
+        ja: "限界利益：P − CV = 50 − 30 = 20"
+      - es: Q = 10,000/20
+        en: Q = 10,000/20
+        pt: Q = 10.000/20
+        fr: Q = 10 000/20
+        zh: Q = 10,000/20
+        ja: Q = 10,000/20
+      - es: Q = 500
+        en: Q = 500
+        pt: Q = 500
+        fr: Q = 500
+        zh: Q = 500
+        ja: Q = 500
+      - es: 500 unidades para cubrir todos los costos
+        en: 500 units to cover all costs
+        pt: 500 unidades para cobrir todos os custos
+        fr: 500 unités pour couvrir tous les coûts
+        zh: 卖出500件才能覆盖全部成本
+        ja: 全コストを賄うには500個

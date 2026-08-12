@@ -1,0 +1,295 @@
+id: fundamental-theorem-of-arithmetic
+title:
+  es: Teorema Fundamental de la Aritmética
+  en: Fundamental Theorem of Arithmetic
+  pt: Teorema Fundamental da Aritmética
+  fr: Théorème fondamental de l'arithmétique
+  zh: 算术基本定理
+  ja: 算術の基本定理
+category:
+  es: Teoría de números
+  en: Number theory
+  pt: Teoria dos números
+  fr: Théorie des nombres
+  zh: 数论
+  ja: 数論
+nodes:
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: "n: cualquier entero mayor que 1."
+      en: "n: any integer greater than 1."
+      pt: "n: qualquer inteiro maior que 1."
+      fr: "n : n'importe quel entier supérieur à 1."
+      zh: "n：任意大于1的整数。"
+      ja: "n：1より大きい任意の整数。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Se descompone de forma única como.
+      en: Uniquely decomposes as.
+      pt: Se decompõe de forma única como.
+      fr: Se décompose de façon unique en.
+      zh: 唯一地分解为。
+      ja: 一意的に次のように分解される。
+  - id: p1
+    type: variable
+    value: p₁
+    explanation:
+      es: "p₁: el primer factor primo."
+      en: "p₁: the first prime factor."
+      pt: "p₁: o primeiro fator primo."
+      fr: "p₁ : le premier facteur premier."
+      zh: "p₁：第一个素因子。"
+      ja: "p₁：最初の素因数。"
+  - id: e1
+    type: superscript
+    value: e₁
+    explanation:
+      es: "e₁: cuántas veces aparece ese primo."
+      en: "e₁: how many times that prime appears."
+      pt: "e₁: quantas vezes esse primo aparece."
+      fr: "e₁ : combien de fois ce premier apparaît."
+      zh: "e₁：该素数出现的次数。"
+      ja: "e₁：その素数が現れる回数。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: p2
+    type: variable
+    value: p₂
+    explanation:
+      es: "p₂: el segundo factor primo."
+      en: "p₂: the second prime factor."
+      pt: "p₂: o segundo fator primo."
+      fr: "p₂ : le second facteur premier."
+      zh: "p₂：第二个素因子。"
+      ja: "p₂：2番目の素因数。"
+  - id: e2
+    type: superscript
+    value: e₂
+    explanation:
+      es: "e₂: el exponente del segundo primo."
+      en: "e₂: the exponent of the second prime."
+      pt: "e₂: o expoente do segundo primo."
+      fr: "e₂ : l'exposant du second premier."
+      zh: "e₂：第二个素数的指数。"
+      ja: "e₂：2番目の素数の指数。"
+  - id: dots
+    type: operator
+    value: …
+    explanation:
+      es: Y así sucesivamente, hasta agotar los factores.
+      en: And so on, until all factors are used.
+      pt: E assim por diante, até esgotar os fatores.
+      fr: Et ainsi de suite, jusqu'à épuisement des facteurs.
+      zh: 依此类推，直至因子用尽。
+      ja: 以下同様に、因子を使い尽くすまで続ける。
+context:
+  author:
+    es: Euclides; demostrado rigurosamente por Gauss
+    en: Euclid; proved rigorously by Gauss
+    pt: Euclides; demonstrado rigorosamente por Gauss
+    fr: Euclide ; démontré rigoureusement par Gauss
+    zh: 欧几里得；由高斯严格证明
+    ja: ユークリッド。ガウスが厳密に証明
+  era:
+    es: Grecia, c. 300 a.C. · demostración completa en 1801
+    en: Greece, c. 300 BC · full proof in 1801
+    pt: Grécia, c. 300 a.C. · demonstração completa em 1801
+    fr: Grèce, v. 300 av. J.-C. · preuve complète en 1801
+    zh: 希腊，约公元前300年·1801年完整证明
+    ja: ギリシャ、紀元前300年頃・1801年に完全な証明
+  history:
+    es: >-
+      La idea de que todo entero se descompone de forma única en primos aparece ya en los Elementos de
+      Euclides (c. 300 a.C.), pero su demostración completa tuvo que esperar a Gauss y sus
+      Disquisitiones Arithmeticae de 1801. Hace de los primos los "átomos" de la aritmética: el ADN
+      numérico de cada entero. La dificultad de invertir el proceso, factorizar grandes números, es lo
+      que protege a la criptografía moderna.
+    en: >-
+      The idea that every integer decomposes uniquely into primes already appears in Euclid's Elements
+      (c. 300 BC), but its complete proof had to wait for Gauss and his Disquisitiones Arithmeticae of
+      1801. It makes primes the "atoms" of arithmetic: the numerical DNA of every integer. The
+      difficulty of reversing the process — factoring large numbers — is what protects modern
+      cryptography.
+    pt: >-
+      A ideia de que todo inteiro se decompõe de forma única em primos já aparece nos Elementos de
+      Euclides (c. 300 a.C.), mas sua demonstração completa teve de esperar por Gauss e suas
+      Disquisitiones Arithmeticae de 1801. Isso torna os primos os "átomos" da aritmética: o DNA
+      numérico de cada inteiro. A dificuldade de reverter o processo — fatorar números grandes — é o
+      que protege a criptografia moderna.
+    fr: >-
+      L'idée que tout entier se décompose de façon unique en nombres premiers apparaît déjà dans les
+      Éléments d'Euclide (v. 300 av. J.-C.), mais sa preuve complète dut attendre Gauss et ses
+      Disquisitiones Arithmeticae de 1801. Elle fait des nombres premiers les « atomes » de
+      l'arithmétique : l'ADN numérique de chaque entier. La difficulté d'inverser le processus —
+      factoriser de grands nombres — est ce qui protège la cryptographie moderne.
+    zh: >-
+      每个整数都能唯一分解为素数，这一思想已见于欧几里得《几何原本》（约公元前300年），但完整的证明须等到高斯
+      1801年的《算术研究》。这一思想使素数成为算术的"原子"：每个整数的数字DNA。而逆向过程——分解大数——的
+      困难，正是现代密码学的保护伞。
+    ja: >-
+      すべての整数が素数の積に一意的に分解されるという考えは、すでにユークリッドの『原論』（紀元前300年頃）に
+      現れているが、完全な証明は1801年のガウスの『整数論講義』を待たねばならなかった。これは素数を算術の
+      「原子」、すなわちすべての整数の数字DNAにする。その逆の操作——大きな数の素因数分解——が難しいことが、
+      現代の暗号技術を守っている。
+  timeline:
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides demuestra la infinitud de los primos y la unicidad de la descomposición.
+        en: >-
+          Euclid proves the infinitude of primes and uniqueness of decomposition.
+        pt: >-
+          Euclides demonstra a infinitude dos primos e a unicidade da decomposição.
+        fr: >-
+          Euclide prouve l'infinitude des nombres premiers et l'unicité de la décomposition.
+        zh: >-
+          欧几里得证明素数无穷多以及分解的唯一性。
+        ja: >-
+          ユークリッドが素数の無限性と分解の一意性を証明する。
+    - year: "1801"
+      label:
+        es: >-
+          Gauss da una demostración completa en las Disquisitiones Arithmeticae.
+        en: >-
+          Gauss gives a complete proof in the Disquisitiones Arithmeticae.
+        pt: >-
+          Gauss dá uma demonstração completa nas Disquisitiones Arithmeticae.
+        fr: >-
+          Gauss donne une preuve complète dans les Disquisitiones Arithmeticae.
+        zh: >-
+          高斯在《算术研究》中给出完整证明。
+        ja: >-
+          ガウスが『整数論講義』で完全な証明を与える。
+    - year: "1977"
+      label:
+        es: >-
+          RSA basa su seguridad en que factorizar números enormes es inviable.
+        en: >-
+          RSA bases its security on factoring enormous numbers being infeasible.
+        pt: >-
+          O RSA baseia sua segurança no fato de fatorar números enormes ser inviável.
+        fr: >-
+          RSA fonde sa sécurité sur l'invraisemblance de factoriser d'énormes nombres.
+        zh: >-
+          RSA的安全性建立在分解巨大数字不可行之上。
+        ja: >-
+          RSAは、巨大な数の素因数分解が実現不可能であることに安全性の根拠を置く。
+  useCases:
+    - title:
+        es: Criptografía
+        en: Cryptography
+        pt: Criptografia
+        fr: Cryptographie
+        zh: 密码学
+        ja: 暗号技術
+      description:
+        es: >-
+          La seguridad de RSA depende de que factorizar productos de primos grandes sea muy difícil.
+        en: >-
+          RSA security depends on factoring products of large primes being very hard.
+        pt: >-
+          A segurança do RSA depende de fatorar produtos de primos grandes ser muito difícil.
+        fr: >-
+          La sécurité de RSA dépend de la grande difficulté à factoriser des produits de grands
+          nombres premiers.
+        zh: >-
+          RSA的安全性取决于分解大素数乘积的难度。
+        ja: >-
+          RSAの安全性は、大きな素数の積の素因数分解が非常に難しいことに依存する。
+    - title:
+        es: Simplificación de expresiones
+        en: Simplifying expressions
+        pt: Simplificação de expressões
+        fr: Simplification d'expressions
+        zh: 化简表达式
+        ja: 式の簡約
+      description:
+        es: >-
+          Raíces, fracciones y fracciones parciales se simplifican usando la factorización prima.
+        en: >-
+          Radicals, fractions, and partial fractions are simplified using prime factorization.
+        pt: >-
+          Radicais, frações e frações parciais se simplificam usando a fatoração prima.
+        fr: >-
+          Radicaux, fractions et fractions partielles se simplifient par factorisation première.
+        zh: >-
+          根式、分数和部分分式都借助素因数分解来化简。
+        ja: >-
+          根号、分数、部分分数は、素因数分解を使って簡約される。
+    - title:
+        es: Música y acústica
+        en: Music and acoustics
+        pt: Música e acústica
+        fr: Musique et acoustique
+        zh: 音乐与声学
+        ja: 音楽と音響学
+      description:
+        es: >-
+          Los intervalos musicales se describen con razones de números pequeños, primos entre sí.
+        en: >-
+          Musical intervals are described with ratios of small, coprime numbers.
+        pt: >-
+          Intervalos musicais são descritos com razões de números pequenos, primos entre si.
+        fr: >-
+          Les intervalles musicaux se décrivent par des rapports de petits nombres premiers entre eux.
+        zh: >-
+          音乐音程用小的互质数之比来描述。
+        ja: >-
+          音楽の音程は、小さな互いに素な数の比で表される。
+  example:
+    title:
+      es: Factorizar 84
+      en: Factoring 84
+      pt: Fatorar 84
+      fr: Factoriser 84
+      zh: 分解 84
+      ja: 84 の素因数分解
+    lines:
+      - es: 84 = 2 × 42
+        en: 84 = 2 × 42
+        pt: 84 = 2 × 42
+        fr: 84 = 2 × 42
+        zh: 84 = 2 × 42
+        ja: 84 = 2 × 42
+      - es: 42 = 2 × 21
+        en: 42 = 2 × 21
+        pt: 42 = 2 × 21
+        fr: 42 = 2 × 21
+        zh: 42 = 2 × 21
+        ja: 42 = 2 × 21
+      - es: 21 = 3 × 7
+        en: 21 = 3 × 7
+        pt: 21 = 3 × 7
+        fr: 21 = 3 × 7
+        zh: 21 = 3 × 7
+        ja: 21 = 3 × 7
+      - es: 84 = 2 × 2 × 3 × 7
+        en: 84 = 2 × 2 × 3 × 7
+        pt: 84 = 2 × 2 × 3 × 7
+        fr: 84 = 2 × 2 × 3 × 7
+        zh: 84 = 2 × 2 × 3 × 7
+        ja: 84 = 2 × 2 × 3 × 7
+      - es: 84 = 2² × 3 × 7
+        en: 84 = 2² × 3 × 7
+        pt: 84 = 2² × 3 × 7
+        fr: 84 = 2² × 3 × 7
+        zh: 84 = 2² × 3 × 7
+        ja: 84 = 2² × 3 × 7
+      - es: La descomposición es única
+        en: The decomposition is unique
+        pt: A decomposição é única
+        fr: La décomposition est unique
+        zh: 分解是唯一的
+        ja: 分解は一意的である

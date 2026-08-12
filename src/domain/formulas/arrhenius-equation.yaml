@@ -1,0 +1,334 @@
+id: arrhenius-equation
+title:
+  es: Ecuación de Arrhenius
+  en: Arrhenius Equation
+  pt: Equação de Arrhenius
+  fr: Équation d'Arrhenius
+  zh: 阿伦尼乌斯方程
+  ja: アレニウスの式
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: k
+    type: variable
+    value: k
+    explanation:
+      es: "k: la constante de velocidad de la reacción, cuánto avanza por unidad de tiempo."
+      en: "k: the reaction's rate constant, how fast it proceeds per unit time."
+      pt: "k: a constante de velocidade da reação, o quanto ela avança por unidade de tempo."
+      fr: "k : la constante de vitesse de la réaction, sa progression par unité de temps."
+      zh: "k：反应的速率常数,即单位时间内反应的进度。"
+      ja: "k：反応の速度定数。単位時間あたりに反応が進む速さ。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: "A: el factor preexponencial, que depende de la frecuencia y orientación de los choques."
+      en: "A: the pre-exponential factor, set by the frequency and orientation of collisions."
+      pt: "A: o fator pré-exponencial, que depende da frequência e da orientação das colisões."
+      fr: "A : le facteur pré-exponentiel, lié à la fréquence et à l'orientation des collisions."
+      zh: "A：指前因子,取决于分子碰撞的频率与取向。"
+      ja: "A：前指数因子。衝突の頻度と向きに依存する。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: e
+    type: constant
+    value: e
+    explanation:
+      es: "e: el número de Euler, la base de las funciones exponenciales."
+      en: "e: Euler's number, the base of exponential functions."
+      pt: "e: o número de Euler, a base das funções exponenciais."
+      fr: "e : le nombre d'Euler, la base des fonctions exponentielles."
+      zh: "e：欧拉数,指数函数的底数。"
+      ja: "e：ネイピア数。指数関数の底。"
+  - id: exponent-neg
+    type: superscript
+    value: −Ea
+    explanation:
+      es: "El exponente es negativo: Ea es la energía de activación, la barrera que las moléculas deben superar."
+      en: "The exponent is negative: Ea is the activation energy, the barrier molecules must overcome."
+      pt: "O expoente é negativo: Ea é a energia de ativação, a barreira que as moléculas devem superar."
+      fr: "L'exposant est négatif : Ea est l'énergie d'activation, la barrière que les molécules doivent franchir."
+      zh: "指数为负:Ea是活化能,即分子必须跨越的能量势垒。"
+      ja: "指数は負:Eaは活性化エネルギー、分子が越えなければならない障壁である。"
+  - id: exponent-divisor
+    type: superscript
+    value: /(R·T)
+    explanation:
+      es: "Dividido por R·T: al aumentar la temperatura T, la fracción crece y la reacción se acelera."
+      en: "Divided by R·T: as temperature T rises, the fraction grows and the reaction speeds up."
+      pt: "Dividido por R·T: ao aumentar a temperatura T, a fração cresce e a reação acelera."
+      fr: "Divisé par R·T : quand la température T augmente, la fraction croît et la réaction s'accélère."
+      zh: "除以R·T:当温度T升高时,分数增大,反应加快。"
+      ja: "R·Tで割る:温度Tが上がると分数は大きくなり、反応は速くなる。"
+context:
+  author:
+    es: Svante Arrhenius
+    en: Svante Arrhenius
+    pt: Svante Arrhenius
+    fr: Svante Arrhenius
+    zh: 斯万特·阿伦尼乌斯
+    ja: スヴァンテ・アレニウス
+  era:
+    es: Suecia, 1859–1927 · publicada en 1889
+    en: Sweden, 1859–1927 · published in 1889
+    pt: Suécia, 1859–1927 · publicada em 1889
+    fr: Suède, 1859–1927 · publiée en 1889
+    zh: 瑞典,1859–1927年 · 1889年发表
+    ja: スウェーデン、1859–1927年・1889年発表
+  history:
+    es: >-
+      En 1889, Svante Arrhenius propuso que para reaccionar, las moléculas deben superar una barrera
+      energética llamada energía de activación (Ea), y que el calor les da esa energía. Su ecuación
+      explica por qué la velocidad de las reacciones crece de forma exponencial con la temperatura. Es
+      la razón por la que el frío preserva los alimentos —al bajar la temperatura, la descomposición se
+      vuelve lentísima— y por la que las baterías rinden menos en invierno pero se degradan más rápido
+      con el calor.
+    en: >-
+      In 1889, Svante Arrhenius proposed that molecules must overcome an energy barrier called the
+      activation energy (Ea) to react, and that heat supplies that energy. His equation explains why
+      reaction rates grow exponentially with temperature. It is why cold preserves food — lower
+      temperature makes spoilage reactions extremely slow — and why batteries deliver less power in
+      winter yet degrade faster in heat.
+    pt: >-
+      Em 1889, Svante Arrhenius propôs que, para reagir, as moléculas devem superar uma barreira de
+      energia chamada energia de ativação (Ea), e que o calor fornece essa energia. Sua equação explica
+      por que a velocidade das reações cresce exponencialmente com a temperatura. É por isso que o frio
+      conserva os alimentos — a temperatura baixa torna a decomposição extremamente lenta — e que as
+      baterias rendem menos no inverno, embora se degradem mais rápido no calor.
+    fr: >-
+      En 1889, Svante Arrhenius proposa que, pour réagir, les molécules doivent franchir une barrière
+      d'énergie appelée énergie d'activation (Ea), et que la chaleur leur fournit cette énergie. Son
+      équation explique pourquoi la vitesse des réactions croît exponentiellement avec la température.
+      C'est pourquoi le froid conserve les aliments — une température basse rend la décomposition
+      extrêmement lente — et pourquoi les batteries délivrent moins de puissance en hiver tout en se
+      dégradant plus vite dans la chaleur.
+    zh: >-
+      1889年,阿伦尼乌斯提出,分子要发生反应必须跨越一个称为活化能(Ea)的能量势垒,而热量正好提供这份能量。他的方程解释了
+      为什么反应速率随温度呈指数增长。这就是为什么寒冷可以保存食物——低温使腐败反应变得极其缓慢——也解释了为什么电池
+      在冬天输出功率更低,而在高温下却降解得更快。
+    ja: >-
+      1889年、スヴァンテ・アレニウスは、分子が反応するためには活性化エネルギー(Ea)と呼ばれるエネルギー障壁を越える
+      必要があり、熱がそのエネルギーを供給すると提唱した。彼の式は、反応速度が温度とともに指数関数的に増大する理由を
+      説明する。これが、低温が食品を保存する理由であり——低温では腐敗反応が極めて遅くなる——、冬に電池の出力が低下する
+      一方、高温では劣化が速まる理由でもある。
+  timeline:
+    - year: "1859"
+      label:
+        es: >-
+          Svante Arrhenius nace en Vik, Suecia, y pronto muestra un temprano interés por la física y las
+          matemáticas.
+        en: >-
+          Svante Arrhenius is born in Vik, Sweden, showing an early interest in physics and mathematics.
+        pt: >-
+          Svante Arrhenius nasce em Vik, na Suécia, e logo demonstra um precoce interesse por física e
+          matemática.
+        fr: >-
+          Svante Arrhenius naît à Vik, en Suède, manifestant un intérêt précoce pour la physique et les
+          mathématiques.
+        zh: >-
+          斯万特·阿伦尼乌斯出生于瑞典维克,自幼对物理学和数学表现出浓厚兴趣。
+        ja: >-
+          スヴァンテ・アレニウスがスウェーデンのヴィクで生まれ、早くから物理学と数学への関心を示す。
+    - year: "1889"
+      label:
+        es: >-
+          Publica su ecuación en la revista Zeitschrift für physikalische Chemie, explicando cómo la
+          temperatura acelera las reacciones.
+        en: >-
+          He publishes his equation in the Zeitschrift für physikalische Chemie, explaining how
+          temperature speeds reactions.
+        pt: >-
+          Publica sua equação na revista Zeitschrift für physikalische Chemie, explicando como a
+          temperatura acelera as reações.
+        fr: >-
+          Il publie son équation dans la Zeitschrift für physikalische Chemie, expliquant comment la
+          température accélère les réactions.
+        zh: >-
+          他在《物理化学杂志》上发表了他的方程,解释了温度如何加快反应。
+        ja: >-
+          『物理化学雑誌』で、温度がどのように反応を速めるかを説明する自身の式を発表する。
+    - year: "1903"
+      label:
+        es: >-
+          Recibe el Premio Nobel de Química por su teoría de la disociación electrolítica.
+        en: >-
+          He receives the Nobel Prize in Chemistry for his theory of electrolytic dissociation.
+        pt: >-
+          Recebe o Prêmio Nobel de Química por sua teoria da dissociação eletrolítica.
+        fr: >-
+          Il reçoit le prix Nobel de chimie pour sa théorie de la dissociation électrolytique.
+        zh: >-
+          他因电离理论获得诺贝尔化学奖。
+        ja: >-
+          電解質解離説によりノーベル化学賞を受賞する。
+    - year: Hoy
+      label:
+        es: >-
+          La ecuación es central en cinética química, predicción de vida útil de alimentos y diseño de
+          baterías.
+        en: >-
+          The equation is central to chemical kinetics, food shelf-life prediction, and battery design.
+        pt: >-
+          A equação é central na cinética química, na previsão de vida útil de alimentos e no projeto de
+          baterias.
+        fr: >-
+          L'équation est centrale en cinétique chimique, dans la prédiction de la durée de vie des
+          aliments et la conception des batteries.
+        zh: >-
+          该方程是化学动力学、食品保质期预测和电池设计的核心。
+        ja: >-
+          この式は化学反応速度論、食品の保存期間予測、電池設計の中核を成す。
+  useCases:
+    - title:
+        es: Ciencia de los alimentos
+        en: Food science
+        pt: Ciência dos alimentos
+        fr: Science des aliments
+        zh: 食品科学
+        ja: 食品科学
+      description:
+        es: >-
+          Predice la velocidad de deterioro de los alimentos según la temperatura de almacenamiento.
+        en: >-
+          It predicts how fast food spoils based on storage temperature.
+        pt: >-
+          Prevê a velocidade de deterioração dos alimentos conforme a temperatura de armazenamento.
+        fr: >-
+          Elle prédit la vitesse de détérioration des aliments selon la température de stockage.
+        zh: >-
+          根据储存温度预测食品变质的快慢。
+        ja: >-
+          保存温度に応じて、食品がどれだけ早く傷むかを予測する。
+    - title:
+        es: Baterías y acumuladores
+        en: Batteries
+        pt: Baterias e acumuladores
+        fr: Batteries et accumulateurs
+        zh: 电池与蓄电池
+        ja: 電池と蓄電池
+      description:
+        es: >-
+          Modela la pérdida de capacidad y la autodescarga, que se aceleran con el calor.
+        en: >-
+          It models capacity loss and self-discharge, both accelerated by heat.
+        pt: >-
+          Modela a perda de capacidade e a autodescarga, que se aceleram com o calor.
+        fr: >-
+          Elle modélise la perte de capacité et l'autodécharge, toutes deux accélérées par la chaleur.
+        zh: >-
+          模拟容量衰减和自放电,这两者在高温下都会加快。
+        ja: >-
+          熱で加速する容量低下と自己放電をモデル化する。
+    - title:
+        es: Estabilidad de medicamentos
+        en: Drug stability
+        pt: Estabilidade de medicamentos
+        fr: Stabilité des médicaments
+        zh: 药物稳定性
+        ja: 医薬品の安定性
+      description:
+        es: >-
+          Estima cuánto tarda en degradarse un fármaco a distintas temperaturas de almacenamiento.
+        en: >-
+          It estimates how long a drug takes to degrade at different storage temperatures.
+        pt: >-
+          Estima quanto tempo um fármaco leva para se degradar em diferentes temperaturas de
+          armazenamento.
+        fr: >-
+          Elle estime le temps de dégradation d'un médicament à différentes températures de stockage.
+        zh: >-
+          估算药物在不同储存温度下发生降解所需的时间。
+        ja: >-
+          医薬品が異なる保存温度で分解するまでの時間を推定する。
+    - title:
+        es: Ingeniería de reactores
+        en: Reactor engineering
+        pt: Engenharia de reatores
+        fr: Génie des réacteurs
+        zh: 反应器工程
+        ja: 反応器工学
+      description:
+        es: >-
+          Permite elegir la temperatura de operación que logra la velocidad de reacción deseada en una
+          planta.
+        en: >-
+          It lets plants choose the operating temperature that achieves the desired reaction rate.
+        pt: >-
+          Permite escolher a temperatura de operação que atinge a velocidade de reação desejada em uma
+          planta.
+        fr: >-
+          Elle permet de choisir la température d'exploitation qui atteint la vitesse de réaction voulue
+          dans une usine.
+        zh: >-
+          帮助工厂选择能达到预期反应速率的操作温度。
+        ja: >-
+          プラントで望みの反応速度を実現する運転温度を選ぶことを可能にする。
+  example:
+    title:
+      es: Velocidad a temperatura ambiente
+      en: Rate at room temperature
+      pt: Velocidade à temperatura ambiente
+      fr: Vitesse à température ambiante
+      zh: 室温下的反应速率
+      ja: 室温での反応速度
+    lines:
+      - es: A = 10¹² s⁻¹ · Ea = 50 kJ/mol · R = 8.314 J/(mol·K) · T = 300 K
+        en: A = 10¹² s⁻¹ · Ea = 50 kJ/mol · R = 8.314 J/(mol·K) · T = 300 K
+        pt: A = 10¹² s⁻¹ · Ea = 50 kJ/mol · R = 8,314 J/(mol·K) · T = 300 K
+        fr: A = 10¹² s⁻¹ · Ea = 50 kJ/mol · R = 8,314 J/(mol·K) · T = 300 K
+        zh: A = 10¹² 秒⁻¹ · Ea = 50 千焦/摩尔 · R = 8.314 焦耳/(摩尔·K) · T = 300 K
+        ja: A = 10¹² s⁻¹ · Ea = 50 kJ/mol · R = 8.314 J/(mol·K) · T = 300 K
+      - es: k = A · e^(−Ea / (R · T))
+        en: k = A · e^(−Ea / (R · T))
+        pt: k = A · e^(−Ea / (R · T))
+        fr: k = A · e^(−Ea / (R · T))
+        zh: k = A · e^(−Ea / (R · T))
+        ja: k = A · e^(−Ea / (R · T))
+      - es: k = 10¹² · e^(−50000 / (8.314 × 300))
+        en: k = 10¹² · e^(−50000 / (8.314 × 300))
+        pt: k = 10¹² · e^(−50000 / (8,314 × 300))
+        fr: k = 10¹² · e^(−50000 / (8,314 × 300))
+        zh: k = 10¹² · e^(−50000 / (8.314 × 300))
+        ja: k = 10¹² · e^(−50000 / (8.314 × 300))
+      - es: k = 10¹² · e^(−50000 / 2494)
+        en: k = 10¹² · e^(−50000 / 2494)
+        pt: k = 10¹² · e^(−50000 / 2494)
+        fr: k = 10¹² · e^(−50000 / 2494)
+        zh: k = 10¹² · e^(−50000 / 2494)
+        ja: k = 10¹² · e^(−50000 / 2494)
+      - es: k ≈ 10¹² · 2 × 10⁻⁹
+        en: k ≈ 10¹² · 2 × 10⁻⁹
+        pt: k ≈ 10¹² · 2 × 10⁻⁹
+        fr: k ≈ 10¹² · 2 × 10⁻⁹
+        zh: k ≈ 10¹² · 2 × 10⁻⁹
+        ja: k ≈ 10¹² · 2 × 10⁻⁹
+      - es: k ≈ 2 × 10³ s⁻¹ — la reacción ocurre miles de veces por segundo
+        en: k ≈ 2 × 10³ s⁻¹ — the reaction happens thousands of times per second
+        pt: k ≈ 2 × 10³ s⁻¹ — a reação acontece milhares de vezes por segundo
+        fr: k ≈ 2 × 10³ s⁻¹ — la réaction se produit des milliers de fois par seconde
+        zh: k ≈ 2 × 10³ s⁻¹——反应每秒发生数千次
+        ja: k ≈ 2 × 10³ s⁻¹——反応は毎秒数千回起こる

@@ -1,0 +1,329 @@
+id: gravitational-pe-general
+title:
+  es: Energía Potencial Gravitatoria General
+  en: General Gravitational Potential Energy
+  pt: Energia Potencial Gravitacional Geral
+  fr: Énergie potentielle gravitationnelle générale
+  zh: 万有引力势能
+  ja: 一般重力位置エネルギー
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: u
+    type: variable
+    value: U
+    explanation:
+      es: La energía potencial gravitatoria, medida en julios.
+      en: The gravitational potential energy, measured in joules.
+      pt: A energia potencial gravitacional, medida em joules.
+      fr: L'énergie potentielle de gravitation, mesurée en joules.
+      zh: 引力势能,单位为焦耳。
+      ja: 重力による位置エネルギー。単位はジュール。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "Menos: la energía es negativa porque el cero se define en el infinito."
+      en: "Minus: the energy is negative because zero is defined at infinity."
+      pt: "Menos: a energia é negativa porque o zero é definido no infinito."
+      fr: "Moins : l'énergie est négative parce que le zéro est défini à l'infini."
+      zh: "负号:能量为负,因为零点定义在无穷远处。"
+      ja: "マイナス。零点を無限遠に置くため、エネルギーは負になる。"
+  - id: g
+    type: constant
+    value: G
+    explanation:
+      es: La constante de gravitación universal, la misma en todo el universo.
+      en: The universal gravitational constant, the same throughout the universe.
+      pt: A constante de gravitação universal, a mesma em todo o universo.
+      fr: La constante de gravitation universelle, identique dans tout l'univers.
+      zh: 万有引力常数,在宇宙中处处相同。
+      ja: 万有引力定数。宇宙のどこでも同じ値をとる。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: big-mass
+    type: variable
+    value: M
+    explanation:
+      es: La masa del cuerpo más grande, por ejemplo la Tierra.
+      en: The mass of the larger body, for instance the Earth.
+      pt: A massa do corpo maior, por exemplo a Terra.
+      fr: La masse du corps le plus grand, par exemple la Terre.
+      zh: 较大物体的质量,例如地球。
+      ja: より大きな物体の質量。例えば地球。
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: small-mass
+    type: variable
+    value: m
+    explanation:
+      es: La masa del cuerpo más pequeño, por ejemplo la Luna.
+      en: The mass of the smaller body, for instance the Moon.
+      pt: A massa do corpo menor, por exemplo a Lua.
+      fr: La masse du corps le plus petit, par exemple la Lune.
+      zh: 较小物体的质量,例如月球。
+      ja: より小さな物体の質量。例えば月。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por la distancia entre los centros de ambos cuerpos.
+      en: Divided by the distance between the centers of both bodies.
+      pt: Dividido pela distância entre os centros dos dois corpos.
+      fr: Divisé par la distance entre les centres des deux corps.
+      zh: 除以两物体中心之间的距离。
+      ja: 二つの物体の中心間の距離で割る。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: La distancia entre los centros de los dos cuerpos.
+      en: The distance between the centers of the two bodies.
+      pt: A distância entre os centros dos dois corpos.
+      fr: La distance entre les centres des deux corps.
+      zh: 两个物体中心之间的距离。
+      ja: 二つの物体の中心間の距離。
+context:
+  author:
+    es: Isaac Newton
+    en: Isaac Newton
+    pt: Isaac Newton
+    fr: Isaac Newton
+    zh: 艾萨克·牛顿
+    ja: アイザック・ニュートン
+  era:
+    es: Inglaterra, 1687 · formalizada en el s. XIX
+    en: England, 1687 · formalized in the 19th century
+    pt: Inglaterra, 1687 · formalizada no séc. XIX
+    fr: Angleterre, 1687 · formalisée au XIXe siècle
+    zh: 英国,1687年·19世纪正式化
+    ja: イングランド、1687年・19世紀に定式化
+  history:
+    es: >-
+      Esta es la forma exacta de la energía potencial gravitatoria, válida a cualquier distancia, a
+      diferencia de U = mgh que solo sirve cerca de la superficie terrestre. Su signo negativo no es
+      un error: define el cero en el infinito, de modo que toda energía es menor que cero y los
+      sistemas ligados, como la Tierra y la Luna, quedan atrapados en un pozo. Para escapar de ese
+      pozo se necesita energía finita, lo que explica la velocidad de escape y es la base del diseño
+      de órbitas y de las trayectorias de los cohetes.
+    en: >-
+      This is the exact form of gravitational potential energy, valid at any distance, unlike
+      U = mgh which only works near Earth's surface. Its negative sign is not an error: it sets zero
+      at infinity, so all energy is less than zero and bound systems, like the Earth and Moon, are
+      trapped in a well. Escaping that well requires finite energy, which explains escape velocity
+      and is the basis of orbit design and rocket trajectories.
+    pt: >-
+      Esta é a forma exata da energia potencial gravitacional, válida a qualquer distância, ao
+      contrário de U = mgh, que só serve perto da superfície terrestre. Seu sinal negativo não é um
+      erro: define o zero no infinito, de modo que toda energia é menor que zero e os sistemas
+      ligados, como a Terra e a Lua, ficam presos em um poço. Escapar desse poço exige energia
+      finita, o que explica a velocidade de escape e é a base do projeto de órbitas e das trajetórias
+      de foguetes.
+    fr: >-
+      C'est la forme exacte de l'énergie potentielle de gravitation, valable à toute distance, à la
+      différence de U = mgh qui ne vaut que près de la surface terrestre. Son signe négatif n'est pas
+      une erreur : il fixe le zéro à l'infini, de sorte que toute énergie est inférieure à zéro et
+      que les systèmes liés, comme la Terre et la Lune, restent piégés dans un puits. En sortir exige
+      une énergie finie, ce qui explique la vitesse de libération et fonde la conception des orbites
+      et des trajectoires de fusées.
+    zh: >-
+      这是引力势能的精确形式,适用于任意距离,不像U = mgh那样只在贴近地球表面时成立。它的负号并不是错误:它把零点定义在
+      无穷远处,于是所有能量都小于零,而地球与月球这样的束缚系统就落入一个势阱中。要逃离这个势阱需要有限的能量,这解释了
+      逃逸速度,也是轨道设计和火箭弹道的基础。
+    ja: >-
+      これは重力による位置エネルギーの正確な形であり、地表付近でしか成り立たないU = mghとは異なり、任意の距離で成立する。
+      負号は誤りではない:零点が無限遠に置かれているため、すべてのエネルギーはゼロより小さく、地球と月のような束縛系は
+      井戸に閉じ込められる。この井戸から脱出するには有限のエネルギーが必要であり、これは脱出速度を説明し、軌道設計や
+      ロケットの軌跡の基礎となる。
+  timeline:
+    - year: "1687"
+      label:
+        es: Newton publica los Principia con la gravitación universal, base de esta energía.
+        en: Newton publishes the Principia with universal gravitation, the basis of this energy.
+        pt: Newton publica os Principia com a gravitação universal, base dessa energia.
+        fr: Newton publie les Principia avec la gravitation universelle, base de cette énergie.
+        zh: 牛顿发表《自然哲学的数学原理》,提出万有引力,这是该能量的基础。
+        ja: ニュートンが『プリンキピア』で万有引力を発表。このエネルギーの基礎となる。
+    - year: "1847"
+      label:
+        es: Helmholtz enuncia la conservación de la energía y da forma moderna a la energía potencial.
+        en: Helmholtz states energy conservation, giving potential energy its modern form.
+        pt: Helmholtz enuncia a conservação da energia e dá forma moderna à energia potencial.
+        fr: Helmholtz énonce la conservation de l'énergie et donne sa forme moderne à l'énergie potentielle.
+        zh: 亥姆霍兹提出能量守恒,赋予势能现代形式。
+        ja: ヘルムホルツがエネルギー保存を述べ、位置エネルギーに現代的な形を与える。
+    - year: "1957"
+      label:
+        es: El Sputnik inaugura la era espacial usando exactamente esta energía para diseñar su órbita.
+        en: Sputnik opens the space age, using exactly this energy to design its orbit.
+        pt: O Sputnik inaugura a era espacial usando exatamente essa energia para projetar sua órbita.
+        fr: Spoutnik ouvre l'ère spatiale en utilisant exactement cette énergie pour concevoir son orbite.
+        zh: 斯普特尼克号开启太空时代,正是用这一能量设计其轨道。
+        ja: スプートニクが、まさにこのエネルギーを用いて軌道を設計し、宇宙時代を切り開く。
+    - year: Hoy
+      label:
+        es: Es la base para planificar misiones a la Luna, a Marte y más allá.
+        en: It is the basis for planning missions to the Moon, Mars, and beyond.
+        pt: É a base para planejar missões à Lua, a Marte e além.
+        fr: Elle est à la base de la planification des missions vers la Lune, Mars et au-delà.
+        zh: 它是规划前往月球、火星乃至更远任务的基础。
+        ja: 月や火星、その先へのミッション計画の基礎である。
+  useCases:
+    - title:
+        es: Exploración espacial
+        en: Space exploration
+        pt: Exploração espacial
+        fr: Exploration spatiale
+        zh: 太空探索
+        ja: 宇宙探査
+      description:
+        es: >-
+          Las trayectorias de los cohetes se calculan venciendo la energía negativa del pozo
+          gravitatorio.
+        en: >-
+          Rocket trajectories are computed by overcoming the negative energy of the gravity well.
+        pt: >-
+          Trajetórias de foguetes são calculadas vencendo a energia negativa do poço gravitacional.
+        fr: >-
+          Les trajectoires de fusées se calculent en vainquant l'énergie négative du puits de gravité.
+        zh: >-
+          火箭的轨道通过克服引力井的负能量来计算。
+        ja: >-
+          ロケットの軌道は、重力井戸の負のエネルギーを打ち勝って計算される。
+    - title:
+        es: Órbitas de satélites
+        en: Satellite orbits
+        pt: Órbitas de satélites
+        fr: Orbites de satellites
+        zh: 卫星轨道
+        ja: 衛星軌道
+      description:
+        es: >-
+          La energía total negativa indica si un satélite está ligado a la Tierra o escapa al
+          espacio.
+        en: >-
+          A negative total energy indicates whether a satellite is bound to Earth or escapes into
+          space.
+        pt: >-
+          A energia total negativa indica se um satélite está ligado à Terra ou escapa para o espaço.
+        fr: >-
+          Une énergie totale négative indique si un satellite est lié à la Terre ou s'échappe dans
+          l'espace.
+        zh: >-
+          总能量为负,说明卫星被地球束缚;否则将逃逸到太空。
+        ja: >-
+          全エネルギーが負なら衛星は地球に束縛され、そうでなければ宇宙へ脱出する。
+    - title:
+        es: Astrofísica
+        en: Astrophysics
+        pt: Astrofísica
+        fr: Astrophysique
+        zh: 天体物理学
+        ja: 天体物理学
+      description:
+        es: >-
+          Las binarias y los cúmulos se mantienen unidos por la energía potencial negativa de su
+          atracción mutua.
+        en: >-
+          Binaries and clusters are held together by the negative potential energy of their mutual
+          attraction.
+        pt: >-
+          Binárias e aglomerados são mantidos unidos pela energia potencial negativa de sua atração
+          mútua.
+        fr: >-
+          Les binaires et les amas sont maintenus par l'énergie potentielle négative de leur
+          attraction mutuelle.
+        zh: >-
+          双星和星团靠相互吸引的负势能维持在一起。
+        ja: >-
+          連星や星団は、相互の引力による負の位置エネルギーで結ばれている。
+    - title:
+        es: Transferencias orbitales
+        en: Orbital transfers
+        pt: Transferências orbitais
+        fr: Transferts orbitaux
+        zh: 轨道转移
+        ja: 軌道遷移
+      description:
+        es: >-
+          La diferencia de energía entre dos órbitas fija cuánto propulsor necesita una nave.
+        en: >-
+          The energy difference between two orbits sets how much propellant a spacecraft needs.
+        pt: >-
+          A diferença de energia entre duas órbitas define quanto propelente uma nave precisa.
+        fr: >-
+          La différence d'énergie entre deux orbites fixe le propulseur nécessaire à un vaisseau.
+        zh: >-
+          两条轨道之间的能量差,决定了航天器需要多少推进剂。
+        ja: >-
+          二つの軌道のエネルギー差が、宇宙船に必要な推進剤の量を決める。
+  example:
+    title:
+      es: La Tierra y la Luna
+      en: The Earth and the Moon
+      pt: A Terra e a Lua
+      fr: La Terre et la Lune
+      zh: 地球与月球
+      ja: 地球と月
+    lines:
+      - es: G = 6.674×10⁻¹¹ N·m²/kg²
+        en: G = 6.674×10⁻¹¹ N·m²/kg²
+        pt: G = 6,674×10⁻¹¹ N·m²/kg²
+        fr: G = 6,674×10⁻¹¹ N·m²/kg²
+        zh: G = 6.674×10⁻¹¹ N·m²/kg²
+        ja: G = 6.674×10⁻¹¹ N·m²/kg²
+      - es: M = 5.972×10²⁴ kg (Tierra), m = 7.348×10²² kg (Luna)
+        en: M = 5.972×10²⁴ kg (Earth), m = 7.348×10²² kg (Moon)
+        pt: M = 5,972×10²⁴ kg (Terra), m = 7,348×10²² kg (Lua)
+        fr: M = 5,972×10²⁴ kg (Terre), m = 7,348×10²² kg (Lune)
+        zh: M = 5.972×10²⁴ 千克(地球),m = 7.348×10²² 千克(月球)
+        ja: M = 5.972×10²⁴ kg(地球)、m = 7.348×10²² kg(月)
+      - es: r = 3.844×10⁸ m (distancia media)
+        en: r = 3.844×10⁸ m (mean distance)
+        pt: r = 3,844×10⁸ m (distância média)
+        fr: r = 3,844×10⁸ m (distance moyenne)
+        zh: r = 3.844×10⁸ 米(平均距离)
+        ja: r = 3.844×10⁸ m(平均距離)
+      - es: U = −G·M·m / r
+        en: U = −G·M·m / r
+        pt: U = −G·M·m / r
+        fr: U = −G·M·m / r
+        zh: U = −G·M·m / r
+        ja: U = −G·M·m / r
+      - es: U ≈ −7.6×10²⁸ julios
+        en: U ≈ −7.6×10²⁸ joules
+        pt: U ≈ −7,6×10²⁸ joules
+        fr: U ≈ −7,6×10²⁸ joules
+        zh: U ≈ −7.6×10²⁸ 焦耳
+        ja: U ≈ −7.6×10²⁸ ジュール

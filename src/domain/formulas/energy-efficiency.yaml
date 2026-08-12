@@ -1,0 +1,307 @@
+id: energy-efficiency
+title:
+  es: Eficiencia Energética
+  en: Energy Efficiency
+  pt: Eficiência Energética
+  fr: Efficacité énergétique
+  zh: 能量效率
+  ja: エネルギー効率
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: eta
+    type: variable
+    value: η
+    explanation:
+      es: "La eficiencia: la fracción de la energía de entrada que se aprovecha como energía útil."
+      en: "Efficiency: the fraction of input energy that is turned into useful energy."
+      pt: "A eficiência: a fração da energia de entrada que é aproveitada como energia útil."
+      fr: "L'efficacité : la fraction de l'énergie d'entrée transformée en énergie utile."
+      zh: 效率：输入能量中转化为有用能量的比例。
+      ja: 効率。入力エネルギーのうち有効なエネルギーとして利用される割合。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: e-out
+    type: variable
+    value: E_out
+    explanation:
+      es: "La energía útil de salida: la que realiza trabajo o produce luz."
+      en: "The useful output energy: the energy that does work or produces light."
+      pt: "A energia útil de saída: a que realiza trabalho ou produz luz."
+      fr: "L'énergie utile de sortie : celle qui produit du travail ou de la lumière."
+      zh: 有用的输出能量：做功或产生光的那部分能量。
+      ja: 有効な出力エネルギー。仕事をしたり光を生み出したりするエネルギー。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: e-in
+    type: variable
+    value: E_in
+    explanation:
+      es: "La energía total de entrada: la que el dispositivo consume de la red o del combustible."
+      en: "The total input energy: what the device draws from the grid or from fuel."
+      pt: "A energia total de entrada: a que o dispositivo consome da rede ou do combustível."
+      fr: "L'énergie totale d'entrée : ce que l'appareil tire du réseau ou du combustible."
+      zh: 总的输入能量：设备从电网或燃料中消耗的能量。
+      ja: 入力エネルギーの総量。機器が電力網や燃料から消費するエネルギー。
+context:
+  author:
+    es: Basada en la termodinámica
+    en: Based on thermodynamics
+    pt: Baseada na termodinâmica
+    fr: Basée sur la thermodynamique
+    zh: 基于热力学
+    ja: 熱力学に基づく
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, séc. XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲，19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      La eficiencia compara la energía útil que se obtiene con la que se consume. La idea maduró en el
+      siglo XIX con la termodinámica: Carnot, Clausius y Kelvin mostraron que ninguna máquina convierte
+      toda la energía de entrada en trabajo, pues siempre hay pérdidas por calor y fricción, y por eso
+      el cociente nunca alcanza 1 (100%). Es la base de las etiquetas energéticas que comparan LED,
+      motores y electrodomésticos: un LED emite como luz más de su entrada que una incandescente, y un
+      refrigerador eficiente extrae más frío por vatio consumido.
+    en: >-
+      Efficiency compares the useful energy obtained with the energy consumed. The idea matured in the
+      19th century with thermodynamics: Carnot, Clausius, and Kelvin showed that no machine converts all
+      input energy into work, because heat and friction always cause losses, so the ratio never reaches
+      1 (100%). It is the basis of the energy labels that compare LEDs, motors, and appliances: an LED
+      gives out more of its input as light than an incandescent bulb, and an efficient refrigerator moves
+      more heat per watt consumed.
+    pt: >-
+      A eficiência compara a energia útil obtida com a energia consumida. A ideia amadureceu no século
+      XIX com a termodinâmica: Carnot, Clausius e Kelvin mostraram que nenhuma máquina converte toda a
+      energia de entrada em trabalho, pois calor e atrito sempre causam perdas, e por isso a razão nunca
+      chega a 1 (100%). É a base das etiquetas de eficiência energética que comparam LEDs, motores e
+      eletrodomésticos: um LED emite como luz mais de sua entrada do que uma incandescente, e uma
+      geladeira eficiente extrai mais frio por watt consumido.
+    fr: >-
+      L'efficacité compare l'énergie utile obtenue à l'énergie consommée. L'idée a mûri au XIXe siècle
+      avec la thermodynamique : Carnot, Clausius et Kelvin ont montré qu'aucune machine ne convertit
+      toute l'énergie d'entrée en travail, car chaleur et frottement causent toujours des pertes, si bien
+      que le rapport n'atteint jamais 1 (100 %). C'est la base des étiquettes énergie qui comparent LED,
+      moteurs et appareils : une LED restitue plus de son énergie d'entrée en lumière qu'une
+      incandescente, et un réfrigérateur performant extrait plus de froid par watt consommé.
+    zh: >-
+      效率比较的是获得的可用能量与消耗的能量之比。这一概念在19世纪随热力学的发展而成熟：卡诺、克劳修斯和开尔文
+      指出，任何机器都无法将全部输入能量转化为功，因为热量和摩擦总会造成损失，因此该比值永远达不到1（100%）。
+      它也是能效标识的基础，用于比较LED、电机和家用电器：LED将输入能量转化为光的比例高于白炽灯，而高效冰箱
+      每消耗一瓦电可搬运更多的热量。
+    ja: >-
+      効率は、得られる有効エネルギーと消費するエネルギーを比べるものである。この考えは19世紀、熱力学の発展と
+      ともに成熟した。カノー、クラウジウス、ケルビンは、熱や摩擦による損失が常に生じるため、いかなる機械も
+      入力エネルギーをすべて仕事に変換できないことを示し、その比は決して1（100%）に達しない。LED、モーター、
+      家電を比べる省エネラベルの基礎であり、LEDは白熱電球よりも入力の多くを光として放出し、効率のよい冷蔵庫は
+      消費電力1ワットあたりにより多くの熱を運び出す。
+  timeline:
+    - year: "1824"
+      label:
+        es: >-
+          Carnot publica sus 'Reflexiones sobre la potencia motriz del fuego', donde deriva la eficiencia
+          máxima posible.
+        en: >-
+          Carnot publishes his 'Reflections on the Motive Power of Fire', deriving the maximum possible
+          efficiency.
+        pt: >-
+          Carnot publica suas 'Reflexões sobre a Potência Motriz do Fogo', derivando a eficiência máxima
+          possível.
+        fr: >-
+          Carnot publie ses « Réflexions sur la puissance motrice du feu », où il dérive l'efficacité
+          maximale possible.
+        zh: >-
+          卡诺发表《关于火的动力的思考》，推导出效率的理论上限。
+        ja: >-
+          カノーが『火の動力についての考察』を発表し、効率の理論上の上限を導く。
+    - year: "1850"
+      label:
+        es: >-
+          Clausius enuncia la segunda ley de la termodinámica, que impide en principio el 100% de
+          eficiencia.
+        en: >-
+          Clausius states the second law of thermodynamics, which rules out 100% efficiency in
+          principle.
+        pt: >-
+          Clausius enuncia a segunda lei da termodinâmica, que impede em princípio a eficiência de 100%.
+        fr: >-
+          Clausius énonce la deuxième loi de la thermodynamique, qui exclut en principe une efficacité de
+          100 %.
+        zh: >-
+          克劳修斯提出热力学第二定律，从原理上排除了100%的效率。
+        ja: >-
+          クラウジウスが熱力学の第二法則を述べ、原理的に100%の効率を排除する。
+    - year: Hoy
+      label:
+        es: >-
+          Las etiquetas energéticas y las mediciones de eficiencia guían la compra de electrodomésticos y
+          motores.
+        en: >-
+          Energy labels and efficiency ratings guide the purchase of appliances and motors today.
+        pt: >-
+          As etiquetas de eficiência e as medições de desempenho orientam hoje a compra de
+          eletrodomésticos e motores.
+        fr: >-
+          Les étiquettes énergie et les mesures de rendement guident aujourd'hui l'achat d'appareils et
+          de moteurs.
+        zh: >-
+          今天，能效标识和效率测量指导着家电与电机的选购。
+        ja: >-
+          今日、省エネラベルと効率の測定が家電やモーター選びの指針となっている。
+  useCases:
+    - title:
+        es: Iluminación LED
+        en: LED lighting
+        pt: Iluminação LED
+        fr: Éclairage LED
+        zh: LED照明
+        ja: LED照明
+      description:
+        es: >-
+          Mide cuánta energía eléctrica se convierte en luz visible: los LED superan con creces a las
+          incandescentes.
+        en: >-
+          It measures how much electrical energy becomes visible light: LEDs far outperform incandescent
+          bulbs.
+        pt: >-
+          Mede quanta energia elétrica vira luz visível: os LEDs superam de longe as incandescentes.
+        fr: >-
+          Elle mesure quelle part de l'énergie électrique devient lumière visible : les LED surpassent
+          largement les ampoules à incandescence.
+        zh: >-
+          衡量多少电能转化为可见光：LED远优于白炽灯。
+        ja: >-
+          電気エネルギーのうちどれだけが可視光になるかを測る。LEDは白熱電球をはるかに上回る。
+    - title:
+        es: Motores eléctricos
+        en: Electric motors
+        pt: Motores elétricos
+        fr: Moteurs électriques
+        zh: 电动机
+        ja: 電動機
+      description:
+        es: >-
+          La relación entre la potencia eléctrica consumida y la potencia mecánica entregada define las
+          clases de eficiencia IE.
+        en: >-
+          The ratio of electrical power consumed to mechanical power delivered defines the IE efficiency
+          classes.
+        pt: >-
+          A razão entre a potência elétrica consumida e a potência mecânica entregue define as classes
+          de eficiência IE.
+        fr: >-
+          Le rapport entre puissance électrique consommée et puissance mécanique fournie définit les
+          classes d'efficacité IE.
+        zh: >-
+          消耗的电功率与输出的机械功率之比，定义了IE能效等级。
+        ja: >-
+          消費した電力に対する機械的出力の比が、IE効率クラスを定める。
+    - title:
+        es: Refrigeradores y bombas de calor
+        en: Refrigerators and heat pumps
+        pt: Geladeiras e bombas de calor
+        fr: Réfrigérateurs et pompes à chaleur
+        zh: 冰箱与热泵
+        ja: 冷蔵庫とヒートポンプ
+      description:
+        es: >-
+          Compara el frío extraído o el calor bombeado con la energía consumida, como muestran las
+          etiquetas de eficiencia.
+        en: >-
+          It compares the heat moved or cold produced with the energy consumed, as shown on efficiency
+          labels.
+        pt: >-
+          Compara o frio extraído ou o calor bombeado com a energia consumida, conforme as etiquetas de
+          eficiência.
+        fr: >-
+          Elle compare le froid produit ou la chaleur pompée à l'énergie consommée, comme l'indiquent
+          les étiquettes énergie.
+        zh: >-
+          将产生的冷量或泵送的热量与消耗的能量进行比较，正如能效标签所示。
+        ja: >-
+          取り出す冷熱や汲み上げる熱量と消費エネルギーを比べる。省エネラベルに示されている。
+    - title:
+        es: Generación de electricidad
+        en: Power generation
+        pt: Geração de energia elétrica
+        fr: Production d'électricité
+        zh: 电力生产
+        ja: 発電
+      description:
+        es: >-
+          La eficiencia de una central térmica indica cuánta energía del combustible acaba en la red
+          eléctrica.
+        en: >-
+          A plant's efficiency shows how much of the fuel's energy actually reaches the electrical grid.
+        pt: >-
+          A eficiência de uma termelétrica indica quanta energia do combustível chega à rede elétrica.
+        fr: >-
+          Le rendement d'une centrale thermique indique quelle part de l'énergie du combustible atteint
+          le réseau électrique.
+        zh: >-
+          电厂的效率表明燃料能量中有多少实际进入了电网。
+        ja: >-
+          火力発電所の効率は、燃料のエネルギーのうち実際に電力網に届く割合を示す。
+  example:
+    title:
+      es: Eficiencia de un LED
+      en: Efficiency of an LED
+      pt: Eficiência de um LED
+      fr: Efficacité d'une LED
+      zh: LED的效率
+      ja: LEDの効率
+    lines:
+      - es: "E_in = 10 J, E_out = 8 J"
+        en: "E_in = 10 J, E_out = 8 J"
+        pt: "E_in = 10 J, E_out = 8 J"
+        fr: "E_in = 10 J, E_out = 8 J"
+        zh: "E_in = 10 J，E_out = 8 J"
+        ja: "E_in = 10 J、E_out = 8 J"
+      - es: η = E_out / E_in
+        en: η = E_out / E_in
+        pt: η = E_out / E_in
+        fr: η = E_out / E_in
+        zh: η = E_out / E_in
+        ja: η = E_out / E_in
+      - es: η = 8 / 10
+        en: η = 8 / 10
+        pt: η = 8 / 10
+        fr: η = 8 / 10
+        zh: η = 8 / 10
+        ja: η = 8 / 10
+      - es: η = 0.8
+        en: η = 0.8
+        pt: η = 0,8
+        fr: η = 0,8
+        zh: η = 0.8
+        ja: η = 0.8
+      - es: η = 0.8 × 100% = 80%
+        en: η = 0.8 × 100% = 80%
+        pt: η = 0,8 × 100% = 80%
+        fr: η = 0,8 × 100% = 80%
+        zh: η = 0.8 × 100% = 80%
+        ja: η = 0.8 × 100% = 80%

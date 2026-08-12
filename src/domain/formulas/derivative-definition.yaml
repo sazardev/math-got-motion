@@ -1,0 +1,349 @@
+id: derivative-definition
+title:
+  es: Definición de Derivada
+  en: Definition of the Derivative
+  pt: Definição de Derivada
+  fr: Définition de la dérivée
+  zh: 导数的定义
+  ja: 導関数の定義
+category:
+  es: Cálculo
+  en: Calculus
+  pt: Cálculo
+  fr: Calcul
+  zh: 微积分
+  ja: 微積分
+nodes:
+  - id: f-prime
+    type: variable
+    value: f′
+    explanation:
+      es: "f′: la derivada de la función f en el punto x."
+      en: "f′: the derivative of the function f at the point x."
+      pt: "f′: a derivada da função f no ponto x."
+      fr: "f′ : la dérivée de la fonction f au point x."
+      zh: "f′：函数f在点x处的导数。"
+      ja: "f′：点xにおける関数fの導関数。"
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el punto de evaluación.
+      en: Opens the evaluation point.
+      pt: Abre o ponto de avaliação.
+      fr: Ouvre le point d'évaluation.
+      zh: 打开求值点。
+      ja: 評価する点を開く括弧。
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: "x: el punto donde se mide la pendiente."
+      en: "x: the point where the slope is measured."
+      pt: "x: o ponto onde a inclinação é medida."
+      fr: "x : le point où la pente est mesurée."
+      zh: "x：测量斜率的点。"
+      ja: "x：傾きを測る点。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el punto de evaluación.
+      en: Closes the evaluation point.
+      pt: Fecha o ponto de avaliação.
+      fr: Ferme le point d'évaluation.
+      zh: 关闭求值点。
+      ja: 評価する点を閉じる括弧。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Se define como.
+      en: Is defined as.
+      pt: É definida como.
+      fr: Est définie comme.
+      zh: 定义为。
+      ja: 次のように定義される。
+  - id: lim
+    type: operator
+    value: lim
+    explanation:
+      es: "El límite: el valor al que tiende la razón."
+      en: "The limit: the value the ratio approaches."
+      pt: "O limite: o valor para o qual a razão tende."
+      fr: "La limite : la valeur vers laquelle tend le rapport."
+      zh: "极限：比值趋近的值。"
+      ja: "極限。比が近づく値。"
+  - id: h-zero
+    type: variable
+    value: h→0
+    explanation:
+      es: "Cuando h tiende a cero: el intervalo se vuelve infinitesimal."
+      en: "As h tends to zero: the interval becomes infinitesimal."
+      pt: "Quando h tende a zero: o intervalo se torna infinitesimal."
+      fr: "Quand h tend vers zéro : l'intervalle devient infinitésimal."
+      zh: "当h趋于零时：区间变为无穷小。"
+      ja: "hが0に近づくとき。区間が無限小になる。"
+  - id: open-paren-2
+    type: operator
+    value: (
+    explanation:
+      es: Abre la razón de cambios.
+      en: Opens the rate of change.
+      pt: Abre a razão de variação.
+      fr: Ouvre le taux de variation.
+      zh: 打开变化率。
+      ja: 変化率を開く括弧。
+  - id: f-xh
+    type: variable
+    value: f(x+h)
+    explanation:
+      es: La función evaluada un poco más adelante.
+      en: The function evaluated slightly ahead.
+      pt: A função avaliada um pouco à frente.
+      fr: La fonction évaluée un peu plus loin.
+      zh: 在稍前一点处取值的函数。
+      ja: 少し先で評価した関数。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: Menos el valor actual.
+      en: Minus the current value.
+      pt: Menos o valor atual.
+      fr: Moins la valeur actuelle.
+      zh: 减去当前值。
+      ja: 現在の値を引く。
+  - id: f-x
+    type: variable
+    value: f(x)
+    explanation:
+      es: La función en el punto actual.
+      en: The function at the current point.
+      pt: A função no ponto atual.
+      fr: La fonction au point actuel.
+      zh: 当前点处的函数。
+      ja: 現在の点での関数。
+  - id: close-paren-2
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la razón de cambios.
+      en: Closes the rate of change.
+      pt: Fecha a razão de variação.
+      fr: Ferme le taux de variation.
+      zh: 关闭变化率。
+      ja: 変化率を閉じる括弧。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividida entre el incremento.
+      en: Divided by the increment.
+      pt: Dividida pelo incremento.
+      fr: Divisée par l'incrément.
+      zh: 除以增量。
+      ja: 増分で割る。
+  - id: h
+    type: variable
+    value: h
+    explanation:
+      es: "h: el incremento de x."
+      en: "h: the increment of x."
+      pt: "h: o incremento de x."
+      fr: "h : l'incrément de x."
+      zh: "h：x的增量。"
+      ja: "h：xの増分。"
+context:
+  author:
+    es: Isaac Newton y Gottfried Leibniz; formalizada por Cauchy
+    en: Isaac Newton and Gottfried Leibniz; formalized by Cauchy
+    pt: Isaac Newton e Gottfried Leibniz; formalizada por Cauchy
+    fr: Isaac Newton et Gottfried Leibniz ; formalisée par Cauchy
+    zh: 艾萨克·牛顿与戈特弗里德·莱布尼茨；由柯西形式化
+    ja: アイザック・ニュートンとライプニッツ。コーシーが定式化
+  era:
+    es: Inglaterra y Alemania, s. XVII · formalizada en 1823
+    en: England and Germany, 17th century · formalized in 1823
+    pt: Inglaterra e Alemanha, séc. XVII · formalizada em 1823
+    fr: Angleterre et Allemagne, XVIIe siècle · formalisée en 1823
+    zh: 英国与德国，17世纪·1823年形式化
+    ja: イングランドとドイツ、17世紀・1823年に定式化
+  history:
+    es: >-
+      Newton llamaba fluxiones a sus derivadas y Leibniz las trataba con diferenciales, pero ambos
+      trabajaban con ideas intuitivas de infinitésimos que escandalizaban a los rigurosos. En 1823,
+      Augustin-Louis Cauchy definió la derivada con el límite moderno, sin infinitésimos: la pendiente
+      instantánea de una curva. Esa definición convirtió el cálculo en una teoría rigurosa y sigue
+      siendo la que se enseña hoy.
+    en: >-
+      Newton called his derivatives fluxions and Leibniz treated them with differentials, but both
+      worked with intuitive notions of infinitesimals that scandalized the rigorists. In 1823,
+      Augustin-Louis Cauchy defined the derivative with the modern limit, without infinitesimals: the
+      instantaneous slope of a curve. That definition turned calculus into a rigorous theory and is
+      still the one taught today.
+    pt: >-
+      Newton chamava suas derivadas de fluxões e Leibniz as tratava com diferenciais, mas ambos
+      trabalhavam com noções intuitivas de infinitesimais que escandalizavam os rigorosos. Em 1823,
+      Augustin-Louis Cauchy definiu a derivada com o limite moderno, sem infinitesimais: a inclinação
+      instantânea de uma curva. Essa definição transformou o cálculo em uma teoria rigorosa e continua
+      sendo a que se ensina hoje.
+    fr: >-
+      Newton appelait ses dérivées des fluxions et Leibniz les traitait avec des différentielles,
+      mais tous deux travaillaient avec des notions intuitives d'infiniment petits qui scandalisaient
+      les rigoristes. En 1823, Augustin-Louis Cauchy définit la dérivée avec la limite moderne, sans
+      infiniment petits : la pente instantanée d'une courbe. Cette définition fit du calcul une théorie
+      rigoureuse et reste celle enseignée aujourd'hui.
+    zh: >-
+      牛顿称其导数为流数，莱布尼茨用微分处理它们，但两人都依赖关于无穷小的直观观念，这令注重严谨的人不满。
+      1823年，奥古斯丁-路易·柯西用现代极限定义了导数，不借助无穷小：即曲线的瞬时斜率。这个定义使微积分成为
+      严谨的理论，至今仍是教科书中的定义。
+    ja: >-
+      ニュートンは導関数を流率と呼び、ライプニッツは微分として扱ったが、両者とも厳密性を重んじる者を驚かせる
+      直観的な無限小の観念に頼っていた。1823年、オーギュスタン＝ルイ・コーシーは、無限小を用いずに現代的な
+      極限で導関数を定義した。すなわち、曲線の瞬間的な傾きである。この定義により微積分は厳密な理論となり、
+      今日でもこの定義が教えられている。
+  timeline:
+    - year: 1666–1680
+      label:
+        es: >-
+          Newton desarrolla el método de fluxiones; Leibniz publica sus diferenciales en 1684.
+        en: >-
+          Newton develops the fluxion method; Leibniz publishes his differentials in 1684.
+        pt: >-
+          Newton desenvolve o método das fluxões; Leibniz publica seus diferenciais em 1684.
+        fr: >-
+          Newton développe la méthode des fluxions ; Leibniz publie ses différentielles en 1684.
+        zh: >-
+          牛顿发展流数法；莱布尼茨于1684年发表微分学。
+        ja: >-
+          ニュートンが流率法を発展させ、ライプニッツが1684年に微分を発表する。
+    - year: "1823"
+      label:
+        es: >-
+          Cauchy define la derivada con límites en su Cours d'analyse, volviéndola rigurosa.
+        en: >-
+          Cauchy defines the derivative with limits in his Cours d'analyse, making it rigorous.
+        pt: >-
+          Cauchy define a derivada com limites em seu Cours d'analyse, tornando-a rigorosa.
+        fr: >-
+          Cauchy définit la dérivée avec des limites dans son Cours d'analyse, la rendant rigoureuse.
+        zh: >-
+          柯西在《分析教程》中用极限定义导数，使其严谨化。
+        ja: >-
+          コーシーが『解析教程』で極限による導関数の定義を与え、厳密化する。
+    - year: Hoy
+      label:
+        es: >-
+          La definición es la base de la optimización, la física y el aprendizaje automático.
+        en: >-
+          The definition underpins optimization, physics, and machine learning.
+        pt: >-
+          A definição é a base da otimização, da física e do aprendizado de máquina.
+        fr: >-
+          La définition est à la base de l'optimisation, de la physique et de l'apprentissage
+          automatique.
+        zh: >-
+          这一定义是优化、物理学和机器学习的基础。
+        ja: >-
+          この定義は、最適化、物理学、機械学習の基盤である。
+  useCases:
+    - title:
+        es: Física
+        en: Physics
+        pt: Física
+        fr: Physique
+        zh: 物理学
+        ja: 物理学
+      description:
+        es: >-
+          La velocidad instantánea es la derivada de la posición respecto al tiempo.
+        en: >-
+          Instantaneous velocity is the derivative of position with respect to time.
+        pt: >-
+          A velocidade instantânea é a derivada da posição em relação ao tempo.
+        fr: >-
+          La vitesse instantanée est la dérivée de la position par rapport au temps.
+        zh: >-
+          瞬时速度就是位置对时间的导数。
+        ja: >-
+          瞬間速度は、位置の時間微分である。
+    - title:
+        es: Economía
+        en: Economics
+        pt: Economia
+        fr: Économie
+        zh: 经济学
+        ja: 経済学
+      description:
+        es: >-
+          El costo marginal es la derivada de la función de costo total.
+        en: >-
+          Marginal cost is the derivative of the total cost function.
+        pt: >-
+          O custo marginal é a derivada da função de custo total.
+        fr: >-
+          Le coût marginal est la dérivée de la fonction de coût total.
+        zh: >-
+          边际成本是总成本函数的导数。
+        ja: >-
+          限界費用は総費用関数の導関数である。
+    - title:
+        es: Aprendizaje automático
+        en: Machine learning
+        pt: Aprendizado de máquina
+        fr: Apprentissage automatique
+        zh: 机器学习
+        ja: 機械学習
+      description:
+        es: >-
+          El descenso de gradiente usa derivadas para minimizar el error de un modelo.
+        en: >-
+          Gradient descent uses derivatives to minimize a model's error.
+        pt: >-
+          A descida de gradiente usa derivadas para minimizar o erro de um modelo.
+        fr: >-
+          La descente de gradient utilise les dérivées pour minimiser l'erreur d'un modèle.
+        zh: >-
+          梯度下降法用导数来最小化模型的误差。
+        ja: >-
+          勾配降下法は、モデルの誤差を最小化するために導関数を使う。
+  example:
+    title:
+      es: Derivada de x² en x=3
+      en: Derivative of x² at x=3
+      pt: Derivada de x² em x=3
+      fr: Dérivée de x² en x=3
+      zh: x² 在 x=3 处的导数
+      ja: x² の x=3 における導関数
+    lines:
+      - es: f′(3) = lim h→0 ((3+h)² − 9) / h
+        en: f′(3) = lim h→0 ((3+h)² − 9) / h
+        pt: f′(3) = lim h→0 ((3+h)² − 9) / h
+        fr: f′(3) = lim h→0 ((3+h)² − 9) / h
+        zh: f′(3) = lim h→0 ((3+h)² − 9) / h
+        ja: f′(3) = lim h→0 ((3+h)² − 9) / h
+      - es: (3+h)² = 9 + 6h + h²
+        en: (3+h)² = 9 + 6h + h²
+        pt: (3+h)² = 9 + 6h + h²
+        fr: (3+h)² = 9 + 6h + h²
+        zh: (3+h)² = 9 + 6h + h²
+        ja: (3+h)² = 9 + 6h + h²
+      - es: f′(3) = lim h→0 (9 + 6h + h² − 9) / h
+        en: f′(3) = lim h→0 (9 + 6h + h² − 9) / h
+        pt: f′(3) = lim h→0 (9 + 6h + h² − 9) / h
+        fr: f′(3) = lim h→0 (9 + 6h + h² − 9) / h
+        zh: f′(3) = lim h→0 (9 + 6h + h² − 9) / h
+        ja: f′(3) = lim h→0 (9 + 6h + h² − 9) / h
+      - es: f′(3) = lim h→0 (6h + h²) / h = lim h→0 (6 + h)
+        en: f′(3) = lim h→0 (6h + h²) / h = lim h→0 (6 + h)
+        pt: f′(3) = lim h→0 (6h + h²) / h = lim h→0 (6 + h)
+        fr: f′(3) = lim h→0 (6h + h²) / h = lim h→0 (6 + h)
+        zh: f′(3) = lim h→0 (6h + h²) / h = lim h→0 (6 + h)
+        ja: f′(3) = lim h→0 (6h + h²) / h = lim h→0 (6 + h)
+      - es: f′(3) = 6
+        en: f′(3) = 6
+        pt: f′(3) = 6
+        fr: f′(3) = 6
+        zh: f′(3) = 6
+        ja: f′(3) = 6

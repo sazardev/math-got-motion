@@ -1,0 +1,322 @@
+id: charless-law
+title:
+  es: Ley de Charles
+  en: Charles's Law
+  pt: Lei de Charles
+  fr: Loi de Charles
+  zh: 查理定律
+  ja: シャルルの法則
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: v1
+    type: variable
+    value: V₁
+    explanation:
+      es: "V₁: el volumen inicial del gas."
+      en: "V₁: the gas's initial volume."
+      pt: "V₁: o volume inicial do gás."
+      fr: "V₁ : le volume initial du gaz."
+      zh: "V₁:气体的初始体积。"
+      ja: "V₁:気体の最初の体積。"
+  - id: slash-1
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: t1
+    type: variable
+    value: T₁
+    explanation:
+      es: "T₁: la temperatura absoluta inicial."
+      en: "T₁: the initial absolute temperature."
+      pt: "T₁: a temperatura absoluta inicial."
+      fr: "T₁ : la température absolue initiale."
+      zh: "T₁:初始绝对温度。"
+      ja: "T₁:最初の絶対温度。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: v2
+    type: variable
+    value: V₂
+    explanation:
+      es: "V₂: el volumen final del gas."
+      en: "V₂: the gas's final volume."
+      pt: "V₂: o volume final do gás."
+      fr: "V₂ : le volume final du gaz."
+      zh: "V₂:气体的最终体积。"
+      ja: "V₂:気体の最終的な体積。"
+  - id: slash-2
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: t2
+    type: variable
+    value: T₂
+    explanation:
+      es: "T₂: la temperatura absoluta final."
+      en: "T₂: the final absolute temperature."
+      pt: "T₂: a temperatura absoluta final."
+      fr: "T₂ : la température absolue finale."
+      zh: "T₂:最终绝对温度。"
+      ja: "T₂:最終的な絶対温度。"
+context:
+  author:
+    es: Jacques Charles y Joseph Louis Gay-Lussac
+    en: Jacques Charles and Joseph Louis Gay-Lussac
+    pt: Jacques Charles e Joseph Louis Gay-Lussac
+    fr: Jacques Charles et Joseph Louis Gay-Lussac
+    zh: 雅克·查理和约瑟夫·路易·盖-吕萨克
+    ja: ジャック・シャルルとジョゼフ・ルイ・ゲイ＝リュサック
+  era:
+    es: Francia, 1746–1823 · publicada en 1802
+    en: France, 1746–1823 · published in 1802
+    pt: França, 1746–1823 · publicada em 1802
+    fr: France, 1746–1823 · publiée en 1802
+    zh: 法国,1746–1823年 · 1802年发表
+    ja: フランス、1746–1823年・1802年発表
+  history:
+    es: >-
+      El aeronauta francés Jacques Charles descubrió que el volumen de un gas crece con su temperatura
+      a presión constante, aunque no lo publicó; Joseph Louis Gay-Lussac difundió el hallazgo en 1802:
+      al duplicar la temperatura absoluta, el volumen se duplica. Es la segunda ley de los gases,
+      complementaria de la de Boyle, y explica por qué los globos de aire caliente se elevan y por qué
+      los neumáticos ganan presión en viajes largos: el aire caliente ocupa más volumen y, al no poder
+      expandirse, aumenta su presión.
+    en: >-
+      French aeronaut Jacques Charles discovered that a gas's volume grows with its temperature at
+      constant pressure, though he never published it; Joseph Louis Gay-Lussac spread the finding in
+      1802: double the absolute temperature and the volume doubles. It is the second gas law,
+      complementary to Boyle's, and explains why hot-air balloons rise and why tires gain pressure on
+      long drives: hot air takes up more volume, and when it cannot expand, its pressure rises.
+    pt: >-
+      O aeronauta francês Jacques Charles descobriu que o volume de um gás cresce com sua temperatura a
+      pressão constante, embora não o tenha publicado; Joseph Louis Gay-Lussac divulgou o achado em
+      1802: ao duplicar a temperatura absoluta, o volume duplica. É a segunda lei dos gases,
+      complementar à de Boyle, e explica por que os balões de ar quente sobem e por que os pneus ganham
+      pressão em viagens longas: o ar quente ocupa mais volume e, sem poder expandir, aumenta sua
+      pressão.
+    fr: >-
+      L'aéronaute français Jacques Charles découvrit que le volume d'un gaz croît avec sa température à
+      pression constante, sans jamais le publier ; Joseph Louis Gay-Lussac diffusa le résultat en 1802 :
+      doublez la température absolue et le volume double. C'est la deuxième loi des gaz, complémentaire
+      de celle de Boyle, qui explique pourquoi les montgolfières s'élèvent et pourquoi les pneus gagnent
+      de la pression sur les longs trajets : l'air chaud occupe plus de volume et, ne pouvant se dilater,
+      sa pression augmente.
+    zh: >-
+      法国航空家雅克·查理发现,在压强不变的条件下,气体的体积随温度升高而增大,但他没有发表这一发现;约瑟夫·路易·
+      盖-吕萨克于1802年将其公开:绝对温度翻倍,体积也翻倍。这是第二条气体定律,与玻意耳定律互补,它解释了热气球为何
+      升空,也解释了长途行驶中轮胎为何气压升高:热空气占据更大体积,当无法膨胀时,压强就会上升。
+    ja: >-
+      フランスの気球乗りジャック・シャルルは、圧力が一定なら気体の体積は温度とともに増大することを発見したが、
+      発表はしなかった。ジョゼフ・ルイ・ゲイ＝リュサックが1802年にこの結果を広めた:絶対温度を2倍にすれば体積も
+      2倍になる。これはボイルの法則と相補的な第二の気体の法則で、熱気球が上昇する理由や、長距離運転でタイヤの圧力が
+      上がる理由を説明する。熱せられた空気はより多くの体積を占め、膨張できないと圧力が上がるのだ。
+  timeline:
+    - year: "1787"
+      label:
+        es: >-
+          Charles descubre la relación entre volumen y temperatura durante sus vuelos en globo.
+        en: >-
+          Charles discovers the volume-temperature relation during his balloon flights.
+        pt: >-
+          Charles descobre a relação entre volume e temperatura em seus voos de balão.
+        fr: >-
+          Charles découvre la relation volume-température lors de ses vols en ballon.
+        zh: >-
+          查理在乘坐热气球飞行中发现了体积与温度的关系。
+        ja: >-
+          シャルルが気球飛行の際に体積と温度の関係を発見する。
+    - year: "1802"
+      label:
+        es: >-
+          Gay-Lussac publica la ley, atribuyéndola a Charles, y la difunde ampliamente.
+        en: >-
+          Gay-Lussac publishes the law, crediting Charles, and spreads it widely.
+        pt: >-
+          Gay-Lussac publica a lei, atribuindo-a a Charles, e a divulga amplamente.
+        fr: >-
+          Gay-Lussac publie la loi, l'attribue à Charles et la diffuse largement.
+        zh: >-
+          盖-吕萨克发表该定律并将其归功于查理,使之广泛传播。
+        ja: >-
+          ゲイ＝リュサックが法則を発表し、チャールズの功績としながら広く普及させる。
+    - year: "1848"
+      label:
+        es: >-
+          Kelvin propone la escala de temperatura absoluta, clave para la forma de la ley.
+        en: >-
+          Kelvin proposes the absolute temperature scale, key to the law's form.
+        pt: >-
+          Kelvin propõe a escala de temperatura absoluta, essencial para a forma da lei.
+        fr: >-
+          Kelvin propose l'échelle de température absolue, essentielle à la forme de la loi.
+        zh: >-
+          开尔文提出绝对温标,这是该定律形式的关键。
+        ja: >-
+          ケルビンが絶対温度の目盛りを提案し、法則の形の鍵となる。
+    - year: Hoy
+      label:
+        es: >-
+          Explica los globos de aire caliente, la presión de los neumáticos y los globos meteorológicos.
+        en: >-
+          It explains hot-air balloons, tire pressure, and weather balloons.
+        pt: >-
+          Explica os balões de ar quente, a pressão dos pneus e os balões meteorológicos.
+        fr: >-
+          Elle explique les montgolfières, la pression des pneus et les ballons-sondes.
+        zh: >-
+          它解释了热气球、轮胎气压和气象气球。
+        ja: >-
+          熱気球、タイヤの圧力、気象観測用気球を説明する。
+  useCases:
+    - title:
+        es: Aerostación
+        en: Hot air balloons
+        pt: Aerostação
+        fr: Montgolfières
+        zh: 热气球
+        ja: 熱気球
+      description:
+        es: >-
+          Calentar el aire de un globo aumenta su volumen y reduce su densidad, generando sustentación.
+        en: >-
+          Heating a balloon's air increases its volume and lowers its density, generating lift.
+        pt: >-
+          Aquecer o ar de um balão aumenta seu volume e reduz sua densidade, gerando sustentação.
+        fr: >-
+          Chauffer l'air d'un ballon augmente son volume et réduit sa densité, générant la portance.
+        zh: >-
+          加热气球内的空气使其体积增大、密度降低,从而产生升力。
+        ja: >-
+          気球の空気を熱すると体積が増え密度が下がり、揚力が生まれる。
+    - title:
+        es: Automoción
+        en: Automotive
+        pt: Automotivo
+        fr: Automobile
+        zh: 汽车
+        ja: 自動車
+      description:
+        es: >-
+          En viajes largos los neumáticos se calientan y la presión sube porque el aire ocupa más
+          volumen.
+        en: >-
+          On long drives tires heat up and pressure rises because the air takes up more volume.
+        pt: >-
+          Em viagens longas os pneus aquecem e a pressão sobe porque o ar ocupa mais volume.
+        fr: >-
+          Sur les longs trajets, les pneus chauffent et la pression monte car l'air occupe plus de
+          volume.
+        zh: >-
+          长途行驶中轮胎发热、气压升高,因为空气占据了更大的体积。
+        ja: >-
+          長距離運転ではタイヤが熱くなり、空気の体積が増えて圧力が上がる。
+    - title:
+        es: Meteorología
+        en: Meteorology
+        pt: Meteorologia
+        fr: Météorologie
+        zh: 气象学
+        ja: 気象学
+      description:
+        es: >-
+          Los globos sonda miden la atmósfera: al ascender, el gas se expande con el frío y la menor
+          presión.
+        en: >-
+          Weather balloons probe the atmosphere: as they rise, the gas expands with cold and lower
+          pressure.
+        pt: >-
+          Balões-sonda medem a atmosfera: ao subir, o gás se expande com o frio e a menor pressão.
+        fr: >-
+          Les ballons-sondes mesurent l'atmosphère : en montant, le gaz se dilate avec le froid et la
+          moindre pression.
+        zh: >-
+          探空气球探测大气:上升时,气体因寒冷和压强降低而膨胀。
+        ja: >-
+          気象観測用気球は大気を調べ、上昇すると寒さと低圧で気体が膨張する。
+    - title:
+        es: Criogenia
+        en: Cryogenics
+        pt: Criogenia
+        fr: Cryogénie
+        zh: 低温技术
+        ja: 極低温工学
+      description:
+        es: >-
+          Al almacenar gases licuados, el calentamiento debe respetar la ley para evitar
+          sobrepresiones.
+        en: >-
+          Storing liquefied gases must respect the law when heating to avoid overpressure.
+        pt: >-
+          Ao armazenar gases liquefeitos, o aquecimento deve respeitar a lei para evitar sobrepressão.
+        fr: >-
+          Le stockage des gaz liquéfiés doit respecter la loi lors du réchauffement pour éviter les
+          surpressions.
+        zh: >-
+          储存液化气体时,加热必须遵循该定律以免压力过高。
+        ja: >-
+          液化ガスの貯蔵では、過圧を避けるため加熱時にこの法則に従う必要がある。
+  example:
+    title:
+      es: Calentar un gas
+      en: Heating a gas
+      pt: Aquecendo um gás
+      fr: Chauffer un gaz
+      zh: 加热气体
+      ja: 気体を加熱
+    lines:
+      - es: "V₁ = 1 L, T₁ = 300 K"
+        en: "V₁ = 1 L, T₁ = 300 K"
+        pt: "V₁ = 1 L, T₁ = 300 K"
+        fr: "V₁ = 1 L, T₁ = 300 K"
+        zh: "V₁ = 1 L, T₁ = 300 K"
+        ja: "V₁ = 1 L, T₁ = 300 K"
+      - es: "V₁/T₁ = V₂/T₂"
+        en: "V₁/T₁ = V₂/T₂"
+        pt: "V₁/T₁ = V₂/T₂"
+        fr: "V₁/T₁ = V₂/T₂"
+        zh: "V₁/T₁ = V₂/T₂"
+        ja: "V₁/T₁ = V₂/T₂"
+      - es: "1 / 300 = V₂ / 600"
+        en: "1 / 300 = V₂ / 600"
+        pt: "1 / 300 = V₂ / 600"
+        fr: "1 / 300 = V₂ / 600"
+        zh: "1 / 300 = V₂ / 600"
+        ja: "1 / 300 = V₂ / 600"
+      - es: "V₂ = 600 / 300"
+        en: "V₂ = 600 / 300"
+        pt: "V₂ = 600 / 300"
+        fr: "V₂ = 600 / 300"
+        zh: "V₂ = 600 / 300"
+        ja: "V₂ = 600 / 300"
+      - es: "V₂ = 2 L"
+        en: "V₂ = 2 L"
+        pt: "V₂ = 2 L"
+        fr: "V₂ = 2 L"
+        zh: "V₂ = 2 L"
+        ja: "V₂ = 2 L"

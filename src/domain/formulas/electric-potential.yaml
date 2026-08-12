@@ -1,0 +1,345 @@
+id: electric-potential
+title:
+  es: Potencial Eléctrico de una Carga
+  en: Electric Potential of a Point Charge
+  pt: Potencial Elétrico de uma Carga
+  fr: Potentiel Électrique d'une Charge
+  zh: 点电荷的电位
+  ja: 点電荷の電位
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: v
+    type: variable
+    value: V
+    explanation:
+      es: El potencial eléctrico en el punto, en voltios.
+      en: The electric potential at the point, in volts.
+      pt: O potencial elétrico no ponto, em volts.
+      fr: Le potentiel électrique au point, en volts.
+      zh: 该点的电位,单位为伏特。
+      ja: その点の電位。単位はボルト。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: k
+    type: constant
+    value: k
+    explanation:
+      es: La constante de Coulomb, unos 8,99 × 10⁹ N·m²/C².
+      en: Coulomb's constant, about 8.99 × 10⁹ N·m²/C².
+      pt: A constante de Coulomb, cerca de 8,99 × 10⁹ N·m²/C².
+      fr: La constante de Coulomb, environ 8,99 × 10⁹ N·m²/C².
+      zh: 库仑常数,约为 8.99 × 10⁹ N·m²/C²。
+      ja: クーロン定数。およそ 8.99 × 10⁹ N·m²/C²。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación de magnitudes.
+      en: Multiplication of quantities.
+      pt: Multiplicação de grandezas.
+      fr: Multiplication de grandeurs.
+      zh: 数量相乘。
+      ja: 量の掛け算。
+  - id: q
+    type: variable
+    value: Q
+    explanation:
+      es: La carga puntual que crea el potencial.
+      en: The point charge that creates the potential.
+      pt: A carga puntiforme que cria o potencial.
+      fr: La charge ponctuelle qui crée le potentiel.
+      zh: 产生电位的点电荷。
+      ja: 電位を作る点電荷。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por la distancia a la carga.
+      en: Divided by the distance to the charge.
+      pt: Dividido pela distância à carga.
+      fr: Divisée par la distance à la charge.
+      zh: 除以到电荷的距离。
+      ja: 電荷までの距離で割る。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: La distancia desde la carga hasta el punto donde se evalúa el potencial.
+      en: The distance from the charge to the point where the potential is evaluated.
+      pt: A distância da carga até o ponto onde o potencial é avaliado.
+      fr: La distance de la charge au point où le potentiel est évalué.
+      zh: 从电荷到计算电位点的距离。
+      ja: 電荷から電位を評価する点までの距離。
+context:
+  author:
+    es: Basada en el trabajo de Coulomb y Volta
+    en: Based on the work of Coulomb and Volta
+    pt: Baseada no trabalho de Coulomb e Volta
+    fr: D'après les travaux de Coulomb et Volta
+    zh: 基于库仑和伏特的研究成果
+    ja: クーロンとボルタの研究に基づく
+  era:
+    es: Europa, s. XVIII
+    en: Europe, 18th century
+    pt: Europa, séc. XVIII
+    fr: Europe, XVIIIᵉ siècle
+    zh: 欧洲,18世纪
+    ja: ヨーロッパ、18世紀
+  history:
+    es: >-
+      El potencial eléctrico mide la energía potencial por unidad de carga en un punto del espacio, y
+      para una carga puntual vale V = k·Q/r, resultado que se obtiene integrando la ley de Coulomb de
+      1785. A diferencia del campo eléctrico, que es un vector, el potencial es un escalar, y eso lo
+      vuelve una herramienta práctica para resolver problemas electrostáticos. También explica por qué
+      las líneas de alta tensión son peligrosas incluso sin contacto: un potencial de decenas de miles
+      de voltios puede romper el aire y atraer una descarga, por eso los operarios mantienen distancias
+      mínimas de seguridad.
+    en: >-
+      Electric potential measures the potential energy per unit charge at a point in space, and for a
+      point charge it is V = k·Q/r, a result obtained by integrating Coulomb's law of 1785. Unlike the
+      electric field, which is a vector, the potential is a scalar, which makes it a practical tool for
+      solving electrostatic problems. It also explains why high-voltage lines are dangerous even
+      without contact: a potential of tens of thousands of volts can break down the air and draw a
+      spark, which is why workers keep strict minimum approach distances.
+    pt: >-
+      O potencial elétrico mede a energia potencial por unidade de carga em um ponto do espaço, e para
+      uma carga puntiforme vale V = k·Q/r, resultado que se obtém integrando a lei de Coulomb de 1785.
+      Ao contrário do campo elétrico, que é um vetor, o potencial é um escalar, o que o torna uma
+      ferramenta prática para resolver problemas eletrostáticos. Ele também explica por que as linhas
+      de alta tensão são perigosas mesmo sem contato: um potencial de dezenas de milhares de volts pode
+      romper o ar e atrair uma descarga, por isso os operários mantêm distâncias mínimas de segurança.
+    fr: >-
+      Le potentiel électrique mesure l'énergie potentielle par unité de charge en un point de
+      l'espace, et pour une charge ponctuelle il vaut V = k·Q/r, résultat obtenu en intégrant la loi
+      de Coulomb de 1785. Contrairement au champ électrique, qui est un vecteur, le potentiel est un
+      scalaire, ce qui en fait un outil pratique pour résoudre les problèmes électrostatiques. Il
+      explique aussi pourquoi les lignes à haute tension sont dangereuses même sans contact : un
+      potentiel de dizaines de milliers de volts peut claquer l'air et attirer une étincelle, c'est
+      pourquoi les opérateurs respectent des distances minimales d'approche.
+    zh: >-
+      电位度量空间中某点处每单位电荷所具有的势能,对点电荷而言等于 V = k·Q/r,这一结果由1785年的库仑定律积分而来。
+      与矢量电场不同,电位是标量,因此它是解决静电问题的实用工具。它还解释了为什么高压线路即使不接触也很危险:数万伏
+      的电位能击穿空气并吸引放电,所以作业人员须保持最低安全距离。
+    ja: >-
+      電位は、空間の各点における単位電荷あたりの位置エネルギーを表す。点電荷については V = k·Q/r となり、この結果
+      は1785年のクーロンの法則を積分して得られる。電界がベクトルであるのに対し、電位はスカラーであり、静電気の問題
+      を解く実用的な道具となる。また、なぜ高電圧線が接触しなくても危険なのかも説明する。数万ボルトの電位は空気を絶
+      縁破壊して放電を引き寄せるため、作業員は最小接近距離を守る。
+  timeline:
+    - year: "1785"
+      label:
+        es: >-
+          Coulomb mide la fuerza entre cargas con su balanza de torsión y establece la ley del
+          cuadrado inverso.
+        en: >-
+          Coulomb measures the force between charges with his torsion balance and establishes the
+          inverse-square law.
+        pt: >-
+          Coulomb mede a força entre cargas com sua balança de torção e estabelece a lei do inverso
+          do quadrado.
+        fr: >-
+          Coulomb mesure la force entre charges avec sa balance de torsion et établit la loi en
+          carré inverse.
+        zh: >-
+          库仑用扭秤测量电荷之间的作用力,确立了平方反比定律。
+        ja: >-
+          クーロンがねじり天秤で電荷間の力を測定し、逆2乗の法則を確立する。
+    - year: "1800"
+      label:
+        es: >-
+          Volta presenta la pila voltaica, la primera fuente estable de potencial eléctrico.
+        en: >-
+          Volta presents the voltaic pile, the first steady source of electric potential.
+        pt: >-
+          Volta apresenta a pilha voltaica, a primeira fonte estável de potencial elétrico.
+        fr: >-
+          Volta présente la pile voltaïque, la première source stable de potentiel électrique.
+        zh: >-
+          伏特展示伏打电堆,这是第一个稳定的电位源。
+        ja: >-
+          ボルタがボルタ電池を発表し、安定した電位源の最初となる。
+    - year: "1891"
+      label:
+        es: >-
+          Las líneas de alta tensión comienzan a transmitir energía a larga distancia con niveles
+          que hoy llamaríamos peligrosos.
+        en: >-
+          High-voltage lines begin carrying power over long distances at levels we would call
+          dangerous today.
+        pt: >-
+          Linhas de alta tensão começam a transmitir energia a longas distâncias em níveis que hoje
+          chamaríamos de perigosos.
+        fr: >-
+          Les lignes à haute tension commencent à transporter l'énergie sur de longues distances à
+          des niveaux que nous appellerions dangereux aujourd'hui.
+        zh: >-
+          高压线路开始远距离输电,其电平在今天看来十分危险。
+        ja: >-
+          高圧送電線が、今日なら危険と言える水準で長距離送電を始める。
+    - year: Hoy
+      label:
+        es: >-
+          El potencial escalar simplifica el análisis de circuitos y de los campos electrostáticos de
+          alta tensión.
+        en: >-
+          The scalar potential simplifies the analysis of circuits and high-voltage electrostatic
+          fields.
+        pt: >-
+          O potencial escalar simplifica a análise de circuitos e de campos eletrostáticos de alta
+          tensão.
+        fr: >-
+          Le potentiel scalaire simplifie l'analyse des circuits et des champs électrostatiques à
+          haute tension.
+        zh: >-
+          标量电位简化了电路和高压静电场的分析。
+        ja: >-
+          スカラーの電位が、回路や高圧静電界の解析を簡素化する。
+  useCases:
+    - title:
+        es: Transmisión en alta tensión
+        en: High-voltage power transmission
+        pt: Transmissão em alta tensão
+        fr: Transport en haute tension
+        zh: 高压输电
+        ja: 高圧送電
+      description:
+        es: >-
+          El potencial de la línea define las distancias de seguridad y el riesgo de descarga para
+          los operarios.
+        en: >-
+          The line's potential sets the safety distances and the discharge risk workers face.
+        pt: >-
+          O potencial da linha define as distâncias de segurança e o risco de descarga para os
+          operários.
+        fr: >-
+          Le potentiel de la ligne fixe les distances de sécurité et le risque de décharge des
+          opérateurs.
+        zh: >-
+          线路的电位决定作业人员的安全距离和放电风险。
+        ja: >-
+          送電線の電位が、作業員の安全距離と放電リスクを決める。
+    - title:
+        es: Análisis de circuitos
+        en: Circuit analysis
+        pt: Análise de circuitos
+        fr: Analyse des circuits
+        zh: 电路分析
+        ja: 回路解析
+      description:
+        es: >-
+          El método de potenciales de nodo resuelve redes completas calculando un solo escalar por
+          nodo.
+        en: >-
+          Nodal analysis solves entire networks by computing one scalar per node.
+        pt: >-
+          A análise nodal resolve redes inteiras calculando um único escalar por nó.
+        fr: >-
+          L'analyse nodale résout des réseaux entiers en calculant un seul scalaire par nœud.
+        zh: >-
+          节点电位法对每个节点只计算一个标量,即可解出整个网络。
+        ja: >-
+          節点電位法は、各ノードにつき1つのスカラーを計算するだけでネットワーク全体を解く。
+    - title:
+        es: Instrumentación de laboratorio
+        en: Laboratory instrumentation
+        pt: Instrumentação de laboratório
+        fr: Instrumentation de laboratoire
+        zh: 实验室仪器
+        ja: 実験室計測
+      description:
+        es: >-
+          Electrodos de referencia y sondas miden la diferencia de potencial, base de sensores y
+          pHmetros.
+        en: >-
+          Reference electrodes and probes measure potential differences, the basis of sensors and pH
+          meters.
+        pt: >-
+          Eletrodos de referência e sondas medem a diferença de potencial, base de sensores e
+          pHmetros.
+        fr: >-
+          Électrodes de référence et sondes mesurent la différence de potentiel, base des capteurs
+          et des pH-mètres.
+        zh: >-
+          参考电极和探针测量电位差,这是传感器和pH计的基础。
+        ja: >-
+          基準電極やプローブが電位差を測る。これはセンサーやpH計の基礎である。
+    - title:
+        es: Aceleradores de partículas
+        en: Particle accelerators
+        pt: Aceleradores de partículas
+        fr: Accélérateurs de particules
+        zh: 粒子加速器
+        ja: 粒子加速器
+      description:
+        es: >-
+          Diferencias de potencial de millones de voltios aceleran haces de partículas cargadas.
+        en: >-
+          Potential differences of millions of volts accelerate beams of charged particles.
+        pt: >-
+          Diferenças de potencial de milhões de volts aceleram feixes de partículas carregadas.
+        fr: >-
+          Des différences de potentiel de millions de volts accélèrent des faisceaux de particules
+          chargées.
+        zh: >-
+          数百万伏的电位差加速带电粒子束。
+        ja: >-
+          数百万ボルトの電位差が荷電粒子ビームを加速する。
+  example:
+    title:
+      es: Potencial cerca de una carga puntual
+      en: Potential near a point charge
+      pt: Potencial perto de uma carga puntiforme
+      fr: Potentiel près d'une charge ponctuelle
+      zh: 点电荷附近的电位
+      ja: 点電荷の近くの電位
+    lines:
+      - es: Q = 1 µC
+        en: Q = 1 µC
+        pt: Q = 1 µC
+        fr: Q = 1 µC
+        zh: Q = 1 µC
+        ja: Q = 1 µC
+      - es: r = 0,1 m
+        en: r = 0.1 m
+        pt: r = 0,1 m
+        fr: r = 0,1 m
+        zh: r = 0.1 m
+        ja: r = 0.1 m
+      - es: k = 8,99 × 10⁹ N·m²/C²
+        en: k = 8.99 × 10⁹ N·m²/C²
+        pt: k = 8,99 × 10⁹ N·m²/C²
+        fr: k = 8,99 × 10⁹ N·m²/C²
+        zh: k = 8.99 × 10⁹ N·m²/C²
+        ja: k = 8.99 × 10⁹ N·m²/C²
+      - es: V = k · Q / r
+        en: V = k · Q / r
+        pt: V = k · Q / r
+        fr: V = k · Q / r
+        zh: V = k · Q / r
+        ja: V = k · Q / r
+      - es: V = 8,99 × 10⁹ × 10⁻⁶ / 0,1
+        en: V = 8.99 × 10⁹ × 10⁻⁶ / 0.1
+        pt: V = 8,99 × 10⁹ × 10⁻⁶ / 0,1
+        fr: V = 8,99 × 10⁹ × 10⁻⁶ / 0,1
+        zh: V = 8.99 × 10⁹ × 10⁻⁶ / 0.1
+        ja: V = 8.99 × 10⁹ × 10⁻⁶ / 0.1
+      - es: V ≈ 89 900 V
+        en: V ≈ 89,900 V
+        pt: V ≈ 89 900 V
+        fr: V ≈ 89 900 V
+        zh: V ≈ 89 900 V
+        ja: V ≈ 89 900 V

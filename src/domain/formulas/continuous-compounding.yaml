@@ -1,0 +1,268 @@
+id: continuous-compounding
+title:
+  es: Interés Compuesto Continuo
+  en: Continuous Compounding
+  pt: Juros Compostos Contínuos
+  fr: Intérêts composés continus
+  zh: 连续复利
+  ja: 連続複利
+category:
+  es: Finanzas
+  en: Finance
+  pt: Finanças
+  fr: Finance
+  zh: 金融
+  ja: 金融
+nodes:
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: "A: el monto final."
+      en: "A: the final amount."
+      pt: "A: o montante final."
+      fr: "A : le montant final."
+      zh: "A：最终金额。"
+      ja: "A：最終金額。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: p
+    type: variable
+    value: P
+    explanation:
+      es: "P: el capital inicial."
+      en: "P: the initial principal."
+      pt: "P: o capital inicial."
+      fr: "P : le capital initial."
+      zh: "P：初始本金。"
+      ja: "P：元本。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: e
+    type: constant
+    value: e
+    explanation:
+      es: "e: la constante de Euler, base del crecimiento continuo."
+      en: "e: Euler's constant, the base of continuous growth."
+      pt: "e: a constante de Euler, base do crescimento contínuo."
+      fr: "e : la constante d'Euler, base de la croissance continue."
+      zh: "e：欧拉常数，连续增长的底。"
+      ja: "e：オイラー定数。連続的な成長の底。"
+  - id: exp
+    type: superscript
+    value: rt
+    explanation:
+      es: "Elevado a r·t: la tasa por el tiempo."
+      en: "Raised to r·t: the rate times the time."
+      pt: "Elevado a r·t: a taxa vezes o tempo."
+      fr: "Élevé à r·t : le taux fois le temps."
+      zh: "的rt次方：利率乘以时间。"
+      ja: "rt乗。金利×時間。"
+context:
+  author:
+    es: Jacob Bernoulli y Leonhard Euler
+    en: Jacob Bernoulli and Leonhard Euler
+    pt: Jacob Bernoulli e Leonhard Euler
+    fr: Jacob Bernoulli et Leonhard Euler
+    zh: 雅各布·伯努利与莱昂哈德·欧拉
+    ja: ヤコブ・ベルヌーイとレオンハルト・オイラー
+  era:
+    es: Suiza, s. XVII–XVIII · límite de Bernoulli en 1683
+    en: Switzerland, 17th–18th centuries · Bernoulli's limit in 1683
+    pt: Suíça, sécs. XVII–XVIII · limite de Bernoulli em 1683
+    fr: Suisse, XVIIe–XVIIIe siècles · limite de Bernoulli en 1683
+    zh: 瑞士，17–18世纪·1683年伯努利的极限
+    ja: スイス、17〜18世紀・1683年のベルヌーイの極限
+  history:
+    es: >-
+      Jacob Bernoulli descubrió en 1683, al estudiar el interés compuesto, que capitalizar con
+      frecuencia infinita produce e^(rt): la fórmula del interés compuesto continuo. Euler bautizó esa
+      constante como e y mostró que el límite (1+1/n)ⁿ converge a ella. La fórmula describe todo
+      crecimiento que ocurre sin pausas: bacterias, poblaciones, intereses, decaimiento. Es el límite
+      natural del interés compuesto discreto cuando los periodos se vuelven infinitesimales.
+    en: >-
+      In 1683, studying compound interest, Jacob Bernoulli discovered that compounding with infinite
+      frequency yields e^(rt): the continuous compounding formula. Euler named that constant e and
+      showed the limit (1+1/n)ⁿ converges to it. The formula describes all growth that happens without
+      pauses: bacteria, populations, interest, decay. It is the natural limit of discrete compound
+      interest as periods become infinitesimal.
+    pt: >-
+      Jacob Bernoulli descobriu em 1683, ao estudar os juros compostos, que capitalizar com frequência
+      infinita produz e^(rt): a fórmula dos juros compostos contínuos. Euler batizou essa constante de e
+      e mostrou que o limite (1+1/n)ⁿ converge para ela. A fórmula descreve todo crescimento que ocorre
+      sem pausas: bactérias, populações, juros, decaimento. É o limite natural dos juros compostos
+      discretos quando os períodos se tornam infinitesimais.
+    fr: >-
+      Jacob Bernoulli découvrit en 1683, en étudiant les intérêts composés, qu'une capitalisation de
+      fréquence infinie donne e^(rt) : la formule des intérêts composés continus. Euler baptisa cette
+      constante e et montra que la limite (1+1/n)ⁿ converge vers elle. La formule décrit toute
+      croissance qui se produit sans pauses : bactéries, populations, intérêts, décroissance. C'est la
+      limite naturelle des intérêts composés discrets quand les périodes deviennent infinitésimales.
+    zh: >-
+      雅各布·伯努利在1683年研究复利时发现，以无限频率计息会产生e^(rt)：即连续复利公式。欧拉将该常数命名为e，
+      并证明极限(1+1/n)ⁿ收敛于它。该公式描述一切不间断的增长：细菌、种群、利息、衰变。当计息周期趋于无穷小时，
+      它就是离散复利的自然极限。
+    ja: >-
+      ヤコブ・ベルヌーイは1683年、複利の研究から、無限の頻度で複利計算するとe^(rt)が得られることを発見した。
+      すなわち、連続複利の公式である。オイラーはこの定数をeと名付け、極限(1+1/n)ⁿがこれに収束することを示した。
+      この公式は、途切れることなく起こるあらゆる成長、つまり細菌、人口、利息、減衰を記述する。これは、期間が
+      無限小になるときの離散複利の自然な極限である。
+  timeline:
+    - year: "1683"
+      label:
+        es: >-
+          Bernoulli estudia el interés compuesto con capitalización infinita y encuentra e.
+        en: >-
+          Bernoulli studies compound interest with infinite compounding and finds e.
+        pt: >-
+          Bernoulli estuda os juros compostos com capitalização infinita e encontra e.
+        fr: >-
+          Bernoulli étudie les intérêts composés à capitalisation infinie et trouve e.
+        zh: >-
+          伯努利研究无限复利并发现e。
+        ja: >-
+          ベルヌーイが無限回複利の利息を研究し、eを見出す。
+    - year: "1728"
+      label:
+        es: >-
+          Euler introduce la notación e y calcula sus primeras cifras.
+        en: >-
+          Euler introduces the notation e and computes its first digits.
+        pt: >-
+          Euler introduz a notação e e calcula suas primeiras cifras.
+        fr: >-
+          Euler introduit la notation e et calcule ses premiers chiffres.
+        zh: >-
+          欧拉引入记号e，并算出它的前几位。
+        ja: >-
+          オイラーが記号eを導入し、その最初の桁を計算する。
+    - year: Hoy
+      label:
+        es: >-
+          Es el modelo estándar de crecimiento en finanzas, biología y física.
+        en: >-
+          It is the standard growth model in finance, biology, and physics.
+        pt: >-
+          É o modelo padrão de crescimento em finanças, biologia e física.
+        fr: >-
+          C'est le modèle de croissance standard en finance, biologie et physique.
+        zh: >-
+          它是金融、生物学和物理学中的标准增长模型。
+        ja: >-
+          金融、生物学、物理学における標準的な成長モデルである。
+  useCases:
+    - title:
+        es: Mercados financieros
+        en: Financial markets
+        pt: Mercados financeiros
+        fr: Marchés financiers
+        zh: 金融市场
+        ja: 金融市場
+      description:
+        es: >-
+          El modelo Black-Scholes usa interés compuesto continuo para valorar opciones.
+        en: >-
+          The Black–Scholes model uses continuous compounding to price options.
+        pt: >-
+          O modelo Black-Scholes usa juros compostos contínuos para precificar opções.
+        fr: >-
+          Le modèle Black-Scholes utilise les intérêts composés continus pour évaluer les options.
+        zh: >-
+          布莱克-舒尔斯模型用连续复利为期权定价。
+        ja: >-
+          ブラック・ショールズモデルは、連続複利を使ってオプションを価格付けする。
+    - title:
+        es: Biología
+        en: Biology
+        pt: Biologia
+        fr: Biologie
+        zh: 生物学
+        ja: 生物学
+      description:
+        es: >-
+          El crecimiento exponencial de poblaciones y cultivos sigue esta fórmula.
+        en: >-
+          Exponential growth of populations and cultures follows this formula.
+        pt: >-
+          O crescimento exponencial de populações e culturas segue essa fórmula.
+        fr: >-
+          La croissance exponentielle des populations et des cultures suit cette formule.
+        zh: >-
+          种群和培养物的指数增长遵循这一公式。
+        ja: >-
+          人口や培養物の指数関数的成長は、この公式に従う。
+    - title:
+        es: Desintegración radiactiva
+        en: Radioactive decay
+        pt: Decaimento radioativo
+        fr: Décroissance radioactive
+        zh: 放射性衰变
+        ja: 放射性崩壊
+      description:
+        es: >-
+          La cantidad restante de un isótopo decae con el mismo modelo continuo.
+        en: >-
+          The remaining amount of an isotope decays with the same continuous model.
+        pt: >-
+          A quantidade restante de um isótopo decai com o mesmo modelo contínuo.
+        fr: >-
+          La quantité restante d'un isotope décroît avec le même modèle continu.
+        zh: >-
+          同位素的剩余量以同样的连续模型衰减。
+        ja: >-
+          同位体の残存量は、同じ連続モデルで減衰する。
+  example:
+    title:
+      es: 1000 a 5% durante 3 años
+      en: 1000 at 5% for 3 years
+      pt: 1000 a 5% por 3 anos
+      fr: 1000 à 5 % pendant 3 ans
+      zh: 1000按5%利率存3年
+      ja: 1000を年利5%で3年間
+    lines:
+      - es: "P = 1000, r = 0.05, t = 3"
+        en: "P = 1000, r = 0.05, t = 3"
+        pt: "P = 1000, r = 0,05, t = 3"
+        fr: "P = 1000, r = 0,05, t = 3"
+        zh: "P = 1000，r = 0.05，t = 3"
+        ja: "P = 1000、r = 0.05、t = 3"
+      - es: A = 1000 · e^(0.05·3)
+        en: A = 1000 · e^(0.05·3)
+        pt: A = 1000 · e^(0,05·3)
+        fr: A = 1000 · e^(0,05·3)
+        zh: A = 1000 · e^(0.05·3)
+        ja: A = 1000 · e^(0.05·3)
+      - es: A = 1000 · e^0.15
+        en: A = 1000 · e^0.15
+        pt: A = 1000 · e^0,15
+        fr: A = 1000 · e^0,15
+        zh: A = 1000 · e^0.15
+        ja: A = 1000 · e^0.15
+      - es: e^0.15 ≈ 1.1618
+        en: e^0.15 ≈ 1.1618
+        pt: e^0,15 ≈ 1,1618
+        fr: e^0,15 ≈ 1,1618
+        zh: e^0.15 ≈ 1.1618
+        ja: e^0.15 ≈ 1.1618
+      - es: A ≈ 1000 · 1.1618 = 1161.83
+        en: A ≈ 1000 · 1.1618 = 1161.83
+        pt: A ≈ 1000 · 1,1618 = 1161,83
+        fr: A ≈ 1000 · 1,1618 = 1161,83
+        zh: A ≈ 1000 · 1.1618 = 1161.83
+        ja: A ≈ 1000 · 1.1618 = 1161.83

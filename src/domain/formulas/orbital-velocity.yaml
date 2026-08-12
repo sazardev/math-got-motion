@@ -1,0 +1,355 @@
+id: orbital-velocity
+title:
+  es: Velocidad Orbital
+  en: Orbital Velocity
+  pt: Velocidade Orbital
+  fr: Vitesse orbitale
+  zh: 轨道速度
+  ja: 軌道速度
+category:
+  es: Astronomía
+  en: Astronomy
+  pt: Astronomia
+  fr: Astronomie
+  zh: 天文学
+  ja: 天文学
+nodes:
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: "v: la velocidad que mantiene al objeto en su órbita."
+      en: "v: the speed that keeps the object in its orbit."
+      pt: "v: a velocidade que mantém o objeto em sua órbita."
+      fr: "v : la vitesse qui maintient l'objet sur son orbite."
+      zh: "v：使物体保持在其轨道上的速度。"
+      ja: "v：物体を軌道上に保つ速度。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: Raíz cuadrada de.
+      en: Square root of.
+      pt: Raiz quadrada de.
+      fr: Racine carrée de.
+      zh: 的平方根。
+      ja: の平方根。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre la expresión.
+      en: Opens the expression.
+      pt: Abre a expressão.
+      fr: Ouvre l'expression.
+      zh: 打开表达式。
+      ja: 式を開く括弧。
+  - id: g
+    type: constant
+    value: G
+    explanation:
+      es: "G: la constante de gravitación universal."
+      en: "G: the universal gravitational constant."
+      pt: "G: a constante de gravitação universal."
+      fr: "G : la constante de gravitation universelle."
+      zh: "G：万有引力常数。"
+      ja: "G：万有引力定数。"
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: m
+    type: variable
+    value: M
+    explanation:
+      es: "M: la masa del planeta o cuerpo central."
+      en: "M: the mass of the planet or central body."
+      pt: "M: a massa do planeta ou corpo central."
+      fr: "M : la masse de la planète ou du corps central."
+      zh: "M：行星或中心天体的质量。"
+      ja: "M：惑星または中心天体の質量。"
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "r: la distancia del objeto al centro del planeta."
+      en: "r: the distance from the object to the planet's center."
+      pt: "r: a distância do objeto ao centro do planeta."
+      fr: "r : la distance de l'objet au centre de la planète."
+      zh: "r：物体到行星中心的距离。"
+      ja: "r：物体から惑星の中心までの距離。"
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra la expresión.
+      en: Closes the expression.
+      pt: Fecha a expressão.
+      fr: Ferme l'expression.
+      zh: 关闭表达式。
+      ja: 式を閉じる括弧。
+context:
+  author:
+    es: Isaac Newton
+    en: Isaac Newton
+    pt: Isaac Newton
+    fr: Isaac Newton
+    zh: 艾萨克·牛顿
+    ja: アイザック・ニュートン
+  era:
+    es: Inglaterra, 1643–1727 · en los Principia, 1687
+    en: England, 1643–1727 · in the Principia, 1687
+    pt: Inglaterra, 1643–1727 · nos Principia, 1687
+    fr: Angleterre, 1643–1727 · dans les Principia, 1687
+    zh: 英国，1643–1727年 · 载于《原理》，1687年
+    ja: イングランド、1643–1727年・『プリンキピア』1687年
+  history:
+    es: >-
+      Newton imaginó en los Principia un cañón tan potente que su proyectil caía siguiendo la
+      curvatura de la Tierra y nunca la tocaba: es la idea de la órbita. La velocidad orbital es la
+      que equilibra la atracción gravitatoria con la inercia del movimiento lateral, y se calcula
+      como la raíz cuadrada de G·M partido por la distancia al centro del planeta. En órbita baja
+      son unos 7.8 km/s; cuanto más lejos, menos velocidad se necesita. Por eso los satélites
+      geoestacionarios se sitúan a unos 35 786 km, donde su período coincide con la rotación de la
+      Tierra.
+    en: >-
+      Newton imagined in the Principia a cannon so powerful that its shot fell following Earth's
+      curvature and never touched the ground: that is the idea of an orbit. Orbital velocity is the
+      speed that balances gravitational pull against the inertia of sideways motion, given by the
+      square root of G·M over the distance to the planet's center. In low Earth orbit it is about
+      7.8 km/s; the farther out, the less speed is needed. That is why geostationary satellites sit
+      at about 35,786 km, where their period matches Earth's rotation.
+    pt: >-
+      Newton imaginou nos Principia um canhão tão potente que seu projétil caía acompanhando a
+      curvatura da Terra e nunca a tocava: é a ideia da órbita. A velocidade orbital é a que
+      equilibra a atração gravitacional com a inércia do movimento lateral, dada pela raiz quadrada
+      de G·M sobre a distância ao centro do planeta. Em órbita baixa são cerca de 7,8 km/s; quanto
+      mais longe, menos velocidade é necessária. Por isso os satélites geoestacionários ficam a
+      cerca de 35 786 km, onde seu período coincide com a rotação da Terra.
+    fr: >-
+      Newton imagina dans les Principia un canon si puissant que son boulet retombait en suivant la
+      courbure de la Terre sans jamais la toucher : c'est l'idée de l'orbite. La vitesse orbitale
+      est celle qui équilibre l'attraction gravitationnelle et l'inertie du mouvement latéral, donnée
+      par la racine carrée de G·M divisé par la distance au centre de la planète. En orbite basse
+      elle est d'environ 7,8 km/s ; plus on s'éloigne, moins il faut de vitesse. C'est pourquoi les
+      satellites géostationnaires se placent à environ 35 786 km, où leur période coïncide avec la
+      rotation de la Terre.
+    zh: >-
+      牛顿在《原理》中设想了一门威力巨大的加农炮，其炮弹在坠落时始终沿着地球的曲率飞行而不会落地：
+      这就是轨道的概念。轨道速度是指使引力吸引与侧向运动的惯性相平衡的速度，等于G·M除以到行星中心距离后的
+      平方根。在低地球轨道约为7.8千米/秒；距离越远，所需速度越小。因此地球静止卫星位于约35786千米的高度，
+      那里的运行周期与地球自转一致。
+    ja: >-
+      ニュートンは『プリンキピア』で、地球の丸みに沿って落ち続け、決して地表に当たらないほど強力な大砲を想像した。
+      それが軌道の考え方である。軌道速度とは、重力による引き寄せと横方向の運動の慣性を釣り合わせる速度であり、
+      G・Mを惑星中心までの距離で割った値の平方根で与えられる。低軌道では約7.8 km/sで、遠いほど必要な速度は
+      小さくなる。だからこそ静止衛星は約3万5786 kmに位置し、その周期は地球の自転と一致する。
+  timeline:
+    - year: "1687"
+      label:
+        es: >-
+          Newton describe su experimento mental del cañón en los Principia.
+        en: >-
+          Newton describes his cannonball thought experiment in the Principia.
+        pt: >-
+          Newton descreve seu experimento mental do canhão nos Principia.
+        fr: >-
+          Newton décrit son expérience de pensée du canon dans les Principia.
+        zh: >-
+          牛顿在《原理》中描述了他的加农炮思想实验。
+        ja: >-
+          ニュートンが『プリンキピア』で大砲の思考実験を記述する。
+    - year: "1957"
+      label:
+        es: >-
+          El Sputnik 1 se convierte en el primer satélite artificial, volando a unos 7.8 km/s.
+        en: >-
+          Sputnik 1 becomes the first artificial satellite, flying at about 7.8 km/s.
+        pt: >-
+          O Sputnik 1 se torna o primeiro satélite artificial, voando a cerca de 7,8 km/s.
+        fr: >-
+          Spoutnik 1 devient le premier satellite artificiel, volant à environ 7,8 km/s.
+        zh: >-
+          斯普特尼克1号成为第一颗人造卫星，以约7.8千米/秒的速度飞行。
+        ja: >-
+          スプートニク1号が、約7.8 km/sで飛行する初の人工衛星となる。
+    - year: "1964"
+      label:
+        es: >-
+          El Syncom 3 se coloca en órbita geoestacionaria, a unos 35 786 km de altitud.
+        en: >-
+          Syncom 3 settles into geostationary orbit, at about 35,786 km of altitude.
+        pt: >-
+          O Syncom 3 entra em órbita geoestacionária, a cerca de 35 786 km de altitude.
+        fr: >-
+          Syncom 3 se place en orbite géostationnaire, à environ 35 786 km d'altitude.
+        zh: >-
+          辛康3号进入地球静止轨道，高度约35786千米。
+        ja: >-
+          シンコム3号が、高度約3万5786 kmの静止軌道に投入される。
+    - year: Hoy
+      label:
+        es: >-
+          Todo satélite, estación espacial y sonda obedece a esta velocidad exacta.
+        en: >-
+          Every satellite, space station, and probe obeys this exact speed.
+        pt: >-
+          Todo satélite, estação espacial e sonda obedece a essa velocidade exata.
+        fr: >-
+          Chaque satellite, station spatiale et sonde obéit à cette vitesse exacte.
+        zh: >-
+          每一颗卫星、空间站和探测器都遵循这一精确速度。
+        ja: >-
+          すべての衛星、宇宙ステーション、探査機が、この正確な速度に従っている。
+  useCases:
+    - title:
+        es: Lanzamiento de satélites
+        en: Satellite deployment
+        pt: Lançamento de satélites
+        fr: Mise en orbite de satellites
+        zh: 卫星发射
+        ja: 衛星打ち上げ
+      description:
+        es: >-
+          Fija la velocidad a la que la etapa superior debe soltar la carga en su órbita.
+        en: >-
+          It sets the speed at which the upper stage must release the payload into orbit.
+        pt: >-
+          Define a velocidade com que o estágio superior deve soltar a carga em sua órbita.
+        fr: >-
+          Elle fixe la vitesse à laquelle l'étage supérieur doit larguer la charge en orbite.
+        zh: >-
+          确定上面级将有效载荷送入轨道时应达到的速度。
+        ja: >-
+          上段ロケットがペイロードを軌道に投入するときの速度を定める。
+    - title:
+        es: Satélites geoestacionarios
+        en: Geostationary satellites
+        pt: Satélites geoestacionários
+        fr: Satellites géostationnaires
+        zh: 地球静止卫星
+        ja: 静止衛星
+      description:
+        es: >-
+          A 35 786 km la velocidad orbital hace que el satélite gire junto con la Tierra.
+        en: >-
+          At 35,786 km orbital velocity makes the satellite turn together with Earth.
+        pt: >-
+          A 35 786 km a velocidade orbital faz o satélite girar junto com a Terra.
+        fr: >-
+          À 35 786 km, la vitesse orbitale fait tourner le satellite avec la Terre.
+        zh: >-
+          在35786千米高度，轨道速度使卫星与地球同步转动。
+        ja: >-
+          高度3万5786 kmでは、軌道速度により衛星が地球と一緒に回転する。
+    - title:
+        es: Estaciones espaciales
+        en: Space stations
+        pt: Estações espaciais
+        fr: Stations spatiales
+        zh: 空间站
+        ja: 宇宙ステーション
+      description:
+        es: >-
+          La Estación Espacial Internacional orbita a unos 7.66 km/s en órbita baja.
+        en: >-
+          The International Space Station orbits at about 7.66 km/s in low Earth orbit.
+        pt: >-
+          A Estação Espacial Internacional orbita a cerca de 7,66 km/s em órbita baixa.
+        fr: >-
+          La Station spatiale internationale orbite à environ 7,66 km/s en orbite basse.
+        zh: >-
+          国际空间站在低地球轨道上以约7.66千米/秒的速度运行。
+        ja: >-
+          国際宇宙ステーションは低軌道を約7.66 km/sで周回する。
+    - title:
+        es: Constelaciones de navegación
+        en: Navigation constellations
+        pt: Constelações de navegação
+        fr: Constellations de navigation
+        zh: 导航星座
+        ja: 航法衛星群
+      description:
+        es: >-
+          El GPS combina la velocidad orbital con relojes atómicos para ubicar cualquier punto.
+        en: >-
+          GPS combines orbital velocity with atomic clocks to locate any point.
+        pt: >-
+          O GPS combina a velocidade orbital com relógios atômicos para localizar qualquer ponto.
+        fr: >-
+          Le GPS combine la vitesse orbitale et des horloges atomiques pour localiser tout point.
+        zh: >-
+          GPS将轨道速度与原子钟相结合，可定位任意地点。
+        ja: >-
+          GPSは軌道速度と原子時計を組み合わせ、あらゆる地点を特定する。
+  example:
+    title:
+      es: Órbita a 400 km de altitud
+      en: A 400 km orbit
+      pt: Órbita a 400 km de altitude
+      fr: Une orbite à 400 km d'altitude
+      zh: 400千米高度的轨道
+      ja: 高度400 kmの軌道
+    lines:
+      - es: G = 6.674×10⁻¹¹, M = 5.972×10²⁴ kg, r = 6.771×10⁶ m
+        en: G = 6.674×10⁻¹¹, M = 5.972×10²⁴ kg, r = 6.771×10⁶ m
+        pt: G = 6,674×10⁻¹¹, M = 5,972×10²⁴ kg, r = 6,771×10⁶ m
+        fr: G = 6,674×10⁻¹¹, M = 5,972×10²⁴ kg, r = 6,771×10⁶ m
+        zh: G = 6.674×10⁻¹¹，M = 5.972×10²⁴ 千克，r = 6.771×10⁶ 米
+        ja: G = 6.674×10⁻¹¹、M = 5.972×10²⁴ kg、r = 6.771×10⁶ m
+      - es: G·M = 6.674×10⁻¹¹ × 5.972×10²⁴ ≈ 3.986×10¹⁴
+        en: G·M = 6.674×10⁻¹¹ × 5.972×10²⁴ ≈ 3.986×10¹⁴
+        pt: G·M = 6,674×10⁻¹¹ × 5,972×10²⁴ ≈ 3,986×10¹⁴
+        fr: G·M = 6,674×10⁻¹¹ × 5,972×10²⁴ ≈ 3,986×10¹⁴
+        zh: G·M = 6.674×10⁻¹¹ × 5.972×10²⁴ ≈ 3.986×10¹⁴
+        ja: G·M = 6.674×10⁻¹¹ × 5.972×10²⁴ ≈ 3.986×10¹⁴
+      - es: G·M/r = 3.986×10¹⁴ / 6.771×10⁶ ≈ 5.887×10⁷
+        en: G·M/r = 3.986×10¹⁴ / 6.771×10⁶ ≈ 5.887×10⁷
+        pt: G·M/r = 3,986×10¹⁴ / 6,771×10⁶ ≈ 5,887×10⁷
+        fr: G·M/r = 3,986×10¹⁴ / 6,771×10⁶ ≈ 5,887×10⁷
+        zh: G·M/r = 3.986×10¹⁴ / 6.771×10⁶ ≈ 5.887×10⁷
+        ja: G·M/r = 3.986×10¹⁴ / 6.771×10⁶ ≈ 5.887×10⁷
+      - es: v = √(5.887×10⁷)
+        en: v = √(5.887×10⁷)
+        pt: v = √(5,887×10⁷)
+        fr: v = √(5,887×10⁷)
+        zh: v = √(5.887×10⁷)
+        ja: v = √(5.887×10⁷)
+      - es: v ≈ 7670 m/s
+        en: v ≈ 7670 m/s
+        pt: v ≈ 7670 m/s
+        fr: v ≈ 7670 m/s
+        zh: v ≈ 7670 米/秒
+        ja: v ≈ 7670 m/s
+      - es: v ≈ 7.67 km/s
+        en: v ≈ 7.67 km/s
+        pt: v ≈ 7,67 km/s
+        fr: v ≈ 7,67 km/s
+        zh: v ≈ 7.67 千米/秒
+        ja: v ≈ 7.67 km/s

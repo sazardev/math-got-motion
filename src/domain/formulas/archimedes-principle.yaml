@@ -1,0 +1,360 @@
+id: archimedes-principle
+title:
+  es: Principio de Arquímedes
+  en: Archimedes' Principle
+  pt: Princípio de Arquimedes
+  fr: Principe d'Archimède
+  zh: 阿基米德原理
+  ja: アルキメデスの原理
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: "F: la fuerza de flotación o empuje, siempre vertical hacia arriba."
+      en: "F: the buoyant force, always directed vertically upward."
+      pt: "F: a força de empuxo, sempre vertical para cima."
+      fr: "F : la poussée d'Archimède, toujours verticale vers le haut."
+      zh: "F：浮力，方向始终竖直向上。"
+      ja: "F：浮力。常に鉛直上向きにはたらく力。"
+  - id: sub-b
+    type: superscript
+    value: b
+    explanation:
+      es: "b: un subíndice que indica que es la fuerza de flotación (buoyancy)."
+      en: "b: a subscript indicating this is the buoyant force."
+      pt: "b: um subscrito que indica que é a força de empuxo."
+      fr: "b : un indice indiquant qu'il s'agit de la poussée d'Archimède."
+      zh: "b：下标，表明这是浮力。"
+      ja: "b：浮力を示す下付き文字。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: rho
+    type: constant
+    value: ρ
+    explanation:
+      es: "ρ: la densidad del fluido en el que se sumerge el cuerpo."
+      en: "ρ: the density of the fluid in which the body is immersed."
+      pt: "ρ: a densidade do fluido em que o corpo está imerso."
+      fr: "ρ : la masse volumique du fluide dans lequel le corps est plongé."
+      zh: "ρ：物体所浸入流体的密度。"
+      ja: "ρ：物体が浸される流体の密度。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: v
+    type: variable
+    value: V
+    explanation:
+      es: "V: el volumen del fluido desalojado, igual al volumen sumergido del cuerpo."
+      en: "V: the volume of displaced fluid, equal to the body's submerged volume."
+      pt: "V: o volume de fluido deslocado, igual ao volume imerso do corpo."
+      fr: "V : le volume de fluide déplacé, égal au volume immergé du corps."
+      zh: "V：排开流体的体积，等于物体浸没部分的体积。"
+      ja: "V：押しのけられた流体の体積。物体の沈んだ部分の体積に等しい。"
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: g
+    type: variable
+    value: g
+    explanation:
+      es: "g: la aceleración de la gravedad (9.81 m/s²)."
+      en: "g: the acceleration of gravity (9.81 m/s²)."
+      pt: "g: a aceleração da gravidade (9,81 m/s²)."
+      fr: "g : l'accélération de la pesanteur (9,81 m/s²)."
+      zh: "g：重力加速度（9.81 米/秒²）。"
+      ja: "g：重力加速度（9.81 m/s²）。"
+context:
+  author:
+    es: Arquímedes
+    en: Archimedes
+    pt: Arquimedes
+    fr: Archimède
+    zh: 阿基米德
+    ja: アルキメデス
+  era:
+    es: Siracusa, c. 287–212 a.C.
+    en: Syracuse, c. 287–212 BC
+    pt: Siracusa, c. 287–212 a.C.
+    fr: Syracuse, c. 287–212 av. J.-C.
+    zh: 叙拉古，约公元前287–212年
+    ja: シラクサ、紀元前287–212年頃
+  history:
+    es: >-
+      La leyenda, narrada por Vitruvio, cuenta que el rey Hierón II encargó a Arquímedes comprobar si
+      su corona de oro había sido adulterada con plata. El sabio encontró la solución mientras se
+      bañaba: al notar que su cuerpo pesaba menos sumergido, corrió desnudo por las calles gritando
+      "¡Eureka!" (lo encontré). El principio que formuló establece que todo cuerpo sumergido en un
+      fluido experimenta un empuje vertical hacia arriba igual al peso del fluido desalojado. Esto
+      explica por qué los barcos de acero flotan: su casco hueco desplaza un volumen de agua cuyo peso
+      supera al del buque. Los submarinos se hunden o emergen variando su peso con tanques de lastre,
+      y el hidrómetro, un tubo flotante con escala, mide la densidad de líquidos según la profundidad
+      a la que se sumerge.
+    en: >-
+      The legend, told by Vitruvius, says that King Hiero II commissioned Archimedes to check whether
+      his golden crown had been alloyed with silver. The sage found the solution while bathing:
+      noticing that his body weighed less when submerged, he ran naked through the streets shouting
+      "Eureka!" (I have found it). The principle he formulated states that a body immersed in a fluid
+      experiences an upward buoyant force equal to the weight of the displaced fluid. This explains
+      why steel ships float: their hollow hull displaces a volume of water whose weight exceeds that
+      of the ship. Submarines dive or surface by changing their weight with ballast tanks, and the
+      hydrometer, a floating tube with a scale, measures the density of liquids by how deep it sinks.
+    pt: >-
+      A lenda, contada por Vitrúvio, diz que o rei Hierão II encarregou Arquimedes de verificar se sua
+      coroa de ouro havia sido adulterada com prata. O sábio encontrou a solução enquanto tomava
+      banho: ao notar que seu corpo pesava menos imerso, saiu correndo nu pelas ruas gritando "Eureca!"
+      (achei). O princípio que formulou estabelece que todo corpo imerso em um fluido sofre um empuxo
+      vertical para cima igual ao peso do fluido deslocado. Isso explica por que navios de aço
+      flutuam: seu casco oco desloca um volume de água cujo peso supera o da embarcação. Os submarinos
+      afundam ou emergem variando seu peso com tanques de lastro, e o hidrômetro, um tubo flutuante
+      com escala, mede a densidade de líquidos pela profundidade em que afunda.
+    fr: >-
+      La légende, racontée par Vitruve, veut que le roi Hiéron II ait chargé Archimède de vérifier si
+      sa couronne d'or avait été frelatée à l'argent. Le savant trouva la solution en prenant son
+      bain : s'apercevant que son corps pesait moins lourd immergé, il courut nu dans les rues en
+      criant « Eurêka ! » (j'ai trouvé). Le principe qu'il formula établit que tout corps plongé dans
+      un fluide subit une poussée verticale vers le haut égale au poids du fluide déplacé. Cela
+      explique pourquoi les navires d'acier flottent : leur coque creuse déplace un volume d'eau dont
+      le poids dépasse celui du bateau. Les sous-marins plongent ou remontent en modifiant leur poids
+      grâce à des ballasts, et l'aréomètre, un tube flottant gradué, mesure la masse volumique des
+      liquides selon la profondeur à laquelle il s'enfonce.
+    zh: >-
+      维特鲁威讲述的传说称，希伦二世委托阿基米德检验他的金冠是否被掺入白银。这位智者在沐浴时想出了办法：
+      他注意到身体浸入水中后变轻，于是赤身跑上街头高呼"尤里卡！"（我找到了）。他提出的原理是：浸在流体中的
+      物体会受到一个竖直向上的浮力，其大小等于排开流体的重量。这解释了钢制的船为何能浮起：中空的船体排开的
+      水的重量超过了船本身的重量。潜艇通过压载舱改变自身重量而下潜或上浮；比重计则是一根带刻度的漂浮管，
+      通过下沉的深度来测量液体的密度。
+    ja: >-
+      ウィトルウィウスが伝える伝説によれば、ヒエロン二世は、自分の金の王冠が銀で偽造されていないかを確かめる
+      ようアルキメデスに依頼した。彼は風呂に入っているときに答えを見つけた。身体が水中で軽くなることに気づい
+      た彼は、「ユーレカ！（見つけた！）」と叫びながら裸で街を走ったという。彼が定式化した原理は、流体に浸され
+      た物体は、押しのけた流体の重さに等しい垂直上向きの浮力を受けるというものだ。これが鋼鉄の船が浮かぶ理由
+      を説明する。中空の船体は、船自身の重さを超える重量の水を押しのけるのだ。潜水艦はバラストタンクで重量を
+      変えて潜航・浮上し、浮秤（うきばかり）は沈む深さから液体の密度を測る。
+  timeline:
+    - year: c. 250 a.C.
+      label:
+        es: >-
+          Arquímedes resuelve el encargo de la corona de Hierón II y enuncia su principio de flotación.
+        en: >-
+          Archimedes solves Hiero II's crown commission and states his principle of buoyancy.
+        pt: >-
+          Arquimedes resolve a encomenda da coroa de Hierão II e enuncia seu princípio de flutuação.
+        fr: >-
+          Archimède résout la commande de la couronne de Hiéron II et énonce son principe de
+          flottabilité.
+        zh: >-
+          阿基米德解决了希伦二世的金冠难题，并阐述了他的浮力原理。
+        ja: >-
+          アルキメデスがヒエロン二世の王冠の問題を解き、浮力の原理を述べる。
+    - year: "1687"
+      label:
+        es: >-
+          Newton da un tratamiento matemático riguroso a la flotación en los Principia.
+        en: >-
+          Newton gives buoyancy a rigorous mathematical treatment in the Principia.
+        pt: >-
+          Newton dá um tratamento matemático rigoroso à flutuação nos Principia.
+        fr: >-
+          Newton donne à la flottabilité un traitement mathématique rigoureux dans les Principia.
+        zh: >-
+          牛顿在《自然哲学的数学原理》中对浮力给出了严密的数学处理。
+        ja: >-
+          ニュートンが『プリンキピア』で浮力に厳密な数学的扱いを与える。
+    - year: "1900"
+      label:
+        es: >-
+          La marina de EE. UU. incorpora su primer submarino moderno, y el control de lastre se vuelve
+          práctica estándar.
+        en: >-
+          The U.S. Navy commissions its first modern submarine, making ballast control standard
+          practice.
+        pt: >-
+          A marinha dos EUA incorpora seu primeiro submarino moderno, tornando o controle de lastro
+          prática padrão.
+        fr: >-
+          La marine américaine met en service son premier sous-marin moderne, faisant du contrôle du
+          lest une pratique standard.
+        zh: >-
+          美国海军服役第一艘现代潜艇，压载控制成为标准做法。
+        ja: >-
+          米海軍が最初の近代潜水艦を就役させ、バラスト制御が標準的な運用となる。
+    - year: Hoy
+      label:
+        es: >-
+          Buques, submarinos e hidrómetros siguen dependiendo del principio de Arquímedes a diario.
+        en: >-
+          Ships, submarines, and hydrometers still rely on Archimedes' principle every day.
+        pt: >-
+          Navios, submarinos e hidrômetros ainda dependem do princípio de Arquimedes diariamente.
+        fr: >-
+          Navires, sous-marins et aréomètres dépendent encore chaque jour du principe d'Archimède.
+        zh: >-
+          船舶、潜艇和比重计至今仍每天依赖阿基米德原理。
+        ja: >-
+          船、潜水艦、浮秤は今も毎日アルキメデスの原理に依存している。
+  useCases:
+    - title:
+        es: Barcos y buques
+        en: Ships and boats
+        pt: Navios e barcos
+        fr: Navires et bateaux
+        zh: 船舶
+        ja: 船
+      description:
+        es: >-
+          El diseño del casco garantiza que el agua desalojada pese más que el buque, fijando el
+          calado máximo de carga.
+        en: >-
+          Hull design ensures the displaced water outweighs the ship, setting the maximum load
+          draft.
+        pt: >-
+          O projeto do casco garante que a água deslocada pese mais que o navio, fixando o calado
+          máximo de carga.
+        fr: >-
+          La conception de la coque garantit que l'eau déplacée pèse plus que le navire, fixant le
+          tirant d'eau maximal.
+        zh: >-
+          船体设计确保排开的水比船更重，从而确定最大装载吃水。
+        ja: >-
+          船体設計は押しのけた水が船より重くなることを保証し、最大積載喫水を定める。
+    - title:
+        es: Submarinos
+        en: Submarines
+        pt: Submarinos
+        fr: Sous-marins
+        zh: 潜艇
+        ja: 潜水艦
+      description:
+        es: >-
+          Los tanques de lastre cambian el peso total para que el empuje lo eleve o lo deje hundirse.
+        en: >-
+          Ballast tanks change total weight so buoyancy lifts the sub or lets it sink.
+        pt: >-
+          Os tanques de lastro mudam o peso total para que o empuxo o eleve ou o deixe afundar.
+        fr: >-
+          Les ballasts modifient le poids total pour que la poussée fasse remonter le submersible ou
+          le laisse couler.
+        zh: >-
+          压载舱改变潜艇的总重量，使浮力将其托起或任其下沉。
+        ja: >-
+          バラストタンクが総重量を変え、浮力が潜水艦を浮上させるか沈ませるかを決める。
+    - title:
+        es: Medición de baterías
+        en: Battery testing
+        pt: Medição de baterias
+        fr: Contrôle des batteries
+        zh: 电池检测
+        ja: バッテリー検査
+      description:
+        es: >-
+          El hidrómetro mide la densidad del electrolito del acumulador y así estima la carga de la
+          batería de un automóvil.
+        en: >-
+          A hydrometer measures the density of the battery electrolyte to estimate a car battery's
+          charge.
+        pt: >-
+          O hidrômetro mede a densidade do eletrólito do acumulador e assim estima a carga da bateria
+          de um automóvel.
+        fr: >-
+          L'aréomètre mesure la masse volumique de l'électrolyte pour estimer la charge d'une batterie
+          d'automobile.
+        zh: >-
+          比重计测量电解液的密度，从而估算汽车蓄电池的电量。
+        ja: >-
+          浮秤が電解液の密度を測り、自動車用バッテリーの充電状態を推定する。
+    - title:
+        es: Ingeniería civil
+        en: Civil engineering
+        pt: Engenharia civil
+        fr: Génie civil
+        zh: 土木工程
+        ja: 土木工学
+      description:
+        es: >-
+          Boyas, pontones y grúas flotantes se dimensionan para soportar la carga que el empuje permite.
+        en: >-
+          Buoys, pontoons, and floating cranes are sized for the load that buoyancy allows.
+        pt: >-
+          Boias, pontões e guindastes flutuantes são dimensionados para a carga que o empuxo permite.
+        fr: >-
+          Bouées, pontons et grues flottantes sont dimensionnés pour la charge que la poussée autorise.
+        zh: >-
+          浮标、浮筒和浮式起重机按浮力允许的载荷来设计。
+        ja: >-
+          ブイ、ポンツーン、浮式クレーンは、浮力が許す荷重に合わせて設計される。
+  example:
+    title:
+      es: Empuje sobre un objeto sumergido
+      en: Buoyancy on a submerged object
+      pt: Empuxo sobre um objeto imerso
+      fr: Poussée sur un objet immergé
+      zh: 浸没物体所受的浮力
+      ja: 水中の物体に働く浮力
+    lines:
+      - es: V = 0.1 m³, ρ = 1000 kg/m³, g = 9.81 m/s²
+        en: V = 0.1 m³, ρ = 1000 kg/m³, g = 9.81 m/s²
+        pt: V = 0,1 m³, ρ = 1000 kg/m³, g = 9,81 m/s²
+        fr: V = 0,1 m³, ρ = 1000 kg/m³, g = 9,81 m/s²
+        zh: V = 0.1 米³，ρ = 1000 千克/米³，g = 9.81 米/秒²
+        ja: V = 0.1 m³、ρ = 1000 kg/m³、g = 9.81 m/s²
+      - es: Fb = ρ · V · g
+        en: Fb = ρ · V · g
+        pt: Fb = ρ · V · g
+        fr: Fb = ρ · V · g
+        zh: Fb = ρ · V · g
+        ja: Fb = ρ · V · g
+      - es: Fb = 1000 × 0.1 × 9.81
+        en: Fb = 1000 × 0.1 × 9.81
+        pt: Fb = 1000 × 0,1 × 9,81
+        fr: Fb = 1000 × 0,1 × 9,81
+        zh: Fb = 1000 × 0.1 × 9.81
+        ja: Fb = 1000 × 0.1 × 9.81
+      - es: Fb = 100 × 9.81
+        en: Fb = 100 × 9.81
+        pt: Fb = 100 × 9,81
+        fr: Fb = 100 × 9,81
+        zh: Fb = 100 × 9.81
+        ja: Fb = 100 × 9.81
+      - es: Fb ≈ 981 N
+        en: Fb ≈ 981 N
+        pt: Fb ≈ 981 N
+        fr: Fb ≈ 981 N
+        zh: Fb ≈ 981 牛
+        ja: Fb ≈ 981 N
+      - es: Si el objeto pesa menos de 981 N, flota
+        en: If the object weighs less than 981 N, it floats
+        pt: Se o objeto pesar menos de 981 N, ele flutua
+        fr: Si l'objet pèse moins de 981 N, il flotte
+        zh: 若物体重量小于 981 牛，它就会浮起来
+        ja: 物体の重さが 981 N 未満なら、浮かぶ

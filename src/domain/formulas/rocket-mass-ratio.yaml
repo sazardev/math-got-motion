@@ -1,0 +1,323 @@
+id: rocket-mass-ratio
+title:
+  es: Relación de Masas del Cohete
+  en: Rocket Mass Ratio
+  pt: Relação de Massas do Foguete
+  fr: Rapport de masses d'une fusée
+  zh: 火箭质量比
+  ja: ロケット質量比
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: m0
+    type: variable
+    value: m₀
+    explanation:
+      es: "m₀: la masa del cohete al despegar, con todo el combustible."
+      en: "m₀: the rocket's mass at liftoff, including all the fuel."
+      pt: "m₀: a massa do foguete na decolagem, com todo o combustível."
+      fr: "m₀ : la masse du lanceur au décollage, carburant compris."
+      zh: "m₀：火箭起飞时的质量，包括全部燃料。"
+      ja: "m₀：燃料を含む、打ち上げ時のロケットの質量。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre. Compara la masa inicial con la final.
+      en: Divided by. Compares the initial mass with the final one.
+      pt: Dividido por. Compara a massa inicial com a final.
+      fr: Divisé par. Compare la masse initiale à la masse finale.
+      zh: 除以。将初始质量与最终质量比较。
+      ja: で割る。初期質量と最終質量を比較する。
+  - id: mf
+    type: variable
+    value: m_f
+    explanation:
+      es: "m_f: la masa final, cuando se agota el combustible."
+      en: "m_f: the final mass, when the fuel runs out."
+      pt: "m_f: a massa final, quando o combustível acaba."
+      fr: "m_f : la masse finale, quand le carburant est épuisé."
+      zh: "m_f：燃料耗尽时的最终质量。"
+      ja: "m_f：燃料が尽きた時の最終質量。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: e
+    type: constant
+    value: e
+    explanation:
+      es: "e: la constante de Euler, base del crecimiento exponencial."
+      en: "e: Euler's constant, the base of exponential growth."
+      pt: "e: a constante de Euler, base do crescimento exponencial."
+      fr: "e : la constante d'Euler, base de la croissance exponentielle."
+      zh: "e：欧拉常数，指数增长的底。"
+      ja: "e：オイラー定数。指数関数的成長の底。"
+  - id: exp
+    type: superscript
+    value: Δv/vₑ
+    explanation:
+      es: "Δv/vₑ: el cambio de velocidad dividido por la velocidad de escape de los gases."
+      en: "Δv/vₑ: the change in velocity divided by the exhaust velocity of the gases."
+      pt: "Δv/vₑ: a variação de velocidade dividida pela velocidade de exaustão dos gases."
+      fr: "Δv/vₑ : la variation de vitesse divisée par la vitesse d'éjection des gaz."
+      zh: "Δv/vₑ：速度变化量除以气体排出速度。"
+      ja: "Δv/vₑ：速度変化をガス排出速度で割ったもの。"
+context:
+  author:
+    es: Derivada de la ecuación de Tsiolkovsky
+    en: Derived from Tsiolkovsky's equation
+    pt: Derivada da equação de Tsiolkovsky
+    fr: Dérivée de l'équation de Tsiolkovsky
+    zh: 由齐奥尔科夫斯基方程推导
+    ja: ツィオルコフスキーの方程式から導出
+  era:
+    es: Rusia, 1903 · formalizada en el s. XX
+    en: Russia, 1903 · formalized in the 20th century
+    pt: Rússia, 1903 · formalizada no séc. XX
+    fr: Russie, 1903 · formalisée au XXᵉ siècle
+    zh: 俄国，1903年 · 20世纪正式确立
+    ja: ロシア、1903年・20世紀に体系化
+  history:
+    es: >-
+      La relación de masas es la forma inversa de la ecuación del cohete de Tsiolkovsky, publicada
+      en 1903: expresa cuántas veces más pesado debe ser un cohete al despegar que al terminar de
+      quemar combustible, para alcanzar un cierto cambio de velocidad. Como el crecimiento es
+      exponencial, duplicar el Δv puede exigir multiplicar la masa inicial por e, o mucho más. De
+      ahí la "tiranía de la ecuación del cohete": la mayor parte de la masa de cualquier misión
+      interplanetaria es combustible, y la carga útil es apenas una fracción del total.
+    en: >-
+      The mass ratio is the inverse form of Tsiolkovsky's rocket equation, published in 1903: it
+      tells how many times heavier a rocket must be at liftoff than when its fuel runs out, to
+      reach a given change in velocity. Because growth is exponential, doubling the Δv can demand
+      multiplying the initial mass by e, or far more. Hence the "tyranny of the rocket equation":
+      most of the mass of any interplanetary mission is fuel, and the payload is only a fraction
+      of the total.
+    pt: >-
+      A relação de massas é a forma inversa da equação do foguete de Tsiolkovsky, publicada em
+      1903: ela diz quantas vezes mais pesado um foguete deve ser na decolagem do que quando o
+      combustível acaba, para atingir uma dada variação de velocidade. Como o crescimento é
+      exponencial, dobrar o Δv pode exigir multiplicar a massa inicial por e, ou muito mais. Daí a
+      "tirania da equação do foguete": a maior parte da massa de qualquer missão interplanetária é
+      combustível, e a carga útil é apenas uma fração do total.
+    fr: >-
+      Le rapport de masses est la forme inverse de l'équation de Tsiolkovsky, publiée en 1903 : il
+      indique combien de fois plus lourd doit être un lanceur au décollage qu'à la fin de son
+      carburant, pour atteindre une certaine variation de vitesse. Comme la croissance est
+      exponentielle, doubler le Δv peut exiger de multiplier la masse initiale par e, ou bien
+      davantage. D'où la « tyrannie de l'équation du lanceur » : la majeure partie de la masse
+      d'une mission interplanétaire est du carburant, et la charge utile n'est qu'une fraction du
+      total.
+    zh: >-
+      质量比是齐奥尔科夫斯基火箭方程（发表于1903年）的逆形式：它表示为了获得给定的速度变化量，
+      火箭起飞时的质量要比燃料耗尽时重多少倍。由于增长是指数式的，Δv每翻一倍可能要求把初始质量
+      乘以e，甚至更多。这就是"火箭方程之暴政"：任何行星际任务的大部分质量都是燃料，有效载荷只占
+      总量的一小部分。
+    ja: >-
+      質量比はツィオルコフスキーのロケット方程式（1903年発表）の逆の形である。与えられた速度変化を
+      達成するために、ロケットが燃料を使い切った時に対して、打ち上げ時に何倍重くなければならないかを
+      表す。成長が指数関数的であるため、Δvを倍にすると初期質量をe倍にしなければならないこともあり、
+      それ以上のこともある。これが「ロケット方程式の専制」だ。惑星間ミッションの質量の大半は燃料で
+      あり、ペイロードは全体のほんの一部にすぎない。
+  timeline:
+    - year: "1903"
+      label:
+        es: >-
+          Konstantín Tsiolkovsky publica la ecuación del cohete en la revista Naúchnoie Obozrénie.
+        en: >-
+          Konstantin Tsiolkovsky publishes the rocket equation in the journal Nauchnoye Obozreniye.
+        pt: >-
+          Konstantin Tsiolkovsky publica a equação do foguete na revista Nauchnoye Obozreniye.
+        fr: >-
+          Konstantin Tsiolkovsky publie l'équation de la fusée dans la revue Naouchnoïe Obozrenie.
+        zh: >-
+          康斯坦丁·齐奥尔科夫斯基在《科学评论》杂志上发表火箭方程。
+        ja: >-
+          コンスタンチン・ツィオルコフスキーが雑誌『科学評論』でロケット方程式を発表する。
+    - year: "1926"
+      label:
+        es: >-
+          Robert Goddard lanza el primer cohete de combustible líquido, primera aplicación práctica
+          de la ecuación.
+        en: >-
+          Robert Goddard launches the first liquid-fueled rocket, the first practical application of
+          the equation.
+        pt: >-
+          Robert Goddard lança o primeiro foguete de combustível líquido, primeira aplicação prática
+          da equação.
+        fr: >-
+          Robert Goddard lance la première fusée à propergol liquide, première application pratique
+          de l'équation.
+        zh: >-
+          罗伯特·戈达德发射第一枚液体燃料火箭，这是该方程的首次实际应用。
+        ja: >-
+          ロバート・ゴダードが最初の液体燃料ロケットを打ち上げる。方程式の初めての実用化である。
+    - year: "1969"
+      label:
+        es: >-
+          El Saturno V aplica la relación de masas para llevar el Apolo 11 a la Luna.
+        en: >-
+          The Saturn V applies the mass ratio to take Apollo 11 to the Moon.
+        pt: >-
+          O Saturno V aplica a relação de massas para levar a Apollo 11 à Lua.
+        fr: >-
+          La Saturn V applique le rapport de masses pour emmener Apollo 11 vers la Lune.
+        zh: >-
+          土星五号运用质量比将阿波罗11号送上月球。
+        ja: >-
+          サターンVが質量比を適用してアポロ11号を月へ運ぶ。
+    - year: Hoy
+      label:
+        es: >-
+          Todo vehículo de lanzamiento, del pequeño Electron al Starship, se dimensiona con esta
+          relación.
+        en: >-
+          Every launch vehicle, from the small Electron to Starship, is sized with this ratio.
+        pt: >-
+          Todo veículo de lançamento, do pequeno Electron ao Starship, é dimensionado com essa
+          relação.
+        fr: >-
+          Chaque lanceur, du petit Electron au Starship, est dimensionné avec ce rapport.
+        zh: >-
+          从小型电子号到星舰，每一枚运载火箭都是依据这一质量比设计的。
+        ja: >-
+          小型のエレクトロンからスターシップまで、あらゆるロケットがこの質量比で設計される。
+  useCases:
+    - title:
+        es: Diseño de vehículos de lanzamiento
+        en: Launch vehicle design
+        pt: Projeto de veículos de lançamento
+        fr: Conception de lanceurs
+        zh: 运载火箭设计
+        ja: ロケットの設計
+      description:
+        es: >-
+          Define cuánto combustible y qué estructura necesita un cohete para entregar su carga útil
+          a órbita.
+        en: >-
+          Sets how much fuel and structure a rocket needs to deliver its payload to orbit.
+        pt: >-
+          Define quanto combustível e estrutura um foguete precisa para levar sua carga útil à
+          órbita.
+        fr: >-
+          Fixe le carburant et la structure dont un lanceur a besoin pour amener sa charge utile en
+          orbite.
+        zh: >-
+          确定火箭将有效载荷送入轨道所需的燃料和结构质量。
+        ja: >-
+          ペイロードを軌道に投入するために、ロケットがどれだけの燃料と構造を必要とするかを定める。
+    - title:
+        es: Misiones interplanetarias
+        en: Interplanetary missions
+        pt: Missões interplanetárias
+        fr: Missions interplanétaires
+        zh: 行星际任务
+        ja: 惑星間ミッション
+      description:
+        es: >-
+          Los viajes a Marte exigen Δv enormes, por eso la masa inicial es casi toda combustible.
+        en: >-
+          Mars trips demand enormous Δv, which is why the initial mass is almost all fuel.
+        pt: >-
+          Viagens a Marte exigem Δv enormes, por isso a massa inicial é quase toda combustível.
+        fr: >-
+          Les voyages vers Mars exigent d'énormes Δv, d'où une masse initiale presque entièrement
+          carburant.
+        zh: >-
+          火星之旅需要巨大的Δv，因此初始质量几乎全是燃料。
+        ja: >-
+          火星への飛行は莫大なΔvを必要とするため、初期質量のほとんどが燃料になる。
+    - title:
+        es: Etapas múltiples
+        en: Multi-stage staging
+        pt: Etapas múltiplas
+        fr: Étagement multiple
+        zh: 多级火箭
+        ja: 多段式ロケット
+      description:
+        es: >-
+          Dividir el cohete en etapas descarta masa vacía y reduce la relación necesaria de cada una.
+        en: >-
+          Splitting the rocket into stages sheds empty mass and lowers each stage's required ratio.
+        pt: >-
+          Dividir o foguete em estágios descarta massa vazia e reduz a relação exigida de cada um.
+        fr: >-
+          Décomposer le lanceur en étages permet d'abandonner la masse vide et réduit le rapport
+          exigé de chacun.
+        zh: >-
+          把火箭分为多级可丢弃空重，降低每一级所需的质量比。
+        ja: >-
+          ロケットを段に分けると空の質量を切り離せ、各段に必要な質量比が下がる。
+    - title:
+        es: Presupuesto de Δv de satélites
+        en: Satellite Δv budgeting
+        pt: Orçamento de Δv de satélites
+        fr: Budget Δv de satellites
+        zh: 卫星Δv预算
+        ja: 衛星のΔv予算
+      description:
+        es: >-
+          Cuantifica el combustible que un satélite necesita para corregir órbita y maniobrar toda
+          su vida útil.
+        en: >-
+          Quantifies the fuel a satellite needs to correct orbit and maneuver through its lifetime.
+        pt: >-
+          Quantifica o combustível que um satélite precisa para corrigir a órbita e manobrar ao
+          longo da vida útil.
+        fr: >-
+          Quantifie le carburant dont un satellite a besoin pour corriger son orbite et manœuvrer
+          toute sa vie.
+        zh: >-
+          量化卫星在整个寿命期内修正轨道和机动所需的燃料。
+        ja: >-
+          衛星が寿命を通じて軌道修正やマニューバに必要な燃料を定量化する。
+  example:
+    title:
+      es: Llegar a órbita
+      en: Reaching orbit
+      pt: Chegar à órbita
+      fr: Atteindre l'orbite
+      zh: 进入轨道
+      ja: 軌道到達
+    lines:
+      - es: Δv = 9000 m/s, vₑ = 3000 m/s
+        en: Δv = 9000 m/s, vₑ = 3000 m/s
+        pt: Δv = 9000 m/s, vₑ = 3000 m/s
+        fr: Δv = 9000 m/s, vₑ = 3000 m/s
+        zh: Δv = 9000 m/s，vₑ = 3000 m/s
+        ja: Δv = 9000 m/s、vₑ = 3000 m/s
+      - es: Δv/vₑ = 9000/3000 = 3
+        en: Δv/vₑ = 9000/3000 = 3
+        pt: Δv/vₑ = 9000/3000 = 3
+        fr: Δv/vₑ = 9000/3000 = 3
+        zh: Δv/vₑ = 9000/3000 = 3
+        ja: Δv/vₑ = 9000/3000 = 3
+      - es: m₀/m_f = e³
+        en: m₀/m_f = e³
+        pt: m₀/m_f = e³
+        fr: m₀/m_f = e³
+        zh: m₀/m_f = e³
+        ja: m₀/m_f = e³
+      - es: e³ ≈ 20.09 ≈ 20.1
+        en: e³ ≈ 20.09 ≈ 20.1
+        pt: e³ ≈ 20,09 ≈ 20,1
+        fr: e³ ≈ 20,09 ≈ 20,1
+        zh: e³ ≈ 20.09 ≈ 20.1
+        ja: e³ ≈ 20.09 ≈ 20.1
+      - es: → por cada kg en órbita, ~20 kg en la plataforma
+        en: → for every kg in orbit, ~20 kg at liftoff
+        pt: → para cada kg em órbita, ~20 kg na decolagem
+        fr: → pour chaque kg en orbite, ~20 kg au décollage
+        zh: → 每向轨道送入1千克，发射时需约20千克
+        ja: → 軌道上の1 kgごとに、打ち上げ時は約20 kg

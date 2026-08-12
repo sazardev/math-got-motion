@@ -1,0 +1,446 @@
+id: compton-scattering
+title:
+  es: Efecto Compton
+  en: Compton Scattering
+  pt: Efeito Compton
+  fr: Effet Compton
+  zh: 康普顿散射
+  ja: コンプトン散乱
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: delta-lambda
+    type: variable
+    value: Δλ
+    explanation:
+      es: El cambio de longitud de onda del rayo X al ser dispersado por un electrón.
+      en: The change in wavelength of the X-ray when scattered by an electron.
+      pt: A variação do comprimento de onda do raio X ao ser espalhado por um elétron.
+      fr: Le changement de longueur d'onde du rayon X lorsqu'il est diffusé par un électron.
+      zh: X射线被电子散射后波长的变化量。
+      ja: 電子によって散乱されたX線の波長の変化量。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: paren-open
+    type: operator
+    value: (
+    explanation:
+      es: Agrupa la longitud de onda de Compton del electrón.
+      en: Groups the electron's Compton wavelength.
+      pt: Agrupa o comprimento de onda de Compton do elétron.
+      fr: Regroupe la longueur d'onde de Compton de l'électron.
+      zh: 将电子的康普顿波长组合在一起。
+      ja: 電子のコンプトン波長をまとめる。
+  - id: h
+    type: constant
+    value: h
+    explanation:
+      es: La constante de Planck, el cuanto de acción fundamental de la física.
+      en: Planck's constant, the fundamental quantum of action in physics.
+      pt: A constante de Planck, o quantum fundamental de ação da física.
+      fr: La constante de Planck, le quantum fondamental d'action de la physique.
+      zh: 普朗克常数,物理学中作用量的基本量子。
+      ja: 物理学における作用の基本量子であるプランク定数。
+  - id: slash-one
+    type: operator
+    value: /
+    explanation:
+      es: "División: se divide entre el producto de la masa del electrón y la velocidad de la luz."
+      en: "Division: divided by the product of the electron's mass and the speed of light."
+      pt: "Divisão: divide-se pelo produto da massa do elétron pela velocidade da luz."
+      fr: "Division : on divise par le produit de la masse de l'électron et de la vitesse de la lumière."
+      zh: 除法:除以电子质量与光速的乘积。
+      ja: 割り算:電子の質量と光速の積で割る。
+  - id: paren-open-2
+    type: operator
+    value: (
+    explanation:
+      es: Agrupa el producto de la masa del electrón por la velocidad de la luz.
+      en: Groups the product of the electron's mass and the speed of light.
+      pt: Agrupa o produto da massa do elétron pela velocidade da luz.
+      fr: Regroupe le produit de la masse de l'électron et de la vitesse de la lumière.
+      zh: 将电子质量与光速的乘积组合在一起。
+      ja: 電子の質量と光速の積をまとめる。
+  - id: m-e
+    type: variable
+    value: mₑ
+    explanation:
+      es: La masa en reposo del electrón.
+      en: The rest mass of the electron.
+      pt: A massa de repouso do elétron.
+      fr: La masse au repos de l'électron.
+      zh: 电子的静止质量。
+      ja: 電子の静止質量。
+  - id: c
+    type: constant
+    value: c
+    explanation:
+      es: La velocidad de la luz en el vacío.
+      en: The speed of light in a vacuum.
+      pt: A velocidade da luz no vácuo.
+      fr: La vitesse de la lumière dans le vide.
+      zh: 真空中的光速。
+      ja: 真空中の光速。
+  - id: paren-close-2
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el agrupamiento del producto mₑ·c.
+      en: Closes the grouping of the product mₑ·c.
+      pt: Fecha o agrupamento do produto mₑ·c.
+      fr: Ferme le regroupement du produit mₑ·c.
+      zh: 结束乘积mₑ·c的分组。
+      ja: 積mₑ·cのまとまりを閉じる。
+  - id: paren-close-one
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la longitud de onda de Compton, el límite del desplazamiento a 90 grados.
+      en: Closes the Compton wavelength, the limit of the shift at 90 degrees.
+      pt: Fecha o comprimento de onda de Compton, o limite do deslocamento a 90 graus.
+      fr: Ferme la longueur d'onde de Compton, la limite du décalage à 90 degrés.
+      zh: 结束康普顿波长,即90度时位移的极限。
+      ja: 90度における変化量の上限であるコンプトン波長を閉じる。
+  - id: paren-open-3
+    type: operator
+    value: (
+    explanation:
+      es: Agrupa el factor angular que depende del ángulo de dispersión.
+      en: Groups the angular factor that depends on the scattering angle.
+      pt: Agrupa o fator angular que depende do ângulo de espalhamento.
+      fr: Regroupe le facteur angulaire qui dépend de l'angle de diffusion.
+      zh: 将依赖于散射角的角度因子组合在一起。
+      ja: 散乱角に依存する角度因子をまとめる。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: El valor unitario del que se resta el coseno.
+      en: The unit value from which the cosine is subtracted.
+      pt: O valor unitário do qual se subtrai o cosseno.
+      fr: La valeur unitaire à laquelle on soustrait le cosinus.
+      zh: 从中减去余弦的单位值。
+      ja: コサインを引く基準の単位値。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "Menos: el desplazamiento crece cuando el coseno decrece."
+      en: "Minus: the shift grows as the cosine shrinks."
+      pt: "Menos: o deslocamento cresce quando o cosseno diminui."
+      fr: "Moins : le décalage grandit quand le cosinus diminue."
+      zh: 减号:当余弦减小时,位移增大。
+      ja: マイナス:コサインが小さくなるほど変化量は大きくなる。
+  - id: cos
+    type: constant
+    value: cos
+    explanation:
+      es: El coseno del ángulo entre la dirección del rayo incidente y el dispersado.
+      en: The cosine of the angle between the incident and scattered ray directions.
+      pt: O cosseno do ângulo entre a direção do raio incidente e a do espalhado.
+      fr: Le cosinus de l'angle entre les directions du rayon incident et du rayon diffusé.
+      zh: 入射光线与散射光线方向之间夹角的余弦。
+      ja: 入射光と散乱光の方向のなす角のコサイン。
+  - id: theta
+    type: variable
+    value: θ
+    explanation:
+      es: "El ángulo de dispersión: cuanto mayor, mayor es el cambio de longitud de onda."
+      en: "The scattering angle: the larger it is, the larger the wavelength shift."
+      pt: "O ângulo de espalhamento: quanto maior, maior a variação do comprimento de onda."
+      fr: "L'angle de diffusion : plus il est grand, plus le décalage en longueur d'onde est grand."
+      zh: 散射角:角度越大,波长变化量越大。
+      ja: 散乱角。大きいほど波長の変化量も大きくなる。
+  - id: paren-close-3
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el factor angular (1 − cos θ).
+      en: Closes the angular factor (1 − cos θ).
+      pt: Fecha o fator angular (1 − cos θ).
+      fr: Ferme le facteur angulaire (1 − cos θ).
+      zh: 结束角度因子(1 − cos θ)。
+      ja: 角度因子(1 − cos θ)を閉じる。
+context:
+  author:
+    es: Arthur Compton
+    en: Arthur Compton
+    pt: Arthur Compton
+    fr: Arthur Compton
+    zh: 阿瑟·康普顿
+    ja: アーサー・コンプトン
+  era:
+    es: Estados Unidos, 1892–1962 · descubierto en 1923
+    en: United States, 1892–1962 · discovered in 1923
+    pt: Estados Unidos, 1892–1962 · descoberto em 1923
+    fr: États-Unis, 1892–1962 · découvert en 1923
+    zh: 美国,1892–1962年 · 1923年发现
+    ja: アメリカ、1892–1962年・1923年発見
+  history:
+    es: >-
+      En 1923 Arthur Compton observó que los rayos X dispersados por electrones libres salen con una
+      longitud de onda mayor: la colisión cede parte del momento del fotón al electrón, y la diferencia
+      Δλ = (h/(mₑ·c))·(1 − cos θ) depende del ángulo. Era la prueba directa de que la luz transporta
+      momento, una idea que la física clásica no podía explicar con ondas continuas. Por este
+      descubrimiento Compton ganó el Nobel de Física en 1927, y la ecuación sustenta hoy la imagenología
+      médica y los telescopios de rayos gamma.
+    en: >-
+      In 1923 Arthur Compton observed that X-rays scattered by free electrons emerge with a longer
+      wavelength: the collision transfers part of the photon's momentum to the electron, and the shift
+      Δλ = (h/(mₑ·c))·(1 − cos θ) depends on the angle. It was direct proof that light carries
+      momentum, an idea classical physics could not explain with continuous waves. For this discovery
+      Compton won the Nobel Prize in Physics in 1927, and the equation now underpins medical imaging
+      and gamma-ray telescopes.
+    pt: >-
+      Em 1923, Arthur Compton observou que os raios X espalhados por elétrons livres saem com
+      comprimento de onda maior: a colisão transfere parte do momento do fóton ao elétron, e o
+      deslocamento Δλ = (h/(mₑ·c))·(1 − cos θ) depende do ângulo. Era a prova direta de que a luz
+      transporta momento, uma ideia que a física clássica não conseguia explicar com ondas contínuas.
+      Por essa descoberta Compton ganhou o Nobel de Física em 1927, e a equação sustenta hoje a imagem
+      médica e os telescópios de raios gama.
+    fr: >-
+      En 1923, Arthur Compton observa que les rayons X diffusés par des électrons libres ressortent
+      avec une longueur d'onde plus grande : la collision cède une partie de la quantité de mouvement
+      du photon à l'électron, et le décalage Δλ = (h/(mₑ·c))·(1 − cos θ) dépend de l'angle. C'était la
+      preuve directe que la lumière porte une quantité de mouvement, une idée que la physique classique
+      ne pouvait expliquer avec des ondes continues. Pour cette découverte, Compton reçut le prix Nobel
+      de physique en 1927, et l'équation soutient aujourd'hui l'imagerie médicale et les télescopes à
+      rayons gamma.
+    zh: >-
+      1923年,阿瑟·康普顿观察到自由电子散射的X射线波长变长:碰撞将光子的一部分动量传递给电子,
+      波长变化Δλ = (h/(mₑ·c))·(1 − cos θ)取决于散射角。这直接证明了光携带动量——经典物理无法用连续波
+      来解释这一点。康普顿因此获得1927年诺贝尔物理学奖,如今这一方程支撑着医学影像和伽马射线望远镜。
+    ja: >-
+      1923年、アーサー・コンプトンは自由電子によって散乱されたX線の波長が長くなることを観察した。
+      衝突によって光子の運動量の一部が電子に渡され、その変化Δλ = (h/(mₑ·c))·(1 − cos θ)は角度に依存する。
+      これは光が運動量を持つことの直接的な証明であり、古典物理学が連続波では説明できないものだった。
+      この発見によりコンプトンは1927年にノーベル物理学賞を受賞し、現在この方程式は医療画像診断や
+      ガンマ線望遠鏡の基盤となっている。
+  timeline:
+    - year: "1923"
+      label:
+        es: >-
+          Compton publica su experimento de dispersión de rayos X e introduce el efecto que lleva su
+          nombre.
+        en: >-
+          Compton publishes his X-ray scattering experiment and introduces the effect that bears his
+          name.
+        pt: >-
+          Compton publica seu experimento de espalhamento de raios X e introduz o efeito que leva seu
+          nome.
+        fr: >-
+          Compton publie son expérience de diffusion des rayons X et introduit l'effet qui porte son
+          nom.
+        zh: >-
+          康普顿发表了他的X射线散射实验,提出了以他命名的效应。
+        ja: >-
+          コンプトンがX線散乱の実験を発表し、彼の名を冠した効果を導入する。
+    - year: "1927"
+      label:
+        es: >-
+          Compton recibe el Premio Nobel de Física por el descubrimiento que confirmó la naturaleza
+          corpuscular de la luz.
+        en: >-
+          Compton receives the Nobel Prize in Physics for the discovery that confirmed the particle
+          nature of light.
+        pt: >-
+          Compton recebe o Prêmio Nobel de Física pelo descobrimento que confirmou a natureza
+          corpuscular da luz.
+        fr: >-
+          Compton reçoit le prix Nobel de physique pour la découverte qui confirma la nature corpusculaire
+          de la lumière.
+        zh: >-
+          康普顿因证实了光的粒子性的发现而获得诺贝尔物理学奖。
+        ja: >-
+          光の粒子性を確認した発見により、コンプトンがノーベル物理学賞を受賞する。
+    - year: "1991"
+      label:
+        es: >-
+          El Observatorio Compton de Rayos Gamma mapea el cielo en rayos gamma usando telescopios
+          basados en este efecto.
+        en: >-
+          The Compton Gamma Ray Observatory maps the gamma-ray sky using telescopes based on this
+          effect.
+        pt: >-
+          O Observatório Compton de Raios Gama mapeia o céu em raios gama usando telescópios baseados
+          nesse efeito.
+        fr: >-
+          L'Observatoire Compton de rayons gamma cartographie le ciel en rayons gamma avec des
+          télescopes fondés sur cet effet.
+        zh: >-
+          康普顿伽马射线天文台利用基于该效应的望远镜,对伽马射线天空进行成像。
+        ja: >-
+          コンプトンガンマ線天文台が、この効果に基づく望遠鏡でガンマ線の空を観測する。
+    - year: Hoy
+      label:
+        es: >-
+          Cámaras de Compton en medicina nuclear y astronomía reconstruyen la dirección de los rayos
+          gamma dispersados.
+        en: >-
+          Compton cameras in nuclear medicine and astronomy reconstruct the direction of scattered
+          gamma rays.
+        pt: >-
+          Câmeras de Compton na medicina nuclear e na astronomia reconstroem a direção dos raios gama
+          espalhados.
+        fr: >-
+          Les caméras Compton en médecine nucléaire et en astronomie reconstruisent la direction des
+          rayons gamma diffusés.
+        zh: >-
+          核医学和天文学中的康普顿相机重建散射伽马射线的方向。
+        ja: >-
+          核医学や天文学のコンプトンカメラが、散乱したガンマ線の方向を再構成する。
+  useCases:
+    - title:
+        es: Imagenología de medicina nuclear
+        en: Nuclear medicine imaging
+        pt: Imagens de medicina nuclear
+        fr: Imagerie en médecine nucléaire
+        zh: 核医学成像
+        ja: 核医学イメージング
+      description:
+        es: >-
+          Las cámaras de Compton localizan la fuente de los rayos gamma emitidos por los
+          radiofármacos dentro del cuerpo.
+        en: >-
+          Compton cameras locate the source of gamma rays emitted by radiopharmaceuticals inside the
+          body.
+        pt: >-
+          As câmeras de Compton localizam a fonte dos raios gama emitidos pelos radiofármacos dentro
+          do corpo.
+        fr: >-
+          Les caméras Compton localisent la source des rayons gamma émis par les radiopharmaceutiques
+          à l'intérieur du corps.
+        zh: >-
+          康普顿相机定位体内放射性药物发出的伽马射线源。
+        ja: >-
+          コンプトンカメラが、体内の放射性医薬品から放出されるガンマ線の発生源を特定する。
+    - title:
+        es: Astronomía de rayos gamma
+        en: Gamma-ray astronomy
+        pt: Astronomia de raios gama
+        fr: Astronomie des rayons gamma
+        zh: 伽马射线天文学
+        ja: ガンマ線天文学
+      description:
+        es: >-
+          Los telescopios de Compton reconstruyen la dirección de fotones muy energéticos provenientes
+          de púlsares y agujeros negros.
+        en: >-
+          Compton telescopes reconstruct the direction of very energetic photons from pulsars and black
+          holes.
+        pt: >-
+          Os telescópios de Compton reconstroem a direção de fótons muito energéticos vindos de
+          pulsares e buracos negros.
+        fr: >-
+          Les télescopes Compton reconstruisent la direction des photons très énergétiques venus des
+          pulsars et des trous noirs.
+        zh: >-
+          康普顿望远镜重建来自脉冲星和黑洞的高能光子的方向。
+        ja: >-
+          コンプトン望遠鏡が、パルサーやブラックホールからの高エネルギーの光子の方向を再構成する。
+    - title:
+        es: Seguridad y vigilancia nuclear
+        en: Nuclear security and monitoring
+        pt: Segurança e vigilância nuclear
+        fr: Sûreté et surveillance nucléaires
+        zh: 核安全与监控
+        ja: 核セキュリティと監視
+      description:
+        es: >-
+          Detectores portátiles usan la dispersión de Compton para localizar fuentes radiactivas
+          ocultas en fronteras y puertos.
+        en: >-
+          Portable detectors use Compton scattering to locate hidden radioactive sources at borders and
+          ports.
+        pt: >-
+          Detectores portáteis usam o espalhamento de Compton para localizar fontes radioativas
+          ocultas em fronteiras e portos.
+        fr: >-
+          Des détecteurs portables utilisent la diffusion Compton pour localiser les sources radioactives
+          cachées aux frontières et dans les ports.
+        zh: >-
+          便携式探测器利用康普顿散射来定位边境和港口藏匿的放射源。
+        ja: >-
+          携帯型検出器がコンプトン散乱を利用して、国境や港湾に隠された放射線源を特定する。
+    - title:
+        es: Física de partículas
+        en: Particle physics
+        pt: Física de partículas
+        fr: Physique des particules
+        zh: 粒子物理学
+        ja: 素粒子物理学
+      description:
+        es: >-
+          La dispersión de Compton es clave para calibrar calorímetros y simular la interacción de
+          fotones con la materia.
+        en: >-
+          Compton scattering is key to calibrating calorimeters and simulating how photons interact
+          with matter.
+        pt: >-
+          O espalhamento de Compton é essencial para calibrar calorímetros e simular como fótons
+          interagem com a matéria.
+        fr: >-
+          La diffusion Compton est essentielle pour calibrer les calorimètres et simuler l'interaction
+          des photons avec la matière.
+        zh: >-
+          康普顿散射是校准量能器和模拟光子与物质相互作用的关键。
+        ja: >-
+          コンプトン散乱は、カロリメーターの較正や光子と物質の相互作用のシミュレーションに欠かせない。
+  example:
+    title:
+      es: Rayos X dispersados a 90 grados
+      en: X-rays scattered at 90 degrees
+      pt: Raios X espalhados a 90 graus
+      fr: Rayons X diffusés à 90 degrés
+      zh: 90度散射的X射线
+      ja: 90度に散乱するX線
+    lines:
+      - es: θ = 90°
+        en: θ = 90°
+        pt: θ = 90°
+        fr: θ = 90°
+        zh: θ = 90°
+        ja: θ = 90°
+      - es: cos 90° = 0
+        en: cos 90° = 0
+        pt: cos 90° = 0
+        fr: cos 90° = 0
+        zh: cos 90° = 0
+        ja: cos 90° = 0
+      - es: Δλ = (h/(mₑ·c))·(1 − 0)
+        en: Δλ = (h/(mₑ·c))·(1 − 0)
+        pt: Δλ = (h/(mₑ·c))·(1 − 0)
+        fr: Δλ = (h/(mₑ·c))·(1 − 0)
+        zh: Δλ = (h/(mₑ·c))·(1 − 0)
+        ja: Δλ = (h/(mₑ·c))·(1 − 0)
+      - es: Δλ = h/(mₑ·c)
+        en: Δλ = h/(mₑ·c)
+        pt: Δλ = h/(mₑ·c)
+        fr: Δλ = h/(mₑ·c)
+        zh: Δλ = h/(mₑ·c)
+        ja: Δλ = h/(mₑ·c)
+      - es: Δλ ≈ 2.43×10⁻¹² m
+        en: Δλ ≈ 2.43×10⁻¹² m
+        pt: Δλ ≈ 2,43×10⁻¹² m
+        fr: Δλ ≈ 2,43×10⁻¹² m
+        zh: Δλ ≈ 2.43×10⁻¹² m
+        ja: Δλ ≈ 2.43×10⁻¹² m
+      - es: Δλ ≈ 2.43 pm
+        en: Δλ ≈ 2.43 pm
+        pt: Δλ ≈ 2,43 pm
+        fr: Δλ ≈ 2,43 pm
+        zh: Δλ ≈ 2.43 pm
+        ja: Δλ ≈ 2.43 pm

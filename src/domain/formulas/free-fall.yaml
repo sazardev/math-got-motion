@@ -1,0 +1,353 @@
+id: free-fall
+title:
+  es: Caída Libre
+  en: Free Fall
+  pt: Queda Livre
+  fr: Chute Libre
+  zh: 自由落体
+  ja: 自由落下
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: h
+    type: variable
+    value: h
+    explanation:
+      es: La altura desde la que cae el cuerpo, medida desde el punto de partida.
+      en: The height from which the body falls, measured from the starting point.
+      pt: A altura da qual o corpo cai, medida a partir do ponto de partida.
+      fr: La hauteur depuis laquelle le corps tombe, mesurée depuis le point de départ.
+      zh: 物体下落的高度,从起点算起。
+      ja: 物体が落下する高さ。出発点から測る。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: half
+    type: number
+    value: ½
+    explanation:
+      es: La mitad, el factor que surge al integrar la aceleración en el tiempo.
+      en: One half, the factor that appears when integrating acceleration over time.
+      pt: A metade, o fator que surge ao integrar a aceleração no tempo.
+      fr: La moitié, le facteur qui apparaît en intégrant l'accélération sur le temps.
+      zh: 二分之一,对时间积分加速度时出现的系数。
+      ja: 半分。加速度を時間で積分するときに現れる係数。
+  - id: times
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación de la gravedad por el cuadrado del tiempo.
+      en: Multiplication of gravity by the square of the time.
+      pt: Multiplicação da gravidade pelo quadrado do tempo.
+      fr: Multiplication de la gravité par le carré du temps.
+      zh: 重力加速度乘以时间的平方。
+      ja: 重力に時間の二乗を掛ける。
+  - id: g
+    type: variable
+    value: g
+    explanation:
+      es: La aceleración de la gravedad, 9.81 m/s² cerca de la superficie terrestre.
+      en: The acceleration of gravity, 9.81 m/s² near Earth's surface.
+      pt: A aceleração da gravidade, 9,81 m/s² perto da superfície terrestre.
+      fr: L'accélération de la pesanteur, 9,81 m/s² près de la surface terrestre.
+      zh: 重力加速度,地球表面附近约为9.81米每秒平方。
+      ja: 重力加速度。地表付近では9.81 m/s²。
+  - id: times2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación de la gravedad por el cuadrado del tiempo.
+      en: Multiplication of gravity by the square of the time.
+      pt: Multiplicação da gravidade pelo quadrado do tempo.
+      fr: Multiplication de la gravité par le carré du temps.
+      zh: 重力加速度乘以时间的平方。
+      ja: 重力に時間の二乗を掛ける。
+  - id: t2
+    type: variable
+    value: t²
+    explanation:
+      es: El cuadrado del tiempo de caída, porque la distancia crece cuadráticamente.
+      en: The square of the falling time, since distance grows quadratically.
+      pt: O quadrado do tempo de queda, pois a distância cresce quadraticamente.
+      fr: Le carré du temps de chute, car la distance croît quadratiquement.
+      zh: 下落时间的平方,因为距离随时间平方增长。
+      ja: 落下時間の二乗。距離は時間の二乗に比例して増えるため。
+context:
+  author:
+    es: Galileo Galilei
+    en: Galileo Galilei
+    pt: Galileu Galilei
+    fr: Galilée
+    zh: 伽利略·伽利莱
+    ja: ガリレオ・ガリレイ
+  era:
+    es: Italia, 1564–1642 · verificada en la torre de Pisa (tradición)
+    en: Italy, 1564–1642 · verified at the Leaning Tower of Pisa (tradition)
+    pt: Itália, 1564–1642 · verificada na Torre de Pisa (tradição)
+    fr: Italie, 1564–1642 · vérifiée à la tour de Pise (tradition)
+    zh: 意大利,1564–1642年 · 相传在比萨斜塔得到验证
+    ja: イタリア、1564–1642年・ピサの斜塔で検証(伝説)
+  history:
+    es: >-
+      Galileo Galilei estableció que todos los cuerpos caen con la misma aceleración si se ignora el
+      aire, una conclusión que obtuvo experimentando con planos inclinados y péndulos en vez de
+      lanzar objetos desde torres, aunque la tradición atribuye la verificación a la torre de Pisa.
+      Al medir distancias y tiempos en sus planos inclinados descubrió que la distancia crece con el
+      cuadrado del tiempo, y publicó el resultado en los Discorsi (1638). Esa relación cuadrática
+      explica por qué duplicar la altura no duplica el daño sino que lo cuadruplica, y por qué los
+      paracaidistas alcanzan una velocidad terminal cuando el aire equilibra la gravedad.
+    en: >-
+      Galileo Galilei established that all bodies fall with the same acceleration when air resistance
+      is ignored, a conclusion he reached by experimenting with inclined planes and pendulums rather
+      than dropping objects from towers, though tradition credits the verification to the Leaning
+      Tower of Pisa. Timing distances on his inclined planes he discovered that distance grows with
+      the square of time, publishing the result in the Discorsi (1638). That quadratic relation
+      explains why doubling the height does not double the damage but quadruples it, and why
+      skydivers reach a terminal velocity when the air balances gravity.
+    pt: >-
+      Galileu Galilei estabeleceu que todos os corpos caem com a mesma aceleração quando se ignora a
+      resistência do ar, conclusão que obteve experimentando com planos inclinados e pêndulos em vez
+      de soltar objetos de torres, embora a tradição atribua a verificação à Torre de Pisa. Medindo
+      distâncias e tempos em seus planos inclinados, descobriu que a distância cresce com o quadrado
+      do tempo, e publicou o resultado nos Discorsi (1638). Essa relação quadrática explica por que
+      dobrar a altura não dobra o dano, mas o quadruplica, e por que os paraquedistas atingem uma
+      velocidade terminal quando o ar equilibra a gravidade.
+    fr: >-
+      Galilée établit que tous les corps tombent avec la même accélération lorsque l'on néglige la
+      résistance de l'air, une conclusion qu'il obtint en expérimentant avec des plans inclinés et
+      des pendules plutôt qu'en lâchant des objets depuis des tours, même si la tradition attribue la
+      vérification à la tour de Pise. En mesurant distances et temps sur ses plans inclinés, il
+      découvrit que la distance croît comme le carré du temps, et publia le résultat dans les
+      Discorsi (1638). Cette relation quadratique explique pourquoi doubler la hauteur ne double pas
+      les dégâts mais les quadruple, et pourquoi les parachutistes atteignent une vitesse terminale
+      lorsque l'air équilibre la gravité.
+    zh: >-
+      伽利略·伽利莱证明了在忽略空气阻力时所有物体都以相同的加速度下落。这一结论来自他在斜面和摆上的实验,
+      而非从塔顶抛落物体,尽管传统说法把比萨斜塔的验证归功于他。在斜面上测量距离和时间时,他发现距离随时间的平方增长,
+      并于1638年在《关于两门新科学的对话》中发表了这一结果。这种二次关系解释了为什么高度翻倍,坠落造成的伤害不是翻倍而是变成四倍,
+      也解释了为什么跳伞者在空气阻力与重力平衡时达到终端速度。
+    ja: >-
+      ガリレオ・ガリレイは、空気抵抗を無視すればすべての物体が同じ加速度で落下することを示した。これは塔から物体を
+      投げ落とすのではなく、斜面と振り子を使った実験から得られた結論で、ピサの斜塔での検証は伝説とされる。
+      斜面で距離と時間を測るうちに、距離が時間の二乗に比例して増えることを発見し、1638年に『新科学対話』で発表した。
+      この二次の関係は、高さを2倍にすると被害は2倍ではなく4倍になる理由や、空気が重力と釣り合ってスカイダイバーが
+      終端速度に達する理由を説明する。
+  timeline:
+    - year: "1589"
+      label:
+        es: >-
+          La tradición sitúa en la torre de Pisa la verificación de que los cuerpos caen juntos,
+          aunque los historiadores lo ponen en duda.
+        en: >-
+          Tradition places the verification that bodies fall together at the Leaning Tower of Pisa,
+          though historians doubt it.
+        pt: >-
+          A tradição situa na Torre de Pisa a verificação de que os corpos caem juntos, embora os
+          historiadores duvidem.
+        fr: >-
+          La tradition situe à la tour de Pise la vérification que les corps tombent ensemble, bien
+          que les historiens en doutent.
+        zh: >-
+          相传在比萨斜塔验证了物体同时落地,但历史学家对此存疑。
+        ja: >-
+          ピサの斜塔で物体が同時に落ちることが検証されたとされるが、歴史家はこれを疑問視している。
+    - year: "1638"
+      label:
+        es: >-
+          Galileo publica los Discorsi, donde la caída libre aparece como distancia proporcional al
+          cuadrado del tiempo.
+        en: >-
+          Galileo publishes the Discorsi, where free fall appears as distance proportional to the
+          square of time.
+        pt: >-
+          Galileu publica os Discorsi, onde a queda livre aparece como distância proporcional ao
+          quadrado do tempo.
+        fr: >-
+          Galilée publie les Discorsi, où la chute libre apparaît comme une distance proportionnelle
+          au carré du temps.
+        zh: >-
+          伽利略发表《关于两门新科学的对话》,自由落体被描述为距离与时间的平方成正比。
+        ja: >-
+          ガリレオが『新科学対話』を発表。自由落下が距離∝時間²として現れる。
+    - year: "1797"
+      label:
+        es: >-
+          André-Jacques Garnerin realiza el primer salto en paracaídas, dando uso práctico al
+          estudio de la caída.
+        en: >-
+          André-Jacques Garnerin makes the first parachute jump, putting the study of falling to
+          practical use.
+        pt: >-
+          André-Jacques Garnerin realiza o primeiro salto de paraquedas, dando uso prático ao estudo
+          da queda.
+        fr: >-
+          André-Jacques Garnerin effectue le premier saut en parachute, donnant un usage pratique à
+          l'étude de la chute.
+        zh: >-
+          安德烈-雅克·加纳林完成首次跳伞,为下落的研究找到了实际用途。
+        ja: >-
+          アンドレ＝ジャック・ガルヌランが初のパラシュート降下を行い、落下の研究が実用化される。
+    - year: Hoy
+      label:
+        es: >-
+          Paracaidistas y deportes extremos dependen de la velocidad terminal que predice esta
+          fórmula.
+        en: >-
+          Skydivers and extreme sports rely on the terminal velocity this formula predicts.
+        pt: >-
+          Paraquedistas e esportes radicais dependem da velocidade terminal que esta fórmula
+          prevê.
+        fr: >-
+          Parachutistes et sports extrêmes dépendent de la vitesse terminale que cette formule
+          prédit.
+        zh: >-
+          跳伞者和极限运动都依赖这条公式预测的终端速度。
+        ja: >-
+          スカイダイバーやエクストリームスポーツは、この式が予測する終端速度に依存している。
+  useCases:
+    - title:
+        es: Paracaidismo y deportes de aventura
+        en: Skydiving and adventure sports
+        pt: Paraquedismo e esportes de aventura
+        fr: Parachutisme et sports d'aventure
+        zh: 跳伞与冒险运动
+        ja: スカイダイビングとアドベンチャースポーツ
+      description:
+        es: >-
+          Los paracaidistas calculan la distancia de caída y el tiempo de apertura usando la ley de
+          la caída libre.
+        en: >-
+          Skydivers compute fall distance and opening time using the law of free fall.
+        pt: >-
+          Paraquedistas calculam a distância de queda e o tempo de abertura usando a lei da queda
+          livre.
+        fr: >-
+          Les parachutistes calculent la distance de chute et le temps d'ouverture avec la loi de la
+          chute libre.
+        zh: >-
+          跳伞者用自由落体定律计算下落距离和开伞时间。
+        ja: >-
+          スカイダイバーは自由落下の法則を使って落下距離と開傘のタイミングを計算する。
+    - title:
+        es: Seguridad de impacto y pruebas de caída
+        en: Impact safety and drop tests
+        pt: Segurança de impacto e testes de queda
+        fr: Sécurité aux chocs et essais de chute
+        zh: 冲击安全与跌落测试
+        ja: 衝撃安全性と落下試験
+      description:
+        es: >-
+          Los fabricantes de dispositivos y embalajes calculan la energía de un golpe desde la altura
+          de caída con esta fórmula.
+        en: >-
+          Manufacturers of devices and packaging compute impact energy from drop height with this
+          formula.
+        pt: >-
+          Fabricantes de dispositivos e embalagens calculam a energia de um impacto a partir da
+          altura de queda com esta fórmula.
+        fr: >-
+          Les fabricants d'appareils et d'emballages calculent l'énergie d'un choc depuis la hauteur
+          de chute avec cette formule.
+        zh: >-
+          设备和包装制造商用这条公式根据跌落高度计算撞击能量。
+        ja: >-
+          機器や梱包のメーカーは、この式で落下高さから衝撃エネルギーを計算する。
+    - title:
+        es: Ingeniería y diseño de estructuras
+        en: Engineering and structure design
+        pt: Engenharia e projeto de estruturas
+        fr: Ingénierie et conception de structures
+        zh: 工程与结构设计
+        ja: エンジニアリングと構造設計
+      description:
+        es: >-
+          Diseñar amortiguadores, cojinetes y grúas exige conocer la velocidad con que un cuerpo
+          cae sobre ellos.
+        en: >-
+          Designing shock absorbers, bearings and cranes requires knowing the speed at which a body
+          falls onto them.
+        pt: >-
+          Projetar amortecedores, rolamentos e guindastes exige conhecer a velocidade com que um
+          corpo cai sobre eles.
+        fr: >-
+          Concevoir amortisseurs, roulements et grues exige de connaître la vitesse à laquelle un
+          corps tombe sur eux.
+        zh: >-
+          设计减震器、轴承和起重机时,需要知道物体落到其上的速度。
+        ja: >-
+          ショックアブソーバーやベアリング、クレーンを設計するには、物体が落下して衝突する速度を知る必要がある。
+    - title:
+        es: Enseñanza de la física
+        en: Physics education
+        pt: Ensino de física
+        fr: Enseignement de la physique
+        zh: 物理教学
+        ja: 物理教育
+      description:
+        es: >-
+          Es la primera ecuación de cinemática que se aprende, y se demuestra con el clásico
+          experimento de la pluma y el martillo en el vacío.
+        en: >-
+          It is the first kinematics equation taught, demonstrated with the classic feather-and-
+          hammer experiment in a vacuum.
+        pt: >-
+          É a primeira equação de cinemática ensinada, demonstrada com o clássico experimento da
+          pena e do martelo no vácuo.
+        fr: >-
+          C'est la première équation de cinématique enseignée, démontrée avec la classique expérience
+          de la plume et du marteau dans le vide.
+        zh: >-
+          这是第一堂运动学课教到的方程,真空中羽毛和锤子同时落地的经典实验演示了它。
+        ja: >-
+          最初に学ぶ運動学の方程式で、真空中で羽とハンマーが同時に落ちる古典実験で示される。
+  example:
+    title:
+      es: Un objeto que cae
+      en: An object in free fall
+      pt: Um objeto em queda livre
+      fr: Un objet en chute libre
+      zh: 自由下落的物体
+      ja: 自由落下する物体
+    lines:
+      - es: t = 3 s
+        en: t = 3 s
+        pt: t = 3 s
+        fr: t = 3 s
+        zh: t = 3 s
+        ja: t = 3 s
+      - es: g = 9.81 m/s²
+        en: g = 9.81 m/s²
+        pt: g = 9,81 m/s²
+        fr: g = 9,81 m/s²
+        zh: g = 9.81 m/s²
+        ja: g = 9.81 m/s²
+      - es: h = ½ · g · t²
+        en: h = ½ · g · t²
+        pt: h = ½ · g · t²
+        fr: h = ½ · g · t²
+        zh: h = ½ · g · t²
+        ja: h = ½ · g · t²
+      - es: h = 0.5 × 9.81 × 9
+        en: h = 0.5 × 9.81 × 9
+        pt: h = 0,5 × 9,81 × 9
+        fr: h = 0,5 × 9,81 × 9
+        zh: h = 0.5 × 9.81 × 9
+        ja: h = 0.5 × 9.81 × 9
+      - es: h ≈ 44.1 m
+        en: h ≈ 44.1 m
+        pt: h ≈ 44,1 m
+        fr: h ≈ 44,1 m
+        zh: h ≈ 44.1 m
+        ja: h ≈ 44.1 m

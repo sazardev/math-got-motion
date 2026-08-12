@@ -1,0 +1,369 @@
+id: arithmetic-sequence-term
+title:
+  es: Término de una Progresión Aritmética
+  en: Arithmetic Sequence Term
+  pt: Termo de uma Progressão Aritmética
+  fr: Terme d'une suite arithmétique
+  zh: 等差数列的通项
+  ja: 等差数列の一般項
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: a-n
+    type: variable
+    value: aₙ
+    explanation:
+      es: El término enésimo, el que ocupa el lugar n en la progresión.
+      en: The nth term, the one in position n of the sequence.
+      pt: O enésimo termo, o que ocupa a posição n na progressão.
+      fr: Le terme de rang n, celui qui occupe la position n dans la suite.
+      zh: 第 n 项，即数列中位于第 n 个位置的项。
+      ja: 第n項。数列のn番目の位置にある項。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: a-1
+    type: variable
+    value: a₁
+    explanation:
+      es: El primer término de la progresión.
+      en: The first term of the sequence.
+      pt: O primeiro termo da progressão.
+      fr: Le premier terme de la suite.
+      zh: 数列的首项。
+      ja: 数列の初項。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Más el resultado de recorrer n−1 diferencias.
+      en: Plus the result of stepping through n−1 differences.
+      pt: Mais o resultado de percorrer n−1 diferenças.
+      fr: Plus le résultat des n−1 différences parcourues.
+      zh: 再加上走过 n−1 个公差的结果。
+      ja: n−1回の公差を進んだ結果を足す。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre la cantidad de pasos intermedios.
+      en: Opens the number of intermediate steps.
+      pt: Abre a quantidade de passos intermediários.
+      fr: Ouvre le nombre de pas intermédiaires.
+      zh: 打开中间步数的括号。
+      ja: 途中のステップ数を開く括弧。
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: El índice del término que se busca.
+      en: The index of the term being sought.
+      pt: O índice do termo procurado.
+      fr: L'indice du terme recherché.
+      zh: 所求项的序号。
+      ja: 求めたい項の番号。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: Menos 1, porque del primero al enésimo hay n−1 saltos.
+      en: Minus 1, because from the first to the nth term there are n−1 jumps.
+      pt: Menos 1, pois do primeiro ao enésimo termo há n−1 saltos.
+      fr: Moins 1, car du premier au terme de rang n il y a n−1 sauts.
+      zh: 减 1，因为从首项到第 n 项共有 n−1 次跳跃。
+      ja: 1を引く。初項から第n項まではn−1回の跳びが要るため。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: El número 1, que se resta para contar solo los saltos intermedios.
+      en: The number 1, subtracted to count only the intermediate jumps.
+      pt: O número 1, subtraído para contar apenas os saltos intermediários.
+      fr: Le nombre 1, soustrait pour ne compter que les sauts intermédiaires.
+      zh: 数字 1，减去它以便只数中间的跳跃。
+      ja: 数1。途中の跳びだけを数えるために引く。
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra la cantidad de pasos; esa cantidad se multiplica por la diferencia.
+      en: Closes the number of steps; that number is multiplied by the difference.
+      pt: Fecha a quantidade de passos; essa quantidade é multiplicada pela diferença.
+      fr: Ferme le nombre de pas ; ce nombre est multiplié par la différence.
+      zh: 闭合步数括号；该数目与公差相乘。
+      ja: ステップ数の括弧を閉じる。その数に公差を掛ける。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por la diferencia común.
+      en: Multiplied by the common difference.
+      pt: Multiplicado pela diferença comum.
+      fr: Multiplié par la différence commune.
+      zh: 乘以公差。
+      ja: 公差を掛ける。
+  - id: d
+    type: variable
+    value: d
+    explanation:
+      es: La diferencia común, la cantidad constante que se suma en cada paso.
+      en: The common difference, the constant amount added at each step.
+      pt: A diferença comum, a quantidade constante somada a cada passo.
+      fr: La différence commune, la quantité constante ajoutée à chaque pas.
+      zh: 公差，即每一步都加上的常量。
+      ja: 公差。毎回足される一定の量。
+context:
+  author:
+    es: Origen colectivo
+    en: Collective origin
+    pt: Origem coletiva
+    fr: Origine collective
+    zh: 集体起源
+    ja: 集合的起源
+  era:
+    es: Babilonia y Grecia antiguas
+    en: Ancient Babylon and Greece
+    pt: Antiga Babilônia e Grécia
+    fr: Babylone et Grèce antiques
+    zh: 古代巴比伦与希腊
+    ja: 古代バビロニアとギリシャ
+  history:
+    es: >-
+      Las progresiones aritméticas, secuencias en las que cada término se obtiene sumando una
+      diferencia constante d, ya aparecen en las tablas de arcilla de los escribas de Babilonia, que
+      las usaban para repartir raciones y calcular intereses simples. La fórmula del término enésimo
+      aₙ = a₁ + (n−1)·d generaliza esa intuición: para llegar al término n se parte del primero y se
+      da un paso de tamaño d en cada uno de los n−1 saltos intermedios. Hoy es la base de los planes
+      de ahorro, las cuotas y los salarios escalonados, y de cualquier serie donde la cantidad crece a
+      ritmo constante.
+    en: >-
+      Arithmetic progressions, sequences in which each term is obtained by adding a constant
+      difference d, already appear on the clay tablets of Babylonian scribes, who used them to ration
+      shares and compute simple interest. The nth-term formula aₙ = a₁ + (n−1)·d generalizes that
+      insight: to reach term n you start from the first and take one step of size d at each of the n−1
+      intermediate jumps. Today it underlies savings plans, installments, stepped salaries, and any
+      series that grows at a steady rate.
+    pt: >-
+      As progressões aritméticas, sequências em que cada termo é obtido somando-se uma diferença
+      constante d, já aparecem nas tábuas de argila dos escribas da Babilônia, que as usavam para
+      repartir rações e calcular juros simples. A fórmula do termo geral aₙ = a₁ + (n−1)·d generaliza
+      essa intuição: para chegar ao termo n, parte-se do primeiro e dá-se um passo de tamanho d em
+      cada um dos n−1 saltos intermediários. Hoje ela está na base dos planos de poupança, das parcelas
+      e dos salários escalonados, e de toda sequência que cresce a ritmo constante.
+    fr: >-
+      Les progressions arithmétiques, suites dans lesquelles chaque terme s'obtient en ajoutant une
+      différence constante d, apparaissent déjà sur les tablettes d'argile des scribes babyloniens,
+      qui s'en servaient pour répartir des rations et calculer des intérêts simples. La formule du
+      terme général aₙ = a₁ + (n−1)·d généralise cette intuition : pour atteindre le terme n, on part
+      du premier et l'on fait un pas de taille d à chacun des n−1 sauts intermédiaires. Aujourd'hui
+      elle est à la base des plans d'épargne, des échéances et des salaires échelonnés, et de toute
+      suite qui croît à rythme constant.
+    zh: >-
+      等差数列——每项通过加上一个常数公差 d 得到的数列——已出现在巴比伦书吏的泥板上，他们用它来分配口粮和计算
+      单利。第 n 项公式 aₙ = a₁ + (n−1)·d 概括了这一直觉：要到达第 n 项，从首项出发，在中间的 n−1 个间隔中
+      各前进一个大小为 d 的步长。今天，它是储蓄计划、分期付款、阶梯式工资，以及一切以恒定速率增长的数列的基础。
+    ja: >-
+      等差数列、すなわち各項が一定の公差dを加えて得られる数列は、すでにバビロニアの書記の粘土板に登場しており、
+      食料の配分や単利の計算に使われていた。第n項の公式 aₙ = a₁ + (n−1)·d はこの直感を一般化する。第n項に
+      到達するには、初項から出発し、途中のn−1回のステップで毎回大きさdだけ進めばよい。今日では貯蓄計画や分割払い、
+      段階給与、そして一定の速さで増えるあらゆる数列の基礎となっている。
+  timeline:
+    - year: c. 1800 a.C.
+      label:
+        es: >-
+          Las tablillas babilónicas usan progresiones aritméticas para repartir raciones y calcular
+          intereses.
+        en: >-
+          Babylonian clay tablets use arithmetic progressions to ration shares and compute interest.
+        pt: >-
+          As tábuas babilônicas usam progressões aritméticas para repartir rações e calcular juros.
+        fr: >-
+          Les tablettes babyloniennes utilisent des progressions arithmétiques pour répartir des
+          rations et calculer des intérêts.
+        zh: >-
+          巴比伦泥板用等差数列来分配口粮和计算利息。
+        ja: >-
+          バビロニアの粘土板が、食料の配分や利息の計算に等差数列を用いる。
+    - year: "499"
+      label:
+        es: >-
+          Aryabhata registra en su Aryabhatiya las reglas generales de las progresiones aritméticas.
+        en: >-
+          Aryabhata records the general rules of arithmetic progressions in his Aryabhatiya.
+        pt: >-
+          Aryabhata registra em sua Aryabhatiya as regras gerais das progressões aritméticas.
+        fr: >-
+          Aryabhata consigne dans son Aryabhatiya les règles générales des progressions arithmétiques.
+        zh: >-
+          阿耶波多在其《阿耶波多书》中记载了等差数列的一般规则。
+        ja: >-
+          アリヤバタが『アーリヤバティーヤ』で等差数列の一般的な規則を記す。
+    - year: c. 1787
+      label:
+        es: >-
+          El joven Gauss sorprende a su maestro sumando del 1 al 100, popularizando la serie
+          aritmética.
+        en: >-
+          Young Gauss amazes his teacher by adding 1 to 100, popularizing the arithmetic series.
+        pt: >-
+          O jovem Gauss surpreende o professor somando de 1 a 100, popularizando a série aritmética.
+        fr: >-
+          Le jeune Gauss étonne son maître en additionnant les nombres de 1 à 100, popularisant la
+          suite arithmétique.
+        zh: >-
+          年幼的高斯从1加到100令老师惊讶，等差数列也随之广为人知。
+        ja: >-
+          少年ガウスが1から100までの和を求め教師を驚かせ、等差数列が広く知られるようになる。
+    - year: Hoy
+      label:
+        es: >-
+          La fórmula del término enésimo organiza calendarios de pago, escalas salariales y bucles de
+          programas.
+        en: >-
+          The nth-term formula organizes payment schedules, salary scales, and program loops.
+        pt: >-
+          A fórmula do termo geral organiza calendários de pagamento, escalas salariais e laços de
+          programas.
+        fr: >-
+          La formule du terme général organise calendriers de paiement, grilles salariales et boucles
+          de programmes.
+        zh: >-
+          通项公式组织着还款计划、工资等级和程序循环。
+        ja: >-
+          一般項の公式は、支払い計画や給与表、プログラムのループを整える。
+  useCases:
+    - title:
+        es: Finanzas personales
+        en: Personal finance
+        pt: Finanças pessoais
+        fr: Finances personnelles
+        zh: 个人理财
+        ja: パーソナルファイナンス
+      description:
+        es: >-
+          Calcula cuotas, ahorro con aportes constantes y calendarios de pagos que crecen a ritmo
+          fijo.
+        en: >-
+          Computes installments, savings with constant deposits, and payment schedules growing at a
+          fixed rate.
+        pt: >-
+          Calcula parcelas, poupança com aportes constantes e calendários de pagamento que crescem a
+          ritmo fixo.
+        fr: >-
+          Calcule les échéances, l'épargne à versements constants et les calendriers de paiement
+          croissant à rythme fixe.
+        zh: >-
+          计算分期付款、固定存款的储蓄，以及以固定速率增长的还款计划。
+        ja: >-
+          分割払い、一定額の積立貯蓄、一定の割合で増える支払い計画などを計算する。
+    - title:
+        es: Recursos humanos
+        en: Human resources
+        pt: Recursos humanos
+        fr: Ressources humaines
+        zh: 人力资源
+        ja: 人事
+      description:
+        es: >-
+          Modela escalas salariales escalonadas donde cada nivel suma un incremento constante.
+        en: >-
+          Models stepped salary scales where each level adds a constant increment.
+        pt: >-
+          Modela escalas salariais escalonadas em que cada nível soma um incremento constante.
+        fr: >-
+          Modélise des grilles salariales échelonnées où chaque niveau ajoute un incrément constant.
+        zh: >-
+          为逐级递增的工资等级建模，其中每一级都加上一个恒定的增量。
+        ja: >-
+          各段階で一定の増分が加わる段階的な給与表をモデル化する。
+    - title:
+        es: Planificación de producción
+        en: Production planning
+        pt: Planejamento de produção
+        fr: Planification de la production
+        zh: 生产计划
+        ja: 生産計画
+      description:
+        es: >-
+          Predice inventarios o costos acumulados cuando cada periodo agrega una cantidad constante.
+        en: >-
+          Predicts inventory or accumulated cost when each period adds a constant amount.
+        pt: >-
+          Prevê estoques ou custos acumulados quando cada período agrega uma quantidade constante.
+        fr: >-
+          Prévoit les stocks ou les coûts cumulés lorsque chaque période ajoute une quantité constante.
+        zh: >-
+          当每个周期增加恒定数量时，用于预测库存或累计成本。
+        ja: >-
+          各期間に一定量が加わる場合の在庫や累積コストを予測する。
+    - title:
+        es: Análisis de algoritmos
+        en: Algorithm analysis
+        pt: Análise de algoritmos
+        fr: Analyse d'algorithmes
+        zh: 算法分析
+        ja: アルゴリズム解析
+      description:
+        es: >-
+          Cuenta operaciones en bucles que incrementan un índice en cada iteración.
+        en: >-
+          Counts operations in loops that increment an index each iteration.
+        pt: >-
+          Conta operações em laços que incrementam um índice a cada iteração.
+        fr: >-
+          Compte les opérations dans des boucles qui incrémentent un indice à chaque itération.
+        zh: >-
+          统计每轮循环使索引递增的循环结构中的运算次数。
+        ja: >-
+          反復ごとに番号が増えるループの演算回数を数える。
+  example:
+    title:
+      es: Término 10 de la progresión
+      en: 10th term of the sequence
+      pt: 10º termo da progressão
+      fr: 10ᵉ terme de la suite
+      zh: 数列的第10项
+      ja: 数列の第10項
+    lines:
+      - es: a₁ = 3, d = 5, n = 10
+        en: a₁ = 3, d = 5, n = 10
+        pt: a₁ = 3, d = 5, n = 10
+        fr: a₁ = 3, d = 5, n = 10
+        zh: a₁ = 3, d = 5, n = 10
+        ja: a₁ = 3, d = 5, n = 10
+      - es: a₁₀ = 3 + (10 − 1)·5
+        en: a₁₀ = 3 + (10 − 1)·5
+        pt: a₁₀ = 3 + (10 − 1)·5
+        fr: a₁₀ = 3 + (10 − 1)·5
+        zh: a₁₀ = 3 + (10 − 1)·5
+        ja: a₁₀ = 3 + (10 − 1)·5
+      - es: a₁₀ = 3 + 9·5
+        en: a₁₀ = 3 + 9·5
+        pt: a₁₀ = 3 + 9·5
+        fr: a₁₀ = 3 + 9·5
+        zh: a₁₀ = 3 + 9·5
+        ja: a₁₀ = 3 + 9·5
+      - es: a₁₀ = 3 + 45
+        en: a₁₀ = 3 + 45
+        pt: a₁₀ = 3 + 45
+        fr: a₁₀ = 3 + 45
+        zh: a₁₀ = 3 + 45
+        ja: a₁₀ = 3 + 45
+      - es: a₁₀ = 48
+        en: a₁₀ = 48
+        pt: a₁₀ = 48
+        fr: a₁₀ = 48
+        zh: a₁₀ = 48
+        ja: a₁₀ = 48

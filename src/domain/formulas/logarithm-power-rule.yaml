@@ -1,0 +1,383 @@
+id: logarithm-power-rule
+
+title:
+  es: Logaritmo de una Potencia
+  en: Logarithm of a Power
+  pt: Logaritmo de uma Potência
+  fr: Logarithme d'une Puissance
+  zh: 幂的对数
+  ja: 冪の対数
+
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+
+nodes:
+  - id: log-left
+    type: variable
+    value: log
+    explanation:
+      es: "El logaritmo: la operación que responde cuántas veces hay que multiplicar la base para obtener el argumento."
+      en: "The logarithm: the operation answering how many times the base must be multiplied to reach the argument."
+      pt: "O logaritmo: a operação que responde quantas vezes a base precisa ser multiplicada para obter o argumento."
+      fr: "Le logarithme : l'opération qui répond combien de fois il faut multiplier la base pour obtenir l'argument."
+      zh: 对数：回答“底数需要乘多少次才能得到真数”这一问题的运算。
+      ja: 対数。底を何回掛ければ真数に達するかを答える演算。
+  - id: open-left
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el argumento del logaritmo.
+      en: Opens the logarithm's argument.
+      pt: Abre o argumento do logaritmo.
+      fr: Ouvre l'argument du logarithme.
+      zh: 打开对数的真数括号。
+      ja: 対数の引数を開く括弧。
+  - id: base-left
+    type: variable
+    value: a
+    explanation:
+      es: La base de la potencia, un número positivo distinto de 1.
+      en: The base of the power, a positive number other than 1.
+      pt: A base da potência, um número positivo diferente de 1.
+      fr: La base de la puissance, un nombre positif différent de 1.
+      zh: 幂的底数，一个不等于 1 的正数。
+      ja: 冪の底。1以外の正の数。
+  - id: exponent-left
+    type: superscript
+    value: b
+    explanation:
+      es: El exponente de la potencia; la regla lo saca fuera como multiplicador.
+      en: The exponent of the power; the rule pulls it out front as a multiplier.
+      pt: O expoente da potência; a regra o traz para fora como multiplicador.
+      fr: L'exposant de la puissance ; la règle le sort devant comme multiplicateur.
+      zh: 幂的指数；该规则把它提到外面作为乘数。
+      ja: 冪の指数。この規則で外へ出て乗数となる。
+  - id: close-left
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el argumento del logaritmo.
+      en: Closes the logarithm's argument.
+      pt: Fecha o argumento do logaritmo.
+      fr: Ferme l'argument du logarithme.
+      zh: 闭合对数的真数括号。
+      ja: 対数の引数を閉じる括弧。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: exponent-right
+    type: variable
+    value: b
+    explanation:
+      es: El mismo exponente, ahora como factor multiplicador del logaritmo.
+      en: The same exponent, now as a multiplier of the logarithm.
+      pt: O mesmo expoente, agora como fator multiplicador do logaritmo.
+      fr: Le même exposant, désormais comme multiplicateur du logarithme.
+      zh: 同一个指数，现在作为对数的乘数。
+      ja: 同じ指数が、今度は対数の乗数となる。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: log-right
+    type: variable
+    value: log
+    explanation:
+      es: El logaritmo de la base a, ahora sin la potencia.
+      en: The logarithm of the base a, now without the power.
+      pt: O logaritmo da base a, agora sem a potência.
+      fr: Le logarithme de la base a, désormais sans la puissance.
+      zh: 现在不含幂的底数 a 的对数。
+      ja: 冪を含まない、底 a の対数。
+  - id: open-right
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el argumento del logaritmo.
+      en: Opens the logarithm's argument.
+      pt: Abre o argumento do logaritmo.
+      fr: Ouvre l'argument du logarithme.
+      zh: 打开对数的真数括号。
+      ja: 対数の引数を開く括弧。
+  - id: base-right
+    type: variable
+    value: a
+    explanation:
+      es: La misma base a, ya sin elevar.
+      en: The same base a, now without an exponent.
+      pt: A mesma base a, agora sem expoente.
+      fr: La même base a, désormais sans exposant.
+      zh: 同一个底数 a，现在没有指数。
+      ja: 同じ底 a。今は指数なし。
+  - id: close-right
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el argumento del logaritmo.
+      en: Closes the logarithm's argument.
+      pt: Fecha o argumento do logaritmo.
+      fr: Ferme l'argument du logarithme.
+      zh: 闭合对数的真数括号。
+      ja: 対数の引数を閉じる括弧。
+
+context:
+  author:
+    es: Basada en la obra de Napier
+    en: Based on Napier's work
+    pt: Baseada na obra de Napier
+    fr: Basée sur l'œuvre de Napier
+    zh: 基于纳皮尔的著作
+    ja: ネイピアの業績に基づく
+  era:
+    es: "Escocia, 1550–1617"
+    en: "Scotland, 1550–1617"
+    pt: "Escócia, 1550–1617"
+    fr: "Écosse, 1550–1617"
+    zh: "苏格兰，1550–1617年"
+    ja: "スコットランド、1550–1617年"
+  history:
+    es: >-
+      John Napier publicó en 1614, en su Mirifici logarithmorum canonis descriptio, la primera tabla
+      de logaritmos, concebidos para convertir multiplicaciones en sumas. La regla de la potencia,
+      que baja el exponente como multiplicador, surge de esa misma idea: como el logaritmo mide
+      cuántas veces se multiplica la base, elevar a b equivale a multiplicar el logaritmo por b. El
+      matemático inglés Henry Briggs la usó enseguida para simplificar los cálculos de potencias y
+      raíces. Hoy la regla es la base de la escala de decibelios, del decaimiento exponencial y de
+      los ejes logarítmicos, y los logaritmos de Napier subyacen a todo el análisis moderno.
+    en: >-
+      John Napier published the first table of logarithms in 1614 in his Mirifici logarithmorum
+      canonis descriptio, conceiving them to turn multiplications into additions. The power rule,
+      which drops the exponent down as a multiplier, follows from that same idea: since the logarithm
+      measures how many times the base is multiplied, raising it to b is equivalent to multiplying
+      the logarithm by b. The English mathematician Henry Briggs applied it at once to simplify
+      powers and roots. Today the rule underlies the decibel scale, exponential decay, and
+      logarithmic axes, and Napier's logarithms sit beneath all of modern analysis.
+    pt: >-
+      John Napier publicou em 1614, em sua Mirifici logarithmorum canonis descriptio, a primeira
+      tabela de logaritmos, concebidos para transformar multiplicações em adições. A regra da
+      potência, que traz o expoente para baixo como multiplicador, decorre dessa mesma ideia: como o
+      logaritmo mede quantas vezes a base é multiplicada, elevá-la a b equivale a multiplicar o
+      logaritmo por b. O matemático inglês Henry Briggs a usou de imediato para simplificar potências
+      e raízes. Hoje a regra é a base da escala de decibéis, do decaimento exponencial e dos eixos
+      logarítmicos, e os logaritmos de Napier sustentam toda a análise moderna.
+    fr: >-
+      John Napier publia en 1614, dans son Mirifici logarithmorum canonis descriptio, la première
+      table de logarithmes, conçus pour transformer des multiplications en additions. La règle de la
+      puissance, qui fait redescendre l'exposant comme multiplicateur, découle de la même idée :
+      puisque le logarithme mesure combien de fois la base est multipliée, l'élever à b équivaut à
+      multiplier le logarithme par b. Le mathématicien anglais Henry Briggs s'en servit aussitôt pour
+      simplifier puissances et racines. Aujourd'hui, la règle fonde l'échelle des décibels, la
+      décroissance exponentielle et les axes logarithmiques, et les logarithmes de Napier
+      sous-tendent toute l'analyse moderne.
+    zh: >-
+      约翰·纳皮尔于1614年在《奇妙的对数定律说明》中发表了第一张对数表，对数本意是把乘法转化为加法。
+      幂的规则——把指数降下来作为乘数——正源自这一思想：既然对数衡量的是底数被乘了多少次，那么把底数取 b 次方
+      就等价于将对数乘以 b。英国数学家亨利·布里格斯随即用它来简化幂与根的运算。如今该规则是分贝标度、
+      指数衰减和对数坐标的基础，而纳皮尔的对数支撑着整个现代分析学。
+    ja: >-
+      ジョン・ネイピアは1614年に『驚くべき対数法則の記述』で最初の対数表を発表し、対数を乗算を加算に変える
+      ものとして考案した。指数を掛け算の係数として下ろすこのべき乗の規則は、まさにその考えから生まれる。
+      対数が底を何回掛けたかを測るものである以上、底をb乗することは対数をb倍することに等しいからだ。
+      イギリスの数学者ヘンリー・ブリッグスはすぐにこれを冪乗と根の計算の簡略化に用いた。今日この規則は
+      デシベル目盛、指数減衰、対数目盛の基礎であり、ネイピアの対数は近代解析学全体を支えている。
+  timeline:
+    - year: "1614"
+      label:
+        es: >-
+          Napier publica la primera tabla de logaritmos, que convierte la multiplicación en adición.
+        en: >-
+          Napier publishes the first table of logarithms, converting multiplication into addition.
+        pt: >-
+          Napier publica a primeira tabela de logaritmos, que converte multiplicação em adição.
+        fr: >-
+          Napier publie la première table de logarithmes, qui convertit la multiplication en addition.
+        zh: >-
+          纳皮尔发表第一张对数表，把乘法转化为加法。
+        ja: >-
+          ネイピアが最初の対数表を発表し、乗算を加算に変換する。
+    - year: "1624"
+      label:
+        es: >-
+          Briggs publica sus logaritmos decimales, adoptados para el cálculo práctico de potencias y
+          raíces.
+        en: >-
+          Briggs publishes common logarithms, adopted for practical powers-and-roots calculation.
+        pt: >-
+          Briggs publica seus logaritmos decimais, adotados para o cálculo prático de potências e
+          raízes.
+        fr: >-
+          Briggs publie ses logarithmes décimaux, adoptés pour le calcul pratique des puissances et
+          racines.
+        zh: >-
+          布里格斯发表常用对数，用于实际的幂与根运算。
+        ja: >-
+          ブリッグスが常用対数を発表し、冪乗と根の実用的計算に採用される。
+    - year: Hoy
+      label:
+        es: >-
+          La regla sostiene la escala de decibelios, los ejes logarítmicos y el análisis del
+          decaimiento exponencial.
+        en: >-
+          The rule underpins the decibel scale, logarithmic axes, and the analysis of exponential
+          decay.
+        pt: >-
+          A regra sustenta a escala de decibéis, os eixos logarítmicos e a análise do decaimento
+          exponencial.
+        fr: >-
+          La règle fonde l'échelle des décibels, les axes logarithmiques et l'analyse de la
+          décroissance exponentielle.
+        zh: >-
+          该规则支撑着分贝标度、对数坐标以及指数衰减的分析。
+        ja: >-
+          この規則はデシベル目盛、対数目盛、指数減衰の解析を支えている。
+  useCases:
+    - title:
+        es: Acústica y audio
+        en: Acoustics and audio
+        pt: Acústica e áudio
+        fr: Acoustique et audio
+        zh: 声学与音频
+        ja: 音響とオーディオ
+      description:
+        es: >-
+          El nivel de sonido en decibelios se define como 10·log(P/P₀), y cada aumento de potencia b
+          veces suma exactamente 10·log(b) dB.
+        en: >-
+          Sound level in decibels is defined as 10·log(P/P₀), and each b-fold power increase adds
+          exactly 10·log(b) dB.
+        pt: >-
+          O nível de som em decibéis é definido como 10·log(P/P₀), e cada aumento de potência de b
+          vezes soma exatamente 10·log(b) dB.
+        fr: >-
+          Le niveau sonore en décibels est défini par 10·log(P/P₀), et chaque multiplication de la
+          puissance par b ajoute exactement 10·log(b) dB.
+        zh: >-
+          以分贝计的声级定义为 10·log(P/P₀)，功率每增大 b 倍恰好增加 10·log(b) 分贝。
+        ja: >-
+          音のレベルは 10·log(P/P₀) で定義され、電力がb倍になるとちょうど 10·log(b) dB 増える。
+    - title:
+        es: Análisis de señales
+        en: Signal analysis
+        pt: Análise de sinais
+        fr: Analyse de signaux
+        zh: 信号分析
+        ja: 信号解析
+      description:
+        es: >-
+          Los ejes logarítmicos convierten relaciones de potencia en diferencias lineales, según la
+          regla de la potencia.
+        en: >-
+          Logarithmic axes turn power ratios into linear differences, following the power rule.
+        pt: >-
+          Os eixos logarítmicos convertem razões de potência em diferenças lineares, seguindo a regra
+          da potência.
+        fr: >-
+          Les axes logarithmiques transforment les rapports de puissance en différences linéaires,
+          suivant la règle de la puissance.
+        zh: >-
+          对数坐标按幂的规则把功率比转化为线性差值。
+        ja: >-
+          対数目盛はべき乗の規則に従って、電力比を線形の差に変換する。
+    - title:
+        es: Cinética química
+        en: Chemical kinetics
+        pt: Cinética química
+        fr: Cinétique chimique
+        zh: 化学动力学
+        ja: 化学反応速度論
+      description:
+        es: >-
+          La ley de decaimiento exponencial se linealiza tomando logaritmos, que bajan la exponencial
+          como multiplicador.
+        en: >-
+          Exponential decay laws are linearized by taking logarithms, which bring the exponent down
+          as a multiplier.
+        pt: >-
+          A lei do decaimento exponencial é linearizada tomando-se logaritmos, que trazem o expoente
+          para baixo como multiplicador.
+        fr: >-
+          Les lois de décroissance exponentielle se linéarisent en prenant des logarithmes, qui font
+          descendre l'exposant comme multiplicateur.
+        zh: >-
+          对指数衰减定律取对数即可将其线性化，对数的幂规则把指数降为乘数。
+        ja: >-
+          指数減衰の法則は対数を取ることで線形化され、指数が乗数として下ろされる。
+    - title:
+        es: Física y astronomía
+        en: Physics and astronomy
+        pt: Física e astronomia
+        fr: Physique et astronomie
+        zh: 物理与天文
+        ja: 物理学と天文学
+      description:
+        es: >-
+          La magnitud estelar y el pH se definen con logaritmos, donde los exponentes se convierten
+          en sumandos.
+        en: >-
+          Stellar magnitude and pH are defined with logarithms, where exponents become addends.
+        pt: >-
+          A magnitude estelar e o pH são definidos com logaritmos, em que os expoentes viram parcelas.
+        fr: >-
+          La magnitude stellaire et le pH se définissent avec des logarithmes, où les exposants
+          deviennent des termes de somme.
+        zh: >-
+          星等和 pH 都用对数定义，指数在其中变成加数。
+        ja: >-
+          恒星の等級や pH は対数で定義され、指数が加法の項となる。
+  example:
+    title:
+      es: Potencia de 10
+      en: Power of 10
+      pt: Potência de 10
+      fr: Puissance de 10
+      zh: 10 的幂
+      ja: 10のべき乗
+    lines:
+      - es: "log(10³) = 3·log(10)"
+        en: "log(10³) = 3·log(10)"
+        pt: "log(10³) = 3·log(10)"
+        fr: "log(10³) = 3·log(10)"
+        zh: "log(10³) = 3·log(10)"
+        ja: "log(10³) = 3·log(10)"
+      - es: "log(10³) = 3·1"
+        en: "log(10³) = 3·1"
+        pt: "log(10³) = 3·1"
+        fr: "log(10³) = 3·1"
+        zh: "log(10³) = 3·1"
+        ja: "log(10³) = 3·1"
+      - es: "log(10³) = 3"
+        en: "log(10³) = 3"
+        pt: "log(10³) = 3"
+        fr: "log(10³) = 3"
+        zh: "log(10³) = 3"
+        ja: "log(10³) = 3"
+      - es: "log(10³) = log(1000)"
+        en: "log(10³) = log(1000)"
+        pt: "log(10³) = log(1000)"
+        fr: "log(10³) = log(1000)"
+        zh: "log(10³) = log(1000)"
+        ja: "log(10³) = log(1000)"
+      - es: "log(1000) = 3"
+        en: "log(1000) = 3"
+        pt: "log(1000) = 3"
+        fr: "log(1000) = 3"
+        zh: "log(1000) = 3"
+        ja: "log(1000) = 3"

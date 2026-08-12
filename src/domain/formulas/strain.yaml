@@ -1,0 +1,321 @@
+id: strain
+title:
+  es: Deformación Unitaria
+  en: Strain
+  pt: Deformação Específica
+  fr: Déformation
+  zh: 应变
+  ja: ひずみ
+category:
+  es: Ingeniería
+  en: Engineering
+  pt: Engenharia
+  fr: Ingénierie
+  zh: 工程学
+  ja: 工学
+nodes:
+  - id: epsilon
+    type: variable
+    value: ε
+    explanation:
+      es: "ε: la deformación unitaria, el estiramiento relativo del material."
+      en: "ε: the strain, the material's relative stretch."
+      pt: "ε: a deformação específica, o estiramento relativo do material."
+      fr: "ε : la déformation, l'étirement relatif du matériau."
+      zh: "ε：应变，即材料的相对伸长量。"
+      ja: "ε：ひずみ。材料の相対的な伸び。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: delta-l
+    type: variable
+    value: ΔL
+    explanation:
+      es: "ΔL: el cambio de longitud, cuánto se estiró o comprimió la pieza."
+      en: "ΔL: the change in length, how much the piece stretched or compressed."
+      pt: "ΔL: a variação de comprimento, quanto a peça esticou ou comprimiu."
+      fr: "ΔL : la variation de longueur, de combien la pièce s'est allongée ou comprimée."
+      zh: "ΔL：长度的变化量，即构件伸长或压缩了多少。"
+      ja: "ΔL：長さの変化。部材が伸びた（または縮んだ）量。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: l
+    type: variable
+    value: L
+    explanation:
+      es: "L: la longitud original de la pieza, antes de deformarse."
+      en: "L: the original length of the piece, before deforming."
+      pt: "L: o comprimento original da peça, antes de se deformar."
+      fr: "L : la longueur originale de la pièce, avant déformation."
+      zh: "L：构件变形前的原始长度。"
+      ja: "L：変形前の部材の元の長さ。"
+context:
+  author:
+    es: Basada en la mecánica de sólidos
+    en: Based on solid mechanics
+    pt: Baseada na mecânica dos sólidos
+    fr: Basée sur la mécanique des solides
+    zh: 基于固体力学
+    ja: 固体力学に基づく
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, séc. XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲，19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      La deformación unitaria mide cuánto se estira un material en relación con su tamaño: si una
+      viga de 2 metros crece 2 milímetros, su deformación es de una milésima. Al no tener unidades,
+      suele expresarse en porcentaje o en partes por millón. Es la respuesta del material al esfuerzo:
+      al trazar la curva que relaciona ambos, se obtiene la firma mecánica de cada material, con su
+      zona elástica, su límite de fluencia y su punto de rotura. Por eso los extensómetros, que miden
+      ε con precisiones de millonésimas, se colocan en puentes y edificios para detectar deformaciones
+      peligrosas antes de que fallen.
+    en: >-
+      Strain measures how much a material stretches relative to its size: if a 2-meter beam grows 2
+      millimeters, its strain is one-thousandth. Being dimensionless, it is usually given as a
+      percentage or in parts per million. It is the material's response to stress: plotting the curve
+      relating both yields each material's mechanical signature, with its elastic zone, yield point,
+      and breaking point. That is why strain gauges, which measure ε to parts per million, are
+      installed on bridges and buildings to detect dangerous deformation before failure.
+    pt: >-
+      A deformação específica mede quanto um material se estica em relação ao seu tamanho: se uma
+      viga de 2 metros cresce 2 milímetros, sua deformação é de um milésimo. Por ser adimensional,
+      costuma ser expressa em porcentagem ou em partes por milhão. É a resposta do material à tensão:
+      ao traçar a curva que relaciona ambos, obtém-se a assinatura mecânica de cada material, com sua
+      zona elástica, seu limite de escoamento e seu ponto de ruptura. Por isso os extensômetros, que
+      medem ε com precisão de milionésimos, são instalados em pontes e edifícios para detectar
+      deformações perigosas antes da falha.
+    fr: >-
+      La déformation mesure l'étirement d'un matériau par rapport à sa taille : si une poutre de 2
+      mètres s'allonge de 2 millimètres, sa déformation est d'un millième. Comme elle est sans
+      dimension, on l'exprime souvent en pourcentage ou en parties par million. C'est la réponse du
+      matériau à la contrainte : en traçant la courbe qui relie les deux, on obtient la signature
+      mécanique de chaque matériau, avec sa zone élastique, sa limite d'élasticité et son point de
+      rupture. C'est pourquoi les extensomètres, qui mesurent ε au millionième près, sont posés sur
+      les ponts et les bâtiments pour détecter une déformation dangereuse avant la ruine.
+    zh: >-
+      应变衡量材料相对于其尺寸的伸长程度：若一根2米长的梁伸长了2毫米，其应变就是千分之一。由于它没有量纲，
+      通常以百分比或百万分之一表示。它是材料对应力的响应：将两者关系绘成曲线，就得到每种材料的力学特征，
+      包括弹性区、屈服点和断裂点。因此，能够以百万分之一精度测量ε的应变计被安装在桥梁和建筑物上，
+      在破坏发生前就发现危险的变形。
+    ja: >-
+      ひずみとは、材料がその大きさに対してどれだけ伸びるかを測る量である。長さ2メートルの梁が2ミリメートル
+      伸びれば、ひずみは1000分の1となる。無次元量のため、通常はパーセントや百万分率で表される。これは応力に
+      対する材料の応答であり、両者の関係をグラフにすれば、各材料の弾性域・降伏点・破断点という力学的な特性が
+      得られる。そこで、百万分の一の精度でεを測るひずみゲージが橋や建物に取り付けられ、破壊の前に危険な変形を
+      検出するのに使われている。
+  timeline:
+    - year: "1807"
+      label:
+        es: >-
+          Thomas Young define su módulo de elasticidad y la deformación pasa a ser una magnitud
+          cuantificable.
+        en: >-
+          Thomas Young defines his modulus of elasticity, making strain a quantifiable magnitude.
+        pt: >-
+          Thomas Young define seu módulo de elasticidade e a deformação passa a ser uma grandeza
+          quantificável.
+        fr: >-
+          Thomas Young définit son module d'élasticité et la déformation devient une grandeur
+          quantifiable.
+        zh: >-
+          托马斯·杨定义了他的弹性模量，应变从此成为可量化的量。
+        ja: >-
+          トーマス・ヤングが弾性率を定義し、ひずみは定量化可能な量となる。
+    - year: "1856"
+      label:
+        es: >-
+          James Clerk Maxwell describe el primer extensómetro mecánico; pronto siguen los aparatos de
+          laboratorio.
+        en: >-
+          James Clerk Maxwell describes the first mechanical strain gauge; laboratory instruments soon
+          follow.
+        pt: >-
+          James Clerk Maxwell descreve o primeiro extensômetro mecânico; os instrumentos de laboratório
+          logo o seguem.
+        fr: >-
+          James Clerk Maxwell décrit le premier extensomètre mécanique ; des instruments de laboratoire
+          suivent rapidement.
+        zh: >-
+          詹姆斯·克拉克·麦克斯韦描述了第一台机械式应变计，实验室仪器随之而来。
+        ja: >-
+          ジェームズ・クラーク・マクスウェルが最初の機械式ひずみ計を記述し、やがて実験器具が続く。
+    - year: "1938"
+      label:
+        es: >-
+          Edward Simmons y Arthur Ruge inventan la galga extensiométrica de hilo pegado, base de los
+          sensores modernos.
+        en: >-
+          Edward Simmons and Arthur Ruge invent the bonded wire strain gauge, the basis of modern
+          sensors.
+        pt: >-
+          Edward Simmons e Arthur Ruge inventam o extensômetro de fio colado, base dos sensores
+          modernos.
+        fr: >-
+          Edward Simmons et Arthur Ruge inventent la jauge de contrainte à fil collé, base des
+          capteurs modernes.
+        zh: >-
+          爱德华·西蒙斯和阿瑟·鲁格发明了粘贴式丝式应变计，它是现代传感器的基石。
+        ja: >-
+          エドワード・シモンズとアーサー・ルージュが貼り付け式ワイヤひずみゲージを発明。現代センサーの基礎となる。
+    - year: Hoy
+      label:
+        es: >-
+          Miles de galgas sobre puentes y presas reportan deformación en tiempo real para el
+          monitoreo estructural.
+        en: >-
+          Thousands of gauges on bridges and dams report strain in real time for structural
+          monitoring.
+        pt: >-
+          Milhares de extensômetros em pontes e barragens reportam deformação em tempo real para o
+          monitoramento estrutural.
+        fr: >-
+          Des milliers de jauges sur les ponts et les barrages rapportent la déformation en temps réel
+          pour le suivi des structures.
+        zh: >-
+          桥梁和大坝上的数千只应变计实时报告应变数据，用于结构监测。
+        ja: >-
+          橋やダムに取り付けられた何千ものひずみゲージが、構造モニタリングのためにひずみをリアルタイムで報告する。
+  useCases:
+    - title:
+        es: Puentes
+        en: Bridges
+        pt: Pontes
+        fr: Ponts
+        zh: 桥梁
+        ja: 橋梁
+      description:
+        es: >-
+          Las galgas pegadas al tablero detectan fisuras y deformaciones anormales antes de que
+          fallen.
+        en: >-
+          Gauges bonded to the deck detect cracks and abnormal deformation before failure.
+        pt: >-
+          Os extensômetros colados no tabuleiro detectam fissuras e deformações anormais antes da
+          falha.
+        fr: >-
+          Les jauges collées au tablier détectent fissures et déformations anormales avant la rupture.
+        zh: >-
+          粘贴在桥面上的应变计能在破坏发生前发现裂缝和异常变形。
+        ja: >-
+          床版に貼られたひずみゲージが、破壊前にひび割れや異常な変形を検出する。
+    - title:
+        es: Ensayos de materiales
+        en: Materials testing
+        pt: Ensaios de materiais
+        fr: Essais des matériaux
+        zh: 材料试验
+        ja: 材料試験
+      description:
+        es: >-
+          La curva esfuerzo-deformación revela elasticidad, fluencia y ductilidad de cada material.
+        en: >-
+          The stress-strain curve reveals each material's elasticity, yield, and ductility.
+        pt: >-
+          A curva tensão-deformação revela elasticidade, escoamento e ductilidade de cada material.
+        fr: >-
+          La courbe contrainte-déformation révèle élasticité, limite d'élasticité et ductilité de
+          chaque matériau.
+        zh: >-
+          应力-应变曲线揭示每种材料的弹性、屈服和延展性。
+        ja: >-
+          応力-ひずみ曲線は、各材料の弾性、降伏、延性を明らかにする。
+    - title:
+        es: Presas y túneles
+        en: Dams and tunnels
+        pt: Barragens e túneis
+        fr: Barrages et tunnels
+        zh: 大坝与隧道
+        ja: ダムとトンネル
+      description:
+        es: >-
+          Los sensores incrustados en el hormigón vigilan los asentamientos del terreno y la presión
+          interna.
+        en: >-
+          Sensors embedded in concrete watch ground settlement and internal pressure.
+        pt: >-
+          Os sensores embutidos no concreto monitoram os recalques do terreno e a pressão interna.
+        fr: >-
+          Les capteurs noyés dans le béton surveillent les tassements du sol et la pression interne.
+        zh: >-
+          埋入混凝土的传感器监测地基沉降和内部压力。
+        ja: >-
+          コンクリートに埋め込まれたセンサーが地盤の沈下と内部圧力を監視する。
+    - title:
+        es: Sensores y datos
+        en: Sensors and data
+        pt: Sensores e dados
+        fr: Capteurs et données
+        zh: 传感器与数据
+        ja: センサーとデータ
+      description:
+        es: >-
+          Las redes de sensores inalámbricos alimentan gemelos digitales con la deformación medida.
+        en: >-
+          Wireless sensor networks feed digital twins with measured strain data.
+        pt: >-
+          As redes de sensores sem fio alimentam gêmeos digitais com a deformação medida.
+        fr: >-
+          Les réseaux de capteurs sans fil alimentent des jumeaux numériques avec la déformation
+          mesurée.
+        zh: >-
+          无线传感器网络将测得的应变数据馈入数字孪生。
+        ja: >-
+          ワイヤレスセンサーネットワークが、測定したひずみデータでデジタルツインを更新する。
+  example:
+    title:
+      es: Alargamiento de una barra
+      en: Elongation of a bar
+      pt: Alongamento de uma barra
+      fr: Allongement d'une barre
+      zh: 杆件的伸长
+      ja: 棒の伸び
+    lines:
+      - es: L = 2 m, ΔL = 1 mm = 0.001 m
+        en: L = 2 m, ΔL = 1 mm = 0.001 m
+        pt: L = 2 m, ΔL = 1 mm = 0,001 m
+        fr: L = 2 m, ΔL = 1 mm = 0,001 m
+        zh: L = 2 米，ΔL = 1 毫米 = 0.001 米
+        ja: L = 2 m、ΔL = 1 mm = 0.001 m
+      - es: ε = ΔL / L
+        en: ε = ΔL / L
+        pt: ε = ΔL / L
+        fr: ε = ΔL / L
+        zh: ε = ΔL / L
+        ja: ε = ΔL / L
+      - es: ε = 0.001 / 2
+        en: ε = 0.001 / 2
+        pt: ε = 0,001 / 2
+        fr: ε = 0,001 / 2
+        zh: ε = 0.001 / 2
+        ja: ε = 0.001 / 2
+      - es: ε = 0.0005
+        en: ε = 0.0005
+        pt: ε = 0,0005
+        fr: ε = 0,0005
+        zh: ε = 0.0005
+        ja: ε = 0.0005
+      - es: ε = 0.05 % de alargamiento
+        en: ε = 0.05% elongation
+        pt: ε = 0,05% de alongamento
+        fr: ε = 0,05 % d'allongement
+        zh: ε = 0.05% 伸长率
+        ja: ε = 0.05% の伸び

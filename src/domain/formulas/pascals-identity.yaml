@@ -1,0 +1,347 @@
+id: pascals-identity
+
+title:
+  es: Identidad de Pascal
+  en: Pascal's Identity
+  pt: Identidade de Pascal
+  fr: Identité de Pascal
+  zh: 帕斯卡恒等式
+  ja: パスカルの恒等式
+
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+
+nodes:
+  - id: cnk
+    type: variable
+    value: C(n,k)
+    explanation:
+      es: El número de combinaciones de k elementos elegidos entre n, el valor que la identidad descompone en dos casos más simples.
+      en: The number of combinations of k elements chosen from n, the value the identity breaks down into two simpler cases.
+      pt: O número de combinações de k elementos escolhidos entre n, o valor que a identidade decompõe em dois casos mais simples.
+      fr: Le nombre de combinaisons de k éléments choisis parmi n, la valeur que l'identité décompose en deux cas plus simples.
+      zh: 从 n 个元素中选 k 个的组合数，是该恒等式要分解成两个更简单情形的目标值。
+      ja: n個の中からk個を選ぶ組合せの総数。この恒等式が、より簡単な二つの場合に分解する値。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a la suma de los dos términos de la derecha.
+      en: Is equal to the sum of the two terms on the right.
+      pt: É igual à soma dos dois termos da direita.
+      fr: Est égal à la somme des deux termes de droite.
+      zh: 等于右边两项之和。
+      ja: 右辺の2つの項の和に等しい。
+  - id: first-term
+    type: variable
+    value: "C(n−1,"
+    explanation:
+      es: "Primer término: combinaciones sobre un conjunto de n−1 elementos, el total sin un elemento."
+      en: "First term: combinations over a set of n−1 elements, the total with one element removed."
+      pt: "Primeiro termo: combinações sobre um conjunto de n−1 elementos, o total sem um elemento."
+      fr: "Premier terme : combinaisons sur un ensemble de n−1 éléments, le total privé d'un élément."
+      zh: 第一项：在 n−1 个元素上的组合，即总数去掉一个元素。
+      ja: 第一項。n−1個の要素、つまり総数から1つ除いた集合における組合せ。
+  - id: first-arg
+    type: variable
+    value: "k−1)"
+    explanation:
+      es: Se eligen k−1 elementos, uno menos que el objetivo; el paréntesis cierra el argumento.
+      en: Chooses k−1 elements, one fewer than the target; the parenthesis closes the argument.
+      pt: Escolhem-se k−1 elementos, um a menos que o alvo; o parêntese fecha o argumento.
+      fr: On choisit k−1 éléments, un de moins que l'objectif ; la parenthèse ferme l'argument.
+      zh: 选取 k−1 个元素，比目标少一个；括号闭合参数。
+      ja: k−1個の要素を選ぶ。目標より1つ少ない。括弧が引数を閉じる。
+  - id: plus
+    type: operator
+    value: "+"
+    explanation:
+      es: "El signo más: los dos casos son disjuntos, así que se suman sus cuentas."
+      en: "The plus sign: the two cases are disjoint, so their counts add up."
+      pt: "O sinal de mais: os dois casos são disjuntos, então suas contagens se somam."
+      fr: "Le signe plus : les deux cas sont disjoints, donc leurs dénombrements s'additionnent."
+      zh: 加号：这两种情形互不相交，因此把它们的数量相加。
+      ja: プラス記号。二つの場合が重ならないので、それぞれの総数を足し合わせる。
+  - id: second-term
+    type: variable
+    value: "C(n−1,"
+    explanation:
+      es: "Segundo término: combinaciones sobre el mismo conjunto reducido de n−1 elementos."
+      en: "Second term: combinations over the same reduced set of n−1 elements."
+      pt: "Segundo termo: combinações sobre o mesmo conjunto reduzido de n−1 elementos."
+      fr: "Second terme : combinaisons sur le même ensemble réduit de n−1 éléments."
+      zh: 第二项：在同一个缩减后的 n−1 个元素集合上的组合。
+      ja: 第二項。同じくn−1個に減らした集合における組合せ。
+  - id: second-arg
+    type: variable
+    value: "k)"
+    explanation:
+      es: Se eligen k elementos iguales que el objetivo, pero sin poder usar el elemento excluido.
+      en: Chooses the same k elements as the target, but without using the excluded element.
+      pt: Escolhem-se os mesmos k elementos do alvo, mas sem poder usar o elemento excluído.
+      fr: On choisit les mêmes k éléments que l'objectif, mais sans pouvoir utiliser l'élément exclu.
+      zh: 选取与目标相同的 k 个元素，但不能使用被排除的那个元素。
+      ja: 目標と同じk個の要素を選ぶが、除外された要素は使えない。
+
+context:
+  author:
+    es: Blaise Pascal
+    en: Blaise Pascal
+    pt: Blaise Pascal
+    fr: Blaise Pascal
+    zh: 布莱兹·帕斯卡
+    ja: ブレーズ・パスカル
+  era:
+    es: "Francia, 1623–1662 · publicada en 1654"
+    en: "France, 1623–1662 · published in 1654"
+    pt: "França, 1623–1662 · publicada em 1654"
+    fr: "France, 1623–1662 · publiée en 1654"
+    zh: "法国，1623–1662年 · 1654年发表"
+    ja: "フランス、1623–1662年・1654年発表"
+  history:
+    es: >-
+      La identidad C(n,k) = C(n−1,k−1) + C(n−1,k) expresa en símbolos lo que el triángulo aritmético
+      muestra en geometría: cada número es la suma de los dos que tiene encima. Blaise Pascal expuso
+      esta propiedad y su demostración en su Traité du triangle arithmétique, escrito hacia 1654, donde
+      la aplicó a problemas de reparto de apuestas que ya discutía con Pierre Fermat. La misma regla era
+      conocida en China, donde el triángulo figuraba en la obra de Yang Hui del siglo XIII, y en Persia
+      y la India. Hoy la identidad es la base de algoritmos de programación dinámica que calculan
+      coeficientes binomiales sin factoriales, sumando resultados previos.
+    en: >-
+      The identity C(n,k) = C(n−1,k−1) + C(n−1,k) expresses in symbols what the arithmetic triangle
+      shows geometrically: each entry is the sum of the two above it. Blaise Pascal set out this
+      property and its proof in his Traité du triangle arithmétique, written around 1654, applying it
+      to the problem of dividing stakes that he was discussing with Pierre Fermat. The same rule was
+      known in China, where the triangle appeared in Yang Hui's 13th-century work, and in Persia and
+      India. Today the identity underlies dynamic-programming algorithms that compute binomial
+      coefficients without factorials by adding previous results.
+    pt: >-
+      A identidade C(n,k) = C(n−1,k−1) + C(n−1,k) expressa em símbolos o que o triângulo aritmético
+      mostra em geometria: cada número é a soma dos dois que estão acima dele. Blaise Pascal expôs essa
+      propriedade e sua demonstração em seu Traité du triangle arithmétique, escrito por volta de 1654,
+      aplicando-a ao problema de repartição de apostas que discutia com Pierre Fermat. A mesma regra já
+      era conhecida na China, onde o triângulo aparecia na obra de Yang Hui do século XIII, e na Pérsia
+      e na Índia. Hoje a identidade é a base de algoritmos de programação dinâmica que calculam
+      coeficientes binomiais sem fatoriais, somando resultados anteriores.
+    fr: >-
+      L'identité C(n,k) = C(n−1,k−1) + C(n−1,k) exprime en symboles ce que le triangle arithmétique
+      montre en géométrie : chaque nombre est la somme des deux qui le surplombent. Blaise Pascal a
+      exposé cette propriété et sa démonstration dans son Traité du triangle arithmétique, écrit vers
+      1654, en l'appliquant au problème du partage des enjeux qu'il discutait avec Pierre Fermat. La
+      même règle était connue en Chine, où le triangle figurait dans l'œuvre du XIIIe siècle de Yang
+      Hui, ainsi qu'en Perse et en Inde. Aujourd'hui, l'identité fonde les algorithmes de programmation
+      dynamique qui calculent les coefficients binomiaux sans factorielles, en additionnant des
+      résultats antérieurs.
+    zh: >-
+      恒等式 C(n,k) = C(n−1,k−1) + C(n−1,k) 用符号表达了算术三角形在几何上展示的规律：每个数等于它
+      上面两个数之和。布莱兹·帕斯卡在约1654年写成的《算术三角形论》中阐述了这一性质及其证明，并将其应用于
+      与皮埃尔·费马讨论的赌金分配问题。同样的规则在中国早已为人所知，十三世纪杨辉的著作中就出现了这个
+      三角形，波斯和印度也是如此。如今该恒等式是动态规划算法的基础，这类算法通过累加先前结果而不使用阶乘
+      来计算二项式系数。
+    ja: >-
+      恒等式 C(n,k) = C(n−1,k−1) + C(n−1,k) は、算術三角形が幾何学的に示す規則を記号で表したものである。
+      各数は、その真上にある二つの数の和になる。ブレーズ・パスカルは1654年頃に執筆した『算術三角形論』で
+      この性質とその証明を示し、ピエール・ド・フェルマーと交わしていた賭け金の分配問題に応用した。
+      同じ規則は中国でも知られており、13世紀の楊輝の著作にこの三角形が登場し、ペルシアやインドにも見られる。
+      今日この恒等式は、階乗を使わずに以前の結果を足し合わせて二項係数を計算する動的計画法アルゴリズムの基盤である。
+  timeline:
+    - year: "s. XIII"
+      label:
+        es: >-
+          El triángulo con la regla de adición ya aparece en China en la obra de Yang Hui.
+        en: >-
+          The triangle with the addition rule already appears in China in Yang Hui's work.
+        pt: >-
+          O triângulo com a regra de adição já aparece na China na obra de Yang Hui.
+        fr: >-
+          Le triangle avec la règle d'addition apparaît déjà en Chine dans l'œuvre de Yang Hui.
+        zh: >-
+          带有加法规则的三角形已经出现在中国杨辉的著作中。
+        ja: >-
+          加算の規則を持つ三角形が、中国ではすでに楊輝の著作に現れている。
+    - year: "1654"
+      label:
+        es: >-
+          Pascal escribe el Traité du triangle arithmétique y demuestra la identidad de forma
+          combinatoria.
+        en: >-
+          Pascal writes the Traité du triangle arithmétique and proves the identity combinatorially.
+        pt: >-
+          Pascal escreve o Traité du triangle arithmétique e demonstra a identidade de forma
+          combinatória.
+        fr: >-
+          Pascal rédige le Traité du triangle arithmétique et démontre l'identité par combinatoire.
+        zh: >-
+          帕斯卡撰写《算术三角形论》，并用组合的方法证明了该恒等式。
+        ja: >-
+          パスカルが『算術三角形論』を著し、組合せ論的にこの恒等式を証明する。
+    - year: "c. 1665"
+      label:
+        es: >-
+          Newton usa los coeficientes del triángulo en su generalización del teorema del binomio.
+        en: >-
+          Newton uses the triangle's coefficients in his generalization of the binomial theorem.
+        pt: >-
+          Newton usa os coeficientes do triângulo em sua generalização do teorema do binômio.
+        fr: >-
+          Newton utilise les coefficients du triangle dans sa généralisation du théorème du binôme.
+        zh: >-
+          牛顿在他对二项式定理的推广中使用了三角形的系数。
+        ja: >-
+          ニュートンが二項定理の一般化で三角形の係数を用いる。
+    - year: Hoy
+      label:
+        es: >-
+          La identidad alimenta la programación dinámica y el triángulo de Pascal calculado por
+          computadora.
+        en: >-
+          The identity powers dynamic programming and computer-generated Pascal's triangles.
+        pt: >-
+          A identidade alimenta a programação dinâmica e o triângulo de Pascal calculado por
+          computador.
+        fr: >-
+          L'identité alimente la programmation dynamique et les triangles de Pascal calculés par
+          machine.
+        zh: >-
+          该恒等式支撑着动态规划以及由计算机生成的帕斯卡三角形。
+        ja: >-
+          この恒等式は動的計画法や、計算機で生成されるパスカルの三角形を支えている。
+  useCases:
+    - title:
+        es: Programación dinámica
+        en: Dynamic programming
+        pt: Programação dinâmica
+        fr: Programmation dynamique
+        zh: 动态规划
+        ja: 動的計画法
+      description:
+        es: >-
+          Calcula coeficientes binomiales sumando resultados previos, evitando factoriales que
+          desbordan rápidamente.
+        en: >-
+          Computes binomial coefficients by adding previous results, avoiding factorials that
+          overflow quickly.
+        pt: >-
+          Calcula coeficientes binomiais somando resultados anteriores, evitando fatoriais que
+          estouram rapidamente.
+        fr: >-
+          Calcule des coefficients binomiaux en additionnant des résultats antérieurs, évitant des
+          factorielles qui débordent vite.
+        zh: >-
+          通过累加先前结果来计算二项式系数，避免阶乘迅速溢出。
+        ja: >-
+          以前の結果を足し合わせて二項係数を計算し、すぐにオーバーフローする階乗を避ける。
+    - title:
+        es: Probabilidad y estadística
+        en: Probability and statistics
+        pt: Probabilidade e estatística
+        fr: Probabilités et statistiques
+        zh: 概率与统计
+        ja: 確率と統計
+      description:
+        es: >-
+          La descomposición recursiva permite calcular probabilidades de conteos sin construir todo
+          el factorial.
+        en: >-
+          The recursive decomposition computes counting probabilities without building the full
+          factorial.
+        pt: >-
+          A decomposição recursiva permite calcular probabilidades de contagens sem construir todo o
+          fatorial.
+        fr: >-
+          La décomposition récursive calcule des probabilités de dénombrement sans construire toute
+          la factorielle.
+        zh: >-
+          递归分解可以在不计算完整阶乘的情况下得到计数概率。
+        ja: >-
+          再帰的な分解により、完全な階乗を構築せずに数え上げの確率を計算できる。
+    - title:
+        es: Análisis combinatorio
+        en: Combinatorial analysis
+        pt: Análise combinatória
+        fr: Analyse combinatoire
+        zh: 组合分析
+        ja: 組合せ解析
+      description:
+        es: >-
+          La identidad aparece en la demostración de propiedades de las trayectorias en redes y de
+          las sumas de binomios.
+        en: >-
+          The identity appears in proofs about paths in networks and sums of binomial terms.
+        pt: >-
+          A identidade aparece nas demonstrações sobre trajetórias em redes e somas de termos
+          binomiais.
+        fr: >-
+          L'identité apparaît dans les preuves sur les chemins dans les réseaux et les sommes de
+          termes binomiaux.
+        zh: >-
+          该恒等式出现在关于网络中路径以及二项式项之和的证明里。
+        ja: >-
+          この恒等式は、ネットワーク上の経路や二項の項の和に関する証明に現れる。
+    - title:
+        es: Genética
+        en: Genetics
+        pt: Genética
+        fr: Génétique
+        zh: 遗传学
+        ja: 遺伝学
+      description:
+        es: >-
+          El modelo de Hardy-Weinberg y el conteo de genotipos usan coeficientes binomiales sumados
+          de forma recurrente.
+        en: >-
+          Hardy-Weinberg modeling and genotype counting use binomial coefficients summed recursively.
+        pt: >-
+          O modelo de Hardy-Weinberg e a contagem de genótipos usam coeficientes binomiais somados de
+          forma recorrente.
+        fr: >-
+          Le modèle de Hardy-Weinberg et le dénombrement des génotypes utilisent des coefficients
+          binomiaux sommés de façon récurrente.
+        zh: >-
+          哈代-温伯格模型和基因型计数使用递归求和的二项式系数。
+        ja: >-
+          ハーディ・ワインベルクのモデルや遺伝子型の数え上げは、再帰的に足し合わされる二項係数を用いる。
+  example:
+    title:
+      es: C(5,2) paso a paso
+      en: C(5,2) step by step
+      pt: C(5,2) passo a passo
+      fr: C(5,2) pas à pas
+      zh: C(5,2) 逐步计算
+      ja: C(5,2) を段階的に
+    lines:
+      - es: "C(5,2) = C(4,1) + C(4,2)"
+        en: "C(5,2) = C(4,1) + C(4,2)"
+        pt: "C(5,2) = C(4,1) + C(4,2)"
+        fr: "C(5,2) = C(4,1) + C(4,2)"
+        zh: "C(5,2) = C(4,1) + C(4,2)"
+        ja: "C(5,2) = C(4,1) + C(4,2)"
+      - es: "C(4,1) = 4, C(4,2) = 6"
+        en: "C(4,1) = 4, C(4,2) = 6"
+        pt: "C(4,1) = 4, C(4,2) = 6"
+        fr: "C(4,1) = 4, C(4,2) = 6"
+        zh: "C(4,1) = 4, C(4,2) = 6"
+        ja: "C(4,1) = 4, C(4,2) = 6"
+      - es: "C(5,2) = 4 + 6"
+        en: "C(5,2) = 4 + 6"
+        pt: "C(5,2) = 4 + 6"
+        fr: "C(5,2) = 4 + 6"
+        zh: "C(5,2) = 4 + 6"
+        ja: "C(5,2) = 4 + 6"
+      - es: "C(5,2) = 10"
+        en: "C(5,2) = 10"
+        pt: "C(5,2) = 10"
+        fr: "C(5,2) = 10"
+        zh: "C(5,2) = 10"
+        ja: "C(5,2) = 10"
+      - es: "Coincide con 5!/(2!·3!) = 10"
+        en: "Matches 5!/(2!·3!) = 10"
+        pt: "Coincide com 5!/(2!·3!) = 10"
+        fr: "Coïncide avec 5!/(2!·3!) = 10"
+        zh: "与 5!/(2!·3!) = 10 一致"
+        ja: "5!/(2!·3!) = 10 と一致する"

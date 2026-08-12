@@ -1,0 +1,398 @@
+id: beam-deflection
+title:
+  es: Flecha de una Viga en Voladizo
+  en: Cantilever Beam Deflection
+  pt: Deflexão de Viga em Balanço
+  fr: Flèche d'une poutre en porte-à-faux
+  zh: 悬臂梁挠度
+  ja: 片持ち梁のたわみ
+category:
+  es: Ingeniería
+  en: Engineering
+  pt: Engenharia
+  fr: Ingénierie
+  zh: 工程学
+  ja: 工学
+nodes:
+  - id: delta
+    type: variable
+    value: δ
+    explanation:
+      es: "δ: la flecha, cuánto desciende el extremo libre de la viga en voladizo."
+      en: "δ: the deflection, how much the cantilever's free end drops."
+      pt: "δ: a deflexão, quanto desce a extremidade livre da viga em balanço."
+      fr: "δ : la flèche, de combien descend l'extrémité libre de la poutre en porte-à-faux."
+      zh: "δ：挠度，即悬臂梁自由端下垂的距离。"
+      ja: "δ：たわみ。片持ち梁の自由端が下がる量。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: "F: la fuerza aplicada en el extremo libre de la viga."
+      en: "F: the load applied at the beam's free end."
+      pt: "F: a força aplicada na extremidade livre da viga."
+      fr: "F : la charge appliquée à l'extrémité libre de la poutre."
+      zh: "F：施加在梁自由端的载荷。"
+      ja: "F：梁の自由端に加わる荷重。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: l
+    type: variable
+    value: L
+    explanation:
+      es: "L: la longitud de la viga desde el empotramiento hasta la carga."
+      en: "L: the beam's length from the fixed support to the load."
+      pt: "L: o comprimento da viga, do engaste até a carga."
+      fr: "L : la longueur de la poutre, de l'encastrement à la charge."
+      zh: "L：从固定端到载荷处的梁长。"
+      ja: "L：固定端から荷重までの梁の長さ。"
+  - id: l-cubed
+    type: superscript
+    value: "3"
+    explanation:
+      es: "El cubo de la longitud: al duplicar L, la flecha se multiplica por 8."
+      en: "The cube of the length: doubling L multiplies the deflection by 8."
+      pt: "O cubo do comprimento: ao dobrar L, a deflexão se multiplica por 8."
+      fr: "Le cube de la longueur : en doublant L, la flèche est multipliée par 8."
+      zh: "长度的立方：L加倍时，挠度乘以8。"
+      ja: "長さの三乗。Lを2倍にすると、たわみは8倍になる。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: paren-open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el denominador.
+      en: Opens the denominator.
+      pt: Abre o denominador.
+      fr: Ouvre le dénominateur.
+      zh: 分母的起始括号。
+      ja: 分母を開く括弧。
+  - id: three
+    type: number
+    value: "3"
+    explanation:
+      es: "El 3: factor del problema de viga empotrada con carga puntual en el extremo."
+      en: "The 3: the factor for a cantilever with a point load at the end."
+      pt: "O 3: o fator do problema de viga engastada com carga pontual na extremidade."
+      fr: "Le 3 : le facteur du problème de poutre encastrée avec charge ponctuelle à l'extrémité."
+      zh: "3：端部受集中载荷的悬臂梁问题中的系数。"
+      ja: "3：先端に集中荷重を受ける片持ち梁の問題の係数。"
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: "E: el módulo de Young del material de la viga."
+      en: "E: the Young's modulus of the beam's material."
+      pt: "E: o módulo de Young do material da viga."
+      fr: "E : le module de Young du matériau de la poutre."
+      zh: "E：梁材料的杨氏模量。"
+      ja: "E：梁の材料のヤング率。"
+  - id: dot-3
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: i
+    type: variable
+    value: I
+    explanation:
+      es: "I: el momento de inercia de la sección, que mide su resistencia a flexionarse."
+      en: "I: the second moment of area of the section, measuring its resistance to bending."
+      pt: "I: o momento de inércia da seção, que mede sua resistência à flexão."
+      fr: "I : le moment quadratique de la section, mesurant sa résistance à la flexion."
+      zh: "I：截面的惯性矩，衡量其抵抗弯曲的能力。"
+      ja: "I：断面の慣性モーメント。曲げに対する抵抗の尺度。"
+  - id: paren-close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el denominador.
+      en: Closes the denominator.
+      pt: Fecha o denominador.
+      fr: Ferme le dénominateur.
+      zh: 分母的结束括号。
+      ja: 分母を閉じる括弧。
+context:
+  author:
+    es: Basada en la teoría de Euler-Bernoulli
+    en: Based on the Euler–Bernoulli theory
+    pt: Baseada na teoria de Euler-Bernoulli
+    fr: Basée sur la théorie d'Euler-Bernoulli
+    zh: 基于欧拉-伯努利理论
+    ja: オイラー・ベルヌーイ理論に基づく
+  era:
+    es: Europa, s. XVIII
+    en: Europe, 18th century
+    pt: Europa, séc. XVIII
+    fr: Europe, XVIIIe siècle
+    zh: 欧洲，18世纪
+    ja: ヨーロッパ、18世紀
+  history:
+    es: >-
+      Una viga en voladizo está empotrada en un extremo y libre en el otro; al cargarla, se curva.
+      Esta fórmula, caso particular de la teoría de vigas de Euler y Bernoulli, da la flecha de su
+      extremo libre. Lo más notable es que la flecha crece con el cubo de la longitud: duplicar la
+      luz multiplica por ocho el descenso. Por eso las vigas largas y delgadas se comban tanto, y por
+      eso puentes y alas de avión usan secciones altas que aumentan I. La misma ecuación, resuelta
+      numéricamente, vive hoy en todo software de análisis estructural.
+    en: >-
+      A cantilever beam is fixed at one end and free at the other; loaded, it bends. This formula, a
+      particular case of the Euler–Bernoulli beam theory, gives the deflection of its free end. The
+      most striking fact is that deflection grows with the cube of the length: doubling the span
+      multiplies the drop by eight. That is why long, thin beams sag so much, and why bridges and
+      aircraft wings use deep sections that increase I. The same equation, solved numerically, lives
+      today in every structural analysis software.
+    pt: >-
+      Uma viga em balanço é engastada em uma extremidade e livre na outra; ao ser carregada, ela se
+      curva. Esta fórmula, caso particular da teoria de vigas de Euler-Bernoulli, dá a deflexão de
+      sua extremidade livre. O mais notável é que a deflexão cresce com o cubo do comprimento: dobrar
+      o vão multiplica por oito o rebaixamento. Por isso vigas longas e finas se curvam tanto, e por
+      isso pontes e asas de avião usam seções altas, que aumentam I. A mesma equação, resolvida
+      numericamente, vive hoje em todo software de análise estrutural.
+    fr: >-
+      Une poutre en porte-à-faux est encastrée à une extrémité et libre à l'autre ; chargée, elle
+      fléchit. Cette formule, cas particulier de la théorie des poutres d'Euler et Bernoulli, donne
+      la flèche de son extrémité libre. Le plus frappant est que la flèche croît avec le cube de la
+      longueur : doubler la portée multiplie l'affaissement par huit. C'est pourquoi les poutres
+      longues et fines s'affaissent tant, et pourquoi les ponts et les ailes d'avion utilisent des
+      sections hautes, qui augmentent I. La même équation, résolue numériquement, vit aujourd'hui
+      dans tout logiciel de calcul de structures.
+    zh: >-
+      悬臂梁一端固定、另一端自由，加载后会发生弯曲。该公式是欧拉-伯努利梁理论的一个特例，给出其自由端的挠度。
+      最引人注目的是：挠度随长度的三次方增长——跨度加倍，下垂量就乘以8。这就是为什么长而细的梁会下垂得如此厉害，
+      也是为什么桥梁和机翼采用增大了I的高截面。同一方程经数值求解后，如今存在于每一个结构分析软件之中。
+    ja: >-
+      片持ち梁は一端が固定され、他端が自由な梁である。荷重を受けると曲がる。この公式はオイラー・ベルヌーイの梁理論の
+      特別な場合であり、自由端のたわみを与える。最も注目すべき点は、たわみが長さの三乗に比例して増えることだ。
+      長さを2倍にすると、たわみは8倍になる。だから長くて細い梁は大きくたわみ、橋や飛行機の翼が断面を高くしてIを
+      大きくするのもそのためである。同じ方程式は数値的に解かれ、今日ではあらゆる構造解析ソフトに組み込まれている。
+  timeline:
+    - year: "1744"
+      label:
+        es: >-
+          Leonhard Euler publica la elástica, la ecuación de la curva de una viga elástica.
+        en: >-
+          Leonhard Euler publishes the elastica, the equation of an elastic beam's curve.
+        pt: >-
+          Leonhard Euler publica a elástica, a equação da curva de uma viga elástica.
+        fr: >-
+          Leonhard Euler publie l'élastique, l'équation de la courbe d'une poutre élastique.
+        zh: >-
+          莱昂哈德·欧拉发表弹性曲线方程，即弹性梁的弯曲曲线方程。
+        ja: >-
+          レオンハルト・オイラーが弾性曲線、すなわち弾性梁の曲線の方程式を発表する。
+    - year: "1826"
+      label:
+        es: >-
+          Navier sistematiza la teoría de vigas y la introduce en los cursos de ingeniería.
+        en: >-
+          Navier systematizes beam theory and introduces it into engineering courses.
+        pt: >-
+          Navier sistematiza a teoria de vigas e a introduz nos cursos de engenharia.
+        fr: >-
+          Navier systématise la théorie des poutres et l'introduit dans les cours d'ingénierie.
+        zh: >-
+          纳维将梁理论系统化并引入工程课程。
+        ja: >-
+          ナビエが梁理論を体系化し、工学の講義に取り入れる。
+    - year: "1850"
+      label:
+        es: >-
+          Los primeros puentes de hierro y acero se dimensionan con la teoría de vigas.
+        en: >-
+          The first iron and steel bridges are sized using beam theory.
+        pt: >-
+          As primeiras pontes de ferro e aço são dimensionadas com a teoria de vigas.
+        fr: >-
+          Les premiers ponts en fer et en acier sont dimensionnés avec la théorie des poutres.
+        zh: >-
+          首批铁桥和钢桥利用梁理论进行尺寸设计。
+        ja: >-
+          最初の鉄橋や鋼橋が梁理論を用いて設計される。
+    - year: Hoy
+      label:
+        es: >-
+          El software de elementos finitos resuelve la misma ecuación numéricamente en cualquier
+          estructura.
+        en: >-
+          Finite element software solves the same equation numerically for any structure.
+        pt: >-
+          O software de elementos finitos resolve a mesma equação numericamente em qualquer estrutura.
+        fr: >-
+          Les logiciels d'éléments finis résolvent la même équation numériquement pour toute structure.
+        zh: >-
+          有限元软件对任何结构都以数值方式求解同一方程。
+        ja: >-
+          有限要素法ソフトウェアが、あらゆる構造について同じ方程式を数値的に解く。
+  useCases:
+    - title:
+        es: Puentes y pasarelas
+        en: Bridges and walkways
+        pt: Pontes e passarelas
+        fr: Ponts et passerelles
+        zh: 桥梁与人行天桥
+        ja: 橋梁と歩道橋
+      description:
+        es: >-
+          Se limita la flecha para que el tráfico no vea deformaciones visibles ni fatiga excesiva.
+        en: >-
+          Deflection is limited so traffic does not cause visible deformation or excess fatigue.
+        pt: >-
+          Limita-se a deflexão para que o tráfego não cause deformações visíveis nem fadiga excessiva.
+        fr: >-
+          On limite la flèche pour que le trafic ne provoque ni déformation visible ni fatigue
+          excessive.
+        zh: >-
+          限制挠度，使交通不会造成可见的变形或过度的疲劳。
+        ja: >-
+          交通による目に見える変形や過度の疲労を避けるため、たわみを制限する。
+    - title:
+        es: Alas y fuselajes
+        en: Wings and fuselages
+        pt: Asas e fuselagens
+        fr: Ailes et fuselages
+        zh: 机翼与机身
+        ja: 翼と機体
+      description:
+        es: >-
+          La rigidez del ala se diseña con la misma ecuación, combinada con el análisis aeroelástico.
+        en: >-
+          Wing stiffness is designed with the same equation, combined with aeroelastic analysis.
+        pt: >-
+          A rigidez da asa é projetada com a mesma equação, combinada com a análise aeroelástica.
+        fr: >-
+          La raideur de l'aile est conçue avec la même équation, combinée à l'analyse aéroélastique.
+        zh: >-
+          机翼刚度用同一方程设计，并结合气动弹性分析。
+        ja: >-
+          翼の剛性は、空力弾性解析と組み合わせた同じ方程式で設計される。
+    - title:
+        es: Edificios y torres
+        en: Buildings and towers
+        pt: Edifícios e torres
+        fr: Bâtiments et tours
+        zh: 建筑与塔楼
+        ja: 建築物と塔
+      description:
+        es: >-
+          Las vigas de pisos y losas se dimensionan para que la flecha bajo carga útil sea
+          imperceptible.
+        en: >-
+          Floor beams and slabs are sized so deflection under service load is imperceptible.
+        pt: >-
+          As vigas de piso e lajes são dimensionadas para que a deflexão sob carga útil seja
+          imperceptível.
+        fr: >-
+          Les poutres de plancher et les dalles sont dimensionnées pour que la flèche sous charge
+          d'usage soit imperceptible.
+        zh: >-
+          楼板梁和板按使用荷载下挠度不易察觉来设计。
+        ja: >-
+          床梁やスラブは、使用荷重でのたわみが目立たないように寸法を決める。
+    - title:
+        es: Máquinas y herramientas
+        en: Machine tools
+        pt: Máquinas e ferramentas
+        fr: Machines-outils
+        zh: 机床与工具
+        ja: 工作機械と工具
+      description:
+        es: >-
+          La rigidez de las columnas de las máquinas define la precisión con la que se mecaniza.
+        en: >-
+          The stiffness of machine columns defines the precision of machining.
+        pt: >-
+          A rigidez das colunas das máquinas define a precisão da usinagem.
+        fr: >-
+          La raideur des colonnes des machines définit la précision de l'usinage.
+        zh: >-
+          机床立柱的刚度决定了加工的精度。
+        ja: >-
+          工作機械のコラムの剛性が、加工精度を左右する。
+  example:
+    title:
+      es: Viga en voladizo cargada
+      en: Loaded cantilever beam
+      pt: Viga em balanço carregada
+      fr: Poutre en porte-à-faux chargée
+      zh: 受载悬臂梁
+      ja: 荷重を受ける片持ち梁
+    lines:
+      - es: F = 100 N, L = 1 m, E = 200 GPa, I = 1×10⁻⁶ m⁴
+        en: F = 100 N, L = 1 m, E = 200 GPa, I = 1×10⁻⁶ m⁴
+        pt: F = 100 N, L = 1 m, E = 200 GPa, I = 1×10⁻⁶ m⁴
+        fr: F = 100 N, L = 1 m, E = 200 GPa, I = 1×10⁻⁶ m⁴
+        zh: F = 100 牛，L = 1 米，E = 200 吉帕，I = 1×10⁻⁶ 米⁴
+        ja: F = 100 N、L = 1 m、E = 200 GPa、I = 1×10⁻⁶ m⁴
+      - es: δ = F · L³ / (3 · E · I)
+        en: δ = F · L³ / (3 · E · I)
+        pt: δ = F · L³ / (3 · E · I)
+        fr: δ = F · L³ / (3 · E · I)
+        zh: δ = F · L³ / (3 · E · I)
+        ja: δ = F · L³ / (3 · E · I)
+      - es: δ = 100 × 1³ / (3 × 200×10⁹ × 1×10⁻⁶)
+        en: δ = 100 × 1³ / (3 × 200×10⁹ × 1×10⁻⁶)
+        pt: δ = 100 × 1³ / (3 × 200×10⁹ × 1×10⁻⁶)
+        fr: δ = 100 × 1³ / (3 × 200×10⁹ × 1×10⁻⁶)
+        zh: δ = 100 × 1³ / (3 × 200×10⁹ × 1×10⁻⁶)
+        ja: δ = 100 × 1³ / (3 × 200×10⁹ × 1×10⁻⁶)
+      - es: δ = 100 / 600,000
+        en: δ = 100 / 600,000
+        pt: δ = 100 / 600.000
+        fr: δ = 100 / 600 000
+        zh: δ = 100 / 600,000
+        ja: δ = 100 / 600,000
+      - es: δ = 1.67×10⁻⁴ m
+        en: δ = 1.67×10⁻⁴ m
+        pt: δ = 1,67×10⁻⁴ m
+        fr: δ = 1,67×10⁻⁴ m
+        zh: δ = 1.67×10⁻⁴ 米
+        ja: δ = 1.67×10⁻⁴ m
+      - es: δ ≈ 0.17 mm (apenas se nota)
+        en: δ ≈ 0.17 mm (barely visible)
+        pt: δ ≈ 0,17 mm (quase imperceptível)
+        fr: δ ≈ 0,17 mm (à peine visible)
+        zh: δ ≈ 0.17 毫米（几乎看不出）
+        ja: δ ≈ 0.17 mm（ほぼ目立たない）

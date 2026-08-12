@@ -1,0 +1,340 @@
+id: specific-impulse
+title:
+  es: Impulso Específico
+  en: Specific Impulse
+  pt: Impulso Específico
+  fr: Impulsion spécifique
+  zh: 比冲
+  ja: 比推力
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: isp
+    type: variable
+    value: Isp
+    explanation:
+      es: "Isp: el impulso específico, medida de la eficiencia del motor."
+      en: "Isp: the specific impulse, a measure of engine efficiency."
+      pt: "Isp: o impulso específico, medida da eficiência do motor."
+      fr: "Isp : l'impulsion spécifique, mesure de l'efficacité du moteur."
+      zh: "Isp：比冲，衡量发动机效率的指标。"
+      ja: "Isp：比推力。エンジンの効率を表す指標。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: "F: el empuje del motor."
+      en: "F: the thrust of the engine."
+      pt: "F: o empuxo do motor."
+      fr: "F : la poussée du moteur."
+      zh: "F：发动机的推力。"
+      ja: "F：エンジンの推力。"
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el denominador.
+      en: Opens the denominator.
+      pt: Abre o denominador.
+      fr: Ouvre le dénominateur.
+      zh: 打开分母。
+      ja: 分母を開始する括弧。
+  - id: m-dot
+    type: variable
+    value: ṁ
+    explanation:
+      es: "ṁ: la masa de combustible quemada por segundo."
+      en: "ṁ: the mass of fuel burned each second."
+      pt: "ṁ: a massa de combustível queimada por segundo."
+      fr: "ṁ : la masse de carburant brûlée chaque seconde."
+      zh: "ṁ：每秒燃烧的燃料质量。"
+      ja: "ṁ：毎秒燃焼される燃料の質量。"
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: g0
+    type: constant
+    value: g₀
+    explanation:
+      es: "g₀: la gravedad estándar en la superficie terrestre, 9.81 m/s²."
+      en: "g₀: the standard gravity at Earth's surface, 9.81 m/s²."
+      pt: "g₀: a gravidade padrão na superfície terrestre, 9,81 m/s²."
+      fr: "g₀ : la gravité standard à la surface de la Terre, 9,81 m/s²."
+      zh: "g₀：地球表面的标准重力，9.81 米/秒²。"
+      ja: "g₀：地球表面の標準重力、9.81 m/s²。"
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el denominador.
+      en: Closes the denominator.
+      pt: Fecha o denominador.
+      fr: Ferme le dénominateur.
+      zh: 关闭分母。
+      ja: 分母を閉じる括弧。
+context:
+  author:
+    es: Basada en la propulsión a reacción
+    en: Based on jet propulsion
+    pt: Baseada na propulsão a jato
+    fr: Basée sur la propulsion à réaction
+    zh: 基于喷气推进
+    ja: ジェット推進に基づく
+  era:
+    es: EE. UU., s. XX
+    en: USA, 20th century
+    pt: EUA, séc. XX
+    fr: États-Unis, XXᵉ siècle
+    zh: 美国，20世纪
+    ja: アメリカ、20世紀
+  history:
+    es: >-
+      El impulso específico mide la eficiencia con que un cohete usa su combustible: el empuje que
+      obtiene por unidad de peso de propulsor quemado por segundo. Dividir el empuje entre el
+      producto del caudal másico por la gravedad estándar g₀ da un resultado en segundos, por eso se
+      cita "Isp de 300 segundos". A mayor Isp, menos combustible por cada newton-segundo de impulso:
+      los motores químicos rondan los 300 s y los iónicos superan los 3000 s, aunque su empuje es
+      minúsculo.
+    en: >-
+      Specific impulse measures how efficiently a rocket uses its fuel: the thrust it gets per unit
+      weight of propellant burned each second. Dividing thrust by the product of mass flow and the
+      standard gravity g₀ gives a result in seconds, which is why engines are quoted as "an Isp of
+      300 seconds". A higher Isp means less fuel per newton-second of impulse: chemical engines reach
+      about 300 s while ion engines exceed 3,000 s, yet their thrust is tiny.
+    pt: >-
+      O impulso específico mede a eficiência com que um foguete usa seu combustível: o empuxo obtido
+      por unidade de peso de propelente queimado por segundo. Dividir o empuxo pelo produto do fluxo
+      mássico pela gravidade padrão g₀ resulta em segundos, por isso se cita "Isp de 300 segundos".
+      Quanto maior o Isp, menos combustível por newton-segundo de impulso: motores químicos chegam a
+      cerca de 300 s e os iônicos ultrapassam 3.000 s, embora seu empuxo seja minúsculo.
+    fr: >-
+      L'impulsion spécifique mesure l'efficacité avec laquelle une fusée utilise son carburant : la
+      poussée obtenue par unité de poids de propergol brûlé chaque seconde. Diviser la poussée par le
+      produit du débit massique et de la gravité standard g₀ donne un résultat en secondes, d'où les
+      moteurs cités comme « Isp de 300 secondes ». Un Isp plus élevé signifie moins de carburant par
+      newton-seconde d'impulsion : les moteurs chimiques atteignent environ 300 s et les moteurs
+      ioniques dépassent 3 000 s, mais leur poussée est minuscule.
+    zh: >-
+      比冲衡量火箭使用燃料的效率：即每秒消耗单位重量推进剂所获得的推力。用推力除以质量流量与标准重力g₀的
+      乘积，结果以秒为单位，因此常说"比冲300秒"。比冲越高，每牛顿·秒的冲量所消耗的燃料越少：化学发动机
+      约为300秒，离子发动机则超过3000秒，尽管后者的推力极小。
+    ja: >-
+      比推力は、ロケットが燃料をどれだけ効率的に使うかを表す指標で、毎秒燃焼される推進剤の単位重量あたりの
+      推力を示す。推力を、質量流量と標準重力g₀の積で割ると結果は秒となり、エンジンは「比推力300秒」のように
+      表記される。比推力が高いほど、ニュートン秒あたりのインパルスに必要な燃料が少ない。化学エンジンは約300秒、
+      イオンエンジンは3000秒を超えるが、後者の推力はごく小さい。
+  timeline:
+    - year: "1920"
+      label:
+        es: >-
+          Robert Goddard introduce el concepto de impulso específico en sus primeros experimentos.
+        en: >-
+          Robert Goddard introduces the specific impulse concept in his early experiments.
+        pt: >-
+          Robert Goddard introduz o conceito de impulso específico em seus primeiros experimentos.
+        fr: >-
+          Robert Goddard introduit le concept d'impulsion spécifique lors de ses premières
+          expériences.
+        zh: >-
+          罗伯特·戈达德在其早期实验中提出了比冲的概念。
+        ja: >-
+          ロバート・ゴダードが初期の実験で比推力の概念を導入する。
+    - year: "1967"
+      label:
+        es: >-
+          Los motores F-1 del Saturno V alcanzan un impulso específico de unos 263 s.
+        en: >-
+          The Saturn V's F-1 engines reach a specific impulse of about 263 s.
+        pt: >-
+          Os motores F-1 do Saturno V alcançam um impulso específico de cerca de 263 s.
+        fr: >-
+          Les moteurs F-1 de la Saturn V atteignent une impulsion spécifique d'environ 263 s.
+        zh: >-
+          土星五号的F-1发动机达到约263秒的比冲。
+        ja: >-
+          サターンVのF-1エンジンが約263秒の比推力を達成する。
+    - year: "1998"
+      label:
+        es: >-
+          La sonda Deep Space 1 vuela con un motor iónico de unos 3000 s de impulso específico.
+        en: >-
+          The Deep Space 1 probe flies on an ion engine with a specific impulse of about 3,000 s.
+        pt: >-
+          A sonda Deep Space 1 voa com um motor iônico de cerca de 3.000 s de impulso específico.
+        fr: >-
+          La sonde Deep Space 1 vole avec un moteur ionique d'environ 3 000 s d'impulsion
+          spécifique.
+        zh: >-
+          深空1号探测器使用比冲约3000秒的离子发动机飞行。
+        ja: >-
+          深宇宙1号探査機が、比推力約3000秒のイオンエンジンで飛行する。
+    - year: Hoy
+      label:
+        es: >-
+          Los propulsores Hall mantienen en órbita a miles de satélites de comunicaciones.
+        en: >-
+          Hall thrusters keep thousands of communications satellites in orbit.
+        pt: >-
+          Propulsores Hall mantêm em órbita milhares de satélites de comunicações.
+        fr: >-
+          Les propulseurs à effet Hall maintiennent en orbite des milliers de satellites de
+          communications.
+        zh: >-
+          霍尔推进器维持着数千颗通信卫星的轨道。
+        ja: >-
+          ホールスラスタが、数千の通信衛星を軌道上に維持している。
+  useCases:
+    - title:
+        es: Motores de lanzamiento
+        en: Launcher engines
+        pt: Motores de lançamento
+        fr: Moteurs de lanceurs
+        zh: 运载发动机
+        ja: ロケットエンジン
+      description:
+        es: >-
+          Permite comparar motores de empuje similar según su consumo de combustible.
+        en: >-
+          It allows comparing engines of similar thrust by their fuel consumption.
+        pt: >-
+          Permite comparar motores de empuxo semelhante segundo seu consumo de combustível.
+        fr: >-
+          Elle permet de comparer des moteurs de poussée similaire selon leur consommation de
+          carburant.
+        zh: >-
+          用于按燃料消耗比较推力相近的发动机。
+        ja: >-
+          推力が似たエンジンを燃料消費量で比較できるようにする。
+    - title:
+        es: Mantenimiento de órbita
+        en: Station-keeping
+        pt: Manutenção de órbita
+        fr: Maintien à poste
+        zh: 轨道保持
+        ja: 軌道維持
+      description:
+        es: >-
+          Los satélites usan propulsores de alto Isp para mantenerse en su posición con poco
+          combustible.
+        en: >-
+          Satellites use high-Isp thrusters to stay in place with little fuel.
+        pt: >-
+          Satélites usam propulsores de alto Isp para se manter no lugar com pouco combustível.
+        fr: >-
+          Les satellites utilisent des propulseurs à fort Isp pour rester à poste avec peu de
+          carburant.
+        zh: >-
+          卫星使用高比冲推进器，以少量燃料保持位置。
+        ja: >-
+          衛星は比推力の高い推進器を使い、わずかな燃料で位置を維持する。
+    - title:
+        es: Sondas interplanetarias
+        en: Interplanetary probes
+        pt: Sondas interplanetárias
+        fr: Sondes interplanétaires
+        zh: 行星际探测器
+        ja: 惑星間探査機
+      description:
+        es: >-
+          Los motores iónicos maximizan la masa útil viajando lejos con poco propulsor.
+        en: >-
+          Ion engines maximize payload mass by traveling far on little propellant.
+        pt: >-
+          Motores iônicos maximizam a massa útil viajando longe com pouco propelente.
+        fr: >-
+          Les moteurs ioniques maximisent la charge utile en voyageant loin avec peu de propergol.
+        zh: >-
+          离子发动机以少量推进剂远距离飞行，使有效载荷质量最大化。
+        ja: >-
+          イオンエンジンはわずかな推進剤で遠くまで飛行し、ペイロードの質量を最大化する。
+    - title:
+        es: Diseño de etapas
+        en: Stage design
+        pt: Projeto de estágios
+        fr: Conception d'étages
+        zh: 级间设计
+        ja: 段の設計
+      description:
+        es: >-
+          Un Isp más alto de la segunda etapa permite llevar más carga útil a órbita.
+        en: >-
+          A higher upper-stage Isp allows carrying more payload to orbit.
+        pt: >-
+          Um Isp mais alto do estágio superior permite levar mais carga útil à órbita.
+        fr: >-
+          Un Isp plus élevé de l'étage supérieur permet d'emporter plus de charge utile en orbite.
+        zh: >-
+          上级发动机的比冲越高，就能向轨道运送更多有效载荷。
+        ja: >-
+          上段の比推力が高いほど、より多くのペイロードを軌道に運べる。
+  example:
+    title:
+      es: Un motor químico típico
+      en: A typical chemical engine
+      pt: Um motor químico típico
+      fr: Un moteur chimique typique
+      zh: 典型的化学发动机
+      ja: 典型的な化学エンジン
+    lines:
+      - es: F = 250,000 N, ṁ = 100 kg/s, g₀ = 9.81 m/s²
+        en: F = 250,000 N, ṁ = 100 kg/s, g₀ = 9.81 m/s²
+        pt: F = 250 000 N, ṁ = 100 kg/s, g₀ = 9,81 m/s²
+        fr: F = 250 000 N, ṁ = 100 kg/s, g₀ = 9,81 m/s²
+        zh: F = 250,000 牛，ṁ = 100 千克/秒，g₀ = 9.81 米/秒²
+        ja: F = 250,000 N、ṁ = 100 kg/s、g₀ = 9.81 m/s²
+      - es: Isp = F/(ṁ·g₀)
+        en: Isp = F/(ṁ·g₀)
+        pt: Isp = F/(ṁ·g₀)
+        fr: Isp = F/(ṁ·g₀)
+        zh: Isp = F/(ṁ·g₀)
+        ja: Isp = F/(ṁ·g₀)
+      - es: ṁ·g₀ = 100 × 9.81 = 981 N
+        en: ṁ·g₀ = 100 × 9.81 = 981 N
+        pt: ṁ·g₀ = 100 × 9,81 = 981 N
+        fr: ṁ·g₀ = 100 × 9,81 = 981 N
+        zh: ṁ·g₀ = 100 × 9.81 = 981 牛
+        ja: ṁ·g₀ = 100 × 9.81 = 981 N
+      - es: Isp = 250,000 / 981
+        en: Isp = 250,000 / 981
+        pt: Isp = 250 000 / 981
+        fr: Isp = 250 000 / 981
+        zh: Isp = 250,000 / 981
+        ja: Isp = 250,000 / 981
+      - es: Isp ≈ 254.8 s
+        en: Isp ≈ 254.8 s
+        pt: Isp ≈ 254,8 s
+        fr: Isp ≈ 254,8 s
+        zh: Isp ≈ 254.8 秒
+        ja: Isp ≈ 254.8 秒

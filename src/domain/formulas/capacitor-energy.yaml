@@ -1,0 +1,355 @@
+id: capacitor-energy
+title:
+  es: Energía de un Condensador
+  en: Capacitor Energy
+  pt: Energia de um Capacitor
+  fr: Énergie d'un Condensateur
+  zh: 电容器储能
+  ja: コンデンサのエネルギー
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: La energía almacenada en el condensador, en julios.
+      en: The energy stored in the capacitor, in joules.
+      pt: A energia armazenada no capacitor, em joules.
+      fr: L'énergie stockée dans le condensateur, en joules.
+      zh: 电容器中储存的能量,单位为焦耳。
+      ja: コンデンサに蓄えられたエネルギー。単位はジュール。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: half
+    type: number
+    value: "½"
+    explanation:
+      es: "El factor un medio: al cargarse, la tensión crece de forma lineal, así que el trabajo total es la mitad del producto final."
+      en: "The one-half factor: since voltage rises linearly during charging, the total work is half the final product."
+      pt: "O fator meio: como a tensão cresce linearmente durante a carga, o trabalho total é a metade do produto final."
+      fr: "Le facteur un demi : la tension croissant linéairement pendant la charge, le travail total vaut la moitié du produit final."
+      zh: "二分之一因子:充电时电压线性上升,所以总功为最终乘积的一半。"
+      ja: "2分の1の係数:充電中は電圧が直線的に増えるため、全仕事量は最終的な積の半分になる。"
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación de magnitudes.
+      en: Multiplication of quantities.
+      pt: Multiplicação de grandezas.
+      fr: Multiplication de grandeurs.
+      zh: 数量相乘。
+      ja: 量の掛け算。
+  - id: c
+    type: variable
+    value: C
+    explanation:
+      es: La capacitancia del condensador, en faradios.
+      en: The capacitance of the capacitor, in farads.
+      pt: A capacitância do capacitor, em farads.
+      fr: La capacité du condensateur, en farads.
+      zh: 电容器的电容,单位为法拉。
+      ja: コンデンサの静電容量。単位はファラッド。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación de magnitudes.
+      en: Multiplication of quantities.
+      pt: Multiplicação de grandezas.
+      fr: Multiplication de grandeurs.
+      zh: 数量相乘。
+      ja: 量の掛け算。
+  - id: v
+    type: variable
+    value: V
+    explanation:
+      es: La tensión entre las placas en el momento de la carga.
+      en: The voltage across the plates at the moment of charging.
+      pt: A tensão entre as placas no momento da carga.
+      fr: La tension aux bornes des plaques au moment de la charge.
+      zh: 充电时两极板之间的电压。
+      ja: 充電時の極板間の電圧。
+  - id: square
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Al cuadrado: la energía crece con el cuadrado de la tensión."
+      en: "Squared: the energy grows with the square of the voltage."
+      pt: "Ao quadrado: a energia cresce com o quadrado da tensão."
+      fr: "Au carré : l'énergie croît avec le carré de la tension."
+      zh: "平方:能量随电压的平方增长。"
+      ja: "2乗:エネルギーは電圧の2乗に比例して増える。"
+context:
+  author:
+    es: Basada en el trabajo de Faraday y Maxwell
+    en: Based on the work of Faraday and Maxwell
+    pt: Baseada no trabalho de Faraday e Maxwell
+    fr: D'après les travaux de Faraday et Maxwell
+    zh: 基于法拉第和麦克斯韦的成果
+    ja: ファラデーとマクスウェルの研究に基づく
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, séc. XIX
+    fr: Europe, XIXᵉ siècle
+    zh: 欧洲,19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      Cuando un condensador se carga, cada fracción de carga adicional debe empujarse contra el campo
+      de la carga ya acumulada, así que el trabajo de carga crece linealmente con la tensión. La
+      energía resultante, ½·C·V², queda almacenada en el campo eléctrico entre las placas y puede
+      liberarse casi por completo en un instante. Esa descarga súbita alimenta los flashes de las
+      cámaras, restablece el ritmo cardíaco en los desfibriladores y hace de los supercondensadores
+      una opción útil para recuperar la energía de frenado en coches híbridos.
+    en: >-
+      When a capacitor charges, each extra bit of charge must be pushed against the field of the
+      charge already stored, so the work of charging grows linearly with voltage. The resulting
+      energy, ½·C·V², is stored in the electric field between the plates and can be released almost
+      entirely in an instant. That sudden discharge powers camera flashes, restores a heartbeat in
+      defibrillators, and makes supercapacitors attractive for recovering braking energy in hybrid
+      cars.
+    pt: >-
+      Quando um capacitor é carregado, cada nova fração de carga precisa ser empurrada contra o campo
+      da carga já acumulada, então o trabalho de carga cresce linearmente com a tensão. A energia
+      resultante, ½·C·V², fica armazenada no campo elétrico entre as placas e pode ser liberada quase
+      inteiramente em um instante. Essa descarga súbita alimenta os flashes de câmeras, restabelece
+      os batimentos cardíacos em desfibriladores e torna os supercapacitores atraentes para recuperar
+      a energia de frenagem em carros híbridos.
+    fr: >-
+      Lorsqu'un condensateur se charge, chaque nouvelle fraction de charge doit être poussée contre
+      le champ de la charge déjà stockée, si bien que le travail de charge croît linéairement avec la
+      tension. L'énergie résultante, ½·C·V², est emmagasinée dans le champ électrique entre les
+      armatures et peut être libérée presque entièrement en un instant. Cette décharge soudaine
+      alimente les flashs d'appareils photo, relance le rythme cardiaque dans les défibrillateurs et
+      rend les supercondensateurs attractifs pour récupérer l'énergie de freinage des voitures
+      hybrides.
+    zh: >-
+      给电容器充电时,每增加一份电荷都必须克服已积累电荷产生的电场做功,因此充电做功随电压线性增长。得到的能量
+      ½·C·V² 储存在两极板之间的电场中,并能在瞬间几乎全部释放。这种瞬时放电驱动相机的闪光灯、让除颤器恢复心脏跳动,
+      也使超级电容器成为在混合动力汽车中回收制动能量的理想选择。
+    ja: >-
+      コンデンサを充電するとき、新たに加える電荷はすでに蓄えられた電荷が作る電界に抗して押し込む必要があるため、
+      充電の仕事は電圧に比例して増える。得られるエネルギー½·C·V²は、極板間の電界に蓄えられ、ほぼ瞬時に放出できる。
+      この瞬間放電はカメラのフラッシュを光らせ、除細動器で心拍を回復させ、ハイブリッド車で制動エネルギーを回収する
+      スーパーキャパシタに適している。
+  timeline:
+    - year: "1745"
+      label:
+        es: >-
+          La botella de Leiden, el primer condensador de la historia, guarda carga en láminas
+          conductoras separadas por vidrio.
+        en: >-
+          The Leyden jar, history's first capacitor, stores charge on conducting plates separated by
+          glass.
+        pt: >-
+          A garrafa de Leiden, primeiro capacitor da história, armazena carga em lâminas condutoras
+          separadas por vidro.
+        fr: >-
+          La bouteille de Leyde, premier condensateur de l'histoire, stocke la charge sur des lames
+          conductrices séparées par du verre.
+        zh: >-
+          莱顿瓶是历史上第一个电容器,用被玻璃隔开的导电箔片储存电荷。
+        ja: >-
+          歴史上最初のコンデンサであるライデン瓶が、ガラスで隔てられた導体箔に電荷を蓄える。
+    - year: "1861"
+      label:
+        es: >-
+          Maxwell publica sus ecuaciones y muestra que la energía de un condensador reside en su
+          campo eléctrico.
+        en: >-
+          Maxwell publishes his equations and shows that a capacitor's energy lives in its electric
+          field.
+        pt: >-
+          Maxwell publica suas equações e mostra que a energia de um capacitor reside em seu campo
+          elétrico.
+        fr: >-
+          Maxwell publie ses équations et montre que l'énergie d'un condensateur réside dans son
+          champ électrique.
+        zh: >-
+          麦克斯韦发表其方程组,指出电容器的能量储存于其电场之中。
+        ja: >-
+          マクスウェルが方程式を発表し、コンデンサのエネルギーが電界に蓄えられることを示す。
+    - year: "1938"
+      label:
+        es: >-
+          El flash electrónico comercial populariza la descarga súbita de un condensador en la
+          fotografía.
+        en: >-
+          The commercial electronic flash popularizes the sudden capacitor discharge in photography.
+        pt: >-
+          O flash eletrônico comercial populariza a descarga súbita de um capacitor na fotografia.
+        fr: >-
+          Le flash électronique commercial popularise la décharge soudaine d'un condensateur en
+          photographie.
+        zh: >-
+          商用电子闪光灯使电容器的瞬间放电在摄影中普及开来。
+        ja: >-
+          商業用電子フラッシュが、写真撮影におけるコンデンサの瞬間放電を普及させる。
+    - year: Hoy
+      label:
+        es: >-
+          Desfibriladores, flashes y supercondensadores de coches híbridos liberan esta energía en
+          milisegundos.
+        en: >-
+          Defibrillators, flashes, and hybrid-car supercapacitors release this energy in
+          milliseconds.
+        pt: >-
+          Desfibriladores, flashes e supercapacitores de carros híbridos liberam essa energia em
+          milissegundos.
+        fr: >-
+          Les défibrillateurs, les flashs et les supercondensateurs des voitures hybrides libèrent
+          cette énergie en quelques millisecondes.
+        zh: >-
+          除颤器、闪光灯和混动车超级电容器都在毫秒级时间内释放出这种能量。
+        ja: >-
+          除細動器、フラッシュ、ハイブリッド車のスーパーキャパシタは、このエネルギーを数ミリ秒で放出する。
+  useCases:
+    - title:
+        es: Fotografía
+        en: Photography
+        pt: Fotografia
+        fr: Photographie
+        zh: 摄影
+        ja: 写真撮影
+      description:
+        es: >-
+          El flash carga un condensador con calma y lo descarga en milisegundos para emitir un
+          destello intenso.
+        en: >-
+          The flash charges a capacitor slowly and discharges it in milliseconds to emit a brilliant
+          burst of light.
+        pt: >-
+          O flash carrega um capacitor com calma e o descarrega em milissegundos para emitir um
+          clarão intenso.
+        fr: >-
+          Le flash charge un condensateur lentement et le décharge en quelques millisecondes pour
+          émettre un éclat intense.
+        zh: >-
+          闪光灯慢慢给电容器充电,再在毫秒内放电,发出明亮的光。
+        ja: >-
+          フラッシュはコンデンサをゆっくり充電し、数ミリ秒で放電して強い光を放つ。
+    - title:
+        es: Emergencias médicas
+        en: Emergency medicine
+        pt: Emergências médicas
+        fr: Médecine d'urgence
+        zh: 急救医学
+        ja: 救急医療
+      description:
+        es: >-
+          Un desfibrilador almacena la energía de la descarga en condensadores y la entrega al pecho
+          del paciente en una única pulsación.
+        en: >-
+          A defibrillator stores the shock energy in capacitors and delivers it to the patient's
+          chest in a single pulse.
+        pt: >-
+          Um desfibrilador armazena a energia do choque em capacitores e a entrega ao peito do
+          paciente em um único pulso.
+        fr: >-
+          Un défibrillateur stocke l'énergie du choc dans des condensateurs et la délivre à la
+          poitrine du patient en une seule impulsion.
+        zh: >-
+          除颤器把电击能量储存在电容器中,再以一次脉冲把它送到患者胸口。
+        ja: >-
+          除細動器はショックのエネルギーをコンデンサに蓄え、単一のパルスで患者の胸部に送る。
+    - title:
+        es: Vehículos híbridos
+        en: Hybrid vehicles
+        pt: Veículos híbridos
+        fr: Véhicules hybrides
+        zh: 混合动力汽车
+        ja: ハイブリッド車
+      description:
+        es: >-
+          Los supercondensadores recuperan la energía de frenado y la reutilizan para ayudar a
+          acelerar el vehículo.
+        en: >-
+          Supercapacitors recover braking energy and reuse it to help accelerate the vehicle.
+        pt: >-
+          Os supercapacitores recuperam a energia de frenagem e a reutilizam para ajudar a acelerar o
+          veículo.
+        fr: >-
+          Les supercondensateurs récupèrent l'énergie de freinage et la réutilisent pour aider le
+          véhicule à accélérer.
+        zh: >-
+          超级电容器回收制动能量,并把它重新用于辅助车辆加速。
+        ja: >-
+          スーパーキャパシタが制動エネルギーを回収し、車両の加速を助けるために再利用する。
+    - title:
+        es: Electrónica de potencia
+        en: Power electronics
+        pt: Eletrônica de potência
+        fr: Électronique de puissance
+        zh: 电力电子技术
+        ja: パワーエレクトロニクス
+      description:
+        es: >-
+          Los convertidores DC-DC usan condensadores para nivelar y almacenar energía entre etapas de
+          conmutación.
+        en: >-
+          DC-DC converters use capacitors to smooth and store energy between switching stages.
+        pt: >-
+          Os conversores DC-DC usam capacitores para suavizar e armazenar energia entre etapas de
+          comutação.
+        fr: >-
+          Les convertisseurs continu-continu utilisent des condensateurs pour lisser et stocker
+          l'énergie entre les étages de découpage.
+        zh: >-
+          DC-DC转换器用电容器在开关级之间平滑并储存能量。
+        ja: >-
+          DC-DCコンバータはスイッチング段の間でエネルギーを平滑化・蓄積するためにコンデンサを使う。
+  example:
+    title:
+      es: Energía de un condensador
+      en: Energy of a capacitor
+      pt: Energia de um capacitor
+      fr: Énergie d'un condensateur
+      zh: 电容器的能量
+      ja: コンデンサのエネルギー
+    lines:
+      - es: C = 1 mF
+        en: C = 1 mF
+        pt: C = 1 mF
+        fr: C = 1 mF
+        zh: C = 1 mF
+        ja: C = 1 mF
+      - es: V = 100 V
+        en: V = 100 V
+        pt: V = 100 V
+        fr: V = 100 V
+        zh: V = 100 V
+        ja: V = 100 V
+      - es: E = ½ · C · V²
+        en: E = ½ · C · V²
+        pt: E = ½ · C · V²
+        fr: E = ½ · C · V²
+        zh: E = ½ · C · V²
+        ja: E = ½ · C · V²
+      - es: E = 0,5 × 0,001 × 10000
+        en: E = 0.5 × 0.001 × 10000
+        pt: E = 0,5 × 0,001 × 10000
+        fr: E = 0,5 × 0,001 × 10000
+        zh: E = 0.5 × 0.001 × 10000
+        ja: E = 0.5 × 0.001 × 10000
+      - es: E = 5 J
+        en: E = 5 J
+        pt: E = 5 J
+        fr: E = 5 J
+        zh: E = 5 J
+        ja: E = 5 J

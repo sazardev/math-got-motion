@@ -1,0 +1,305 @@
+id: coefficient-of-performance
+title:
+  es: Coeficiente de Rendimiento (COP)
+  en: Coefficient of Performance
+  pt: Coeficiente de Desempenho (COP)
+  fr: Coefficient de performance (COP)
+  zh: 制冷性能系数 (COP)
+  ja: 成績係数 (COP)
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: cop
+    type: variable
+    value: COP
+    explanation:
+      es: El coeficiente de rendimiento de un refrigerador.
+      en: The coefficient of performance of a refrigerator.
+      pt: O coeficiente de desempenho de um refrigerador.
+      fr: Le coefficient de performance d'un réfrigérateur.
+      zh: 制冷机的性能系数。
+      ja: 冷凍機の成績係数。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual al cociente entre lo que se logra y lo que se paga.
+      en: Equals the ratio between what is gained and what is paid.
+      pt: É igual à razão entre o que se ganha e o que se paga.
+      fr: Est égal au rapport entre ce que l'on gagne et ce que l'on paie.
+      zh: 等于收益与投入之比。
+      ja: 得られるものと支払うものの比に等しい。
+  - id: qc
+    type: variable
+    value: Q_c
+    explanation:
+      es: El calor extraído del recinto frío.
+      en: The heat removed from the cold space.
+      pt: O calor retirado do ambiente frio.
+      fr: La chaleur extraite de l'espace froid.
+      zh: 从冷环境中移走的热量。
+      ja: 冷たい空間から取り除かれる熱。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: w
+    type: variable
+    value: W
+    explanation:
+      es: El trabajo que consume el compresor.
+      en: The work consumed by the compressor.
+      pt: O trabalho consumido pelo compressor.
+      fr: Le travail consommé par le compresseur.
+      zh: 压缩机消耗的功。
+      ja: 圧縮機が消費する仕事。
+context:
+  author:
+    es: Basada en el trabajo de Sadi Carnot
+    en: Based on Sadi Carnot's work
+    pt: Baseada no trabalho de Sadi Carnot
+    fr: Basée sur les travaux de Sadi Carnot
+    zh: 基于萨迪·卡诺的著作
+    ja: サディ・カルノーの研究に基づく
+  era:
+    es: Francia, 1824 · desarrollada con la refrigeración industrial en el s. XIX
+    en: France, 1824 · developed with industrial refrigeration in the 19th century
+    pt: França, 1824 · desenvolvida com a refrigeração industrial no séc. XIX
+    fr: France, 1824 · développée avec la réfrigération industrielle au XIXe siècle
+    zh: 法国，1824年 · 随19世纪工业制冷而发展
+    ja: フランス、1824年・19世紀の工業用冷凍とともに発展
+  history:
+    es: >-
+      Un refrigerador invierte el flujo natural del calor: extrae calor de un recinto frío y lo
+      cede a uno caliente, a costa de trabajo del compresor. El coeficiente de rendimiento mide
+      cuánto calor se mueve por cada unidad de trabajo invertido. Como mueve más calor del que
+      consume en trabajo, su valor suele ser mayor que 1. El límite teórico lo fija el ciclo
+      inverso de Carnot: el COP máximo depende solo de las dos temperaturas de trabajo.
+    en: >-
+      A refrigerator reverses the natural flow of heat: it extracts heat from a cold space and
+      delivers it to a hot one, at the cost of work done by the compressor. The coefficient of
+      performance measures how much heat is moved per unit of work invested. Because it moves
+      more heat than the work it consumes, its value is usually greater than 1. The theoretical
+      limit is set by the reversed Carnot cycle: the maximum COP depends only on the two working
+      temperatures.
+    pt: >-
+      Um refrigerador inverte o fluxo natural do calor: extrai calor de um ambiente frio e o
+      entrega a um quente, ao custo de trabalho do compressor. O coeficiente de desempenho mede
+      quanto calor é movido por unidade de trabalho investido. Como ele move mais calor do que o
+      trabalho que consome, seu valor costuma ser maior que 1. O limite teórico é dado pelo ciclo
+      de Carnot invertido: o COP máximo depende apenas das duas temperaturas de trabalho.
+    fr: >-
+      Un réfrigérateur inverse le flux naturel de la chaleur : il extrait de la chaleur d'un
+      espace froid pour la rejeter vers un espace chaud, au prix d'un travail fourni par le
+      compresseur. Le coefficient de performance mesure la chaleur déplacée par unité de travail
+      investi. Comme il déplace plus de chaleur que le travail qu'il consomme, sa valeur est
+      généralement supérieure à 1. La limite théorique est fixée par le cycle de Carnot inversé :
+      le COP maximal ne dépend que des deux températures de travail.
+    zh: >-
+      制冷机逆转热量的自然流向：它以压缩机做功为代价，把热量从冷环境中取出并送到热环境中。
+      性能系数衡量每投入单位功所搬运的热量。由于它搬运的热量多于所消耗的功，其数值通常大于1。
+      理论上限由逆向卡诺循环决定：最大COP只取决于两个工作温度。
+    ja: >-
+      冷凍機は熱の自然な流れを逆転させる。圧縮機の仕事を対価として、冷たい空間から熱を取り出し、
+      熱い空間へ排出するのである。成績係数は、投入した仕事の単位当たりにどれだけの熱を移動できるかを示す。
+      消費した仕事よりも多くの熱を移動させるため、その値は通常1より大きくなる。理論上の上限は
+      逆カルノーサイクルによって決まり、最大のCOPは二つの作業温度のみに依存する。
+  timeline:
+    - year: "1824"
+      label:
+        es: >-
+          Carnot describe el ciclo ideal que, invertido, servirá de modelo a la refrigeración.
+        en: >-
+          Carnot describes the ideal cycle that, reversed, will model refrigeration.
+        pt: >-
+          Carnot descreve o ciclo ideal que, invertido, servirá de modelo à refrigeração.
+        fr: >-
+          Carnot décrit le cycle idéal qui, inversé, servira de modèle à la réfrigération.
+        zh: >-
+          卡诺描述了理想循环，将其逆转后便成为制冷的模型。
+        ja: >-
+          カルノーが理想サイクルを記述する。これを逆転させたものが冷凍のモデルとなる。
+    - year: "1851"
+      label:
+        es: >-
+          James Harrison instala la primera máquina de refrigeración por compresión en Australia.
+        en: >-
+          James Harrison installs the first compression refrigeration machine in Australia.
+        pt: >-
+          James Harrison instala a primeira máquina de refrigeração por compressão na Austrália.
+        fr: >-
+          James Harrison installe la première machine frigorifique à compression en Australie.
+        zh: >-
+          詹姆斯·哈里森在澳大利亚安装了第一台压缩式制冷机。
+        ja: >-
+          ジェームズ・ハリソンがオーストラリアで最初の圧縮式冷凍機を設置する。
+    - year: "1876"
+      label:
+        es: >-
+          Carl von Linde patenta el compresor de amoníaco que impulsa la industria alimentaria.
+        en: >-
+          Carl von Linde patents the ammonia compressor that drives the food industry.
+        pt: >-
+          Carl von Linde patenteia o compressor de amônia que impulsiona a indústria alimentícia.
+        fr: >-
+          Carl von Linde brevète le compresseur à ammoniac qui dynamise l'industrie alimentaire.
+        zh: >-
+          卡尔·冯·林德获得了氨压缩机的专利，推动了食品工业的发展。
+        ja: >-
+          カール・フォン・リンデがアンモニア圧縮機の特許を取得し、食品産業を牽引する。
+    - year: Hoy
+      label:
+        es: >-
+          El COP es la cifra estándar con que se clasifican heladeras, aires y bombas de calor.
+        en: >-
+          The COP is the standard figure used to rate refrigerators, AC units and heat pumps.
+        pt: >-
+          O COP é o número padrão com que se classificam geladeiras, ares-condicionados e bombas
+          de calor.
+        fr: >-
+          Le COP est la valeur standard qui classe les réfrigérateurs, climatiseurs et pompes à
+          chaleur.
+        zh: >-
+          性能系数是评定冰箱、空调和热泵的标准指标。
+        ja: >-
+          成績係数は、冷蔵庫やエアコン、ヒートポンプを評価する標準的な数値である。
+  useCases:
+    - title:
+        es: Refrigeradores domésticos
+        en: Household refrigerators
+        pt: Refrigeradores domésticos
+        fr: Réfrigérateurs domestiques
+        zh: 家用冰箱
+        ja: 家庭用冷蔵庫
+      description:
+        es: >-
+          El COP informa al comprador cuánta energía consume el electrodoméstico por cada unidad
+          de frío.
+        en: >-
+          The COP tells the buyer how much energy the appliance uses per unit of cold produced.
+        pt: >-
+          O COP informa ao comprador quanta energia o eletrodoméstico consome por unidade de frio.
+        fr: >-
+          Le COP indique à l'acheteur l'énergie consommée par l'appareil par unité de froid
+          produite.
+        zh: >-
+          性能系数告诉消费者，家电每产生单位冷量消耗多少电能。
+        ja: >-
+          成績係数は、冷えの単位あたりに家電製品がどれだけのエネルギーを消費するかを買い手に示す。
+    - title:
+        es: Aire acondicionado
+        en: Air conditioning
+        pt: Ar-condicionado
+        fr: Climatisation
+        zh: 空调
+        ja: 空調
+      description:
+        es: >-
+          Los fabricantes usan el COP (o el EER equivalente) para certificar la eficiencia
+          energética.
+        en: >-
+          Manufacturers use the COP (or the equivalent EER) to certify energy efficiency.
+        pt: >-
+          Os fabricantes usam o COP (ou o EER equivalente) para certificar a eficiência
+          energética.
+        fr: >-
+          Les fabricants utilisent le COP (ou l'EER équivalent) pour certifier l'efficacité
+          énergétique.
+        zh: >-
+          制造商使用性能系数（或等效的EER）来认证能效等级。
+        ja: >-
+          メーカーは成績係数（または同等のEER）を用いてエネルギー効率を認定する。
+    - title:
+        es: Bombas de calor
+        en: Heat pumps
+        pt: Bombas de calor
+        fr: Pompes à chaleur
+        zh: 热泵
+        ja: ヒートポンプ
+      description:
+        es: >-
+          La misma fórmula, aplicada en sentido inverso, mide cuánto calor de calefacción se
+          obtiene por vatio.
+        en: >-
+          The same formula, applied in reverse, measures heating output per watt of electricity.
+        pt: >-
+          A mesma fórmula, aplicada em sentido inverso, mede quanto calor de aquecimento se obtém
+          por watt.
+        fr: >-
+          La même formule, appliquée en sens inverse, mesure le chauffage obtenu par watt
+          d'électricité.
+        zh: >-
+          同一公式逆向应用，可衡量每瓦电能可获得多少供暖热量。
+        ja: >-
+          同じ公式を逆向きに適用すると、電気1ワットあたりに得られる暖房熱量を測ることができる。
+    - title:
+        es: Cadena de frío logística
+        en: Cold-chain logistics
+        pt: Logística da cadeia fria
+        fr: Logistique de la chaîne du froid
+        zh: 冷链物流
+        ja: コールドチェーン物流
+      description:
+        es: >-
+          Dimensiona los equipos de transporte refrigerado según el COP para minimizar costos.
+        en: >-
+          It sizes refrigerated transport equipment by COP to minimize costs.
+        pt: >-
+          Dimensiona os equipamentos de transporte refrigerado pelo COP para minimizar custos.
+        fr: >-
+          Elle dimensionne les équipements de transport réfrigéré selon le COP pour réduire les
+          coûts.
+        zh: >-
+          依据性能系数来选配冷链运输设备，以最大限度地降低成本。
+        ja: >-
+          成績係数に基づいて冷凍輸送機器の容量を決め、コストを最小化する。
+  example:
+    title:
+      es: COP de un refrigerador
+      en: COP of a refrigerator
+      pt: COP de um refrigerador
+      fr: COP d'un réfrigérateur
+      zh: 制冷机的性能系数
+      ja: 冷蔵庫の成績係数
+    lines:
+      - es: "Calor extraído del frío: Q_c = 300 J"
+        en: "Heat removed from the cold side: Q_c = 300 J"
+        pt: "Calor retirado do frio: Q_c = 300 J"
+        fr: "Chaleur extraite du froid : Q_c = 300 J"
+        zh: 从冷侧移走的热量：Q_c = 300 J
+        ja: 低温側から取り除いた熱：Q_c = 300 J
+      - es: "Trabajo del compresor: W = 100 J"
+        en: "Compressor work: W = 100 J"
+        pt: "Trabalho do compressor: W = 100 J"
+        fr: "Travail du compresseur : W = 100 J"
+        zh: 压缩机做功：W = 100 J
+        ja: 圧縮機の仕事：W = 100 J
+      - es: COP = Q_c / W
+        en: COP = Q_c / W
+        pt: COP = Q_c / W
+        fr: COP = Q_c / W
+        zh: COP = Q_c / W
+        ja: COP = Q_c / W
+      - es: COP = 300 / 100
+        en: COP = 300 / 100
+        pt: COP = 300 / 100
+        fr: COP = 300 / 100
+        zh: COP = 300 / 100
+        ja: COP = 300 / 100
+      - es: "COP = 3: mueve 3 J por cada joule invertido"
+        en: "COP = 3: it moves 3 J per joule invested"
+        pt: "COP = 3: move 3 J por cada joule investido"
+        fr: "COP = 3 : il déplace 3 J par joule investi"
+        zh: COP = 3：每投入1焦耳可搬运3焦耳
+        ja: COP = 3：投入1ジュールごとに3 Jを移動できる

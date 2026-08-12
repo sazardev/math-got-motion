@@ -1,0 +1,330 @@
+id: friction-force
+title:
+  es: Fuerza de Fricción
+  en: Friction Force
+  pt: Força de Atrito
+  fr: Force de frottement
+  zh: 摩擦力
+  ja: 摩擦力
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: f
+    type: variable
+    value: f
+    explanation:
+      es: "La fuerza de fricción: la resistencia que se opone al deslizamiento entre dos superficies en contacto."
+      en: "The friction force: the resistance that opposes sliding between two surfaces in contact."
+      pt: "A força de atrito: a resistência que se opõe ao deslizamento entre duas superfícies em contato."
+      fr: "La force de frottement : la résistance qui s'oppose au glissement entre deux surfaces en contact."
+      zh: "摩擦力：阻止两个相互接触的表面相对滑动的阻力。"
+      ja: 摩擦力。接触する二つの面のすべりに抵抗する力。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: mu
+    type: variable
+    value: μ
+    explanation:
+      es: "El coeficiente de fricción: un número sin unidades que depende de las superficies en contacto."
+      en: "The coefficient of friction: a dimensionless number that depends on the surfaces in contact."
+      pt: "O coeficiente de atrito: um número adimensional que depende das superfícies em contato."
+      fr: "Le coefficient de frottement : un nombre sans dimension qui dépend des surfaces en contact."
+      zh: "摩擦系数：一个无单位、取决于接触表面的数。"
+      ja: 摩擦係数。接触する面に依存する無次元の数。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: n
+    type: variable
+    value: N
+    explanation:
+      es: "La fuerza normal: la fuerza perpendicular con la que la superficie empuja al cuerpo."
+      en: "The normal force: the perpendicular force with which the surface pushes on the body."
+      pt: "A força normal: a força perpendicular com que a superfície empurra o corpo."
+      fr: "La force normale : la force perpendiculaire avec laquelle la surface pousse le corps."
+      zh: "法向力：接触表面垂直推压物体的力。"
+      ja: 垂直抗力。面が物体を垂直に押す力。
+context:
+  author:
+    es: Basada en los experimentos de Coulomb y Amontons
+    en: Based on the experiments of Coulomb and Amontons
+    pt: Baseada nos experimentos de Coulomb e Amontons
+    fr: Fondée sur les expériences de Coulomb et Amontons
+    zh: 基于库仑和阿蒙顿的实验
+    ja: クーロンとアモントンの実験に基づく
+  era:
+    es: Francia, s. XVII–XVIII
+    en: France, 17th–18th century
+    pt: França, s. XVII–XVIII
+    fr: France, XVIIe–XVIIIe siècle
+    zh: 法国，17–18世纪
+    ja: フランス、17〜18世紀
+  history:
+    es: >-
+      En 1699, el físico francés Guillaume Amontons enunció que la fuerza de fricción entre dos
+      superficies es proporcional a la fuerza normal y no depende del área de contacto, ideas que ya
+      había anticipado Leonardo da Vinci. Charles-Augustin de Coulomb confirmó y refinó estas leyes
+      experimentalmente en 1781, distinguiendo además la fricción estática, que mantiene un cuerpo en
+      reposo, de la cinética, que actúa mientras se desliza. El coeficiente μ depende de las superficies:
+      caucho sobre asfalto ofrece más agarre que hielo sobre metal. Es la misma ley que explica por qué
+      los neumáticos de un auto agarran la carretera y por qué los frenos — que transforman la energía
+      en calor por fricción — pueden detenerlo.
+    en: >-
+      In 1699 the French physicist Guillaume Amontons stated that the friction force between two
+      surfaces is proportional to the normal force and independent of contact area, ideas Leonardo da
+      Vinci had already anticipated. Charles-Augustin de Coulomb confirmed and refined these laws
+      experimentally in 1781, further distinguishing static friction, which holds a body at rest, from
+      kinetic friction, which acts while it slides. The coefficient μ depends on the surfaces: rubber
+      on asphalt grips far better than ice on metal. It is the same law that explains why a car's tires
+      grip the road and why its brakes — which turn energy into heat through friction — can bring it to
+      a stop.
+    pt: >-
+      Em 1699, o físico francês Guillaume Amontons enunciou que a força de atrito entre duas superfícies
+      é proporcional à força normal e não depende da área de contato, ideias que Leonardo da Vinci já
+      havia antecipado. Charles-Augustin de Coulomb confirmou e refinou essas leis experimentalmente em
+      1781, distinguindo ainda o atrito estático, que mantém um corpo em repouso, do cinético, que atua
+      enquanto o corpo desliza. O coeficiente μ depende das superfícies: borracha sobre asfalto oferece
+      muito mais aderência do que gelo sobre metal. É a mesma lei que explica por que os pneus de um
+      carro aderem à estrada e por que os freios — que transformam energia em calor por atrito — conseguem
+      pará-lo.
+    fr: >-
+      En 1699, le physicien français Guillaume Amontons énonça que la force de frottement entre deux
+      surfaces est proportionnelle à la force normale et indépendante de l'aire de contact, des idées
+      que Léonard de Vinci avait déjà pressenties. Charles-Augustin de Coulomb confirma et affina ces
+      lois expérimentalement en 1781, distinguant de plus le frottement statique, qui maintient un
+      corps au repos, du frottement cinétique, qui agit pendant le glissement. Le coefficient μ dépend
+      des surfaces : le caoutchouc sur l'asphalte accroche bien mieux que la glace sur le métal. C'est
+      la même loi qui explique pourquoi les pneus d'une voiture adhèrent à la route et pourquoi ses
+      freins — qui convertissent l'énergie en chaleur par frottement — parviennent à l'arrêter.
+    zh: >-
+      1699年，法国物理学家纪尧姆·阿蒙顿提出：两接触面之间的摩擦力与法向力成正比，且与接触面积无关——这一思想列奥纳
+      多·达·芬奇早已预见。1781年，夏尔-奥古斯丁·德·库仑通过实验确认并完善了这些定律，还进一步区分了使物体保持静止的
+      静摩擦力和物体滑动时的动摩擦力。摩擦系数μ取决于接触面的性质：橡胶与沥青的抓地力远强于冰与金属。正是这条定律
+      解释了为什么汽车轮胎能抓紧路面，也解释了为什么刹车——通过摩擦把能量转化为热量——能让汽车停下来。
+    ja: >-
+      1699年、フランスの物理学者ギヨーム・アモントンは、二つの面の間の摩擦力が垂直抗力に比例し、接触面積には依存
+      しないと述べた。この考えはレオナルド・ダ・ヴィンチがすでに予見していた。シャルル＝オーギュスタン・ド・クーロンは
+      1781年に実験によってこれらの法則を確証・洗練し、さらに物体を静止させたままにする静止摩擦と、滑っている間に働く
+      動摩擦を区別した。摩擦係数μは面の性質に依存し、アスファルト上のゴムは氷上の金属よりはるかに大きなグリップを発揮
+      する。タイヤが路面をとらえられる理由も、ブレーキが摩擦によってエネルギーを熱に変えて車を止められる理由も、同じ
+      この法則で説明できる。
+  timeline:
+    - year: "1699"
+      label:
+        es: >-
+          Guillaume Amontons presenta sus dos leyes de fricción a la Academia de Ciencias de París.
+        en: >-
+          Guillaume Amontons presents his two laws of friction to the Paris Academy of Sciences.
+        pt: >-
+          Guillaume Amontons apresenta suas duas leis do atrito à Academia de Ciências de Paris.
+        fr: >-
+          Guillaume Amontons présente ses deux lois du frottement à l'Académie des sciences de Paris.
+        zh: >-
+          纪尧姆·阿蒙顿向巴黎科学院提出他的两条摩擦定律。
+        ja: >-
+          ギヨーム・アモントンが摩擦の二法則をパリ科学アカデミーに発表する。
+    - year: "1781"
+      label:
+        es: >-
+          Charles-Augustin de Coulomb confirma las leyes con experimentos y distingue fricción estática
+          y cinética.
+        en: >-
+          Charles-Augustin de Coulomb confirms the laws with experiments and distinguishes static and
+          kinetic friction.
+        pt: >-
+          Charles-Augustin de Coulomb confirma as leis com experimentos e distingue atrito estático e
+          cinético.
+        fr: >-
+          Charles-Augustin de Coulomb confirme les lois par l'expérience et distingue frottement
+          statique et cinétique.
+        zh: >-
+          夏尔-奥古斯丁·德·库仑用实验确认了这些定律，并区分了静摩擦与动摩擦。
+        ja: >-
+          シャルル＝オーギュスタン・ド・クーロンが実験で法則を確証し、静止摩擦と動摩擦を区別する。
+    - year: "1978"
+      label:
+        es: >-
+          Bosch introduce el primer ABS de producción, que modula el frenado para mantener la fricción
+          estática de los neumáticos.
+        en: >-
+          Bosch introduces the first production ABS, which modulates braking to keep the tires in
+          static friction.
+        pt: >-
+          A Bosch apresenta o primeiro ABS de produção, que modula a frenagem para manter o atrito
+          estático dos pneus.
+        fr: >-
+          Bosch introduit le premier ABS de série, qui module le freinage pour maintenir le frottement
+          statique des pneus.
+        zh: >-
+          博世推出首款量产ABS，它通过调节制动力让轮胎保持静摩擦状态。
+        ja: >-
+          ボッシュが初の量産ABSを発表。タイヤを静止摩擦の状態に保つよう制動を調整する。
+    - year: Hoy
+      label:
+        es: >-
+          El compuesto y el dibujo de los neumáticos se diseñan para maximizar μ en seco y en mojado.
+        en: >-
+          Tire compounds and treads are engineered to maximize μ on dry and wet roads.
+        pt: >-
+          O composto e o desenho dos pneus são projetados para maximizar μ em piso seco e molhado.
+        fr: >-
+          Les gommes et sculptures des pneus sont conçues pour maximiser μ sur sol sec et mouillé.
+        zh: >-
+          轮胎的配方与花纹被设计成在干湿路面都能最大化μ。
+        ja: >-
+          タイヤのコンパウンドとトレッドは、乾いた路面でも濡れた路面でもμを最大化するよう設計されている。
+  useCases:
+    - title:
+        es: Frenos de vehículos
+        en: Vehicle brakes
+        pt: Freios de veículos
+        fr: Freins de véhicules
+        zh: 车辆制动
+        ja: 車両ブレーキ
+      description:
+        es: >-
+          Las pastillas presionan el disco y la fricción convierte la energía cinética en calor para
+          detener el auto.
+        en: >-
+          Brake pads press on the disc and friction turns kinetic energy into heat to stop the car.
+        pt: >-
+          As pastilhas pressionam o disco e o atrito converte a energia cinética em calor para parar o
+          carro.
+        fr: >-
+          Les plaquettes pressent le disque et le frottement convertit l'énergie cinétique en chaleur
+          pour arrêter la voiture.
+        zh: >-
+          刹车片压紧刹车盘，摩擦力将动能转化为热量，使汽车停下来。
+        ja: >-
+          ブレーキパッドがディスクを押し、摩擦が運動エネルギーを熱に変えて車を停止させる。
+    - title:
+        es: Neumáticos y agarre
+        en: Tires and grip
+        pt: Pneus e aderência
+        fr: Pneus et adhérence
+        zh: 轮胎与抓地力
+        ja: タイヤとグリップ
+      description:
+        es: >-
+          El agarre del neumático sobre el asfalto depende del coeficiente de fricción; los dibujos de
+          la banda evacúan el agua para mantenerlo.
+        en: >-
+          A tire's grip on asphalt depends on the coefficient of friction; tread patterns evacuate
+          water to preserve it.
+        pt: >-
+          A aderência do pneu ao asfalto depende do coeficiente de atrito; os sulcos evacuam a água
+          para mantê-la.
+        fr: >-
+          L'adhérence du pneu sur l'asphalte dépend du coefficient de frottement ; les sculptures
+          évacuent l'eau pour la préserver.
+        zh: >-
+          轮胎在沥青上的抓地力取决于摩擦系数；胎面花纹能排出积水，从而保持抓地力。
+        ja: >-
+          タイヤのアスファルトへのグリップは摩擦係数に依存し、トレッドの溝が水を排出してそれを保つ。
+    - title:
+        es: Seguridad vial
+        en: Road safety
+        pt: Segurança viária
+        fr: Sécurité routière
+        zh: 道路安全
+        ja: 道路安全
+      description:
+        es: >-
+          El estado de los neumáticos y del pavimento cambia μ, y con él la distancia de frenado y el
+          riesgo en una curva.
+        en: >-
+          Tire and pavement condition changes μ, and with it the braking distance and the risk in a
+          curve.
+        pt: >-
+          O estado dos pneus e do pavimento muda μ, e com ele a distância de frenagem e o risco em uma
+          curva.
+        fr: >-
+          L'état des pneus et de la chaussée modifie μ, et avec lui la distance de freinage et le
+          risque dans un virage.
+        zh: >-
+          轮胎和路面的状况会改变μ，制动距离和过弯风险也随之改变。
+        ja: >-
+          タイヤと路面の状態はμを変え、制動距離とカーブでの危険性もそれに伴って変わる。
+    - title:
+        es: Ingeniería mecánica
+        en: Mechanical engineering
+        pt: Engenharia mecânica
+        fr: Ingénierie mécanique
+        zh: 机械工程
+        ja: 機械工学
+      description:
+        es: >-
+          Embragues, frenos industriales y rodamientos se diseñan controlando o minimizando la fricción
+          entre superficies.
+        en: >-
+          Clutches, industrial brakes, and bearings are designed by controlling or minimizing friction
+          between surfaces.
+        pt: >-
+          Embreagens, freios industriais e rolamentos são projetados controlando ou minimizando o
+          atrito entre superfícies.
+        fr: >-
+          Embrayages, freins industriels et roulements sont conçus en contrôlant ou en minimisant le
+          frottement entre les surfaces.
+        zh: >-
+          离合器、工业制动器和轴承的设计，都涉及对表面间摩擦力的控制或最小化。
+        ja: >-
+          クラッチや工業用ブレーキ、軸受けの設計では、面の間の摩擦を制御または最小化する。
+  example:
+    title:
+      es: Frenado de un auto
+      en: Braking a car
+      pt: Frenagem de um carro
+      fr: Freinage d'une voiture
+      zh: 汽车的制动
+      ja: 自動車のブレーキ
+    lines:
+      - es: μ = 0.8, m = 1000 kg
+        en: μ = 0.8, m = 1000 kg
+        pt: μ = 0,8, m = 1000 kg
+        fr: μ = 0,8, m = 1000 kg
+        zh: μ = 0.8, m = 1000 kg
+        ja: μ = 0.8, m = 1000 kg
+      - es: N = m · g
+        en: N = m · g
+        pt: N = m · g
+        fr: N = m · g
+        zh: N = m · g
+        ja: N = m · g
+      - es: N = 1000 × 9.81
+        en: N = 1000 × 9.81
+        pt: N = 1000 × 9,81
+        fr: N = 1000 × 9,81
+        zh: N = 1000 × 9.81
+        ja: N = 1000 × 9.81
+      - es: N ≈ 9810 N
+        en: N ≈ 9810 N
+        pt: N ≈ 9810 N
+        fr: N ≈ 9810 N
+        zh: N ≈ 9810 N
+        ja: N ≈ 9810 N
+      - es: f = μ · N ≈ 0.8 × 9810 ≈ 7848 N
+        en: f = μ · N ≈ 0.8 × 9810 ≈ 7848 N
+        pt: f = μ · N ≈ 0,8 × 9810 ≈ 7848 N
+        fr: f = μ · N ≈ 0,8 × 9810 ≈ 7848 N
+        zh: f = μ · N ≈ 0.8 × 9810 ≈ 7848 N
+        ja: f = μ · N ≈ 0.8 × 9810 ≈ 7848 N

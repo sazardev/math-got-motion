@@ -1,0 +1,331 @@
+id: impulse
+title:
+  es: Impulso
+  en: Impulse
+  pt: Impulso
+  fr: Impulsion
+  zh: 冲量
+  ja: 力積
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: j
+    type: variable
+    value: J
+    explanation:
+      es: "El impulso: la fuerza aplicada multiplicada por el tiempo durante el que actúa."
+      en: "The impulse: the applied force multiplied by the time over which it acts."
+      pt: "O impulso: a força aplicada multiplicada pelo tempo durante o qual ela atua."
+      fr: "L'impulsion : la force appliquée multipliée par la durée pendant laquelle elle agit."
+      zh: "冲量：所施加的力乘以该力作用的时间。"
+      ja: 力積。加えられた力と、その力が働いた時間の積。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: La fuerza neta que se aplica al cuerpo.
+      en: The net force applied to the body.
+      pt: A força resultante aplicada ao corpo.
+      fr: La force nette appliquée au corps.
+      zh: 施加在物体上的合力。
+      ja: 物体に加えられる合力。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: delta-t
+    type: variable
+    value: Δt
+    explanation:
+      es: El intervalo de tiempo durante el que actúa la fuerza.
+      en: The time interval during which the force acts.
+      pt: O intervalo de tempo durante o qual a força atua.
+      fr: L'intervalle de temps pendant lequel la force agit.
+      zh: 力作用的持续时间。
+      ja: 力が働いている時間間隔。
+context:
+  author:
+    es: Basada en los Principia de Newton
+    en: Based on Newton's Principia
+    pt: Baseada nos Principia de Newton
+    fr: Fondée sur les Principia de Newton
+    zh: 基于牛顿《自然哲学的数学原理》
+    ja: ニュートンの『プリンキピア』に基づく
+  era:
+    es: Inglaterra, 1687
+    en: England, 1687
+    pt: Inglaterra, 1687
+    fr: Angleterre, 1687
+    zh: 英国，1687年
+    ja: イギリス、1687年
+  history:
+    es: >-
+      El impulso es la acción de una fuerza durante un intervalo de tiempo: a mayor duración, mayor
+      cambio de momento. Se sigue directamente del segundo principio de Newton, tal como se enuncia en
+      los Principia de 1687, y su versión integral, el teorema del impulso, afirma que el impulso total
+      sobre un cuerpo iguala la variación de su momento lineal. Es la física de la protección en un
+      choque: si la variación de momento es la misma, alargar la duración del impacto divide la fuerza.
+      Por eso los airbags y las zonas de deformación de los autos, diseñados para extenderse durante
+      décimas de segundo, salvan vidas al reducir drásticamente la fuerza que recibe el ocupante.
+    en: >-
+      Impulse is the action of a force over a time interval: the longer the force acts, the greater the
+      change in momentum. It follows directly from Newton's second law, as stated in the 1687
+      Principia, and its integral form, the impulse–momentum theorem, says that the total impulse on a
+      body equals its change in linear momentum. This is the physics of crash protection: when the
+      change in momentum is fixed, lengthening the impact time divides the force. That is why airbags
+      and crumple zones, designed to extend over fractions of a second, save lives by drastically
+      reducing the force felt by the occupant.
+    pt: >-
+      O impulso é a ação de uma força durante um intervalo de tempo: quanto maior a duração, maior a
+      variação do momento. Ele decorre diretamente da segunda lei de Newton, tal como enunciada nos
+      Principia de 1687, e sua forma integral, o teorema do impulso, afirma que o impulso total sobre
+      um corpo é igual à variação do seu momento linear. Essa é a física da proteção em colisões: se a
+      variação do momento é fixa, prolongar a duração do impacto divide a força. Por isso os airbags e
+      as zonas de deformação dos carros, projetados para se estenderem por frações de segundo, salvam
+      vidas ao reduzir drasticamente a força sofrida pelo ocupante.
+    fr: >-
+      L'impulsion est l'action d'une force pendant un intervalle de temps : plus elle dure, plus la
+      quantité de mouvement varie. Elle découle directement de la deuxième loi de Newton, telle
+      qu'énoncée dans les Principia de 1687, et sa forme intégrale, le théorème de l'impulsion,
+      affirme que l'impulsion totale reçue par un corps égale la variation de sa quantité de mouvement.
+      C'est la physique de la protection en cas de choc : lorsque la variation de quantité de
+      mouvement est fixe, allonger la durée de l'impact divise la force. C'est pourquoi les airbags et
+      les zones de déformation des voitures, conçus pour se déployer en quelques fractions de seconde,
+      sauvent des vies en réduisant fortement la force subie par l'occupant.
+    zh: >-
+      冲量是力在一段时间内的作用效果：作用时间越长，动量的改变越大。它直接来自1687年《自然哲学的数学原理》中阐述的
+      牛顿第二定律，其积分形式——冲量定理——指出物体所受的总冲量等于其线性动量的变化。这正是碰撞防护的物理原理：
+      当动量的变化量固定时，延长撞击持续时间就能按比例减小作用力。因此，安全气囊和汽车的溃缩区被设计成在几分之一秒
+      内完成形变，通过大幅减小乘员所承受的力来挽救生命。
+    ja: >-
+      力積とは、力がある時間だけ作用した効果を表すもので、作用時間が長いほど運動量の変化は大きくなる。これは1687年の
+      『プリンキピア』で述べられたニュートンの第二法則から直接導かれ、その積分形である力積・運動量定理は、物体に加わる
+      力積の総和が線形運動量の変化に等しいことを示す。これが衝突保護の物理である。運動量の変化が一定なら、衝突時間を
+      長くすれば力を分割できる。だからこそエアバッグやクラッシャブルゾーンは、数分の一秒にわたって変形するよう設計され、
+      搭乗者が受ける力を大幅に減らして命を救っている。
+  timeline:
+    - year: "1687"
+      label:
+        es: >-
+          Newton enuncia en los Principia la segunda ley, que fundamenta el teorema del impulso.
+        en: >-
+          Newton states the second law in the Principia, which underpins the impulse theorem.
+        pt: >-
+          Newton enuncia nos Principia a segunda lei, que fundamenta o teorema do impulso.
+        fr: >-
+          Newton énonce dans les Principia la deuxième loi, qui fonde le théorème de l'impulsion.
+        zh: >-
+          牛顿在《自然哲学的数学原理》中阐述了第二定律，为冲量定理奠定基础。
+        ja: >-
+          ニュートンが『プリンキピア』で第二法則を述べ、力積定理の基礎を築く。
+    - year: "1953"
+      label:
+        es: >-
+          Béla Barényi patenta en Mercedes-Benz la primera zona de deformación, que alarga la duración
+          de la deceleración en un choque.
+        en: >-
+          Béla Barényi patents at Mercedes-Benz the first crumple zone, lengthening deceleration time
+          in a crash.
+        pt: >-
+          Béla Barényi patenteia na Mercedes-Benz a primeira zona de deformação, que prolonga a
+          duração da desaceleração em uma colisão.
+        fr: >-
+          Béla Barényi brevète chez Mercedes-Benz la première zone de déformation, qui allonge la durée
+          de décélération lors d'un choc.
+        zh: >-
+          贝拉·巴伦伊在梅赛德斯-奔驰申请了首个溃缩区的专利，通过延长碰撞中的减速时间来保护乘客。
+        ja: >-
+          ベーラ・バレーニがメルセデス・ベンツで最初のクラッシャブルゾーンを特許取得し、衝突時の減速時間を延ばす。
+    - year: "1959"
+      label:
+        es: >-
+          John Hetrick patenta el airbag: al inflarse en milisegundos, multiplica el tiempo del impacto
+          y divide la fuerza.
+        en: >-
+          John Hetrick patents the airbag: inflating in milliseconds, it multiplies impact time and
+          divides the force.
+        pt: >-
+          John Hetrick patenteia o airbag: ao inflar em milissegundos, ele multiplica o tempo do
+          impacto e divide a força.
+        fr: >-
+          John Hetrick brevète l'airbag : en se gonflant en quelques millisecondes, il multiplie la
+          durée du choc et divise la force.
+        zh: >-
+          约翰·赫特里克为安全气囊申请专利：它在毫秒内充气展开，从而延长撞击时间并成倍减小作用力。
+        ja: >-
+          ジョン・ヘトリックがエアバッグを特許出願する。数ミリ秒で膨らむことで衝突時間を延ばし、力を分割する。
+    - year: Hoy
+      label:
+        es: >-
+          Airbags, cinturones pretensados y zonas de deformación protegen a los ocupantes aplicando el
+          mismo principio.
+        en: >-
+          Airbags, pretensioned seat belts, and crumple zones protect occupants by applying the same
+          principle.
+        pt: >-
+          Airbags, cintos pretensionados e zonas de deformação protegem os ocupantes aplicando o mesmo
+          princípio.
+        fr: >-
+          Airbags, ceintures à prétensionneur et zones de déformation protègent les occupants en
+          appliquant le même principe.
+        zh: >-
+          安全气囊、预紧式安全带和溃缩区都运用同一原理来保护乘员。
+        ja: >-
+          エアバッグ、プリテンショナー式シートベルト、クラッシャブルゾーンが、同じ原理で搭乗者を保護している。
+  useCases:
+    - title:
+        es: Airbags
+        en: Airbags
+        pt: Airbags
+        fr: Airbags
+        zh: 安全气囊
+        ja: エアバッグ
+      description:
+        es: >-
+          Inflado en milisegundos, el airbag alarga el tiempo del choque y reduce la fuerza sobre el
+          ocupante para un mismo cambio de momento.
+        en: >-
+          Inflating in milliseconds, the airbag lengthens the crash time and reduces the force on the
+          occupant for the same change in momentum.
+        pt: >-
+          Inflado em milissegundos, o airbag prolonga o tempo do choque e reduz a força sobre o
+          ocupante para a mesma variação de momento.
+        fr: >-
+          Se gonflant en quelques millisecondes, l'airbag allonge la durée du choc et réduit la force
+          sur l'occupant pour une même variation de quantité de mouvement.
+        zh: >-
+          安全气囊在毫秒内充气展开，延长碰撞时间，从而在动量变化相同的情况下减小乘员所受的力。
+        ja: >-
+          エアバッグは数ミリ秒で膨らみ、運動量の変化が同じでも衝突時間を延ばして搭乗者への力を小さくする。
+    - title:
+        es: Zonas de deformación
+        en: Crumple zones
+        pt: Zonas de deformação
+        fr: Zones de déformation
+        zh: 溃缩区
+        ja: クラッシャブルゾーン
+      description:
+        es: >-
+          Diseñadas para deformarse en un choque, aumentan la duración de la deceleración y dividen la
+          fuerza sobre la cabina y sus ocupantes.
+        en: >-
+          Designed to crumple in a crash, they increase the duration of deceleration and divide the
+          force on the cabin and its occupants.
+        pt: >-
+          Projetadas para se deformarem em uma colisão, aumentam a duração da desaceleração e dividem
+          a força sobre a cabine e seus ocupantes.
+        fr: >-
+          Conçues pour se déformer lors d'un choc, elles allongent la durée de la décélération et
+          divisent la force sur l'habitacle et ses occupants.
+        zh: >-
+          溃缩区被设计成在碰撞中发生形变，从而延长减速持续时间，并分摊作用在座舱及乘员身上的力。
+        ja: >-
+          クラッシャブルゾーンは衝突時に潰れるよう設計され、減速時間を延ばして車室と搭乗者にかかる力を分割する。
+    - title:
+        es: Frenado y ABS
+        en: Braking and ABS
+        pt: Frenagem e ABS
+        fr: Freinage et ABS
+        zh: 制动与ABS
+        ja: ブレーキとABS
+      description:
+        es: >-
+          Al frenar, la fuerza se aplica durante un tiempo; el ABS modula esa fuerza para mantener el
+          control y aprovechar al máximo el agarre.
+        en: >-
+          During braking the force acts over time; ABS modulates that force to keep control and make
+          the most of the available grip.
+        pt: >-
+          Ao frear, a força é aplicada durante um tempo; o ABS modula essa força para manter o controle
+          e aproveitar ao máximo a aderência.
+        fr: >-
+          Lors du freinage, la force s'applique pendant un temps ; l'ABS module cette force pour garder
+          le contrôle et exploiter au mieux l'adhérence.
+        zh: >-
+          刹车时，制动力在一段时间内作用；ABS通过调节制动力来保持控制并充分利用抓地力。
+        ja: >-
+          ブレーキでは力が時間にわたって作用する。ABSはその力を調整し、制御を保ちつつグリップを最大限に活用する。
+    - title:
+        es: Deportes de contacto
+        en: Contact sports
+        pt: Esportes de contato
+        fr: Sports de contact
+        zh: 接触性运动
+        ja: コンタクトスポーツ
+      description:
+        es: >-
+          Guantes de boxeo, colchonetas y cascos alargan el tiempo del impacto para reducir la fuerza
+          sin cambiar la variación de momento.
+        en: >-
+          Boxing gloves, mats, and helmets lengthen the impact time to reduce the force without changing
+          the change in momentum.
+        pt: >-
+          Luvas de boxe, colchonetes e capacetes prolongam o tempo do impacto para reduzir a força sem
+          alterar a variação do momento.
+        fr: >-
+          Gants de boxe, tapis et casques allongent la durée de l'impact pour réduire la force sans
+          changer la variation de quantité de mouvement.
+        zh: >-
+          拳击手套、垫子和头盔都能延长撞击时间，在不改变动量变化的情况下减小作用力。
+        ja: >-
+          ボクシンググローブやマット、ヘルメットは、運動量の変化を変えずに衝撃時間を延ばして力を小さくする。
+  example:
+    title:
+      es: Impulso en un choque
+      en: Impulse in a crash
+      pt: Impulso em uma colisão
+      fr: Impulsion lors d'un choc
+      zh: 碰撞中的冲量
+      ja: 衝突の力積
+    lines:
+      - es: F = 3000 N
+        en: F = 3000 N
+        pt: F = 3000 N
+        fr: F = 3000 N
+        zh: F = 3000 N
+        ja: F = 3000 N
+      - es: Δt = 0.1 s
+        en: Δt = 0.1 s
+        pt: Δt = 0,1 s
+        fr: Δt = 0,1 s
+        zh: Δt = 0.1 s
+        ja: Δt = 0.1 s
+      - es: J = F · Δt
+        en: J = F · Δt
+        pt: J = F · Δt
+        fr: J = F · Δt
+        zh: J = F · Δt
+        ja: J = F · Δt
+      - es: J = 3000 × 0.1
+        en: J = 3000 × 0.1
+        pt: J = 3000 × 0,1
+        fr: J = 3000 × 0,1
+        zh: J = 3000 × 0.1
+        ja: J = 3000 × 0.1
+      - es: J = 300 N·s
+        en: J = 300 N·s
+        pt: J = 300 N·s
+        fr: J = 300 N·s
+        zh: J = 300 N·s
+        ja: J = 300 N·s

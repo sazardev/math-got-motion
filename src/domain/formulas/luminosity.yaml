@@ -1,0 +1,402 @@
+id: luminosity
+title:
+  es: Luminosidad de una Estrella
+  en: Stellar Luminosity
+  pt: Luminosidade de uma Estrela
+  fr: Luminosité d'une étoile
+  zh: 恒星的光度
+  ja: 恒星の光度
+category:
+  es: Astronomía
+  en: Astronomy
+  pt: Astronomia
+  fr: Astronomie
+  zh: 天文学
+  ja: 天文学
+nodes:
+  - id: l
+    type: variable
+    value: L
+    explanation:
+      es: "La luminosidad: la energía total que la estrella irradia por segundo."
+      en: "The luminosity: the total energy the star radiates per second."
+      pt: "A luminosidade: a energia total que a estrela irradia por segundo."
+      fr: "La luminosité : l'énergie totale que l'étoile rayonne par seconde."
+      zh: "光度：恒星每秒辐射出的总能量。"
+      ja: "光度。恒星が毎秒放射する全エネルギー。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: four
+    type: number
+    value: "4"
+    explanation:
+      es: El factor 4 proviene del área de una esfera.
+      en: The factor 4 comes from the area of a sphere.
+      pt: O fator 4 vem da área de uma esfera.
+      fr: Le facteur 4 provient de l'aire d'une sphère.
+      zh: 系数4来自球体的表面积公式。
+      ja: 4は球の表面積に由来する。
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 次を掛ける。
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: Pi, la constante que relaciona la circunferencia con su diámetro.
+      en: Pi, the constant relating a circle's circumference to its diameter.
+      pt: Pi, a constante que relaciona a circunferência com o diâmetro.
+      fr: Pi, la constante qui relie la circonférence au diamètre.
+      zh: 圆周率π，连接圆周长与直径的常数。
+      ja: 円周率π。円の直径と周の長さの関係を表す定数。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 次を掛ける。
+  - id: r
+    type: variable
+    value: R
+    explanation:
+      es: "El radio de la estrella: define el área de la superficie que radia."
+      en: "The star's radius: it sets the area of the radiating surface."
+      pt: "O raio da estrela: define a área da superfície que irradia."
+      fr: "Le rayon de l'étoile : il fixe l'aire de la surface rayonnante."
+      zh: "恒星的半径：它决定了辐射表面的面积。"
+      ja: "恒星の半径。放射する表面の面積を決める。"
+  - id: r-squared
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Al cuadrado: duplicar el radio cuadruplica la superficie y la luminosidad."
+      en: "Squared: doubling the radius quadruples the surface and the luminosity."
+      pt: "Ao quadrado: dobrar o raio quadruplica a superfície e a luminosidade."
+      fr: "Au carré : doubler le rayon quadruple la surface et la luminosité."
+      zh: "平方：半径加倍，表面积和光度变为原来的四倍。"
+      ja: "2乗。半径を2倍にすると表面積と光度は4倍になる。"
+  - id: dot-3
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 次を掛ける。
+  - id: sigma
+    type: constant
+    value: σ
+    explanation:
+      es: La constante de Stefan-Boltzmann (5.67×10⁻⁸ W/m²·K⁴).
+      en: The Stefan-Boltzmann constant (5.67×10⁻⁸ W/m²·K⁴).
+      pt: A constante de Stefan-Boltzmann (5,67×10⁻⁸ W/m²·K⁴).
+      fr: La constante de Stefan-Boltzmann (5,67×10⁻⁸ W/m²·K⁴).
+      zh: 斯特藩-玻尔兹曼常数（5.67×10⁻⁸ 瓦/平方米·开⁴）。
+      ja: シュテファン=ボルツマン定数（5.67×10⁻⁸ W/m²·K⁴）。
+  - id: dot-4
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 次を掛ける。
+  - id: t
+    type: variable
+    value: T
+    explanation:
+      es: La temperatura efectiva de la superficie estelar, medida en kelvin.
+      en: The star's effective surface temperature, measured in kelvin.
+      pt: A temperatura efetiva da superfície estelar, medida em kelvin.
+      fr: La température effective de la surface stellaire, mesurée en kelvins.
+      zh: 恒星表面的有效温度，以开尔文为单位。
+      ja: 恒星の表面の有効温度。単位はケルビン。
+  - id: exp-4
+    type: superscript
+    value: "4"
+    explanation:
+      es: "A la cuarta potencia: la temperatura domina; un 10% más de temperatura multiplica la luz por 1.46."
+      en: "To the fourth power: temperature dominates; 10% more temperature multiplies the light by 1.46."
+      pt: "À quarta potência: a temperatura domina; 10% a mais de temperatura multiplica a luz por 1,46."
+      fr: "À la quatrième puissance : la température domine ; 10 % de température en plus multiplie la lumière par 1,46."
+      zh: "四次方：温度起主导作用；温度提高10%，光强变为原来的1.46倍。"
+      ja: "4乗。温度の影響が最も大きく、温度が10%上がると光は1.46倍になる。"
+context:
+  author:
+    es: Basada en la ley de Stefan-Boltzmann
+    en: Based on the Stefan-Boltzmann law
+    pt: Baseada na lei de Stefan-Boltzmann
+    fr: Basée sur la loi de Stefan-Boltzmann
+    zh: 基于斯特藩-玻尔兹曼定律
+    ja: シュテファン=ボルツマンの法則に基づく
+  era:
+    es: Europa, s. XIX–XX
+    en: Europe, 19th–20th century
+    pt: Europa, sécs. XIX–XX
+    fr: Europe, XIXe–XXe siècle
+    zh: 欧洲，19–20世纪
+    ja: ヨーロッパ、19–20世紀
+  history:
+    es: >-
+      La luminosidad es la energía total que una estrella emite cada segundo en todas direcciones.
+      En una esfera, la superficie crece con el cuadrado del radio y la emisión por unidad de área
+      crece con la cuarta potencia de la temperatura, según la ley de Stefan-Boltzmann. Eso explica
+      por qué las estrellas grandes y calientes son descomunalmente más brillantes: una con el doble
+      de radio y el doble de temperatura es 64 veces más luminosa. Junto al color estelar, la
+      luminosidad es la base del diagrama de Hertzsprung-Russell, que ordena las estrellas por su
+      brillo y su temperatura.
+    en: >-
+      Luminosity is the total energy a star emits every second in all directions. On a sphere, the
+      surface grows with the square of the radius and the emission per unit area grows with the
+      fourth power of temperature, by the Stefan-Boltzmann law. That explains why large, hot stars
+      are vastly brighter: one with twice the radius and twice the temperature is 64 times more
+      luminous. Together with stellar color, luminosity is the basis of the Hertzsprung-Russell
+      diagram, which orders stars by brightness and temperature.
+    pt: >-
+      A luminosidade é a energia total que uma estrela emite por segundo em todas as direções. Numa
+      esfera, a superfície cresce com o quadrado do raio e a emissão por unidade de área cresce com
+      a quarta potência da temperatura, segundo a lei de Stefan-Boltzmann. Isso explica por que
+      estrelas grandes e quentes são descomunalmente mais brilhantes: uma com o dobro do raio e o
+      dobro da temperatura é 64 vezes mais luminosa. Junto à cor estelar, a luminosidade é a base do
+      diagrama de Hertzsprung-Russell, que ordena as estrelas por brilho e temperatura.
+    fr: >-
+      La luminosité est l'énergie totale qu'une étoile émet chaque seconde dans toutes les
+      directions. Sur une sphère, la surface croît comme le carré du rayon et l'émission par unité
+      de surface croît comme la quatrième puissance de la température, d'après la loi de
+      Stefan-Boltzmann. Cela explique pourquoi les étoiles grandes et chaudes sont démesurément plus
+      brillantes : une étoile au rayon double et à température double est 64 fois plus lumineuse.
+      Avec la couleur stellaire, la luminosité est la base du diagramme de Hertzsprung-Russell, qui
+      ordonne les étoiles par éclat et température.
+    zh: >-
+      光度是恒星每秒钟向所有方向辐射的总能量。在球体上，表面积随半径的平方增长，而单位面积的辐射量随温度的
+      四次方增长，这正是斯特藩-玻尔兹曼定律。这解释了为什么体积大、温度高的恒星会明亮得多：半径和温度都加倍
+      的恒星，其光度是原来的64倍。结合恒星的颜色，光度是赫罗图的基础，赫罗图按亮度和温度对恒星排序。
+    ja: >-
+      光度とは、恒星が毎秒あらゆる方向へ放出する全エネルギーのことである。球では表面積が半径の2乗に比例して
+      増え、単位面積あたりの放射はシュテファン=ボルツマンの法則により温度の4乗に比例して増える。このため、
+      大きくて高温の恒星が桁違いに明るくなるのは、半径も温度も2倍の恒星は光度が64倍になるからである。光度は
+      恒星の色とともに、明るさと温度で恒星を並べるヘルツシュプルング=ラッセル図の基礎となる。
+  timeline:
+    - year: "1879"
+      label:
+        es: >-
+          Josef Stefan publica la ley empírica de la radiación del cuerpo negro.
+        en: >-
+          Josef Stefan publishes the empirical law of black body radiation.
+        pt: >-
+          Josef Stefan publica a lei empírica da radiação do corpo negro.
+        fr: >-
+          Josef Stefan publie la loi empirique du rayonnement du corps noir.
+        zh: >-
+          约瑟夫·斯特藩发表黑体辐射的经验定律。
+        ja: >-
+          ヨーゼフ・シュテファンが黒体放射の経験則を発表する。
+    - year: "1884"
+      label:
+        es: >-
+          Ludwig Boltzmann deriva la ley desde la termodinámica, dándole fundamento teórico.
+        en: >-
+          Ludwig Boltzmann derives the law from thermodynamics, giving it a theoretical foundation.
+        pt: >-
+          Ludwig Boltzmann deriva a lei a partir da termodinâmica, dando-lhe fundamento teórico.
+        fr: >-
+          Ludwig Boltzmann dérive la loi de la thermodynamique, lui donnant un fondement théorique.
+        zh: >-
+          路德维希·玻尔兹曼从热力学推导出该定律，奠定了理论基础。
+        ja: >-
+          ルートヴィッヒ・ボルツマンが熱力学からこの法則を導き、理論的基盤を与える。
+    - year: "1910"
+      label:
+        es: >-
+          Hertzsprung y Russell trazan el diagrama que relaciona la luminosidad y la temperatura de
+          las estrellas.
+        en: >-
+          Hertzsprung and Russell plot the diagram relating stellar luminosity and temperature.
+        pt: >-
+          Hertzsprung e Russell traçam o diagrama que relaciona luminosidade e temperatura das
+          estrelas.
+        fr: >-
+          Hertzsprung et Russell tracent le diagramme reliant luminosité et température des étoiles.
+        zh: >-
+          赫茨普龙和罗素绘制出把恒星光度和温度联系起来的关系图。
+        ja: >-
+          ヘルツシュプルングとラッセルが、恒星の光度と温度を関連づける図を作成する。
+    - year: Hoy
+      label:
+        es: >-
+          La astrofísica la usa para deducir el radio y la temperatura de las estrellas a partir de
+          su brillo medido.
+        en: >-
+          Astrophysics uses it to infer the radius and temperature of stars from their measured
+          brightness.
+        pt: >-
+          A astrofísica a usa para deduzir o raio e a temperatura das estrelas a partir do brilho
+          medido.
+        fr: >-
+          L'astrophysique l'utilise pour déduire le rayon et la température des étoiles à partir de
+          leur éclat mesuré.
+        zh: >-
+          天体物理学根据测得的恒星亮度，用它推算恒星的半径与温度。
+        ja: >-
+          天体物理学では、観測した明るさから恒星の半径と温度を推定するのに用いられる。
+  useCases:
+    - title:
+        es: Astrofísica
+        en: Astrophysics
+        pt: Astrofísica
+        fr: Astrophysique
+        zh: 天体物理学
+        ja: 天体物理学
+      description:
+        es: >-
+          Combinada con el color de la estrella, ubica su posición en el diagrama de
+          Hertzsprung-Russell y revela su radio y temperatura.
+        en: >-
+          Combined with the star's color, it places the star on the Hertzsprung-Russell diagram,
+          revealing its radius and temperature.
+        pt: >-
+          Combinada com a cor da estrela, posiciona-a no diagrama de Hertzsprung-Russell e revela
+          seu raio e temperatura.
+        fr: >-
+          Combinée à la couleur de l'étoile, elle la place sur le diagramme de Hertzsprung-Russell
+          et révèle son rayon et sa température.
+        zh: >-
+          结合恒星的颜色，可在赫罗图上确定其位置，并揭示其半径与温度。
+        ja: >-
+          恒星の色と組み合わせることで、ヘルツシュプルング=ラッセル図上の位置を定め、半径と温度を明らかにする。
+    - title:
+        es: Exoplanetas
+        en: Exoplanets
+        pt: Exoplanetas
+        fr: Exoplanètes
+        zh: 系外行星
+        ja: 太陽系外惑星
+      description:
+        es: >-
+          Define la zona habitable alrededor de una estrella, según la luminosidad que recibe cada
+          órbita.
+        en: >-
+          It defines the habitable zone around a star, from the luminosity each orbit receives.
+        pt: >-
+          Define a zona habitável ao redor de uma estrela, conforme a luminosidade que cada órbita
+          recebe.
+        fr: >-
+          Elle définit la zone habitable autour d'une étoile, selon la luminosité que reçoit chaque
+          orbite.
+        zh: >-
+          根据各轨道接收到的光度，划定恒星周围的宜居带。
+        ja: >-
+          各軌道が受ける光度に基づいて、恒星周りのハビタブルゾーンを定める。
+    - title:
+        es: Energía solar
+        en: Solar energy
+        pt: Energia solar
+        fr: Énergie solaire
+        zh: 太阳能
+        ja: 太陽光発電
+      description:
+        es: >-
+          La potencia total del Sol estimada con esta fórmula sirve para calibrar paneles
+          fotovoltaicos y modelos de irradiación.
+        en: >-
+          The Sun's total power, estimated with this formula, calibrates photovoltaic panels and
+          irradiance models.
+        pt: >-
+          A potência total do Sol, estimada com esta fórmula, calibra painéis fotovoltaicos e
+          modelos de irradiância.
+        fr: >-
+          La puissance totale du Soleil, estimée avec cette formule, sert à calibrer les panneaux
+          photovoltaïques et les modèles d'irradiance.
+        zh: >-
+          用该公式估算的太阳总功率，用于校准光伏电池板和辐照模型。
+        ja: >-
+          この式で推定した太陽の全出力は、太陽光パネルや放射照度モデルの較正に使われる。
+    - title:
+        es: Control térmico de satélites
+        en: Satellite thermal control
+        pt: Controle térmico de satélites
+        fr: Contrôle thermique des satellites
+        zh: 卫星热控
+        ja: 衛星の熱制御
+      description:
+        es: >-
+          Dimensiona los radiadores necesarios para disipar el calor que el satélite emite y recibe.
+        en: >-
+          It sizes the radiators needed to shed the heat a satellite emits and receives.
+        pt: >-
+          Dimensiona os radiadores necessários para dissipar o calor que o satélite emite e recebe.
+        fr: >-
+          Elle dimensionne les radiateurs nécessaires pour dissiper la chaleur qu'un satellite émet
+          et reçoit.
+        zh: >-
+          用于设计卫星所需散热器的规格，以散发卫星发出和接收的热量。
+        ja: >-
+          衛星が放出・受熱する熱を放散するために必要なラジエーターの大きさを決める。
+  example:
+    title:
+      es: Luminosidad del Sol
+      en: Luminosity of the Sun
+      pt: Luminosidade do Sol
+      fr: Luminosité du Soleil
+      zh: 太阳的光度
+      ja: 太陽の光度
+    lines:
+      - es: R = 6.96×10⁸ m, T = 5778 K, σ = 5.67×10⁻⁸
+        en: R = 6.96×10⁸ m, T = 5778 K, σ = 5.67×10⁻⁸
+        pt: R = 6,96×10⁸ m, T = 5778 K, σ = 5,67×10⁻⁸
+        fr: R = 6,96×10⁸ m, T = 5778 K, σ = 5,67×10⁻⁸
+        zh: R = 6.96×10⁸ 米，T = 5778 开，σ = 5.67×10⁻⁸
+        ja: R = 6.96×10⁸ m、T = 5778 K、σ = 5.67×10⁻⁸
+      - es: R² = (6.96×10⁸)² ≈ 4.84×10¹⁷
+        en: R² = (6.96×10⁸)² ≈ 4.84×10¹⁷
+        pt: R² = (6,96×10⁸)² ≈ 4,84×10¹⁷
+        fr: R² = (6,96×10⁸)² ≈ 4,84×10¹⁷
+        zh: R² = (6.96×10⁸)² ≈ 4.84×10¹⁷
+        ja: R² = (6.96×10⁸)² ≈ 4.84×10¹⁷
+      - es: 4πR² = 4 · π · 4.84×10¹⁷ ≈ 6.09×10¹⁸
+        en: 4πR² = 4 · π · 4.84×10¹⁷ ≈ 6.09×10¹⁸
+        pt: 4πR² = 4 · π · 4,84×10¹⁷ ≈ 6,09×10¹⁸
+        fr: 4πR² = 4 · π · 4,84×10¹⁷ ≈ 6,09×10¹⁸
+        zh: 4πR² = 4 · π · 4.84×10¹⁷ ≈ 6.09×10¹⁸
+        ja: 4πR² = 4 · π · 4.84×10¹⁷ ≈ 6.09×10¹⁸
+      - es: T⁴ = 5778⁴ ≈ 1.11×10¹⁵
+        en: T⁴ = 5778⁴ ≈ 1.11×10¹⁵
+        pt: T⁴ = 5778⁴ ≈ 1,11×10¹⁵
+        fr: T⁴ = 5778⁴ ≈ 1,11×10¹⁵
+        zh: T⁴ = 5778⁴ ≈ 1.11×10¹⁵
+        ja: T⁴ = 5778⁴ ≈ 1.11×10¹⁵
+      - es: L = 6.09×10¹⁸ · 5.67×10⁻⁸ · 1.11×10¹⁵
+        en: L = 6.09×10¹⁸ · 5.67×10⁻⁸ · 1.11×10¹⁵
+        pt: L = 6,09×10¹⁸ · 5,67×10⁻⁸ · 1,11×10¹⁵
+        fr: L = 6,09×10¹⁸ · 5,67×10⁻⁸ · 1,11×10¹⁵
+        zh: L = 6.09×10¹⁸ · 5.67×10⁻⁸ · 1.11×10¹⁵
+        ja: L = 6.09×10¹⁸ · 5.67×10⁻⁸ · 1.11×10¹⁵
+      - es: L ≈ 3.8×10²⁶ W
+        en: L ≈ 3.8×10²⁶ W
+        pt: L ≈ 3,8×10²⁶ W
+        fr: L ≈ 3,8×10²⁶ W
+        zh: L ≈ 3.8×10²⁶ 瓦
+        ja: L ≈ 3.8

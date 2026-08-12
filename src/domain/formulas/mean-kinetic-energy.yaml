@@ -1,0 +1,362 @@
+id: mean-kinetic-energy
+title:
+  es: Energía Cinética Media Molecular
+  en: Mean Molecular Kinetic Energy
+  pt: Energia Cinética Média Molecular
+  fr: Énergie Cinétique Moyenne Moléculaire
+  zh: 分子平均动能
+  ja: 分子の平均運動エネルギー
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: ke
+    type: variable
+    value: KE
+    explanation:
+      es: La energía cinética media de una molécula, el promedio de su movimiento térmico.
+      en: The mean kinetic energy of a molecule, the average of its thermal motion.
+      pt: A energia cinética média de uma molécula, a média de seu movimento térmico.
+      fr: L'énergie cinétique moyenne d'une molécule, la moyenne de son agitation thermique.
+      zh: 分子的平均动能，即其热运动的平均值。
+      ja: 分子の平均運動エネルギー。熱運動の平均を表す。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: three
+    type: number
+    value: "3"
+    explanation:
+      es: El numerador tres, que corresponde a los tres grados de libertad de traslación.
+      en: The numerator three, corresponding to the three translational degrees of freedom.
+      pt: O numerador três, correspondente aos três graus de liberdade de translação.
+      fr: Le numérateur trois, correspondant aux trois degrés de liberté de translation.
+      zh: 分子三，对应三个平动自由度。
+      ja: 分子3。並進の3自由度に対応する。
+  - id: divide
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: 次で割る。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: El denominador dos, por el factor de un medio del teorema de equipartición.
+      en: The denominator two, from the one-half factor of the equipartition theorem.
+      pt: O denominador dois, pelo fator de um meio do teorema de equipartição.
+      fr: Le dénominateur deux, issu du facteur un demi du théorème d'équipartition.
+      zh: 分母二，来自能量均分定理中的二分之一系数。
+      ja: 分母2。エネルギー等分配の法則の二分の一の係数による。
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 次を掛ける。
+  - id: k
+    type: constant
+    value: k
+    explanation:
+      es: La constante de Boltzmann, la escala de energía del mundo microscópico.
+      en: The Boltzmann constant, the energy scale of the microscopic world.
+      pt: A constante de Boltzmann, a escala de energia do mundo microscópico.
+      fr: La constante de Boltzmann, l'échelle d'énergie du monde microscopique.
+      zh: 玻尔兹曼常数，微观世界的能量标度。
+      ja: ボルツマン定数。微視的世界のエネルギーの尺度。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 次を掛ける。
+  - id: t
+    type: variable
+    value: T
+    explanation:
+      es: La temperatura absoluta del gas, medida en kelvin.
+      en: The gas's absolute temperature, measured in kelvin.
+      pt: A temperatura absoluta do gás, medida em kelvin.
+      fr: La température absolue du gaz, mesurée en kelvins.
+      zh: 气体的绝对温度，以开尔文为单位。
+      ja: 気体の絶対温度。単位はケルビン。
+context:
+  author:
+    es: Rudolf Clausius y James Clerk Maxwell
+    en: Rudolf Clausius and James Clerk Maxwell
+    pt: Rudolf Clausius e James Clerk Maxwell
+    fr: Rudolf Clausius et James Clerk Maxwell
+    zh: 鲁道夫·克劳修斯与詹姆斯·克拉克·麦克斯韦
+    ja: ルドルフ・クラウジウスとジェームズ・クラーク・マクスウェル
+  era:
+    es: Alemania y Escocia, 1857–1860
+    en: Germany and Scotland, 1857–1860
+    pt: Alemanha e Escócia, 1857–1860
+    fr: Allemagne et Écosse, 1857–1860
+    zh: 德国与苏格兰，1857–1860年
+    ja: ドイツとスコットランド、1857–1860年
+  history:
+    es: >-
+      La teoría cinética de los gases nació en la década de 1850 con los trabajos de Rudolf
+      Clausius y James Clerk Maxwell, que relacionaron la temperatura con el movimiento de las
+      moléculas. El teorema de equipartición reparte la energía por igual entre cada grado de
+      libertad y, para una molécula monoatómica, el resultado es una energía cinética media de
+      3/2 kT. De aquí se sigue que el cero absoluto, 0 K, sería el estado en que las moléculas
+      dejan de moverse. La constante k, la de Boltzmann, conecta el mundo microscópico con el
+      macroscópico.
+    en: >-
+      The kinetic theory of gases was born in the 1850s with the work of Rudolf Clausius and James
+      Clerk Maxwell, who linked temperature to the motion of molecules. The equipartition theorem
+      divides energy equally among each degree of freedom and, for a monatomic molecule, the result
+      is a mean kinetic energy of 3/2 kT. It follows that absolute zero, 0 K, would be the state in
+      which molecules stop moving. The constant k, Boltzmann's constant, connects the microscopic
+      world to the macroscopic one.
+    pt: >-
+      A teoria cinética dos gases nasceu na década de 1850 com os trabalhos de Rudolf Clausius e
+      James Clerk Maxwell, que relacionaram a temperatura ao movimento das moléculas. O teorema de
+      equipartição distribui a energia igualmente entre cada grau de liberdade e, para uma molécula
+      monoatômica, o resultado é uma energia cinética média de 3/2 kT. Daí decorre que o zero
+      absoluto, 0 K, seria o estado em que as moléculas deixam de se mover. A constante k, a de
+      Boltzmann, conecta o mundo microscópico ao macroscópico.
+    fr: >-
+      La théorie cinétique des gaz est née dans les années 1850 avec les travaux de Rudolf Clausius
+      et James Clerk Maxwell, qui relièrent la température au mouvement des molécules. Le théorème
+      d'équipartition répartit également l'énergie entre chaque degré de liberté et, pour une
+      molécule monoatomique, le résultat est une énergie cinétique moyenne de 3/2 kT. Il s'ensuit
+      que le zéro absolu, 0 K, serait l'état dans lequel les molécules cessent de se mouvoir. La
+      constante k, celle de Boltzmann, relie le monde microscopique au monde macroscopique.
+    zh: >-
+      气体动理论诞生于19世纪50年代，以鲁道夫·克劳修斯和詹姆斯·克拉克·麦克斯韦的工作为代表，他们建立了温度与
+      分子运动之间的联系。能量均分定理将能量平均分配到每个自由度上，对于单原子分子，平均动能恰为3/2 kT。
+      由此可知，绝对零度（0 K）将对应分子完全停止运动的状态。常数k即玻尔兹曼常数，把微观世界与宏观世界
+      连接起来。
+    ja: >-
+      気体分子運動論は1850年代、ルドルフ・クラウジウスとジェームズ・クラーク・マクスウェルの研究によって誕生し、
+      温度を分子の運動と結びつけた。エネルギー等分配の法則は各自由度にエネルギーを均等に配分し、単原子分子の
+      場合、平均運動エネルギーは 3/2 kT となる。ここから、絶対零度（0 K）は分子の運動が完全に停止する状態で
+      あることが帰結する。定数k、すなわちボルツマン定数は、微視的世界と巨視的世界とを結びつける。
+  timeline:
+    - year: "1857"
+      label:
+        es: >-
+          Clausius relaciona la presión y la temperatura de un gas con la energía cinética media de
+          sus moléculas.
+        en: >-
+          Clausius links a gas's pressure and temperature to the mean kinetic energy of its
+          molecules.
+        pt: >-
+          Clausius relaciona a pressão e a temperatura de um gás com a energia cinética média de
+          suas moléculas.
+        fr: >-
+          Clausius relie la pression et la température d'un gaz à l'énergie cinétique moyenne de ses
+          molécules.
+        zh: >-
+          克劳修斯将气体的压强和温度与其分子的平均动能联系起来。
+        ja: >-
+          クラウジウスが気体の圧力と温度を分子の平均運動エネルギーと結びつける。
+    - year: "1860"
+      label:
+        es: >-
+          Maxwell publica la distribución de velocidades y precisa el papel de la energía cinética
+          media.
+        en: >-
+          Maxwell publishes the speed distribution and clarifies the role of the mean kinetic
+          energy.
+        pt: >-
+          Maxwell publica a distribuição de velocidades e esclarece o papel da energia cinética
+          média.
+        fr: >-
+          Maxwell publie la distribution des vitesses et précise le rôle de l'énergie cinétique
+          moyenne.
+        zh: >-
+          麦克斯韦发表了速率分布，阐明了平均动能的作用。
+        ja: >-
+          マクスウェルが速度分布を発表し、平均運動エネルギーの役割を明確にする。
+    - year: "1900"
+      label:
+        es: >-
+          Max Planck da el nombre de Boltzmann a la constante k, fijando la proporcionalidad entre
+          energía y temperatura.
+        en: >-
+          Max Planck names the constant k after Boltzmann, fixing the proportionality between energy
+          and temperature.
+        pt: >-
+          Max Planck dá o nome de Boltzmann à constante k, fixando a proporcionalidade entre energia
+          e temperatura.
+        fr: >-
+          Max Planck donne à la constante k le nom de Boltzmann, fixant la proportionnalité entre
+          l'énergie et la température.
+        zh: >-
+          马克斯·普朗克以玻尔兹曼的名字命名常数k，确定了能量与温度之间的正比关系。
+        ja: >-
+          マックス・プランクが定数kをボルツマンにちなんで名付け、エネルギーと温度の比例関係を確定する。
+    - year: Hoy
+      label:
+        es: >-
+          La relación da sentido físico a la escala kelvin y se usa para estimar energías térmicas
+          en física y química.
+        en: >-
+          The relation gives physical meaning to the kelvin scale and is used to estimate thermal
+          energies in physics and chemistry.
+        pt: >-
+          A relação dá sentido físico à escala kelvin e é usada para estimar energias térmicas em
+          física e química.
+        fr: >-
+          La relation donne un sens physique à l'échelle kelvin et sert à estimer les énergies
+          thermiques en physique et en chimie.
+        zh: >-
+          这一关系赋予了开尔文温标物理意义，并用于估算物理学和化学中的热能。
+        ja: >-
+          この関係はケルビン温度目盛に物理的意味を与え、物理学や化学で熱エネルギーを推定するのに使われる。
+  useCases:
+    - title:
+        es: Física estadística
+        en: Statistical physics
+        pt: Física estatística
+        fr: Physique statistique
+        zh: 统计物理
+        ja: 統計力学
+      description:
+        es: >-
+          Es la unidad básica de energía térmica que aparece en toda la termodinámica microscópica.
+        en: >-
+          It is the basic unit of thermal energy that appears throughout microscopic
+          thermodynamics.
+        pt: >-
+          É a unidade básica de energia térmica que aparece em toda a termodinâmica microscópica.
+        fr: >-
+          C'est l'unité de base de l'énergie thermique qui apparaît dans toute la thermodynamique
+          microscopique.
+        zh: >-
+          它是贯穿整个微观热力学的基本热能单位。
+        ja: >-
+          微視的熱力学全体に現れる、熱エネルギーの基本単位である。
+    - title:
+        es: Química
+        en: Chemistry
+        pt: Química
+        fr: Chimie
+        zh: 化学
+        ja: 化学
+      description:
+        es: >-
+          La teoría de colisiones relaciona esta energía con la velocidad de las reacciones
+          químicas.
+        en: >-
+          Collision theory links this energy to the rate of chemical reactions.
+        pt: >-
+          A teoria de colisões relaciona essa energia com a velocidade das reações químicas.
+        fr: >-
+          La théorie des collisions relie cette énergie à la vitesse des réactions chimiques.
+        zh: >-
+          碰撞理论将此能量与化学反应速率联系起来。
+        ja: >-
+          衝突理論は、このエネルギーを化学反応の速度と結びつける。
+    - title:
+        es: Criogenia
+        en: Cryogenics
+        pt: Criogenia
+        fr: Cryogénie
+        zh: 低温技术
+        ja: 極低温技術
+      description:
+        es: >-
+          Enfriar un gas reduce la energía media de sus moléculas, hasta acercarlas al reposo.
+        en: >-
+          Cooling a gas reduces its molecules' mean energy, bringing them close to rest.
+        pt: >-
+          Resfriar um gás reduz a energia média de suas moléculas, aproximando-as do repouso.
+        fr: >-
+          Refroidir un gaz réduit l'énergie moyenne de ses molécules, jusqu'à les approcher du
+          repos.
+        zh: >-
+          冷却气体可降低其分子的平均能量，使它们趋近于静止。
+        ja: >-
+          気体を冷やすと分子の平均エネルギーが減り、静止に近づく。
+    - title:
+        es: Astrofísica
+        en: Astrophysics
+        pt: Astrofísica
+        fr: Astrophysique
+        zh: 天体物理学
+        ja: 天体物理学
+      description:
+        es: >-
+          La temperatura de nubes de gas interestelar se expresa como la energía cinética media de
+          sus partículas.
+        en: >-
+          The temperature of interstellar gas clouds is expressed as the mean kinetic energy of
+          their particles.
+        pt: >-
+          A temperatura de nuvens de gás interestelar é expressa como a energia cinética média de
+          suas partículas.
+        fr: >-
+          La température des nuages de gaz interstellaire s'exprime comme l'énergie cinétique moyenne
+          de leurs particules.
+        zh: >-
+          星际气体云的温度可表示为其中粒子的平均动能。
+        ja: >-
+          星間ガス雲の温度は、その粒子の平均運動エネルギーとして表される。
+  example:
+    title:
+      es: Energía térmica a temperatura ambiente
+      en: Thermal energy at room temperature
+      pt: Energia térmica à temperatura ambiente
+      fr: Énergie thermique à température ambiante
+      zh: 室温下的热能
+      ja: 室温における熱エネルギー
+    lines:
+      - es: k = 1.38×10⁻²³ J/K
+        en: k = 1.38×10⁻²³ J/K
+        pt: k = 1,38×10⁻²³ J/K
+        fr: k = 1,38×10⁻²³ J/K
+        zh: k = 1.38×10⁻²³ J/K
+        ja: k = 1.38×10⁻²³ J/K
+      - es: T = 300 K
+        en: T = 300 K
+        pt: T = 300 K
+        fr: T = 300 K
+        zh: T = 300 开
+        ja: T = 300 K
+      - es: KE = 3/2 · k · T
+        en: KE = 3/2 · k · T
+        pt: KE = 3/2 · k · T
+        fr: KE = 3/2 · k · T
+        zh: KE = 3/2 · k · T
+        ja: KE = 3/2 · k · T
+      - es: KE = 1.5 · 1.38×10⁻²³ · 300
+        en: KE = 1.5 · 1.38×10⁻²³ · 300
+        pt: KE = 1,5 · 1,38×10⁻²³ · 300
+        fr: KE = 1,5 · 1,38×10⁻²³ · 300
+        zh: KE = 1.5 · 1.38×10⁻²³ · 300
+        ja: KE = 1.5 · 1.38×10⁻²³ · 300
+      - es: KE ≈ 6.2×10⁻²¹ J
+        en: KE ≈ 6.2×10⁻²¹ J
+        pt: KE ≈ 6,2×10⁻²¹ J
+        fr: KE ≈ 6,2×10⁻²¹ J
+        zh: KE ≈ 6.2×10⁻²¹ 焦耳
+        ja: KE ≈ 6.2×10⁻²¹ J

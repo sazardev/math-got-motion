@@ -1,0 +1,377 @@
+id: arithmetic-series
+title:
+  es: Suma de una Progresión Aritmética
+  en: Arithmetic Series
+  pt: Soma de uma Progressão Aritmética
+  fr: Somme d'une suite arithmétique
+  zh: 等差数列求和
+  ja: 等差数列の和
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: sn
+    type: variable
+    value: Sₙ
+    explanation:
+      es: "La suma de los n primeros términos de la progresión aritmética."
+      en: "The sum of the first n terms of the arithmetic sequence."
+      pt: "A soma dos n primeiros termos da progressão aritmética."
+      fr: "La somme des n premiers termes de la suite arithmétique."
+      zh: "等差数列前 n 项的和。"
+      ja: "等差数列の初項から第n項までの和。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: "El número de términos que se suman."
+      en: "The number of terms being added."
+      pt: "O número de termos que estão sendo somados."
+      fr: "Le nombre de termes additionnés."
+      zh: "被求和的项数。"
+      ja: "足し合わせる項の数。"
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: "Abre la agrupación del primer y el último término."
+      en: "Opens the grouping of the first and last terms."
+      pt: "Abre o agrupamento do primeiro e do último termo."
+      fr: "Ouvre le groupement du premier et du dernier terme."
+      zh: "打开首项与末项的括号组合。"
+      ja: "初項と末項のグループを開く括弧。"
+  - id: a-1
+    type: variable
+    value: a₁
+    explanation:
+      es: "El primer término de la progresión."
+      en: "The first term of the sequence."
+      pt: "O primeiro termo da progressão."
+      fr: "Le premier terme de la suite."
+      zh: "数列的首项。"
+      ja: "数列の初項。"
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado al último término.
+      en: Added to the last term.
+      pt: Somado ao último termo.
+      fr: Ajouté au dernier terme.
+      zh: 与末项相加。
+      ja: 末項に加える。
+  - id: a-n
+    type: variable
+    value: aₙ
+    explanation:
+      es: "El término enésimo, el último de los que se suman."
+      en: "The nth term, the last one being added."
+      pt: "O enésimo termo, o último a ser somado."
+      fr: "Le terme de rang n, le dernier à être additionné."
+      zh: "第 n 项，即求和的最后一项。"
+      ja: "第n項、つまり足し合わせる最後の項。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: "Cierra la agrupación; el número de términos n multiplica esta suma."
+      en: "Closes the grouping; the term count n multiplies this sum."
+      pt: "Fecha o agrupamento; o número de termos n multiplica essa soma."
+      fr: "Ferme le groupement ; le nombre de termes n multiplie cette somme."
+      zh: "闭合括号；项数 n 与这个和相乘。"
+      ja: "グループを閉じる括弧。項数nがこの和に掛けられる。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: "Dividido entre dos, porque el agrupamiento cuenta cada término dos veces."
+      en: "Divided by two, because the pairing counts each term twice."
+      pt: "Dividido por dois, pois o emparelhamento conta cada termo duas vezes."
+      fr: "Divisé par deux, car le groupement compte chaque terme deux fois."
+      zh: "除以2，因为配对时每一项被计算了两次。"
+      ja: "2で割る。ペアを作る操作で各項が2回数えられるため。"
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "La constante 2 del denominador, resultado del truco del emparejamiento."
+      en: "The constant 2 in the denominator, a result of the pairing trick."
+      pt: "A constante 2 do denominador, resultado do truque do emparelhamento."
+      fr: "La constante 2 du dénominateur, résultat de l'astuce du groupement."
+      zh: "分母中的常数2，来自配对技巧。"
+      ja: "分母の定数2。ペアを作る操作から得られる。"
+context:
+  author:
+    es: Carl Friedrich Gauss
+    en: Carl Friedrich Gauss
+    pt: Carl Friedrich Gauss
+    fr: Carl Friedrich Gauss
+    zh: 卡尔·弗里德里希·高斯
+    ja: カール・フリードリヒ・ガウス
+  era:
+    es: Alemania, 1777–1855 · método legendario c. 1787
+    en: Germany, 1777–1855 · legendary method c. 1787
+    pt: Alemanha, 1777–1855 · método lendário c. 1787
+    fr: Allemagne, 1777–1855 · méthode légendaire v. 1787
+    zh: 德国，1777–1855 · 约1787年流传的算法
+    ja: ドイツ、1777–1855年・伝説の計算法は1787年頃
+  history:
+    es: >-
+      Cuenta la leyenda que, de niño, Gauss resolvió en segundos el problema de sumar del 1 al 100
+      emparejando los términos: (1+100), (2+99), (3+98)... El truco revela la fórmula
+      S = n(a₁+aₙ)/2, y no era nuevo: matemáticos de la India ya conocían la regla para sumar
+      progresiones aritméticas muchos siglos antes, como registró Aryabhata en su Aryabhatiya.
+    en: >-
+      Legend has it that, as a child, Gauss solved in seconds the task of summing 1 to 100 by pairing
+      the terms: (1+100), (2+99), (3+98)... The trick reveals the formula S = n(a₁+aₙ)/2, and it was
+      not new: Indian mathematicians already knew the rule for summing arithmetic progressions many
+      centuries earlier, as Aryabhata recorded in his Aryabhatiya.
+    pt: >-
+      A lenda conta que, quando criança, Gauss resolveu em segundos o problema de somar de 1 a 100
+      emparelhando os termos: (1+100), (2+99), (3+98)... O truque revela a fórmula S = n(a₁+aₙ)/2, e
+      não era novidade: matemáticos indianos já conheciam a regra para somar progressões aritméticas
+      muitos séculos antes, como Aryabhata registrou em sua Aryabhatiya.
+    fr: >-
+      La légende raconte qu'enfant, Gauss résolut en quelques secondes le problème consistant à
+      additionner les nombres de 1 à 100 en groupant les termes : (1+100), (2+99), (3+98)... L'astuce
+      révèle la formule S = n(a₁+aₙ)/2, qui n'était pas nouvelle : les mathématiciens indiens
+      connaissaient déjà la règle pour sommer des progressions arithmétiques des siècles plus tôt,
+      comme l'a consigné Aryabhata dans son Aryabhatiya.
+    zh: >-
+      传说年幼的高斯几秒钟就算出了从1加到100的和：他把首尾配对，即(1+100)、(2+99)、(3+98)……
+      这个技巧揭示了公式 S = n(a₁+aₙ)/2。其实这并非新发现：早在许多世纪以前，印度数学家就已掌握
+      等差数列求和的方法，阿耶波多在他的《阿耶波多书》中就有记载。
+    ja: >-
+      伝説によれば、少年時代のガウスは1から100までの和を、両端から順にペアを作る(1+100)、(2+99)、
+      (3+98)…という方法で数秒のうちに求めたという。このペア作りの妙技が公式 S = n(a₁+aₙ)/2 を
+      導く。この公式自体は新しいものではなく、インドの数学者たちがはるか以前から等差数列の和の
+      規則を知っており、アリヤバタがその著書『アーリヤバティーヤ』に記している。
+  timeline:
+    - year: c. 499
+      label:
+        es: >-
+          Aryabhata registra en India la regla general para sumar una progresión aritmética en su obra
+          Aryabhatiya, siglos antes de Gauss.
+        en: >-
+          Aryabhata records in India the general rule for summing an arithmetic progression in his
+          Aryabhatiya, centuries before Gauss.
+        pt: >-
+          Aryabhata registra na Índia a regra geral para somar uma progressão aritmética em sua obra
+          Aryabhatiya, séculos antes de Gauss.
+        fr: >-
+          Aryabhata consigne en Inde la règle générale pour sommer une progression arithmétique dans
+          son Aryabhatiya, des siècles avant Gauss.
+        zh: >-
+          阿耶波多在印度所著的《阿耶波多书》中记载了等差数列求和的一般规则，比高斯早了许多个世纪。
+        ja: >-
+          アリヤバタが著書『アーリヤバティーヤ』で等差数列の和の一般的な規則を記す。ガウスより
+          何世紀も前のことである。
+    - year: c. 1787
+      label:
+        es: >-
+          Según la anécdota, el joven Gauss sorprende a su maestro sumando del 1 al 100 en segundos
+          mediante el emparejamiento de términos.
+        en: >-
+          According to the anecdote, young Gauss amazes his teacher by adding 1 to 100 in seconds
+          through term pairing.
+        pt: >-
+          Segundo a anedota, o jovem Gauss surpreende o professor somando de 1 a 100 em segundos por
+          meio do emparelhamento de termos.
+        fr: >-
+          D'après l'anecdote, le jeune Gauss étonne son maître en additionnant les nombres de 1 à 100
+          en quelques secondes grâce au groupement des termes.
+        zh: >-
+          据传，年幼的高斯通过首尾配对，几秒钟内算出了1到100的和，令老师大为惊讶。
+        ja: >-
+          逸話によれば、少年ガウスは項をペアにする方法で1から100までの和を数秒で求め、教師を
+          驚かせた。
+    - year: "1800s"
+      label:
+        es: >-
+          La anécdota de Gauss y la fórmula se incorporan al currículo escolar de aritmética y álgebra
+          en todo el mundo.
+        en: >-
+          The Gauss anecdote and the formula enter the school arithmetic and algebra curriculum
+          worldwide.
+        pt: >-
+          A anedota de Gauss e a fórmula passam a integrar o currículo escolar de aritmética e álgebra
+          em todo o mundo.
+        fr: >-
+          L'anecdote de Gauss et la formule entrent dans les programmes scolaires d'arithmétique et
+          d'algèbre du monde entier.
+        zh: >-
+          高斯的故事与该公式进入世界各地中小学算术和代数的课程之中。
+        ja: >-
+          ガウスの逸話とこの公式は、世界各国の算数・代数の授業内容に組み込まれる。
+    - year: Hoy
+      label:
+        es: >-
+          La suma n(n+1)/2 aparece en análisis de algoritmos, finanzas y estadística, y sigue siendo
+          una de las primeras series que se enseñan.
+        en: >-
+          The sum n(n+1)/2 appears in algorithm analysis, finance, and statistics, and remains one of
+          the first series taught.
+        pt: >-
+          A soma n(n+1)/2 aparece na análise de algoritmos, em finanças e na estatística, e continua
+          sendo uma das primeiras séries ensinadas.
+        fr: >-
+          La somme n(n+1)/2 apparaît dans l'analyse d'algorithmes, la finance et la statistique, et
+          reste l'une des premières séries enseignées.
+        zh: >-
+          求和公式 n(n+1)/2 出现在算法分析、金融和统计之中，也是最先教授的级数之一。
+        ja: >-
+          n(n+1)/2 の和はアルゴリズム解析や金融、統計に登場し、最初に教わる数列の一つであり
+          続けている。
+  useCases:
+    - title:
+        es: Finanzas personales
+        en: Personal finance
+        pt: Finanças pessoais
+        fr: Finances personnelles
+        zh: 个人理财
+        ja: パーソナルファイナンス
+      description:
+        es: >-
+          Calcula el total pagado en n cuotas iguales o el total acumulado en un ahorro con aportes
+          constantes.
+        en: >-
+          Computes the total paid in n equal installments or the total saved through constant
+          deposits.
+        pt: >-
+          Calcula o total pago em n parcelas iguais ou o total poupado com depósitos constantes.
+        fr: >-
+          Calcule le total payé en n échéances égales ou le total épargné avec des versements
+          constants.
+        zh: >-
+          计算 n 期等额分期付款的总支付额，或固定存款的累计储蓄总额。
+        ja: >-
+          均等分割払いn回分の支払総額や、一定額の積立貯蓄の合計額を計算する。
+    - title:
+        es: Planificación de producción
+        en: Production planning
+        pt: Planejamento de produção
+        fr: Planification de la production
+        zh: 生产计划
+        ja: 生産計画
+      description:
+        es: >-
+          Modela la producción o el costo acumulado cuando cada periodo aporta un incremento
+          constante.
+        en: >-
+          Models cumulative production or cost when each period adds a constant increment.
+        pt: >-
+          Modela a produção ou o custo acumulado quando cada período acrescenta um incremento
+          constante.
+        fr: >-
+          Modélise la production ou le coût cumulé lorsque chaque période ajoute un incrément
+          constant.
+        zh: >-
+          当每个周期增加恒定的增量时，用于建模累计产量或累计成本。
+        ja: >-
+          各期間に一定の増分が加わる場合の累計生産量や累計コストを表す。
+    - title:
+        es: Análisis de algoritmos
+        en: Algorithm analysis
+        pt: Análise de algoritmos
+        fr: Analyse d'algorithmes
+        zh: 算法分析
+        ja: アルゴリズム解析
+      description:
+        es: >-
+          La suma 1 + 2 + ... + n = n(n+1)/2 aparece al contar operaciones de bucles y estructuras
+          anidadas.
+        en: >-
+          The sum 1 + 2 + ... + n = n(n+1)/2 appears when counting operations in loops and nested
+          structures.
+        pt: >-
+          A soma 1 + 2 + ... + n = n(n+1)/2 aparece ao contar operações de laços e estruturas
+          aninhadas.
+        fr: >-
+          La somme 1 + 2 + ... + n = n(n+1)/2 apparaît lorsqu'on compte les opérations des boucles et
+          des structures imbriquées.
+        zh: >-
+          在统计循环和嵌套结构的运算次数时，会用到求和式 1 + 2 + ... + n = n(n+1)/2。
+        ja: >-
+          ループや入れ子構造の演算回数を数える際に、1 + 2 + ... + n = n(n+1)/2 という和が現れる。
+    - title:
+        es: Matemáticas recreativas
+        en: Recreational mathematics
+        pt: Matemática recreativa
+        fr: Mathématiques récréatives
+        zh: 趣味数学
+        ja: 数学パズル
+      description:
+        es: >-
+          Resolver mentalmente sumas de enteros consecutivos se basa en el mismo emparejamiento de
+          términos.
+        en: >-
+          Solving sums of consecutive integers mentally relies on the same term-pairing trick.
+        pt: >-
+          Resolver mentalmente somas de inteiros consecutivos se baseia no mesmo emparelhamento de
+          termos.
+        fr: >-
+          Calculer mentalement des sommes d'entiers consécutifs repose sur le même groupement de
+          termes.
+        zh: >-
+          心算连续整数之和，依靠的正是同样的首尾配对技巧。
+        ja: >-
+          連続する整数の和を暗算で求める際にも、同じペア作りの方法が使われる。
+  example:
+    title:
+      es: Sumar del 1 al 100
+      en: Summing 1 to 100
+      pt: Somar de 1 a 100
+      fr: Additionner les nombres de 1 à 100
+      zh: 从1加到100
+      ja: 1から100まで足す
+    lines:
+      - es: a₁ = 1, aₙ = 100, n = 100
+        en: a₁ = 1, aₙ = 100, n = 100
+        pt: a₁ = 1, aₙ = 100, n = 100
+        fr: a₁ = 1, aₙ = 100, n = 100
+        zh: a₁ = 1, aₙ = 100, n = 100
+        ja: a₁ = 1, aₙ = 100, n = 100
+      - es: Sₙ = n(a₁ + aₙ) / 2
+        en: Sₙ = n(a₁ + aₙ) / 2
+        pt: Sₙ = n(a₁ + aₙ) / 2
+        fr: Sₙ = n(a₁ + aₙ) / 2
+        zh: Sₙ = n(a₁ + aₙ) / 2
+        ja: Sₙ = n(a₁ + aₙ) / 2
+      - es: S = 100(1 + 100) / 2
+        en: S = 100(1 + 100) / 2
+        pt: S = 100(1 + 100) / 2
+        fr: S = 100(1 + 100) / 2
+        zh: S = 100(1 + 100) / 2
+        ja: S = 100(1 + 100) / 2
+      - es: S = 100 × 101 / 2
+        en: S = 100 × 101 / 2
+        pt: S = 100 × 101 / 2
+        fr: S = 100 × 101 / 2
+        zh: S = 100 × 101 / 2
+        ja: S = 100 × 101 / 2
+      - es: S = 10100 / 2
+        en: S = 10100 / 2
+        pt: S = 10100 / 2
+        fr: S = 10100 / 2
+        zh: S = 10100 / 2
+        ja: S = 10100 / 2
+      - es: S = 5050
+        en: S = 5050
+        pt: S = 5050
+        fr: S = 5050
+        zh: S = 5050
+        ja: S = 5050

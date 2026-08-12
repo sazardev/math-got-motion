@@ -1,0 +1,398 @@
+id: pascals-principle
+title:
+  es: Principio de Pascal
+  en: Pascal's Principle
+  pt: Princípio de Pascal
+  fr: Principe de Pascal
+  zh: 帕斯卡原理
+  ja: パスカルの原理
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: p-1
+    type: variable
+    value: P₁
+    explanation:
+      es: "P₁: la presión aplicada sobre el émbolo pequeño del fluido confinado."
+      en: "P₁: the pressure applied on the small piston of the confined fluid."
+      pt: "P₁: a pressão aplicada sobre o êmbolo pequeno do fluido confinado."
+      fr: "P₁ : la pression appliquée sur le petit piston du fluide confiné."
+      zh: "P₁：施加在密闭流体小活塞上的压强。"
+      ja: "P₁：密閉された流体の小さなピストンに加わる圧力。"
+  - id: equals-1
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: p-2
+    type: variable
+    value: P₂
+    explanation:
+      es: "P₂: la presión en otro punto del mismo fluido, idéntica a la primera."
+      en: "P₂: the pressure at another point of the same fluid, identical to the first."
+      pt: "P₂: a pressão em outro ponto do mesmo fluido, idêntica à primeira."
+      fr: "P₂ : la pression en un autre point du même fluide, identique à la première."
+      zh: "P₂：同一流体中另一点的压强，与前者完全相同。"
+      ja: "P₂：同じ流体の別の点での圧力。最初のものと等しい。"
+  - id: implies
+    type: operator
+    value: →
+    explanation:
+      es: "→: lo que equivale a comparar fuerzas y áreas en dos émbolos."
+      en: "→: which is equivalent to comparing forces and areas on two pistons."
+      pt: "→: o que equivale a comparar forças e áreas em dois êmbolos."
+      fr: "→ : ce qui revient à comparer forces et surfaces sur deux pistons."
+      zh: "→：即比较两个活塞上的力与面积。"
+      ja: "→：つまり二つのピストンの力と面積を比較することに等しい。"
+  - id: f-1
+    type: variable
+    value: F₁
+    explanation:
+      es: "F₁: la fuerza aplicada sobre el émbolo pequeño."
+      en: "F₁: the force applied to the small piston."
+      pt: "F₁: a força aplicada sobre o êmbolo pequeno."
+      fr: "F₁ : la force appliquée sur le petit piston."
+      zh: "F₁：施加在小活塞上的力。"
+      ja: "F₁：小さなピストンに加える力。"
+  - id: slash-1
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: a-1
+    type: variable
+    value: A₁
+    explanation:
+      es: "A₁: el área del émbolo pequeño."
+      en: "A₁: the area of the small piston."
+      pt: "A₁: a área do êmbolo pequeno."
+      fr: "A₁ : la surface du petit piston."
+      zh: "A₁：小活塞的面积。"
+      ja: "A₁：小さなピストンの面積。"
+  - id: equals-2
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: f-2
+    type: variable
+    value: F₂
+    explanation:
+      es: "F₂: la fuerza resultante sobre el émbolo grande."
+      en: "F₂: the resulting force on the large piston."
+      pt: "F₂: a força resultante sobre o êmbolo grande."
+      fr: "F₂ : la force résultante sur le grand piston."
+      zh: "F₂：大活塞上的合力。"
+      ja: "F₂：大きなピストンに生じる力。"
+  - id: slash-2
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: a-2
+    type: variable
+    value: A₂
+    explanation:
+      es: "A₂: el área del émbolo grande."
+      en: "A₂: the area of the large piston."
+      pt: "A₂: a área do êmbolo grande."
+      fr: "A₂ : la surface du grand piston."
+      zh: "A₂：大活塞的面积。"
+      ja: "A₂：大きなピストンの面積。"
+context:
+  author:
+    es: Blaise Pascal
+    en: Blaise Pascal
+    pt: Blaise Pascal
+    fr: Blaise Pascal
+    zh: 布莱兹·帕斯卡
+    ja: ブレーズ・パスカル
+  era:
+    es: Francia, 1623–1662 · publicado en 1653
+    en: France, 1623–1662 · published in 1653
+    pt: França, 1623–1662 · publicada em 1653
+    fr: France, 1623–1662 · publié en 1653
+    zh: 法国，1623–1662年 · 1653年发表
+    ja: フランス、1623–1662年・1653年発表
+  history:
+    es: >-
+      En su "Tratado del equilibrio de los líquidos", terminado hacia 1653 y publicado póstumamente en
+      1663, Blaise Pascal enunció que la presión aplicada a un fluido confinado se transmite
+      íntegramente y por igual en todas las direcciones. Para demostrarlo, cuenta su cuñado, Pascal
+      selló un barril de vino lleno de agua y conectó un tubo largo y estrecho; al llenar el tubo con
+      unos pocos litros, la presión multiplicada por la altura hizo estallar el barril. El principio
+      sustenta la prensa hidráulica, los gatos y los frenos de los automóviles: una fuerza pequeña
+      sobre un émbolo pequeño se convierte en una fuerza grande sobre un émbolo mayor, sin que aumente
+      la presión del fluido.
+    en: >-
+      In his "Treatise on the Equilibrium of Liquids", finished around 1653 and published posthumously
+      in 1663, Blaise Pascal stated that pressure applied to a confined fluid is transmitted
+      undiminished and equally in all directions. To demonstrate it, his brother-in-law recounts,
+      Pascal sealed a wine barrel filled with water and attached a long, narrow tube; pouring in just
+      a few liters, the pressure multiplied by height made the barrel burst. The principle underpins
+      the hydraulic press, jacks, and car brakes: a small force on a small piston becomes a large
+      force on a larger piston, without the fluid's pressure increasing.
+    pt: >-
+      Em seu "Tratado sobre o Equilíbrio dos Líquidos", concluído por volta de 1653 e publicado
+      postumamente em 1663, Blaise Pascal enunciou que a pressão aplicada a um fluido confinado se
+      transmite integralmente e igualmente em todas as direções. Para demonstrá-lo, conta seu cunhado,
+      Pascal selou um barril de vinho cheio de água e conectou um tubo longo e estreito; ao enchê-lo
+      com poucos litros, a pressão multiplicada pela altura fez o barril estourar. O princípio sustenta
+      a prensa hidráulica, os macacos e os freios dos automóveis: uma força pequena sobre um êmbolo
+      pequeno se torna uma força grande sobre um êmbolo maior, sem que a pressão do fluido aumente.
+    fr: >-
+      Dans son « Traité de l'équilibre des liqueurs », achevé vers 1653 et publié à titre posthume en
+      1663, Blaise Pascal énonça que la pression appliquée à un fluide confiné se transmet intégralement
+      et également dans toutes les directions. Pour le démontrer, raconte son beau-frère, Pascal scella
+      un tonneau de vin rempli d'eau et y fixa un tube long et étroit ; en versant quelques litres
+      seulement, la pression multipliée par la hauteur fit éclater le tonneau. Ce principe est à la
+      base de la presse hydraulique, des vérins et des freins d'automobile : une petite force sur un
+      petit piston devient une grande force sur un piston plus grand, sans que la pression du fluide
+      augmente.
+    zh: >-
+      在约1653年完成、1663年作为遗作出版的《液体平衡论》中，布莱兹·帕斯卡提出：施加在密闭流体上的压强会不
+      衰减地向各个方向等量传递。据他的妻弟记述，为了演示这一点，帕斯卡把装满水的酒桶封住，接上一根细长管子；
+      只倒入几升水，被高度放大的压强就把酒桶撑爆了。这一原理支撑着液压机、千斤顶和汽车刹车：在小活塞上施加的
+      小力，会在更大的活塞上变成大力，而流体的压强并未增加。
+    ja: >-
+      1653年頃に完成し、1663年に遺著として出版された『液体の平衡に関する論考』の中で、ブレーズ・パスカルは、
+      密閉された流体に加えた圧力は減衰せず全方向に等しく伝わることを述べた。義弟の記述によれば、これを実証する
+      ためパスカルは水で満たしたワインの樽を密閉し、細長い管を取り付けた。数リットルの水を注ぐだけで、高さに
+      比例して増幅された圧力が樽を破裂させたという。この原理は油圧プレス、ジャッキ、自動車のブレーキの基盤で
+      ある。小さなピストンに加えた小さな力は、流体の圧力が増えることなく、より大きなピストンで大きな力になる
+      のだ。
+  timeline:
+    - year: c. 1646
+      label:
+        es: >-
+          Pascal demuestra la transmisión de la presión haciendo estallar un barril de vino con un
+          tubo lleno de agua.
+        en: >-
+          Pascal demonstrates the transmission of pressure by bursting a wine barrel with a water
+          tube.
+        pt: >-
+          Pascal demonstra a transmissão da pressão fazendo estourar um barril de vinho com um tubo
+          cheio de água.
+        fr: >-
+          Pascal démontre la transmission de la pression en faisant éclater un tonneau de vin avec un
+          tube rempli d'eau.
+        zh: >-
+          帕斯卡用装满水的管子撑爆酒桶，演示压强的传递。
+        ja: >-
+          パスカルが水を満たした管で樽を破裂させ、圧力の伝播を実証する。
+    - year: "1653"
+      label:
+        es: >-
+          Pascal redacta su tratado sobre el equilibrio de los líquidos, donde enuncia el principio.
+        en: >-
+          Pascal writes his treatise on the equilibrium of liquids, where he states the principle.
+        pt: >-
+          Pascal escreve seu tratado sobre o equilíbrio dos líquidos, onde enuncia o princípio.
+        fr: >-
+          Pascal rédige son traité sur l'équilibre des liqueurs, où il énonce le principe.
+        zh: >-
+          帕斯卡撰写《液体平衡论》，在书中阐述了这一原理。
+        ja: >-
+          パスカルが『液体の平衡に関する論考』を執筆し、原理を述べる。
+    - year: "1795"
+      label:
+        es: >-
+          Joseph Bramah patenta la prensa hidráulica, primera máquina industrial basada en el
+          principio.
+        en: >-
+          Joseph Bramah patents the hydraulic press, the first industrial machine based on the
+          principle.
+        pt: >-
+          Joseph Bramah patenteia a prensa hidráulica, primeira máquina industrial baseada no
+          princípio.
+        fr: >-
+          Joseph Bramah brevette la presse hydraulique, première machine industrielle fondée sur le
+          principe.
+        zh: >-
+          约瑟夫·布拉默为液压机申请专利，这是基于该原理的第一台工业机器。
+        ja: >-
+          ジョセフ・ブラマーが油圧プレスを特許取得。この原理に基づく最初の産業機械となる。
+    - year: Hoy
+      label:
+        es: >-
+          Frenos de automóvil, gatos hidráulicos y excavadoras funcionan a diario gracias al principio.
+        en: >-
+          Car brakes, hydraulic jacks, and excavators work daily thanks to the principle.
+        pt: >-
+          Freios de automóvel, macacos hidráulicos e escavadeiras funcionam diariamente graças ao
+          princípio.
+        fr: >-
+          Freins d'automobile, vérins hydrauliques et excavatrices fonctionnent chaque jour grâce au
+          principe.
+        zh: >-
+          汽车刹车、液压千斤顶和挖掘机每天都在依靠这一原理运转。
+        ja: >-
+          自動車のブレーキ、油圧ジャッキ、ショベルカーは、この原理によって毎日動いている。
+  useCases:
+    - title:
+        es: Frenos de automóvil
+        en: Car brakes
+        pt: Freios de automóvel
+        fr: Freins d'automobile
+        zh: 汽车刹车
+        ja: 自動車のブレーキ
+      description:
+        es: >-
+          La presión del pedal se transmite por el líquido a las pinzas de cada rueda, que muerden el
+          disco por igual.
+        en: >-
+          Pedal pressure is carried by the fluid to the calipers at each wheel, which grip the disc
+          equally.
+        pt: >-
+          A pressão do pedal é transmitida pelo fluido às pinças de cada roda, que mordem o disco
+          igualmente.
+        fr: >-
+          La pression de la pédale est transmise par le fluide aux étriers de chaque roue, qui
+          serrent le disque à l'identique.
+        zh: >-
+          踏板产生的压强经制动液传递到每个车轮的卡钳，使其均匀夹紧制动盘。
+        ja: >-
+          ペダルの圧力がブレーキフルードを通じて各車輪のキャリパーに伝わり、ディスクを均等に挟む。
+    - title:
+        es: Prensas y gatos hidráulicos
+        en: Hydraulic presses and jacks
+        pt: Prensas e macacos hidráulicos
+        fr: Presses et vérins hydrauliques
+        zh: 液压机与液压千斤顶
+        ja: 油圧プレスとジャッキ
+      description:
+        es: >-
+          Un émbolo pequeño multiplica la fuerza en uno grande para compactar chatarra o levantar
+          toneladas.
+        en: >-
+          A small piston multiplies force onto a large one to compact scrap or lift tons.
+        pt: >-
+          Um êmbolo pequeno multiplica a força em um grande para compactar sucata ou levantar
+          toneladas.
+        fr: >-
+          Un petit piston multiplie la force sur un grand pour compacter la ferraille ou soulever des
+          tonnes.
+        zh: >-
+          小活塞把力放大到大活塞上，用于压碎废料或顶起数吨重物。
+        ja: >-
+          小さなピストンが大きなピストンに力を増幅し、くず鉄の圧縮や数トンの持ち上げを行う。
+    - title:
+        es: Maquinaria pesada
+        en: Heavy machinery
+        pt: Maquinário pesado
+        fr: Engins de chantier
+        zh: 重型机械
+        ja: 重機
+      description:
+        es: >-
+          Excavadoras y retroexcavadoras mueven sus brazos con cilindros hidráulicos accionados por
+          presión de aceite.
+        en: >-
+          Excavators and backhoes move their arms with hydraulic cylinders driven by oil pressure.
+        pt: >-
+          Escavadeiras e retroescavadeiras movem seus braços com cilindros hidráulicos acionados por
+          pressão de óleo.
+        fr: >-
+          Excavatrices et pelles mécaniques actionnent leurs bras par des vérins hydrauliques
+          alimentés en pression d'huile.
+        zh: >-
+          挖掘机和反铲挖机用油压驱动的液压缸来移动其动臂。
+        ja: >-
+          ショベルカーやバックホーは、油圧によって動くシリンダーでアームを動かす。
+    - title:
+        es: Buques y carga
+        en: Ships and cargo
+        pt: Navios e carga
+        fr: Navires et cargaison
+        zh: 船舶与货物
+        ja: 船舶と貨物
+      description:
+        es: >-
+          Timones, escotillas y grúas de a bordo usan actuadores hidráulicos regidos por el principio.
+        en: >-
+          Rudders, hatches, and onboard cranes use hydraulic actuators governed by the principle.
+        pt: >-
+          Timões, escotilhas e guindastes de bordo usam atuadores hidráulicos regidos pelo princípio.
+        fr: >-
+          Gouvernails, écoutilles et grues de bord utilisent des vérins hydrauliques régis par le
+          principe.
+        zh: >-
+          船舵、舱盖和船载起重机都使用由该原理支配的液压执行器。
+        ja: >-
+          舵、ハッチ、船載クレーンは、この原理に従う油圧アクチュエーターを使う。
+  example:
+    title:
+      es: Prensa hidráulica
+      en: Hydraulic press
+      pt: Prensa hidráulica
+      fr: Presse hydraulique
+      zh: 液压机
+      ja: 油圧プレス
+    lines:
+      - es: A₁ = 0.01 m², A₂ = 0.1 m²
+        en: A₁ = 0.01 m², A₂ = 0.1 m²
+        pt: A₁ = 0,01 m², A₂ = 0,1 m²
+        fr: A₁ = 0,01 m², A₂ = 0,1 m²
+        zh: A₁ = 0.01 米²，A₂ = 0.1 米²
+        ja: A₁ = 0.01 m²、A₂ = 0.1 m²
+      - es: F₁ = 100 N
+        en: F₁ = 100 N
+        pt: F₁ = 100 N
+        fr: F₁ = 100 N
+        zh: F₁ = 100 牛
+        ja: F₁ = 100 N
+      - es: F₁/A₁ = F₂/A₂
+        en: F₁/A₁ = F₂/A₂
+        pt: F₁/A₁ = F₂/A₂
+        fr: F₁/A₁ = F₂/A₂
+        zh: F₁/A₁ = F₂/A₂
+        ja: F₁/A₁ = F₂/A₂
+      - es: F₂ = F₁ · (A₂/A₁)
+        en: F₂ = F₁ · (A₂/A₁)
+        pt: F₂ = F₁ · (A₂/A₁)
+        fr: F₂ = F₁ · (A₂/A₁)
+        zh: F₂ = F₁ · (A₂/A₁)
+        ja: F₂ = F₁ · (A₂/A₁)
+      - es: F₂ = 100 × (0.1 / 0.01)
+        en: F₂ = 100 × (0.1 / 0.01)
+        pt: F₂ = 100 × (0,1 / 0,01)
+        fr: F₂ = 100 × (0,1 / 0,01)
+        zh: F₂ = 100 × (0.1 / 0.01)
+        ja: F₂ = 100 × (0.1 / 0.01)
+      - es: F₂ = 100 × 10
+        en: F₂ = 100 × 10
+        pt: F₂ = 100 × 10
+        fr: F₂ = 100 × 10
+        zh: F₂ = 100 × 10
+        ja: F₂ = 100 × 10
+      - es: F₂ = 1000 N (diez veces la fuerza)
+        en: F₂ = 1,000 N (ten times the force)
+        pt: F₂ = 1.000 N (dez vezes a força)
+        fr: F₂ = 1 000 N (dix fois la force)
+        zh: F₂ = 1000 牛（力的十倍）
+        ja: F₂ = 1,000 N（力の10倍）

@@ -1,0 +1,312 @@
+id: multiplication-rule
+title:
+  es: Regla de la Multiplicación
+  en: Multiplication Rule
+  pt: Regra da Multiplicação
+  fr: Règle de Multiplication
+  zh: 乘法法则
+  ja: 乗法定理
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率統計
+nodes:
+  - id: p-a-intersect-b
+    type: variable
+    value: P(A∩B)
+    explanation:
+      es: "La probabilidad de que ambos eventos, A y B, ocurran juntos."
+      en: "The probability that both events, A and B, occur together."
+      pt: "A probabilidade de que os dois eventos, A e B, ocorram juntos."
+      fr: "La probabilité que les deux événements, A et B, se produisent ensemble."
+      zh: "A和B两个事件同时发生的概率。"
+      ja: "AとBの両方の事象が同時に起こる確率。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これに正確に等しい。
+  - id: p-a
+    type: variable
+    value: P(A)
+    explanation:
+      es: "La probabilidad de que ocurra el primer evento, A."
+      en: "The probability that the first event, A, occurs."
+      pt: "A probabilidade de que o primeiro evento, A, ocorra."
+      fr: "La probabilité que le premier événement, A, se produise."
+      zh: "第一个事件A发生的概率。"
+      ja: "最初の事象Aが起こる確率。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: p-b-given-a
+    type: variable
+    value: P(B|A)
+    explanation:
+      es: "La probabilidad de B dado que A ya ocurrió."
+      en: "The probability of B given that A has already occurred."
+      pt: "A probabilidade de B dado que A já ocorreu."
+      fr: "La probabilité de B sachant que A s'est déjà produit."
+      zh: "在A已发生的条件下B的概率。"
+      ja: "Aがすでに起きたという条件のもとでのBの確率。"
+context:
+  author:
+    es: Basada en el trabajo de Laplace
+    en: Based on the work of Laplace
+    pt: Baseada no trabalho de Laplace
+    fr: Basé sur les travaux de Laplace
+    zh: 基于拉普拉斯的工作
+    ja: ラプラスの研究に基づく
+  era:
+    es: Francia, s. XVIII
+    en: France, 18th century
+    pt: França, séc. XVIII
+    fr: France, XVIIIe siècle
+    zh: 法国,18世纪
+    ja: フランス、18世紀
+  history:
+    es: >-
+      La regla de la multiplicación resuelve la pregunta de cuán probable es que dos cosas sucedan a
+      la vez: basta multiplicar la probabilidad del primer evento por la del segundo suponiendo que
+      el primero ya ocurrió. Cuando los eventos son independientes, la condición desaparece y queda
+      simplemente P(A)·P(B). Es el eslabón que encadena los árboles de decisión, el punto de partida
+      de la regla de la cadena y la base para calcular la confiabilidad de sistemas en serie, todo
+      ello formalizado en la obra probabilística de Laplace.
+    en: >-
+      The multiplication rule answers how likely it is that two things happen together: multiply the
+      probability of the first event by the probability of the second given that the first already
+      occurred. When the events are independent, the condition vanishes and only P(A)·P(B) remains.
+      It is the link that chains decision trees together, the starting point of the chain rule, and
+      the basis for computing the reliability of series systems, all formalized in Laplace's work on
+      probability.
+    pt: >-
+      A regra da multiplicação responde à pergunta de quão provável é que duas coisas aconteçam ao
+      mesmo tempo: basta multiplicar a probabilidade do primeiro evento pela do segundo supondo que o
+      primeiro já ocorreu. Quando os eventos são independentes, a condição desaparece e resta
+      simplesmente P(A)·P(B). É o elo que encadeia as árvores de decisão, o ponto de partida da regra
+      da cadeia e a base para calcular a confiabilidade de sistemas em série, tudo formalizado na obra
+      probabilística de Laplace.
+    fr: >-
+      La règle de multiplication répond à la question de savoir à quel point il est probable que deux
+      choses se produisent ensemble : il suffit de multiplier la probabilité du premier événement par
+      celle du second, sachant que le premier s'est déjà produit. Lorsque les événements sont
+      indépendants, la condition disparaît et il ne reste que P(A)·P(B). C'est le maillon qui enchaîne
+      les arbres de décision, le point de départ de la règle de la chaîne et la base du calcul de
+      fiabilité des systèmes en série, le tout formalisé dans l'œuvre probabiliste de Laplace.
+    zh: >-
+      乘法法则解决的是两个事件同时发生的概率问题:只需用第一个事件的概率,乘以在第一个事件已发生的
+      条件下第二个事件的概率。当两个事件相互独立时,条件消失,只剩下P(A)·P(B)。它是把决策树串联
+      起来的环节,是链式法则的出发点,也是计算串联系统可靠性的基础,这一切都在拉普拉斯的概率论
+      著作中得到了系统化。
+    ja: >-
+      乗法定理は、2つのことが同時に起こる確率に答える。最初の事象の確率に、その事象がすでに
+      起きたという条件のもとでの2番目の事象の確率を掛ければよい。2つの事象が独立なら、条件は
+      消えて単にP(A)·P(B)になる。これは決定木をつなぐ環であり、連鎖律の出発点であり、直列
+      システムの信頼性計算の基礎でもある。それらはすべてラプラスの確率論の著作で体系化された。
+  timeline:
+    - year: "1812"
+      label:
+        es: >-
+          Laplace publica Théorie analytique des probabilités, que formaliza la regla del producto.
+        en: >-
+          Laplace publishes Théorie analytique des probabilités, formalizing the product rule.
+        pt: >-
+          Laplace publica Théorie analytique des probabilités, formalizando a regra do produto.
+        fr: >-
+          Laplace publie la Théorie analytique des probabilités, formalisant la règle du produit.
+        zh: >-
+          拉普拉斯发表《概率的解析理论》,将乘法法则形式化。
+        ja: >-
+          ラプラスが『確率の解析理論』を出版し、乗法定理を定式化する。
+    - year: "1933"
+      label:
+        es: >-
+          Kolmogorov sitúa la regla del producto entre los axiomas de la probabilidad.
+        en: >-
+          Kolmogorov places the product rule among the axioms of probability.
+        pt: >-
+          Kolmogorov situa a regra do produto entre os axiomas da probabilidade.
+        fr: >-
+          Kolmogorov place la règle du produit parmi les axiomes de la probabilité.
+        zh: >-
+          科尔莫戈罗夫把乘法法则列为概率的公理之一。
+        ja: >-
+          コルモゴロフが乗法の規則を確率論の公理の一つに据える。
+    - year: s. XX
+      label:
+        es: >-
+          Los árboles de decisión y la regla de la cadena la convierten en herramienta de la IA.
+        en: >-
+          Decision trees and the chain rule turn it into a tool of artificial intelligence.
+        pt: >-
+          As árvores de decisão e a regra da cadeia a tornam uma ferramenta da IA.
+        fr: >-
+          Les arbres de décision et la règle de la chaîne en font un outil de l'intelligence
+          artificielle.
+        zh: >-
+          决策树与链式法则使它成为人工智能的工具。
+        ja: >-
+          決定木と連鎖律によって、AIの道具となる。
+    - year: Hoy
+      label:
+        es: >-
+          Sigue siendo la base del cálculo de probabilidades conjuntas en ciencia y negocios.
+        en: >-
+          It remains the basis of joint probability calculations in science and business.
+        pt: >-
+          Continua sendo a base do cálculo de probabilidades conjuntas na ciência e nos negócios.
+        fr: >-
+          Elle reste la base du calcul des probabilités conjointes en science et en affaires.
+        zh: >-
+          它至今仍是科学和商业中联合概率计算的基础。
+        ja: >-
+          科学とビジネスにおける同時確率計算の基本であり続けている。
+  useCases:
+    - title:
+        es: Árboles de decisión
+        en: Decision trees
+        pt: Árvores de decisão
+        fr: Arbres de décision
+        zh: 决策树
+        ja: 決定木
+      description:
+        es: >-
+          Calcula la probabilidad de cada rama completa al multiplicar las probabilidades a lo largo
+          del camino.
+        en: >-
+          Computes the probability of each complete branch by multiplying probabilities along the
+          path.
+        pt: >-
+          Calcula a probabilidade de cada ramo completo ao multiplicar as probabilidades ao longo do
+          caminho.
+        fr: >-
+          Calcule la probabilité de chaque branche complète en multipliant les probabilités le long
+          du chemin.
+        zh: >-
+          沿路径相乘各概率,从而计算每条完整分支的概率。
+        ja: >-
+          経路上の確率を掛け合わせることで、各完全分岐の確率を計算する。
+    - title:
+        es: Ingeniería de confiabilidad
+        en: Reliability engineering
+        pt: Engenharia de confiabilidade
+        fr: Ingénierie de la fiabilité
+        zh: 可靠性工程
+        ja: 信頼性工学
+      description:
+        es: >-
+          Estima la probabilidad de que un sistema en serie funcione si todos sus componentes deben
+          operar.
+        en: >-
+          Estimates the probability that a series system works when all its components must operate.
+        pt: >-
+          Estima a probabilidade de um sistema em série funcionar quando todos os seus componentes
+          precisam operar.
+        fr: >-
+          Estime la probabilité qu'un système en série fonctionne lorsque tous ses composants doivent
+          opérer.
+        zh: >-
+          当串联系统的所有部件都必须正常工作时,估计系统工作的概率。
+        ja: >-
+          直列システムの全構成部品が動作しなければならないとき、そのシステムが機能する確率を
+          推定する。
+    - title:
+        es: Control de procesos
+        en: Process control
+        pt: Controle de processos
+        fr: Contrôle des processus
+        zh: 过程控制
+        ja: 工程管理
+      description:
+        es: >-
+          Calcula la probabilidad conjunta de que una cadena de pasos de producción termine sin
+          fallas.
+        en: >-
+          Computes the joint probability that a chain of production steps finishes without failures.
+        pt: >-
+          Calcula a probabilidade conjunta de uma cadeia de etapas de produção terminar sem falhas.
+        fr: >-
+          Calcule la probabilité conjointe qu'une chaîne d'étapes de production s'achève sans
+          défaillance.
+        zh: >-
+          计算一整条生产工序链条无故障完成的联合概率。
+        ja: >-
+          一連の生産工程が失敗なく完了する同時確率を計算する。
+    - title:
+        es: Finanzas y seguros
+        en: Finance and insurance
+        pt: Finanças e seguros
+        fr: Finance et assurance
+        zh: 金融与保险
+        ja: 金融と保険
+      description:
+        es: >-
+          Evalúa la probabilidad de que varios riesgos ocurran simultáneamente en una cartera o
+          póliza.
+        en: >-
+          Assesses the probability that several risks occur at the same time in a portfolio or
+          policy.
+        pt: >-
+          Avalia a probabilidade de vários riscos ocorrerem simultaneamente em uma carteira ou
+          apólice.
+        fr: >-
+          Évalue la probabilité que plusieurs risques se produisent simultanément dans un
+          portefeuille ou une police.
+        zh: >-
+          评估投资组合或保单中多个风险同时发生的概率。
+        ja: >-
+          ポートフォリオや保険契約で複数のリスクが同時に発生する確率を評価する。
+  example:
+    title:
+      es: Dos eventos encadenados
+      en: Two chained events
+      pt: Dois eventos encadeados
+      fr: Deux événements enchaînés
+      zh: 两个关联事件
+      ja: 連鎖する2つの事象
+    lines:
+      - es: P(A) = 0.6
+        en: P(A) = 0.6
+        pt: P(A) = 0,6
+        fr: P(A) = 0,6
+        zh: P(A) = 0.6
+        ja: P(A) = 0.6
+      - es: P(B|A) = 0.5
+        en: P(B|A) = 0.5
+        pt: P(B|A) = 0,5
+        fr: P(B|A) = 0,5
+        zh: P(B|A) = 0.5
+        ja: P(B|A) = 0.5
+      - es: P(A ∩ B) = P(A) · P(B|A)
+        en: P(A ∩ B) = P(A) · P(B|A)
+        pt: P(A ∩ B) = P(A) · P(B|A)
+        fr: P(A ∩ B) = P(A) · P(B|A)
+        zh: P(A ∩ B) = P(A) · P(B|A)
+        ja: P(A ∩ B) = P(A) · P(B|A)
+      - es: P(A ∩ B) = 0.6 · 0.5
+        en: P(A ∩ B) = 0.6 · 0.5
+        pt: P(A ∩ B) = 0,6 · 0,5
+        fr: P(A ∩ B) = 0,6 · 0,5
+        zh: P(A ∩ B) = 0.6 · 0.5
+        ja: P(A ∩ B) = 0.6 · 0.5
+      - es: P(A ∩ B) = 0.3
+        en: P(A ∩ B) = 0.3
+        pt: P(A ∩ B) = 0,3
+        fr: P(A ∩ B) = 0,3
+        zh: P(A ∩ B) = 0.3
+        ja: P(A ∩ B) = 0.3

@@ -1,0 +1,303 @@
+id: double-angle
+title:
+  es: Fórmula del Ángulo Doble
+  en: Double-Angle Formula
+  pt: Fórmula do Ângulo Duplo
+  fr: Formule de l'angle double
+  zh: 倍角公式
+  ja: 倍角の公式
+category:
+  es: Trigonometría
+  en: Trigonometry
+  pt: Trigonometria
+  fr: Trigonométrie
+  zh: 三角学
+  ja: 三角法
+nodes:
+  - id: sin
+    type: operator
+    value: sin
+    explanation:
+      es: El seno del ángulo doble.
+      en: The sine of the double angle.
+      pt: O seno do ângulo duplo.
+      fr: Le sinus de l'angle double.
+      zh: 二倍角的正弦。
+      ja: 2倍の角の正弦。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el ángulo.
+      en: Opens the angle.
+      pt: Abre o ângulo.
+      fr: Ouvre l'angle.
+      zh: 打开角度。
+      ja: 角度を開く括弧。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "El doble: el ángulo θ sumado consigo mismo."
+      en: "The double: the angle θ added to itself."
+      pt: "O dobro: o ângulo θ somado a ele mesmo."
+      fr: "Le double : l'angle θ ajouté à lui-même."
+      zh: "二倍：角度θ与自身相加。"
+      ja: "2倍。角θをそれ自身に足したもの。"
+  - id: theta
+    type: variable
+    value: θ
+    explanation:
+      es: "θ: el ángulo original."
+      en: "θ: the original angle."
+      pt: "θ: o ângulo original."
+      fr: "θ : l'angle d'origine."
+      zh: "θ：原来的角度。"
+      ja: "θ：元の角度。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el ángulo.
+      en: Closes the angle.
+      pt: Fecha o ângulo.
+      fr: Ferme l'angle.
+      zh: 关闭角度。
+      ja: 角度を閉じる括弧。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: two-2
+    type: number
+    value: "2"
+    explanation:
+      es: "El factor 2 que aparece al sumar la identidad consigo misma."
+      en: "The factor 2 that appears when adding the identity to itself."
+      pt: "O fator 2 que aparece ao somar a identidade com ela mesma."
+      fr: "Le facteur 2 qui apparaît quand on additionne l'identité à elle-même."
+      zh: "将恒等式与自身相加时出现的因子2。"
+      ja: "恒等式をそれ自身に足したときに現れる2。"
+  - id: sin-1
+    type: variable
+    value: sin θ
+    explanation:
+      es: El seno del ángulo original.
+      en: The sine of the original angle.
+      pt: O seno do ângulo original.
+      fr: Le sinus de l'angle d'origine.
+      zh: 原角度的正弦。
+      ja: 元の角度の正弦。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: cos-1
+    type: variable
+    value: cos θ
+    explanation:
+      es: El coseno del mismo ángulo.
+      en: The cosine of the same angle.
+      pt: O cosseno do mesmo ângulo.
+      fr: Le cosinus du même angle.
+      zh: 同一角度的余弦。
+      ja: 同じ角度の余弦。
+context:
+  author:
+    es: Origen colectivo; sistematizada por Euler
+    en: Collective origin; systematized by Euler
+    pt: Origem coletiva; sistematizada por Euler
+    fr: Origine collective ; systématisée par Euler
+    zh: 集体起源；由欧拉系统化
+    ja: 集団的起源。オイラーにより体系化
+  era:
+    es: Europa y el mundo islámico, s. IX–XVIII
+    en: Europe and the Islamic world, 9th–18th centuries
+    pt: Europa e o mundo islâmico, sécs. IX–XVIII
+    fr: Europe et monde islamique, IXe–XVIIIe siècles
+    zh: 欧洲与伊斯兰世界，9–18世纪
+    ja: ヨーロッパとイスラム世界、9〜18世紀
+  history:
+    es: >-
+      La fórmula del ángulo doble se obtiene directamente de la del seno de la suma, haciendo a = b =
+      θ. Aparece en la trigonometría islámica medieval para simplificar tablas astronómicas, y en el
+      cálculo de Euler adquiere su forma definitiva. Es la herramienta que convierte potencias de
+      senos y cosenos en funciones simples, indispensable para integrar y para el análisis de
+      señales.
+    en: >-
+      The double-angle formula follows directly from the sine addition formula by setting a = b = θ.
+      It appears in medieval Islamic trigonometry to simplify astronomical tables and reached its
+      definitive form in Euler's calculus. It is the tool that turns powers of sines and cosines into
+      simple functions, indispensable for integration and signal analysis.
+    pt: >-
+      A fórmula do ângulo duplo é obtida diretamente da do seno da soma, fazendo a = b = θ. Aparece na
+      trigonometria islâmica medieval para simplificar tabelas astronômicas e ganha sua forma
+      definitiva no cálculo de Euler. É a ferramenta que transforma potências de senos e cossenos em
+      funções simples, indispensável para integrar e para a análise de sinais.
+    fr: >-
+      La formule de l'angle double se déduit directement de celle du sinus d'une somme en posant a =
+      b = θ. Elle apparaît dans la trigonométrie islamique médiévale pour simplifier les tables
+      astronomiques et prend sa forme définitive dans le calcul d'Euler. C'est l'outil qui transforme
+      les puissances de sinus et cosinus en fonctions simples, indispensable pour intégrer et pour
+      l'analyse du signal.
+    zh: >-
+      倍角公式可直接由两角和的正弦公式令a = b = θ得到。它出现在中世纪伊斯兰三角学中，用于简化天文用表，
+      并在欧拉的微积分中取得最终形式。它是把正弦、余弦的幂化为简单函数的工具，对积分和信号分析必不可少。
+    ja: >-
+      倍角の公式は、正弦の加法定理でa = b = θとおけばすぐに得られる。中世イスラムの三角法では天文学の表を
+      簡略化するために現れ、オイラーの微積分で決定的な形に整えられた。これは正弦・余弦のべき乗を簡単な関数に
+      変える道具であり、積分と信号解析に不可欠である。
+  timeline:
+    - year: s. IX
+      label:
+        es: >-
+          La trigonometría islámica usa el ángulo doble para simplificar el cálculo de tablas
+          astronómicas.
+        en: >-
+          Islamic trigonometry uses the double angle to simplify the computation of astronomical
+          tables.
+        pt: >-
+          A trigonometria islâmica usa o ângulo duplo para simplificar o cálculo de tabelas
+          astronômicas.
+        fr: >-
+          La trigonométrie islamique utilise l'angle double pour simplifier le calcul des tables
+          astronomiques.
+        zh: >-
+          伊斯兰三角学利用倍角公式简化天文用表的计算。
+        ja: >-
+          イスラムの三角法が、天文学の表の計算を簡略化するために倍角を用いる。
+    - year: "1748"
+      label:
+        es: >-
+          Euler la deduce de las fórmulas de adición en su Introductio in analysin infinitorum.
+        en: >-
+          Euler derives it from the addition formulas in his Introductio in analysin infinitorum.
+        pt: >-
+          Euler a deduz das fórmulas de adição em sua Introductio in analysin infinitorum.
+        fr: >-
+          Euler la déduit des formules d'addition dans son Introductio in analysin infinitorum.
+        zh: >-
+          欧拉在《无穷分析引论》中由加法公式推出它。
+        ja: >-
+          オイラーが『無限解析入門』の中で加法定理からこれを導く。
+    - year: Hoy
+      label:
+        es: >-
+          Es clave para integrar potencias trigonométricas y para los osciladores de señal.
+        en: >-
+          It is key to integrating trigonometric powers and to signal oscillators.
+        pt: >-
+          É chave para integrar potências trigonométricas e para osciladores de sinal.
+        fr: >-
+          Elle est essentielle pour intégrer les puissances trigonométriques et pour les oscillateurs
+          de signal.
+        zh: >-
+          它是三角函数幂积分和信号振荡器的关键。
+        ja: >-
+          三角関数のべき乗の積分や信号発振器にとって重要な公式である。
+  useCases:
+    - title:
+        es: Cálculo de integrales
+        en: Integral calculus
+        pt: Cálculo integral
+        fr: Calcul intégral
+        zh: 积分学
+        ja: 積分
+      description:
+        es: >-
+          Reduce potencias como sin²θ a funciones simples integrables al instante.
+        en: >-
+          It reduces powers like sin²θ to simple, instantly integrable functions.
+        pt: >-
+          Reduz potências como sin²θ a funções simples, integráveis na hora.
+        fr: >-
+          Elle réduit des puissances comme sin²θ à des fonctions simples, intégrables immédiatement.
+        zh: >-
+          它将sin²θ这样的幂降为可直接积分的简单函数。
+        ja: >-
+          sin²θのようなべき乗を、すぐに積分できる簡単な関数に変える。
+    - title:
+        es: Robótica
+        en: Robotics
+        pt: Robótica
+        fr: Robotique
+        zh: 机器人学
+        ja: ロボティクス
+      description:
+        es: >-
+          La cinemática de articulaciones rotatorias combina ángulos dobles de cada eslabón.
+        en: >-
+          The kinematics of rotating joints combine double angles of each link.
+        pt: >-
+          A cinemática de articulações rotativas combina ângulos duplos de cada elo.
+        fr: >-
+          La cinématique des articulations rotatives combine les angles doubles de chaque segment.
+        zh: >-
+          旋转关节的运动学将每个连杆的二倍角组合起来。
+        ja: >-
+          回転関節の運動学は、各リンクの倍角を組み合わせる。
+    - title:
+        es: Ingeniería eléctrica
+        en: Electrical engineering
+        pt: Engenharia elétrica
+        fr: Génie électrique
+        zh: 电气工程
+        ja: 電気工学
+      description:
+        es: >-
+          La potencia instantánea de corriente alterna contiene términos de ángulo doble.
+        en: >-
+          Instantaneous AC power contains double-angle terms.
+        pt: >-
+          A potência instantânea de corrente alternada contém termos de ângulo duplo.
+        fr: >-
+          La puissance instantanée en courant alternatif contient des termes d'angle double.
+        zh: >-
+          交流电的瞬时功率包含倍角项。
+        ja: >-
+          交流の瞬時電力には倍角の項が現れる。
+  example:
+    title:
+      es: Seno de 60°
+      en: Sine of 60°
+      pt: Seno de 60°
+      fr: Sinus de 60°
+      zh: 60°的正弦
+      ja: sin 60°
+    lines:
+      - es: sin(2·30°) = 2 · sin 30° · cos 30°
+        en: sin(2·30°) = 2 · sin 30° · cos 30°
+        pt: sin(2·30°) = 2 · sen 30° · cos 30°
+        fr: sin(2·30°) = 2 · sin 30° · cos 30°
+        zh: sin(2·30°) = 2 · sin 30° · cos 30°
+        ja: sin(2·30°) = 2 · sin 30° · cos 30°
+      - es: sin 60° = 2 · 0.5 · 0.8660
+        en: sin 60° = 2 · 0.5 · 0.8660
+        pt: sin 60° = 2 · 0,5 · 0,8660
+        fr: sin 60° = 2 · 0,5 · 0,8660
+        zh: sin 60° = 2 · 0.5 · 0.8660
+        ja: sin 60° = 2 · 0.5 · 0.8660
+      - es: sin 60° = 1 · 0.8660
+        en: sin 60° = 1 · 0.8660
+        pt: sin 60° = 1 · 0,8660
+        fr: sin 60° = 1 · 0,8660
+        zh: sin 60° = 1 · 0.8660
+        ja: sin 60° = 1 · 0.8660
+      - es: sin 60° ≈ 0.866
+        en: sin 60° ≈ 0.866
+        pt: sin 60° ≈ 0,866
+        fr: sin 60° ≈ 0,866
+        zh: sin 60° ≈ 0.866
+        ja: sin 60° ≈ 0.866

@@ -1,0 +1,317 @@
+id: adiabatic-process
+title:
+  es: Proceso Adiabático
+  en: Adiabatic Process
+  pt: Processo Adiabático
+  fr: Processus adiabatique
+  zh: 绝热过程
+  ja: 断熱過程
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: p
+    type: variable
+    value: P
+    explanation:
+      es: La presión del gas, por ejemplo en atmósferas (atm) o pascales (Pa).
+      en: The pressure of the gas, for example in atmospheres (atm) or pascals (Pa).
+      pt: A pressão do gás, por exemplo em atmosferas (atm) ou pascais (Pa).
+      fr: La pression du gaz, par exemple en atmosphères (atm) ou en pascals (Pa).
+      zh: 气体的压强，例如以大气压（atm）或帕斯卡（Pa）为单位。
+      ja: 気体の圧力。例えば気圧（atm）やパスカル（Pa）で表す。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: v-gamma
+    type: variable
+    value: "V^γ"
+    explanation:
+      es: El volumen elevado a γ, el coeficiente adiabático, que permanece constante en el proceso.
+      en: The volume raised to γ, the adiabatic coefficient, which stays constant in the process.
+      pt: O volume elevado a γ, o coeficiente adiabático, que permanece constante no processo.
+      fr:
+        Le volume élevé à la puissance γ, le coefficient adiabatique, qui reste constant au cours du
+        processus.
+      zh: 体积的γ次幂，其中γ是绝热系数，在过程中保持不变。
+      ja: 体積をγ乗したもの。γは断熱係数で、この過程では一定に保たれる。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: cte
+    type: constant
+    value: cte
+    explanation:
+      es: "Una constante: el producto se conserva mientras no haya intercambio de calor."
+      en: "A constant: the product is conserved as long as no heat is exchanged."
+      pt: "Uma constante: o produto se conserva enquanto não houver troca de calor."
+      fr: "Une constante : le produit se conserve tant qu'aucune chaleur n'est échangée."
+      zh: 一个常数：只要没有热量交换，乘积就保持不变。
+      ja: 定数。熱の交換が行われない限り、この積は保存される。
+context:
+  author:
+    es: Siméon Denis Poisson
+    en: Siméon Denis Poisson
+    pt: Siméon Denis Poisson
+    fr: Siméon Denis Poisson
+    zh: 西梅翁·德尼·泊松
+    ja: シメオン・ドニ・ポアソン
+  era:
+    es: Francia, 1781–1840 · derivada en 1823
+    en: France, 1781–1840 · derived in 1823
+    pt: França, 1781–1840 · derivada em 1823
+    fr: France, 1781–1840 · dérivée en 1823
+    zh: 法国，1781–1840年 · 1823年推导
+    ja: フランス、1781–1840年・1823年に導出
+  history:
+    es: >-
+      Siméon Denis Poisson, matemático y físico francés, estableció en 1823 la relación P·V^γ = constante
+      para un gas que cambia de estado sin intercambiar calor con su entorno, un proceso hoy llamado
+      adiabático. La ecuación generalizaba el resultado que Laplace había usado para calcular la velocidad
+      del sonido. En un proceso adiabático la compresión calienta el gas y la expansión lo enfría: por eso
+      se calienta una bomba de inflar una bicicleta y por eso se forman las nubes cuando el aire asciende y
+      se expande. También es la base del encendido por compresión en el motor diésel.
+    en: >-
+      Siméon Denis Poisson, a French mathematician and physicist, established in 1823 the relation
+      P·V^γ = constant for a gas that changes state without exchanging heat with its surroundings, a
+      process now called adiabatic. The equation generalized the result Laplace had used to compute the
+      speed of sound. In an adiabatic process compression heats the gas and expansion cools it: that is why
+      a bicycle pump gets hot and why clouds form when air rises and expands. It is also the basis of
+      compression ignition in the diesel engine.
+    pt: >-
+      Siméon Denis Poisson, matemático e físico francês, estabeleceu em 1823 a relação P·V^γ = constante
+      para um gás que muda de estado sem trocar calor com o ambiente, um processo hoje chamado adiabático.
+      A equação generalizava o resultado que Laplace havia usado para calcular a velocidade do som. Em um
+      processo adiabático, a compressão aquece o gás e a expansão o resfria: por isso uma bomba de encher
+      bicicleta esquenta e por isso se formam nuvens quando o ar sobe e se expande. Ela também é a base do
+      acendimento por compressão no motor diesel.
+    fr: >-
+      Siméon Denis Poisson, mathématicien et physicien français, établit en 1823 la relation
+      P·V^γ = constante pour un gaz qui change d'état sans échanger de chaleur avec le milieu, un processus
+      aujourd'hui dit adiabatique. L'équation généralisait le résultat que Laplace avait utilisé pour
+      calculer la vitesse du son. Dans un processus adiabatique, la compression réchauffe le gaz et la
+      détente le refroidit : c'est pourquoi une pompe à vélo chauffe et pourquoi des nuages se forment
+      quand l'air s'élève et se détend. C'est aussi la base de l'allumage par compression dans le moteur
+      diesel.
+    zh: >-
+      法国数学家和物理学家西梅翁·德尼·泊松于1823年建立了P·V^γ = 常数这一关系，
+      适用于不与周围环境交换热量的气体状态变化，这一过程如今称为绝热过程。
+      该方程推广了拉普拉斯用来计算声速的结果。在绝热过程中，压缩使气体变热，膨胀使气体变冷：
+      这就是自行车打气筒会发热、以及空气上升膨胀会形成云的原因。
+      它也是柴油机压燃式点火的基础。
+    ja: >-
+      フランスの数学者で物理学者のシメオン・ドニ・ポアソンは1823年、周囲と熱を交換せずに状態が変化する
+      気体についての関係式P·V^γ = 定数を確立した。この過程は現在、断熱過程と呼ばれる。
+      この式は、ラプラスが音速の計算に用いた結果を一般化したものである。断熱過程では圧縮すると気体は熱くなり、
+      膨張すると冷たくなる。そのため自転車の空気入れは熱くなり、上昇して膨張する空気によって雲が生まれる。
+      ディーゼルエンジンの圧縮着火の基本原理でもある。
+  timeline:
+    - year: "1816"
+      label:
+        es: >-
+          Laplace explica la velocidad del sonido suponiendo una compresión adiabática del aire.
+        en: >-
+          Laplace explains the speed of sound by assuming adiabatic compression of the air.
+        pt: >-
+          Laplace explica a velocidade do som supondo uma compressão adiabática do ar.
+        fr: >-
+          Laplace explique la vitesse du son en supposant une compression adiabatique de l'air.
+        zh: >-
+          拉普拉斯假设空气绝热压缩，从而解释了声速。
+        ja: >-
+          ラプラスが空気の断熱圧縮を仮定して音速を説明する。
+    - year: "1823"
+      label:
+        es: >-
+          Poisson publica la relación P·V^γ = constante para procesos sin intercambio de calor.
+        en: >-
+          Poisson publishes the relation P·V^γ = constant for processes with no heat exchange.
+        pt: >-
+          Poisson publica a relação P·V^γ = constante para processos sem troca de calor.
+        fr: >-
+          Poisson publie la relation P·V^γ = constante pour les processus sans échange de chaleur.
+        zh: >-
+          泊松发表了无热量交换过程的P·V^γ = 常数关系式。
+        ja: >-
+          ポアソンが熱交換を伴わない過程の関係式P·V^γ = 定数を発表する。
+    - year: "1892"
+      label:
+        es: >-
+          Rudolf Diesel patenta un motor que enciende el combustible por el calor de la compresión
+          adiabática del aire.
+        en: >-
+          Rudolf Diesel patents an engine that ignites fuel by the heat of adiabatic compression of the
+          air.
+        pt: >-
+          Rudolf Diesel patenteia um motor que acende o combustível pelo calor da compressão adiabática do
+          ar.
+        fr: >-
+          Rudolf Diesel brevète un moteur qui enflamme le carburant par la chaleur de la compression
+          adiabatique de l'air.
+        zh: >-
+          鲁道夫·迪塞尔为一种靠空气绝热压缩的热量点燃燃料的发动机申请了专利。
+        ja: >-
+          ルドルフ・ディーゼルが、空気の断熱圧縮による熱で燃料に点火するエンジンを特許取得。
+    - year: Hoy
+      label:
+        es: >-
+          Guía la meteorología, los motores de gas y la criogenia.
+        en: >-
+          It guides meteorology, gas engines, and cryogenics.
+        pt: >-
+          Guia a meteorologia, os motores a gás e a criogenia.
+        fr: >-
+          Elle guide la météorologie, les moteurs à gaz et la cryogénie.
+        zh: >-
+          它为气象学、燃气发动机和低温技术提供指导。
+        ja: >-
+          気象学、ガスエンジン、低温技術を導く。
+  useCases:
+    - title:
+        es: Motores diésel
+        en: Diesel engines
+        pt: Motores diesel
+        fr: Moteurs diesel
+        zh: 柴油发动机
+        ja: ディーゼルエンジン
+      description:
+        es: >-
+          El aire comprimido adiabáticamente alcanza temperaturas suficientes para encender el
+          combustible.
+        en: >-
+          Adiabatically compressed air reaches temperatures high enough to ignite the fuel.
+        pt: >-
+          O ar comprimido adiabaticamente atinge temperaturas suficientes para acender o combustível.
+        fr: >-
+          L'air comprimé adiabatiquement atteint des températures suffisantes pour enflammer le carburant.
+        zh: >-
+          绝热压缩的空气达到足够高的温度，足以点燃燃料。
+        ja: >-
+          断熱圧縮された空気が燃料に点火するのに十分な温度に達する。
+    - title:
+        es: Meteorología
+        en: Meteorology
+        pt: Meteorologia
+        fr: Météorologie
+        zh: 气象学
+        ja: 気象学
+      description:
+        es: >-
+          El aire ascendente se expande y enfría adiabáticamente, condensando el vapor y formando nubes.
+        en: >-
+          Rising air expands and cools adiabatically, condensing vapor and forming clouds.
+        pt: >-
+          O ar ascendente se expande e resfria adiabaticamente, condensando o vapor e formando nuvens.
+        fr: >-
+          L'air ascendant se détend et se refroidit adiabatiquement, condensant la vapeur et formant des
+          nuages.
+        zh: >-
+          上升的空气绝热膨胀并冷却，使水汽凝结形成云。
+        ja: >-
+          上昇する空気は断熱膨張して冷え、水蒸気が凝結して雲を形成する。
+    - title:
+        es: Criogenia y licuefacción
+        en: Cryogenics and liquefaction
+        pt: Criogenia e liquefação
+        fr: Cryogénie et liquéfaction
+        zh: 低温技术与液化
+        ja: 極低温と液化
+      description:
+        es: >-
+          La expansión adiabática de un gas lo enfría hasta condensarlo en líquido, como en el aire
+          licuado.
+        en: >-
+          Adiabatic expansion cools a gas until it condenses into a liquid, as in liquefied air.
+        pt: >-
+          A expansão adiabática de um gás o resfria até condensá-lo em líquido, como no ar liquefeito.
+        fr: >-
+          La détente adiabatique d'un gaz le refroidit jusqu'à le condenser en liquide, comme pour l'air
+          liquéfié.
+        zh: >-
+          气体的绝热膨胀使其冷却并凝结为液体，例如液化空气。
+        ja: >-
+          気体の断熱膨張で冷却し、液化空気のように液体に凝縮させる。
+    - title:
+        es: Turbinas de gas
+        en: Gas turbines
+        pt: Turbinas a gás
+        fr: Turbines à gaz
+        zh: 燃气轮机
+        ja: ガスタービン
+      description:
+        es: >-
+          Los ciclos Brayton alternan compresión y expansión adiabáticas en plantas de energía.
+        en: >-
+          Brayton cycles alternate adiabatic compression and expansion in power plants.
+        pt: >-
+          Os ciclos Brayton alternam compressão e expansão adiabáticas em usinas de energia.
+        fr: >-
+          Les cycles de Brayton alternent compression et détente adiabatiques dans les centrales
+          électriques.
+        zh: >-
+          布雷顿循环在发电厂中交替进行绝热压缩和膨胀。
+        ja: >-
+          ブレイトンサイクルは発電所で断熱圧縮と断熱膨張を交互に繰り返す。
+  example:
+    title:
+      es: Compresión de un gas en una jeringa
+      en: Compression of a gas in a syringe
+      pt: Compressão de um gás em uma seringa
+      fr: Compression d'un gaz dans une seringue
+      zh: 注射器内气体的压缩
+      ja: 注射器内の気体の圧縮
+    lines:
+      - es: P₁ = 1 atm, V₁ = 1 L, γ = 1.4
+        en: P₁ = 1 atm, V₁ = 1 L, γ = 1.4
+        pt: P₁ = 1 atm, V₁ = 1 L, γ = 1,4
+        fr: P₁ = 1 atm, V₁ = 1 L, γ = 1,4
+        zh: P₁ = 1 atm, V₁ = 1 L, γ = 1.4
+        ja: P₁ = 1 atm, V₁ = 1 L, γ = 1.4
+      - es: V₂ = 0.5 L
+        en: V₂ = 0.5 L
+        pt: V₂ = 0,5 L
+        fr: V₂ = 0,5 L
+        zh: V₂ = 0.5 L
+        ja: V₂ = 0.5 L
+      - es: P₁ · V₁^γ = P₂ · V₂^γ
+        en: P₁ · V₁^γ = P₂ · V₂^γ
+        pt: P₁ · V₁^γ = P₂ · V₂^γ
+        fr: P₁ · V₁^γ = P₂ · V₂^γ
+        zh: P₁ · V₁^γ = P₂ · V₂^γ
+        ja: P₁ · V₁^γ = P₂ · V₂^γ
+      - es: P₂ = P₁ · (V₁ / V₂)^γ
+        en: P₂ = P₁ · (V₁ / V₂)^γ
+        pt: P₂ = P₁ · (V₁ / V₂)^γ
+        fr: P₂ = P₁ · (V₁ / V₂)^γ
+        zh: P₂ = P₁ · (V₁ / V₂)^γ
+        ja: P₂ = P₁ · (V₁ / V₂)^γ
+      - es: P₂ = 1 × (1 / 0.5)^1.4
+        en: P₂ = 1 × (1 / 0.5)^1.4
+        pt: P₂ = 1 × (1 / 0,5)^1,4
+        fr: P₂ = 1 × (1 / 0,5)^1,4
+        zh: P₂ = 1 × (1 / 0.5)^1.4
+        ja: P₂ = 1 × (1 / 0.5)^1.4
+      - es: P₂ ≈ 1 × 2^1.4 ≈ 2.64 atm
+        en: P₂ ≈ 1 × 2^1.4 ≈ 2.64 atm
+        pt: P₂ ≈ 1 × 2^1,4 ≈ 2,64 atm
+        fr: P₂ ≈ 1 × 2^1,4 ≈ 2,64 atm
+        zh: P₂ ≈ 1 × 2^1.4 ≈ 2.64 atm
+        ja: P₂ ≈ 1 × 2^1.4 ≈ 2.64 atm

@@ -1,0 +1,335 @@
+id: density
+title:
+  es: Densidad
+  en: Density
+  pt: Densidade
+  fr: Masse volumique
+  zh: 密度
+  ja: 密度
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: rho
+    type: constant
+    value: ρ
+    explanation:
+      es: "ρ: la densidad, la masa contenida en cada unidad de volumen."
+      en: "ρ: the density, the mass contained in each unit of volume."
+      pt: "ρ: a densidade, a massa contida em cada unidade de volume."
+      fr: "ρ : la masse volumique, la masse contenue dans chaque unité de volume."
+      zh: "ρ：密度，即每单位体积内所含的质量。"
+      ja: "ρ：密度。単位体積あたりに含まれる質量。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: "m: la masa del cuerpo."
+      en: "m: the mass of the body."
+      pt: "m: a massa do corpo."
+      fr: "m : la masse du corps."
+      zh: "m：物体的质量。"
+      ja: "m：物体の質量。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: v
+    type: variable
+    value: V
+    explanation:
+      es: "V: el volumen que ocupa esa masa."
+      en: "V: the volume that mass occupies."
+      pt: "V: o volume que essa massa ocupa."
+      fr: "V : le volume qu'occupe cette masse."
+      zh: "V：该质量所占据的体积。"
+      ja: "V：その質量が占める体積。"
+context:
+  author:
+    es: Origen colectivo; cuantificada por Arquímedes
+    en: Collective origin; quantified by Archimedes
+    pt: Origem coletiva; quantificada por Arquimedes
+    fr: Origine collective ; quantifiée par Archimède
+    zh: 集体起源；由阿基米德定量化
+    ja: 集団的起源；アルキメデスが定量化
+  era:
+    es: Siracusa, c. 287–212 a.C.
+    en: Syracuse, c. 287–212 BC
+    pt: Siracusa, c. 287–212 a.C.
+    fr: Syracuse, c. 287–212 av. J.-C.
+    zh: 叙拉古，约公元前287–212年
+    ja: シラクサ、紀元前287–212年頃
+  history:
+    es: >-
+      Que unas sustancias son "más pesadas" que otras se conoce desde la Antigüedad, pero su medida
+      se atribuye a Arquímedes (c. 287–212 a.C.). Cuenta Vitruvio que el rey Hierón II pidió al sabio
+      comprobar si una corona de oro había sido adulterada con plata, sin destruirla. Al sumergirla en
+      agua, Arquímedes comparó el volumen desplazado con el de un lingote de igual peso y descubrió la
+      falsificación, exclamando "¡Eureka!". La densidad, masa por unidad de volumen, explica por qué
+      el aceite flota sobre el agua y por qué un barco de acero navega: su casco desplaza mucho
+      volumen, lo que baja la densidad media. La noción de gravedad específica, que compara la
+      densidad con la del agua, fue luego sistematizada por los ensayadores de metales.
+    en: >-
+      That some substances are "heavier" than others has been known since antiquity, but measuring it
+      is credited to Archimedes (c. 287–212 BC). Vitruvius recounts that King Hiero II asked the sage
+      to verify whether a golden crown had been alloyed with silver, without destroying it. By dipping
+      it in water, Archimedes compared the displaced volume with that of an ingot of equal weight and
+      exposed the fraud, exclaiming "Eureka!". Density, mass per unit of volume, explains why oil
+      floats on water and why a steel ship sails: its hull displaces a large volume, lowering the
+      average density. The notion of specific gravity, comparing density with that of water, was later
+      systematized by metal assayers.
+    pt: >-
+      Que algumas substâncias são "mais pesadas" que outras é conhecido desde a Antiguidade, mas sua
+      medida é atribuída a Arquimedes (c. 287–212 a.C.). Vitrúvio conta que o rei Hierão II pediu ao
+      sábio que verificasse, sem destruí-la, se uma coroa de ouro havia sido adulterada com prata. Ao
+      mergulhá-la em água, Arquimedes comparou o volume deslocado com o de um lingote de igual peso e
+      desmascarou a fraude, exclamando "Eureca!". A densidade, massa por unidade de volume, explica
+      por que o óleo flutua sobre a água e por que um navio de aço navega: seu casco desloca muito
+      volume, o que reduz a densidade média. A noção de gravidade específica, que compara a densidade
+      com a da água, foi depois sistematizada pelos ensaiadores de metais.
+    fr: >-
+      Que certaines substances soient "plus lourdes" que d'autres est connu depuis l'Antiquité, mais
+      leur mesure est attribuée à Archimède (c. 287–212 av. J.-C.). Vitruve raconte que le roi Hiéron
+      II demanda au savant de vérifier, sans la détruire, si une couronne d'or avait été frelatée à
+      l'argent. En la plongeant dans l'eau, Archimède compara le volume déplacé à celui d'un lingot de
+      même poids et démasqua la fraude, s'écriant « Eurêka ! ». La masse volumique, la masse par unité
+      de volume, explique pourquoi l'huile flotte sur l'eau et pourquoi un navire d'acier navigue : sa
+      coque déplace un grand volume, ce qui abaisse sa masse volumique moyenne. La notion de densité,
+      qui compare la masse volumique d'un corps à celle de l'eau, fut ensuite systématisée par les
+      essayeurs de métaux.
+    zh: >-
+      有些物质比别的物质"更重"，这是古时就知道的事，但对它的定量则归功于阿基米德（约公元前287–212年）。
+      据维特鲁威记载，国王希伦二世请这位智者在不毁坏金冠的前提下，检验它是否被掺入了白银。阿基米德将金冠
+      浸入水中，与同等重量的金锭所排开的水的体积相比较，从而揭穿了造假，并高呼"尤里卡！"。密度即单位体积
+      的质量，它解释了为什么油浮在水面上，也解释了为什么钢制的船能航行：船体排开很大的体积，使平均密度降低。
+      后来，金属检验师把与水的密度相比的"比重"概念系统化。
+    ja: >-
+      ある物質が別の物質より「重い」ことは古くから知られていたが、その定量化はアルキメデス（紀元前287～
+      212年頃）に帰せられる。ウィトルウィウスによれば、ヒエロン二世は、金の王冠が銀で偽造されていないかを、
+      破壊せずに確かめるよう彼に依頼した。王冠を水に沈め、同重量の金塊が押しのける体積と比較することで、
+      アルキメデスは偽造を暴き「ユーレカ！」と叫んだという。質量を体積で割った密度は、油が水に浮く理由や、
+      鋼鉄の船が航行できる理由を説明する。船体は大きな体積を押しのけるため、平均密度が下がるのだ。水との密度
+      の比である「比重」の概念は、後に金属の検査官によって体系化された。
+  timeline:
+    - year: c. 250 a.C.
+      label:
+        es: >-
+          Arquímedes desenmascara la corona falsa de Hierón II comparando los volúmenes desplazados
+          en agua.
+        en: >-
+          Archimedes exposes Hiero II's counterfeit crown by comparing volumes displaced in water.
+        pt: >-
+          Arquimedes desmascara a coroa falsa de Hierão II comparando os volumes deslocados em água.
+        fr: >-
+          Archimède démasque la couronne falsifiée de Hiéron II en comparant les volumes déplacés
+          dans l'eau.
+        zh: >-
+          阿基米德通过比较水中排开的体积，揭穿了希伦二世的假金冠。
+        ja: >-
+          アルキメデスが水中で押しのける体積の比較により、ヒエロン二世の偽の王冠を暴く。
+    - year: "1612"
+      label:
+        es: >-
+          Galileo presenta la bilancetta, una balanza hidrostática para medir la densidad de los
+          metales.
+        en: >-
+          Galileo introduces the bilancetta, a hydrostatic balance for measuring the density of
+          metals.
+        pt: >-
+          Galileu apresenta a bilancetta, uma balança hidrostática para medir a densidade dos metais.
+        fr: >-
+          Galilée présente la bilancetta, une balance hydrostatique pour mesurer la masse volumique
+          des métaux.
+        zh: >-
+          伽利略推出流体静力天平"bilancetta"，用于测量金属的密度。
+        ja: >-
+          ガリレオが、金属の密度を測る流体静力学的天秤ビランチェッタを発表する。
+    - year: "1795"
+      label:
+        es: >-
+          El kilogramo se define originalmente como la masa de un litro de agua, la densidad de
+          referencia.
+        en: >-
+          The kilogram is originally defined as the mass of one liter of water, the reference density.
+        pt: >-
+          O quilograma é originalmente definido como a massa de um litro de água, a densidade de
+          referência.
+        fr: >-
+          Le kilogramme est à l'origine défini comme la masse d'un litre d'eau, la masse volumique de
+          référence.
+        zh: >-
+          千克最初被定义为一升水的质量，即参考密度。
+        ja: >-
+          キログラムが当初、水1リットルの質量として定義され、参照密度となる。
+    - year: Hoy
+      label:
+        es: >-
+          La densidad clasifica materiales, separa el petróleo del agua y verifica la pureza de las
+          aleaciones.
+        en: >-
+          Density classifies materials, separates oil from water, and verifies the purity of alloys.
+        pt: >-
+          A densidade classifica materiais, separa o petróleo da água e verifica a pureza das ligas.
+        fr: >-
+          La masse volumique classe les matériaux, sépare le pétrole de l'eau et vérifie la pureté
+          des alliages.
+        zh: >-
+          密度用于给材料分类、把油从水中分离，并检验合金的纯度。
+        ja: >-
+          密度は材料の分類、水と油の分離、合金の純度検査に使われる。
+  useCases:
+    - title:
+        es: Industria petrolera
+        en: Oil industry
+        pt: Indústria petrolífera
+        fr: Industrie pétrolière
+        zh: 石油工业
+        ja: 石油産業
+      description:
+        es: >-
+          El crudo flota sobre el agua por su menor densidad, y la separación de sus fracciones se
+          guía por la densidad de cada una.
+        en: >-
+          Crude oil floats on water because it is less dense, and refining separates fractions by
+          their density.
+        pt: >-
+          O petróleo bruto flutua sobre a água por ter menor densidade, e o refino separa as frações
+          pela densidade de cada uma.
+        fr: >-
+          Le pétrole brut flotte sur l'eau car il est moins dense, et le raffinage sépare les
+          fractions selon leur masse volumique.
+        zh: >-
+          原油密度较小，因此浮在水面上；炼油时也按各馏分的密度进行分离。
+        ja: >-
+          原油は密度が小さいため水に浮き、精製では各留分の密度によって分離される。
+    - title:
+        es: Materiales de construcción
+        en: Building materials
+        pt: Materiais de construção
+        fr: Matériaux de construction
+        zh: 建筑材料
+        ja: 建築材料
+      description:
+        es: >-
+          La densidad decide qué material usar en cada elemento: hormigón para cimientos, acero para
+          vigas, madera para cubiertas.
+        en: >-
+          Density decides which material fits each element: concrete for foundations, steel for
+          beams, wood for roofs.
+        pt: >-
+          A densidade decide qual material usar em cada elemento: concreto para fundações, aço para
+          vigas, madeira para telhados.
+        fr: >-
+          La masse volumique détermine le matériau de chaque élément : béton pour les fondations,
+          acier pour les poutres, bois pour les toitures.
+        zh: >-
+          密度决定每个构件选用的材料：地基用混凝土，梁用钢材，屋面用木材。
+        ja: >-
+          密度によって各部材に適した材料が決まる。基礎にはコンクリート、梁には鋼材、屋根には木材。
+    - title:
+        es: Arquitectura naval
+        en: Naval architecture
+        pt: Arquitetura naval
+        fr: Architecture navale
+        zh: 造船工程
+        ja: 造船工学
+      description:
+        es: >-
+          El casco hueco de un buque reduce su densidad media por debajo de la del agua, condición
+          necesaria para flotar.
+        en: >-
+          A ship's hollow hull lowers its average density below that of water, the condition for
+          floating.
+        pt: >-
+          O casco oco de um navio reduz sua densidade média abaixo da da água, condição necessária
+          para flutuar.
+        fr: >-
+          La coque creuse d'un navire abaisse sa masse volumique moyenne sous celle de l'eau,
+          condition nécessaire pour flotter.
+        zh: >-
+          船体中空的结构使船的平均密度降到水之下，这正是漂浮的必要条件。
+        ja: >-
+          船の中空の船体は平均密度を水より低くし、これが浮くための必要条件となる。
+    - title:
+        es: Control de calidad de metales
+        en: Metal quality control
+        pt: Controle de qualidade de metais
+        fr: Contrôle qualité des métaux
+        zh: 金属质量控制
+        ja: 金属の品質管理
+      description:
+        es: >-
+          Medir la densidad detecta falsificaciones y mezclas indeseadas en lingotes, monedas y
+          piezas mecanizadas.
+        en: >-
+          Measuring density detects counterfeits and unwanted mixtures in ingots, coins, and machined
+          parts.
+        pt: >-
+          Medir a densidade detecta falsificações e misturas indesejadas em lingotes, moedas e peças
+          usinadas.
+        fr: >-
+          Mesurer la masse volumique détecte les contrefaçons et les mélanges indésirables dans les
+          lingots, les pièces de monnaie et les pièces usinées.
+        zh: >-
+          测量密度可以发现锭、硬币和机加工零件中的伪品与不当混料。
+        ja: >-
+          密度を測ることで、インゴットや硬貨、機械加工部品の偽造や不要な混入を検出できる。
+  example:
+    title:
+      es: Masa de un volumen de agua
+      en: Mass of a volume of water
+      pt: Massa de um volume de água
+      fr: Masse d'un volume d'eau
+      zh: 一定体积水的质量
+      ja: ある体積の水の質量
+    lines:
+      - es: V = 2 m³, ρ = 1000 kg/m³
+        en: V = 2 m³, ρ = 1000 kg/m³
+        pt: V = 2 m³, ρ = 1000 kg/m³
+        fr: V = 2 m³, ρ = 1000 kg/m³
+        zh: V = 2 米³，ρ = 1000 千克/米³
+        ja: V = 2 m³、ρ = 1000 kg/m³
+      - es: m = ρ · V
+        en: m = ρ · V
+        pt: m = ρ · V
+        fr: m = ρ · V
+        zh: m = ρ · V
+        ja: m = ρ · V
+      - es: m = 1000 × 2
+        en: m = 1000 × 2
+        pt: m = 1.000 × 2
+        fr: m = 1 000 × 2
+        zh: m = 1000 × 2
+        ja: m = 1000 × 2
+      - es: m = 2000 kg (2 toneladas)
+        en: m = 2000 kg (2 tons)
+        pt: m = 2000 kg (2 toneladas)
+        fr: m = 2000 kg (2 tonnes)
+        zh: m = 2000 千克（2 吨）
+        ja: m = 2000 kg（2 トン）
+      - es: Otro caso, un bloque de 500 g en 100 cm³ → ρ = 5 g/cm³
+        en: Another case, a 500 g block in 100 cm³ → ρ = 5 g/cm³
+        pt: Outro caso, um bloco de 500 g em 100 cm³ → ρ = 5 g/cm³
+        fr: Autre cas, un bloc de 500 g dans 100 cm³ → ρ = 5 g/cm³
+        zh: 另一例中，500 克物体占 100 厘米³ → ρ = 5 克/厘米³
+        ja: 別の例では、100 cm³ のブロックが 500 g → ρ = 5 g/cm³

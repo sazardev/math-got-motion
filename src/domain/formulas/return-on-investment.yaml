@@ -1,0 +1,347 @@
+id: return-on-investment
+title:
+  es: Retorno de la Inversión
+  en: Return on Investment
+  pt: Retorno sobre o Investimento
+  fr: Retour sur investissement
+  zh: 投资回报率
+  ja: 投資収益率
+category:
+  es: Finanzas
+  en: Finance
+  pt: Finanças
+  fr: Finance
+  zh: 金融
+  ja: 金融
+nodes:
+  - id: roi
+    type: variable
+    value: ROI
+    explanation:
+      es: El retorno de la inversión, la ganancia por cada unidad monetaria invertida.
+      en: Return on investment, the profit for each monetary unit invested.
+      pt: O retorno sobre o investimento, o lucro por cada unidade monetária investida.
+      fr: Le retour sur investissement, le profit pour chaque unité monétaire investie.
+      zh: 投资回报率，每投资一个货币单位所获得的收益。
+      ja: 投資収益率。投資した通貨単位ごとの利益。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: 次の値に等しい。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el cálculo de la ganancia neta.
+      en: Opens the net gain calculation.
+      pt: Abre o cálculo do ganho líquido.
+      fr: Ouvre le calcul du gain net.
+      zh: 打开净收益的计算。
+      ja: 純利益の計算を開く括弧。
+  - id: gain
+    type: variable
+    value: G
+    explanation:
+      es: La ganancia final, cuánto se recibe al final del periodo.
+      en: The final gain, how much is received at the end of the period.
+      pt: O ganho final, quanto se recebe ao final do período.
+      fr: Le gain final, ce qui est reçu à la fin de la période.
+      zh: 最终收益，期末收回的金额。
+      ja: 最終利益。期間の終わりに受け取る額。
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: Menos, restando lo que se invirtió.
+      en: Minus, subtracting what was invested.
+      pt: Menos, subtraindo o que foi investido.
+      fr: Moins, en soustrayant ce qui a été investi.
+      zh: 减，减去投入的部分。
+      ja: マイナス。投資した額を引く。
+  - id: cost
+    type: variable
+    value: C
+    explanation:
+      es: El costo, el capital invertido al inicio.
+      en: The cost, the capital invested at the start.
+      pt: O custo, o capital investido no início.
+      fr: Le coût, le capital investi au départ.
+      zh: 成本，即最初投入的资本。
+      ja: コスト。最初に投資した資本。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el cálculo de la ganancia neta.
+      en: Closes the net gain calculation.
+      pt: Fecha o cálculo do ganho líquido.
+      fr: Ferme le calcul du gain net.
+      zh: 关闭净收益的计算。
+      ja: 純利益の計算を閉じる括弧。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: cost-denominator
+    type: variable
+    value: C
+    explanation:
+      es: El costo de nuevo, la base que normaliza el retorno.
+      en: The cost again, the base that normalizes the return.
+      pt: O custo novamente, a base que normaliza o retorno.
+      fr: Le coût à nouveau, la base qui normalise le rendement.
+      zh: 成本再次出现，作为归一化回报的基准。
+      ja: コストをもう一度。収益を正規化する基準。
+context:
+  author:
+    es: Origen colectivo de las finanzas
+    en: Collective origin in finance
+    pt: Origem coletiva nas finanças
+    fr: Origine collective en finance
+    zh: 金融业的集体起源
+    ja: 金融における集合的起源
+  era:
+    es: Europa y EE. UU., s. XX
+    en: Europe and USA, 20th century
+    pt: Europa e EUA, séc. XX
+    fr: Europe et États-Unis, XXe siècle
+    zh: 欧洲和美国，20世纪
+    ja: ヨーロッパとアメリカ、20世紀
+  history:
+    es: >-
+      El retorno de la inversión es una de las métricas financieras más antiguas y universales:
+      compara la ganancia de un proyecto con lo que costó financiarlo. No tiene un inventor único; se
+      consolidó con la contabilidad moderna europea y con la gestión empresarial que floreció en
+      Estados Unidos durante el siglo XX. Su simpleza es su fuerza: los gerentes lo usan para comparar
+      proyectos dispares, los inversionistas para evaluar su cartera y todo plan de negocio lo
+      proyecta para atraer capital.
+    en: >-
+      Return on investment is one of the oldest and most universal financial metrics: it compares the
+      profit of a project with the cost of funding it. It has no single inventor; it took shape with
+      modern European accounting and with the business management that flourished in the United
+      States during the 20th century. Its simplicity is its strength: managers use it to compare
+      disparate projects, investors to evaluate their portfolio, and every business plan projects it
+      to attract capital.
+    pt: >-
+      O retorno sobre o investimento é uma das métricas financeiras mais antigas e universais:
+      compara o lucro de um projeto com o custo de financiá-lo. Não tem um inventor único;
+      consolidou-se com a contabilidade moderna europeia e com a gestão empresarial que floresceu
+      nos Estados Unidos durante o século XX. Sua simplicidade é sua força: gestores o usam para
+      comparar projetos distintos, investidores para avaliar sua carteira e todo plano de negócios o
+      projeta para atrair capital.
+    fr: >-
+      Le retour sur investissement est l'une des métriques financières les plus anciennes et les plus
+      universelles : il compare le profit d'un projet au coût de son financement. Il n'a pas
+      d'inventeur unique ; il s'est consolidé avec la comptabilité moderne européenne et avec la
+      gestion d'entreprise qui a prospéré aux États-Unis au cours du XXe siècle. Sa simplicité fait
+      sa force : les dirigeants l'utilisent pour comparer des projets disparates, les investisseurs
+      pour évaluer leur portefeuille, et tout plan d'affaires le projette pour attirer des capitaux.
+    zh: >-
+      投资回报率是最古老、最通用的财务指标之一：它把项目的收益与融资成本进行比较。它没有单一的发明者，
+      而是在欧洲现代会计学以及20世纪美国蓬勃发展的企业管理实践中逐渐成形。它的力量正在于其简洁：
+      管理者用它比较不同性质的项目，投资者用它评估自己的投资组合，每一份商业计划书都会测算它来吸引资本。
+    ja: >-
+      投資収益率は、最も古くて普遍的な財務指標のひとつである。プロジェクトの利益を、その資金調達コストと
+      比較する。単一の考案者はおらず、ヨーロッパの近代会計と、20世紀にアメリカで発展した企業経営の中で
+      形作られた。その強みは単純さにある。経営者は異なるプロジェクトを比較するのに使い、投資家は
+      ポートフォリオの評価に使い、あらゆる事業計画書は資本を集めるためにこれを試算する。
+  timeline:
+    - year: "1912"
+      label:
+        es: >-
+          Donaldson Brown crea el análisis DuPont, que descompone el ROI en margen y rotación de
+          activos.
+        en: >-
+          Donaldson Brown creates the DuPont analysis, breaking ROI into margin and asset turnover.
+        pt: >-
+          Donaldson Brown cria a análise DuPont, que decompõe o ROI em margem e giro de ativos.
+        fr: >-
+          Donaldson Brown crée l'analyse DuPont, qui décompose le ROI en marge et rotation des
+          actifs.
+        zh: >-
+          唐纳森·布朗创立杜邦分析，将ROI分解为利润率与资产周转率。
+        ja: >-
+          ドナルドソン・ブラウンがROIを利益率と資産回転率に分解するデュポン分析を考案する。
+    - year: s. XX
+      label:
+        es: >-
+          El ROI se vuelve universal en la gestión de empresas y en la evaluación de fondos de
+          inversión.
+        en: >-
+          ROI becomes universal in corporate management and in the evaluation of investment funds.
+        pt: >-
+          O ROI torna-se universal na gestão de empresas e na avaliação de fundos de investimento.
+        fr: >-
+          Le ROI devient universel dans la gestion d'entreprise et l'évaluation des fonds
+          d'investissement.
+        zh: >-
+          ROI在企业管理和投资基金评估中变得无处不在。
+        ja: >-
+          ROIは企業経営や投資ファンドの評価において普遍的となる。
+    - year: "1970"
+      label:
+        es: >-
+          La planificación estratégica populariza los presupuestos de capital basados en el retorno
+          esperado.
+        en: >-
+          Strategic planning popularizes capital budgeting based on expected return.
+        pt: >-
+          O planejamento estratégico populariza o orçamento de capital baseado no retorno esperado.
+        fr: >-
+          La planification stratégique popularise les budgets d'investissement fondés sur le
+          rendement attendu.
+        zh: >-
+          战略规划使基于预期回报的资本预算广为流行。
+        ja: >-
+          戦略計画が、期待収益に基づく資本予算を広める。
+    - year: Hoy
+      label:
+        es: >-
+          Todo plan de negocio, campaña de marketing y pitch de capital de riesgo lo cita como su
+          primera métrica.
+        en: >-
+          Every business plan, marketing campaign, and venture capital pitch cites it as their first
+          metric.
+        pt: >-
+          Todo plano de negócios, campanha de marketing e pitch de capital de risco o cita como
+          primeira métrica.
+        fr: >-
+          Tout plan d'affaires, campagne marketing et pitch de capital-risque le cite comme première
+          métrique.
+        zh: >-
+          每一份商业计划书、营销活动方案和风投路演都把它列为第一项指标。
+        ja: >-
+          あらゆる事業計画書、マーケティングキャンペーン、ベンチャーキャピタルのピッチが最初の指標として
+          挙げる。
+  useCases:
+    - title:
+        es: Marketing
+        en: Marketing
+        pt: Marketing
+        fr: Marketing
+        zh: 营销
+        ja: マーケティング
+      description:
+        es: >-
+          Compara campañas por su retorno publicitario, el ROAS, para asignar el presupuesto.
+        en: >-
+          It compares campaigns by their advertising return, ROAS, to allocate budget.
+        pt: >-
+          Compara campanhas pelo seu retorno publicitário, o ROAS, para alocar o orçamento.
+        fr: >-
+          Il compare les campagnes par leur retour publicitaire, le ROAS, pour allouer le budget.
+        zh: >-
+          通过广告回报（ROAS）比较不同营销活动，以分配预算。
+        ja: >-
+          広告効果（ROAS）でキャンペーンを比較し、予算を配分する。
+    - title:
+        es: Capital de riesgo
+        en: Venture capital
+        pt: Capital de risco
+        fr: Capital-risque
+        zh: 风险投资
+        ja: ベンチャーキャピタル
+      description:
+        es: >-
+          Evalúa el retorno esperado de una inversión inicial frente a su riesgo.
+        en: >-
+          It evaluates the expected return of an initial investment against its risk.
+        pt: >-
+          Avalia o retorno esperado de um investimento inicial frente ao seu risco.
+        fr: >-
+          Il évalue le rendement attendu d'un investissement initial face à son risque.
+        zh: >-
+          评估一笔初始投资相对其风险的预期回报。
+        ja: >-
+          初期投資の期待収益を、そのリスクと引き換えに評価する。
+    - title:
+        es: Finanzas corporativas
+        en: Corporate finance
+        pt: Finanças corporativas
+        fr: Finance d'entreprise
+        zh: 公司金融
+        ja: コーポレートファイナンス
+      description:
+        es: >-
+          Decide entre proyectos con presupuesto limitado eligiendo el mayor retorno.
+        en: >-
+          It decides between projects under a limited budget by choosing the highest return.
+        pt: >-
+          Decide entre projetos com orçamento limitado escolhendo o maior retorno.
+        fr: >-
+          Il départage les projets à budget limité en retenant le meilleur rendement.
+        zh: >-
+          在预算有限时，选择回报最高的项目。
+        ja: >-
+          限られた予算の中で最も収益の高いプロジェクトを選定する。
+    - title:
+        es: Bienes raíces
+        en: Real estate
+        pt: Imóveis
+        fr: Immobilier
+        zh: 房地产
+        ja: 不動産
+      description:
+        es: >-
+          Mide la rentabilidad anual de una propiedad frente al capital invertido.
+        en: >-
+          It measures a property's annual return against the capital invested.
+        pt: >-
+          Mede a rentabilidade anual de um imóvel frente ao capital investido.
+        fr: >-
+          Il mesure le rendement annuel d'un bien par rapport au capital investi.
+        zh: >-
+          衡量房产相对于投入资本的年回报率。
+        ja: >-
+          不動産の年間収益率を、投下資本と比較して測る。
+  example:
+    title:
+      es: Inversión de 1.000
+      en: A 1,000 investment
+      pt: Investimento de 1.000
+      fr: Un investissement de 1 000
+      zh: 一笔1,000的投资
+      ja: 1,000の投資
+    lines:
+      - es: "Inversión = $1000; ganancia final = $1250"
+        en: "Investment = $1,000; final gain = $1,250"
+        pt: "Investimento = US$ 1.000; ganho final = US$ 1.250"
+        fr: "Investissement = 1 000 $ ; gain final = 1 250 $"
+        zh: "投资额 = 1,000美元；最终收益 = 1,250美元"
+        ja: "投資額 = 1,000ドル；最終利益 = 1,250ドル"
+      - es: ROI = (1250 − 1000)/1000
+        en: ROI = (1250 − 1000)/1000
+        pt: ROI = (1250 − 1000)/1000
+        fr: ROI = (1250 − 1000)/1000
+        zh: ROI = (1250 − 1000)/1000
+        ja: ROI = (1250 − 1000)/1000
+      - es: ROI = 250/1000
+        en: ROI = 250/1000
+        pt: ROI = 250/1000
+        fr: ROI = 250/1000
+        zh: ROI = 250/1000
+        ja: ROI = 250/1000
+      - es: ROI = 0.25
+        en: ROI = 0.25
+        pt: ROI = 0,25
+        fr: ROI = 0,25
+        zh: ROI = 0.25
+        ja: ROI = 0.25
+      - es: ROI = 25%
+        en: ROI = 25%
+        pt: ROI = 25%
+        fr: ROI = 25 %
+        zh: ROI = 25%
+        ja: ROI = 25%

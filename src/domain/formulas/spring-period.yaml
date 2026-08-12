@@ -1,0 +1,390 @@
+id: spring-period
+title:
+  es: Periodo de un Resorte
+  en: Spring Period
+  pt: Período de uma Mola
+  fr: Période d'un ressort
+  zh: 弹簧的周期
+  ja: ばねの周期
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: t
+    type: variable
+    value: T
+    explanation:
+      es: "El período: el tiempo que tarda la masa en completar un vaivén, en segundos."
+      en: "The period: the time the mass takes to complete one back-and-forth swing, in seconds."
+      pt: "O período: o tempo que a massa leva para completar uma ida e volta, em segundos."
+      fr: "La période : le temps que la masse met pour accomplir un aller-retour, en secondes."
+      zh: 周期：质量块完成一次来回振动所需的时间，以秒为单位。
+      ja: 周期。おもりが1往復するのにかかる時間。単位は秒。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "El factor 2: un período completo incluye la ida y la vuelta de la masa."
+      en: "The factor 2: one full period includes both the swing out and back."
+      pt: "O fator 2: um período completo inclui a ida e a volta da massa."
+      fr: "Le facteur 2 : une période complète comprend l'aller et le retour de la masse."
+      zh: 因数2：一个完整周期包含质量块的前去和返回。
+      ja: 係数の2。1周期には行きと帰りが含まれる。
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: Pi, la constante que relaciona la circunferencia con su diámetro, unos 3,1416.
+      en: Pi, the constant relating a circle's circumference to its diameter, about 3.1416.
+      pt: Pi, a constante que relaciona a circunferência com o diâmetro, cerca de 3,1416.
+      fr: Pi, la constante reliant la circonférence d'un cercle à son diamètre, environ 3,1416.
+      zh: 圆周率π，即圆的周长与直径之比，约为3.1416。
+      ja: 円周率。円の円周と直径の比で、約3.1416。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por la raíz cuadrada del cociente.
+      en: Multiplied by the square root of the ratio.
+      pt: Multiplicado pela raiz quadrada do quociente.
+      fr: Multiplié par la racine carrée du rapport.
+      zh: 乘以比值的平方根。
+      ja: 比の平方根を掛ける。
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: La raíz cuadrada del cociente entre masa y rigidez.
+      en: The square root of the ratio of mass to stiffness.
+      pt: A raiz quadrada do quociente entre massa e rigidez.
+      fr: La racine carrée du rapport entre la masse et la raideur.
+      zh: 对质量与刚度之比开平方根。
+      ja: 質量と剛性の比の平方根。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el agrupamiento bajo la raíz.
+      en: Opens the grouping under the root.
+      pt: Abre o agrupamento sob a raiz.
+      fr: Ouvre le groupement sous la racine.
+      zh: 打开根号下的括号。
+      ja: 根号の中を開く括弧。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: La masa que oscila, en kilogramos; a más masa, más lento el vaivén.
+      en: The oscillating mass, in kilograms; a heavier mass swings more slowly.
+      pt: A massa que oscila, em quilogramas; quanto maior a massa, mais lenta a ida e volta.
+      fr: La masse qui oscille, en kilogrammes ; plus la masse est lourde, plus l'aller-retour est lent.
+      zh: 振荡的质量，以千克为单位；质量越大，摆动越慢。
+      ja: 振動するおもりの質量（kg）。質量が大きいほど往復は遅くなる。
+  - id: div
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por la rigidez del muelle.
+      en: Divided by the spring's stiffness.
+      pt: Dividido pela rigidez da mola.
+      fr: Divisé par la raideur du ressort.
+      zh: 除以弹簧的刚度。
+      ja: ばねの剛性で割る。
+  - id: k
+    type: variable
+    value: k
+    explanation:
+      es: La constante del muelle, en newtons por metro; a más rigidez, más rápido el vaivén.
+      en: The spring constant, in newtons per meter; a stiffer spring swings faster.
+      pt: A constante da mola, em newtons por metro; quanto maior a rigidez, mais rápida a oscilação.
+      fr: La constante de raideur, en newtons par mètre ; un ressort plus raide oscille plus vite.
+      zh: 弹簧的劲度系数，单位为牛每米；越硬摆动越快。
+      ja: ばね定数（N/m）。硬いほど振動は速くなる。
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el agrupamiento bajo la raíz.
+      en: Closes the grouping under the root.
+      pt: Fecha o agrupamento sob a raiz.
+      fr: Ferme le groupement sous la racine.
+      zh: 关闭根号下的括号。
+      ja: 根号の中を閉じる括弧。
+context:
+  author:
+    es: Basada en la ley de Hooke
+    en: Based on Hooke's law
+    pt: Baseada na lei de Hooke
+    fr: Fondée sur la loi de Hooke
+    zh: 基于胡克定律
+    ja: フックの法則に基づく
+  era:
+    es: Inglaterra, s. XVII
+    en: England, 17th century
+    pt: Inglaterra, século XVII
+    fr: Angleterre, XVIIe siècle
+    zh: 英格兰，17世纪
+    ja: イングランド、17世紀
+  history:
+    es: >-
+      El período de un resorte — el tiempo que tarda una masa en completar un vaivén — depende de la masa
+      y de la rigidez, pero no de la amplitud: al estirarlo más, la fuerza crece en la misma proporción y
+      la masa vuelve igual de rápido. Se deduce combinando la ley de Hooke, enunciada por Robert Hooke en
+      1660, con la segunda ley de Newton, publicada en los Principia de 1687. Este isocronismo de las
+      oscilaciones pequeñas es la base del muelle de espiral de los relojes mecánicos, de la suspensión de
+      los vehículos y de los sismómetros, que miden terremotos registrando la oscilación de una masa
+      sujeta a un muelle.
+    en: >-
+      The period of a spring — the time a mass takes to complete one back-and-forth swing — depends on
+      the mass and the stiffness, but not on the amplitude: pull it harder and the force grows by the
+      same proportion, so the mass returns just as quickly. It is derived by combining Hooke's law,
+      stated by Robert Hooke in 1660, with Newton's second law, published in the Principia of 1687. This
+      isochronism of small oscillations is the basis of the balance spring in mechanical watches, of
+      vehicle suspension, and of seismometers, which measure earthquakes by recording the oscillation of
+      a mass on a spring.
+    pt: >-
+      O período de uma mola — o tempo que uma massa leva para completar uma ida e volta — depende da
+      massa e da rigidez, mas não da amplitude: se você estica mais, a força cresce na mesma proporção e
+      a massa volta igualmente rápido. Ele é deduzido combinando a lei de Hooke, enunciada por Robert
+      Hooke em 1660, com a segunda lei de Newton, publicada nos Principia de 1687. Esse isocronismo das
+      pequenas oscilações é a base da mola espiral dos relógios mecânicos, da suspensão de veículos e dos
+      sismômetros, que medem terremotos registrando a oscilação de uma massa presa a uma mola.
+    fr: >-
+      La période d'un ressort — le temps qu'une masse met à effectuer un aller-retour — dépend de la
+      masse et de la raideur, mais pas de l'amplitude : si on tire davantage, la force croît dans la même
+      proportion et la masse revient aussi vite. On la déduit en combinant la loi de Hooke, énoncée par
+      Robert Hooke en 1660, avec la deuxième loi de Newton, publiée dans les Principia de 1687. Cet
+      isochronisme des petites oscillations est à la base du ressort spiral des montres mécaniques, de la
+      suspension des véhicules et des sismomètres, qui mesurent les séismes en enregistrant l'oscillation
+      d'une masse accrochée à un ressort.
+    zh: >-
+      弹簧的周期——质量块完成一次来回振动所需的时间——取决于质量和刚度，与振幅无关：拉得越用力，力按同样比例增大，
+      质量块回来得一样快。它由胡克定律与牛顿第二定律结合推导而来，前者由罗伯特·胡克于1660年提出，后者发表于1687年的
+      《自然哲学的数学原理》。小幅振荡的这种等时性，是机械钟摆轮游丝、车辆悬挂以及地震仪的基础——地震仪通过记录弹簧上
+      质量块的振荡来测量地震。
+    ja: >-
+      ばねの周期（おもりが1往復するのにかかる時間）は、おもりの質量とばねの硬さに依存するが、振幅には依存しない。強く
+      引いても力も同じ割合で大きくなるため、おもりは同じ速さで戻ってくる。この式は、1660年にロバート・フックが述べた
+      フックの法則と、1687年に出版された『プリンキピア』のニュートンの運動の第二法則を組み合わせて導かれる。小さな
+      振動のこの等時性は、機械式時計のひげぜんまい、自動車のサスペンション、そしてばねにつながれたおもりの振動を記録
+      して地震を測る地震計の基礎である。
+  timeline:
+    - year: "1660"
+      label:
+        es: >-
+          Robert Hooke enuncia su ley de elasticidad: la fuerza es proporcional al estiramiento, "ut
+          tensio, sic vis".
+        en: >-
+          Robert Hooke states his law of elasticity: force is proportional to stretch, "ut tensio, sic
+          vis".
+        pt: >-
+          Robert Hooke enuncia sua lei da elasticidade: a força é proporcional ao estiramento, "ut
+          tensio, sic vis".
+        fr: >-
+          Robert Hooke énonce sa loi d'élasticité : la force est proportionnelle à l'étirement, « ut
+          tensio, sic vis ».
+        zh: >-
+          罗伯特·胡克阐述弹性定律：力与拉伸量成正比，即"力如伸缩"。
+        ja: >-
+          ロバート・フックが弾性の法則を発表。力は伸びに比例する（ut tensio, sic vis）。
+    - year: "1675"
+      label:
+        es: >-
+          Huygens patenta el muelle de espiral que regula los relojes de bolsillo, primera gran
+          aplicación del oscilador armónico.
+        en: >-
+          Huygens patents the balance spring regulating pocket watches, the first major use of the
+          harmonic oscillator.
+        pt: >-
+          Huygens patenteia a mola espiral que regula os relógios de bolso, primeira grande aplicação do
+          oscilador harmônico.
+        fr: >-
+          Huygens brevète le ressort spiral réglant les montres de poche, première grande application de
+          l'oscillateur harmonique.
+        zh: >-
+          惠更斯为调节怀表的摆轮游丝申请专利，这是谐振子的首次重大应用。
+        ja: >-
+          ホイヘンスが懐中時計を制御するひげぜんまいの特許を取得。調和振動子の最初の大規模な応用となる。
+    - year: "1687"
+      label:
+        es: >-
+          Newton publica los Principia; su segunda ley combinada con la ley de Hooke da el movimiento
+          armónico simple.
+        en: >-
+          Newton publishes the Principia; his second law combined with Hooke's law yields simple
+          harmonic motion.
+        pt: >-
+          Newton publica os Principia; sua segunda lei combinada com a lei de Hooke dá o movimento
+          harmônico simples.
+        fr: >-
+          Newton publie les Principia ; sa deuxième loi combinée à la loi de Hooke donne le mouvement
+          harmonique simple.
+        zh: >-
+          牛顿出版《自然哲学的数学原理》；第二定律与胡克定律结合得出简谐运动。
+        ja: >-
+          ニュートンが『プリンキピア』を出版。第二法則とフックの法則を組み合わせて単振動が導かれる。
+    - year: Hoy
+      label:
+        es: >-
+          Toda oscilación lineal — relojes, suspensión, sismómetros — se dimensiona con esta fórmula.
+        en: >-
+          Every linear oscillation — clocks, suspension, seismometers — is sized with this formula.
+        pt: >-
+          Toda oscilação linear — relógios, suspensão, sismômetros — é dimensionada com esta fórmula.
+        fr: >-
+          Toute oscillation linéaire — horloges, suspension, sismomètres — se dimensionne avec cette
+          formule.
+        zh: >-
+          一切线性振荡——钟表、悬挂、地震仪——都凭这一公式进行设计。
+        ja: >-
+          時計、サスペンション、地震計など、あらゆる線形振動がこの公式で設計される。
+  useCases:
+    - title:
+        es: Relojería mecánica
+        en: Mechanical watchmaking
+        pt: Relojoaria mecânica
+        fr: Horlogerie mécanique
+        zh: 机械钟表
+        ja: 機械式時計
+      description:
+        es: >-
+          El volante y su muelle de espiral oscilan con este período, regulando la marcha del reloj.
+        en: >-
+          The balance wheel and its spring oscillate with this period, regulating the watch's rate.
+        pt: >-
+          O volante e sua mola espiral oscilam com esse período, regulando a marcha do relógio.
+        fr: >-
+          Le balancier et son ressort spiral oscillent avec cette période, réglant la marche de la
+          montre.
+        zh: >-
+          摆轮与其游丝按此周期振荡，从而调节钟表的走时。
+        ja: >-
+          テンプとひげぜんまいはこの周期で振動し、時計の歩度を整える。
+    - title:
+        es: Suspensión de vehículos
+        en: Vehicle suspension
+        pt: Suspensão de veículos
+        fr: Suspension de véhicules
+        zh: 车辆悬挂
+        ja: 車両サスペンション
+      description:
+        es: >-
+          Muelles y amortiguadores se eligen para que el chasis responda al período de las ruedas sin
+          rebotar.
+        en: >-
+          Springs and dampers are chosen so the chassis responds at the wheels' period without bouncing.
+        pt: >-
+          Molas e amortecedores são escolhidos para que o chassi responda ao período das rodas sem
+          quicar.
+        fr: >-
+          Ressorts et amortisseurs sont choisis pour que le châssis réponde à la période des roues sans
+          rebondir.
+        zh: >-
+          弹簧与减震器按车轮周期的响应来选配，使车身不弹跳。
+        ja: >-
+          ばねとダンパーは、車輪の周期に応答してバウンドしないように選ばれる。
+    - title:
+        es: Sismología
+        en: Seismology
+        pt: Sismologia
+        fr: Sismologie
+        zh: 地震学
+        ja: 地震学
+      description:
+        es: >-
+          Los sismómetros usan una masa sobre un muelle; su período define la banda de frecuencias que
+          detectan.
+        en: >-
+          Seismometers use a mass on a spring; its period sets the frequency band they detect.
+        pt: >-
+          Os sismômetros usam uma massa sobre uma mola; seu período define a banda de frequências que
+          detectam.
+        fr: >-
+          Les sismomètres utilisent une masse sur un ressort ; sa période fixe la bande de fréquences
+          qu'ils détectent.
+        zh: >-
+          地震仪使用弹簧上的质量块；其周期决定了可探测的频率范围。
+        ja: >-
+          地震計はばねに載せたおもりを使い、その周期が検出できる周波数帯を決める。
+    - title:
+        es: Control de vibraciones
+        en: Vibration control
+        pt: Controle de vibrações
+        fr: Contrôle des vibrations
+        zh: 振动控制
+        ja: 振動制御
+      description:
+        es: >-
+          Aisladores y soportes elásticos se dimensionan para que su período no coincida con el de la
+          maquinaria.
+        en: >-
+          Isolators and elastic mounts are sized so their period avoids resonating with machinery.
+        pt: >-
+          Isoladores e suportes elásticos são dimensionados para que seu período não coincida com o da
+          maquinaria.
+        fr: >-
+          Isolateurs et supports élastiques se dimensionnent pour que leur période n'entre pas en
+          résonance avec les machines.
+        zh: >-
+          隔振器和弹性支座按避开机械共振周期来设计。
+        ja: >-
+          防振マウントや弾性支持部は、機械と共振しない周期になるよう設計される。
+  example:
+    title:
+      es: Una masa de 0,5 kg en un muelle de k = 200 N/m
+      en: A 0.5 kg mass on a spring with k = 200 N/m
+      pt: Uma massa de 0,5 kg em uma mola de k = 200 N/m
+      fr: Une masse de 0,5 kg sur un ressort de k = 200 N/m
+      zh: 质量为0.5千克、k = 200牛/米的弹簧系统
+      ja: 質量0.5 kg、k = 200 N/mのばね
+    lines:
+      - es: m = 0,5 kg
+        en: m = 0.5 kg
+        pt: m = 0,5 kg
+        fr: m = 0,5 kg
+        zh: m = 0.5 kg
+        ja: m = 0.5 kg
+      - es: k = 200 N/m
+        en: k = 200 N/m
+        pt: k = 200 N/m
+        fr: k = 200 N/m
+        zh: k = 200 牛/米
+        ja: k = 200 N/m
+      - es: m/k = 0,0025
+        en: m/k = 0.0025
+        pt: m/k = 0,0025
+        fr: m/k = 0,0025
+        zh: m/k = 0.0025
+        ja: m/k = 0.0025
+      - es: T = 2π√(m/k) = 2π√0,0025
+        en: T = 2π√(m/k) = 2π√0.0025
+        pt: T = 2π√(m/k) = 2π√0,0025
+        fr: T = 2π√(m/k) = 2π√0,0025
+        zh: T = 2π√(m/k) = 2π√0.0025
+        ja: T = 2π√(m/k) = 2π√0.0025
+      - es: T = 2π × 0,05
+        en: T = 2π × 0.05
+        pt: T = 2π × 0,05
+        fr: T = 2π × 0,05
+        zh: T = 2π × 0.05
+        ja: T = 2π × 0.05
+      - es: T ≈ 0,314 s
+        en: T ≈ 0.314 s
+        pt: T ≈ 0,314 s
+        fr: T ≈ 0,314 s
+        zh: T ≈ 0.314 秒
+        ja: T ≈ 0.314 秒

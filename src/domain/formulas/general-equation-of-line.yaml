@@ -1,0 +1,332 @@
+id: general-equation-of-line
+title:
+  es: Ecuación General de la Recta
+  en: Equation of a Line
+  pt: Equação Geral da Reta
+  fr: Équation générale d'une droite
+  zh: 直线方程
+  ja: 直線の方程式
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: y
+    type: variable
+    value: y
+    explanation:
+      es: "La variable dependiente: su valor queda determinado por x a través de la recta."
+      en: "The dependent variable: its value is determined by x through the line."
+      pt: "A variável dependente: seu valor é determinado por x através da reta."
+      fr: "La variable dépendante : sa valeur est déterminée par x à travers la droite."
+      zh: "因变量：它的值由 x 通过直线方程决定。"
+      ja: "従属変数。xによって直線上の値が決まる。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: "La pendiente: mide cuánto sube o baja la recta por cada unidad que avanza x."
+      en: "The slope: how much the line rises or falls for each unit x moves forward."
+      pt: "A inclinação: mede o quanto a reta sobe ou desce a cada unidade que x avança."
+      fr: "La pente : de combien la droite monte ou descend pour chaque unité de x."
+      zh: "斜率：x 每前进一个单位时，直线上升或下降的量。"
+      ja: "傾き。xが1単位進むごとに直線がどれだけ上がるか下がるかを示す。"
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: "La variable independiente: el valor de entrada, usualmente representado en el eje horizontal."
+      en: "The independent variable: the input value, usually shown on the horizontal axis."
+      pt: "A variável independente: o valor de entrada, geralmente representado no eixo horizontal."
+      fr: "La variable indépendante : la valeur d'entrée, généralement représentée sur l'axe horizontal."
+      zh: "自变量：输入的值，通常画在横轴上。"
+      ja: "独立変数。入力する値で、通常は横軸に取る。"
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado al siguiente término.
+      en: Added to the following term.
+      pt: Somado ao termo seguinte.
+      fr: Ajouté au terme suivant.
+      zh: 与下一项相加。
+      ja: 続く項に加える。
+  - id: b
+    type: variable
+    value: b
+    explanation:
+      es: "La ordenada al origen: el valor de y cuando x es 0, donde la recta cruza el eje vertical."
+      en: "The y-intercept: the value of y when x is 0, where the line crosses the vertical axis."
+      pt: "A interseção com o eixo y: o valor de y quando x é 0, onde a reta cruza o eixo vertical."
+      fr: "L'ordonnée à l'origine : la valeur de y lorsque x vaut 0, là où la droite coupe l'axe vertical."
+      zh: "截距：x 为 0 时 y 的值，即直线与纵轴的交点。"
+      ja: "切片。xが0のときのyの値で、直線が縦軸と交わる点。"
+context:
+  author:
+    es: René Descartes y Pierre de Fermat
+    en: René Descartes and Pierre de Fermat
+    pt: René Descartes e Pierre de Fermat
+    fr: René Descartes et Pierre de Fermat
+    zh: 勒内·笛卡尔与皮埃尔·德·费马
+    ja: ルネ・デカルトとピエール・ド・フェルマー
+  era:
+    es: Francia, 1596–1650 y 1601–1665 · geometría analítica en 1637
+    en: France, 1596–1650 and 1601–1665 · analytic geometry in 1637
+    pt: França, 1596–1650 e 1601–1665 · geometria analítica em 1637
+    fr: France, 1596–1650 et 1601–1665 · géométrie analytique en 1637
+    zh: 法国，1596–1650与1601–1665 · 解析几何创立于1637年
+    ja: フランス、1596–1650年と1601–1665年・解析幾何学は1637年
+  history:
+    es: >-
+      En La Géométrie (1637), Descartes vinculó el álgebra con la geometría al describir curvas
+      mediante ecuaciones, dando origen a la geometría analítica; Fermat llegó por su cuenta a ideas
+      equivalentes. La forma pendiente-intersección y = mx + b se estandarizó después en los libros
+      de texto, y las relaciones lineales se convirtieron en el primer modelo matemático del cambio.
+    en: >-
+      In La Géométrie (1637), Descartes linked algebra to geometry by describing curves through
+      equations, giving rise to analytic geometry; Fermat reached equivalent ideas on his own. The
+      slope-intercept form y = mx + b was later standardized in textbooks, and linear relationships
+      became the first mathematical model of change.
+    pt: >-
+      Em La Géométrie (1637), Descartes vinculou a álgebra à geometria ao descrever curvas por meio
+      de equações, dando origem à geometria analítica; Fermat chegou por conta própria a ideias
+      equivalentes. A forma interseção-inclinação y = mx + b foi padronizada depois nos livros
+      didáticos, e as relações lineares se tornaram o primeiro modelo matemático da variação.
+    fr: >-
+      Dans La Géométrie (1637), Descartes relie l'algèbre à la géométrie en décrivant les courbes par
+      des équations, donnant naissance à la géométrie analytique ; Fermat parvint de son côté à des
+      idées équivalentes. La forme réduite y = mx + b fut ensuite normalisée dans les manuels, et les
+      relations linéaires devinrent le premier modèle mathématique du changement.
+    zh: >-
+      在1637年的《几何学》中，笛卡尔通过方程来描述曲线，把代数与几何联系起来，由此开创了解析几何；
+      费马也独立得出了类似的思想。斜截式 y = mx + b 后来在教科书中被标准化，线性关系成为描述变化
+      的第一个数学模型。
+    ja: >-
+      デカルトは1637年の『幾何学』で、曲線を方程式で表すことにより代数と幾何を結び付け、解析
+      幾何学を生み出した。フェルマーも独自に同等の考えに到達している。傾きと切片で表す y = mx + b
+      の形はその後教科書で標準化され、線形関係は変化を表す最初の数学モデルとなった。
+  timeline:
+    - year: "1637"
+      label:
+        es: >-
+          La Géométrie de Descartes introduce las coordenadas y permite estudiar rectas y curvas
+          mediante ecuaciones: el nacimiento de la geometría analítica.
+        en: >-
+          Descartes's La Géométrie introduces coordinates and lets lines and curves be studied
+          through equations: the birth of analytic geometry.
+        pt: >-
+          La Géométrie, de Descartes, introduz as coordenadas e permite estudar retas e curvas por
+          meio de equações: o nascimento da geometria analítica.
+        fr: >-
+          La Géométrie de Descartes introduit les coordonnées et permet d'étudier droites et courbes
+          par des équations : la naissance de la géométrie analytique.
+        zh: >-
+          笛卡尔的《几何学》引入了坐标系，使得直线和曲线可以通过方程来研究，解析几何由此诞生。
+        ja: >-
+          デカルトの『幾何学』が座標を導入し、直線や曲線を方程式で研究できるようにする。解析幾何学の
+          誕生である。
+    - year: 1659–61
+      label:
+        es: >-
+          Fermat difunde por correspondencia su método para máximos y tangentes, un paso temprano
+          hacia el cálculo que hace leer la pendiente como razón de cambio.
+        en: >-
+          Fermat circulates by letter his method for maxima and tangents, an early step toward the
+          calculus that reads the slope as a rate of change.
+        pt: >-
+          Fermat difunde por correspondência seu método para máximos e tangentes, um passo inicial
+          rumo ao cálculo que faz ler a inclinação como razão de variação.
+        fr: >-
+          Fermat diffuse par correspondance sa méthode des maxima et des tangentes, un premier pas
+          vers le calcul qui lit la pente comme un taux de variation.
+        zh: >-
+          费马通过书信传播其求极大值与切线的方法，这是迈向微积分的早期一步，把斜率理解为变化率。
+        ja: >-
+          フェルマーが極大値と接線を求める方法を書簡で広める。傾きを変化率と捉える、微分積分学への
+          初期の一歩である。
+    - year: "1800s"
+      label:
+        es: >-
+          La forma pendiente-intersección y = mx + b se consolida como notación escolar estándar en
+          los libros de álgebra del siglo XIX.
+        en: >-
+          The slope-intercept form y = mx + b becomes the standard school notation in nineteenth
+          century algebra textbooks.
+        pt: >-
+          A forma interseção-inclinação y = mx + b consolida-se como notação escolar padrão nos
+          livros de álgebra do século XIX.
+        fr: >-
+          La forme réduite y = mx + b s'impose comme notation scolaire standard dans les manuels
+          d'algèbre du XIXe siècle.
+        zh: >-
+          斜截式 y = mx + b 在19世纪的代数教科书中成为标准的学校记法。
+        ja: >-
+          傾きと切片の形 y = mx + b が、19世紀の代数の教科書で標準的な学校表記として定着する。
+    - year: Hoy
+      label:
+        es: >-
+          Los modelos lineales sustentan la regresión, el análisis de tendencias e innumerables
+          sistemas de ingeniería y finanzas.
+        en: >-
+          Linear models underpin regression, trend analysis, and countless engineering and finance
+          systems.
+        pt: >-
+          Os modelos lineares sustentam a regressão, a análise de tendências e inúmeros sistemas de
+          engenharia e finanças.
+        fr: >-
+          Les modèles linéaires sous-tendent la régression, l'analyse des tendances et d'innombrables
+          systèmes d'ingénierie et de finance.
+        zh: >-
+          线性模型支撑着回归分析、趋势分析以及无数工程和金融系统。
+        ja: >-
+          線形モデルは回帰分析やトレンド分析、そして無数の工学・金融システムの基盤となっている。
+  useCases:
+    - title:
+        es: Economía y negocios
+        en: Economics and business
+        pt: Economia e negócios
+        fr: Économie et commerce
+        zh: 经济学与商业
+        ja: 経済とビジネス
+      description:
+        es: >-
+          Un modelo lineal predice la cantidad vendida en función del precio fijado; es la forma más
+          simple de curva de demanda que usan las empresas.
+        en: >-
+          A linear model predicts the quantity sold at any given price; it is the simplest demand
+          curve companies use to set prices.
+        pt: >-
+          Um modelo linear prevê a quantidade vendida em função do preço fixado; é a forma mais
+          simples de curva de demanda usada pelas empresas.
+        fr: >-
+          Un modèle linéaire prédit la quantité vendue en fonction du prix fixé ; c'est la forme la
+          plus simple de courbe de demande utilisée par les entreprises.
+        zh: >-
+          线性模型根据设定的价格预测销量，是企业定价时使用的最简单的需求曲线形式。
+        ja: >-
+          線形モデルは設定した価格に応じて販売量を予測するもので、企業が価格設定に使う最も単純な
+          需要曲線の形である。
+    - title:
+        es: Ciencia de datos
+        en: Data science
+        pt: Ciência de dados
+        fr: Science des données
+        zh: 数据科学
+        ja: データサイエンス
+      description:
+        es: >-
+          La regresión lineal ajusta una recta a datos observados y calcula la línea de tendencia
+          usada para proyectar valores futuros.
+        en: >-
+          Linear regression fits a line to observed data and computes the trend line used to project
+          future values.
+        pt: >-
+          A regressão linear ajusta uma reta aos dados observados e calcula a linha de tendência
+          usada para projetar valores futuros.
+        fr: >-
+          La régression linéaire ajuste une droite aux données observées et calcule la ligne de
+          tendance utilisée pour projeter les valeurs futures.
+        zh: >-
+          线性回归将一条直线拟合到观测数据上，并计算出用于预测未来数值的趋势线。
+        ja: >-
+          線形回帰は観測データに直線を当てはめ、将来の値を予測するためのトレンドラインを計算する。
+    - title:
+        es: Cinemática
+        en: Kinematics
+        pt: Cinemática
+        fr: Cinématique
+        zh: 运动学
+        ja: 運動学
+      description:
+        es: >-
+          A velocidad constante, la posición cumple x(t) = x₀ + vt; el desplazamiento es una función
+          lineal del tiempo.
+        en: >-
+          At constant velocity, position obeys x(t) = x₀ + vt; displacement is a linear function of
+          time.
+        pt: >-
+          A velocidade constante, a posição obedece a x(t) = x₀ + vt; o deslocamento é uma função
+          linear do tempo.
+        fr: >-
+          À vitesse constante, la position obéit à x(t) = x₀ + vt ; le déplacement est une fonction
+          linéaire du temps.
+        zh: >-
+          匀速运动时，位置满足 x(t) = x₀ + vt，位移是时间的线性函数。
+        ja: >-
+          等速運動では位置が x(t) = x₀ + vt を満たし、変位は時間の線形関数となる。
+    - title:
+        es: Ingeniería eléctrica
+        en: Electrical engineering
+        pt: Engenharia elétrica
+        fr: Génie électrique
+        zh: 电气工程
+        ja: 電気工学
+      description:
+        es: >-
+          La ley de Ohm, V = IR, describe una relación lineal entre el voltaje y la corriente en un
+          circuito con resistencia constante.
+        en: >-
+          Ohm's law, V = IR, describes a linear relationship between voltage and current in a circuit
+          with constant resistance.
+        pt: >-
+          A lei de Ohm, V = IR, descreve uma relação linear entre a tensão e a corrente em um
+          circuito com resistência constante.
+        fr: >-
+          La loi d'Ohm, V = IR, décrit une relation linéaire entre la tension et le courant dans un
+          circuit à résistance constante.
+        zh: >-
+          欧姆定律 V = IR 描述了电阻恒定的电路中电压与电流之间的线性关系。
+        ja: >-
+          オームの法則 V = IR は、抵抗が一定の回路における電圧と電流の線形関係を表す。
+  example:
+    title:
+      es: Una recta con pendiente 2
+      en: A line with slope 2
+      pt: Uma reta com inclinação 2
+      fr: Une droite de pente 2
+      zh: 一条斜率为2的直线
+      ja: 傾き2の直線
+    lines:
+      - es: m = 2 y pasa por (0, 1) → b = 1
+        en: m = 2 and passes through (0, 1) → b = 1
+        pt: m = 2 e passa por (0, 1) → b = 1
+        fr: m = 2 et passe par (0, 1) → b = 1
+        zh: m = 2，且过点 (0, 1) → b = 1
+        ja: m = 2、点 (0, 1) を通る → b = 1
+      - es: y = mx + b → y = 2x + 1
+        en: y = mx + b → y = 2x + 1
+        pt: y = mx + b → y = 2x + 1
+        fr: y = mx + b → y = 2x + 1
+        zh: y = mx + b → y = 2x + 1
+        ja: y = mx + b → y = 2x + 1
+      - es: "Verificando en (0, 1): y = 2·0 + 1 = 1 ✓"
+        en: "Checking (0, 1): y = 2·0 + 1 = 1 ✓"
+        pt: "Verificando em (0, 1): y = 2·0 + 1 = 1 ✓"
+        fr: "Vérification en (0, 1) : y = 2·0 + 1 = 1 ✓"
+        zh: 验算点 (0, 1)：y = 2·0 + 1 = 1 ✓
+        ja: (0, 1) で検算：y = 2·0 + 1 = 1 ✓
+      - es: "Verificando en (3, 7): y = 2·3 + 1 = 7 ✓"
+        en: "Checking (3, 7): y = 2·3 + 1 = 7 ✓"
+        pt: "Verificando em (3, 7): y = 2·3 + 1 = 7 ✓"
+        fr: "Vérification en (3, 7) : y = 2·3 + 1 = 7 ✓"
+        zh: 验算点 (3, 7)：y = 2·3 + 1 = 7 ✓
+        ja: (3, 7) で検算：y = 2·3 + 1 = 7 ✓
+      - es: Ambos puntos cumplen la ecuación, la recta queda confirmada.
+        en: Both points satisfy the equation, confirming the line.
+        pt: Ambos pontos satisfazem a equação, confirmando a reta.
+        fr: Les deux points vérifient l'équation, ce qui confirme la droite.
+        zh: 两点都满足方程，直线得到确认。
+        ja: どちらの点も方程式を満たし、直線が確認できる。

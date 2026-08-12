@@ -1,0 +1,348 @@
+id: thermal-expansion
+title:
+  es: Expansión Térmica
+  en: Thermal Expansion
+  pt: Expansão Térmica
+  fr: Dilatation Thermique
+  zh: 热膨胀
+  ja: 熱膨張
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: delta-l
+    type: variable
+    value: ΔL
+    explanation:
+      es: El cambio de longitud del material cuando varía la temperatura.
+      en: The change in the material's length when temperature changes.
+      pt: A variação do comprimento do material quando a temperatura muda.
+      fr: La variation de longueur du matériau lorsque la température change.
+      zh: 温度变化时材料长度的变化量。
+      ja: 温度が変化したときの物体の長さの変化量。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: alpha
+    type: constant
+    value: α
+    explanation:
+      es: El coeficiente de dilatación lineal, cuánto se estira el material por grado y por metro.
+      en: The linear expansion coefficient, how much the material stretches per degree per meter.
+      pt: O coeficiente de dilatação linear, quanto o material se estica por grau e por metro.
+      fr: Le coefficient de dilatation linéaire, l'allongement du matériau par degré et par mètre.
+      zh: 线膨胀系数，即材料每升高一度、每米的伸长量。
+      ja: 線膨張係数。物体が1度あたり・1メートルあたりにどれだけ伸びるか。
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 次を掛ける。
+  - id: l-zero
+    type: variable
+    value: L₀
+    explanation:
+      es: La longitud inicial del material antes de calentarse.
+      en: The material's initial length before heating.
+      pt: O comprimento inicial do material antes de ser aquecido.
+      fr: La longueur initiale du matériau avant chauffage.
+      zh: 材料受热前的初始长度。
+      ja: 加熱前の物体の初期の長さ。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 次を掛ける。
+  - id: delta-t
+    type: variable
+    value: ΔT
+    explanation:
+      es: El cambio de temperatura, medido en grados.
+      en: The change in temperature, measured in degrees.
+      pt: A variação de temperatura, medida em graus.
+      fr: La variation de température, mesurée en degrés.
+      zh: 温度的变化量，以度为单位。
+      ja: 温度の変化量。単位は度。
+context:
+  author:
+    es: Origen colectivo; formalizada en el s. XIX
+    en: Collective origin; formalized in the 19th century
+    pt: Origem coletiva; formalizada no s. XIX
+    fr: Origine collective ; formalisée au XIXe siècle
+    zh: 集体起源；19世纪确立
+    ja: 集団的な起源；19世紀に定式化
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, s. XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲，19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      La mayoría de los materiales se expanden al calentarse: sus átomos vibran con más amplitud y
+      ocupan un poco más de espacio. El coeficiente de dilatación lineal α mide cuánto se estira
+      cada material por grado de temperatura y por unidad de longitud. Esta ley explica por qué los
+      puentes tienen juntas de dilatación y las vías de ferrocarril dejan huecos entre tramos, para
+      que el metal no se deforme en los días cálidos. La diferencia entre coeficientes está también
+      detrás de los termostatos bimetálicos, que se curvan con el calor y abren o cierran un
+      contacto eléctrico.
+    en: >-
+      Most materials expand when heated: their atoms vibrate with greater amplitude and take up a
+      little more space. The linear expansion coefficient α measures how much each material
+      stretches per degree of temperature and per unit of length. This law explains why bridges
+      have expansion joints and railway tracks leave gaps between sections, so the metal does not
+      buckle on hot days. The difference between coefficients also lies behind bimetallic
+      thermostats, which curl with heat to open or close an electric contact.
+    pt: >-
+      A maioria dos materiais se expande quando aquecida: seus átomos vibram com maior amplitude e
+      ocupam um pouco mais de espaço. O coeficiente de dilatação linear α mede o quanto cada
+      material se estica por grau de temperatura e por unidade de comprimento. Essa lei explica por
+      que pontes têm juntas de dilatação e trilhos de trem deixam vãos entre seções, para que o
+      metal não se deforme em dias quentes. A diferença entre coeficientes também está por trás dos
+      termostatos bimetálicos, que se curvam com o calor e abrem ou fecham um contato elétrico.
+    fr: >-
+      La plupart des matériaux se dilatent lorsqu'on les chauffe : leurs atomes vibrent avec plus
+      d'amplitude et occupent un peu plus d'espace. Le coefficient de dilatation linéaire α mesure
+      l'allongement de chaque matériau par degré de température et par unité de longueur. Cette loi
+      explique pourquoi les ponts ont des joints de dilatation et les voies ferrées laissent des
+      espaces entre les sections, afin que le métal ne se déforme pas les jours chauds. La
+      différence entre les coefficients est aussi à l'origine des thermostats bimétalliques, qui se
+      courbent sous l'effet de la chaleur pour ouvrir ou fermer un contact électrique.
+    zh: >-
+      大多数材料受热时都会膨胀：原子振动幅度增大，占据了稍多的空间。线膨胀系数α衡量每种材料每升高一度、
+      每单位长度的伸长量。这条定律解释了为什么桥梁设有伸缩缝、铁轨在段与段之间留有空隙，使金属在炎热天气
+      不会变形。不同材料系数的差异也是双金属恒温器的工作原理——受热时它会弯曲，从而接通或断开电触点。
+    ja: >-
+      多くの物体は温められると膨張する。原子の振動の振幅が大きくなり、わずかに多くの空間を占めるからである。
+      線膨張係数αは、各物体が温度1度・単位長さあたりにどれだけ伸びるかを測る。この法則は、橋に伸縮継手があり、
+      線路のレールの間に継ぎ目が残される理由を説明する。暑い日には金属が変形しないようにするためだ。係数の差は
+      バイメタル式サーモスタットの原理にもある。熱で湾曲して電気接点を開閉するのである。
+  timeline:
+    - year: c. 1603
+      label:
+        es: >-
+          Galileo construye el termoscopio, que usa la expansión del aire para indicar la
+          temperatura.
+        en: >-
+          Galileo builds the thermoscope, using the expansion of air to indicate temperature.
+        pt: >-
+          Galileu constrói o termoscópio, que usa a expansão do ar para indicar a temperatura.
+        fr: >-
+          Galilée construit le thermoscope, qui utilise la dilatation de l'air pour indiquer la
+          température.
+        zh: >-
+          伽利略制作了验温器，利用空气的膨胀来指示温度。
+        ja: >-
+          ガリレオが空気の膨張を利用して温度を示す温度計（サーモスコープ）を作る。
+    - year: "1726"
+      label:
+        es: >-
+          John Harrison compensa la dilatación con su péndulo de parrilla para que sus relojes
+          marinos no se atrasen.
+        en: >-
+          John Harrison compensates for expansion with his gridiron pendulum so his marine clocks
+          stay accurate.
+        pt: >-
+          John Harrison compensa a dilatação com seu pêndulo de grade para que seus relógios marinhos
+          não atrasem.
+        fr: >-
+          John Harrison compense la dilatation avec son pendule en gril pour que ses horloges
+          marines restent exactes.
+        zh: >-
+          约翰·哈里森用栅形补偿摆抵消膨胀，使他的航海钟保持准确。
+        ja: >-
+          ジョン・ハリソンがグリッドアイアン振り子で膨張を補償し、マリンクロックの精度を保つ。
+    - year: "1883"
+      label:
+        es: >-
+          Warren S. Johnson patenta el termostato bimetálico, aplicación directa de esta ley al
+          control de temperatura.
+        en: >-
+          Warren S. Johnson patents the bimetallic thermostat, a direct application of this law to
+          temperature control.
+        pt: >-
+          Warren S. Johnson patenteia o termostato bimetálico, aplicação direta dessa lei ao
+          controle de temperatura.
+        fr: >-
+          Warren S. Johnson brevète le thermostat bimétallique, application directe de cette loi au
+          contrôle de la température.
+        zh: >-
+          沃伦·S·约翰逊为双金属恒温器申请专利，这是该定律在温度控制中的直接应用。
+        ja: >-
+          ウォーレン・S・ジョンソンがバイメタル式サーモスタットの特許を取得。温度制御への直接的な応用。
+    - year: Hoy
+      label:
+        es: >-
+          Las juntas de dilatación de puentes y vías, y las láminas bimetálicas de miles de
+          termostatos, dependen de esta ley a diario.
+        en: >-
+          Bridge and rail expansion joints, and the bimetallic strips in thousands of thermostats,
+          rely on this law every day.
+        pt: >-
+          As juntas de dilatação de pontes e trilhos, e as lâminas bimetálicas de milhares de
+          termostatos, dependem dessa lei diariamente.
+        fr: >-
+          Les joints de dilatation des ponts et des rails, ainsi que les lames bimétalliques de
+          milliers de thermostats, dépendent chaque jour de cette loi.
+        zh: >-
+          桥梁和铁轨的伸缩缝，以及无数恒温器中的双金属片，每天都在依靠这条定律工作。
+        ja: >-
+          橋やレールの伸縮継手、そして数多くのサーモスタットのバイメタル板は、毎日この法則に依存している。
+  useCases:
+    - title:
+        es: Puentes y ferrocarriles
+        en: Bridges and railways
+        pt: Pontes e ferrovias
+        fr: Ponts et chemins de fer
+        zh: 桥梁与铁路
+        ja: 橋と鉄道
+      description:
+        es: >-
+          Las juntas de dilatación y los huecos entre tramos de vía se dimensionan con α para que
+          el metal respire sin deformarse.
+        en: >-
+          Expansion joints and the gaps between track sections are sized with α so the metal can
+          breathe without deforming.
+        pt: >-
+          As juntas de dilatação e os vãos entre seções de trilho são dimensionados com α para que
+          o metal respire sem se deformar.
+        fr: >-
+          Les joints de dilatation et les espaces entre sections de voie sont dimensionnés avec α
+          pour que le métal puisse se dilater sans se déformer.
+        zh: >-
+          伸缩缝和轨道段之间的间隙都用α来设计尺寸，使金属能够自由伸缩而不变形。
+        ja: >-
+          伸縮継手や軌道区間の間隔はαを用いて寸法設計され、金属が変形せずに伸縮できるようにしている。
+    - title:
+        es: Termostatos domésticos
+        en: Home thermostats
+        pt: Termostatos domésticos
+        fr: Thermostats domestiques
+        zh: 家用恒温器
+        ja: 家庭用サーモスタット
+      description:
+        es: >-
+          Las láminas bimetálicas, dos metales pegados con distinto α, se curvan con el calor y
+          abren o cierran el circuito.
+        en: >-
+          Bimetallic strips, two metals bonded with different α, curl with heat and open or close
+          the circuit.
+        pt: >-
+          As lâminas bimetálicas, dois metais colados com α distintos, se curvam com o calor e
+          abrem ou fecham o circuito.
+        fr: >-
+          Les lames bimétalliques, deux métaux soudés avec des α différents, se courbent sous
+          l'effet de la chaleur et ouvrent ou ferment le circuit.
+        zh: >-
+          双金属片是两种膨胀系数α不同的金属贴合而成，受热时弯曲，从而接通或断开电路。
+        ja: >-
+          バイメタル板はαの異なる2枚の金属を張り合わせたもので、熱で湾曲して回路を開閉する。
+    - title:
+        es: Relojería de precisión
+        en: Precision horology
+        pt: Relojoaria de precisão
+        fr: Horlogerie de précision
+        zh: 精密钟表
+        ja: 精密時計学
+      description:
+        es: >-
+          Los péndulos compensados alternan metales con distinto α para que la expansión se cancele
+          y el reloj no se atrase.
+        en: >-
+          Compensated pendulums alternate metals with different α so the expansion cancels out and
+          the clock does not drift.
+        pt: >-
+          Pêndulos compensados alternam metais com α distintos para que a dilatação se cancele e o
+          relógio não se atrase.
+        fr: >-
+          Les pendules compensés alternent des métaux à α différents pour que la dilatation se
+          compense et que l'horloge ne retarde pas.
+        zh: >-
+          补偿摆交替使用膨胀系数α不同的金属，使膨胀相互抵消，钟表不至于走慢。
+        ja: >-
+          補償振り子はαの異なる金属を交互に用い、膨張を打ち消して時計の遅れを防ぐ。
+    - title:
+        es: Motores y maquinaria
+        en: Engines and machinery
+        pt: Motores e máquinas
+        fr: Moteurs et machines
+        zh: 发动机与机械
+        ja: エンジンと機械
+      description:
+        es: >-
+          Las holguras entre pistones y cilindros se calculan para que el conjunto selle bien al
+          alcanzar la temperatura de trabajo.
+        en: >-
+          Clearances between pistons and cylinders are calculated so the assembly seals properly
+          once it reaches working temperature.
+        pt: >-
+          As folgas entre pistões e cilindros são calculadas para que o conjunto vede bem ao
+          atingir a temperatura de trabalho.
+        fr: >-
+          Les jeux entre pistons et cylindres sont calculés pour que l'ensemble soit bien étanche
+          une fois la température de service atteinte.
+        zh: >-
+          活塞与气缸之间的间隙经过计算，使组件达到工作温度时能良好密封。
+        ja: >-
+          ピストンとシリンダーのすき間は、作動温度に達したときにしっかり密閉されるよう計算される。
+  example:
+    title:
+      es: Riel de acero de ferrocarril
+      en: Steel railway rail
+      pt: Trilho de aço de trem
+      fr: Rail en acier
+      zh: 钢制铁路钢轨
+      ja: 鋼鉄製の線路レール
+    lines:
+      - es: L₀ = 10 m
+        en: L₀ = 10 m
+        pt: L₀ = 10 m
+        fr: L₀ = 10 m
+        zh: L₀ = 10 米
+        ja: L₀ = 10 m
+      - es: α = 1.2×10⁻⁵ /°C
+        en: α = 1.2×10⁻⁵ /°C
+        pt: α = 1,2×10⁻⁵ /°C
+        fr: α = 1,2×10⁻⁵ /°C
+        zh: α = 1.2×10⁻⁵ /°C
+        ja: α = 1.2×10⁻⁵ /°C
+      - es: ΔT = 40 °C
+        en: ΔT = 40 °C
+        pt: ΔT = 40 °C
+        fr: ΔT = 40 °C
+        zh: ΔT = 40 °C
+        ja: ΔT = 40 °C
+      - es: ΔL = L₀ · α · ΔT = 10 · 1.2×10⁻⁵ · 40
+        en: ΔL = L₀ · α · ΔT = 10 · 1.2×10⁻⁵ · 40
+        pt: ΔL = L₀ · α · ΔT = 10 · 1,2×10⁻⁵ · 40
+        fr: ΔL = L₀ · α · ΔT = 10 · 1,2×10⁻⁵ · 40
+        zh: ΔL = L₀ · α · ΔT = 10 · 1.2×10⁻⁵ · 40
+        ja: ΔL = L₀ · α · ΔT = 10 · 1.2×10⁻⁵ · 40
+      - es: ΔL = 0.0048 m = 4.8 mm
+        en: ΔL = 0.0048 m = 4.8 mm
+        pt: ΔL = 0,0048 m = 4,8 mm
+        fr: ΔL = 0,0048 m = 4,8 mm
+        zh: ΔL = 0.0048 米 = 4.8 毫米
+        ja: ΔL = 0.0048 m = 4.8 mm

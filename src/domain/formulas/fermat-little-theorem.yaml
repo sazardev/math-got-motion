@@ -1,0 +1,275 @@
+id: fermat-little-theorem
+title:
+  es: Pequeño Teorema de Fermat
+  en: Fermat's Little Theorem
+  pt: Pequeno Teorema de Fermat
+  fr: Petit théorème de Fermat
+  zh: 费马小定理
+  ja: フェルマーの小定理
+category:
+  es: Teoría de números
+  en: Number theory
+  pt: Teoria dos números
+  fr: Théorie des nombres
+  zh: 数论
+  ja: 数論
+nodes:
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: "a: un número entero cualquiera."
+      en: "a: any integer."
+      pt: "a: um número inteiro qualquer."
+      fr: "a : n'importe quel entier."
+      zh: "a：任意整数。"
+      ja: "a：任意の整数。"
+  - id: p-pow
+    type: superscript
+    value: p
+    explanation:
+      es: Elevado a p, donde p es primo.
+      en: Raised to p, where p is prime.
+      pt: Elevado a p, onde p é primo.
+      fr: Élevé à p, où p est premier.
+      zh: 的p次方，其中p为素数。
+      ja: p乗。ここでpは素数。
+  - id: congruent
+    type: operator
+    value: ≡
+    explanation:
+      es: "≡: congruente módulo p, es decir, misma resta de múltiplos de p."
+      en: "≡: congruent modulo p, i.e., differing by a multiple of p."
+      pt: "≡: congruente módulo p, ou seja, difere por um múltiplo de p."
+      fr: "≡ : congru modulo p, c'est-à-dire différent d'un multiple de p."
+      zh: "≡：模p同余，即相差p的整数倍。"
+      ja: "≡：法pで合同。すなわちpの倍数だけ異なる。"
+  - id: a-2
+    type: variable
+    value: a
+    explanation:
+      es: El mismo número a.
+      en: The same number a.
+      pt: O mesmo número a.
+      fr: Le même nombre a.
+      zh: 同一个数a。
+      ja: 同じ数a。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre la condición.
+      en: Opens the condition.
+      pt: Abre a condição.
+      fr: Ouvre la condition.
+      zh: 打开条件。
+      ja: 条件を開く括弧。
+  - id: mod-p
+    type: operator
+    value: mod p
+    explanation:
+      es: El módulo p, el número primo.
+      en: The modulus p, the prime number.
+      pt: O módulo p, o número primo.
+      fr: Le module p, le nombre premier.
+      zh: 模p，即素数p。
+      ja: 法p。素数p。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la condición.
+      en: Closes the condition.
+      pt: Fecha a condição.
+      fr: Ferme la condition.
+      zh: 关闭条件。
+      ja: 条件を閉じる括弧。
+context:
+  author:
+    es: Pierre de Fermat
+    en: Pierre de Fermat
+    pt: Pierre de Fermat
+    fr: Pierre de Fermat
+    zh: 皮埃尔·德·费马
+    ja: ピエール・ド・フェルマー
+  era:
+    es: Francia, 1607–1665 · enunciado en 1640
+    en: France, 1607–1665 · stated in 1640
+    pt: França, 1607–1665 · enunciado em 1640
+    fr: France, 1607–1665 · énoncé en 1640
+    zh: 法国，1607–1665年·1640年提出
+    ja: フランス、1607–1665年・1640年に提示
+  history:
+    es: >-
+      Fermat comunicó el resultado en 1640, en una carta a su amigo Frénicle, como solía hacer con sus
+      descubrimientos. Afirma que, para un primo p, la potencia aᵖ es congruente con a módulo p. Euler
+      lo generalizó en 1736 con su teorema del totient. Hoy es la piedra angular de la criptografía:
+      permite probar si un número es probablemente primo y sustentar el cifrado RSA.
+    en: >-
+      Fermat communicated the result in 1640, in a letter to his friend Frénicle, as he often did with
+      his discoveries. It states that, for a prime p, the power aᵖ is congruent to a modulo p. Euler
+      generalized it in 1736 with his totient theorem. Today it is the cornerstone of cryptography:
+      it tests whether a number is probably prime and underpins RSA encryption.
+    pt: >-
+      Fermat comunicou o resultado em 1640, em uma carta ao amigo Frénicle, como costumava fazer com
+      suas descobertas. Ele afirma que, para um primo p, a potência aᵖ é congruente a a módulo p.
+      Euler o generalizou em 1736 com seu teorema do totiente. Hoje é a pedra angular da criptografia:
+      permite testar se um número é provavelmente primo e sustenta a cifração RSA.
+    fr: >-
+      Fermat communiqua le résultat en 1640, dans une lettre à son ami Frénicle, comme il le faisait
+      souvent pour ses découvertes. Il affirme que, pour un nombre premier p, la puissance aᵖ est
+      congrue à a modulo p. Euler le généralisa en 1736 avec son théorème de l'indicatrice.
+      Aujourd'hui, c'est la pierre angulaire de la cryptographie : il teste si un nombre est
+      probablement premier et sous-tend le chiffrement RSA.
+    zh: >-
+      1640年，费马在给朋友弗雷尼克尔的一封信中传达了这个结果，他惯于以这种方式交流自己的发现。该定理表明：
+      对于素数p，aᵖ与a模p同余。1736年欧拉用他的欧拉函数定理将其推广。如今它是密码学的基石：用于测试一个数
+      是否可能为素数，并支撑着RSA加密。
+    ja: >-
+      フェルマーは1640年、友人フレニクルへの手紙でこの結果を伝えた。彼は発見をよくこのように伝えていた。この定理は、
+      素数pに対して、aᵖがaと法pで合同であることを主張する。1736年にオイラーがオイラーのφ関数の定理として一般化した。
+      今日、これは暗号技術の要であり、数が素数かどうかの確率的判定に使われ、RSA暗号を支えている。
+  timeline:
+    - year: "1640"
+      label:
+        es: >-
+          Fermat enuncia el teorema en una carta, sin demostración.
+        en: >-
+          Fermat states the theorem in a letter, without proof.
+        pt: >-
+          Fermat enuncia o teorema em uma carta, sem demonstração.
+        fr: >-
+          Fermat énonce le théorème dans une lettre, sans démonstration.
+        zh: >-
+          费马在一封信中提出该定理，未附证明。
+        ja: >-
+          フェルマーが手紙で証明なしにこの定理を述べる。
+    - year: "1736"
+      label:
+        es: >-
+          Euler demuestra el teorema y lo generaliza con su función totient.
+        en: >-
+          Euler proves the theorem and generalizes it with his totient function.
+        pt: >-
+          Euler demonstra o teorema e o generaliza com sua função totiente.
+        fr: >-
+          Euler démontre le théorème et le généralise avec sa fonction indicatrice.
+        zh: >-
+          欧拉证明该定理，并用欧拉函数加以推广。
+        ja: >-
+          オイラーがこの定理を証明し、オイラーのφ関数で一般化する。
+    - year: "1976"
+      label:
+        es: >-
+          La criptografía de clave pública RSA convierte el teorema en infraestructura digital.
+        en: >-
+          RSA public-key cryptography turns the theorem into digital infrastructure.
+        pt: >-
+          A criptografia de chave pública RSA transforma o teorema em infraestrutura digital.
+        fr: >-
+          La cryptographie à clé publique RSA transforme le théorème en infrastructure numérique.
+        zh: >-
+          RSA公钥密码学使该定理成为数字基础设施。
+        ja: >-
+          RSA公開鍵暗号が、この定理をデジタル社会の基盤にする。
+  useCases:
+    - title:
+        es: Cifrado RSA
+        en: RSA encryption
+        pt: Cifração RSA
+        fr: Chiffrement RSA
+        zh: RSA 加密
+        ja: RSA暗号
+      description:
+        es: >-
+          La exponenciación modular que cifra y firma se apoya en esta congruencia.
+        en: >-
+          The modular exponentiation that encrypts and signs relies on this congruence.
+        pt: >-
+          A exponenciação modular que cifra e assina se apoia nessa congruência.
+        fr: >-
+          L'exponentiation modulaire qui chiffre et signe repose sur cette congruence.
+        zh: >-
+          用于加密和签名的模幂运算依赖于这条同余关系。
+        ja: >-
+          暗号化と署名に使うモジュラ冪乗は、この合同関係に依存している。
+    - title:
+        es: Pruebas de primalidad
+        en: Primality testing
+        pt: Testes de primalidade
+        fr: Tests de primalité
+        zh: 素性检验
+        ja: 素数判定
+      description:
+        es: >-
+          Si aᵖ−1 no es congruente con 1, el número no es primo; la prueba de Miller-Rabin lo repite.
+        en: >-
+          If aᵖ−1 is not congruent to 1, the number is not prime; Miller-Rabin repeats the test.
+        pt: >-
+          Se aᵖ−1 não for congruente a 1, o número não é primo; o teste de Miller-Rabin repete isso.
+        fr: >-
+          Si aᵖ−1 n'est pas congru à 1, le nombre n'est pas premier ; le test de Miller-Rabin répète
+          l'opération.
+        zh: >-
+          若aᵖ−1不与1同余，则该数不是素数；米勒-拉宾检验会重复这一测试。
+        ja: >-
+          aᵖ−1が1と合同でなければ素数ではない。ミラー・ラビン判定はこれを繰り返す。
+    - title:
+        es: Generadores pseudoaleatorios
+        en: Pseudorandom generators
+        pt: Geradores pseudoaleatórios
+        fr: Générateurs pseudo-aléatoires
+        zh: 伪随机数生成器
+        ja: 擬似乱数生成器
+      description:
+        es: >-
+          La exponenciación modular es la base de muchos generadores de números aleatorios.
+        en: >-
+          Modular exponentiation is the basis of many random number generators.
+        pt: >-
+          A exponenciação modular é a base de muitos geradores de números aleatórios.
+        fr: >-
+          L'exponentiation modulaire est à la base de nombreux générateurs de nombres aléatoires.
+        zh: >-
+          模幂运算是许多随机数生成器的基础。
+        ja: >-
+          モジュラ冪乗は、多くの乱数生成器の基礎である。
+  example:
+    title:
+      es: Verificar con p = 5
+      en: Verify with p = 5
+      pt: Verificar com p = 5
+      fr: Vérifier avec p = 5
+      zh: 用 p = 5 验证
+      ja: p = 5 で検証
+    lines:
+      - es: p = 5 (primo), a = 3
+        en: p = 5 (prime), a = 3
+        pt: p = 5 (primo), a = 3
+        fr: p = 5 (premier), a = 3
+        zh: p = 5（素数），a = 3
+        ja: p = 5（素数）、a = 3
+      - es: 3⁵ = 243
+        en: 3⁵ = 243
+        pt: 3⁵ = 243
+        fr: 3⁵ = 243
+        zh: 3⁵ = 243
+        ja: 3⁵ = 243
+      - es: 243 ÷ 5 = 48, resto 3
+        en: 243 ÷ 5 = 48, remainder 3
+        pt: 243 ÷ 5 = 48, resto 3
+        fr: 243 ÷ 5 = 48, reste 3
+        zh: 243 ÷ 5 = 48，余数 3
+        ja: 243 ÷ 5 = 48、余り3
+      - es: 243 ≡ 3 (mod 5)
+        en: 243 ≡ 3 (mod 5)
+        pt: 243 ≡ 3 (mod 5)
+        fr: 243 ≡ 3 (mod 5)
+        zh: 243 ≡ 3 (mod 5)
+        ja: 243 ≡ 3 (mod 5)
+      - es: "Se cumple: 3⁵ ≡ 3 (mod 5)"
+        en: "It holds: 3⁵ ≡ 3 (mod 5)"
+        pt: "Vale: 3⁵ ≡ 3 (mod 5)"
+        fr: "Cela vaut : 3⁵ ≡ 3 (mod 5)"
+        zh: 成立：3⁵ ≡ 3 (mod 5)
+        ja: 成立：3⁵ ≡ 3 (mod 5)

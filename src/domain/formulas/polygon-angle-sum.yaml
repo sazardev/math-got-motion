@@ -1,0 +1,341 @@
+id: polygon-angle-sum
+title:
+  es: Suma de Ángulos Internos
+  en: Sum of Interior Angles of a Polygon
+  pt: Soma dos Ângulos Internos
+  fr: Somme des Angles Internes
+  zh: 多边形内角和
+  ja: 多角形の内角の和
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: sum
+    type: variable
+    value: S
+    explanation:
+      es: "La suma: el total de los ángulos internos del polígono, en grados."
+      en: "The sum: the total of the polygon's interior angles, in degrees."
+      pt: "A soma: o total dos ângulos internos do polígono, em graus."
+      fr: "La somme : le total des angles internes du polygone, en degrés."
+      zh: "和：多边形所有内角的总和，以度为单位。"
+      ja: "和：多角形の内角の合計を度で表したもの。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: ちょうど等しい。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: "Paréntesis de apertura: agrupa la resta antes de multiplicar."
+      en: "Opening parenthesis: groups the subtraction before multiplying."
+      pt: "Parêntese de abertura: agrupa a subtração antes de multiplicar."
+      fr: "Parenthèse ouvrante : regroupe la soustraction avant de multiplier."
+      zh: "左括号：将相减的结果括起来再相乘。"
+      ja: "括弧の始まり：引き算をひとまとめにしてから掛ける。"
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: "El número de lados, y de vértices, del polígono."
+      en: "The number of sides — and vertices — of the polygon."
+      pt: "O número de lados, e de vértices, do polígono."
+      fr: "Le nombre de côtés — et de sommets — du polygone."
+      zh: "多边形的边数，也就是顶点数。"
+      ja: "多角形の辺の数。頂点の数でもある。"
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "Menos: triangulando se forman dos triángulos menos que lados."
+      en: "Minus: triangulating yields two fewer triangles than sides."
+      pt: "Menos: ao triangular, formam-se dois triângulos a menos que lados."
+      fr: "Moins : la triangulation donne deux triangles de moins que de côtés."
+      zh: "减：三角剖分得到的三角形个数比边数少两个。"
+      ja: "引く：三角形分割すると、三角形の数は辺の数より2つ少ない。"
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "Dos: de un vértice parten n − 2 diagonales que forman n − 2 triángulos."
+      en: "Two: from one vertex, n − 2 diagonals form n − 2 triangles."
+      pt: "Dois: de um vértice partem n − 2 diagonais que formam n − 2 triângulos."
+      fr: "Deux : depuis un sommet, n − 2 diagonales forment n − 2 triangles."
+      zh: "二：从一个顶点出发的n − 2条对角线，形成n − 2个三角形。"
+      ja: "2：1つの頂点から引くn − 2本の対角線により、n − 2個の三角形ができる。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: "Paréntesis de cierre: el número de triángulos queda listo para multiplicar."
+      en: "Closing parenthesis: the triangle count is ready to be multiplied."
+      pt: "Parêntese de fechamento: o número de triângulos fica pronto para multiplicar."
+      fr: "Parenthèse fermante : le nombre de triangles est prêt à être multiplié."
+      zh: "右括号：三角形的个数已就绪，可以相乘。"
+      ja: "括弧の終わり：三角形の数が掛け算できる状態になる。"
+  - id: mul
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: one-eighty
+    type: number
+    value: "180"
+    explanation:
+      es: "Ciento ochenta: la suma de los ángulos internos de un triángulo."
+      en: "One hundred eighty: the sum of a triangle's interior angles."
+      pt: "Cento e oitenta: a soma dos ângulos internos de um triângulo."
+      fr: "Cent quatre-vingts : la somme des angles internes d'un triangle."
+      zh: "一百八十：三角形内角的总和。"
+      ja: "百八十：三角形の内角の合計。"
+  - id: degree
+    type: operator
+    value: "°"
+    explanation:
+      es: "El grado: la unidad angular en la que se expresa el resultado."
+      en: "Degrees: the angular unit in which the result is expressed."
+      pt: "O grau: a unidade angular na qual o resultado é expresso."
+      fr: "Le degré : l'unité angulaire dans laquelle s'exprime le résultat."
+      zh: "度：结果所使用的角度单位。"
+      ja: "度：結果を表す角度の単位。"
+context:
+  author:
+    es: Origen colectivo (geometría griega)
+    en: Collective origin (Greek geometry)
+    pt: Origem coletiva (geometria grega)
+    fr: Origine collective (géométrie grecque)
+    zh: 集体起源（古希腊几何学）
+    ja: 集団的起源（古代ギリシャの幾何学）
+  era:
+    es: Grecia, c. 300 a.C. · en los Elementos de Euclides
+    en: Greece, c. 300 BC · in Euclid's Elements
+    pt: Grécia, c. 300 a.C. · nos Elementos de Euclides
+    fr: Grèce, v. 300 av. J.-C. · dans les Éléments d'Euclide
+    zh: 古希腊，约公元前300年·见于欧几里得《几何原本》
+    ja: ギリシャ、紀元前300年頃・ユークリッド『原論』による
+  history:
+    es: >-
+      La fórmula se obtiene triangulando el polígono desde un vértice en n − 2 triángulos. Euclides
+      demostró en la Proposición I.32 de los Elementos que los ángulos internos de un triángulo
+      suman 180°, el caso base; la versión general para cualquier polígono se consolidó en la
+      geometría islámica medieval.
+    en: >-
+      The formula comes from triangulating a polygon from one vertex into n − 2 triangles. Euclid
+      proved in Proposition I.32 of the Elements that a triangle's interior angles sum to 180°, the
+      base case; the general version for any polygon was consolidated in medieval Islamic geometry.
+    pt: >-
+      A fórmula é obtida triangulando o polígono a partir de um vértice em n − 2 triângulos.
+      Euclides demonstrou na Proposição I.32 dos Elementos que os ângulos internos de um triângulo
+      somam 180°, o caso base; a versão geral para qualquer polígono se consolidou na geometria
+      islâmica medieval.
+    fr: >-
+      La formule s'obtient en triangulant le polygone depuis un sommet en n − 2 triangles. Euclide
+      démontra dans la Proposition I.32 des Éléments que les angles internes d'un triangle
+      totalisent 180°, le cas de base ; la version générale pour tout polygone fut consolidée dans
+      la géométrie islamique médiévale.
+    zh: >-
+      该公式通过从某一顶点出发，将多边形分割成n − 2个三角形来得出。欧几里得在《几何原本》第一卷命题32中
+      证明了三角形内角和为180°，这是基础情形；任意多边形的通式则在中世纪伊斯兰几何中得以完善。
+    ja: >-
+      この公式は、多角形を1つの頂点からn − 2個の三角形に分割することで得られる。ユークリッドは『原論』
+      第1巻命題32で、三角形の内角の和が180°であることを証明しており、これが基礎となる場合である。
+      任意の多角形に対する一般形は、中世イスラームの幾何学で確立された。
+  timeline:
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides demuestra en los Elementos que los ángulos internos de un triángulo suman 180°.
+        en: >-
+          Euclid proves in the Elements that a triangle's interior angles sum to 180°.
+        pt: >-
+          Euclides demonstra nos Elementos que os ângulos internos de um triângulo somam 180°.
+        fr: >-
+          Euclide démontre dans les Éléments que les angles internes d'un triangle totalisent 180°.
+        zh: >-
+          欧几里得在《几何原本》中证明，三角形内角之和为180°。
+        ja: >-
+          ユークリッドが『原論』で、三角形の内角の和が180°であることを証明する。
+    - year: s. IX
+      label:
+        es: >-
+          Geómetras islámicos, como Thābit ibn Qurra, extienden el resultado a polígonos generales.
+        en: >-
+          Islamic geometers, such as Thābit ibn Qurra, extend the result to general polygons.
+        pt: >-
+          Geômetras islâmicos, como Thābit ibn Qurra, estendem o resultado a polígonos gerais.
+        fr: >-
+          Les géomètres islamiques, tels que Thābit ibn Qurra, étendent le résultat aux polygones
+          généraux.
+        zh: >-
+          以萨比特·伊本·库拉为代表的伊斯兰几何学家将该结果推广到一般多边形。
+        ja: >-
+          サービト・イブン・クッラらイスラームの幾何学者が、この結果を一般の多角形へと拡張する。
+    - year: Hoy
+      label:
+        es: >-
+          La suma de ángulos valida polígonos en gráficos por computadora y detecta errores en
+          levantamientos topográficos.
+        en: >-
+          The angle sum validates polygons in computer graphics and catches errors in land surveys.
+        pt: >-
+          A soma dos ângulos valida polígonos em computação gráfica e detecta erros em
+          levantamentos topográficos.
+        fr: >-
+          La somme des angles valide les polygones en infographie et détecte les erreurs dans les
+          relevés topographiques.
+        zh: >-
+          内角和用于验证计算机图形学中的多边形，并在土地测量中发现误差。
+        ja: >-
+          角度の和は、コンピュータグラフィックスで多角形を検証し、測量の誤差を見つけるために使われる。
+  useCases:
+    - title:
+        es: Marcos estructurales
+        en: Structural frames
+        pt: Estruturas de pórticos
+        fr: Cadres structuraux
+        zh: 结构框架
+        ja: 構造フレーム
+      description:
+        es: >-
+          Marcos y celosías poligonales se verifican sumando sus ángulos para que los elementos
+          cierren correctamente.
+        en: >-
+          Polygonal frames and trusses are checked by summing angles so that elements close
+          correctly.
+        pt: >-
+          Pórticos e treliças poligonais são verificados somando seus ângulos para que os elementos
+          fechem corretamente.
+        fr: >-
+          Cadres et treillis polygonaux sont vérifiés en additionnant leurs angles pour que les
+          éléments se referment correctement.
+        zh: >-
+          多边形框架和桁架通过内角和来校验，确保各构件能正确闭合。
+        ja: >-
+          多角形のフレームやトラスは、角度の和を調べて要素が正しく閉じることを確認する。
+    - title:
+        es: Teselados y mosaicos
+        en: Tiling and mosaics
+        pt: Tesselações e mosaicos
+        fr: Pavages et mosaïques
+        zh: 镶嵌与马赛克
+        ja: タイル張りとモザイク
+      description:
+        es: >-
+          Para que un mosaico cubra el plano sin huecos, los ángulos de las piezas que concurren en
+          un vértice deben sumar 360°.
+        en: >-
+          For a mosaic to cover the plane without gaps, the angles of the pieces meeting at a vertex
+          must sum to 360°.
+        pt: >-
+          Para um mosaico cobrir o plano sem lacunas, os ângulos das peças que se encontram em um
+          vértice devem somar 360°.
+        fr: >-
+          Pour qu'une mosaïque couvre le plan sans trous, les angles des pièces qui se rencontrent
+          en un sommet doivent totaliser 360°.
+        zh: >-
+          要让马赛克无空隙地铺满平面，汇聚于同一顶点的各片角之和必须为360°。
+        ja: >-
+          モザイクがすき間なく平面を敷き詰めるには、1つの頂点に集まるピースの角度の和が360°でなければ
+          ならない。
+    - title:
+        es: Gráficos por computadora
+        en: Computer graphics
+        pt: Computação gráfica
+        fr: Infographie
+        zh: 计算机图形学
+        ja: コンピュータグラフィックス
+      description:
+        es: >-
+          Las mallas poligonales de modelos 3D validan sus caras comprobando la suma de ángulos de
+          cada una.
+        en: >-
+          The polygonal meshes of 3D models validate their faces by checking each one's angle sum.
+        pt: >-
+          As malhas poligonais de modelos 3D validam suas faces verificando a soma dos ângulos de
+          cada uma.
+        fr: >-
+          Les maillages polygonaux des modèles 3D valident leurs faces en vérifiant la somme des
+          angles de chacune.
+        zh: >-
+          三维模型的网格通过检查每个面的内角和来验证面是否有效。
+        ja: >-
+          3Dモデルのポリゴンメッシュは、各面の角度の和を調べることで面の妥当性を検証する。
+    - title:
+        es: Topografía
+        en: Surveying
+        pt: Topografia
+        fr: Topographie
+        zh: 地形测量
+        ja: 測量
+      description:
+        es: >-
+          La suma de ángulos medidos de un polígono cerrado debe ser (n − 2)·180°, lo que permite
+          detectar errores de medición.
+        en: >-
+          The measured angles of a closed polygon must sum to (n − 2)·180°, which exposes
+          measurement errors.
+        pt: >-
+          A soma dos ângulos medidos de um polígono fechado deve ser (n − 2)·180°, o que permite
+          detectar erros de medição.
+        fr: >-
+          La somme des angles mesurés d'un polygone fermé doit valoir (n − 2)·180°, ce qui permet de
+          détecter les erreurs de mesure.
+        zh: >-
+          闭合多边形实测内角和应为(n − 2)·180°，据此可以发现测量误差。
+        ja: >-
+          閉じた多角形の実測した内角の和は(n − 2)·180°になるはずであり、これにより測量誤差を見つけられる。
+  example:
+    title:
+      es: Un hexágono
+      en: A hexagon
+      pt: Um hexágono
+      fr: Un hexagone
+      zh: 一个六边形
+      ja: 六角形
+    lines:
+      - es: n = 6
+        en: n = 6
+        pt: n = 6
+        fr: n = 6
+        zh: n = 6
+        ja: n = 6
+      - es: S = (n − 2) · 180°
+        en: S = (n − 2) · 180°
+        pt: S = (n − 2) · 180°
+        fr: S = (n − 2) · 180°
+        zh: S = (n − 2) · 180°
+        ja: S = (n − 2) · 180°
+      - es: S = (6 − 2) · 180°
+        en: S = (6 − 2) · 180°
+        pt: S = (6 − 2) · 180°
+        fr: S = (6 − 2) · 180°
+        zh: S = (6 − 2) · 180°
+        ja: S = (6 − 2) · 180°
+      - es: S = 4 · 180°
+        en: S = 4 · 180°
+        pt: S = 4 · 180°
+        fr: S = 4 · 180°
+        zh: S = 4 · 180°
+        ja: S = 4 · 180°
+      - es: S = 720°
+        en: S = 720°
+        pt: S = 720°
+        fr: S = 720°
+        zh: S = 720°
+        ja: S = 720°

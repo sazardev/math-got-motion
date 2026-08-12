@@ -1,0 +1,368 @@
+id: schwarzschild-radius
+title:
+  es: Radio de Schwarzschild
+  en: Schwarzschild Radius
+  pt: Raio de Schwarzschild
+  fr: Rayon de Schwarzschild
+  zh: 史瓦西半径
+  ja: シュヴァルツシルト半径
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: r-s
+    type: variable
+    value: "rₛ"
+    explanation:
+      es: "El radio de Schwarzschild: el límite bajo el cual nada, ni siquiera la luz, puede escapar de la gravedad."
+      en: "The Schwarzschild radius: the boundary below which nothing, not even light, can escape gravity."
+      pt: "O raio de Schwarzschild: o limite abaixo do qual nada, nem mesmo a luz, consegue escapar da gravidade."
+      fr: "Le rayon de Schwarzschild : la limite en deçà de laquelle rien, pas même la lumière, ne peut échapper à la gravité."
+      zh: "史瓦西半径：在此界限之内，任何东西包括光都无法逃脱引力。"
+      ja: "シュヴァルツシルト半径。この境界の内側からは光さえも重力から逃れられない。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: El número 2, que surge de la definición de velocidad de escape.
+      en: The number 2, which arises from the escape velocity definition.
+      pt: O número 2, que surge da definição de velocidade de escape.
+      fr: Le nombre 2, issu de la définition de la vitesse de libération.
+      zh: 数字2，源自逃逸速度的定义。
+      ja: 数値2。脱出速度の定義から現れる。
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 次を掛ける。
+  - id: g
+    type: constant
+    value: G
+    explanation:
+      es: La constante de gravitación universal (6.674×10⁻¹¹).
+      en: The universal gravitational constant (6.674×10⁻¹¹).
+      pt: A constante de gravitação universal (6,674×10⁻¹¹).
+      fr: La constante de gravitation universelle (6,674×10⁻¹¹).
+      zh: 万有引力常数（6.674×10⁻¹¹）。
+      ja: 万有引力定数（6.674×10⁻¹¹）。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 次を掛ける。
+  - id: m
+    type: variable
+    value: M
+    explanation:
+      es: La masa del objeto que genera el campo gravitatorio.
+      en: The mass of the object generating the gravitational field.
+      pt: A massa do objeto que gera o campo gravitacional.
+      fr: La masse de l'objet qui génère le champ gravitationnel.
+      zh: 产生引力场的天体质量。
+      ja: 重力場を生み出す天体の質量。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: c
+    type: constant
+    value: c
+    explanation:
+      es: La velocidad de la luz en el vacío (3×10⁸ m/s).
+      en: The speed of light in a vacuum (3×10⁸ m/s).
+      pt: A velocidade da luz no vácuo (3×10⁸ m/s).
+      fr: La vitesse de la lumière dans le vide (3×10⁸ m/s).
+      zh: 真空中的光速（3×10⁸ 米/秒）。
+      ja: 真空中の光速（3×10⁸ m/s）。
+  - id: c-squared
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Al cuadrado: la luz en el denominador limita el tamaño del radio."
+      en: "Squared: the speed of light in the denominator caps the radius size."
+      pt: "Ao quadrado: a luz no denominador limita o tamanho do raio."
+      fr: "Au carré : la lumière au dénominateur borne la taille du rayon."
+      zh: "平方：分母中的光速限制了半径的大小。"
+      ja: "2乗。分母の光速が半径の大きさを制限する。"
+context:
+  author:
+    es: Karl Schwarzschild
+    en: Karl Schwarzschild
+    pt: Karl Schwarzschild
+    fr: Karl Schwarzschild
+    zh: 卡尔·史瓦西
+    ja: カール・シュヴァルツシルト
+  era:
+    es: Alemania, 1873–1916 · publicado en 1916
+    en: Germany, 1873–1916 · published in 1916
+    pt: Alemanha, 1873–1916 · publicado em 1916
+    fr: Allemagne, 1873–1916 · publié en 1916
+    zh: 德国，1873–1916年 · 1916年发表
+    ja: ドイツ、1873–1916年・1916年発表
+  history:
+    es: >-
+      El radio de Schwarzschild es el tamaño al que la velocidad de escape iguala a la velocidad de
+      la luz: si se comprime una masa por debajo de ese límite, ni la luz puede escapar y se forma un
+      agujero negro. Karl Schwarzschild halló esta solución exacta de las ecuaciones de Einstein
+      semanas después de publicarse la relatividad general, mientras servía en el frente ruso de la
+      Primera Guerra Mundial. Su esfera define el horizonte de sucesos, la frontera desde la cual
+      nada puede regresar.
+    en: >-
+      The Schwarzschild radius is the size at which the escape velocity equals the speed of light:
+      squeeze a mass below that limit and not even light can escape, forming a black hole. Karl
+      Schwarzschild found this exact solution to Einstein's equations weeks after general relativity
+      was published, while serving on the Russian front of the First World War. Its sphere defines
+      the event horizon, the boundary from which nothing can return.
+    pt: >-
+      O raio de Schwarzschild é o tamanho no qual a velocidade de escape se iguala à velocidade da
+      luz: se uma massa for comprimida abaixo desse limite, nem a luz escapa e forma-se um buraco
+      negro. Karl Schwarzschild encontrou essa solução exata das equações de Einstein semanas após a
+      publicação da relatividade geral, enquanto servia na frente russa da Primeira Guerra Mundial.
+      Sua esfera define o horizonte de eventos, a fronteira da qual nada pode voltar.
+    fr: >-
+      Le rayon de Schwarzschild est la taille à laquelle la vitesse de libération égale la vitesse
+      de la lumière : si l'on comprime une masse en deçà de cette limite, même la lumière ne peut
+      s'échapper et un trou noir se forme. Karl Schwarzschild trouva cette solution exacte des
+      équations d'Einstein quelques semaines après la publication de la relativité générale, alors
+      qu'il servait sur le front russe de la Première Guerre mondiale. Sa sphère définit l'horizon
+      des événements, la frontière d'où rien ne peut revenir.
+    zh: >-
+      史瓦西半径是逃逸速度恰好等于光速时的尺度：如果把天体压缩到这个界限以内，连光也无法逃逸，从而形成黑洞。
+      卡尔·史瓦西在广义相对论发表后仅数周，就在第一次世界大战的俄国前线服役期间，找到了爱因斯坦方程的
+      这个精确解。他的球面定义了事件视界，即一切都无法回返的边界。
+    ja: >-
+      シュヴァルツシルト半径とは、脱出速度が光速と等しくなる大きさのことである。質量をこの限界以下に圧縮すると、
+      光さえも逃げ出せず、ブラックホールが形成される。カール・シュヴァルツシルトは第一次世界大戦のロシア戦線に
+      従軍しながら、一般相対性理論の発表からわずか数週間後にアインシュタイン方程式の厳密解を求めた。この球面は
+      事象の地平面、すなわち何も戻れない境界を定義する。
+  timeline:
+    - year: "1916"
+      label:
+        es: >-
+          Schwarzschild publica la primera solución exacta de las ecuaciones de la relatividad
+          general, semanas después de su publicación.
+        en: >-
+          Schwarzschild publishes the first exact solution to Einstein's field equations, weeks
+          after general relativity appeared.
+        pt: >-
+          Schwarzschild publica a primeira solução exata das equações da relatividade geral, semanas
+          após sua publicação.
+        fr: >-
+          Schwarzschild publie la première solution exacte des équations de la relativité générale,
+          quelques semaines après leur publication.
+        zh: >-
+          广义相对论发表后仅数周，史瓦西就给出了场方程的第一个精确解。
+        ja: >-
+          一般相対性理論の発表からわずか数週間後、シュヴァルツシルトが場の方程式の最初の厳密解を発表する。
+    - year: "1939"
+      label:
+        es: >-
+          Oppenheimer y Snyder demuestran que una estrella masiva puede colapsar hasta su radio de
+          Schwarzschild.
+        en: >-
+          Oppenheimer and Snyder show that a massive star can collapse down to its Schwarzschild
+          radius.
+        pt: >-
+          Oppenheimer e Snyder demonstram que uma estrela massiva pode colapsar até seu raio de
+          Schwarzschild.
+        fr: >-
+          Oppenheimer et Snyder montrent qu'une étoile massive peut s'effondrer jusqu'à son rayon de
+          Schwarzschild.
+        zh: >-
+          奥本海默和斯奈德证明，大质量恒星可以坍缩到其史瓦西半径。
+        ja: >-
+          オッペンハイマーとスナイダーが、大質量星がシュヴァルツシルト半径まで崩壊しうることを示す。
+    - year: "2019"
+      label:
+        es: >-
+          El Event Horizon Telescope publica la primera imagen del horizonte de sucesos de un
+          agujero negro, M87*.
+        en: >-
+          The Event Horizon Telescope releases the first image of a black hole's event horizon, M87*.
+        pt: >-
+          O Event Horizon Telescope publica a primeira imagem do horizonte de eventos de um buraco
+          negro, M87*.
+        fr: >-
+          Le télescope Event Horizon publie la première image de l'horizon des événements d'un trou
+          noir, M87*.
+        zh: >-
+          事件视界望远镜发布了黑洞M87*事件视界的第一张图像。
+        ja: >-
+          イベントホライズンテレスコープが、ブラックホールM87*の事象の地平面の初画像を公開する。
+    - year: Hoy
+      label:
+        es: >-
+          Sigue siendo la herramienta básica para estimar el tamaño de cualquier agujero negro
+          conocido.
+        en: >-
+          It remains the basic tool for estimating the size of any known black hole.
+        pt: >-
+          Continua sendo a ferramenta básica para estimar o tamanho de qualquer buraco negro
+          conhecido.
+        fr: >-
+          Elle reste l'outil de base pour estimer la taille de tout trou noir connu.
+        zh: >-
+          它仍然是估算任何已知黑洞大小的基本工具。
+        ja: >-
+          既知のあらゆるブラックホールの大きさを推定するための基本的な道具であり続けている。
+  useCases:
+    - title:
+        es: Astrofísica estelar
+        en: Stellar astrophysics
+        pt: Astrofísica estelar
+        fr: Astrophysique stellaire
+        zh: 恒星天体物理学
+        ja: 恒星天体物理学
+      description:
+        es: >-
+          Comparada con la masa del objeto, la fórmula distingue una estrella de neutrones de un
+          agujero negro.
+        en: >-
+          Compared with the object's mass, the formula tells a neutron star apart from a black hole.
+        pt: >-
+          Comparada com a massa do objeto, a fórmula distingue uma estrela de nêutrons de um buraco
+          negro.
+        fr: >-
+          Comparée à la masse de l'objet, la formule distingue une étoile à neutrons d'un trou noir.
+        zh: >-
+          与天体质量比较，该公式可区分中子星与黑洞。
+        ja: >-
+          天体の質量と比較することで、中性子星とブラックホールを区別できる。
+    - title:
+        es: Agujeros negros supermasivos
+        en: Supermassive black holes
+        pt: Buracos negros supermassivos
+        fr: Trous noirs supermassifs
+        zh: 超大质量黑洞
+        ja: 超大質量ブラックホール
+      description:
+        es: >-
+          El horizonte de Sgr A*, el agujero negro central de la Vía Láctea, se estima con esta
+          fórmula a partir de su masa de 4×10⁶ masas solares.
+        en: >-
+          The horizon of Sgr A*, the Milky Way's central black hole, is estimated with this formula
+          from its mass of 4×10⁶ solar masses.
+        pt: >-
+          O horizonte de Sgr A*, o buraco negro central da Via Láctea, é estimado com esta fórmula a
+          partir de sua massa de 4×10⁶ massas solares.
+        fr: >-
+          L'horizon de Sgr A*, le trou noir central de la Voie lactée, est estimé avec cette formule
+          à partir de sa masse de 4×10⁶ masses solaires.
+        zh: >-
+          银河系中心的黑洞人马座A*的视界，就是依据其4×10⁶倍太阳质量用该公式估算的。
+        ja: >-
+          銀河系中心のブラックホールSgr A*の地平面は、4×10⁶太陽質量の質量からこの式で推定される。
+    - title:
+        es: Ondas gravitacionales
+        en: Gravitational waves
+        pt: Ondas gravitacionais
+        fr: Ondes gravitationnelles
+        zh: 引力波
+        ja: 重力波
+      description:
+        es: >-
+          LIGO y Virgo modelan la fusión de agujeros negros usando el radio de Schwarzschild de cada
+          componente.
+        en: >-
+          LIGO and Virgo model black hole mergers using each component's Schwarzschild radius.
+        pt: >-
+          LIGO e Virgo modelam a fusão de buracos negros usando o raio de Schwarzschild de cada
+          componente.
+        fr: >-
+          LIGO et Virgo modélisent les fusions de trous noirs en utilisant le rayon de Schwarzschild
+          de chaque composant.
+        zh: >-
+          LIGO和Virgo使用每个组成黑洞的史瓦西半径来模拟黑洞并合过程。
+        ja: >-
+          LIGOとVirgoは、各成分のシュヴァルツシルト半径を使ってブラックホールの合体をモデル化する。
+    - title:
+        es: Cosmología
+        en: Cosmology
+        pt: Cosmologia
+        fr: Cosmologie
+        zh: 宇宙学
+        ja: 宇宙論
+      description:
+        es: >-
+          Se usa para estimar el tamaño de los agujeros negros primordiales, candidatos a materia
+          oscura.
+        en: >-
+          It estimates the size of primordial black holes, a dark matter candidate.
+        pt: >-
+          É usada para estimar o tamanho dos buracos negros primordiais, candidatos a matéria
+          escura.
+        fr: >-
+          Elle sert à estimer la taille des trous noirs primordiaux, candidats à la matière noire.
+        zh: >-
+          用于估算原初黑洞的大小，而原初黑洞是暗物质的候选者。
+        ja: >-
+          ダークマターの候補である原始ブラックホールの大きさの推定に使われる。
+  example:
+    title:
+      es: El Sol como agujero negro
+      en: The Sun as a black hole
+      pt: O Sol como buraco negro
+      fr: Le Soleil en tant que trou noir
+      zh: 把太阳变成黑洞
+      ja: 太陽をブラックホールにすると
+    lines:
+      - es: G = 6.674×10⁻¹¹, M = 1.989×10³⁰ kg, c = 3×10⁸ m/s
+        en: G = 6.674×10⁻¹¹, M = 1.989×10³⁰ kg, c = 3×10⁸ m/s
+        pt: G = 6,674×10⁻¹¹, M = 1,989×10³⁰ kg, c = 3×10⁸ m/s
+        fr: G = 6,674×10⁻¹¹, M = 1,989×10³⁰ kg, c = 3×10⁸ m/s
+        zh: G = 6.674×10⁻¹¹，M = 1.989×10³⁰ 千克，c = 3×10⁸ 米/秒
+        ja: G = 6.674×10⁻¹¹、M = 1.989×10³⁰ kg、c = 3×10⁸ m/s
+      - es: 2GM = 2 · 6.674×10⁻¹¹ · 1.989×10³⁰ ≈ 2.655×10²⁰
+        en: 2GM = 2 · 6.674×10⁻¹¹ · 1.989×10³⁰ ≈ 2.655×10²⁰
+        pt: 2GM = 2 · 6,674×10⁻¹¹ · 1,989×10³⁰ ≈ 2,655×10²⁰
+        fr: 2GM = 2 · 6,674×10⁻¹¹ · 1,989×10³⁰ ≈ 2,655×10²⁰
+        zh: 2GM = 2 · 6.674×10⁻¹¹ · 1.989×10³⁰ ≈ 2.655×10²⁰
+        ja: 2GM = 2 · 6.674×10⁻¹¹ · 1.989×10³⁰ ≈ 2.655×10²⁰
+      - es: c² = (3×10⁸)² = 9×10¹⁶
+        en: c² = (3×10⁸)² = 9×10¹⁶
+        pt: c² = (3×10⁸)² = 9×10¹⁶
+        fr: c² = (3×10⁸)² = 9×10¹⁶
+        zh: c² = (3×10⁸)² = 9×10¹⁶
+        ja: c² = (3×10⁸)² = 9×10¹⁶
+      - es: rₛ = 2GM / c² = 2.655×10²⁰ / 9×10¹⁶
+        en: rₛ = 2GM / c² = 2.655×10²⁰ / 9×10¹⁶
+        pt: rₛ = 2GM / c² = 2,655×10²⁰ / 9×10¹⁶
+        fr: rₛ = 2GM / c² = 2,655×10²⁰ / 9×10¹⁶
+        zh: rₛ = 2GM / c² = 2.655×10²⁰ / 9×10¹⁶
+        ja: rₛ = 2GM / c² = 2.655×10²⁰ / 9×10¹⁶
+      - es: rₛ ≈ 2.95×10³ m ≈ 2950 m (unos 3 km)
+        en: rₛ ≈ 2.95×10³ m ≈ 2950 m (about 3 km)
+        pt: rₛ ≈ 2,95×10³ m ≈ 2950 m (cerca de 3 km)
+        fr: rₛ ≈ 2,95×10³ m ≈ 2950 m (environ 3 km)
+        zh: rₛ ≈ 2.95×10³ 米 ≈ 2950 米（约 3 千米）
+        ja: rₛ ≈ 2.95×10³ m ≈ 2950 m（約3 km）

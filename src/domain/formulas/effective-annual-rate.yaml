@@ -1,0 +1,381 @@
+id: effective-annual-rate
+title:
+  es: Tasa Anual Efectiva
+  en: Effective Annual Rate
+  pt: Taxa Anual Efetiva
+  fr: Taux annuel effectif
+  zh: 有效年利率
+  ja: 実効年利率
+category:
+  es: Finanzas
+  en: Finance
+  pt: Finanças
+  fr: Finance
+  zh: 金融
+  ja: 金融
+nodes:
+  - id: ear
+    type: variable
+    value: EAR
+    explanation:
+      es: La tasa anual efectiva, el costo real anual de un préstamo o inversión.
+      en: The effective annual rate, the true annual cost of a loan or investment.
+      pt: A taxa anual efetiva, o custo real anual de um empréstimo ou investimento.
+      fr: Le taux annuel effectif, le coût réel annuel d'un prêt ou d'un investissement.
+      zh: 有效年利率，即贷款或投资的真实年成本。
+      ja: 実効年利率。ローンや投資の実際の年間コスト。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: 次の値に等しい。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el factor de crecimiento de un periodo de capitalización.
+      en: Opens the growth factor of one compounding period.
+      pt: Abre o fator de crescimento de um período de capitalização.
+      fr: Ouvre le facteur de croissance d'une période de capitalisation.
+      zh: 打开一个复利周期的增长因子。
+      ja: 1回の複利計算期間の成長率を開く括弧。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: La unidad, el 100% del capital original.
+      en: The unit, 100% of the original capital.
+      pt: A unidade, os 100% do capital original.
+      fr: L'unité, les 100 % du capital d'origine.
+      zh: 单位1，即原始资本的100%。
+      ja: 1。元の資本の100%。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado a la tasa de cada periodo.
+      en: Added to the rate of each period.
+      pt: Somado à taxa de cada período.
+      fr: Ajouté au taux de chaque période.
+      zh: 加上每个周期的利率。
+      ja: 各期間の利率を加える。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: La tasa nominal anual, expresada como decimal.
+      en: The nominal annual rate, expressed as a decimal.
+      pt: A taxa nominal anual, expressa como decimal.
+      fr: Le taux nominal annuel, exprimé sous forme décimale.
+      zh: 名义年利率，以小数表示。
+      ja: 名目年利率。小数で表される。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: El número de capitalizaciones por año.
+      en: The number of compounding periods per year.
+      pt: O número de capitalizações por ano.
+      fr: Le nombre de capitalisations par an.
+      zh: 每年复利计算的次数。
+      ja: 1年あたりの複利計算回数。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el factor de crecimiento de cada periodo.
+      en: Closes the per-period growth factor.
+      pt: Fecha o fator de crescimento de cada período.
+      fr: Ferme le facteur de croissance de chaque période.
+      zh: 关闭每个周期的增长因子。
+      ja: 各期間の成長率の括弧を閉じる。
+  - id: n-power
+    type: superscript
+    value: n
+    explanation:
+      es: Elevado a n, para componer el interés una vez por cada periodo del año.
+      en: Raised to n, compounding the interest once per period of the year.
+      pt: Elevado a n, para capitalizar o juro uma vez por cada período do ano.
+      fr: Élevé à n, pour capitaliser l'intérêt une fois par période de l'année.
+      zh: 取n次幂，使利息按一年的每个周期复利。
+      ja: n乗。1年の各期間ごとに利息を複利計算する。
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: Menos, restando el capital original.
+      en: Minus, subtracting the original capital.
+      pt: Menos, subtraindo o capital original.
+      fr: Moins, en soustrayant le capital d'origine.
+      zh: 减，减去原始资本。
+      ja: マイナス。元の資本を引く。
+  - id: one-final
+    type: number
+    value: "1"
+    explanation:
+      es: La unidad otra vez, para que el resultado sea la tasa pura.
+      en: The unit again, so the result is the pure rate.
+      pt: A unidade novamente, para que o resultado seja a taxa pura.
+      fr: L'unité à nouveau, pour que le résultat soit le taux pur.
+      zh: 单位1再次出现，使结果成为纯粹的利率。
+      ja: もう一度の1。結果を純粋な利率にするため。
+context:
+  author:
+    es: Basado en el interés compuesto
+    en: Based on compound interest
+    pt: Baseado nos juros compostos
+    fr: Basé sur les intérêts composés
+    zh: 基于复利
+    ja: 複利に基づく
+  era:
+    es: Europa, s. XVII–XX
+    en: Europe, 17th–20th centuries
+    pt: Europa, séc. XVII–XX
+    fr: Europe, XVIIe–XXe siècle
+    zh: 欧洲，17–20世纪
+    ja: ヨーロッパ、17–20世紀
+  history:
+    es: >-
+      La tasa anual efectiva responde a una trampa de los números: el interés nominal no dice cuánto
+      se paga realmente si la capitalización ocurre varias veces al año. La idea creció con el
+      interés compuesto, que se remonta a los tratados comerciales europeos del siglo XVII, y se
+      estandarizó con la legislación financiera del siglo XX que obliga a los prestamistas a divulgar
+      el costo real. Comparar tarjetas de crédito y préstamos sin la tasa efectiva es comparar cifras
+      incomparables.
+    en: >-
+      The effective annual rate answers a numbers trap: the nominal rate does not say how much is
+      really paid when compounding happens several times a year. The idea grew out of compound
+      interest, which traces back to European commercial treatises of the 17th century, and was
+      standardized by the financial legislation of the 20th century that forces lenders to disclose
+      the true cost. Comparing credit cards and loans without the effective rate is comparing
+      incomparable figures.
+    pt: >-
+      A taxa anual efetiva responde a uma armadilha dos números: a taxa nominal não diz quanto
+      realmente se paga quando a capitalização ocorre várias vezes ao ano. A ideia cresceu com os
+      juros compostos, que remontam aos tratados comerciais europeus do século XVII, e foi
+      padronizada pela legislação financeira do século XX, que obriga os credores a divulgar o custo
+      real. Comparar cartões de crédito e empréstimos sem a taxa efetiva é comparar cifras
+      incomparáveis.
+    fr: >-
+      Le taux annuel effectif répond à un piège des nombres : le taux nominal ne dit pas combien on
+      paie réellement lorsque la capitalisation a lieu plusieurs fois par an. L'idée est née des
+      intérêts composés, dont l'origine remonte aux traités commerciaux européens du XVIIe siècle, et
+      a été normalisée par la législation financière du XXe siècle, qui oblige les prêteurs à divulguer
+      le coût réel. Comparer des cartes de crédit et des prêts sans le taux effectif, c'est comparer
+      des chiffres incomparables.
+    zh: >-
+      有效年利率针对的是数字上的一个陷阱：当复利一年内发生多次时，名义利率并不能说明实际支付或获得的水平。
+      这一思想源于17世纪欧洲的商业著作中的复利概念，并在20世纪通过要求贷方披露真实成本的金融立法而标准化。
+      不借助有效利率来比较信用卡和贷款，无异于比较无法比较的数字。
+    ja: >-
+      実効年利率は、数字の落とし穴に答えるものだ。複利計算が1年に何度も行われる場合、名目利率は実際に
+      支払う額を示してはくれない。この考えは、17世紀のヨーロッパの商業書にまで遡る複利から生まれ、
+      貸し手に真のコストの開示を義務付けた20世紀の金融法制によって標準化された。実効利率を使わずに
+      クレジットカードやローンを比較することは、比較できない数字を比べることに等しい。
+  timeline:
+    - year: "1613"
+      label:
+        es: >-
+          Richard Witt publica en Londres el primer tratado en inglés dedicado enteramente al interés
+          compuesto.
+        en: >-
+          Richard Witt publishes in London the first English treatise devoted entirely to compound
+          interest.
+        pt: >-
+          Richard Witt publica em Londres o primeiro tratado em inglês dedicado inteiramente aos
+          juros compostos.
+        fr: >-
+          Richard Witt publie à Londres le premier traité en anglais entièrement consacré aux
+          intérêts composés.
+        zh: >-
+          理查德·威特在伦敦出版了第一部完全专门论述复利的英文著作。
+        ja: >-
+          リチャード・ウィットがロンドンで、複利のみを扱った初の英語の論文を出版する。
+    - year: s. XVII
+      label:
+        es: >-
+          El interés compuesto se formaliza en los tratados comerciales y actuariales de Europa.
+        en: >-
+          Compound interest is formalized in Europe's commercial and actuarial treatises.
+        pt: >-
+          Os juros compostos são formalizados nos tratados comerciais e atuariais da Europa.
+        fr: >-
+          Les intérêts composés se formalisent dans les traités commerciaux et actuariels d'Europe.
+        zh: >-
+          复利在欧洲的商业和精算著作中得到正式化。
+        ja: >-
+          ヨーロッパの商業書・保険数理書で複利が定式化される。
+    - year: "1968"
+      label:
+        es: >-
+          La Truth in Lending Act de Estados Unidos obliga a los prestamistas a divulgar la tasa
+          efectiva.
+        en: >-
+          The U.S. Truth in Lending Act forces lenders to disclose the effective rate.
+        pt: >-
+          A Truth in Lending Act dos EUA obriga os credores a divulgar a taxa efetiva.
+        fr: >-
+          La Truth in Lending Act américaine oblige les prêteurs à divulguer le taux effectif.
+        zh: >-
+          美国的《贷款真相法案》强制贷方披露有效利率。
+        ja: >-
+          米国の貸付真実法（Truth in Lending Act）が、貸し手に実効利率の開示を義務付ける。
+    - year: Hoy
+      label:
+        es: >-
+          Comparar tarjetas, préstamos e inversiones sin la tasa efectiva es casi imposible en el
+          mundo regulado.
+        en: >-
+          Comparing cards, loans, and investments without the effective rate is nearly impossible in
+          the regulated world.
+        pt: >-
+          Comparar cartões, empréstimos e investimentos sem a taxa efetiva é quase impossível no
+          mundo regulado.
+        fr: >-
+          Comparer cartes, prêts et investissements sans le taux effectif est presque impossible dans
+          le monde réglementé.
+        zh: >-
+          在监管日趋完善的世界里，不使用有效利率比较信用卡、贷款和投资几乎是不可能的。
+        ja: >-
+          規制の行き届いた世界では、実効利率なしにカード、ローン、投資を比較することはほぼ不可能である。
+  useCases:
+    - title:
+        es: Tarjetas de crédito
+        en: Credit cards
+        pt: Cartões de crédito
+        fr: Cartes de crédit
+        zh: 信用卡
+        ja: クレジットカード
+      description:
+        es: >-
+          Compara el costo real del financiamiento entre emisores con distinta capitalización.
+        en: >-
+          It compares the true cost of financing across issuers with different compounding.
+        pt: >-
+          Compara o custo real do financiamento entre emissores com capitalização diferente.
+        fr: >-
+          Il compare le coût réel du financement entre émetteurs à capitalisation différente.
+        zh: >-
+          在复利方式不同的发卡机构之间，比较真实的融资成本。
+        ja: >-
+          複利方式が異なる発行会社間で、実際の資金調達コストを比較する。
+    - title:
+        es: Préstamos y créditos
+        en: Loans and credit
+        pt: Empréstimos e créditos
+        fr: Prêts et crédits
+        zh: 贷款与信贷
+        ja: 融資・信用
+      description:
+        es: >-
+          Evalúa ofertas de bancos y fintechs por su costo anual real, no por el nominal.
+        en: >-
+          It evaluates bank and fintech offers by their real annual cost, not the nominal one.
+        pt: >-
+          Avalia ofertas de bancos e fintechs pelo seu custo anual real, não pelo nominal.
+        fr: >-
+          Il évalue les offres des banques et des fintechs par leur coût annuel réel, pas nominal.
+        zh: >-
+          按真实年成本而非名义利率来评估银行与金融科技公司的报价。
+        ja: >-
+          銀行やフィンテックの提示を、名目ではなく実質の年間コストで評価する。
+    - title:
+        es: Inversiones
+        en: Investments
+        pt: Investimentos
+        fr: Investissements
+        zh: 投资
+        ja: 投資
+      description:
+        es: >-
+          Compara depósitos y bonos con distintas frecuencias de capitalización.
+        en: >-
+          It compares deposits and bonds with different compounding frequencies.
+        pt: >-
+          Compara depósitos e títulos com frequências de capitalização diferentes.
+        fr: >-
+          Il compare dépôts et obligations à différentes fréquences de capitalisation.
+        zh: >-
+          比较具有不同复利频率的存款和债券。
+        ja: >-
+          複利計算の頻度が異なる預金や債券を比較する。
+    - title:
+        es: Regulación financiera
+        en: Financial regulation
+        pt: Regulação financeira
+        fr: Régulation financière
+        zh: 金融监管
+        ja: 金融規制
+      description:
+        es: >-
+          La ley obliga a divulgar la tasa efectiva en contratos y publicidad de crédito.
+        en: >-
+          The law requires disclosing the effective rate in credit contracts and advertising.
+        pt: >-
+          A lei obriga a divulgar a taxa efetiva em contratos e publicidade de crédito.
+        fr: >-
+          La loi impose de divulguer le taux effectif dans les contrats et la publicité de crédit.
+        zh: >-
+          法律要求在信贷合同和广告中披露有效利率。
+        ja: >-
+          法律により、クレジット契約や広告で実効利率の開示が義務付けられている。
+  example:
+    title:
+      es: Tarjeta con tasa nominal del 12%
+      en: Card with a 12% nominal rate
+      pt: Cartão com taxa nominal de 12%
+      fr: Carte à taux nominal de 12 %
+      zh: 名义利率12%的信用卡
+      ja: 名目利率12%のカード
+    lines:
+      - es: "r = 12% = 0.12; n = 12 (capitalización mensual)"
+        en: "r = 12% = 0.12; n = 12 (monthly compounding)"
+        pt: "r = 12% = 0,12; n = 12 (capitalização mensal)"
+        fr: "r = 12 % = 0,12 ; n = 12 (capitalisation mensuelle)"
+        zh: "r = 12% = 0.12；n = 12（每月复利）"
+        ja: "r = 12% = 0.12；n = 12（月次複利）"
+      - es: EAR = (1 + 0.12/12)¹² − 1
+        en: EAR = (1 + 0.12/12)¹² − 1
+        pt: EAR = (1 + 0.12/12)¹² − 1
+        fr: EAR = (1 + 0.12/12)¹² − 1
+        zh: EAR = (1 + 0.12/12)¹² − 1
+        ja: EAR = (1 + 0.12/12)¹² − 1
+      - es: EAR = (1.01)¹² − 1
+        en: EAR = (1.01)¹² − 1
+        pt: EAR = (1.01)¹² − 1
+        fr: EAR = (1.01)¹² − 1
+        zh: EAR = (1.01)¹² − 1
+        ja: EAR = (1.01)¹² − 1
+      - es: (1.01)¹² ≈ 1.1268
+        en: (1.01)¹² ≈ 1.1268
+        pt: (1.01)¹² ≈ 1,1268
+        fr: (1.01)¹² ≈ 1,1268
+        zh: (1.01)¹² ≈ 1.1268
+        ja: (1.01)¹² ≈ 1.1268
+      - es: EAR ≈ 0.1268
+        en: EAR ≈ 0.1268
+        pt: EAR ≈ 0,1268
+        fr: EAR ≈ 0,1268
+        zh: EAR ≈ 0.1268
+        ja: EAR ≈ 0.1268
+      - es: EAR ≈ 12.68%
+        en: EAR ≈ 12.68%
+        pt: EAR ≈ 12,68%
+        fr: EAR ≈ 12,68 %
+        zh: EAR ≈ 12.68%
+        ja: EAR ≈ 12.68%

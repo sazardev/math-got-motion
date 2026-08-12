@@ -1,0 +1,302 @@
+id: escape-velocity
+title:
+  es: Velocidad de Escape
+  en: Escape Velocity
+  pt: Velocidade de Escape
+  fr: Vitesse de libération
+  zh: 逃逸速度
+  ja: 脱出速度
+category:
+  es: Astronomía
+  en: Astronomy
+  pt: Astronomia
+  fr: Astronomie
+  zh: 天文学
+  ja: 天文学
+nodes:
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: "v: la velocidad mínima para escapar de la gravedad."
+      en: "v: the minimum speed to escape gravity."
+      pt: "v: a velocidade mínima para escapar da gravidade."
+      fr: "v : la vitesse minimale pour échapper à la gravité."
+      zh: "v：挣脱引力所需的最小速度。"
+      ja: "v：重力から逃れるための最小速度。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: Raíz cuadrada de.
+      en: Square root of.
+      pt: Raiz quadrada de.
+      fr: Racine carrée de.
+      zh: 的平方根。
+      ja: の平方根。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre la expresión.
+      en: Opens the expression.
+      pt: Abre a expressão.
+      fr: Ouvre l'expression.
+      zh: 打开表达式。
+      ja: 式を開く括弧。
+  - id: two-gm
+    type: variable
+    value: 2GM
+    explanation:
+      es: "2·G·M: dos veces la constante gravitatoria por la masa."
+      en: "2·G·M: twice the gravitational constant times the mass."
+      pt: "2·G·M: duas vezes a constante gravitacional vezes a massa."
+      fr: "2·G·M : deux fois la constante gravitationnelle par la masse."
+      zh: "2·G·M：两倍的引力常数乘以质量。"
+      ja: "2・G・M：万有引力定数の2倍×質量。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "r: la distancia al centro del cuerpo celeste."
+      en: "r: the distance to the celestial body's center."
+      pt: "r: a distância ao centro do corpo celeste."
+      fr: "r : la distance au centre du corps céleste."
+      zh: "r：到天体中心的距离。"
+      ja: "r：天体の中心までの距離。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la expresión.
+      en: Closes the expression.
+      pt: Fecha a expressão.
+      fr: Ferme l'expression.
+      zh: 关闭表达式。
+      ja: 式を閉じる括弧。
+context:
+  author:
+    es: Isaac Newton
+    en: Isaac Newton
+    pt: Isaac Newton
+    fr: Isaac Newton
+    zh: 艾萨克·牛顿
+    ja: アイザック・ニュートン
+  era:
+    es: Inglaterra, 1643–1727 · deducida en los Principia, 1687
+    en: England, 1643–1727 · derived in the Principia, 1687
+    pt: Inglaterra, 1643–1727 · deduzida nos Principia, 1687
+    fr: Angleterre, 1643–1727 · déduite dans les Principia, 1687
+    zh: 英国，1643–1727年·1687年在《原理》中推导
+    ja: イングランド、1643–1727年・1687年に『プリンキピア』で導出
+  history:
+    es: >-
+      Newton ya calculó en los Principia (1687) la velocidad necesaria para que un proyectil escape de
+      la gravedad terrestre: unos 11.2 km/s. La velocidad de escape se obtiene igualando la energía
+      cinética con la energía potencial gravitatoria. Es la razón por la que la Luna y los cohetes
+      orbitan pero no caen, y por la que algunos cuerpos con gravedad extrema no dejan escapar ni la
+      luz: los agujeros negros.
+    en: >-
+      Newton already computed in the Principia (1687) the speed needed for a projectile to escape
+      Earth's gravity: about 11.2 km/s. Escape velocity comes from equating kinetic energy with
+      gravitational potential energy. It is why the Moon and rockets orbit but do not fall, and why
+      bodies with extreme gravity let nothing escape, not even light: black holes.
+    pt: >-
+      Newton já calculou nos Principia (1687) a velocidade necessária para um projétil escapar da
+      gravidade terrestre: cerca de 11,2 km/s. A velocidade de escape é obtida igualando a energia
+      cinética com a energia potencial gravitacional. É a razão pela qual a Lua e os foguetes orbitam
+      mas não caem, e pela qual corpos com gravidade extrema não deixam escapar nem a luz: os buracos
+      negros.
+    fr: >-
+      Newton calcula déjà dans les Principia (1687) la vitesse nécessaire à un projectile pour échapper
+      à la gravité terrestre : environ 11,2 km/s. La vitesse de libération s'obtient en égalant
+      l'énergie cinétique à l'énergie potentielle gravitationnelle. C'est pourquoi la Lune et les
+      fusées orbitent sans tomber, et pourquoi des corps à gravité extrême ne laissent rien s'échapper,
+      pas même la lumière : les trous noirs.
+    zh: >-
+      牛顿在《原理》（1687年）中已计算出抛射体挣脱地球引力所需的速度：约11.2千米/秒。逃逸速度通过令动能等于
+      引力势能来求得。这正是月球和火箭能够环绕而不坠落的原因，也是引力极强的天体连光都无法逃逸（黑洞）的原因。
+    ja: >-
+      ニュートンは『プリンキピア』（1687年）で、投射物が地球の重力から逃れるのに必要な速度、約11.2 km/sをすでに
+      計算していた。脱出速度は、運動エネルギーと重力による位置エネルギーを等置することで得られる。これは、月や
+      ロケットが落下せずに軌道を回る理由であり、極端な重力を持つ天体が光さえも逃がさない（ブラックホール）理由
+      でもある。
+  timeline:
+    - year: "1687"
+      label:
+        es: >-
+          Newton calcula la velocidad de escape terrestre en los Principia.
+        en: >-
+          Newton computes Earth's escape velocity in the Principia.
+        pt: >-
+          Newton calcula a velocidade de escape terrestre nos Principia.
+        fr: >-
+          Newton calcule la vitesse de libération terrestre dans les Principia.
+        zh: >-
+          牛顿在《原理》中计算地球的逃逸速度。
+        ja: >-
+          ニュートンが『プリンキピア』で地球の脱出速度を計算する。
+    - year: "1783"
+      label:
+        es: >-
+          John Michell concibe los "agujeros negros": cuerpos cuya velocidad de escape supera la luz.
+        en: >-
+          John Michell conceives "black holes": bodies whose escape velocity exceeds light.
+        pt: >-
+          John Michell concebe os "buracos negros": corpos cuja velocidade de escape supera a luz.
+        fr: >-
+          John Michell conçoit les « trous noirs » : des corps dont la vitesse de libération dépasse
+          la lumière.
+        zh: >-
+          约翰·米歇尔构想"黑洞"：逃逸速度超过光速的天体。
+        ja: >-
+          ジョン・ミッチェルが「ブラックホール」、すなわち脱出速度が光を超える天体を構想する。
+    - year: "1969"
+      label:
+        es: >-
+          El Apolo 11 alcanza la velocidad de escape lunar para volver a la Tierra.
+        en: >-
+          Apollo 11 reaches lunar escape velocity to return to Earth.
+        pt: >-
+          A Apollo 11 atinge a velocidade de escape lunar para voltar à Terra.
+        fr: >-
+          Apollo 11 atteint la vitesse de libération lunaire pour revenir sur Terre.
+        zh: >-
+          阿波罗11号达到月球逃逸速度以返回地球。
+        ja: >-
+          アポロ11号が地球へ戻るために月の脱出速度に達する。
+    - year: Hoy
+      label:
+        es: >-
+          Rige el lanzamiento de cohetes y el diseño de todas las misiones espaciales.
+        en: >-
+          It governs rocket launches and the design of all space missions.
+        pt: >-
+          Rege o lançamento de foguetes e o projeto de todas as missões espaciais.
+        fr: >-
+          Elle régit le lancement des fusées et la conception de toutes les missions spatiales.
+        zh: >-
+          它支配着火箭发射和所有太空任务的设计。
+        ja: >-
+          ロケットの打ち上げとすべての宇宙ミッションの設計を支配している。
+  useCases:
+    - title:
+        es: Misiones espaciales
+        en: Space missions
+        pt: Missões espaciais
+        fr: Missions spatiales
+        zh: 太空任务
+        ja: 宇宙ミッション
+      description:
+        es: >-
+          Un cohete interplanetario debe superar la velocidad de escape de la Tierra.
+        en: >-
+          An interplanetary rocket must exceed Earth's escape velocity.
+        pt: >-
+          Um foguete interplanetário deve superar a velocidade de escape da Terra.
+        fr: >-
+          Une fusée interplanétaire doit dépasser la vitesse de libération de la Terre.
+        zh: >-
+          星际火箭必须超过地球的逃逸速度。
+        ja: >-
+          惑星間ロケットは、地球の脱出速度を超えなければならない。
+    - title:
+        es: Agujeros negros
+        en: Black holes
+        pt: Buracos negros
+        fr: Trous noirs
+        zh: 黑洞
+        ja: ブラックホール
+      description:
+        es: >-
+          Cuando la velocidad de escape supera la luz, nada sale: ese es el horizonte de sucesos.
+        en: >-
+          When escape velocity exceeds light, nothing escapes: that is the event horizon.
+        pt: >-
+          Quando a velocidade de escape supera a luz, nada sai: esse é o horizonte de eventos.
+        fr: >-
+          Quand la vitesse de libération dépasse la lumière, rien ne sort : c'est l'horizon des
+          événements.
+        zh: >-
+          当逃逸速度超过光速时，一切皆无法逃出：这就是事件视界。
+        ja: >-
+          脱出速度が光を超えると何も出られない。それが事象の地平面である。
+    - title:
+        es: Exploración planetaria
+        en: Planetary exploration
+        pt: Exploração planetária
+        fr: Exploration planétaire
+        zh: 行星探测
+        ja: 惑星探査
+      description:
+        es: >-
+          Despegar de la Luna requiere solo 2.4 km/s, mucho menos que de la Tierra.
+        en: >-
+          Taking off from the Moon needs only 2.4 km/s, far less than from Earth.
+        pt: >-
+          Decolar da Lua exige apenas 2,4 km/s, muito menos do que da Terra.
+        fr: >-
+          Décoller de la Lune ne demande que 2,4 km/s, bien moins que depuis la Terre.
+        zh: >-
+          从月球起飞只需2.4千米/秒，远比从地球少。
+        ja: >-
+          月からの離陸に必要なのはわずか2.4 km/sで、地球よりはるかに少ない。
+  example:
+    title:
+      es: Escapar de la Tierra
+      en: Escaping Earth
+      pt: Escapar da Terra
+      fr: Échapper à la Terre
+      zh: 挣脱地球
+      ja: 地球から脱出
+    lines:
+      - es: G = 6.674×10⁻¹¹, M = 5.972×10²⁴ kg, r = 6.371×10⁶ m
+        en: G = 6.674×10⁻¹¹, M = 5.972×10²⁴ kg, r = 6.371×10⁶ m
+        pt: G = 6,674×10⁻¹¹, M = 5,972×10²⁴ kg, r = 6,371×10⁶ m
+        fr: G = 6,674×10⁻¹¹, M = 5,972×10²⁴ kg, r = 6,371×10⁶ m
+        zh: G = 6.674×10⁻¹¹，M = 5.972×10²⁴ 千克，r = 6.371×10⁶ 米
+        ja: G = 6.674×10⁻¹¹、M = 5.972×10²⁴ kg、r = 6.371×10⁶ m
+      - es: 2GM = 2 · 6.674×10⁻¹¹ · 5.972×10²⁴ ≈ 7.97×10¹⁴
+        en: 2GM = 2 · 6.674×10⁻¹¹ · 5.972×10²⁴ ≈ 7.97×10¹⁴
+        pt: 2GM = 2 · 6,674×10⁻¹¹ · 5,972×10²⁴ ≈ 7,97×10¹⁴
+        fr: 2GM = 2 · 6,674×10⁻¹¹ · 5,972×10²⁴ ≈ 7,97×10¹⁴
+        zh: 2GM = 2 · 6.674×10⁻¹¹ · 5.972×10²⁴ ≈ 7.97×10¹⁴
+        ja: 2GM = 2 · 6.674×10⁻¹¹ · 5.972×10²⁴ ≈ 7.97×10¹⁴
+      - es: 2GM/r ≈ 1.25×10⁸
+        en: 2GM/r ≈ 1.25×10⁸
+        pt: 2GM/r ≈ 1,25×10⁸
+        fr: 2GM/r ≈ 1,25×10⁸
+        zh: 2GM/r ≈ 1.25×10⁸
+        ja: 2GM/r ≈ 1.25×10⁸
+      - es: v = √(1.25×10⁸)
+        en: v = √(1.25×10⁸)
+        pt: v = √(1,25×10⁸)
+        fr: v = √(1,25×10⁸)
+        zh: v = √(1.25×10⁸)
+        ja: v = √(1.25×10⁸)
+      - es: v ≈ 11.2 km/s
+        en: v ≈ 11.2 km/s
+        pt: v ≈ 11,2 km/s
+        fr: v ≈ 11,2 km/s
+        zh: v ≈ 11.2 千米/秒
+        ja: v ≈ 11.2 km/s

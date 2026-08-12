@@ -1,0 +1,292 @@
+id: integration-by-parts
+title:
+  es: Integración por Partes
+  en: Integration by Parts
+  pt: Integração por Partes
+  fr: Intégration par parties
+  zh: 分部积分法
+  ja: 部分積分
+category:
+  es: Cálculo
+  en: Calculus
+  pt: Cálculo
+  fr: Calcul
+  zh: 微积分
+  ja: 微積分
+nodes:
+  - id: integral
+    type: operator
+    value: ∫
+    explanation:
+      es: La integral indefinida.
+      en: The indefinite integral.
+      pt: A integral indefinida.
+      fr: L'intégrale indéfinie.
+      zh: 不定积分。
+      ja: 不定積分。
+  - id: u
+    type: variable
+    value: u
+    explanation:
+      es: "u: la parte que se derivará."
+      en: "u: the part to be differentiated."
+      pt: "u: a parte que será derivada."
+      fr: "u : la partie à dériver."
+      zh: "u：将被求导的部分。"
+      ja: "u：微分する部分。"
+  - id: dv
+    type: variable
+    value: dv
+    explanation:
+      es: "d v: la parte que se integrará."
+      en: "d v: the part to be integrated."
+      pt: "d v: a parte que será integrada."
+      fr: "d v : la partie à intégrer."
+      zh: "d v：将被积分的部分。"
+      ja: "d v：積分する部分。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: uv
+    type: variable
+    value: u·v
+    explanation:
+      es: El producto de las dos funciones.
+      en: The product of the two functions.
+      pt: O produto das duas funções.
+      fr: Le produit des deux fonctions.
+      zh: 两个函数的乘积。
+      ja: 2つの関数の積。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: Menos la integral restante.
+      en: Minus the remaining integral.
+      pt: Menos a integral restante.
+      fr: Moins l'intégrale restante.
+      zh: 减去余下的积分。
+      ja: 残りの積分を引く。
+  - id: integral-2
+    type: operator
+    value: ∫
+    explanation:
+      es: La integral restante.
+      en: The remaining integral.
+      pt: A integral restante.
+      fr: L'intégrale restante.
+      zh: 余下的积分。
+      ja: 残りの積分。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La función integrada.
+      en: The integrated function.
+      pt: A função integrada.
+      fr: La fonction intégrée.
+      zh: 积分后的函数。
+      ja: 積分した関数。
+  - id: du
+    type: variable
+    value: du
+    explanation:
+      es: "d u: la derivada de u."
+      en: "d u: the derivative of u."
+      pt: "d u: a derivada de u."
+      fr: "d u : la dérivée de u."
+      zh: "d u：u的导数。"
+      ja: "d u：uの微分。"
+context:
+  author:
+    es: Brook Taylor
+    en: Brook Taylor
+    pt: Brook Taylor
+    fr: Brook Taylor
+    zh: 布鲁克·泰勒
+    ja: ブルック・テイラー
+  era:
+    es: Inglaterra, 1685–1731 · publicada en 1715
+    en: England, 1685–1731 · published in 1715
+    pt: Inglaterra, 1685–1731 · publicada em 1715
+    fr: Angleterre, 1685–1731 · publiée en 1715
+    zh: 英国，1685–1731年·1715年发表
+    ja: イングランド、1685–1731年・1715年発表
+  history:
+    es: >-
+      Brook Taylor publicó la regla en 1715, obteniéndola invirtiendo la regla del producto de Leibniz:
+      si (u·v)′ = u′·v + u·v′, entonces ∫u·dv = u·v − ∫v·du. Es la técnica que permite integrar
+      productos de funciones como x·e^x, trasladando la derivada de un factor al otro. Aparece en
+      física, estadística y teoría de la señal como método estándar.
+    en: >-
+      Brook Taylor published the rule in 1715, deriving it by reversing Leibniz's product rule: if
+      (u·v)′ = u′·v + u·v′, then ∫u·dv = u·v − ∫v·du. It is the technique that integrates products of
+      functions like x·e^x by moving the derivative from one factor to the other. It appears in
+      physics, statistics, and signal theory as a standard method.
+    pt: >-
+      Brook Taylor publicou a regra em 1715, obtendo-a ao inverter a regra do produto de Leibniz: se
+      (u·v)′ = u′·v + u·v′, então ∫u·dv = u·v − ∫v·du. É a técnica que integra produtos de funções como
+      x·e^x, transferindo a derivada de um fator para o outro. Aparece na física, na estatística e na
+      teoria do sinal como método padrão.
+    fr: >-
+      Brook Taylor publia la règle en 1715, en l'obtenant par inversion de la règle du produit de
+      Leibniz : si (u·v)′ = u′·v + u·v′, alors ∫u·dv = u·v − ∫v·du. C'est la technique qui intègre des
+      produits de fonctions comme x·e^x en faisant passer la dérivée d'un facteur à l'autre. Elle
+      apparaît en physique, en statistique et en théorie du signal comme méthode standard.
+    zh: >-
+      布鲁克·泰勒于1715年发表该法则，通过反转莱布尼茨的乘积法则得到：若(u·v)′ = u′·v + u·v′，则∫u·dv = u·v − ∫v·du。
+      它通过对导数在因子间转移，从而能积分x·e^x这样的函数乘积。它是物理学、统计学和信号理论中的标准方法。
+    ja: >-
+      ブルック・テイラーは1715年、ライプニッツの積の微分法を逆転させてこの法則を発表した：(u·v)′ = u′·v + u·v′ならば、
+      ∫u·dv = u·v − ∫v·du。これは、x·e^xのような関数の積を、微分を一方の因子から他方へ移すことで積分する技法である。
+      物理学、統計学、信号理論で標準的な方法として現れる。
+  timeline:
+    - year: "1715"
+      label:
+        es: >-
+          Taylor publica la regla en Methodus Incrementorum Directa et Inversa.
+        en: >-
+          Taylor publishes the rule in Methodus Incrementorum Directa et Inversa.
+        pt: >-
+          Taylor publica a regra em Methodus Incrementorum Directa et Inversa.
+        fr: >-
+          Taylor publie la règle dans Methodus Incrementorum Directa et Inversa.
+        zh: >-
+          泰勒在《正逆增量方法》中发表该法则。
+        ja: >-
+          テイラーが『正逆増分法』でこの法則を発表する。
+    - year: s. XVIII–XIX
+      label:
+        es: >-
+          Euler y Lagrange la convierten en herramienta estándar de la mecánica analítica.
+        en: >-
+          Euler and Lagrange make it a standard tool of analytical mechanics.
+        pt: >-
+          Euler e Lagrange a tornam ferramenta padrão da mecânica analítica.
+        fr: >-
+          Euler et Lagrange en font un outil standard de la mécanique analytique.
+        zh: >-
+          欧拉和拉格朗日使其成为分析力学的标准工具。
+        ja: >-
+          オイラーとラグランジュがこれを解析力学の標準的な道具にする。
+    - year: Hoy
+      label:
+        es: >-
+          Es uno de los dos métodos de integración que se enseñan en todo el mundo.
+        en: >-
+          It is one of the two integration methods taught worldwide.
+        pt: >-
+          É um dos dois métodos de integração ensinados no mundo todo.
+        fr: >-
+          C'est l'une des deux méthodes d'intégration enseignées dans le monde entier.
+        zh: >-
+          它是全世界教授的两种基本积分方法之一。
+        ja: >-
+          世界中で教えられる2大積分手法の一つである。
+  useCases:
+    - title:
+        es: Estadística
+        en: Statistics
+        pt: Estatística
+        fr: Statistiques
+        zh: 统计学
+        ja: 統計学
+      description:
+        es: >-
+          La media de distribuciones como la exponencial o la gamma usa esta técnica.
+        en: >-
+          The mean of distributions like the exponential or gamma uses this technique.
+        pt: >-
+          A média de distribuições como a exponencial ou a gama usa essa técnica.
+        fr: >-
+          La moyenne de distributions comme l'exponentielle ou la gamma utilise cette technique.
+        zh: >-
+          指数分布或伽马分布等分布的均值使用这一方法。
+        ja: >-
+          指数分布やガンマ分布などの平均を求める際にこの技法を使う。
+    - title:
+        es: Física
+        en: Physics
+        pt: Física
+        fr: Physique
+        zh: 物理学
+        ja: 物理学
+      description:
+        es: >-
+          Calcular el valor esperado de la energía o derivar soluciones usa esta regla.
+        en: >-
+          Computing expected energies or deriving solutions uses this rule.
+        pt: >-
+          Calcular energias esperadas ou derivar soluções usa essa regra.
+        fr: >-
+          Calculer des énergies moyennes ou dériver des solutions utilise cette règle.
+        zh: >-
+          计算期望能量或推导解会用到这条法则。
+        ja: >-
+          期待エネルギーを計算したり解を導出したりする際にこの法則を使う。
+    - title:
+        es: Ingeniería de control
+        en: Control engineering
+        pt: Engenharia de controle
+        fr: Ingénierie de contrôle
+        zh: 控制工程
+        ja: 制御工学
+      description:
+        es: >-
+          Las transformadas inversas de Laplace se calculan con integración por partes.
+        en: >-
+          Inverse Laplace transforms are computed with integration by parts.
+        pt: >-
+          Transformadas inversas de Laplace são calculadas com integração por partes.
+        fr: >-
+          Les transformées inverses de Laplace se calculent par intégration par parties.
+        zh: >-
+          逆拉普拉斯变换用分部积分计算。
+        ja: >-
+          逆ラプラス変換は部分積分で計算される。
+  example:
+    title:
+      es: Integral de x·e^x
+      en: Integral of x·e^x
+      pt: Integral de x·e^x
+      fr: Intégrale de x·e^x
+      zh: x·e^x 的积分
+      ja: x·e^x の積分
+    lines:
+      - es: "u = x, dv = e^x dx"
+        en: "u = x, dv = e^x dx"
+        pt: "u = x, dv = e^x dx"
+        fr: "u = x, dv = e^x dx"
+        zh: "u = x，dv = e^x dx"
+        ja: "u = x、dv = e^x dx"
+      - es: du = dx, v = e^x
+        en: du = dx, v = e^x
+        pt: du = dx, v = e^x
+        fr: du = dx, v = e^x
+        zh: du = dx，v = e^x
+        ja: du = dx、v = e^x
+      - es: ∫x·e^x dx = x·e^x − ∫e^x dx
+        en: ∫x·e^x dx = x·e^x − ∫e^x dx
+        pt: ∫x·e^x dx = x·e^x − ∫e^x dx
+        fr: ∫x·e^x dx = x·e^x − ∫e^x dx
+        zh: ∫x·e^x dx = x·e^x − ∫e^x dx
+        ja: ∫x·e^x dx = x·e^x − ∫e^x dx
+      - es: ∫e^x dx = e^x
+        en: ∫e^x dx = e^x
+        pt: ∫e^x dx = e^x
+        fr: ∫e^x dx = e^x
+        zh: ∫e^x dx = e^x
+        ja: ∫e^x dx = e^x
+      - es: ∫x·e^x dx = x·e^x − e^x + C
+        en: ∫x·e^x dx = x·e^x − e^x + C
+        pt: ∫x·e^x dx = x·e^x − e^x + C
+        fr: ∫x·e^x dx = x·e^x − e^x + C
+        zh: ∫x·e^x dx = x·e^x − e^x + C
+        ja: ∫x·e^x dx = x·e^x − e^x + C

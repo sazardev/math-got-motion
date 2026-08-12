@@ -1,0 +1,310 @@
+id: entropy-change
+title:
+  es: Cambio de Entropía
+  en: Entropy Change
+  pt: Variação de Entropia
+  fr: Variation d'entropie
+  zh: 熵变
+  ja: エントロピー変化
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: delta-s
+    type: variable
+    value: "ΔS"
+    explanation:
+      es: El cambio de entropía del sistema entre dos estados, en julios por kelvin (J/K).
+      en: The change in the system's entropy between two states, in joules per kelvin (J/K).
+      pt: A variação de entropia do sistema entre dois estados, em joules por kelvin (J/K).
+      fr: La variation d'entropie du système entre deux états, en joules par kelvin (J/K).
+      zh: 系统在两个状态之间的熵变化，单位为焦耳每开尔文（J/K）。
+      ja: 二つの状態の間での系のエントロピー変化。単位はケルビン当たりのジュール（J/K）。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: q
+    type: variable
+    value: Q
+    explanation:
+      es: El calor intercambiado de forma reversible, en julios (J).
+      en: The heat exchanged reversibly, in joules (J).
+      pt: O calor trocado de forma reversível, em joules (J).
+      fr: La chaleur échangée de manière réversible, en joules (J).
+      zh: 可逆交换的热量，单位为焦耳（J）。
+      ja: 可逆的に交換される熱。単位はジュール（J）。
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: 割る。
+  - id: t
+    type: variable
+    value: T
+    explanation:
+      es: La temperatura absoluta a la que ocurre el intercambio, en kelvins (K).
+      en: The absolute temperature at which the exchange occurs, in kelvins (K).
+      pt: A temperatura absoluta na qual ocorre a troca, em kelvins (K).
+      fr: La température absolue à laquelle l'échange a lieu, en kelvins (K).
+      zh: 发生交换时的绝对温度，单位为开尔文（K）。
+      ja: 交換が起こる絶対温度。単位はケルビン（K）。
+context:
+  author:
+    es: Rudolf Clausius
+    en: Rudolf Clausius
+    pt: Rudolf Clausius
+    fr: Rudolf Clausius
+    zh: 鲁道夫·克劳修斯
+    ja: ルドルフ・クラウジウス
+  era:
+    es: Alemania, 1822–1888 · definida en 1865
+    en: Germany, 1822–1888 · defined in 1865
+    pt: Alemanha, 1822–1888 · definida em 1865
+    fr: Allemagne, 1822–1888 · définie en 1865
+    zh: 德国，1822–1888年 · 1865年定义
+    ja: ドイツ、1822–1888年・1865年に定義
+  history:
+    es: >-
+      Rudolf Clausius, físico alemán, acuñó la palabra "entropía" en 1865, del griego "tropē", que
+      significa transformación, para nombrar la magnitud que había introducido al estudiar los ciclos
+      termodinámicos. Para un proceso reversible la variación de entropía es ΔS = Q/T, y Clausius la
+      convirtió en el enunciado de la segunda ley: en un sistema aislado, la entropía nunca disminuye. La
+      idea, que en su época parecía contradecir la mecánica, fue reinterpretada por Ludwig Boltzmann como
+      una medida del desorden y la probabilidad molecular. Hoy es central en física, química, teoría de la
+      información y cosmología.
+    en: >-
+      Rudolf Clausius, a German physicist, coined the word "entropy" in 1865, from the Greek "tropē",
+      meaning transformation, to name the quantity he had introduced while studying thermodynamic cycles.
+      For a reversible process the entropy change is ΔS = Q/T, and Clausius made it the statement of the
+      second law: in an isolated system, entropy never decreases. The idea, which seemed to contradict
+      mechanics in his day, was reinterpreted by Ludwig Boltzmann as a measure of molecular disorder and
+      probability. Today it is central to physics, chemistry, information theory, and cosmology.
+    pt: >-
+      Rudolf Clausius, físico alemão, cunhou a palavra "entropia" em 1865, do grego "tropē", que significa
+      transformação, para nomear a grandeza que havia introduzido ao estudar os ciclos termodinâmicos.
+      Para um processo reversível, a variação de entropia é ΔS = Q/T, e Clausius a tornou o enunciado da
+      segunda lei: em um sistema isolado, a entropia nunca diminui. A ideia, que em sua época parecia
+      contradizer a mecânica, foi reinterpretada por Ludwig Boltzmann como medida da desordem e da
+      probabilidade molecular. Hoje ela é central na física, na química, na teoria da informação e na
+      cosmologia.
+    fr: >-
+      Rudolf Clausius, physicien allemand, forgea le mot « entropie » en 1865, du grec « tropē », qui
+      signifie transformation, pour nommer la grandeur qu'il avait introduite en étudiant les cycles
+      thermodynamiques. Pour un processus réversible, la variation d'entropie est ΔS = Q/T, et Clausius en
+      fit l'énoncé de la deuxième loi : dans un système isolé, l'entropie ne diminue jamais. Cette idée,
+      qui semblait contredire la mécanique à son époque, fut réinterprétée par Ludwig Boltzmann comme une
+      mesure du désordre et de la probabilité moléculaires. Elle est aujourd'hui centrale en physique, en
+      chimie, en théorie de l'information et en cosmologie.
+    zh: >-
+      德国物理学家鲁道夫·克劳修斯于1865年创造了"熵"这个词，它源自希腊语"tropē"，意为"转变"，
+      用来命名他在研究热力学循环时引入的那个量。对可逆过程而言，熵变为ΔS = Q/T。
+      克劳修斯将其表述为热力学第二定律：在孤立系统中，熵永不减少。
+      这一在当时似乎与力学相悖的思想，后来被路德维希·玻尔兹曼重新解释为分子无序性和概率的度量。
+      如今，熵在物理学、化学、信息论和宇宙学中都处于核心地位。
+    ja: >-
+      ドイツの物理学者ルドルフ・クラウジウスは1865年、「変化」を意味するギリシャ語の「tropē」から
+      「エントロピー」という言葉を作り、熱力学サイクルを研究する中で導入した量を名付けた。
+      可逆過程ではエントロピーの変化はΔS = Q/Tであり、クラウジウスはこれを第二法則の定式化とした。
+      孤立系ではエントロピーは決して減少しない。当時は力学と矛盾するように思われたこの考えは、
+      ルートヴィッヒ・ボルツマンによって分子の無秩序さと確率の尺度として再解釈された。
+      今日では物理学、化学、情報理論、宇宙論の中心的な概念である。
+  timeline:
+    - year: "1850"
+      label:
+        es: >-
+          Clausius formula la segunda ley: el calor no pasa espontáneamente de un cuerpo frío a uno
+          caliente.
+        en: >-
+          Clausius states the second law: heat cannot pass spontaneously from a cold body to a hot one.
+        pt: >-
+          Clausius formula a segunda lei: o calor não passa espontaneamente de um corpo frio para um
+          quente.
+        fr: >-
+          Clausius énonce la deuxième loi : la chaleur ne passe pas spontanément d'un corps froid à un
+          corps chaud.
+        zh: >-
+          克劳修斯表述了第二定律：热量不能自发地从冷物体传到热物体。
+        ja: >-
+          クラウジウスが第二法則を定式化。熱は低温の物体から高温の物体へ自然には移動しない。
+    - year: "1865"
+      label:
+        es: >-
+          Acuña la palabra "entropía" y escribe la relación ΔS = Q/T para procesos reversibles.
+        en: >-
+          He coins the word "entropy" and writes the relation ΔS = Q/T for reversible processes.
+        pt: >-
+          Ele cunha a palavra "entropia" e escreve a relação ΔS = Q/T para processos reversíveis.
+        fr: >-
+          Il forge le mot « entropie » et écrit la relation ΔS = Q/T pour les processus réversibles.
+        zh: >-
+          他创造了"熵"这个词，并写出可逆过程的ΔS = Q/T关系式。
+        ja: >-
+          「エントロピー」という言葉を作り、可逆過程の関係式ΔS = Q/Tを記す。
+    - year: "1877"
+      label:
+        es: >-
+          Boltzmann vincula la entropía con el desorden y la probabilidad de los estados moleculares.
+        en: >-
+          Boltzmann links entropy to the disorder and probability of molecular states.
+        pt: >-
+          Boltzmann vincula a entropia à desordem e à probabilidade dos estados moleculares.
+        fr: >-
+          Boltzmann relie l'entropie au désordre et à la probabilité des états moléculaires.
+        zh: >-
+          玻尔兹曼将熵与分子状态的无序性和概率联系起来。
+        ja: >-
+          ボルツマンがエントロピーを分子状態の無秩序さと確率に結びつける。
+    - year: "1948"
+      label:
+        es: >-
+          Claude Shannon adapta el concepto para medir la información en las comunicaciones.
+        en: >-
+          Claude Shannon adapts the concept to measure information in communications.
+        pt: >-
+          Claude Shannon adapta o conceito para medir a informação nas comunicações.
+        fr: >-
+          Claude Shannon adapte le concept pour mesurer l'information dans les communications.
+        zh: >-
+          克劳德·香农将这一概念改造为通信中信息的度量。
+        ja: >-
+          クロード・シャノンが通信における情報量を測る概念として応用する。
+  useCases:
+    - title:
+        es: Motores y plantas de energía
+        en: Engines and power plants
+        pt: Motores e usinas de energia
+        fr: Moteurs et centrales électriques
+        zh: 发动机与发电厂
+        ja: エンジンと発電所
+      description:
+        es: >-
+          El balance de entropía define la eficiencia máxima de máquinas térmicas y ciclos de potencia.
+        en: >-
+          The entropy balance sets the maximum efficiency of heat engines and power cycles.
+        pt: >-
+          O balanço de entropia define a eficiência máxima de máquinas térmicas e ciclos de potência.
+        fr: >-
+          Le bilan d'entropie définit l'efficacité maximale des machines thermiques et des cycles de
+          puissance.
+        zh: >-
+          熵平衡决定了热机和动力循环的最大效率。
+        ja: >-
+          エントロピーの収支が熱機関や動力サイクルの最大効率を決める。
+    - title:
+        es: Química
+        en: Chemistry
+        pt: Química
+        fr: Chimie
+        zh: 化学
+        ja: 化学
+      description:
+        es: >-
+          Con la energía libre de Gibbs predice si una reacción ocurre de forma espontánea.
+        en: >-
+          Together with Gibbs free energy, it predicts whether a reaction occurs spontaneously.
+        pt: >-
+          Com a energia livre de Gibbs, prevê se uma reação ocorre de forma espontânea.
+        fr: >-
+          Avec l'énergie libre de Gibbs, elle prédit si une réaction se produit spontanément.
+        zh: >-
+          与吉布斯自由能一起，用于判断反应是否自发进行。
+        ja: >-
+          ギブズ自由エネルギーとともに、反応が自発的に進むかどうかを予測する。
+    - title:
+        es: Teoría de la información
+        en: Information theory
+        pt: Teoria da informação
+        fr: Théorie de l'information
+        zh: 信息论
+        ja: 情報理論
+      description:
+        es: >-
+          La entropía de Shannon mide cuánta información contiene un mensaje y guía la compresión de
+          datos.
+        en: >-
+          Shannon entropy measures how much information a message holds and guides data compression.
+        pt: >-
+          A entropia de Shannon mede quanta informação um mensagem contém e orienta a compressão de
+          dados.
+        fr: >-
+          L'entropie de Shannon mesure la quantité d'information d'un message et guide la compression des
+          données.
+        zh: >-
+          香农熵衡量一条消息所含信息的多少，并指导数据压缩。
+        ja: >-
+          シャノンエントロピーはメッセージが持つ情報量を測り、データ圧縮を導く。
+    - title:
+        es: Astrofísica y cosmología
+        en: Astrophysics and cosmology
+        pt: Astrofísica e cosmologia
+        fr: Astrophysique et cosmologie
+        zh: 天体物理与宇宙学
+        ja: 天体物理学と宇宙論
+      description:
+        es: >-
+          La entropía de los agujeros negros y el fondo cósmico traza la evolución del universo.
+        en: >-
+          The entropy of black holes and the cosmic background traces the universe's evolution.
+        pt: >-
+          A entropia dos buracos negros e do fundo cósmico traça a evolução do universo.
+        fr: >-
+          L'entropie des trous noirs et du fond cosmique retrace l'évolution de l'univers.
+        zh: >-
+          黑洞和宇宙背景辐射的熵勾勒出宇宙的演化。
+        ja: >-
+          ブラックホールや宇宙背景放射のエントロピーが宇宙の進化をたどる。
+  example:
+    title:
+      es: Calentamiento de 1 kg de agua
+      en: Heating 1 kg of water
+      pt: Aquecimento de 1 kg de água
+      fr: Échauffement de 1 kg d'eau
+      zh: 加热1千克水
+      ja: 1 kgの水の加熱
+    lines:
+      - es: Q = 100 J (reversible), T = 300 K
+        en: Q = 100 J (reversible), T = 300 K
+        pt: Q = 100 J (reversível), T = 300 K
+        fr: Q = 100 J (réversible), T = 300 K
+        zh: Q = 100 J（可逆），T = 300 K
+        ja: Q = 100 J（可逆）、T = 300 K
+      - es: ΔS = Q / T
+        en: ΔS = Q / T
+        pt: ΔS = Q / T
+        fr: ΔS = Q / T
+        zh: ΔS = Q / T
+        ja: ΔS = Q / T
+      - es: ΔS = 100 / 300
+        en: ΔS = 100 / 300
+        pt: ΔS = 100 / 300
+        fr: ΔS = 100 / 300
+        zh: ΔS = 100 / 300
+        ja: ΔS = 100 / 300
+      - es: ΔS ≈ 0.33 J/K
+        en: ΔS ≈ 0.33 J/K
+        pt: ΔS ≈ 0,33 J/K
+        fr: ΔS ≈ 0,33 J/K
+        zh: ΔS ≈ 0.33 J/K
+        ja: ΔS ≈ 0.33 J/K
+      - es: Al absorber calor, la entropía del agua aumenta.
+        en: Absorbing heat increases the water's entropy.
+        pt: Ao absorver calor, a entropia da água aumenta.
+        fr: En absorbant la chaleur, l'entropie de l'eau augmente.
+        zh: 吸收热量使水的熵增加。
+        ja: 熱を吸収することで水のエントロピーが増加する。

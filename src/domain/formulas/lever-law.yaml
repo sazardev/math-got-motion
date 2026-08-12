@@ -1,0 +1,290 @@
+id: lever-law
+title:
+  es: Ley de la Palanca
+  en: Law of the Lever
+  pt: Lei da Alavanca
+  fr: Loi du levier
+  zh: 杠杆定律
+  ja: てこの原理
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: f-1
+    type: variable
+    value: F₁
+    explanation:
+      es: La fuerza aplicada en el primer lado de la palanca, medida en newtons.
+      en: The force applied on the first side of the lever, measured in newtons.
+      pt: A força aplicada no primeiro lado da alavanca, medida em newtons.
+      fr: La force appliquée sur le premier côté du levier, mesurée en newtons.
+      zh: 施加在杠杆第一侧的力，单位为牛顿。
+      ja: てこの一方に加える力。単位はニュートン。
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: d-1
+    type: variable
+    value: d₁
+    explanation:
+      es: La distancia de la fuerza al punto de apoyo, el brazo de palanca.
+      en: The distance from the force to the fulcrum, the lever arm.
+      pt: A distância da força até o ponto de apoio, o braço de alavanca.
+      fr: La distance de la force au point d'appui, le bras de levier.
+      zh: 从力到支点的距离，即力臂。
+      ja: 力から支点までの距離、すなわちてこの腕の長さ。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: f-2
+    type: variable
+    value: F₂
+    explanation:
+      es: La fuerza aplicada en el segundo lado de la palanca, medida en newtons.
+      en: The force applied on the second side of the lever, measured in newtons.
+      pt: A força aplicada no segundo lado da alavanca, medida em newtons.
+      fr: La force appliquée sur le deuxième côté du levier, mesurée en newtons.
+      zh: 施加在杠杆第二侧的力，单位为牛顿。
+      ja: てこのもう一方に加える力。単位はニュートン。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: d-2
+    type: variable
+    value: d₂
+    explanation:
+      es: La distancia de la segunda fuerza al punto de apoyo; cuanto más larga, menor es la fuerza necesaria.
+      en: The distance from the second force to the fulcrum; the longer it is, the smaller the force needed.
+      pt: A distância da segunda força até o ponto de apoio; quanto maior, menor a força necessária.
+      fr: La distance de la deuxième force au point d'appui ; plus elle est grande, plus la force requise est petite.
+      zh: 从第二个力到支点的距离；距离越长，所需力越小。
+      ja: 2つ目の力から支点までの距離。長いほど必要な力は小さくなる。
+context:
+  author:
+    es: Arquímedes
+    en: Archimedes
+    pt: Arquimedes
+    fr: Archimède
+    zh: 阿基米德
+    ja: アルキメデス
+  era:
+    es: Siracusa, c. 287–212 a.C.
+    en: Syracuse, c. 287–212 BC
+    pt: Siracusa, c. 287–212 a.C.
+    fr: Syracuse, v. 287–212 av. J.-C.
+    zh: 锡拉库萨，约公元前287–212年
+    ja: シラクサ、紀元前287–212年頃
+  history:
+    es: >-
+      La ley de la palanca es una de las afirmaciones más antiguas de la física: Arquímedes la demostró
+      en su tratado 'Sobre el equilibrio de los planos' (c. 260 a.C.) y, según la tradición, declaró:
+      'Dadme un punto de apoyo y moveré el mundo'. La ecuación expresa el equilibrio de momentos: una
+      fuerza pequeña aplicada lejos del fulcro equilibra una fuerza grande aplicada cerca. Por eso las
+      tijeras, las carretillas y las palancas multiplican la fuerza, y por eso una llave más larga
+      afloja tornillos con menos esfuerzo.
+    en: >-
+      The law of the lever is one of the oldest statements in physics: Archimedes proved it in his
+      treatise 'On the Equilibrium of Planes' (c. 260 BC) and, according to tradition, declared: 'Give
+      me a place to stand, and I will move the Earth'. The equation expresses the balance of moments: a
+      small force applied far from the fulcrum balances a large force applied close to it. That is why
+      scissors, wheelbarrows, and crowbars multiply force, and why a longer wrench loosens bolts with
+      less effort.
+    pt: >-
+      A lei da alavanca é uma das afirmações mais antigas da física: Arquimedes a demonstrou em seu
+      tratado 'Sobre o Equilíbrio dos Planos' (c. 260 a.C.) e, segundo a tradição, declarou: 'Dai-me um
+      ponto de apoio e moverei o mundo'. A equação expressa o equilíbrio de momentos: uma força pequena
+      aplicada longe do fulcro equilibra uma força grande aplicada perto dele. Por isso tesouras,
+      carrinhos de mão e alavancas multiplicam a força, e por isso uma chave mais longa solta parafusos
+      com menos esforço.
+    fr: >-
+      La loi du levier est l'un des plus anciens énoncés de la physique : Archimède l'a démontrée dans
+      son traité « De l'équilibre des plans » (v. 260 av. J.-C.) et, selon la tradition, il aurait
+      déclaré : « Donnez-moi un point d'appui, et je soulèverai le monde ». L'équation exprime
+      l'équilibre des moments : une petite force appliquée loin du point d'appui équilibre une grande
+      force appliquée près de lui. C'est pourquoi ciseaux, brouettes et leviers démultiplient la force,
+      et pourquoi une clé plus longue desserre les boulons avec moins d'effort.
+    zh: >-
+      杠杆定律是物理学中最古老的命题之一：阿基米德在其著作《论平面图形的平衡》中给出了证明（约公元前260年），
+      相传他曾宣称：给我一个支点，我就能撬动地球。该方程表达了力矩的平衡：远离支点施加的小力，可平衡靠近支点
+      施加的大力。因此剪刀、手推车和撬棍都能放大力量，更长的扳手也能更省力地拧松螺栓。
+    ja: >-
+      てこの原理は物理学で最も古い命題の一つである。アルキメデスは『平面の釣り合いについて』（紀元前260年頃）
+      の中でこれを証明し、伝説によれば「支点を与えよ、されば地球を動かしてみせよう」と述べたという。この式は
+      モーメントの釣り合いを表す。支点から遠い位置に加えた小さな力は、支点に近い位置に加えた大きな力と釣り合う。
+      ハサミや一輪車、バールが力を倍増させるのはこのためであり、長いレンチなら少ない力でボルトを緩められるの
+      も同じ理由である。
+  timeline:
+    - year: c. 260 a.C.
+      label:
+        es: >-
+          Arquímedes demuestra la ley de la palanca en su tratado 'Sobre el equilibrio de los planos'.
+        en: >-
+          Archimedes proves the law of the lever in his treatise 'On the Equilibrium of Planes'.
+        pt: >-
+          Arquimedes demonstra a lei da alavanca em seu tratado 'Sobre o Equilíbrio dos Planos'.
+        fr: >-
+          Archimède démontre la loi du levier dans son traité « De l'équilibre des plans ».
+        zh: >-
+          阿基米德在其著作《论平面图形的平衡》中证明了杠杆定律。
+        ja: >-
+          アルキメデスが『平面の釣り合いについて』でてこの原理を証明する。
+    - year: "1687"
+      label:
+        es: >-
+          Newton publica los Principia y sitúa la ley dentro de una teoría general de fuerzas y momentos
+          (torques).
+        en: >-
+          Newton publishes the Principia, placing the law within a general theory of forces and moments
+          (torques).
+        pt: >-
+          Newton publica os Principia e insere a lei numa teoria geral de forças e momentos (torques).
+        fr: >-
+          Newton publie les Principia, plaçant la loi dans une théorie générale des forces et des
+          moments (couples).
+        zh: >-
+          牛顿发表《原理》，将这条定律纳入力和力矩的普遍理论之中。
+        ja: >-
+          ニュートンが『プリンキピア』を刊行し、この原理を力とモーメント（トルク）の一般理論に位置づける。
+    - year: Hoy
+      label:
+        es: >-
+          Tijeras, llaves, carretillas y grúas usan la palanca todos los días.
+        en: >-
+          Scissors, wrenches, wheelbarrows, and cranes put the lever to work every day.
+        pt: >-
+          Tesouras, chaves, carrinhos de mão e guindastes usam a alavanca diariamente.
+        fr: >-
+          Ciseaux, clés, brouettes et grues mettent le levier au travail chaque jour.
+        zh: >-
+          剪刀、扳手、手推车和起重机每天都在运用杠杆。
+        ja: >-
+          ハサミ、レンチ、一輪車、クレーンが日々、てこを利用している。
+  useCases:
+    - title:
+        es: Herramientas manuales
+        en: Hand tools
+        pt: Ferramentas manuais
+        fr: Outils à main
+        zh: 手动工具
+        ja: 手動工具
+      description:
+        es: >-
+          Tijeras, alicates, cascanueces y llaves funcionan como palancas para multiplicar la fuerza de
+          la mano.
+        en: >-
+          Scissors, pliers, nutcrackers, and wrenches work as levers to multiply the force of the hand.
+        pt: >-
+          Tesouras, alicates, quebra-nozes e chaves funcionam como alavancas para multiplicar a força
+          da mão.
+        fr: >-
+          Ciseaux, pinces, casse-noix et clés fonctionnent comme des leviers pour démultiplier la force
+          de la main.
+        zh: >-
+          剪刀、钳子、核桃夹和扳手都是利用杠杆原理来放大手部力量的工具。
+        ja: >-
+          ハサミ、ペンチ、くるみ割り、レンチは、手の力を増幅するてことして働く。
+    - title:
+        es: Construcción y obra
+        en: Construction sites
+        pt: Construção civil
+        fr: Construction et chantiers
+        zh: 建筑工程
+        ja: 建設現場
+      description:
+        es: >-
+          Palancas, carretillas y grúas mueven cargas pesadas usando brazos de palanca largos.
+        en: >-
+          Crowbars, wheelbarrows, and cranes move heavy loads using long lever arms.
+        pt: >-
+          Alavancas, carrinhos de mão e guindastes movem cargas pesadas usando braços de alavanca
+          longos.
+        fr: >-
+          Leviers, brouettes et grues déplacent de lourdes charges grâce à de longs bras de levier.
+        zh: >-
+          撬棍、手推车和起重机利用长力臂搬运重物。
+        ja: >-
+          バール、一輪車、クレーンは長い腕を使って重い荷物を動かす。
+    - title:
+        es: Mecánica automotriz
+        en: Automotive repair
+        pt: Mecânica automotiva
+        fr: Mécanique automobile
+        zh: 汽车维修
+        ja: 自動車整備
+      description:
+        es: >-
+          Una barra de extensión aprovecha el brazo de palanca para aflojar tuercas muy apretadas.
+        en: >-
+          An extension bar uses the lever arm to loosen tightened nuts.
+        pt: >-
+          Uma barra de extensão usa o braço de alavanca para soltar porcas apertadas.
+        fr: >-
+          Une barre de force utilise le bras de levier pour desserrer les écrous serrés.
+        zh: >-
+          加力杆利用力臂来拧松拧紧的螺母。
+        ja: >-
+          ブレーカーバーは腕の長さを利用して、固く締まったナットを緩める。
+  example:
+    title:
+      es: Equilibrio de una palanca
+      en: Balancing a lever
+      pt: Equilíbrio de uma alavanca
+      fr: Équilibre d'un levier
+      zh: 杠杆的平衡
+      ja: てこの釣り合い
+    lines:
+      - es: "Datos: F₁ = 100 N, d₁ = 1 m, d₂ = 0.25 m"
+        en: "Given: F₁ = 100 N, d₁ = 1 m, d₂ = 0.25 m"
+        pt: "Dados: F₁ = 100 N, d₁ = 1 m, d₂ = 0,25 m"
+        fr: "Données : F₁ = 100 N, d₁ = 1 m, d₂ = 0,25 m"
+        zh: "已知：F₁ = 100 N，d₁ = 1 m，d₂ = 0.25 m"
+        ja: "条件：F₁ = 100 N、d₁ = 1 m、d₂ = 0.25 m"
+      - es: F₂ · d₂ = F₁ · d₁
+        en: F₂ · d₂ = F₁ · d₁
+        pt: F₂ · d₂ = F₁ · d₁
+        fr: F₂ · d₂ = F₁ · d₁
+        zh: F₂ · d₂ = F₁ · d₁
+        ja: F₂ · d₂ = F₁ · d₁
+      - es: F₂ = F₁ · d₁ / d₂ = 100 × 1 / 0.25
+        en: F₂ = F₁ · d₁ / d₂ = 100 × 1 / 0.25
+        pt: F₂ = F₁ · d₁ / d₂ = 100 × 1 / 0,25
+        fr: F₂ = F₁ · d₁ / d₂ = 100 × 1 / 0,25
+        zh: F₂ = F₁ · d₁ / d₂ = 100 × 1 / 0.25
+        ja: F₂ = F₁ · d₁ / d₂ = 100 × 1 / 0.25
+      - es: F₂ = 100 / 0.25
+        en: F₂ = 100 / 0.25
+        pt: F₂ = 100 / 0,25
+        fr: F₂ = 100 / 0,25
+        zh: F₂ = 100 / 0.25
+        ja: F₂ = 100 / 0.25
+      - es: F₂ = 400 N
+        en: F₂ = 400 N
+        pt: F₂ = 400 N
+        fr: F₂ = 400 N
+        zh: F₂ = 400 N
+        ja: F₂ = 400 N

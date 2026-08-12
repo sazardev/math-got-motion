@@ -1,0 +1,362 @@
+id: cube-of-binomial
+title:
+  es: Cubo de un Binomio
+  en: Cube of a Binomial
+  pt: Cubo de um Binômio
+  fr: Cube d'un binôme
+  zh: 二项式的立方
+  ja: 二項式の立方
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: binomial
+    type: variable
+    value: (a+b)
+    explanation:
+      es: El binomio, la suma de las variables a y b, elevado al cubo.
+      en: The binomial, the sum of the variables a and b, being cubed.
+      pt: O binômio, a soma das variáveis a e b, elevado ao cubo.
+      fr: Le binôme, la somme des variables a et b, élevé au cube.
+      zh: 二项式，即变量 a 与 b 之和，将其求立方。
+      ja: 二項式。変数aとbの和であり、3乗する。
+  - id: cubed
+    type: superscript
+    value: "3"
+    explanation:
+      es: "El exponente 3: el binomio multiplicado por sí mismo tres veces."
+      en: "The exponent 3: the binomial multiplied by itself three times."
+      pt: "O expoente 3: o binômio multiplicado por si mesmo três vezes."
+      fr: "L'exposant 3 : le binôme multiplié par lui-même trois fois."
+      zh: 指数3：二项式与自身相乘三次。
+      ja: 指数3：二項式を自分自身と3回掛け合わせる。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a la suma de los cuatro términos desarrollados.
+      en: Is equal to the sum of the four expanded terms.
+      pt: É igual à soma dos quatro termos desenvolvidos.
+      fr: Est égal à la somme des quatre termes développés.
+      zh: 等于展开后的四项之和。
+      ja: 展開された4つの項の和に等しい。
+  - id: a-cubed
+    type: variable
+    value: a³
+    explanation:
+      es: La primera variable, elevada al cubo.
+      en: The first variable, cubed.
+      pt: A primeira variável, elevada ao cubo.
+      fr: La première variable, élevée au cube.
+      zh: 第一项变量，立方。
+      ja: 最初の変数を3乗する。
+  - id: plus-1
+    type: operator
+    value: +
+    explanation:
+      es: Más el triple del producto del cuadrado de a por b.
+      en: Plus three times the product of a squared and b.
+      pt: Mais o triplo do produto de a ao quadrado por b.
+      fr: Plus le triple du produit de a au carré par b.
+      zh: 加上三倍的 a 平方乘以 b。
+      ja: aの2乗とbの積の3倍を足す。
+  - id: mid-1
+    type: variable
+    value: 3a²b
+    explanation:
+      es: "El término central: tres veces a² por b, una de las tres caras del cubo."
+      en: "The middle term: three times a² times b, one of the cube's three faces."
+      pt: "O termo central: três vezes a² vezes b, uma das três faces do cubo."
+      fr: "Le terme central : trois fois a² fois b, l'une des trois faces du cube."
+      zh: "中间项：三倍的 a²·b，对应立方体的三个面之一。"
+      ja: "中央の項：a²×bの3倍。立方体の三つの面の一つに当たる。"
+  - id: plus-2
+    type: operator
+    value: +
+    explanation:
+      es: Más el triple del producto de a por el cuadrado de b.
+      en: Plus three times the product of a and b squared.
+      pt: Mais o triplo do produto de a por b ao quadrado.
+      fr: Plus le triple du produit de a et de b au carré.
+      zh: 加上三倍的 a 乘以 b 平方。
+      ja: aとbの2乗の積の3倍を足す。
+  - id: mid-2
+    type: variable
+    value: 3ab²
+    explanation:
+      es: "Otro término central: tres veces a por b², las tres aristas del cubo."
+      en: "Another middle term: three times a times b², the cube's three edges."
+      pt: "Outro termo central: três vezes a vezes b², as três arestas do cubo."
+      fr: "Un autre terme central : trois fois a fois b², les trois arêtes du cube."
+      zh: "另一个中间项：三倍的 a·b²，对应立方体的三条棱。"
+      ja: "もう一つの中央の項：a×b²の3倍。立方体の三つの辺に当たる。"
+  - id: plus-3
+    type: operator
+    value: +
+    explanation:
+      es: Más el cubo de la segunda variable.
+      en: Plus the cube of the second variable.
+      pt: Mais o cubo da segunda variável.
+      fr: Plus le cube de la seconde variable.
+      zh: 加上第二项变量的立方。
+      ja: 2つ目の変数の3乗を足す。
+  - id: b-cubed
+    type: variable
+    value: b³
+    explanation:
+      es: La segunda variable, también elevada al cubo.
+      en: The second variable, also cubed.
+      pt: A segunda variável, também elevada ao cubo.
+      fr: La seconde variable, elle aussi élevée au cube.
+      zh: 第二项变量同样要立方。
+      ja: 2つ目の変数も3乗される。
+context:
+  author:
+    es: Origen colectivo (álgebra clásica)
+    en: Collective origin (classical algebra)
+    pt: Origem coletiva (álgebra clássica)
+    fr: Origine collective (algèbre classique)
+    zh: 集体起源（古典代数）
+    ja: 集合的起源（古典代数学）
+  era:
+    es: Europa y mundo islámico, s. IX–XVI
+    en: Europe and the Islamic world, 9th–16th century
+    pt: Europa e mundo islâmico, sécs. IX–XVI
+    fr: Europe et monde islamique, IXe–XVIe siècle
+    zh: 欧洲与伊斯兰世界，9–16世纪
+    ja: ヨーロッパとイスラーム世界、9–16世紀
+  history:
+    es: >-
+      La expansión del cubo de un binomio se gestó a lo largo de siglos en el álgebra de la Europa
+      medieval y del mundo islámico, donde los estudiosos manejaban potencias y raíces como rutinas
+      de cálculo. La fórmula (a+b)³ = a³ + 3a²b + 3ab² + b³ admite una lectura geométrica: un cubo de
+      lado a+b se descompone en un cubo a³, otro b³, y tres placas y tres barras de volumen 3a²b y
+      3ab². En cálculo, el desarrollo de (x+h)³ es la base de la derivada de x³, y el binomio al cubo
+      aparece en toda ecuación cúbica al completar el término cúbico.
+    en: >-
+      The expansion of the cube of a binomial took shape over centuries in the algebra of medieval
+      Europe and the Islamic world, where scholars handled powers and roots as everyday routines of
+      calculation. The formula (a+b)³ = a³ + 3a²b + 3ab² + b³ has a geometric reading: a cube of side
+      a+b splits into a cube a³, another b³, and three slabs and three bars of volume 3a²b and 3ab².
+      In calculus, expanding (x+h)³ underlies the derivative of x³, and the cubed binomial appears
+      whenever a cubic equation is completed.
+    pt: >-
+      A expansão do cubo de um binômio tomou forma ao longo de séculos na álgebra da Europa medieval e
+      do mundo islâmico, onde os estudiosos lidavam com potências e raízes como rotinas cotidianas de
+      cálculo. A fórmula (a+b)³ = a³ + 3a²b + 3ab² + b³ admite uma leitura geométrica: um cubo de lado
+      a+b se decompõe em um cubo a³, outro b³, e três placas e três barras de volume 3a²b e 3ab². No
+      cálculo, desenvolver (x+h)³ está na base da derivada de x³, e o binômio ao cubo aparece sempre
+      que se completa uma equação cúbica.
+    fr: >-
+      Le développement du cube d'un binôme s'est forgé au fil des siècles dans l'algèbre de l'Europe
+      médiévale et du monde islamique, où les savants maniaient puissances et racines comme des
+      routines de calcul courantes. La formule (a+b)³ = a³ + 3a²b + 3ab² + b³ admet une lecture
+      géométrique : un cube de côté a+b se décompose en un cube a³, un autre b³, et trois plaques et
+      trois barres de volume 3a²b et 3ab². En analyse, le développement de (x+h)³ est à la base de la
+      dérivée de x³, et le binôme au cube apparaît dès qu'on complète une équation cubique.
+    zh: >-
+      二项式立方的展开式是在中世纪欧洲和伊斯兰世界数百年的代数学中逐步形成的，那里的学者把幂和根当作日常的
+      计算常规来处理。公式 (a+b)³ = a³ + 3a²b + 3ab² + b³ 有直观的几何解读：边长为 a+b 的立方体可分解为
+      一个 a³ 的立方体、一个 b³ 的立方体，以及三个体积为 3a²b 的板形块和三个体积为 3ab² 的条形块。在微积分中，
+      展开 (x+h)³ 是推导 x³ 的导数的基础；在求解三次方程补全三次项时，二项式的立方也必然出现。
+    ja: >-
+      二項式の立方の展開式は、中世ヨーロッパとイスラーム世界の代数学の中で何世紀もかけて形作られてきた。
+      そこでは冪や根は日常的な計算の手順として扱われていた。公式 (a+b)³ = a³ + 3a²b + 3ab² + b³ は
+      幾何学的に読み解ける。一辺がa+bの立方体は、一辺aの立方体と一辺bの立方体、体積3a²bの平板三枚、
+      体積3ab²の角材三本に分解される。微分積分では (x+h)³ の展開が x³ の導関数の基礎であり、三次方程式で
+      三次の項を整えるときには必ず二項式の立方が登場する。
+  timeline:
+    - year: "820"
+      label:
+        es: >-
+          Al-Khwarizmi publica su tratado de álgebra, donde potencias y expansiones se tratan como
+          reglas de cálculo.
+        en: >-
+          Al-Khwarizmi publishes his algebra treatise, where powers and expansions are treated as
+          rules of calculation.
+        pt: >-
+          Al-Khwarizmi publica seu tratado de álgebra, onde potências e expansões são tratadas como
+          regras de cálculo.
+        fr: >-
+          Al-Khwârizmî publie son traité d'algèbre, où puissances et développements sont traités comme
+          des règles de calcul.
+        zh: >-
+          花拉子米出版其代数学著作，其中幂与展开被当作计算的规则来对待。
+        ja: >-
+          アル＝フワーリズミーが代数学の書を発表し、冪と展開が計算の規則として扱われる。
+    - year: "1202"
+      label:
+        es: >-
+          El Liber Abaci de Fibonacci difunde en Europa el álgebra indoarábiga con potencias y
+          raíces.
+        en: >-
+          Fibonacci's Liber Abaci spreads Indo-Arabic algebra with powers and roots across Europe.
+        pt: >-
+          O Liber Abaci de Fibonacci difunde na Europa a álgebra indo-arábica com potências e raízes.
+        fr: >-
+          Le Liber Abaci de Fibonacci diffuse en Europe l'algèbre indo-arabe avec puissances et
+          racines.
+        zh: >-
+          斐波那契的《计算之书》把包含幂与根的印度-阿拉伯代数学传播到欧洲。
+        ja: >-
+          フィボナッチの『計算の書』が、冪や根を含むインド・アラビアの代数学をヨーロッパに広める。
+    - year: "1545"
+      label:
+        es: >-
+          Cardano publica el Ars Magna; las ecuaciones cúbicas hacen imprescindible dominar el cubo
+          del binomio.
+        en: >-
+          Cardano publishes the Ars Magna; cubic equations make mastering the cube of a binomial
+          essential.
+        pt: >-
+          Cardano publica a Ars Magna; as equações cúbicas tornam imprescindível dominar o cubo do
+          binômio.
+        fr: >-
+          Cardan publie l'Ars Magna ; les équations cubiques rendent indispensable la maîtrise du cube
+          du binôme.
+        zh: >-
+          卡尔达诺出版《大术》；求解三次方程使得掌握二项式的立方成为必需。
+        ja: >-
+          カルダーノが『アルス・マグナ』を出版。三次方程式のため二項式の立方の習得が必須となる。
+    - year: Hoy
+      label:
+        es: >-
+          (a+b)³ sigue abriendo el álgebra escolar y sostiene la derivada de x³ vía (x+h)³.
+        en: >-
+          (a+b)³ still opens school algebra and underlies the derivative of x³ via (x+h)³.
+        pt: >-
+          (a+b)³ segue abrindo a álgebra escolar e sustenta a derivada de x³ via (x+h)³.
+        fr: >-
+          (a+b)³ ouvre encore l'algèbre scolaire et soutient la dérivée de x³ via (x+h)³.
+        zh: >-
+          (a+b)³ 至今仍是学校代数的入门内容，也是经由 (x+h)³ 推导 x³ 导数的基础。
+        ja: >-
+          (a+b)³は今も学校の代数の入り口であり、(x+h)³を通じてx³の導関数を支えている。
+  useCases:
+    - title:
+        es: Álgebra escolar
+        en: School algebra
+        pt: Álgebra escolar
+        fr: Algèbre scolaire
+        zh: 学校代数
+        ja: 学校の代数
+      description:
+        es: >-
+          Expande binomios al cubo sin multiplicar término a término, base de las identidades
+          notables.
+        en: >-
+          Expands cubed binomials without multiplying term by term, the basis of notable identities.
+        pt: >-
+          Expande binômios ao cubo sem multiplicar termo a termo, base das identidades notáveis.
+        fr: >-
+          Développe les binômes au cube sans multiplier terme à terme, base des identités
+          remarquables.
+        zh: >-
+          不用逐项相乘即可展开二项式的立方，是常用恒等式的基础。
+        ja: >-
+          二項式の立方を、項ごとの掛け算なしで展開できる。展開公式の基礎である。
+    - title:
+        es: Cálculo
+        en: Calculus
+        pt: Cálculo
+        fr: Analyse
+        zh: 微积分
+        ja: 微分積分学
+      description:
+        es: >-
+          La derivada de x³ se obtiene expandiendo (x+h)³ = x³ + 3x²h + 3xh² + h³ y dividiendo por h.
+        en: >-
+          The derivative of x³ is found by expanding (x+h)³ = x³ + 3x²h + 3xh² + h³ and dividing by h.
+        pt: >-
+          A derivada de x³ é obtida expandindo (x+h)³ = x³ + 3x²h + 3xh² + h³ e dividindo por h.
+        fr: >-
+          La dérivée de x³ s'obtient en développant (x+h)³ = x³ + 3x²h + 3xh² + h³ puis en divisant
+          par h.
+        zh: >-
+          对 x³ 求导时，先展开 (x+h)³ = x³ + 3x²h + 3xh² + h³，再除以 h。
+        ja: >-
+          x³の導関数は、(x+h)³ = x³ + 3x²h + 3xh² + h³ と展開してからhで割って得られる。
+    - title:
+        es: Geometría
+        en: Geometry
+        pt: Geometria
+        fr: Géométrie
+        zh: 几何学
+        ja: 幾何学
+      description:
+        es: >-
+          El volumen de un cubo de lado a+b se calcula con la expansión del binomio al cubo.
+        en: >-
+          The volume of a cube of side a+b is computed with the cubed-binomial expansion.
+        pt: >-
+          O volume de um cubo de lado a+b é calculado com a expansão do binômio ao cubo.
+        fr: >-
+          Le volume d'un cube de côté a+b se calcule avec le développement du binôme au cube.
+        zh: >-
+          边长为 a+b 的立方体的体积，可以用二项式立方的展开式计算。
+        ja: >-
+          一辺がa+bの立方体の体積は、二項式の立方の展開で計算できる。
+    - title:
+        es: Ecuaciones cúbicas
+        en: Cubic equations
+        pt: Equações cúbicas
+        fr: Équations cubiques
+        zh: 三次方程
+        ja: 三次方程式
+      description:
+        es: >-
+          Al completar el cubo (x+p)³ se transforma una cúbica y se simplifica su resolución.
+        en: >-
+          Completing the cube (x+p)³ transforms a cubic equation and simplifies its solution.
+        pt: >-
+          Ao completar o cubo (x+p)³, uma equação cúbica é transformada e sua resolução fica mais
+          simples.
+        fr: >-
+          Compléter le cube (x+p)³ transforme une équation cubique et simplifie sa résolution.
+        zh: >-
+          利用补全立方 (x+p)³ 可以化简三次方程并简化求解。
+        ja: >-
+          (x+p)³ の立方完成により三次方程式を変形し、解を求めやすくする。
+  example:
+    title:
+      es: Calcular (2+1)³
+      en: Computing (2+1)³
+      pt: Calculando (2+1)³
+      fr: Calcul de (2+1)³
+      zh: 计算 (2+1)³
+      ja: (2+1)³ の計算
+    lines:
+      - es: a = 2, b = 1
+        en: a = 2, b = 1
+        pt: a = 2, b = 1
+        fr: a = 2, b = 1
+        zh: a = 2, b = 1
+        ja: a = 2, b = 1
+      - es: (2 + 1)³ = 2³ + 3·2²·1 + 3·2·1² + 1³
+        en: (2 + 1)³ = 2³ + 3·2²·1 + 3·2·1² + 1³
+        pt: (2 + 1)³ = 2³ + 3·2²·1 + 3·2·1² + 1³
+        fr: (2 + 1)³ = 2³ + 3·2²·1 + 3·2·1² + 1³
+        zh: (2 + 1)³ = 2³ + 3·2²·1 + 3·2·1² + 1³
+        ja: (2 + 1)³ = 2³ + 3·2²·1 + 3·2·1² + 1³
+      - es: 3³ = 8 + 12 + 6 + 1
+        en: 3³ = 8 + 12 + 6 + 1
+        pt: 3³ = 8 + 12 + 6 + 1
+        fr: 3³ = 8 + 12 + 6 + 1
+        zh: 3³ = 8 + 12 + 6 + 1
+        ja: 3³ = 8 + 12 + 6 + 1
+      - es: 27 = 27
+        en: 27 = 27
+        pt: 27 = 27
+        fr: 27 = 27
+        zh: 27 = 27
+        ja: 27 = 27
+      - es: "Resultado: 27"
+        en: "Result: 27"
+        pt: "Resultado: 27"
+        fr: "Résultat : 27"
+        zh: 结果：27
+        ja: 結果：27

@@ -1,0 +1,360 @@
+id: coefficient-of-restitution
+title:
+  es: Coeficiente de Restitución
+  en: Coefficient of Restitution
+  pt: Coeficiente de Restituição
+  fr: Coefficient de restitution
+  zh: 恢复系数
+  ja: 反発係数
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: e
+    type: variable
+    value: e
+    explanation:
+      es: El coeficiente de restitución, la medida de cuán elástico es un choque.
+      en: The coefficient of restitution, the measure of how elastic a collision is.
+      pt: O coeficiente de restituição, a medida de quão elástica é uma colisão.
+      fr: Le coefficient de restitution, la mesure de l'élasticité d'un choc.
+      zh: 恢复系数,衡量碰撞弹性的度量。
+      ja: 反発係数。衝突がどの程度弾性的かを示す量。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el numerador.
+      en: Opens the numerator.
+      pt: Abre o numerador.
+      fr: Ouvre le numérateur.
+      zh: 打开分子。
+      ja: 分子を開く括弧。
+  - id: v2-prime
+    type: variable
+    value: v₂′
+    explanation:
+      es: La velocidad del segundo cuerpo después del choque.
+      en: The second body's velocity after the collision.
+      pt: A velocidade do segundo corpo depois da colisão.
+      fr: La vitesse du second corps après le choc.
+      zh: 碰撞后第二个物体的速度。
+      ja: 衝突後の二番目の物体の速度。
+  - id: minus-1
+    type: operator
+    value: −
+    explanation:
+      es: Menos.
+      en: Minus.
+      pt: Menos.
+      fr: Moins.
+      zh: 减去。
+      ja: マイナス。
+  - id: v1-prime
+    type: variable
+    value: v₁′
+    explanation:
+      es: La velocidad del primer cuerpo después del choque.
+      en: The first body's velocity after the collision.
+      pt: A velocidade do primeiro corpo depois da colisão.
+      fr: La vitesse du premier corps après le choc.
+      zh: 碰撞后第一个物体的速度。
+      ja: 衝突後の最初の物体の速度。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el numerador.
+      en: Closes the numerator.
+      pt: Fecha o numerador.
+      fr: Ferme le numérateur.
+      zh: 关闭分子。
+      ja: 分子を閉じる括弧。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: open-paren-2
+    type: operator
+    value: (
+    explanation:
+      es: Abre el denominador.
+      en: Opens the denominator.
+      pt: Abre o denominador.
+      fr: Ouvre le dénominateur.
+      zh: 打开分母。
+      ja: 分母を開く括弧。
+  - id: u1
+    type: variable
+    value: u₁
+    explanation:
+      es: La velocidad del primer cuerpo antes del choque.
+      en: The first body's velocity before the collision.
+      pt: A velocidade do primeiro corpo antes da colisão.
+      fr: La vitesse du premier corps avant le choc.
+      zh: 碰撞前第一个物体的速度。
+      ja: 衝突前の最初の物体の速度。
+  - id: minus-2
+    type: operator
+    value: −
+    explanation:
+      es: Menos.
+      en: Minus.
+      pt: Menos.
+      fr: Moins.
+      zh: 减去。
+      ja: マイナス。
+  - id: u2
+    type: variable
+    value: u₂
+    explanation:
+      es: La velocidad del segundo cuerpo antes del choque.
+      en: The second body's velocity before the collision.
+      pt: A velocidade do segundo corpo antes da colisão.
+      fr: La vitesse du second corps avant le choc.
+      zh: 碰撞前第二个物体的速度。
+      ja: 衝突前の二番目の物体の速度。
+  - id: close-paren-2
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el denominador.
+      en: Closes the denominator.
+      pt: Fecha o denominador.
+      fr: Ferme le dénominateur.
+      zh: 关闭分母。
+      ja: 分母を閉じる括弧。
+context:
+  author:
+    es: Isaac Newton
+    en: Isaac Newton
+    pt: Isaac Newton
+    fr: Isaac Newton
+    zh: 艾萨克·牛顿
+    ja: アイザック・ニュートン
+  era:
+    es: Inglaterra, 1643–1727 · en los Principia
+    en: England, 1643–1727 · in the Principia
+    pt: Inglaterra, 1643–1727 · nos Principia
+    fr: Angleterre, 1643–1727 · dans les Principia
+    zh: 英国,1643–1727年 · 载于《自然哲学的数学原理》
+    ja: イングランド、1643–1727年・『プリンキピア』にて
+  history:
+    es: >-
+      El coeficiente de restitución cuantifica cuán elástico es un choque: es la razón entre las
+      velocidades relativas de separación y de aproximación. Un valor e = 1 describe un choque
+      perfectamente elástico, sin pérdida de energía, y e = 0 uno perfectamente plástico, en el que
+      los cuerpos quedan pegados. Newton estudió estos cocientes al experimentar con péndulos en los
+      Principia. Hoy esa idea guía el diseño de las pelotas deportivas, la seguridad de los
+      parachoques y las pruebas de choque de los vehículos.
+    en: >-
+      The coefficient of restitution quantifies how elastic a collision is: it is the ratio between
+      the relative velocities of separation and of approach. A value e = 1 describes a perfectly
+      elastic collision, with no loss of energy, and e = 0 a perfectly plastic one, where the bodies
+      stick together. Newton studied these ratios while experimenting with pendulums in the
+      Principia. Today the idea guides the design of sports balls, bumper safety, and vehicle crash
+      testing.
+    pt: >-
+      O coeficiente de restituição quantifica quão elástica é uma colisão: é a razão entre as
+      velocidades relativas de separação e de aproximação. Um valor e = 1 descreve uma colisão
+      perfeitamente elástica, sem perda de energia, e e = 0 uma perfeitamente plástica, em que os
+      corpos ficam grudados. Newton estudou esses quocientes ao experimentar com pêndulos nos
+      Principia. Hoje essa ideia guia o projeto de bolas esportivas, a segurança dos para-choques e
+      os testes de colisão dos veículos.
+    fr: >-
+      Le coefficient de restitution quantifie l'élasticité d'un choc : c'est le rapport entre les
+      vitesses relatives de séparation et d'approche. Une valeur e = 1 décrit un choc parfaitement
+      élastique, sans perte d'énergie, et e = 0 un choc parfaitement plastique, où les corps restent
+      collés. Newton étudia ces quotients en expérimentant avec des pendules dans les Principia.
+      Aujourd'hui cette idée guide la conception des ballons sportifs, la sécurité des pare-chocs et
+      les essais de collision des véhicules.
+    zh: >-
+      恢复系数用来量化碰撞的弹性程度:它是分离相对速度与接近相对速度之比。e = 1 表示完全弹性碰撞,没有能量损失;e = 0
+      表示完全塑性碰撞,两物体会粘在一起。牛顿在《自然哲学的数学原理》中用摆做实验研究过这些比值。如今这一思想指导着
+      体育用球的设计、保险杠的安全性和汽车的碰撞测试。
+    ja: >-
+      反発係数は衝突の弾性の度合いを数値化する:これは、離れるときの相対速度と近づくときの相対速度の比である。e = 1は
+      エネルギー損失のない完全弾性衝突を表し、e = 0は物体がくっつく完全塑性衝突を表す。ニュートンは『プリンキピア』で
+      振り子の実験を行い、これらの比を研究した。今日、この考えはスポーツボールの設計、バンパーの安全性、自動車の衝突試験を
+      導いている。
+  timeline:
+    - year: "1669"
+      label:
+        es: La Royal Society encarga experimentos con péndulos en choque a Wallis, Wren y Huygens.
+        en: The Royal Society commissions colliding-pendulum experiments from Wallis, Wren, and Huygens.
+        pt: A Royal Society encomenda experimentos de pêndulos em choque a Wallis, Wren e Huygens.
+        fr: La Royal Society commande à Wallis, Wren et Huygens des expériences de pendules en choc.
+        zh: 皇家学会委托沃利斯、雷恩和惠更斯进行碰撞摆实验。
+        ja: 王立協会がウォリス、レン、ホイヘンスに衝突する振り子の実験を依頼する。
+    - year: "1687"
+      label:
+        es: Newton incluye el coeficiente de restitución en los Principia.
+        en: Newton includes the coefficient of restitution in the Principia.
+        pt: Newton inclui o coeficiente de restituição nos Principia.
+        fr: Newton inclut le coefficient de restitution dans les Principia.
+        zh: 牛顿在《自然哲学的数学原理》中引入了恢复系数。
+        ja: ニュートンが『プリンキピア』に反発係数を載せる。
+    - year: s. XX
+      label:
+        es: La industria automotriz lo adopta para diseñar zonas de deformación y parachoques.
+        en: The automotive industry adopts it to design crumple zones and bumpers.
+        pt: A indústria automotiva o adota para projetar zonas de deformação e para-choques.
+        fr: L'industrie automobile l'adopte pour concevoir zones de déformation et pare-chocs.
+        zh: 汽车工业采用它来设计溃缩区和保险杠。
+        ja: 自動車産業がクラッシュゾーンやバンパーの設計に採用する。
+    - year: Hoy
+      label:
+        es: Es el estándar para medir el rebote de las pelotas y la absorción de impacto de los materiales.
+        en: It is the standard for measuring ball bounce and the impact absorption of materials.
+        pt: É o padrão para medir o rebote de bolas e a absorção de impacto dos materiais.
+        fr: C'est la norme pour mesurer le rebond des balles et l'absorption d'impact des matériaux.
+        zh: 它是测量球类回弹和材料冲击吸收性能的标准。
+        ja: ボールのバウンドや材料の衝撃吸収を測る標準となっている。
+  useCases:
+    - title:
+        es: Pelotas deportivas
+        en: Sports balls
+        pt: Bolas esportivas
+        fr: Ballons sportifs
+        zh: 体育用球
+        ja: スポーツボール
+      description:
+        es: >-
+          Tenis, baloncesto y fútbol se regulan por la altura de rebote que impone su coeficiente.
+        en: >-
+          Tennis, basketball, and football are regulated by the bounce height set by their
+          coefficient.
+        pt: >-
+          Tênis, basquete e futebol são regulados pela altura de rebote imposta pelo seu coeficiente.
+        fr: >-
+          Tennis, basket et football sont réglementés par la hauteur de rebond imposée par leur
+          coefficient.
+        zh: >-
+          网球、篮球和足球的性能,由它们的恢复系数所决定的回弹高度来规定。
+        ja: >-
+          テニス、バスケットボール、サッカーは、反発係数が定めるバウンドの高さで規格が決まる。
+    - title:
+        es: Seguridad automotriz
+        en: Automotive safety
+        pt: Segurança automotiva
+        fr: Sécurité automobile
+        zh: 汽车安全
+        ja: 自動車の安全性
+      description:
+        es: >-
+          Las zonas de deformación y los parachoques absorben energía reduciendo la restitución del
+          choque.
+        en: >-
+          Crumple zones and bumpers absorb energy by reducing the collision's restitution.
+        pt: >-
+          Zonas de deformação e para-choques absorvem energia reduzindo a restituição do choque.
+        fr: >-
+          Les zones de déformation et les pare-chocs absorbent l'énergie en réduisant la restitution
+          du choc.
+        zh: >-
+          溃缩区和保险杠通过降低碰撞的恢复系数来吸收能量。
+        ja: >-
+          クラッシュゾーンやバンパーは、衝突の反発係数を下げてエネルギーを吸収する。
+    - title:
+        es: Caracterización de materiales
+        en: Materials characterization
+        pt: Caracterização de materiais
+        fr: Caractérisation des matériaux
+        zh: 材料表征
+        ja: 材料評価
+      description:
+        es: >-
+          Medir la restitución de una probeta clasifica su elasticidad sin pruebas destructivas.
+        en: >-
+          Measuring a sample's restitution ranks its elasticity without destructive testing.
+        pt: >-
+          Medir a restituição de um corpo de prova classifica sua elasticidade sem ensaios
+          destrutivos.
+        fr: >-
+          Mesurer la restitution d'une éprouvette classe son élasticité sans essai destructif.
+        zh: >-
+          测量试样的恢复系数即可评价其弹性,无需破坏性试验。
+        ja: >-
+          試験片の反発係数を測ることで、破壊試験なしに弾性を評価できる。
+    - title:
+        es: Protección industrial
+        en: Industrial protection
+        pt: Proteção industrial
+        fr: Protection industrielle
+        zh: 工业防护
+        ja: 産業用保護
+      description:
+        es: >-
+          Embalajes y cascos se prueban dejando caer pesos medidos para limitar la energía
+          transmitida.
+        en: >-
+          Packaging and helmets are tested by dropping measured weights to limit transmitted energy.
+        pt: >-
+          Embalagens e capacetes são testados deixando cair pesos medidos para limitar a energia
+          transmitida.
+        fr: >-
+          Les emballages et casques sont testés en laissant tomber des poids mesurés pour limiter
+          l'énergie transmise.
+        zh: >-
+          包装和头盔通过从规定高度落下重物来测试,以限制传递的能量。
+        ja: >-
+          包装やヘルメットは、決められた重りを落下させて、伝わるエネルギーを抑えられるか試験される。
+  example:
+    title:
+      es: Una pelota que rebota
+      en: A bouncing ball
+      pt: Uma bola que quica
+      fr: Une balle qui rebondit
+      zh: 弹跳的球
+      ja: 跳ねるボール
+    lines:
+      - es: h₀ = 1 m, h₁ = 0.81 m
+        en: h₀ = 1 m, h₁ = 0.81 m
+        pt: h₀ = 1 m, h₁ = 0,81 m
+        fr: h₀ = 1 m, h₁ = 0,81 m
+        zh: h₀ = 1 米,h₁ = 0.81 米
+        ja: h₀ = 1 m、h₁ = 0.81 m
+      - es: e = √(h₁ / h₀)
+        en: e = √(h₁ / h₀)
+        pt: e = √(h₁ / h₀)
+        fr: e = √(h₁ / h₀)
+        zh: e = √(h₁ / h₀)
+        ja: e = √(h₁ / h₀)
+      - es: e = √0.81
+        en: e = √0.81
+        pt: e = √0,81
+        fr: e = √0,81
+        zh: e = √0.81
+        ja: e = √0.81
+      - es: e = 0.9
+        en: e = 0.9
+        pt: e = 0,9
+        fr: e = 0,9
+        zh: e = 0.9
+        ja: e = 0.9
+      - es: e = 0.9 (se conserva el 90 % de la velocidad)
+        en: e = 0.9 (90% of the speed is conserved)
+        pt: e = 0,9 (conservam-se 90 % da velocidade)
+        fr: e = 0,9 (90 % de la vitesse est conservé)
+        zh: e = 0.9(保留了90%的速度)
+        ja: e = 0.9(速度の90%が保たれる)

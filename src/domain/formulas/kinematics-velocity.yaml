@@ -1,0 +1,341 @@
+id: kinematics-velocity
+title:
+  es: Velocidad con Aceleración Constante
+  en: Constant Acceleration Velocity
+  pt: Velocidade com Aceleração Constante
+  fr: Vitesse à Accélération Constante
+  zh: 匀加速运动的末速度
+  ja: 等加速度運動の速度
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La velocidad final del objeto, medida en metros por segundo.
+      en: The final speed of the object, measured in meters per second.
+      pt: A velocidade final do objeto, medida em metros por segundo.
+      fr: La vitesse finale de l'objet, mesurée en mètres par seconde.
+      zh: 物体的末速度,以米每秒为单位。
+      ja: 物体の最終速度。単位はメートル毎秒。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: v0
+    type: variable
+    value: v₀
+    explanation:
+      es: La velocidad inicial, con la que el objeto empezó a moverse.
+      en: The initial speed, with which the object started moving.
+      pt: A velocidade inicial, com a qual o objeto começou a se mover.
+      fr: La vitesse initiale, avec laquelle l'objet a commencé à se déplacer.
+      zh: 初速度,即物体开始运动时的速度。
+      ja: 初速度。物体が動き始めたときの速度。
+  - id: plus
+    type: operator
+    value: "+"
+    explanation:
+      es: Suma de la velocidad inicial y la ganada por la aceleración.
+      en: Addition of the initial speed and the speed gained from acceleration.
+      pt: Soma da velocidade inicial com a velocidade ganha pela aceleração.
+      fr: Addition de la vitesse initiale et de la vitesse gagnée grâce à l'accélération.
+      zh: 初速度与加速获得的速度之和。
+      ja: 初速度と加速度で得た速度の和。
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: La aceleración constante, el cambio de velocidad por cada segundo.
+      en: The constant acceleration, the change in speed each second.
+      pt: A aceleração constante, a variação de velocidade a cada segundo.
+      fr: L'accélération constante, le changement de vitesse à chaque seconde.
+      zh: 恒定的加速度,即每秒速度的变化量。
+      ja: 一定の加速度。毎秒あたりの速度の変化量。
+  - id: times
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación de la aceleración por el tiempo.
+      en: Multiplication of the acceleration by the time.
+      pt: Multiplicação da aceleração pelo tempo.
+      fr: Multiplication de l'accélération par le temps.
+      zh: 加速度乘以时间。
+      ja: 加速度に時間を掛ける。
+  - id: t
+    type: variable
+    value: t
+    explanation:
+      es: El tiempo transcurrido desde que comenzó el movimiento, en segundos.
+      en: The time elapsed since the motion began, in seconds.
+      pt: O tempo decorrido desde o início do movimento, em segundos.
+      fr: Le temps écoulé depuis le début du mouvement, en secondes.
+      zh: 自运动开始以来经过的时间,以秒为单位。
+      ja: 運動が始まってからの経過時間。単位は秒。
+context:
+  author:
+    es: Galileo Galilei
+    en: Galileo Galilei
+    pt: Galileu Galilei
+    fr: Galilée
+    zh: 伽利略·伽利莱
+    ja: ガリレオ・ガリレイ
+  era:
+    es: Italia, 1564–1642 · en los Discorsi, 1638
+    en: Italy, 1564–1642 · in the Discorsi, 1638
+    pt: Itália, 1564–1642 · nos Discorsi, 1638
+    fr: Italie, 1564–1642 · dans les Discorsi, 1638
+    zh: 意大利,1564–1642年 · 载于《关于两门新科学的对话》,1638年
+    ja: イタリア、1564–1642年・『新科学対話』、1638年
+  history:
+    es: >-
+      Al estudiar el movimiento, Galileo Galilei descubrió que un cuerpo que cae o se desliza por un
+      plano inclinado gana la misma cantidad de velocidad en cada intervalo igual de tiempo, es
+      decir, se acelera uniformemente. Ese resultado, publicado en los Discorsi (1638), convierte a
+      la velocidad en una función lineal del tiempo, y de allí salen las ecuaciones que hoy gobiernan
+      la medición de todo lo que se mueve. La ecuación v = v₀ + a·t está detrás del velocímetro de
+      cada auto, de los cálculos de frenado y de los simuladores de choque usados en seguridad vial.
+    en: >-
+      While studying motion, Galileo Galilei discovered that a body falling or sliding down an
+      inclined plane gains the same amount of speed in every equal interval of time, meaning it
+      accelerates uniformly. That result, published in the Discorsi (1638), makes velocity a linear
+      function of time, and from it come the equations that today govern how we measure anything
+      that moves. The equation v = v₀ + a·t sits behind every car's speedometer, braking-distance
+      calculations and the crash simulators used in road safety.
+    pt: >-
+      Ao estudar o movimento, Galileu Galilei descobriu que um corpo em queda ou deslizando por um
+      plano inclinado ganha a mesma quantidade de velocidade em cada intervalo igual de tempo, ou
+      seja, acelera de maneira uniforme. Esse resultado, publicado nos Discorsi (1638), torna a
+      velocidade uma função linear do tempo, e dele saem as equações que hoje governam a medição de
+      tudo o que se move. A equação v = v₀ + a·t está por trás do velocímetro de todo carro, dos
+      cálculos de frenagem e dos simuladores de colisão usados na segurança viária.
+    fr: >-
+      En étudiant le mouvement, Galilée découvrit qu'un corps en chute ou glissant sur un plan
+      incliné gagne la même quantité de vitesse à chaque intervalle de temps égal, c'est-à-dire
+      qu'il accélère uniformément. Ce résultat, publié dans les Discorsi (1638), fait de la vitesse
+      une fonction linéaire du temps, et c'est de là que viennent les équations qui régissent
+      aujourd'hui la mesure de tout ce qui se déplace. L'équation v = v₀ + a·t se trouve derrière le
+      compteur de vitesse de chaque voiture, les calculs de distance de freinage et les simulateurs
+      de choc utilisés en sécurité routière.
+    zh: >-
+      在研究运动的过程中,伽利略·伽利莱发现,无论是自由下落的物体还是沿斜面滑下的物体,在每一个相等的时间间隔内
+      都会获得相同大小的速度增量,也就是说做匀加速运动。这一成果发表于1638年的《关于两门新科学的对话》,
+      它使速度成为时间的线性函数,如今测量一切运动物体的公式皆由此而来。方程v = v₀ + a·t是每辆汽车车速表、
+      制动距离计算和交通安全碰撞模拟器的基础。
+    ja: >-
+      ガリレオ・ガリレイは運動の研究で、自由落下や斜面上を滑る物体が、等しい時間間隔ごとに同じ速度を
+      獲得することを発見した。すなわち等加速度運動である。この結果は『新科学対話』(1638年)に発表され、
+      速度を時間の一次関数とした。今日あらゆる動くものの計測を支配する方程式はここから生まれた。
+      式v = v₀ + a·tは、あらゆる自動車のスピードメーター、制動距離の計算、交通安全の衝突シミュレーターの背後にある。
+  timeline:
+    - year: "1604"
+      label:
+        es: >-
+          Galileo formula la ley de la aceleración uniforme a partir de experimentos con planos
+          inclinados y péndulos.
+        en: >-
+          Galileo formulates the law of uniform acceleration from experiments with inclined planes
+          and pendulums.
+        pt: >-
+          Galileu formula a lei da aceleração uniforme a partir de experimentos com planos
+          inclinados e pêndulos.
+        fr: >-
+          Galilée formule la loi de l'accélération uniforme à partir d'expériences avec des plans
+          inclinés et des pendules.
+        zh: >-
+          伽利略通过斜面和摆的实验,提出了匀加速运动的定律。
+        ja: >-
+          ガリレオが斜面と振り子の実験から等加速度運動の法則を定式化する。
+    - year: "1638"
+      label:
+        es: >-
+          Se publican los Discorsi en Leiden mientras Galileo está bajo arresto domiciliario.
+        en: >-
+          The Discorsi are published in Leiden while Galileo is under house arrest.
+        pt: >-
+          Os Discorsi são publicados em Leiden enquanto Galileu está em prisão domiciliar.
+        fr: >-
+          Les Discorsi sont publiés à Leyde alors que Galilée est assigné à résidence.
+        zh: >-
+          伽利略被软禁期间,《关于两门新科学的对话》在莱顿出版。
+        ja: >-
+          ガリレオが自宅軟禁の身にある中、『新科学対話』がライデンで出版される。
+    - year: "1901"
+      label:
+        es: >-
+          El Oldsmobile Curved Dash incorpora un velocímetro, y esta ecuación empieza a acompañar a
+          los autos.
+        en: >-
+          The Oldsmobile Curved Dash gains a speedometer, and this equation begins to travel with
+          cars.
+        pt: >-
+          O Oldsmobile Curved Dash ganha um velocímetro, e esta equação começa a acompanhar os
+          carros.
+        fr: >-
+          L'Oldsmobile Curved Dash se dote d'un compteur de vitesse, et cette équation commence à
+          voyager avec les voitures.
+        zh: >-
+          奥斯莫比尔Curved Dash装上里程表,这个方程开始与汽车相伴。
+        ja: >-
+          オールズモビル・カーブドダッシュに速度計が搭載され、この式が自動車とともに歩み始める。
+    - year: Hoy
+      label:
+        es: >-
+          Cada simulación de frenado y de choque de la industria automotriz usa esta ecuación para
+          predecir velocidades.
+        en: >-
+          Every braking and crash simulation in the automotive industry uses this equation to
+          predict speeds.
+        pt: >-
+          Cada simulação de frenagem e colisão da indústria automotiva usa esta equação para prever
+          velocidades.
+        fr: >-
+          Chaque simulation de freinage et de choc de l'industrie automobile utilise cette équation
+          pour prédire les vitesses.
+        zh: >-
+          汽车工业中的每一次制动和碰撞模拟都用这个方程来预测速度。
+        ja: >-
+          自動車業界の制動・衝突シミュレーションはすべて、速度を予測するためにこの式を使う。
+  useCases:
+    - title:
+        es: Velocímetros y frenado de autos
+        en: Car speedometers and braking
+        pt: Velocímetros e frenagem de carros
+        fr: Compteurs de vitesse et freinage
+        zh: 汽车车速表与制动
+        ja: 車の速度計と制動
+      description:
+        es: >-
+          El velocímetro y los sistemas de frenado ABS trabajan con la velocidad que crece
+          linealmente con el tiempo de aceleración.
+        en: >-
+          Speedometers and ABS braking systems work with speed growing linearly with acceleration
+          time.
+        pt: >-
+          O velocímetro e os sistemas de frenagem ABS trabalham com a velocidade que cresce
+          linearmente com o tempo de aceleração.
+        fr: >-
+          Les compteurs de vitesse et les systèmes de freinage ABS travaillent avec une vitesse qui
+          croît linéairement avec le temps d'accélération.
+        zh: >-
+          车速表和ABS制动系统处理的速度,都随加速时间线性增长。
+        ja: >-
+          スピードメーターやABSブレーキシステムは、加速時間に応じて速度が直線的に増えることを利用している。
+    - title:
+        es: Pruebas de choque y seguridad vial
+        en: Crash tests and road safety
+        pt: Testes de colisão e segurança viária
+        fr: Crash-tests et sécurité routière
+        zh: 碰撞测试与道路安全
+        ja: 衝突テストと交通安全
+      description:
+        es: >-
+          Los simuladores calculan la velocidad de impacto final a partir de la aceleración y el
+          tiempo antes de cada prueba.
+        en: >-
+          Simulators compute the final impact speed from the acceleration and time before each test.
+        pt: >-
+          Os simuladores calculam a velocidade final de impacto a partir da aceleração e do tempo
+          antes de cada teste.
+        fr: >-
+          Les simulateurs calculent la vitesse d'impact finale à partir de l'accélération et du
+          temps avant chaque essai.
+        zh: >-
+          模拟器根据每次测试前的加速度和时间计算最终的撞击速度。
+        ja: >-
+          シミュレーターは各テストの前の加速度と時間から最終的な衝突速度を計算する。
+    - title:
+        es: Caída libre y paracaidismo
+        en: Free fall and skydiving
+        pt: Queda livre e paraquedismo
+        fr: Chute libre et parachutisme
+        zh: 自由落体与跳伞
+        ja: 自由落下とスカイダイビング
+      description:
+        es: >-
+          Al comenzar la caída, la velocidad crece con esta ley hasta que el aire la estabiliza.
+        en: >-
+          As a fall begins, speed grows by this law until the air stabilizes it.
+        pt: >-
+          No início da queda, a velocidade cresce por esta lei até o ar estabilizá-la.
+        fr: >-
+          Au début de la chute, la vitesse croît selon cette loi jusqu'à ce que l'air la stabilise.
+        zh: >-
+          下落初期,速度按这条规律增长,直到空气阻力使其稳定。
+        ja: >-
+          落下の初め、速度はこの法則に従って増加し、やがて空気抵抗によって安定する。
+    - title:
+        es: Transporte ferroviario y urbano
+        en: Rail and urban transit
+        pt: Transporte ferroviário e urbano
+        fr: Transports ferroviaires et urbains
+        zh: 铁路与城市交通
+        ja: 鉄道と都市交通
+      description:
+        es: >-
+          Los trenes y metros planifican su aceleración con esta ecuación para llegar a la velocidad
+          de crucero en el tramo justo.
+        en: >-
+          Trains and metros plan their acceleration with this equation to reach cruising speed in
+          the right distance.
+        pt: >-
+          Trens e metrôs planejam sua aceleração com esta equação para atingir a velocidade de
+          cruzeiro no trecho certo.
+        fr: >-
+          Les trains et métros planifient leur accélération avec cette équation pour atteindre la
+          vitesse de croisière au bon moment.
+        zh: >-
+          火车和地铁用这个方程规划加速度,以便在合适的区间达到巡航速度。
+        ja: >-
+          電車や地下鉄は、この式で加速度を計画して適切な区間で巡航速度に到達する。
+  example:
+    title:
+      es: Un auto que acelera
+      en: A car accelerating
+      pt: Um carro acelerando
+      fr: Une voiture qui accélère
+      zh: 加速的汽车
+      ja: 加速する車
+    lines:
+      - es: v₀ = 0 m/s
+        en: v₀ = 0 m/s
+        pt: v₀ = 0 m/s
+        fr: v₀ = 0 m/s
+        zh: v₀ = 0 m/s
+        ja: v₀ = 0 m/s
+      - es: a = 5 m/s² · t = 6 s
+        en: a = 5 m/s² · t = 6 s
+        pt: a = 5 m/s² · t = 6 s
+        fr: a = 5 m/s² · t = 6 s
+        zh: a = 5 m/s² · t = 6 s
+        ja: a = 5 m/s² · t = 6 s
+      - es: v = v₀ + a · t
+        en: v = v₀ + a · t
+        pt: v = v₀ + a · t
+        fr: v = v₀ + a · t
+        zh: v = v₀ + a · t
+        ja: v = v₀ + a · t
+      - es: v = 0 + 5 × 6
+        en: v = 0 + 5 × 6
+        pt: v = 0 + 5 × 6
+        fr: v = 0 + 5 × 6
+        zh: v = 0 + 5 × 6
+        ja: v = 0 + 5 × 6
+      - es: v = 30 m/s
+        en: v = 30 m/s
+        pt: v = 30 m/s
+        fr: v = 30 m/s
+        zh: v = 30 m/s
+        ja: v = 30 m/s

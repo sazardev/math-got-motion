@@ -1,0 +1,350 @@
+id: decay-constant
+title:
+  es: Constante de Decaimiento
+  en: Decay Constant
+  pt: Constante de Decaimento
+  fr: Constante de décroissance
+  zh: 衰变常数
+  ja: 崩壊定数
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: lambda
+    type: variable
+    value: λ
+    explanation:
+      es: "λ (lambda): la constante de decaimiento, la probabilidad de desintegración por unidad de tiempo."
+      en: "λ (lambda): the decay constant, the probability of decay per unit of time."
+      pt: "λ (lambda): a constante de decaimento, a probabilidade de desintegração por unidade de tempo."
+      fr: "λ (lambda) : la constante de décroissance, la probabilité de désintégration par unité de temps."
+      zh: "λ（lambda）：衰变常数，单位时间内的衰变概率。"
+      ja: "λ（ラムダ）：崩壊定数。単位時間当たりの崩壊確率。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: ln
+    type: operator
+    value: ln
+    explanation:
+      es: El logaritmo natural, de base e.
+      en: The natural logarithm, base e.
+      pt: O logaritmo natural, de base e.
+      fr: Le logarithme naturel, de base e.
+      zh: 自然对数，以e为底。
+      ja: 自然対数。底はe。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el logaritmo de 2.
+      en: Opens the logarithm of 2.
+      pt: Abre o logaritmo de 2.
+      fr: Ouvre le logarithme de 2.
+      zh: 打开2的对数。
+      ja: 2の対数を開く括弧。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "El 2 de la vida media: la fracción de núcleos que quedan sin desintegrar."
+      en: "The 2 of the half-life: the fraction of nuclei that remain undecayed."
+      pt: "O 2 da meia-vida: a fração de núcleos que restam sem desintegrar."
+      fr: "Le 2 de la demi-vie : la fraction de noyaux qui restent sans se désintégrer."
+      zh: "半衰期里的2：仍未衰变的原子核所占的比例。"
+      ja: 半減期の2。崩壊せずに残る原子核の割合。
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el logaritmo.
+      en: Closes the logarithm.
+      pt: Fecha o logaritmo.
+      fr: Ferme le logarithme.
+      zh: 关闭对数。
+      ja: 対数を閉じる括弧。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre la vida media.
+      en: Divided by the half-life.
+      pt: Dividido pela meia-vida.
+      fr: Divisé par la demi-vie.
+      zh: 除以半衰期。
+      ja: 半減期で割る。
+  - id: half-life
+    type: variable
+    value: t½
+    explanation:
+      es: "t½: la vida media, el tiempo en que queda la mitad de los núcleos."
+      en: "t½: the half-life, the time after which half the nuclei remain."
+      pt: "t½: a meia-vida, o tempo em que resta metade dos núcleos."
+      fr: "t½ : la demi-vie, le temps au bout duquel il reste la moitié des noyaux."
+      zh: "t½：半衰期，即原子核剩下一半所需的时间。"
+      ja: "t½：半減期。原子核が半分残るまでの時間。"
+context:
+  author:
+    es: Basada en el trabajo de Rutherford
+    en: Based on the work of Rutherford
+    pt: Baseada no trabalho de Rutherford
+    fr: Fondée sur les travaux de Rutherford
+    zh: 基于卢瑟福的研究
+    ja: ラザフォードの研究に基づく
+  era:
+    es: Inglaterra, s. XX
+    en: England, 20th century
+    pt: Inglaterra, século XX
+    fr: Angleterre, XXe siècle
+    zh: 英格兰，20世纪
+    ja: イングランド、20世紀
+  history:
+    es: >-
+      A comienzos del siglo XX, Ernest Rutherford y sus colaboradores en Manchester y Cambridge
+      mostraron que la desintegración radiactiva no es un proceso determinista sino probabilístico:
+      cada núcleo tiene una probabilidad fija de decaer por unidad de tiempo. Esa probabilidad, la
+      constante de decaimiento λ, es el inverso de la vida media t½ a través de λ = ln 2 / t½, y su
+      recíproca 1/λ es el tiempo promedio que un núcleo sobrevive. Fue la base del modelo exponencial
+      de la radiactividad, y hoy sustenta la datación con carbono-14, la medicina nuclear y la física
+      de partículas, donde cada partícula inestable tiene su propia constante de decaimiento.
+    en: >-
+      In the early 20th century, Ernest Rutherford and his collaborators in Manchester and Cambridge
+      showed that radioactive decay is not deterministic but probabilistic: each nucleus has a fixed
+      probability of decaying per unit of time. That probability, the decay constant λ, is the inverse
+      of the half-life t½ through λ = ln 2 / t½, and its reciprocal 1/λ is the average time a nucleus
+      survives. It underpinned the exponential model of radioactivity, and today it sustains carbon-14
+      dating, nuclear medicine, and particle physics, where every unstable particle has its own decay
+      constant.
+    pt: >-
+      No início do século XX, Ernest Rutherford e seus colaboradores em Manchester e Cambridge
+      mostraram que o decaimento radioativo não é determinístico, mas probabilístico: cada núcleo tem
+      uma probabilidade fixa de decair por unidade de tempo. Essa probabilidade, a constante de
+      decaimento λ, é o inverso da meia-vida t½ por meio de λ = ln 2 / t½, e seu recíproco 1/λ é o
+      tempo médio que um núcleo sobrevive. Foi a base do modelo exponencial da radioatividade, e hoje
+      sustenta a datação com carbono-14, a medicina nuclear e a física de partículas, em que cada
+      partícula instável tem sua própria constante de decaimento.
+    fr: >-
+      Au début du XXe siècle, Ernest Rutherford et ses collaborateurs à Manchester et Cambridge ont
+      montré que la désintégration radioactive n'est pas déterministe mais probabiliste : chaque noyau
+      a une probabilité fixe de se désintégrer par unité de temps. Cette probabilité, la constante de
+      décroissance λ, est l'inverse de la demi-vie t½ par λ = ln 2 / t½, et son réciproque 1/λ est le
+      temps moyen de survie d'un noyau. Ce fut la base du modèle exponentiel de la radioactivité, et
+      aujourd'hui elle soutient la datation au carbone 14, la médecine nucléaire et la physique des
+      particules, où chaque particule instable a sa propre constante de décroissance.
+    zh: >-
+      20世纪初，欧内斯特·卢瑟福与他在曼彻斯特和剑桥的合作者表明，放射性衰变不是确定性的，而是概率性的：每个原子核在
+      单位时间内都有一个固定的衰变概率。这个概率——衰变常数λ——通过λ = ln 2 / t½与半衰期t½互为倒数关系，其倒数1/λ
+      就是一个原子核平均存活的时长。它奠定了放射性指数模型的基础，如今支撑着碳-14测年、核医学和粒子物理学——每种不
+      稳定粒子都有各自的衰变常数。
+    ja: >-
+      20世紀初頭、アーネスト・ラザフォードはマンチェスターとケンブリッジの共同研究者たちとともに、放射性崩壊が
+      決定的な過程ではなく確率的な過程であることを示した。各原子核は、単位時間当たりに一定の確率で崩壊する。この確率
+      である崩壊定数λは、λ = ln 2 / t½を通じて半減期t½と逆数の関係にあり、その逆数1/λが原子核が平均して生き残る
+      時間となる。これは放射能の指数モデルの基盤となり、今日では炭素14年代測定、核医学、そしてあらゆる不安定粒子が
+      固有の崩壊定数を持つ素粒子物理学を支えている。
+  timeline:
+    - year: "1902"
+      label:
+        es: >-
+          Rutherford y Soddy formulan la ley del decaimiento radiactivo, origen de la constante λ.
+        en: >-
+          Rutherford and Soddy formulate the law of radioactive decay, the origin of the constant λ.
+        pt: >-
+          Rutherford e Soddy formulam a lei do decaimento radioativo, origem da constante λ.
+        fr: >-
+          Rutherford et Soddy formulent la loi de la décroissance radioactive, origine de la constante
+          λ.
+        zh: >-
+          卢瑟福与索迪提出放射性衰变定律，这是常数λ的起源。
+        ja: >-
+          ラザフォードとソディが放射性崩壊の法則を定式化し、定数λの起源となる。
+    - year: "1911"
+      label:
+        es: >-
+          Rutherford descubre el núcleo atómico, y el modelo exponencial se consolida en la física
+          moderna.
+        en: >-
+          Rutherford discovers the atomic nucleus, and the exponential model is consolidated in modern
+          physics.
+        pt: >-
+          Rutherford descobre o núcleo atômico, e o modelo exponencial se consolida na física moderna.
+        fr: >-
+          Rutherford découvre le noyau atomique, et le modèle exponentiel se consolide dans la
+          physique moderne.
+        zh: >-
+          卢瑟福发现原子核，指数模型在现代物理学中得以确立。
+        ja: >-
+          ラザフォードが原子核を発見し、指数モデルが現代物理学で確立される。
+    - year: "1949"
+      label:
+        es: >-
+          La datación con carbono-14 de Libby aplica la constante de decaimiento a la arqueología.
+        en: >-
+          Libby's carbon-14 dating applies the decay constant to archaeology.
+        pt: >-
+          A datação com carbono-14 de Libby aplica a constante de decaimento à arqueologia.
+        fr: >-
+          La datation au carbone 14 de Libby applique la constante de décroissance à l'archéologie.
+        zh: >-
+          利比的碳-14测年法将衰变常数应用到考古学。
+        ja: >-
+          リビーの炭素14年代測定が、崩壊定数を考古学に応用する。
+    - year: Hoy
+      label:
+        es: >-
+          Es la base de la medicina nuclear y de la física de partículas modernas.
+        en: >-
+          It is the basis of nuclear medicine and modern particle physics.
+        pt: >-
+          É a base da medicina nuclear e da física de partículas moderna.
+        fr: >-
+          C'est la base de la médecine nucléaire et de la physique des particules moderne.
+        zh: >-
+          它是核医学和现代粒子物理学的基础。
+        ja: >-
+          核医学と現代の素粒子物理学の基盤である。
+  useCases:
+    - title:
+        es: Datación con carbono-14
+        en: Carbon-14 dating
+        pt: Datação com carbono-14
+        fr: Datation au carbone 14
+        zh: 碳-14测年
+        ja: 炭素14年代測定
+      description:
+        es: >-
+          La constante de decaimiento del carbono-14 fija el reloj que data restos orgánicos de hasta
+          unos 50.000 años.
+        en: >-
+          Carbon-14's decay constant sets the clock that dates organic remains up to about 50,000
+          years old.
+        pt: >-
+          A constante de decaimento do carbono-14 fixa o relógio que data restos orgânicos de até
+          cerca de 50 mil anos.
+        fr: >-
+          La constante de décroissance du carbone 14 règle l'horloge qui date les restes organiques
+          jusqu'à environ 50 000 ans.
+        zh: >-
+          碳-14的衰变常数设定了一台时钟，可测定距今约5万年以内的有机物遗存。
+        ja: >-
+          炭素14の崩壊定数が、約5万年前までの有機物の年代を測定する時計を決める。
+    - title:
+        es: Medicina nuclear
+        en: Nuclear medicine
+        pt: Medicina nuclear
+        fr: Médecine nucléaire
+        zh: 核医学
+        ja: 核医学
+      description:
+        es: >-
+          Los radioisótopos diagnósticos se eligen según su constante de decaimiento para que la dosis
+          se elimine del cuerpo a tiempo.
+        en: >-
+          Diagnostic radioisotopes are chosen by their decay constant so the dose clears the body in
+          time.
+        pt: >-
+          Radioisótopos diagnósticos são escolhidos pela constante de decaimento para que a dose seja
+          eliminada do corpo a tempo.
+        fr: >-
+          Les radio-isotopes diagnostiques sont choisis selon leur constante de décroissance afin que
+          la dose soit éliminée du corps à temps.
+        zh: >-
+          诊断用放射性同位素根据其衰变常数来选择，以便剂量能及时从体内清除。
+        ja: >-
+          診断用の放射性同位体は、線量が時間内に体内から排出されるように、その崩壊定数に基づいて選ばれる。
+    - title:
+        es: Física de partículas
+        en: Particle physics
+        pt: Física de partículas
+        fr: Physique des particules
+        zh: 粒子物理学
+        ja: 素粒子物理学
+      description:
+        es: >-
+          La vida media de cada partícula inestable, de microsegundos a attosegundos, se expresa con
+          su constante de decaimiento.
+        en: >-
+          Every unstable particle's lifetime, from microseconds to attoseconds, is expressed by its
+          decay constant.
+        pt: >-
+          A vida de cada partícula instável, de microssegundos a attossegundos, é expressa por sua
+          constante de decaimento.
+        fr: >-
+          La durée de vie de chaque particule instable, de la microseconde à l'attoseconde, s'exprime
+          par sa constante de décroissance.
+        zh: >-
+          每种不稳定粒子的寿命，从微秒到阿秒，都用其衰变常数表示。
+        ja: >-
+          マイクロ秒からアト秒に及ぶ不安定粒子の寿命は、それぞれの崩壊定数で表される。
+    - title:
+        es: Geología
+        en: Geology
+        pt: Geologia
+        fr: Géologie
+        zh: 地质学
+        ja: 地質学
+      description:
+        es: >-
+          Las constantes de decaimiento de uranio, potasio y rubidio datan rocas de miles de millones
+          de años.
+        en: >-
+          The decay constants of uranium, potassium, and rubidium date rocks billions of years old.
+        pt: >-
+          As constantes de decaimento de urânio, potássio e rubídio datam rochas de bilhões de anos.
+        fr: >-
+          Les constantes de décroissance de l'uranium, du potassium et du rubidium datent des roches
+          vieilles de milliards d'années.
+        zh: >-
+          铀、钾和铷的衰变常数可测定数十亿年历史岩石的年代。
+        ja: >-
+          ウラン・カリウム・ルビジウムの崩壊定数が、数十億年前の岩石の年代を測定する。
+  example:
+    title:
+      es: Carbono-14, vida media de 5730 años
+      en: Carbon-14, half-life of 5730 years
+      pt: Carbono-14, meia-vida de 5730 anos
+      fr: Carbone 14, demi-vie de 5730 ans
+      zh: 碳-14，半衰期5730年
+      ja: 炭素14、半減期5730年
+    lines:
+      - es: t½ = 5730 años
+        en: t½ = 5730 years
+        pt: t½ = 5730 anos
+        fr: t½ = 5730 ans
+        zh: t½ = 5730 年
+        ja: t½ = 5730 年
+      - es: λ = ln 2 / t½ = 0.693 / 5730
+        en: λ = ln 2 / t½ = 0.693 / 5730
+        pt: λ = ln 2 / t½ = 0,693 / 5730
+        fr: λ = ln 2 / t½ = 0,693 / 5730
+        zh: λ = ln 2 / t½ = 0.693 / 5730
+        ja: λ = ln 2 / t½ = 0.693 / 5730
+      - es: λ ≈ 1.21×10⁻⁴ años⁻¹
+        en: λ ≈ 1.21×10⁻⁴ years⁻¹
+        pt: λ ≈ 1,21×10⁻⁴ anos⁻¹
+        fr: λ ≈ 1,21×10⁻⁴ ans⁻¹
+        zh: λ ≈ 1.21×10⁻⁴ 年⁻¹
+        ja: λ ≈ 1.21×10⁻⁴ 年⁻¹
+      - es: "Por año, cada núcleo tiene ≈ 0.0121% de probabilidad de decaer"
+        en: "Each year, a nucleus has ≈ 0.0121% chance of decaying"
+        pt: "A cada ano, um núcleo tem ≈ 0,0121% de chance de decair"
+        fr: "Chaque année, un noyau a ≈ 0,0121 % de chances de se désintégrer"
+        zh: "每一年，每个原子核的衰变概率约为0.0121%"
+        ja: "毎年、原子核が崩壊する確率は約0.0121%"
+      - es: "El tiempo medio de vida 1/λ ≈ 8267 años"
+        en: "The mean lifetime 1/λ ≈ 8267 years"
+        pt: "O tempo médio de vida 1/λ ≈ 8267 anos"
+        fr: "La durée de vie moyenne 1/λ ≈ 8267 ans"
+        zh: "平均寿命 1/λ ≈ 8267 年"
+        ja: "平均寿命 1/λ ≈ 8267 年"

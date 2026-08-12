@@ -1,0 +1,276 @@
+id: torque
+title:
+  es: Torque (Momento de Fuerza)
+  en: Torque
+  pt: Torque (Momento de Força)
+  fr: Couple (moment de force)
+  zh: 力矩
+  ja: トルク（力のモーメント）
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: tau
+    type: variable
+    value: τ
+    explanation:
+      es: "τ: el torque o momento de fuerza."
+      en: "τ: the torque, or moment of force."
+      pt: "τ: o torque, ou momento de força."
+      fr: "τ : le couple, ou moment de force."
+      zh: "τ：力矩。"
+      ja: "τ：トルク（力のモーメント）。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "r: la distancia del punto de giro a la fuerza."
+      en: "r: the distance from the pivot to the force."
+      pt: "r: a distância do ponto de giro à força."
+      fr: "r : la distance du pivot à la force."
+      zh: "r：从转轴到力的距离。"
+      ja: "r：支点から力までの距離。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: "F: la fuerza aplicada."
+      en: "F: the applied force."
+      pt: "F: a força aplicada."
+      fr: "F : la force appliquée."
+      zh: "F：施加的力。"
+      ja: "F：加えた力。"
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: sin
+    type: variable
+    value: sin θ
+    explanation:
+      es: El seno del ángulo entre fuerza y brazo.
+      en: The sine of the angle between force and lever.
+      pt: O seno do ângulo entre a força e o braço.
+      fr: Le sinus de l'angle entre la force et le bras de levier.
+      zh: 力与力臂之间夹角的正弦。
+      ja: 力と腕の間の角の正弦。
+context:
+  author:
+    es: Arquímedes y Leonhard Euler
+    en: Archimedes and Leonhard Euler
+    pt: Arquimedes e Leonhard Euler
+    fr: Archimède et Leonhard Euler
+    zh: 阿基米德与莱昂哈德·欧拉
+    ja: アルキメデスとレオンハルト・オイラー
+  era:
+    es: Siracusa, c. 287–212 a.C. · formalizado en el s. XVIII
+    en: Syracuse, c. 287–212 BC · formalized in the 18th century
+    pt: Siracusa, c. 287–212 a.C. · formalizado no séc. XVIII
+    fr: Syracuse, v. 287–212 av. J.-C. · formalisé au XVIIIe siècle
+    zh: 叙拉古，约公元前287–212年·18世纪形式化
+    ja: シラクサ、紀元前287〜212年頃・18世紀に定式化
+  history:
+    es: >-
+      La ley de la palanca de Arquímedes — el efecto de una fuerza depende de su distancia al punto de
+      apoyo — es el torque en su forma más antigua. La definición vectorial moderna, τ = r·F·sin θ,
+      se formalizó en el siglo XVIII con Euler y el desarrollo de la mecánica de sólidos. El torque
+      mide la capacidad de girar: es lo que afloja una tuerca, pone en marcha un motor y mantiene
+      estable un edificio frente al viento.
+    en: >-
+      Archimedes' law of the lever — the effect of a force depends on its distance from the fulcrum —
+      is torque in its oldest form. The modern vector definition, τ = r·F·sin θ, was formalized in the
+      18th century with Euler and the development of solid mechanics. Torque measures turning ability:
+      it is what loosens a nut, starts an engine, and keeps a building stable in the wind.
+    pt: >-
+      A lei da alavanca de Arquimedes — o efeito de uma força depende de sua distância ao ponto de apoio
+      — é o torque em sua forma mais antiga. A definição vetorial moderna, τ = r·F·sin θ, foi
+      formalizada no século XVIII com Euler e o desenvolvimento da mecânica dos sólidos. O torque mede
+      a capacidade de girar: é o que afrouxa uma porca, põe um motor em marcha e mantém um edifício
+      estável diante do vento.
+    fr: >-
+      La loi du levier d'Archimède — l'effet d'une force dépend de sa distance au point d'appui — est le
+      couple sous sa forme la plus ancienne. La définition vectorielle moderne, τ = r·F·sin θ, fut
+      formalisée au XVIIIe siècle avec Euler et le développement de la mécanique des solides. Le couple
+      mesure la capacité à faire tourner : c'est ce qui desserre un écrou, démarre un moteur et maintient
+      un bâtiment stable face au vent.
+    zh: >-
+      阿基米德的杠杆定律——力的作用取决于它到支点的距离——就是力矩最古老的形式。现代向量定义τ = r·F·sin θ在
+      18世纪随欧拉和固体力学的发展而形式化。力矩度量转动的能力：正是它松开螺母、启动发动机，也让建筑物在风中
+      保持稳定。
+    ja: >-
+      アルキメデスのてこの原理——力の効果は支点からの距離に依存する——は、最も古い形のトルクである。現代的な
+      ベクトル定義τ = r・F・sin θは、18世紀にオイラーと剛体力学の発展とともに定式化された。トルクは回す能力を
+      測る。ナットを緩めるもの、エンジンを始動させるもの、風の中で建物を安定させるもの、それがトルクである。
+  timeline:
+    - year: c. 250 a.C.
+      label:
+        es: >-
+          Arquímedes enuncia la ley de la palanca: la base del concepto de torque.
+        en: >-
+          Archimedes states the law of the lever: the basis of the torque concept.
+        pt: >-
+          Arquimedes enuncia a lei da alavanca: a base do conceito de torque.
+        fr: >-
+          Archimède énonce la loi du levier : la base du concept de couple.
+        zh: >-
+          阿基米德提出杠杆定律：力矩概念的基石。
+        ja: >-
+          アルキメデスがてこの原理を述べる。トルク概念の基盤。
+    - year: s. XVIII
+      label:
+        es: >-
+          Euler formaliza el momento de fuerza en la mecánica de sólidos.
+        en: >-
+          Euler formalizes the moment of force in solid mechanics.
+        pt: >-
+          Euler formaliza o momento de força na mecânica dos sólidos.
+        fr: >-
+          Euler formalise le moment de force en mécanique des solides.
+        zh: >-
+          欧拉在固体力学中形式化力的力矩。
+        ja: >-
+          オイラーが剛体力学で力のモーメントを定式化する。
+    - year: Hoy
+      label:
+        es: >-
+          Es el parámetro central de motores, herramientas y estructuras.
+        en: >-
+          It is the central parameter of engines, tools, and structures.
+        pt: >-
+          É o parâmetro central de motores, ferramentas e estruturas.
+        fr: >-
+          C'est le paramètre central des moteurs, outils et structures.
+        zh: >-
+          它是发动机、工具和结构的核心参数。
+        ja: >-
+          エンジン、工具、構造物の中心的なパラメータである。
+  useCases:
+    - title:
+        es: Motores y vehículos
+        en: Engines and vehicles
+        pt: Motores e veículos
+        fr: Moteurs et véhicules
+        zh: 发动机与车辆
+        ja: エンジンと車両
+      description:
+        es: >-
+          El par motor define la capacidad de un auto de acelerar y subir cuestas.
+        en: >-
+          Engine torque defines a car's ability to accelerate and climb hills.
+        pt: >-
+          O torque do motor define a capacidade de um carro acelerar e subir ladeiras.
+        fr: >-
+          Le couple moteur définit la capacité d'une voiture à accélérer et grimper.
+        zh: >-
+          发动机扭矩决定汽车加速和爬坡的能力。
+        ja: >-
+          エンジンのトルクが、車の加速力と登坂能力を決める。
+    - title:
+        es: Herramientas y tornillos
+        en: Tools and fasteners
+        pt: Ferramentas e parafusos
+        fr: Outils et fixations
+        zh: 工具与紧固件
+        ja: 工具とねじ
+      description:
+        es: >-
+          Una llave más larga multiplica el torque para aflojar una tuerca.
+        en: >-
+          A longer wrench multiplies torque to loosen a nut.
+        pt: >-
+          Uma chave mais longa multiplica o torque para soltar uma porca.
+        fr: >-
+          Une clé plus longue multiplie le couple pour desserrer un écrou.
+        zh: >-
+          更长的扳手会放大扭矩来松开螺母。
+        ja: >-
+          長いレンチはトルクを増幅し、ナットを緩める。
+    - title:
+        es: Ingeniería estructural
+        en: Structural engineering
+        pt: Engenharia estrutural
+        fr: Génie des structures
+        zh: 结构工程
+        ja: 構造工学
+      description:
+        es: >-
+          El momento flector en vigas y columnas se calcula con el mismo concepto.
+        en: >-
+          Bending moment in beams and columns is computed with the same concept.
+        pt: >-
+          O momento fletor em vigas e colunas é calculado com o mesmo conceito.
+        fr: >-
+          Le moment fléchissant des poutres et colonnes se calcule avec le même concept.
+        zh: >-
+          梁和柱中的弯矩用同一概念计算。
+        ja: >-
+          梁や柱の曲げモーメントも、同じ概念で計算される。
+  example:
+    title:
+      es: Aflojar una tuerca
+      en: Loosening a nut
+      pt: Soltando uma porca
+      fr: Desserrer un écrou
+      zh: 松开螺母
+      ja: ナットを緩める
+    lines:
+      - es: r = 0.5 m, F = 40 N, θ = 90°
+        en: r = 0.5 m, F = 40 N, θ = 90°
+        pt: r = 0,5 m, F = 40 N, θ = 90°
+        fr: r = 0,5 m, F = 40 N, θ = 90°
+        zh: r = 0.5 米，F = 40 牛，θ = 90°
+        ja: r = 0.5 m、F = 40 N、θ = 90°
+      - es: τ = r · F · sin θ
+        en: τ = r · F · sin θ
+        pt: τ = r · F · sen θ
+        fr: τ = r · F · sin θ
+        zh: τ = r · F · sin θ
+        ja: τ = r · F · sin θ
+      - es: sin 90° = 1 (fuerza perpendicular)
+        en: sin 90° = 1 (perpendicular force)
+        pt: sen 90° = 1 (força perpendicular)
+        fr: sin 90° = 1 (force perpendiculaire)
+        zh: sin 90° = 1（力与力臂垂直）
+        ja: sin 90° = 1（力が垂直）
+      - es: τ = 0.5 · 40 · 1
+        en: τ = 0.5 · 40 · 1
+        pt: τ = 0,5 · 40 · 1
+        fr: τ = 0,5 · 40 · 1
+        zh: τ = 0.5 · 40 · 1
+        ja: τ = 0.5 · 40 · 1
+      - es: τ = 20 N·m
+        en: τ = 20 N·m
+        pt: τ = 20 N·m
+        fr: τ = 20 N·m
+        zh: τ = 20 牛·米
+        ja: τ = 20 N·m

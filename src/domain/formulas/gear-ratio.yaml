@@ -1,0 +1,334 @@
+id: gear-ratio
+title:
+  es: Relación de Transmisión
+  en: Gear Ratio
+  pt: Relação de Transmissão
+  fr: Rapport de transmission
+  zh: 齿轮比
+  ja: ギア比
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: gr
+    type: variable
+    value: GR
+    explanation:
+      es: La relación de transmisión, el cociente entre las velocidades de los engranajes.
+      en: The gear ratio, the quotient between the speeds of the gears.
+      pt: A relação de transmissão, o quociente entre as velocidades das engrenagens.
+      fr: Le rapport de transmission, le quotient entre les vitesses des engrenages.
+      zh: 齿轮比,即两个齿轮速度之比。
+      ja: ギア比。歯車同士の回転速度の比。
+  - id: equals-1
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: n2
+    type: variable
+    value: N₂
+    explanation:
+      es: El número de dientes de la rueda conducida (la que recibe el movimiento).
+      en: The number of teeth on the driven gear (the one receiving the motion).
+      pt: O número de dentes da roda conduzida (a que recebe o movimento).
+      fr: Le nombre de dents de la roue menée (celle qui reçoit le mouvement).
+      zh: 从动轮(接收运动的齿轮)的齿数。
+      ja: 従動側の歯車(動きを受け取る側)の歯数。
+  - id: slash-1
+    type: operator
+    value: /
+    explanation:
+      es: División.
+      en: Division.
+      pt: Divisão.
+      fr: Division.
+      zh: 除法。
+      ja: 除算。
+  - id: n1
+    type: variable
+    value: N₁
+    explanation:
+      es: El número de dientes de la rueda motriz (la que entrega el movimiento).
+      en: The number of teeth on the driving gear (the one supplying the motion).
+      pt: O número de dentes da roda motriz (a que fornece o movimento).
+      fr: Le nombre de dents de la roue menante (celle qui fournit le mouvement).
+      zh: 主动轮(输出运动的齿轮)的齿数。
+      ja: 駆動側の歯車(動きを与える側)の歯数。
+  - id: equals-2
+    type: equals
+    value: "="
+    explanation:
+      es: También es igual a la razón de velocidades angulares.
+      en: It is also equal to the ratio of angular speeds.
+      pt: Também é igual à razão das velocidades angulares.
+      fr: Elle est aussi égale au rapport des vitesses angulaires.
+      zh: 它也等于角速度之比。
+      ja: これは角速度の比にも等しい。
+  - id: omega-1
+    type: variable
+    value: ω₁
+    explanation:
+      es: La velocidad angular de la rueda motriz.
+      en: The angular speed of the driving gear.
+      pt: A velocidade angular da roda motriz.
+      fr: La vitesse angulaire de la roue menante.
+      zh: 主动轮的角速度。
+      ja: 駆動側の歯車の角速度。
+  - id: slash-2
+    type: operator
+    value: /
+    explanation:
+      es: División.
+      en: Division.
+      pt: Divisão.
+      fr: Division.
+      zh: 除法。
+      ja: 除算。
+  - id: omega-2
+    type: variable
+    value: ω₂
+    explanation:
+      es: La velocidad angular de la rueda conducida.
+      en: The angular speed of the driven gear.
+      pt: A velocidade angular da roda conduzida.
+      fr: La vitesse angulaire de la roue menée.
+      zh: 从动轮的角速度。
+      ja: 従動側の歯車の角速度。
+context:
+  author:
+    es: Origen colectivo de la ingeniería mecánica
+    en: Collective origin of mechanical engineering
+    pt: Origem coletiva da engenharia mecânica
+    fr: Origine collective du génie mécanique
+    zh: 机械工程的集体智慧
+    ja: 機械工学の集団的な起源
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, séc. XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲,19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      Dos engranajes entrelazados siempre comparten los mismos dientes por segundo, así que la
+      relación entre sus números de dientes fija cuántas veces gira uno por cada vuelta del otro. Una
+      rueda pequeña que arrastra una grande multiplica el par y reduce la velocidad; a la inversa, gana
+      velocidad y pierde fuerza. Por eso los autos cambian de marcha: una relación corta entrega más
+      par para arrancar y subir cuestas, y una larga permite rodar rápido a bajas revoluciones. Este
+      principio, perfeccionado por la ingeniería mecánica del siglo XIX, sigue en cada transmisión,
+      bicicleta y reductor industrial.
+    en: >-
+      Two meshing gears always share the same teeth per second, so the ratio of their tooth counts sets
+      how many times one turns for every turn of the other. A small gear driving a large one multiplies
+      torque and cuts speed; the reverse gains speed and loses force. That is why cars shift gears: a
+      low ratio delivers more torque to launch and climb hills, while a tall ratio lets the engine
+      cruise fast at low revs. This principle, refined by 19th-century mechanical engineering, still
+      lives in every transmission, bicycle, and industrial reducer.
+    pt: >-
+      Duas engrenagens engatadas sempre compartilham os mesmos dentes por segundo, então a relação
+      entre seus números de dentes define quantas vezes uma gira a cada volta da outra. Uma engrenagem
+      pequena que arrasta uma grande multiplica o torque e reduz a velocidade; o contrário ganha
+      velocidade e perde força. Por isso os carros trocam de marcha: uma relação curta entrega mais
+      torque para arrancar e subir ladeiras, e uma longa permite rodar rápido em baixa rotação. Esse
+      princípio, aperfeiçoado pela engenharia mecânica do século XIX, segue em toda transmissão,
+      bicicleta e redutor industrial.
+    fr: >-
+      Deux engrenages en prise partagent toujours les mêmes dents par seconde, si bien que le rapport
+      de leurs nombres de dents fixe combien de tours l'une fait pour chaque tour de l'autre. Une
+      petite roue menant une grande multiplie le couple et réduit la vitesse ; l'inverse gagne de la
+      vitesse et perd de la force. C'est pourquoi les voitures passent les vitesses : un rapport court
+      fournit plus de couple pour démarrer et gravir, tandis qu'un rapport long permet de rouler vite à
+      bas régime. Ce principe, perfectionné par le génie mécanique du XIXe siècle, vit dans chaque
+      transmission, vélo et réducteur industriel.
+    zh: >-
+      相互啮合的两个齿轮每秒传递的齿数相同,因此两轮齿数之比决定了另一个齿轮每转一圈时它的转数。
+      小齿轮带动大齿轮会放大扭矩、降低转速;反之则提速而损失力。这正是汽车换挡的原因:低速挡提供
+      更大扭矩,用于起步和爬坡;高速挡则让发动机在低转速下高速巡航。这一原理由19世纪的机械工程
+      不断改进,至今仍存在于每一台变速箱、每一辆自行车和每一台工业减速机中。
+    ja: >-
+      噛み合ったふたつの歯車は毎秒同じ歯数を共有するため、歯数の比が「相手が1回転する間に自分が
+      何回転するか」を決める。小歯車が大歯車を駆動するとトルクは増幅され速度は下がり、逆なら速度が
+      増して力は減る。自動車がギアを切り替えるのはこのためだ。ローギアは発進や登坂に必要なトルクを
+      供給し、ハイギアは低回転で高速巡航を可能にする。19世紀の機械工学が洗練したこの原理は、あらゆる
+      変速機、自転車、産業用減速機に今も生きている。
+  timeline:
+    - year: c. 1500
+      label:
+        es: >-
+          Leonardo da Vinci dibuja trenes de engranajes que anticipan la transmisión moderna.
+        en: >-
+          Leonardo da Vinci sketches gear trains that anticipate the modern transmission.
+        pt: >-
+          Leonardo da Vinci desenha trens de engrenagens que antecipam a transmissão moderna.
+        fr: >-
+          Léonard de Vinci dessine des trains d'engrenages qui anticipent la transmission moderne.
+        zh: >-
+          达·芬奇绘制了预示现代变速器的齿轮系草图。
+        ja: >-
+          レオナルド・ダ・ヴィンチが、現代の変速機を先取りする歯車列のスケッチを描く。
+    - year: "1894"
+      label:
+        es: >-
+          Panhard y Levassor presentan la primera caja de cambios moderna en su automóvil.
+        en: >-
+          Panhard and Levassor introduce the first modern gearbox in their automobile.
+        pt: >-
+          Panhard e Levassor apresentam a primeira caixa de câmbio moderna em seu automóvel.
+        fr: >-
+          Panhard et Levassor présentent la première boîte de vitesses moderne dans leur automobile.
+        zh: >-
+          庞阿尔和勒瓦索在其汽车上采用了现代变速箱。
+        ja: >-
+          パナールとルヴァソールが、自社の自動車に近代的な変速機を導入する。
+    - year: Hoy
+      label:
+        es: >-
+          Cambios automáticos y bicicletas de 21 velocidades siguen aplicando la misma relación de
+          dientes.
+        en: >-
+          Automatic transmissions and 21-speed bicycles still apply the same tooth ratio.
+        pt: >-
+          Câmbios automáticos e bicicletas de 21 marchas ainda aplicam a mesma relação de dentes.
+        fr: >-
+          Boîtes automatiques et vélos à 21 vitesses appliquent toujours le même rapport de dents.
+        zh: >-
+          自动变速箱和21速自行车至今仍在使用同样的齿数比原理。
+        ja: >-
+          オートマチックトランスミッションや21段変速の自転車も、いまだに同じ歯数比の原理を応用して
+          いる。
+  useCases:
+    - title:
+        es: Transmisión de autos
+        en: Car transmissions
+        pt: Transmissão de carros
+        fr: Boîtes de vitesses automobiles
+        zh: 汽车变速箱
+        ja: 自動車用トランスミッション
+      description:
+        es: >-
+          Cada marcha fija la relación entre el motor y las ruedas para combinar par y velocidad.
+        en: >-
+          Each gear sets the ratio between engine and wheels to balance torque and speed.
+        pt: >-
+          Cada marcha define a relação entre o motor e as rodas para equilibrar torque e velocidade.
+        fr: >-
+          Chaque vitesse fixe le rapport entre moteur et roues pour équilibrer couple et vitesse.
+        zh: >-
+          每个挡位都设定发动机与车轮之间的传动比,以平衡扭矩和速度。
+        ja: >-
+          各ギアがエンジンと車輪の間の比を定め、トルクと速度のバランスを取る。
+    - title:
+        es: Bicicletas
+        en: Bicycles
+        pt: Bicicletas
+        fr: Vélos
+        zh: 自行车
+        ja: 自転車
+      description:
+        es: >-
+          Las combinaciones de plato y piñón adaptan el esfuerzo de las piernas a cuestas y llanos.
+        en: >-
+          Chainring-and-sprocket combinations adapt leg effort to hills and flat roads.
+        pt: >-
+          Combinações de coroa e catraca adaptam o esforço das pernas a ladeiras e planícies.
+        fr: >-
+          Combinaisons de plateaux et de pignons adaptent l'effort des jambes aux côtes et aux plats.
+        zh: >-
+          牙盘与飞轮的组合让腿部力量适应爬坡和平路。
+        ja: >-
+          チェーンリングとスプロケットの組み合わせが、脚力の使い方を坂道と平坦路に合わせる。
+    - title:
+        es: Reductores industriales
+        en: Industrial gearboxes
+        pt: Redutores industriais
+        fr: Réducteurs industriels
+        zh: 工业减速机
+        ja: 産業用減速機
+      description:
+        es: >-
+          Reducen la velocidad de motores eléctricos aumentando el par de máquinas y cintas
+          transportadoras.
+        en: >-
+          They cut electric motor speed while boosting torque in machines and conveyor belts.
+        pt: >-
+          Reduzem a velocidade de motores elétricos aumentando o torque em máquinas e esteiras.
+        fr: >-
+          Ils réduisent la vitesse des moteurs électriques en augmentant le couple dans les machines
+          et convoyeurs.
+        zh: >-
+          降低电机转速,同时提高机械和传送带的扭矩。
+        ja: >-
+          モーターの回転数を落とし、機械やコンベヤーのトルクを増幅する。
+    - title:
+        es: Motores de cohetes
+        en: Rocket engines
+        pt: Motores de foguetes
+        fr: Moteurs de fusées
+        zh: 火箭发动机
+        ja: ロケットエンジン
+      description:
+        es: >-
+          Los reductores de turbobombas hacen girar bombas a gran velocidad para alimentar la cámara
+          de combustión.
+        en: >-
+          Turbopump gearboxes spin fuel pumps at high speed to feed the combustion chamber.
+        pt: >-
+          Os redutores de turbobombas giram bombas em alta velocidade para alimentar a câmara de
+          combustão.
+        fr: >-
+          Les réducteurs de turbopompes font tourner les pompes à grande vitesse pour alimenter la
+          chambre de combustion.
+        zh: >-
+          涡轮泵减速器使燃料泵高速旋转,为燃烧室供料。
+        ja: >-
+          ターボポンプの減速歯車が燃料ポンプを高速回転させ、燃焼室へ供給する。
+  example:
+    title:
+      es: Engranajes de un auto
+      en: Car gears
+      pt: Engrenagens de um carro
+      fr: Engrenages d'une voiture
+      zh: 汽车齿轮
+      ja: 自動車の歯車
+    lines:
+      - es: N₁ = 20 (rueda motriz)
+        en: N₁ = 20 (driving gear)
+        pt: N₁ = 20 (roda motriz)
+        fr: N₁ = 20 (roue menante)
+        zh: N₁ = 20 (主动轮)
+        ja: N₁ = 20 (駆動側)
+      - es: N₂ = 60 (rueda conducida)
+        en: N₂ = 60 (driven gear)
+        pt: N₂ = 60 (roda conduzida)
+        fr: N₂ = 60 (roue menée)
+        zh: N₂ = 60 (从动轮)
+        ja: N₂ = 60 (従動側)
+      - es: GR = N₂ / N₁
+        en: GR = N₂ / N₁
+        pt: GR = N₂ / N₁
+        fr: GR = N₂ / N₁
+        zh: GR = N₂ / N₁
+        ja: GR = N₂ / N₁
+      - es: GR = 60 / 20
+        en: GR = 60 / 20
+        pt: GR = 60 / 20
+        fr: GR = 60 / 20
+        zh: GR = 60 / 20
+        ja: GR = 60 / 20
+      - es: GR = 3 · par ×3, velocidad ÷3
+        en: GR = 3 · torque ×3, speed ÷3
+        pt: GR = 3 · torque ×3, velocidade ÷3
+        fr: GR = 3 · couple ×3, vitesse ÷3
+        zh: GR = 3 · 扭矩×3,转速÷3
+        ja: GR = 3 · トルク×3、回転数÷3

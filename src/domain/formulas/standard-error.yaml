@@ -1,0 +1,316 @@
+id: standard-error
+title:
+  es: Error Estándar
+  en: Standard Error
+  pt: Erro Padrão
+  fr: Erreur Type
+  zh: 标准误
+  ja: 標準誤差
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率統計
+nodes:
+  - id: standard-error
+    type: variable
+    value: SE
+    explanation:
+      es: "El error estándar: cuánto varía la media de una muestra a otra."
+      en: "The standard error: how much a sample mean varies from sample to sample."
+      pt: "O erro padrão: o quanto a média de uma amostra varia de amostra para amostra."
+      fr: "L'erreur type : à quel point la moyenne d'un échantillon varie d'un échantillon à l'autre."
+      zh: "标准误:样本均值在多次抽样之间变动多少。"
+      ja: "標準誤差:標本ごとに標本平均がどれだけ変動するか。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これに正確に等しい。
+  - id: sigma
+    type: variable
+    value: σ
+    explanation:
+      es: Sigma, la desviación estándar de la población de origen.
+      en: Sigma, the standard deviation of the underlying population.
+      pt: Sigma, o desvio padrão da população de origem.
+      fr: Sigma, l'écart-type de la population d'origine.
+      zh: 西格玛,所研究总体的标准差。
+      ja: シグマ、母集団の標準偏差。
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: これで割る。
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: La raíz cuadrada del tamaño de la muestra.
+      en: The square root of the sample size.
+      pt: A raiz quadrada do tamanho da amostra.
+      fr: La racine carrée de la taille de l'échantillon.
+      zh: 样本量的平方根。
+      ja: 標本サイズの平方根。
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: n, el número de observaciones de la muestra.
+      en: n, the number of observations in the sample.
+      pt: n, o número de observações na amostra.
+      fr: n, le nombre d'observations de l'échantillon.
+      zh: n,样本中的观测数量。
+      ja: n、標本の観測数。
+context:
+  author:
+    es: Basada en el trabajo de Gauss y Laplace
+    en: Based on the work of Gauss and Laplace
+    pt: Baseada no trabalho de Gauss e Laplace
+    fr: Basé sur les travaux de Gauss et Laplace
+    zh: 基于高斯与拉普拉斯的工作
+    ja: ガウスとラプラスの研究に基づく
+  era:
+    es: Europa, s. XVIII–XIX
+    en: Europe, 18th–19th century
+    pt: Europa, séc. XVIII–XIX
+    fr: Europe, XVIIIe–XIXe siècle
+    zh: 欧洲,18–19世纪
+    ja: ヨーロッパ、18–19世紀
+  history:
+    es: >-
+      El error estándar cuantifica la incertidumbre de una media calculada a partir de una muestra:
+      cuánto saltaría ese promedio si repitiéramos el estudio con otra muestra del mismo tamaño.
+      Desciende de la teoría de errores de Gauss y Laplace, y decrece con la raíz cuadrada del tamaño
+      muestral, lo que explica por qué muestras más grandes dan estimaciones más precisas pero con
+      rendimientos decrecientes. Sobre él se apoyan los intervalos de confianza y el margen de error
+      que acompaña a cada encuesta.
+    en: >-
+      The standard error quantifies the uncertainty of a mean estimated from a sample: how much that
+      average would jump if the study were repeated with another sample of the same size. It descends
+      from Gauss and Laplace's theory of errors and shrinks with the square root of the sample size,
+      which explains why larger samples give more precise estimates, but with diminishing returns.
+      Confidence intervals and the margin of error attached to every poll rest on it.
+    pt: >-
+      O erro padrão quantifica a incerteza de uma média calculada a partir de uma amostra: o quanto
+      essa média saltaria se o estudo fosse repetido com outra amostra do mesmo tamanho. Ele descende
+      da teoria de erros de Gauss e Laplace e diminui com a raiz quadrada do tamanho da amostra, o
+      que explica por que amostras maiores geram estimativas mais precisas, mas com retornos
+      decrescentes. Os intervalos de confiança e a margem de erro que acompanha cada pesquisa se
+      apoiam nele.
+    fr: >-
+      L'erreur type quantifie l'incertitude d'une moyenne estimée à partir d'un échantillon : de
+      combien cette moyenne rebondirait si l'étude était répétée avec un autre échantillon de même
+      taille. Elle descend de la théorie des erreurs de Gauss et Laplace et décroît avec la racine
+      carrée de la taille de l'échantillon, ce qui explique pourquoi des échantillons plus grands
+      donnent des estimations plus précises, mais avec des rendements décroissants. Les intervalles de
+      confiance et la marge d'erreur de chaque sondage s'appuient sur elle.
+    zh: >-
+      标准误量化了从样本计算的均值的可靠性:如果用同样大小的另一份样本重做研究,这个均值会跳动
+      多少。它源自高斯和拉普拉斯的误差理论,并随样本量的平方根而减小,这就解释了为什么更大的
+      样本能给出更精确的估计,但收益递减。置信区间以及每次民意调查附带的误差幅度都建立在这个
+      概念之上。
+    ja: >-
+      標準誤差は、標本から推定した平均の不確かさを定量化する。つまり、同じ大きさの別の標本で
+      研究をやり直したら、その平均がどれだけ変動するかということだ。ガウスとラプラスの誤差
+      理論に由来し、標本サイズの平方根に反比例して小さくなる。これが、より大きな標本ほど推定
+      が正確になる一方で、効果が逓減する理由である。信頼区間や、あらゆる世論調査に付随する
+      誤差の幅は、この標準誤差に支えられている。
+  timeline:
+    - year: "1809"
+      label:
+        es: >-
+          Gauss publica su teoría de errores de medición, semilla del error estándar.
+        en: >-
+          Gauss publishes his theory of measurement errors, the seed of the standard error.
+        pt: >-
+          Gauss publica sua teoria de erros de medição, semente do erro padrão.
+        fr: >-
+          Gauss publie sa théorie des erreurs de mesure, germe de l'erreur type.
+        zh: >-
+          高斯发表测量误差理论,这是标准误思想的源头。
+        ja: >-
+          ガウスが測定誤差の理論を発表する。標準誤差の源流となる。
+    - year: "1810"
+      label:
+        es: >-
+          Laplace demuestra una versión del teorema del límite central que explica la dispersión de
+          las medias muestrales.
+        en: >-
+          Laplace proves a version of the central limit theorem explaining the spread of sample
+          means.
+        pt: >-
+          Laplace demonstra uma versão do teorema do limite central que explica a dispersão das
+          médias amostrais.
+        fr: >-
+          Laplace démontre une version du théorème central limite qui explique la dispersion des
+          moyennes d'échantillons.
+        zh: >-
+          拉普拉斯证明了中心极限定理的一个版本,解释了样本均值的离散规律。
+        ja: >-
+          ラプラスが中心極限定理の一版を証明し、標本平均のばらつきを説明する。
+    - year: "1908"
+      label:
+        es: >-
+          William Gosset, con el seudónimo Student, aplica el error estándar a muestras pequeñas.
+        en: >-
+          William Gosset, writing as Student, applies the standard error to small samples.
+        pt: >-
+          William Gosset, sob o pseudônimo Student, aplica o erro padrão a amostras pequenas.
+        fr: >-
+          William Gosset, sous le pseudonyme Student, applique l'erreur type aux petits échantillons.
+        zh: >-
+          威廉·戈塞特以"学生"为笔名,将标准误应用于小样本。
+        ja: >-
+          ウィリアム・ゴセットが「スチューデント」の筆名で、標準誤差を小標本に応用する。
+    - year: Hoy
+      label:
+        es: >-
+          Toda encuesta, ensayo clínico y meta-análisis reporta un margen de error derivado de él.
+        en: >-
+          Every poll, clinical trial, and meta-analysis reports a margin of error derived from it.
+        pt: >-
+          Toda pesquisa, ensaio clínico e meta-análise reporta uma margem de erro derivada dele.
+        fr: >-
+          Chaque sondage, essai clinique et méta-analyse rapporte une marge d'erreur qui en dérive.
+        zh: >-
+          每一项调查、临床试验和荟萃分析都会报告由它推出的误差幅度。
+        ja: >-
+          あらゆる世論調査、臨床試験、メタ分析が、それから導かれる誤差の幅を報告する。
+  useCases:
+    - title:
+        es: Encuestas y sondeos
+        en: Polls and surveys
+        pt: Pesquisas e sondagens
+        fr: Sondages et enquêtes
+        zh: 民意调查
+        ja: 世論調査
+      description:
+        es: >-
+          El margen de error de un sondeo es, en esencia, el error estándar de la proporción
+          estimada.
+        en: >-
+          A poll's margin of error is, in essence, the standard error of the estimated proportion.
+        pt: >-
+          A margem de erro de uma sondagem é, em essência, o erro padrão da proporção estimada.
+        fr: >-
+          La marge d'erreur d'un sondage est, en substance, l'erreur type de la proportion estimée.
+        zh: >-
+          民调的误差幅度本质上就是估计比例的标准误。
+        ja: >-
+          世論調査の誤差の幅は、本質的に推定比率の標準誤差である。
+    - title:
+        es: Ensayos clínicos
+        en: Clinical trials
+        pt: Ensaios clínicos
+        fr: Essais cliniques
+        zh: 临床试验
+        ja: 臨床試験
+      description:
+        es: >-
+          Separa el efecto real de un tratamiento del ruido de una muestra limitada.
+        en: >-
+          Separates a treatment's real effect from the noise of a limited sample.
+        pt: >-
+          Separa o efeito real de um tratamento do ruído de uma amostra limitada.
+        fr: >-
+          Sépare l'effet réel d'un traitement du bruit d'un échantillon limité.
+        zh: >-
+          区分治疗的真实效果与有限样本带来的噪声。
+        ja: >-
+          治療の真の効果を、限られた標本のノイズから区別する。
+    - title:
+        es: Ciencias sociales
+        en: Social sciences
+        pt: Ciências sociais
+        fr: Sciences sociales
+        zh: 社会科学
+        ja: 社会科学
+      description:
+        es: >-
+          Expresa la precisión de cualquier promedio o diferencia estimada en encuestas y estudios de
+          campo.
+        en: >-
+          Expresses the precision of any estimated average or difference in surveys and field
+          studies.
+        pt: >-
+          Expressa a precisão de qualquer média ou diferença estimada em pesquisas e estudos de
+          campo.
+        fr: >-
+          Exprime la précision de toute moyenne ou différence estimée dans les enquêtes et études de
+          terrain.
+        zh: >-
+          体现调查和田野研究中任何估计平均值或差异的精确程度。
+        ja: >-
+          調査やフィールド研究で推定された平均や差の精度を表す。
+    - title:
+        es: Metrología y laboratorio
+        en: Metrology and laboratories
+        pt: Metrologia e laboratórios
+        fr: Métrologie et laboratoires
+        zh: 计量与实验室
+        ja: 計量と実験室
+      description:
+        es: >-
+          Reporta la incertidumbre de medición de instrumentos y procesos de calibración.
+        en: >-
+          Reports the measurement uncertainty of instruments and calibration processes.
+        pt: >-
+          Reporta a incerteza de medição de instrumentos e processos de calibração.
+        fr: >-
+          Rapporte l'incertitude de mesure des instruments et des processus d'étalonnage.
+        zh: >-
+          报告仪器和校准过程的测量不确定度。
+        ja: >-
+          計測器や較正プロセスの測定不確かさを報告する。
+  example:
+    title:
+      es: Precisión de una media
+      en: Precision of a mean
+      pt: Precisão de uma média
+      fr: Précision d'une moyenne
+      zh: 均值的精度
+      ja: 平均の精度
+    lines:
+      - es: σ = 10
+        en: σ = 10
+        pt: σ = 10
+        fr: σ = 10
+        zh: σ = 10
+        ja: σ = 10
+      - es: n = 100
+        en: n = 100
+        pt: n = 100
+        fr: n = 100
+        zh: n = 100
+        ja: n = 100
+      - es: SE = σ / √n
+        en: SE = σ / √n
+        pt: SE = σ / √n
+        fr: SE = σ / √n
+        zh: SE = σ / √n
+        ja: SE = σ / √n
+      - es: SE = 10 / √100
+        en: SE = 10 / √100
+        pt: SE = 10 / √100
+        fr: SE = 10 / √100
+        zh: SE = 10 / √100
+        ja: SE = 10 / √100
+      - es: SE = 10 / 10 = 1
+        en: SE = 10 / 10 = 1
+        pt: SE = 10 / 10 = 1
+        fr: SE = 10 / 10 = 1
+        zh: SE = 10 / 10 = 1
+        ja: SE = 10 / 10 = 1

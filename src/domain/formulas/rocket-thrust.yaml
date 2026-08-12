@@ -1,0 +1,306 @@
+id: rocket-thrust
+title:
+  es: Empuje de un Cohete
+  en: Rocket Thrust
+  pt: Empuxo de um Foguete
+  fr: Poussée d'une fusée
+  zh: 火箭推力
+  ja: ロケット推力
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: "F: la fuerza de empuje que impulsa al cohete."
+      en: "F: the thrust force that pushes the rocket forward."
+      pt: "F: a força de empuxo que impulsiona o foguete."
+      fr: "F : la force de poussée qui propulse la fusée."
+      zh: "F：推动火箭前进的推力。"
+      ja: "F：ロケットを押し進める推力。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: m-dot
+    type: variable
+    value: ṁ
+    explanation:
+      es: "ṁ: la masa de combustible que se expulsa cada segundo."
+      en: "ṁ: the mass of propellant expelled each second."
+      pt: "ṁ: a massa de propelente expelida a cada segundo."
+      fr: "ṁ : la masse de propergol éjectée chaque seconde."
+      zh: "ṁ：每秒排出的推进剂质量。"
+      ja: "ṁ：毎秒排出される推進剤の質量。"
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: v-e
+    type: variable
+    value: vₑ
+    explanation:
+      es: "vₑ: la velocidad a la que los gases salen del motor."
+      en: "vₑ: the velocity at which the gases leave the engine."
+      pt: "vₑ: a velocidade com que os gases saem do motor."
+      fr: "vₑ : la vitesse à laquelle les gaz quittent le moteur."
+      zh: "vₑ：气体离开发动机时的速度。"
+      ja: "vₑ：ガスがエンジンを出る速度。"
+context:
+  author:
+    es: Derivada de la conservación del momento
+    en: Derived from conservation of momentum
+    pt: Derivada da conservação do momento
+    fr: Dérivée de la conservation de la quantité de mouvement
+    zh: 由动量守恒推导
+    ja: 運動量保存から導出
+  era:
+    es: Rusia y EE. UU., s. XX
+    en: Russia and the USA, 20th century
+    pt: Rússia e EUA, séc. XX
+    fr: Russie et États-Unis, XXᵉ siècle
+    zh: 俄国与美国，20世纪
+    ja: ロシアとアメリカ、20世紀
+  history:
+    es: >-
+      El empuje es la fuerza que impulsa a un cohete, y nace de la tercera ley de Newton: expulsar
+      gas hacia atrás produce una reacción hacia adelante de igual magnitud. La ecuación F = ṁ·vₑ
+      cuantifica esa fuerza como el producto de la masa expulsada por segundo y la velocidad a la
+      que sale. Por eso los grandes motores queman combustible a ritmos enormes: más empuje exige
+      acelerar más masa, más rápido. Es la ecuación fundamental del diseño de motores, de los
+      aceleradores sólidos a los motores iónicos.
+    en: >-
+      Thrust is the force that pushes a rocket, born from Newton's third law: expelling gas
+      backwards produces an equal reaction forwards. The equation F = ṁ·vₑ quantifies that force as
+      the product of the mass expelled per second and its exit velocity. That is why large engines
+      burn fuel at enormous rates: more thrust demands accelerating more mass, faster. It is the
+      fundamental equation of engine design, from solid boosters to ion engines.
+    pt: >-
+      O empuxo é a força que impulsiona um foguete e nasce da terceira lei de Newton: expelir gás
+      para trás produz uma reação igual para a frente. A equação F = ṁ·vₑ quantifica essa força
+      como o produto da massa expelida por segundo pela velocidade de saída. Por isso motores
+      grandes queimam combustível a ritmos enormes: mais empuxo exige acelerar mais massa, mais
+      rápido. É a equação fundamental do projeto de motores, dos aceleradores sólidos aos motores
+      iônicos.
+    fr: >-
+      La poussée est la force qui propulse une fusée, née de la troisième loi de Newton : expulser
+      du gaz vers l'arrière produit une réaction égale vers l'avant. L'équation F = ṁ·vₑ quantifie
+      cette force comme le produit de la masse éjectée par seconde et de sa vitesse de sortie.
+      C'est pourquoi les gros moteurs brûlent leur carburant à des débits énormes : plus de poussée
+      exige d'accélérer plus de masse, plus vite. C'est l'équation fondamentale de la conception des
+      moteurs, des propulseurs à poudre aux moteurs ioniques.
+    zh: >-
+      推力是推动火箭前进的力，源自牛顿第三定律：向后喷射气体产生大小相等、方向向前的反作用力。
+      方程F = ṁ·vₑ将这一力量化为每秒排出的质量与排出速度的乘积。因此大型发动机以巨大速率消耗燃料：
+      要获得更大推力，就必须加速更多质量、加速得更快。它是发动机设计的基本方程，从固体助推器到离子发动机都适用。
+    ja: >-
+      推力とはロケットを押し進める力であり、ニュートンの第三法則に由来する。後方へガスを噴射すると、前方へ
+      等しい大きさの反作用が生じる。式F = ṁ・vₑは、その力を毎秒排出される質量と排出速度の積として定量化する。
+      だからこそ大型エンジンは莫大な速度で燃料を消費する。より大きな推力を得るには、より多くの質量を、より速く
+      加速させる必要があるからだ。固体ブースターからイオンエンジンまで、エンジン設計の基本方程式である。
+  timeline:
+    - year: "1687"
+      label:
+        es: >-
+          Newton formula la tercera ley del movimiento en los Principia, base del empuje.
+        en: >-
+          Newton states the third law of motion in the Principia, the basis of thrust.
+        pt: >-
+          Newton formula a terceira lei do movimento nos Principia, base do empuxo.
+        fr: >-
+          Newton énonce la troisième loi du mouvement dans les Principia, base de la poussée.
+        zh: >-
+          牛顿在《原理》中提出运动第三定律，这是推力的基础。
+        ja: >-
+          ニュートンが『プリンキピア』で運動の第三法則を唱える。推力の基礎となる。
+    - year: "1926"
+      label:
+        es: >-
+          Robert Goddard lanza el primer cohete de combustible líquido, primer uso práctico del
+          empuje químico.
+        en: >-
+          Robert Goddard launches the first liquid-fueled rocket, the first practical use of
+          chemical thrust.
+        pt: >-
+          Robert Goddard lança o primeiro foguete de combustível líquido, primeiro uso prático do
+          empuxo químico.
+        fr: >-
+          Robert Goddard lance la première fusée à propergol liquide, premier usage pratique de la
+          poussée chimique.
+        zh: >-
+          罗伯特·戈达德发射第一枚液体燃料火箭，这是化学推力的首次实际应用。
+        ja: >-
+          ロバート・ゴダードが最初の液体燃料ロケットを打ち上げる。化学推力の初めての実用である。
+    - year: "1967"
+      label:
+        es: >-
+          El motor F-1 del Saturno V entrega unos 6.8 millones de newton de empuje en despegue.
+        en: >-
+          The Saturn V's F-1 engine delivers about 6.8 million newtons of thrust at liftoff.
+        pt: >-
+          O motor F-1 do Saturno V entrega cerca de 6,8 milhões de newton de empuxo na decolagem.
+        fr: >-
+          Le moteur F-1 de la Saturn V délivre environ 6,8 millions de newtons de poussée au
+          décollage.
+        zh: >-
+          土星五号的F-1发动机在起飞时提供约680万牛顿的推力。
+        ja: >-
+          サターンVのF-1エンジンが離陸時に約680万ニュートンの推力を生み出す。
+    - year: Hoy
+      label:
+        es: >-
+          Todo motor de cohete moderno, del Raptor de SpaceX al RL-10, se diseña con esta ecuación.
+        en: >-
+          Every modern rocket engine, from SpaceX's Raptor to the RL-10, is designed with this
+          equation.
+        pt: >-
+          Todo motor de foguete moderno, do Raptor da SpaceX ao RL-10, é projetado com esta equação.
+        fr: >-
+          Tout moteur de fusée moderne, du Raptor de SpaceX au RL-10, est conçu avec cette équation.
+        zh: >-
+          从SpaceX的猛禽到RL-10，每一台现代火箭发动机都是依据这一方程设计的。
+        ja: >-
+          SpaceXのラプターからRL-10まで、現代のロケットエンジンはすべてこの方程式で設計されている。
+  useCases:
+    - title:
+        es: Vehículos de lanzamiento
+        en: Launch vehicles
+        pt: Veículos de lançamento
+        fr: Lanceurs
+        zh: 运载火箭
+        ja: ロケット
+      description:
+        es: >-
+          Dimensiona el empuje total necesario para vencer el peso en la plataforma de despegue.
+        en: >-
+          It sizes the total thrust needed to overcome the vehicle's weight on the pad.
+        pt: >-
+          Dimensiona o empuxo total necessário para vencer o peso na plataforma de lançamento.
+        fr: >-
+          Elle dimensionne la poussée totale nécessaire pour vaincre le poids au pas de tir.
+        zh: >-
+          用于确定在发射台上克服运载火箭重量所需的总推力。
+        ja: >-
+          発射台で機体の重量に打ち勝つために必要な総推力を設計する。
+    - title:
+        es: Propulsión de satélites
+        en: Satellite propulsion
+        pt: Propulsão de satélites
+        fr: Propulsion de satellites
+        zh: 卫星推进
+        ja: 衛星推進
+      description:
+        es: >-
+          Calcula el empuje que un propulsor debe dar para corregir la órbita del satélite.
+        en: >-
+          It calculates the thrust a thruster must provide to correct the satellite's orbit.
+        pt: >-
+          Calcula o empuxo que um propulsor deve dar para corrigir a órbita do satélite.
+        fr: >-
+          Elle calcule la poussée qu'un propulseur doit fournir pour corriger l'orbite du satellite.
+        zh: >-
+          计算推进器为修正卫星轨道所需提供的推力。
+        ja: >-
+          衛星の軌道を修正するために推進器が与えなければならない推力を計算する。
+    - title:
+        es: Diseño de motores
+        en: Engine design
+        pt: Projeto de motores
+        fr: Conception de moteurs
+        zh: 发动机设计
+        ja: エンジン設計
+      description:
+        es: >-
+          Fija el caudal y la velocidad de salida que debe alcanzar una tobera para lograr el
+          empuje pedido.
+        en: >-
+          It sets the flow rate and exit velocity a nozzle must reach to deliver the required
+          thrust.
+        pt: >-
+          Define o fluxo e a velocidade de saída que um bocal deve atingir para entregar o empuxo
+          pedido.
+        fr: >-
+          Elle fixe le débit et la vitesse de sortie qu'une tuyère doit atteindre pour fournir la
+          poussée demandée.
+        zh: >-
+          确定喷管为达到所需推力应达到的流量与排出速度。
+        ja: >-
+          要求された推力を生み出すために、ノズルが達成すべき流量と排出速度を定める。
+    - title:
+        es: Propulsión eléctrica
+        en: Electric propulsion
+        pt: Propulsão elétrica
+        fr: Propulsion électrique
+        zh: 电推进
+        ja: 電気推進
+      description:
+        es: >-
+          Los motores iónicos producen poco empuje porque expulsan muy poca masa por segundo.
+        en: >-
+          Ion engines produce little thrust because they expel very little mass per second.
+        pt: >-
+          Motores iônicos produzem pouco empuxo porque expulsam muito pouca massa por segundo.
+        fr: >-
+          Les moteurs ioniques produisent peu de poussée car ils éjectent très peu de masse par
+          seconde.
+        zh: >-
+          离子发动机产生的推力很小，因为它们每秒排出的质量很少。
+        ja: >-
+          イオンエンジンは毎秒排出する質量が非常に少ないため、推力をほとんど生み出さない。
+  example:
+    title:
+      es: Un motor con ṁ = 100 kg/s
+      en: An engine with ṁ = 100 kg/s
+      pt: Um motor com ṁ = 100 kg/s
+      fr: Un moteur avec ṁ = 100 kg/s
+      zh: ṁ = 100 千克/秒的发动机
+      ja: ṁ = 100 kg/s のエンジン
+    lines:
+      - es: ṁ = 100 kg/s
+        en: ṁ = 100 kg/s
+        pt: ṁ = 100 kg/s
+        fr: ṁ = 100 kg/s
+        zh: ṁ = 100 千克/秒
+        ja: ṁ = 100 kg/s
+      - es: vₑ = 2500 m/s
+        en: vₑ = 2500 m/s
+        pt: vₑ = 2500 m/s
+        fr: vₑ = 2500 m/s
+        zh: vₑ = 2500 米/秒
+        ja: vₑ = 2500 m/s
+      - es: F = ṁ × vₑ
+        en: F = ṁ × vₑ
+        pt: F = ṁ × vₑ
+        fr: F = ṁ × vₑ
+        zh: F = ṁ × vₑ
+        ja: F = ṁ × vₑ
+      - es: F = 100 × 2500
+        en: F = 100 × 2500
+        pt: F = 100 × 2500
+        fr: F = 100 × 2500
+        zh: F = 100 × 2500
+        ja: F = 100 × 2500
+      - es: F = 250,000 N = 250 kN
+        en: F = 250,000 N = 250 kN
+        pt: F = 250 000 N = 250 kN
+        fr: F = 250 000 N = 250 kN
+        zh: F = 250,000 牛 = 250 千牛
+        ja: F = 250,000 N = 250 kN

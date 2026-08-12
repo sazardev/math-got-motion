@@ -1,0 +1,292 @@
+id: second-law-of-thermodynamics
+title:
+  es: Segunda Ley de la Termodinámica
+  en: Second Law of Thermodynamics
+  pt: Segunda Lei da Termodinâmica
+  fr: Deuxième loi de la thermodynamique
+  zh: 热力学第二定律
+  ja: 熱力学の第二法則
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: ds
+    type: variable
+    value: ΔS
+    explanation:
+      es: El cambio de entropía de un sistema aislado.
+      en: The change in entropy of an isolated system.
+      pt: A variação da entropia de um sistema isolado.
+      fr: La variation d'entropie d'un système isolé.
+      zh: 孤立系统的熵变。
+      ja: 孤立系のエントロピーの変化。
+  - id: geq
+    type: operator
+    value: "≥"
+    explanation:
+      es: "Mayor o igual que: nunca disminuye."
+      en: "Greater than or equal to: it never decreases."
+      pt: "Maior ou igual a: nunca diminui."
+      fr: "Supérieur ou égal à : elle ne décroît jamais."
+      zh: 大于或等于：熵永不减少。
+      ja: 以上。決して減少しないことを意味する。
+  - id: zero
+    type: number
+    value: "0"
+    explanation:
+      es: "El cero: el equilibrio se alcanza cuando la entropía deja de crecer."
+      en: "Zero: equilibrium is reached when entropy stops growing."
+      pt: "O zero: o equilíbrio é atingido quando a entropia para de crescer."
+      fr: "Zéro : l'équilibre est atteint lorsque l'entropie cesse de croître."
+      zh: 零：当熵停止增长时达到平衡。
+      ja: ゼロ。エントロピーが増えなくなった時点で平衡に達する。
+context:
+  author:
+    es: Rudolf Clausius
+    en: Rudolf Clausius
+    pt: Rudolf Clausius
+    fr: Rudolf Clausius
+    zh: 鲁道夫·克劳修斯
+    ja: ルドルフ・クラウジウス
+  era:
+    es: Alemania, 1822–1888 · enunciada en 1850–1865
+    en: Germany, 1822–1888 · stated in 1850–1865
+    pt: Alemanha, 1822–1888 · enunciada em 1850–1865
+    fr: Allemagne, 1822–1888 · énoncée en 1850–1865
+    zh: 德国，1822–1888年 · 于1850–1865年提出
+    ja: ドイツ、1822–1888年・1850–1865年に定式化
+  history:
+    es: >-
+      En 1850 Rudolf Clausius enunció la segunda ley para explicar por qué el calor fluye
+      espontáneamente de lo caliente a lo frío y nunca al revés. En 1865 acuñó el término
+      "entropía" y postuló que en un sistema aislado nunca disminuye. Lord Kelvin dio una
+      formulación equivalente: es imposible transformar por completo el calor en trabajo. La
+      entropía creciente marca la flecha del tiempo y explica por qué un refrigerador necesita
+      trabajo para mover calor contra el gradiente natural.
+    en: >-
+      In 1850 Rudolf Clausius stated the second law to explain why heat flows spontaneously from
+      hot to cold and never the other way. In 1865 he coined the term "entropy" and proposed
+      that it never decreases in an isolated system. Lord Kelvin gave an equivalent statement:
+      it is impossible to convert heat completely into work. Growing entropy marks the arrow of
+      time and explains why a refrigerator needs work to move heat against the natural gradient.
+    pt: >-
+      Em 1850, Rudolf Clausius enunciou a segunda lei para explicar por que o calor flui
+      espontaneamente do quente para o frio e nunca ao contrário. Em 1865, cunhou o termo
+      "entropia" e postulou que ela nunca diminui em um sistema isolado. Lord Kelvin deu uma
+      formulação equivalente: é impossível transformar calor integralmente em trabalho. O
+      crescimento da entropia marca a seta do tempo e explica por que um refrigerador precisa de
+      trabalho para mover calor contra o gradiente natural.
+    fr: >-
+      En 1850, Rudolf Clausius énonça la deuxième loi pour expliquer pourquoi la chaleur circule
+      spontanément du chaud vers le froid et jamais dans l'autre sens. En 1865, il forgea le
+      terme « entropie » et postula qu'elle ne décroît jamais dans un système isolé. Lord Kelvin
+      en donna une formulation équivalente : il est impossible de convertir entièrement la
+      chaleur en travail. L'entropie croissante marque la flèche du temps et explique pourquoi un
+      réfrigérateur doit fournir du travail pour déplacer la chaleur contre le gradient naturel.
+    zh: >-
+      1850年，鲁道夫·克劳修斯提出第二定律，用以解释为何热总是自发地从热体流向冷体而从不反向流动。
+      1865年，他创造了"熵"一词，并提出在孤立系统中熵永不减少。开尔文勋爵给出了一个等价的表述：
+      不可能把热量完全转化为功。熵的不断增加标志着时间之矢，也解释了为什么冰箱必须做功才能逆着自然梯度搬运热量。
+    ja: >-
+      1850年、ルドルフ・クラウジウスは、熱がなぜ高温から低温へ自然に流れ、決して逆方向には流れないのかを
+      説明するために第二法則を定式化した。1865年、彼は「エントロピー」という言葉を作り、
+      孤立系ではそれが決して減少しないことを主張した。ケルビン卿は等価な表現を与えた。
+      熱を完全に仕事に変換することは不可能である、というものである。エントロピーの増大は時間の矢印を刻み、
+      冷蔵庫が自然の勾配に逆らって熱を運ぶために仕事を必要とする理由を説明する。
+  timeline:
+    - year: "1824"
+      label:
+        es: >-
+          Carnot publica su análisis de la máquina térmica ideal, base sobre la que se construirá
+          la segunda ley.
+        en: >-
+          Carnot publishes his analysis of the ideal heat engine, the foundation on which the
+          second law will be built.
+        pt: >-
+          Carnot publica sua análise da máquina térmica ideal, base sobre a qual a segunda lei
+          será construída.
+        fr: >-
+          Carnot publie son analyse de la machine thermique idéale, fondement sur lequel la
+          deuxième loi sera construite.
+        zh: >-
+          卡诺发表了他对理想热机的分析，这成为第二定律得以建立的基础。
+        ja: >-
+          カルノーが理想熱機関の解析を発表し、第二法則が築かれる基礎となる。
+    - year: "1850"
+      label:
+        es: >-
+          Clausius publica su enunciado de la segunda ley y en 1854 introduce la entropía.
+        en: >-
+          Clausius publishes his statement of the second law, and in 1854 introduces entropy.
+        pt: >-
+          Clausius publica seu enunciado da segunda lei e, em 1854, introduz a entropia.
+        fr: >-
+          Clausius publie son énoncé de la deuxième loi et, en 1854, introduit l'entropie.
+        zh: >-
+          克劳修斯发表第二定律的表述，并于1854年引入熵的概念。
+        ja: >-
+          クラウジウスが第二法則の表現を発表し、1854年にはエントロピーを導入する。
+    - year: "1851"
+      label:
+        es: >-
+          Kelvin formula la versión de la segunda ley que prohíbe convertir todo el calor en
+          trabajo.
+        en: >-
+          Kelvin formulates the version of the second law that forbids converting all heat into
+          work.
+        pt: >-
+          Kelvin formula a versão da segunda lei que proíbe converter todo o calor em trabalho.
+        fr: >-
+          Kelvin formule la version de la deuxième loi qui interdit de convertir toute la chaleur
+          en travail.
+        zh: >-
+          开尔文提出了第二定律的表述，禁止将全部热量转化为功。
+        ja: >-
+          ケルビンが、熱をすべて仕事に変換することを禁じる第二法則の表現を定式化する。
+    - year: "1865"
+      label:
+        es: >-
+          Clausius acuña la palabra "entropía" y resume la ley como "la entropía del universo
+          tiende a un máximo".
+        en: >-
+          Clausius coins the word "entropy" and summarizes the law as "the entropy of the
+          universe tends to a maximum".
+        pt: >-
+          Clausius cunha a palavra "entropia" e resume a lei como "a entropia do universo tende a
+          um máximo".
+        fr: >-
+          Clausius forge le mot « entropie » et résume la loi ainsi : « l'entropie de l'univers
+          tend vers un maximum ».
+        zh: >-
+          克劳修斯创造了"熵"一词，并把这条定律概括为"宇宙的熵趋于极大值"。
+        ja: >-
+          クラウジウスが「エントロピー」という言葉を作り、「宇宙のエントロピーは極大へ向かう」と法則を総括する。
+  useCases:
+    - title:
+        es: Centrales de energía
+        en: Power plants
+        pt: Usinas de energia
+        fr: Centrales électriques
+        zh: 发电厂
+        ja: 発電所
+      description:
+        es: >-
+          Fija el límite teórico de eficiencia de cualquier planta que convierta calor en
+          electricidad.
+        en: >-
+          It sets the theoretical efficiency limit of any plant converting heat into electricity.
+        pt: >-
+          Estabelece o limite teórico de eficiência de qualquer usina que converta calor em
+          eletricidade.
+        fr: >-
+          Elle fixe la limite théorique de rendement de toute centrale convertissant la chaleur
+          en électricité.
+        zh: >-
+          它为任何将热量转化为电能的电厂设定了理论效率上限。
+        ja: >-
+          熱を電気に変換するあらゆる発電所の理論上の効率上限を定める。
+    - title:
+        es: Refrigeración
+        en: Refrigeration
+        pt: Refrigeração
+        fr: Réfrigération
+        zh: 制冷
+        ja: 冷凍
+      description:
+        es: >-
+          Explica el trabajo mínimo que exige trasladar calor de un cuerpo frío a uno caliente.
+        en: >-
+          It explains the minimum work required to move heat from a cold body to a hot one.
+        pt: >-
+          Explica o trabalho mínimo exigido para mover calor de um corpo frio para um quente.
+        fr: >-
+          Elle explique le travail minimal nécessaire pour déplacer de la chaleur d'un corps
+          froid vers un corps chaud.
+        zh: >-
+          它解释了将热量从冷体搬到热体所需的最小功。
+        ja: >-
+          冷たい物体から熱い物体へ熱を移動させるのに必要な最小の仕事を説明する。
+    - title:
+        es: Química de procesos
+        en: Process chemistry
+        pt: Química de processos
+        fr: Chimie des procédés
+        zh: 化工过程
+        ja: プロセス化学
+      description:
+        es: >-
+          Predice si una reacción química puede ocurrir de forma espontánea comparando entropías.
+        en: >-
+          It predicts whether a chemical reaction can occur spontaneously by comparing entropies.
+        pt: >-
+          Prevê se uma reação química pode ocorrer espontaneamente comparando entropias.
+        fr: >-
+          Elle prédit si une réaction chimique peut se produire spontanément en comparant les
+          entropies.
+        zh: >-
+          通过比较熵，它可预测化学反应能否自发进行。
+        ja: >-
+          エントロピーを比較することで、化学反応が自発的に起こり得るかを予測する。
+    - title:
+        es: Cosmología y física del clima
+        en: Cosmology and climate physics
+        pt: Cosmologia e física do clima
+        fr: Cosmologie et physique du climat
+        zh: 宇宙学与气候物理学
+        ja: 宇宙論と気候物理学
+      description:
+        es: >-
+          La entropía creciente estructura la evolución del universo y de los sistemas terrestres.
+        en: >-
+          Growing entropy structures the evolution of the universe and of Earth's systems.
+        pt: >-
+          A entropia crescente estrutura a evolução do universo e dos sistemas da Terra.
+        fr: >-
+          L'entropie croissante structure l'évolution de l'univers et des systèmes terrestres.
+        zh: >-
+          熵的不断增加塑造了宇宙及地球系统的演化。
+        ja: >-
+          増大するエントロピーが、宇宙や地球システムの進化を形づくる。
+  example:
+    title:
+      es: Flujo espontáneo del calor
+      en: Spontaneous heat flow
+      pt: Fluxo espontâneo de calor
+      fr: Flux spontané de chaleur
+      zh: 热的自发流动
+      ja: 熱の自発的流れ
+    lines:
+      - es: "Bloque caliente: T_h = 350 K"
+        en: "Hot block: T_h = 350 K"
+        pt: "Bloco quente: T_h = 350 K"
+        fr: "Bloc chaud : T_h = 350 K"
+        zh: 热块：T_h = 350 K
+        ja: 高温のブロック：T_h = 350 K
+      - es: "Bloque frío: T_c = 300 K"
+        en: "Cold block: T_c = 300 K"
+        pt: "Bloco frio: T_c = 300 K"
+        fr: "Bloc froid : T_c = 300 K"
+        zh: 冷块：T_c = 300 K
+        ja: 低温のブロック：T_c = 300 K
+      - es: Q = 100 J pasa del caliente al frío
+        en: Q = 100 J flows from hot to cold
+        pt: Q = 100 J flui do quente para o frio
+        fr: Q = 100 J circule du chaud vers le froid
+        zh: 有 Q = 100 J 的热量从热块流向冷块
+        ja: Q = 100 J の熱が高温側から低温側へ流れる
+      - es: ΔS = Q/T_c − Q/T_h = 0.333 − 0.286
+        en: ΔS = Q/T_c − Q/T_h = 0.333 − 0.286
+        pt: ΔS = Q/T_c − Q/T_h = 0,333 − 0,286
+        fr: ΔS = Q/T_c − Q/T_h = 0,333 − 0,286
+        zh: ΔS = Q/T_c − Q/T_h = 0.333 − 0.286
+        ja: ΔS = Q/T_c − Q/T_h = 0.333 − 0.286
+      - es: "ΔS = +0.047 J/K, positivo: el proceso ocurre"
+        en: "ΔS = +0.047 J/K, positive: the process happens"
+        pt: "ΔS = +0,047 J/K, positivo: o processo ocorre"
+        fr: "ΔS = +0,047 J/K, positif : le processus se produit"
+        zh: ΔS = +0.047 J/K，为正：过程发生
+        ja: ΔS = +0.047 J/K、正：この過程は起こる

@@ -1,0 +1,312 @@
+id: mechanical-energy
+title:
+  es: Energía Mecánica Total
+  en: Total Mechanical Energy
+  pt: Energia Mecânica Total
+  fr: Énergie mécanique totale
+  zh: 总机械能
+  ja: 力学的エネルギーの総和
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: La energía mecánica total del sistema.
+      en: The total mechanical energy of the system.
+      pt: A energia mecânica total do sistema.
+      fr: L'énergie mécanique totale du système.
+      zh: 系统的总机械能。
+      ja: 系全体の力学的エネルギー。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: pe
+    type: variable
+    value: PE
+    explanation:
+      es: La energía potencial, la que depende de la posición o de la altura.
+      en: The potential energy, which depends on position or height.
+      pt: A energia potencial, a que depende da posição ou da altura.
+      fr: L'énergie potentielle, celle qui dépend de la position ou de la hauteur.
+      zh: 势能，即取决于位置或高度的能量。
+      ja: 位置エネルギー。位置や高さに依存するエネルギー。
+  - id: plus
+    type: operator
+    value: "+"
+    explanation:
+      es: La suma de ambas formas de energía.
+      en: The sum of both forms of energy.
+      pt: A soma das duas formas de energia.
+      fr: La somme des deux formes d'énergie.
+      zh: 两种能量之和。
+      ja: 二つのエネルギー形態の和。
+  - id: ke
+    type: variable
+    value: KE
+    explanation:
+      es: La energía cinética, la que depende del movimiento del cuerpo.
+      en: The kinetic energy, which depends on the body's motion.
+      pt: A energia cinética, a que depende do movimento do corpo.
+      fr: L'énergie cinétique, celle qui dépend du mouvement du corps.
+      zh: 动能，即取决于物体运动的能量。
+      ja: 運動エネルギー。物体の運動に依存するエネルギー。
+context:
+  author:
+    es: Basada en la conservación de la energía
+    en: Based on the conservation of energy
+    pt: Baseada na conservação da energia
+    fr: Basée sur la conservation de l'énergie
+    zh: 基于能量守恒定律
+    ja: エネルギー保存則に基づく
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, século XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲,19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      La energía mecánica es la suma de la energía potencial y la cinética de un sistema. En
+      ausencia de fricción, esa suma permanece constante: la energía se convierte de altura en
+      velocidad y de velocidad en altura, pero no se crea ni se destruye. Este principio, que
+      Hermann von Helmholtz formuló con rigor en 1847 como parte de la conservación de la energía,
+      explica el vaivén del péndulo y el diseño de las montañas rusas, que convierten la energía de
+      la primera subida en toda la velocidad del recorrido.
+    en: >-
+      Mechanical energy is the sum of a system's potential and kinetic energy. In the absence of
+      friction that sum stays constant: energy converts from height into speed and from speed into
+      height, but is neither created nor destroyed. This principle, rigorously formulated by Hermann
+      von Helmholtz in 1847 as part of energy conservation, explains the swing of a pendulum and the
+      design of roller coasters, which convert the energy of the first climb into all the speed of
+      the ride.
+    pt: >-
+      A energia mecânica é a soma da energia potencial e da cinética de um sistema. Na ausência de
+      atrito, essa soma permanece constante: a energia se converte de altura em velocidade e de
+      velocidade em altura, mas não se cria nem se destrói. Esse princípio, formulado com rigor por
+      Hermann von Helmholtz em 1847 como parte da conservação da energia, explica o vai e vem do
+      pêndulo e o projeto das montanhas-russas, que convertem a energia da primeira subida em toda a
+      velocidade do percurso.
+    fr: >-
+      L'énergie mécanique est la somme de l'énergie potentielle et de l'énergie cinétique d'un
+      système. En l'absence de frottement, cette somme reste constante : l'énergie se convertit de
+      la hauteur en vitesse et de la vitesse en hauteur, mais ne se crée ni ne se détruit. Ce
+      principe, formulé rigoureusement par Hermann von Helmholtz en 1847 dans le cadre de la
+      conservation de l'énergie, explique le va-et-vient du pendule et la conception des grands
+      huit, qui transforment l'énergie de la première montée en toute la vitesse du parcours.
+    zh: >-
+      机械能是系统势能与动能之和。在没有摩擦的情况下，这个和保持不变：能量在高度与速度之间相互转化，
+      既不会凭空产生，也不会消失。1847年，赫尔曼·冯·亥姆霍兹作为能量守恒的一部分将其严谨地表述出来，
+      它解释了单摆的往复摆动，也解释了过山车的设计——把第一次爬升的势能转化成全程的速度。
+    ja: >-
+      力学的エネルギーは、系の位置エネルギーと運動エネルギーの和である。摩擦がなければこの和は一定に保たれ、
+      エネルギーは高さと速度の間を相互に変換されるが、決して生まれもせず消えもしない。ヘルマン・フォン・
+      ヘルムホルツが1847年にエネルギー保存の一環として厳密に定式化したこの原理は、振り子の往復運動や
+      ジェットコースターの設計を説明する。最初の上り坂のエネルギーが、コース全体の速度に変換されるのだ。
+  timeline:
+    - year: "1807"
+      label:
+        es: >-
+          Thomas Young difunde el término "energía" con su sentido mecánico moderno.
+        en: >-
+          Thomas Young popularizes the term "energy" with its modern mechanical sense.
+        pt: >-
+          Thomas Young difunde o termo "energia" com seu sentido mecânico moderno.
+        fr: >-
+          Thomas Young répand le terme "énergie" dans son sens mécanique moderne.
+        zh: >-
+          托马斯·杨使"能量"一词在现代力学意义上普及开来。
+        ja: >-
+          トーマス・ヤングが現代の力学的な意味での「エネルギー」という用語を広める。
+    - year: "1847"
+      label:
+        es: >-
+          Helmholtz enuncia la conservación de la energía, uniendo la mecánica con el calor.
+        en: >-
+          Helmholtz states the conservation of energy, uniting mechanics with heat.
+        pt: >-
+          Helmholtz enuncia a conservação da energia, unindo a mecânica ao calor.
+        fr: >-
+          Helmholtz énonce la conservation de l'énergie, unissant la mécanique à la chaleur.
+        zh: >-
+          亥姆霍兹表述能量守恒，将力学与热统一起来。
+        ja: >-
+          ヘルムホルツがエネルギー保存を述べ、力学と熱を統一する。
+    - year: "1884"
+      label:
+        es: >-
+          LaMarcus Thompson inaugura el Switchback Railway en Coney Island, una montaña rusa
+          pensada en el intercambio entre altura y velocidad.
+        en: >-
+          LaMarcus Thompson opens the Switchback Railway at Coney Island, a roller coaster designed
+          around the exchange of height and speed.
+        pt: >-
+          LaMarcus Thompson inaugura a Switchback Railway em Coney Island, uma montanha-russa
+          pensada na troca entre altura e velocidade.
+        fr: >-
+          LaMarcus Thompson inaugure le Switchback Railway à Coney Island, un grand huit conçu
+          autour de l'échange entre hauteur et vitesse.
+        zh: >-
+          拉马克斯·汤普森在科尼岛开设"折返铁路"过山车，其设计正是基于高度与速度的转换。
+        ja: >-
+          ラマーカス・トンプソンがコニーアイランドにスイッチバック鉄道を開業。高さと速度の交換を軸に設計された
+          ジェットコースターである。
+    - year: Hoy
+      label:
+        es: >-
+          Los relojes de péndulo, las atracciones y el diseño de máquinas se apoyan en la
+          conservación de la energía mecánica.
+        en: >-
+          Pendulum clocks, rides, and machine design all rely on the conservation of mechanical
+          energy.
+        pt: >-
+          Os relógios de pêndulo, as atrações e o projeto de máquinas se apoiam na conservação da
+          energia mecânica.
+        fr: >-
+          Les horloges à pendule, les attractions et la conception de machines s'appuient sur la
+          conservation de l'énergie mécanique.
+        zh: >-
+          摆钟、游乐设施与机械设计都以机械能守恒为依据。
+        ja: >-
+          振り子時計、遊具、機械設計はすべて、力学的エネルギーの保存に依拠している。
+  useCases:
+    - title:
+        es: Parques de atracciones
+        en: Amusement parks
+        pt: Parques de diversão
+        fr: Parcs d'attractions
+        zh: 游乐园
+        ja: 遊園地
+      description:
+        es: >-
+          La primera subida carga toda la energía del recorrido, que se va alternando entre altura
+          y velocidad.
+        en: >-
+          The first climb charges the whole ride's energy, which alternates between height and
+          speed.
+        pt: >-
+          A primeira subida carrega toda a energia do percurso, que vai se alternando entre altura
+          e velocidade.
+        fr: >-
+          La première montée fournit toute l'énergie du parcours, qui alterne entre hauteur et
+          vitesse.
+        zh: >-
+          第一次爬升为全程提供能量，之后能量在高度与速度之间交替转换。
+        ja: >-
+          最初の上りがコース全体のエネルギーをまかない、以後は高さと速度を交互に交換する。
+    - title:
+        es: Relojería y péndulos
+        en: Horology and pendulums
+        pt: Relojoaria e pêndulos
+        fr: Horlogerie et pendules
+        zh: 钟表与摆
+        ja: 時計と振り子
+      description:
+        es: >-
+          El péndulo de un reloj conserva su energía mecánica para oscilar con ritmo constante.
+        en: >-
+          A clock's pendulum conserves its mechanical energy to swing at a steady rhythm.
+        pt: >-
+          O pêndulo de um relógio conserva sua energia mecânica para oscilar em ritmo constante.
+        fr: >-
+          Le pendule d'une horloge conserve son énergie mécanique pour osciller à un rythme
+          constant.
+        zh: >-
+          钟摆通过守恒机械能来以稳定的节律摆动。
+        ja: >-
+          時計の振り子は力学的エネルギーを保存して、一定のリズムで振れ続ける。
+    - title:
+        es: Ingeniería mecánica
+        en: Mechanical engineering
+        pt: Engenharia mecânica
+        fr: Ingénierie mécanique
+        zh: 机械工程
+        ja: 機械工学
+      description:
+        es: >-
+          Máquinas como bielas y resortes intercambian energía potencial y cinética en cada ciclo.
+        en: >-
+          Machines such as linkages and springs exchange potential and kinetic energy each cycle.
+        pt: >-
+          Máquinas como bielas e molas trocam energia potencial e cinética a cada ciclo.
+        fr: >-
+          Des machines comme les bielles et les ressorts échangent énergie potentielle et cinétique
+          à chaque cycle.
+        zh: >-
+          连杆和弹簧之类的机械在每个循环中都在势能与动能之间转换。
+        ja: >-
+          連結やばねのような機械は、サイクルごとに位置エネルギーと運動エネルギーを交換する。
+    - title:
+        es: Saltos y clavados
+        en: Diving and jumps
+        pt: Saltos e mergulhos
+        fr: Plongeons et sauts
+        zh: 跳水与跳跃
+        ja: 飛び込みと跳躍
+      description:
+        es: >-
+          La energía de la altura inicial se convierte en la velocidad del giro o de la entrada al
+          agua.
+        en: >-
+          The energy of the starting height becomes the speed of the spin or of the water entry.
+        pt: >-
+          A energia da altura inicial se converte na velocidade do giro ou da entrada na água.
+        fr: >-
+          L'énergie de la hauteur initiale devient la vitesse du saut ou de l'entrée dans l'eau.
+        zh: >-
+          起始高度的能量转化为旋转的速度或入水的速度。
+        ja: >-
+          最初の高さのエネルギーが、回転や着水の速度に変わる。
+  example:
+    title:
+      es: Energía de una caja en reposo a 10 m
+      en: Energy of a box at rest at 10 m
+      pt: Energia de uma caixa em repouso a 10 m
+      fr: Énergie d'une caisse au repos à 10 m
+      zh: 10米高处静止箱子的能量
+      ja: 10mの高さで静止した箱のエネルギー
+    lines:
+      - es: m = 2 kg, h = 10 m, v = 0 m/s
+        en: m = 2 kg, h = 10 m, v = 0 m/s
+        pt: m = 2 kg, h = 10 m, v = 0 m/s
+        fr: m = 2 kg, h = 10 m, v = 0 m/s
+        zh: m = 2 kg, h = 10 m, v = 0 m/s
+        ja: m = 2 kg, h = 10 m, v = 0 m/s
+      - es: E = PE + KE
+        en: E = PE + KE
+        pt: E = PE + KE
+        fr: E = PE + KE
+        zh: E = PE + KE
+        ja: E = PE + KE
+      - es: PE = m · g · h = 2 × 9.81 × 10 ≈ 196 J
+        en: PE = m · g · h = 2 × 9.81 × 10 ≈ 196 J
+        pt: PE = m · g · h = 2 × 9,81 × 10 ≈ 196 J
+        fr: PE = m · g · h = 2 × 9,81 × 10 ≈ 196 J
+        zh: PE = m · g · h = 2 × 9.81 × 10 ≈ 196 J
+        ja: PE = m · g · h = 2 × 9.81 × 10 ≈ 196 J
+      - es: KE = ½ · m · v² = ½ × 2 × 0² = 0 J
+        en: KE = ½ · m · v² = ½ × 2 × 0² = 0 J
+        pt: KE = ½ · m · v² = ½ × 2 × 0² = 0 J
+        fr: KE = ½ · m · v² = ½ × 2 × 0² = 0 J
+        zh: KE = ½ · m · v² = ½ × 2 × 0² = 0 J
+        ja: KE = ½ · m · v² = ½ × 2 × 0² = 0 J
+      - es: E = 196 + 0 = 196 J
+        en: E = 196 + 0 = 196 J
+        pt: E = 196 + 0 = 196 J
+        fr: E = 196 + 0 = 196 J
+        zh: E = 196 + 0 = 196 J
+        ja: E = 196 + 0 = 196 J

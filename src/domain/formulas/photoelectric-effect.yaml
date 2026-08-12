@@ -1,0 +1,336 @@
+id: photoelectric-effect
+title:
+  es: Efecto Fotoeléctrico
+  en: Photoelectric Effect
+  pt: Efeito Fotoelétrico
+  fr: Effet photoélectrique
+  zh: 光电效应
+  ja: 光電効果
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: ke-max
+    type: variable
+    value: KE_max
+    explanation:
+      es: La energía cinética máxima con la que un electrón escapa de la superficie del metal.
+      en: The maximum kinetic energy with which an electron escapes the metal surface.
+      pt: A energia cinética máxima com que um elétron escapa da superfície do metal.
+      fr: L'énergie cinétique maximale avec laquelle un électron s'échappe de la surface du métal.
+      zh: 电子以最大动能从金属表面逃逸。
+      ja: 電子が金属表面から飛び出すときの最大運動エネルギー。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: h
+    type: constant
+    value: h
+    explanation:
+      es: La constante de Planck, que relaciona la energía de un cuanto de luz con su frecuencia.
+      en: Planck's constant, which links the energy of a light quantum to its frequency.
+      pt: A constante de Planck, que relaciona a energia de um quantum de luz com sua frequência.
+      fr: La constante de Planck, qui relie l'énergie d'un quantum de lumière à sa fréquence.
+      zh: 普朗克常数,将光量子的能量与其频率联系起来。
+      ja: 光の量子のエネルギーを周波数と結びつけるプランク定数。
+  - id: f
+    type: variable
+    value: f
+    explanation:
+      es: La frecuencia de la luz que incide sobre el metal.
+      en: The frequency of the light striking the metal.
+      pt: A frequência da luz que incide sobre o metal.
+      fr: La fréquence de la lumière qui frappe le métal.
+      zh: 照射在金属上的光的频率。
+      ja: 金属に照射される光の周波数。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "Menos: se resta el trabajo necesario para liberar al electrón."
+      en: "Minus: the work needed to free the electron is subtracted."
+      pt: "Menos: subtrai-se o trabalho necessário para liberar o elétron."
+      fr: "Moins : on soustrait le travail nécessaire pour libérer l'électron."
+      zh: 减号:减去释放电子所需的功。
+      ja: マイナス:電子を解放するのに必要な仕事を引く。
+  - id: phi
+    type: constant
+    value: φ
+    explanation:
+      es: "La función trabajo del metal: la energía mínima para arrancarle un electrón."
+      en: "The metal's work function: the minimum energy to pull an electron free."
+      pt: "A função trabalho do metal: a energia mínima para arrancar um elétron."
+      fr: "Le travail d'extraction du métal : l'énergie minimale pour libérer un électron."
+      zh: 金属的功函数:将一个电子拉出所需的最小能量。
+      ja: 金属の仕事関数:電子を引き離すのに必要な最小エネルギー。
+context:
+  author:
+    es: Albert Einstein
+    en: Albert Einstein
+    pt: Albert Einstein
+    fr: Albert Einstein
+    zh: 阿尔伯特·爱因斯坦
+    ja: アルベルト・アインシュタイン
+  era:
+    es: Suiza, 1879–1955 · publicada en 1905
+    en: Switzerland, 1879–1955 · published in 1905
+    pt: Suíça, 1879–1955 · publicada em 1905
+    fr: Suisse, 1879–1955 · publiée en 1905
+    zh: 瑞士,1879–1955年 · 1905年发表
+    ja: スイス、1879–1955年・1905年発表
+  history:
+    es: >-
+      En 1887 Hertz observó que la luz ultravioleta arranca electrones de los metales, algo que la
+      física ondulatoria no podía explicar: la energía de esos electrones depende de la frecuencia de
+      la luz, no de su intensidad. En 1905 Einstein propuso que la luz viaja en cuantos de energía
+      h·f, cada uno capaz de liberar un solo electrón; por ese trabajo recibió el Premio Nobel en
+      1921. Su idea sentó las bases de la mecánica cuántica y hoy alimenta los paneles solares
+      fotovoltaicos.
+    en: >-
+      In 1887 Hertz observed that ultraviolet light knocks electrons out of metals, something wave
+      physics could not explain: the energy of those electrons depends on the light's frequency, not
+      its intensity. In 1905 Einstein proposed that light travels in quanta of energy h·f, each
+      capable of freeing a single electron; for that work he won the Nobel Prize in 1921. His idea
+      laid the foundations of quantum mechanics and now powers photovoltaic solar panels.
+    pt: >-
+      Em 1887, Hertz observou que a luz ultravioleta arranca elétrons dos metais, algo que a física
+      ondulatória não conseguia explicar: a energia desses elétrons depende da frequência da luz, não
+      de sua intensidade. Em 1905, Einstein propôs que a luz viaja em quanta de energia h·f, cada um
+      capaz de liberar um único elétron; por esse trabalho recebeu o Prêmio Nobel em 1921. Sua ideia
+      lançou as bases da mecânica quântica e hoje alimenta os painéis solares fotovoltaicos.
+    fr: >-
+      En 1887, Hertz observa que la lumière ultraviolette arrache des électrons aux métaux, ce que la
+      physique ondulatoire ne pouvait expliquer : l'énergie de ces électrons dépend de la fréquence de
+      la lumière, pas de son intensité. En 1905, Einstein proposa que la lumière voyage en quanta
+      d'énergie h·f, chacun capable de libérer un électron ; pour ces travaux il reçut le prix Nobel
+      en 1921. Son idée posa les fondations de la mécanique quantique et alimente aujourd'hui les
+      panneaux solaires photovoltaïques.
+    zh: >-
+      1887年赫兹观察到紫外线能从金属中击出电子,这是波动光学无法解释的:这些电子的能量取决于光的频率,
+      而不是光的强度。1905年爱因斯坦提出光以能量量子h·f的形式传播,每个量子能释放一个电子,他因此获得
+      1921年诺贝尔物理学奖。他的思想奠定了量子力学的基础,如今也为光伏太阳能电池板提供能源。
+    ja: >-
+      1887年、ヘルツは紫外線が金属から電子を叩き出すことを観察したが、これは波動光学では説明できなかった。
+      その電子のエネルギーは光の強度ではなく周波数に依存するのだ。1905年、アインシュタインは光がエネルギー
+      量子h·fとして伝わり、一つの量子が一つの電子を解放できると提唱し、その業績で1921年にノーベル賞を受賞した。
+      彼の考えは量子力学の基礎を築き、現在は太陽光発電パネルを動かしている。
+  timeline:
+    - year: "1887"
+      label:
+        es: >-
+          Hertz observa que la luz ultravioleta sobre metales produce descargas eléctricas, el primer
+          indicio del efecto fotoeléctrico.
+        en: >-
+          Hertz observes that ultraviolet light striking metals produces electric discharges, the
+          first hint of the photoelectric effect.
+        pt: >-
+          Hertz observa que a luz ultravioleta sobre metais produz descargas elétricas, o primeiro
+          indício do efeito fotoelétrico.
+        fr: >-
+          Hertz observe que la lumière ultraviolette sur les métaux produit des décharges électriques,
+          premier indice de l'effet photoélectrique.
+        zh: >-
+          赫兹观察到紫外线照射金属会产生放电现象,这是光电效应的最初线索。
+        ja: >-
+          ヘルツが金属への紫外線照射で放電が起こることを観察。光電効果の最初の手がかりとなる。
+    - year: "1905"
+      label:
+        es: >-
+          Einstein publica su artículo sobre los cuantos de luz, que explica la energía de los
+          electrones emitidos.
+        en: >-
+          Einstein publishes his paper on light quanta, explaining the energy of the emitted
+          electrons.
+        pt: >-
+          Einstein publica seu artigo sobre os quanta de luz, que explica a energia dos elétrons
+          emitidos.
+        fr: >-
+          Einstein publie son article sur les quanta de lumière, qui explique l'énergie des électrons
+          émis.
+        zh: >-
+          爱因斯坦发表关于光量子的论文,解释了发射电子的能量。
+        ja: >-
+          アインシュタインが光量子に関する論文を発表し、放出される電子のエネルギーを説明する。
+    - year: "1921"
+      label:
+        es: >-
+          Einstein recibe el Premio Nobel de Física, citado principalmente por su explicación del
+          efecto fotoeléctrico.
+        en: >-
+          Einstein receives the Nobel Prize in Physics, cited chiefly for his explanation of the
+          photoelectric effect.
+        pt: >-
+          Einstein recebe o Prêmio Nobel de Física, citado principalmente por sua explicação do efeito
+          fotoelétrico.
+        fr: >-
+          Einstein reçoit le prix Nobel de physique, cité principalement pour son explication de
+          l'effet photoélectrique.
+        zh: >-
+          爱因斯坦获得诺贝尔物理学奖,主要因其对光电效应的解释而获奖。
+        ja: >-
+          アインシュタインが光電効果の説明を主な理由としてノーベル物理学賞を受賞する。
+    - year: Hoy
+      label:
+        es: >-
+          El efecto fotoeléctrico sustenta las celdas fotovoltaicas que convierten la luz del sol en
+          electricidad en todo el mundo.
+        en: >-
+          The photoelectric effect underpins the photovoltaic cells that turn sunlight into
+          electricity worldwide.
+        pt: >-
+          O efeito fotoelétrico sustenta as células fotovoltaicas que convertem a luz do sol em
+          eletricidade em todo o mundo.
+        fr: >-
+          L'effet photoélectrique sous-tend les cellules photovoltaïques qui transforment la lumière
+          du soleil en électricité dans le monde entier.
+        zh: >-
+          光电效应支撑着世界各地的光伏电池,将阳光转化为电能。
+        ja: >-
+          光電効果は、太陽光を電力に変える太陽電池の基礎となっている。
+  useCases:
+    - title:
+        es: Celdas solares fotovoltaicas
+        en: Photovoltaic solar cells
+        pt: Células solares fotovoltaicas
+        fr: Cellules solaires photovoltaïques
+        zh: 光伏太阳能电池
+        ja: 太陽光発電セル
+      description:
+        es: >-
+          Convierte la luz del sol directamente en electricidad: cada fotón absorbido libera un
+          electrón que contribuye a la corriente.
+        en: >-
+          It converts sunlight directly into electricity: each absorbed photon frees an electron that
+          contributes to the current.
+        pt: >-
+          Converte a luz do sol diretamente em eletricidade: cada fóton absorvido libera um elétron
+          que contribui para a corrente.
+        fr: >-
+          Elle convertit directement la lumière du soleil en électricité : chaque photon absorbé
+          libère un électron qui contribue au courant.
+        zh: >-
+          将阳光直接转化为电能:每个被吸收的光子释放一个电子,为电流作出贡献。
+        ja: >-
+          太陽光を直接電気に変える。吸収された各光子が電子を解放し、電流に寄与する。
+    - title:
+        es: Tubos fotomultiplicadores
+        en: Photomultiplier tubes
+        pt: Tubos fotomultiplicadores
+        fr: Tubes photomultiplicateurs
+        zh: 光电倍增管
+        ja: 光電子増倍管
+      description:
+        es: >-
+          Detectan fotones individuales en física de partículas y medicina nuclear, amplificando la
+          señal de cada electrón liberado.
+        en: >-
+          They detect single photons in particle physics and nuclear medicine, amplifying the signal
+          of each freed electron.
+        pt: >-
+          Detectam fótons individuais na física de partículas e na medicina nuclear, amplificando o
+          sinal de cada elétron liberado.
+        fr: >-
+          Ils détectent des photons individuels en physique des particules et en médecine nucléaire,
+          en amplifiant le signal de chaque électron libéré.
+        zh: >-
+          在粒子物理学和核医学中探测单个光子,放大每个释放电子的信号。
+        ja: >-
+          素粒子物理学や核医学で単一光子を検出し、解放された各電子の信号を増幅する。
+    - title:
+        es: Sensores de luz y cámaras digitales
+        en: Light sensors and digital cameras
+        pt: Sensores de luz e câmeras digitais
+        fr: Capteurs de lumière et appareils photo numériques
+        zh: 光传感器与数码相机
+        ja: 光センサーとデジタルカメラ
+      description:
+        es: >-
+          En cada píxel de un sensor, los fotones liberan electrones que se acumulan y se leen como
+          niveles de brillo.
+        en: >-
+          In each sensor pixel, photons free electrons that accumulate and are read as brightness
+          levels.
+        pt: >-
+          Em cada pixel de um sensor, os fótons liberam elétrons que se acumulam e são lidos como
+          níveis de brilho.
+        fr: >-
+          Dans chaque pixel d'un capteur, les photons libèrent des électrons qui s'accumulent et sont
+          lus comme des niveaux de luminosité.
+        zh: >-
+          在传感器的每个像素中,光子释放的电子不断累积,并被读取为亮度等级。
+        ja: >-
+          センサーの各画素では、光子が解放した電子が蓄積され、輝度レベルとして読み取られる。
+    - title:
+        es: Espectroscopía fotoeléctrica
+        en: Photoelectron spectroscopy
+        pt: Espectroscopia fotoelétrica
+        fr: Spectroscopie photoélectronique
+        zh: 光电子能谱
+        ja: 光電子分光
+      description:
+        es: >-
+          Mide la energía de los electrones arrancados por rayos X o UV para estudiar la estructura
+          electrónica de materiales y superficies.
+        en: >-
+          It measures the energy of electrons knocked out by X-rays or UV to study the electronic
+          structure of materials and surfaces.
+        pt: >-
+          Mede a energia dos elétrons arrancados por raios X ou UV para estudar a estrutura
+          eletrônica de materiais e superfícies.
+        fr: >-
+          Elle mesure l'énergie des électrons arrachés par des rayons X ou UV pour étudier la
+          structure électronique des matériaux et des surfaces.
+        zh: >-
+          测量被X射线或紫外线击出的电子的能量,用以研究材料和表面的电子结构。
+        ja: >-
+          X線やUVで叩き出された電子のエネルギーを測定し、材料や表面の電子構造を研究する。
+  example:
+    title:
+      es: Fotones de 4 eV sobre un metal
+      en: 4 eV photons on a metal
+      pt: Fótons de 4 eV sobre um metal
+      fr: Photons de 4 eV sur un métal
+      zh: 4 eV光子照射金属
+      ja: 金属に照射する4 eVの光子
+    lines:
+      - es: h·f = 4 eV
+        en: h·f = 4 eV
+        pt: h·f = 4 eV
+        fr: h·f = 4 eV
+        zh: h·f = 4 eV
+        ja: h·f = 4 eV
+      - es: φ = 2 eV
+        en: φ = 2 eV
+        pt: φ = 2 eV
+        fr: φ = 2 eV
+        zh: φ = 2 eV
+        ja: φ = 2 eV
+      - es: KE_max = h·f − φ
+        en: KE_max = h·f − φ
+        pt: KE_max = h·f − φ
+        fr: KE_max = h·f − φ
+        zh: KE_max = h·f − φ
+        ja: KE_max = h·f − φ
+      - es: KE_max = 4 − 2
+        en: KE_max = 4 − 2
+        pt: KE_max = 4 − 2
+        fr: KE_max = 4 − 2
+        zh: KE_max = 4 − 2
+        ja: KE_max = 4 − 2
+      - es: KE_max = 2 eV
+        en: KE_max = 2 eV
+        pt: KE_max = 2 eV
+        fr: KE_max = 2 eV
+        zh: KE_max = 2 eV
+        ja: KE_max = 2 eV

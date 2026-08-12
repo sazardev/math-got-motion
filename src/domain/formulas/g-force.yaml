@@ -1,0 +1,277 @@
+id: g-force
+title:
+  es: Fuerza G
+  en: G-Force
+  pt: Força G
+  fr: Force G
+  zh: G力
+  ja: Gフォース
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: gforce
+    type: variable
+    value: G
+    explanation:
+      es: El factor G, cuántas veces la aceleración supera a la gravedad terrestre.
+      en: The G factor, how many times the acceleration exceeds Earth's gravity.
+      pt: O fator G, quantas vezes a aceleração supera a gravidade terrestre.
+      fr: Le facteur G, combien de fois l'accélération dépasse la pesanteur terrestre.
+      zh: G因子,即加速度超过地球重力的倍数。
+      ja: Gフォース。加速度が地球の重力を何倍上回るかを示す。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: La aceleración real que sufre el objeto, medida en m/s².
+      en: The actual acceleration the object undergoes, measured in m/s².
+      pt: A aceleração real que o objeto sofre, medida em m/s².
+      fr: L'accélération réelle subie par l'objet, mesurée en m/s².
+      zh: 物体实际受到的加速度,单位为米/秒²。
+      ja: 物体が実際に受ける加速度。単位は m/s²。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: g
+    type: variable
+    value: g
+    explanation:
+      es: La gravedad de la Tierra, 9.81 m/s², la unidad de comparación.
+      en: Earth's gravity, 9.81 m/s², the unit of comparison.
+      pt: A gravidade da Terra, 9,81 m/s², a unidade de comparação.
+      fr: La pesanteur terrestre, 9,81 m/s², l'unité de comparaison.
+      zh: 地球重力,9.81米/秒²,作为比较的单位。
+      ja: 地球の重力 9.81 m/s²。比較の単位。
+context:
+  author:
+    es: Basada en la mecánica de Newton
+    en: Based on Newtonian mechanics
+    pt: Baseada na mecânica de Newton
+    fr: Basée sur la mécanique de Newton
+    zh: 基于牛顿力学
+    ja: ニュートン力学に基づく
+  era:
+    es: Europa y EE. UU., s. XX
+    en: Europe and the USA, 20th century
+    pt: Europa e EUA, séc. XX
+    fr: Europe et États-Unis, XXe siècle
+    zh: 欧洲与美国,20世纪
+    ja: ヨーロッパとアメリカ、20世紀
+  history:
+    es: >-
+      La fuerza G mide la aceleración en unidades de la gravedad terrestre: 1 G es lo que sentimos en
+      reposo y, al acelerar, el cuerpo experimenta varias veces ese peso. Los pilotos de combate y los
+      astronautas la soportan de forma extrema: a partir de unos 5 G, la sangre deja de llegar al
+      cerebro y se produce el desmayo. Las montañas rusas y las curvas automovilísticas la dosifican
+      con cuidado, y todo vehículo se diseña para resistir la fuerza G como límite estructural.
+    en: >-
+      G-force measures acceleration in units of Earth's gravity: 1 G is what we feel at rest, and when
+      accelerating the body endures several times that weight. Fighter pilots and astronauts endure it
+      at extreme levels: above about 5 G, blood stops reaching the brain and blackout occurs. Roller
+      coasters and car cornering dose it carefully, and every vehicle is designed to withstand
+      g-force as a structural limit.
+    pt: >-
+      A força G mede a aceleração em unidades da gravidade terrestre: 1 G é o que sentimos em repouso
+      e, ao acelerar, o corpo suporta várias vezes esse peso. Pilotos de caça e astronautas a suportam
+      de forma extrema: a partir de cerca de 5 G, o sangue deixa de chegar ao cérebro e ocorre o
+      desmaio. Montanhas-russas e curvas automobilísticas a dosam com cuidado, e todo veículo é
+      projetado para resistir à força G como limite estrutural.
+    fr: >-
+      La force G mesure l'accélération en unités de la pesanteur terrestre : 1 G correspond à ce que
+      nous ressentons au repos et, en accélérant, le corps endure plusieurs fois ce poids. Les pilotes
+      de chasse et les astronautes la subissent de façon extrême : au-delà d'environ 5 G, le sang
+      n'atteint plus le cerveau et survient l'évanouissement. Grands huit et virages automobiles la
+      dosent avec soin, et tout véhicule est conçu pour résister à la force G comme limite
+      structurale.
+    zh: >-
+      G力以地球重力为单位来衡量加速度:1 G就是我们静止时所感受到的重量,加速时身体要承受这个重量的好几倍。
+      战斗机飞行员和宇航员会承受极端值:超过约5 G时,血液无法到达大脑,人就会昏厥。过山车和汽车过弯都会精心控制G值,
+      而每一辆载具都把承受G力作为结构设计的极限。
+    ja: >-
+      Gフォースは、加速度を地球の重力を単位として表す。1 Gは静止時に感じる重さであり、加速すると体はその数倍の重さを
+      受ける。戦闘機のパイロットや宇宙飛行士は極端な値に耐える:約5 Gを超えると血液が脳に届かなくなり、失神が起こる。
+      ジェットコースターや自動車のコーナリングはこれを慎重に配分し、あらゆる乗り物はGフォースを構造上の限界として設計される。
+  timeline:
+    - year: "1918"
+      label:
+        es: Los pilotos de la Primera Guerra Mundial reportan desmayos en picadas cerradas; nace la medicina de vuelo.
+        en: WWI pilots report blackouts in steep dives; aviation medicine is born.
+        pt: Pilotos da Primeira Guerra reportam desmaios em mergulhos fechados; nasce a medicina de aviação.
+        fr: Les pilotes de la Première Guerre mondiale signalent des évanouissements en piqué ; la médecine aéronautique naît.
+        zh: 一战飞行员报告俯冲时昏厥;航空医学由此诞生。
+        ja: 第一次世界大戦のパイロットが急降下中の失神を報告し、航空医学が生まれる。
+    - year: "1935"
+      label:
+        es: Los investigadores usan centrífugas para medir cuántos G tolera el cuerpo humano.
+        en: Researchers use centrifuges to measure how many G the human body can tolerate.
+        pt: Pesquisadores usam centrífugas para medir quantos G o corpo humano tolera.
+        fr: Les chercheurs utilisent des centrifugeuses pour mesurer combien de G le corps humain tolère.
+        zh: 研究人员用离心机测量人体能承受多少个G。
+        ja: 研究者たちは遠心分離機を使って、人体が何Gまで耐えられるかを測定する。
+    - year: "1950"
+      label:
+        es: Los trajes antigravedad se vuelven estándar en la aviación de combate y permiten soportar hasta 9 G.
+        en: Anti-G suits become standard in combat aviation, allowing pilots to withstand up to 9 G.
+        pt: Trajes antigravidade viram padrão na aviação de combate, permitindo suportar até 9 G.
+        fr: Les combinaisons anti-G deviennent standard dans l'aviation de combat, permettant de supporter jusqu'à 9 G.
+        zh: 抗荷服在作战航空中成为标配,使飞行员能够承受高达9 G。
+        ja: 抗Gスーツが戦闘機で標準となり、最大9 Gまで耐えられるようになる。
+    - year: Hoy
+      label:
+        es: La fuerza G es un límite de diseño diario en montañas rusas, automóviles y pruebas de seguridad.
+        en: G-force is a daily design limit in roller coasters, cars, and safety testing.
+        pt: A força G é um limite de projeto diário em montanhas-russas, carros e testes de segurança.
+        fr: La force G est une limite de conception quotidienne dans les grands huit, les voitures et les essais de sécurité.
+        zh: G力是过山车、汽车和安全测试中日常的设计极限。
+        ja: Gフォースは、ジェットコースターや自動車、安全試験における日常的な設計上の限界である。
+  useCases:
+    - title:
+        es: Aviación militar
+        en: Fighter aviation
+        pt: Aviação militar
+        fr: Aviation militaire
+        zh: 军用航空
+        ja: 戦闘機航空
+      description:
+        es: >-
+          Los pilotos entrenan con centrífugas y usan trajes antigravedad para soportar hasta 9 G en
+          maniobras.
+        en: >-
+          Pilots train with centrifuges and wear anti-G suits to withstand up to 9 G in maneuvers.
+        pt: >-
+          Pilotos treinam em centrífugas e usam trajes antigravidade para suportar até 9 G em
+          manobras.
+        fr: >-
+          Les pilotes s'entraînent en centrifugeuse et portent des combinaisons anti-G pour supporter
+          jusqu'à 9 G en manœuvre.
+        zh: >-
+          飞行员通过离心机训练并穿着抗荷服,在机动中承受高达9 G。
+        ja: >-
+          パイロットは遠心分離機で訓練し、抗Gスーツを着用して、機動中に最大9 Gに耐える。
+    - title:
+        es: Parques de atracciones
+        en: Amusement parks
+        pt: Parques de diversão
+        fr: Parcs d'attractions
+        zh: 游乐园
+        ja: 遊園地
+      description:
+        es: >-
+          Las montañas rusas se diseñan para que las fuerzas G se mantengan en un rango cómodo y
+          seguro.
+        en: >-
+          Roller coasters are designed to keep g-forces within a comfortable, safe range.
+        pt: >-
+          Montanhas-russas são projetadas para manter as forças G em uma faixa confortável e segura.
+        fr: >-
+          Les grands huit sont conçus pour maintenir les forces G dans une plage confortable et sûre.
+        zh: >-
+          过山车被设计成使G力保持在舒适安全的范围内。
+        ja: >-
+          ジェットコースターはGフォースを快適で安全な範囲に保つよう設計される。
+    - title:
+        es: Pruebas de choque automotriz
+        en: Automotive crash testing
+        pt: Testes de colisão automotivos
+        fr: Essais de collision automobile
+        zh: 汽车碰撞测试
+        ja: 自動車衝突試験
+      description:
+        es: >-
+          Los maniquíes miden las fuerzas G que soportan los ocupantes para diseñar cinturones y
+          airbags.
+        en: >-
+          Crash dummies measure the g-forces occupants withstand to design seat belts and airbags.
+        pt: >-
+          Bonecos de teste medem as forças G que os ocupantes suportam para projetar cintos e airbags.
+        fr: >-
+          Les mannequins mesurent les forces G subies par les occupants pour concevoir ceintures et
+          airbags.
+        zh: >-
+          碰撞假人测量乘员承受的G力,用于设计安全带和安全气囊。
+        ja: >-
+          衝突ダミーが搭乗者の受けるGフォースを測定し、シートベルトやエアバッグの設計に使う。
+    - title:
+        es: Medicina aeroespacial
+        en: Aerospace medicine
+        pt: Medicina aeroespacial
+        fr: Médecine aérospatiale
+        zh: 航空航天医学
+        ja: 航空宇宙医学
+      description:
+        es: >-
+          Estudia el umbral de pérdida de consciencia, alrededor de 5 G, para proteger a pilotos y
+          astronautas.
+        en: >-
+          It studies the blackout threshold, around 5 G, to protect pilots and astronauts.
+        pt: >-
+          Estuda o limiar de perda de consciência, em torno de 5 G, para proteger pilotos e
+          astronautas.
+        fr: >-
+          Elle étudie le seuil de perte de connaissance, autour de 5 G, pour protéger pilotes et
+          astronautes.
+        zh: >-
+          研究约5 G的昏厥阈值,以保护飞行员和宇航员。
+        ja: >-
+          約5 Gの失神閾値を研究し、パイロットや宇宙飛行士を守る。
+  example:
+    title:
+      es: Aceleración de 29.43 m/s²
+      en: Acceleration of 29.43 m/s²
+      pt: Aceleração de 29,43 m/s²
+      fr: Accélération de 29,43 m/s²
+      zh: 加速度为29.43米/秒²
+      ja: 加速度 29.43 m/s²
+    lines:
+      - es: a = 29.43 m/s²
+        en: a = 29.43 m/s²
+        pt: a = 29,43 m/s²
+        fr: a = 29,43 m/s²
+        zh: a = 29.43 米/秒²
+        ja: a = 29.43 m/s²
+      - es: g = 9.81 m/s²
+        en: g = 9.81 m/s²
+        pt: g = 9,81 m/s²
+        fr: g = 9,81 m/s²
+        zh: g = 9.81 米/秒²
+        ja: g = 9.81 m/s²
+      - es: G = a / g
+        en: G = a / g
+        pt: G = a / g
+        fr: G = a / g
+        zh: G = a / g
+        ja: G = a / g
+      - es: G = 29.43 / 9.81
+        en: G = 29.43 / 9.81
+        pt: G = 29,43 / 9,81
+        fr: G = 29,43 / 9,81
+        zh: G = 29.43 / 9.81
+        ja: G = 29.43 / 9.81
+      - es: G = 3 (tres veces el peso propio)
+        en: G = 3 (three times body weight)
+        pt: G = 3 (três vezes o próprio peso)
+        fr: G = 3 (trois fois le poids du corps)
+        zh: G = 3(体重的三倍)
+        ja: G = 3(体重の3倍)

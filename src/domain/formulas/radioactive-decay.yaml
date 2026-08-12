@@ -1,0 +1,280 @@
+id: radioactive-decay
+title:
+  es: Decaimiento Radiactivo
+  en: Radioactive Decay
+  pt: Decaimento Radioativo
+  fr: Décroissance radioactive
+  zh: 放射性衰变
+  ja: 放射性崩壊
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: n
+    type: variable
+    value: N
+    explanation:
+      es: "N: la cantidad de núcleos que quedan en el tiempo t."
+      en: "N: the number of nuclei remaining at time t."
+      pt: "N: a quantidade de núcleos restantes no tempo t."
+      fr: "N : le nombre de noyaux restants à l'instant t."
+      zh: "N：时刻t剩余的原子核数。"
+      ja: "N：時刻tに残っている原子核の数。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: n0
+    type: variable
+    value: N₀
+    explanation:
+      es: "N₀: la cantidad inicial de núcleos."
+      en: "N₀: the initial number of nuclei."
+      pt: "N₀: a quantidade inicial de núcleos."
+      fr: "N₀ : le nombre initial de noyaux."
+      zh: "N₀：初始的原子核数。"
+      ja: "N₀：最初の原子核の数。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: e
+    type: constant
+    value: e
+    explanation:
+      es: "e: la base de los logaritmos naturales."
+      en: "e: the base of natural logarithms."
+      pt: "e: a base dos logaritmos naturais."
+      fr: "e : la base des logarithmes naturels."
+      zh: "e：自然对数的底。"
+      ja: "e：自然対数の底。"
+  - id: exp
+    type: superscript
+    value: −λt
+    explanation:
+      es: "Elevado a −λt: decae exponencialmente con el tiempo."
+      en: "Raised to −λt: decays exponentially with time."
+      pt: "Elevado a −λt: decai exponencialmente com o tempo."
+      fr: "Élevé à −λt : décroît exponentiellement avec le temps."
+      zh: "的−λt次方：随时间指数衰减。"
+      ja: "−λt乗。時間とともに指数関数的に減衰する。"
+context:
+  author:
+    es: Ernest Rutherford y Frederick Soddy
+    en: Ernest Rutherford and Frederick Soddy
+    pt: Ernest Rutherford e Frederick Soddy
+    fr: Ernest Rutherford et Frederick Soddy
+    zh: 欧内斯特·卢瑟福与弗雷德里克·索迪
+    ja: アーネスト・ラザフォードとフレデリック・ソディ
+  era:
+    es: Inglaterra, 1902 · formulada al estudiar la radiactividad
+    en: England, 1902 · formulated while studying radioactivity
+    pt: Inglaterra, 1902 · formulada ao estudar a radioatividade
+    fr: Angleterre, 1902 · formulée en étudiant la radioactivité
+    zh: 英国，1902年·在研究中提出
+    ja: イングランド、1902年・放射能の研究の中で定式化
+  history:
+    es: >-
+      En 1902, Rutherford y Soddy descubrieron que la radiactividad es la desintegración espontánea de
+      los núcleos: cada elemento radiactivo pierde sus átomos a un ritmo proporcional a cuántos quedan.
+      De ahí surge la ley exponencial N = N₀·e^(−λt). Fue la primera evidencia de que los átomos no son
+      eternos e inmutables. Hoy gobierna la datación con carbono-14, la medicina nuclear y la gestión
+      de residuos radiactivos.
+    en: >-
+      In 1902, Rutherford and Soddy discovered that radioactivity is the spontaneous disintegration of
+      nuclei: each radioactive element loses its atoms at a rate proportional to how many remain. Hence
+      the exponential law N = N₀·e^(−λt). It was the first evidence that atoms are not eternal and
+      immutable. Today it governs carbon-14 dating, nuclear medicine, and radioactive waste management.
+    pt: >-
+      Em 1902, Rutherford e Soddy descobriram que a radioatividade é a desintegração espontânea dos
+      núcleos: cada elemento radioativo perde seus átomos a um ritmo proporcional a quantos restam. Daí
+      surge a lei exponencial N = N₀·e^(−λt). Foi a primeira evidência de que os átomos não são eternos
+      e imutáveis. Hoje rege a datação por carbono-14, a medicina nuclear e a gestão de resíduos
+      radioativos.
+    fr: >-
+      En 1902, Rutherford et Soddy découvrirent que la radioactivité est la désintégration spontanée
+      des noyaux : chaque élément radioactif perd ses atomes à un rythme proportionnel au nombre de
+      restants. D'où la loi exponentielle N = N₀·e^(−λt). Ce fut la première preuve que les atomes ne
+      sont ni éternels ni immuables. Aujourd'hui, elle régit la datation au carbone 14, la médecine
+      nucléaire et la gestion des déchets radioactifs.
+    zh: >-
+      1902年，卢瑟福和索迪发现，放射性是原子核的自发分裂：每种放射性元素都以与剩余原子数成正比的速度失去原子。
+      由此得出指数定律N = N₀·e^(−λt)。这是原子并非永恒不变的首个证据。如今它支配着碳-14定年、核医学和放射性
+      废物的管理。
+    ja: >-
+      1902年、ラザフォードとソディは、放射能が原子核の自発的な崩壊であることを発見した。各放射性元素は、残って
+      いる数に比例した速さで原子を失う。そこから指数則N = N₀・e^(−λt)が導かれる。これは、原子が永遠で不変では
+      ないことの最初の証拠だった。今日、これは炭素14年代測定、核医学、放射性廃棄物管理を支配している。
+  timeline:
+    - year: "1896"
+      label:
+        es: >-
+          Becquerel descubre la radiactividad accidentalmente.
+        en: >-
+          Becquerel discovers radioactivity by accident.
+        pt: >-
+          Becquerel descobre a radioatividade por acidente.
+        fr: >-
+          Becquerel découvre la radioactivité par accident.
+        zh: >-
+          贝克勒尔偶然发现放射性。
+        ja: >-
+          ベクレルが偶然に放射能を発見する。
+    - year: "1902"
+      label:
+        es: >-
+          Rutherford y Soddy formulan la ley exponencial del decaimiento.
+        en: >-
+          Rutherford and Soddy formulate the exponential decay law.
+        pt: >-
+          Rutherford e Soddy formulam a lei exponencial do decaimento.
+        fr: >-
+          Rutherford et Soddy formulent la loi exponentielle de la décroissance.
+        zh: >-
+          卢瑟福和索迪提出指数衰变定律。
+        ja: >-
+          ラザフォードとソディが指数関数的な崩壊の法則を定式化する。
+    - year: "1949"
+      label:
+        es: >-
+          Willard Libby introduce la datación por carbono-14.
+        en: >-
+          Willard Libby introduces carbon-14 dating.
+        pt: >-
+          Willard Libby introduz a datação por carbono-14.
+        fr: >-
+          Willard Libby introduit la datation au carbone 14.
+        zh: >-
+          威拉德·利比引入碳-14定年法。
+        ja: >-
+          ウィラード・リビーが炭素14年代測定法を導入する。
+    - year: Hoy
+      label:
+        es: >-
+          Está en la medicina, la datación arqueológica y la energía nuclear.
+        en: >-
+          It is in medicine, archaeological dating, and nuclear power.
+        pt: >-
+          Está na medicina, na datação arqueológica e na energia nuclear.
+        fr: >-
+          Elle est dans la médecine, la datation archéologique et l'énergie nucléaire.
+        zh: >-
+          它存在于医学、考古定年和核能之中。
+        ja: >-
+          医学、考古学の年代測定、原子力に現れる。
+  useCases:
+    - title:
+        es: Datación por carbono-14
+        en: Carbon-14 dating
+        pt: Datação por carbono-14
+        fr: Datation au carbone 14
+        zh: 碳-14 定年
+        ja: 炭素14年代測定
+      description:
+        es: >-
+          La edad de fósiles y restos orgánicos se calcula con este decaimiento.
+        en: >-
+          The age of fossils and organic remains is computed with this decay.
+        pt: >-
+          A idade de fósseis e restos orgânicos é calculada com esse decaimento.
+        fr: >-
+          L'âge des fossiles et restes organiques se calcule avec cette décroissance.
+        zh: >-
+          化石和有机遗骸的年代用这种衰变来计算。
+        ja: >-
+          化石や有機物の遺骸の年代は、この崩壊で計算される。
+    - title:
+        es: Medicina nuclear
+        en: Nuclear medicine
+        pt: Medicina nuclear
+        fr: Médecine nucléaire
+        zh: 核医学
+        ja: 核医学
+      description:
+        es: >-
+          Los radiofármacos se dosifican según su vida de decaimiento.
+        en: >-
+          Radiopharmaceuticals are dosed according to their decay life.
+        pt: >-
+          Radiofármacos são dosados conforme sua vida de decaimento.
+        fr: >-
+          Les radiopharmaceutiques sont dosés selon leur durée de décroissance.
+        zh: >-
+          放射性药物按其衰变寿命来配量。
+        ja: >-
+          放射性医薬品は、その崩壊寿命に応じて投与量が決められる。
+    - title:
+        es: Energía nuclear
+        en: Nuclear power
+        pt: Energia nuclear
+        fr: Énergie nucléaire
+        zh: 核能
+        ja: 原子力
+      description:
+        es: >-
+          La gestión del combustible gastado depende de conocer este decaimiento.
+        en: >-
+          Managing spent fuel depends on knowing this decay.
+        pt: >-
+          A gestão do combustível usado depende de conhecer esse decaimento.
+        fr: >-
+          La gestion du combustible usé dépend de la connaissance de cette décroissance.
+        zh: >-
+          乏燃料的管理有赖于了解这种衰变。
+        ja: >-
+          使用済み燃料の管理は、この崩壊を知ることに依存する。
+  example:
+    title:
+      es: 1000 núcleos con λ = 0.1
+      en: 1000 nuclei with λ = 0.1
+      pt: 1000 núcleos com λ = 0,1
+      fr: 1000 noyaux avec λ = 0,1
+      zh: 1000个原子核，λ = 0.1
+      ja: λ = 0.1の1000個の原子核
+    lines:
+      - es: N₀ = 1000, λ = 0.1, t = 10
+        en: N₀ = 1000, λ = 0.1, t = 10
+        pt: N₀ = 1000, λ = 0,1, t = 10
+        fr: N₀ = 1000, λ = 0,1, t = 10
+        zh: N₀ = 1000，λ = 0.1，t = 10
+        ja: N₀ = 1000、λ = 0.1、t = 10
+      - es: N = 1000 · e^(−0.1·10)
+        en: N = 1000 · e^(−0.1·10)
+        pt: N = 1000 · e^(−0,1·10)
+        fr: N = 1000 · e^(−0,1·10)
+        zh: N = 1000 · e^(−0.1·10)
+        ja: N = 1000 · e^(−0.1·10)
+      - es: N = 1000 · e^(−1)
+        en: N = 1000 · e^(−1)
+        pt: N = 1000 · e^(−1)
+        fr: N = 1000 · e^(−1)
+        zh: N = 1000 · e^(−1)
+        ja: N = 1000 · e^(−1)
+      - es: e^(−1) ≈ 0.3679
+        en: e^(−1) ≈ 0.3679
+        pt: e^(−1) ≈ 0,3679
+        fr: e^(−1) ≈ 0,3679
+        zh: e^(−1) ≈ 0.3679
+        ja: e^(−1) ≈ 0.3679
+      - es: N ≈ 368 núcleos quedan
+        en: N ≈ 368 nuclei remain
+        pt: N ≈ 368 núcleos restam
+        fr: N ≈ 368 noyaux restent
+        zh: 剩余约368个原子核
+        ja: 約368個の原子核が残る

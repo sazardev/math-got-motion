@@ -1,0 +1,335 @@
+id: definite-integral
+title:
+  es: Integral Definida
+  en: Definite Integral
+  pt: Integral Definida
+  fr: Intégrale définie
+  zh: 定积分
+  ja: 定積分
+category:
+  es: Cálculo
+  en: Calculus
+  pt: Cálculo
+  fr: Calcul
+  zh: 微积分
+  ja: 微積分
+nodes:
+  - id: integral
+    type: operator
+    value: ∫ₐᵇ
+    explanation:
+      es: "La integral definida: suma continua de trozos infinitesimales desde el límite a hasta el b."
+      en: "The definite integral: a continuous sum of infinitesimal pieces from the lower limit a to b."
+      pt: "A integral definida: soma contínua de pedaços infinitesimais do limite a até o b."
+      fr: "L'intégrale définie : une somme continue de morceaux infinitésimaux de la borne a à b."
+      zh: "定积分：从下限a到上限b对无穷小量之和的连续求和。"
+      ja: "定積分。下限aから上限bまで、微小な断片を連続的に足し合わせたもの。"
+  - id: integrand
+    type: variable
+    value: f(x)dx
+    explanation:
+      es: "El integrando: la función f multiplicada por el ancho infinitesimal dx de cada trozo."
+      en: "The integrand: the function f times the infinitesimal width dx of each piece."
+      pt: "O integrando: a função f vezes a largura infinitesimal dx de cada pedaço."
+      fr: "L'intégrande : la fonction f multipliée par la largeur infinitésimale dx de chaque morceau."
+      zh: "被积表达式：函数f乘以每个小段的无穷小宽度dx。"
+      ja: "被積分関数。関数fに、各断片の微小な幅dxを掛けたもの。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a, por el teorema fundamental del cálculo.
+      en: Is exactly equal to, by the fundamental theorem of calculus.
+      pt: É exatamente igual a, pelo teorema fundamental do cálculo.
+      fr: Est exactement égal à, d'après le théorème fondamental du calcul.
+      zh: 根据微积分基本定理，恰好等于。
+      ja: 微積分学の基本定理により、これに正確に等しい。
+  - id: f-big
+    type: variable
+    value: F(b)
+    explanation:
+      es: "La antiderivada F de f, evaluada en el límite superior b."
+      en: "The antiderivative F of f, evaluated at the upper limit b."
+      pt: "A primitiva F de f, avaliada no limite superior b."
+      fr: "La primitive F de f, évaluée à la borne supérieure b."
+      zh: "f的原函数F，在上限b处取值。"
+      ja: "fの原始関数Fを、上限bで評価した値。"
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "Menos: la resta entre las dos evaluaciones resume toda la suma."
+      en: "Minus: subtracting the two evaluations condenses the entire sum."
+      pt: "Menos: a subtração entre as duas avaliações resume toda a soma."
+      fr: "Moins : soustraire les deux évaluations condense toute la somme."
+      zh: 减号：两次取值之差概括了整段求和。
+      ja: マイナス。2つの評価値の差が和全体を要約する。
+  - id: f-big-2
+    type: variable
+    value: F(a)
+    explanation:
+      es: "La misma antiderivada, evaluada en el límite inferior a."
+      en: "The same antiderivative, evaluated at the lower limit a."
+      pt: "A mesma primitiva, avaliada no limite inferior a."
+      fr: "La même primitive, évaluée à la borne inférieure a."
+      zh: "同一个原函数，在下限a处取值。"
+      ja: "同じ原始関数を、下限aで評価した値。"
+context:
+  author:
+    es: Isaac Newton y Gottfried Wilhelm Leibniz
+    en: Isaac Newton and Gottfried Wilhelm Leibniz
+    pt: Isaac Newton e Gottfried Wilhelm Leibniz
+    fr: Isaac Newton et Gottfried Wilhelm Leibniz
+    zh: 艾萨克·牛顿与戈特弗里德·威廉·莱布尼茨
+    ja: アイザック・ニュートンとゴットフリート・ヴィルヘルム・ライプニッツ
+  era:
+    es: Inglaterra y Alemania, s. XVII · fundamentada rigurosamente por Riemann en 1854
+    en: England and Germany, 17th century · rigorously founded by Riemann in 1854
+    pt: Inglaterra e Alemanha, séc. XVII · fundamentada rigorosamente por Riemann em 1854
+    fr: Angleterre et Allemagne, XVIIe siècle · fondée rigoureusement par Riemann en 1854
+    zh: 英国与德国，17世纪·1854年由黎曼奠定严格基础
+    ja: イングランドとドイツ、17世紀・1854年にリーマンが厳密に基礎づけ
+  history:
+    es: >-
+      La integral definida responde a una pregunta antigua: cómo sumar una cantidad que cambia
+      continuamente. Arquímedes ya lo hizo con áreas bajo curvas, pero la herramienta moderna nació
+      en el siglo XVII cuando Newton y Leibniz descubrieron, por separado, que integrar y derivar son
+      operaciones inversas: el teorema fundamental del cálculo. En 1854 Riemann convirtió la idea
+      intuitiva en una definición precisa como límite de sumas de rectángulos, y en 1902 Lebesgue
+      extendió aún más qué funciones se pueden integrar.
+    en: >-
+      The definite integral answers an ancient question: how to sum a quantity that changes
+      continuously. Archimedes already did this for areas under curves, but the modern tool was born
+      in the 17th century when Newton and Leibniz independently discovered that integrating and
+      differentiating are inverse operations: the fundamental theorem of calculus. In 1854 Riemann
+      turned the intuitive idea into a precise definition as a limit of sums of rectangles, and in
+      1902 Lebesgue extended even further which functions can be integrated.
+    pt: >-
+      A integral definida responde a uma pergunta antiga: como somar uma grandeza que muda
+      continuamente. Arquimedes já o fizera para áreas sob curvas, mas a ferramenta moderna nasceu no
+      século XVII, quando Newton e Leibniz descobriram, separadamente, que integrar e derivar são
+      operações inversas: o teorema fundamental do cálculo. Em 1854 Riemann converteu a ideia
+      intuitiva em uma definição precisa, como limite de somas de retângulos, e em 1902 Lebesgue
+      ampliou ainda mais quais funções podem ser integradas.
+    fr: >-
+      L'intégrale définie répond à une question ancienne : comment sommer une grandeur qui varie en
+      continu. Archimède l'avait déjà fait pour les aires sous des courbes, mais l'outil moderne est
+      né au XVIIe siècle, lorsque Newton et Leibniz découvrirent, séparément, qu'intégrer et dériver
+      sont des opérations inverses : le théorème fondamental du calcul. En 1854, Riemann transforma
+      l'idée intuitive en une définition précise, comme limite de sommes de rectangles, et en 1902
+      Lebesgue élargit encore l'ensemble des fonctions intégrables.
+    zh: >-
+      定积分回答了一个古老的问题：如何对连续变化的量求和。阿基米德已能计算曲线下的面积，但现代工具诞生于
+      17世纪——牛顿与莱布尼茨分别发现积分与微分互为逆运算，即微积分基本定理。1854年，黎曼将这一直观思想
+      转化为精确的定义，即矩形面积之和的极限；1902年，勒贝格进一步扩展了可积函数的范围。
+    ja: >-
+      定積分は、連続的に変化する量をどう足し合わせるかという古代からの問いに答える。アルキメデスは曲線の下の
+      面積でこれを既に行っていたが、現代的な道具は17世紀、ニュートンとライプニッツが積分と微分が互いに逆の
+      演算であることを別々に発見したときに生まれた。これが微積分学の基本定理である。1854年、リーマンはこの
+      直観的な考えを、長方形の面積の和の極限という厳密な定義に変え、1902年にはルベーグが積分可能な関数の範囲を
+      さらに広げた。
+  timeline:
+    - year: s. XVII
+      label:
+        es: >-
+          Newton y Leibniz descubren que la integración es la inversa de la derivación, lo que permite
+          calcular integrales por antiderivadas.
+        en: >-
+          Newton and Leibniz discover integration inverts differentiation, letting integrals be
+          computed via antiderivatives.
+        pt: >-
+          Newton e Leibniz descobrem que a integração é a inversa da derivação, o que permite calcular
+          integrais por primitivas.
+        fr: >-
+          Newton et Leibniz découvrent que l'intégration est l'inverse de la dérivation, ce qui permet
+          de calculer les intégrales via les primitives.
+        zh: >-
+          牛顿与莱布尼茨发现积分是微分的逆运算，从而可以通过原函数计算积分。
+        ja: >-
+          ニュートンとライプニッツが、積分が微分の逆演算であることを発見し、原始関数による積分計算が可能になる。
+    - year: "1854"
+      label:
+        es: >-
+          Riemann define la integral como límite de sumas de rectángulos, dándole un fundamento
+          riguroso.
+        en: >-
+          Riemann defines the integral as a limit of sums of rectangles, giving it a rigorous basis.
+        pt: >-
+          Riemann define a integral como limite de somas de retângulos, dando-lhe um fundamento
+          rigoroso.
+        fr: >-
+          Riemann définit l'intégrale comme limite de sommes de rectangles, lui donnant une base
+          rigoureuse.
+        zh: >-
+          黎曼将积分定义为矩形面积之和的极限，为积分奠定了严格基础。
+        ja: >-
+          リーマンが積分を長方形の面積の和の極限として定義し、厳密な基礎を与える。
+    - year: "1902"
+      label:
+        es: >-
+          Lebesgue publica su teoría de integración, que integra funciones mucho más generales y
+          ancla la teoría de la medida.
+        en: >-
+          Lebesgue publishes his integration theory, covering far more general functions and anchoring
+          measure theory.
+        pt: >-
+          Lebesgue publica sua teoria de integração, que integra funções muito mais gerais e ancora a
+          teoria da medida.
+        fr: >-
+          Lebesgue publie sa théorie de l'intégration, qui couvre des fonctions bien plus générales et
+          ancre la théorie de la mesure.
+        zh: >-
+          勒贝格发表他的积分理论，可积分函数远为广泛，并为测度论奠定基础。
+        ja: >-
+          ルベーグが彼の積分論を発表し、はるかに広い関数を扱えるようにして測度論の基礎を築く。
+    - year: Hoy
+      label:
+        es: >-
+          La integral definida es la base de la física, la ingeniería, las probabilidades y la ciencia
+          de datos moderna.
+        en: >-
+          The definite integral underpins physics, engineering, probability, and modern data science.
+        pt: >-
+          A integral definida é a base da física, da engenharia, da probabilidade e da ciência de
+          dados moderna.
+        fr: >-
+          L'intégrale définie est à la base de la physique, de l'ingénierie, des probabilités et de la
+          science des données moderne.
+        zh: >-
+          定积分是物理学、工程学、概率论和现代数据科学的基础。
+        ja: >-
+          定積分は、物理学、工学、確率論、そして現代のデータサイエンスの基盤である。
+  useCases:
+    - title:
+        es: Física e ingeniería
+        en: Physics and engineering
+        pt: Física e engenharia
+        fr: Physique et ingénierie
+        zh: 物理学与工程学
+        ja: 物理学と工学
+      description:
+        es: >-
+          El trabajo de una fuerza variable, la carga acumulada o el volumen de sólidos de revolución
+          se calculan con integrales.
+        en: >-
+          Work done by a varying force, accumulated charge, or volumes of revolution are computed with
+          integrals.
+        pt: >-
+          O trabalho de uma força variável, a carga acumulada ou o volume de sólidos de revolução são
+          calculados com integrais.
+        fr: >-
+          Le travail d'une force variable, la charge accumulée ou les volumes de révolution se
+          calculent avec des intégrales.
+        zh: >-
+          变力做功、累积电荷或旋转体的体积都用积分计算。
+        ja: >-
+          変化する力の仕事、累積電荷、回転体の体積は積分で計算される。
+    - title:
+        es: Probabilidad y estadística
+        en: Probability and statistics
+        pt: Probabilidade e estatística
+        fr: Probabilités et statistiques
+        zh: 概率与统计
+        ja: 確率と統計
+      description:
+        es: >-
+          La probabilidad de un intervalo en una distribución continua es el área bajo su curva, una
+          integral definida.
+        en: >-
+          The probability of an interval in a continuous distribution is the area under its curve — a
+          definite integral.
+        pt: >-
+          A probabilidade de um intervalo em uma distribuição contínua é a área sob sua curva — uma
+          integral definida.
+        fr: >-
+          La probabilité d'un intervalle dans une distribution continue est l'aire sous sa courbe —
+          une intégrale définie.
+        zh: >-
+          连续分布中某个区间的概率就是其曲线下的面积，即一个定积分。
+        ja: >-
+          連続分布における区間の確率は、その曲線の下の面積、すなわち定積分である。
+    - title:
+        es: Economía
+        en: Economics
+        pt: Economia
+        fr: Économie
+        zh: 经济学
+        ja: 経済学
+      description:
+        es: >-
+          El excedente del consumidor y del productor se miden como áreas bajo curvas de oferta y
+          demanda.
+        en: >-
+          Consumer and producer surplus are measured as areas under supply and demand curves.
+        pt: >-
+          O excedente do consumidor e do produtor é medido como áreas sob curvas de oferta e demanda.
+        fr: >-
+          Le surplus du consommateur et du producteur se mesure comme des aires sous les courbes
+          d'offre et de demande.
+        zh: >-
+          消费者剩余和生产者剩余就是供需曲线下方的面积。
+        ja: >-
+          消費者余剰と生産者余剰は、需要曲線・供給曲線の下の面積として測られる。
+    - title:
+        es: Control y procesamiento de señales
+        en: Control and signal processing
+        pt: Controle e processamento de sinais
+        fr: Contrôle et traitement du signal
+        zh: 控制与信号处理
+        ja: 制御と信号処理
+      description:
+        es: >-
+          La respuesta de un sistema a lo largo del tiempo es la integral de su señal de entrada, la
+          base de los controladores PID.
+        en: >-
+          A system's response over time is the integral of its input signal — the basis of PID
+          controllers.
+        pt: >-
+          A resposta de um sistema ao longo do tempo é a integral de seu sinal de entrada — a base dos
+          controladores PID.
+        fr: >-
+          La réponse d'un système au fil du temps est l'intégrale de son signal d'entrée — la base des
+          contrôleurs PID.
+        zh: >-
+          系统随时间变化的响应就是其输入信号的积分，这也是PID控制器的原理基础。
+        ja: >-
+          システムの時間応答は入力信号の積分であり、PID制御の基礎となっている。
+  example:
+    title:
+      es: Área bajo la parábola
+      en: Area under the parabola
+      pt: Área sob a parábola
+      fr: Aire sous la parabole
+      zh: 抛物线下的面积
+      ja: 放物線の下の面積
+    lines:
+      - es: ∫₁³ x² dx
+        en: ∫₁³ x² dx
+        pt: ∫₁³ x² dx
+        fr: ∫₁³ x² dx
+        zh: ∫₁³ x² dx
+        ja: ∫₁³ x² dx
+      - es: La antiderivada de x² es x³/3
+        en: The antiderivative of x² is x³/3
+        pt: A primitiva de x² é x³/3
+        fr: La primitive de x² est x³/3
+        zh: x²的原函数是 x³/3
+        ja: x²の原始関数はx³/3
+      - es: ∫₁³ x² dx = [x³/3]₁³
+        en: ∫₁³ x² dx = [x³/3]₁³
+        pt: ∫₁³ x² dx = [x³/3]₁³
+        fr: ∫₁³ x² dx = [x³/3]₁³
+        zh: ∫₁³ x² dx = [x³/3]₁³
+        ja: ∫₁³ x² dx = [x³/3]₁³
+      - es: = 27/3 − 1/3
+        en: = 27/3 − 1/3
+        pt: = 27/3 − 1/3
+        fr: = 27/3 − 1/3
+        zh: = 27/3 − 1/3
+        ja: = 27/3 − 1/3
+      - es: = 26/3 ≈ 8.667
+        en: = 26/3 ≈ 8.667
+        pt: = 26/3 ≈ 8,667
+        fr: = 26/3 ≈ 8,667
+        zh: = 26/3 ≈ 8.667
+        ja: = 26/3 ≈ 8.667

@@ -1,0 +1,315 @@
+id: osmotic-pressure
+title:
+  es: Presión Osmótica
+  en: Osmotic Pressure
+  pt: Pressão Osmótica
+  fr: Pression Osmotique
+  zh: 渗透压
+  ja: 浸透圧
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: pi
+    type: variable
+    value: Π
+    explanation:
+      es: La presión que debe aplicarse a una solución para impedir que el disolvente puro entre a través de una membrana semipermeable.
+      en: The pressure that must be applied to a solution to stop pure solvent from flowing in through a semipermeable membrane.
+      pt: A pressão que deve ser aplicada a uma solução para impedir que o solvente puro entre através de uma membrana semipermeável.
+      fr: La pression qu'il faut appliquer à une solution pour empêcher le solvant pur d'y entrer à travers une membrane semipermeable.
+      zh: 为阻止纯溶剂通过半透膜进入溶液而必须施加的压力。
+      ja: 半透膜を通して純溶媒が溶液に入るのを防ぐために加える必要のある圧力。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: vanthoff-factor
+    type: variable
+    value: i
+    explanation:
+      es: El factor de van 't Hoff, el número de partículas en que se disocia cada fórmula unidad al disolverse; para el NaCl vale 2.
+      en: The van 't Hoff factor, the number of particles each formula unit splits into when it dissolves; it equals 2 for NaCl.
+      pt: O fator de van 't Hoff, o número de partículas em que cada unidade de fórmula se dissocia ao se dissolver; para o NaCl vale 2.
+      fr: Le facteur de van 't Hoff, le nombre de particules produites par chaque unité de formule qui se dissout; il vaut 2 pour NaCl.
+      zh: 范托夫因子,即每个化学式单元溶解时产生的粒子数;对NaCl等于2。
+      ja: ファント・ホッフ係数。溶けるとき化学式単位あたりに何個の粒子に分かれるかを表し、NaClでは2となる。
+  - id: molarity
+    type: variable
+    value: M
+    explanation:
+      es: La molaridad, o concentración molar, en moles por litro.
+      en: The molarity, or molar concentration, in moles per liter.
+      pt: A molaridade, ou concentração molar, em mols por litro.
+      fr: La molarité, ou concentration molaire, en moles par litre.
+      zh: 摩尔浓度,即每升溶液中的溶质物质的量。
+      ja: モル濃度。1リットルあたりの物質量。
+  - id: gas-constant
+    type: constant
+    value: R
+    explanation:
+      es: La constante universal de los gases, igual a 8.314 J/(mol·K).
+      en: The universal gas constant, equal to 8.314 J/(mol·K).
+      pt: A constante universal dos gases, igual a 8,314 J/(mol·K).
+      fr: La constante universelle des gaz, égale à 8,314 J/(mol·K).
+      zh: 通用气体常数,等于8.314 J/(mol·K)。
+      ja: 一般気体定数。8,314 J/(mol·K)に等しい。
+  - id: temperature
+    type: variable
+    value: T
+    explanation:
+      es: La temperatura absoluta de la solución, en kelvin.
+      en: The absolute temperature of the solution, in kelvin.
+      pt: A temperatura absoluta da solução, em kelvin.
+      fr: La température absolue de la solution, en kelvin.
+      zh: 溶液的热力学温度,单位是开尔文。
+      ja: 溶液の絶対温度。単位はケルビン。
+context:
+  author:
+    es: Jacobus Henricus van 't Hoff
+    en: Jacobus Henricus van 't Hoff
+    pt: Jacobus Henricus van 't Hoff
+    fr: Jacobus Henricus van 't Hoff
+    zh: 雅各布斯·亨里克斯·范托夫
+    ja: ヤコブス・ヘンリクス・ファント・ホッフ
+  era:
+    es: Países Bajos, 1852–1911 · publicada en 1887
+    en: Netherlands, 1852–1911 · published in 1887
+    pt: Países Baixos, 1852–1911 · publicada em 1887
+    fr: Pays-Bas, 1852–1911 · publiée en 1887
+    zh: 荷兰,1852–1911年 · 1887年发表
+    ja: オランダ、1852–1911年・1887年発表
+  history:
+    es: >-
+      La presión osmótica es la presión que detiene la ósmosis, el paso espontáneo del disolvente a
+      través de una membrana semipermeable hacia la zona de mayor concentración. Jacobus van 't Hoff
+      la expresó en 1887 con la misma forma que la ley de los gases ideales, introduciendo el factor i
+      para contar las partículas que libera cada soluto al disolverse. Esta ecuación está en la base de
+      la biología, porque las membranas celulares son semipermeables; de la medicina, al regular los
+      fluidos intravenosos y la reposición de electrolitos; y de la desalinización del agua por ósmosis
+      inversa, que aplica presión externa para invertir el flujo del disolvente.
+    en: >-
+      Osmotic pressure is the pressure that stops osmosis, the spontaneous flow of solvent through a
+      semipermeable membrane toward the region of higher concentration. Jacobus van 't Hoff expressed it
+      in 1887 in the same form as the ideal gas law, introducing the factor i to count the particles each
+      solute releases on dissolving. The equation underpins biology, since cell membranes are
+      semipermeable; medicine, where it regulates intravenous fluids and electrolyte replacement; and
+      water desalination by reverse osmosis, which applies external pressure to reverse the solvent's
+      flow.
+    pt: >-
+      A pressão osmótica é a pressão que detém a osmose, o fluxo espontâneo do solvente através de uma
+      membrana semipermeável em direção à região de maior concentração. Jacobus van 't Hoff a expressou
+      em 1887 na mesma forma da lei dos gases ideais, introduzindo o fator i para contar as partículas
+      liberadas por cada soluto ao se dissolver. A equação está na base da biologia, pois as membranas
+      celulares são semipermeáveis; da medicina, ao regular os fluidos intravenosos e a reposição de
+      eletrólitos; e da dessalinização da água por osmose reversa, que aplica pressão externa para
+      inverter o fluxo do solvente.
+    fr: >-
+      La pression osmotique est la pression qui arrête l'osmose, le passage spontané du solvant à
+      travers une membrane semipermeable vers la zone de plus forte concentration. Jacobus van 't Hoff
+      l'a exprimée en 1887 sous la même forme que la loi des gaz parfaits, en introduisant le facteur i
+      pour compter les particules libérées par chaque soluté en se dissolvant. L'équation est à la base
+      de la biologie, car les membranes cellulaires sont semipermeables ; de la médecine, où elle régit
+      les liquides intraveineux et la rééquilibration des électrolytes ; et du dessalement de l'eau par
+      osmose inverse, qui applique une pression externe pour inverser l'écoulement du solvant.
+    zh: >-
+      渗透压是阻止渗透进行的压力,即阻止纯溶剂通过半透膜自发流向浓度较高一侧的压力。1887年,雅各布斯·范托夫以与理想气体定律相同的形式表达了渗透压,
+      并引入因子i来计算每个溶质溶解时释放出的粒子数。该方程是生物学的基础,因为细胞膜具有半透性;也是医学的基础,用于调节静脉输液和电解质补充;
+      还是反渗透海水淡化的基础,反渗透通过施加外部压力来逆转溶剂的流动方向。
+    ja: >-
+      浸透圧とは、浸透を止めるために必要な圧力であり、浸透とは半透膜を通って純溶媒が濃度の高い側へ自発的に流れる現象である。1887年、ヤコブス・ファント・ホッフは
+      これを理想気体の法則と同じ形で表し、溶質が溶けるときに放出する粒子数を数えるための係数iを導入した。この式は、細胞膜が半透性であるため生物学の基礎となり、
+      静脈輸液や電解質補給を調整する医学の基礎となり、外部圧力を加えて溶媒の流れを逆転させる逆浸透による海水淡水化の基礎ともなっている。
+  timeline:
+    - year: "1887"
+      label:
+        es: >-
+          Van 't Hoff publica la ley de la presión osmótica, análoga a la ley de los gases ideales.
+        en: >-
+          Van 't Hoff publishes the law of osmotic pressure, analogous to the ideal gas law.
+        pt: >-
+          Van 't Hoff publica a lei da pressão osmótica, análoga à lei dos gases ideais.
+        fr: >-
+          Van 't Hoff publie la loi de la pression osmotique, analogue à la loi des gaz parfaits.
+        zh: >-
+          范托夫发表渗透压定律,该定律与理想气体定律形式相似。
+        ja: >-
+          ファント・ホッフが浸透圧の法則を発表する。理想気体の法則に類似した法則である。
+    - year: "1901"
+      label:
+        es: >-
+          Van 't Hoff recibe el primer Premio Nobel de Química, otorgado en gran parte por este trabajo.
+        en: >-
+          Van 't Hoff receives the first Nobel Prize in Chemistry, largely for this work.
+        pt: >-
+          Van 't Hoff recebe o primeiro Prêmio Nobel de Química, em grande parte por este trabalho.
+        fr: >-
+          Van 't Hoff reçoit le premier prix Nobel de chimie, en grande partie pour ces travaux.
+        zh: >-
+          范托夫获得第一届诺贝尔化学奖,很大程度上是因为这项研究。
+        ja: >-
+          ファント・ホッフが第一回ノーベル化学賞を受賞する。この研究が大きく評価されたためである。
+    - year: "1959"
+      label:
+        es: >-
+          Loeb y Sourirajan desarrollan la primera membrana práctica de ósmosis inversa para desalinizar agua.
+        en: >-
+          Loeb and Sourirajan develop the first practical reverse osmosis membrane for water desalination.
+        pt: >-
+          Loeb e Sourirajan desenvolvem a primeira membrana prática de osmose reversa para dessalinizar água.
+        fr: >-
+          Loeb et Sourirajan développent la première membrane pratique d'osmose inverse pour dessaler l'eau.
+        zh: >-
+          勒布和苏里拉詹研制出第一张实用的反渗透膜,用于海水淡化。
+        ja: >-
+          ローブとスーリラジャンが、水の淡水化に使える初の実用的な逆浸透膜を開発する。
+    - year: Hoy
+      label:
+        es: >-
+          La ecuación guía la formulación de sueros intravenosos y las plantas de ósmosis inversa.
+        en: >-
+          The equation guides intravenous fluid formulation and reverse osmosis plants.
+        pt: >-
+          A equação orienta a formulação de soro intravenoso e as plantas de osmose reversa.
+        fr: >-
+          L'équation guide la formulation des solutés intraveineux et les usines d'osmose inverse.
+        zh: >-
+          该方程用于指导静脉输液配方设计和反渗透处理厂。
+        ja: >-
+          この式は、静脈輸液の処方設計や逆浸透プラントの設計に役立っている。
+  useCases:
+    - title:
+        es: Medicina
+        en: Medicine
+        pt: Medicina
+        fr: Médecine
+        zh: 医学
+        ja: 医学
+      description:
+        es: >-
+          Los sueros intravenosos se preparan con una osmolaridad cercana a la del plasma para no dañar los glóbulos rojos.
+        en: >-
+          Intravenous fluids are prepared with an osmolarity close to that of plasma so red blood cells are not damaged.
+        pt: >-
+          O soro intravenoso é preparado com osmolaridade próxima à do plasma para não danificar os glóbulos vermelhos.
+        fr: >-
+          Les solutés intraveineux sont préparés avec une osmolarité proche de celle du plasma pour ne pas endommager les globules rouges.
+        zh: >-
+          静脉输液按接近血浆渗透浓度配制,以免损伤红细胞。
+        ja: >-
+          静脈輸液は血漿に近い浸透圧に調製され、赤血球を傷つけないようにしている。
+    - title:
+        es: Biología celular
+        en: Cell biology
+        pt: Biologia celular
+        fr: Biologie cellulaire
+        zh: 细胞生物学
+        ja: 細胞生物学
+      description:
+        es: >-
+          La ósmosis a través de las membranas celulares semipermeables regula el equilibrio de agua de las células.
+        en: >-
+          Osmosis through semipermeable cell membranes regulates the water balance of cells.
+        pt: >-
+          A osmose através das membranas celulares semipermeáveis regula o equilíbrio hídrico das células.
+        fr: >-
+          L'osmose à travers les membranes cellulaires semipermeables régule l'équilibre hydrique des cellules.
+        zh: >-
+          水通过半透性的细胞膜进行渗透,调节着细胞的水分平衡。
+        ja: >-
+          半透性の細胞膜を通る浸透が、細胞の水分バランスを調節している。
+    - title:
+        es: Desalinización del agua
+        en: Water desalination
+        pt: Dessalinização da água
+        fr: Dessalement de l'eau
+        zh: 海水淡化
+        ja: 海水淡水化
+      description:
+        es: >-
+          La ósmosis inversa aplica presión externa para forzar el paso del agua dulce a través de las membranas.
+        en: >-
+          Reverse osmosis applies external pressure to force fresh water through the membranes.
+        pt: >-
+          A osmose reversa aplica pressão externa para forçar a passagem da água doce pelas membranas.
+        fr: >-
+          L'osmose inverse applique une pression externe pour faire passer l'eau douce à travers les membranes.
+        zh: >-
+          反渗透施加外部压力,使淡水通过半透膜。
+        ja: >-
+          逆浸透は外部から圧力を加え、淡水を膜を通して取り出す。
+    - title:
+        es: Industria alimentaria
+        en: Food industry
+        pt: Indústria alimentícia
+        fr: Industrie agroalimentaire
+        zh: 食品工业
+        ja: 食品産業
+      description:
+        es: >-
+          Salar o curar alimentos conserva carnes y pescados al extraer agua por ósmosis.
+        en: >-
+          Salting or curing preserves meat and fish by drawing water out through osmosis.
+        pt: >-
+          Salgar ou curar alimentos preserva carnes e peixes ao extrair água por osmose.
+        fr: >-
+          Saler ou saumurer conserve viandes et poissons en extrayant l'eau par osmose.
+        zh: >-
+          腌制肉类和鱼类通过渗透作用排出水分,从而延长保质期。
+        ja: >-
+          塩漬けや熟成は浸透で水分を抜くことで肉や魚を保存する。
+  example:
+    title:
+      es: Presión osmótica del NaCl
+      en: Osmotic pressure of NaCl
+      pt: Pressão osmótica do NaCl
+      fr: Pression osmotique du NaCl
+      zh: 氯化钠溶液的渗透压
+      ja: NaCl水溶液の浸透圧
+    lines:
+      - es: M = 0.1 mol/L, i = 2 (NaCl)
+        en: M = 0.1 mol/L, i = 2 (NaCl)
+        pt: M = 0,1 mol/L, i = 2 (NaCl)
+        fr: M = 0,1 mol/L, i = 2 (NaCl)
+        zh: M = 0.1 mol/L, i = 2 (NaCl)
+        ja: M = 0.1 mol/L, i = 2 (NaCl)
+      - es: R = 8.314 kPa·L/(mol·K)
+        en: R = 8.314 kPa·L/(mol·K)
+        pt: R = 8,314 kPa·L/(mol·K)
+        fr: R = 8,314 kPa·L/(mol·K)
+        zh: R = 8.314 kPa·L/(mol·K)
+        ja: R = 8.314 kPa·L/(mol·K)
+      - es: T = 300 K
+        en: T = 300 K
+        pt: T = 300 K
+        fr: T = 300 K
+        zh: T = 300 K
+        ja: T = 300 K
+      - es: Π = i × M × R × T
+        en: Π = i × M × R × T
+        pt: Π = i × M × R × T
+        fr: Π = i × M × R × T
+        zh: Π = i × M × R × T
+        ja: Π = i × M × R × T
+      - es: Π = 2 × 0.1 × 8.314 × 300
+        en: Π = 2 × 0.1 × 8.314 × 300
+        pt: Π = 2 × 0,1 × 8,314 × 300
+        fr: Π = 2 × 0,1 × 8,314 × 300
+        zh: Π = 2 × 0.1 × 8.314 × 300
+        ja: Π = 2 × 0.1 × 8.314 × 300
+      - es: Π ≈ 499 kPa
+        en: Π ≈ 499 kPa
+        pt: Π ≈ 499 kPa
+        fr: Π ≈ 499 kPa
+        zh: Π ≈ 499 kPa
+        ja: Π ≈ 499 kPa

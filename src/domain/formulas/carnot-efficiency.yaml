@@ -1,0 +1,320 @@
+id: carnot-efficiency
+title:
+  es: Eficiencia de Carnot
+  en: Carnot Efficiency
+  pt: Eficiência de Carnot
+  fr: Rendement de Carnot
+  zh: 卡诺效率
+  ja: カルノー効率
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: eta
+    type: variable
+    value: η
+    explanation:
+      es: La eficiencia de una máquina térmica reversible.
+      en: The efficiency of a reversible heat engine.
+      pt: A eficiência de uma máquina térmica reversível.
+      fr: Le rendement d'une machine thermique réversible.
+      zh: 可逆热机的效率。
+      ja: 可逆熱機関の効率。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: "La unidad: la eficiencia perfecta que ninguna máquina alcanza."
+      en: "One: the perfect efficiency no engine attains."
+      pt: "Um: a eficiência perfeita que nenhuma máquina atinge."
+      fr: "Un : le rendement parfait qu'aucune machine n'atteint."
+      zh: 一：任何机器都达不到的完美效率。
+      ja: 1。どの機関も到達できない完全な効率。
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: "Menos: lo que se pierde por la diferencia de temperaturas."
+      en: "Minus: what is lost to the temperature difference."
+      pt: "Menos: o que se perde pela diferença de temperaturas."
+      fr: "Moins : ce qui est perdu à cause de la différence de température."
+      zh: 减号：因温度差而损失的部分。
+      ja: マイナス。温度差によって失われる分を差し引く。
+  - id: tc
+    type: variable
+    value: T_c
+    explanation:
+      es: La temperatura absoluta del foco frío.
+      en: The absolute temperature of the cold reservoir.
+      pt: A temperatura absoluta da fonte fria.
+      fr: La température absolue de la source froide.
+      zh: 冷源的绝对温度。
+      ja: 低温源の絶対温度。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: "Dividido entre: el cociente de las dos temperaturas."
+      en: "Divided by: the ratio of the two temperatures."
+      pt: "Dividido por: a razão entre as duas temperaturas."
+      fr: "Divisé par : le rapport des deux températures."
+      zh: 除以：两个温度的比值。
+      ja: で割る。二つの温度の比。
+  - id: th
+    type: variable
+    value: T_h
+    explanation:
+      es: La temperatura absoluta del foco caliente.
+      en: The absolute temperature of the hot reservoir.
+      pt: A temperatura absoluta da fonte quente.
+      fr: La température absolue de la source chaude.
+      zh: 热源的绝对温度。
+      ja: 高温源の絶対温度。
+context:
+  author:
+    es: Nicolas Léonard Sadi Carnot
+    en: Nicolas Léonard Sadi Carnot
+    pt: Nicolas Léonard Sadi Carnot
+    fr: Nicolas Léonard Sadi Carnot
+    zh: 尼古拉·莱昂纳尔·萨迪·卡诺
+    ja: ニコラ・レオナール・サディ・カルノー
+  era:
+    es: Francia, 1796–1832 · publicada en 1824
+    en: France, 1796–1832 · published in 1824
+    pt: França, 1796–1832 · publicada em 1824
+    fr: France, 1796–1832 · publiée en 1824
+    zh: 法国，1796–1832年 · 于1824年发表
+    ja: フランス、1796–1832年・1824年発表
+  history:
+    es: >-
+      En 1824, con 28 años, Sadi Carnot publicó "Réflexions sur la puissance motrice du feu",
+      donde analizó la máquina térmica ideal: un ciclo reversible entre un foco caliente y uno
+      frío. Demostró que su eficiencia depende solo de las dos temperaturas y que ninguna
+      máquina real puede superarla. El trabajo fue ignorado en su época y Carnot murió de cólera
+      en 1832, pero en 1834 Clapeyron y luego Kelvin y Clausius lo rescataron, y su ciclo se
+      volvió la piedra angular de la termodinámica.
+    en: >-
+      In 1824, at age 28, Sadi Carnot published "Reflections on the Motive Power of Fire", in
+      which he analyzed the ideal heat engine: a reversible cycle between a hot and a cold
+      reservoir. He proved that its efficiency depends only on the two temperatures and that no
+      real engine can beat it. The work was ignored in his time, and Carnot died of cholera in
+      1832, but in 1834 Clapeyron and later Kelvin and Clausius rescued it, making his cycle the
+      cornerstone of thermodynamics.
+    pt: >-
+      Em 1824, aos 28 anos, Sadi Carnot publicou "Reflexões sobre a Potência Motriz do Fogo", na
+      qual analisou a máquina térmica ideal: um ciclo reversível entre uma fonte quente e uma
+      fria. Demonstrou que sua eficiência depende apenas das duas temperaturas e que nenhuma
+      máquina real consegue superá-la. A obra foi ignorada em sua época, e Carnot morreu de
+      cólera em 1832, mas em 1834 Clapeyron e depois Kelvin e Clausius a resgataram, tornando seu
+      ciclo a pedra angular da termodinâmica.
+    fr: >-
+      En 1824, à 28 ans, Sadi Carnot publia « Réflexions sur la puissance motrice du feu », où il
+      analysa la machine thermique idéale : un cycle réversible entre une source chaude et une
+      source froide. Il démontra que son rendement ne dépend que des deux températures et
+      qu'aucune machine réelle ne peut le dépasser. L'ouvrage fut ignoré à son époque, et Carnot
+      mourut du choléra en 1832, mais en 1834 Clapeyron puis Kelvin et Clausius le ressuscitèrent,
+      faisant de son cycle la pierre angulaire de la thermodynamique.
+    zh: >-
+      1824年，年仅28岁的萨迪·卡诺发表了《论火的动力》，分析了理想热机：一个在热源与冷源之间
+      可逆循环的机器。他证明其效率只取决于两个温度，且任何真实机器都无法超越。
+      这部著作在当时被忽视，卡诺本人于1832年死于霍乱。但1834年克拉佩龙、之后开尔文和克劳修斯
+      重新发现了它，使卡诺循环成为热力学的基石。
+    ja: >-
+      1824年、28歳のサディ・カルノーは『火の推進力についての考察』を発表し、理想熱機関すなわち
+      高温源と低温源の間の可逆サイクルを分析した。その効率が二つの温度のみに依存し、
+      現実の機関は決してそれを超えられないことを証明した。この著作は当時無視され、カルノーは
+      1832年にコレラで亡くなったが、1834年にクラペイロンが、その後ケルビンとクラウジウスが
+      再評価し、彼のサイクルは熱力学の礎となった。
+  timeline:
+    - year: "1824"
+      label:
+        es: >-
+          Carnot publica "Réflexions sur la puissance motrice du feu" con su ciclo ideal.
+        en: >-
+          Carnot publishes "Reflections on the Motive Power of Fire" with his ideal cycle.
+        pt: >-
+          Carnot publica "Reflexões sobre a Potência Motriz do Fogo" com seu ciclo ideal.
+        fr: >-
+          Carnot publie « Réflexions sur la puissance motrice du feu » avec son cycle idéal.
+        zh: >-
+          卡诺发表《论火的动力》，提出了理想循环。
+        ja: >-
+          カルノーが『火の推進力についての考察』を発表し、理想サイクルを提示する。
+    - year: "1834"
+      label:
+        es: >-
+          Clapeyron reformula el trabajo de Carnot en forma gráfica y matemática.
+        en: >-
+          Clapeyron reformulates Carnot's work in graphical and mathematical form.
+        pt: >-
+          Clapeyron reformula o trabalho de Carnot em forma gráfica e matemática.
+        fr: >-
+          Clapeyron reformule le travail de Carnot sous forme graphique et mathématique.
+        zh: >-
+          克拉佩龙以图形和数学形式重新表述了卡诺的工作。
+        ja: >-
+          クラペイロンがカルノーの研究を図形的・数学的に再定式化する。
+    - year: "1848"
+      label:
+        es: >-
+          Kelvin establece la escala absoluta de temperatura a partir del ciclo de Carnot.
+        en: >-
+          Kelvin establishes the absolute temperature scale from the Carnot cycle.
+        pt: >-
+          Kelvin estabelece a escala absoluta de temperatura a partir do ciclo de Carnot.
+        fr: >-
+          Kelvin établit l'échelle absolue de température à partir du cycle de Carnot.
+        zh: >-
+          开尔文基于卡诺循环确立了绝对温标。
+        ja: >-
+          ケルビンがカルノーサイクルから絶対温度目盛を確立する。
+    - year: Hoy
+      label:
+        es: >-
+          El límite de Carnot sigue guiando el diseño de turbinas, motores y centrales eléctricas.
+        en: >-
+          The Carnot limit still guides the design of turbines, engines and power plants.
+        pt: >-
+          O limite de Carnot ainda guia o projeto de turbinas, motores e usinas elétricas.
+        fr: >-
+          La limite de Carnot guide encore la conception des turbines, moteurs et centrales
+          électriques.
+        zh: >-
+          卡诺极限至今仍指导着涡轮机、发动机和电厂的设计。
+        ja: >-
+          カルノー限界は今もなお、タービンやエンジン、発電所の設計を導いている。
+  useCases:
+    - title:
+        es: Centrales térmicas
+        en: Thermal power plants
+        pt: Usinas termelétricas
+        fr: Centrales thermiques
+        zh: 火力发电厂
+        ja: 火力発電所
+      description:
+        es: >-
+          Los ingenieros comparan el rendimiento real de la planta con el límite de Carnot.
+        en: >-
+          Engineers compare the plant's actual efficiency against the Carnot limit.
+        pt: >-
+          Engenheiros comparam o rendimento real da usina com o limite de Carnot.
+        fr: >-
+          Les ingénieurs comparent le rendement réel de la centrale à la limite de Carnot.
+        zh: >-
+          工程师将电厂的实测效率与卡诺极限进行比较。
+        ja: >-
+          技術者は発電所の実際の効率をカルノー限界と比較する。
+    - title:
+        es: Motores de combustión
+        en: Combustion engines
+        pt: Motores de combustão
+        fr: Moteurs à combustion
+        zh: 内燃机
+        ja: 内燃機関
+      description:
+        es: >-
+          Marca la cota superior teórica del rendimiento de motores de gasolina y diésel.
+        en: >-
+          It sets the theoretical upper bound on gasoline and diesel engine efficiency.
+        pt: >-
+          Define o teto teórico do rendimento de motores a gasolina e a diesel.
+        fr: >-
+          Elle fixe la borne théorique supérieure du rendement des moteurs à essence et diesel.
+        zh: >-
+          它设定了汽油机和柴油机效率的理论上限。
+        ja: >-
+          ガソリン・ディーゼルエンジンの効率の理論的上限を定める。
+    - title:
+        es: Refrigeración y bomba de calor
+        en: Refrigeration and heat pumps
+        pt: Refrigeração e bombas de calor
+        fr: Réfrigération et pompes à chaleur
+        zh: 制冷与热泵
+        ja: 冷凍とヒートポンプ
+      description:
+        es: >-
+          El ciclo inverso de Carnot define el límite del coeficiente de rendimiento posible.
+        en: >-
+          The reversed Carnot cycle defines the bound on the attainable coefficient of
+          performance.
+        pt: >-
+          O ciclo de Carnot invertido define o limite do coeficiente de desempenho possível.
+        fr: >-
+          Le cycle de Carnot inversé définit la limite du coefficient de performance possible.
+        zh: >-
+          逆向卡诺循环定义了可达到的性能系数的上限。
+        ja: >-
+          逆カルノーサイクルが、達成可能な成績係数の限界を定める。
+    - title:
+        es: Ingeniería aeroespacial
+        en: Aerospace engineering
+        pt: Engenharia aeroespacial
+        fr: Ingénierie aérospatiale
+        zh: 航空航天工程
+        ja: 航空宇宙工学
+      description:
+        es: >-
+          Ayuda a evaluar el rendimiento termodinámico de turbinas de gas de propulsión a chorro.
+        en: >-
+          It helps evaluate the thermodynamic efficiency of jet-engine gas turbines.
+        pt: >-
+          Ajuda a avaliar o rendimento termodinâmico das turbinas a gás dos motores a jato.
+        fr: >-
+          Elle aide à évaluer le rendement thermodynamique des turbines à gaz des turboréacteurs.
+        zh: >-
+          它有助于评估喷气发动机燃气轮机的热力效率。
+        ja: >-
+          ジェットエンジンのガスタービンの熱力学的効率を評価するのに役立つ。
+  example:
+    title:
+      es: Eficiencia entre dos focos
+      en: Efficiency between two reservoirs
+      pt: Eficiência entre duas fontes
+      fr: Rendement entre deux sources
+      zh: 两热源之间的效率
+      ja: 二つの熱源の間の効率
+    lines:
+      - es: "Foco caliente: T_h = 500 K"
+        en: "Hot reservoir: T_h = 500 K"
+        pt: "Fonte quente: T_h = 500 K"
+        fr: "Source chaude : T_h = 500 K"
+        zh: 热源：T_h = 500 K
+        ja: 高温源：T_h = 500 K
+      - es: "Foco frío: T_c = 300 K"
+        en: "Cold reservoir: T_c = 300 K"
+        pt: "Fonte fria: T_c = 300 K"
+        fr: "Source froide : T_c = 300 K"
+        zh: 冷源：T_c = 300 K
+        ja: 低温源：T_c = 300 K
+      - es: η = 1 − T_c / T_h = 1 − 0.6
+        en: η = 1 − T_c / T_h = 1 − 0.6
+        pt: η = 1 − T_c / T_h = 1 − 0,6
+        fr: η = 1 − T_c / T_h = 1 − 0,6
+        zh: η = 1 − T_c / T_h = 1 − 0.6
+        ja: η = 1 − T_c / T_h = 1 − 0.6
+      - es: η = 0.4
+        en: η = 0.4
+        pt: η = 0,4
+        fr: η = 0,4
+        zh: η = 0.4
+        ja: η = 0.4
+      - es: η = 40% es el máximo teórico
+        en: η = 40% is the theoretical maximum
+        pt: η = 40% é o máximo teórico
+        fr: η = 40% est le maximum théorique
+        zh: η = 40% 是理论最大值
+        ja: η = 40% が理論上の最大値

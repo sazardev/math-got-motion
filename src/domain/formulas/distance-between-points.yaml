@@ -1,0 +1,408 @@
+id: distance-between-points
+title:
+  es: Distancia entre Dos Puntos
+  en: Distance Between Two Points
+  pt: Distância entre Dois Pontos
+  fr: Distance entre deux points
+  zh: 两点之间的距离
+  ja: 2点間の距離
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: d
+    type: variable
+    value: d
+    explanation:
+      es: La distancia en línea recta entre los dos puntos, en el plano.
+      en: The straight-line distance between the two points, in the plane.
+      pt: A distância em linha reta entre os dois pontos, no plano.
+      fr: La distance en ligne droite entre les deux points, dans le plan.
+      zh: 平面上两点之间的直线距离。
+      ja: 平面上の2点を結ぶ直線の距離。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: "Raíz cuadrada: deshace la operación de elevar al cuadrado."
+      en: "Square root: undoes squaring."
+      pt: "Raiz quadrada: desfaz a operação de elevar ao quadrado."
+      fr: "Racine carrée : elle annule l'élévation au carré."
+      zh: "平方根：与平方运算互逆。"
+      ja: "平方根。2乗する操作の逆演算。"
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Agrupa la primera diferencia de coordenadas.
+      en: Groups the first coordinate difference.
+      pt: Agrupa a primeira diferença de coordenadas.
+      fr: Regroupe la première différence de coordonnées.
+      zh: 将第一个坐标差括在一起。
+      ja: 最初の座標の差をまとめる括弧。
+  - id: x2
+    type: variable
+    value: x₂
+    explanation:
+      es: La coordenada x del segundo punto.
+      en: The x-coordinate of the second point.
+      pt: A coordenada x do segundo ponto.
+      fr: L'abscisse x du deuxième point.
+      zh: 第二个点的x坐标。
+      ja: 2点目のx座標。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: Menos. La diferencia se calcula sin importar el orden, porque va al cuadrado.
+      en: Minus. The difference works in either order, since it gets squared.
+      pt: Menos. A diferença funciona em qualquer ordem, pois vai ao quadrado.
+      fr: Moins. La différence fonctionne dans les deux sens, car elle est élevée au carré.
+      zh: 减号。由于后面要平方，差值的顺序无关紧要。
+      ja: マイナス。2乗されるため、引き算の順序はどちらでもよい。
+  - id: x1
+    type: variable
+    value: x₁
+    explanation:
+      es: La coordenada x del primer punto.
+      en: The x-coordinate of the first point.
+      pt: A coordenada x do primeiro ponto.
+      fr: L'abscisse x du premier point.
+      zh: 第一个点的x坐标。
+      ja: 1点目のx座標。
+  - id: x-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Al cuadrado: convierte la diferencia en una distancia siempre positiva."
+      en: "Squared: turns the difference into an always-positive quantity."
+      pt: "Ao quadrado: transforma a diferença em uma grandeza sempre positiva."
+      fr: "Au carré : rend la différence toujours positive."
+      zh: 平方：使差值始终为正。
+      ja: 2乗。差を常に正の値にする。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado al cuadrado de la diferencia en y.
+      en: Added to the squared difference in y.
+      pt: Somado ao quadrado da diferença em y.
+      fr: Ajouté au carré de la différence en y.
+      zh: 加上y坐标差的平方。
+      ja: y座標の差の2乗に加える。
+  - id: open-paren-2
+    type: operator
+    value: (
+    explanation:
+      es: Agrupa la segunda diferencia de coordenadas.
+      en: Groups the second coordinate difference.
+      pt: Agrupa a segunda diferença de coordenadas.
+      fr: Regroupe la deuxième différence de coordonnées.
+      zh: 将第二个坐标差括在一起。
+      ja: 2番目の座標の差をまとめる括弧。
+  - id: y2
+    type: variable
+    value: y₂
+    explanation:
+      es: La coordenada y del segundo punto.
+      en: The y-coordinate of the second point.
+      pt: A coordenada y do segundo ponto.
+      fr: L'ordonnée y du deuxième point.
+      zh: 第二个点的y坐标。
+      ja: 2点目のy座標。
+  - id: minus-2
+    type: operator
+    value: −
+    explanation:
+      es: Menos.
+      en: Minus.
+      pt: Menos.
+      fr: Moins.
+      zh: 减号。
+      ja: マイナス。
+  - id: y1
+    type: variable
+    value: y₁
+    explanation:
+      es: La coordenada y del primer punto.
+      en: The y-coordinate of the first point.
+      pt: A coordenada y do primeiro ponto.
+      fr: L'ordonnée y du premier point.
+      zh: 第一个点的y坐标。
+      ja: 1点目のy座標。
+  - id: y-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Al cuadrado, cerrando la raíz: esta es la distancia euclidiana."
+      en: "Squared, closing the root: this is the Euclidean distance."
+      pt: "Ao quadrado, fechando a raiz: esta é a distância euclidiana."
+      fr: "Au carré, fermant la racine : c'est la distance euclidienne."
+      zh: 平方，并完成根号运算：这就是欧几里得距离。
+      ja: 2乗して根号を閉じる。これがユークリッド距離である。
+context:
+  author:
+    es: Basada en el teorema de Pitágoras
+    en: Based on the Pythagorean theorem
+    pt: Baseada no teorema de Pitágoras
+    fr: Fondée sur le théorème de Pythagore
+    zh: 基于毕达哥拉斯定理
+    ja: ピタゴラスの定理に基づく
+  era:
+    es: Grecia, c. 300 a.C. · formalizada con coordenadas por Descartes en 1637
+    en: Greece, c. 300 BC · formalized with coordinates by Descartes in 1637
+    pt: Grécia, c. 300 a.C. · formalizada com coordenadas por Descartes em 1637
+    fr: Grèce, v. 300 av. J.-C. · formalisée avec des coordonnées par Descartes en 1637
+    zh: 希腊，约公元前300年·1637年由笛卡尔用坐标加以形式化
+    ja: ギリシャ、紀元前300年頃・1637年にデカルトが座標を用いて定式化
+  history:
+    es: >-
+      Esta fórmula es el teorema de Pitágoras traducido al lenguaje de las coordenadas. Euclides
+      demostró el teorema en Elementos hacia el 300 a.C., pero hacerlo numérico exigió esperar a que
+      Descartes publicara su geometría analítica en 1637, uniendo álgebra y geometría al etiquetar
+      puntos con pares de números. Siglos después, la misma idea se extendió a tres o más
+      dimensiones y se convirtió en la distancia euclidiana que usan hoy los sistemas de navegación,
+      la computación gráfica y el aprendizaje automático.
+    en: >-
+      This formula is the Pythagorean theorem translated into the language of coordinates. Euclid
+      proved the theorem in Elements around 300 BC, but making it numeric had to wait until Descartes
+      published his analytic geometry in 1637, uniting algebra and geometry by labeling points with
+      pairs of numbers. Centuries later, the same idea extended to three or more dimensions and
+      became the Euclidean distance used today by navigation systems, computer graphics, and machine
+      learning.
+    pt: >-
+      Essa fórmula é o teorema de Pitágoras traduzido para a linguagem das coordenadas. Euclides
+      demonstrou o teorema em Os Elementos por volta de 300 a.C., mas torná-lo numérico exigiu
+      esperar que Descartes publicasse sua geometria analítica em 1637, unindo álgebra e geometria ao
+      rotular pontos com pares de números. Séculos depois, a mesma ideia se estendeu a três ou mais
+      dimensões e se tornou a distância euclidiana usada hoje pelos sistemas de navegação, pela
+      computação gráfica e pelo aprendizado de máquina.
+    fr: >-
+      Cette formule est le théorème de Pythagore traduit dans le langage des coordonnées. Euclide a
+      démontré le théorème dans les Éléments vers 300 av. J.-C., mais pour le rendre numérique il a
+      fallu attendre que Descartes publie sa géométrie analytique en 1637, unissant algèbre et
+      géométrie en repérant les points par des paires de nombres. Des siècles plus tard, la même idée
+      s'est étendue à trois dimensions et plus, devenant la distance euclidienne qu'utilisent
+      aujourd'hui les systèmes de navigation, l'infographie et l'apprentissage automatique.
+    zh: >-
+      这个公式是毕达哥拉斯定理在坐标语言下的表述。欧几里得约在公元前300年于《几何原本》中证明了该定理，
+      但要将其数值化，还需等到笛卡尔于1637年发表解析几何——用一对数字标记点，从而将代数与几何统一起来。
+      几个世纪后，同样的思想扩展到三维甚至更高维，成为如今导航系统、计算机图形学和机器学习所使用的欧几里得距离。
+    ja: >-
+      この公式は、ピタゴラスの定理を座標の言葉に翻訳したものである。ユークリッドは紀元前300年頃に『原論』で
+      この定理を証明したが、それを数値化するには、1637年にデカルトが解析幾何学を発表し、点を数の組で表すことで
+      代数と幾何学を結びつけるのを待つ必要があった。何世紀も後、同じ考えは3次元以上に拡張され、今日の航法システム、
+      コンピューターグラフィックス、機械学習が使うユークリッド距離となった。
+  timeline:
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides demuestra el teorema de Pitágoras, del cual esta fórmula es la versión analítica.
+        en: >-
+          Euclid proves the Pythagorean theorem, of which this formula is the analytic version.
+        pt: >-
+          Euclides demonstra o teorema de Pitágoras, do qual essa fórmula é a versão analítica.
+        fr: >-
+          Euclide démontre le théorème de Pythagore, dont cette formule est la version analytique.
+        zh: >-
+          欧几里得证明毕达哥拉斯定理，本公式正是该定理的解析形式。
+        ja: >-
+          ユークリッドがピタゴラスの定理を証明する。この公式はその解析的な表現である。
+    - year: "1637"
+      label:
+        es: >-
+          La Géométrie de Descartes introduce las coordenadas y permite expresar distancias como
+          cálculos aritméticos.
+        en: >-
+          Descartes' La Géométrie introduces coordinates, letting distances be expressed as
+          arithmetic.
+        pt: >-
+          La Géométrie de Descartes introduz as coordenadas e permite expressar distâncias como
+          cálculos aritméticos.
+        fr: >-
+          La Géométrie de Descartes introduit les coordonnées, permettant d'exprimer les distances
+          comme des calculs arithmétiques.
+        zh: >-
+          笛卡尔的《几何学》引入坐标，使距离可以表达为算术运算。
+        ja: >-
+          デカルトの『幾何学』が座標を導入し、距離を算術的な計算で表せるようにした。
+    - year: s. XIX
+      label:
+        es: >-
+          La distancia euclidiana se generaliza a espacios de n dimensiones con Riemann y otros.
+        en: >-
+          Euclidean distance generalizes to n-dimensional spaces with Riemann and others.
+        pt: >-
+          A distância euclidiana se generaliza a espaços de n dimensões com Riemann e outros.
+        fr: >-
+          La distance euclidienne se généralise aux espaces à n dimensions avec Riemann et d'autres.
+        zh: >-
+          黎曼等人将欧几里得距离推广到n维空间。
+        ja: >-
+          リーマンらによって、ユークリッド距離がn次元空間へと一般化される。
+    - year: Hoy
+      label:
+        es: >-
+          Es la métrica por defecto para medir similitud en clustering, búsqueda de vecinos cercanos e
+          IA.
+        en: >-
+          It is the default metric for measuring similarity in clustering, nearest-neighbor search,
+          and AI.
+        pt: >-
+          É a métrica padrão para medir similaridade em agrupamento, busca de vizinhos mais próximos e
+          IA.
+        fr: >-
+          C'est la métrique par défaut pour mesurer la similarité en clustering, en recherche des
+          plus proches voisins et en IA.
+        zh: >-
+          它是聚类、最近邻搜索和人工智能中衡量相似度的默认指标。
+        ja: >-
+          クラスタリング、最近傍探索、AIにおいて類似度を測る標準的な指標となっている。
+  useCases:
+    - title:
+        es: Geolocalización GPS
+        en: GPS geolocation
+        pt: Geolocalização GPS
+        fr: Géolocalisation GPS
+        zh: GPS 定位
+        ja: GPS測位
+      description:
+        es: >-
+          La distancia entre dos coordenadas de latitud y longitud se calcula con una versión
+          esférica de esta fórmula.
+        en: >-
+          The distance between two latitude/longitude coordinates is computed with a spherical
+          version of this formula.
+        pt: >-
+          A distância entre duas coordenadas de latitude e longitude é calculada com uma versão
+          esférica dessa fórmula.
+        fr: >-
+          La distance entre deux coordonnées de latitude/longitude se calcule avec une version
+          sphérique de cette formule.
+        zh: >-
+          两个经纬度坐标之间的距离用该公式的球面版本计算。
+        ja: >-
+          緯度・経度の2座標間の距離は、この公式の球面版で計算される。
+    - title:
+        es: Computación gráfica
+        en: Computer graphics
+        pt: Computação gráfica
+        fr: Infographie
+        zh: 计算机图形学
+        ja: コンピューターグラフィックス
+      description:
+        es: >-
+          Los motores de juegos miden distancias entre vectores para detectar colisiones y aplicar
+          iluminación.
+        en: >-
+          Game engines measure distances between vectors to detect collisions and apply lighting.
+        pt: >-
+          Motores de jogos medem distâncias entre vetores para detectar colisões e aplicar iluminação.
+        fr: >-
+          Les moteurs de jeu mesurent les distances entre vecteurs pour détecter les collisions et
+          appliquer l'éclairage.
+        zh: >-
+          游戏引擎测量向量之间的距离，用于碰撞检测和光照计算。
+        ja: >-
+          ゲームエンジンは、衝突判定や照明の計算のためにベクトル間の距離を測る。
+    - title:
+        es: Aprendizaje automático
+        en: Machine learning
+        pt: Aprendizado de máquina
+        fr: Apprentissage automatique
+        zh: 机器学习
+        ja: 機械学習
+      description:
+        es: >-
+          Algoritmos como k-means agrupan datos midiendo la distancia euclidiana entre puntos en un
+          espacio de muchas dimensiones.
+        en: >-
+          Algorithms like k-means cluster data by measuring Euclidean distance between points in a
+          high-dimensional space.
+        pt: >-
+          Algoritmos como k-means agrupam dados medindo a distância euclidiana entre pontos em um
+          espaço de muitas dimensões.
+        fr: >-
+          Des algorithmes comme k-means regroupent les données en mesurant la distance euclidienne
+          entre des points dans un espace de nombreuses dimensions.
+        zh: >-
+          像k-means这样的算法通过测量高维空间中点之间的欧几里得距离来对数据进行聚类。
+        ja: >-
+          k-meansのようなアルゴリズムは、高次元空間の点間のユークリッド距離を測ってデータをクラスタリングする。
+    - title:
+        es: Similaridad de imágenes
+        en: Image similarity
+        pt: Similaridade de imagens
+        fr: Similarité d'images
+        zh: 图像相似度
+        ja: 画像類似度
+      description:
+        es: >-
+          Comparar dos imágenes vectorizadas equivale a medir la distancia entre sus representaciones
+          numéricas.
+        en: >-
+          Comparing two vectorized images amounts to measuring the distance between their numeric
+          representations.
+        pt: >-
+          Comparar duas imagens vetorizadas equivale a medir a distância entre suas representações
+          numéricas.
+        fr: >-
+          Comparer deux images vectorisées revient à mesurer la distance entre leurs représentations
+          numériques.
+        zh: >-
+          比较两张向量化图像，本质上就是测量它们数值表示之间的距离。
+        ja: >-
+          ベクトル化された2枚の画像を比較することは、その数値表現間の距離を測ることと同じである。
+  example:
+    title:
+      es: De (1, 2) a (4, 6)
+      en: From (1, 2) to (4, 6)
+      pt: De (1, 2) a (4, 6)
+      fr: De (1, 2) à (4, 6)
+      zh: 从 (1, 2) 到 (4, 6)
+      ja: (1, 2) から (4, 6) へ
+    lines:
+      - es: x₂−x₁ = 4−1 = 3
+        en: x₂−x₁ = 4−1 = 3
+        pt: x₂−x₁ = 4−1 = 3
+        fr: x₂−x₁ = 4−1 = 3
+        zh: x₂−x₁ = 4−1 = 3
+        ja: x₂−x₁ = 4−1 = 3
+      - es: y₂−y₁ = 6−2 = 4
+        en: y₂−y₁ = 6−2 = 4
+        pt: y₂−y₁ = 6−2 = 4
+        fr: y₂−y₁ = 6−2 = 4
+        zh: y₂−y₁ = 6−2 = 4
+        ja: y₂−y₁ = 6−2 = 4
+      - es: d = √(3² + 4²)
+        en: d = √(3² + 4²)
+        pt: d = √(3² + 4²)
+        fr: d = √(3² + 4²)
+        zh: d = √(3² + 4²)
+        ja: d = √(3² + 4²)
+      - es: d = √(9 + 16)
+        en: d = √(9 + 16)
+        pt: d = √(9 + 16)
+        fr: d = √(9 + 16)
+        zh: d = √(9 + 16)
+        ja: d = √(9 + 16)
+      - es: d = √25 = 5
+        en: d = √25 = 5
+        pt: d = √25 = 5
+        fr: d = √25 = 5
+        zh: d = √25 = 5
+        ja: d = √25 = 5

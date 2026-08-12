@@ -1,0 +1,404 @@
+id: magnetic-field-wire
+title:
+  es: Campo Magnético de un Conductor
+  en: Magnetic Field of a Wire
+  pt: Campo Magnético de um Fio
+  fr: Champ magnétique d'un fil
+  zh: 导线的磁场
+  ja: 導線の磁場
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: b
+    type: variable
+    value: B
+    explanation:
+      es: El campo magnético producido por la corriente en el punto considerado.
+      en: The magnetic field produced by the current at the point in question.
+      pt: O campo magnético produzido pela corrente no ponto considerado.
+      fr: Le champ magnétique produit par le courant au point considéré.
+      zh: 电流在考察点处产生的磁场。
+      ja: 電流が考えている点に作る磁場。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: mu0
+    type: constant
+    value: μ₀
+    explanation:
+      es: La permeabilidad del vacío, una constante fundamental que vale 4π × 10⁻⁷ T·m/A.
+      en: The vacuum permeability, a fundamental constant equal to 4π × 10⁻⁷ T·m/A.
+      pt: A permeabilidade do vácuo, uma constante fundamental que vale 4π × 10⁻⁷ T·m/A.
+      fr: La perméabilité du vide, une constante fondamentale valant 4π × 10⁻⁷ T·m/A.
+      zh: 真空磁导率,一个等于 4π × 10⁻⁷ T·m/A 的基本常数。
+      ja: 真空の透磁率。4π × 10⁻⁷ T·m/A に等しい基本定数。
+  - id: mult
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛け算。
+  - id: i
+    type: variable
+    value: I
+    explanation:
+      es: La corriente eléctrica que circula por el conductor.
+      en: The electric current flowing through the conductor.
+      pt: A corrente elétrica que circula pelo condutor.
+      fr: Le courant électrique qui circule dans le conducteur.
+      zh: 流过导体的电流。
+      ja: 導体を流れる電流。
+  - id: div
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: 割り算。
+  - id: paren-open
+    type: operator
+    value: "("
+    explanation:
+      es: Comienza el denominador de la fracción.
+      en: It opens the denominator of the fraction.
+      pt: Abre o denominador da fração.
+      fr: Il ouvre le dénominateur de la fraction.
+      zh: 分数的分母从这里开始。
+      ja: 分数の分母を始める括弧。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: El número 2, que surge de la longitud total de la circunferencia del campo.
+      en: The number 2, which arises from the full length of the field's circumference.
+      pt: O número 2, que surge do comprimento total da circunferência do campo.
+      fr: Le nombre 2, qui provient de la longueur totale de la circonférence du champ.
+      zh: 数字2,来源于磁场圆周的总长度。
+      ja: 数2。磁場の円周の全長から生じる。
+  - id: mult2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛け算。
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: La constante pi, aproximadamente 3.1416.
+      en: The constant pi, approximately 3.1416.
+      pt: A constante pi, aproximadamente 3,1416.
+      fr: La constante pi, environ 3,1416.
+      zh: 圆周率 π,约等于 3.1416。
+      ja: 円周率 π。およそ3.1416。
+  - id: mult3
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛け算。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: La distancia perpendicular desde el centro del conductor hasta el punto considerado.
+      en: The perpendicular distance from the conductor's center to the point in question.
+      pt: A distância perpendicular do centro do condutor até o ponto considerado.
+      fr: La distance perpendiculaire du centre du conducteur au point considéré.
+      zh: 从导体中心到考察点的垂直距离。
+      ja: 導体の中心から考える点までの垂直距離。
+  - id: paren-close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el denominador de la fracción.
+      en: It closes the denominator of the fraction.
+      pt: Fecha o denominador da fração.
+      fr: Il ferme le dénominateur de la fraction.
+      zh: 分数的分母在这里结束。
+      ja: 分数の分母を閉じる括弧。
+context:
+  author:
+    es: André-Marie Ampère y Jean-Baptiste Biot
+    en: André-Marie Ampère and Jean-Baptiste Biot
+    pt: André-Marie Ampère e Jean-Baptiste Biot
+    fr: André-Marie Ampère et Jean-Baptiste Biot
+    zh: 安德烈-马里·安培与让-巴蒂斯特·毕奥
+    ja: アンドレ＝マリ・アンペールとジャン＝バティスト・ビオ
+  era:
+    es: Francia, 1820
+    en: France, 1820
+    pt: França, 1820
+    fr: France, 1820
+    zh: 法国,1820年
+    ja: フランス、1820年
+  history:
+    es: >-
+      En 1820, el físico danés Hans Christian Oersted descubrió que una aguja magnética se desvía
+      junto a un cable por el que circula corriente: la electricidad crea magnetismo. André-Marie
+      Ampère y Jean-Baptiste Biot formalizaron el resultado. Biot y Félix Savart dedujeron que la
+      corriente produce un campo magnético circular alrededor del hilo, que decrece con la distancia
+      al conductor, y Ampère generalizó la relación con su célebre ley. De este descubrimiento
+      derivan los electroimanes, los motores y los transformadores.
+    en: >-
+      In 1820, Danish physicist Hans Christian Oersted discovered that a magnetic needle deflects
+      next to a wire carrying current: electricity creates magnetism. André-Marie Ampère and
+      Jean-Baptiste Biot quickly formalized the result. Biot and Félix Savart deduced that the
+      current produces a circular magnetic field around the wire that falls off with distance, while
+      Ampère generalized the relation in his famous law. From this discovery come the electromagnets,
+      motors, and transformers that move the modern world.
+    pt: >-
+      Em 1820, o físico dinamarquês Hans Christian Oersted descobriu que uma agulha magnética se
+      desvia ao lado de um fio por onde passa corrente: a eletricidade cria magnetismo. André-Marie
+      Ampère e Jean-Baptiste Biot rapidamente formalizaram o resultado. Biot e Félix Savart
+      deduziram que a corrente produz um campo magnético circular ao redor do fio, que diminui com a
+      distância ao condutor, e Ampère generalizou a relação com sua célebre lei. Dessa descoberta
+      derivam os eletroímãs, os motores e os transformadores.
+    fr: >-
+      En 1820, le physicien danois Hans Christian Oersted découvrit qu'une aiguille aimantée dévie à
+      côté d'un fil parcouru par un courant : l'électricité crée le magnétisme. André-Marie Ampère et
+      Jean-Baptiste Biot formalisèrent rapidement ce résultat. Biot et Félix Savart en déduisirent
+      que le courant produit un champ magnétique circulaire autour du fil, qui décroît avec la
+      distance au conducteur, tandis qu'Ampère généralisa la relation dans sa célèbre loi. De cette
+      découverte découlent les électroaimants, les moteurs et les transformateurs.
+    zh: >-
+      1820年,丹麦物理学家汉斯·克里斯蒂安·奥斯特发现,通电导线附近的磁针会发生偏转:电能产生磁。安德烈-马里·
+      安培和让-巴蒂斯特·毕奥很快将这一结果形式化。毕奥和费利克斯·萨伐尔推导出,电流在导线周围产生圆形的磁场,
+      其强度随距导体的距离而衰减;安培则用他的著名定律概括了这一关系。电磁铁、电动机和变压器都源于这一发现。
+    ja: >-
+      1820年、デンマークの物理学者ハンス・クリスチャン・オーアステッドは、電流の流れる電線の近くで磁針が
+      振れることを発見した。電気が磁気を生み出すのだ。アンドレ＝マリ・アンペールとジャン＝バティスト・ビオは
+      すぐにこの結果を定式化した。ビオとフェリックス・サヴァールは、電流が導線の周囲に円形の磁場を作り、
+      それが導体からの距離とともに減衰することを導き、アンペールは有名な法則でその関係を一般化した。
+      電磁石、モーター、変圧器はこの発見に由来する。
+  timeline:
+    - year: "1820"
+      label:
+        es: >-
+          Oersted descubre que una aguja magnética se desvía junto a un cable con corriente,
+          uniendo electricidad y magnetismo.
+        en: >-
+          Oersted discovers that a magnetic needle deflects next to a current-carrying wire,
+          linking electricity and magnetism.
+        pt: >-
+          Oersted descobre que uma agulha magnética se desvia ao lado de um fio com corrente,
+          unindo eletricidade e magnetismo.
+        fr: >-
+          Oersted découvre qu'une aiguille aimantée dévie à côté d'un fil parcouru par un courant,
+          reliant électricité et magnétisme.
+        zh: >-
+          奥斯特发现,通电导线旁的磁针会发生偏转,将电与磁联系起来。
+        ja: >-
+          オーアステッドが、電流の流れる電線の近くで磁針が振れることを発見し、電気と磁気を結びつける。
+    - year: "1821"
+      label:
+        es: >-
+          Biot y Savart formulan la ley del campo creado por un conductor rectilíneo, y Ampère
+          determina la regla de la mano derecha.
+        en: >-
+          Biot and Savart formulate the law of the field from a straight wire, and Ampère
+          determines the right-hand rule.
+        pt: >-
+          Biot e Savart formulam a lei do campo criado por um fio retilíneo, e Ampère determina a
+          regra da mão direita.
+        fr: >-
+          Biot et Savart formulent la loi du champ créé par un fil rectiligne, et Ampère détermine
+          la règle de la main droite.
+        zh: >-
+          毕奥和萨伐尔提出了直线导线所产生磁场的定律,安培则确定了右手定则。
+        ja: >-
+          ビオとサヴァールが直線状の導線が作る磁場の法則を定式化し、アンペールが右手の法則を明らかにする。
+    - year: "1827"
+      label:
+        es: >-
+          Ampère publica su memoria completa sobre electrodinámica, que generaliza la relación
+          entre corriente y campo magnético.
+        en: >-
+          Ampère publishes his complete memoir on electrodynamics, generalizing the relation
+          between current and magnetic field.
+        pt: >-
+          Ampère publica sua memória completa sobre eletrodinâmica, generalizando a relação entre
+          corrente e campo magnético.
+        fr: >-
+          Ampère publie son mémoire complet sur l'électrodynamique, généralisant la relation entre
+          courant et champ magnétique.
+        zh: >-
+          安培发表了关于电动力学的完整论文,将电流与磁场之间的关系加以推广。
+        ja: >-
+          アンペールが電気力学に関する完全な論文集を発表し、電流と磁場の関係を一般化する。
+    - year: Hoy
+      label:
+        es: >-
+          Es la base de los electroimanes, los motores eléctricos y los transformadores que mueven
+          el mundo moderno.
+        en: >-
+          It is the basis of the electromagnets, electric motors, and transformers that move the
+          modern world.
+        pt: >-
+          É a base dos eletroímãs, dos motores elétricos e dos transformadores que movem o mundo
+          moderno.
+        fr: >-
+          Elle est à la base des électroaimants, des moteurs électriques et des transformateurs qui
+          font bouger le monde moderne.
+        zh: >-
+          它是驱动现代世界的电磁铁、电动机和变压器的基础。
+        ja: >-
+          現代世界を動かす電磁石、電動モーター、変圧器の基礎である。
+  useCases:
+    - title:
+        es: Motores eléctricos
+        en: Electric motors
+        pt: Motores elétricos
+        fr: Moteurs électriques
+        zh: 电动机
+        ja: 電動モーター
+      description:
+        es: >-
+          El campo creado por las bobinas del estátor empuja el rotor y produce el par motor.
+        en: >-
+          The field created by the stator windings pushes the rotor and produces the motor torque.
+        pt: >-
+          O campo criado pelas bobinas do estator empurra o rotor e produz o torque do motor.
+        fr: >-
+          Le champ créé par les bobinages du stator pousse le rotor et produit le couple du moteur.
+        zh: >-
+          定子绕组产生的磁场推动转子旋转,从而产生电机转矩。
+        ja: >-
+          固定子の巻線が作る磁場が回転子を押し、モーターのトルクを生み出す。
+    - title:
+        es: Transformadores
+        en: Transformers
+        pt: Transformadores
+        fr: Transformateurs
+        zh: 变压器
+        ja: 変圧器
+      description:
+        es: >-
+          El campo magnético del devanado primario induce la corriente en el secundario,
+          transfiriendo la energía.
+        en: >-
+          The magnetic field of the primary winding induces current in the secondary, transferring
+          the energy.
+        pt: >-
+          O campo magnético do enrolamento primário induz a corrente no secundário, transferindo a
+          energia.
+        fr: >-
+          Le champ magnétique de l'enroulement primaire induit le courant dans le secondaire,
+          transférant l'énergie.
+        zh: >-
+          初级绕组的磁场在次级绕组中感应出电流,从而传递能量。
+        ja: >-
+          一次巻線の磁場が二次側に電流を誘導し、エネルギーを伝える。
+    - title:
+        es: Electroimanes
+        en: Electromagnets
+        pt: Eletroímãs
+        fr: Électroaimants
+        zh: 电磁铁
+        ja: 電磁石
+      description:
+        es: >-
+          Un núcleo de hierro concentra el campo de la corriente y levanta o sujeta piezas con
+          solo encenderla.
+        en: >-
+          An iron core concentrates the current's field and lifts or holds parts by simply turning
+          it on.
+        pt: >-
+          Um núcleo de ferro concentra o campo da corrente e ergue ou segura peças apenas ligando-a.
+        fr: >-
+          Un noyau de fer concentre le champ du courant et soulève ou maintient des pièces en le
+          mettant simplement sous tension.
+        zh: >-
+          铁芯汇聚电流产生的磁场,只要通电就能吸起或夹持工件。
+        ja: >-
+          鉄心が電流の磁場を集中させ、通電するだけで部品を持ち上げたり保持したりする。
+    - title:
+        es: Instrumentación y sensores
+        en: Instrumentation and sensors
+        pt: Instrumentação e sensores
+        fr: Instrumentation et capteurs
+        zh: 仪器仪表与传感器
+        ja: 計測とセンサー
+      description:
+        es: >-
+          Sensores de corriente y transformadores de medida aprovechan el campo creado por el
+          conductor para medir amperios.
+        en: >-
+          Current sensors and measurement transformers exploit the field around the conductor to
+          measure amperes.
+        pt: >-
+          Sensores de corrente e transformadores de medição aproveitam o campo ao redor do
+          condutor para medir amperes.
+        fr: >-
+          Les capteurs de courant et les transformateurs de mesure exploitent le champ autour du
+          conducteur pour mesurer des ampères.
+        zh: >-
+          电流传感器和测量用互感器利用导体周围的磁场来测量安培数。
+        ja: >-
+          電流センサーや計器用変流器が、導体の周囲の磁場を利用してアンペア数を測る。
+  example:
+    title:
+      es: Campo cerca de un conductor
+      en: Field near a conductor
+      pt: Campo perto de um condutor
+      fr: Champ près d'un conducteur
+      zh: 导体附近的磁场
+      ja: 導体の近くの磁場
+    lines:
+      - es: B = μ₀ · I / (2 · π · r)
+        en: B = μ₀ · I / (2 · π · r)
+        pt: B = μ₀ · I / (2 · π · r)
+        fr: B = μ₀ · I / (2 · π · r)
+        zh: B = μ₀ · I / (2 · π · r)
+        ja: B = μ₀ · I / (2 · π · r)
+      - es: μ₀ = 4π × 10⁻⁷ T·m/A, I = 10 A, r = 0.05 m
+        en: μ₀ = 4π × 10⁻⁷ T·m/A, I = 10 A, r = 0.05 m
+        pt: μ₀ = 4π × 10⁻⁷ T·m/A, I = 10 A, r = 0,05 m
+        fr: μ₀ = 4π × 10⁻⁷ T·m/A, I = 10 A, r = 0,05 m
+        zh: μ₀ = 4π × 10⁻⁷ T·m/A, I = 10 A, r = 0.05 m
+        ja: μ₀ = 4π × 10⁻⁷ T·m/A, I = 10 A, r = 0.05 m
+      - es: B = (4π × 10⁻⁷ × 10) / (2 × π × 0.05)
+        en: B = (4π × 10⁻⁷ × 10) / (2 × π × 0.05)
+        pt: B = (4π × 10⁻⁷ × 10) / (2 × π × 0,05)
+        fr: B = (4π × 10⁻⁷ × 10) / (2 × π × 0,05)
+        zh: B = (4π × 10⁻⁷ × 10) / (2 × π × 0.05)
+        ja: B = (4π × 10⁻⁷ × 10) / (2 × π × 0.05)
+      - es: B = (4 × 10⁻⁶ π) / (0.1 π)
+        en: B = (4 × 10⁻⁶ π) / (0.1 π)
+        pt: B = (4 × 10⁻⁶ π) / (0,1 π)
+        fr: B = (4 × 10⁻⁶ π) / (0,1 π)
+        zh: B = (4 × 10⁻⁶ π) / (0.1 π)
+        ja: B = (4 × 10⁻⁶ π) / (0.1 π)
+      - es: B = 4 × 10⁻⁵ T
+        en: B = 4 × 10⁻⁵ T
+        pt: B = 4 × 10⁻⁵ T
+        fr: B = 4 × 10⁻⁵ T
+        zh: B = 4 × 10⁻⁵ T
+        ja: B = 4 × 10⁻⁵ T

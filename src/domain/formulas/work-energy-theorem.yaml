@@ -1,0 +1,309 @@
+id: work-energy-theorem
+title:
+  es: Teorema del Trabajo y la Energía
+  en: Work-Energy Theorem
+  pt: Teorema do Trabalho e da Energia
+  fr: Théorème de l'énergie cinétique
+  zh: 功能定理
+  ja: 仕事とエネルギーの定理
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: delta-ke
+    type: variable
+    value: ΔKE
+    explanation:
+      es: El cambio de energía cinética, lo que el cuerpo gana o pierde al cambiar su velocidad.
+      en: The change in kinetic energy, what the body gains or loses as its speed changes.
+      pt: A variação da energia cinética, o que o corpo ganha ou perde ao mudar sua velocidade.
+      fr: La variation d'énergie cinétique, ce que le corps gagne ou perd quand sa vitesse change.
+      zh: 动能的变化量，即物体速度改变时增加或减少的能量。
+      ja: 運動エネルギーの変化。速度が変わるときに物体が得たり失ったりするエネルギー。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: w
+    type: variable
+    value: W
+    explanation:
+      es: El trabajo neto realizado sobre el cuerpo por todas las fuerzas.
+      en: The net work done on the body by all forces.
+      pt: O trabalho líquido realizado sobre o corpo por todas as forças.
+      fr: Le travail net effectué sur le corps par toutes les forces.
+      zh: 所有力对物体所做的净功。
+      ja: すべての力によって物体に対してなされる正味の仕事。
+context:
+  author:
+    es: Basada en el trabajo de Coriolis y Poncelet
+    en: Based on the work of Coriolis and Poncelet
+    pt: Baseada no trabalho de Coriolis e Poncelet
+    fr: Basée sur les travaux de Coriolis et Poncelet
+    zh: 以科里奥利和彭赛列的研究为基础
+    ja: コリオリとポンスレーの研究に基づく
+  era:
+    es: Francia, s. XIX
+    en: France, 19th century
+    pt: França, séc. XIX
+    fr: France, XIXe siècle
+    zh: 法国，19世纪
+    ja: フランス、19世紀
+  history:
+    es: >-
+      El teorema del trabajo y la energía tomó forma en el siglo XIX, cuando los ingenieros franceses
+      medían la eficiencia de las máquinas. Gaspard-Gustave de Coriolis formalizó el concepto de
+      trabajo en 1826 y, junto a Jean-Victor Poncelet, mostró que el trabajo neto sobre un cuerpo se
+      convierte exactamente en un cambio de su energía cinética. La relación explica por qué los
+      frenos se calientan al disipar en calor la energía del vehículo, y por qué la distancia de
+      frenado crece con el cuadrado de la velocidad. Es la base de las pruebas de choque y de las
+      auditorías energéticas modernas.
+    en: >-
+      The work-energy theorem took shape in the 19th century, when French engineers were measuring
+      the efficiency of machines. Gaspard-Gustave de Coriolis formalized the concept of work in 1826
+      and, together with Jean-Victor Poncelet, showed that the net work on a body turns exactly into
+      a change in its kinetic energy. The relation explains why brakes heat up as they dissipate the
+      vehicle's energy as heat, and why braking distance grows with the square of speed. It is the
+      basis of crash tests and of modern energy audits.
+    pt: >-
+      O teorema do trabalho e da energia tomou forma no século XIX, quando os engenheiros franceses
+      mediam a eficiência das máquinas. Gaspard-Gustave de Coriolis formalizou o conceito de trabalho
+      em 1826 e, junto com Jean-Victor Poncelet, mostrou que o trabalho líquido sobre um corpo se
+      converte exatamente em uma variação de sua energia cinética. A relação explica por que os freios
+      esquentam ao dissipar em calor a energia do veículo, e por que a distância de frenagem cresce
+      com o quadrado da velocidade. É a base dos testes de colisão e das auditorias energéticas
+      modernas.
+    fr: >-
+      Le théorème de l'énergie cinétique a pris forme au XIXe siècle, lorsque les ingénieurs français
+      mesuraient l'efficacité des machines. Gaspard-Gustave de Coriolis formalisa le concept de
+      travail en 1826 et, avec Jean-Victor Poncelet, montra que le travail net sur un corps se
+      convertit exactement en une variation de son énergie cinétique. La relation explique pourquoi
+      les freins chauffent en dissipant sous forme de chaleur l'énergie du véhicule, et pourquoi la
+      distance de freinage croît avec le carré de la vitesse. Elle est la base des crash-tests et des
+      audits énergétiques modernes.
+    zh: >-
+      功能定理成形于19世纪，当时法国工程师正在测量机械的效率。加斯帕-古斯塔夫·德·科里奥利于1826年将功的概念系统化，
+      并与让-维克托·彭赛列一起表明，对物体所做的净功恰好转化为其动能的变化。这一定理解释了为什么刹车会发热——它们把车辆
+      的能量以热的形式耗散掉——以及为什么制动距离随速度的平方增长。它是碰撞测试和现代能源审计的基础。
+    ja: >-
+      仕事とエネルギーの定理は、フランスの技術者たちが機械の効率を測定していた19世紀に形作られた。ガスパール＝
+      ギュスターヴ・ド・コリオリは1826年に仕事の概念を体系化し、ジャン＝ヴィクトル・ポンスレーとともに、物体に
+      対する正味の仕事が正確に運動エネルギーの変化になることを示した。この関係は、ブレーキが車両のエネルギーを熱として
+      散逸させて熱くなる理由や、制動距離が速度の二乗に比例して伸びる理由を説明する。これは衝突テストと現代のエネル
+      ギー監査の基礎である。
+  timeline:
+    - year: "1826"
+      label:
+        es: >-
+          Coriolis introduce el término "trabajo" en sus cursos y comienza a vincularlo con la
+          energía del movimiento.
+        en: >-
+          Coriolis introduces the term "work" in his courses and begins linking it to the energy of
+          motion.
+        pt: >-
+          Coriolis introduz o termo "trabalho" em seus cursos e começa a vinculá-lo à energia do
+          movimento.
+        fr: >-
+          Coriolis introduit le terme "travail" dans ses cours et commence à le relier à l'énergie du
+          mouvement.
+        zh: >-
+          科里奥利在课程中引入"功"一词，并开始将其与运动的能量联系起来。
+        ja: >-
+          コリオリが講義で「仕事」という用語を導入し、運動のエネルギーとの結びつけを始める。
+    - year: "1829"
+      label:
+        es: >-
+          Publica "Du calcul de l'effet des machines", que establece la equivalencia entre trabajo y
+          energía cinética ½mv².
+        en: >-
+          He publishes "Du calcul de l'effet des machines", establishing the equivalence between work
+          and kinetic energy ½mv².
+        pt: >-
+          Publica "Du calcul de l'effet des machines", estabelecendo a equivalência entre trabalho e
+          energia cinética ½mv².
+        fr: >-
+          Il publie « Du calcul de l'effet des machines », établissant l'équivalence entre le travail
+          et l'énergie cinétique ½mv².
+        zh: >-
+          他发表《论机械效应的计算》，确立了功与动能½mv²之间的等价关系。
+        ja: >-
+          『機械の効果の計算について』を発表し、仕事と運動エネルギー½mv²の等価性を確立する。
+    - year: "1839"
+      label:
+        es: >-
+          Poncelet difunde el teorema en sus cursos de mecánica industrial, extendiéndolo entre los
+          ingenieros.
+        en: >-
+          Poncelet popularizes the theorem in his industrial mechanics courses, spreading it among
+          engineers.
+        pt: >-
+          Poncelet difunde o teorema em seus cursos de mecânica industrial, estendendo-o entre os
+          engenheiros.
+        fr: >-
+          Poncelet diffuse le théorème dans ses cours de mécanique industrielle, le répandant parmi
+          les ingénieurs.
+        zh: >-
+          彭赛列在其工业力学课程中推广这一定理，使其在工程师中广泛传播。
+        ja: >-
+          ポンスレーが工業力学の講義でこの定理を広め、技術者の間に普及させる。
+    - year: Hoy
+      label:
+        es: >-
+          Es el fundamento de las pruebas de choque, el diseño de frenos y las auditorías energéticas.
+        en: >-
+          It is the foundation of crash testing, brake design, and energy audits.
+        pt: >-
+          É o fundamento dos testes de colisão, do projeto de freios e das auditorias energéticas.
+        fr: >-
+          Elle est le fondement des crash-tests, de la conception des freins et des audits
+          énergétiques.
+        zh: >-
+          它是碰撞测试、制动器设计和能源审计的基础。
+        ja: >-
+          衝突テスト、ブレーキの設計、エネルギー監査の基盤である。
+  useCases:
+    - title:
+        es: Seguridad automotriz
+        en: Automotive safety
+        pt: Segurança automotiva
+        fr: Sécurité automobile
+        zh: 汽车安全
+        ja: 自動車の安全性
+      description:
+        es: >-
+          Calcula la energía que una zona de deformación debe absorber y la distancia que necesita un
+          vehículo para frenar.
+        en: >-
+          It calculates the energy a crumple zone must absorb and the distance a vehicle needs to
+          brake.
+        pt: >-
+          Calcula a energia que uma zona de deformação deve absorver e a distância que um veículo
+          precisa para frear.
+        fr: >-
+          Elle calcule l'énergie qu'une zone de déformation doit absorber et la distance dont un
+          véhicule a besoin pour freiner.
+        zh: >-
+          用于计算溃缩区必须吸收的能量以及车辆制动所需的距离。
+        ja: >-
+          クラッシャブルゾーンが吸収すべきエネルギーと、車両が制動に必要な距離を計算する。
+    - title:
+        es: Frenos regenerativos
+        en: Regenerative braking
+        pt: Frenagem regenerativa
+        fr: Freinage régénératif
+        zh: 再生制动
+        ja: 回生ブレーキ
+      description:
+        es: >-
+          Los autos eléctricos convierten la energía cinética de frenado de vuelta en electricidad,
+          en vez de disiparla en calor.
+        en: >-
+          Electric cars convert braking kinetic energy back into electricity instead of dissipating
+          it as heat.
+        pt: >-
+          Os carros elétricos convertem a energia cinética da frenagem de volta em eletricidade, em
+          vez de dissipá-la em calor.
+        fr: >-
+          Les voitures électriques reconvertissent l'énergie cinétique du freinage en électricité au
+          lieu de la dissiper en chaleur.
+        zh: >-
+          电动汽车将制动时的动能重新转化为电能，而不是以热的形式耗散掉。
+        ja: >-
+          電気自動車は制動時の運動エネルギーを熱として散逸させず、再び電力へ変換する。
+    - title:
+        es: Auditorías energéticas
+        en: Energy audits
+        pt: Auditorias energéticas
+        fr: Audits énergétiques
+        zh: 能源审计
+        ja: エネルギー監査
+      description:
+        es: >-
+          Cuantifica cuánta energía se pierde en el arranque y parada de máquinas, guiando las
+          mejoras de eficiencia.
+        en: >-
+          It quantifies how much energy is lost in machine starts and stops, guiding efficiency
+          improvements.
+        pt: >-
+          Quantifica quanta energia é perdida na partida e parada de máquinas, orientando as
+          melhorias de eficiência.
+        fr: >-
+          Elle quantifie l'énergie perdue lors des démarrages et arrêts de machines, guidant les
+          améliorations d'efficacité.
+        zh: >-
+          用于量化机械启动和停止过程中的能量损失，为能效改进提供指导。
+        ja: >-
+          機械の起動・停止で失われるエネルギーを定量化し、効率改善の指針を与える。
+    - title:
+        es: Diseño de frenos industriales
+        en: Industrial brake design
+        pt: Projeto de freios industriais
+        fr: Conception de freins industriels
+        zh: 工业制动器设计
+        ja: 産業用ブレーキの設計
+      description:
+        es: >-
+          Dimensiona los discos y pastillas que deben disipar la energía cinética de cada detención
+          sin sobrecalentarse.
+        en: >-
+          It sizes the discs and pads that must dissipate the kinetic energy of each stop without
+          overheating.
+        pt: >-
+          Dimensiona os discos e pastilhas que devem dissipar a energia cinética de cada parada sem
+          superaquecer.
+        fr: >-
+          Elle dimensionne les disques et plaquettes qui doivent dissiper l'énergie cinétique de
+          chaque arrêt sans surchauffer.
+        zh: >-
+          用于确定每次停车时须耗散动能且不致过热的制动盘和制动片的尺寸。
+        ja: >-
+          毎回の停止時に過熱せず運動エネルギーを散逸させるディスクとパッドの寸法を設計する。
+  example:
+    title:
+      es: Un auto que frena desde 20 m/s
+      en: A car braking from 20 m/s
+      pt: Um carro freando a partir de 20 m/s
+      fr: Une voiture qui freine depuis 20 m/s
+      zh: 从20米/秒制动的汽车
+      ja: 20m/sからブレーキをかける車
+    lines:
+      - es: m = 1000 kg
+        en: m = 1000 kg
+        pt: m = 1000 kg
+        fr: m = 1000 kg
+        zh: m = 1000 千克
+        ja: m = 1000 kg
+      - es: v₀ = 0 m/s · v = 20 m/s
+        en: v₀ = 0 m/s · v = 20 m/s
+        pt: v₀ = 0 m/s · v = 20 m/s
+        fr: v₀ = 0 m/s · v = 20 m/s
+        zh: v₀ = 0 米/秒 · v = 20 米/秒
+        ja: v₀ = 0 m/s · v = 20 m/s
+      - es: ΔKE = ½ · m · v²
+        en: ΔKE = ½ · m · v²
+        pt: ΔKE = ½ · m · v²
+        fr: ΔKE = ½ · m · v²
+        zh: ΔKE = ½ · m · v²
+        ja: ΔKE = ½ · m · v²
+      - es: ΔKE = ½ × 1000 × 20² = ½ × 1000 × 400
+        en: ΔKE = ½ × 1000 × 20² = ½ × 1000 × 400
+        pt: ΔKE = ½ × 1000 × 20² = ½ × 1000 × 400
+        fr: ΔKE = ½ × 1000 × 20² = ½ × 1000 × 400
+        zh: ΔKE = ½ × 1000 × 20² = ½ × 1000 × 400
+        ja: ΔKE = ½ × 1000 × 20² = ½ × 1000 × 400
+      - es: W = ΔKE = 200 000 J = 200 kJ
+        en: W = ΔKE = 200,000 J = 200 kJ
+        pt: W = ΔKE = 200.000 J = 200 kJ
+        fr: W = ΔKE = 200 000 J = 200 kJ
+        zh: W = ΔKE = 200,000 焦耳 = 200 千焦
+        ja: W = ΔKE = 200,000 J = 200 kJ

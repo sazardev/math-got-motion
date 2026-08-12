@@ -1,0 +1,358 @@
+id: tsiolkovsky-rocket-equation
+title:
+  es: Ecuación del Cohete de Tsiolkovsky
+  en: Tsiolkovsky Rocket Equation
+  pt: Equação do Foguete de Tsiolkovsky
+  fr: Équation de la fusée de Tsiolkovsky
+  zh: 齐奥尔科夫斯基火箭方程
+  ja: ツィオルコフスキーのロケット方程式
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: delta-v
+    type: variable
+    value: Δv
+    explanation:
+      es: "Δv: el cambio total de velocidad que puede lograr el cohete."
+      en: "Δv: the total change in velocity the rocket can achieve."
+      pt: "Δv: a variação total de velocidade que o foguete pode atingir."
+      fr: "Δv : la variation totale de vitesse que la fusée peut atteindre."
+      zh: "Δv：火箭所能获得的总速度变化。"
+      ja: "Δv：ロケットが達成できる速度の総変化量。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: v-e
+    type: variable
+    value: vₑ
+    explanation:
+      es: "vₑ: la velocidad de expulsión de los gases respecto al cohete."
+      en: "vₑ: the exhaust velocity of the gases relative to the rocket."
+      pt: "vₑ: a velocidade de exaustão dos gases em relação ao foguete."
+      fr: "vₑ : la vitesse d'éjection des gaz par rapport à la fusée."
+      zh: "vₑ：气体相对于火箭的排气速度。"
+      ja: "vₑ：ロケットに対するガスの噴出速度。"
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: ln
+    type: operator
+    value: ln
+    explanation:
+      es: El logaritmo natural.
+      en: The natural logarithm.
+      pt: O logaritmo natural.
+      fr: Le logarithme népérien.
+      zh: 自然对数。
+      ja: 自然対数。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el argumento del logaritmo.
+      en: Opens the logarithm's argument.
+      pt: Abre o argumento do logaritmo.
+      fr: Ouvre l'argument du logarithme.
+      zh: 打开对数的自变量。
+      ja: 対数の真数を開始する括弧。
+  - id: m0
+    type: variable
+    value: m₀
+    explanation:
+      es: "m₀: la masa total del cohete al despegar, con todo el combustible."
+      en: "m₀: the rocket's total mass at liftoff, including all fuel."
+      pt: "m₀: a massa total do foguete na decolagem, incluindo todo o combustível."
+      fr: "m₀ : la masse totale de la fusée au décollage, carburant compris."
+      zh: "m₀：火箭起飞时的总质量，包括全部燃料。"
+      ja: "m₀：全燃料を含む、離床時のロケットの総質量。"
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: m-f
+    type: variable
+    value: m_f
+    explanation:
+      es: "m_f: la masa al agotarse el combustible, con el cohete ya vacío."
+      en: "m_f: the mass once the fuel is spent, with the rocket empty."
+      pt: "m_f: a massa quando o combustível acaba, com o foguete vazio."
+      fr: "m_f : la masse une fois le carburant épuisé, fusée vide."
+      zh: "m_f：燃料耗尽后火箭的质量，即空载时的质量。"
+      ja: "m_f：燃料を使い切った時点での、空になったロケットの質量。"
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el argumento del logaritmo.
+      en: Closes the logarithm's argument.
+      pt: Fecha o argumento do logaritmo.
+      fr: Ferme l'argument du logarithme.
+      zh: 关闭对数的自变量。
+      ja: 対数の真数を閉じる括弧。
+context:
+  author:
+    es: Konstantín Tsiolkovsky
+    en: Konstantin Tsiolkovsky
+    pt: Konstantin Tsiolkovsky
+    fr: Konstantin Tsiolkovski
+    zh: 康斯坦丁·齐奥尔科夫斯基
+    ja: コンスタンチン・ツィオルコフスキー
+  era:
+    es: Rusia, 1857–1935 · publicada en 1903
+    en: Russia, 1857–1935 · published in 1903
+    pt: Rússia, 1857–1935 · publicada em 1903
+    fr: Russie, 1857–1935 · publiée en 1903
+    zh: 俄国，1857–1935年 · 1903年发表
+    ja: ロシア、1857–1935年・1903年発表
+  history:
+    es: >-
+      En 1903, Konstantín Tsiolkovsky, un profesor ruso de matemáticas, publicó la ecuación que
+      describe cómo un cohete gana velocidad al expulsar masa: el cambio de velocidad depende del
+      logaritmo de la relación entre su masa inicial y su masa final. Demostró que ninguna etapa
+      única puede alcanzar la órbita terrestre y que la solución es apilar etapas que se descartan
+      a medida que agotan su combustible. Décadas después, esta relación guió el dimensionado del
+      programa Apolo: el Saturno V consumía unas 2500 toneladas para poner en órbita apenas 45.
+    en: >-
+      In 1903 Konstantin Tsiolkovsky, a Russian mathematics teacher, published the equation
+      describing how a rocket gains speed by expelling mass: the change in velocity depends on the
+      logarithm of the ratio between its initial and final mass. He showed that no single stage can
+      reach Earth orbit and that the answer is stacking stages that are discarded as they burn out.
+      Decades later this relation guided the scaling of the Apollo program: the Saturn V consumed
+      some 2,500 tonnes to place barely 45 in orbit.
+    pt: >-
+      Em 1903, Konstantin Tsiolkovsky, um professor russo de matemática, publicou a equação que
+      descreve como um foguete ganha velocidade ao expelir massa: a variação de velocidade depende
+      do logaritmo da razão entre a massa inicial e a final. Ele mostrou que nenhum estágio único
+      consegue alcançar a órbita terrestre e que a solução é empilhar estágios descartados à medida
+      que consomem seu combustível. Décadas depois, essa relação guiou o dimensionamento do
+      programa Apollo: o Saturno V consumia cerca de 2.500 toneladas para colocar em órbita apenas
+      45.
+    fr: >-
+      En 1903, Konstantin Tsiolkovski, professeur de mathématiques russe, publie l'équation
+      décrivant comment une fusée gagne de la vitesse en expulsant de la masse : la variation de
+      vitesse dépend du logarithme du rapport entre sa masse initiale et sa masse finale. Il montre
+      qu'aucun étage unique ne peut atteindre l'orbite terrestre et que la solution consiste à
+      empiler des étages largués au fur et à mesure qu'ils épuisent leur carburant. Des décennies
+      plus tard, cette relation a guidé le dimensionnement du programme Apollo : la Saturn V
+      consumait près de 2 500 tonnes pour placer à peine 45 en orbite.
+    zh: >-
+      1903年，俄国数学教师康斯坦丁·齐奥尔科夫斯基发表了描述火箭如何通过排出质量获得速度的方程：速度变化
+      取决于初始质量与最终质量之比的自然对数。他证明单级火箭无法到达地球轨道，解决办法是堆叠多级火箭，
+      每级燃尽后即被抛弃。几十年后，这一关系指导了阿波罗计划的规模设计：土星五号消耗约2500吨推进剂，
+      却只把约45吨送入轨道。
+    ja: >-
+      1903年、ロシアの数学教師コンスタンチン・ツィオルコフスキーは、質量を放出することでロケットが
+      どのように速度を得るかを表す方程式を発表した。速度の変化は、初期質量と最終質量の比の自然対数に
+      依存する。彼は、単一の段では地球軌道に到達できず、燃え尽きた段を順に切り離す多段式が解決策である
+      ことを示した。数十年後、この関係式はアポロ計画の規模設計を導いた。サターンVは約2500トンを消費して、
+      わずか約45トンを軌道に乗せた。
+  timeline:
+    - year: "1903"
+      label:
+        es: >-
+          Tsiolkovsky publica la ecuación del cohete en la revista rusa "Naúchnoe Obozrénie".
+        en: >-
+          Tsiolkovsky publishes the rocket equation in the Russian journal "Nauchnoye Obozreniye".
+        pt: >-
+          Tsiolkovsky publica a equação do foguete na revista russa "Naúchnoe Obozrénie".
+        fr: >-
+          Tsiolkovski publie l'équation de la fusée dans la revue russe « Naoutchnoïe Obozrenie ».
+        zh: >-
+          齐奥尔科夫斯基在俄国《科学评论》杂志上发表火箭方程。
+        ja: >-
+          ツィオルコフスキーがロシアの雑誌『科学評論』にロケット方程式を発表する。
+    - year: "1926"
+      label:
+        es: >-
+          Robert Goddard lanza el primer cohete de combustible líquido, aplicando el mismo
+          principio.
+        en: >-
+          Robert Goddard launches the first liquid-fueled rocket, applying the same principle.
+        pt: >-
+          Robert Goddard lança o primeiro foguete de combustível líquido, aplicando o mesmo
+          princípio.
+        fr: >-
+          Robert Goddard lance la première fusée à propergol liquide, appliquant le même principe.
+        zh: >-
+          罗伯特·戈达德发射第一枚液体燃料火箭，应用了同样的原理。
+        ja: >-
+          ロバート・ゴダードが、同じ原理を応用した最初の液体燃料ロケットを打ち上げる。
+    - year: "1957"
+      label:
+        es: >-
+          El Sputnik 1 alcanza la órbita terrestre sobre un cohete R-7 de varias etapas.
+        en: >-
+          Sputnik 1 reaches Earth orbit atop a multi-stage R-7 rocket.
+        pt: >-
+          O Sputnik 1 alcança a órbita terrestre a bordo de um foguete R-7 de vários estágios.
+        fr: >-
+          Spoutnik 1 atteint l'orbite terrestre à bord d'une fusée R-7 à plusieurs étages.
+        zh: >-
+          斯普特尼克1号搭载多级R-7火箭进入地球轨道。
+        ja: >-
+          スプートニク1号が多段式のR-7ロケットで地球軌道に到達する。
+    - year: "1969"
+      label:
+        es: >-
+          El Saturno V del Apolo 11 aplica la ecuación en cada una de sus etapas hasta la Luna.
+        en: >-
+          Apollo 11's Saturn V applies the equation through every stage on the way to the Moon.
+        pt: >-
+          O Saturno V da Apollo 11 aplica a equação em cada um de seus estágios rumo à Lua.
+        fr: >-
+          La Saturn V d'Apollo 11 applique l'équation à chaque étage en route vers la Lune.
+        zh: >-
+          阿波罗11号的土星五号在飞向月球的每一级中运用了这一方程。
+        ja: >-
+          アポロ11号のサターンVが、月へ向かうすべての段でこの方程式を応用する。
+  useCases:
+    - title:
+        es: Vehículos de lanzamiento
+        en: Launch vehicles
+        pt: Veículos de lançamento
+        fr: Lanceurs
+        zh: 运载火箭
+        ja: ロケット
+      description:
+        es: >-
+          Dimensiona el presupuesto de combustible y la masa de cada etapa de un cohete.
+        en: >-
+          It sizes the fuel budget and the mass of each rocket stage.
+        pt: >-
+          Dimensiona o orçamento de combustível e a massa de cada estágio do foguete.
+        fr: >-
+          Elle dimensionne le budget de carburant et la masse de chaque étage d'une fusée.
+        zh: >-
+          用于确定火箭每一级的燃料预算和质量。
+        ja: >-
+          ロケットの各段の燃料予算と質量を設計する。
+    - title:
+        es: Satélites y sondas
+        en: Satellites and probes
+        pt: Satélites e sondas
+        fr: Satellites et sondes
+        zh: 卫星与探测器
+        ja: 衛星・探査機
+      description:
+        es: >-
+          Estima cuánto propulsor necesita una nave para alcanzar y mantener su órbita.
+        en: >-
+          It estimates how much propellant a spacecraft needs to reach and hold its orbit.
+        pt: >-
+          Estima quanto propelente uma nave precisa para alcançar e manter sua órbita.
+        fr: >-
+          Elle estime le propergol nécessaire à une sonde pour atteindre et conserver son orbite.
+        zh: >-
+          估算航天器到达并维持其轨道所需的推进剂。
+        ja: >-
+          宇宙機が軌道に到達し維持するのに必要な推進剤量を推定する。
+    - title:
+        es: Misiones interplanetarias
+        en: Interplanetary missions
+        pt: Missões interplanetárias
+        fr: Missions interplanétaires
+        zh: 行星际任务
+        ja: 惑星間ミッション
+      description:
+        es: >-
+          Define los Δv necesarios para salir de la Tierra y frenar ante otro planeta.
+        en: >-
+          It defines the Δv needed to leave Earth and brake at another planet.
+        pt: >-
+          Define os Δv necessários para sair da Terra e frear diante de outro planeta.
+        fr: >-
+          Elle définit les Δv nécessaires pour quitter la Terre et freiner devant une autre planète.
+        zh: >-
+          定义离开地球并到达另一颗行星前制动所需的速度增量Δv。
+        ja: >-
+          地球を離れ、別の惑星の前で減速するために必要なΔvを定義する。
+    - title:
+        es: Propulsión espacial
+        en: Spacecraft propulsion
+        pt: Propulsão espacial
+        fr: Propulsion spatiale
+        zh: 航天推进
+        ja: 宇宙推進
+      description:
+        es: >-
+          Compara el rendimiento de motores químicos e iónicos en términos de Δv disponible.
+        en: >-
+          It compares chemical and ion engines in terms of available Δv.
+        pt: >-
+          Compara o desempenho de motores químicos e iônicos em termos de Δv disponível.
+        fr: >-
+          Elle compare les moteurs chimiques et ioniques en termes de Δv disponible.
+        zh: >-
+          从可用速度增量Δv的角度比较化学发动机与离子发动机的性能。
+        ja: >-
+          化学エンジンとイオンエンジンの性能を、利用可能なΔvの観点で比較する。
+  example:
+    title:
+      es: Un cohete que pierde el 80% de su masa
+      en: A rocket that sheds 80% of its mass
+      pt: Um foguete que perde 80% da sua massa
+      fr: Une fusée qui perd 80 % de sa masse
+      zh: 丢掉80%质量的火箭
+      ja: 質量の80%を失うロケット
+    lines:
+      - es: vₑ = 3000 m/s, m₀ = 100 t, m_f = 20 t
+        en: vₑ = 3000 m/s, m₀ = 100 t, m_f = 20 t
+        pt: vₑ = 3000 m/s, m₀ = 100 t, m_f = 20 t
+        fr: vₑ = 3000 m/s, m₀ = 100 t, m_f = 20 t
+        zh: vₑ = 3000 米/秒，m₀ = 100 吨，m_f = 20 吨
+        ja: vₑ = 3000 m/s、m₀ = 100 t、m_f = 20 t
+      - es: m₀/m_f = 100/20 = 5
+        en: m₀/m_f = 100/20 = 5
+        pt: m₀/m_f = 100/20 = 5
+        fr: m₀/m_f = 100/20 = 5
+        zh: m₀/m_f = 100/20 = 5
+        ja: m₀/m_f = 100/20 = 5
+      - es: ln(5) ≈ 1.609
+        en: ln(5) ≈ 1.609
+        pt: ln(5) ≈ 1,609
+        fr: ln(5) ≈ 1,609
+        zh: ln(5) ≈ 1.609
+        ja: ln(5) ≈ 1.609
+      - es: Δv = 3000 × 1.609
+        en: Δv = 3000 × 1.609
+        pt: Δv = 3000 × 1,609
+        fr: Δv = 3000 × 1,609
+        zh: Δv = 3000 × 1.609
+        ja: Δv = 3000 × 1.609
+      - es: Δv ≈ 4828 m/s
+        en: Δv ≈ 4828 m/s
+        pt: Δv ≈ 4828 m/s
+        fr: Δv ≈ 4828 m/s
+        zh: Δv ≈ 4828 米/秒
+        ja: Δv ≈ 4828 m/s
+      - es: Δv ≈ 4.83 km/s
+        en: Δv ≈ 4.83 km/s
+        pt: Δv ≈ 4,83 km/s
+        fr: Δv ≈ 4,83 km/s
+        zh: Δv ≈ 4.83 千米/秒
+        ja: Δv ≈ 4.83 km/s

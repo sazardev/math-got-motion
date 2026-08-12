@@ -1,0 +1,306 @@
+id: reaction-rate
+title:
+  es: Ley de Velocidad de Reacción
+  en: Reaction Rate Law
+  pt: Lei de Velocidade de Reação
+  fr: Loi de Vitesse de Réaction
+  zh: 反应速率定律
+  ja: 反応速度則
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: rate
+    type: variable
+    value: rate
+    explanation:
+      es: La velocidad de la reacción, la cantidad de reactivo que se consume por unidad de tiempo.
+      en: The reaction rate, the amount of reactant consumed per unit of time.
+      pt: A velocidade da reação, a quantidade de reagente consumida por unidade de tempo.
+      fr: La vitesse de réaction, la quantité de réactif consommée par unité de temps.
+      zh: 反应速率,即单位时间内消耗的反应物量。
+      ja: 反応速度。単位時間あたりに消費される反応物の量。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: rate-constant
+    type: constant
+    value: k
+    explanation:
+      es: La constante de velocidad, que depende de la temperatura y del catalizador.
+      en: The rate constant, which depends on temperature and on any catalyst.
+      pt: A constante de velocidade, que depende da temperatura e do catalisador.
+      fr: La constante de vitesse, qui dépend de la température et du catalyseur.
+      zh: 速率常数,它取决于温度和催化剂。
+      ja: 速度定数。温度や触媒に依存する。
+  - id: reactant-a
+    type: variable
+    value: "[A]"
+    explanation:
+      es: La concentración del reactivo A, en mol/L.
+      en: The concentration of reactant A, in mol/L.
+      pt: A concentração do reagente A, em mol/L.
+      fr: La concentration du réactif A, en mol/L.
+      zh: 反应物A的浓度,单位是mol/L。
+      ja: 反応物Aの濃度。単位はmol/L。
+  - id: order-a
+    type: superscript
+    value: m
+    explanation:
+      es: El orden de la reacción respecto de A, determinado experimentalmente y no por el coeficiente estequiométrico.
+      en: The order of the reaction with respect to A, determined experimentally, not by the stoichiometric coefficient.
+      pt: A ordem da reação em relação a A, determinada experimentalmente, não pelo coeficiente estequiométrico.
+      fr: L'ordre de la réaction par rapport à A, déterminé expérimentalement et non par le coefficient stoechiométrique.
+      zh: 反应对A的级数,由实验确定,而不是由化学计量系数确定。
+      ja: Aに関する反応次数。化学量論係数ではなく実験によって決定される。
+  - id: reactant-b
+    type: variable
+    value: "[B]"
+    explanation:
+      es: La concentración del reactivo B, en mol/L.
+      en: The concentration of reactant B, in mol/L.
+      pt: A concentração do reagente B, em mol/L.
+      fr: La concentration du réactif B, en mol/L.
+      zh: 反应物B的浓度,单位是mol/L。
+      ja: 反応物Bの濃度。単位はmol/L。
+  - id: order-b
+    type: superscript
+    value: n
+    explanation:
+      es: El orden de la reacción respecto de B, que también surge de la experimentación.
+      en: The order of the reaction with respect to B, which likewise comes from experiment.
+      pt: A ordem da reação em relação a B, que também vem da experimentação.
+      fr: L'ordre de la réaction par rapport à B, qui découle lui aussi de l'expérience.
+      zh: 反应对B的级数,同样来自实验。
+      ja: Bに関する反応次数。こちらも実験から得られる。
+context:
+  author:
+    es: Basada en la cinética química de Guldberg y Waage
+    en: Based on the chemical kinetics of Guldberg and Waage
+    pt: Baseada na cinética química de Guldberg e Waage
+    fr: Basée sur la cinétique chimique de Guldberg et Waage
+    zh: 基于古德贝格和瓦格提出的化学动力学
+    ja: グルドベリとヴァーゲの化学反応速度論に基づく
+  era:
+    es: Noruega, 1864–1879
+    en: Norway, 1864–1879
+    pt: Noruega, 1864–1879
+    fr: Norvège, 1864–1879
+    zh: 挪威,1864–1879年
+    ja: ノルウェー、1864–1879年
+  history:
+    es: >-
+      La ley de velocidad describe cuán rápido avanza una reacción, pues la velocidad depende de las
+      concentraciones de los reactivos elevadas a ciertos exponentes y de la constante de velocidad k,
+      que resume el efecto de la temperatura. Los exponentes m y n se determinan en el laboratorio y,
+      en general, no coinciden con los coeficientes de la ecuación balanceada. La ley explica por qué
+      las reacciones se ralentizan a medida que los reactivos se consumen, y es la base del diseño de
+      procesos industriales y del estudio del metabolismo de los fármacos en el organismo.
+    en: >-
+      The rate law describes how fast a reaction proceeds, since the rate depends on the concentrations
+      of the reactants raised to certain exponents and on the rate constant k, which summarizes the
+      effect of temperature. The exponents m and n are determined in the laboratory and, in general, do
+      not match the coefficients of the balanced equation. The law explains why reactions slow down as
+      reactants are depleted, and it underpins the design of industrial processes and the study of drug
+      metabolism in the body.
+    pt: >-
+      A lei de velocidade descreve o quão rápido uma reação avança, pois a velocidade depende das
+      concentrações dos reagentes elevadas a certos expoentes e da constante de velocidade k, que resume
+      o efeito da temperatura. Os expoentes m e n são determinados em laboratório e, em geral, não
+      coincidem com os coeficientes da equação balanceada. A lei explica por que as reações desaceleram
+      à medida que os reagentes se esgotam, e está na base do projeto de processos industriais e do
+      estudo do metabolismo de fármacos no organismo.
+    fr: >-
+      La loi de vitesse décrit la rapidité d'avancement d'une réaction, car la vitesse dépend des
+      concentrations des réactifs élevées à certains exposants et de la constante de vitesse k, qui
+      résume l'effet de la température. Les exposants m et n sont déterminés au laboratoire et, en
+      général, ne coïncident pas avec les coefficients de l'équation équilibrée. La loi explique
+      pourquoi les réactions ralentissent à mesure que les réactifs s'épuisent, et elle est à la base de
+      la conception des procédés industriels et de l'étude du métabolisme des médicaments dans
+      l'organisme.
+    zh: >-
+      速率定律描述反应进行得有多快,因为反应速率取决于各反应物浓度乘以其指数以及速率常数k,k概括了温度的影响。指数m和n通过实验确定,通常与配平方程中的
+      化学计量系数不一致。该定律解释了为什么反应物不断消耗时反应会减慢,它是工业过程设计和药物在体内代谢研究的基础。
+    ja: >-
+      速度則は反応がどれだけ速く進むかを表す。反応速度は、反応物の濃度をそれぞれ指数乗したものと、温度の影響をまとめた速度定数kに依存する。指数mとnは実験で決定され、
+      一般に化学量論係数とは一致しない。この法則は、反応物が減るにつれて反応が遅くなる理由を説明し、工業プロセスの設計や体内での薬物代謝の研究の基礎となっている。
+  timeline:
+    - year: "1864"
+      label:
+        es: >-
+          Guldberg y Waage formulan la ley de acción de masas, que relaciona la velocidad con las concentraciones.
+        en: >-
+          Guldberg and Waage formulate the law of mass action, relating reaction rate to concentrations.
+        pt: >-
+          Guldberg e Waage formulam a lei da ação das massas, relacionando a velocidade às concentrações.
+        fr: >-
+          Guldberg et Waage formulent la loi d'action de masse, reliant la vitesse aux concentrations.
+        zh: >-
+          古德贝格和瓦格提出质量作用定律,将反应速率与浓度联系起来。
+        ja: >-
+          グルドベリとヴァーゲが質量作用の法則を定式化し、反応速度と濃度の関係を示す。
+    - year: "1889"
+      label:
+        es: >-
+          Arrhenius publica su ecuación, que explica cómo depende la constante de velocidad de la temperatura.
+        en: >-
+          Arrhenius publishes his equation, explaining how the rate constant depends on temperature.
+        pt: >-
+          Arrhenius publica sua equação, que explica como a constante de velocidade depende da temperatura.
+        fr: >-
+          Arrhenius publie son équation, qui explique comment la constante de vitesse dépend de la température.
+        zh: >-
+          阿伦尼乌斯发表其方程,解释了速率常数如何随温度变化。
+        ja: >-
+          アレニウスが、速度定数が温度にどう依存するかを説明する方程式を発表する。
+    - year: Hoy
+      label:
+        es: >-
+          Los ingenieros de proceso la usan para dimensionar reactores industriales y los farmacólogos para estudiar el metabolismo de fármacos.
+        en: >-
+          Process engineers use it to size industrial reactors and pharmacologists to study drug metabolism.
+        pt: >-
+          Engenheiros de processo a usam para dimensionar reatores industriais e farmacologistas para estudar o metabolismo de fármacos.
+        fr: >-
+          Les ingénieurs de procédés l'utilisent pour dimensionner les réacteurs industriels et les pharmacologues pour étudier le métabolisme des médicaments.
+        zh: >-
+          工艺工程师用它来设计工业反应器,药理学家用它来研究药物代谢。
+        ja: >-
+          プロセスエンジニアは工業用反応器の設計に、薬理学者は薬物代謝の研究にこの法則を使う。
+  useCases:
+    - title:
+        es: Industria química
+        en: Chemical industry
+        pt: Indústria química
+        fr: Industrie chimique
+        zh: 化学工业
+        ja: 化学産業
+      description:
+        es: >-
+          Permite predecir cuánto tarda una reacción en un reactor industrial y ajustar temperatura, presión y catalizador.
+        en: >-
+          It predicts how long a reaction takes in an industrial reactor and how to tune temperature, pressure, and catalyst.
+        pt: >-
+          Permite prever quanto tempo uma reação leva em um reator industrial e ajustar temperatura, pressão e catalisador.
+        fr: >-
+          Elle permet de prévoir la durée d'une réaction dans un réacteur industriel et d'ajuster température, pression et catalyseur.
+        zh: >-
+          它可以预测反应在工业反应器中的耗时,并调整温度、压力和催化剂。
+        ja: >-
+          工業用反応器での反応所要時間を予測し、温度・圧力・触媒の調整に役立つ。
+    - title:
+        es: Farmacología
+        en: Pharmacology
+        pt: Farmacologia
+        fr: Pharmacologie
+        zh: 药理学
+        ja: 薬理学
+      description:
+        es: >-
+          El metabolismo de los fármacos sigue leyes de velocidad, lo que permite calcular dosis y tiempos de eliminación.
+        en: >-
+          Drug metabolism follows rate laws, allowing doses and elimination times to be calculated.
+        pt: >-
+          O metabolismo de fármacos segue leis de velocidade, permitindo calcular doses e tempos de eliminação.
+        fr: >-
+          Le métabolisme des médicaments suit des lois de vitesse, ce qui permet de calculer doses et temps d'élimination.
+        zh: >-
+          药物代谢遵循速率定律,据此可以计算剂量和消除时间。
+        ja: >-
+          薬物代謝は速度則に従い、投与量や消失時間の計算に使われる。
+    - title:
+        es: Química ambiental
+        en: Environmental chemistry
+        pt: Química ambiental
+        fr: Chimie de l'environnement
+        zh: 环境化学
+        ja: 環境化学
+      description:
+        es: >-
+          Modela cómo se descomponen los contaminantes en la atmósfera, el suelo y el agua a lo largo del tiempo.
+        en: >-
+          It models how pollutants break down in air, soil, and water over time.
+        pt: >-
+          Modela como os poluentes se decompõem no ar, no solo e na água ao longo do tempo.
+        fr: >-
+          Elle modélise la dégradation des polluants dans l'air, le sol et l'eau au fil du temps.
+        zh: >-
+          它模拟污染物在空气、土壤和水体中随时间的分解过程。
+        ja: >-
+          大気・土壌・水の中での汚染物質の経時的な分解をモデル化する。
+    - title:
+        es: Industria alimentaria
+        en: Food industry
+        pt: Indústria alimentícia
+        fr: Industrie agroalimentaire
+        zh: 食品工业
+        ja: 食品産業
+      description:
+        es: >-
+          Describe el deterioro y la pérdida de nutrientes de los alimentos para fijar su vida útil.
+        en: >-
+          It describes food spoilage and nutrient loss to set shelf life.
+        pt: >-
+          Descreve a deterioração e a perda de nutrientes dos alimentos para fixar sua vida útil.
+        fr: >-
+          Elle décrit l'altération et la perte de nutriments des aliments pour fixer leur durée de conservation.
+        zh: >-
+          它描述食品的变质和营养流失,用于确定保质期。
+        ja: >-
+          食品の劣化や栄養素の減少を表し、賞味期限の設定に使われる。
+  example:
+    title:
+      es: Efecto de duplicar [A]
+      en: Effect of doubling [A]
+      pt: Efeito de dobrar [A]
+      fr: Effet d'un doublement de [A]
+      zh: 将[A]加倍的效果
+      ja: "[A]を2倍にした効果"
+    lines:
+      - es: rate = k·[A]²·[B]
+        en: rate = k·[A]²·[B]
+        pt: rate = k·[A]²·[B]
+        fr: rate = k·[A]²·[B]
+        zh: rate = k·[A]²·[B]
+        ja: rate = k·[A]²·[B]
+      - es: k = 0.5 L³·mol⁻³·s⁻¹
+        en: k = 0.5 L³·mol⁻³·s⁻¹
+        pt: k = 0,5 L³·mol⁻³·s⁻¹
+        fr: k = 0,5 L³·mol⁻³·s⁻¹
+        zh: k = 0.5 L³·mol⁻³·s⁻¹
+        ja: k = 0.5 L³·mol⁻³·s⁻¹
+      - es: "[A] = 0.2 mol/L, [B] = 0.4 mol/L"
+        en: "[A] = 0.2 mol/L, [B] = 0.4 mol/L"
+        pt: "[A] = 0,2 mol/L, [B] = 0,4 mol/L"
+        fr: "[A] = 0,2 mol/L, [B] = 0,4 mol/L"
+        zh: "[A] = 0.2 mol/L, [B] = 0.4 mol/L"
+        ja: "[A] = 0.2 mol/L, [B] = 0.4 mol/L"
+      - es: rate = 0.5 × (0.2)² × 0.4 = 0.008 mol/(L·s)
+        en: rate = 0.5 × (0.2)² × 0.4 = 0.008 mol/(L·s)
+        pt: rate = 0,5 × (0,2)² × 0,4 = 0,008 mol/(L·s)
+        fr: rate = 0,5 × (0,2)² × 0,4 = 0,008 mol/(L·s)
+        zh: rate = 0.5 × (0.2)² × 0.4 = 0.008 mol/(L·s)
+        ja: rate = 0.5 × (0.2)² × 0.4 = 0.008 mol/(L·s)
+      - es: Duplicar [A] → rate = 0.5 × (0.4)² × 0.4
+        en: Doubling [A] → rate = 0.5 × (0.4)² × 0.4
+        pt: Dobrar [A] → rate = 0,5 × (0,4)² × 0,4
+        fr: Doubler [A] → rate = 0,5 × (0,4)² × 0,4
+        zh: 将[A]加倍 → rate = 0.5 × (0.4)² × 0.4
+        ja: "[A]を2倍に → rate = 0.5 × (0.4)² × 0.4"
+      - es: rate = 0.032 mol/(L·s) → la velocidad se cuadruplica
+        en: rate = 0.032 mol/(L·s) → the rate quadruples
+        pt: rate = 0,032 mol/(L·s) → a velocidade quadruplica
+        fr: rate = 0,032 mol/(L·s) → la vitesse quadruple
+        zh: rate = 0.032 mol/(L·s) → 速率变为原来的4倍
+        ja: rate = 0.032 mol/(L·s) → 速度は4倍になる

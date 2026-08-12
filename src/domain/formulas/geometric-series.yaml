@@ -1,0 +1,421 @@
+id: geometric-series
+title:
+  es: Serie Geométrica
+  en: Geometric Series
+  pt: Série Geométrica
+  fr: Série géométrique
+  zh: 等比数列求和
+  ja: 等比級数
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: sn
+    type: variable
+    value: Sₙ
+    explanation:
+      es: La suma de los n primeros términos de la serie geométrica.
+      en: The sum of the first n terms of the geometric series.
+      pt: A soma dos n primeiros termos da série geométrica.
+      fr: La somme des n premiers termes de la série géométrique.
+      zh: 等比数列前 n 项的和。
+      ja: 等比級数の初項から第n項までの和。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a la fórmula siguiente.
+      en: Is equal to the following formula.
+      pt: É igual à fórmula a seguir.
+      fr: Est égal à la formule suivante.
+      zh: 等于下面的公式。
+      ja: 次の公式に等しい。
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: El primer término de la serie.
+      en: The first term of the series.
+      pt: O primeiro termo da série.
+      fr: Le premier terme de la série.
+      zh: 数列的首项。
+      ja: 数列の初項。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el numerador de la fracción.
+      en: Opens the numerator of the fraction.
+      pt: Abre o numerador da fração.
+      fr: Ouvre le numérateur de la fraction.
+      zh: 打开分数的分子。
+      ja: 分数の分子の括弧を開く。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: El 1, primer término de la resta.
+      en: The 1, first term of the subtraction.
+      pt: O 1, primeiro termo da subtração.
+      fr: Le 1, premier terme de la soustraction.
+      zh: 减法中的第一项1。
+      ja: 引き算の最初の項である1。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: Menos la razón elevada a la cantidad de términos.
+      en: Minus the ratio raised to the number of terms.
+      pt: Menos a razão elevada à quantidade de termos.
+      fr: Moins la raison élevée au nombre de termes.
+      zh: 减去公比的项数次幂。
+      ja: 公比を項数で累乗したものを引く。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: La razón común, el factor fijo entre términos consecutivos.
+      en: The common ratio, the fixed factor between consecutive terms.
+      pt: A razão comum, o fator fixo entre termos consecutivos.
+      fr: La raison, le facteur fixe entre termes consécutifs.
+      zh: 公比，即相邻两项之间的固定倍数。
+      ja: 公比。隣り合う項の間の一定の倍率。
+  - id: r-exp
+    type: superscript
+    value: n
+    explanation:
+      es: El exponente n, la cantidad de términos sumados.
+      en: The exponent n, the number of terms being summed.
+      pt: O expoente n, a quantidade de termos somados.
+      fr: L'exposant n, le nombre de termes additionnés.
+      zh: 指数 n，即被求和的项数。
+      ja: 指数n。足し合わせる項の数。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el numerador.
+      en: Closes the numerator.
+      pt: Fecha o numerador.
+      fr: Ferme le numérateur.
+      zh: 闭合分子括号。
+      ja: 分子の括弧を閉じる。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre el denominador.
+      en: Divided by the denominator.
+      pt: Dividido pelo denominador.
+      fr: Divisé par le dénominateur.
+      zh: 除以分母。
+      ja: 分母で割る。
+  - id: open-paren-2
+    type: operator
+    value: (
+    explanation:
+      es: Abre el denominador.
+      en: Opens the denominator.
+      pt: Abre o denominador.
+      fr: Ouvre le dénominateur.
+      zh: 打开分母括号。
+      ja: 分母の括弧を開く。
+  - id: one-2
+    type: number
+    value: "1"
+    explanation:
+      es: El 1 del denominador.
+      en: The 1 in the denominator.
+      pt: O 1 do denominador.
+      fr: Le 1 du dénominateur.
+      zh: 分母中的1。
+      ja: 分母にある1。
+  - id: minus-2
+    type: operator
+    value: −
+    explanation:
+      es: Menos la razón.
+      en: Minus the ratio.
+      pt: Menos a razão.
+      fr: Moins la raison.
+      zh: 减去公比。
+      ja: 公比を引く。
+  - id: r-2
+    type: variable
+    value: r
+    explanation:
+      es: La misma razón común.
+      en: The same common ratio.
+      pt: A mesma razão comum.
+      fr: La même raison.
+      zh: 同一个公比。
+      ja: 同じ公比。
+  - id: close-paren-2
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el denominador.
+      en: Closes the denominator.
+      pt: Fecha o denominador.
+      fr: Ferme le dénominateur.
+      zh: 闭合分母括号。
+      ja: 分母の括弧を閉じる。
+context:
+  author:
+    es: Arquímedes y Euclides
+    en: Archimedes and Euclid
+    pt: Arquimedes e Euclides
+    fr: Archimède et Euclide
+    zh: 阿基米德与欧几里得
+    ja: アルキメデスとユークリッド
+  era:
+    es: Grecia, s. III a.C.
+    en: Greece, 3rd century BC
+    pt: Grécia, séc. III a.C.
+    fr: Grèce, IIIe siècle av. J.-C.
+    zh: 希腊，公元前3世纪
+    ja: ギリシャ、紀元前3世紀
+  history:
+    es: >-
+      Arquímedes, en su cuadratura de la parábola (c. 250 a.C.), sumó la serie geométrica 1 + 1/4 +
+      1/16 + ... para hallar el área bajo la curva, un uso pionero del caso infinito. Euclides había
+      demostrado antes el caso finito en la proposición 35 del Libro IX de los Elementos. La fórmula,
+      que hoy se enseña en cualquier curso de álgebra, es la base de la convergencia de las series y
+      aparece cuando |r| < 1.
+    en: >-
+      Archimedes, in his quadrature of the parabola (c. 250 BC), summed the geometric series 1 + 1/4 +
+      1/16 + ... to find the area under the curve, a pioneering use of the infinite case. Euclid had
+      already proved the finite case in Proposition 35 of Book IX of the Elements. The formula, now
+      taught in any algebra course, is the basis of series convergence and appears whenever |r| < 1.
+    pt: >-
+      Arquimedes, em sua quadratura da parábola (c. 250 a.C.), somou a série geométrica 1 + 1/4 + 1/16
+      + ... para encontrar a área sob a curva, um uso pioneiro do caso infinito. Euclides já havia
+      demonstrado o caso finito na Proposição 35 do Livro IX dos Elementos. A fórmula, hoje ensinada em
+      qualquer curso de álgebra, é a base da convergência de séries e aparece sempre que |r| < 1.
+    fr: >-
+      Archimède, dans sa quadrature de la parabole (v. 250 av. J.-C.), a sommé la série géométrique 1 +
+      1/4 + 1/16 + ... pour trouver l'aire sous la courbe, un usage pionnier du cas infini. Euclide
+      avait déjà démontré le cas fini dans la Proposition 35 du Livre IX des Éléments. La formule,
+      aujourd'hui enseignée dans tous les cours d'algèbre, est à la base de la convergence des séries
+      et apparaît dès que |r| < 1.
+    zh: >-
+      阿基米德在求抛物线弓形面积（约公元前250年）时，求出了等比级数 1 + 1/4 + 1/16 + …… 的和，这是无穷情形
+      的最早应用之一。此前，欧几里得已在《几何原本》第九卷命题35中证明了有限情形。这条公式如今是任何代数课程
+      都讲授的内容，也是级数收敛理论的基础，当 |r| < 1 时它便会反复出现。
+    ja: >-
+      アルキメデスは放物線の求積（紀元前250年頃）において、等比級数 1 + 1/4 + 1/16 + … の和を求めて曲線下の
+      面積を計算した。これは無限の場合の先駆的な利用である。有限の場合については、ユークリッドが『原論』第9巻の
+      命題35で既に証明していた。今日、代数のどの教科書でも教えられるこの公式は、級数の収束の基礎であり、|r| < 1
+      のとき至る所に現れる。
+  timeline:
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides demuestra el caso finito de la suma en la proposición 35 del Libro IX de los
+          Elementos.
+        en: >-
+          Euclid proves the finite case of the sum in Proposition 35 of Book IX of the Elements.
+        pt: >-
+          Euclides demonstra o caso finito da soma na Proposição 35 do Livro IX dos Elementos.
+        fr: >-
+          Euclide démontre le cas fini de la somme dans la Proposition 35 du Livre IX des Éléments.
+        zh: >-
+          欧几里得在《几何原本》第九卷命题35中证明了求和的有限情形。
+        ja: >-
+          ユークリッドが『原論』第9巻の命題35で、この和の有限の場合を証明する。
+    - year: c. 250 a.C.
+      label:
+        es: >-
+          Arquímedes suma la serie infinita 1/4 + 1/16 + ... en la cuadratura de la parábola.
+        en: >-
+          Archimedes sums the infinite series 1/4 + 1/16 + ... in the quadrature of the parabola.
+        pt: >-
+          Arquimedes soma a série infinita 1/4 + 1/16 + ... na quadratura da parábola.
+        fr: >-
+          Archimède somme la série infinie 1/4 + 1/16 + ... dans la quadrature de la parabole.
+        zh: >-
+          阿基米德在求抛物线弓形面积时求出了无穷级数 1/4 + 1/16 + …… 的和。
+        ja: >-
+          アルキメデスが放物線の求積で、無限級数 1/4 + 1/16 + … の和を求める。
+    - year: "1666"
+      label:
+        es: >-
+          Newton desarrolla el cálculo y las series infinitas, haciendo del límite de las series
+          geométricas una herramienta central.
+        en: >-
+          Newton develops calculus and infinite series, making the limit of geometric series a central
+          tool.
+        pt: >-
+          Newton desenvolve o cálculo e as séries infinitas, tornando o limite das séries geométricas
+          uma ferramenta central.
+        fr: >-
+          Newton développe le calcul infinitésimal et les séries infinies, faisant de la limite des
+          séries géométriques un outil central.
+        zh: >-
+          牛顿发展了微积分和无穷级数，使等比级数的极限成为核心工具。
+        ja: >-
+          ニュートンが微積分学と無限級数を発展させ、等比級数の極限を中心的な道具にした。
+    - year: Hoy
+      label:
+        es: >-
+          La fórmula subyace al valor presente de anualidades, a la complejidad de algoritmos y a los
+          fractales.
+        en: >-
+          The formula underlies the present value of annuities, algorithm complexity, and fractals.
+        pt: >-
+          A fórmula está na base do valor presente de anuidades, da complexidade de algoritmos e dos
+          fractais.
+        fr: >-
+          La formule sous-tend la valeur actuelle des rentes, la complexité des algorithmes et les
+          fractales.
+        zh: >-
+          该公式是年金现值、算法复杂度和分形几何的基础。
+        ja: >-
+          この公式は年金の現在価値、アルゴリズムの計算量、フラクタルの基盤となっている。
+  useCases:
+    - title:
+        es: Finanzas
+        en: Finance
+        pt: Finanças
+        fr: Finance
+        zh: 金融
+        ja: 金融
+      description:
+        es: >-
+          El valor presente de una anualidad es una serie geométrica: cada pago se descuenta por un
+          factor fijo.
+        en: >-
+          The present value of an annuity is a geometric series: each payment is discounted by a fixed
+          factor.
+        pt: >-
+          O valor presente de uma anuidade é uma série geométrica: cada pagamento é descontado por um
+          fator fixo.
+        fr: >-
+          La valeur actuelle d'une rente est une série géométrique : chaque versement est actualisé
+          par un facteur fixe.
+        zh: >-
+          年金的现值就是一条等比级数：每期付款都按固定因子折现。
+        ja: >-
+          年金の現在価値は等比級数である。各支払いが一定の割引率で現在価値に割り戻される。
+    - title:
+        es: Algoritmos
+        en: Algorithms
+        pt: Algoritmos
+        fr: Algorithmes
+        zh: 算法
+        ja: アルゴリズム
+      description:
+        es: >-
+          Dividir un problema por la mitad en cada paso acumula un esfuerzo que forma una serie
+          geométrica.
+        en: >-
+          Halving a problem each step accumulates effort that forms a geometric series.
+        pt: >-
+          Reduzir um problema pela metade a cada passo acumula um esforço que forma uma série
+          geométrica.
+        fr: >-
+          Réduire un problème de moitié à chaque étape accumule un effort qui forme une série
+          géométrique.
+        zh: >-
+          每一步把问题规模减半，累计的工作量构成一条等比级数。
+        ja: >-
+          各ステップで問題を半分にしていくと、蓄積する計算量は等比級数をなす。
+    - title:
+        es: Física
+        en: Physics
+        pt: Física
+        fr: Physique
+        zh: 物理学
+        ja: 物理学
+      description:
+        es: >-
+          La paradoja de Zenón se resuelve sumando 1/2 + 1/4 + 1/8 + ..., que converge a 1.
+        en: >-
+          Zeno's paradox is resolved by summing 1/2 + 1/4 + 1/8 + ..., which converges to 1.
+        pt: >-
+          O paradoxo de Zenão se resolve somando 1/2 + 1/4 + 1/8 + ..., que converge para 1.
+        fr: >-
+          Le paradoxe de Zénon se résout en sommant 1/2 + 1/4 + 1/8 + ..., qui converge vers 1.
+        zh: >-
+          芝诺悖论通过求和 1/2 + 1/4 + 1/8 + …… 得到解决，其和为 1。
+        ja: >-
+          ゼノンのパラドックスは、1/2 + 1/4 + 1/8 + … という 1 に収束する級数の和を求めることで解決する。
+    - title:
+        es: Geometría fractal
+        en: Fractal geometry
+        pt: Geometria fractal
+        fr: Géométrie fractale
+        zh: 分形几何
+        ja: フラクタル幾何学
+      description:
+        es: >-
+          Los fractales clásicos como el triángulo de Sierpinski se construyen por escalas iteradas,
+          que se analizan con series geométricas.
+        en: >-
+          Classic fractals like the Sierpinski triangle are built by iterated scaling, analyzed with
+          geometric series.
+        pt: >-
+          Fractais clássicos como o triângulo de Sierpinski são construídos por escalas iteradas,
+          analisadas com séries geométricas.
+        fr: >-
+          Les fractales classiques comme le triangle de Sierpiński se construisent par mises à l'échelle
+          itérées, analysées avec des séries géométriques.
+        zh: >-
+          谢尔宾斯基三角形等经典分形通过不断缩放构造而成，可用等比级数进行分析。
+        ja: >-
+          シェルピンスキーの三角形などの古典的なフラクタルはスケールの反復で作られ、等比級数で解析される。
+  example:
+    title:
+      es: Suma con a = 2, r = 3, n = 4
+      en: Sum with a = 2, r = 3, n = 4
+      pt: Soma com a = 2, r = 3, n = 4
+      fr: Somme avec a = 2, r = 3, n = 4
+      zh: 求和，a = 2，r = 3，n = 4
+      ja: a = 2、r = 3、n = 4 の和
+    lines:
+      - es: a = 2, r = 3, n = 4
+        en: a = 2, r = 3, n = 4
+        pt: a = 2, r = 3, n = 4
+        fr: a = 2, r = 3, n = 4
+        zh: a = 2, r = 3, n = 4
+        ja: a = 2, r = 3, n = 4
+      - es: Sₙ = a(1 − rⁿ)/(1 − r)
+        en: Sₙ = a(1 − rⁿ)/(1 − r)
+        pt: Sₙ = a(1 − rⁿ)/(1 − r)
+        fr: Sₙ = a(1 − rⁿ)/(1 − r)
+        zh: Sₙ = a(1 − rⁿ)/(1 − r)
+        ja: Sₙ = a(1 − rⁿ)/(1 − r)
+      - es: S₄ = 2(1 − 3⁴)/(1 − 3)
+        en: S₄ = 2(1 − 3⁴)/(1 − 3)
+        pt: S₄ = 2(1 − 3⁴)/(1 − 3)
+        fr: S₄ = 2(1 − 3⁴)/(1 − 3)
+        zh: S₄ = 2(1 − 3⁴)/(1 − 3)
+        ja: S₄ = 2(1 − 3⁴)/(1 − 3)
+      - es: S₄ = 2(1 − 81)/(1 − 3)
+        en: S₄ = 2(1 − 81)/(1 − 3)
+        pt: S₄ = 2(1 − 81)/(1 − 3)
+        fr: S₄ = 2(1 − 81)/(1 − 3)
+        zh: S₄ = 2(1 − 81)/(1 − 3)
+        ja: S₄ = 2(1 − 81)/(1 − 3)
+      - es: S₄ = 2(−80)/(−2)
+        en: S₄ = 2(−80)/(−2)
+        pt: S₄ = 2(−80)/(−2)
+        fr: S₄ = 2(−80)/(−2)
+        zh: S₄ = 2(−80)/(−2)
+        ja: S₄ = 2(−80)/(−2)
+      - es: S₄ = 80
+        en: S₄ = 80
+        pt: S₄ = 80
+        fr: S₄ = 80
+        zh: S₄ = 80
+        ja: S₄ = 80
+      - es: "Verificación: 2 + 6 + 18 + 54 = 80"
+        en: "Check: 2 + 6 + 18 + 54 = 80"
+        pt: "Verificação: 2 + 6 + 18 + 54 = 80"
+        fr: "Vérification : 2 + 6 + 18 + 54 = 80"
+        zh: 验证：2 + 6 + 18 + 54 = 80
+        ja: 検算：2 + 6 + 18 + 54 = 80

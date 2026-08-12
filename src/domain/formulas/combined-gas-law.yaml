@@ -1,0 +1,399 @@
+id: combined-gas-law
+title:
+  es: Ley General de los Gases
+  en: Combined Gas Law
+  pt: Lei Geral dos Gases
+  fr: Loi Générale des Gaz
+  zh: 气体综合定律
+  ja: 結合気体の法則
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: p1
+    type: variable
+    value: "P₁"
+    explanation:
+      es: La presión inicial del gas.
+      en: The initial pressure of the gas.
+      pt: A pressão inicial do gás.
+      fr: La pression initiale du gaz.
+      zh: 气体的初始压强。
+      ja: 気体の初期圧力。
+  - id: times-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por el volumen inicial.
+      en: Multiplied by the initial volume.
+      pt: Multiplicado pelo volume inicial.
+      fr: Multiplié par le volume initial.
+      zh: 乘以初始体积。
+      ja: 初期体積を掛ける。
+  - id: v1
+    type: variable
+    value: "V₁"
+    explanation:
+      es: El volumen inicial del gas.
+      en: The initial volume of the gas.
+      pt: O volume inicial do gás.
+      fr: Le volume initial du gaz.
+      zh: 气体的初始体积。
+      ja: 気体の初期体積。
+  - id: slash-1
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido por la temperatura inicial.
+      en: Divided by the initial temperature.
+      pt: Dividido pela temperatura inicial.
+      fr: Divisé par la température initiale.
+      zh: 除以初始温度。
+      ja: 初期温度で割る。
+  - id: t1
+    type: variable
+    value: "T₁"
+    explanation:
+      es: La temperatura inicial del gas, siempre en kelvin.
+      en: The initial temperature of the gas, always in kelvins.
+      pt: A temperatura inicial do gás, sempre em kelvin.
+      fr: La température initiale du gaz, toujours en kelvins.
+      zh: 气体的初始温度,始终以开尔文为单位。
+      ja: 気体の初期温度。常にケルビンで表す。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a la misma expresión para el estado final.
+      en: Is equal to the same expression for the final state.
+      pt: É igual à mesma expressão para o estado final.
+      fr: Est égal à la même expression pour l'état final.
+      zh: 等于最终状态的同一表达式。
+      ja: 終状態についての同じ式に等しい。
+  - id: p2
+    type: variable
+    value: "P₂"
+    explanation:
+      es: La presión final del gas.
+      en: The final pressure of the gas.
+      pt: A pressão final do gás.
+      fr: La pression finale du gaz.
+      zh: 气体的最终压强。
+      ja: 気体の最終圧力。
+  - id: times-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por el volumen final.
+      en: Multiplied by the final volume.
+      pt: Multiplicado pelo volume final.
+      fr: Multiplié par le volume final.
+      zh: 乘以最终体积。
+      ja: 最終体積を掛ける。
+  - id: v2
+    type: variable
+    value: "V₂"
+    explanation:
+      es: El volumen final del gas.
+      en: The final volume of the gas.
+      pt: O volume final do gás.
+      fr: Le volume final du gaz.
+      zh: 气体的最终体积。
+      ja: 気体の最終体積。
+  - id: slash-2
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido por la temperatura final.
+      en: Divided by the final temperature.
+      pt: Dividido pela temperatura final.
+      fr: Divisé par la température finale.
+      zh: 除以最终温度。
+      ja: 最終温度で割る。
+  - id: t2
+    type: variable
+    value: "T₂"
+    explanation:
+      es: La temperatura final del gas, siempre en kelvin.
+      en: The final temperature of the gas, always in kelvins.
+      pt: A temperatura final do gás, sempre em kelvin.
+      fr: La température finale du gaz, toujours en kelvins.
+      zh: 气体的最终温度,始终以开尔文为单位。
+      ja: 気体の最終温度。常にケルビンで表す。
+context:
+  author:
+    es: Basada en Boyle, Charles y Gay-Lussac
+    en: Based on Boyle, Charles, and Gay-Lussac
+    pt: Baseada em Boyle, Charles e Gay-Lussac
+    fr: Basée sur Boyle, Charles et Gay-Lussac
+    zh: 基于波义耳、查理和盖-吕萨克
+    ja: ボイル、シャルル、ゲイ＝リュサックに基づく
+  era:
+    es: Europa, s. XVII–XIX
+    en: Europe, 17th–19th centuries
+    pt: Europa, séculos XVII–XIX
+    fr: Europe, XVIIe–XIXe siècles
+    zh: 欧洲,17–19世纪
+    ja: ヨーロッパ、17〜19世紀
+  history:
+    es: >-
+      La ley general de los gases combina las leyes de Boyle, Charles y Gay-Lussac
+      en una sola ecuación que relaciona presión, volumen y temperatura de una
+      masa fija de gas. Se aplica cuando la cantidad de gas no cambia, por lo que
+      rige desde los cálculos de buceo —donde el aire se comprime con la
+      profundidad— hasta la física de los globos meteorológicos, que se expanden
+      al ascender. Émile Clapeyron la formalizó en 1834, tras décadas de
+      mediciones empíricas de los tres físicos.
+    en: >-
+      The combined gas law merges Boyle's, Charles's, and Gay-Lussac's laws into a
+      single equation relating the pressure, volume, and temperature of a fixed
+      amount of gas. It applies whenever the quantity of gas is constant, so it
+      governs everything from scuba diving calculations —where air compresses with
+      depth— to the physics of weather balloons, which expand as they rise.
+      Émile Clapeyron formalized it in 1834, after decades of empirical
+      measurements by the three founding physicists.
+    pt: >-
+      A lei geral dos gases combina as leis de Boyle, Charles e Gay-Lussac em uma
+      única equação que relaciona pressão, volume e temperatura de uma massa fixa
+      de gás. Ela se aplica quando a quantidade de gás não muda, regendo desde os
+      cálculos de mergulho — onde o ar se comprime com a profundidade — até a
+      física dos balões meteorológicos, que se expandem ao subir. Émile Clapeyron
+      a formalizou em 1834, após décadas de medições empíricas dos três físicos.
+    fr: >-
+      La loi générale des gaz combine les lois de Boyle, de Charles et de
+      Gay-Lussac en une seule équation reliant la pression, le volume et la
+      température d'une quantité fixe de gaz. Elle s'applique lorsque la quantité
+      de gaz est constante, régissant aussi bien les calculs de plongée — où l'air
+      se comprime avec la profondeur — que la physique des ballons-sondes, qui
+      gonflent en s'élevant. Émile Clapeyron l'a formalisée en 1834, après des
+      décennies de mesures empiriques des trois physiciens.
+    zh: >-
+      气体综合定律将波义耳定律、查理定律和盖-吕萨克定律合并为一个方程,用来描述
+      固定量气体的压强、体积和温度之间的关系。它适用于气体量不变的情形,因而既
+      支配着潜水计算——空气随深度被压缩——也支配着气象气球的物理,后者在上升时
+      会膨胀。埃米尔·克拉佩龙于1834年正式提出该定律,此前三位物理学家已进行了
+      数十年的实验测量。
+    ja: >-
+      結合気体の法則は、ボイルの法則、シャルルの法則、ゲイ＝リュサックの法則を
+      ひとつの式にまとめ、一定量の気体の圧力・体積・温度の関係を示す。気体の量が
+      変わらない場合に成り立ち、水深とともに空気が圧縮される潜水の計算から、上昇
+      するにつれて膨張する気象観測用気球の物理までを支配する。エミール・クラペイロン
+      が1834年に定式化した。それ以前に3人の物理学者が長年の実験で積み上げた測定
+      結果に基づく。
+  timeline:
+    - year: "1662"
+      label:
+        es: >-
+          Boyle publica su ley de compresión: a temperatura constante, presión y
+          volumen se compensan.
+        en: >-
+          Boyle publishes his compression law: at constant temperature, pressure
+          and volume offset each other.
+        pt: >-
+          Boyle publica sua lei de compressão: a temperatura constante, pressão e
+          volume se compensam.
+        fr: >-
+          Boyle publie sa loi de compression : à température constante, pression
+          et volume se compensent.
+        zh: >-
+          波义耳发表其压缩定律:在温度不变时,压强与体积相互补偿。
+        ja: >-
+          ボイルが圧縮の法則を発表する。温度一定のとき、圧力と体積が互いに打ち消し合う。
+    - year: "1787"
+      label:
+        es: >-
+          Charles descubre que el volumen de un gas crece con su temperatura a
+          presión constante.
+        en: >-
+          Charles discovers that the volume of a gas grows with its temperature at
+          constant pressure.
+        pt: >-
+          Charles descobre que o volume de um gás cresce com sua temperatura a
+          pressão constante.
+        fr: >-
+          Charles découvre que le volume d'un gaz croît avec sa température à
+          pression constante.
+        zh: >-
+          查理发现,在压强不变时,气体的体积随温度升高而增大。
+        ja: >-
+          シャルルが、圧力一定のもとでは気体の体積が温度とともに増大することを発見する。
+    - year: "1802"
+      label:
+        es: >-
+          Gay-Lussac establece que la presión de un gas fijo crece con la
+          temperatura a volumen constante.
+        en: >-
+          Gay-Lussac establishes that the pressure of a fixed gas grows with
+          temperature at constant volume.
+        pt: >-
+          Gay-Lussac estabelece que a pressão de um gás fixo cresce com a
+          temperatura a volume constante.
+        fr: >-
+          Gay-Lussac établit que la pression d'un gaz fixe croît avec la
+          température à volume constant.
+        zh: >-
+          盖-吕萨克确立,在体积不变时,固定量气体的压强随温度升高而增大。
+        ja: >-
+          ゲイ＝リュサックが、体積一定のもとでは固定量の気体の圧力が温度とともに増大することを確立する。
+    - year: "1834"
+      label:
+        es: >-
+          Clapeyron combina las tres leyes en la ley general de los gases que se
+          usa hoy.
+        en: >-
+          Clapeyron combines the three laws into the combined gas law used today.
+        pt: >-
+          Clapeyron combina as três leis na lei geral dos gases usada hoje.
+        fr: >-
+          Clapeyron combine les trois lois en la loi générale des gaz utilisée
+          aujourd'hui.
+        zh: >-
+          克拉佩龙将三条定律合并为今天所使用的气体综合定律。
+        ja: >-
+          クラペイロンが3つの法則を、今日使われる結合気体の法則にまとめる。
+  useCases:
+    - title:
+        es: Buceo y submarinismo
+        en: Scuba diving
+        pt: Mergulho
+        fr: Plongée sous-marine
+        zh: 水肺潜水
+        ja: スキューバダイビング
+      description:
+        es: >-
+          Calcula cómo cambia el volumen del aire en los pulmones o en un tanque
+          con la presión del agua a distintas profundidades.
+        en: >-
+          It calculates how the volume of air in lungs or a tank changes with
+          water pressure at different depths.
+        pt: >-
+          Calcula como o volume de ar nos pulmões ou em um tanque muda com a
+          pressão da água em diferentes profundidades.
+        fr: >-
+          Elle calcule comment le volume d'air des poumons ou d'une bouteille
+          varie avec la pression de l'eau à différentes profondeurs.
+        zh: >-
+          计算在不同深度、不同水压之下,肺或气瓶中的空气体积如何变化。
+        ja: >-
+          異なる深度の水圧によって、肺やタンク内の空気の体積がどう変わるかを計算する。
+    - title:
+        es: Meteorología
+        en: Meteorology
+        pt: Meteorologia
+        fr: Météorologie
+        zh: 气象学
+        ja: 気象学
+      description:
+        es: >-
+          Predice cuánto se expande un globo meteorológico a medida que sube y la
+          presión exterior desciende.
+        en: >-
+          It predicts how much a weather balloon expands as it rises and the
+          outside pressure drops.
+        pt: >-
+          Prevê o quanto um balão meteorológico se expande à medida que sobe e a
+          pressão externa cai.
+        fr: >-
+          Elle prédit de combien un ballon-sonde gonfle à mesure qu'il s'élève et
+          que la pression extérieure diminue.
+        zh: >-
+          预测气象气球在上升、外界压强下降时会膨胀多少。
+        ja: >-
+          気象観測用気球が上昇し、外部の圧力が下がるにつれてどれだけ膨張するかを予測する。
+    - title:
+        es: Climatización y aire comprimido
+        en: HVAC and compressed air
+        pt: Climatização e ar comprimido
+        fr: Climatisation et air comprimé
+        zh: 暖通空调与压缩空气
+        ja: 空調と圧縮空気
+      description:
+        es: >-
+          Dimensiona sistemas de ventilación y aire comprimido cuando cambian la
+          temperatura y la presión de trabajo.
+        en: >-
+          It sizes ventilation and compressed-air systems as operating temperature
+          and pressure shift.
+        pt: >-
+          Dimensiona sistemas de ventilação e ar comprimido quando mudam a
+          temperatura e a pressão de trabalho.
+        fr: >-
+          Elle dimensionne les systèmes de ventilation et d'air comprimé lorsque
+          la température et la pression de travail varient.
+        zh: >-
+          在温度和压力变化时,用于确定通风和压缩空气系统的尺寸。
+        ja: >-
+          温度や圧力が変化する際に、換気や圧縮空気システムの設計を行う。
+    - title:
+        es: Aviación
+        en: Aviation
+        pt: Aviação
+        fr: Aviation
+        zh: 航空
+        ja: 航空
+      description:
+        es: >-
+          Ayuda a diseñar la presurización de cabina teniendo en cuenta el cambio
+          de volumen del aire con la altitud.
+        en: >-
+          It helps design cabin pressurization by accounting for the air's volume
+          change with altitude.
+        pt: >-
+          Ajuda a projetar a pressurização da cabine considerando a variação do
+          volume do ar com a altitude.
+        fr: >-
+          Elle aide à concevoir la pressurisation de la cabine en tenant compte de
+          la variation de volume de l'air avec l'altitude.
+        zh: >-
+          考虑空气体积随海拔的变化,用于设计机舱增压系统。
+        ja: >-
+          高度による空気の体積変化を考慮して、機内の与圧設計を支援する。
+  example:
+    title:
+      es: Volumen final de un gas
+      en: Final volume of a gas
+      pt: Volume final de um gás
+      fr: Volume final d'un gaz
+      zh: 气体的最终体积
+      ja: 気体の最終体積
+    lines:
+      - es: P₁ = 1 atm, V₁ = 2 L, T₁ = 300 K
+        en: P₁ = 1 atm, V₁ = 2 L, T₁ = 300 K
+        pt: P₁ = 1 atm, V₁ = 2 L, T₁ = 300 K
+        fr: P₁ = 1 atm, V₁ = 2 L, T₁ = 300 K
+        zh: P₁ = 1 atm, V₁ = 2 L, T₁ = 300 K
+        ja: P₁ = 1 atm, V₁ = 2 L, T₁ = 300 K
+      - es: P₂ = 2 atm, T₂ = 600 K
+        en: P₂ = 2 atm, T₂ = 600 K
+        pt: P₂ = 2 atm, T₂ = 600 K
+        fr: P₂ = 2 atm, T₂ = 600 K
+        zh: P₂ = 2 atm, T₂ = 600 K
+        ja: P₂ = 2 atm, T₂ = 600 K
+      - es: V₂ = P₁·V₁·T₂ / (P₂·T₁)
+        en: V₂ = P₁·V₁·T₂ / (P₂·T₁)
+        pt: V₂ = P₁·V₁·T₂ / (P₂·T₁)
+        fr: V₂ = P₁·V₁·T₂ / (P₂·T₁)
+        zh: V₂ = P₁·V₁·T₂ / (P₂·T₁)
+        ja: V₂ = P₁·V₁·T₂ / (P₂·T₁)
+      - es: V₂ = (1 × 2 × 600) / (2 × 300)
+        en: V₂ = (1 × 2 × 600) / (2 × 300)
+        pt: V₂ = (1 × 2 × 600) / (2 × 300)
+        fr: V₂ = (1 × 2 × 600) / (2 × 300)
+        zh: V₂ = (1 × 2 × 600) / (2 × 300)
+        ja: V₂ = (1 × 2 × 600) / (2 × 300)
+      - es: V₂ = 1200 / 600
+        en: V₂ = 1200 / 600
+        pt: V₂ = 1200 / 600
+        fr: V₂ = 1200 / 600
+        zh: V₂ = 1200 / 600
+        ja: V₂ = 1200 / 600
+      - es: V₂ = 2 L
+        en: V₂ = 2 L
+        pt: V₂ = 2 L
+        fr: V₂ = 2 L
+        zh: V₂ = 2 L
+        ja: V₂ = 2 L

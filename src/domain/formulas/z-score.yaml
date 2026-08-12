@@ -1,0 +1,321 @@
+id: z-score
+title:
+  es: Puntuación Z
+  en: Z-Score
+  pt: Escore Z
+  fr: Score Z
+  zh: Z分数
+  ja: Zスコア
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率統計
+nodes:
+  - id: z-score
+    type: variable
+    value: z
+    explanation:
+      es: "El puntaje z: cuántas desviaciones estándar separa un valor de su media."
+      en: "The z-score: how many standard deviations a value sits from its mean."
+      pt: "O escore z: quantos desvios padrão separam um valor de sua média."
+      fr: "Le score z : de combien d'écarts-types une valeur s'écarte de sa moyenne."
+      zh: "Z分数:一个值距离其均值多少个标准差。"
+      ja: "Zスコア:ある値が平均から標準偏差いくつ分離れているかを示す。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これに正確に等しい。
+  - id: x-value
+    type: variable
+    value: x
+    explanation:
+      es: x, el valor individual que se quiere ubicar dentro de la distribución.
+      en: x, the individual value to be located within the distribution.
+      pt: x, o valor individual que se deseja localizar na distribuição.
+      fr: x, la valeur individuelle à situer au sein de la distribution.
+      zh: x,要在分布中定位的单个数值。
+      ja: x、分布の中で位置づけたい個々の値。
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: Menos, restando la media al valor.
+      en: Minus, subtracting the mean from the value.
+      pt: Menos, subtraindo a média do valor.
+      fr: Moins, en soustrayant la moyenne à la valeur.
+      zh: 减,从该值中减去均值。
+      ja: マイナス。値から平均を引く。
+  - id: mu
+    type: variable
+    value: μ
+    explanation:
+      es: Mu, la media aritmética de la distribución.
+      en: Mu, the arithmetic mean of the distribution.
+      pt: Mu, a média aritmética da distribuição.
+      fr: Mu, la moyenne arithmétique de la distribution.
+      zh: μ,分布的平均数。
+      ja: ミュー、分布の算術平均。
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: これで割る。
+  - id: sigma
+    type: variable
+    value: σ
+    explanation:
+      es: Sigma, la desviación estándar de la distribución.
+      en: Sigma, the standard deviation of the distribution.
+      pt: Sigma, o desvio padrão da distribuição.
+      fr: Sigma, l'écart-type de la distribution.
+      zh: 西格玛,分布的标准差。
+      ja: シグマ、分布の標準偏差。
+context:
+  author:
+    es: Basada en la normal estándar
+    en: Based on the standard normal distribution
+    pt: Baseada na normal padrão
+    fr: Basé sur la loi normale standard
+    zh: 基于标准正态分布
+    ja: 標準正規分布に基づく
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, séc. XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲,19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      El puntaje z responde a una pregunta universal: cuánto se aleja un valor de lo esperado, en
+      unidades de dispersión. Al restar la media y dividir entre la desviación estándar, cualquier
+      distribución normal se transforma en la normal estándar de media 0 y desviación 1, permitiendo
+      comparar datos de escalas distintas. Sobre esa estandarización se construyeron las escalas de
+      cociente intelectual y los percentiles, y el puntaje z sigue siendo el número con el que la
+      estadística ubica cualquier observación en su población.
+    en: >-
+      A z-score answers a universal question: how far a value sits from what is expected, measured in
+      units of spread. By subtracting the mean and dividing by the standard deviation, any normal
+      distribution becomes the standard normal with mean 0 and standard deviation 1, making it
+      possible to compare data on entirely different scales. IQ scales and percentiles were built on
+      this standardization, and the z-score remains the number statistics uses to locate any
+      observation within its population.
+    pt: >-
+      O escore z responde a uma pergunta universal: o quanto um valor se afasta do esperado, em
+      unidades de dispersão. Ao subtrair a média e dividir pelo desvio padrão, qualquer distribuição
+      normal se transforma na normal padrão de média 0 e desvio padrão 1, permitindo comparar dados
+      em escalas totalmente diferentes. As escalas de quociente de inteligência e os percentis foram
+      construídas sobre essa padronização, e o escore z continua sendo o número com o qual a
+      estatística localiza qualquer observação em sua população.
+    fr: >-
+      Le score z répond à une question universelle : de combien une valeur s'écarte de l'attendu, en
+      unités de dispersion. En soustrayant la moyenne et en divisant par l'écart-type, toute loi
+      normale se transforme en loi normale standard de moyenne 0 et d'écart-type 1, ce qui permet de
+      comparer des données sur des échelles totalement différentes. Les échelles de quotient
+      intellectuel et les percentiles furent bâtis sur cette standardisation, et le score z demeure
+      le nombre par lequel la statistique situe toute observation au sein de sa population.
+    zh: >-
+      Z分数回答的是一个普遍的问题:一个值以离散程度为单位离期望值有多远。用该值减去均值再除以
+      标准差,任何正态分布都会被转换成均值为0、标准差为1的标准正态分布,从而可以比较完全不同
+      尺度的数据。智商量表和百分位正是建立在这种标准化之上,Z分数至今仍是统计学在总体中定位
+      任何观测所用的数字。
+    ja: >-
+      Zスコアが答えるのは普遍的な問いである。値が期待値から、ばらつきの単位でどれだけ離れて
+      いるか。平均を引いて標準偏差で割れば、あらゆる正規分布は平均0、標準偏差1の標準正規分布
+      へと変換され、まったく異なる尺度のデータを比較できるようになる。知能指数の尺度や百分位
+      数はこの標準化の上に築かれ、Zスコアは今も統計学が任意の観測値を母集団内に位置づける
+      ために使う数値である。
+  timeline:
+    - year: "1733"
+      label:
+        es: >-
+          Abraham de Moivre descubre la curva normal al aproximar la distribución binomial.
+        en: >-
+          Abraham de Moivre discovers the normal curve while approximating the binomial distribution.
+        pt: >-
+          Abraham de Moivre descobre a curva normal ao aproximar a distribuição binomial.
+        fr: >-
+          Abraham de Moivre découvre la courbe normale en approximant la distribution binomiale.
+        zh: >-
+          亚伯拉罕·棣莫弗在近似二项分布时发现了正态曲线。
+        ja: >-
+          アブラハム・ド・モアブルが二項分布の近似から正規曲線を発見する。
+    - year: "1809"
+      label:
+        es: >-
+          Gauss introduce la distribución normal para analizar errores de medición astronómica.
+        en: >-
+          Gauss introduces the normal distribution to analyze astronomical measurement errors.
+        pt: >-
+          Gauss introduz a distribuição normal para analisar erros de medição astronômica.
+        fr: >-
+          Gauss introduit la loi normale pour analyser les erreurs de mesure astronomique.
+        zh: >-
+          高斯引入正态分布来分析天文测量误差。
+        ja: >-
+          ガウスが天文測定誤差の分析に正規分布を導入する。
+    - year: s. XX
+      label:
+        es: >-
+          Las escalas de cociente intelectual y los tests estandarizados la adoptan como base de sus
+          puntuaciones.
+        en: >-
+          IQ scales and standardized tests adopt it as the basis of their scores.
+        pt: >-
+          As escalas de QI e os testes padronizados a adotam como base de suas pontuações.
+        fr: >-
+          Les échelles de QI et les tests standardisés l'adoptent comme base de leurs scores.
+        zh: >-
+          智商量表与标准化考试将其作为计分的基础。
+        ja: >-
+          知能指数の尺度や標準化テストが、スコアの基礎としてこれを採用する。
+    - year: Hoy
+      label:
+        es: >-
+          Es la puntuación universal para comparar observaciones de cualquier campo científico.
+        en: >-
+          It is the universal score for comparing observations across any scientific field.
+        pt: >-
+          É a pontuação universal para comparar observações em qualquer campo científico.
+        fr: >-
+          C'est le score universel pour comparer des observations dans tout domaine scientifique.
+        zh: >-
+          它是跨任何科学领域比较观测值的通用分数。
+        ja: >-
+          あらゆる科学分野で観測値を比較するための普遍的なスコアである。
+  useCases:
+    - title:
+        es: Evaluación educativa
+        en: Educational assessment
+        pt: Avaliação educacional
+        fr: Évaluation pédagogique
+        zh: 教育测评
+        ja: 教育評価
+      description:
+        es: >-
+          Escalas de CI y exámenes estandarizados reportan la posición relativa de cada alumno como
+          puntaje z.
+        en: >-
+          IQ scales and standardized exams report each student's relative position as a z-score.
+        pt: >-
+          Escalas de QI e exames padronizados relatam a posição relativa de cada aluno como escore z.
+        fr: >-
+          Les échelles de QI et les examens standardisés expriment la position relative de chaque
+          élève en score z.
+        zh: >-
+          智商量表与标准化考试以Z分数报告每个学生的相对位置。
+        ja: >-
+          知能指数の尺度や標準化試験は、各生徒の相対的な位置をZスコアで報告する。
+    - title:
+        es: Control de calidad
+        en: Quality control
+        pt: Controle de qualidade
+        fr: Contrôle qualité
+        zh: 质量控制
+        ja: 品質管理
+      description:
+        es: >-
+          Una medición fuera de rango se detecta al superar un puntaje z de tolerancia.
+        en: >-
+          An out-of-range measurement is flagged when it exceeds a tolerance z-score.
+        pt: >-
+          Uma medição fora da faixa é sinalizada ao ultrapassar um escore z de tolerância.
+        fr: >-
+          Une mesure hors plage est signalée lorsqu'elle dépasse un score z de tolérance.
+        zh: >-
+          当测量值超出公差Z分数时,即被标记为越界。
+        ja: >-
+          許容範囲のZスコアを超えると、その測定値は異常として検出される。
+    - title:
+        es: Finanzas
+        en: Finance
+        pt: Finanças
+        fr: Finance
+        zh: 金融
+        ja: 金融
+      description:
+        es: >-
+          Compara el rendimiento de activos distintos en unidades de riesgo comparable.
+        en: >-
+          Compares the returns of different assets in comparable units of risk.
+        pt: >-
+          Compara o retorno de ativos diferentes em unidades de risco comparáveis.
+        fr: >-
+          Compare les rendements de différents actifs en unités de risque comparables.
+        zh: >-
+          以可比较的风险单位比较不同资产的收益。
+        ja: >-
+          異なる資産の収益を、比較可能なリスク単位で比較する。
+    - title:
+        es: Deporte y análisis de rendimiento
+        en: Sports and performance analysis
+        pt: Esportes e análise de desempenho
+        fr: Sport et analyse de performance
+        zh: 体育与表现分析
+        ja: スポーツとパフォーマンス分析
+      description:
+        es: >-
+          Sitúa a un atleta respecto a la población de su disciplina a lo largo de distintas épocas.
+        en: >-
+          Locates an athlete within their sport's population across different eras.
+        pt: >-
+          Situa um atleta em relação à população de sua modalidade ao longo de diferentes épocas.
+        fr: >-
+          Situe un athlète au sein de la population de sa discipline à travers les époques.
+        zh: >-
+          在不同时代中,将运动员置于其项目人群中的相对位置。
+        ja: >-
+          年代を超えて、ある競技の集団の中での選手の位置を示す。
+  example:
+    title:
+      es: Puntuación en un examen
+      en: A test score
+      pt: Nota em um exame
+      fr: Une note d'examen
+      zh: 一次考试的分数
+      ja: 試験の点数
+    lines:
+      - es: x = 85
+        en: x = 85
+        pt: x = 85
+        fr: x = 85
+        zh: x = 85
+        ja: x = 85
+      - es: μ = 70
+        en: μ = 70
+        pt: μ = 70
+        fr: μ = 70
+        zh: μ = 70
+        ja: μ = 70
+      - es: σ = 10
+        en: σ = 10
+        pt: σ = 10
+        fr: σ = 10
+        zh: σ = 10
+        ja: σ = 10
+      - es: z = (85 − 70) / 10
+        en: z = (85 − 70) / 10
+        pt: z = (85 − 70) / 10
+        fr: z = (85 − 70) / 10
+        zh: z = (85 − 70) / 10
+        ja: z = (85 − 70) / 10
+      - es: z = 15 / 10 = 1.5
+        en: z = 15 / 10 = 1.5
+        pt: z = 15 / 10 = 1,5
+        fr: z = 15 / 10 = 1,5
+        zh: z = 15 / 10 = 1.5
+        ja: z = 15 / 10 = 1.5

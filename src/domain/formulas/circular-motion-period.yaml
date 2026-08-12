@@ -1,0 +1,332 @@
+id: circular-motion-period
+title:
+  es: Periodo del Movimiento Circular
+  en: Circular Motion Period
+  pt: Período do Movimento Circular
+  fr: Période du mouvement circulaire
+  zh: 圆周运动周期
+  ja: 円運動の周期
+category:
+  es: Astronomía
+  en: Astronomy
+  pt: Astronomia
+  fr: Astronomie
+  zh: 天文学
+  ja: 天文学
+nodes:
+  - id: t
+    type: variable
+    value: T
+    explanation:
+      es: "T: el período, el tiempo de una vuelta completa."
+      en: "T: the period, the time for one full revolution."
+      pt: "T: o período, o tempo de uma volta completa."
+      fr: "T : la période, le temps d'une révolution complète."
+      zh: "T：周期，即完成一整圈所需的时间。"
+      ja: "T：周期。一周するのにかかる時間。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "El dos: una vuelta entera recorre 2π veces el radio."
+      en: "The two: one full turn covers 2π times the radius."
+      pt: "O dois: uma volta completa percorre 2π vezes o raio."
+      fr: "Le deux : un tour complet parcourt 2π fois le rayon."
+      zh: 数字2：一整圈的长度是半径的2π倍。
+      ja: 数字の2。一周の長さは半径の2π倍。
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: "π: la constante que relaciona la circunferencia con su diámetro, unos 3.1416."
+      en: "π: the constant relating a circumference to its diameter, about 3.1416."
+      pt: "π: a constante que relaciona a circunferência com seu diâmetro, cerca de 3,1416."
+      fr: "π : la constante reliant la circonférence à son diamètre, environ 3,1416."
+      zh: "π：圆周率，连接圆周长与直径的常数，约为3.1416。"
+      ja: "π：円周率。円周と直径の関係を表す定数で、およそ3.1416。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "r: el radio del círculo que describe el movimiento."
+      en: "r: the radius of the circle traced by the motion."
+      pt: "r: o raio do círculo descrito pelo movimento."
+      fr: "r : le rayon du cercle décrit par le mouvement."
+      zh: "r：运动轨迹圆的半径。"
+      ja: "r：運動が描く円の半径。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre. La velocidad reparte la longitud de la vuelta.
+      en: Divided by. The speed distributes the lap length.
+      pt: Dividido por. A velocidade reparte o comprimento da volta.
+      fr: Divisé par. La vitesse répartit la longueur du tour.
+      zh: 除以。速度摊分一圈的路程。
+      ja: で割る。速度が一周の距離を配分する。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: "v: la rapidez constante del movimiento circular."
+      en: "v: the constant speed of the circular motion."
+      pt: "v: a rapidez constante do movimento circular."
+      fr: "v : la vitesse constante du mouvement circulaire."
+      zh: "v：圆周运动的恒定速率。"
+      ja: "v：等速円運動の速さ。"
+context:
+  author:
+    es: Origen colectivo de la mecánica
+    en: Collective origin of mechanics
+    pt: Origem coletiva da mecânica
+    fr: Origine collective de la mécanique
+    zh: 力学的集体起源
+    ja: 力学の集団的起源
+  era:
+    es: Europa, s. XVIII
+    en: Europe, 18th century
+    pt: Europa, séc. XVIII
+    fr: Europe, XVIIIᵉ siècle
+    zh: 欧洲，18世纪
+    ja: ヨーロッパ、18世紀
+  history:
+    es: >-
+      El período del movimiento circular uniforme es el cociente entre la longitud de una vuelta y
+      la velocidad: dar una revolución completa es recorrer 2π veces el radio. Si el movimiento es
+      más rápido o el radio menor, el período se acorta. Es la ecuación que conecta las revoluciones
+      por minuto de un motor con su período, y que permite pasar de la rotación de una rueda a la
+      velocidad de un vehículo. Aparece en todo mecanismo rotatorio: engranajes, centrífugas,
+      motores y la rotación de satélites.
+    en: >-
+      The period of uniform circular motion is the ratio of one full lap to the speed: completing a
+      revolution means traveling 2π times the radius. If the motion is faster or the radius smaller,
+      the period shortens. It is the equation that connects an engine's revolutions per minute to
+      its period, and that converts a wheel's rotation into a vehicle's speed. It appears in every
+      rotating mechanism: gears, centrifuges, engines, and the spinning of satellites.
+    pt: >-
+      O período do movimento circular uniforme é a razão entre o comprimento de uma volta e a
+      velocidade: completar uma revolução é percorrer 2π vezes o raio. Se o movimento é mais rápido
+      ou o raio é menor, o período encurta. É a equação que conecta as revoluções por minuto de um
+      motor ao seu período, e que converte a rotação de uma roda na velocidade de um veículo.
+      Aparece em todo mecanismo rotativo: engrenagens, centrífugas, motores e a rotação de
+      satélites.
+    fr: >-
+      La période du mouvement circulaire uniforme est le rapport entre la longueur d'un tour et la
+      vitesse : accomplir une révolution, c'est parcourir 2π fois le rayon. Si le mouvement est plus
+      rapide ou le rayon plus petit, la période raccourcit. C'est l'équation qui relie les tours par
+      minute d'un moteur à sa période, et qui convertit la rotation d'une roue en vitesse d'un
+      véhicule. Elle apparaît dans tout mécanisme rotatif : engrenages, centrifugeuses, moteurs et
+      rotation des satellites.
+    zh: >-
+      匀速圆周运动的周期是一圈路程与速度之比：完成一整圈即走过2π倍的半径。运动越快或半径越小，
+      周期就越短。这个方程把发动机每分钟转速与周期联系起来，也可由车轮的转动换算车辆的速度。
+      它出现在一切旋转机构中：齿轮、离心机、发动机，以及卫星的自转。
+    ja: >-
+      等速円運動の周期は、一回転の距離を速度で割ったものである。一周することは半径の2π倍を進むこと
+      を意味する。運動が速いほど、あるいは半径が小さいほど周期は短くなる。この式はエンジンの毎分
+      回転数と周期を結びつけ、車輪の回転から車両の速度を求めることもできる。歯車、遠心分離機、
+      エンジン、衛星の自転など、あらゆる回転機構に現れる。
+  timeline:
+    - year: "1687"
+      label:
+        es: >-
+          Newton estudia el movimiento circular en los Principia, ligando velocidad, giro y
+          período.
+        en: >-
+          Newton studies circular motion in the Principia, linking speed, rotation, and period.
+        pt: >-
+          Newton estuda o movimento circular nos Principia, ligando velocidade, giro e período.
+        fr: >-
+          Newton étudie le mouvement circulaire dans les Principia, reliant vitesse, rotation et
+          période.
+        zh: >-
+          牛顿在《原理》中研究圆周运动，将速度、转动与周期联系起来。
+        ja: >-
+          ニュートンが『プリンキピア』で円運動を研究し、速度、回転、周期を結びつける。
+    - year: "1788"
+      label:
+        es: >-
+          James Watt patenta el regulador centrífugo, primera aplicación industrial del período de
+          rotación.
+        en: >-
+          James Watt patents the centrifugal governor, the first industrial use of the rotation
+          period.
+        pt: >-
+          James Watt patenteia o regulador centrífugo, primeiro uso industrial do período de
+          rotação.
+        fr: >-
+          James Watt brevète le régulateur centrifuge, premier usage industriel de la période de
+          rotation.
+        zh: >-
+          詹姆斯·瓦特获得离心调速器专利，这是旋转周期的首次工业应用。
+        ja: >-
+          ジェームズ・ワットが遠心調速機の特許を取得する。回転周期の初めての産業利用である。
+    - year: Hoy
+      label:
+        es: >-
+          Conecta RPM, período y velocidad en motores, ruedas y máquinas de todo tipo.
+        en: >-
+          It links RPM, period, and speed in engines, wheels, and machines of every kind.
+        pt: >-
+          Liga RPM, período e velocidade em motores, rodas e máquinas de todo tipo.
+        fr: >-
+          Elle relie RPM, période et vitesse dans les moteurs, roues et machines de toutes sortes.
+        zh: >-
+          它把转速、周期和速度联系起来，用于各类发动机、车轮和机器。
+        ja: >-
+          RPM、周期、速度を結びつけ、あらゆるエンジンや車輪、機械に使われる。
+  useCases:
+    - title:
+        es: Motores y máquinas
+        en: Engines and machinery
+        pt: Motores e máquinas
+        fr: Moteurs et machines
+        zh: 发动机与机械
+        ja: エンジンと機械
+      description:
+        es: >-
+          Convierte las revoluciones por minuto de un motor en su período, para el sincronizado de
+          engranajes y cigüeñales.
+        en: >-
+          Converts an engine's revolutions per minute into its period, for gear and crankshaft
+          timing.
+        pt: >-
+          Converte as rotações por minuto de um motor em seu período, para o sincronismo de
+          engrenagens e virabrequins.
+        fr: >-
+          Convertit les tours par minute d'un moteur en sa période, pour le calage des engrenages et
+          vilebrequins.
+        zh: >-
+          将发动机的每分钟转数转换为周期，用于齿轮和曲轴的同步。
+        ja: >-
+          エンジンの毎分回転数を周期に変換し、歯車やクランクシャフトの同期に使う。
+    - title:
+        es: Ruedas y velocímetros
+        en: Wheels and speedometers
+        pt: Rodas e velocímetros
+        fr: Roues et compteurs de vitesse
+        zh: 车轮与车速表
+        ja: 車輪と速度計
+      description:
+        es: >-
+          Mide la velocidad de un vehículo contando las vueltas de sus ruedas.
+        en: >-
+          Measures a vehicle's speed by counting its wheels' rotations.
+        pt: >-
+          Mede a velocidade de um veículo contando as voltas de suas rodas.
+        fr: >-
+          Mesure la vitesse d'un véhicule en comptant les tours de ses roues.
+        zh: >-
+          通过数车轮转数来测量车速。
+        ja: >-
+          車輪の回転数を数えて車両の速度を測る。
+    - title:
+        es: Centrífugas
+        en: Centrifuges
+        pt: Centrífugas
+        fr: Centrifugeuses
+        zh: 离心机
+        ja: 遠心分離機
+      description:
+        es: >-
+          Los equipos de laboratorio y las separadoras fijan su RPM a partir del período de rotación
+          deseado.
+        en: >-
+          Laboratory and industrial separators set their RPM from the desired rotation period.
+        pt: >-
+          Equipamentos de laboratório e separadoras definem sua RPM a partir do período de rotação
+          desejado.
+        fr: >-
+          Les équipements de laboratoire et les séparateurs fixent leur RPM d'après la période de
+          rotation voulue.
+        zh: >-
+          实验室和工业分离设备根据所需的旋转周期设定转速。
+        ja: >-
+          実験室や工業用の遠心分離機は、望みの回転周期からRPMを設定する。
+    - title:
+        es: Rotación de sistemas espaciales
+        en: Spacecraft rotation systems
+        pt: Rotação de sistemas espaciais
+        fr: Rotation des systèmes spatiaux
+        zh: 航天器旋转系统
+        ja: 宇宙機の回転システム
+      description:
+        es: >-
+          Ruedas de reacción y giroscopios de los satélites operan con períodos de giro muy
+          controlados.
+        en: >-
+          Satellites' reaction wheels and gyroscopes operate with tightly controlled spin periods.
+        pt: >-
+          Rodas de reação e giroscópios de satélites operam com períodos de giro muito controlados.
+        fr: >-
+          Les roues de réaction et gyroscopes des satellites fonctionnent à des périodes de rotation
+          très contrôlées.
+        zh: >-
+          卫星的反作用轮和陀螺仪以严格控制的自转周期运转。
+        ja: >-
+          衛星のリアクションホイールやジャイロは、厳密に制御された回転周期で動作する。
+  example:
+    title:
+      es: La rueda de un auto
+      en: A car wheel
+      pt: A roda de um carro
+      fr: La roue d'une voiture
+      zh: 汽车车轮
+      ja: 自動車の車輪
+    lines:
+      - es: r = 0.3 m, v = 10 m/s
+        en: r = 0.3 m, v = 10 m/s
+        pt: r = 0,3 m, v = 10 m/s
+        fr: r = 0,3 m, v = 10 m/s
+        zh: r = 0.3 米，v = 10 米/秒
+        ja: r = 0.3 m、v = 10 m/s
+      - es: T = 2π · r / v
+        en: T = 2π · r / v
+        pt: T = 2π · r / v
+        fr: T = 2π · r / v
+        zh: T = 2π · r / v
+        ja: T = 2π · r / v
+      - es: T = 2π · 0.3 / 10
+        en: T = 2π · 0.3 / 10
+        pt: T = 2π · 0,3 / 10
+        fr: T = 2π · 0,3 / 10
+        zh: T = 2π · 0.3 / 10
+        ja: T = 2π · 0.3 / 10
+      - es: 2π · 0.3 ≈ 1.885
+        en: 2π · 0.3 ≈ 1.885
+        pt: 2π · 0,3 ≈ 1,885
+        fr: 2π · 0,3 ≈ 1,885
+        zh: 2π · 0.3 ≈ 1.885
+        ja: 2π · 0.3 ≈ 1.885
+      - es: T ≈ 1.885 / 10 ≈ 0.1885 s
+        en: T ≈ 1.885 / 10 ≈ 0.1885 s
+        pt: T ≈ 1,885 / 10 ≈ 0,1885 s
+        fr: T ≈ 1,885 / 10 ≈ 0,1885 s
+        zh: T ≈ 1.885 / 10 ≈ 0.1885 秒
+        ja: T ≈ 1.885 / 10 ≈ 0.1885 秒
+      - es: 60 / 0.1885 ≈ 318 RPM
+        en: 60 / 0.1885 ≈ 318 RPM
+        pt: 60 / 0,1885 ≈ 318 RPM
+        fr: 60 / 0,1885 ≈ 318 RPM
+        zh: 60 / 0.1885 ≈ 318 转/分
+        ja: 60 / 0.1885 ≈ 318 回転/分

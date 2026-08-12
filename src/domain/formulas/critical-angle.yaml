@@ -1,0 +1,380 @@
+id: critical-angle
+title:
+  es: Ángulo Crítico
+  en: Critical Angle
+  pt: Ângulo Crítico
+  fr: Angle Critique
+  zh: 临界角
+  ja: 臨界角
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: sin
+    type: operator
+    value: "sin"
+    explanation:
+      es: La función seno aplicada al ángulo crítico.
+      en: The sine function applied to the critical angle.
+      pt: A função seno aplicada ao ângulo crítico.
+      fr: La fonction sinus appliquée à l'angle critique.
+      zh: 应用于临界角的正弦函数。
+      ja: 臨界角に適用される正弦関数。
+  - id: paren-open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el argumento del seno.
+      en: Opens the sine function's argument.
+      pt: Abre o argumento da função seno.
+      fr: Ouvre l'argument de la fonction sinus.
+      zh: 正弦函数参数的起始括号。
+      ja: 正弦関数の引数を開く括弧。
+  - id: theta-c
+    type: variable
+    value: "θ"
+    explanation:
+      es: "El ángulo crítico: el mayor ángulo de incidencia que aún deja pasar la luz al segundo medio."
+      en: "The critical angle: the largest incidence angle that still lets light pass into the second medium."
+      pt: "O ângulo crítico: o maior ângulo de incidência que ainda deixa a luz passar para o segundo meio."
+      fr: "L'angle critique : le plus grand angle d'incidence qui laisse encore passer la lumière dans le second milieu."
+      zh: "临界角：仍能让光进入第二种介质的最大入射角。"
+      ja: "臨界角：光が第二の媒質をまだ通過できる最大の入射角。"
+  - id: theta-c-sub
+    type: superscript
+    value: "c"
+    explanation:
+      es: "El subíndice c: ángulo crítico."
+      en: "Subscript c: critical angle."
+      pt: "O subíndice c: ângulo crítico."
+      fr: "L'indice c : angle critique."
+      zh: "下标c：临界角。"
+      ja: "下付きc：臨界角。"
+  - id: paren-close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el argumento del seno.
+      en: Closes the sine function's argument.
+      pt: Fecha o argumento da função seno.
+      fr: Ferme l'argument de la fonction sinus.
+      zh: 正弦函数参数的结束括号。
+      ja: 正弦関数の引数を閉じる括弧。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: n2
+    type: variable
+    value: "n"
+    explanation:
+      es: El índice de refracción del medio menos denso, al que la luz intenta salir.
+      en: The refractive index of the rarer medium the light tries to escape into.
+      pt: O índice de refração do meio menos denso, para o qual a luz tenta sair.
+      fr: L'indice de réfraction du milieu moins dense vers lequel la lumière tente de sortir.
+      zh: 光试图进入的较疏介质的折射率。
+      ja: 光が抜けようとする、より希薄な媒質の屈折率。
+  - id: n2-sub
+    type: superscript
+    value: "2"
+    explanation:
+      es: "El subíndice 2: el segundo medio, menos denso."
+      en: "Subscript 2: the second, rarer medium."
+      pt: "O subíndice 2: o segundo meio, menos denso."
+      fr: "L'indice 2 : le second milieu, moins dense."
+      zh: "下标2：第二种介质，密度较小。"
+      ja: "下付き2：二つ目の、より希薄な媒質。"
+  - id: division
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: n1
+    type: variable
+    value: "n"
+    explanation:
+      es: El índice de refracción del medio más denso, del que proviene la luz.
+      en: The refractive index of the denser medium the light comes from.
+      pt: O índice de refração do meio mais denso, do qual a luz provém.
+      fr: L'indice de réfraction du milieu plus dense d'où provient la lumière.
+      zh: 光所来自的较密介质的折射率。
+      ja: 光が来る、より密な媒質の屈折率。
+  - id: n1-sub
+    type: superscript
+    value: "1"
+    explanation:
+      es: "El subíndice 1: el primer medio, más denso."
+      en: "Subscript 1: the first, denser medium."
+      pt: "O subíndice 1: o primeiro meio, mais denso."
+      fr: "L'indice 1 : le premier milieu, plus dense."
+      zh: "下标1：第一种介质，密度较大。"
+      ja: "下付き1：一つ目の、より密な媒質。"
+context:
+  author:
+    es: Basada en la ley de Snell
+    en: Based on Snell's law
+    pt: Baseada na lei de Snell
+    fr: Basée sur la loi de Snell
+    zh: 基于斯涅尔定律
+    ja: スネルの法則に基づく
+  era:
+    es: Europa, s. XVII
+    en: Europe, 17th century
+    pt: Europa, séc. XVII
+    fr: Europe, XVIIe siècle
+    zh: 欧洲，17世纪
+    ja: ヨーロッパ、17世紀
+  history:
+    es: >-
+      Cuando la luz pasa de un medio más denso a uno menos denso, se refracta alejándose de la
+      normal; por encima del ángulo crítico θc ya no puede salir y se refleja por completo en el
+      interior. Esa reflexión total interna mantiene la luz atrapada en la fibra óptica a lo largo de
+      kilómetros, hace brillar los diamantes —por su alto índice y sus cortes— y explica por qué los
+      peces parecen estar donde no están al mirarlos desde la superficie.
+    en: >-
+      When light passes from a denser medium to a rarer one, it refracts away from the normal; beyond
+      the critical angle θc it can no longer escape and is reflected entirely back inside. This total
+      internal reflection keeps light trapped inside optical fiber for kilometers, makes diamonds
+      sparkle — thanks to their high index and many facets — and explains why fish appear where they
+      are not when seen from the surface.
+    pt: >-
+      Quando a luz passa de um meio mais denso para um menos denso, ela se refrata afastando-se da
+      normal; acima do ângulo crítico θc ela já não consegue sair e é refletida totalmente para
+      dentro. Essa reflexão total interna mantém a luz presa na fibra óptica por quilômetros, faz os
+      diamantes brilharem — por seu alto índice e muitos cortes — e explica por que os peixes parecem
+      estar onde não estão quando vistos da superfície.
+    fr: >-
+      Quand la lumière passe d'un milieu plus dense à un milieu moins dense, elle se réfracte en
+      s'éloignant de la normale ; au-delà de l'angle critique θc elle ne peut plus en sortir et se
+      réfléchit entièrement vers l'intérieur. Cette réflexion totale interne maintient la lumière
+      prisonnière de la fibre optique sur des kilomètres, fait étinceler les diamants — grâce à leur
+      indice élevé et à leurs nombreuses facettes — et explique pourquoi les poissons semblent être là
+      où ils ne sont pas vus depuis la surface.
+    zh: >-
+      当光从较密介质进入较疏介质时，会偏离法线折射；一旦入射角超过临界角θc，光便无法逃逸，
+      全部被反射回介质内部。这种全内反射使光能沿光纤传播数千米，让钻石因高折射率和多切面而闪耀，
+      也解释了为什么从水面看去，鱼仿佛不在其真实的位置。
+    ja: >-
+      光がより密な媒質からより希薄な媒質へ進むとき、法線から遠ざかる方向に屈折する。入射角が臨界角θcを
+      超えると、光は外へ抜け出せなくなり、すべて内側へ反射される。この全反射が光を光ファイバーの中に
+      数キロメートル閉じ込め、高い屈折率と多数のカットを持つダイヤモンドを輝かせ、水面から見ると魚が
+      実際と違う場所にいるように見える理由を説明している。
+  timeline:
+    - year: "1842"
+      label:
+        es: >-
+          Colladon y Babinet guían luz por un chorro de agua frente a la Royal Society, demostrando
+          la reflexión total.
+        en: >-
+          Colladon and Babinet guide light through a water jet before the Royal Society,
+          demonstrating total reflection.
+        pt: >-
+          Colladon e Babinet guiam a luz por um jato de água diante da Royal Society, demonstrando a
+          reflexão total.
+        fr: >-
+          Colladon et Babinet guident la lumière dans un jet d'eau devant la Royal Society,
+          démontrant la réflexion totale.
+        zh: >-
+          科拉东和巴比内向皇家学会演示了光沿水柱传播，证明了全反射现象。
+        ja: >-
+          コラドンとバビネが王立協会で水流に光を通し、全反射を実演する。
+    - year: "1957"
+      label:
+        es: >-
+          Hopkins y Kapany construyen la primera fibra de vidrio que transmite imágenes por
+          reflexión total.
+        en: >-
+          Hopkins and Kapany build the first glass fiber that transmits images by total internal
+          reflection.
+        pt: >-
+          Hopkins e Kapany constroem a primeira fibra de vidro que transmite imagens por reflexão
+          total.
+        fr: >-
+          Hopkins et Kapany construisent la première fibre de verre transmettant des images par
+          réflexion totale.
+        zh: >-
+          霍普金斯和卡帕尼制成第一根通过全反射传输图像的光纤。
+        ja: >-
+          ホプキンスとカパニーが、全反射で画像を伝送する最初のガラスファイバーを製作する。
+    - year: "1966"
+      label:
+        es: >-
+          Kao y Hockham proponen usar el ángulo crítico para telecomunicaciones por fibra.
+        en: >-
+          Kao and Hockham propose using the critical angle for fiber-optic telecommunications.
+        pt: >-
+          Kao e Hockham propõem usar o ângulo crítico para telecomunicações por fibra.
+        fr: >-
+          Kao et Hockham proposent d'utiliser l'angle critique pour les télécommunications par fibre.
+        zh: >-
+          高锟和霍克哈姆提出利用临界角实现光纤通信。
+        ja: >-
+          カオとホッカムが、臨界角を利用した光ファイバー通信を提案する。
+    - year: Hoy
+      label:
+        es: >-
+          El ángulo crítico gobierna las redes de fibra que transmiten internet por todo el mundo.
+        en: >-
+          The critical angle governs the fiber networks carrying the internet worldwide.
+        pt: >-
+          O ângulo crítico rege as redes de fibra que transmitem a internet pelo mundo.
+        fr: >-
+          L'angle critique régit les réseaux de fibre qui transportent l'internet dans le monde
+          entier.
+        zh: >-
+          临界角支配着将互联网传遍世界的光纤网络。
+        ja: >-
+          臨界角が、世界中にインターネットを運ぶファイバーネットワークを支配している。
+  useCases:
+    - title:
+        es: Fibra óptica
+        en: Fiber optics
+        pt: Fibra óptica
+        fr: Fibre optique
+        zh: 光纤
+        ja: 光ファイバー
+      description:
+        es: >-
+          La reflexión total interna atrapa pulsos de luz en el núcleo de la fibra y los guía por
+          kilómetros sin escapar.
+        en: >-
+          Total internal reflection traps light pulses in the fiber core and guides them for
+          kilometers without escaping.
+        pt: >-
+          A reflexão total interna aprisiona pulsos de luz no núcleo da fibra e os guia por
+          quilômetros sem escapar.
+        fr: >-
+          La réflexion totale interne piège les impulsions lumineuses dans le cœur de la fibre et
+          les guide sur des kilomètres sans qu'elles s'échappent.
+        zh: >-
+          全内反射把光脉冲困在纤芯中，引导其传播数千米而不外泄。
+        ja: >-
+          全反射が光パルスをファイバーのコアに閉じ込め、逃げ出させることなく数キロメートル導く。
+    - title:
+        es: Diamantes y gemas
+        en: Diamonds and gemstones
+        pt: Diamantes e gemas
+        fr: Diamants et pierres précieuses
+        zh: 钻石与宝石
+        ja: ダイヤモンドと宝石
+      description:
+        es: >-
+          El tallado se calcula para que casi toda la luz sufra reflexión total y rebote de vuelta
+          al ojo.
+        en: >-
+          Facets are cut so nearly all light undergoes total reflection and bounces back to the eye.
+        pt: >-
+          As facetas são lapidadas para que quase toda a luz sofra reflexão total e volte aos olhos.
+        fr: >-
+          Les facettes sont taillées pour que presque toute la lumière subisse une réflexion totale
+          et revienne à l'œil.
+        zh: >-
+          切割面被设计得让几乎全部光线都发生全反射，并弹回人眼。
+        ja: >-
+          ほぼすべての光が全反射して目に返るように、ファセットがカットされる。
+    - title:
+        es: Prismas y periscopios
+        en: Prisms and periscopes
+        pt: Prismas e periscópios
+        fr: Prismes et périscopes
+        zh: 棱镜与潜望镜
+        ja: プリズムと潜望鏡
+      description:
+        es: >-
+          Los binoculares y periscopios usan prismas que desvían la imagen con reflexión total en
+          lugar de espejos.
+        en: >-
+          Binoculars and periscopes use prisms that bend the image by total reflection instead of
+          mirrors.
+        pt: >-
+          Binóculos e periscópios usam prismas que desviam a imagem por reflexão total em vez de
+          espelhos.
+        fr: >-
+          Jumelles et périscopes utilisent des prismes qui dévient l'image par réflexion totale au
+          lieu de miroirs.
+        zh: >-
+          双筒望远镜和潜望镜用棱镜以全反射偏转图像，而非用镜子。
+        ja: >-
+          双眼鏡や潜望鏡は、鏡ではなく全反射で像の向きを変えるプリズムを使っている。
+    - title:
+        es: Endoscopia
+        en: Endoscopy
+        pt: Endoscopia
+        fr: Endoscopie
+        zh: 内窥镜
+        ja: 内視鏡
+      description:
+        es: >-
+          Los endoscopios médicos llevan luz y una imagen hasta el interior del cuerpo a través de
+          haces de fibra.
+        en: >-
+          Medical endoscopes carry light and an image inside the body through fiber bundles.
+        pt: >-
+          Endoscópios médicos levam luz e imagem ao interior do corpo por feixes de fibra.
+        fr: >-
+          Les endoscopes médicaux amènent lumière et image à l'intérieur du corps grâce à des
+          faisceaux de fibres.
+        zh: >-
+          医用内窥镜通过光纤束把光和图像送入体内。
+        ja: >-
+          医療用内視鏡は、ファイバーバンドルで体内へ光と映像を届ける。
+  example:
+    title:
+      es: Del vidrio al aire
+      en: From glass to air
+      pt: Do vidro para o ar
+      fr: Du verre à l'air
+      zh: 从玻璃到空气
+      ja: ガラスから空気へ
+    lines:
+      - es: n1 = 1.5 (vidrio), n2 = 1.0 (aire)
+        en: n1 = 1.5 (glass), n2 = 1.0 (air)
+        pt: n1 = 1,5 (vidro), n2 = 1,0 (ar)
+        fr: n1 = 1,5 (verre), n2 = 1,0 (air)
+        zh: n1 = 1.5（玻璃），n2 = 1.0（空气）
+        ja: n1 = 1.5（ガラス）、n2 = 1.0（空気）
+      - es: sen(θc) = n2 / n1
+        en: sin(θc) = n2 / n1
+        pt: sen(θc) = n2 / n1
+        fr: sin(θc) = n2 / n1
+        zh: sin(θc) = n2 / n1
+        ja: sin(θc) = n2 / n1
+      - es: sen(θc) = 1.0 / 1.5
+        en: sin(θc) = 1.0 / 1.5
+        pt: sen(θc) = 1,0 / 1,5
+        fr: sin(θc) = 1,0 / 1,5
+        zh: sin(θc) = 1.0 / 1.5
+        ja: sin(θc) = 1.0 / 1.5
+      - es: sen(θc) ≈ 0.667
+        en: sin(θc) ≈ 0.667
+        pt: sen(θc) ≈ 0,667
+        fr: sin(θc) ≈ 0,667
+        zh: sin(θc) ≈ 0.667
+        ja: sin(θc) ≈ 0.667
+      - es: θc = arcsen(0.667)
+        en: θc = arcsin(0.667)
+        pt: θc = arcsen(0,667)
+        fr: θc = arcsin(0,667)
+        zh: θc = arcsin(0.667)
+        ja: θc = arcsin(0.667)
+      - es: "θc ≈ 41.8°: el ángulo crítico del vidrio al aire"
+        en: "θc ≈ 41.8°: the critical angle from glass to air"
+        pt: "θc ≈ 41,8°: o ângulo crítico do vidro para o ar"
+        fr: "θc ≈ 41,8° : l'angle critique du verre à l'air"
+        zh: "θc ≈ 41.8°：从玻璃到空气的临界角"
+        ja: "θc ≈ 41.8°：ガラスから空気への臨界角"

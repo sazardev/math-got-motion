@@ -1,0 +1,335 @@
+id: hardy-weinberg
+title:
+  es: Equilibrio de Hardy-Weinberg
+  en: Hardy-Weinberg Equilibrium
+  pt: Equilíbrio de Hardy-Weinberg
+  fr: Équilibre de Hardy-Weinberg
+  zh: 哈代-温伯格平衡
+  ja: ハーディ・ワインベルク平衡
+category:
+  es: Biología
+  en: Biology
+  pt: Biologia
+  fr: Biologie
+  zh: 生物学
+  ja: 生物学
+nodes:
+  - id: p2
+    type: variable
+    value: p²
+    explanation:
+      es: La frecuencia del genotipo homocigoto dominante en la población.
+      en: The frequency of the homozygous-dominant genotype in the population.
+      pt: A frequência do genótipo homozigoto dominante na população.
+      fr: La fréquence du génotype homozygote dominant dans la population.
+      zh: 种群中显性纯合基因型的频率。
+      ja: 集団における優性ホモ接合型の頻度。
+  - id: plus1
+    type: operator
+    value: +
+    explanation:
+      es: "Más: las tres frecuencias genotípicas suman la población entera."
+      en: "Plus: the three genotype frequencies add up to the whole population."
+      pt: "Mais: as três frequências genotípicas somam a população inteira."
+      fr: "Plus : les trois fréquences génotypiques somme la population entière."
+      zh: 加：三种基因型频率相加为整个种群。
+      ja: たす。三つの遺伝子型頻度を足すと集団全体になる。
+  - id: coeff-2
+    type: number
+    value: "2"
+    explanation:
+      es: El factor 2 por las dos formas posibles del heterocigoto (AB y BA).
+      en: The factor 2 for the two possible heterozygous arrangements (AB and BA).
+      pt: O fator 2 pelas duas formas possíveis do heterozigoto (AB e BA).
+      fr: Le facteur 2 pour les deux arrangements possibles de l'hétérozygote (AB et BA).
+      zh: 系数2，对应杂合子的两种组合方式（AB和BA）。
+      ja: ヘテロ接合体の二通りの並び（ABとBA）による係数2。
+  - id: pq
+    type: variable
+    value: pq
+    explanation:
+      es: El producto de las frecuencias alélicas p y q, que mide el heterocigoto.
+      en: The product of the allele frequencies p and q, which measures the heterozygote.
+      pt: O produto das frequências alélicas p e q, que mede o heterozigoto.
+      fr: Le produit des fréquences alléliques p et q, qui mesure l'hétérozygote.
+      zh: 等位基因频率p与q的乘积，度量杂合子。
+      ja: 対立遺伝子頻度pとqの積。ヘテロ接合体を測る。
+  - id: plus2
+    type: operator
+    value: +
+    explanation:
+      es: Más.
+      en: Plus.
+      pt: Mais.
+      fr: Plus.
+      zh: 加。
+      ja: たす。
+  - id: q2
+    type: variable
+    value: q²
+    explanation:
+      es: La frecuencia del genotipo homocigoto recesivo en la población.
+      en: The frequency of the homozygous-recessive genotype in the population.
+      pt: A frequência do genótipo homozigoto recessivo na população.
+      fr: La fréquence du génotype homozygote récessif dans la population.
+      zh: 种群中隐性纯合基因型的频率。
+      ja: 集団における劣性ホモ接合型の頻度。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: "El 1: la población completa, si ninguna fuerza evolutiva actúa."
+      en: "The 1: the whole population, as long as no evolutionary force acts."
+      pt: "O 1: a população inteira, desde que nenhuma força evolutiva atue."
+      fr: "Le 1 : la population entière, tant qu'aucune force évolutive n'agit."
+      zh: "1：即整个种群，前提是没有进化力量的作用。"
+      ja: "1：進化の力が働かない限り、集団全体を表す。"
+context:
+  author:
+    es: G. H. Hardy y Wilhelm Weinberg
+    en: G. H. Hardy and Wilhelm Weinberg
+    pt: G. H. Hardy e Wilhelm Weinberg
+    fr: G. H. Hardy et Wilhelm Weinberg
+    zh: 戈弗雷·哈罗德·哈代与威廉·温伯格
+    ja: G.H.ハーディとヴィルヘルム・ワインベルク
+  era:
+    es: Inglaterra y Alemania, 1908
+    en: England and Germany, 1908
+    pt: Inglaterra e Alemanha, 1908
+    fr: Angleterre et Allemagne, 1908
+    zh: 英国与德国,1908年
+    ja: イギリスとドイツ、1908年
+  history:
+    es: >-
+      En 1908, el matemático G. H. Hardy y el médico Wilhelm Weinberg demostraron por separado que las
+      frecuencias alélicas y genotípicas permanecen constantes de generación en generación en ausencia
+      de evolución, siempre que el apareamiento sea aleatorio y no actúen mutación, selección ni
+      migración. La relación p + q = 1 y p² + 2pq + q² = 1 se convirtió en la hipótesis nula de la
+      genética de poblaciones: cualquier desvío revela que algo está evolucionando. Hoy se aplica al
+      diagnóstico de enfermedades hereditarias y a la genética forense.
+    en: >-
+      In 1908, the mathematician G. H. Hardy and the physician Wilhelm Weinberg independently showed
+      that allele and genotype frequencies stay constant generation after generation in the absence of
+      evolution, provided mating is random and no mutation, selection, or migration acts. The
+      relations p + q = 1 and p² + 2pq + q² = 1 became the null hypothesis of population genetics: any
+      deviation reveals that something is evolving. Today it is applied to the diagnosis of hereditary
+      diseases and to forensic genetics.
+    pt: >-
+      Em 1908, o matemático G. H. Hardy e o médico Wilhelm Weinberg demonstraram, de forma
+      independente, que as frequências alélicas e genotípicas permanecem constantes de geração em
+      geração na ausência de evolução, desde que o acasalamento seja aleatório e não atuem mutação,
+      seleção ou migração. As relações p + q = 1 e p² + 2pq + q² = 1 tornaram-se a hipótese nula da
+      genética de populações: qualquer desvio revela que algo está evoluindo. Hoje se aplica ao
+      diagnóstico de doenças hereditárias e à genética forense.
+    fr: >-
+      En 1908, le mathématicien G. H. Hardy et le médecin Wilhelm Weinberg montrèrent indépendamment
+      que les fréquences alléliques et génotypiques restent constantes de génération en génération en
+      l'absence d'évolution, à condition que les accouplements soient aléatoires et qu'aucune mutation,
+      sélection ou migration n'opère. Les relations p + q = 1 et p² + 2pq + q² = 1 devinrent
+      l'hypothèse nulle de la génétique des populations : tout écart révèle qu'une évolution est en
+      cours. Elles servent aujourd'hui au diagnostic des maladies héréditaires et à la génétique
+      médico-légale.
+    zh: >-
+      1908年，数学家戈弗雷·哈罗德·哈代与医生威廉·温伯格分别独立证明：在不存在进化的情况下，只要随机交配、
+      没有突变、选择或迁移作用，等位基因频率和基因型频率会代代保持不变。关系式p + q = 1和p² + 2pq + q² = 1
+      由此成为种群遗传学的零假设：任何偏离都说明有进化的力量在起作用。如今它被用于遗传病诊断和法医遗传学。
+    ja: >-
+      1908年、数学者G.H.ハーディと医師ヴィルヘルム・ワインベルクは独立に、進化が働かず、交配が無作為で、
+      突然変異・自然選択・移動が作用しない限り、対立遺伝子頻度と遺伝子型頻度は世代を超えて一定に保たれることを
+      証明した。p + q = 1とp² + 2pq + q² = 1という関係は集団遺伝学の帰無仮説となり、そこからの乖離は何らかの
+      進化の力の存在を示す。今日では遺伝病の診断や法医学的遺伝子鑑定に応用されている。
+  timeline:
+    - year: "1908"
+      label:
+        es: >-
+          Hardy responde en Science y Weinberg publica en Alemania el mismo equilibrio en forma
+          independiente.
+        en: >-
+          Hardy replies in Science while Weinberg publishes the same equilibrium independently in
+          Germany.
+        pt: >-
+          Hardy responde na Science e Weinberg publica na Alemanha o mesmo equilíbrio de forma
+          independente.
+        fr: >-
+          Hardy répond dans Science tandis que Weinberg publie en Allemagne le même équilibre,
+          indépendamment.
+        zh: >-
+          哈代在《科学》上回复，同时温伯格在德国独立发表了相同的平衡。
+        ja: >-
+          ハーディがScience誌で回答し、ヴァインベルクはドイツで独立に同じ平衡を発表する。
+    - year: "1918"
+      label:
+        es: >-
+          R. A. Fisher funda la genética cuantitativa apoyándose en la constancia de las frecuencias.
+        en: >-
+          R. A. Fisher founds quantitative genetics building on the constancy of frequencies.
+        pt: >-
+          R. A. Fisher funda a genética quantitativa apoiando-se na constância das frequências.
+        fr: >-
+          R. A. Fisher fonde la génétique quantitative en s'appuyant sur la constance des fréquences.
+        zh: >-
+          费希尔以频率的恒定性为基础，创立了数量遗传学。
+        ja: >-
+          R.A.フィッシャーが、頻度の恒常性に基づいて量的遺伝学を創始する。
+    - year: "1985"
+      label:
+        es: >-
+          La huella genética forense adopta las frecuencias de Hardy-Weinberg para valorar pruebas.
+        en: >-
+          Forensic DNA profiling adopts Hardy-Weinberg frequencies to evaluate evidence.
+        pt: >-
+          A genética forense adota as frequências de Hardy-Weinberg para avaliar provas.
+        fr: >-
+          L'empreinte génétique médico-légale adopte les fréquences de Hardy-Weinberg pour évaluer les
+          preuves.
+        zh: >-
+          法医DNA鉴定采用哈代-温伯格频率来评估证据。
+        ja: >-
+          法医学のDNA鑑定が、証拠評価にハーディ・ワインベルク頻度を採用する。
+    - year: Hoy
+      label:
+        es: >-
+          Es la hipótesis nula de cualquier estudio genético de poblaciones.
+        en: >-
+          It is the null hypothesis of any population genetics study.
+        pt: >-
+          É a hipótese nula de qualquer estudo de genética de populações.
+        fr: >-
+          C'est l'hypothèse nulle de toute étude de génétique des populations.
+        zh: >-
+          它是任何种群遗传学研究的零假设。
+        ja: >-
+          あらゆる集団遺伝学研究における帰無仮説である。
+  useCases:
+    - title:
+        es: Genética forense
+        en: Forensic genetics
+        pt: Genética forense
+        fr: Génétique médico-légale
+        zh: 法医遗传学
+        ja: 法医学遺伝学
+      description:
+        es: >-
+          Estima la rareza de un perfil de ADN combinando las frecuencias alélicas esperadas.
+        en: >-
+          It estimates the rarity of a DNA profile by combining the expected allele frequencies.
+        pt: >-
+          Estima a raridade de um perfil de DNA combinando as frequências alélicas esperadas.
+        fr: >-
+          Elle estime la rareté d'un profil ADN en combinant les fréquences alléliques attendues.
+        zh: >-
+          通过组合预期等位基因频率，评估DNA图谱的罕见程度。
+        ja: >-
+          期待される対立遺伝子頻度を組み合わせて、DNA型の希少性を推定する。
+    - title:
+        es: Medicina genética
+        en: Medical genetics
+        pt: Medicina genética
+        fr: Génétique médicale
+        zh: 医学遗传学
+        ja: 医学遺伝学
+      description:
+        es: >-
+          Calcula la probabilidad de portar una enfermedad recesiva a partir de su frecuencia.
+        en: >-
+          It computes the chance of carrying a recessive disease from its frequency.
+        pt: >-
+          Calcula a probabilidade de ser portador de uma doença recessiva a partir da sua frequência.
+        fr: >-
+          Elle calcule la probabilité d'être porteur d'une maladie récessive à partir de sa
+          fréquence.
+        zh: >-
+          根据隐性疾病的频率，计算携带致病基因的概率。
+        ja: >-
+          劣性疾患の頻度から、その保因者である確率を計算する。
+    - title:
+        es: Conservación de especies
+        en: Species conservation
+        pt: Conservação de espécies
+        fr: Conservation des espèces
+        zh: 物种保护
+        ja: 種の保全
+      description:
+        es: >-
+          Detecta endogamia en poblaciones pequeñas cuando las frecuencias se desvían del equilibrio.
+        en: >-
+          It detects inbreeding in small populations when frequencies deviate from equilibrium.
+        pt: >-
+          Detecta endogamia em populações pequenas quando as frequências se desviam do equilíbrio.
+        fr: >-
+          Elle détecte la consanguinité dans les petites populations quand les fréquences s'écartent
+          de l'équilibre.
+        zh: >-
+          当频率偏离平衡时，可检测小种群中的近亲繁殖。
+        ja: >-
+          頻度が平衡からずれたとき、小集団における近親交配を検出する。
+    - title:
+        es: Mejoramiento genético
+        en: Plant breeding
+        pt: Melhoramento genético
+        fr: Amélioration génétique
+        zh: 作物育种
+        ja: 育種
+      description:
+        es: >-
+          Predice la proporción de genotipos deseables en las próximas generaciones de un cultivo.
+        en: >-
+          It predicts the proportion of desirable genotypes in a crop's coming generations.
+        pt: >-
+          Prediz a proporção de genótipos desejáveis nas próximas gerações de uma cultura.
+        fr: >-
+          Elle prédit la proportion de génotypes recherchés dans les générations à venir d'une
+          culture.
+        zh: >-
+          预测作物未来世代中理想基因型的比例。
+        ja: >-
+          作物の次世代における望ましい遺伝子型の割合を予測する。
+  example:
+    title:
+      es: Frecuencias con p = 0.7
+      en: Frequencies with p = 0.7
+      pt: Frequências com p = 0,7
+      fr: Fréquences avec p = 0,7
+      zh: p = 0.7时的频率
+      ja: p = 0.7の場合の頻度
+    lines:
+      - es: "p = 0.7, q = 1 − p = 0.3"
+        en: "p = 0.7, q = 1 − p = 0.3"
+        pt: "p = 0,7, q = 1 − p = 0,3"
+        fr: "p = 0,7, q = 1 − p = 0,3"
+        zh: "p = 0.7，q = 1 − p = 0.3"
+        ja: "p = 0.7、q = 1 − p = 0.3"
+      - es: p² = 0.7² = 0.49
+        en: p² = 0.7² = 0.49
+        pt: p² = 0,7² = 0,49
+        fr: p² = 0,7² = 0,49
+        zh: p² = 0.7² = 0.49
+        ja: p² = 0.7² = 0.49
+      - es: 2pq = 2 × 0.7 × 0.3 = 0.42
+        en: 2pq = 2 × 0.7 × 0.3 = 0.42
+        pt: 2pq = 2 × 0,7 × 0,3 = 0,42
+        fr: 2pq = 2 × 0,7 × 0,3 = 0,42
+        zh: 2pq = 2 × 0.7 × 0.3 = 0.42
+        ja: 2pq = 2 × 0.7 × 0.3 = 0.42
+      - es: q² = 0.3² = 0.09
+        en: q² = 0.3² = 0.09
+        pt: q² = 0,3² = 0,09
+        fr: q² = 0,3² = 0,09
+        zh: q² = 0.3² = 0.09
+        ja: q² = 0.3² = 0.09
+      - es: p² + 2pq + q² = 0.49 + 0.42 + 0.09 = 1
+        en: p² + 2pq + q² = 0.49 + 0.42 + 0.09 = 1
+        pt: p² + 2pq + q² = 0,49 + 0,42 + 0,09 = 1
+        fr: p² + 2pq + q² = 0,49 + 0,42 + 0,09 = 1
+        zh: p² + 2pq + q² = 0.49 + 0.42 + 0.09 = 1
+        ja: p² + 2pq + q² = 0.49 + 0.42 + 0.09 = 1

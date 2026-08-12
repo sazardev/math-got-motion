@@ -1,0 +1,343 @@
+id: sector-area
+title:
+  es: Área de un Sector Circular
+  en: Circular Sector Area
+  pt: Área de um Setor Circular
+  fr: Aire d'un Secteur Circulaire
+  zh: 扇形面积
+  ja: 扇形の面積
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: area
+    type: variable
+    value: A
+    explanation:
+      es: El área del sector circular.
+      en: The area of the circular sector.
+      pt: A área do setor circular.
+      fr: L'aire du secteur circulaire.
+      zh: 扇形的面积。
+      ja: 扇形の面積。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: half
+    type: number
+    value: "½"
+    explanation:
+      es: "Un medio: el sector es la mitad de un rectángulo equivalente de base r y altura rθ."
+      en: "One half: the sector is half of an equivalent rectangle of base r and height rθ."
+      pt: "Um meio: o setor é a metade de um retângulo equivalente de base r e altura rθ."
+      fr: "Un demi : le secteur est la moitié d'un rectangle équivalent de base r et de hauteur rθ."
+      zh: "二分之一：扇形相当于底为 r、高为 rθ 的矩形的面积之半。"
+      ja: "2分の1。扇形は、底r・高さrθの長方形の半分の面積に当たる。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por el radio al cuadrado.
+      en: Multiplied by the radius squared.
+      pt: Multiplicado pelo raio ao quadrado.
+      fr: Multiplié par le rayon au carré.
+      zh: 乘以半径的平方。
+      ja: 半径の2乗を掛ける。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: El radio del círculo.
+      en: The radius of the circle.
+      pt: O raio do círculo.
+      fr: Le rayon du cercle.
+      zh: 圆的半径。
+      ja: 円の半径。
+  - id: r-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: El radio al cuadrado.
+      en: The radius squared.
+      pt: O raio ao quadrado.
+      fr: Le rayon au carré.
+      zh: 半径的平方。
+      ja: 半径の2乗。
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por el ángulo.
+      en: Multiplied by the angle.
+      pt: Multiplicado pelo ângulo.
+      fr: Multiplié par l'angle.
+      zh: 乘以角度。
+      ja: 角度を掛ける。
+  - id: theta
+    type: variable
+    value: θ
+    explanation:
+      es: El ángulo central del sector, medido en radianes.
+      en: The sector's central angle, measured in radians.
+      pt: O ângulo central do setor, medido em radianos.
+      fr: L'angle central du secteur, mesuré en radians.
+      zh: 扇形的圆心角,以弧度为单位。
+      ja: 扇形の中心角。単位はラジアン。
+context:
+  author:
+    es: Origen colectivo de la geometría griega
+    en: Collective origin of Greek geometry
+    pt: Origem coletiva da geometria grega
+    fr: Origine collective de la géométrie grecque
+    zh: 希腊几何学的集体起源
+    ja: 古代ギリシャ幾何学の集団的起源
+  era:
+    es: Grecia, c. 300 a.C.
+    en: Greece, c. 300 BC
+    pt: Grécia, c. 300 a.C.
+    fr: Grèce, c. 300 av. J.-C.
+    zh: 希腊,约公元前300年
+    ja: ギリシャ、紀元前300年頃
+  history:
+    es: >-
+      Un sector circular es la porción de círculo barrida por un ángulo central θ, y su área es una
+      fracción exacta de la del círculo, proporcional al ángulo. Ya Euclides mostró en los Elementos
+      que los sectores de un mismo círculo se relacionan como sus ángulos, y Arquímedes usó sectores
+      para medir el círculo. La forma A = ½r²θ exige medir el ángulo en radianes, la unidad natural
+      introducida siglos después. Con ella se hacen los gráficos de torta, se dimensionan dientes de
+      engranaje y se calcula el precio de una porción de pizza; y es la semilla de la integral en
+      coordenadas polares, ∫½r²dθ.
+    en: >-
+      A circular sector is the portion of a circle swept by a central angle θ, and its area is an
+      exact fraction of the circle's area, proportional to the angle. Euclid already showed in the
+      Elements that sectors of the same circle relate as their angles, and Archimedes used sectors
+      to measure the circle. The form A = ½r²θ requires measuring the angle in radians, the natural
+      unit introduced centuries later. It is used for pie charts, for sizing gear teeth, and for
+      pricing a slice of pizza; and it is the seed of the polar integral, ∫½r²dθ.
+    pt: >-
+      Um setor circular é a porção do círculo varrida por um ângulo central θ, e sua área é uma
+      fração exata da do círculo, proporcional ao ângulo. Euclides já mostrou nos Elementos que os
+      setores de um mesmo círculo se relacionam como seus ângulos, e Arquimedes usou setores para
+      medir o círculo. A forma A = ½r²θ exige medir o ângulo em radianos, a unidade natural
+      introduzida séculos depois. Com ela se fazem gráficos de torta, se dimensionam dentes de
+      engrenagem e se calcula o preço de uma fatia de pizza; e é a semente da integral em
+      coordenadas polares, ∫½r²dθ.
+    fr: >-
+      Un secteur circulaire est la portion de cercle balayée par un angle central θ, et son aire est
+      une fraction exacte de celle du cercle, proportionnelle à l'angle. Euclide avait déjà montré
+      dans les Éléments que les secteurs d'un même cercle se rapportent comme leurs angles, et
+      Archimède utilisa des secteurs pour mesurer le cercle. La forme A = ½r²θ exige de mesurer
+      l'angle en radians, l'unité naturelle introduite des siècles plus tard. Elle sert aux
+      diagrammes circulaires, au dimensionnement des dents d'engrenage et au prix d'une part de
+      pizza ; et elle est la semence de l'intégrale polaire, ∫½r²dθ.
+    zh: >-
+      扇形是圆中由圆心角 θ 扫过的部分,其面积恰好是圆面积的一个分数,与角度成正比。欧几里得已在《几何原本》
+      中证明,同一圆的扇形之比等于其圆心角之比;阿基米德也借助扇形来度量圆。形式 A = ½r²θ 要求以弧度为
+      单位度量角度,而弧度这个自然单位直到几个世纪后才被引入。饼图、齿轮齿的尺寸以及披萨一角的定价都用
+      到它;它还是极坐标积分 ∫½r²dθ 的种子。
+    ja: >-
+      扇形は、中心角 θ によって掃かれる円の一部であり、その面積は円の面積の正確な分数で、角度に比例する。
+      ユークリッドは『原論』で、同一円の扇形がその中心角の比に応じて関係することをすでに示しており、
+      アルキメデスも円を測るのに扇形を用いた。A = ½r²θ という形には、角度をラジアンで測ることが必要であり、
+      これは何世紀も後に導入された自然な単位である。この式は円グラフや歯車の歯の寸法、ピザ一切れの値段の
+      計算に使われ、また極座標の積分 ∫½r²dθ の種となった。
+  timeline:
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides demuestra en los Elementos que los sectores de un círculo son proporcionales a
+          sus ángulos.
+        en: >-
+          Euclid proves in the Elements that sectors of a circle are proportional to their angles.
+        pt: >-
+          Euclides demonstra nos Elementos que os setores de um círculo são proporcionais aos seus
+          ângulos.
+        fr: >-
+          Euclide démontre dans les Éléments que les secteurs d'un cercle sont proportionnels à
+          leurs angles.
+        zh: >-
+          欧几里得在《几何原本》中证明,同一圆的扇形与圆心角成正比。
+        ja: >-
+          ユークリッドが『原論』で、同一円の扇形が中心角に比例することを証明する。
+    - year: c. 225 a.C.
+      label:
+        es: >-
+          Arquímedes usa sectores circulares en su medida del círculo y de la espiral.
+        en: >-
+          Archimedes uses circular sectors in his measurement of the circle and the spiral.
+        pt: >-
+          Arquimedes usa setores circulares em sua medida do círculo e da espiral.
+        fr: >-
+          Archimède utilise des secteurs circulaires dans sa mesure du cercle et de la spirale.
+        zh: >-
+          阿基米德在度量圆和螺线时使用扇形。
+        ja: >-
+          アルキメデスが円と螺旋の測定に扇形を用いる。
+    - year: "1873"
+      label:
+        es: >-
+          James Thomson acuña el término "radián", la unidad natural que hace válida la fórmula
+          A = ½r²θ.
+        en: >-
+          James Thomson coins the term "radian", the natural unit that makes A = ½r²θ valid.
+        pt: >-
+          James Thomson cunha o termo "radiano", a unidade natural que torna A = ½r²θ válida.
+        fr: >-
+          James Thomson forge le terme « radian », l'unité naturelle qui rend A = ½r²θ valable.
+        zh: >-
+          詹姆斯·汤姆森创造"弧度"一词,这是使 A = ½r²θ 成立的自然单位。
+        ja: >-
+          ジェームズ・トムソンが「ラジアン」という語を作る。A = ½r²θ が成り立つ自然な単位。
+    - year: Hoy
+      label:
+        es: >-
+          El sector sustenta gráficos de torta, dientes de engranaje y la integral polar del área.
+        en: >-
+          The sector underpins pie charts, gear teeth, and the polar area integral.
+        pt: >-
+          O setor sustenta gráficos de torta, dentes de engrenagem e a integral polar da área.
+        fr: >-
+          Le secteur fonde les diagrammes circulaires, les dents d'engrenage et l'intégrale polaire
+          de l'aire.
+        zh: >-
+          扇形支撑着饼图、齿轮齿和极坐标面积积分。
+        ja: >-
+          扇形は円グラフ、歯車の歯、極座標の面積積分の基盤である。
+  useCases:
+    - title:
+        es: Visualización de datos
+        en: Data visualization
+        pt: Visualização de dados
+        fr: Visualisation de données
+        zh: 数据可视化
+        ja: データ可視化
+      description:
+        es: >-
+          En un gráfico de torta, el área de cada porción es proporcional a su ángulo, siguiendo
+          esta fórmula.
+        en: >-
+          In a pie chart, each slice's area is proportional to its angle, following this formula.
+        pt: >-
+          Em um gráfico de torta, a área de cada fatia é proporcional ao seu ângulo, seguindo esta
+          fórmula.
+        fr: >-
+          Dans un diagramme circulaire, l'aire de chaque part est proportionnelle à son angle,
+          suivant cette formule.
+        zh: >-
+          饼图中每一块的面积与其角度成正比,依据的就是该公式。
+        ja: >-
+          円グラフでは、各スライスの面積が角度に比例する。これはこの公式に従う。
+    - title:
+        es: Diseño mecánico
+        en: Mechanical design
+        pt: Projeto mecânico
+        fr: Conception mécanique
+        zh: 机械设计
+        ja: 機械設計
+      description:
+        es: >-
+          Los dientes de los engranajes son sectores de circunferencia; su área define el material
+          y el desgaste.
+        en: >-
+          Gear teeth are circular sectors; their area defines material and wear.
+        pt: >-
+          Os dentes das engrenagens são setores de circunferência; sua área define material e
+          desgaste.
+        fr: >-
+          Les dents d'engrenage sont des secteurs de cercle ; leur aire définit la matière et
+          l'usure.
+        zh: >-
+          轮齿是扇形,其面积决定材料和磨损。
+        ja: >-
+          歯車の歯は扇形であり、その面積が材料と摩耗を決める。
+    - title:
+        es: Gastronomía y comercio
+        en: Food and commerce
+        pt: Gastronomia e comércio
+        fr: Gastronomie et commerce
+        zh: 餐饮与商业
+        ja: 飲食と商取引
+      description:
+        es: >-
+          El precio de una porción de pizza u otro alimento circular se calcula por área de sector.
+        en: >-
+          The price of a slice of pizza or other circular food is computed by sector area.
+        pt: >-
+          O preço de uma fatia de pizza ou outro alimento circular é calculado pela área do setor.
+        fr: >-
+          Le prix d'une part de pizza ou d'un autre aliment circulaire se calcule par l'aire du
+          secteur.
+        zh: >-
+          披萨等圆形食物的价格按扇形面积计算。
+        ja: >-
+          ピザなど円形の食品の一切れの値段は、扇形の面積で計算される。
+    - title:
+        es: Cálculo en polares
+        en: Polar calculus
+        pt: Cálculo em polares
+        fr: Calcul en polaires
+        zh: 极坐标微积分
+        ja: 極座標の微積分
+      description:
+        es: >-
+          La integral de área en coordenadas polares se construye sumando sectores ½r²dθ.
+        en: >-
+          The polar area integral is built by adding sectors ½r²dθ.
+        pt: >-
+          A integral de área em coordenadas polares se constrói somando setores ½r²dθ.
+        fr: >-
+          L'intégrale d'aire en coordonnées polaires se construit en sommant des secteurs ½r²dθ.
+        zh: >-
+          极坐标下的面积积分通过累加扇形 ½r²dθ 来构造。
+        ja: >-
+          極座標での面積積分は、扇形 ½r²dθ を足し合わせて構成される。
+  example:
+    title:
+      es: Sector de radio 5 y ángulo 1.2
+      en: Sector of radius 5 and angle 1.2
+      pt: Setor de raio 5 e ângulo 1,2
+      fr: Secteur de rayon 5 et d'angle 1,2
+      zh: 半径5、角度1.2的扇形
+      ja: 半径5・角度1.2の扇形
+    lines:
+      - es: r = 5, θ = 1.2 rad
+        en: r = 5, θ = 1.2 rad
+        pt: r = 5, θ = 1,2 rad
+        fr: r = 5, θ = 1,2 rad
+        zh: r = 5, θ = 1.2 rad
+        ja: r = 5, θ = 1.2 rad
+      - es: A = ½ · r² · θ
+        en: A = ½ · r² · θ
+        pt: A = ½ · r² · θ
+        fr: A = ½ · r² · θ
+        zh: A = ½ · r² · θ
+        ja: A = ½ · r² · θ
+      - es: A = 0.5 · 25 · 1.2
+        en: A = 0.5 · 25 · 1.2
+        pt: A = 0,5 · 25 · 1,2
+        fr: A = 0,5 · 25 · 1,2
+        zh: A = 0.5 · 25 · 1.2
+        ja: A = 0.5 · 25 · 1.2
+      - es: A = 12.5 · 1.2
+        en: A = 12.5 · 1.2
+        pt: A = 12,5 · 1,2
+        fr: A = 12,5 · 1,2
+        zh: A = 12.5 · 1.2
+        ja: A = 12.5 · 1.2
+      - es: "Resultado: A = 15"
+        en: "Result: A = 15"
+        pt: "Resultado: A = 15"
+        fr: "Résultat : A = 15"
+        zh: 结果：A = 15
+        ja: 結果：A = 15

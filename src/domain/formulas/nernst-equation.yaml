@@ -1,0 +1,445 @@
+id: nernst-equation
+title:
+  es: Ecuación de Nernst
+  en: Nernst Equation
+  pt: Equação de Nernst
+  fr: Équation de Nernst
+  zh: 能斯特方程
+  ja: ネルンストの式
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: El potencial real de la celda electroquímica fuera de condiciones estándar.
+      en: The actual potential of the electrochemical cell under non-standard conditions.
+      pt: O potencial real da célula eletroquímica fora das condições padrão.
+      fr: Le potentiel réel de la cellule électrochimique hors conditions standard.
+      zh: 非标准条件下电化学电池的实际电位。
+      ja: 標準状態以外での電気化学セルの実際の電位。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual al potencial estándar corregido por la actividad.
+      en: Is equal to the standard potential corrected for activity.
+      pt: É igual ao potencial padrão corrigido pela atividade.
+      fr: Est égal au potentiel standard corrigé de l'activité.
+      zh: 等于经活度校正后的标准电位。
+      ja: 活量で補正した標準電位に等しい。
+  - id: e0
+    type: constant
+    value: "E⁰"
+    explanation:
+      es: El potencial estándar de la celda, medido a 298 K con concentraciones 1 M.
+      en: The standard cell potential, measured at 298 K with 1 M concentrations.
+      pt: O potencial padrão da célula, medido a 298 K com concentrações 1 M.
+      fr: Le potentiel standard de la cellule, mesuré à 298 K avec des concentrations 1 M.
+      zh: 电池的标准电位,在298 K、浓度为1 M的条件下测得。
+      ja: 298K、濃度1Mで測定されたセルの標準電位。
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: Resta la corrección que depende de la temperatura y las concentraciones.
+      en: Subtracts the correction that depends on temperature and concentrations.
+      pt: Subtrai a correção que depende da temperatura e das concentrações.
+      fr: Soustrait la correction qui dépend de la température et des concentrations.
+      zh: 减去与温度和浓度相关的修正项。
+      ja: 温度と濃度に依存する補正項を引く。
+  - id: r
+    type: constant
+    value: R
+    explanation:
+      es: La constante de los gases ideales, 8,314 J/(mol·K).
+      en: The ideal gas constant, 8.314 J/(mol·K).
+      pt: A constante dos gases ideais, 8,314 J/(mol·K).
+      fr: La constante des gaz parfaits, 8,314 J/(mol·K).
+      zh: 理想气体常数,8.314 J/(mol·K)。
+      ja: 気体定数。8.314 J/(mol·K)。
+  - id: times-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por la temperatura absoluta.
+      en: Multiplied by the absolute temperature.
+      pt: Multiplicado pela temperatura absoluta.
+      fr: Multiplié par la température absolue.
+      zh: 乘以绝对温度。
+      ja: 絶対温度を掛ける。
+  - id: t
+    type: variable
+    value: T
+    explanation:
+      es: La temperatura absoluta de la celda en kelvin.
+      en: The absolute temperature of the cell in kelvins.
+      pt: A temperatura absoluta da célula em kelvin.
+      fr: La température absolue de la cellule en kelvins.
+      zh: 电池的绝对温度,单位为开尔文。
+      ja: セルの絶対温度（ケルビン）。
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido por n por la constante de Faraday.
+      en: Divided by n times the Faraday constant.
+      pt: Dividido por n vezes a constante de Faraday.
+      fr: Divisé par n fois la constante de Faraday.
+      zh: 除以n与法拉第常数的乘积。
+      ja: n×ファラデー定数で割る。
+  - id: paren
+    type: operator
+    value: "("
+    explanation:
+      es: Agrupa el producto n·F en el denominador.
+      en: Groups the product n·F in the denominator.
+      pt: Agrupa o produto n·F no denominador.
+      fr: Regroupe le produit n·F au dénominateur.
+      zh: 将分母中的n·F括起来。
+      ja: 分母のn·Fをまとめる括弧。
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: El número de electrones transferidos en la reacción redox.
+      en: The number of electrons transferred in the redox reaction.
+      pt: O número de elétrons transferidos na reação redox.
+      fr: Le nombre d'électrons transférés dans la réaction d'oxydoréduction.
+      zh: 氧化还原反应中转移的电子数。
+      ja: 酸化還元反応で移動する電子の数。
+  - id: times-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por la constante de Faraday.
+      en: Multiplied by the Faraday constant.
+      pt: Multiplicado pela constante de Faraday.
+      fr: Multiplié par la constante de Faraday.
+      zh: 乘以法拉第常数。
+      ja: ファラデー定数を掛ける。
+  - id: f
+    type: constant
+    value: F
+    explanation:
+      es: La constante de Faraday, 96.485 C/mol.
+      en: The Faraday constant, 96,485 C/mol.
+      pt: A constante de Faraday, 96.485 C/mol.
+      fr: La constante de Faraday, 96 485 C/mol.
+      zh: 法拉第常数,96,485 C/mol。
+      ja: ファラデー定数。96,485 C/mol。
+  - id: paren-close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el agrupamiento del denominador.
+      en: Closes the grouping of the denominator.
+      pt: Fecha o agrupamento do denominador.
+      fr: Ferme le regroupement du dénominateur.
+      zh: 结束分母的括组。
+      ja: 分母の括弧を閉じる。
+  - id: times-3
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por el logaritmo natural de Q.
+      en: Multiplied by the natural logarithm of Q.
+      pt: Multiplicado pelo logaritmo natural de Q.
+      fr: Multiplié par le logarithme népérien de Q.
+      zh: 乘以Q的自然对数。
+      ja: Qの自然対数を掛ける。
+  - id: ln
+    type: constant
+    value: ln
+    explanation:
+      es: El logaritmo natural, base e.
+      en: The natural logarithm, base e.
+      pt: O logaritmo natural, base e.
+      fr: Le logarithme népérien, de base e.
+      zh: 自然对数,底为e。
+      ja: 自然対数。底はe。
+  - id: q
+    type: variable
+    value: Q
+    explanation:
+      es: El cociente de reacción, según las concentraciones de productos y reactivos.
+      en: The reaction quotient, from the concentrations of products and reactants.
+      pt: O quociente de reação, conforme as concentrações de produtos e reagentes.
+      fr: Le quotient de réaction, d'après les concentrations des produits et des réactifs.
+      zh: 反应商,由产物和反应物的浓度决定。
+      ja: 生成物と反応物の濃度から決まる反応商。
+context:
+  author:
+    es: Walther Nernst
+    en: Walther Nernst
+    pt: Walther Nernst
+    fr: Walther Nernst
+    zh: 瓦尔特·能斯特
+    ja: ヴァルター・ネルンスト
+  era:
+    es: Alemania, 1864–1941 · publicada en 1889
+    en: Germany, 1864–1941 · published in 1889
+    pt: Alemanha, 1864–1941 · publicada em 1889
+    fr: Allemagne, 1864–1941 · publiée en 1889
+    zh: 德国,1864–1941年 · 1889年发表
+    ja: ドイツ、1864–1941年・1889年発表
+  history:
+    es: >-
+      Walther Nernst, físico y químico alemán que obtuvo el Premio Nobel de
+      Química en 1920, publicó en 1889 la ecuación que lleva su nombre para
+      describir la diferencia de potencial de una celda electroquímica fuera de
+      las condiciones estándar. La ecuación conecta la termodinámica con la
+      electroquímica: muestra cómo el potencial depende de la temperatura y de
+      las concentraciones de los reactivos y productos. Es el latido de las
+      baterías y de las celdas de combustible y, en forma de potencial de Nernst,
+      también de las señales nerviosas de los seres vivos.
+    en: >-
+      Walther Nernst, a German physicist and chemist who won the Nobel Prize in
+      Chemistry in 1920, published in 1889 the equation that bears his name to
+      describe the potential difference of an electrochemical cell under
+      non-standard conditions. The equation connects thermodynamics to
+      electrochemistry: it shows how the potential depends on temperature and on
+      the concentrations of reactants and products. It is the heartbeat of
+      batteries and fuel cells and, in the form of the Nernst potential, of the
+      nerve signals of living organisms.
+    pt: >-
+      Walther Nernst, físico e químico alemão que ganhou o Prêmio Nobel de
+      Química em 1920, publicou em 1889 a equação que leva seu nome para descrever
+      a diferença de potencial de uma célula eletroquímica fora das condições
+      padrão. A equação conecta a termodinâmica à eletroquímica: mostra como o
+      potencial depende da temperatura e das concentrações de reagentes e
+      produtos. É o coração das baterias e das células de combustível e, na forma
+      de potencial de Nernst, dos sinais nervosos dos seres vivos.
+    fr: >-
+      Walther Nernst, physicien et chimiste allemand lauréat du prix Nobel de
+      chimie en 1920, publia en 1889 l'équation qui porte son nom pour décrire la
+      différence de potentiel d'une cellule électrochimique hors conditions
+      standard. L'équation relie la thermodynamique à l'électrochimie : elle
+      montre comment le potentiel dépend de la température et des concentrations
+      des réactifs et des produits. C'est le cœur des batteries et des piles à
+      combustible et, sous la forme du potentiel de Nernst, des signaux nerveux
+      des organismes vivants.
+    zh: >-
+      德国物理化学家瓦尔特·能斯特于1920年获得诺贝尔化学奖。1889年,他发表了以
+      他的名字命名的方程,用以描述非标准条件下的电化学电池的电位差。该方程将
+      热力学与电化学联系起来:它表明电位如何随温度以及反应物和产物的浓度而变化。
+      它是电池和燃料电池的核心;以能斯特电位的形式,它也是生物体神经信号的来源。
+    ja: >-
+      1920年にノーベル化学賞を受賞したドイツの物理化学者ヴァルター・ネルンストは、
+      1889年に、標準状態以外の条件下での電気化学セルの電位差を記述する方程式を発表した。
+      この方程式は熱力学と電気化学を結びつけ、電位が温度や反応物・生成物の濃度にどう依存するかを示す。
+      電池や燃料電池の心臓部であり、ネルンスト電位として生物の神経信号の源でもある。
+  timeline:
+    - year: "1889"
+      label:
+        es: >-
+          Nernst publica su ecuación al estudiar la fuerza electromotriz de las
+          celdas galvánicas.
+        en: >-
+          Nernst publishes his equation while studying the electromotive force of
+          galvanic cells.
+        pt: >-
+          Nernst publica sua equação ao estudar a força eletromotriz das células
+          galvânicas.
+        fr: >-
+          Nernst publie son équation en étudiant la force électromotrice des
+          cellules galvaniques.
+        zh: >-
+          能斯特在研究伽伐尼电池的电动势时发表了他的方程。
+        ja: >-
+          ガルバニ電池の起電力を研究する中で、ネルンストが自身の式を発表する。
+    - year: "1920"
+      label:
+        es: >-
+          Nernst recibe el Premio Nobel de Química por su trabajo en termoquímica.
+        en: >-
+          Nernst receives the Nobel Prize in Chemistry for his work in
+          thermochemistry.
+        pt: >-
+          Nernst recebe o Prêmio Nobel de Química por seu trabalho em
+          termoquímica.
+        fr: >-
+          Nernst reçoit le prix Nobel de chimie pour ses travaux en
+          thermochimie.
+        zh: >-
+          能斯特因其在热化学方面的工作获得诺贝尔化学奖。
+        ja: >-
+          熱化学の業績により、ネルンストがノーベル化学賞を受賞する。
+    - year: Hoy
+      label:
+        es: >-
+          Es la ecuación estándar para calcular el voltaje de baterías y el
+          potencial de membrana de las neuronas.
+        en: >-
+          It is the standard equation for calculating battery voltage and the
+          membrane potential of neurons.
+        pt: >-
+          É a equação padrão para calcular a tensão de baterias e o potencial de
+          membrana dos neurônios.
+        fr: >-
+          C'est l'équation standard pour calculer la tension des batteries et le
+          potentiel de membrane des neurones.
+        zh: >-
+          它是计算电池电压和神经元膜电位的标准方程。
+        ja: >-
+          電池の電圧やニューロンの膜電位を計算する標準的な式である。
+  useCases:
+    - title:
+        es: Baterías recargables
+        en: Rechargeable batteries
+        pt: Baterias recarregáveis
+        fr: Batteries rechargeables
+        zh: 可充电电池
+        ja: 二次電池
+      description:
+        es: >-
+          Estima el voltaje real de una batería según su estado de carga y la
+          temperatura.
+        en: >-
+          It estimates the real voltage of a battery based on its state of charge
+          and temperature.
+        pt: >-
+          Estima a tensão real de uma bateria conforme seu estado de carga e a
+          temperatura.
+        fr: >-
+          Elle estime la tension réelle d'une batterie selon son état de charge
+          et la température.
+        zh: >-
+          根据荷电状态和温度,估算电池的实际电压。
+        ja: >-
+          充電状態と温度に基づいて、電池の実際の電圧を推定する。
+    - title:
+        es: Celdas de combustible
+        en: Fuel cells
+        pt: Células de combustível
+        fr: Piles à combustible
+        zh: 燃料电池
+        ja: 燃料電池
+      description:
+        es: >-
+          Calcula el voltaje disponible de una celda de hidrógeno según las
+          presiones parciales de los gases.
+        en: >-
+          It calculates the available voltage of a hydrogen cell from the partial
+          pressures of the gases.
+        pt: >-
+          Calcula a tensão disponível de uma célula de hidrogênio conforme as
+          pressões parciais dos gases.
+        fr: >-
+          Elle calcule la tension disponible d'une pile à hydrogène selon les
+          pressions partielles des gaz.
+        zh: >-
+          根据气体的分压,计算氢燃料电池的可用电压。
+        ja: >-
+          ガスの分圧に基づいて、水素燃料電池の利用可能な電圧を計算する。
+    - title:
+        es: Corrosión y protección
+        en: Corrosion and protection
+        pt: Corrosão e proteção
+        fr: Corrosion et protection
+        zh: 腐蚀与防护
+        ja: 腐食と防食
+      description:
+        es: >-
+          Predice si una reacción de corrosión será espontánea según las
+          concentraciones de iones en el medio.
+        en: >-
+          It predicts whether a corrosion reaction will be spontaneous based on
+          the ion concentrations in the medium.
+        pt: >-
+          Prevê se uma reação de corrosão será espontânea conforme as
+          concentrações de íons no meio.
+        fr: >-
+          Elle prédit si une réaction de corrosion sera spontanée selon les
+          concentrations d'ions dans le milieu.
+        zh: >-
+          根据介质中的离子浓度,预测腐蚀反应是否会自发进行。
+        ja: >-
+          媒体中のイオン濃度に基づいて、腐食反応が自発的に起こるかを予測する。
+    - title:
+        es: Neurociencia
+        en: Neuroscience
+        pt: Neurociência
+        fr: Neurosciences
+        zh: 神经科学
+        ja: 神経科学
+      description:
+        es: >-
+          El potencial de Nernst de cada ion explica el potencial de membrana de
+          las neuronas en reposo.
+        en: >-
+          The Nernst potential of each ion explains the resting membrane potential
+          of neurons.
+        pt: >-
+          O potencial de Nernst de cada íon explica o potencial de membrana dos
+          neurônios em repouso.
+        fr: >-
+          Le potentiel de Nernst de chaque ion explique le potentiel de membrane
+          des neurones au repos.
+        zh: >-
+          每个离子的能斯特电位解释了神经元在静息状态下的膜电位。
+        ja: >-
+          各イオンのネルンスト電位は、静止時のニューロンの膜電位を説明する。
+  example:
+    title:
+      es: Potencial de una celda
+      en: Cell potential
+      pt: Potencial de uma célula
+      fr: Potentiel d'une cellule
+      zh: 电池的电位
+      ja: セルの電位
+    lines:
+      - es: E⁰ = 1.2 V, n = 2, T = 298 K
+        en: E⁰ = 1.2 V, n = 2, T = 298 K
+        pt: E⁰ = 1,2 V, n = 2, T = 298 K
+        fr: E⁰ = 1,2 V, n = 2, T = 298 K
+        zh: E⁰ = 1.2 V, n = 2, T = 298 K
+        ja: E⁰ = 1.2 V, n = 2, T = 298 K
+      - es: Q = 0.1
+        en: Q = 0.1
+        pt: Q = 0,1
+        fr: Q = 0,1
+        zh: Q = 0.1
+        ja: Q = 0.1
+      - es: E = E⁰ − (0.0592/n)·log(Q)
+        en: E = E⁰ − (0.0592/n)·log(Q)
+        pt: E = E⁰ − (0,0592/n)·log(Q)
+        fr: E = E⁰ − (0,0592/n)·log(Q)
+        zh: E = E⁰ − (0.0592/n)·log(Q)
+        ja: E = E⁰ − (0.0592/n)·log(Q)
+      - es: E = 1.2 − 0.0296 × log(0.1)
+        en: E = 1.2 − 0.0296 × log(0.1)
+        pt: E = 1,2 − 0,0296 × log(0,1)
+        fr: E = 1,2 − 0,0296 × log(0,1)
+        zh: E = 1.2 − 0.0296 × log(0.1)
+        ja: E = 1.2 − 0.0296 × log(0.1)
+      - es: log(0.1) = −1
+        en: log(0.1) = −1
+        pt: log(0,1) = −1
+        fr: log(0,1) = −1
+        zh: log(0.1) = −1
+        ja: log(0.1) = −1
+      - es: E = 1.2 − 0.0296 × (−1)
+        en: E = 1.2 − 0.0296 × (−1)
+        pt: E = 1,2 − 0,0296 × (−1)
+        fr: E = 1,2 − 0,0296 × (−1)
+        zh: E = 1.2 − 0.0296 × (−1)
+        ja: E = 1.2 − 0.0296 × (−1)
+      - es: E = 1.2 + 0.0296
+        en: E = 1.2 + 0.0296
+        pt: E = 1,2 + 0,0296
+        fr: E = 1,2 + 0,0296
+        zh: E = 1.2 + 0.0296
+        ja: E = 1.2 + 0.0296
+      - es: E ≈ 1.23 V
+        en: E ≈ 1.23 V
+        pt: E ≈ 1,23 V
+        fr: E ≈ 1,23 V
+        zh: E ≈ 1.23 V
+        ja: E ≈ 1.23 V

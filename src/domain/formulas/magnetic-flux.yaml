@@ -1,0 +1,336 @@
+id: magnetic-flux
+title:
+  es: Flujo Magnético
+  en: Magnetic Flux
+  pt: Fluxo Magnético
+  fr: Flux magnétique
+  zh: 磁通量
+  ja: 磁束
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: phi
+    type: variable
+    value: Φ
+    explanation:
+      es: El flujo magnético total que atraviesa una superficie.
+      en: The total magnetic flux crossing a surface.
+      pt: O fluxo magnético total que atravessa uma superfície.
+      fr: Le flux magnétique total qui traverse une surface.
+      zh: 穿过一个表面的总磁通量。
+      ja: 面を貫く磁束の総量。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: b
+    type: variable
+    value: B
+    explanation:
+      es: La densidad de flujo magnético, es decir, la intensidad del campo magnético.
+      en: The magnetic flux density, that is, the strength of the magnetic field.
+      pt: A densidade de fluxo magnético, ou seja, a intensidade do campo magnético.
+      fr: La densité de flux magnétique, c'est-à-dire l'intensité du champ magnétique.
+      zh: 磁通密度，也就是磁场的强度。
+      ja: 磁束密度、すなわち磁場の強さ。
+  - id: dot-1
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: El área de la superficie atravesada por el campo.
+      en: The area of the surface crossed by the field.
+      pt: A área da superfície atravessada pelo campo.
+      fr: L'aire de la surface traversée par le champ.
+      zh: 被磁场穿过的表面的面积。
+      ja: 磁場が貫く面の面積。
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: cos-theta
+    type: constant
+    value: cos θ
+    explanation:
+      es: "El coseno del ángulo entre el campo y la normal a la superficie: proyecta el campo sobre esa normal."
+      en: "The cosine of the angle between the field and the surface's normal: it projects the field onto that normal."
+      pt: "O cosseno do ângulo entre o campo e a normal à superfície: projeta o campo sobre essa normal."
+      fr: "Le cosinus de l'angle entre le champ et la normale à la surface : il projette le champ sur cette normale."
+      zh: "磁场与表面法线之间夹角的余弦：把磁场投影到法线方向上。"
+      ja: "磁場と面の法線とのなす角の余弦。磁場を法線方向に投影する。"
+context:
+  author:
+    es: Michael Faraday
+    en: Michael Faraday
+    pt: Michael Faraday
+    fr: Michael Faraday
+    zh: 迈克尔·法拉第
+    ja: マイケル・ファラデー
+  era:
+    es: Inglaterra, 1791–1867
+    en: England, 1791–1867
+    pt: Inglaterra, 1791–1867
+    fr: Angleterre, 1791–1867
+    zh: 英格兰，1791–1867年
+    ja: イングランド、1791–1867年
+  history:
+    es: >-
+      Faraday introdujo la idea de las líneas de campo magnético en 1831, al experimentar en Londres
+      con imanes y espiras de alambre. El flujo Φ cuenta cuántas líneas de campo atraviesan una
+      superficie; el coseno proyecta el ángulo entre el campo y la normal a esa superficie. Cuando el
+      flujo cambia con el tiempo, Faraday descubrió que se induce un voltaje en el circuito, un
+      fenómeno que hoy alimenta desde los generadores de las centrales eléctricas hasta las pastillas
+      de las guitarras eléctricas.
+    en: >-
+      Faraday introduced the idea of magnetic field lines in 1831 while experimenting in London with
+      magnets and coils of wire. The flux Φ counts how many field lines cross a surface; the cosine
+      projects the angle between the field and the surface's normal. When the flux changes with time,
+      Faraday discovered, a voltage is induced in the circuit — a phenomenon that today powers
+      everything from power-station generators to electric guitar pickups.
+    pt: >-
+      Faraday introduziu a ideia das linhas de campo magnético em 1831, ao experimentar em Londres
+      com ímãs e bobinas de fio. O fluxo Φ conta quantas linhas de campo atravessam uma superfície; o
+      cosseno projeta o ângulo entre o campo e a normal a essa superfície. Quando o fluxo varia com o
+      tempo, Faraday descobriu que uma tensão é induzida no circuito, um fenômeno que hoje alimenta
+      desde os geradores das usinas elétricas até os captadores das guitarras elétricas.
+    fr: >-
+      Faraday introduisit l'idée des lignes de champ magnétique en 1831, en expérimentant à Londres
+      avec des aimants et des bobines de fil. Le flux Φ compte combien de lignes de champ traversent
+      une surface ; le cosinus projette l'angle entre le champ et la normale à cette surface. Lorsque
+      le flux varie dans le temps, Faraday découvrit qu'une tension est induite dans le circuit — un
+      phénomène qui alimente aujourd'hui aussi bien les générateurs des centrales électriques que les
+      micros des guitares électriques.
+    zh: >-
+      1831年，法拉第在伦敦用磁铁和线圈做实验时引入了磁力线这一概念。磁通量Φ用来数一数有多少条场线穿过某个表面；
+      余弦把磁场与表面法线之间的夹角投影到法线方向上。法拉第发现，当磁通量随时间变化时，回路中会产生感应电压。
+      这一现象今天既驱动着发电站里的发电机，也支撑着电吉他的拾音器。
+    ja: >-
+      ファラデーは1831年、ロンドンで磁石とコイルを使った実験から磁力線の概念を導入した。磁束Φは面を貫く磁力線の
+      本数を数える量であり、余弦は磁場と面の法線とのなす角を法線方向に投影する。磁束が時間とともに変化すると回路に
+      起電力が誘導されることをファラデーは発見した。この現象は現在、発電所の発電機からエレキギターのピックアップまで、
+      幅広く利用されている。
+  timeline:
+    - year: "1820"
+      label:
+        es: >-
+          Ørsted descubre que una corriente desvía la aguja de una brújula, uniendo electricidad y
+          magnetismo.
+        en: >-
+          Ørsted discovers that a current deflects a compass needle, linking electricity and
+          magnetism.
+        pt: >-
+          Ørsted descobre que uma corrente desvia a agulha de uma bússola, unindo eletricidade e
+          magnetismo.
+        fr: >-
+          Ørsted découvre qu'un courant dévie l'aiguille d'une boussole, unissant électricité et
+          magnétisme.
+        zh: >-
+          奥斯特发现电流能使指南针的指针偏转，第一次把电与磁联系起来。
+        ja: >-
+          エルステッドが、電流がコンパスの針を振れさせることを発見し、電気と磁気を結びつける。
+    - year: "1831"
+      label:
+        es: >-
+          Faraday descubre la inducción electromagnética: un flujo cambiante induce un voltaje.
+        en: >-
+          Faraday discovers electromagnetic induction: a changing flux induces a voltage.
+        pt: >-
+          Faraday descobre a indução eletromagnética: um fluxo variável induz uma tensão.
+        fr: >-
+          Faraday découvre l'induction électromagnétique : un flux variable induit une tension.
+        zh: >-
+          法拉第发现电磁感应：变化的磁通量会感应出电压。
+        ja: >-
+          ファラデーが電磁誘導を発見する。変化する磁束が電圧を誘起する。
+    - year: "1861"
+      label:
+        es: >-
+          Maxwell encierra el electromagnetismo en sus ecuaciones, que describen el flujo como un
+          campo.
+        en: >-
+          Maxwell captures electromagnetism in his equations, describing flux as a field.
+        pt: >-
+          Maxwell resume o eletromagnetismo em suas equações, descrevendo o fluxo como um campo.
+        fr: >-
+          Maxwell enferme l'électromagnétisme dans ses équations, décrivant le flux comme un champ.
+        zh: >-
+          麦克斯韦用方程组完整描述电磁学，把磁通量归结为场的概念。
+        ja: >-
+          マクスウェルが電磁気学を方程式にまとめ、磁束を場として記述する。
+    - year: Hoy
+      label:
+        es: >-
+          Generadores, transformadores, motores y pastillas de guitarra funcionan gracias al flujo
+          cambiante.
+        en: >-
+          Generators, transformers, motors, and guitar pickups all run on changing flux.
+        pt: >-
+          Geradores, transformadores, motores e captadores de guitarra funcionam graças ao fluxo
+          variável.
+        fr: >-
+          Générateurs, transformateurs, moteurs et micros de guitare fonctionnent grâce au flux
+          variable.
+        zh: >-
+          发电机、变压器、电机和吉他拾音器都靠变化的磁通量工作。
+        ja: >-
+          発電機、変圧器、モーター、ギターピックアップはすべて、変化する磁束によって働いている。
+  useCases:
+    - title:
+        es: Generación de electricidad
+        en: Electricity generation
+        pt: Geração de eletricidade
+        fr: Production d'électricité
+        zh: 发电
+        ja: 発電
+      description:
+        es: >-
+          Los generadores de las centrales eléctricas convierten movimiento en electricidad haciendo
+          variar el flujo magnético a través de bobinas.
+        en: >-
+          Power-station generators convert motion into electricity by varying the magnetic flux
+          through coils.
+        pt: >-
+          Os geradores das usinas elétricas convertem movimento em eletricidade fazendo variar o
+          fluxo magnético através de bobinas.
+        fr: >-
+          Les générateurs des centrales électriques convertissent le mouvement en électricité en
+          faisant varier le flux magnétique à travers des bobines.
+        zh: >-
+          发电站的发电机通过让线圈中的磁通量发生变化，把运动转化为电能。
+        ja: >-
+          発電所の発電機はコイルを貫く磁束を変化させることで、運動を電気に変換している。
+    - title:
+        es: Transformadores
+        en: Transformers
+        pt: Transformadores
+        fr: Transformateurs
+        zh: 变压器
+        ja: 変圧器
+      description:
+        es: >-
+          Reducen o elevan la tensión haciendo pasar un flujo variable por un núcleo de hierro
+          compartido.
+        en: >-
+          They step voltage up or down by driving a varying flux through a shared iron core.
+        pt: >-
+          Reduzem ou elevam a tensão fazendo passar um fluxo variável por um núcleo de ferro
+          compartilhado.
+        fr: >-
+          Ils élèvent ou abaissent la tension en faisant passer un flux variable dans un noyau de
+          fer partagé.
+        zh: >-
+          让变化的磁通量穿过共用的铁芯，从而实现升压或降压。
+        ja: >-
+          共有する鉄心に変化する磁束を通すことで、電圧を昇圧・降圧する。
+    - title:
+        es: Guitarras eléctricas
+        en: Electric guitars
+        pt: Guitarras elétricas
+        fr: Guitares électriques
+        zh: 电吉他
+        ja: エレキギター
+      description:
+        es: >-
+          Las pastillas magnéticas transforman la vibración de las cuerdas en una señal eléctrica al
+          alterar el flujo.
+        en: >-
+          Magnetic pickups turn the vibration of the strings into an electric signal by altering the
+          flux.
+        pt: >-
+          Os captadores magnéticos transformam a vibração das cordas em um sinal elétrico ao alterar
+          o fluxo.
+        fr: >-
+          Les micros magnétiques transforment la vibration des cordes en signal électrique en
+          modifiant le flux.
+        zh: >-
+          磁拾音器通过改变磁通量，把琴弦的振动转化为电信号。
+        ja: >-
+          マグネティック・ピックアップは磁束を変化させることで、弦の振動を電気信号に変換する。
+    - title:
+        es: Motores eléctricos
+        en: Electric motors
+        pt: Motores elétricos
+        fr: Moteurs électriques
+        zh: 电动机
+        ja: 電動モーター
+      description:
+        es: >-
+          Funcionan invirtiendo la relación: la corriente en las bobinas crea un flujo que hace girar
+          el rotor.
+        en: >-
+          They run the relation backward: current in the coils creates a flux that drives the rotor
+          to spin.
+        pt: >-
+          Funcionam invertendo a relação: a corrente nas bobinas cria um fluxo que faz o rotor girar.
+        fr: >-
+          Ils fonctionnent en inversant la relation : le courant dans les bobines crée un flux qui
+          entraîne la rotation du rotor.
+        zh: >-
+          电动机把关系反过来用：线圈中的电流产生磁通量，推动转子旋转。
+        ja: >-
+          モーターは関係を逆に利用する。コイルの電流が磁束を作り、ローターを回転させる。
+  example:
+    title:
+      es: Flujo a través de una superficie
+      en: Flux through a surface
+      pt: Fluxo através de uma superfície
+      fr: Flux à travers une surface
+      zh: 穿过一个表面的磁通量
+      ja: 面を貫く磁束
+    lines:
+      - es: B = 0.5 T
+        en: B = 0.5 T
+        pt: B = 0,5 T
+        fr: B = 0,5 T
+        zh: B = 0.5 T
+        ja: B = 0.5 T
+      - es: A = 0.2 m²
+        en: A = 0.2 m²
+        pt: A = 0,2 m²
+        fr: A = 0,2 m²
+        zh: A = 0.2 m²
+        ja: A = 0.2 m²
+      - es: cos θ = 1 (θ = 0°)
+        en: cos θ = 1 (θ = 0°)
+        pt: cos θ = 1 (θ = 0°)
+        fr: cos θ = 1 (θ = 0°)
+        zh: cos θ = 1（θ = 0°）
+        ja: cos θ = 1（θ = 0°）
+      - es: Φ = B · A · cos θ = 0.5 × 0.2 × 1
+        en: Φ = B · A · cos θ = 0.5 × 0.2 × 1
+        pt: Φ = B · A · cos θ = 0,5 × 0,2 × 1
+        fr: Φ = B · A · cos θ = 0,5 × 0,2 × 1
+        zh: Φ = B · A · cos θ = 0.5 × 0.2 × 1
+        ja: Φ = B · A · cos θ = 0.5 × 0.2 × 1
+      - es: Φ = 0.1 Wb
+        en: Φ = 0.1 Wb
+        pt: Φ = 0,1 Wb
+        fr: Φ = 0,1 Wb
+        zh: Φ = 0.1 Wb
+        ja: Φ = 0.1 Wb

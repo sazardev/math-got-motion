@@ -1,0 +1,345 @@
+id: cosine-addition
+title:
+  es: Coseno de la Suma de Ángulos
+  en: Cosine of a Sum of Angles
+  pt: Cosseno da Soma de Ângulos
+  fr: Cosinus d'une somme d'angles
+  zh: 两角和的余弦公式
+  ja: 余弦の加法定理
+category:
+  es: Trigonometría
+  en: Trigonometry
+  pt: Trigonometria
+  fr: Trigonométrie
+  zh: 三角学
+  ja: 三角法
+nodes:
+  - id: cos
+    type: operator
+    value: cos
+    explanation:
+      es: La función coseno del ángulo que sigue.
+      en: The cosine function of the angle that follows.
+      pt: A função cosseno do ângulo que segue.
+      fr: La fonction cosinus de l'angle qui suit.
+      zh: 后面角度的余弦函数。
+      ja: 続く角度の余弦関数。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre la suma de ángulos.
+      en: Opens the sum of angles.
+      pt: Abre a soma de ângulos.
+      fr: Ouvre la somme d'angles.
+      zh: 打开角度之和。
+      ja: 角度の和を開く括弧。
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: "a: el primer ángulo."
+      en: "a: the first angle."
+      pt: "a: o primeiro ângulo."
+      fr: "a : le premier angle."
+      zh: "a：第一个角度。"
+      ja: "a：最初の角度。"
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado al segundo ángulo.
+      en: Added to the second angle.
+      pt: Somado ao segundo ângulo.
+      fr: Ajouté au second angle.
+      zh: 加上第二个角度。
+      ja: 2番目の角度に加える。
+  - id: b
+    type: variable
+    value: b
+    explanation:
+      es: "b: el segundo ángulo."
+      en: "b: the second angle."
+      pt: "b: o segundo ângulo."
+      fr: "b : le second angle."
+      zh: "b：第二个角度。"
+      ja: "b：2番目の角度。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la suma de ángulos.
+      en: Closes the sum of angles.
+      pt: Fecha a soma de ângulos.
+      fr: Ferme la somme d'angles.
+      zh: 关闭角度之和。
+      ja: 角度の和を閉じる括弧。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: cos-a
+    type: variable
+    value: cos a
+    explanation:
+      es: El coseno del primer ángulo.
+      en: The cosine of the first angle.
+      pt: O cosseno do primeiro ângulo.
+      fr: Le cosinus du premier angle.
+      zh: 第一个角度的余弦。
+      ja: 最初の角度の余弦。
+  - id: dot-1
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: cos-b
+    type: variable
+    value: cos b
+    explanation:
+      es: El coseno del segundo ángulo.
+      en: The cosine of the second angle.
+      pt: O cosseno do segundo ângulo.
+      fr: Le cosinus du second angle.
+      zh: 第二个角度的余弦。
+      ja: 2番目の角度の余弦。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "Menos: a diferencia del seno, en el coseno el signo es negativo."
+      en: "Minus: unlike the sine formula, the cosine formula carries a minus sign."
+      pt: "Menos: ao contrário da fórmula do seno, aqui o sinal é negativo."
+      fr: "Moins : contrairement à la formule du sinus, ici le signe est négatif."
+      zh: "减号：与正弦公式不同，此处符号为负。"
+      ja: "マイナス。正弦の公式と異なり、ここでは符号がマイナスになる。"
+  - id: sin-a
+    type: variable
+    value: sin a
+    explanation:
+      es: El seno del primer ángulo.
+      en: The sine of the first angle.
+      pt: O seno do primeiro ângulo.
+      fr: Le sinus du premier angle.
+      zh: 第一个角度的正弦。
+      ja: 最初の角度の正弦。
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: sin-b
+    type: variable
+    value: sin b
+    explanation:
+      es: El seno del segundo ángulo.
+      en: The sine of the second angle.
+      pt: O seno do segundo ângulo.
+      fr: Le sinus du second angle.
+      zh: 第二个角度的正弦。
+      ja: 2番目の角度の正弦。
+context:
+  author:
+    es: Claudio Ptolomeo y matemáticos árabes
+    en: Claudius Ptolemy and Arabic mathematicians
+    pt: Cláudio Ptolomeu e matemáticos árabes
+    fr: Claude Ptolémée et les mathématiciens arabes
+    zh: 克罗狄斯·托勒密及阿拉伯数学家
+    ja: クラウディオス・プトレマイオスとアラブの数学者たち
+  era:
+    es: Alejandría, c. 150 · sintetizada por Euler en 1748
+    en: Alexandria, c. 150 · synthesized by Euler in 1748
+    pt: Alexandria, c. 150 · sintetizada por Euler em 1748
+    fr: Alexandrie, v. 150 · synthétisée par Euler en 1748
+    zh: 亚历山大港，约公元150年·1748年由欧拉综合
+    ja: アレクサンドリア、紀元150年頃・1748年にオイラーが集大成
+  history:
+    es: >-
+      Compañera de la fórmula del seno de la suma, aparece también en la trigonometría de cuerdas de
+      Ptolomeo y fue desarrollada por los matemáticos islámicos medievales. La resta codifica que el
+      coseno es una función par: cos(−x) = cos x. Junto con su par seno, es la base del cálculo de
+      fasores en los circuitos de corriente alterna y de la descomposición de señales en senos y
+      cosenos de Fourier.
+    en: >-
+      The companion to the sine addition formula, it also appears in Ptolemy's chord trigonometry and
+      was developed by medieval Islamic mathematicians. The subtraction encodes the fact that cosine
+      is even: cos(−x) = cos x. Together with its sine counterpart, it is the basis of phasor
+      calculations in AC circuits and of Fourier's decomposition of signals into sines and cosines.
+    pt: >-
+      Companheira da fórmula do seno da soma, aparece também na trigonometria de cordas de Ptolomeu e
+      foi desenvolvida pelos matemáticos islâmicos medievais. A subtração codifica que o cosseno é uma
+      função par: cos(−x) = cos x. Junto com sua contraparte seno, é a base do cálculo de fasores nos
+      circuitos de corrente alternada e da decomposição de sinais em senos e cossenos de Fourier.
+    fr: >-
+      Compagne de la formule du sinus d'une somme, elle apparaît aussi dans la trigonométrie des
+      cordes de Ptolémée et fut développée par les mathématiciens islamiques médiévaux. La
+      soustraction traduit le fait que le cosinus est pair : cos(−x) = cos x. Avec son pendant sinus,
+      elle est à la base du calcul des phaseurs dans les circuits à courant alternatif et de la
+      décomposition de Fourier des signaux en sinus et cosinus.
+    zh: >-
+      作为两角和正弦公式的姊妹公式，它也出现在托勒密的弦三角学中，并由中世纪伊斯兰数学家加以发展。
+      其中的减号体现了余弦是偶函数这一事实：cos(−x) = cos x。它与正弦公式一起，构成交流电路中相量计算的
+      基础，也是傅里叶将信号分解为正弦和余弦的基础。
+    ja: >-
+      正弦の加法定理の相棒であり、プトレマイオスの弦の三角法にも現れ、中世イスラムの数学者たちが発展させた。
+      引き算は、cos(−x) = cos xという余弦が偶関数であることを表している。正弦の公式とともに、交流回路の
+      フェーザ計算や、信号を正弦・余弦に分解するフーリエ解析の基礎となっている。
+  timeline:
+    - year: c. 150
+      label:
+        es: >-
+          La trigonometría de cuerdas de Ptolomeo encierra esta identidad en forma geométrica.
+        en: >-
+          Ptolemy's chord trigonometry encodes this identity in geometric form.
+        pt: >-
+          A trigonometria de cordas de Ptolomeu encerra essa identidade em forma geométrica.
+        fr: >-
+          La trigonométrie des cordes de Ptolémée renferme cette identité sous forme géométrique.
+        zh: >-
+          托勒密的弦三角学以几何形式蕴含了这一恒等式。
+        ja: >-
+          プトレマイオスの弦の三角法が、この恒等式を幾何学的な形で内包している。
+    - year: "1748"
+      label:
+        es: >-
+          Euler la deduce de su fórmula e^(iθ), dando a la resta su forma definitiva.
+        en: >-
+          Euler derives it from his formula e^(iθ), giving the subtraction its definitive form.
+        pt: >-
+          Euler a deduz de sua fórmula e^(iθ), dando à subtração sua forma definitiva.
+        fr: >-
+          Euler la déduit de sa formule e^(iθ), donnant à la soustraction sa forme définitive.
+        zh: >-
+          欧拉从e^(iθ)公式推出它，使减号具有了最终形式。
+        ja: >-
+          オイラーがe^(iθ)の公式からこれを導き、引き算に決定的な形を与える。
+    - year: Hoy
+      label:
+        es: >-
+          Es el cálculo estándar de diferencias de fase en ingeniería eléctrica y análisis de señales.
+        en: >-
+          It is the standard phase-difference calculation in electrical engineering and signal
+          analysis.
+        pt: >-
+          É o cálculo padrão de diferença de fase em engenharia elétrica e análise de sinais.
+        fr: >-
+          C'est le calcul standard de la différence de phase en génie électrique et en analyse du
+          signal.
+        zh: >-
+          它是电气工程和信号分析中相位差的标准计算。
+        ja: >-
+          電気工学と信号解析における位相差計算の標準となっている。
+  useCases:
+    - title:
+        es: Corriente alterna
+        en: Alternating current
+        pt: Corrente alternada
+        fr: Courant alternatif
+        zh: 交流电
+        ja: 交流
+      description:
+        es: >-
+          La diferencia de fase entre voltaje y corriente se calcula con el coseno de la resta de
+          ángulos.
+        en: >-
+          The phase difference between voltage and current is computed with the cosine of a
+          difference of angles.
+        pt: >-
+          A diferença de fase entre tensão e corrente é calculada com o cosseno de uma diferença de
+          ângulos.
+        fr: >-
+          Le déphasage entre tension et courant se calcule avec le cosinus d'une différence
+          d'angles.
+        zh: >-
+          电压与电流之间的相位差，用角度之差的余弦来计算。
+        ja: >-
+          電圧と電流の位相差は、角度の差の余弦で計算される。
+    - title:
+        es: Análisis de Fourier
+        en: Fourier analysis
+        pt: Análise de Fourier
+        fr: Analyse de Fourier
+        zh: 傅里叶分析
+        ja: フーリエ解析
+      description:
+        es: >-
+          Descomponer una señal en senos y cosenos depende de estas identidades de adición.
+        en: >-
+          Decomposing a signal into sines and cosines relies on these addition identities.
+        pt: >-
+          Decompor um sinal em senos e cossenos depende dessas identidades de adição.
+        fr: >-
+          Décomposer un signal en sinus et cosinus repose sur ces identités d'addition.
+        zh: >-
+          将信号分解为正弦和余弦，依赖于这些加法恒等式。
+        ja: >-
+          信号を正弦・余弦に分解することは、これらの加法定理に依存している。
+    - title:
+        es: Mecánica orbital
+        en: Orbital mechanics
+        pt: Mecânica orbital
+        fr: Mécanique orbitale
+        zh: 轨道力学
+        ja: 軌道力学
+      description:
+        es: >-
+          Descomponer la posición de un satélite en componentes requiere estas identidades.
+        en: >-
+          Decomposing a satellite's position into components requires these identities.
+        pt: >-
+          Decompor a posição de um satélite em componentes requer essas identidades.
+        fr: >-
+          Décomposer la position d'un satellite en composantes exige ces identités.
+        zh: >-
+          将卫星位置分解为分量需要这些恒等式。
+        ja: >-
+          衛星の位置を成分に分解するには、これらの恒等式が必要である。
+  example:
+    title:
+      es: Coseno de 90°
+      en: Cosine of 90°
+      pt: Cosseno de 90°
+      fr: Cosinus de 90°
+      zh: 90°的余弦
+      ja: cos 90°
+    lines:
+      - es: cos(60°+30°) = cos 60° cos 30° − sin 60° sin 30°
+        en: cos(60°+30°) = cos 60° cos 30° − sin 60° sin 30°
+        pt: cos(60°+30°) = cos 60° cos 30° − sen 60° sen 30°
+        fr: cos(60°+30°) = cos 60° cos 30° − sin 60° sin 30°
+        zh: cos(60°+30°) = cos 60° cos 30° − sin 60° sin 30°
+        ja: cos(60°+30°) = cos 60° cos 30° − sin 60° sin 30°
+      - es: = 0.5 · 0.8660 − 0.8660 · 0.5
+        en: = 0.5 · 0.8660 − 0.8660 · 0.5
+        pt: = 0,5 · 0,8660 − 0,8660 · 0,5
+        fr: = 0,5 · 0,8660 − 0,8660 · 0,5
+        zh: = 0.5 · 0.8660 − 0.8660 · 0.5
+        ja: = 0.5 · 0.8660 − 0.8660 · 0.5
+      - es: = 0.433 − 0.433
+        en: = 0.433 − 0.433
+        pt: = 0,433 − 0,433
+        fr: = 0,433 − 0,433
+        zh: = 0.433 − 0.433
+        ja: = 0.433 − 0.433
+      - es: cos 90° = 0
+        en: cos 90° = 0
+        pt: cos 90° = 0
+        fr: cos 90° = 0
+        zh: cos 90° = 0
+        ja: cos 90° = 0

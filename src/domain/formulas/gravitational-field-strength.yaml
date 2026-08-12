@@ -1,0 +1,354 @@
+id: gravitational-field-strength
+title:
+  es: Intensidad del Campo Gravitatorio
+  en: Gravitational Field Strength
+  pt: Intensidade do Campo Gravitacional
+  fr: Intensité du champ gravitationnel
+  zh: 引力场强度
+  ja: 重力場の強さ
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: g
+    type: variable
+    value: g
+    explanation:
+      es: La intensidad del campo gravitatorio, es decir, la fuerza que siente cada unidad de masa.
+      en: The gravitational field strength, that is, the force felt by each unit of mass.
+      pt: A intensidade do campo gravitacional, ou seja, a força que cada unidade de massa sente.
+      fr: L'intensité du champ gravitationnel, c'est-à-dire la force ressentie par chaque unité de
+        masse.
+      zh: 引力场强度，即单位质量所感受到的力。
+      ja: 重力場の強さ。すなわち単位質量あたりに感じる力。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: g-const
+    type: constant
+    value: G
+    explanation:
+      es: La constante de gravitación universal, la misma en todo el universo.
+      en: The universal gravitational constant, the same throughout the universe.
+      pt: A constante de gravitação universal, a mesma em todo o universo.
+      fr: La constante de gravitation universelle, identique dans tout l'univers.
+      zh: 万有引力常数，在宇宙中处处相同。
+      ja: 万有引力定数。宇宙のどこでも同じ値をとる。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: m
+    type: variable
+    value: M
+    explanation:
+      es: La masa del cuerpo que crea el campo, por ejemplo la Tierra.
+      en: The mass of the body creating the field, for example the Earth.
+      pt: A massa do corpo que cria o campo, por exemplo a Terra.
+      fr: La masse du corps qui crée le champ, par exemple la Terre.
+      zh: 产生该场的天体的质量，例如地球。
+      ja: 場を作る天体の質量。例えば地球。
+  - id: div
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre el cuadrado de la distancia.
+      en: Divided by the square of the distance.
+      pt: Dividido pelo quadrado da distância.
+      fr: Divisé par le carré de la distance.
+      zh: 除以距离的平方。
+      ja: 距離の二乗で割る。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: La distancia desde el centro del cuerpo hasta el punto donde se mide el campo.
+      en: The distance from the body's center to the point where the field is measured.
+      pt: A distância do centro do corpo até o ponto onde se mede o campo.
+      fr: La distance du centre du corps jusqu'au point où le champ est mesuré.
+      zh: 从天体中心到测量该场那一点的距离。
+      ja: 天体の中心から場を測る点までの距離。
+  - id: exp-2
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Al cuadrado: al alejarnos, el campo se debilita muy rápido."
+      en: "Squared: as you move away, the field weakens very quickly."
+      pt: "Ao quadrado: ao nos afastarmos, o campo enfraquece muito rápido."
+      fr: "Au carré : en s'éloignant, le champ s'affaiblit très vite."
+      zh: "平方：离得越远，场衰减得越快。"
+      ja: "二乗。離れるほど、場は急速に弱くなる。"
+context:
+  author:
+    es: Isaac Newton
+    en: Isaac Newton
+    pt: Isaac Newton
+    fr: Isaac Newton
+    zh: 艾萨克·牛顿
+    ja: アイザック・ニュートン
+  era:
+    es: Inglaterra, 1687
+    en: England, 1687
+    pt: Inglaterra, 1687
+    fr: Angleterre, 1687
+    zh: 英格兰，1687年
+    ja: イングランド、1687年
+  history:
+    es: >-
+      Newton publicó en 1687, en los Principia, que dos cuerpos se atraen con una fuerza
+      proporcional a sus masas e inversa al cuadrado de su distancia. El campo gravitatorio g =
+      G·M/r² expresa esa misma fuerza por unidad de masa: en la superficie terrestre vale unos 9,81
+      N/kg. Como la Tierra cae junto con todo lo que orbita a su alrededor, los astronautas de la
+      Estación Espacial sienten ingravidez aunque la gravedad allí apenas es menor que en el suelo:
+      están en caída libre permanente.
+    en: >-
+      Newton published in 1687, in the Principia, that two bodies attract each other with a force
+      proportional to their masses and inversely proportional to the square of their distance. The
+      gravitational field strength g = G·M/r² expresses that same force per unit mass: near Earth's
+      surface it is about 9.81 N/kg. Because the Earth falls together with everything in orbit
+      around it, astronauts on the space station feel weightless even though gravity there is barely
+      weaker than at the surface: they are in permanent free fall.
+    pt: >-
+      Newton publicou em 1687, nos Principia, que dois corpos se atraem com uma força proporcional
+      às suas massas e inversamente proporcional ao quadrado da distância. A intensidade do campo
+      gravitacional g = G·M/r² expressa essa mesma força por unidade de massa: na superfície da
+      Terra vale cerca de 9,81 N/kg. Como a Terra cai junto com tudo o que orbita ao seu redor, os
+      astronautas na Estação Espacial sentem imponderabilidade mesmo que a gravidade ali seja pouco
+      menor que a do solo: estão em queda livre permanente.
+    fr: >-
+      Newton publia en 1687, dans les Principia, que deux corps s'attirent avec une force
+      proportionnelle à leurs masses et inversement proportionnelle au carré de leur distance.
+      L'intensité du champ gravitationnel g = G·M/r² exprime cette même force par unité de masse : à
+      la surface de la Terre, elle vaut environ 9,81 N/kg. Parce que la Terre tombe en même temps
+      que tout ce qui orbite autour d'elle, les astronautes de la Station spatiale ressentent
+      l'impesanteur même si la gravité y est à peine plus faible qu'au sol : ils sont en chute libre
+      permanente.
+    zh: >-
+      1687年，牛顿在《自然哲学的数学原理》中指出，两个物体之间的引力与它们的质量成正比，与距离的平方成反比。引力场强度
+      g = G·M/r²表示的就是这个力除以单位质量的结果：在地球表面约为9.81 N/kg。因为地球和环绕它的一切物体在一起下落，
+      国际空间站上的宇航员即使身处仅比地面略弱的引力中仍会感到失重：他们一直处于自由落体之中。
+    ja: >-
+      ニュートンは1687年の『プリンキピア』で、二つの物体は質量に比例し距離の二乗に反比例する力で引き合うことを示した。
+      重力場の強さg = G・M/r²は、その力を単位質量あたりで表したものである。地表付近では約9.81 N/kgとなる。地球は周りを回る
+      すべてのものと一緒に落下しているため、宇宙ステーションの宇宙飛行士は、そこでの重力が地表とほとんど変わらないにもかかわらず
+      無重力を感じる。彼らは絶えず自由落下しているのである。
+  timeline:
+    - year: "1687"
+      label:
+        es: >-
+          Newton publica los Principia, donde la ley de gravitación universal da lugar al campo g =
+          G·M/r².
+        en: >-
+          Newton publishes the Principia, where the law of universal gravitation yields the field g
+          = G·M/r².
+        pt: >-
+          Newton publica os Principia, onde a lei da gravitação universal dá origem ao campo g =
+          G·M/r².
+        fr: >-
+          Newton publie les Principia, où la loi de la gravitation universelle donne naissance au
+          champ g = G·M/r².
+        zh: >-
+          牛顿发表《自然哲学的数学原理》，万有引力定律由此推出引力场g = G·M/r²。
+        ja: >-
+          ニュートンが『プリンキピア』を出版。万有引力の法則から重力場g = G・M/r²が導かれる。
+    - year: "1798"
+      label:
+        es: >-
+          Henry Cavendish mide en laboratorio la constante G con una balanza de torsión.
+        en: >-
+          Henry Cavendish measures the constant G in the laboratory with a torsion balance.
+        pt: >-
+          Henry Cavendish mede em laboratório a constante G com uma balança de torção.
+        fr: >-
+          Henry Cavendish mesure en laboratoire la constante G avec une balance de torsion.
+        zh: >-
+          亨利·卡文迪什在实验室中用扭秤测出了常数G的数值。
+        ja: >-
+          ヘンリー・キャヴェンディッシュがねじり秤で実験室において定数Gを測定する。
+    - year: "1957"
+      label:
+        es: >-
+          El Sputnik 1 entra en órbita: la primera órbita artificial calculada con este campo
+          gravitatorio.
+        en: >-
+          Sputnik 1 reaches orbit: the first artificial orbit computed with this gravitational
+          field.
+        pt: >-
+          O Sputnik 1 entra em órbita: a primeira órbita artificial calculada com esse campo
+          gravitacional.
+        fr: >-
+          Spoutnik 1 atteint l'orbite : la première orbite artificielle calculée avec ce champ
+          gravitationnel.
+        zh: >-
+          斯普特尼克1号进入轨道：第一条用这个引力场计算出来的人造轨道。
+        ja: >-
+          スプートニク1号が軌道に到達。この重力場で計算された最初の人工軌道である。
+    - year: Hoy
+      label:
+        es: >-
+          La ingravidez de los astronautas es un estado permanente de caída libre dentro de este
+          campo.
+        en: >-
+          Astronauts' weightlessness is a permanent state of free fall inside this field.
+        pt: >-
+          A imponderabilidade dos astronautas é um estado permanente de queda livre dentro desse
+          campo.
+        fr: >-
+          L'impesanteur des astronautes est un état permanent de chute libre au sein de ce champ.
+        zh: >-
+          宇航员的失重状态，正是在这个场中永不停息的自由落体。
+        ja: >-
+          宇宙飛行士の無重力は、この場の中での絶え間ない自由落下の状態である。
+  useCases:
+    - title:
+        es: Misiones espaciales
+        en: Space missions
+        pt: Missões espaciais
+        fr: Missions spatiales
+        zh: 太空任务
+        ja: 宇宙ミッション
+      description:
+        es: >-
+          Se usa para calcular órbitas, velocidades de escape y trayectorias de sondas y satélites.
+        en: >-
+          It is used to compute orbits, escape velocities, and trajectories of probes and
+          satellites.
+        pt: >-
+          É usada para calcular órbitas, velocidades de escape e trajetórias de sondas e satélites.
+        fr: >-
+          Elle sert à calculer les orbites, les vitesses de libération et les trajectoires des sondes
+          et des satellites.
+        zh: >-
+          用于计算轨道、逃逸速度以及探测器和卫星的飞行轨迹。
+        ja: >-
+          探査機や衛星の軌道、脱出速度、飛行経路の計算に使われる。
+    - title:
+        es: Geodesia y gravimetría
+        en: Geodesy and gravimetry
+        pt: Geodesia e gravimetria
+        fr: Géodésie et gravimétrie
+        zh: 大地测量与重力测量
+        ja: 測地学と重力測定
+      description:
+        es: >-
+          Mide las pequeñas variaciones del campo g para trazar la forma del planeta y detectar
+          recursos subterráneos.
+        en: >-
+          It measures small variations of the field g to map the planet's shape and detect
+          underground resources.
+        pt: >-
+          Mede as pequenas variações do campo g para mapear a forma do planeta e detectar recursos
+          subterrâneos.
+        fr: >-
+          Elle mesure les petites variations du champ g pour cartographier la forme de la planète et
+          détecter des ressources souterraines.
+        zh: >-
+          通过测量g场的微小变化，绘制地球的形状并探测地下资源。
+        ja: >-
+          gのわずかな変化を測定し、惑星の形状を地図化したり地下資源を探査したりする。
+    - title:
+        es: Exploración planetaria
+        en: Planetary exploration
+        pt: Exploração planetária
+        fr: Exploration planétaire
+        zh: 行星探测
+        ja: 惑星探査
+      description:
+        es: >-
+          La gravedad superficial de cada cuerpo celeste, calculada con esta fórmula, define el
+          diseño de los módulos de aterrizaje.
+        en: >-
+          The surface gravity of each celestial body, computed with this formula, dictates lander
+          design.
+        pt: >-
+          A gravidade superficial de cada corpo celeste, calculada com essa fórmula, define o projeto
+          dos módulos de pouso.
+        fr: >-
+          La gravité de surface de chaque corps céleste, calculée avec cette formule, définit la
+          conception des atterrisseurs.
+        zh: >-
+          用这个公式算出每个天体的表面重力，决定了着陆器的设计。
+        ja: >-
+          この公式で求めた各天体の表面重力が、着陸機の設計を左右する。
+    - title:
+        es: Entrenamiento de astronautas
+        en: Astronaut training
+        pt: Treinamento de astronautas
+        fr: Entraînement des astronautes
+        zh: 宇航员训练
+        ja: 宇宙飛行士の訓練
+      description:
+        es: >-
+          Los vuelos parabólicos reproducen la caída libre del campo g para simular la ingravidez.
+        en: >-
+          Parabolic flights reproduce the free fall of the field g to simulate weightlessness.
+        pt: >-
+          Os voos parabólicos reproduzem a queda livre do campo g para simular a imponderabilidade.
+        fr: >-
+          Les vols paraboliques reproduisent la chute libre du champ g pour simuler l'impesanteur.
+        zh: >-
+          抛物线飞行再现g场中的自由落体，用以模拟失重状态。
+        ja: >-
+          放物線飛行がg場の中の自由落下を再現し、無重力状態を模擬する。
+  example:
+    title:
+      es: Gravedad en la superficie terrestre
+      en: Gravity at Earth's surface
+      pt: Gravidade na superfície da Terra
+      fr: Gravité à la surface de la Terre
+      zh: 地球表面的重力
+      ja: 地表の重力
+    lines:
+      - es: M = 5.972×10²⁴ kg
+        en: M = 5.972×10²⁴ kg
+        pt: M = 5,972×10²⁴ kg
+        fr: M = 5,972×10²⁴ kg
+        zh: M = 5.972×10²⁴ kg
+        ja: M = 5.972×10²⁴ kg
+      - es: r = 6.371×10⁶ m
+        en: r = 6.371×10⁶ m
+        pt: r = 6,371×10⁶ m
+        fr: r = 6,371×10⁶ m
+        zh: r = 6.371×10⁶ m
+        ja: r = 6.371×10⁶ m
+      - es: G = 6.674×10⁻¹¹ N·m²/kg²
+        en: G = 6.674×10⁻¹¹ N·m²/kg²
+        pt: G = 6,674×10⁻¹¹ N·m²/kg²
+        fr: G = 6,674×10⁻¹¹ N·m²/kg²
+        zh: G = 6.674×10⁻¹¹ N·m²/kg²
+        ja: G = 6.674×10⁻¹¹ N·m²/kg²
+      - es: g = G·M/r²
+        en: g = G·M/r²
+        pt: g = G·M/r²
+        fr: g = G·M/r²
+        zh: g = G·M/r²
+        ja: g = G·M/r²
+      - es: g = 6.674×10⁻¹¹ × 5.972×10²⁴ / (6.371×10⁶)²
+        en: g = 6.674×10⁻¹¹ × 5.972×10²⁴ / (6.371×10⁶)²
+        pt: g = 6,674×10⁻¹¹ × 5,972×10²⁴ / (6,371×10⁶)²
+        fr: g = 6,674×10⁻¹¹ × 5,972×10²⁴ / (6,371×10⁶)²
+        zh: g = 6.674×10⁻¹¹ × 5.972×10²⁴ / (6.371×10⁶)²
+        ja: g = 6.674×10⁻¹¹ × 5.972×10²⁴ / (6.371×10⁶)²
+      - es: g ≈ 9.81 m/s²
+        en: g ≈ 9.81 m/s²
+        pt: g ≈ 9,81 m/s²
+        fr: g ≈ 9,81 m/s²
+        zh: g ≈ 9.81 m/s²
+        ja: g ≈ 9.81 m/s²

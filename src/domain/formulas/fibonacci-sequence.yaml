@@ -1,0 +1,283 @@
+id: fibonacci-sequence
+title:
+  es: Sucesión de Fibonacci
+  en: Fibonacci Sequence
+  pt: Sequência de Fibonacci
+  fr: Suite de Fibonacci
+  zh: 斐波那契数列
+  ja: フィボナッチ数列
+category:
+  es: Teoría de números
+  en: Number theory
+  pt: Teoria dos números
+  fr: Théorie des nombres
+  zh: 数论
+  ja: 数論
+nodes:
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: El enésimo número de Fibonacci.
+      en: The nth Fibonacci number.
+      pt: O enésimo número de Fibonacci.
+      fr: Le n-ième nombre de Fibonacci.
+      zh: 第n个斐波那契数。
+      ja: n番目のフィボナッチ数。
+  - id: sub-n
+    type: variable
+    value: n
+    explanation:
+      es: "n: la posición en la sucesión."
+      en: "n: the position in the sequence."
+      pt: "n: a posição na sequência."
+      fr: "n : la position dans la suite."
+      zh: "n：在数列中的位置。"
+      ja: "n：数列における位置。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: f-prev
+    type: variable
+    value: Fₙ₋₁
+    explanation:
+      es: El número anterior en la sucesión.
+      en: The previous number in the sequence.
+      pt: O número anterior na sequência.
+      fr: Le nombre précédent de la suite.
+      zh: 数列中的前一个数。
+      ja: 数列の前の数。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado al.
+      en: Added to the.
+      pt: Somado ao.
+      fr: Ajouté au.
+      zh: 加上。
+      ja: に加える。
+  - id: f-prev-2
+    type: variable
+    value: Fₙ₋₂
+    explanation:
+      es: El número anterior al anterior.
+      en: The number before the previous one.
+      pt: O número anterior ao anterior.
+      fr: Le nombre d'avant le précédent.
+      zh: 前一个数之前的一个数。
+      ja: 前々の数。
+context:
+  author:
+    es: Leonardo de Pisa (Fibonacci)
+    en: Leonardo of Pisa (Fibonacci)
+    pt: Leonardo de Pisa (Fibonacci)
+    fr: Léonard de Pise (Fibonacci)
+    zh: 比萨的列奥纳多（斐波那契）
+    ja: ピサのレオナルド（フィボナッチ）
+  era:
+    es: Pisa, c. 1170–1250 · publicada en 1202 en Liber Abaci
+    en: Pisa, c. 1170–1250 · published in 1202 in Liber Abaci
+    pt: Pisa, c. 1170–1250 · publicada em 1202 no Liber Abaci
+    fr: Pise, v. 1170–1250 · publiée en 1202 dans le Liber Abaci
+    zh: 比萨，约1170–1250年·1202年发表于《计算之书》
+    ja: ピサ、1170–1250年頃・1202年に『算盤の書』で発表
+  history:
+    es: >-
+      Fibonacci presentó la sucesión en el Liber Abaci (1202) para modelar el crecimiento de una
+      población de conejos: cada mes nuevo par, la suma de los dos anteriores. La secuencia ya era
+      conocida en la India (prosodia de Pingala). Su cociente entre términos tiende al número áureo, y
+      la naturaleza la refleja en girasoles, piñas y conchas. Es, quizá, la sucesión más famosa de las
+      matemáticas.
+    en: >-
+      Fibonacci presented the sequence in the Liber Abaci (1202) to model the growth of a rabbit
+      population: each month a new pair, the sum of the two previous ones. The sequence was already
+      known in India (Pingala's prosody). Its ratio between terms tends to the golden ratio, and nature
+      mirrors it in sunflowers, pinecones, and shells. It is perhaps the most famous sequence in
+      mathematics.
+    pt: >-
+      Fibonacci apresentou a sequência no Liber Abaci (1202) para modelar o crescimento de uma
+      população de coelhos: a cada mês um novo par, a soma dos dois anteriores. A sequência já era
+      conhecida na Índia (prosódia de Pingala). Sua razão entre termos tende ao número áureo, e a
+      natureza a reflete em girassóis, pinhas e conchas. É, talvez, a sequência mais famosa da
+      matemática.
+    fr: >-
+      Fibonacci présenta la suite dans le Liber Abaci (1202) pour modéliser la croissance d'une
+      population de lapins : chaque mois un nouveau couple, somme des deux précédents. La suite était
+      déjà connue en Inde (prosodie de Pingala). Son rapport entre termes tend vers le nombre d'or, et
+      la nature la reflète dans les tournesols, les pommes de pin et les coquillages. C'est peut-être
+      la suite la plus célèbre des mathématiques.
+    zh: >-
+      斐波那契在《计算之书》（1202年）中提出该数列，用于模拟兔子种群的繁殖：每个月新增一对，等于前两对之和。
+      这一数列在印度早已为人所知（频伽罗的诗歌节律研究）。相邻项之比趋向黄金比例，自然界中的向日葵、松果和
+      海螺都映照着它。它或许是数学中最著名的数列。
+    ja: >-
+      フィボナッチは『算盤の書』（1202年）で、ウサギの個体数の増加をモデル化するためにこの数列を紹介した。
+      毎月新しいペアが増え、その数は直前の2つの和になる。この数列はインド（ピンガラの韻律学）で既に知られていた。
+      隣接する項の比は黄金比に近づき、自然界ではひまわり、松かさ、貝殻にその姿が見られる。おそらく数学で最も
+      有名な数列である。
+  timeline:
+    - year: c. 200 a.C.
+      label:
+        es: >-
+          Pingala y otros matemáticos indios estudian variantes de la sucesión en prosodia.
+        en: >-
+          Pingala and other Indian mathematicians study variants of the sequence in prosody.
+        pt: >-
+          Pingala e outros matemáticos indianos estudam variantes da sequência na prosódia.
+        fr: >-
+          Pingala et d'autres mathématiciens indiens étudient des variantes de la suite en prosodie.
+        zh: >-
+          频伽罗等印度数学家在前律学中研究该数列的变体。
+        ja: >-
+          ピンガラらインドの数学者が、韻律学の中でこの数列の変種を研究する。
+    - year: "1202"
+      label:
+        es: >-
+          Fibonacci lo publica en el Liber Abaci con su famoso problema de los conejos.
+        en: >-
+          Fibonacci publishes it in the Liber Abaci with his famous rabbit problem.
+        pt: >-
+          Fibonacci o publica no Liber Abaci com seu famoso problema dos coelhos.
+        fr: >-
+          Fibonacci le publie dans le Liber Abaci avec son célèbre problème des lapins.
+        zh: >-
+          斐波那契在《计算之书》中连同著名的兔子问题一起发表。
+        ja: >-
+          フィボナッチが『算盤の書』で有名なウサギの問題とともにこれを発表する。
+    - year: "1877"
+      label:
+        es: >-
+          Édouard Lucas lo bautiza "sucesión de Fibonacci" y estudia sus divisores.
+        en: >-
+          Édouard Lucas names it the "Fibonacci sequence" and studies its divisors.
+        pt: >-
+          Édouard Lucas a batiza de "sequência de Fibonacci" e estuda seus divisores.
+        fr: >-
+          Édouard Lucas la baptise « suite de Fibonacci » et étudie ses diviseurs.
+        zh: >-
+          爱德华·吕卡将其命名为"斐波那契数列"并研究其因数。
+        ja: >-
+          エドゥアール・リュカがこれを「フィボナッチ数列」と名付け、その約数を研究する。
+    - year: Hoy
+      label:
+        es: >-
+          Aparece en algoritmos, análisis financiero y en la filotaxis de las plantas.
+        en: >-
+          It appears in algorithms, financial analysis, and plant phyllotaxis.
+        pt: >-
+          Aparece em algoritmos, análise financeira e na filotaxia das plantas.
+        fr: >-
+          Elle apparaît dans les algorithmes, l'analyse financière et la phyllotaxie des plantes.
+        zh: >-
+          它出现在算法、金融分析和植物的叶序中。
+        ja: >-
+          アルゴリズム、金融分析、植物の葉序に現れる。
+  useCases:
+    - title:
+        es: Análisis de algoritmos
+        en: Algorithm analysis
+        pt: Análise de algoritmos
+        fr: Analyse d'algorithmes
+        zh: 算法分析
+        ja: アルゴリズム解析
+      description:
+        es: >-
+          Los heaps de Fibonacci y las cotas de complejidad recursiva usan estos números.
+        en: >-
+          Fibonacci heaps and recursive complexity bounds use these numbers.
+        pt: >-
+          Heaps de Fibonacci e limites de complexidade recursiva usam esses números.
+        fr: >-
+          Les tas de Fibonacci et les bornes de complexité récursive utilisent ces nombres.
+        zh: >-
+          斐波那契堆和递归复杂度的界都用到这些数。
+        ja: >-
+          フィボナッチヒープや再帰的な計算量の評価にこれらの数が使われる。
+    - title:
+        es: Análisis técnico financiero
+        en: Financial technical analysis
+        pt: Análise técnica financeira
+        fr: Analyse technique financière
+        zh: 金融技术分析
+        ja: 金融のテクニカル分析
+      description:
+        es: >-
+          Los retrocesos de Fibonacci marcan niveles de soporte y resistencia en los mercados.
+        en: >-
+          Fibonacci retracements mark support and resistance levels in markets.
+        pt: >-
+          Os retrocessos de Fibonacci marcam níveis de suporte e resistência nos mercados.
+        fr: >-
+          Les retracements de Fibonacci marquent des niveaux de support et de résistance en bourse.
+        zh: >-
+          斐波那契回撤标记市场中的支撑位和阻力位。
+        ja: >-
+          フィボナッチ・リトレースメントが、市場の支持線と抵抗線の水準を示す。
+    - title:
+        es: Biología
+        en: Biology
+        pt: Biologia
+        fr: Biologie
+        zh: 生物学
+        ja: 生物学
+      description:
+        es: >-
+          Los girasoles y las piñas muestran espirales cuyo conteo son números de Fibonacci.
+        en: >-
+          Sunflowers and pinecones show spirals whose counts are Fibonacci numbers.
+        pt: >-
+          Girassóis e pinhas mostram espirais cujas contagens são números de Fibonacci.
+        fr: >-
+          Les tournesols et les pommes de pin présentent des spirales dont les comptages sont des
+          nombres de Fibonacci.
+        zh: >-
+          向日葵和松果中的螺旋数目正是斐波那契数。
+        ja: >-
+          ひまわりや松かさの螺旋の数は、フィボナッチ数になっている。
+  example:
+    title:
+      es: Los primeros diez términos
+      en: The first ten terms
+      pt: Os dez primeiros termos
+      fr: Les dix premiers termes
+      zh: 前十项
+      ja: 最初の10項
+    lines:
+      - es: F₁ = 1, F₂ = 1
+        en: F₁ = 1, F₂ = 1
+        pt: F₁ = 1, F₂ = 1
+        fr: F₁ = 1, F₂ = 1
+        zh: F₁ = 1，F₂ = 1
+        ja: F₁ = 1、F₂ = 1
+      - es: F₃ = F₂ + F₁ = 1 + 1 = 2
+        en: F₃ = F₂ + F₁ = 1 + 1 = 2
+        pt: F₃ = F₂ + F₁ = 1 + 1 = 2
+        fr: F₃ = F₂ + F₁ = 1 + 1 = 2
+        zh: F₃ = F₂ + F₁ = 1 + 1 = 2
+        ja: F₃ = F₂ + F₁ = 1 + 1 = 2
+      - es: F₄ = 2 + 1 = 3, F₅ = 3 + 2 = 5
+        en: F₄ = 2 + 1 = 3, F₅ = 3 + 2 = 5
+        pt: F₄ = 2 + 1 = 3, F₅ = 3 + 2 = 5
+        fr: F₄ = 2 + 1 = 3, F₅ = 3 + 2 = 5
+        zh: F₄ = 2 + 1 = 3，F₅ = 3 + 2 = 5
+        ja: F₄ = 2 + 1 = 3、F₅ = 3 + 2 = 5
+      - es: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+        en: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+        pt: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+        fr: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+        zh: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+        ja: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+      - es: F₁₀ = 34 + 21 = 55
+        en: F₁₀ = 34 + 21 = 55
+        pt: F₁₀ = 34 + 21 = 55
+        fr: F₁₀ = 34 + 21 = 55
+        zh: F₁₀ = 34 + 21 = 55
+        ja: F₁₀ = 34 + 21 = 55

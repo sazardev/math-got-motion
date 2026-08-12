@@ -1,0 +1,315 @@
+id: rc-time-constant
+title:
+  es: Constante de Tiempo RC
+  en: RC Time Constant
+  pt: Constante de Tempo RC
+  fr: Constante de Temps RC
+  zh: RC时间常数
+  ja: RC時定数
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: tau
+    type: variable
+    value: τ
+    explanation:
+      es: "La constante de tiempo: el tiempo que tarda el condensador en alcanzar el 63% de su carga final."
+      en: "The time constant: how long the capacitor takes to reach about 63% of its final charge."
+      pt: "A constante de tempo: o tempo que o capacitor leva para atingir cerca de 63% da carga final."
+      fr: "La constante de temps : le temps que met le condensateur pour atteindre environ 63 % de sa charge finale."
+      zh: "时间常数:电容器达到最终电量约63%所需的时间。"
+      ja: "時定数。コンデンサが最終電荷の約63%に達するまでにかかる時間。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: r
+    type: variable
+    value: R
+    explanation:
+      es: La resistencia del circuito, en ohmios.
+      en: The resistance of the circuit, in ohms.
+      pt: A resistência do circuito, em ohms.
+      fr: La résistance du circuit, en ohms.
+      zh: 电路中的电阻,单位为欧姆。
+      ja: 回路の抵抗。単位はオーム。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación de magnitudes.
+      en: Multiplication of quantities.
+      pt: Multiplicação de grandezas.
+      fr: Multiplication de grandeurs.
+      zh: 数量相乘。
+      ja: 量の掛け算。
+  - id: c
+    type: variable
+    value: C
+    explanation:
+      es: La capacitancia del condensador, en faradios.
+      en: The capacitance of the capacitor, in farads.
+      pt: A capacitância do capacitor, em farads.
+      fr: La capacité du condensateur, en farads.
+      zh: 电容器的电容,单位为法拉。
+      ja: コンデンサの静電容量。単位はファラッド。
+context:
+  author:
+    es: Oliver Heaviside
+    en: Oliver Heaviside
+    pt: Oliver Heaviside
+    fr: Oliver Heaviside
+    zh: 奥利弗·亥维赛
+    ja: オリバー・ヘヴィサイド
+  era:
+    es: Inglaterra, 1850–1925
+    en: England, 1850–1925
+    pt: Inglaterra, 1850–1925
+    fr: Angleterre, 1850–1925
+    zh: 英国,1850–1925年
+    ja: イギリス、1850–1925年
+  history:
+    es: >-
+      Un condensador conectado a una resistencia no se carga de golpe: la corriente arranca máxima y
+      decae conforme la tensión acumulada se opone a la fuente. El producto τ = R·C fija la velocidad
+      de ese proceso: tras un tiempo τ el condensador alcanza el 63% de su carga final, y tras cinco τ
+      se considera prácticamente cargado. Este tiempo característico, sistematizado por Oliver
+      Heaviside al estudiar las corrientes transitorias en los cables de telégrafo, está en la base
+      de los temporizadores, los filtros electrónicos y los marcapasos.
+    en: >-
+      A capacitor connected through a resistor does not charge instantly: the current starts at its
+      maximum and decays as the stored voltage opposes the source. The product τ = R·C sets the speed
+      of that process — after one time constant the capacitor reaches about 63% of its final charge,
+      and after five it is considered essentially full. This characteristic time, systematized by
+      Oliver Heaviside while studying transient currents in telegraph cables, underlies timing
+      circuits, electronic filters, and pacemakers.
+    pt: >-
+      Um capacitor ligado a um resistor não carrega de uma vez: a corrente começa máxima e decai à
+      medida que a tensão acumulada se opõe à fonte. O produto τ = R·C determina a velocidade desse
+      processo — após um tempo τ o capacitor atinge cerca de 63% da carga final, e após cinco τ é
+      considerado praticamente carregado. Esse tempo característico, sistematizado por Oliver
+      Heaviside ao estudar as correntes transitórias nos cabos telegráficos, está na base de
+      temporizadores, filtros eletrônicos e marcapassos.
+    fr: >-
+      Un condensateur branché sur une résistance ne se charge pas d'un coup : le courant démarre
+      maximal puis décroît à mesure que la tension accumulée s'oppose à la source. Le produit τ = R·C
+      fixe la vitesse de ce processus — après un temps τ, le condensateur atteint environ 63 % de sa
+      charge finale, et après cinq τ il est jugé pratiquement chargé. Ce temps caractéristique,
+      systématisé par Oliver Heaviside en étudiant les courants transitoires dans les câbles
+      télégraphiques, est à la base des temporisateurs, des filtres électroniques et des stimulateurs
+      cardiaques.
+    zh: >-
+      电容器通过电阻充电时不会瞬间充满:电流一开始最大,随着累积电压对抗电源而逐渐衰减。乘积 τ = R·C 决定了这一过程的
+      速度——经过一个时间常数 τ,电容器达到最终电量的约63%,经过五个 τ 后即被认为基本充满。这个由奥利弗·亥维赛在
+      研究电报电缆中的瞬态电流时系统化的特征时间,是定时器、电子滤波器和心脏起搏器的基础。
+    ja: >-
+      コンデンサは抵抗を通じて充電しても一瞬では終わらない。電流は最初が最大で、蓄積電圧が電源に逆らうにつれて減衰する。
+      積 τ = R·C がその速さを決める。1つの時定数τの後、コンデンサは最終電荷の約63%に達し、5τの後にはほぼ満充電と
+      見なされる。オリバー・ヘヴィサイドが電信ケーブルの過渡電流の研究で体系化したこの特性時間は、タイマー回路、電子
+      フィルター、ペースメーカーの基礎となっている。
+  timeline:
+    - year: "1850"
+      label:
+        es: >-
+          Oliver Heaviside nace en Londres.
+        en: >-
+          Oliver Heaviside is born in London.
+        pt: >-
+          Oliver Heaviside nasce em Londres.
+        fr: >-
+          Oliver Heaviside naît à Londres.
+        zh: >-
+          奥利弗·亥维赛出生于伦敦。
+        ja: >-
+          オリバー・ヘヴィサイドがロンドンで生まれる。
+    - year: "1887"
+      label:
+        es: >-
+          Heaviside introduce la constante de tiempo al analizar las corrientes transitorias en los
+          cables de transmisión.
+        en: >-
+          Heaviside introduces the time constant while analysing transient currents in transmission
+          cables.
+        pt: >-
+          Heaviside introduz a constante de tempo ao analisar as correntes transitórias nos cabos de
+          transmissão.
+        fr: >-
+          Heaviside introduit la constante de temps en analysant les courants transitoires dans les
+          câbles de transmission.
+        zh: >-
+          亥维赛在分析传输电缆中的瞬态电流时引入了时间常数。
+        ja: >-
+          ヘヴィサイドが伝送ケーブルの過渡電流の解析に際して時定数を導入する。
+    - year: "1958"
+      label:
+        es: >-
+          Se implanta el primer marcapasos cardiaco, cuyo circuito de temporización se apoya en
+          constantes RC.
+        en: >-
+          The first cardiac pacemaker is implanted, its timing circuit relying on RC time constants.
+        pt: >-
+          É implantado o primeiro marcapasso cardíaco, cujo circuito de temporização se apoia em
+          constantes RC.
+        fr: >-
+          Le premier stimulateur cardiaque est implanté, son circuit de temporisation reposant sur
+          des constantes RC.
+        zh: >-
+          首台心脏起搏器被植入人体,其定时电路依赖RC时间常数。
+        ja: >-
+          最初の心臓ペースメーカーが植え込まれる。そのタイミング回路はRC時定数を利用している。
+    - year: Hoy
+      label:
+        es: >-
+          Temporizadores, filtros y retardos de todo tipo se construyen a partir de τ = R·C.
+        en: >-
+          Timers, filters, and all kinds of delays are built from τ = R·C.
+        pt: >-
+          Temporizadores, filtros e atrasos de todo tipo são construídos a partir de τ = R·C.
+        fr: >-
+          Les temporisateurs, les filtres et toutes sortes de délais sont construits à partir de
+          τ = R·C.
+        zh: >-
+          定时器、滤波器以及各种延迟电路都由 τ = R·C 构建。
+        ja: >-
+          タイマー、フィルター、あらゆる遅延回路が τ = R·C から作られる。
+  useCases:
+    - title:
+        es: Circuitos de temporización
+        en: Timing circuits
+        pt: Circuitos de temporização
+        fr: Circuits de temporisation
+        zh: 定时电路
+        ja: タイミング回路
+      description:
+        es: >-
+          El temporizador 555 y los osciladores fijan sus tiempos mediante combinaciones de R y C.
+        en: >-
+          The 555 timer and oscillators set their timing with combinations of R and C.
+        pt: >-
+          O temporizador 555 e os osciladores fixam seus tempos com combinações de R e C.
+        fr: >-
+          Le temporisateur 555 et les oscillateurs règlent leurs temps avec des combinaisons de R et
+          C.
+        zh: >-
+          555定时器和振荡器都用 R 与 C 的组合来设定时间。
+        ja: >-
+          555タイマーや発振器は、RとCの組み合わせで時間を設定する。
+    - title:
+        es: Filtros de audio
+        en: Audio filters
+        pt: Filtros de áudio
+        fr: Filtres audio
+        zh: 音频滤波器
+        ja: オーディオフィルター
+      description:
+        es: >-
+          Los filtros RC atentan las frecuencias altas o bajas según la constante de tiempo elegida.
+        en: >-
+          RC filters attenuate high or low frequencies according to the chosen time constant.
+        pt: >-
+          Os filtros RC atenuam frequências altas ou baixas conforme a constante de tempo escolhida.
+        fr: >-
+          Les filtres RC atténuent les hautes ou basses fréquences selon la constante de temps
+          choisie.
+        zh: >-
+          RC滤波器按所选时间常数衰减高频或低频。
+        ja: >-
+          RCフィルターは選んだ時定数に応じて高域または低域を減衰させる。
+    - title:
+        es: Medicina
+        en: Medicine
+        pt: Medicina
+        fr: Médecine
+        zh: 医学
+        ja: 医学
+      description:
+        es: >-
+          Los marcapasos usan constantes RC para controlar la frecuencia de los estímulos que regulan
+          el corazón.
+        en: >-
+          Pacemakers use RC time constants to control the rate of the stimuli that regulate the
+          heart.
+        pt: >-
+          Os marcapassos usam constantes RC para controlar a frequência dos estímulos que regulam o
+          coração.
+        fr: >-
+          Les stimulateurs cardiaques utilisent des constantes RC pour contrôler la cadence des
+          stimuli qui régulent le cœur.
+        zh: >-
+          起搏器用RC时间常数控制调节心脏的刺激频率。
+        ja: >-
+          ペースメーカーは心臓を調整する刺激の頻度を制御するためにRC時定数を用いる。
+    - title:
+        es: Automoción
+        en: Automotive
+        pt: Automotivo
+        fr: Automobile
+        zh: 汽车行业
+        ja: 自動車
+      description:
+        es: >-
+          Los retardos de limpiaparabrisas y las luces de cortesía se obtienen descargando un
+          condensador a través de una resistencia.
+        en: >-
+          Wiper delays and courtesy-light timers are made by discharging a capacitor through a
+          resistor.
+        pt: >-
+          Os retardos do limpador de para-brisa e as luzes de cortesia são obtidos descarregando um
+          capacitor através de um resistor.
+        fr: >-
+          Les temporisations d'essuie-glaces et de plafonniers s'obtiennent en déchargeant un
+          condensateur à travers une résistance.
+        zh: >-
+          雨刷间歇动作和车门照明灯的延时,都是让电容器经电阻放电来实现的。
+        ja: >-
+          ワイパーの間欠動作や足元灯の消灯遅延は、抵抗を通してコンデンサを放電させて実現する。
+  example:
+    title:
+      es: Tiempo de carga de un circuito RC
+      en: Charge time of an RC circuit
+      pt: Tempo de carga de um circuito RC
+      fr: Temps de charge d'un circuit RC
+      zh: RC电路的充电时间
+      ja: RC回路の充電時間
+    lines:
+      - es: R = 10 kΩ
+        en: R = 10 kΩ
+        pt: R = 10 kΩ
+        fr: R = 10 kΩ
+        zh: R = 10 kΩ
+        ja: R = 10 kΩ
+      - es: C = 100 µF
+        en: C = 100 µF
+        pt: C = 100 µF
+        fr: C = 100 µF
+        zh: C = 100 µF
+        ja: C = 100 µF
+      - es: τ = R × C
+        en: τ = R × C
+        pt: τ = R × C
+        fr: τ = R × C
+        zh: τ = R × C
+        ja: τ = R × C
+      - es: τ = 10000 × 0,0001
+        en: τ = 10000 × 0.0001
+        pt: τ = 10000 × 0,0001
+        fr: τ = 10000 × 0,0001
+        zh: τ = 10000 × 0.0001
+        ja: τ = 10000 × 0.0001
+      - es: τ = 1 s
+        en: τ = 1 s
+        pt: τ = 1 s
+        fr: τ = 1 s
+        zh: τ = 1 s
+        ja: τ = 1 s

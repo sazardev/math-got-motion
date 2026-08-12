@@ -1,0 +1,290 @@
+id: dot-product
+title:
+  es: Producto Punto (Escalar)
+  en: Dot Product
+  pt: Produto Escalar
+  fr: Produit scalaire
+  zh: 点积
+  ja: ドット積（内積）
+category:
+  es: Álgebra lineal
+  en: Linear algebra
+  pt: Álgebra linear
+  fr: Algèbre linéaire
+  zh: 线性代数
+  ja: 線形代数
+nodes:
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: "a: el primer vector."
+      en: "a: the first vector."
+      pt: "a: o primeiro vetor."
+      fr: "a : le premier vecteur."
+      zh: "a：第一个向量。"
+      ja: "a：最初のベクトル。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: El producto punto.
+      en: The dot product.
+      pt: O produto escalar.
+      fr: Le produit scalaire.
+      zh: 点积。
+      ja: ドット積。
+  - id: b
+    type: variable
+    value: b
+    explanation:
+      es: "b: el segundo vector."
+      en: "b: the second vector."
+      pt: "b: o segundo vetor."
+      fr: "b : le second vecteur."
+      zh: "b：第二个向量。"
+      ja: "b：2番目のベクトル。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: mag-a
+    type: operator
+    value: "|a|"
+    explanation:
+      es: La magnitud (longitud) del primer vector.
+      en: The magnitude (length) of the first vector.
+      pt: A magnitude (comprimento) do primeiro vetor.
+      fr: La norme (longueur) du premier vecteur.
+      zh: 第一个向量的模（长度）。
+      ja: 最初のベクトルの大きさ（長さ）。
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: mag-b
+    type: operator
+    value: "|b|"
+    explanation:
+      es: La magnitud del segundo vector.
+      en: The magnitude of the second vector.
+      pt: A magnitude do segundo vetor.
+      fr: La norme du second vecteur.
+      zh: 第二个向量的模。
+      ja: 2番目のベクトルの大きさ。
+  - id: dot-3
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: cos
+    type: variable
+    value: cos θ
+    explanation:
+      es: El coseno del ángulo entre los dos vectores.
+      en: The cosine of the angle between the two vectors.
+      pt: O cosseno do ângulo entre os dois vetores.
+      fr: Le cosinus de l'angle entre les deux vecteurs.
+      zh: 两个向量之间夹角的余弦。
+      ja: 2つのベクトルの間の角の余弦。
+context:
+  author:
+    es: Joseph-Louis Lagrange
+    en: Joseph-Louis Lagrange
+    pt: Joseph-Louis Lagrange
+    fr: Joseph-Louis Lagrange
+    zh: 约瑟夫-路易·拉格朗日
+    ja: ジョゼフ＝ルイ・ラグランジュ
+  era:
+    es: Francia e Italia, 1736–1813 · formalizado en el s. XIX
+    en: France and Italy, 1736–1813 · formalized in the 19th century
+    pt: França e Itália, 1736–1813 · formalizado no séc. XIX
+    fr: France et Italie, 1736–1813 · formalisé au XIXe siècle
+    zh: 法国与意大利，1736–1813年·19世纪形式化
+    ja: フランスとイタリア、1736–1813年・19世紀に定式化
+  history:
+    es: >-
+      Lagrange usó en 1773 productos de coordenadas para calcular fuerzas y momentos, sin darles aún
+      un nombre. A fines del siglo XIX, Josiah Willard Gibbs y Oliver Heaviside formalizaron el
+      producto punto de vectores. Mide cuánto se proyecta un vector sobre otro: es la herramienta
+      estándar para calcular trabajo en física, similaridad en inteligencia artificial e iluminación
+      en gráficos por computadora.
+    en: >-
+      Lagrange used coordinate products in 1773 to compute forces and moments, without yet naming
+      them. In the late 19th century, Josiah Willard Gibbs and Oliver Heaviside formalized the vector
+      dot product. It measures how much one vector projects onto another: it is the standard tool for
+      work in physics, similarity in AI, and lighting in computer graphics.
+    pt: >-
+      Lagrange usou em 1773 produtos de coordenadas para calcular forças e momentos, sem ainda
+      nomeá-los. No fim do século XIX, Josiah Willard Gibbs e Oliver Heaviside formalizaram o produto
+      escalar de vetores. Ele mede o quanto um vetor se projeta sobre outro: é a ferramenta padrão
+      para trabalho na física, similaridade em IA e iluminação em computação gráfica.
+    fr: >-
+      Lagrange utilisa en 1773 des produits de coordonnées pour calculer forces et moments, sans
+      encore les nommer. À la fin du XIXe siècle, Josiah Willard Gibbs et Oliver Heaviside
+      formalisèrent le produit scalaire de vecteurs. Il mesure la projection d'un vecteur sur un
+      autre : c'est l'outil standard du travail en physique, de la similarité en IA et de l'éclairage
+      en infographie.
+    zh: >-
+      1773年拉格朗日用坐标乘积计算力和力矩，但尚未为之命名。19世纪末，乔赛亚·威拉德·吉布斯和奥利弗·亥维赛将
+      向量的点积形式化。它度量一个向量在另一个向量上的投影大小：是物理学中计算功、人工智能中计算相似度、计算机
+      图形学中计算光照的标准工具。
+    ja: >-
+      ラグランジュは1773年に、力とモーメントを計算するために座標の積を用いたが、まだ名前を付けていなかった。
+      19世紀末、ジョサイア・ウィラード・ギブスとオリバー・ヘヴィサイドがベクトルのドット積を定式化した。これは、
+      一方のベクトルが他方へどれだけ射影されるかを測る。物理学の仕事、AIの類似度、コンピューターグラフィックスの
+      照明の標準的な道具である。
+  timeline:
+    - year: "1773"
+      label:
+        es: >-
+          Lagrange usa el producto de coordenadas para estudiar sólidos en movimiento.
+        en: >-
+          Lagrange uses coordinate products to study solids in motion.
+        pt: >-
+          Lagrange usa o produto de coordenadas para estudar sólidos em movimento.
+        fr: >-
+          Lagrange utilise le produit de coordonnées pour étudier les solides en mouvement.
+        zh: >-
+          拉格朗日用坐标乘积研究运动中的刚体。
+        ja: >-
+          ラグランジュが座標の積を用いて運動する剛体を研究する。
+    - year: 1880s
+      label:
+        es: >-
+          Gibbs y Heaviside formalizan el álgebra vectorial moderna con el producto punto.
+        en: >-
+          Gibbs and Heaviside formalize modern vector algebra with the dot product.
+        pt: >-
+          Gibbs e Heaviside formalizam a álgebra vetorial moderna com o produto escalar.
+        fr: >-
+          Gibbs et Heaviside formalisent l'algèbre vectorielle moderne avec le produit scalaire.
+        zh: >-
+          吉布斯和亥维赛用点积将现代向量代数形式化。
+        ja: >-
+          ギブスとヘヴィサイドが、ドット積を伴う現代のベクトル代数を定式化する。
+    - year: Hoy
+      label:
+        es: >-
+          Es la operación que más ejecuta el cómputo moderno en IA y gráficos.
+        en: >-
+          It is the most executed operation in modern AI and graphics computing.
+        pt: >-
+          É a operação mais executada na computação moderna de IA e gráficos.
+        fr: >-
+          C'est l'opération la plus exécutée dans le calcul moderne en IA et en infographie.
+        zh: >-
+          它是现代人工智能和图形计算中执行最多的运算。
+        ja: >-
+          現代のAIとグラフィックス計算で最も多く実行される演算である。
+  useCases:
+    - title:
+        es: Inteligencia artificial
+        en: Artificial intelligence
+        pt: Inteligência artificial
+        fr: Intelligence artificielle
+        zh: 人工智能
+        ja: 人工知能
+      description:
+        es: >-
+          La similaridad del coseno compara vectores de texto o imágenes con este producto.
+        en: >-
+          Cosine similarity compares text or image vectors with this product.
+        pt: >-
+          A similaridade de cosseno compara vetores de texto ou imagem com esse produto.
+        fr: >-
+          La similarité cosinus compare des vecteurs de texte ou d'images avec ce produit.
+        zh: >-
+          余弦相似度用点积比较文本或图像向量。
+        ja: >-
+          コサイン類似度は、この積を使ってテキストや画像のベクトルを比較する。
+    - title:
+        es: Física
+        en: Physics
+        pt: Física
+        fr: Physique
+        zh: 物理学
+        ja: 物理学
+      description:
+        es: >-
+          El trabajo W = F·d es exactamente un producto punto entre fuerza y desplazamiento.
+        en: >-
+          Work W = F·d is exactly a dot product of force and displacement.
+        pt: >-
+          O trabalho W = F·d é exatamente um produto escalar entre força e deslocamento.
+        fr: >-
+          Le travail W = F·d est exactement un produit scalaire entre force et déplacement.
+        zh: >-
+          功W = F·d正是力与位移的点积。
+        ja: >-
+          仕事W = F·dは、まさに力と変位のドット積である。
+    - title:
+        es: Gráficos por computadora
+        en: Computer graphics
+        pt: Computação gráfica
+        fr: Infographie
+        zh: 计算机图形学
+        ja: コンピューターグラフィックス
+      description:
+        es: >-
+          La iluminación difusa se calcula con el producto punto entre normal y luz.
+        en: >-
+          Diffuse lighting is computed with the dot product of normal and light.
+        pt: >-
+          A iluminação difusa é calculada com o produto escalar entre normal e luz.
+        fr: >-
+          L'éclairage diffus se calcule avec le produit scalaire entre normale et lumière.
+        zh: >-
+          漫反射光照用法线与光线的点积计算。
+        ja: >-
+          拡散反射の照明は、法線と光のドット積で計算される。
+  example:
+    title:
+      es: Producto de (1,2,3)·(4,5,6)
+      en: Dot product of (1,2,3)·(4,5,6)
+      pt: Produto escalar de (1,2,3)·(4,5,6)
+      fr: Produit scalaire de (1,2,3)·(4,5,6)
+      zh: 点积 (1,2,3)·(4,5,6)
+      ja: (1,2,3)·(4,5,6) のドット積
+    lines:
+      - es: a·b = a₁b₁ + a₂b₂ + a₃b₃
+        en: a·b = a₁b₁ + a₂b₂ + a₃b₃
+        pt: a·b = a₁b₁ + a₂b₂ + a₃b₃
+        fr: a·b = a₁b₁ + a₂b₂ + a₃b₃
+        zh: a·b = a₁b₁ + a₂b₂ + a₃b₃
+        ja: a·b = a₁b₁ + a₂b₂ + a₃b₃
+      - es: a·b = 1·4 + 2·5 + 3·6
+        en: a·b = 1·4 + 2·5 + 3·6
+        pt: a·b = 1·4 + 2·5 + 3·6
+        fr: a·b = 1·4 + 2·5 + 3·6
+        zh: a·b = 1·4 + 2·5 + 3·6
+        ja: a·b = 1·4 + 2·5 + 3·6
+      - es: a·b = 4 + 10 + 18
+        en: a·b = 4 + 10 + 18
+        pt: a·b = 4 + 10 + 18
+        fr: a·b = 4 + 10 + 18
+        zh: a·b = 4 + 10 + 18
+        ja: a·b = 4 + 10 + 18
+      - es: a·b = 32
+        en: a·b = 32
+        pt: a·b = 32
+        fr: a·b = 32
+        zh: a·b = 32
+        ja: a·b = 32

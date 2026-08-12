@@ -1,0 +1,341 @@
+id: mass-flow-rate
+title:
+  es: Flujo Másico
+  en: Mass Flow Rate
+  pt: Fluxo Mássico
+  fr: Débit massique
+  zh: 质量流量
+  ja: 質量流量
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: mdot
+    type: variable
+    value: ṁ
+    explanation:
+      es: El flujo másico, la masa de fluido que atraviesa una sección por segundo.
+      en: The mass flow rate, the mass of fluid crossing a section each second.
+      pt: O fluxo mássico, a massa de fluido que atravessa uma seção por segundo.
+      fr: Le débit massique, la masse de fluide traversant une section par seconde.
+      zh: 质量流量,即每秒通过某一截面的流体质量。
+      ja: 質量流量。1秒間に断面を通過する流体の質量。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: rho
+    type: variable
+    value: ρ
+    explanation:
+      es: La densidad del fluido, la masa contenida en cada unidad de volumen.
+      en: The density of the fluid, the mass contained in each unit of volume.
+      pt: A densidade do fluido, a massa contida em cada unidade de volume.
+      fr: La densité du fluide, la masse contenue dans chaque unité de volume.
+      zh: 流体的密度,即单位体积所含的质量。
+      ja: 流体の密度。単位体積あたりの質量。
+  - id: mult
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛け算。
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: El área de la sección transversal por donde pasa el fluido.
+      en: The cross-sectional area through which the fluid passes.
+      pt: A área da seção transversal por onde o fluido passa.
+      fr: La section transversale par laquelle passe le fluide.
+      zh: 流体通过处的横截面积。
+      ja: 流体が通る断面積。
+  - id: mult2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛け算。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La velocidad del flujo perpendicular a la sección.
+      en: The speed of the flow perpendicular to the section.
+      pt: A velocidade do escoamento perpendicular à seção.
+      fr: La vitesse de l'écoulement perpendiculaire à la section.
+      zh: 垂直于截面的流动速度。
+      ja: 断面に垂直な流れの速度。
+context:
+  author:
+    es: Origen colectivo de la mecánica de fluidos
+    en: Collective origin of fluid mechanics
+    pt: Origem coletiva da mecânica dos fluidos
+    fr: Origine collective de la mécanique des fluides
+    zh: 流体力学集体智慧的产物
+    ja: 流体力学における集合的な起源
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, séc. XIX
+    fr: Europe, XIXe siècle
+    zh: 欧洲,19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      La idea de medir cuánta masa atraviesa una sección por segundo surgió de manera colectiva con
+      la mecánica de fluidos del siglo XIX, cuando la hidráulica, la termodinámica y la ingeniería
+      de máquinas exigieron cuantificar el transporte de materia. La expresión ṁ = ρ·A·v se
+      consolidó en el diseño de bombas, turbinas y conductos, y se volvió esencial con los motores
+      a reacción: conocer el flujo másico de aire permite dosificar el combustible exacto. Hoy
+      gobierna desde el combustible de un cohete hasta el aire climatizado de un edificio.
+    en: >-
+      The idea of measuring how much mass crosses a section each second grew collectively with
+      19th-century fluid mechanics, when hydraulics, thermodynamics, and machine engineering
+      demanded quantifying the transport of matter. The expression ṁ = ρ·A·v was consolidated in
+      the design of pumps, turbines, and ducts, and became essential with jet engines: knowing the
+      air mass flow allows dosing exactly the right fuel. Today it governs everything from rocket
+      fuel to the air a building breathes.
+    pt: >-
+      A ideia de medir quanta massa atravessa uma seção por segundo surgiu de forma coletiva com a
+      mecânica dos fluidos do século XIX, quando a hidráulica, a termodinâmica e a engenharia de
+      máquinas exigiram quantificar o transporte de matéria. A expressão ṁ = ρ·A·v consolidou-se no
+      projeto de bombas, turbinas e dutos, e tornou-se essencial com os motores a jato: conhecer o
+      fluxo mássico de ar permite dosar exatamente o combustível. Hoje rege desde o combustível de
+      um foguete até o ar climatizado de um edifício.
+    fr: >-
+      L'idée de mesurer combien de masse traverse une section par seconde a émergé collectivement
+      avec la mécanique des fluides du XIXe siècle, quand l'hydraulique, la thermodynamique et
+      l'ingénierie des machines ont exigé de quantifier le transport de la matière. L'expression
+      ṁ = ρ·A·v s'est imposée dans la conception des pompes, turbines et conduits, et est devenue
+      essentielle avec les moteurs à réaction : connaître le débit massique d'air permet de doser
+      exactement le carburant. Aujourd'hui elle régit du carburant d'une fusée à l'air conditionné
+      d'un bâtiment.
+    zh: >-
+      测量每秒通过某一截面的质量这一思想,是随着19世纪流体力学的发展而集体形成的,当时水力学、热力学和机械
+      工程都需要对物质输运进行量化。表达式 ṁ = ρ·A·v 在泵、涡轮和管道设计中得到确立,并在喷气发动机出现后
+      变得至关重要:测出空气质量流量,就能精确配比燃油。如今,从火箭燃料到建筑的空调风量,都受它支配。
+    ja: >-
+      1秒間に断面を通過する質量を測るという考えは、19世紀の流体力学とともに集団的に生まれた。水力学や
+      熱力学、機械工学が物質の輸送を定量化することを要求したからだ。式 ṁ = ρ·A·v はポンプやタービン、
+      ダクトの設計で確立され、ジェットエンジンで不可欠になった。空気の質量流量を知れば、燃料を正確に供給
+      できるからである。今日ではロケットの燃料から建物の空調空気までを支配している。
+  timeline:
+    - year: "1738"
+      label:
+        es: >-
+          Daniel Bernoulli, en "Hydrodynamica", relaciona el flujo a través de una sección con el
+          área y la velocidad.
+        en: >-
+          Daniel Bernoulli, in "Hydrodynamica", relates flow through a section to area and speed.
+        pt: >-
+          Daniel Bernoulli, em "Hydrodynamica", relaciona o escoamento por uma seção com a área e a
+          velocidade.
+        fr: >-
+          Daniel Bernoulli, dans « Hydrodynamica », relie l'écoulement à travers une section à la
+          surface et à la vitesse.
+        zh: >-
+          丹尼尔·伯努利在《流体动力学》中将通过截面的流动与面积和速度联系起来。
+        ja: >-
+          ダニエル・ベルヌーイが『流体力学』で、断面を流れる流量と面積・速度の関係を示す。
+    - year: "1850"
+      label:
+        es: >-
+          La termodinámica en desarrollo consolida la medición del flujo de masa en calderas,
+          máquinas de vapor y conductos industriales.
+        en: >-
+          Developing thermodynamics consolidates the measurement of mass flow in boilers, steam
+          engines, and industrial ducts.
+        pt: >-
+          A termodinâmica em desenvolvimento consolida a medição do fluxo de massa em caldeiras,
+          máquinas a vapor e dutos industriais.
+        fr: >-
+          La thermodynamique en développement consolide la mesure du débit massique dans les
+          chaudières, les machines à vapeur et les conduits industriels.
+        zh: >-
+          发展中的热力学巩固了锅炉、蒸汽机和工业管道中质量流量的测量。
+        ja: >-
+          発展途上の熱力学が、ボイラー、蒸気機関、産業用ダクトにおける質量流量の測定を確立する。
+    - year: "1939"
+      label:
+        es: >-
+          El primer vuelo del motor a reacción (Heinkel He 178) hace crítica la medición del flujo
+          másico de aire para dosificar el combustible.
+        en: >-
+          The first jet engine flight (Heinkel He 178) makes measuring air mass flow critical for
+          dosing fuel.
+        pt: >-
+          O primeiro voo do motor a jato (Heinkel He 178) torna crítica a medição do fluxo mássico
+          de ar para dosar o combustível.
+        fr: >-
+          Le premier vol du moteur à réaction (Heinkel He 178) rend critique la mesure du débit
+          massique d'air pour doser le carburant.
+        zh: >-
+          喷气发动机首飞(亨克尔 He 178)使测量空气质量流量以配比燃油变得至关重要。
+        ja: >-
+          最初のジェットエンジン飛行(ハインケルHe 178)により、燃料供給のための空気質量流量の測定が
+          決定的に重要になる。
+    - year: Hoy
+      label:
+        es: >-
+          Es la base del control de motores a reacción, cohetes, sistemas de climatización y
+          refrigeración.
+        en: >-
+          It is the basis for controlling jet engines, rockets, HVAC, and refrigeration systems.
+        pt: >-
+          É a base do controle de motores a jato, foguetes, sistemas de climatização e refrigeração.
+        fr: >-
+          Elle est à la base du pilotage des moteurs à réaction, des fusées, de la climatisation et
+          de la réfrigération.
+        zh: >-
+          它是喷气发动机、火箭、暖通空调和制冷系统控制的基础。
+        ja: >-
+          ジェットエンジン、ロケット、空調、冷凍システムの制御の基盤である。
+  useCases:
+    - title:
+        es: Motores a reacción
+        en: Jet engines
+        pt: Motores a jato
+        fr: Moteurs à réaction
+        zh: 喷气发动机
+        ja: ジェットエンジン
+      description:
+        es: >-
+          Mide el aire que entra al compresor para inyectar la cantidad exacta de combustible y
+          mantener el empuje.
+        en: >-
+          It measures the air entering the compressor to inject the exact fuel amount and sustain
+          thrust.
+        pt: >-
+          Mede o ar que entra no compressor para injetar a quantidade exata de combustível e manter
+          o empuxo.
+        fr: >-
+          Elle mesure l'air entrant dans le compresseur pour injecter la quantité exacte de
+          carburant et maintenir la poussée.
+        zh: >-
+          测量进入压气机的空气,以喷入精确的燃油量并维持推力。
+        ja: >-
+          圧縮機に入る空気を測り、正確な燃料量を噴射して推力を維持する。
+    - title:
+        es: Propulsión de cohetes
+        en: Rocket propulsion
+        pt: Propulsão de foguetes
+        fr: Propulsion des fusées
+        zh: 火箭推进
+        ja: ロケット推進
+      description:
+        es: >-
+          Regula el flujo de propelente hacia la cámara de combustión para controlar el empuje y el
+          consumo de combustible.
+        en: >-
+          It regulates propellant flow into the combustion chamber to control thrust and fuel burn.
+        pt: >-
+          Regula o fluxo de propelente para a câmara de combustão para controlar o empuxo e o
+          consumo de combustível.
+        fr: >-
+          Elle régule le débit de propergol vers la chambre de combustion pour contrôler la poussée
+          et la consommation.
+        zh: >-
+          调节进入燃烧室的推进剂流量,以控制推力和燃料消耗。
+        ja: >-
+          燃焼室への推進剤の流量を調節し、推力と燃料消費を制御する。
+    - title:
+        es: Climatización (HVAC)
+        en: Heating, ventilation and air conditioning
+        pt: Climatização (HVAC)
+        fr: Chauffage, ventilation et climatisation
+        zh: 暖通空调
+        ja: 空調設備
+      description:
+        es: >-
+          Calcula cuánto aire fresco debe entrar a un edificio para renovar el ambiente por hora.
+        en: >-
+          It calculates how much fresh air must enter a building to renew the indoor air per hour.
+        pt: >-
+          Calcula quanto ar fresco deve entrar em um edifício para renovar o ambiente por hora.
+        fr: >-
+          Elle calcule la quantité d'air neuf qui doit entrer dans un bâtiment pour renouveler l'air
+          par heure.
+        zh: >-
+          计算建筑物每小时需要引入多少新风以更新室内空气。
+        ja: >-
+          建物に毎時間どれだけの新鮮な空気を入れれば室内空気を入れ替えられるかを計算する。
+    - title:
+        es: Sistemas de refrigeración
+        en: Refrigeration systems
+        pt: Sistemas de refrigeração
+        fr: Systèmes de réfrigération
+        zh: 制冷系统
+        ja: 冷凍システム
+      description:
+        es: >-
+          Asegura que el refrigerante circule con el caudal adecuado para extraer el calor
+          necesario.
+        en: >-
+          It ensures refrigerant flows at the right rate to extract the required heat.
+        pt: >-
+          Garante que o refrigerante circule na vazão adequada para extrair o calor necessário.
+        fr: >-
+          Elle garantit que le fluide frigorigène circule au bon débit pour extraire la chaleur
+          nécessaire.
+        zh: >-
+          确保制冷剂以合适的流量循环,以提取所需的热量。
+        ja: >-
+          冷媒が必要な熱を奪えるように、適切な流量で循環させることを保証する。
+  example:
+    title:
+      es: Aire en la entrada de un motor
+      en: Air at an engine intake
+      pt: Ar na entrada de um motor
+      fr: Air à l'entrée d'un moteur
+      zh: 发动机进气口的空气
+      ja: エンジン吸気口の空気
+    lines:
+      - es: ṁ = ρ · A · v
+        en: ṁ = ρ · A · v
+        pt: ṁ = ρ · A · v
+        fr: ṁ = ρ · A · v
+        zh: ṁ = ρ · A · v
+        ja: ṁ = ρ · A · v
+      - es: ρ = 1.225 kg/m³, A = 1 m², v = 100 m/s
+        en: ρ = 1.225 kg/m³, A = 1 m², v = 100 m/s
+        pt: ρ = 1,225 kg/m³, A = 1 m², v = 100 m/s
+        fr: ρ = 1,225 kg/m³, A = 1 m², v = 100 m/s
+        zh: ρ = 1.225 kg/m³, A = 1 m², v = 100 m/s
+        ja: ρ = 1.225 kg/m³, A = 1 m², v = 100 m/s
+      - es: ṁ = 1.225 × 1 × 100
+        en: ṁ = 1.225 × 1 × 100
+        pt: ṁ = 1,225 × 1 × 100
+        fr: ṁ = 1,225 × 1 × 100
+        zh: ṁ = 1.225 × 1 × 100
+        ja: ṁ = 1.225 × 1 × 100
+      - es: ṁ = 122.5 kg/s
+        en: ṁ = 122.5 kg/s
+        pt: ṁ = 122,5 kg/s
+        fr: ṁ = 122,5 kg/s
+        zh: ṁ = 122.5 kg/s
+        ja: ṁ = 122.5 kg/s
+      - es: 122.5 kg de aire por segundo
+        en: 122.5 kg of air per second
+        pt: 122,5 kg de ar por segundo
+        fr: 122,5 kg d'air par seconde
+        zh: 每秒 122.5 千克空气
+        ja: 毎秒122.5kgの空気

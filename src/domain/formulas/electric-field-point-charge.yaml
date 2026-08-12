@@ -1,0 +1,351 @@
+id: electric-field-point-charge
+title:
+  es: Campo Eléctrico de una Carga
+  en: Electric Field of a Point Charge
+  pt: Campo Elétrico de uma Carga
+  fr: Champ Électrique d'une Charge
+  zh: 点电荷的电场
+  ja: 点電荷の電界
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: La intensidad del campo a una distancia r de la carga.
+      en: The field strength at a distance r from the charge.
+      pt: A intensidade do campo a uma distância r da carga.
+      fr: L'intensité du champ à une distance r de la charge.
+      zh: 距电荷 r 处的场强。
+      ja: 電荷から距離 r の点での電界の強さ。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: k
+    type: constant
+    value: k
+    explanation:
+      es: La constante de Coulomb, unos 8,99 × 10⁹ N·m²/C².
+      en: Coulomb's constant, about 8.99 × 10⁹ N·m²/C².
+      pt: A constante de Coulomb, cerca de 8,99 × 10⁹ N·m²/C².
+      fr: La constante de Coulomb, environ 8,99 × 10⁹ N·m²/C².
+      zh: 库仑常数,约为 8.99 × 10⁹ N·m²/C²。
+      ja: クーロン定数。およそ 8.99 × 10⁹ N·m²/C²。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación de magnitudes.
+      en: Multiplication of quantities.
+      pt: Multiplicação de grandezas.
+      fr: Multiplication de grandeurs.
+      zh: 数量相乘。
+      ja: 量の掛け算。
+  - id: q
+    type: variable
+    value: Q
+    explanation:
+      es: La magnitud de la carga que crea el campo.
+      en: The magnitude of the charge that creates the field.
+      pt: A magnitude da carga que cria o campo.
+      fr: La grandeur de la charge qui crée le champ.
+      zh: 产生电场的电荷的电荷量。
+      ja: 電界を作る電荷の大きさ。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por el cuadrado de la distancia.
+      en: Divided by the square of the distance.
+      pt: Dividido pelo quadrado da distância.
+      fr: Divisée par le carré de la distance.
+      zh: 除以距离的平方。
+      ja: 距離の2乗で割る。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: La distancia desde la carga hasta el punto donde se mide el campo.
+      en: The distance from the charge to the point where the field is measured.
+      pt: A distância da carga até o ponto onde o campo é medido.
+      fr: La distance de la charge au point où le champ est mesuré.
+      zh: 从电荷到测量场点的距离。
+      ja: 電荷から電界を測る点までの距離。
+  - id: exp-2
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Al cuadrado: el campo se debilita rápidamente al alejarse de la carga."
+      en: "Squared: the field weakens quickly as you move away from the charge."
+      pt: "Ao quadrado: o campo enfraquece rapidamente à medida que você se afasta da carga."
+      fr: "Au carré : le champ s'affaiblit rapidement lorsqu'on s'éloigne de la charge."
+      zh: "平方:离电荷越远,电场衰减得越快。"
+      ja: "2乗:電荷から遠ざかるほど電界は急速に弱まる。"
+context:
+  author:
+    es: Basada en la ley de Coulomb
+    en: Based on Coulomb's law
+    pt: Baseada na lei de Coulomb
+    fr: D'après la loi de Coulomb
+    zh: 基于库仑定律
+    ja: クーロンの法則に基づく
+  era:
+    es: Francia, 1785 · formalizada en el s. XIX
+    en: France, 1785 · formalized in the 19th century
+    pt: França, 1785 · formalizada no séc. XIX
+    fr: France, 1785 · formalisée au XIXᵉ siècle
+    zh: 法国,1785年 · 19世纪正式确立
+    ja: フランス、1785年・19世紀に体系化
+  history:
+    es: >-
+      La intensidad del campo creado por una carga puntual decrece con el cuadrado de la distancia,
+      resultado que Charles-Augustin de Coulomb estableció experimentalmente en 1785 y que se
+      formalizó en el siglo XIX dentro de la teoría de campos. Ese descenso rápido explica por qué
+      los pararrayos, con sus puntas afiladas, concentran el campo y atraen la descarga. El patrón de
+      cuadrado inverso es además el mismo que gobierna la gravedad de Newton.
+    en: >-
+      The strength of the field produced by a point charge falls off with the square of the
+      distance, a result Charles-Augustin de Coulomb established experimentally in 1785 and later
+      formalised in 19th-century field theory. That rapid fall explains why lightning rods, with
+      their sharp tips, concentrate the field and attract the discharge. The inverse-square pattern
+      is also the same one that governs Newtonian gravity.
+    pt: >-
+      A intensidade do campo criado por uma carga puntiforme diminui com o quadrado da distância,
+      resultado que Charles-Augustin de Coulomb estabeleceu experimentalmente em 1785 e que foi
+      formalizado no século XIX dentro da teoria de campos. Esse decaimento rápido explica por que os
+      para-raios, com suas pontas afiadas, concentram o campo e atraem a descarga. O padrão do
+      inverso do quadrado é o mesmo que governa a gravidade de Newton.
+    fr: >-
+      L'intensité du champ créé par une charge ponctuelle décroît comme l'inverse du carré de la
+      distance, résultat que Charles-Augustin de Coulomb établit expérimentalement en 1785 et qui fut
+      formalisé au XIXᵉ siècle dans la théorie des champs. Cette décroissance rapide explique pourquoi
+      les paratonnerres, avec leurs pointes acérées, concentrent le champ et attirent la décharge.
+      La loi en carré inverse est aussi celle qui régit la gravité de Newton.
+    zh: >-
+      点电荷产生的场强随距离的平方而衰减,这一结果由夏尔-奥古斯丁·库仑于1785年通过实验确立,并在19世纪的场论中得到正式
+      表述。这种快速衰减解释了为什么具有尖锐尖端的避雷针会集中电场并吸引放电。平方反比的规律也正是支配牛顿引力场的
+      同一规律。
+    ja: >-
+      点電荷が作る電界の強さは距離の2乗に反比例して減衰する。この結果はシャルル＝オーギュスタン・クーロンが1785年に
+      実験的に確立し、19世紀の場の理論で体系化された。この急速な減衰は、先端が鋭い避雷針が電界を集中させ、落雷を引き寄せる
+      理由を説明する。逆2乗のパターンはニュートンの重力を支配するものと同じである。
+  timeline:
+    - year: "1785"
+      label:
+        es: >-
+          Coulomb mide la fuerza entre cargas con su balanza de torsión y establece la ley del
+          cuadrado inverso.
+        en: >-
+          Coulomb measures the force between charges with his torsion balance and establishes the
+          inverse-square law.
+        pt: >-
+          Coulomb mede a força entre cargas com sua balança de torção e estabelece a lei do inverso
+          do quadrado.
+        fr: >-
+          Coulomb mesure la force entre charges avec sa balance de torsion et établit la loi en
+          carré inverse.
+        zh: >-
+          库仑用扭秤测量电荷之间的作用力,确立了平方反比定律。
+        ja: >-
+          クーロンがねじり天秤で電荷間の力を測定し、逆2乗の法則を確立する。
+    - year: "1813"
+      label:
+        es: >-
+          Poisson formula el potencial electrostático y convierte la ley de Coulomb en una teoría de
+          campos rigurosa.
+        en: >-
+          Poisson formulates the electrostatic potential, turning Coulomb's law into a rigorous
+          field theory.
+        pt: >-
+          Poisson formula o potencial eletrostático e transforma a lei de Coulomb em uma teoria de
+          campos rigorosa.
+        fr: >-
+          Poisson formule le potentiel électrostatique et transforme la loi de Coulomb en une théorie
+          des champs rigoureuse.
+        zh: >-
+          泊松提出静电势,把库仑定律变成严谨的场论。
+        ja: >-
+          ポアソンが静電ポテンシャルを定式化し、クーロンの法則を厳密な場の理論へと発展させる。
+    - year: "1873"
+      label:
+        es: >-
+          Maxwell publica su Tratado y enmarca la ley de Coulomb dentro de la teoría electromagnética
+          completa.
+        en: >-
+          Maxwell publishes his Treatise, framing Coulomb's law within the complete electromagnetic
+          theory.
+        pt: >-
+          Maxwell publica seu Tratado e enquadra a lei de Coulomb na teoria eletromagnética
+          completa.
+        fr: >-
+          Maxwell publie son Traité, inscrivant la loi de Coulomb dans la théorie électromagnétique
+          complète.
+        zh: >-
+          麦克斯韦出版《电磁通论》,把库仑定律纳入完整的电磁理论。
+        ja: >-
+          マクスウェルが『電磁気論』を著し、クーロンの法則を完全な電磁気理論の中に位置づける。
+    - year: Hoy
+      label:
+        es: >-
+          Pararrayos, pintura electrostática y diseño de alta tensión siguen aplicando E = k·Q/r².
+        en: >-
+          Lightning rods, electrostatic painting, and high-voltage design still apply E = k·Q/r².
+        pt: >-
+          Para-raios, pintura eletrostática e projetos de alta tensão ainda aplicam E = k·Q/r².
+        fr: >-
+          Paratonnerres, peinture électrostatique et conception haute tension appliquent encore
+          E = k·Q/r².
+        zh: >-
+          避雷针、静电喷涂和高压设计至今仍在应用 E = k·Q/r²。
+        ja: >-
+          避雷針、静電塗装、高電圧設計は今も E = k·Q/r² を応用している。
+  useCases:
+    - title:
+        es: Protección contra rayos
+        en: Lightning protection
+        pt: Proteção contra raios
+        fr: Protection contre la foudre
+        zh: 防雷保护
+        ja: 落雷対策
+      description:
+        es: >-
+          La punta del pararrayos concentra el campo y favorece que la descarga caiga sobre ella y no
+          sobre el edificio.
+        en: >-
+          A lightning rod's tip concentrates the field, drawing the discharge to itself instead of
+          the building.
+        pt: >-
+          A ponta do para-raios concentra o campo e favorece que a descarga caia sobre ela e não
+          sobre o edifício.
+        fr: >-
+          La pointe du paratonnerre concentre le champ et attire la décharge sur elle plutôt que sur
+          le bâtiment.
+        zh: >-
+          避雷针的尖端集中电场,使放电落在针上而不是建筑上。
+        ja: >-
+          避雷針の先端は電界を集中させ、放電を建物ではなく針に引き寄せる。
+    - title:
+        es: Pintura electrostática
+        en: Electrostatic painting
+        pt: Pintura eletrostática
+        fr: Peinture électrostatique
+        zh: 静电喷涂
+        ja: 静電塗装
+      description:
+        es: >-
+          Las gotas de pintura cargadas siguen el campo intenso de las puntas y se adhieren a la
+          pieza a pintar.
+        en: >-
+          Charged paint droplets follow the strong field at sharp points and stick to the part being
+          painted.
+        pt: >-
+          As gotas de tinta carregadas seguem o campo intenso das pontas e aderem à peça a ser
+          pintada.
+        fr: >-
+          Les gouttelettes de peinture chargées suivent le champ intense des pointes et adhèrent à
+          la pièce à peindre.
+        zh: >-
+          带电的漆滴沿尖端附近的强电场飞行,附着到被喷涂的工件上。
+        ja: >-
+          帯電した塗料の液滴は先端の強い電界に沿って飛び、塗装対象に付着する。
+    - title:
+        es: Diseño de alta tensión
+        en: High-voltage design
+        pt: Projetos de alta tensão
+        fr: Conception haute tension
+        zh: 高压设计
+        ja: 高電圧設計
+      description:
+        es: >-
+          Conocer E = k·Q/r² ayuda a prever las descargas corona en líneas y aisladores.
+        en: >-
+          Knowing E = k·Q/r² helps predict corona discharge on lines and insulators.
+        pt: >-
+          Conhecer E = k·Q/r² ajuda a prever as descargas corona em linhas e isoladores.
+        fr: >-
+          Connaître E = k·Q/r² aide à prévoir les décharges corona sur les lignes et les isolateurs.
+        zh: >-
+          了解 E = k·Q/r² 有助于预测线路和绝缘子上的电晕放电。
+        ja: >-
+          E = k·Q/r² を知ることで、電線や碍子のコロナ放電を予測できる。
+    - title:
+        es: Electrostática industrial
+        en: Industrial electrostatics
+        pt: Eletrostática industrial
+        fr: Électrostatique industrielle
+        zh: 工业静电技术
+        ja: 産業用静電気技術
+      description:
+        es: >-
+          La eliminación de polvo y la neutralización de cargas dependen de cómo decae el campo con
+          la distancia.
+        en: >-
+          Dust removal and charge neutralisation rely on how the field falls off with distance.
+        pt: >-
+          A remoção de poeira e a neutralização de cargas dependem de como o campo decai com a
+          distância.
+        fr: >-
+          Le dépoussiérage et la neutralisation des charges reposent sur la façon dont le champ
+          décroît avec la distance.
+        zh: >-
+          除尘和静电消除都依赖于电场随距离衰减的方式。
+        ja: >-
+          除塵や除電は、電界が距離とともに減衰する仕組みに依存している。
+  example:
+    title:
+      es: Campo cerca de una carga puntual
+      en: Field near a point charge
+      pt: Campo perto de uma carga puntiforme
+      fr: Champ près d'une charge ponctuelle
+      zh: 点电荷附近的电场
+      ja: 点電荷の近くの電界
+    lines:
+      - es: Q = 1 µC
+        en: Q = 1 µC
+        pt: Q = 1 µC
+        fr: Q = 1 µC
+        zh: Q = 1 µC
+        ja: Q = 1 µC
+      - es: r = 0,1 m
+        en: r = 0.1 m
+        pt: r = 0,1 m
+        fr: r = 0,1 m
+        zh: r = 0.1 m
+        ja: r = 0.1 m
+      - es: k = 8,99 × 10⁹ N·m²/C²
+        en: k = 8.99 × 10⁹ N·m²/C²
+        pt: k = 8,99 × 10⁹ N·m²/C²
+        fr: k = 8,99 × 10⁹ N·m²/C²
+        zh: k = 8.99 × 10⁹ N·m²/C²
+        ja: k = 8.99 × 10⁹ N·m²/C²
+      - es: E = k × Q / r²
+        en: E = k × Q / r²
+        pt: E = k × Q / r²
+        fr: E = k × Q / r²
+        zh: E = k × Q / r²
+        ja: E = k × Q / r²
+      - es: E = 8,99 × 10⁹ × 10⁻⁶ / 0,01
+        en: E = 8.99 × 10⁹ × 10⁻⁶ / 0.01
+        pt: E = 8,99 × 10⁹ × 10⁻⁶ / 0,01
+        fr: E = 8,99 × 10⁹ × 10⁻⁶ / 0,01
+        zh: E = 8.99 × 10⁹ × 10⁻⁶ / 0.01
+        ja: E = 8.99 × 10⁹ × 10⁻⁶ / 0.01
+      - es: E ≈ 899 000 N/C
+        en: E ≈ 899,000 N/C
+        pt: E ≈ 899 000 N/C
+        fr: E ≈ 899 000 N/C
+        zh: E ≈ 899 000 N/C
+        ja: E ≈ 899 000 N/C

@@ -1,0 +1,326 @@
+id: bacterial-doubling-time
+title:
+  es: Tiempo de Duplicación
+  en: Doubling Time
+  pt: Tempo de Duplicação
+  fr: Temps de Doublement
+  zh: 倍增时间
+  ja: 倍加時間
+category:
+  es: Biología
+  en: Biology
+  pt: Biologia
+  fr: Biologie
+  zh: 生物学
+  ja: 生物学
+nodes:
+  - id: td
+    type: variable
+    value: t₂
+    explanation:
+      es: "t₂: el tiempo que tarda la población en duplicarse, en la unidad de tiempo de r."
+      en: "t₂: the time the population takes to double, in the time unit of r."
+      pt: "t₂: o tempo que a população leva para duplicar, na unidade de tempo de r."
+      fr: "t₂ : le temps que met la population à doubler, dans l'unité de temps de r."
+      zh: "t₂：种群数量翻倍所需的时间，与r的时间单位一致。"
+      ja: "t₂：集団が倍になるまでの時間。rの時間単位で表す。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: ln2
+    type: variable
+    value: ln 2
+    explanation:
+      es: "ln 2: el logaritmo natural de 2, ≈ 0.693."
+      en: "ln 2: the natural logarithm of 2, ≈ 0.693."
+      pt: "ln 2: o logaritmo natural de 2, ≈ 0,693."
+      fr: "ln 2 : le logarithme naturel de 2, ≈ 0,693."
+      zh: "ln 2：2的自然对数，约0.693。"
+      ja: "ln 2：2の自然対数。約0.693。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: rate
+    type: variable
+    value: r
+    explanation:
+      es: "r: la tasa de crecimiento por unidad de tiempo."
+      en: "r: the growth rate per unit of time."
+      pt: "r: a taxa de crescimento por unidade de tempo."
+      fr: "r : le taux de croissance par unité de temps."
+      zh: "r：单位时间内的增长率。"
+      ja: "r：単位時間あたりの成長率。"
+context:
+  author:
+    es: Basada en el crecimiento exponencial
+    en: Based on exponential growth
+    pt: Baseada no crescimento exponencial
+    fr: Basée sur la croissance exponentielle
+    zh: 基于指数增长模型
+    ja: 指数関数的成長に基づく
+  era:
+    es: Europa, s. XX
+    en: Europe, 20th century
+    pt: Europa, século XX
+    fr: Europe, XXe siècle
+    zh: 欧洲,20世纪
+    ja: ヨーロッパ、20世紀
+  history:
+    es: >-
+      El tiempo de duplicación es el tiempo que tarda una población en duplicarse cuando crece de
+      forma exponencial. Surge de la ecuación N = N₀·e^(rt), al buscar el instante en que N = 2·N₀,
+      lo que da t₂ = ln 2 / r. El contraste entre especies es enorme; algunas bacterias se duplican
+      en minutos y ciertos árboles, en décadas. Por eso el mismo número gobierna la fermentación,
+      la propagación de una infección y el crecimiento de un cultivo celular.
+    en: >-
+      The doubling time is the time a population takes to double when it grows exponentially. It
+      follows from the equation N = N₀·e^(rt), by finding the instant at which N = 2·N₀, which
+      gives t₂ = ln 2 / r. The contrast between species is enormous; some bacteria double in
+      minutes while certain trees take decades. For that reason the same number governs
+      fermentation, the spread of an infection, and the growth of a cell culture.
+    pt: >-
+      O tempo de duplicação é o tempo que uma população leva para duplicar quando cresce de forma
+      exponencial. Surge da equação N = N₀·e^(rt), ao buscar o instante em que N = 2·N₀, o que
+      resulta em t₂ = ln 2 / r. O contraste entre espécies é enorme; algumas bactérias duplicam em
+      minutos e certas árvores, em décadas. Por isso o mesmo número rege a fermentação, a
+      propagação de uma infecção e o crescimento de uma cultura celular.
+    fr: >-
+      Le temps de doublement est le temps que met une population à doubler lorsqu'elle croît de
+      façon exponentielle. Il découle de l'équation N = N₀·e^(rt), en cherchant l'instant où
+      N = 2·N₀, ce qui donne t₂ = ln 2 / r. Le contraste entre espèces est énorme ; certaines
+      bactéries doublent en quelques minutes et certains arbres, en décennies. C'est pourquoi ce
+      même nombre gouverne la fermentation, la propagation d'une infection et la croissance d'une
+      culture cellulaire.
+    zh: >-
+      倍增时间是种群数量翻倍所需的时间，前提是种群按指数方式增长。它源自方程N = N₀·e^(rt)，令
+      N = 2·N₀即可求出该时刻，得到t₂ = ln 2 / r。物种之间的差别极大，有些细菌几分钟就翻倍，
+      而某些树木需要数十年。正因为如此，同一公式也支配着发酵、感染的传播和细胞培养物的生长。
+    ja: >-
+      倍加時間とは、指数関数的に増える集団が倍になるまでの時間である。式N = N₀·e^(rt)から、
+      N = 2·N₀となる瞬間を求めるとt₂ = ln 2 / rが得られる。種による差は大きく、ある細菌は数分で
+      倍になる一方、ある種の樹木には数十年かかる。そのため、同じ数が発酵、感染の広がり、細胞培養の
+      増殖を支配している。
+  timeline:
+    - year: "1798"
+      label:
+        es: >-
+          Thomas Malthus publica su "Ensayo sobre el principio de la población", que cimenta la
+          idea del crecimiento exponencial de las poblaciones.
+        en: >-
+          Thomas Malthus publishes his "Essay on the Principle of Population", cementing the idea
+          of exponential population growth.
+        pt: >-
+          Thomas Malthus publica seu "Ensaio sobre o Princípio da População", consolidando a ideia
+          do crescimento exponencial das populações.
+        fr: >-
+          Thomas Malthus publie son « Essai sur le principe de population », qui consolide l'idée
+          d'une croissance exponentielle des populations.
+        zh: >-
+          托马斯·马尔萨斯发表《人口论》，奠定了人口指数增长的思想。
+        ja: >-
+          トマス・マルサスが『人口論』を発表し、人口の指数関数的増加という考え方を確立する。
+    - year: "1942"
+      label:
+        es: >-
+          Jacques Monod formaliza en su tesis la cinética del crecimiento bacteriano en cultivo,
+          en la que el tiempo de duplicación es el parámetro central.
+        en: >-
+          Jacques Monod's thesis formalizes the kinetics of bacterial growth in culture, where
+          doubling time is the central parameter.
+        pt: >-
+          Jacques Monod formaliza em sua tese a cinética do crescimento bacteriano em cultura, na
+          qual o tempo de duplicação é o parâmetro central.
+        fr: >-
+          La thèse de Jacques Monod formalise la cinétique de croissance bactérienne en culture,
+          dont le temps de doublement est le paramètre central.
+        zh: >-
+          雅克·莫诺在其博士论文中系统阐述了培养中细菌生长的动力学，倍增时间是其中的核心参数。
+        ja: >-
+          ジャック・モノーの学位論文が、培養における細菌増殖の動力学を定式化し、倍加時間を中心的な
+          パラメータとする。
+    - year: "2020"
+      label:
+        es: >-
+          Durante la pandemia de COVID-19 el tiempo de duplicación de los casos se vuelve una
+          métrica cotidiana para seguir la propagación del virus.
+        en: >-
+          During the COVID-19 pandemic the case doubling time becomes a household metric for
+          tracking the spread of the virus.
+        pt: >-
+          Durante a pandemia de COVID-19, o tempo de duplicação dos casos vira uma métrica
+          cotidiana para acompanhar a propagação do vírus.
+        fr: >-
+          Pendant la pandémie de COVID-19, le temps de doublement des cas devient une mesure
+          courante pour suivre la propagation du virus.
+        zh: >-
+          在COVID-19疫情期间，病例倍增时间成为追踪病毒传播的日常指标。
+        ja: >-
+          COVID-19のパンデミック中、症例の倍加時間がウイルスの拡散を追跡する日常的な指標となる。
+    - year: Hoy
+      label:
+        es: >-
+          Se usa para programar los pases de cultivos celulares, predecir la duración de una
+          fermentación y modelar la evolución de una epidemia.
+        en: >-
+          It is used to schedule cell culture passages, predict how long a fermentation will take,
+          and model the course of an epidemic.
+        pt: >-
+          É usado para programar as passagens de cultivos celulares, prever a duração de uma
+          fermentação e modelar a evolução de uma epidemia.
+        fr: >-
+          Il sert à programmer les repiquages de cultures cellulaires, à prédire la durée d'une
+          fermentation et à modéliser l'évolution d'une épidémie.
+        zh: >-
+          它被用来安排细胞培养的传代时间、预测发酵所需时长，并建立疫情演变的模型。
+        ja: >-
+          細胞培養の継代時期の計画、発酵にかかる時間の予測、流行の推移のモデル化に使われる。
+  useCases:
+    - title:
+        es: Cultivos celulares
+        en: Cell culture
+        pt: Cultivos celulares
+        fr: Cultures cellulaires
+        zh: 细胞培养
+        ja: 細胞培養
+      description:
+        es: >-
+          Los laboratorios programan cuándo subcultivar células según el tiempo de duplicación
+          para que nunca agoten el medio de cultivo.
+        en: >-
+          Laboratories schedule when to subculture cells from the doubling time so they never
+          exhaust the culture medium.
+        pt: >-
+          Os laboratórios programam quando subcultivar células a partir do tempo de duplicação
+          para que elas nunca esgotem o meio de cultura.
+        fr: >-
+          Les laboratoires programment les repiquages de cellules à partir du temps de doublement
+          pour qu'elles n'épuisent jamais le milieu de culture.
+        zh: >-
+          实验室根据倍增时间安排细胞的传代时间，确保细胞不会耗尽培养液。
+        ja: >-
+          研究室では倍加時間に基づいて継代時期を計画し、培養液を枯渇させないようにしている。
+    - title:
+        es: Epidemiología
+        en: Epidemiology
+        pt: Epidemiologia
+        fr: Épidémiologie
+        zh: 流行病学
+        ja: 疫学
+      description:
+        es: >-
+          El tiempo de duplicación de los casos describe la velocidad de un brote y permite
+          comparar la eficacia de las medidas de control.
+        en: >-
+          The case doubling time describes how fast an outbreak grows and allows comparing the
+          effectiveness of control measures.
+        pt: >-
+          O tempo de duplicação dos casos descreve a velocidade de um surto e permite comparar a
+          eficácia das medidas de controle.
+        fr: >-
+          Le temps de doublement des cas décrit la vitesse d'une épidémie et permet de comparer
+          l'efficacité des mesures de contrôle.
+        zh: >-
+          病例倍增时间描述了疫情的增长速度，可用于比较不同防控措施的效果。
+        ja: >-
+          症例の倍加時間は集団発生の拡大速度を表し、対策の効果を比較するのに役立つ。
+    - title:
+        es: Fermentación industrial
+        en: Industrial fermentation
+        pt: Fermentação industrial
+        fr: Fermentation industrielle
+        zh: 工业发酵
+        ja: 工業発酵
+      description:
+        es: >-
+          La duración de una fermentación industrial se planifica con el tiempo de duplicación del
+          microorganismo productor.
+        en: >-
+          The duration of an industrial fermentation is planned using the doubling time of the
+          producing microorganism.
+        pt: >-
+          A duração de uma fermentação industrial é planejada a partir do tempo de duplicação do
+          microrganismo produtor.
+        fr: >-
+          La durée d'une fermentation industrielle se planifie à partir du temps de doublement du
+          micro-organisme producteur.
+        zh: >-
+          工业发酵的时长依据生产菌的倍增时间来规划。
+        ja: >-
+          工業発酵の所要時間は、生産菌の倍加時間に基づいて計画される。
+    - title:
+        es: Microbiología de alimentos
+        en: Food microbiology
+        pt: Microbiologia de alimentos
+        fr: Microbiologie alimentaire
+        zh: 食品微生物学
+        ja: 食品微生物学
+      description:
+        es: >-
+          El tiempo de duplicación de los microbios que deterioran o contaminan los alimentos
+          define su vida útil y su seguridad.
+        en: >-
+          The doubling time of spoilage or pathogenic microbes in food defines its shelf life and
+          safety.
+        pt: >-
+          O tempo de duplicação dos micróbios que deterioram ou contaminam os alimentos define sua
+          vida útil e sua segurança.
+        fr: >-
+          Le temps de doublement des microbes qui altèrent ou contaminent les aliments définit leur
+          durée de conservation et leur sécurité.
+        zh: >-
+          导致食物变质或污染微生物的倍增时间，决定了食品的保质期和安全性。
+        ja: >-
+          食品を腐敗させたり汚染したりする微生物の倍加時間が、その保存期間と安全性を決める。
+  example:
+    title:
+      es: Con r = 0.2 por hora
+      en: With r = 0.2 per hour
+      pt: Com r = 0,2 por hora
+      fr: Avec r = 0,2 par heure
+      zh: 取 r = 0.2（每小时）
+      ja: r = 0.2（毎時）の場合
+    lines:
+      - es: r = 0.2 (por hora)
+        en: r = 0.2 (per hour)
+        pt: r = 0,2 (por hora)
+        fr: r = 0,2 (par heure)
+        zh: r = 0.2（每小时）
+        ja: r = 0.2（毎時）
+      - es: t₂ = ln 2 / r
+        en: t₂ = ln 2 / r
+        pt: t₂ = ln 2 / r
+        fr: t₂ = ln 2 / r
+        zh: t₂ = ln 2 / r
+        ja: t₂ = ln 2 / r
+      - es: t₂ = 0.6931 / 0.2
+        en: t₂ = 0.6931 / 0.2
+        pt: t₂ = 0,6931 / 0,2
+        fr: t₂ = 0,6931 / 0,2
+        zh: t₂ = 0.6931 / 0.2
+        ja: t₂ = 0.6931 / 0.2
+      - es: t₂ ≈ 3.47
+        en: t₂ ≈ 3.47
+        pt: t₂ ≈ 3,47
+        fr: t₂ ≈ 3,47
+        zh: t₂ ≈ 3.47
+        ja: t₂ ≈ 3.47
+      - es: "En 3.47 horas la población se duplica"
+        en: "In 3.47 hours the population doubles"
+        pt: "Em 3,47 horas a população se duplica"
+        fr: "En 3,47 heures la population double"
+        zh: "3.47小时后，种群数量翻倍"
+        ja: "3.47時間後に集団は倍になる"

@@ -1,0 +1,386 @@
+id: shannon-capacity
+title:
+  es: Capacidad de Canal de Shannon
+  en: Shannon Capacity
+  pt: Capacidade de Canal de Shannon
+  fr: Capacité de canal de Shannon
+  zh: 香农信道容量
+  ja: シャノンの通信路容量
+category:
+  es: Teoría de la información
+  en: Information theory
+  pt: Teoria da informação
+  fr: Théorie de l'information
+  zh: 信息论
+  ja: 情報理論
+nodes:
+  - id: c
+    type: variable
+    value: C
+    explanation:
+      es: "C: la capacidad del canal, la tasa máxima de datos que puede transmitir sin errores."
+      en: "C: the channel capacity, the maximum data rate it can transmit without errors."
+      pt: "C: a capacidade do canal, a taxa máxima de dados que ele pode transmitir sem erros."
+      fr: "C : la capacité du canal, le débit maximal qu'il peut transmettre sans erreur."
+      zh: "C：信道容量，即能够无误传输的最大数据速率。"
+      ja: "C：通信路容量。誤りなく伝送できる最大のデータ速度。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: b
+    type: variable
+    value: B
+    explanation:
+      es: "B: el ancho de banda del canal, en hercios."
+      en: "B: the channel's bandwidth, in hertz."
+      pt: "B: a largura de banda do canal, em hertz."
+      fr: "B : la largeur de bande du canal, en hertz."
+      zh: "B：信道的带宽，单位为赫兹。"
+      ja: "B：通信路の帯域幅。単位はヘルツ。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: log2
+    type: operator
+    value: log₂
+    explanation:
+      es: El logaritmo en base 2, que mide la información en bits.
+      en: The base-2 logarithm, which measures information in bits.
+      pt: O logaritmo na base 2, que mede a informação em bits.
+      fr: Le logarithme en base 2, qui mesure l'information en bits.
+      zh: 以2为底的对数，用比特衡量信息量。
+      ja: 底が2の対数。情報量をビット単位で測る。
+  - id: paren-open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el argumento del logaritmo.
+      en: Opens the logarithm's argument.
+      pt: Abre o argumento do logaritmo.
+      fr: Ouvre l'argument du logarithme.
+      zh: 对数的起始括号。
+      ja: 対数の引数を開く括弧。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: "El 1: suma la señal al ruido para expresar la relación entre ambos."
+      en: "The 1: adds the signal to the noise to express their combined ratio."
+      pt: "O 1: soma o sinal ao ruído para expressar a relação entre ambos."
+      fr: "Le 1 : ajoute le signal au bruit pour exprimer leur rapport combiné."
+      zh: "1：把信号加到噪声上，表示两者的合比。"
+      ja: "1：信号を雑音に加え、両者の関係を表す。"
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado a.
+      en: Added to.
+      pt: Somado a.
+      fr: Ajouté à.
+      zh: 加上。
+      ja: に加える。
+  - id: s
+    type: variable
+    value: S
+    explanation:
+      es: "S: la potencia de la señal recibida."
+      en: "S: the power of the received signal."
+      pt: "S: a potência do sinal recebido."
+      fr: "S : la puissance du signal reçu."
+      zh: "S：接收信号的功率。"
+      ja: "S：受信信号の電力。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: n
+    type: variable
+    value: N
+    explanation:
+      es: "N: la potencia del ruido, que degrada la señal."
+      en: "N: the noise power, which degrades the signal."
+      pt: "N: a potência do ruído, que degrada o sinal."
+      fr: "N : la puissance du bruit, qui dégrade le signal."
+      zh: "N：使信号劣化的噪声功率。"
+      ja: "N：信号を劣化させる雑音の電力。"
+  - id: paren-close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el argumento del logaritmo.
+      en: Closes the logarithm's argument.
+      pt: Fecha o argumento do logaritmo.
+      fr: Ferme l'argument du logarithme.
+      zh: 对数的结束括号。
+      ja: 対数の引数を閉じる括弧。
+context:
+  author:
+    es: Claude Shannon
+    en: Claude Shannon
+    pt: Claude Shannon
+    fr: Claude Shannon
+    zh: 克劳德·香农
+    ja: クロード・シャノン
+  era:
+    es: Estados Unidos, 1916–2001 · publicada en 1948
+    en: United States, 1916–2001 · published in 1948
+    pt: Estados Unidos, 1916–2001 · publicada em 1948
+    fr: États-Unis, 1916–2001 · publiée en 1948
+    zh: 美国，1916–2001年 · 1948年发表
+    ja: アメリカ、1916–2001年・1948年発表
+  history:
+    es: >-
+      La capacidad de canal es la tasa máxima de datos que un medio puede transmitir sin error, y
+      Shannon la calculó en 1948. La fórmula dice que el límite crece con el ancho de banda y, con
+      mucha menos fuerza, con la relación señal a ruido: duplicar el ancho de banda duplica la
+      capacidad, pero duplicar la potencia solo añade un bit. Esto explica la carrera del 5G:
+      necesita más espectro, no solo más potencia. Todo sistema real — fibra, Wi-Fi, satélites —
+      opera bajo este techo teórico, y por eso los códigos de corrección de errores se diseñan para
+      acercarse a él.
+    en: >-
+      Channel capacity is the maximum data rate a medium can transmit without error, and Shannon
+      derived it in 1948. The formula says the limit grows with bandwidth and, far more slowly, with
+      the signal-to-noise ratio: doubling the bandwidth doubles capacity, but doubling the power adds
+      just one bit. This explains the 5G race: it needs more spectrum, not only more power. Every
+      real system — fiber, Wi-Fi, satellites — operates under this theoretical ceiling, which is why
+      error-correcting codes are designed to approach it.
+    pt: >-
+      A capacidade de canal é a taxa máxima de dados que um meio pode transmitir sem erros, e
+      Shannon a calculou em 1948. A fórmula diz que o limite cresce com a largura de banda e, com
+      muito menos força, com a relação sinal-ruído: dobrar a largura de banda dobra a capacidade, mas
+      dobrar a potência acrescenta apenas um bit. Isso explica a corrida do 5G: ele precisa de mais
+      espectro, não só de mais potência. Todo sistema real — fibra, Wi-Fi, satélites — opera sob esse
+      teto teórico, e por isso os códigos de correção de erros são projetados para se aproximar dele.
+    fr: >-
+      La capacité de canal est le débit maximal qu'un support peut transmettre sans erreur, et
+      Shannon l'a calculée en 1948. La formule dit que la limite croît avec la largeur de bande et,
+      bien plus lentement, avec le rapport signal sur bruit : doubler la largeur de bande double la
+      capacité, mais doubler la puissance n'ajoute qu'un bit. Cela explique la course à la 5G : il
+      faut plus de spectre, pas seulement plus de puissance. Tout système réel — fibre, Wi-Fi,
+      satellites — opère sous ce plafond théorique, c'est pourquoi les codes correcteurs d'erreurs
+      sont conçus pour s'en approcher.
+    zh: >-
+      信道容量是信道能够无误传输的最大数据速率，香农于1948年推导出它。该公式表明，这一上限随带宽增长，而随信噪比的
+      增长要慢得多：带宽加倍则容量加倍，但功率加倍只增加一个比特。这解释了5G的竞赛：它需要更多频谱，而不仅仅是更大
+      功率。所有真实系统——光纤、Wi-Fi、卫星——都在这一理论上限之下运行，因此纠错码被设计成去逼近它。
+    ja: >-
+      通信路容量とは、媒体が誤りなく伝送できる最大のデータ速度であり、シャノンが1948年にこれを導き出した。この公式は、
+      上限が帯域幅に比例し、信号対雑音比にはそれよりはるかに弱い依存をすることを示す。帯域幅を2倍にすれば容量も2倍に
+      なるが、電力を2倍にしても1ビット増えるだけである。これが5G競争の本質を説明する。より多くのスペクトラムが必要な
+      のであって、単に電力を上げるだけでは足りないのだ。光ファイバー、Wi-Fi、衛星など、あらゆる実システムはこの理論上の
+      上限の下で動作しており、誤り訂正符号はその上限に近づくように設計されている。
+  timeline:
+    - year: "1924"
+      label:
+        es: >-
+          Harry Nyquist publica que la tasa de datos de un canal depende linealmente de su ancho de
+          banda.
+        en: >-
+          Harry Nyquist publishes that a channel's data rate scales linearly with its bandwidth.
+        pt: >-
+          Harry Nyquist publica que a taxa de dados de um canal depende linearmente de sua largura de
+          banda.
+        fr: >-
+          Harry Nyquist publie que le débit d'un canal dépend linéairement de sa largeur de bande.
+        zh: >-
+          哈利·奈奎斯特发表文章，指出信道的数据速率与其带宽线性相关。
+        ja: >-
+          ハリー・ナイキストが、通信路のデータ速度が帯域幅に比例することを発表する。
+    - year: "1928"
+      label:
+        es: >-
+          Ralph Hartley publica 'Transmission of Information', primer modelo de capacidad de un canal.
+        en: >-
+          Ralph Hartley publishes 'Transmission of Information', the first channel capacity model.
+        pt: >-
+          Ralph Hartley publica 'Transmission of Information', primeiro modelo de capacidade de canal.
+        fr: >-
+          Ralph Hartley publie « Transmission of Information », premier modèle de capacité d'un canal.
+        zh: >-
+          拉尔夫·哈特莱发表《信息的传输》，这是第一个信道容量模型。
+        ja: >-
+          ラルフ・ハートレーが『情報の伝送』を発表。最初の通信路容量モデルとなる。
+    - year: "1948"
+      label:
+        es: >-
+          Claude Shannon publica 'A Mathematical Theory of Communication', con su fórmula de
+          capacidad.
+        en: >-
+          Claude Shannon publishes 'A Mathematical Theory of Communication', with his capacity
+          formula.
+        pt: >-
+          Claude Shannon publica 'A Mathematical Theory of Communication', com sua fórmula de
+          capacidade.
+        fr: >-
+          Claude Shannon publie « A Mathematical Theory of Communication », avec sa formule de
+          capacité.
+        zh: >-
+          克劳德·香农发表《通信的数学理论》，提出他的容量公式。
+        ja: >-
+          クロード・シャノンが『通信の数学的理論』を発表し、通信路容量の公式を示す。
+    - year: Hoy
+      label:
+        es: >-
+          Cada estándar inalámbrico, del 4G al Wi-Fi 6, se diseña y se mide contra el límite de
+          Shannon.
+        en: >-
+          Every wireless standard, from 4G to Wi-Fi 6, is designed and measured against Shannon's
+          limit.
+        pt: >-
+          Cada padrão sem fio, do 4G ao Wi-Fi 6, é projetado e medido contra o limite de Shannon.
+        fr: >-
+          Chaque norme sans fil, de la 4G au Wi-Fi 6, est conçue et mesurée contre la limite de
+          Shannon.
+        zh: >-
+          从4G到Wi-Fi 6，每一个无线标准都是对照香农极限来设计和测量的。
+        ja: >-
+          4GからWi-Fi 6まで、あらゆる無線規格はシャノンの限界に照らして設計・評価されている。
+  useCases:
+    - title:
+        es: Redes móviles 4G/5G
+        en: 4G/5G mobile networks
+        pt: Redes móveis 4G/5G
+        fr: Réseaux mobiles 4G/5G
+        zh: 4G/5G移动网络
+        ja: 4G/5Gモバイルネットワーク
+      description:
+        es: >-
+          Define cuánto espectro necesita una banda para ofrecer la velocidad contratada.
+        en: >-
+          It defines how much spectrum a band needs to deliver the promised speed.
+        pt: >-
+          Define quanto espectro uma banda precisa para entregar a velocidade contratada.
+        fr: >-
+          Elle définit la quantité de spectre dont une bande a besoin pour offrir le débit promis.
+        zh: >-
+          它决定一个频段要达到承诺的速度需要多少频谱。
+        ja: >-
+          約束された速度を実現するために、ある帯域にどれだけのスペクトラムが必要かを決める。
+    - title:
+        es: Redes Wi-Fi
+        en: Wi-Fi networks
+        pt: Redes Wi-Fi
+        fr: Réseaux Wi-Fi
+        zh: Wi-Fi网络
+        ja: Wi-Fiネットワーク
+      description:
+        es: >-
+          Los canales se eligen buscando el mayor ancho de banda con la menor interferencia.
+        en: >-
+          Channels are chosen seeking the widest bandwidth with the least interference.
+        pt: >-
+          Os canais são escolhidos buscando a maior largura de banda com a menor interferência.
+        fr: >-
+          Les canaux sont choisis en recherchant la plus grande largeur de bande avec le moins
+          d'interférences.
+        zh: >-
+          选择信道时力求带宽最宽、干扰最小。
+        ja: >-
+          チャネルは、干渉が最小で帯域幅が最大になるように選ばれる。
+    - title:
+        es: Comunicaciones satelitales
+        en: Satellite communications
+        pt: Comunicações via satélite
+        fr: Communications par satellite
+        zh: 卫星通信
+        ja: 衛星通信
+      description:
+        es: >-
+          Con potencia limitada a bordo, la capacidad fija cuántos canales puede emitir un satélite.
+        en: >-
+          With limited on-board power, capacity fixes how many channels a satellite can carry.
+        pt: >-
+          Com potência limitada a bordo, a capacidade fixa quantos canais um satélite pode emitir.
+        fr: >-
+          Avec une puissance embarquée limitée, la capacité fixe le nombre de canaux qu'un satellite
+          peut émettre.
+        zh: >-
+          在星上功率有限的条件下，容量决定了卫星能承载多少个信道。
+        ja: >-
+          搭載電力が限られているため、容量が衛星が送れるチャネル数を決める。
+    - title:
+        es: Fibra óptica
+        en: Fiber optics
+        pt: Fibra óptica
+        fr: Fibre optique
+        zh: 光纤
+        ja: 光ファイバー
+      description:
+        es: >-
+          Se diseña la modulación para acercarse al límite de Shannon del enlace de fibra.
+        en: >-
+          Modulation is designed to approach the Shannon limit of the fiber link.
+        pt: >-
+          A modulação é projetada para se aproximar do limite de Shannon do enlace de fibra.
+        fr: >-
+          La modulation est conçue pour approcher la limite de Shannon de la liaison fibre.
+        zh: >-
+          调制方式被设计为逼近光纤链路的香农极限。
+        ja: >-
+          光ファイバー回線のシャノン限界に近づくように変調方式が設計される。
+  example:
+    title:
+      es: Capacidad de un canal de 20 MHz
+      en: Capacity of a 20 MHz channel
+      pt: Capacidade de um canal de 20 MHz
+      fr: Capacité d'un canal de 20 MHz
+      zh: 20 MHz 信道的容量
+      ja: 20 MHzチャネルの容量
+    lines:
+      - es: B = 20 MHz = 20×10⁶ Hz, S/N = 100
+        en: B = 20 MHz = 20×10⁶ Hz, S/N = 100
+        pt: B = 20 MHz = 20×10⁶ Hz, S/N = 100
+        fr: B = 20 MHz = 20×10⁶ Hz, S/N = 100
+        zh: B = 20 兆赫 = 20×10⁶ 赫兹，S/N = 100
+        ja: B = 20 MHz = 20×10⁶ Hz、S/N = 100
+      - es: C = B · log₂(1 + S/N)
+        en: C = B · log₂(1 + S/N)
+        pt: C = B · log₂(1 + S/N)
+        fr: C = B · log₂(1 + S/N)
+        zh: C = B · log₂(1 + S/N)
+        ja: C = B · log₂(1 + S/N)
+      - es: C = 20×10⁶ × log₂(1 + 100)
+        en: C = 20×10⁶ × log₂(1 + 100)
+        pt: C = 20×10⁶ × log₂(1 + 100)
+        fr: C = 20×10⁶ × log₂(1 + 100)
+        zh: C = 20×10⁶ × log₂(1 + 100)
+        ja: C = 20×10⁶ × log₂(1 + 100)
+      - es: C = 20×10⁶ × log₂(101)
+        en: C = 20×10⁶ × log₂(101)
+        pt: C = 20×10⁶ × log₂(101)
+        fr: C = 20×10⁶ × log₂(101)
+        zh: C = 20×10⁶ × log₂(101)
+        ja: C = 20×10⁶ × log₂(101)
+      - es: log₂(101) ≈ 6.658
+        en: log₂(101) ≈ 6.658
+        pt: log₂(101) ≈ 6,658
+        fr: log₂(101) ≈ 6,658
+        zh: log₂(101) ≈ 6.658
+        ja: log₂(101) ≈ 6.658
+      - es: C ≈ 20×10⁶ × 6.658 ≈ 133 Mbps
+        en: C ≈ 20×10⁶ × 6.658 ≈ 133 Mbps
+        pt: C ≈ 20×10⁶ × 6,658 ≈ 133 Mbps
+        fr: C ≈ 20×10⁶ × 6,658 ≈ 133 Mbps
+        zh: C ≈ 20×10⁶ × 6.658 ≈ 133 兆比特/秒
+        ja: C ≈ 20×10⁶ × 6.658 ≈ 133 Mbps

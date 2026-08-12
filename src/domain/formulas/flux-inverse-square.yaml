@@ -1,0 +1,391 @@
+id: flux-inverse-square
+title:
+  es: Flujo y Ley del Inverso del Cuadrado
+  en: Inverse Square Flux
+  pt: Fluxo e Lei do Inverso do Quadrado
+  fr: Flux et loi du carré inverse
+  zh: 通量与平方反比定律
+  ja: フラックスと逆二乗則
+category:
+  es: Astronomía
+  en: Astronomy
+  pt: Astronomia
+  fr: Astronomie
+  zh: 天文学
+  ja: 天文学
+nodes:
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: "El flujo: la potencia luminosa que recibe una superficie por unidad de área."
+      en: "The flux: the light power received per unit area."
+      pt: "O fluxo: a potência luminosa recebida por unidade de área."
+      fr: "Le flux : la puissance lumineuse reçue par unité de surface."
+      zh: 通量：单位面积接收到的光功率。
+      ja: フラックス。単位面積あたりに受ける光の出力。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: l
+    type: variable
+    value: L
+    explanation:
+      es: La luminosidad total de la fuente, medida en vatios.
+      en: The source's total luminosity, measured in watts.
+      pt: A luminosidade total da fonte, medida em watts.
+      fr: La luminosité totale de la source, mesurée en watts.
+      zh: 光源的总光度，单位为瓦特。
+      ja: 光源の全光度。単位はワット。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre la expresión.
+      en: Opens the expression.
+      pt: Abre a expressão.
+      fr: Ouvre l'expression.
+      zh: 打开表达式。
+      ja: 式を開く括弧。
+  - id: four
+    type: number
+    value: "4"
+    explanation:
+      es: El factor 4 proviene del área de la esfera que rodea a la fuente.
+      en: The factor 4 comes from the area of the sphere surrounding the source.
+      pt: O fator 4 vem da área da esfera que envolve a fonte.
+      fr: Le facteur 4 provient de l'aire de la sphère entourant la source.
+      zh: 系数4来自包围光源的球体的表面积。
+      ja: 4は光源を取り囲む球の表面積に由来する。
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 次を掛ける。
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: Pi, la constante que relaciona la circunferencia con su diámetro.
+      en: Pi, the constant relating a circle's circumference to its diameter.
+      pt: Pi, a constante que relaciona a circunferência com o diâmetro.
+      fr: Pi, la constante qui relie la circonférence au diamètre.
+      zh: 圆周率π，连接圆周长与直径的常数。
+      ja: 円周率π。円の直径と周の長さの関係を表す定数。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 次を掛ける。
+  - id: d
+    type: variable
+    value: d
+    explanation:
+      es: La distancia desde la fuente hasta el observador.
+      en: The distance from the source to the observer.
+      pt: A distância da fonte ao observador.
+      fr: La distance entre la source et l'observateur.
+      zh: 光源到观测者的距离。
+      ja: 光源から観測者までの距離。
+  - id: d-squared
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Al cuadrado: si la distancia se duplica, el flujo cae a la cuarta parte."
+      en: "Squared: if the distance doubles, the flux drops to a quarter."
+      pt: "Ao quadrado: se a distância dobra, o fluxo cai para um quarto."
+      fr: "Au carré : si la distance double, le flux tombe au quart."
+      zh: 平方：距离加倍，通量降为原来的四分之一。
+      ja: 2乗。距離が2倍になるとフラックスは4分の1になる。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la expresión.
+      en: Closes the expression.
+      pt: Fecha a expressão.
+      fr: Ferme l'expression.
+      zh: 关闭表达式。
+      ja: 式を閉じる括弧。
+context:
+  author:
+    es: Origen colectivo; aplicada por Kepler a la luz
+    en: Collective origin; applied to light by Kepler
+    pt: Origem coletiva; aplicada à luz por Kepler
+    fr: Origine collective ; appliquée à la lumière par Kepler
+    zh: 集体起源；开普勒将其应用于光
+    ja: 集団的な起源；ケプラーが光に適用
+  era:
+    es: Europa, s. XVII
+    en: Europe, 17th century
+    pt: Europa, séc. XVII
+    fr: Europe, XVIIe siècle
+    zh: 欧洲，17世纪
+    ja: ヨーロッパ、17世紀
+  history:
+    es: >-
+      La luz de una fuente puntual se reparte sobre la superficie de una esfera en expansión: la
+      misma energía atraviesa un área cada vez mayor, y por eso el brillo por unidad de superficie
+      cae con el cuadrado de la distancia. Johannes Kepler ya sostenía en 1604 que la intensidad de
+      la luz disminuía de este modo. Es la razón por la que las estrellas lejanas parecen tenues
+      aunque sean enormemente brillantes, y por la que, comparando el flujo medido con la
+      luminosidad conocida de una fuente, se calcula su distancia: el primer peldaño de la escalera
+      de distancias del universo.
+    en: >-
+      The light of a point source spreads over the surface of an expanding sphere: the same energy
+      crosses an ever larger area, so the brightness per unit area falls with the square of the
+      distance. Johannes Kepler already argued in 1604 that light intensity weakened this way. It is
+      why distant stars look faint even when they are enormously bright, and why comparing the
+      measured flux with a source's known luminosity yields its distance: the first rung of the
+      cosmic distance ladder.
+    pt: >-
+      A luz de uma fonte pontual se reparte sobre a superfície de uma esfera em expansão: a mesma
+      energia atravessa uma área cada vez maior, e por isso o brilho por unidade de área cai com o
+      quadrado da distância. Johannes Kepler já sustentava em 1604 que a intensidade da luz
+      diminuía dessa forma. É a razão pela qual estrelas distantes parecem tênues mesmo sendo
+      enormemente brilhantes, e pela qual, comparando o fluxo medido com a luminosidade conhecida de
+      uma fonte, calcula-se sua distância: o primeiro degrau da escada de distâncias do universo.
+    fr: >-
+      La lumière d'une source ponctuelle se répartit sur la surface d'une sphère en expansion : la
+      même énergie traverse une surface sans cesse plus grande, aussi l'éclat par unité de surface
+      décroît-il comme le carré de la distance. Johannes Kepler soutenait déjà en 1604 que
+      l'intensité de la lumière diminuait ainsi. C'est pourquoi les étoiles lointaines semblent
+      faibles alors qu'elles sont prodigieusement brillantes, et pourquoi, en comparant le flux
+      mesuré à la luminosité connue d'une source, on calcule sa distance : le premier échelon de
+      l'échelle des distances de l'univers.
+    zh: >-
+      点光源的光分布在不断扩张的球面上：同样的能量要穿过越来越大的面积，因此单位面积的亮度随距离的平方而下降。
+      开普勒早在1604年就论证了光强会以这种方式减弱。这就是为什么遥远的恒星虽然极其明亮，看起来却很暗淡，也
+      为什么将测得的通量与已知的光度相比较，就能算出它的距离：这是宇宙距离阶梯的第一级。
+    ja: >-
+      点光源の光は、広がり続ける球面全体に分布する。同じエネルギーがより広い面積を通過するため、単位面積あたりの
+      明るさは距離の2乗に反比例して減衰する。ヨハネス・ケプラーは1604年にはすでに、光の強さがこのように弱まると
+      論じていた。遠くの恒星が途方もなく明るいのに暗く見えるのはこのためであり、測定したフラックスと既知の光度を
+      比較することで距離が求められる。それが宇宙の距離はしごの最初の段である。
+  timeline:
+    - year: "1604"
+      label:
+        es: >-
+          Kepler afirma en su óptica que la intensidad de la luz disminuye con el cuadrado de la
+          distancia.
+        en: >-
+          Kepler states in his optics that light intensity falls off with the square of the
+          distance.
+        pt: >-
+          Kepler afirma em sua ótica que a intensidade da luz diminui com o quadrado da distância.
+        fr: >-
+          Kepler affirme dans son optique que l'intensité de la lumière décroît comme le carré de la
+          distance.
+        zh: >-
+          开普勒在其光学著作中断言，光强随距离的平方而减弱。
+        ja: >-
+          ケプラーが光学の著作で、光の強さが距離の2乗に反比例して減衰すると述べる。
+    - year: "1687"
+      label:
+        es: >-
+          Newton extiende la misma ley inversa del cuadrado a la fuerza de gravedad.
+        en: >-
+          Newton extends the same inverse square law to the force of gravity.
+        pt: >-
+          Newton estende a mesma lei do inverso do quadrado à força da gravidade.
+        fr: >-
+          Newton étend la même loi du carré inverse à la force de gravité.
+        zh: >-
+          牛顿把同样的平方反比定律推广到引力。
+        ja: >-
+          ニュートンが同じ逆二乗則を重力に拡張する。
+    - year: "1912"
+      label:
+        es: >-
+          Henrietta Leavitt descubre la relación período-luminosidad de las Cefeidas, que permite
+          medir distancias comparando flujo y luminosidad.
+        en: >-
+          Henrietta Leavitt discovers the Cepheid period-luminosity relation, letting distances be
+          measured by comparing flux and luminosity.
+        pt: >-
+          Henrietta Leavitt descobre a relação período-luminosidade das Cefeidas, permitindo medir
+          distâncias ao comparar fluxo e luminosidade.
+        fr: >-
+          Henrietta Leavitt découvre la relation période-luminosité des Céphéides, permettant de
+          mesurer des distances en comparant flux et luminosité.
+        zh: >-
+          亨丽埃塔·莱维特发现造父变星的周光关系，通过比较通量与光度即可测量距离。
+        ja: >-
+          ヘンリエッタ・リービットがケフェイド変光星の周期・光度関係を発見し、フラックスと光度の比較で距離を測れるようにする。
+    - year: Hoy
+      label:
+        es: >-
+          La comparación de flujo y luminosidad sigue midiendo distancias con velas estándar como
+          las supernovas tipo Ia.
+        en: >-
+          Comparing flux and luminosity still measures distances with standard candles such as Type
+          Ia supernovae.
+        pt: >-
+          Comparar fluxo e luminosidade segue medindo distâncias com velas-padrão como as supernovas
+          tipo Ia.
+        fr: >-
+          Comparer flux et luminosité mesure toujours des distances avec des chandelles standard
+          telles que les supernovae de type Ia.
+        zh: >-
+          比较通量与光度的办法，至今仍用于借助Ia型超新星等标准烛光测量距离。
+        ja: >-
+          フラックスと光度の比較は、Ia型超新星などの標準光源による距離測定に今も使われている。
+  useCases:
+    - title:
+        es: Escalera de distancias
+        en: Distance ladder
+        pt: Escada de distâncias
+        fr: Échelle des distances
+        zh: 距离阶梯
+        ja: 距離はしご
+      description:
+        es: >-
+          Con la luminosidad conocida de una vela estándar, el flujo medido revela cuán lejos está la
+          fuente.
+        en: >-
+          With a standard candle's known luminosity, the measured flux reveals how far the source is.
+        pt: >-
+          Com a luminosidade conhecida de uma vela-padrão, o fluxo medido revela a distância da fonte.
+        fr: >-
+          Avec la luminosité connue d'une chandelle standard, le flux mesuré révèle la distance de la
+          source.
+        zh: >-
+          已知标准烛光的光度后，测得的通量就能揭示光源的距离。
+        ja: >-
+          標準光源の光度が既知なら、測定したフラックスから光源までの距離がわかる。
+    - title:
+        es: Telecomunicaciones
+        en: Telecommunications
+        pt: Telecomunicações
+        fr: Télécommunications
+        zh: 电信
+        ja: 通信
+      description:
+        es: >-
+          La señal de radio y Wi-Fi pierde intensidad con el cuadrado de la distancia, lo que fija
+          el alcance de las antenas.
+        en: >-
+          Radio and Wi-Fi signals weaken with the square of distance, setting how far antennas reach.
+        pt: >-
+          O sinal de rádio e Wi-Fi perde intensidade com o quadrado da distância, fixando o alcance
+          das antenas.
+        fr: >-
+          Le signal radio et Wi-Fi perd de l'intensité comme le carré de la distance, ce qui fixe la
+          portée des antennes.
+        zh: >-
+          无线电和Wi-Fi信号强度随距离的平方衰减，这决定了天线的覆盖范围。
+        ja: >-
+          電波やWi-Fiの信号は距離の2乗に反比例して弱まり、アンテナの到達範囲を決める。
+    - title:
+        es: Iluminación
+        en: Lighting
+        pt: Iluminação
+        fr: Éclairage
+        zh: 照明
+        ja: 照明
+      description:
+        es: >-
+          Los fotómetros y el diseño de iluminación usan la ley para saber cuánta luz llega a cada
+          punto según la distancia.
+        en: >-
+          Photometers and lighting design use the law to know how much light reaches each point with
+          distance.
+        pt: >-
+          Fotômetros e projetos de iluminação usam a lei para saber quanta luz chega a cada ponto
+          conforme a distância.
+        fr: >-
+          Photomètres et conception d'éclairage utilisent la loi pour savoir combien de lumière
+          atteint chaque point selon la distance.
+        zh: >-
+          光度计和照明设计利用该定律，计算不同距离处到达各点的光量。
+        ja: >-
+          照度計や照明設計は、距離に応じて各点に届く光量を求めるためにこの法則を使う。
+    - title:
+        es: Radiología
+        en: Radiology
+        pt: Radiologia
+        fr: Radiologie
+        zh: 放射学
+        ja: 放射線医学
+      description:
+        es: >-
+          La dosis de rayos X cae con 1/d², así que la distancia es la primera forma de protección
+          radiológica.
+        en: >-
+          The X-ray dose falls with 1/d², so distance is the first form of radiation protection.
+        pt: >-
+          A dose de raios X cai com 1/d², então a distância é a primeira forma de proteção
+          radiológica.
+        fr: >-
+          La dose de rayons X décroît en 1/d², si bien la distance est la première forme de
+          protection radiologique.
+        zh: >-
+          放射线剂量随1/d²下降，因此距离是放射防护的第一手段。
+        ja: >-
+          X線の線量は1/d²で減少するため、距離が放射線防護の第一手段となる。
+  example:
+    title:
+      es: La constante solar
+      en: The solar constant
+      pt: A constante solar
+      fr: La constante solaire
+      zh: 太阳常数
+      ja: 太陽定数
+    lines:
+      - es: L = 3.8×10²⁶ W, d = 1.5×10¹¹ m
+        en: L = 3.8×10²⁶ W, d = 1.5×10¹¹ m
+        pt: L = 3,8×10²⁶ W, d = 1,5×10¹¹ m
+        fr: L = 3,8×10²⁶ W, d = 1,5×10¹¹ m
+        zh: L = 3.8×10²⁶ 瓦，d = 1.5×10¹¹ 米
+        ja: L = 3.8×10²⁶ W、d = 1.5×10¹¹ m
+      - es: d² = (1.5×10¹¹)² = 2.25×10²²
+        en: d² = (1.5×10¹¹)² = 2.25×10²²
+        pt: d² = (1,5×10¹¹)² = 2,25×10²²
+        fr: d² = (1,5×10¹¹)² = 2,25×10²²
+        zh: d² = (1.5×10¹¹)² = 2.25×10²²
+        ja: d² = (1.5×10¹¹)² = 2.25×10²²
+      - es: 4πd² = 4 · π · 2.25×10²² ≈ 2.83×10²³
+        en: 4πd² = 4 · π · 2.25×10²² ≈ 2.83×10²³
+        pt: 4πd² = 4 · π · 2,25×10²² ≈ 2,83×10²³
+        fr: 4πd² = 4 · π · 2,25×10²² ≈ 2,83×10²³
+        zh: 4πd² = 4 · π · 2.25×10²² ≈ 2.83×10²³
+        ja: 4πd² = 4 · π · 2.25×10²² ≈ 2.83×10²³
+      - es: F = 3.8×10²⁶ / 2.83×10²³
+        en: F = 3.8×10²⁶ / 2.83×10²³
+        pt: F = 3,8×10²⁶ / 2,83×10²³
+        fr: F = 3,8×10²⁶ / 2,83×10²³
+        zh: F = 3.8×10²⁶ / 2.83×10²³
+        ja: F = 3.8×10²⁶ / 2.83×10²³
+      - es: F ≈ 1344 W/m² (la constante solar)
+        en: F ≈ 1344 W/m² (the solar constant)
+        pt: F ≈ 1344 W/m² (a constante solar)
+        fr: F ≈ 1344 W/m² (la constante solaire)
+        zh: F ≈ 1344 瓦/平方米（太阳常数）
+        ja: F ≈ 1344 W/m²（太陽定数）

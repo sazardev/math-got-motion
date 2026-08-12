@@ -1,0 +1,316 @@
+id: weight-force
+title:
+  es: Peso (Fuerza Gravitatoria)
+  en: Weight (Gravitational Force)
+  pt: Peso (Força Gravitacional)
+  fr: Poids (Force gravitationnelle)
+  zh: 重力（引力）
+  ja: 重量（重力）
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: w
+    type: variable
+    value: W
+    explanation:
+      es: El peso del cuerpo, la fuerza con que la gravedad lo atrae, medida en newtons.
+      en: The weight of the body, the force with which gravity attracts it, measured in newtons.
+      pt: O peso do corpo, a força com que a gravidade o atrai, medida em newtons.
+      fr: Le poids du corps, la force avec laquelle la gravité l'attire, mesuré en newtons.
+      zh: 物体的重量，即重力吸引它的力，单位是牛顿。
+      ja: 物体の重量。重力が物体を引き付ける力。単位はニュートン。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: La masa del cuerpo, la cantidad de materia que contiene, medida en kilogramos.
+      en: The mass of the body, the amount of matter it contains, measured in kilograms.
+      pt: A massa do corpo, a quantidade de matéria que contém, medida em quilogramas.
+      fr: La masse du corps, la quantité de matière qu'il contient, mesurée en kilogrammes.
+      zh: 物体的质量，即它所含物质的多少，单位是千克。
+      ja: 物体の質量。物体が含む物質の量。単位はキログラム。
+  - id: mul
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por la aceleración de la gravedad.
+      en: Multiplied by the acceleration of gravity.
+      pt: Multiplicado pela aceleração da gravidade.
+      fr: Multiplié par l'accélération de la pesanteur.
+      zh: 乘以重力加速度。
+      ja: 重力加速度を掛ける。
+  - id: g
+    type: variable
+    value: g
+    explanation:
+      es: La aceleración de la gravedad, unos 9.81 m/s² en la superficie terrestre.
+      en: The acceleration of gravity, about 9.81 m/s² at Earth's surface.
+      pt: A aceleração da gravidade, cerca de 9,81 m/s² na superfície terrestre.
+      fr: L'accélération de la pesanteur, environ 9,81 m/s² à la surface de la Terre.
+      zh: 重力加速度，在地球表面约为9.81米/秒²。
+      ja: 重力加速度。地表でおよそ9.81 m/s²。
+context:
+  author:
+    es: Isaac Newton
+    en: Isaac Newton
+    pt: Isaac Newton
+    fr: Isaac Newton
+    zh: 艾萨克·牛顿
+    ja: アイザック・ニュートン
+  era:
+    es: Inglaterra, 1643–1727
+    en: England, 1643–1727
+    pt: Inglaterra, 1643–1727
+    fr: Angleterre, 1643–1727
+    zh: 英格兰，1643–1727年
+    ja: イングランド、1643–1727年
+  history:
+    es: >-
+      La idea de que los cuerpos pesan porque algo los atrae se remonta a la antigüedad, pero fue
+      Isaac Newton quien en los Principia (1687) unificó el peso con la gravedad: el peso es la
+      fuerza con que la Tierra atrae a un cuerpo, igual al producto de su masa por la aceleración
+      gravitatoria. Newton distinguió masa y peso, distinción que el lenguaje cotidiano aún
+      confunde. La magnitud de g cambia con la latitud, la altitud y la rotación de la Tierra, y en
+      la Luna vale apenas una sexta parte, por eso un astronauta pesa menos aunque su masa no
+      cambie. Toda báscula y todo ascensor miden o perciben esta fuerza.
+    en: >-
+      The idea that bodies weigh what they do because something attracts them dates back to
+      antiquity, but it was Isaac Newton who in the Principia (1687) unified weight with gravity:
+      weight is the force with which the Earth attracts a body, equal to its mass times the
+      gravitational acceleration. Newton distinguished mass from weight, a distinction everyday
+      language still blurs. The value of g varies with latitude, altitude, and the Earth's rotation,
+      and on the Moon it is barely one sixth as large, which is why an astronaut weighs less even
+      though their mass is unchanged. Every scale and every elevator measures or feels this force.
+    pt: >-
+      A ideia de que os corpos pesam porque algo os atrai remonta à Antiguidade, mas foi Isaac Newton
+      quem, nos Principia (1687), unificou o peso com a gravidade: o peso é a força com que a Terra
+      atrai um corpo, igual ao produto de sua massa pela aceleração gravitacional. Newton distinguiu
+      massa e peso, distinção que a linguagem cotidiana ainda confunde. O valor de g varia com a
+      latitude, a altitude e a rotação da Terra, e na Lua vale apenas um sexto, por isso um astronauta
+      pesa menos mesmo com a massa inalterada. Toda balança e todo elevador medem ou sentem essa
+      força.
+    fr: >-
+      L'idée que les corps pèsent parce que quelque chose les attire remonte à l'Antiquité, mais c'est
+      Isaac Newton qui, dans les Principia (1687), unifia le poids et la gravité : le poids est la
+      force avec laquelle la Terre attire un corps, égale au produit de sa masse par l'accélération de
+      la pesanteur. Newton distingua la masse du poids, distinction que le langage courant brouille
+      encore. La valeur de g varie avec la latitude, l'altitude et la rotation de la Terre, et sur la
+      Lune elle vaut à peine un sixième, c'est pourquoi un astronaute pèse moins alors que sa masse
+      n'a pas changé. Toute balance et tout ascenseur mesurent ou ressentent cette force.
+    zh: >-
+      物体因受到某种吸引而具有重量的观念可以追溯到古代，但直到1687年的《原理》中，艾萨克·牛顿才把重量与引力统一起来：
+      重量是地球吸引物体的力，等于物体的质量乘以重力加速度。牛顿区分了质量与重量，而日常语言至今仍常将二者混为一谈。
+      g的大小随纬度、海拔和地球自转而变化，在月球上仅约为其六分之一，所以宇航员在月球上体重更轻，尽管质量并未改变。
+      每一台秤和每一部电梯都在测量或感受这种力。
+    ja: >-
+      物体が何かに引き付けられるから重いという考えは古代にまでさかのぼるが、質量と重量を区別しつつ、重量は地球が物体を
+      引き付ける力であり、質量と重力加速度の積に等しいと『プリンキピア』(1687年)で示したのはアイザック・ニュートンで
+      ある。日常言語はいまだにこの区別を曖昧にしている。gの値は緯度・標高・地球の自転によって変化し、月面上では約
+      6分の1になる。だから宇宙飛行士は質量が変わらないのに体重が軽くなるのだ。すべての秤とエレベーターはこの力を
+      測定し、あるいは感じている。
+  timeline:
+    - year: "1687"
+      label:
+        es: >-
+          Newton publica los Principia y unifica el peso con la gravitación universal.
+        en: >-
+          Newton publishes the Principia and unifies weight with universal gravitation.
+        pt: >-
+          Newton publica os Principia e unifica o peso com a gravitação universal.
+        fr: >-
+          Newton publie les Principia et unifie le poids avec la gravitation universelle.
+        zh: >-
+          牛顿发表《原理》，将重量与万有引力统一起来。
+        ja: >-
+          ニュートンが『プリンキピア』を発表し、重量と万有引力を統一する。
+    - year: "1795"
+      label:
+        es: >-
+          El sistema métrico francés define el kilogramo por la masa, consolidando la distinción
+          entre masa y peso.
+        en: >-
+          The French metric system defines the kilogram by mass, cementing the mass-weight
+          distinction.
+        pt: >-
+          O sistema métrico francês define o quilograma pela massa, consolidando a distinção entre
+          massa e peso.
+        fr: >-
+          Le système métrique français définit le kilogramme par la masse, consacrant la distinction
+          entre masse et poids.
+        zh: >-
+          法国公制以质量来定义千克，巩固了质量与重量的区分。
+        ja: >-
+          フランスのメートル法がキログラムを質量で定義し、質量と重量の区別を確固たるものにする。
+    - year: "1960"
+      label:
+        es: >-
+          El Sistema Internacional adopta el newton como unidad derivada de fuerza, midiendo el peso
+          en newtons.
+        en: >-
+          The International System adopts the newton as the derived unit of force, measuring weight in
+          newtons.
+        pt: >-
+          O Sistema Internacional adota o newton como unidade derivada de força, medindo o peso em
+          newtons.
+        fr: >-
+          Le Système international adopte le newton comme unité dérivée de force, mesurant le poids
+          en newtons.
+        zh: >-
+          国际单位制采用牛顿作为力的导出单位，重量以牛顿计量。
+        ja: >-
+          国際単位系(SI)が力の組立単位としてニュートンを採用し、重量をニュートンで測る。
+    - year: Hoy
+      label:
+        es: >-
+          Básculas, ascensores y aviones confían en esta relación para medir o soportar el peso.
+        en: >-
+          Scales, elevators, and aircraft rely on this relation to measure or support weight.
+        pt: >-
+          Balanças, elevadores e aviões confiam nessa relação para medir ou suportar o peso.
+        fr: >-
+          Balances, ascenseurs et avions s'appuient sur cette relation pour mesurer ou supporter le
+          poids.
+        zh: >-
+          秤、电梯和飞机都依赖这一关系来测量或承载重量。
+        ja: >-
+          秤、エレベーター、航空機は、この関係に基づいて重量を測定または支持している。
+  useCases:
+    - title:
+        es: Básculas y pesaje
+        en: Scales and weighing
+        pt: Balanças e pesagem
+        fr: Balances et pesage
+        zh: 秤与称重
+        ja: 秤と計量
+      description:
+        es: >-
+          Una báscula no mide masa sino la fuerza que la masa ejerce sobre ella, es decir, el peso.
+        en: >-
+          A scale does not measure mass but the force the mass exerts on it, that is, the weight.
+        pt: >-
+          Uma balança não mede massa, mas a força que a massa exerce sobre ela, ou seja, o peso.
+        fr: >-
+          Une balance ne mesure pas la masse mais la force que la masse exerce sur elle, c'est-à-dire
+          le poids.
+        zh: >-
+          秤测量的不是质量，而是质量施加在秤上的力，也就是重量。
+        ja: >-
+          秤が測るのは質量ではなく、質量が秤に及ぼす力、すなわち重量である。
+    - title:
+        es: Ascensores y estructuras
+        en: Elevators and structures
+        pt: Elevadores e estruturas
+        fr: Ascenseurs et structures
+        zh: 电梯与建筑结构
+        ja: エレベーターと構造物
+      description:
+        es: >-
+          Los cables de un ascensor y las vigas de un edificio deben soportar el peso de cargas y
+          personas.
+        en: >-
+          An elevator's cables and a building's beams must support the weight of loads and people.
+        pt: >-
+          Os cabos de um elevador e as vigas de um edifício devem suportar o peso de cargas e
+          pessoas.
+        fr: >-
+          Les câbles d'un ascenseur et les poutres d'un bâtiment doivent supporter le poids des
+          charges et des personnes.
+        zh: >-
+          电梯的缆绳和建筑物的梁必须能够承受载荷和人员的重量。
+        ja: >-
+          エレベーターのケーブルや建物の梁は、荷物や人の重量を支えなければならない。
+    - title:
+        es: Aviación y aeroespacial
+        en: Aviation and aerospace
+        pt: Aviação e aeroespacial
+        fr: Aviation et aérospatial
+        zh: 航空与航天
+        ja: 航空・宇宙
+      description:
+        es: >-
+          El peso de despegue determina la sustentación y el combustible que necesita cada vuelo.
+        en: >-
+          Takeoff weight determines the lift and fuel each flight needs.
+        pt: >-
+          O peso de decolagem determina a sustentação e o combustível de que cada voo precisa.
+        fr: >-
+          Le poids au décollage détermine la portance et le carburant dont chaque vol a besoin.
+        zh: >-
+          起飞重量决定了每次飞行所需的升力和燃油。
+        ja: >-
+          離陸重量が、各飛行に必要な揚力と燃料を決める。
+    - title:
+        es: Geofísica
+        en: Geophysics
+        pt: Geofísica
+        fr: Géophysique
+        zh: 地球物理学
+        ja: 地球物理学
+      description:
+        es: >-
+          Las variaciones locales de g revelan la densidad del subsuelo y ayudan a buscar recursos.
+        en: >-
+          Local variations in g reveal underground density and help locate resources.
+        pt: >-
+          Variações locais de g revelam a densidade do subsolo e ajudam a localizar recursos.
+        fr: >-
+          Les variations locales de g révèlent la densité du sous-sol et aident à localiser des
+          ressources.
+        zh: >-
+          g的局部变化能够反映地下的密度分布，有助于寻找资源。
+        ja: >-
+          gの局所的な変化は地下の密度を明らかにし、資源の探索に役立つ。
+  example:
+    title:
+      es: Peso de una persona de 70 kg
+      en: Weight of a 70 kg person
+      pt: Peso de uma pessoa de 70 kg
+      fr: Poids d'une personne de 70 kg
+      zh: 一个70千克人的重量
+      ja: 70kgの人の重量
+    lines:
+      - es: m = 70 kg
+        en: m = 70 kg
+        pt: m = 70 kg
+        fr: m = 70 kg
+        zh: m = 70 千克
+        ja: m = 70 kg
+      - es: g = 9.81 m/s²
+        en: g = 9.81 m/s²
+        pt: g = 9,81 m/s²
+        fr: g = 9,81 m/s²
+        zh: g = 9.81 米/秒²
+        ja: g = 9.81 m/s²
+      - es: W = m · g
+        en: W = m · g
+        pt: W = m · g
+        fr: W = m · g
+        zh: W = m · g
+        ja: W = m · g
+      - es: W = 70 × 9.81
+        en: W = 70 × 9.81
+        pt: W = 70 × 9,81
+        fr: W = 70 × 9,81
+        zh: W = 70 × 9.81
+        ja: W = 70 × 9.81
+      - es: W ≈ 686.7 N
+        en: W ≈ 686.7 N
+        pt: W ≈ 686,7 N
+        fr: W ≈ 686,7 N
+        zh: W ≈ 686.7 牛
+        ja: W ≈ 686.7 N

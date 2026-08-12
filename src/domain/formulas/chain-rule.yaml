@@ -1,0 +1,315 @@
+id: chain-rule
+title:
+  es: Regla de la Cadena
+  en: Chain Rule
+  pt: Regra da Cadeia
+  fr: Règle de la chaîne
+  zh: 链式法则
+  ja: 合成関数の微分法
+category:
+  es: Cálculo
+  en: Calculus
+  pt: Cálculo
+  fr: Calcul
+  zh: 微积分
+  ja: 微積分
+nodes:
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre la composición de funciones.
+      en: Opens the composition of functions.
+      pt: Abre a composição de funções.
+      fr: Ouvre la composition de fonctions.
+      zh: 打开函数的复合。
+      ja: 関数の合成を開く括弧。
+  - id: f-comp-g
+    type: variable
+    value: f∘g
+    explanation:
+      es: "f∘g: aplicar primero g y luego f."
+      en: "f∘g: apply g first, then f."
+      pt: "f∘g: aplicar primeiro g, depois f."
+      fr: "f∘g : appliquer d'abord g, puis f."
+      zh: "f∘g：先应用g，再应用f。"
+      ja: "f∘g：最初にgを適用し、次にfを適用する。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la composición.
+      en: Closes the composition.
+      pt: Fecha a composição.
+      fr: Ferme la composition.
+      zh: 关闭复合。
+      ja: 合成を閉じる括弧。
+  - id: prime
+    type: operator
+    value: ′
+    explanation:
+      es: "La prima: derivada respecto a x."
+      en: "The prime: derivative with respect to x."
+      pt: "A linha: derivada em relação a x."
+      fr: "La prime : dérivée par rapport à x."
+      zh: "撇号：对x求导。"
+      ja: "プライム。xに関する微分。"
+  - id: open-paren-2
+    type: operator
+    value: (
+    explanation:
+      es: Abre el punto de evaluación.
+      en: Opens the evaluation point.
+      pt: Abre o ponto de avaliação.
+      fr: Ouvre le point d'évaluation.
+      zh: 打开求值点。
+      ja: 評価する点を開く括弧。
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: "x: la variable de entrada."
+      en: "x: the input variable."
+      pt: "x: a variável de entrada."
+      fr: "x : la variable d'entrée."
+      zh: "x：输入变量。"
+      ja: "x：入力変数。"
+  - id: close-paren-2
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el punto de evaluación.
+      en: Closes the evaluation point.
+      pt: Fecha o ponto de avaliação.
+      fr: Ferme le point d'évaluation.
+      zh: 关闭求值点。
+      ja: 評価する点を閉じる括弧。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: f-prime
+    type: variable
+    value: f′(g(x))
+    explanation:
+      es: "La derivada de la función externa, evaluada en la interna g(x)."
+      en: "The derivative of the outer function, evaluated at the inner g(x)."
+      pt: "A derivada da função externa, avaliada na interna g(x)."
+      fr: "La dérivée de la fonction externe, évaluée à la fonction interne g(x)."
+      zh: "外层函数的导数，在内层g(x)处取值。"
+      ja: "外側の関数の導関数を、内側のg(x)で評価したもの。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: g-prime
+    type: variable
+    value: g′(x)
+    explanation:
+      es: "La derivada de la función interna g en x."
+      en: "The derivative of the inner function g at x."
+      pt: "A derivada da função interna g em x."
+      fr: "La dérivée de la fonction interne g en x."
+      zh: "内层函数g在x处的导数。"
+      ja: "内側の関数gのxにおける導関数。"
+context:
+  author:
+    es: Gottfried Wilhelm Leibniz
+    en: Gottfried Wilhelm Leibniz
+    pt: Gottfried Wilhelm Leibniz
+    fr: Gottfried Wilhelm Leibniz
+    zh: 戈特弗里德·威廉·莱布尼茨
+    ja: ゴットフリート・ヴィルヘルム・ライプニッツ
+  era:
+    es: Alemania, 1646–1716 · publicada en 1684
+    en: Germany, 1646–1716 · published in 1684
+    pt: Alemanha, 1646–1716 · publicada em 1684
+    fr: Allemagne, 1646–1716 · publiée en 1684
+    zh: 德国，1646–1716年·1684年发表
+    ja: ドイツ、1646–1716年・1684年発表
+  history:
+    es: >-
+      La notación diferencial de Leibniz, publicada en 1684, hace que la regla de la cadena se escriba
+      casi sola: dy/dx = (dy/du)·(du/dx). Es la regla más usada del cálculo aplicado, porque casi toda
+      función real es una función dentro de otra. Hoy, cada capa de una red neuronal es una función
+      compuesta, y la retropropagación no es más que esta regla encadenada.
+    en: >-
+      Leibniz's differential notation, published in 1684, makes the chain rule almost write itself:
+      dy/dx = (dy/du)·(du/dx). It is the most used rule of applied calculus, because nearly every real
+      function is a function inside another. Today, each layer of a neural network is a composite
+      function, and backpropagation is nothing but this rule chained together.
+    pt: >-
+      A notação diferencial de Leibniz, publicada em 1684, faz a regra da cadeia quase se escrever
+      sozinha: dy/dx = (dy/du)·(du/dx). É a regra mais usada do cálculo aplicado, porque quase toda
+      função real é uma função dentro de outra. Hoje, cada camada de uma rede neural é uma função
+      composta, e a retropropagação nada mais é que essa regra encadeada.
+    fr: >-
+      La notation différentielle de Leibniz, publiée en 1684, fait que la règle de la chaîne s'écrit
+      presque toute seule : dy/dx = (dy/du)·(du/dx). C'est la règle la plus utilisée du calcul
+      appliqué, car presque toute fonction réelle est une fonction dans une autre. Aujourd'hui, chaque
+      couche d'un réseau de neurones est une fonction composée, et la rétropropagation n'est rien
+      d'autre que cette règle enchaînée.
+    zh: >-
+      莱布尼茨1684年发表的微分记号使链式法则几乎可以自动写出：dy/dx = (dy/du)·(du/dx)。它是应用微积分中最常用的
+      法则，因为几乎每个实际函数都是一个套一个的复合函数。如今，神经网络的每一层都是复合函数，而反向传播不过是
+      这条法则的链式使用。
+    ja: >-
+      ライプニッツが1684年に発表した微分の記法は、連鎖律をほとんど自動的に書けるようにする：dy/dx = (dy/du)・(du/dx)。
+      これは応用数学で最もよく使われる微分則である。なぜなら、実用の関数のほとんどが、関数の中の関数だからだ。
+      今日、ニューラルネットワークの各層は合成関数であり、誤差逆伝播法はこの法則を鎖状に使ったものにほかならない。
+  timeline:
+    - year: "1684"
+      label:
+        es: >-
+          Leibniz publica la regla en su artículo Nova Methodus, con la notación de diferenciales.
+        en: >-
+          Leibniz publishes the rule in his paper Nova Methodus, with differential notation.
+        pt: >-
+          Leibniz publica a regra em seu artigo Nova Methodus, com a notação de diferenciais.
+        fr: >-
+          Leibniz publie la règle dans son article Nova Methodus, avec la notation différentielle.
+        zh: >-
+          莱布尼茨在《新方法》论文中用微分记号发表该法则。
+        ja: >-
+          ライプニッツが『新方法』の論文で微分の記法とともにこの法則を発表する。
+    - year: s. XVIII
+      label:
+        es: >-
+          La regla se convierte en el caballo de batalla de la mecánica newtoniana.
+        en: >-
+          The rule becomes the workhorse of Newtonian mechanics.
+        pt: >-
+          A regra se torna o cavalo de batalha da mecânica newtoniana.
+        fr: >-
+          La règle devient le cheval de bataille de la mécanique newtonienne.
+        zh: >-
+          该法则成为牛顿力学的常用工具。
+        ja: >-
+          この法則はニュートン力学の主力ツールとなる。
+    - year: "1986"
+      label:
+        es: >-
+          La retropropagación aplica la regla de la cadena a capas de redes neuronales.
+        en: >-
+          Backpropagation applies the chain rule across neural network layers.
+        pt: >-
+          A retropropagação aplica a regra da cadeia às camadas de redes neurais.
+        fr: >-
+          La rétropropagation applique la règle de la chaîne aux couches de réseaux de neurones.
+        zh: >-
+          反向传播将链式法则应用于神经网络各层。
+        ja: >-
+          誤差逆伝播法が、ニューラルネットワークの各層に連鎖律を適用する。
+  useCases:
+    - title:
+        es: Redes neuronales
+        en: Neural networks
+        pt: Redes neurais
+        fr: Réseaux de neurones
+        zh: 神经网络
+        ja: ニューラルネットワーク
+      description:
+        es: >-
+          La retropropagación encadena esta regla a través de cada capa para ajustar los pesos.
+        en: >-
+          Backpropagation chains this rule through every layer to adjust the weights.
+        pt: >-
+          A retropropagação encadeia essa regra por cada camada para ajustar os pesos.
+        fr: >-
+          La rétropropagation enchaîne cette règle à travers chaque couche pour ajuster les poids.
+        zh: >-
+          反向传播把这条法则穿过每一层，用以调整权重。
+        ja: >-
+          誤差逆伝播法は、各層を通してこの法則を鎖状に適用し、重みを調整する。
+    - title:
+        es: Física
+        en: Physics
+        pt: Física
+        fr: Physique
+        zh: 物理学
+        ja: 物理学
+      description:
+        es: >-
+          La velocidad radial o angular de sistemas compuestos usa derivadas anidadas.
+        en: >-
+          Radial or angular velocities of composite systems use nested derivatives.
+        pt: >-
+          Velocidades radiais ou angulares de sistemas compostos usam derivadas aninhadas.
+        fr: >-
+          Les vitesses radiales ou angulaires des systèmes composites utilisent des dérivées
+          imbriquées.
+        zh: >-
+          复合系统的径向或角速度使用嵌套导数。
+        ja: >-
+          複合系の半径方向・角速度は、入れ子になった微分を用いる。
+    - title:
+        es: Propagación de errores
+        en: Error propagation
+        pt: Propagação de erros
+        fr: Propagation des erreurs
+        zh: 误差传播
+        ja: 誤差伝播
+      description:
+        es: >-
+          La incertidumbre de una medida compuesta se calcula con derivadas parciales encadenadas.
+        en: >-
+          The uncertainty of a composite measurement uses chained partial derivatives.
+        pt: >-
+          A incerteza de uma medição composta usa derivadas parciais encadeadas.
+        fr: >-
+          L'incertitude d'une mesure composite utilise des dérivées partielles enchaînées.
+        zh: >-
+          复合测量的不确定度使用链式偏导数计算。
+        ja: >-
+          合成測定の不確かさは、連鎖した偏微分で計算される。
+  example:
+    title:
+      es: Derivada de (3x+1)²
+      en: Derivative of (3x+1)²
+      pt: Derivada de (3x+1)²
+      fr: Dérivée de (3x+1)²
+      zh: (3x+1)² 的导数
+      ja: (3x+1)² の導関数
+    lines:
+      - es: "g(x) = 3x+1, f(u) = u²"
+        en: "g(x) = 3x+1, f(u) = u²"
+        pt: "g(x) = 3x+1, f(u) = u²"
+        fr: "g(x) = 3x+1, f(u) = u²"
+        zh: "g(x) = 3x+1，f(u) = u²"
+        ja: "g(x) = 3x+1、f(u) = u²"
+      - es: f′(g(x)) = 2(3x+1)
+        en: f′(g(x)) = 2(3x+1)
+        pt: f′(g(x)) = 2(3x+1)
+        fr: f′(g(x)) = 2(3x+1)
+        zh: f′(g(x)) = 2(3x+1)
+        ja: f′(g(x)) = 2(3x+1)
+      - es: g′(x) = 3
+        en: g′(x) = 3
+        pt: g′(x) = 3
+        fr: g′(x) = 3
+        zh: g′(x) = 3
+        ja: g′(x) = 3
+      - es: f′ = 2(3x+1) · 3
+        en: f′ = 2(3x+1) · 3
+        pt: f′ = 2(3x+1) · 3
+        fr: f′ = 2(3x+1) · 3
+        zh: f′ = 2(3x+1) · 3
+        ja: f′ = 2(3x+1) · 3
+      - es: f′(x) = 6(3x+1)
+        en: f′(x) = 6(3x+1)
+        pt: f′(x) = 6(3x+1)
+        fr: f′(x) = 6(3x+1)
+        zh: f′(x) = 6(3x+1)
+        ja: f′(x) = 6(3x+1)

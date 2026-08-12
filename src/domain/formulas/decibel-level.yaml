@@ -1,0 +1,372 @@
+id: decibel-level
+title:
+  es: Nivel de Sonido (Decibelios)
+  en: Sound Level (Decibels)
+  pt: Nível de Som (Decibéis)
+  fr: Niveau sonore (décibels)
+  zh: 声级（分贝）
+  ja: 音のレベル（デシベル）
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: beta
+    type: variable
+    value: β
+    explanation:
+      es: "Beta: el nivel de presión sonora, medido en decibelios (dB)."
+      en: "Beta: the sound pressure level, measured in decibels (dB)."
+      pt: "Beta: o nível de pressão sonora, medido em decibéis (dB)."
+      fr: "Bêta : le niveau de pression acoustique, mesuré en décibels (dB)."
+      zh: "β：声压级，以分贝（dB）为单位。"
+      ja: "β：音圧レベル。単位はデシベル（dB）。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: ten
+    type: number
+    value: "10"
+    explanation:
+      es: "El factor 10: cada multiplicación de la intensidad por 10 suma 10 dB."
+      en: "The factor 10: each tenfold increase in intensity adds 10 dB."
+      pt: "O fator 10: cada vez que a intensidade é multiplicada por 10, somam-se 10 dB."
+      fr: "Le facteur 10 : chaque multiplication de l'intensité par 10 ajoute 10 dB."
+      zh: "因数10：强度每增大十倍，声级就增加10分贝。"
+      ja: "係数の10。強さが10倍になるごとに10 dB加わる。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por el logaritmo del cociente.
+      en: Multiplied by the logarithm of the ratio.
+      pt: Multiplicado pelo logaritmo do quociente.
+      fr: Multiplié par le logarithme du rapport.
+      zh: 乘以比值的对数。
+      ja: 比の対数を掛ける。
+  - id: log
+    type: operator
+    value: log
+    explanation:
+      es: El logaritmo en base 10, que comprime las intensidades enormes.
+      en: The base-10 logarithm, which compresses the huge range of intensities.
+      pt: O logaritmo na base 10, que comprime as intensidades enormes.
+      fr: Le logarithme en base 10, qui comprime les intensités énormes.
+      zh: 以10为底的对数，可压缩巨大的强度范围。
+      ja: 底10の対数。巨大な強さの範囲を圧縮する。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el cociente entre la intensidad y su referencia.
+      en: Opens the ratio of intensity to its reference.
+      pt: Abre o quociente entre a intensidade e sua referência.
+      fr: Ouvre le rapport entre l'intensité et sa référence.
+      zh: 打开强度与其参考值的比值。
+      ja: 強さとその基準値の比を開く括弧。
+  - id: i
+    type: variable
+    value: I
+    explanation:
+      es: La intensidad sonora de la onda, en vatios por metro cuadrado.
+      en: The sound intensity of the wave, in watts per square meter.
+      pt: A intensidade sonora da onda, em watts por metro quadrado.
+      fr: L'intensité acoustique de l'onde, en watts par mètre carré.
+      zh: 声波的声强，单位为瓦每平方米。
+      ja: 音波の強さ。単位はW/m²。
+  - id: div
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por la intensidad de referencia.
+      en: Divided by the reference intensity.
+      pt: Dividido pela intensidade de referência.
+      fr: Divisé par l'intensité de référence.
+      zh: 除以参考强度。
+      ja: 基準の強さで割る。
+  - id: i0
+    type: variable
+    value: I₀
+    explanation:
+      es: El umbral de audición, 10⁻¹² W/m², el punto cero de la escala.
+      en: The threshold of hearing, 10⁻¹² W/m², the zero point of the scale.
+      pt: O limiar de audição, 10⁻¹² W/m², o ponto zero da escala.
+      fr: Le seuil d'audition, 10⁻¹² W/m², le zéro de l'échelle.
+      zh: 听觉阈值，即10⁻¹²瓦/米²，是标度的零点。
+      ja: 可聴閾値の10⁻¹² W/m²。目盛りのゼロ点。
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el cociente entre la intensidad y su referencia.
+      en: Closes the ratio of intensity to its reference.
+      pt: Fecha o quociente entre a intensidade e sua referência.
+      fr: Ferme le rapport entre l'intensité et sa référence.
+      zh: 关闭强度与其参考值的比值。
+      ja: 強さとその基準値の比を閉じる括弧。
+context:
+  author:
+    es: Basada en el trabajo de Alexander Graham Bell
+    en: Based on the work of Alexander Graham Bell
+    pt: Baseada no trabalho de Alexander Graham Bell
+    fr: Fondée sur les travaux d'Alexander Graham Bell
+    zh: 基于亚历山大·格雷厄姆·贝尔的研究
+    ja: アレクサンダー・グラハム・ベルによる研究に基づく
+  era:
+    es: Estados Unidos, s. XX · unidad "bel" en 1928
+    en: United States, 20th century · the "bel" unit in 1928
+    pt: Estados Unidos, século XX · unidade "bel" em 1928
+    fr: États-Unis, XXe siècle · unité « bel » en 1928
+    zh: 美国，20世纪 · 1928年确立"贝尔"单位
+    ja: アメリカ合衆国、20世紀・1928年「ベル」単位
+  history:
+    es: >-
+      El bel lleva el nombre de Alexander Graham Bell, inventor del teléfono, y fue adoptado en 1928 por
+      los ingenieros de los Laboratorios Bell para expresar las enormes diferencias de potencia que las
+      líneas telefónicas podían transmitir. Su décima parte, el decibelio, comprime un rango de intensidad
+      sonora que va de 10⁻¹² a 10² W/m² — un factor de diez mil millones — en una escala de 0 a 140 dB. Por
+      eso un susurro ronda los 30 dB, una conversación normal los 60, y una sirena a corta distancia supera
+      los 120 dB, el umbral del dolor. La exposición prolongada por encima de 85 dB daña la audición de
+      forma permanente, lo que convierte al decibelio en la unidad de la protección auditiva moderna.
+    en: >-
+      The bel is named after Alexander Graham Bell, inventor of the telephone, and was adopted in 1928 by
+      engineers at Bell Laboratories to express the huge differences in power that telephone lines could
+      carry. Its tenth part, the decibel, compresses a range of sound intensity spanning from 10⁻¹² to 10²
+      W/m² — a factor of ten billion — into a scale of 0 to 140 dB. That is why a whisper sits near 30 dB,
+      normal conversation near 60, and a close siren exceeds 120 dB, the threshold of pain. Prolonged
+      exposure above 85 dB permanently damages hearing, making the decibel the unit of modern hearing
+      protection.
+    pt: >-
+      O bel leva o nome de Alexander Graham Bell, inventor do telefone, e foi adotado em 1928 pelos
+      engenheiros dos Laboratórios Bell para expressar as enormes diferenças de potência que as linhas
+      telefônicas podiam transmitir. Sua décima parte, o decibel, comprime uma faixa de intensidade sonora
+      que vai de 10⁻¹² a 10² W/m² — um fator de dez bilhões — em uma escala de 0 a 140 dB. Por isso um
+      sussurro fica perto de 30 dB, uma conversa normal perto de 60, e uma sirene próxima supera os 120 dB,
+      o limiar da dor. A exposição prolongada acima de 85 dB danifica a audição de forma permanente, o que
+      torna o decibel a unidade da proteção auditiva moderna.
+    fr: >-
+      Le bel porte le nom d'Alexander Graham Bell, l'inventeur du téléphone, et fut adopté en 1928 par les
+      ingénieurs des Laboratoires Bell pour exprimer les énormes différences de puissance que les lignes
+      téléphoniques pouvaient transporter. Sa dixième partie, le décibel, compresse une plage d'intensité
+      sonore allant de 10⁻¹² à 10² W/m² — un facteur de dix milliards — sur une échelle de 0 à 140 dB. C'est
+      pourquoi un chuchotement avoisine 30 dB, une conversation normale 60, et une sirène proche dépasse 120
+      dB, le seuil de la douleur. Une exposition prolongée au-dessus de 85 dB endommage durablement
+      l'audition, faisant du décibel l'unité de la protection auditive moderne.
+    zh: >-
+      贝尔得名于电话发明者亚历山大·格雷厄姆·贝尔，1928年由贝尔实验室的工程师们采用，用于表达电话线路所能承载的巨大
+      功率差异。它的十分之一——分贝——把从10⁻¹²到10²瓦/米²（相差一百亿倍）的声强范围压缩成0到140分贝的标度。因此
+      耳语约为30分贝，正常交谈约为60分贝，近处警报器则超过120分贝——这是疼痛的阈值。长期暴露在85分贝以上会永久
+      损伤听力，使分贝成为现代听力保护的基本单位。
+    ja: >-
+      ベルは電話の発明者アレクサンダー・グラハム・ベルにちなんで名付けられ、1928年にベル研究所の技術者たちが電話回線で
+      伝送できる巨大な電力差を表すために採用した。その10分の1であるデシベルは、10⁻¹²から10² W/m²（100億倍の差）に
+      及ぶ音の強さを、0から140 dBの尺度に圧縮する。ささやき声がおよそ30 dB、普通の会話が約60 dB、間近のサイレンは
+      120 dBを超え、これは痛みの閾値である。85 dBを超える環境への長時間の曝露は聴力を恒久的に損なうため、デシベルは
+      現代の聴覚保護の単位となっている。
+  timeline:
+    - year: "1876"
+      label:
+        es: >-
+          Bell patenta el teléfono; décadas después, su nombre bautiza la unidad del sonido.
+        en: >-
+          Bell patents the telephone; decades later his name crowns the unit of sound.
+        pt: >-
+          Bell patenteia o telefone; décadas depois, seu nome batiza a unidade do som.
+        fr: >-
+          Bell brevète le téléphone ; des décennies plus tard, son nom baptise l'unité du son.
+        zh: >-
+          贝尔为电话申请专利；几十年后，他的名字被用来命名声音单位。
+        ja: >-
+          ベルが電話の特許を取得。数十年後、彼の名前が音の単位に冠される。
+    - year: "1928"
+      label:
+        es: >-
+          Ingenieros de los Laboratorios Bell acuñan el "bel" para medir pérdidas de potencia
+          telefónica; su décima parte es el decibelio.
+        en: >-
+          Engineers at Bell Laboratories coin the "bel" to measure telephone power loss; a tenth of a
+          bel is the decibel.
+        pt: >-
+          Engenheiros dos Laboratórios Bell cunham o "bel" para medir perdas de potência telefônica;
+          sua décima parte é o decibel.
+        fr: >-
+          Des ingénieurs des Laboratoires Bell forgent le « bel » pour mesurer les pertes de puissance
+          téléphonique ; sa dixième partie est le décibel.
+        zh: >-
+          贝尔实验室的工程师们提出"贝尔"以衡量电话功率损耗；其十分之一即分贝。
+        ja: >-
+          ベル研究所の技術者が電話の電力損失を測る「ベル」を命名。その10分の1がデシベル。
+    - year: "1971"
+      label:
+        es: >-
+          Las normativas de salud laboral de EE. UU. fijan en 85 dB el límite de exposición
+          sostenida, anclando el decibelio en la protección auditiva.
+        en: >-
+          US occupational health rules set an 85 dB limit for sustained exposure, anchoring the
+          decibel in hearing protection.
+        pt: >-
+          As normas de saúde ocupacional dos EUA fixam em 85 dB o limite de exposição sustentada,
+          ancorando o decibel na proteção auditiva.
+        fr: >-
+          Les règles américaines de santé au travail fixent à 85 dB la limite d'exposition prolongée,
+          ancrant le décibel dans la protection auditive.
+        zh: >-
+          美国职业健康法规将长期暴露上限设为85分贝，使分贝在听力保护中站稳脚跟。
+        ja: >-
+          米国の労働安全衛生規則が長時間曝露の上限を85 dBと定め、デシベルは聴覚保護の基準となる。
+    - year: Hoy
+      label:
+        es: >-
+          Todos los sonómetros, especificaciones de altavoces y pruebas de audición leen niveles en
+          decibelios.
+        en: >-
+          Every sound meter, speaker spec, and hearing test reads levels in decibels.
+        pt: >-
+          Todos os sonômetros, especificações de alto-falantes e testes de audição leem níveis em
+          decibéis.
+        fr: >-
+          Tous les sonomètres, fiches techniques de haut-parleurs et tests d'audition lisent les
+          niveaux en décibels.
+        zh: >-
+          所有声级计、扬声器规格和听力测试都以分贝来读数。
+        ja: >-
+          騒音計、スピーカーの仕様、聴力検査まで、すべてのレベルはデシベルで表される。
+  useCases:
+    - title:
+        es: Acústica y audio profesional
+        en: Professional audio
+        pt: Áudio profissional
+        fr: Audio professionnel
+        zh: 专业音频
+        ja: プロオーディオ
+      description:
+        es: >-
+          Niveles de estudio, potencia de altavoces y dinámica de mezclas se especifican y se miden
+          en decibelios.
+        en: >-
+          Studio levels, speaker power, and mix dynamics are specified and measured in decibels.
+        pt: >-
+          Níveis de estúdio, potência de alto-falantes e dinâmica de mixagens são especificados e
+          medidos em decibéis.
+        fr: >-
+          Niveaux de studio, puissance des haut-parleurs et dynamique des mixages sont spécifiés et
+          mesurés en décibels.
+        zh: >-
+          录音室电平、扬声器功率和混音动态都以分贝来标定和测量。
+        ja: >-
+          スタジオのレベル、スピーカーの出力、ミックスのダイナミクスがデシベルで規定・測定される。
+    - title:
+        es: Salud ocupacional
+        en: Occupational health
+        pt: Saúde ocupacional
+        fr: Santé au travail
+        zh: 职业健康
+        ja: 労働衛生
+      description:
+        es: >-
+          Dosímetros de ruido y protectores auditivos se calibran contra los límites de 85 y 120 dB.
+        en: >-
+          Noise dosimeters and hearing protection are calibrated against the 85 and 120 dB limits.
+        pt: >-
+          Dosímetros de ruído e protetores auditivos são calibrados em relação aos limites de 85 e
+          120 dB.
+        fr: >-
+          Les dosimètres de bruit et les protections auditives sont calibrés par rapport aux limites
+          de 85 et 120 dB.
+        zh: >-
+          噪声剂量计和听力防护用品都按85和120分贝的限值来校准。
+        ja: >-
+          騒音ばく露計や聴覚保護具は、85 dBと120 dBの限界値に合わせて校正される。
+    - title:
+        es: Telecomunicaciones
+        en: Telecommunications
+        pt: Telecomunicações
+        fr: Télécommunications
+        zh: 电信
+        ja: 電気通信
+      description:
+        es: >-
+          El dBm expresa potencias de señal y relación señal/ruido en toda la red telefónica y de
+          datos.
+        en: >-
+          The dBm expresses signal power and signal-to-noise ratio across telephony and data
+          networks.
+        pt: >-
+          O dBm expressa potências de sinal e relação sinal/ruído em toda a rede telefônica e de
+          dados.
+        fr: >-
+          Le dBm exprime les puissances de signal et le rapport signal/bruit dans les réseaux
+          téléphoniques et de données.
+        zh: >-
+          dBm用于表示电话和数据网络中所有信号功率及信噪比。
+        ja: >-
+          電話網やデータ網では、信号電力とSN比をdBmで表す。
+    - title:
+        es: Medicina y audiología
+        en: Medicine and audiology
+        pt: Medicina e audiologia
+        fr: Médecine et audiologie
+        zh: 医学与听力学
+        ja: 医学と聴覚学
+      description:
+        es: >-
+          Los audiómetros miden el umbral auditivo de cada paciente en decibelios de pérdida.
+        en: >-
+          Audiometers measure each patient's hearing threshold in decibels of loss.
+        pt: >-
+          Os audiômetros medem o limiar auditivo de cada paciente em decibéis de perda.
+        fr: >-
+          Les audiomètres mesurent le seuil auditif de chaque patient en décibels de perte.
+        zh: >-
+          听力计以分贝损失为单位测量每位患者的听力阈值。
+        ja: >-
+          オージオメーターは、各患者の聴力閾値を損失デシベルで測定する。
+  example:
+    title:
+      es: Una habitación con I = 10⁻⁶ W/m²
+      en: A room with I = 10⁻⁶ W/m²
+      pt: Uma sala com I = 10⁻⁶ W/m²
+      fr: Une pièce avec I = 10⁻⁶ W/m²
+      zh: 一间声强 I = 10⁻⁶ 瓦/米² 的房间
+      ja: I = 10⁻⁶ W/m² の部屋
+    lines:
+      - es: I = 1×10⁻⁶ W/m²
+        en: I = 1×10⁻⁶ W/m²
+        pt: I = 1×10⁻⁶ W/m²
+        fr: I = 1×10⁻⁶ W/m²
+        zh: I = 1×10⁻⁶ 瓦/米²
+        ja: I = 1×10⁻⁶ W/m²
+      - es: I₀ = 1×10⁻¹² W/m²
+        en: I₀ = 1×10⁻¹² W/m²
+        pt: I₀ = 1×10⁻¹² W/m²
+        fr: I₀ = 1×10⁻¹² W/m²
+        zh: I₀ = 1×10⁻¹² 瓦/米²
+        ja: I₀ = 1×10⁻¹² W/m²
+      - es: I/I₀ = 10⁶
+        en: I/I₀ = 10⁶
+        pt: I/I₀ = 10⁶
+        fr: I/I₀ = 10⁶
+        zh: I/I₀ = 10⁶
+        ja: I/I₀ = 10⁶
+      - es: β = 10·log(10⁶) = 10×6
+        en: β = 10·log(10⁶) = 10×6
+        pt: β = 10·log(10⁶) = 10×6
+        fr: β = 10·log(10⁶) = 10×6
+        zh: β = 10·log(10⁶) = 10×6
+        ja: β = 10·log(10⁶) = 10×6
+      - es: β = 60 dB
+        en: β = 60 dB
+        pt: β = 60 dB
+        fr: β = 60 dB
+        zh: β = 60 分贝
+        ja: β = 60 dB

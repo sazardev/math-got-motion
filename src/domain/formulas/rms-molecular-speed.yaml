@@ -1,0 +1,373 @@
+id: rms-molecular-speed
+title:
+  es: Velocidad Cuadrática Media Molecular
+  en: RMS Molecular Speed
+  pt: Velocidade Quadrática Média Molecular
+  fr: Vitesse Quadratique Moyenne Moléculaire
+  zh: 分子方均根速率
+  ja: 分子の二乗平均速度
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: v-rms
+    type: variable
+    value: v_rms
+    explanation:
+      es: La velocidad cuadrática media, una velocidad típica representativa de las moléculas del gas.
+      en: The root-mean-square speed, a typical representative speed of the gas molecules.
+      pt: A velocidade quadrática média, uma velocidade típica representativa das moléculas do gás.
+      fr: La vitesse quadratique moyenne, une vitesse typique représentative des molécules du gaz.
+      zh: 方均根速率，气体分子的一种典型代表性速度。
+      ja: 二乗平均速度。気体分子の代表的な速さ。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: Raíz cuadrada de la expresión que sigue.
+      en: Square root of the expression that follows.
+      pt: Raiz quadrada da expressão que segue.
+      fr: Racine carrée de l'expression qui suit.
+      zh: 后面表达式的平方根。
+      ja: 続く式の平方根。
+  - id: paren-open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el argumento de la raíz.
+      en: Opens the argument of the root.
+      pt: Abre o argumento da raiz.
+      fr: Ouvre l'argument de la racine.
+      zh: 打开根号内的表达式。
+      ja: 根号の中身を始める括弧。
+  - id: three
+    type: number
+    value: "3"
+    explanation:
+      es: El factor tres, que proviene de los tres grados de libertad de traslación.
+      en: The factor three, coming from the three translational degrees of freedom.
+      pt: O fator três, que vem dos três graus de liberdade de translação.
+      fr: Le facteur trois, issu des trois degrés de liberté de translation.
+      zh: 因数三，来自三个平动自由度。
+      ja: 並進の3自由度に由来する係数3。
+  - id: k
+    type: constant
+    value: k
+    explanation:
+      es: La constante de Boltzmann, que conecta la energía molecular con la temperatura.
+      en: The Boltzmann constant, connecting molecular energy to temperature.
+      pt: A constante de Boltzmann, que conecta a energia molecular à temperatura.
+      fr: La constante de Boltzmann, qui relie l'énergie moléculaire à la température.
+      zh: 玻尔兹曼常数，将分子能量与温度联系起来。
+      ja: ボルツマン定数。分子のエネルギーと温度を結びつける。
+  - id: t
+    type: variable
+    value: T
+    explanation:
+      es: La temperatura absoluta del gas, medida en kelvin.
+      en: The gas's absolute temperature, measured in kelvin.
+      pt: A temperatura absoluta do gás, medida em kelvin.
+      fr: La température absolue du gaz, mesurée en kelvins.
+      zh: 气体的绝对温度，以开尔文为单位。
+      ja: 気体の絶対温度。単位はケルビン。
+  - id: divide
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: 次で割る。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: La masa de una sola molécula del gas, en kilogramos.
+      en: The mass of a single gas molecule, in kilograms.
+      pt: A massa de uma única molécula do gás, em quilogramas.
+      fr: La masse d'une seule molécule du gaz, en kilogrammes.
+      zh: 单个气体分子的质量，以千克为单位。
+      ja: 気体分子1個の質量。単位はキログラム。
+  - id: paren-close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el argumento de la raíz.
+      en: Closes the argument of the root.
+      pt: Fecha o argumento da raiz.
+      fr: Ferme l'argument de la racine.
+      zh: 关闭根号内的表达式。
+      ja: 根号の中身を終える括弧。
+context:
+  author:
+    es: James Clerk Maxwell
+    en: James Clerk Maxwell
+    pt: James Clerk Maxwell
+    fr: James Clerk Maxwell
+    zh: 詹姆斯·克拉克·麦克斯韦
+    ja: ジェームズ・クラーク・マクスウェル
+  era:
+    es: Escocia, 1831–1879 · derivada en 1860
+    en: Scotland, 1831–1879 · derived in 1860
+    pt: Escócia, 1831–1879 · derivada em 1860
+    fr: Écosse, 1831–1879 · dérivée en 1860
+    zh: 苏格兰，1831–1879年 · 1860年推导
+    ja: スコットランド、1831–1879年・1860年に導出
+  history:
+    es: >-
+      En 1860 James Clerk Maxwell derivó la distribución de velocidades de las moléculas de un gas
+      a partir de la teoría cinética, mostrando que no todas se mueven a igual velocidad sino en un
+      amplio rango. La velocidad cuadrática media se obtiene del teorema de equipartición, que
+      asigna ½kT de energía cinética por grado de libertad, y depende de la masa molecular y de la
+      temperatura. Este resultado explica, por ejemplo, por qué el hidrógeno, ligero y rápido, se
+      escapa de la atmósfera terrestre mientras que los gases más pesados permanecen.
+    en: >-
+      In 1860 James Clerk Maxwell derived the speed distribution of a gas's molecules from kinetic
+      theory, showing that they do not all move at the same speed but across a broad range. The
+      root-mean-square speed follows from the equipartition theorem, which assigns ½kT of kinetic
+      energy per degree of freedom, and depends on molecular mass and temperature. The result
+      explains, for instance, why light, fast hydrogen escapes Earth's atmosphere while heavier
+      gases remain.
+    pt: >-
+      Em 1860, James Clerk Maxwell derivou a distribuição de velocidades das moléculas de um gás a
+      partir da teoria cinética, mostrando que elas não se movem todas à mesma velocidade, mas em
+      uma ampla faixa. A velocidade quadrática média decorre do teorema de equipartição, que
+      atribui ½kT de energia cinética por grau de liberdade, e depende da massa molecular e da
+      temperatura. Esse resultado explica, por exemplo, por que o hidrogênio, leve e rápido, escapa
+      da atmosfera terrestre enquanto os gases mais pesados permanecem.
+    fr: >-
+      En 1860, James Clerk Maxwell dériva la distribution des vitesses des molécules d'un gaz à
+      partir de la théorie cinétique, montrant qu'elles ne se déplacent pas toutes à la même
+      vitesse mais sur une large gamme. La vitesse quadratique moyenne découle du théorème
+      d'équipartition, qui attribue ½kT d'énergie cinétique par degré de liberté, et dépend de la
+      masse moléculaire et de la température. Ce résultat explique notamment pourquoi l'hydrogène,
+      léger et rapide, s'échappe de l'atmosphère terrestre alors que les gaz plus lourds restent.
+    zh: >-
+      1860年，詹姆斯·克拉克·麦克斯韦从气体动理论推导出气体分子的速率分布，表明分子并非都以相同速度运动，
+      而是分布在一个宽广的范围内。方均根速率由均分定理得出，该定理为每个自由度分配½kT的动能，并取决于分子
+      质量与温度。这一结果解释了为何轻而快的氢气会逸散出地球大气层，而较重的气体则得以保留。
+    ja: >-
+      1860年、ジェームズ・クラーク・マクスウェルは気体分子運動論から気体分子の速度分布を導き、すべての分子が
+      同じ速さで運動するのではなく、広い範囲に分布していることを示した。二乗平均速度は、自由度あたり½kTの
+      運動エネルギーを割り当てるエネルギー等分配の法則から導かれ、分子質量と温度に依存する。この結果は、
+      軽くて速い水素が地球の大気から逃散する一方、より重い気体が留まる理由を説明する。
+  timeline:
+    - year: "1857"
+      label:
+        es: >-
+          Rudolf Clausius sienta las bases de la teoría cinética y estima por primera vez las
+          velocidades moleculares.
+        en: >-
+          Rudolf Clausius lays the foundations of kinetic theory and first estimates molecular
+          speeds.
+        pt: >-
+          Rudolf Clausius lança as bases da teoria cinética e estima pela primeira vez as
+          velocidades moleculares.
+        fr: >-
+          Rudolf Clausius pose les fondements de la théorie cinétique et estime pour la première
+          fois les vitesses moléculaires.
+        zh: >-
+          鲁道夫·克劳修斯奠定了气体动理论的基础，并首次估算了分子速率。
+        ja: >-
+          ルドルフ・クラウジウスが気体分子運動論の基礎を築き、初めて分子の速度を推定する。
+    - year: "1860"
+      label:
+        es: >-
+          Maxwell publica la distribución de velocidades moleculares, de la que se deduce la
+          velocidad cuadrática media.
+        en: >-
+          Maxwell publishes the molecular speed distribution, from which the root-mean-square speed
+          follows.
+        pt: >-
+          Maxwell publica a distribuição de velocidades moleculares, da qual se deduz a velocidade
+          quadrática média.
+        fr: >-
+          Maxwell publie la distribution des vitesses moléculaires, d'où se déduit la vitesse
+          quadratique moyenne.
+        zh: >-
+          麦克斯韦发表了分子速率分布，方均根速率由此推得。
+        ja: >-
+          マクスウェルが分子の速度分布を発表し、そこから二乗平均速度が導かれる。
+    - year: "1868"
+      label:
+        es: >-
+          Ludwig Boltzmann generaliza los resultados de Maxwell y consolida el teorema de
+          equipartición.
+        en: >-
+          Ludwig Boltzmann generalizes Maxwell's results and consolidates the equipartition theorem.
+        pt: >-
+          Ludwig Boltzmann generaliza os resultados de Maxwell e consolida o teorema de equipartição.
+        fr: >-
+          Ludwig Boltzmann généralise les résultats de Maxwell et consolide le théorème
+          d'équipartition.
+        zh: >-
+          路德维希·玻尔兹曼推广了麦克斯韦的结果，并巩固了能量均分定理。
+        ja: >-
+          ルートヴィッヒ・ボルツマンがマクスウェルの結果を一般化し、エネルギー等分配の法則を確立する。
+    - year: Hoy
+      label:
+        es: >-
+          Es la base para calcular la efusión de gases y para entender por qué los planetas
+          retienen o pierden sus atmósferas.
+        en: >-
+          It underlies gas effusion calculations and our understanding of why planets keep or lose
+          their atmospheres.
+        pt: >-
+          É a base para calcular a efusão de gases e para entender por que planetas retêm ou perdem
+          suas atmosferas.
+        fr: >-
+          Elle est à la base du calcul de l'effusion des gaz et de notre compréhension de la
+          rétention ou de la perte des atmosphères planétaires.
+        zh: >-
+          它是气体逸散计算的基础，也是理解行星为何保留或失去大气层的关键。
+        ja: >-
+          気体の流出速度の計算や、惑星が大気を保持するか失うかの理解の基礎となっている。
+  useCases:
+    - title:
+        es: Cinética química
+        en: Chemical kinetics
+        pt: Cinética química
+        fr: Cinétique chimique
+        zh: 化学动力学
+        ja: 化学反応速度論
+      description:
+        es: >-
+          La velocidad media de las moléculas fija cuántas colisiones por segundo se dan en un gas
+          reactivo.
+        en: >-
+          The mean molecular speed sets how many collisions per second occur in a reactive gas.
+        pt: >-
+          A velocidade média das moléculas determina quantas colisões por segundo ocorrem em um gás
+          reativo.
+        fr: >-
+          La vitesse moyenne des molécules fixe le nombre de collisions par seconde dans un gaz
+          réactif.
+        zh: >-
+          分子的平均速率决定了反应性气体中每秒发生多少次碰撞。
+        ja: >-
+          分子の平均速さは、反応性気体の中で毎秒何回の衝突が起こるかを決める。
+    - title:
+        es: Ciencias atmosféricas
+        en: Atmospheric science
+        pt: Ciências atmosféricas
+        fr: Sciences de l'atmosphère
+        zh: 大气科学
+        ja: 大気科学
+      description:
+        es: >-
+          Explica por qué el hidrógeno y el helio, ligeros y veloces, escapan de la atmósfera
+          terrestre.
+        en: >-
+          It explains why light, fast hydrogen and helium escape Earth's atmosphere.
+        pt: >-
+          Explica por que o hidrogênio e o hélio, leves e velozes, escapam da atmosfera terrestre.
+        fr: >-
+          Elle explique pourquoi l'hydrogène et l'hélium, légers et rapides, s'échappent de
+          l'atmosphère terrestre.
+        zh: >-
+          它解释了为什么轻而快的氢和氦会逸散出地球大气层。
+        ja: >-
+          軽くて速い水素とヘリウムが地球の大気から逃散する理由を説明する。
+    - title:
+        es: Tecnología de vacío
+        en: Vacuum technology
+        pt: Tecnologia de vácuo
+        fr: Technologie du vide
+        zh: 真空技术
+        ja: 真空技術
+      description:
+        es: >-
+          El flujo de gas a través de tubos y válvulas de vacío depende de la velocidad molecular.
+        en: >-
+          Gas flow through vacuum tubes and valves depends on the molecular speed.
+        pt: >-
+          O fluxo de gás através de tubos e válvulas de vácuo depende da velocidade molecular.
+        fr: >-
+          L'écoulement des gaz dans les tubes et vannes de vide dépend de la vitesse moléculaire.
+        zh: >-
+          气体在真空管和阀门中的流动取决于分子速率。
+        ja: >-
+          真空管やバルブを通る気体の流れは分子の速さに依存する。
+    - title:
+        es: Deposición de películas
+        en: Thin-film deposition
+        pt: Deposição de filmes finos
+        fr: Dépôt de couches minces
+        zh: 薄膜沉积
+        ja: 薄膜成膜
+      description:
+        es: >-
+          En la evaporación de materiales, la velocidad molecular define la uniformidad del
+          recubrimiento.
+        en: >-
+          In material evaporation, molecular speed defines how uniform the coating is.
+        pt: >-
+          Na evaporação de materiais, a velocidade molecular define a uniformidade do revestimento.
+        fr: >-
+          Dans l'évaporation de matériaux, la vitesse moléculaire détermine l'uniformité du
+          revêtement.
+        zh: >-
+          在材料蒸发过程中，分子速率决定了镀层的均匀性。
+        ja: >-
+          材料の蒸発において、分子の速さがコーティングの均一性を決める。
+  example:
+    title:
+      es: Velocidad de una molécula de oxígeno
+      en: Speed of an oxygen molecule
+      pt: Velocidade de uma molécula de oxigênio
+      fr: Vitesse d'une molécule d'oxygène
+      zh: 氧分子的速率
+      ja: 酸素分子の速さ
+    lines:
+      - es: m = 5.3×10⁻²⁶ kg
+        en: m = 5.3×10⁻²⁶ kg
+        pt: m = 5,3×10⁻²⁶ kg
+        fr: m = 5,3×10⁻²⁶ kg
+        zh: m = 5.3×10⁻²⁶ 千克
+        ja: m = 5.3×10⁻²⁶ kg
+      - es: k = 1.38×10⁻²³ J/K
+        en: k = 1.38×10⁻²³ J/K
+        pt: k = 1,38×10⁻²³ J/K
+        fr: k = 1,38×10⁻²³ J/K
+        zh: k = 1.38×10⁻²³ J/K
+        ja: k = 1.38×10⁻²³ J/K
+      - es: T = 300 K
+        en: T = 300 K
+        pt: T = 300 K
+        fr: T = 300 K
+        zh: T = 300 开
+        ja: T = 300 K
+      - es: v_rms = √(3kT/m)
+        en: v_rms = √(3kT/m)
+        pt: v_rms = √(3kT/m)
+        fr: v_rms = √(3kT/m)
+        zh: v_rms = √(3kT/m)
+        ja: v_rms = √(3kT/m)
+      - es: v_rms = √(3 · 1.38×10⁻²³ · 300 / 5.3×10⁻²⁶)
+        en: v_rms = √(3 · 1.38×10⁻²³ · 300 / 5.3×10⁻²⁶)
+        pt: v_rms = √(3 · 1,38×10⁻²³ · 300 / 5,3×10⁻²⁶)
+        fr: v_rms = √(3 · 1,38×10⁻²³ · 300 / 5,3×10⁻²⁶)
+        zh: v_rms = √(3 · 1.38×10⁻²³ · 300 / 5.3×10⁻²⁶)
+        ja: v_rms = √(3 · 1.38×10⁻²³ · 300 / 5.3×10⁻²⁶)
+      - es: v_rms ≈ 483 m/s
+        en: v_rms ≈ 483 m/s
+        pt: v_rms ≈ 483 m/s
+        fr: v_rms ≈ 483 m/s
+        zh: v_rms ≈ 483 米/秒
+        ja: v_rms ≈ 483 m/s

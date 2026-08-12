@@ -1,0 +1,332 @@
+id: transformer-equation
+title:
+  es: Ecuación del Transformador
+  en: Transformer Equation
+  pt: Equação do Transformador
+  fr: Équation du Transformateur
+  zh: 变压器方程
+  ja: 変圧器の方程式
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: vs
+    type: variable
+    value: Vs
+    explanation:
+      es: La tensión en la bobina secundaria, en voltios.
+      en: The voltage on the secondary coil, in volts.
+      pt: A tensão na bobina secundária, em volts.
+      fr: La tension aux bornes de la bobine secondaire, en volts.
+      zh: 次级线圈上的电压,单位为伏特。
+      ja: 二次コイルの電圧。単位はボルト。
+  - id: slash-1
+    type: operator
+    value: /
+    explanation:
+      es: "División: la razón entre dos magnitudes."
+      en: "Division: the ratio between two quantities."
+      pt: "Divisão: a razão entre duas grandezas."
+      fr: "Division : le rapport entre deux grandeurs."
+      zh: "除法:两个数量之比。"
+      ja: "割り算。2つの量の比。"
+  - id: vp
+    type: variable
+    value: Vp
+    explanation:
+      es: La tensión en la bobina primaria, en voltios.
+      en: The voltage on the primary coil, in volts.
+      pt: A tensão na bobina primária, em volts.
+      fr: La tension aux bornes de la bobine primaire, en volts.
+      zh: 初级线圈上的电压,单位为伏特。
+      ja: 一次コイルの電圧。単位はボルト。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: ns
+    type: variable
+    value: Ns
+    explanation:
+      es: El número de espiras de la bobina secundaria.
+      en: The number of turns on the secondary coil.
+      pt: O número de espiras da bobina secundária.
+      fr: Le nombre de spires de la bobine secondaire.
+      zh: 次级线圈的匝数。
+      ja: 二次コイルの巻数。
+  - id: slash-2
+    type: operator
+    value: /
+    explanation:
+      es: "División: la razón entre dos magnitudes."
+      en: "Division: the ratio between two quantities."
+      pt: "Divisão: a razão entre duas grandezas."
+      fr: "Division : le rapport entre deux grandeurs."
+      zh: "除法:两个数量之比。"
+      ja: "割り算。2つの量の比。"
+  - id: np
+    type: variable
+    value: Np
+    explanation:
+      es: El número de espiras de la bobina primaria.
+      en: The number of turns on the primary coil.
+      pt: O número de espiras da bobina primária.
+      fr: Le nombre de spires de la bobine primaire.
+      zh: 初级线圈的匝数。
+      ja: 一次コイルの巻数。
+context:
+  author:
+    es: Michael Faraday
+    en: Michael Faraday
+    pt: Michael Faraday
+    fr: Michael Faraday
+    zh: 迈克尔·法拉第
+    ja: マイケル・ファラデー
+  era:
+    es: Inglaterra, 1791–1867 · descubierta en 1831
+    en: England, 1791–1867 · discovered in 1831
+    pt: Inglaterra, 1791–1867 · descoberta em 1831
+    fr: Angleterre, 1791–1867 · découverte en 1831
+    zh: 英国,1791–1867年 · 1831年发现
+    ja: イギリス、1791–1867年・1831年発見
+  history:
+    es: >-
+      En 1831 Michael Faraday descubrió la inducción electromagnética: una corriente que cambia en
+      una bobina crea un campo magnético variable que induce una tensión en una segunda bobina. De
+      esa ley se deriva la relación Vs/Vp = Ns/Np entre tensiones y espiras. El transformador que la
+      explota permitió elevar la tensión para transmitir electricidad a cientos de kilómetros con
+      pocas pérdidas y reducirla de nuevo en el destino, haciendo posibles las redes eléctricas de
+      larga distancia.
+    en: >-
+      In 1831 Michael Faraday discovered electromagnetic induction: a changing current in one coil
+      creates a changing magnetic field that induces a voltage in a second coil. The ratio
+      Vs/Vp = Ns/Np between voltages and turns follows from that law. The transformer that exploits
+      it allowed voltage to be stepped up so electricity could travel hundreds of kilometres with
+      little loss and stepped back down at its destination, making long-distance power grids
+      possible.
+    pt: >-
+      Em 1831 Michael Faraday descobriu a indução eletromagnética: uma corrente que varia em uma
+      bobina cria um campo magnético variável que induz tensão em uma segunda bobina. Dessa lei
+      decorre a relação Vs/Vp = Ns/Np entre tensões e espiras. O transformador que a explora permitiu
+      elevar a tensão para transmitir eletricidade por centenas de quilômetros com poucas perdas e
+      reduzi-la de novo no destino, tornando possíveis as redes elétricas de longa distância.
+    fr: >-
+      En 1831, Michael Faraday découvrit l'induction électromagnétique : un courant variable dans une
+      bobine crée un champ magnétique variable qui induit une tension dans une seconde bobine. La
+      relation Vs/Vp = Ns/Np entre tensions et spires découle de cette loi. Le transformateur qui
+      l'exploite a permis d'élever la tension pour transporter l'électricité sur des centaines de
+      kilomètres avec peu de pertes, puis de la réduire à l'arrivée, rendant possibles les réseaux
+      électriques à longue distance.
+    zh: >-
+      1831年,迈克尔·法拉第发现了电磁感应:一个线圈中变化的电流产生变化的磁场,从而在第二个线圈中感应出电压。电压与匝数的
+      比例关系 Vs/Vp = Ns/Np 正是由这一定律导出。利用这一关系的变压器得以把电压升高,使电力在数百公里的传输中损耗极小,
+      再在用电端把电压降下来,这使远距离电网成为可能。
+    ja: >-
+      1831年、マイケル・ファラデーは電磁誘導を発見した。一方のコイルで変化する電流が変化する磁場を作り、それがもう一方の
+      コイルに電圧を誘導する。電圧と巻数の比 Vs/Vp = Ns/Np はこの法則から導かれる。これを利用する変圧器は、電圧を高めて
+      数百キロメートル先まで損失少なく送電し、目的地で再び降圧することを可能にし、長距離電力網を実現した。
+  timeline:
+    - year: "1831"
+      label:
+        es: >-
+          Faraday descubre la inducción electromagnética: una corriente variable genera tensión en
+          una segunda bobina.
+        en: >-
+          Faraday discovers electromagnetic induction: a changing current induces voltage in a
+          second coil.
+        pt: >-
+          Faraday descobre a indução eletromagnética: uma corrente variável induz tensão em uma
+          segunda bobina.
+        fr: >-
+          Faraday découvre l'induction électromagnétique : un courant variable induit une tension
+          dans une seconde bobine.
+        zh: >-
+          法拉第发现电磁感应:变化的电流在第二个线圈中感应出电压。
+        ja: >-
+          ファラデーが電磁誘導を発見。変化する電流が別のコイルに電圧を誘導する。
+    - year: "1885"
+      label:
+        es: >-
+          En Budapest, Bláthy, Déri y Zipernowsky construyen el primer transformador práctico de
+          corriente alterna.
+        en: >-
+          In Budapest, Bláthy, Déri, and Zipernowsky build the first practical alternating-current
+          transformer.
+        pt: >-
+          Em Budapeste, Bláthy, Déri e Zipernowsky constroem o primeiro transformador prático de
+          corrente alternada.
+        fr: >-
+          À Budapest, Bláthy, Déri et Zipernowsky construisent le premier transformateur pratique à
+          courant alternatif.
+        zh: >-
+          布达佩斯的布拉蒂、德里和齐佩诺夫斯基制造出第一台实用的交流变压器。
+        ja: >-
+          ブダペストでブラーティ、デーリ、ツィペルノフスキーが初の実用的な交流変圧器を製作する。
+    - year: "1896"
+      label:
+        es: >-
+          La central hidroeléctrica del Niágara transmite energía a Búfalo gracias a transformadores
+          elevadores y reductores.
+        en: >-
+          The Niagara hydroelectric plant transmits power to Buffalo thanks to step-up and step-down
+          transformers.
+        pt: >-
+          A usina hidrelétrica do Niágara transmite energia a Buffalo graças a transformadores
+          elevadores e abaixadores.
+        fr: >-
+          La centrale hydroélectrique du Niagara transmet de l'énergie à Buffalo grâce à des
+          transformateurs élévateurs et abaisseurs.
+        zh: >-
+          尼亚加拉水电站借助升压和降压变压器把电力输送到布法罗。
+        ja: >-
+          ナイアガラ水力発電所が、昇圧・降圧変圧器によってバッファローへ電力を送電する。
+    - year: Hoy
+      label:
+        es: >-
+          Hay un transformador en cada poste de la red y dentro de cada cargador de teléfono.
+        en: >-
+          A transformer sits on every utility pole and inside every phone charger.
+        pt: >-
+          Há um transformador em cada poste da rede e dentro de cada carregador de celular.
+        fr: >-
+          Un transformateur se trouve sur chaque poteau du réseau et dans chaque chargeur de
+          téléphone.
+        zh: >-
+          每一根电线杆上、每一个手机充电器里都有一只变压器。
+        ja: >-
+          電柱の上にも、携帯電話の充電器の中にも変圧器がある。
+  useCases:
+    - title:
+        es: Red eléctrica
+        en: Power grid
+        pt: Rede elétrica
+        fr: Réseau électrique
+        zh: 电网
+        ja: 電力網
+      description:
+        es: >-
+          Los transformadores suben la tensión para el transporte y la bajan para el consumo
+          doméstico.
+        en: >-
+          Transformers step voltage up for transmission and down for household use.
+        pt: >-
+          Os transformadores elevam a tensão para o transporte e a baixam para o consumo doméstico.
+        fr: >-
+          Les transformateurs élèvent la tension pour le transport et l'abaissent pour la
+          consommation domestique.
+        zh: >-
+          变压器把电压升高以便远距离输送,再降低以供家庭使用。
+        ja: >-
+          変圧器は送電のため電圧を上げ、家庭用に下げる。
+    - title:
+        es: Cargadores y adaptadores
+        en: Chargers and adapters
+        pt: Carregadores e adaptadores
+        fr: Chargeurs et adaptateurs
+        zh: 充电器和适配器
+        ja: 充電器・アダプター
+      description:
+        es: >-
+          Un cargador de teléfono reduce los 240 V de la red a los pocos voltios del dispositivo.
+        en: >-
+          A phone charger steps the 240 V mains down to the few volts a device needs.
+        pt: >-
+          Um carregador de celular reduz os 240 V da rede aos poucos volts que o aparelho precisa.
+        fr: >-
+          Un chargeur de téléphone abaisse les 240 V du réseau aux quelques volts nécessaires à
+          l'appareil.
+        zh: >-
+          手机充电器把电网的240伏降为设备所需的几伏。
+        ja: >-
+          携帯電話の充電器は、コンセントの240Vを機器が必要とする数ボルトに降圧する。
+    - title:
+        es: Audio
+        en: Audio
+        pt: Áudio
+        fr: Audio
+        zh: 音响设备
+        ja: オーディオ
+      description:
+        es: >-
+          Los transformadores de salida adaptan la impedancia del amplificador a la del altavoz.
+        en: >-
+          Output transformers match the amplifier's impedance to that of the speaker.
+        pt: >-
+          Os transformadores de saída adaptam a impedância do amplificador à do alto-falante.
+        fr: >-
+          Les transformateurs de sortie adaptent l'impédance de l'amplificateur à celle du
+          haut-parleur.
+        zh: >-
+          输出变压器把放大器的阻抗匹配到扬声器的阻抗。
+        ja: >-
+          出力トランスはアンプのインピーダンスをスピーカーのそれに整合させる。
+    - title:
+        es: Medición eléctrica
+        en: Electrical measurement
+        pt: Medição elétrica
+        fr: Mesure électrique
+        zh: 电气测量
+        ja: 電気計測
+      description:
+        es: >-
+          Los transformadores de corriente permiten medir líneas de alta tensión de forma segura.
+        en: >-
+          Current transformers allow high-voltage lines to be measured safely.
+        pt: >-
+          Os transformadores de corrente permitem medir linhas de alta tensão com segurança.
+        fr: >-
+          Les transformateurs de courant permettent de mesurer les lignes haute tension en toute
+          sécurité.
+        zh: >-
+          电流互感器让高压线路可以被安全地测量。
+        ja: >-
+          変流器は高圧線を安全に測定することを可能にする。
+  example:
+    title:
+      es: Tensión de salida de un transformador
+      en: Output voltage of a transformer
+      pt: Tensão de saída de um transformador
+      fr: Tension de sortie d'un transformateur
+      zh: 变压器的输出电压
+      ja: 変圧器の出力電圧
+    lines:
+      - es: Vp = 240 V
+        en: Vp = 240 V
+        pt: Vp = 240 V
+        fr: Vp = 240 V
+        zh: Vp = 240 V
+        ja: Vp = 240 V
+      - es: Np = 1000, Ns = 250
+        en: Np = 1000, Ns = 250
+        pt: Np = 1000, Ns = 250
+        fr: Np = 1000, Ns = 250
+        zh: Np = 1000, Ns = 250
+        ja: Np = 1000, Ns = 250
+      - es: Vs = Vp × Ns / Np
+        en: Vs = Vp × Ns / Np
+        pt: Vs = Vp × Ns / Np
+        fr: Vs = Vp × Ns / Np
+        zh: Vs = Vp × Ns / Np
+        ja: Vs = Vp × Ns / Np
+      - es: Vs = 240 × 250 / 1000
+        en: Vs = 240 × 250 / 1000
+        pt: Vs = 240 × 250 / 1000
+        fr: Vs = 240 × 250 / 1000
+        zh: Vs = 240 × 250 / 1000
+        ja: Vs = 240 × 250 / 1000
+      - es: Vs = 60 V
+        en: Vs = 60 V
+        pt: Vs = 60 V
+        fr: Vs = 60 V
+        zh: Vs = 60 V
+        ja: Vs = 60 V

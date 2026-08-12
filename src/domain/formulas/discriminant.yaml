@@ -1,0 +1,364 @@
+id: discriminant
+title:
+  es: Discriminante
+  en: Discriminant
+  pt: Discriminante
+  fr: Discriminant
+  zh: 判别式
+  ja: 判別式
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: delta
+    type: variable
+    value: Δ
+    explanation:
+      es: El discriminante, el valor que decide cuántas raíces reales tiene la ecuación.
+      en: The discriminant, the value that decides how many real roots the equation has.
+      pt: O discriminante, o valor que decide quantas raízes reais a equação tem.
+      fr: Le discriminant, la valeur qui décide du nombre de racines réelles de l'équation.
+      zh: 判别式，决定方程有多少个实数根的值。
+      ja: 判別式。方程式の実数解の個数を決める値。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: b
+    type: variable
+    value: b
+    explanation:
+      es: El coeficiente b de la ecuación ax² + bx + c = 0.
+      en: The coefficient b of the equation ax² + bx + c = 0.
+      pt: O coeficiente b da equação ax² + bx + c = 0.
+      fr: Le coefficient b de l'équation ax² + bx + c = 0.
+      zh: 方程 ax² + bx + c = 0 中的系数 b。
+      ja: 方程式 ax² + bx + c = 0 の係数b。
+  - id: b-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Elevado al cuadrado: multiplicado por sí mismo."
+      en: "Squared: multiplied by itself."
+      pt: "Elevado ao quadrado: multiplicado por si mesmo."
+      fr: "Élevé au carré : multiplié par lui-même."
+      zh: "平方：与自身相乘。"
+      ja: "2乗: 自分自身に掛けたもの。"
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: Resta el siguiente término.
+      en: Subtracts the following term.
+      pt: Subtrai o termo seguinte.
+      fr: Soustrait le terme suivant.
+      zh: 减去后面的项。
+      ja: 次の項を引く。
+  - id: four
+    type: number
+    value: "4"
+    explanation:
+      es: Cuatro, el factor constante que acompaña al producto.
+      en: Four, the constant factor accompanying the product.
+      pt: Quatro, o fator constante que acompanha o produto.
+      fr: Quatre, le facteur constant qui accompagne le produit.
+      zh: 四，乘积前面的常数因子。
+      ja: 積に付く定数因子の4。
+  - id: dot-a
+    type: operator
+    value: ·
+    explanation:
+      es: Se multiplica por el coeficiente a.
+      en: Multiplied by the coefficient a.
+      pt: Multiplicado pelo coeficiente a.
+      fr: Multiplié par le coefficient a.
+      zh: 乘以系数 a。
+      ja: 係数aと掛ける。
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: El coeficiente a, el término que acompaña a x².
+      en: The coefficient a, the term accompanying x².
+      pt: O coeficiente a, o termo que acompanha x².
+      fr: Le coefficient a, le terme qui accompagne x².
+      zh: 系数 a，即 x² 前面的项。
+      ja: 係数a。x²に付随する項。
+  - id: dot-c
+    type: operator
+    value: ·
+    explanation:
+      es: Se multiplica por el coeficiente c.
+      en: Multiplied by the coefficient c.
+      pt: Multiplicado pelo coeficiente c.
+      fr: Multiplié par le coefficient c.
+      zh: 乘以系数 c。
+      ja: 係数cと掛ける。
+  - id: c
+    type: variable
+    value: c
+    explanation:
+      es: El coeficiente c, el término independiente de la ecuación.
+      en: The coefficient c, the constant term of the equation.
+      pt: O coeficiente c, o termo independente da equação.
+      fr: Le coefficient c, le terme constant de l'équation.
+      zh: 系数 c，即方程的常数项。
+      ja: 係数c。方程式の定数項。
+context:
+  author:
+    es: Basada en la fórmula cuadrática
+    en: Based on the quadratic formula
+    pt: Baseada na fórmula quadrática
+    fr: Basée sur la formule quadratique
+    zh: 基于二次方程求根公式
+    ja: 二次方程式の解の公式に基づく
+  era:
+    es: Europa, s. XVI–XVII
+    en: Europe, 16th–17th century
+    pt: Europa, séc. XVI–XVII
+    fr: Europe, XVIe–XVIIe siècle
+    zh: 欧洲，16–17世纪
+    ja: ヨーロッパ、16〜17世紀
+  history:
+    es: >-
+      El discriminante es la parte de la fórmula cuadrática que decide cuántas raíces reales tiene
+      una ecuación de segundo grado: la expresión b² − 4ac bajo el signo de la raíz cuadrada. Si es
+      positivo hay dos raíces reales; si es cero, una raíz doble; si es negativo, ninguna real. El
+      concepto se fue formando en los siglos XVI y XVII, cuando Cardano, Viète y Descartes
+      sistematizaron la resolución de ecuaciones y su notación simbólica; el término lo fijó Sylvester
+      en 1851. Hoy sigue siendo la base del análisis de raíces en matemáticas y en teoría de señales,
+      donde decide si un sistema es sobreamortiguado, crítico o subamortiguado.
+    en: >-
+      The discriminant is the part of the quadratic formula that decides how many real roots a
+      quadratic equation has: the expression b² − 4ac under the square root sign. If it is positive
+      there are two real roots; if zero, one double root; if negative, none. The concept took shape in
+      the 16th and 17th centuries, as Cardano, Viète, and Descartes systematized solving equations
+      and their symbolic notation; Sylvester fixed the term in 1851. Today it remains the basis of
+      root analysis in mathematics and in signal theory, where it decides whether a system is
+      overdamped, critically damped, or underdamped.
+    pt: >-
+      O discriminante é a parte da fórmula quadrática que decide quantas raízes reais uma equação do
+      segundo grau tem: a expressão b² − 4ac sob o sinal da raiz quadrada. Se for positivo, há duas
+      raízes reais; se for zero, uma raiz dupla; se negativo, nenhuma real. O conceito foi se formando
+      nos séculos XVI e XVII, quando Cardano, Viète e Descartes sistematizaram a resolução de
+      equações e sua notação simbólica; o termo foi fixado por Sylvester em 1851. Hoje continua sendo
+      a base da análise de raízes na matemática e na teoria de sinais, onde decide se um sistema é
+      sobreamortecido, criticamente amortecido ou subamortecido.
+    fr: >-
+      Le discriminant est la partie de la formule quadratique qui décide du nombre de racines réelles
+      d'une équation du second degré : l'expression b² − 4ac sous le signe de la racine carrée. S'il
+      est positif, il y a deux racines réelles ; s'il est nul, une racine double ; s'il est négatif,
+      aucune. Le concept s'est formé aux XVIe et XVIIe siècles, lorsque Cardan, Viète et Descartes
+      systématisèrent la résolution des équations et leur notation symbolique ; le terme fut fixé par
+      Sylvester en 1851. Il demeure aujourd'hui la base de l'analyse des racines en mathématiques et
+      en théorie du signal, où il décide si un système est sur-amorti, à amortissement critique ou
+      sous-amorti.
+    zh: >-
+      判别式是二次方程求根公式中决定方程有多少个实数根的部分：平方根符号下的表达式 b² − 4ac。若它为正，
+      方程有两个实数根；若为零，有一个重根；若为负，则没有实数根。这个概念在16、17世纪逐渐成形——卡尔达诺、
+      韦达和笛卡尔系统化了方程的求解和符号记法；西尔维斯特在1851年确定了"判别式"这一术语。今天，它仍是数学
+      和信号理论中根分析的基础，在信号理论中它决定一个系统是过阻尼、临界阻尼还是欠阻尼。
+    ja: >-
+      判別式は、二次方程式の解の公式のうち、実数解の個数を決める部分である。平方根の記号の下にある
+      b² − 4ac という式だ。これが正なら実数解は2つ、0なら重解が1つ、負なら実数解はない。この概念は16〜17
+      世紀、カルダーノ、ヴィエト、デカルトらが方程式の解法と記号表記を体系化する中で形作られ、1851年に
+      シルベスターがこの用語を定めた。今日でも、数学における解の解析や信号理論の基盤であり、信号理論では
+      系が過減衰か臨界減衰か不足減衰かを決める。
+  timeline:
+    - year: "1545"
+      label:
+        es: >-
+          Cardano publica el Ars Magna, que sistematiza la resolución de ecuaciones cuadráticas y
+          cúbicas.
+        en: >-
+          Cardano publishes the Ars Magna, systematizing the solution of quadratic and cubic
+          equations.
+        pt: >-
+          Cardano publica o Ars Magna, que sistematiza a resolução de equações quadráticas e cúbicas.
+        fr: >-
+          Cardan publie l'Ars Magna, qui systématise la résolution des équations quadratiques et
+          cubiques.
+        zh: >-
+          卡尔达诺出版《大术》，系统化了二次和三次方程的求解。
+        ja: >-
+          カルダーノが『アルス・マグナ』を発表し、二次・三次方程式の解法を体系化する。
+    - year: s. XVI–XVII
+      label:
+        es: >-
+          Viète y Descartes desarrollan la notación simbólica que permite escribir b² − 4ac.
+        en: >-
+          Viète and Descartes develop the symbolic notation that makes it possible to write b² − 4ac.
+        pt: >-
+          Viète e Descartes desenvolvem a notação simbólica que permite escrever b² − 4ac.
+        fr: >-
+          Viète et Descartes développent la notation symbolique qui permet d'écrire b² − 4ac.
+        zh: >-
+          韦达和笛卡尔发展出符号记法，使 b² − 4ac 的书写成为可能。
+        ja: >-
+          ヴィエトとデカルトが、b² − 4ac と書ける記号表記法を発展させる。
+    - year: "1851"
+      label:
+        es: >-
+          Sylvester introduce el término "discriminante" para esta expresión.
+        en: >-
+          Sylvester introduces the term "discriminant" for this expression.
+        pt: >-
+          Sylvester introduz o termo "discriminante" para essa expressão.
+        fr: >-
+          Sylvester introduit le terme « discriminant » pour cette expression.
+        zh: >-
+          西尔维斯特为这个表达式引入"判别式"这一术语。
+        ja: >-
+          シルベスターがこの式に対して「判別式」という用語を導入する。
+    - year: Hoy
+      label:
+        es: >-
+          Decide el comportamiento de sistemas de segundo orden en teoría de señales y control.
+        en: >-
+          It decides the behavior of second-order systems in signal theory and control.
+        pt: >-
+          Decide o comportamento de sistemas de segunda ordem na teoria de sinais e no controle.
+        fr: >-
+          Il décide du comportement des systèmes du second ordre en théorie du signal et en contrôle.
+        zh: >-
+          在信号理论和控制中，它决定二阶系统的行为特性。
+        ja: >-
+          信号理論や制御工学において、2次系の挙動を決める。
+  useCases:
+    - title:
+        es: Teoría de señales
+        en: Signal theory
+        pt: Teoria de sinais
+        fr: Théorie du signal
+        zh: 信号理论
+        ja: 信号理論
+      description:
+        es: >-
+          Determina si un sistema de segundo orden es sobreamortiguado, crítico o subamortiguado.
+        en: >-
+          Determines whether a second-order system is overdamped, critically damped, or underdamped.
+        pt: >-
+          Determina se um sistema de segunda ordem é sobreamortecido, criticamente amortecido ou
+          subamortecido.
+        fr: >-
+          Détermine si un système du second ordre est sur-amorti, à amortissement critique ou
+          sous-amorti.
+        zh: >-
+          判断一个二阶系统是过阻尼、临界阻尼还是欠阻尼。
+        ja: >-
+          2次系が過減衰、臨界減衰、不足減衰のいずれかを判別する。
+    - title:
+        es: Ingeniería de control
+        en: Control engineering
+        pt: Engenharia de controle
+        fr: Génie du contrôle
+        zh: 控制工程
+        ja: 制御工学
+      description:
+        es: >-
+          Predice si la respuesta de un sistema alcanza su valor final sin oscilar.
+        en: >-
+          Predicts whether a system's response reaches its final value without oscillating.
+        pt: >-
+          Prevê se a resposta de um sistema atinge seu valor final sem oscilar.
+        fr: >-
+          Prédit si la réponse d'un système atteint sa valeur finale sans osciller.
+        zh: >-
+          预测系统的响应能否不振荡地到达最终值。
+        ja: >-
+          系の応答が振動することなく最終値に達するかを予測する。
+    - title:
+        es: Matemáticas
+        en: Mathematics
+        pt: Matemática
+        fr: Mathématiques
+        zh: 数学
+        ja: 数学
+      description:
+        es: >-
+          Clasifica las raíces de cualquier ecuación cuadrática sin tener que resolverla.
+        en: >-
+          Classifies the roots of any quadratic equation without solving it.
+        pt: >-
+          Classifica as raízes de qualquer equação quadrática sem precisar resolvê-la.
+        fr: >-
+          Classe les racines de toute équation quadratique sans avoir à la résoudre.
+        zh: >-
+          无需求解即可判断任意二次方程根的类型。
+        ja: >-
+          解かずに任意の二次方程式の解を分類する。
+    - title:
+        es: Física
+        en: Physics
+        pt: Física
+        fr: Physique
+        zh: 物理学
+        ja: 物理学
+      description:
+        es: >-
+          Indica si un proyectil alcanza cierta altura en su trayectoria parabólica.
+        en: >-
+          Tells whether a projectile reaches a certain height on its parabolic path.
+        pt: >-
+          Indica se um projétil atinge determinada altura em sua trajetória parabólica.
+        fr: >-
+          Indique si un projectile atteint une certaine hauteur sur sa trajectoire parabolique.
+        zh: >-
+          判断抛射体在抛物线轨迹上能否达到某一高度。
+        ja: >-
+          放物線軌道を描く発射体がある高さに達するかどうかを示す。
+  example:
+    title:
+      es: Raíces de x² − 4x + 3
+      en: Roots of x² − 4x + 3
+      pt: Raízes de x² − 4x + 3
+      fr: Racines de x² − 4x + 3
+      zh: x² − 4x + 3 的根
+      ja: x² − 4x + 3 の解
+    lines:
+      - es: a = 1, b = −4, c = 3
+        en: a = 1, b = −4, c = 3
+        pt: a = 1, b = −4, c = 3
+        fr: a = 1, b = −4, c = 3
+        zh: a = 1, b = −4, c = 3
+        ja: a = 1, b = −4, c = 3
+      - es: Δ = b² − 4·a·c
+        en: Δ = b² − 4·a·c
+        pt: Δ = b² − 4·a·c
+        fr: Δ = b² − 4·a·c
+        zh: Δ = b² − 4·a·c
+        ja: Δ = b² − 4·a·c
+      - es: Δ = (−4)² − 4·1·3
+        en: Δ = (−4)² − 4·1·3
+        pt: Δ = (−4)² − 4·1·3
+        fr: Δ = (−4)² − 4·1·3
+        zh: Δ = (−4)² − 4·1·3
+        ja: Δ = (−4)² − 4·1·3
+      - es: Δ = 16 − 12
+        en: Δ = 16 − 12
+        pt: Δ = 16 − 12
+        fr: Δ = 16 − 12
+        zh: Δ = 16 − 12
+        ja: Δ = 16 − 12
+      - es: Δ = 4
+        en: Δ = 4
+        pt: Δ = 4
+        fr: Δ = 4
+        zh: Δ = 4
+        ja: Δ = 4
+      - es: Δ > 0 → dos raíces reales
+        en: Δ > 0 → two real roots
+        pt: Δ > 0 → duas raízes reais
+        fr: Δ > 0 → deux racines réelles
+        zh: Δ > 0 → 两个实数根
+        ja: Δ > 0 → 実数解は2つ

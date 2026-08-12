@@ -1,0 +1,311 @@
+id: conditional-probability
+title:
+  es: Probabilidad Condicional
+  en: Conditional Probability
+  pt: Probabilidade Condicional
+  fr: Probabilité Conditionnelle
+  zh: 条件概率
+  ja: 条件付き確率
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率統計
+nodes:
+  - id: p-a-given-b
+    type: variable
+    value: P(A|B)
+    explanation:
+      es: "La probabilidad de A condicionada a que B ya ocurrió."
+      en: "The probability of A given that B has already occurred."
+      pt: "A probabilidade de A condicionada a que B já ocorreu."
+      fr: "La probabilité de A sachant que B s'est déjà produit."
+      zh: "在B已发生的条件下A发生的概率。"
+      ja: "Bがすでに起きたという条件のもとでのAの確率。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これに正確に等しい。
+  - id: p-a-intersect-b
+    type: variable
+    value: P(A∩B)
+    explanation:
+      es: "La probabilidad de que ambos eventos, A y B, ocurran a la vez."
+      en: "The probability that both events, A and B, occur together."
+      pt: "A probabilidade de que os dois eventos, A e B, ocorram juntos."
+      fr: "La probabilité que les deux événements, A et B, se produisent ensemble."
+      zh: "A和B两个事件同时发生的概率。"
+      ja: "AとBの両方の事象が同時に起こる確率。"
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: これで割る。
+  - id: p-b
+    type: variable
+    value: P(B)
+    explanation:
+      es: "La probabilidad total de que B ocurra."
+      en: "The total probability that B occurs."
+      pt: "A probabilidade total de que B ocorra."
+      fr: "La probabilité totale que B se produise."
+      zh: "B发生的总概率。"
+      ja: "Bが起こる全確率。"
+context:
+  author:
+    es: Basada en el trabajo de Bayes y Laplace
+    en: Based on the work of Bayes and Laplace
+    pt: Baseada no trabalho de Bayes e Laplace
+    fr: Basé sur les travaux de Bayes et Laplace
+    zh: 基于贝叶斯与拉普拉斯的工作
+    ja: ベイズとラプラスの研究に基づく
+  era:
+    es: Inglaterra y Francia, s. XVIII
+    en: England and France, 18th century
+    pt: Inglaterra e França, séc. XVIII
+    fr: Angleterre et France, XVIIIe siècle
+    zh: 英国与法国,18世纪
+    ja: イギリスとフランス、18世紀
+  history:
+    es: >-
+      La probabilidad condicional responde a la pregunta que da forma a casi todo el razonamiento
+      moderno con datos: dado lo que ya sé, qué tan probable es mi hipótesis. Se define dividiendo
+      la probabilidad conjunta de A y B entre la probabilidad de B, y fue formalizada en el siglo
+      XVIII a partir de los trabajos de Bayes y Laplace. Es la pieza que permite a un médico
+      interpretar un resultado positivo, al filtro de correo decidir si un mensaje es spam y a los
+      sistemas de IA razonar con evidencia incierta.
+    en: >-
+      Conditional probability answers the question that shapes almost all modern reasoning with data:
+      given what I already know, how likely is my hypothesis. It is defined by dividing the joint
+      probability of A and B by the probability of B, and was formalized in the 18th century out of
+      the work of Bayes and Laplace. It is the piece that lets a doctor interpret a positive result,
+      a mail filter decide whether a message is spam, and AI systems reason with uncertain evidence.
+    pt: >-
+      A probabilidade condicional responde à pergunta que molda quase todo o raciocínio moderno com
+      dados: dado o que já sei, qual é a probabilidade da minha hipótese. Ela é definida dividindo a
+      probabilidade conjunta de A e B pela probabilidade de B, e foi formalizada no século XVIII a
+      partir dos trabalhos de Bayes e Laplace. É a peça que permite ao médico interpretar um resultado
+      positivo, ao filtro de e-mail decidir se uma mensagem é spam e aos sistemas de IA raciocinar com
+      evidências incertas.
+    fr: >-
+      La probabilité conditionnelle répond à la question qui structure presque tout raisonnement
+      moderne sur les données : étant donné ce que je sais déjà, quelle est la probabilité de mon
+      hypothèse. Elle se définit en divisant la probabilité conjointe de A et B par la probabilité de
+      B, et fut formalisée au XVIIIe siècle à partir des travaux de Bayes et Laplace. C'est elle qui
+      permet à un médecin d'interpréter un résultat positif, à un filtre antispam de décider si un
+      message est un courrier indésirable, et aux systèmes d'IA de raisonner avec des preuves
+      incertaines.
+    zh: >-
+      条件概率回答的问题几乎塑造了现代一切基于数据的推理:在已知现状的情况下,我的假设有多大概率
+      成立。它定义为A和B同时发生的概率除以B发生的概率,并于18世纪在贝叶斯和拉普拉斯工作的
+      基础上得到系统化。正是它让医生能够解读阳性结果,让邮件过滤器判断一封邮件是否为垃圾邮件,
+      也让AI系统能依据不确定的证据进行推理。
+    ja: >-
+      条件付き確率は、データに基づく現代の推理のほとんどを形作る問いに答える。すでに分かって
+      いることを前提として、自分の仮説がどれほど起こりうるか。これはAとBが同時に起こる確率を
+      Bの確率で割ることで定義され、18世紀にベイズとラプラスの研究から定式化された。医師が陽性
+      結果を解釈し、メールフィルターがスパムかどうかを判定し、AIが不確かな証拠をもとに推論する
+      のは、この条件付き確率のおかげである。
+  timeline:
+    - year: "1763"
+      label:
+        es: >-
+          Se publica póstumamente el ensayo de Bayes, que introduce la probabilidad inversa.
+        en: >-
+          Bayes' essay is published posthumously, introducing inverse probability.
+        pt: >-
+          O ensaio de Bayes é publicado postumamente, introduzindo a probabilidade inversa.
+        fr: >-
+          L'essai de Bayes est publié à titre posthume, introduisant la probabilité inverse.
+        zh: >-
+          贝叶斯的论文身后发表,提出了逆概率的概念。
+        ja: >-
+          ベイズの論文が死後出版され、逆確率の考えが紹介される。
+    - year: "1812"
+      label:
+        es: >-
+          Laplace publica Théorie analytique des probabilités y formaliza la probabilidad
+          condicional.
+        en: >-
+          Laplace publishes Théorie analytique des probabilités and formalizes conditional
+          probability.
+        pt: >-
+          Laplace publica Théorie analytique des probabilités e formaliza a probabilidade
+          condicional.
+        fr: >-
+          Laplace publie la Théorie analytique des probabilités et formalise la probabilité
+          conditionnelle.
+        zh: >-
+          拉普拉斯发表《概率的解析理论》,将条件概率形式化。
+        ja: >-
+          ラプラスが『確率の解析理論』を出版し、条件付き確率を定式化する。
+    - year: "1933"
+      label:
+        es: >-
+          Kolmogorov axiomatiza la probabilidad y da a la probabilidad condicional una definición
+          rigurosa.
+        en: >-
+          Kolmogorov axiomatizes probability, giving conditional probability a rigorous definition.
+        pt: >-
+          Kolmogorov axiomatiza a probabilidade e dá à probabilidade condicional uma definição
+          rigorosa.
+        fr: >-
+          Kolmogorov axiomatise les probabilités et donne à la probabilité conditionnelle une
+          définition rigoureuse.
+        zh: >-
+          科尔莫戈罗夫将概率公理化,为条件概率给出了严格的定义。
+        ja: >-
+          コルモゴロフが確率論を公理化し、条件付き確率に厳密な定義を与える。
+    - year: Hoy
+      label:
+        es: >-
+          Es el motor de los diagnósticos probabilísticos, los filtros de spam y el razonamiento de
+          la IA.
+        en: >-
+          It powers probabilistic diagnostics, spam filters, and AI reasoning.
+        pt: >-
+          É o motor dos diagnósticos probabilísticos, dos filtros de spam e do raciocínio da IA.
+        fr: >-
+          Elle anime les diagnostics probabilistes, les filtres antispam et le raisonnement de l'IA.
+        zh: >-
+          它是概率诊断、垃圾邮件过滤和AI推理的引擎。
+        ja: >-
+          確率的診断、スパムフィルター、AIの推論を支える原動力である。
+  useCases:
+    - title:
+        es: Diagnóstico médico
+        en: Medical diagnosis
+        pt: Diagnóstico médico
+        fr: Diagnostic médical
+        zh: 医学诊断
+        ja: 医療診断
+      description:
+        es: >-
+          Interpreta la probabilidad de una enfermedad a partir de un resultado de test positivo o
+          negativo.
+        en: >-
+          Interprets the probability of a disease from a positive or negative test result.
+        pt: >-
+          Interpreta a probabilidade de uma doença a partir de um resultado de teste positivo ou
+          negativo.
+        fr: >-
+          Interprète la probabilité d'une maladie à partir d'un résultat de test positif ou négatif.
+        zh: >-
+          根据阳性或阴性检测结果解读患病的概率。
+        ja: >-
+          陽性・陰性の検査結果から疾患の確率を解釈する。
+    - title:
+        es: Filtros de spam
+        en: Spam filtering
+        pt: Filtros de spam
+        fr: Filtrage du spam
+        zh: 垃圾邮件过滤
+        ja: スパムフィルタリング
+      description:
+        es: >-
+          Estima la probabilidad de que un mensaje sea spam dados los términos que contiene.
+        en: >-
+          Estimates the probability that a message is spam given the terms it contains.
+        pt: >-
+          Estima a probabilidade de uma mensagem ser spam dados os termos que contém.
+        fr: >-
+          Estime la probabilité qu'un message soit un spam au vu des termes qu'il contient.
+        zh: >-
+          根据邮件包含的词项,估计它是垃圾邮件的概率。
+        ja: >-
+          含まれる語句から、そのメールがスパムである確率を推定する。
+    - title:
+        es: Juegos y seguros
+        en: Games and insurance
+        pt: Jogos e seguros
+        fr: Jeux et assurance
+        zh: 博彩与保险
+        ja: ゲームと保険
+      description:
+        es: >-
+          Ajusta la probabilidad de un evento cuando ya se conoce información sobre una parte de él.
+        en: >-
+          Adjusts the probability of an event when partial information about it is already known.
+        pt: >-
+          Ajusta a probabilidade de um evento quando já se conhece informação sobre uma parte dele.
+        fr: >-
+          Ajuste la probabilité d'un événement lorsqu'une partie de l'information le concernant est
+          déjà connue.
+        zh: >-
+          当已知事件的部分信息时,修正该事件的概率。
+        ja: >-
+          事象の一部についての情報がすでに分かっているときに、その事象の確率を更新する。
+    - title:
+        es: Aprendizaje automático
+        en: Machine learning
+        pt: Aprendizado de máquina
+        fr: Apprentissage automatique
+        zh: 机器学习
+        ja: 機械学習
+      description:
+        es: >-
+          Clasificadores y modelos probabilísticos actualizan sus decisiones con cada nueva
+          observación.
+        en: >-
+          Classifiers and probabilistic models update their decisions with each new observation.
+        pt: >-
+          Classificadores e modelos probabilísticos atualizam suas decisões a cada nova observação.
+        fr: >-
+          Les classifieurs et modèles probabilistes actualisent leurs décisions à chaque nouvelle
+          observation.
+        zh: >-
+          分类器和概率模型随着每次新观测不断更新其决策。
+        ja: >-
+          分類器や確率モデルが、新しい観測のたびに判断を更新する。
+  example:
+    title:
+      es: Probabilidad de un suceso condicionado
+      en: Probability of a conditioned event
+      pt: Probabilidade de um evento condicionado
+      fr: Probabilité d'un événement conditionné
+      zh: 一个条件事件的概率
+      ja: 条件付き事象の確率
+    lines:
+      - es: P(A ∩ B) = 0.2
+        en: P(A ∩ B) = 0.2
+        pt: P(A ∩ B) = 0,2
+        fr: P(A ∩ B) = 0,2
+        zh: P(A ∩ B) = 0.2
+        ja: P(A ∩ B) = 0.2
+      - es: P(B) = 0.5
+        en: P(B) = 0.5
+        pt: P(B) = 0,5
+        fr: P(B) = 0,5
+        zh: P(B) = 0.5
+        ja: P(B) = 0.5
+      - es: P(A|B) = P(A ∩ B) / P(B)
+        en: P(A|B) = P(A ∩ B) / P(B)
+        pt: P(A|B) = P(A ∩ B) / P(B)
+        fr: P(A|B) = P(A ∩ B) / P(B)
+        zh: P(A|B) = P(A ∩ B) / P(B)
+        ja: P(A|B) = P(A ∩ B) / P(B)
+      - es: P(A|B) = 0.2 / 0.5
+        en: P(A|B) = 0.2 / 0.5
+        pt: P(A|B) = 0,2 / 0,5
+        fr: P(A|B) = 0,2 / 0,5
+        zh: P(A|B) = 0.2 / 0.5
+        ja: P(A|B) = 0.2 / 0.5
+      - es: P(A|B) = 0.4
+        en: P(A|B) = 0.4
+        pt: P(A|B) = 0,4
+        fr: P(A|B) = 0,4
+        zh: P(A|B) = 0.4
+        ja: P(A|B) = 0.4

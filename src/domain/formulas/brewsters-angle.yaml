@@ -1,0 +1,367 @@
+id: brewsters-angle
+title:
+  es: Ángulo de Brewster
+  en: Brewster's Angle
+  pt: Ângulo de Brewster
+  fr: Angle de Brewster
+  zh: 布儒斯特角
+  ja: ブリュースター角
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: tan
+    type: operator
+    value: "tan"
+    explanation:
+      es: La función tangente evaluada en el ángulo de Brewster.
+      en: The tangent function evaluated at the Brewster angle.
+      pt: A função tangente avaliada no ângulo de Brewster.
+      fr: La fonction tangente évaluée à l'angle de Brewster.
+      zh: 在布儒斯特角处计算的正切函数。
+      ja: ブリュースター角で評価される正接関数。
+  - id: paren-open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el argumento de la tangente.
+      en: Opens the tangent function's argument.
+      pt: Abre o argumento da função tangente.
+      fr: Ouvre l'argument de la fonction tangente.
+      zh: 正切函数参数的起始括号。
+      ja: 正接関数の引数を開く括弧。
+  - id: theta-b
+    type: variable
+    value: "θ"
+    explanation:
+      es: "El ángulo de Brewster: el ángulo de incidencia que polariza por completo la luz reflejada."
+      en: "The Brewster angle: the incidence angle that fully polarizes the reflected light."
+      pt: "O ângulo de Brewster: o ângulo de incidência que polariza completamente a luz refletida."
+      fr: "L'angle de Brewster : l'angle d'incidence qui polarise entièrement la lumière réfléchie."
+      zh: "布儒斯特角：使反射光完全偏振的入射角。"
+      ja: "ブリュースター角：反射光を完全に偏光させる入射角。"
+  - id: theta-b-sub
+    type: superscript
+    value: "B"
+    explanation:
+      es: "El subíndice B: ángulo de Brewster."
+      en: "Subscript B: Brewster angle."
+      pt: "O subíndice B: ângulo de Brewster."
+      fr: "L'indice B : angle de Brewster."
+      zh: "下标B：布儒斯特角。"
+      ja: "下付きB：ブリュースター角。"
+  - id: paren-close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el argumento de la tangente.
+      en: Closes the tangent function's argument.
+      pt: Fecha o argumento da função tangente.
+      fr: Ferme l'argument de la fonction tangente.
+      zh: 正切函数参数的结束括号。
+      ja: 正接関数の引数を閉じる括弧。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: n2
+    type: variable
+    value: "n"
+    explanation:
+      es: El índice de refracción del segundo medio, en el que entra la luz.
+      en: The refractive index of the second medium, into which the light enters.
+      pt: O índice de refração do segundo meio, no qual a luz entra.
+      fr: L'indice de réfraction du second milieu, dans lequel la lumière pénètre.
+      zh: 光线进入的第二种介质的折射率。
+      ja: 光が入っていく第二の媒質の屈折率。
+  - id: n2-sub
+    type: superscript
+    value: "2"
+    explanation:
+      es: "El subíndice 2: el medio al que entra la luz."
+      en: "Subscript 2: the medium the light enters."
+      pt: "O subíndice 2: o meio no qual a luz entra."
+      fr: "L'indice 2 : le milieu dans lequel la lumière pénètre."
+      zh: "下标2：光进入的介质。"
+      ja: "下付き2：光が入っていく媒質。"
+  - id: division
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: n1
+    type: variable
+    value: "n"
+    explanation:
+      es: El índice de refracción del primer medio, del que proviene la luz.
+      en: The refractive index of the first medium, from which the light comes.
+      pt: O índice de refração do primeiro meio, do qual a luz provém.
+      fr: L'indice de réfraction du premier milieu, d'où provient la lumière.
+      zh: 光线所来自的第一种介质的折射率。
+      ja: 光が来る第一の媒質の屈折率。
+  - id: n1-sub
+    type: superscript
+    value: "1"
+    explanation:
+      es: "El subíndice 1: el medio de origen de la luz."
+      en: "Subscript 1: the medium the light comes from."
+      pt: "O subíndice 1: o meio de origem da luz."
+      fr: "L'indice 1 : le milieu d'origine de la lumière."
+      zh: "下标1：光线来源的介质。"
+      ja: "下付き1：光の出発元の媒質。"
+context:
+  author:
+    es: David Brewster
+    en: David Brewster
+    pt: David Brewster
+    fr: David Brewster
+    zh: 大卫·布儒斯特
+    ja: デビッド・ブリュースター
+  era:
+    es: Escocia, 1781–1868 · publicada en 1815
+    en: Scotland, 1781–1868 · published in 1815
+    pt: Escócia, 1781–1868 · publicada em 1815
+    fr: Écosse, 1781–1868 · publiée en 1815
+    zh: 苏格兰,1781–1868年 · 1815年发表
+    ja: スコットランド、1781–1868年・1815年発表
+  history:
+    es: >-
+      En 1815 el físico escocés David Brewster descubrió que, en un ángulo muy preciso, la luz
+      reflejada queda completamente polarizada: las vibraciones perpendiculares al plano de
+      incidencia se anulan y el reflejo se apaga si se observa con un filtro cruzado. Ese ángulo
+      depende solo de los índices de refracción. Sobre él se construyen las gafas de sol polarizadas
+      y los filtros que los fotógrafos giran para borrar los reflejos del agua, el vidrio y las
+      carrocerías.
+    en: >-
+      In 1815 the Scottish physicist David Brewster discovered that at a very precise angle,
+      reflected light becomes fully polarized: the vibrations perpendicular to the plane of
+      incidence cancel out, and the reflection disappears when seen through a crossed filter. That
+      angle depends only on the refractive indices. It is the basis of polarized sunglasses and of
+      the filters photographers rotate to erase reflections from water, glass, and car bodies.
+    pt: >-
+      Em 1815, o físico escocês David Brewster descobriu que, em um ângulo muito preciso, a luz
+      refletida fica completamente polarizada: as vibrações perpendiculares ao plano de incidência
+      se anulam e o reflexo se apaga se observado com um filtro cruzado. Esse ângulo depende apenas
+      dos índices de refração. Sobre ele se constroem os óculos de sol polarizados e os filtros que
+      os fotógrafos giram para eliminar reflexos da água, do vidro e das carrocerias.
+    fr: >-
+      En 1815, le physicien écossais David Brewster découvrit qu'à un angle très précis, la lumière
+      réfléchie devient complètement polarisée : les vibrations perpendiculaires au plan d'incidence
+      s'annulent et le reflet s'éteint lorsqu'on l'observe à travers un filtre croisé. Cet angle ne
+      dépend que des indices de réfraction. Il est à la base des lunettes de soleil polarisantes et
+      des filtres que les photographes font tourner pour effacer les reflets de l'eau, du verre et
+      des carrosseries.
+    zh: >-
+      1815年，苏格兰物理学家大卫·布儒斯特发现，在一个非常精确的角度上，反射光会完全偏振：
+      垂直于入射面的振动相互抵消，透过交叉的偏振片观察时反射光会消失。这个角度只取决于两种介质的折射率。
+      偏振太阳镜，以及摄影师用来消除水面、玻璃和车身反光的滤镜，都建立在这个角度之上。
+    ja: >-
+      1815年、スコットランドの物理学者デビッド・ブリュースターは、ごく特定の角度で反射光が完全に偏光することを
+      発見した。入射面に垂直な振動が打ち消され、直交するフィルター越しに見ると反射が消えるのである。この角度は
+      屈折率だけに依存する。偏光サングラスや、写真家が水面・ガラス・車体の映り込みを消すために回すフィルターは、
+      この上に成り立っている。
+  timeline:
+    - year: "1815"
+      label:
+        es: >-
+          Brewster publica la ley que lleva su nombre: en ese ángulo la luz reflejada queda
+          totalmente polarizada.
+        en: >-
+          Brewster publishes the law bearing his name: at that angle reflected light is fully
+          polarized.
+        pt: >-
+          Brewster publica a lei que leva seu nome: nesse ângulo a luz refletida fica totalmente
+          polarizada.
+        fr: >-
+          Brewster publie la loi qui porte son nom : à cet angle, la lumière réfléchie est
+          entièrement polarisée.
+        zh: >-
+          布儒斯特发表以他命名的定律：在该角度下反射光完全偏振。
+        ja: >-
+          ブリュースターが自身の名を冠する法則を発表。この角度では反射光が完全に偏光する。
+    - year: "1929"
+      label:
+        es: >-
+          Edwin Land crea el primer filtro polarizador sintético, base de las gafas de sol
+          modernas.
+        en: >-
+          Edwin Land creates the first synthetic polarizing filter, the basis of modern sunglasses.
+        pt: >-
+          Edwin Land cria o primeiro filtro polarizador sintético, base dos óculos de sol modernos.
+        fr: >-
+          Edwin Land crée le premier filtre polarisant synthétique, à la base des lunettes de soleil
+          modernes.
+        zh: >-
+          埃德温·兰德制成第一块合成偏振片，这是现代太阳镜的基础。
+        ja: >-
+          エドウィン・ランドが最初の合成偏光フィルターを開発。現代のサングラスの基礎となる。
+    - year: "1936"
+      label:
+        es: Salen al mercado las gafas de sol polarizadas de Polaroid.
+        en: Polaroid brings polarized sunglasses to market.
+        pt: Os óculos de sol polarizados da Polaroid chegam ao mercado.
+        fr: Les lunettes de soleil polarisantes de Polaroid arrivent sur le marché.
+        zh: Polaroid将偏振太阳镜推向市场。
+        ja: ポラロイド社が偏光サングラスを市場に送り出す。
+    - year: Hoy
+      label:
+        es: >-
+          Fotógrafos, cineastas y láseres usan la ventana de Brewster para eliminar reflejos no
+          deseados.
+        en: >-
+          Photographers, filmmakers, and lasers use the Brewster window to remove unwanted
+          reflections.
+        pt: >-
+          Fotógrafos, cineastas e lasers usam a janela de Brewster para eliminar reflexos
+          indesejados.
+        fr: >-
+          Photographes, cinéastes et lasers utilisent la fenêtre de Brewster pour éliminer les
+          reflets indésirables.
+        zh: >-
+          摄影师、电影工作者和激光器用布儒斯特窗消除不想要的反射。
+        ja: >-
+          写真家や映像作家、そしてレーザーが、不要な反射を除くためにブリュースター窓を利用している。
+  useCases:
+    - title:
+        es: Gafas de sol polarizadas
+        en: Polarized sunglasses
+        pt: Óculos de sol polarizados
+        fr: Lunettes de soleil polarisantes
+        zh: 偏振太阳镜
+        ja: 偏光サングラス
+      description:
+        es: >-
+          El filtro se orienta en el ángulo de Brewster de la superficie del agua o del asfalto para
+          cortar el brillo.
+        en: >-
+          The filter is oriented at the Brewster angle of water or asphalt to cut the glare.
+        pt: >-
+          O filtro é orientado no ângulo de Brewster da água ou do asfalto para cortar o
+          ofuscamento.
+        fr: >-
+          Le filtre est orienté à l'angle de Brewster de l'eau ou du bitume pour couper
+          l'éblouissement.
+        zh: >-
+          偏振片按水面或沥青的布儒斯特角取向，以消除眩光。
+        ja: >-
+          水やアスファルトのブリュースター角にフィルターを向けて、ぎらつきを遮る。
+    - title:
+        es: Fotografía y cine
+        en: Photography and filmmaking
+        pt: Fotografia e cinema
+        fr: Photographie et cinéma
+        zh: 摄影与影视
+        ja: 写真と映画
+      description:
+        es: >-
+          Los fotógrafos giran el filtro polarizador hasta eliminar los reflejos del agua, el
+          vidrio y las hojas.
+        en: >-
+          Photographers rotate a polarizing filter until reflections from water, glass, and leaves
+          disappear.
+        pt: >-
+          Fotógrafos giram o filtro polarizador até eliminar os reflexos da água, do vidro e das
+          folhas.
+        fr: >-
+          Les photographes tournent le filtre polarisant jusqu'à faire disparaître les reflets de
+          l'eau, du verre et des feuilles.
+        zh: >-
+          摄影师旋转偏振镜，直到水面、玻璃和树叶的反光消失。
+        ja: >-
+          写真家は偏光フィルターを回し、水やガラス、葉の映り込みが消えるようにする。
+    - title:
+        es: Láseres
+        en: Lasers
+        pt: Lasers
+        fr: Lasers
+        zh: 激光器
+        ja: レーザー
+      description:
+        es: >-
+          La ventana de Brewster elimina las pérdidas por reflexión dentro de la cavidad del láser.
+        en: >-
+          The Brewster window removes reflection losses inside the laser cavity.
+        pt: >-
+          A janela de Brewster elimina as perdas por reflexão dentro da cavidade do laser.
+        fr: >-
+          La fenêtre de Brewster élimine les pertes par réflexion à l'intérieur de la cavité laser.
+        zh: >-
+          布儒斯特窗消除了激光谐振腔内的反射损耗。
+        ja: >-
+          ブリュースター窓がレーザー共振器内の反射損失を取り除く。
+    - title:
+        es: Cámaras y sensores
+        en: Cameras and sensors
+        pt: Câmeras e sensores
+        fr: Caméras et capteurs
+        zh: 相机与传感器
+        ja: カメラとセンサー
+      description:
+        es: >-
+          Los sensores de los vehículos y los drones usan polarizadores para que los reflejos no
+          cieguen a la cámara.
+        en: >-
+          Vehicle and drone sensors use polarizers so reflections do not blind the camera.
+        pt: >-
+          Sensores de veículos e drones usam polarizadores para que os reflexos não ceguem a câmera.
+        fr: >-
+          Les capteurs de véhicules et de drones utilisent des polariseurs pour que les reflets
+          n'éblouissent pas la caméra.
+        zh: >-
+          车辆和无人机的传感器使用偏振片，使反光不致令相机失明。
+        ja: >-
+          車両やドローンのセンサーは偏光子を使い、映り込みでカメラがくらまないようにしている。
+  example:
+    title:
+      es: Del aire al vidrio
+      en: From air to glass
+      pt: Do ar para o vidro
+      fr: De l'air au verre
+      zh: 从空气到玻璃
+      ja: 空気からガラスへ
+    lines:
+      - es: n1 = 1.0 (aire), n2 = 1.5 (vidrio)
+        en: n1 = 1.0 (air), n2 = 1.5 (glass)
+        pt: n1 = 1,0 (ar), n2 = 1,5 (vidro)
+        fr: n1 = 1,0 (air), n2 = 1,5 (verre)
+        zh: n1 = 1.0（空气），n2 = 1.5（玻璃）
+        ja: n1 = 1.0（空気）、n2 = 1.5（ガラス）
+      - es: tan(θB) = n2 / n1
+        en: tan(θB) = n2 / n1
+        pt: tan(θB) = n2 / n1
+        fr: tan(θB) = n2 / n1
+        zh: tan(θB) = n2 / n1
+        ja: tan(θB) = n2 / n1
+      - es: tan(θB) = 1.5 / 1.0
+        en: tan(θB) = 1.5 / 1.0
+        pt: tan(θB) = 1,5 / 1,0
+        fr: tan(θB) = 1,5 / 1,0
+        zh: tan(θB) = 1.5 / 1.0
+        ja: tan(θB) = 1.5 / 1.0
+      - es: tan(θB) = 1.5
+        en: tan(θB) = 1.5
+        pt: tan(θB) = 1,5
+        fr: tan(θB) = 1,5
+        zh: tan(θB) = 1.5
+        ja: tan(θB) = 1.5
+      - es: "θB = arctan(1.5) ≈ 56.3°"
+        en: "θB = arctan(1.5) ≈ 56.3°"
+        pt: "θB = arctan(1,5) ≈ 56,3°"
+        fr: "θB = arctan(1,5) ≈ 56,3°"
+        zh: "θB = arctan(1.5) ≈ 56.3°"
+        ja: "θB = arctan(1.5) ≈ 56.3°"

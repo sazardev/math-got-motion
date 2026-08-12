@@ -1,0 +1,344 @@
+id: thrust-to-weight-ratio
+title:
+  es: Relación Empuje-Peso
+  en: Thrust-to-Weight Ratio
+  pt: Razão Empuxo-Peso
+  fr: Rapport poussée/poids
+  zh: 推重比
+  ja: 推力重量比
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: twr
+    type: variable
+    value: TWR
+    explanation:
+      es: "TWR: la relación entre el empuje del cohete y su peso."
+      en: "TWR: the ratio of the rocket's thrust to its weight."
+      pt: "TWR: a razão entre o empuxo do foguete e seu peso."
+      fr: "TWR : le rapport entre la poussée de la fusée et son poids."
+      zh: "TWR：火箭推力与其重量之比。"
+      ja: "TWR：ロケットの推力と重量の比。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: "F: el empuje total que producen los motores."
+      en: "F: the total thrust produced by the engines."
+      pt: "F: o empuxo total produzido pelos motores."
+      fr: "F : la poussée totale produite par les moteurs."
+      zh: "F：发动机产生的总推力。"
+      ja: "F：エンジンが生み出す総推力。"
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el denominador.
+      en: Opens the denominator.
+      pt: Abre o denominador.
+      fr: Ouvre le dénominateur.
+      zh: 打开分母。
+      ja: 分母を開始する括弧。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: "m: la masa total del vehículo en la superficie."
+      en: "m: the total mass of the vehicle on the surface."
+      pt: "m: a massa total do veículo na superfície."
+      fr: "m : la masse totale du véhicule au sol."
+      zh: "m：飞行器在地面的总质量。"
+      ja: "m：地上での機体の総質量。"
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: g
+    type: variable
+    value: g
+    explanation:
+      es: "g: la aceleración de la gravedad local."
+      en: "g: the local gravitational acceleration."
+      pt: "g: a aceleração da gravidade local."
+      fr: "g : l'accélération gravitationnelle locale."
+      zh: "g：当地的重力加速度。"
+      ja: "g：その場所の重力加速度。"
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el denominador.
+      en: Closes the denominator.
+      pt: Fecha o denominador.
+      fr: Ferme le dénominateur.
+      zh: 关闭分母。
+      ja: 分母を閉じる括弧。
+context:
+  author:
+    es: Concepto de la ingeniería aeroespacial
+    en: A concept from aerospace engineering
+    pt: Conceito da engenharia aeroespacial
+    fr: Concept de l'ingénierie aérospatiale
+    zh: 航空航天工程的概念
+    ja: 航空宇宙工学の概念
+  era:
+    es: EE. UU., s. XX
+    en: USA, 20th century
+    pt: EUA, séc. XX
+    fr: États-Unis, XXᵉ siècle
+    zh: 美国，20世纪
+    ja: アメリカ、20世紀
+  history:
+    es: >-
+      La relación empuje-peso compara la fuerza de un cohete con su peso en la superficie: si supera
+      1, el empuje vence a la gravedad y el vehículo despega; si es menor, permanece inmóvil en la
+      plataforma. El Saturno V, el cohete más grande jamás construido, despegaba con apenas 1.2,
+      porque sus cinco motores F-1 apenas bastaban para levantar sus 2900 toneladas. La aviación usa
+      la misma cifra para describir la capacidad de maniobra de un avión. Es el número con que se
+      caracteriza todo vehículo de lanzamiento.
+    en: >-
+      The thrust-to-weight ratio compares a rocket's thrust with its weight on the surface: above 1
+      the thrust overcomes gravity and the vehicle lifts off; below 1 it stays on the pad. The
+      Saturn V, the largest rocket ever built, lifted off with barely 1.2, because its five F-1
+      engines were just enough to raise its 2,900 tonnes. Aviation uses the same figure to describe
+      an aircraft's maneuverability. It is the number that characterizes every launch vehicle.
+    pt: >-
+      A razão empuxo-peso compara a força de um foguete com seu peso na superfície: se supera 1, o
+      empuxo vence a gravidade e o veículo decola; se é menor, permanece parado na plataforma. O
+      Saturno V, o maior foguete já construído, decolava com apenas 1,2, pois seus cinco motores F-1
+      mal davam conta de levantar suas 2.900 toneladas. A aviação usa o mesmo número para descrever
+      a manobrabilidade de uma aeronave. É a cifra que caracteriza todo veículo de lançamento.
+    fr: >-
+      Le rapport poussée/poids compare la poussée d'une fusée à son poids au sol : au-dessus de 1,
+      la poussée vainc la gravité et le véhicule décolle ; en dessous, il reste sur le pas de tir.
+      La Saturn V, la plus grande fusée jamais construite, décollait avec à peine 1,2, car ses cinq
+      moteurs F-1 suffisaient tout juste à soulever ses 2 900 tonnes. L'aviation emploie le même
+      chiffre pour décrire la manœuvrabilité d'un avion. C'est le nombre qui caractérise chaque
+      lanceur.
+    zh: >-
+      推重比将火箭的推力与它在地面的重量相比较：比值大于1时，推力克服重力，飞行器起飞；小于1时则停在发射台上。
+      有史以来最大的火箭土星五号仅以约1.2的推重比起飞，因为它的五台F-1发动机才刚刚够抬起2900吨的箭体。
+      航空界也用同一数字描述飞机的机动能力。这是表征每一种运载火箭的数字。
+    ja: >-
+      推力重量比は、ロケットの推力を地上での重量と比較する指標である。1を超えれば推力が重力に打ち勝ち、
+      機体は離陸し、1未満なら発射台上に留まる。史上最大のロケットであるサターンVは、わずか1.2前後の
+      推力重量比で離陸した。5基のF-1エンジンが、2900トンの機体を持ち上げるのがやっとだったからだ。
+      航空の分野でも、飛行機の機動性を表すために同じ数値が使われる。あらゆるロケットを特徴づける数字である。
+  timeline:
+    - year: "1944"
+      label:
+        es: >-
+          El V-2 alemán se convierte en el primer gran cohete cuyo despegue exige TWR > 1.
+        en: >-
+          The German V-2 becomes the first large rocket whose liftoff demands TWR > 1.
+        pt: >-
+          O V-2 alemão se torna o primeiro grande foguete cuja decolagem exige TWR > 1.
+        fr: >-
+          Le V-2 allemand devient la première grande fusée dont le décollage exige TWR > 1.
+        zh: >-
+          德国V-2成为第一枚起飞时要求推重比大于1的大型火箭。
+        ja: >-
+          ドイツのV-2が、TWR > 1を必要とする初の大型ロケットとなる。
+    - year: "1967"
+      label:
+        es: >-
+          El Saturno V del Apolo despega con un TWR de solo 1.2, el mínimo viable.
+        en: >-
+          Apollo's Saturn V lifts off with a TWR of barely 1.2, the viable minimum.
+        pt: >-
+          O Saturno V da Apollo decola com um TWR de apenas 1,2, o mínimo viável.
+        fr: >-
+          La Saturn V d'Apollo décolle avec un TWR de seulement 1,2, le minimum viable.
+        zh: >-
+          阿波罗的土星五号仅以1.2的推重比起飞，这是可行的最低值。
+        ja: >-
+          アポロのサターンVが、ぎりぎり成立する最低値である1.2のTWRで離陸する。
+    - year: "1981"
+      label:
+        es: >-
+          El transbordador espacial depende de sus aceleradores sólidos para superar TWR > 1.
+        en: >-
+          The Space Shuttle relies on its solid boosters to push TWR above 1.
+        pt: >-
+          O ônibus espacial depende de seus aceleradores sólidos para superar TWR > 1.
+        fr: >-
+          La navette spatiale compte sur ses propulseurs à poudre pour dépasser TWR > 1.
+        zh: >-
+          航天飞机依靠其固体助推器使推重比超过1。
+        ja: >-
+          スペースシャトルは、TWRを1以上にするために固体ブースターに依存する。
+    - year: Hoy
+      label:
+        es: >-
+          El Falcon 9 despega con un TWR de unos 1.3, muy distinto de las cifras del Saturno V.
+        en: >-
+          The Falcon 9 lifts off with a TWR of about 1.3, far from the Saturn V's figures.
+        pt: >-
+          O Falcon 9 decola com um TWR de cerca de 1,3, bem diferente dos valores do Saturno V.
+        fr: >-
+          La Falcon 9 décolle avec un TWR d'environ 1,3, bien loin des chiffres de la Saturn V.
+        zh: >-
+          猎鹰9号以约1.3的推重比起飞，与土星五号的数值大不相同。
+        ja: >-
+          ファルコン9は約1.3のTWRで離陸する。サターンVの数値とは大きく異なる。
+  useCases:
+    - title:
+        es: Vehículos de lanzamiento
+        en: Launch vehicles
+        pt: Veículos de lançamento
+        fr: Lanceurs
+        zh: 运载火箭
+        ja: ロケット
+      description:
+        es: >-
+          Define si un cohete puede despegar de la plataforma y con qué aceleración inicial.
+        en: >-
+          It defines whether a rocket can lift off and with what initial acceleration.
+        pt: >-
+          Define se um foguete consegue decolar e com qual aceleração inicial.
+        fr: >-
+          Elle définit si une fusée peut décoller et avec quelle accélération initiale.
+        zh: >-
+          决定火箭能否起飞，以及初始加速度为多少。
+        ja: >-
+          ロケットが離陸できるかどうかと、その初期加速度を定義する。
+    - title:
+        es: Aviación
+        en: Aviation
+        pt: Aviação
+        fr: Aviation
+        zh: 航空
+        ja: 航空
+      description:
+        es: >-
+          Un caza con TWR > 1 puede subir en vertical; los aviones comerciales no lo necesitan.
+        en: >-
+          A fighter with TWR > 1 can climb vertically; commercial airliners do not need it.
+        pt: >-
+          Um caça com TWR > 1 consegue subir na vertical; aviões comerciais não precisam.
+        fr: >-
+          Un chasseur avec TWR > 1 peut grimper à la verticale ; les avions de ligne n'en ont pas
+          besoin.
+        zh: >-
+          推重比大于1的战斗机可以垂直爬升；商用客机则不需要。
+        ja: >-
+          TWR > 1の戦闘機は垂直に上昇できる。旅客機にそれは必要ない。
+    - title:
+        es: Misiones lunares
+        en: Lunar missions
+        pt: Missões lunares
+        fr: Missions lunaires
+        zh: 月球任务
+        ja: 月面ミッション
+      description:
+        es: >-
+          Despegar de la Luna exige TWR > 1 con la gravedad lunar, mucho menor que la terrestre.
+        en: >-
+          Leaving the Moon demands TWR > 1 under lunar gravity, far weaker than Earth's.
+        pt: >-
+          Decolar da Lua exige TWR > 1 com a gravidade lunar, muito menor que a terrestre.
+        fr: >-
+          Quitter la Lune exige TWR > 1 sous la gravité lunaire, bien plus faible que celle de la
+          Terre.
+        zh: >-
+          在比地球弱得多的月球重力下，离开月球仍要求推重比大于1。
+        ja: >-
+          地球よりはるかに弱い月の重力下でも、月を離れるにはTWR > 1が必要である。
+    - title:
+        es: Pruebas estáticas
+        en: Static fire tests
+        pt: Testes estáticos
+        fr: Essais statiques
+        zh: 静态点火测试
+        ja: 地上燃焼試験
+      description:
+        es: >-
+          En tierra se fija el cohete y se mide el empuje real para verificar el TWR calculado.
+        en: >-
+          On the ground the rocket is held down and real thrust is measured to verify the computed
+          TWR.
+        pt: >-
+          No solo, o foguete é preso e o empuxo real é medido para verificar o TWR calculado.
+        fr: >-
+          Au sol, la fusée est maintenue et la poussée réelle est mesurée pour vérifier le TWR
+          calculé.
+        zh: >-
+          在地面固定火箭，测量实际推力，以验证计算出的推重比。
+        ja: >-
+          地上でロケットを固定し、実推力を測定して計算上のTWRを検証する。
+  example:
+    title:
+      es: Un lanzador pesado
+      en: A heavy launcher
+      pt: Um lançador pesado
+      fr: Un lanceur lourd
+      zh: 重型运载火箭
+      ja: 大型ロケット
+    lines:
+      - es: F = 30 MN, m = 2500 t, g = 9.81 m/s²
+        en: F = 30 MN, m = 2500 t, g = 9.81 m/s²
+        pt: F = 30 MN, m = 2500 t, g = 9,81 m/s²
+        fr: F = 30 MN, m = 2500 t, g = 9,81 m/s²
+        zh: F = 30 兆牛，m = 2500 吨，g = 9.81 米/秒²
+        ja: F = 30 MN、m = 2500 t、g = 9.81 m/s²
+      - es: m·g = 2500×10³ kg × 9.81 ≈ 24.5×10⁶ N
+        en: m·g = 2500×10³ kg × 9.81 ≈ 24.5×10⁶ N
+        pt: m·g = 2500×10³ kg × 9,81 ≈ 24,5×10⁶ N
+        fr: m·g = 2500×10³ kg × 9,81 ≈ 24,5×10⁶ N
+        zh: m·g = 2500×10³ 千克 × 9.81 ≈ 24.5×10⁶ 牛
+        ja: m·g = 2500×10³ kg × 9.81 ≈ 24.5×10⁶ N
+      - es: TWR = F/(m·g)
+        en: TWR = F/(m·g)
+        pt: TWR = F/(m·g)
+        fr: TWR = F/(m·g)
+        zh: TWR = F/(m·g)
+        ja: TWR = F/(m·g)
+      - es: TWR = 30×10⁶ / 24.5×10⁶
+        en: TWR = 30×10⁶ / 24.5×10⁶
+        pt: TWR = 30×10⁶ / 24,5×10⁶
+        fr: TWR = 30×10⁶ / 24,5×10⁶
+        zh: TWR = 30×10⁶ / 24.5×10⁶
+        ja: TWR = 30×10⁶ / 24.5×10⁶
+      - es: TWR ≈ 1.22
+        en: TWR ≈ 1.22
+        pt: TWR ≈ 1,22
+        fr: TWR ≈ 1,22
+        zh: TWR ≈ 1.22
+        ja: TWR ≈ 1.22
+      - es: "TWR > 1: el cohete puede despegar"
+        en: "TWR > 1: the rocket can lift off"
+        pt: "TWR > 1: o foguete consegue decolar"
+        fr: "TWR > 1 : la fusée peut décoller"
+        zh: "TWR > 1：火箭可以起飞"
+        ja: "TWR > 1：ロケットは離陸できる"

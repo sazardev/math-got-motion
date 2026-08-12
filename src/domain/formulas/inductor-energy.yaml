@@ -1,0 +1,346 @@
+id: inductor-energy
+title:
+  es: Energía de un Inductor
+  en: Inductor Energy
+  pt: Energia de um Indutor
+  fr: Énergie d'un Inducteur
+  zh: 电感器储能
+  ja: インダクタのエネルギー
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: La energía almacenada en el inductor, en julios.
+      en: The energy stored in the inductor, in joules.
+      pt: A energia armazenada no indutor, em joules.
+      fr: L'énergie stockée dans l'inducteur, en joules.
+      zh: 电感器中储存的能量,单位为焦耳。
+      ja: インダクタに蓄えられたエネルギー。単位はジュール。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: half
+    type: number
+    value: "½"
+    explanation:
+      es: "El factor un medio: la corriente crece linealmente al energizar la bobina, así que el trabajo total es la mitad del producto final."
+      en: "The one-half factor: since current rises linearly when the coil energizes, the total work is half the final product."
+      pt: "O fator meio: como a corrente cresce linearmente ao energizar a bobina, o trabalho total é a metade do produto final."
+      fr: "Le facteur un demi : le courant croissant linéairement lors de la mise sous tension de la bobine, le travail total vaut la moitié du produit final."
+      zh: "二分之一因子:通电时电流线性上升,所以总功为最终乘积的一半。"
+      ja: "2分の1の係数:通電時は電流が直線的に増えるため、全仕事量は最終的な積の半分になる。"
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación de magnitudes.
+      en: Multiplication of quantities.
+      pt: Multiplicação de grandezas.
+      fr: Multiplication de grandeurs.
+      zh: 数量相乘。
+      ja: 量の掛け算。
+  - id: l
+    type: variable
+    value: L
+    explanation:
+      es: La inductancia de la bobina, en henrios.
+      en: The inductance of the coil, in henries.
+      pt: A indutância da bobina, em henries.
+      fr: L'inductance de la bobine, en henrys.
+      zh: 线圈的电感,单位为亨利。
+      ja: コイルのインダクタンス。単位はヘンリー。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación de magnitudes.
+      en: Multiplication of quantities.
+      pt: Multiplicação de grandezas.
+      fr: Multiplication de grandeurs.
+      zh: 数量相乘。
+      ja: 量の掛け算。
+  - id: i
+    type: variable
+    value: I
+    explanation:
+      es: La corriente que circula por el inductor.
+      en: The current flowing through the inductor.
+      pt: A corrente que circula pelo indutor.
+      fr: Le courant qui circule dans l'inducteur.
+      zh: 流过电感器的电流。
+      ja: インダクタを流れる電流。
+  - id: square
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Al cuadrado: la energía crece con el cuadrado de la corriente."
+      en: "Squared: the energy grows with the square of the current."
+      pt: "Ao quadrado: a energia cresce com o quadrado da corrente."
+      fr: "Au carré : l'énergie croît avec le carré du courant."
+      zh: "平方:能量随电流的平方增长。"
+      ja: "2乗:エネルギーは電流の2乗に比例して増える。"
+context:
+  author:
+    es: Basada en el trabajo de Faraday y Henry
+    en: Based on the work of Faraday and Henry
+    pt: Baseada no trabalho de Faraday e Henry
+    fr: D'après les travaux de Faraday et Henry
+    zh: 基于法拉第和亨利的研究成果
+    ja: ファラデーとヘンリーの研究に基づく
+  era:
+    es: Inglaterra y EE. UU., s. XIX
+    en: England and the USA, 19th century
+    pt: Inglaterra e EUA, séc. XIX
+    fr: Angleterre et États-Unis, XIXᵉ siècle
+    zh: 英国和美国,19世纪
+    ja: イギリスと米国、19世紀
+  history:
+    es: >-
+      Un inductor que conduce corriente almacena energía en el campo magnético que rodea su bobina, y
+      esa energía es exactamente ½·L·I², el análogo magnético de la ½·C·V² de los condensadores.
+      Cuando la corriente cesa de golpe, el campo colapsa y devuelve la energía como una elevada
+      tensión, propiedad que Michael Faraday y Joseph Henry habían explorado en sus experimentos de
+      inducción a principios del siglo XIX. Ese comportamiento sustenta los convertidores conmutados
+      de las fuentes de alimentación modernas y las bobinas de encendido de los motores de
+      combustión, y explica por qué los motores eléctricos reclaman una ráfaga de corriente al
+      arrancar: deben crear el campo magnético desde cero.
+    en: >-
+      An inductor carrying current stores energy in the magnetic field around its coil, and that
+      energy is exactly ½·L·I², the magnetic twin of the capacitor's ½·C·V². When the current is cut
+      suddenly, the field collapses and returns the energy as a high voltage, a property Michael
+      Faraday and Joseph Henry had explored in their induction experiments in the early 19th
+      century. That behaviour underpins the switched-mode power supplies of modern electronics and
+      the ignition coils of combustion engines, and explains why electric motors demand a burst of
+      current when starting: they must build the magnetic field from nothing.
+    pt: >-
+      Um indutor conduzindo corrente armazena energia no campo magnético ao redor de sua bobina, e
+      essa energia é exatamente ½·L·I², o gêmeo magnético do ½·C·V² dos capacitores. Quando a
+      corrente cessa bruscamente, o campo colapsa e devolve a energia como uma alta tensão,
+      propriedade que Michael Faraday e Joseph Henry exploraram em seus experimentos de indução no
+      início do século XIX. Esse comportamento sustenta as fontes chaveadas da eletrônica moderna e
+      as bobinas de ignição dos motores de combustão, e explica por que os motores elétricos exigem
+      uma rajada de corrente ao partir: precisam construir o campo magnético do zero.
+    fr: >-
+      Un inducteur parcouru par un courant stocke de l'énergie dans le champ magnétique qui entoure
+      sa bobine, et cette énergie vaut exactement ½·L·I², le jumeau magnétique du ½·C·V² du
+      condensateur. Lorsque le courant est coupé brusquement, le champ s'effondre et restitue
+      l'énergie sous forme d'une haute tension, propriété que Michael Faraday et Joseph Henry avaient
+      explorée dans leurs expériences d'induction au début du XIXᵉ siècle. Ce comportement est à la
+      base des alimentations à découpage de l'électronique moderne et des bobines d'allumage des
+      moteurs à combustion, et explique pourquoi les moteurs électriques réclament une brusque montée
+      de courant au démarrage : ils doivent bâtir le champ magnétique de zéro.
+    zh: >-
+      载流电感器把能量储存在线圈周围的磁场中,这部分能量恰好是 ½·L·I²,是电容器 ½·C·V² 的磁性孪生。当电流骤然切断时,
+      磁场坍塌,以高压的形式把能量送回电路,这一性质早在19世纪初迈克尔·法拉第和约瑟夫·亨利的感应实验中就得到探索。
+      这一行为构成了现代开关电源和燃油发动机点火线圈的基础,也解释了为什么电动机启动时会要求一股电流冲击:它们必须
+      从零建立磁场。
+    ja: >-
+      電流を流すインダクタは、そのコイルの周囲の磁界にエネルギーを蓄える。そのエネルギーはまさに ½·L·I² であり、
+      コンデンサの ½·C·V² の磁気的な双子である。電流を急に断つと磁界が崩壊し、エネルギーは高電圧となって回路に戻
+      される。この性質は19世紀初頭にマイケル・ファラデーとジョセフ・ヘンリーが誘導実験で調べたものである。この振
+      る舞いは現代の電源のスイッチング電源や内燃機関の点火コイルの基礎となり、電動モーターが起動時に電流のバースト
+      を要求する理由も説明する。磁界をゼロから作らねばならないからだ。
+  timeline:
+    - year: "1820"
+      label:
+        es: >-
+          Oersted descubre que una corriente desvía la aguja de una brújula, uniendo electricidad y
+          magnetismo.
+        en: >-
+          Oersted discovers that a current deflects a compass needle, linking electricity and
+          magnetism.
+        pt: >-
+          Oersted descobre que uma corrente desvia a agulha de uma bússola, unindo eletricidade e
+          magnetismo.
+        fr: >-
+          Oersted découvre qu'un courant dévie l'aiguille d'une boussole, reliant électricité et
+          magnétisme.
+        zh: >-
+          奥斯特发现电流会使指南针偏转,把电和磁联系起来。
+        ja: >-
+          エルステッドが、電流が磁針を振らせることを発見し、電気と磁気を結びつける。
+    - year: "1831"
+      label:
+        es: >-
+          Faraday y Henry descubren por separado la inducción electromagnética.
+        en: >-
+          Faraday and Henry independently discover electromagnetic induction.
+        pt: >-
+          Faraday e Henry descobrem separadamente a indução eletromagnética.
+        fr: >-
+          Faraday et Henry découvrent indépendamment l'induction électromagnétique.
+        zh: >-
+          法拉第和亨利各自独立发现电磁感应。
+        ja: >-
+          ファラデーとヘンリーがそれぞれ電磁誘導を発見する。
+    - year: "1861"
+      label:
+        es: >-
+          Maxwell enmarca la energía del campo magnético dentro de sus ecuaciones del
+          electromagnetismo.
+        en: >-
+          Maxwell frames magnetic field energy within his equations of electromagnetism.
+        pt: >-
+          Maxwell enquadra a energia do campo magnético em suas equações do eletromagnetismo.
+        fr: >-
+          Maxwell inscrit l'énergie du champ magnétique dans ses équations de l'électromagnétisme.
+        zh: >-
+          麦克斯韦把磁场能量纳入其电磁方程组中。
+        ja: >-
+          マクスウェルが磁界のエネルギーを電磁気の方程式の中に位置づける。
+    - year: Hoy
+      label:
+        es: >-
+          Fuentes conmutadas y bobinas de encendido acumulan y liberan ½·L·I² en cada ciclo.
+        en: >-
+          Switching supplies and ignition coils store and release ½·L·I² every cycle.
+        pt: >-
+          Fontes chaveadas e bobinas de ignição acumulam e liberam ½·L·I² a cada ciclo.
+        fr: >-
+          Alimentations à découpage et bobines d'allumage stockent et libèrent ½·L·I² à chaque
+          cycle.
+        zh: >-
+          开关电源和点火线圈在每个循环中储存并释放 ½·L·I²。
+        ja: >-
+          スイッチング電源と点火コイルは毎周期 ½·L·I² を蓄え、放出する。
+  useCases:
+    - title:
+        es: Fuentes de alimentación conmutadas
+        en: Switching power supplies
+        pt: Fontes chaveadas
+        fr: Alimentations à découpage
+        zh: 开关电源
+        ja: スイッチング電源
+      description:
+        es: >-
+          El inductor almacena energía mientras conduce y la entrega cuando el interruptor se abre.
+        en: >-
+          The inductor stores energy while conducting and delivers it when the switch opens.
+        pt: >-
+          O indutor armazena energia enquanto conduz e a entrega quando a chave abre.
+        fr: >-
+          L'inducteur stocke l'énergie pendant la conduction et la restitue quand l'interrupteur
+          s'ouvre.
+        zh: >-
+          电感在导通时储存能量,在开关断开时将其释放。
+        ja: >-
+          インダクタは導通中にエネルギーを蓄え、スイッチが開くとそれを放出する。
+    - title:
+        es: Sistemas de encendido
+        en: Ignition systems
+        pt: Sistemas de ignição
+        fr: Systèmes d'allumage
+        zh: 点火系统
+        ja: 点火システム
+      description:
+        es: >-
+          La bobina de encendido colapsa su campo y genera la alta tensión que salta en la bujía.
+        en: >-
+          The ignition coil collapses its field and generates the high voltage that jumps at the
+          spark plug.
+        pt: >-
+          A bobina de ignição colapsa seu campo e gera a alta tensão que salta na vela.
+        fr: >-
+          La bobine d'allumage effondre son champ et produit la haute tension qui saute à la bougie.
+        zh: >-
+          点火线圈使其磁场坍塌,产生在火花塞处跳火的高压。
+        ja: >-
+          点火コイルは磁界を崩壊させ、スパークプラグで火花を飛ばす高電圧を生み出す。
+    - title:
+        es: Motores eléctricos
+        en: Electric motors
+        pt: Motores elétricos
+        fr: Moteurs électriques
+        zh: 电动机
+        ja: 電動モーター
+      description:
+        es: >-
+          Al arrancar, el motor reclama una ráfaga de corriente para construir el campo magnético.
+        en: >-
+          On startup, the motor demands a burst of current to build the magnetic field.
+        pt: >-
+          Ao partir, o motor exige uma rajada de corrente para construir o campo magnético.
+        fr: >-
+          Au démarrage, le moteur réclame une brusque montée de courant pour bâtir le champ
+          magnétique.
+        zh: >-
+          启动时,电动机要求一股电流冲击来建立磁场。
+        ja: >-
+          起動時にモーターは磁界を作るため、電流のバーストを要求する。
+    - title:
+        es: Electrónica de potencia
+        en: Power electronics
+        pt: Eletrônica de potência
+        fr: Électronique de puissance
+        zh: 电力电子技术
+        ja: パワーエレクトロニクス
+      description:
+        es: >-
+          Convertidores elevadores y reductores transfieren la energía del campo de un inductor
+          entre etapas.
+        en: >-
+          Boost and buck converters transfer an inductor's field energy between stages.
+        pt: >-
+          Conversores elevadores e abaixadores transferem a energia do campo de um indutor entre
+          etapas.
+        fr: >-
+          Les convertisseurs élévateurs et abaisseurs transfèrent l'énergie du champ d'un inducteur
+          entre les étages.
+        zh: >-
+          升压和降压变换器在级间传递电感磁场的能量。
+        ja: >-
+          昇圧・降圧コンバータは、インダクタの磁界のエネルギーを段間で受け渡す。
+  example:
+    title:
+      es: Energía de un inductor
+      en: Energy of an inductor
+      pt: Energia de um indutor
+      fr: Énergie d'un inducteur
+      zh: 电感器的能量
+      ja: インダクタのエネルギー
+    lines:
+      - es: L = 0.5 H
+        en: L = 0.5 H
+        pt: L = 0.5 H
+        fr: L = 0.5 H
+        zh: L = 0.5 H
+        ja: L = 0.5 H
+      - es: I = 10 A
+        en: I = 10 A
+        pt: I = 10 A
+        fr: I = 10 A
+        zh: I = 10 A
+        ja: I = 10 A
+      - es: E = ½ · L · I²
+        en: E = ½ · L · I²
+        pt: E = ½ · L · I²
+        fr: E = ½ · L · I²
+        zh: E = ½ · L · I²
+        ja: E = ½ · L · I²
+      - es: E = 0,5 × 0,5 × 100
+        en: E = 0.5 × 0.5 × 100
+        pt: E = 0,5 × 0,5 × 100
+        fr: E = 0,5 × 0,5 × 100
+        zh: E = 0.5 × 0.5 × 100
+        ja: E = 0.5 × 0.5 × 100
+      - es: E = 25 J
+        en: E = 25 J
+        pt: E = 25 J
+        fr: E = 25 J
+        zh: E = 25 J
+        ja: E = 25 J

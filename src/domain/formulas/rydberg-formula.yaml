@@ -1,0 +1,431 @@
+id: rydberg-formula
+title:
+  es: Fórmula de Rydberg
+  en: Rydberg Formula
+  pt: Fórmula de Rydberg
+  fr: Formule de Rydberg
+  zh: 里德伯公式
+  ja: リュードベリの公式
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: "Un numerador unitario: la fórmula da el inverso de la longitud de onda."
+      en: "A unit numerator: the formula yields the inverse of the wavelength."
+      pt: "Um numerador unitário: a fórmula fornece o inverso do comprimento de onda."
+      fr: "Un numérateur unitaire : la formule donne l'inverse de la longueur d'onde."
+      zh: 分子为1:公式给出波长的倒数。
+      ja: 分子は1:この公式は波長の逆数を表す。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: "División: el inverso de la longitud de onda se expresa en número de onda."
+      en: "Division: the inverse wavelength is expressed as a wavenumber."
+      pt: "Divisão: o inverso do comprimento de onda é expresso como número de onda."
+      fr: "Division : l'inverse de la longueur d'onde s'exprime en nombre d'onde."
+      zh: 除法:波长的倒数用波数表示。
+      ja: 割り算:波長の逆数は波数として表される。
+  - id: lambda
+    type: variable
+    value: λ
+    explanation:
+      es: La longitud de onda de la luz emitida o absorbida por el átomo.
+      en: The wavelength of the light the atom emits or absorbs.
+      pt: O comprimento de onda da luz emitida ou absorvida pelo átomo.
+      fr: La longueur d'onde de la lumière émise ou absorbée par l'atome.
+      zh: 原子发射或吸收的光的波长。
+      ja: 原子が放出または吸収する光の波長。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: r
+    type: constant
+    value: R
+    explanation:
+      es: La constante de Rydberg, R ≈ 1.097×10⁷ m⁻¹ para el hidrógeno.
+      en: The Rydberg constant, R ≈ 1.097×10⁷ m⁻¹ for hydrogen.
+      pt: A constante de Rydberg, R ≈ 1,097×10⁷ m⁻¹ para o hidrogênio.
+      fr: La constante de Rydberg, R ≈ 1,097×10⁷ m⁻¹ pour l'hydrogène.
+      zh: 里德伯常数,氢的R ≈ 1.097×10⁷ m⁻¹。
+      ja: リュードベリ定数。水素ではR ≈ 1.097×10⁷ m⁻¹。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: "Multiplicación: la constante se multiplica por la diferencia de términos."
+      en: "Multiplication: the constant is multiplied by the difference of terms."
+      pt: "Multiplicação: a constante é multiplicada pela diferença dos termos."
+      fr: "Multiplication : la constante est multipliée par la différence des termes."
+      zh: 乘法:常数乘以各项之差。
+      ja: 掛け算:定数に項の差を掛ける。
+  - id: paren-open
+    type: operator
+    value: (
+    explanation:
+      es: El paréntesis agrupa la diferencia de dos términos espectrales.
+      en: The parenthesis groups the difference of two spectral terms.
+      pt: O parêntese agrupa a diferença de dois termos espectrais.
+      fr: La parenthèse regroupe la différence de deux termes spectraux.
+      zh: 括号将两个谱项的差组合在一起。
+      ja: 括弧は二つのスペクトル項の差をまとめる。
+  - id: one-inner
+    type: number
+    value: "1"
+    explanation:
+      es: El numerador unitario de cada término espectral.
+      en: The unit numerator of each spectral term.
+      pt: O numerador unitário de cada termo espectral.
+      fr: Le numérateur unitaire de chaque terme spectral.
+      zh: 每个谱项的分子为1。
+      ja: 各スペクトル項の分子は1。
+  - id: slash-inner
+    type: operator
+    value: /
+    explanation:
+      es: "División: cada término es el inverso de un cuadrado."
+      en: "Division: each term is the inverse of a square."
+      pt: "Divisão: cada termo é o inverso de um quadrado."
+      fr: "Division : chaque terme est l'inverse d'un carré."
+      zh: 除法:每一项都是一个平方的倒数。
+      ja: 割り算:各項は平方数の逆数。
+  - id: n1-squared
+    type: variable
+    value: n₁²
+    explanation:
+      es: El número cuántico de la órbita inferior, elevado al cuadrado.
+      en: The quantum number of the lower orbit, squared.
+      pt: O número quântico da órbita inferior, elevado ao quadrado.
+      fr: Le nombre quantique de l'orbite inférieure, au carré.
+      zh: 较低轨道的量子数的平方。
+      ja: 下側の軌道の量子数の2乗。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "Menos: se resta el término de la órbita superior al de la inferior."
+      en: "Minus: the upper orbit's term is subtracted from the lower one."
+      pt: "Menos: subtrai-se o termo da órbita superior do da inferior."
+      fr: "Moins : on soustrait le terme de l'orbite supérieure à celui de l'inférieure."
+      zh: 减号:用低轨道的项减去高轨道的项。
+      ja: マイナス:上側の軌道の項を下側から引く。
+  - id: one-inner-2
+    type: number
+    value: "1"
+    explanation:
+      es: El numerador unitario del segundo término espectral.
+      en: The unit numerator of the second spectral term.
+      pt: O numerador unitário do segundo termo espectral.
+      fr: Le numérateur unitaire du second terme spectral.
+      zh: 第二个谱项的分子为1。
+      ja: 二つ目のスペクトル項の分子は1。
+  - id: slash-inner-2
+    type: operator
+    value: /
+    explanation:
+      es: "División: el segundo término también es un inverso de cuadrado."
+      en: "Division: the second term is also an inverse square."
+      pt: "Divisão: o segundo termo também é um inverso de quadrado."
+      fr: "Division : le second terme est aussi un inverse de carré."
+      zh: 除法:第二项同样是平方的倒数。
+      ja: 割り算:二つ目の項も平方数の逆数。
+  - id: n2-squared
+    type: variable
+    value: n₂²
+    explanation:
+      es: El número cuántico de la órbita superior, elevado al cuadrado.
+      en: The quantum number of the upper orbit, squared.
+      pt: O número quântico da órbita superior, elevado ao quadrado.
+      fr: Le nombre quantique de l'orbite supérieure, au carré.
+      zh: 较高轨道的量子数的平方。
+      ja: 上側の軌道の量子数の2乗。
+  - id: paren-close
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la agrupación de los dos términos espectrales.
+      en: Closes the grouping of the two spectral terms.
+      pt: Fecha o agrupamento dos dois termos espectrais.
+      fr: Ferme le regroupement des deux termes spectraux.
+      zh: 结束两个谱项的分组。
+      ja: 二つのスペクトル項のまとまりを閉じる。
+context:
+  author:
+    es: Johannes Rydberg
+    en: Johannes Rydberg
+    pt: Johannes Rydberg
+    fr: Johannes Rydberg
+    zh: 约翰内斯·里德伯
+    ja: ヨハネス・リュードベリ
+  era:
+    es: Suecia, 1854–1919 · publicada en 1888
+    en: Sweden, 1854–1919 · published in 1888
+    pt: Suécia, 1854–1919 · publicada em 1888
+    fr: Suède, 1854–1919 · publiée en 1888
+    zh: 瑞典,1854–1919年 · 1888年发表
+    ja: スウェーデン、1854–1919年・1888年発表
+  history:
+    es: >-
+      En 1888 el físico sueco Johannes Rydberg, que buscaba regularidades numéricas en las longitudes
+      de onda de los espectros, halló que las líneas del hidrógeno cumplen 1/λ = R·(1/n₁² − 1/n₂²),
+      con R ≈ 1.097×10⁷ m⁻¹. Su fórmula unificaba series como la de Balmer (n₁ = 2, visible) y predijo
+      líneas aún no observadas en el infrarrojo. Rydberg no pudo explicar por qué funcionaba; lo logró
+      Bohr en 1913, cuando su modelo atómico reprodujo la constante a partir de cargas y constantes
+      físicas.
+    en: >-
+      In 1888 the Swedish physicist Johannes Rydberg, searching for numerical regularities in spectral
+      wavelengths, found that hydrogen's lines obey 1/λ = R·(1/n₁² − 1/n₂²), with R ≈ 1.097×10⁷ m⁻¹.
+      His formula unified series such as Balmer's (n₁ = 2, visible) and predicted lines not yet
+      observed in the infrared. Rydberg could not explain why it worked; Bohr did in 1913, when his
+      atomic model reproduced the constant from charges and physical constants.
+    pt: >-
+      Em 1888, o físico sueco Johannes Rydberg, que procurava regularidades numéricas nos comprimentos
+      de onda dos espectros, descobriu que as linhas do hidrogênio obedecem a 1/λ = R·(1/n₁² − 1/n₂²),
+      com R ≈ 1,097×10⁷ m⁻¹. Sua fórmula unificava séries como a de Balmer (n₁ = 2, visível) e previu
+      linhas ainda não observadas no infravermelho. Rydberg não conseguia explicar por que funcionava;
+      Bohr o fez em 1913, quando seu modelo atômico reproduziu a constante a partir de cargas e
+      constantes físicas.
+    fr: >-
+      En 1888, le physicien suédois Johannes Rydberg, cherchant des régularités numériques dans les
+      longueurs d'onde des spectres, découvrit que les raies de l'hydrogène obéissent à
+      1/λ = R·(1/n₁² − 1/n₂²), avec R ≈ 1,097×10⁷ m⁻¹. Sa formule unifiait des séries comme celle de
+      Balmer (n₁ = 2, visible) et prédisait des raies encore inobservées dans l'infrarouge. Rydberg ne
+      pouvait expliquer pourquoi elle fonctionnait ; Bohr y parvint en 1913, quand son modèle atomique
+      reproduisit la constante à partir des charges et des constantes physiques.
+    zh: >-
+      1888年,瑞典物理学家约翰内斯·里德伯在寻找光谱波长的数值规律时发现,氢的谱线满足
+      1/λ = R·(1/n₁² − 1/n₂²),其中R ≈ 1.097×10⁷ m⁻¹。他的公式统一了巴耳末系(n₁ = 2,可见光)等谱线系,
+      并预言了红外区尚未观测到的谱线。里德伯无法解释其原理;1913年玻尔做到了,他的原子模型用电荷和物理常量
+      重现了这一常数。
+    ja: >-
+      1888年、スペクトルの波長に数値的な規則性を探していたスウェーデンの物理学者ヨハネス・リュードベリは、
+      水素のスペクトル線が1/λ = R·(1/n₁² − 1/n₂²)に従うことを見いだした。ここでR ≈ 1.097×10⁷ m⁻¹である。
+      彼の公式はバルマー系列(n₁ = 2,可視光)などの系列を統一し、まだ観測されていない赤外線のスペクトル線を予言した。
+      リュードベリはその理由を説明できなかった。1913年にボーアが、その原子モデルで電荷と物理定数から定数を
+      再現することで説明した。
+  timeline:
+    - year: "1885"
+      label:
+        es: >-
+          Balmer publica su serie empírica para las líneas visibles del hidrógeno, un caso particular
+          de la fórmula de Rydberg.
+        en: >-
+          Balmer publishes his empirical series for hydrogen's visible lines, a special case of the
+          Rydberg formula.
+        pt: >-
+          Balmer publica sua série empírica para as linhas visíveis do hidrogênio, um caso particular
+          da fórmula de Rydberg.
+        fr: >-
+          Balmer publie sa série empirique pour les raies visibles de l'hydrogène, un cas particulier
+          de la formule de Rydberg.
+        zh: >-
+          巴耳末发表了他关于氢可见谱线的经验系列,这是里德伯公式的一个特例。
+        ja: >-
+          バルマーが水素の可視スペクトル線に関する経験的な系列を発表。リュードベリの公式の特別な場合である。
+    - year: "1888"
+      label:
+        es: >-
+          Rydberg generaliza el resultado y publica la fórmula que describe todas las series del
+          espectro del hidrógeno.
+        en: >-
+          Rydberg generalizes the result and publishes the formula describing every hydrogen spectral
+          series.
+        pt: >-
+          Rydberg generaliza o resultado e publica a fórmula que descreve todas as séries do espectro
+          do hidrogênio.
+        fr: >-
+          Rydberg généralise le résultat et publie la formule qui décrit toutes les séries du spectre
+          de l'hydrogène.
+        zh: >-
+          里德伯将结果推广,发表了描述氢光谱所有谱线系的公式。
+        ja: >-
+          リュードベリが結果を一般化し、水素の全スペクトル系列を記述する公式を発表する。
+    - year: "1913"
+      label:
+        es: >-
+          El modelo atómico de Bohr deriva la constante de Rydberg a partir de constantes físicas
+          fundamentales.
+        en: >-
+          Bohr's atomic model derives the Rydberg constant from fundamental physical constants.
+        pt: >-
+          O modelo atômico de Bohr deriva a constante de Rydberg a partir de constantes físicas
+          fundamentais.
+        fr: >-
+          Le modèle atomique de Bohr dérive la constante de Rydberg à partir des constantes physiques
+          fondamentales.
+        zh: >-
+          玻尔的原子模型从基本物理常量推导出了里德伯常数。
+        ja: >-
+          ボーアの原子モデルが、基本的な物理定数からリュードベリ定数を導出する。
+    - year: Hoy
+      label:
+        es: >-
+          La constante de Rydberg, medida con precisión extrema, es un estándar de la espectroscopia
+          moderna.
+        en: >-
+          The Rydberg constant, measured with extreme precision, is a standard of modern spectroscopy.
+        pt: >-
+          A constante de Rydberg, medida com precisão extrema, é um padrão da espectroscopia moderna.
+        fr: >-
+          La constante de Rydberg, mesurée avec une extrême précision, est un étalon de la
+          spectroscopie moderne.
+        zh: >-
+          以极高精度测量的里德伯常数,是现代光谱学的一个标准。
+        ja: >-
+          極めて高い精度で測定されるリュードベリ定数は、現代分光の標準となっている。
+  useCases:
+    - title:
+        es: Espectroscopía astronómica
+        en: Astronomical spectroscopy
+        pt: Espectroscopia astronômica
+        fr: Spectroscopie astronomique
+        zh: 天文光谱学
+        ja: 天体分光
+      description:
+        es: >-
+          Identifica los elementos presentes en estrellas y nebulosas comparando la posición de sus
+          líneas espectrales con las predichas por la fórmula.
+        en: >-
+          It identifies the elements in stars and nebulae by matching the position of their spectral
+          lines with those the formula predicts.
+        pt: >-
+          Identifica os elementos presentes em estrelas e nebulosas comparando a posição de suas
+          linhas espectrais com as previstas pela fórmula.
+        fr: >-
+          Elle identifie les éléments présents dans les étoiles et les nébuleuses en comparant la
+          position de leurs raies spectrales à celles que la formule prédit.
+        zh: >-
+          通过将星体和星云光谱线的位置与公式预测的谱线进行比较,识别其中存在的元素。
+        ja: >-
+          恒星や星雲のスペクトル線の位置を公式が予測するものと照合し、含まれる元素を特定する。
+    - title:
+        es: Análisis elemental por emisión
+        en: Emission-based elemental analysis
+        pt: Análise elementar por emissão
+        fr: Analyse élémentaire par émission
+        zh: 发射光谱元素分析
+        ja: 発光による元素分析
+      description:
+        es: >-
+          Laboratorios y fundiciones identifican metales y trazas midiendo las longitudes de onda que
+          cada sustancia emite al calentarse.
+        en: >-
+          Laboratories and foundries identify metals and trace elements by measuring the wavelengths
+          each substance emits when heated.
+        pt: >-
+          Laboratórios e fundições identificam metais e elementos-traço medindo os comprimentos de
+          onda que cada substância emite ao ser aquecida.
+        fr: >-
+          Les laboratoires et fonderies identifient les métaux et les éléments traces en mesurant les
+          longueurs d'onde que chaque substance émet lorsqu'on la chauffe.
+        zh: >-
+          实验室和铸造厂通过测量物质受热时发射的波长,来识别金属和微量元素。
+        ja: >-
+          実験室や鋳造所では、物質を加熱したときに放出される波長を測定して金属や微量元素を特定する。
+    - title:
+        es: Espectroscopía láser
+        en: Laser spectroscopy
+        pt: Espectroscopia a laser
+        fr: Spectroscopie laser
+        zh: 激光光谱学
+        ja: レーザー分光
+      description:
+        es: >-
+          La constante de Rydberg, medida con láseres de alta precisión, es una de las constantes
+          físicas más exactamente conocidas.
+        en: >-
+          The Rydberg constant, measured with high-precision lasers, is one of the most accurately
+          known physical constants.
+        pt: >-
+          A constante de Rydberg, medida com lasers de alta precisão, é uma das constantes físicas mais
+          exatamente conhecidas.
+        fr: >-
+          La constante de Rydberg, mesurée avec des lasers de haute précision, est l'une des constantes
+          physiques les plus exactement connues.
+        zh: >-
+          用高精度激光测量的里德伯常数,是已知最精确的物理常数之一。
+        ja: >-
+          高精度レーザーで測定されるリュードベリ定数は、最も正確に知られている物理定数の一つである。
+    - title:
+        es: Física atómica de precisión
+        en: Precision atomic physics
+        pt: Física atômica de precisão
+        fr: Physique atomique de précision
+        zh: 精密原子物理
+        ja: 精密原子物理学
+      description:
+        es: >-
+          Los niveles de energía del hidrógeno, calculados con esta fórmula, sirven para probar la
+          electrodinámica cuántica.
+        en: >-
+          Hydrogen's energy levels, computed with this formula, serve to test quantum electrodynamics.
+        pt: >-
+          Os níveis de energia do hidrogênio, calculados com essa fórmula, servem para testar a
+          eletrodinâmica quântica.
+        fr: >-
+          Les niveaux d'énergie de l'hydrogène, calculés avec cette formule, servent à tester
+          l'électrodynamique quantique.
+        zh: >-
+          用此公式计算的氢能级,可用于检验量子电动力学。
+        ja: >-
+          この公式で計算される水素のエネルギー準位は、量子電磁力学の検証に使われる。
+  example:
+    title:
+      es: La línea roja del hidrógeno
+      en: The red line of hydrogen
+      pt: A linha vermelha do hidrogênio
+      fr: La raie rouge de l'hydrogène
+      zh: 氢的红色谱线
+      ja: 水素の赤いスペクトル線
+    lines:
+      - es: n₁ = 2, n₂ = 3
+        en: n₁ = 2, n₂ = 3
+        pt: n₁ = 2, n₂ = 3
+        fr: n₁ = 2, n₂ = 3
+        zh: n₁ = 2, n₂ = 3
+        ja: n₁ = 2, n₂ = 3
+      - es: 1/λ = R·(1/n₁² − 1/n₂²)
+        en: 1/λ = R·(1/n₁² − 1/n₂²)
+        pt: 1/λ = R·(1/n₁² − 1/n₂²)
+        fr: 1/λ = R·(1/n₁² − 1/n₂²)
+        zh: 1/λ = R·(1/n₁² − 1/n₂²)
+        ja: 1/λ = R·(1/n₁² − 1/n₂²)
+      - es: 1/λ = 1.097×10⁷·(1/4 − 1/9)
+        en: 1/λ = 1.097×10⁷·(1/4 − 1/9)
+        pt: 1/λ = 1,097×10⁷·(1/4 − 1/9)
+        fr: 1/λ = 1,097×10⁷·(1/4 − 1/9)
+        zh: 1/λ = 1.097×10⁷·(1/4 − 1/9)
+        ja: 1/λ = 1.097×10⁷·(1/4 − 1/9)
+      - es: 1/λ = 1.097×10⁷·(5/36)
+        en: 1/λ = 1.097×10⁷·(5/36)
+        pt: 1/λ = 1,097×10⁷·(5/36)
+        fr: 1/λ = 1,097×10⁷·(5/36)
+        zh: 1/λ = 1.097×10⁷·(5/36)
+        ja: 1/λ = 1.097×10⁷·(5/36)
+      - es: λ ≈ 6.563×10⁻⁷ m
+        en: λ ≈ 6.563×10⁻⁷ m
+        pt: λ ≈ 6,563×10⁻⁷ m
+        fr: λ ≈ 6,563×10⁻⁷ m
+        zh: λ ≈ 6.563×10⁻⁷ m
+        ja: λ ≈ 6.563×10⁻⁷ m
+      - es: λ ≈ 656 nm (roja)
+        en: λ ≈ 656 nm (red)
+        pt: λ ≈ 656 nm (vermelha)
+        fr: λ ≈ 656 nm (rouge)
+        zh: λ ≈ 656 nm(红色)
+        ja: λ ≈ 656 nm(赤色)

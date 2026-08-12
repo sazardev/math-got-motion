@@ -1,0 +1,297 @@
+id: lhopitals-rule
+title:
+  es: Regla de L'Hôpital
+  en: L'Hôpital's Rule
+  pt: Regra de L'Hôpital
+  fr: Règle de L'Hôpital
+  zh: 洛必达法则
+  ja: ロピタルの定理
+category:
+  es: Cálculo
+  en: Calculus
+  pt: Cálculo
+  fr: Calcul
+  zh: 微积分
+  ja: 微積分
+nodes:
+  - id: lim
+    type: operator
+    value: lim
+    explanation:
+      es: El límite que se quiere calcular.
+      en: The limit to be computed.
+      pt: O limite que se quer calcular.
+      fr: La limite à calculer.
+      zh: 要求解的极限。
+      ja: 計算したい極限。
+  - id: f
+    type: variable
+    value: f(x)
+    explanation:
+      es: El numerador de la razón indeterminada.
+      en: The numerator of the indeterminate ratio.
+      pt: O numerador da razão indeterminada.
+      fr: Le numérateur du rapport indéterminé.
+      zh: 不定比值的分子。
+      ja: 不定形の比の分子。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: g
+    type: variable
+    value: g(x)
+    explanation:
+      es: El denominador de la razón.
+      en: The denominator of the ratio.
+      pt: O denominador da razão.
+      fr: Le dénominateur du rapport.
+      zh: 比值的分母。
+      ja: 比の分母。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: lim-2
+    type: operator
+    value: lim
+    explanation:
+      es: El límite de las derivadas.
+      en: The limit of the derivatives.
+      pt: O limite das derivadas.
+      fr: La limite des dérivées.
+      zh: 导数之比值的极限。
+      ja: 導関数の比の極限。
+  - id: f-prime
+    type: variable
+    value: f′(x)
+    explanation:
+      es: La derivada del numerador.
+      en: The derivative of the numerator.
+      pt: A derivada do numerador.
+      fr: La dérivée du numérateur.
+      zh: 分子的导数。
+      ja: 分子の導関数。
+  - id: slash-2
+    type: operator
+    value: /
+    explanation:
+      es: Dividida entre.
+      en: Divided by.
+      pt: Dividida por.
+      fr: Divisée par.
+      zh: 除以。
+      ja: で割る。
+  - id: g-prime
+    type: variable
+    value: g′(x)
+    explanation:
+      es: La derivada del denominador.
+      en: The derivative of the denominator.
+      pt: A derivada do denominador.
+      fr: La dérivée du dénominateur.
+      zh: 分母的导数。
+      ja: 分母の導関数。
+context:
+  author:
+    es: Guillaume de L'Hôpital (sobre trabajo de Johann Bernoulli)
+    en: Guillaume de L'Hôpital (based on Johann Bernoulli's work)
+    pt: Guillaume de L'Hôpital (sobre obra de J. Bernoulli)
+    fr: Guillaume de L'Hôpital (d'après Jean Bernoulli)
+    zh: 纪尧姆·德·洛必达（基于约翰·伯努利的工作）
+    ja: ギヨーム・ド・ロピタル（ヨハン・ベルヌーイの業績に基づく）
+  era:
+    es: Francia, 1661–1704 · publicada en 1696
+    en: France, 1661–1704 · published in 1696
+    pt: França, 1661–1704 · publicada em 1696
+    fr: France, 1661–1704 · publiée en 1696
+    zh: 法国，1661–1704年·1696年发表
+    ja: フランス、1661–1704年・1696年発表
+  history:
+    es: >-
+      La regla apareció en 1696 en Analyse des infiniment petits, el primer libro de texto de cálculo,
+      firmado por el marqués de L'Hôpital. Pero el método era de Johann Bernoulli, con quien L'Hôpital
+      había firmado un contrato para usar sus descubrimientos. Resuelve límites indeterminados 0/0 o
+      ∞/∞ comparando las derivadas. La anécdota del plagio pago hace de esta regla una de las más
+      famosas de la historia de las matemáticas.
+    en: >-
+      The rule appeared in 1696 in Analyse des infiniment petits, the first calculus textbook, signed
+      by the Marquis de L'Hôpital. But the method was Johann Bernoulli's, with whom L'Hôpital had
+      signed a contract to use his discoveries. It resolves indeterminate 0/0 or ∞/∞ limits by
+      comparing derivatives. The story of the paid plagiarism makes this one of the most famous rules
+      in the history of mathematics.
+    pt: >-
+      A regra apareceu em 1696 em Analyse des infiniment petits, o primeiro livro-texto de cálculo,
+      assinado pelo marquês de L'Hôpital. Mas o método era de Johann Bernoulli, com quem L'Hôpital
+      havia assinado um contrato para usar suas descobertas. Ela resolve limites indeterminados 0/0 ou
+      ∞/∞ comparando as derivadas. A história do plágio pago faz dessa regra uma das mais famosas da
+      história da matemática.
+    fr: >-
+      La règle apparut en 1696 dans l'Analyse des infiniment petits, le premier manuel de calcul,
+      signé par le marquis de L'Hôpital. Mais la méthode était de Jean Bernoulli, avec qui L'Hôpital
+      avait signé un contrat pour utiliser ses découvertes. Elle résout les limites indéterminées 0/0
+      ou ∞/∞ en comparant les dérivées. L'anecdote du plagiat payant fait de cette règle l'une des
+      plus célèbres de l'histoire des mathématiques.
+    zh: >-
+      这条法则出现在1696年的《无穷小分析》，这是第一部微积分教科书，署名是洛必达侯爵。但该方法是约翰·伯努利的，
+      洛必达与他签有使用其发现的合同。该法则通过比较导数来解决0/0或∞/∞的不定式极限。"付费抄袭"的轶事使它成为
+      数学史上最著名的法则之一。
+    ja: >-
+      この定理は1696年、初の微積分の教科書『無限小の解析』に現れた。署名はロピタル侯爵だが、その方法はヨハン・
+      ベルヌーイのもので、ロピタルは彼の成果を使う契約を結んでいた。この定理は、0/0や∞/∞の不定形の極限を、
+      導関数の比較で解く。「金で買った剽窃」の逸話は、この定理を数学史上最も有名なものにしている。
+  timeline:
+    - year: "1696"
+      label:
+        es: >-
+          La regla se publica en el primer libro de texto de cálculo, firmado por L'Hôpital.
+        en: >-
+          The rule is published in the first calculus textbook, signed by L'Hôpital.
+        pt: >-
+          A regra é publicada no primeiro livro-texto de cálculo, assinado por L'Hôpital.
+        fr: >-
+          La règle est publiée dans le premier manuel de calcul, signé par L'Hôpital.
+        zh: >-
+          该法则发表于第一部微积分教科书中，署名洛必达。
+        ja: >-
+          初の微積分の教科書に、ロピタルの署名入りでこの定理が発表される。
+    - year: "1921"
+      label:
+        es: >-
+          El análisis de la correspondencia de Bernoulli confirma que él descubrió la regla.
+        en: >-
+          Analysis of Bernoulli's correspondence confirms he discovered the rule.
+        pt: >-
+          A análise da correspondência de Bernoulli confirma que ele descobriu a regra.
+        fr: >-
+          L'analyse de la correspondance de Bernoulli confirme qu'il a découvert la règle.
+        zh: >-
+          对伯努利书信的分析证实，是他发现了这条法则。
+        ja: >-
+          ベルヌーイの往復書簡の分析により、彼がこの定理を発見したことが確認される。
+    - year: Hoy
+      label:
+        es: >-
+          Es la herramienta estándar para evaluar límites indeterminados en el cálculo.
+        en: >-
+          It is the standard tool for evaluating indeterminate limits in calculus.
+        pt: >-
+          É a ferramenta padrão para avaliar limites indeterminados no cálculo.
+        fr: >-
+          C'est l'outil standard pour évaluer les limites indéterminées en calcul.
+        zh: >-
+          它是微积分中处理不定式极限的标准工具。
+        ja: >-
+          微積分で不定形の極限を評価する際の標準的な道具である。
+  useCases:
+    - title:
+        es: Cálculo de límites
+        en: Computing limits
+        pt: Cálculo de limites
+        fr: Calcul de limites
+        zh: 计算极限
+        ja: 極限の計算
+      description:
+        es: >-
+          Resuelve de inmediato límites 0/0 como el de sin x / x en cero.
+        en: >-
+          It instantly resolves 0/0 limits like that of sin x / x at zero.
+        pt: >-
+          Resolve na hora limites 0/0 como o de sen x / x em zero.
+        fr: >-
+          Elle résout instantanément les limites 0/0 comme celle de sin x / x en zéro.
+        zh: >-
+          它能立即解决0/0型极限，例如sin x / x在零点处的极限。
+        ja: >-
+          sin x / x の0での極限のような0/0型を即座に解く。
+    - title:
+        es: Análisis asintótico
+        en: Asymptotic analysis
+        pt: Análise assintótica
+        fr: Analyse asymptotique
+        zh: 渐近分析
+        ja: 漸近解析
+      description:
+        es: >-
+          Comparar el crecimiento de funciones en el infinito usa la regla repetidamente.
+        en: >-
+          Comparing function growth at infinity uses the rule repeatedly.
+        pt: >-
+          Comparar o crescimento de funções no infinito usa a regra repetidamente.
+        fr: >-
+          Comparer la croissance des fonctions à l'infini utilise la règle à répétition.
+        zh: >-
+          在无穷远处比较函数的增长速度，需要反复使用该法则。
+        ja: >-
+          無限遠での関数の成長の比較には、この定理を繰り返し使う。
+    - title:
+        es: Complejidad computacional
+        en: Computational complexity
+        pt: Complexidade computacional
+        fr: Complexité algorithmique
+        zh: 计算复杂度
+        ja: 計算量理論
+      description:
+        es: >-
+          Los límites de razones de tiempos de ejecución se evalúan con esta regla.
+        en: >-
+          Limits of ratios of running times are evaluated with this rule.
+        pt: >-
+          Limites de razões de tempos de execução são avaliados com essa regra.
+        fr: >-
+          Les limites de rapports de temps d'exécution s'évaluent avec cette règle.
+        zh: >-
+          运行时间之比的极限用这条法则求值。
+        ja: >-
+          実行時間の比の極限は、この定理で評価される。
+  example:
+    title:
+      es: Límite de sin x / x
+      en: Limit of sin x / x
+      pt: Limite de sen x / x
+      fr: Limite de sin x / x
+      zh: sin x / x 的极限
+      ja: sin x / x の極限
+    lines:
+      - es: lim x→0 (sin x / x), forma 0/0
+        en: lim x→0 (sin x / x), a 0/0 form
+        pt: lim x→0 (sen x / x), forma 0/0
+        fr: lim x→0 (sin x / x), forme 0/0
+        zh: lim x→0 (sin x / x)，0/0型
+        ja: lim x→0 (sin x / x)、0/0形
+      - es: "Derivadas: (sin x)′ = cos x, (x)′ = 1"
+        en: "Derivatives: (sin x)′ = cos x, (x)′ = 1"
+        pt: "Derivadas: (sen x)′ = cos x, (x)′ = 1"
+        fr: "Dérivées : (sin x)′ = cos x, (x)′ = 1"
+        zh: 导数：(sin x)′ = cos x，(x)′ = 1
+        ja: 導関数：(sin x)′ = cos x、(x)′ = 1
+      - es: lim x→0 (cos x / 1)
+        en: lim x→0 (cos x / 1)
+        pt: lim x→0 (cos x / 1)
+        fr: lim x→0 (cos x / 1)
+        zh: lim x→0 (cos x / 1)
+        ja: lim x→0 (cos x / 1)
+      - es: cos 0 = 1
+        en: cos 0 = 1
+        pt: cos 0 = 1
+        fr: cos 0 = 1
+        zh: cos 0 = 1
+        ja: cos 0 = 1
+      - es: lim x→0 (sin x / x) = 1
+        en: lim x→0 (sin x / x) = 1
+        pt: lim x→0 (sen x / x) = 1
+        fr: lim x→0 (sin x / x) = 1
+        zh: lim x→0 (sin x / x) = 1
+        ja: lim x→0 (sin x / x) = 1

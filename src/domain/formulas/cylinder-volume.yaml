@@ -1,0 +1,335 @@
+id: cylinder-volume
+title:
+  es: Volumen de un Cilindro
+  en: Volume of a Cylinder
+  pt: Volume de um Cilindro
+  fr: Volume d'un Cylindre
+  zh: 圆柱体的体积
+  ja: 円柱の体積
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: volume
+    type: variable
+    value: V
+    explanation:
+      es: "El volumen: el espacio tridimensional que ocupa el cilindro."
+      en: "The volume: the three-dimensional space the cylinder occupies."
+      pt: "O volume: o espaço tridimensional ocupado pelo cilindro."
+      fr: "Le volume : l'espace tridimensionnel occupé par le cylindre."
+      zh: "体积：圆柱体所占据的三维空间。"
+      ja: "体積：円柱が占める三次元空間。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: ちょうど等しい。
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: Pi, la razón constante entre la circunferencia de un círculo y su diámetro.
+      en: Pi, the constant ratio between a circle's circumference and its diameter.
+      pt: Pi, a razão constante entre a circunferência de um círculo e seu diâmetro.
+      fr: Pi, le rapport constant entre la circonférence d'un cercle et son diamètre.
+      zh: 圆周率π，圆的周长与直径之比的常数。
+      ja: 円周率π。円の円周と直径の一定な比。
+  - id: mul-r
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "El radio: la distancia desde el centro de la base circular hasta su borde."
+      en: "The radius: the distance from the center of the circular base to its edge."
+      pt: "O raio: a distância do centro da base circular até sua borda."
+      fr: "Le rayon : la distance du centre de la base circulaire à son bord."
+      zh: "半径：从圆形底面的中心到其边缘的距离。"
+      ja: "半径：円形の底面の中心から縁までの距離。"
+  - id: r-sq
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Elevado al cuadrado: el radio multiplicado por sí mismo, que da el área de la base."
+      en: "Squared: the radius times itself, which gives the base's area."
+      pt: "Elevado ao quadrado: o raio multiplicado por si mesmo, que dá a área da base."
+      fr: "Élevé au carré : le rayon multiplié par lui-même, soit l'aire de la base."
+      zh: "平方：半径与自身相乘，即底面的面积。"
+      ja: "2乗：半径を自分自身に掛けたもの。これが底面の面積となる。"
+  - id: mul-h
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: h
+    type: variable
+    value: h
+    explanation:
+      es: "La altura: la distancia entre las dos bases paralelas."
+      en: "The height: the distance between the two parallel bases."
+      pt: "A altura: a distância entre as duas bases paralelas."
+      fr: "La hauteur : la distance entre les deux bases parallèles."
+      zh: "高：两个平行底面之间的距离。"
+      ja: "高さ：平行な2つの底面の間の距離。"
+context:
+  author:
+    es: Arquímedes de Siracusa
+    en: Archimedes of Syracuse
+    pt: Arquimedes de Siracusa
+    fr: Archimède de Syracuse
+    zh: 叙拉古的阿基米德
+    ja: シラクサのアルキメデス
+  era:
+    es: Siracusa, c. 287–212 a.C. · demostrado en Sobre la esfera y el cilindro
+    en: Syracuse, c. 287–212 BC · proved in On the Sphere and Cylinder
+    pt: Siracusa, c. 287–212 a.C. · demonstrado em Sobre a esfera e o cilindro
+    fr: Syracuse, v. 287–212 av. J.-C. · démontré dans De la sphère et du cylindre
+    zh: 叙拉古，约公元前287–212年·在《论球与圆柱》中证明
+    ja: シラクサ、紀元前287年頃〜前212年・『球と円柱について』で証明
+  history:
+    es: >-
+      Arquímedes demostró en Sobre la esfera y el cilindro que el volumen del cilindro es el
+      producto del área de su base por su altura, y que la esfera inscrita ocupa dos tercios de él.
+      La fórmula sustenta el cálculo de tuberías, tanques y motores, y la tumba de Arquímedes llevó
+      el grabado de la esfera y el cilindro por este mismo resultado.
+    en: >-
+      Archimedes proved in On the Sphere and the Cylinder that a cylinder's volume is the product
+      of its base area and its height, and that the inscribed sphere fills two thirds of it. The
+      formula underpins the sizing of pipes, tanks, and engines, and Archimedes' tomb bore the
+      sphere-and-cylinder carving for this very result.
+    pt: >-
+      Arquimedes demonstrou em Sobre a esfera e o cilindro que o volume do cilindro é o produto da
+      área de sua base pela altura, e que a esfera inscrita ocupa dois terços dele. A fórmula
+      sustenta o dimensionamento de tubulações, tanques e motores, e o túmulo de Arquimedes recebeu
+      o relevo da esfera e do cilindro por esse mesmo resultado.
+    fr: >-
+      Archimède démontra dans De la sphère et du cylindre que le volume d'un cylindre est le produit
+      de l'aire de sa base par sa hauteur, et que la sphère inscrite en occupe les deux tiers. La
+      formule sous-tend le dimensionnement des tuyaux, des réservoirs et des moteurs, et la tombe
+      d'Archimède porta la gravure de la sphère et du cylindre pour ce même résultat.
+    zh: >-
+      阿基米德在《论球与圆柱》中证明，圆柱体的体积等于底面积乘以高，且内接球占其三分之二。该公式是管道、
+      储罐和发动机尺寸计算的基础；阿基米德的墓碑上就刻着球与圆柱，正是为了纪念这一成果。
+    ja: >-
+      アルキメデスは『球と円柱について』の中で、円柱の体積が底面の面積と高さの積であり、内接する球が
+      その3分の2を占めることを証明した。この公式は配管、タンク、エンジンの寸法設計を支えており、
+      アルキメデスの墓に刻まれた球と円柱の浮き彫りは、まさにこの成果を記念したものである。
+  timeline:
+    - year: c. 250 a.C.
+      label:
+        es: >-
+          Arquímedes publica Sobre la esfera y el cilindro y demuestra V = πr²h junto con los
+          volúmenes de la esfera y el cono.
+        en: >-
+          Archimedes publishes On the Sphere and the Cylinder, proving V = πr²h together with the
+          volumes of the sphere and the cone.
+        pt: >-
+          Arquimedes publica Sobre a esfera e o cilindro e demonstra V = πr²h junto com os volumes
+          da esfera e do cone.
+        fr: >-
+          Archimède publie De la sphère et du cylindre et démontre V = πr²h ainsi que les volumes de
+          la sphère et du cône.
+        zh: >-
+          阿基米德发表《论球与圆柱》，证明了V = πr²h，以及球和圆锥的体积。
+        ja: >-
+          アルキメデスが『球と円柱について』を発表し、V = πr²hと球・円錐の体積を証明する。
+    - year: "1965"
+      label:
+        es: >-
+          El Palimpsesto de Arquímedes, descifrado, revela el método mecánico con el que dedujo estos
+          volúmenes antes de demostrarlos.
+        en: >-
+          The deciphered Archimedes Palimpsest reveals the mechanical method by which he derived
+          these volumes before proving them.
+        pt: >-
+          O Palimpsesto de Arquimedes, decifrado, revela o método mecânico com o qual ele deduziu
+          esses volumes antes de demonstrá-los.
+        fr: >-
+          Le palimpseste d'Archimède, déchiffré, révèle la méthode mécanique qui lui permit de
+          déduire ces volumes avant de les démontrer.
+        zh: >-
+          被破译的《阿基米德羊皮书》揭示了他先借助力学方法推导、后加以证明的过程。
+        ja: >-
+          解読された「アルキメデス・パリンプセスト」が、彼が証明の前にこれらの体積を導いた力学的方法を
+          明らかにする。
+    - year: Hoy
+      label:
+        es: >-
+          Es la base del cálculo de capacidad de tuberías, tanques y cilindros de motor en toda la
+          ingeniería.
+        en: >-
+          It is the basis of capacity calculations for pipes, tanks, and engine cylinders across
+          engineering.
+        pt: >-
+          É a base do cálculo de capacidade de tubulações, tanques e cilindros de motor em toda a
+          engenharia.
+        fr: >-
+          Elle est à la base du calcul de capacité des tuyaux, réservoirs et cylindres de moteur
+          dans toute l'ingénierie.
+        zh: >-
+          它是整个工程领域中管道、储罐和发动机气缸容量计算的基础。
+        ja: >-
+          あらゆる工学分野で、配管、タンク、エンジンのシリンダーの容量計算の基礎となっている。
+  useCases:
+    - title:
+        es: Fontanería y tuberías
+        en: Plumbing and pipes
+        pt: Encanamento e tubulações
+        fr: Plomberie et tuyaux
+        zh: 管道与给排水
+        ja: 配管・給排水
+      description:
+        es: >-
+          La capacidad de una tubería depende del área de su sección; se calcula con el volumen del
+          cilindro que la forma.
+        en: >-
+          A pipe's capacity depends on its cross-section area, computed with the volume of the
+          cylinder it forms.
+        pt: >-
+          A capacidade de uma tubulação depende da área de sua seção, calculada com o volume do
+          cilindro que ela forma.
+        fr: >-
+          La capacité d'un tuyau dépend de l'aire de sa section, calculée avec le volume du cylindre
+          qu'il forme.
+        zh: >-
+          管道的输送能力取决于其横截面积，用它所形成的圆柱体积来计算。
+        ja: >-
+          配管の容量は断面積に依存し、その管がなす円柱の体積で計算される。
+    - title:
+        es: Tanques de combustible
+        en: Fuel tanks
+        pt: Tanques de combustível
+        fr: Réservoirs de carburant
+        zh: 燃料储罐
+        ja: 燃料タンク
+      description:
+        es: >-
+          Los tanques cilíndricos de almacenamiento se dimensionan con esta fórmula para fijar
+          capacidad y dimensiones.
+        en: >-
+          Cylindrical storage tanks are sized with this formula to set their capacity and
+          dimensions.
+        pt: >-
+          Tanques cilíndricos de armazenamento são dimensionados com esta fórmula para definir
+          capacidade e dimensões.
+        fr: >-
+          Les réservoirs de stockage cylindriques sont dimensionnés avec cette formule pour fixer
+          capacité et dimensions.
+        zh: >-
+          圆柱形储罐用此公式确定尺寸和容量。
+        ja: >-
+          円筒形の貯蔵タンクは、この式で容量と寸法を決める。
+    - title:
+        es: Cilindrada de motores
+        en: Engine displacement
+        pt: Cilindrada de motores
+        fr: Cylindrée des moteurs
+        zh: 发动机排量
+        ja: エンジンの排気量
+      description:
+        es: >-
+          La cilindrada de un motor suma los volúmenes de sus cilindros, cada uno calculado como
+          πr²h.
+        en: >-
+          Engine displacement sums the volumes of its cylinders, each computed as πr²h.
+        pt: >-
+          A cilindrada de um motor soma os volumes de seus cilindros, cada um calculado como πr²h.
+        fr: >-
+          La cylindrée d'un moteur est la somme des volumes de ses cylindres, chacun calculé comme
+          πr²h.
+        zh: >-
+          发动机排量是其各气缸体积之和，每缸按πr²h计算。
+        ja: >-
+          エンジンの排気量は各シリンダーの体積の合計であり、それぞれπr²hで計算される。
+    - title:
+        es: Envasado
+        en: Packaging
+        pt: Embalagens
+        fr: Emballage
+        zh: 包装
+        ja: パッケージング
+      description:
+        es: >-
+          Latas, botellas y barriles cilíndricos se diseñan para contener un volumen exacto
+          minimizando material.
+        en: >-
+          Cylindrical cans, bottles, and barrels are designed to hold an exact volume while
+          minimizing material.
+        pt: >-
+          Latas, garrafas e barris cilíndricos são projetados para conter um volume exato
+          minimizando o material.
+        fr: >-
+          Boîtes, bouteilles et barils cylindriques sont conçus pour contenir un volume exact tout
+          en minimisant la matière.
+        zh: >-
+          圆柱形罐、瓶和桶的设计，要求在保证精确容积的同时尽量减少材料。
+        ja: >-
+          円筒形の缶やボトル、樽は、材料を最小限に抑えながら正確な内容量を持つように設計される。
+  example:
+    title:
+      es: Un cilindro de radio 3 y altura 5
+      en: A cylinder with radius 3 and height 5
+      pt: Um cilindro de raio 3 e altura 5
+      fr: Un cylindre de rayon 3 et de hauteur 5
+      zh: 半径3、高5的圆柱体
+      ja: 半径3、高さ5の円柱
+    lines:
+      - es: r = 3, h = 5
+        en: r = 3, h = 5
+        pt: r = 3, h = 5
+        fr: r = 3, h = 5
+        zh: r = 3, h = 5
+        ja: r = 3, h = 5
+      - es: V = π · r² · h
+        en: V = π · r² · h
+        pt: V = π · r² · h
+        fr: V = π · r² · h
+        zh: V = π · r² · h
+        ja: V = π · r² · h
+      - es: V = π · 9 · 5
+        en: V = π · 9 · 5
+        pt: V = π · 9 · 5
+        fr: V = π · 9 · 5
+        zh: V = π · 9 · 5
+        ja: V = π · 9 · 5
+      - es: V = π · 45
+        en: V = π · 45
+        pt: V = π · 45
+        fr: V = π · 45
+        zh: V = π · 45
+        ja: V = π · 45
+      - es: V = 45π
+        en: V = 45π
+        pt: V = 45π
+        fr: V = 45π
+        zh: V = 45π
+        ja: V = 45π
+      - es: V ≈ 141.37
+        en: V ≈ 141.37
+        pt: V ≈ 141,37
+        fr: V ≈ 141,37
+        zh: V ≈ 141.37
+        ja: V ≈ 141.37

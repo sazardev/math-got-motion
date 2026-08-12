@@ -1,0 +1,288 @@
+id: kirchhoff-voltage-law
+title:
+  es: Segunda Ley de Kirchhoff
+  en: Kirchhoff's Voltage Law
+  pt: Lei das Tensões de Kirchhoff
+  fr: Loi des tensions de Kirchhoff
+  zh: 基尔霍夫电压定律
+  ja: キルヒホッフの電圧則
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: sigma
+    type: operator
+    value: Σ
+    explanation:
+      es: El símbolo de sumatoria, que indica sumar los voltajes a lo largo del lazo cerrado.
+      en: The summation symbol, meaning to add up the voltages around the closed loop.
+      pt: O símbolo de somatório, que indica somar as tensões ao longo do laço fechado.
+      fr: Le symbole de sommation, qui indique d'additionner les tensions le long de la boucle fermée.
+      zh: 求和符号,表示把闭合回路上的电压相加。
+      ja: 総和記号。閉じた経路に沿って電圧を足し合わせることを示す。
+  - id: v
+    type: variable
+    value: V
+    explanation:
+      es: El voltaje o tensión entre dos puntos de cada elemento del circuito.
+      en: The voltage across each element of the circuit.
+      pt: A tensão entre dois pontos de cada elemento do circuito.
+      fr: La tension entre deux points de chaque élément du circuit.
+      zh: 电路各元件两端的电压。
+      ja: 回路の各素子の両端の電圧。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: zero
+    type: number
+    value: "0"
+    explanation:
+      es: Cero, porque la energía se conserva al completar una vuelta al lazo.
+      en: Zero, because energy is conserved when going around the loop once.
+      pt: Zero, porque a energia é conservada ao completar uma volta no laço.
+      fr: Zéro, car l'énergie est conservée lorsqu'on fait un tour complet de la boucle.
+      zh: 零,因为绕回路一圈后能量守恒。
+      ja: ゼロ。経路を一周するとエネルギーが保存されるからである。
+context:
+  author:
+    es: Gustav Kirchhoff
+    en: Gustav Kirchhoff
+    pt: Gustav Kirchhoff
+    fr: Gustav Kirchhoff
+    zh: 古斯塔夫·基尔霍夫
+    ja: グスタフ・キルヒホフ
+  era:
+    es: Alemania, 1824–1887 · publicada en 1845
+    en: Germany, 1824–1887 · published in 1845
+    pt: Alemanha, 1824–1887 · publicada em 1845
+    fr: Allemagne, 1824–1887 · publiée en 1845
+    zh: 德国,1824–1887年 · 1845年发表
+    ja: ドイツ、1824–1887年・1845年発表
+  history:
+    es: >-
+      Enunciada por Gustav Kirchhoff en 1845 junto con su ley de corrientes, esta regla afirma que la
+      energía se conserva al recorrer un lazo cerrado, pues la suma algebraica de los voltajes a lo
+      largo de la malla es cero. Las subidas de tensión, como las de una batería, se equilibran
+      exactamente con las caídas en las resistencias, de modo que una pila de 12 V reparte esos 12 V
+      entre los componentes del circuito. Es el fundamento del análisis de mallas y del diseño de
+      fuentes de alimentación.
+    en: >-
+      Stated by Gustav Kirchhoff in 1845 alongside his current law, this rule asserts that energy is
+      conserved when going around a closed loop, since the algebraic sum of the voltages along the
+      loop is zero. Voltage rises, such as those of a battery, are exactly balanced by the drops
+      across the resistors, so a 12 V battery shares those 12 V among the components of the circuit.
+      It is the foundation of mesh analysis and of power supply design.
+    pt: >-
+      Enunciada por Gustav Kirchhoff em 1845 juntamente com sua lei das correntes, esta regra afirma
+      que a energia é conservada ao percorrer um laço fechado, pois a soma algébrica das tensões ao
+      longo da malha é zero. As elevações de tensão, como as de uma bateria, equilibram-se
+      exatamente com as quedas nos resistores, de modo que uma pilha de 12 V reparte esses 12 V entre
+      os componentes do circuito. É o fundamento da análise de malhas e do projeto de fontes de
+      alimentação.
+    fr: >-
+      Énoncée par Gustav Kirchhoff en 1845 avec sa loi des courants, cette règle affirme que
+      l'énergie est conservée lorsqu'on parcourt une boucle fermée, car la somme algébrique des
+      tensions le long de la maille est nulle. Les élévations de tension, comme celles d'une pile,
+      sont exactement compensées par les chutes aux bornes des résistances, si bien qu'une pile de
+      12 V répartit ces 12 V entre les composants du circuit. C'est le fondement de l'analyse des
+      mailles et de la conception des alimentations.
+    zh: >-
+      该定律由古斯塔夫·基尔霍夫于1845年与他的电流定律一同提出,它断言沿闭合回路绕行时能量守恒,因为回路上
+      电压的代数和为零。电池等电压升高的元件与电阻两端的电压降恰好平衡,因此一块12伏电池会把这12伏分给
+      电路中的各个元件。它是网孔分析和电源设计的基础。
+    ja: >-
+      この法則はグスタフ・キルヒホフが1845年に電流の法則とともに発表したもので、閉じた経路を一周すると
+      エネルギーが保存されることを示す。経路に沿った電圧の代数和はゼロになり、電池などによる電圧の上昇は
+      抵抗による電圧降下とちょうど釣り合う。つまり12 Vの電池はその12 Vを回路の各素子に分配する。
+      網目解析と電源設計の基盤である。
+  timeline:
+    - year: "1845"
+      label:
+        es: >-
+          Kirchhoff publica la ley de tensiones, completando el par de reglas del análisis de
+          circuitos.
+        en: >-
+          Kirchhoff publishes the voltage law, completing the pair of rules of circuit analysis.
+        pt: >-
+          Kirchhoff publica a lei das tensões, completando o par de regras da análise de circuitos.
+        fr: >-
+          Kirchhoff publie la loi des tensions, complétant la paire de règles de l'analyse des
+          circuits.
+        zh: >-
+          基尔霍夫发表电压定律,补全了电路分析的规则组合。
+        ja: >-
+          キルヒホフが電圧の法則を発表し、回路解析の規則を完成させる。
+    - year: "1873"
+      label:
+        es: >-
+          El Tratado de Maxwell consolida la ley de tensiones dentro de la teoría electromagnética.
+        en: >-
+          Maxwell's Treatise consolidates the voltage law within electromagnetic theory.
+        pt: >-
+          O Tratado de Maxwell consolida a lei das tensões na teoria eletromagnética.
+        fr: >-
+          Le Traité de Maxwell consolide la loi des tensions dans la théorie électromagnétique.
+        zh: >-
+          麦克斯韦的《论电与磁》将电压定律纳入电磁理论。
+        ja: >-
+          マクスウェルの『電磁気学論』が電圧の法則を電磁気学理論に確立する。
+    - year: Hoy
+      label:
+        es: >-
+          El análisis de mallas por esta ley es la base del diseño de fuentes y de la electrónica de
+          potencia.
+        en: >-
+          Mesh analysis based on this law underpins power supply design and power electronics.
+        pt: >-
+          A análise de malhas por esta lei é a base do projeto de fontes e da eletrônica de potência.
+        fr: >-
+          L'analyse des mailles fondée sur cette loi est à la base de la conception des alimentations
+          et de l'électronique de puissance.
+        zh: >-
+          基于该定律的网孔分析是电源设计和电力电子的基础。
+        ja: >-
+          この法則に基づく網目解析は、電源設計とパワーエレクトロニクスの基礎である。
+  useCases:
+    - title:
+        es: Análisis de mallas en electrónica
+        en: Mesh analysis in electronics
+        pt: Análise de malhas em eletrônica
+        fr: Analyse des mailles en électronique
+        zh: 电子学中的网孔分析
+        ja: 電子回路の網目解析
+      description:
+        es: >-
+          Se plantea una ecuación por cada malla para hallar las corrientes del circuito sin
+          necesidad de medir nada.
+        en: >-
+          One equation is set up per loop to find the circuit's currents without measuring anything.
+        pt: >-
+          Planta-se uma equação por malha para encontrar as correntes do circuito sem medir nada.
+        fr: >-
+          On pose une équation par maille pour trouver les courants du circuit sans rien mesurer.
+        zh: >-
+          为每个回路列一个方程,无需测量即可求出电路的电流。
+        ja: >-
+          各網目について方程式を一つ立て、何も測定せずに回路の電流を求める。
+    - title:
+        es: Fuentes de alimentación
+        en: Power supplies
+        pt: Fontes de alimentação
+        fr: Alimentations électriques
+        zh: 电源设备
+        ja: 電源装置
+      description:
+        es: >-
+          El diseño de reguladores y convertidores garantiza que las caídas de tensión sumen
+          exactamente la tensión de entrada.
+        en: >-
+          Regulator and converter design ensures the voltage drops add up exactly to the input
+          voltage.
+        pt: >-
+          O projeto de reguladores e conversores garante que as quedas de tensão somem exatamente a
+          tensão de entrada.
+        fr: >-
+          La conception de régulateurs et de convertisseurs garantit que les chutes de tension
+          s'ajoutent exactement à la tension d'entrée.
+        zh: >-
+          稳压器和变换器的设计确保电压降之和恰好等于输入电压。
+        ja: >-
+          レギュレータやコンバータの設計は、電圧降下の合計が入力電圧にちょうど一致することを保証する。
+    - title:
+        es: Electrónica de potencia en vehículos eléctricos
+        en: EV power electronics
+        pt: Eletrônica de potência em veículos elétricos
+        fr: Électronique de puissance des véhicules électriques
+        zh: 电动汽车电力电子
+        ja: 電気自動車のパワーエレクトロニクス
+      description:
+        es: >-
+          Inversores y convertidores CC-CC se diseñan verificando que las tensiones en cada lazo
+          cerrado se equilibren.
+        en: >-
+          Inverters and DC-DC converters are designed by verifying that the voltages around each
+          closed loop balance.
+        pt: >-
+          Inversores e conversores CC-CC são projetados verificando que as tensões em cada laço
+          fechado se equilibram.
+        fr: >-
+          Onduleurs et convertisseurs continu-continu sont conçus en vérifiant que les tensions de
+          chaque boucle fermée s'équilibrent.
+        zh: >-
+          逆变器和直流-直流变换器的设计需要验证每个闭合回路中的电压是否平衡。
+        ja: >-
+          インバータやDC-DCコンバータは、各閉回路の電圧が釣り合うことを確認して設計する。
+    - title:
+        es: Redes eléctricas de potencia
+        en: Power grids
+        pt: Redes elétricas de potência
+        fr: Réseaux électriques de puissance
+        zh: 电力网络
+        ja: 電力系統
+      description:
+        es: >-
+          El cálculo de caídas de tensión en líneas y transformadores asegura que la tensión llegue
+          regulada al usuario.
+        en: >-
+          Computing voltage drops across lines and transformers ensures regulated voltage reaches the
+          user.
+        pt: >-
+          O cálculo de quedas de tensão em linhas e transformadores assegura que a tensão chegue
+          regulada ao usuário.
+        fr: >-
+          Le calcul des chutes de tension dans les lignes et les transformateurs assure que la
+          tension parvient régulée à l'utilisateur.
+        zh: >-
+          计算线路和变压器上的电压降,确保电压以受控状态到达用户端。
+        ja: >-
+          送電線や変圧器の電圧降下を計算することで、規制された電圧が利用者に届くことを保証する。
+  example:
+    title:
+      es: Una malla con una pila y dos resistencias
+      en: A loop with one battery and two resistors
+      pt: Uma malha com uma pilha e dois resistores
+      fr: Une maille avec une pile et deux résistances
+      zh: 一个电池和两个电阻构成的回路
+      ja: 電池1個と抵抗2個の閉回路
+    lines:
+      - es: V = 12 V
+        en: V = 12 V
+        pt: V = 12 V
+        fr: V = 12 V
+        zh: V = 12 V
+        ja: V = 12 V
+      - es: V₁ = 8 V
+        en: V₁ = 8 V
+        pt: V₁ = 8 V
+        fr: V₁ = 8 V
+        zh: V₁ = 8 V
+        ja: V₁ = 8 V
+      - es: V₂ = 4 V
+        en: V₂ = 4 V
+        pt: V₂ = 4 V
+        fr: V₂ = 4 V
+        zh: V₂ = 4 V
+        ja: V₂ = 4 V
+      - es: ΣV = 12 − 8 − 4
+        en: ΣV = 12 − 8 − 4
+        pt: ΣV = 12 − 8 − 4
+        fr: ΣV = 12 − 8 − 4
+        zh: ΣV = 12 − 8 − 4
+        ja: ΣV = 12 − 8 − 4
+      - es: ΣV = 0
+        en: ΣV = 0
+        pt: ΣV = 0
+        fr: ΣV = 0
+        zh: ΣV = 0
+        ja: ΣV = 0

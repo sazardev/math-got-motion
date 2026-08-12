@@ -1,0 +1,324 @@
+id: moment-of-inertia
+title:
+  es: Momento de Inercia (Masa Puntual)
+  en: Moment of Inertia (Point Mass)
+  pt: Momento de Inércia (Massa Pontual)
+  fr: Moment d'inertie (masse ponctuelle)
+  zh: 转动惯量（质点）
+  ja: 慣性モーメント（質点）
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: i
+    type: variable
+    value: I
+    explanation:
+      es: El momento de inercia, la resistencia del cuerpo a cambiar su rotación.
+      en: The moment of inertia, the body's resistance to changing its rotation.
+      pt: O momento de inércia, a resistência do corpo a mudar sua rotação.
+      fr: Le moment d'inertie, la résistance du corps à changer sa rotation.
+      zh: 转动惯量，即物体抵抗转动状态改变的量度。
+      ja: 慣性モーメント。物体の回転の変化に対する抵抗。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: La masa del cuerpo en rotación.
+      en: The mass of the rotating body.
+      pt: A massa do corpo em rotação.
+      fr: La masse du corps en rotation.
+      zh: 旋转物体的质量。
+      ja: 回転する物体の質量。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicada por la distancia al eje, elevada al cuadrado.
+      en: Multiplied by the distance to the axis, squared.
+      pt: Multiplicada pela distância ao eixo, ao quadrado.
+      fr: Multipliée par la distance à l'axe, au carré.
+      zh: 乘以到转轴距离的平方。
+      ja: 軸までの距離の二乗を掛ける。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: La distancia de la masa al eje de rotación.
+      en: The distance from the mass to the axis of rotation.
+      pt: A distância da massa ao eixo de rotação.
+      fr: La distance de la masse à l'axe de rotation.
+      zh: 质量到转动轴的距离。
+      ja: 質量から回転軸までの距離。
+  - id: r-squared
+    type: superscript
+    value: "2"
+    explanation:
+      es: Elevada al cuadrado, porque esa distancia pesa al cuadrado en la rotación.
+      en: Squared, because that distance counts squared in rotation.
+      pt: Elevada ao quadrado, pois essa distância conta ao quadrado na rotação.
+      fr: Au carré, car cette distance compte au carré dans la rotation.
+      zh: 平方，因为该距离在转动中以平方起作用。
+      ja: 二乗。その距離は回転では二乗で効く。
+context:
+  author:
+    es: Leonhard Euler y Jean-Baptiste le Rond d'Alembert
+    en: Leonhard Euler and Jean-Baptiste le Rond d'Alembert
+    pt: Leonhard Euler e Jean-Baptiste le Rond d'Alembert
+    fr: Leonhard Euler et Jean-Baptiste le Rond d'Alembert
+    zh: 莱昂哈德·欧拉与让·勒朗·达朗贝尔
+    ja: レオンハルト・オイラーとジャン・ル・ロン・ダランベール
+  era:
+    es: Europa, s. XVIII
+    en: Europe, 18th century
+    pt: Europa, século XVIII
+    fr: Europe, XVIIIe siècle
+    zh: 欧洲,18世纪
+    ja: ヨーロッパ、18世紀
+  history:
+    es: >-
+      El momento de inercia es la "masa rotacional": mide cuánto se resiste un cuerpo a cambiar su
+      giro, y depende de su masa y de cuán lejos está esa masa del eje de rotación, porque la
+      distancia cuenta al cuadrado. Leonhard Euler y Jean-Baptiste le Rond d'Alembert lo
+      formalizaron en el siglo XVIII al escribir la dinámica del cuerpo rígido. Explica por qué los
+      patinadores encogen los brazos para girar más rápido y es la base del diseño de volantes de
+      inercia y de las ruedas de los vehículos.
+    en: >-
+      The moment of inertia is the "rotational mass": it measures how much a body resists changing
+      its spin, depending on its mass and on how far that mass sits from the axis of rotation,
+      because the distance counts squared. Leonhard Euler and Jean-Baptiste le Rond d'Alembert
+      formalized it in the 18th century while writing the dynamics of rigid bodies. It explains why
+      ice skaters pull their arms in to spin faster, and it is the basis for designing flywheels
+      and vehicle wheels.
+    pt: >-
+      O momento de inércia é a "massa rotacional": mede quanto um corpo resiste a mudar seu giro, e
+      depende de sua massa e de quão longe essa massa está do eixo de rotação, pois a distância
+      conta ao quadrado. Leonhard Euler e Jean-Baptiste le Rond d'Alembert o formalizaram no século
+      XVIII ao escrever a dinâmica do corpo rígido. Explica por que os patinadores encolhem os
+      braços para girar mais rápido e é a base do projeto de volantes de inércia e das rodas de
+      veículos.
+    fr: >-
+      Le moment d'inertie est la "masse de rotation" : il mesure la résistance d'un corps à changer
+      son mouvement de rotation, et dépend de sa masse et de la distance de celle-ci à l'axe de
+      rotation, car cette distance compte au carré. Leonhard Euler et Jean-Baptiste le Rond
+      d'Alembert le formalisèrent au XVIIIe siècle en écrivant la dynamique du corps rigide. Il
+      explique pourquoi les patineurs ramènent leurs bras pour tourner plus vite, et il est à la
+      base de la conception des volants d'inertie et des roues de véhicules.
+    zh: >-
+      转动惯量是"旋转质量"：它衡量物体抵抗旋转状态改变的程度，取决于质量的大小以及质量距转轴的远近，
+      因为该距离以平方计算。18世纪，莱昂哈德·欧拉与让·勒朗·达朗贝尔在建立刚体动力学时将其形式化。
+      它解释了花样滑冰选手为什么收拢手臂就能转得更快，也是飞轮与车辆车轮设计的依据。
+    ja: >-
+      慣性モーメントは「回転の質量」である。物体が回転の状態変化にどれだけ抵抗するかを示し、質量と、
+      その質量が回転軸からどれだけ離れているかによって決まる。距離は二乗で効くからだ。18世紀に
+      レオンハルト・オイラーとジャン・ル・ロン・ダランベールが剛体の力学を書き上げる過程で形式化した。
+      スケート選手が腕を引き寄せると回転が速くなる理由を説明し、フライホイールや車輪の設計の基礎でもある。
+  timeline:
+    - year: "1736"
+      label:
+        es: >-
+          Euler introduce el concepto de momento de inercia en su mecánica de los cuerpos rígidos.
+        en: >-
+          Euler introduces the moment of inertia in his mechanics of rigid bodies.
+        pt: >-
+          Euler introduz o conceito de momento de inércia em sua mecânica dos corpos rígidos.
+        fr: >-
+          Euler introduit le concept de moment d'inertie dans sa mécanique des corps rigides.
+        zh: >-
+          欧拉在其刚体力学中引入了转动惯量的概念。
+        ja: >-
+          オイラーが剛体の力学の中で慣性モーメントの概念を導入する。
+    - year: "1743"
+      label:
+        es: >-
+          d'Alembert publica el Traité de dynamique, que consolida la mecánica del cuerpo rígido.
+        en: >-
+          d'Alembert publishes the Traité de dynamique, consolidating rigid-body mechanics.
+        pt: >-
+          d'Alembert publica o Traité de dynamique, consolidando a mecânica do corpo rígido.
+        fr: >-
+          d'Alembert publie le Traité de dynamique, consolidant la mécanique du corps rigide.
+        zh: >-
+          达朗贝尔发表《动力学论》，巩固了刚体力学。
+        ja: >-
+          ダランベールが『動力学論』を発表し、剛体の力学を確立する。
+    - year: s. XIX
+      label:
+        es: >-
+          Los volantes de inercia se vuelven esenciales para suavizar las máquinas de vapor de la
+          Revolución Industrial.
+        en: >-
+          Flywheels become essential for smoothing the steam engines of the Industrial Revolution.
+        pt: >-
+          Os volantes de inércia tornam-se essenciais para suavizar as máquinas a vapor da
+          Revolução Industrial.
+        fr: >-
+          Les volants d'inertie deviennent essentiels pour régulariser les machines à vapeur de la
+          Révolution industrielle.
+        zh: >-
+          飞轮成为工业革命中使蒸汽机平稳运转的关键部件。
+        ja: >-
+          フライホイールは産業革命の蒸気機関を滑らかに回すために欠かせないものとなる。
+    - year: Hoy
+      label:
+        es: >-
+          Los volantes de inercia almacenan energía en la Fórmula 1 (KERS) y en los autobuses
+          urbanos.
+        en: >-
+          Flywheels store energy in Formula 1 (KERS) and city buses.
+        pt: >-
+          Os volantes de inércia armazenam energia na Fórmula 1 (KERS) e nos ônibus urbanos.
+        fr: >-
+          Les volants d'inertie stockent l'énergie en Formule 1 (KERS) et dans les bus urbains.
+        zh: >-
+          飞轮在F1（KERS）和城市公交车中储存能量。
+        ja: >-
+          フライホイールはF1（KERS）や都市バスでエネルギーを蓄える。
+  useCases:
+    - title:
+        es: Volantes de inercia
+        en: Flywheels
+        pt: Volantes de inércia
+        fr: Volants d'inertie
+        zh: 飞轮
+        ja: フライホイール
+      description:
+        es: >-
+          Un volante de radio grande almacena más energía por su r², clave para suavizar máquinas y
+          recuperar energía en las frenadas.
+        en: >-
+          A large-radius flywheel stores more energy because of r², key for smoothing machines and
+          recovering braking energy.
+        pt: >-
+          Um volante de raio grande armazena mais energia por causa do r², essencial para suavizar
+          máquinas e recuperar energia nas frenagens.
+        fr: >-
+          Un volant à grand rayon stocke plus d'énergie grâce à r², essentiel pour régulariser les
+          machines et récupérer l'énergie au freinage.
+        zh: >-
+          大半径飞轮因r²而能储存更多能量，这对平稳运转机械和回收制动能量至关重要。
+        ja: >-
+          半径の大きいフライホイールはr²のおかげで多くのエネルギーを蓄え、機械の平滑化や制動エネルギーの回収に欠かせない。
+    - title:
+        es: Automoción y ruedas
+        en: Automotive and wheels
+        pt: Automotiva e rodas
+        fr: Automobile et roues
+        zh: 汽车与车轮
+        ja: 自動車と車輪
+      description:
+        es: >-
+          El diseño de llantas y ejes ajusta el momento de inercia para equilibrar estabilidad y
+          aceleración.
+        en: >-
+          Wheel and axle design tunes the moment of inertia to balance stability and acceleration.
+        pt: >-
+          O projeto de rodas e eixos ajusta o momento de inércia para equilibrar estabilidade e
+          aceleração.
+        fr: >-
+          La conception des roues et essieux ajuste le moment d'inertie pour équilibrer stabilité
+          et accélération.
+        zh: >-
+          车轮与车轴的设计通过调整转动惯量来平衡稳定性与加速性。
+        ja: >-
+          ホイールと車軸の設計は慣性モーメントを調整し、安定性と加速のバランスを取る。
+    - title:
+        es: Turbinas y generadores
+        en: Turbines and generators
+        pt: Turbinas e geradores
+        fr: Turbines et génératrices
+        zh: 涡轮机与发电机
+        ja: タービンと発電機
+      description:
+        es: >-
+          Los rotores pesados de los generadores usan un gran momento de inercia para estabilizar
+          el giro de la red.
+        en: >-
+          Heavy generator rotors use a large moment of inertia to stabilize the grid's spin.
+        pt: >-
+          Os rotores pesados dos geradores usam um grande momento de inércia para estabilizar o
+          giro da rede.
+        fr: >-
+          Les rotors lourds des génératrices utilisent un grand moment d'inertie pour stabiliser la
+          rotation du réseau.
+        zh: >-
+          发电机沉重的转子利用大转动惯量来稳定电网的旋转。
+        ja: >-
+          発電機の重いローターは大きな慣性モーメントで系統の回転を安定させる。
+    - title:
+        es: Patinaje y gimnasia
+        en: Skating and gymnastics
+        pt: Patinação e ginástica
+        fr: Patinage et gymnastique
+        zh: 滑冰与体操
+        ja: スケートと体操
+      description:
+        es: >-
+          Encoger los brazos reduce el momento de inercia y multiplica la velocidad de giro sin
+          gastar energía.
+        en: >-
+          Pulling the arms in lowers the moment of inertia and multiplies spin speed without
+          spending energy.
+        pt: >-
+          Encolher os braços reduz o momento de inércia e multiplica a velocidade de giro sem
+          gastar energia.
+        fr: >-
+          Ramener les bras réduit le moment d'inertie et multiplie la vitesse de rotation sans
+          dépenser d'énergie.
+        zh: >-
+          收拢手臂会减小转动惯量，不消耗能量就能成倍提高旋转速度。
+        ja: >-
+          腕を引き寄せると慣性モーメントが減り、エネルギーを使わずに回転速度が何倍にもなる。
+  example:
+    title:
+      es: Una masa de 2 kg a medio metro del eje
+      en: A 2 kg mass half a meter from the axis
+      pt: Uma massa de 2 kg a meio metro do eixo
+      fr: Une masse de 2 kg à un demi-mètre de l'axe
+      zh: 距转轴半米的2千克质点
+      ja: 軸から0.5メートルの2kgの質点
+    lines:
+      - es: m = 2 kg, r = 0.5 m
+        en: m = 2 kg, r = 0.5 m
+        pt: m = 2 kg, r = 0,5 m
+        fr: m = 2 kg, r = 0,5 m
+        zh: m = 2 kg, r = 0.5 m
+        ja: m = 2 kg, r = 0.5 m
+      - es: I = m · r²
+        en: I = m · r²
+        pt: I = m · r²
+        fr: I = m · r²
+        zh: I = m · r²
+        ja: I = m · r²
+      - es: I = 2 × 0.5²
+        en: I = 2 × 0.5²
+        pt: I = 2 × 0,5²
+        fr: I = 2 × 0,5²
+        zh: I = 2 × 0.5²
+        ja: I = 2 × 0.5²
+      - es: I = 2 × 0.25
+        en: I = 2 × 0.25
+        pt: I = 2 × 0,25
+        fr: I = 2 × 0,25
+        zh: I = 2 × 0.25
+        ja: I = 2 × 0.25
+      - es: I = 0.5 kg·m²
+        en: I = 0.5 kg·m²
+        pt: I = 0,5 kg·m²
+        fr: I = 0,5 kg·m²
+        zh: I = 0.5 kg·m²
+        ja: I = 0.5 kg·m²

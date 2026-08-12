@@ -1,0 +1,345 @@
+id: elastic-potential-energy
+title:
+  es: Energía Potencial Elástica
+  en: Elastic Potential Energy
+  pt: Energia Potencial Elástica
+  fr: Énergie potentielle élastique
+  zh: 弹性势能
+  ja: 弾性位置エネルギー
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: u
+    type: variable
+    value: U
+    explanation:
+      es: La energía almacenada en el resorte deformado, medida en julios.
+      en: The energy stored in the deformed spring, measured in joules.
+      pt: A energia armazenada na mola deformada, medida em joules.
+      fr: L'énergie emmagasinée dans le ressort déformé, mesurée en joules.
+      zh: 形变弹簧中储存的能量，单位是焦耳。
+      ja: 変形したバネに蓄えられたエネルギー。単位はジュール。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égale à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: half
+    type: number
+    value: "½"
+    explanation:
+      es: "Un medio: el factor que surge de integrar la fuerza de Hooke a lo largo de la deformación."
+      en: "One half: the factor that arises from integrating Hooke's force along the deformation."
+      pt: "Um meio: o fator que surge ao integrar a força de Hooke ao longo da deformação."
+      fr: "Un demi : le facteur issu de l'intégration de la force de Hooke sur la déformation."
+      zh: "二分之一：由胡克力沿形变积分而得的系数。"
+      ja: "2分の1。フックの力をつぎ込む変形に沿って積分することで現れる係数。"
+  - id: mul-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por la constante del resorte.
+      en: Multiplied by the spring constant.
+      pt: Multiplicado pela constante da mola.
+      fr: Multiplié par la constante du ressort.
+      zh: 乘以弹簧的劲度系数。
+      ja: バネ定数を掛ける。
+  - id: k
+    type: constant
+    value: k
+    explanation:
+      es: La constante del resorte, una medida de su rigidez.
+      en: The spring constant, a measure of the spring's stiffness.
+      pt: A constante da mola, uma medida de sua rigidez.
+      fr: La constante du ressort, une mesure de sa raideur.
+      zh: 弹簧的劲度系数，衡量弹簧的刚度。
+      ja: バネ定数。バネの硬さを表す。
+  - id: mul-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por la deformación al cuadrado.
+      en: Multiplied by the deformation squared.
+      pt: Multiplicado pela deformação ao quadrado.
+      fr: Multiplié par la déformation au carré.
+      zh: 乘以形变的平方。
+      ja: 変形量の二乗を掛ける。
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: La deformación, o desplazamiento desde la posición de equilibrio.
+      en: The deformation, or displacement from the equilibrium position.
+      pt: A deformação, ou deslocamento em relação à posição de equilíbrio.
+      fr: La déformation, ou le déplacement par rapport à la position d'équilibre.
+      zh: 形变量，即相对平衡位置的位移。
+      ja: 変形量。つり合いの位置からの変位。
+  - id: exp-2
+    type: superscript
+    value: "2"
+    explanation:
+      es: "Al cuadrado: deformar el doble almacena cuatro veces más energía."
+      en: "Squared: deforming twice as much stores four times the energy."
+      pt: "Ao quadrado: deformar o dobro armazena quatro vezes mais energia."
+      fr: "Au carré : une déformation double stocke quatre fois plus d'énergie."
+      zh: "平方：形变量加倍，储存的能量增至四倍。"
+      ja: "二乗。変形量を2倍にすると、蓄えられるエネルギーは4倍になる。"
+context:
+  author:
+    es: Basada en la ley de Hooke
+    en: Based on Hooke's law
+    pt: Baseada na lei de Hooke
+    fr: Basée sur la loi de Hooke
+    zh: 基于胡克定律
+    ja: フックの法則に基づく
+  era:
+    es: Inglaterra, s. XVII
+    en: England, 17th century
+    pt: Inglaterra, séc. XVII
+    fr: Angleterre, XVIIe siècle
+    zh: 英格兰，17世纪
+    ja: イングランド、17世紀
+  history:
+    es: >-
+      La energía almacenada en un resorte estirado se desprende de la ley de Hooke, enunciada por
+      Robert Hooke en 1678: la fuerza del resorte crece linealmente con la deformación. Integrar esa
+      fuerza a lo largo del estiramiento arroja la energía acumulada, que crece con el cuadrado de la
+      deformación, de ahí el factor ½·k·x². Es la energía que dispara una flecha, impulsa a un atleta
+      en un trampolín y suaviza cada bache en la suspensión de un auto. Su carácter cuadrático explica
+      también por qué un resorte comprimido al doble almacena cuatro veces más energía, principio que
+      aprovechan los amortiguadores y los arcos de los relojes.
+    en: >-
+      The energy stored in a stretched spring follows from Hooke's law, stated by Robert Hooke in
+      1678: the spring's force grows linearly with the deformation. Integrating that force over the
+      stretch yields the stored energy, which grows with the square of the deformation, hence the
+      factor ½·k·x². It is the energy that launches an arrow, lifts an athlete on a trampoline, and
+      smooths every bump in a car's suspension. Its quadratic character also explains why a spring
+      compressed twice as much stores four times the energy, a principle used by shock absorbers and
+      watch mainsprings.
+    pt: >-
+      A energia armazenada em uma mola esticada decorre da lei de Hooke, enunciada por Robert Hooke
+      em 1678: a força da mola cresce linearmente com a deformação. Integrar essa força ao longo do
+      estiramento resulta na energia acumulada, que cresce com o quadrado da deformação, daí o fator
+      ½·k·x². É a energia que dispara uma flecha, impulsiona um atleta em um trampolim e suaviza cada
+      buraco na suspensão de um carro. Seu caráter quadrático explica também por que uma mola
+      comprimida o dobro armazena quatro vezes mais energia, princípio aproveitado pelos amortecedores
+      e pelas molas dos relógios.
+    fr: >-
+      L'énergie emmagasinée dans un ressort étiré découle de la loi de Hooke, énoncée par Robert Hooke
+      en 1678 : la force du ressort croît linéairement avec la déformation. Intégrer cette force sur
+      l'étirement donne l'énergie accumulée, qui croît avec le carré de la déformation, d'où le
+      facteur ½·k·x². C'est l'énergie qui lance une flèche, soulève un athlète sur un trampoline et
+      amortit chaque bosse de la suspension d'une voiture. Son caractère quadratique explique aussi
+      pourquoi un ressort comprimé deux fois plus emmagasine quatre fois plus d'énergie, principe
+      exploité par les amortisseurs et les ressorts de montre.
+    zh: >-
+      拉伸的弹簧中所储存的能量源自胡克定律，该定律由罗伯特·胡克于1678年提出：弹簧的力随形变线性增长。将这种力沿拉伸
+      距离积分，便得到储存的能量，它随形变的平方增长，因此有系数½·k·x²。正是这种能量射出了箭矢、在蹦床上托起运动员，
+      并缓解了汽车悬挂系统遇到的每一个颠簸。它的平方特性也解释了为什么压缩量加倍的弹簧会储存四倍的能量，减震器和钟表
+      发条利用的正是这一原理。
+    ja: >-
+      伸ばしたバネに蓄えられるエネルギーは、ロバート・フックが1678年に述べたフックの法則から導かれる。バネの力は
+      変形に比例して増える。この力を伸びの距離に沿って積分すると蓄えられたエネルギーが得られ、それは変形の二乗に比例して
+      増える。これが½·k·x²という係数の由来である。矢を放ち、トランポリンでアスリートを跳ね上げ、車のサスペンションで
+      路面の凸凹を和らげるのはこのエネルギーだ。二乗という性質は、2倍に圧縮したバネが4倍のエネルギーを蓄えることも
+      説明する。ショックアブソーバーや時計のぜんまいはこの原理を利用している。
+  timeline:
+    - year: "1678"
+      label:
+        es: >-
+          Robert Hooke publica su ley de los resortes, de la que se deriva la energía elástica.
+        en: >-
+          Robert Hooke publishes his law of springs, from which elastic energy is derived.
+        pt: >-
+          Robert Hooke publica sua lei das molas, da qual se deriva a energia elástica.
+        fr: >-
+          Robert Hooke publie sa loi des ressorts, d'où se déduit l'énergie élastique.
+        zh: >-
+          罗伯特·胡克发表他的弹簧定律，弹性势能即由此推导而来。
+        ja: >-
+          ロバート・フックがバネの法則を発表する。弾性エネルギーはここから導かれる。
+    - year: "1853"
+      label:
+        es: >-
+          William Rankine acuña el término "energía potencial" e integra los resortes en el marco de
+          la energía.
+        en: >-
+          William Rankine coins the term "potential energy" and folds springs into the energy
+          framework.
+        pt: >-
+          William Rankine cunha o termo "energia potencial" e integra as molas ao quadro da energia.
+        fr: >-
+          William Rankine forge le terme "énergie potentielle" et intègre les ressorts au cadre de
+          l'énergie.
+        zh: >-
+          威廉·兰金创造了"势能"一词，并将弹簧纳入能量的理论框架。
+        ja: >-
+          ウィリアム・ランキンが「位置エネルギー」という用語を作り、バネをエネルギー理論に組み込む。
+    - year: s. XX
+      label:
+        es: >-
+          La producción industrial de resortes hace de la fórmula una herramienta cotidiana de la
+          ingeniería.
+        en: >-
+          Industrial spring production makes the formula a daily tool of engineering.
+        pt: >-
+          A produção industrial de molas torna a fórmula uma ferramenta cotidiana da engenharia.
+        fr: >-
+          La production industrielle des ressorts fait de la formule un outil quotidien de
+          l'ingénierie.
+        zh: >-
+          弹簧的工业化生产使这一公式成为工程领域日常使用的工具。
+        ja: >-
+          バネの工業生産により、この式は工学の日常的な道具となる。
+    - year: Hoy
+      label:
+        es: >-
+          Trampolines, puenting y suspensiones de autos dependen de esta energía almacenada.
+        en: >-
+          Trampolines, bungee jumping, and car suspensions depend on this stored energy.
+        pt: >-
+          Trampolins, bungee jumping e suspensões de carros dependem dessa energia armazenada.
+        fr: >-
+          Trampolines, saut à l'élastique et suspensions automobiles dépendent de cette énergie
+          stockée.
+        zh: >-
+          蹦床、蹦极和汽车悬挂系统都依赖于这种储存的能量。
+        ja: >-
+          トランポリン、バンジージャンプ、車のサスペンションは、この蓄えられたエネルギーに依存している。
+  useCases:
+    - title:
+        es: Deportes y ocio
+        en: Sports and recreation
+        pt: Esportes e lazer
+        fr: Sports et loisirs
+        zh: 体育与休闲
+        ja: スポーツとレジャー
+      description:
+        es: >-
+          El arco almacena energía al tensarse y el trampolín la devuelve al impulso de cada salto.
+        en: >-
+          The bow stores energy as it is drawn, and the trampoline returns it in each jump's boost.
+        pt: >-
+          O arco armazena energia ao ser tensionado e o trampolim a devolve no impulso de cada salto.
+        fr: >-
+          L'arc emmagasine l'énergie en se tendant, et le trampoline la restitue dans l'impulsion de
+          chaque saut.
+        zh: >-
+          弓在拉满时储存能量，蹦床则在每次起跳时将其释放为推力。
+        ja: >-
+          弓は引き絞ることでエネルギーを蓄え、トランポリンは毎回のジャンプの推進力としてそれを返す。
+    - title:
+        es: Suspensiones de vehículos
+        en: Vehicle suspensions
+        pt: Suspensões de veículos
+        fr: Suspensions de véhicules
+        zh: 车辆悬挂
+        ja: 車両サスペンション
+      description:
+        es: >-
+          Los resortes de suspensión absorben la energía de cada bache y la liberan al volver a su
+          forma.
+        en: >-
+          Suspension springs absorb the energy of each bump and release it as they return to shape.
+        pt: >-
+          As molas de suspensão absorvem a energia de cada buraco e a liberam ao voltar à forma.
+        fr: >-
+          Les ressorts de suspension absorbent l'énergie de chaque bosse et la restituent en revenant
+          à leur forme.
+        zh: >-
+          悬挂弹簧吸收每一个颠簸的能量，并在恢复原状时将其释放。
+        ja: >-
+          サスペンションのバネは路面の凸凹のエネルギーを吸収し、元の形に戻るときにそれを放出する。
+    - title:
+        es: Ingeniería mecánica
+        en: Mechanical engineering
+        pt: Engenharia mecânica
+        fr: Ingénierie mécanique
+        zh: 机械工程
+        ja: 機械工学
+      description:
+        es: >-
+          Dimensiona resortes en válvulas, embragues y dispositivos de retorno que guardan energía
+          para funcionar.
+        en: >-
+          It sizes springs in valves, clutches, and return mechanisms that store energy to function.
+        pt: >-
+          Dimensiona molas em válvulas, embreagens e mecanismos de retorno que guardam energia para
+          funcionar.
+        fr: >-
+          Elle dimensionne les ressorts des soupapes, embrayages et mécanismes de rappel qui
+          emmagasinent de l'énergie pour fonctionner.
+        zh: >-
+          用于设计阀门、离合器和回位机构中的弹簧，这些弹簧通过储存能量来工作。
+        ja: >-
+          作動にエネルギーを蓄えるバルブ、クラッチ、復帰機構のバネを設計する。
+    - title:
+        es: Relojería e instrumentos
+        en: Watchmaking and instruments
+        pt: Relojoaria e instrumentos
+        fr: Horlogerie et instruments
+        zh: 钟表与仪器
+        ja: 時計と計器
+      description:
+        es: >-
+          El muelle real de un reloj acumula la energía que el mecanismo libera a lo largo del día.
+        en: >-
+          A watch mainspring accumulates the energy the mechanism releases throughout the day.
+        pt: >-
+          A mola real de um relógio acumula a energia que o mecanismo libera ao longo do dia.
+        fr: >-
+          Le ressort moteur d'une montre accumule l'énergie que le mécanisme libère au fil de la
+          journée.
+        zh: >-
+          钟表的发条累积起机械装置一整天缓慢释放的能量。
+        ja: >-
+          時計のぜんまいは、機構が一日かけて放出するエネルギーを蓄える。
+  example:
+    title:
+      es: Un resorte comprimido 10 cm
+      en: A spring compressed 10 cm
+      pt: Uma mola comprimida 10 cm
+      fr: Un ressort comprimé de 10 cm
+      zh: 压缩10厘米的弹簧
+      ja: 10cm圧縮したバネ
+    lines:
+      - es: k = 500 N/m
+        en: k = 500 N/m
+        pt: k = 500 N/m
+        fr: k = 500 N/m
+        zh: k = 500 牛/米
+        ja: k = 500 N/m
+      - es: x = 0.1 m
+        en: x = 0.1 m
+        pt: x = 0,1 m
+        fr: x = 0,1 m
+        zh: x = 0.1 米
+        ja: x = 0.1 m
+      - es: U = ½ · k · x²
+        en: U = ½ · k · x²
+        pt: U = ½ · k · x²
+        fr: U = ½ · k · x²
+        zh: U = ½ · k · x²
+        ja: U = ½ · k · x²
+      - es: U = ½ × 500 × 0.1²
+        en: U = ½ × 500 × 0.1²
+        pt: U = ½ × 500 × 0,1²
+        fr: U = ½ × 500 × 0,1²
+        zh: U = ½ × 500 × 0.1²
+        ja: U = ½ × 500 × 0.1²
+      - es: U = ½ × 500 × 0.01 = 2.5 J
+        en: U = ½ × 500 × 0.01 = 2.5 J
+        pt: U = ½ × 500 × 0,01 = 2,5 J
+        fr: U = ½ × 500 × 0,01 = 2,5 J
+        zh: U = ½ × 500 × 0.01 = 2.5 焦耳
+        ja: U = ½ × 500 × 0.01 = 2.5 J

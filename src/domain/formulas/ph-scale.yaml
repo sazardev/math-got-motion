@@ -1,0 +1,254 @@
+id: ph-scale
+title:
+  es: Escala de pH
+  en: pH Scale
+  pt: Escala de pH
+  fr: Échelle de pH
+  zh: pH 标度
+  ja: pHスケール
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: ph
+    type: variable
+    value: pH
+    explanation:
+      es: "pH: la medida de acidez o basicidad de una solución."
+      en: "pH: the measure of a solution's acidity or basicity."
+      pt: "pH: a medida da acidez ou basicidade de uma solução."
+      fr: "pH : la mesure de l'acidité ou basicité d'une solution."
+      zh: "pH：溶液酸碱性的一种度量。"
+      ja: "pH：溶液の酸性・塩基性の度合い。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Se define como.
+      en: Is defined as.
+      pt: É definido como.
+      fr: Est défini comme.
+      zh: 定义为。
+      ja: 次のように定義される。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "Menos: a más iones de hidrógeno, menor pH."
+      en: "Minus: more hydrogen ions, lower pH."
+      pt: "Menos: mais íons de hidrogênio, menor pH."
+      fr: "Moins : plus d'ions hydrogène, plus le pH est faible."
+      zh: "负号：氢离子越多，pH越低。"
+      ja: "マイナス。水素イオンが多いほどpHは低い。"
+  - id: log
+    type: operator
+    value: log
+    explanation:
+      es: El logaritmo en base 10.
+      en: The base-10 logarithm.
+      pt: O logaritmo na base 10.
+      fr: Le logarithme en base 10.
+      zh: 以10为底的对数。
+      ja: 底10の対数。
+  - id: brackets
+    type: variable
+    value: "[H⁺]"
+    explanation:
+      es: La concentración de iones de hidrógeno.
+      en: The hydrogen ion concentration.
+      pt: A concentração de íons de hidrogênio.
+      fr: La concentration en ions hydrogène.
+      zh: 氢离子的浓度。
+      ja: 水素イオン濃度。
+context:
+  author:
+    es: Søren Sørensen
+    en: Søren Sørensen
+    pt: Søren Sørensen
+    fr: Søren Sørensen
+    zh: 索伦·索伦森
+    ja: セーレン・セーレンセン
+  era:
+    es: Dinamarca, 1868–1939 · introducida en 1909
+    en: Denmark, 1868–1939 · introduced in 1909
+    pt: Dinamarca, 1868–1939 · introduzida em 1909
+    fr: Danemark, 1868–1939 · introduite en 1909
+    zh: 丹麦，1868–1939年·1909年提出
+    ja: デンマーク、1868–1939年・1909年に導入
+  history:
+    es: >-
+      En 1909, el químico danés Søren Sørensen definió el pH como el logaritmo negativo de la
+      concentración de iones de hidrógeno, para controlar la acidez de la cerveza en el laboratorio
+      Carlsberg. El logaritmo comprime concentraciones que van de 10⁻¹⁴ a 10⁰ en una escala de 0 a 14,
+      fácil de medir y recordar. Hoy el pH gobierna la biología, la agricultura, la medicina y toda la
+      industria química.
+    en: >-
+      In 1909, the Danish chemist Søren Sørensen defined pH as the negative logarithm of the hydrogen
+      ion concentration, to control the acidity of beer at the Carlsberg laboratory. The logarithm
+      compresses concentrations ranging from 10⁻¹⁴ to 10⁰ into a 0-to-14 scale that is easy to measure
+      and remember. Today pH governs biology, agriculture, medicine, and the entire chemical industry.
+    pt: >-
+      Em 1909, o químico dinamarquês Søren Sørensen definiu o pH como o logaritmo negativo da
+      concentração de íons de hidrogênio, para controlar a acidez da cerveja no laboratório Carlsberg.
+      O logaritmo comprime concentrações de 10⁻¹⁴ a 10⁰ em uma escala de 0 a 14, fácil de medir e
+      lembrar. Hoje o pH rege a biologia, a agricultura, a medicina e toda a indústria química.
+    fr: >-
+      En 1909, le chimiste danois Søren Sørensen définit le pH comme le logarithme négatif de la
+      concentration en ions hydrogène, pour contrôler l'acidité de la bière au laboratoire Carlsberg.
+      Le logarithme comprime des concentrations allant de 10⁻¹⁴ à 10⁰ en une échelle de 0 à 14, facile à
+      mesurer et à retenir. Aujourd'hui, le pH régit la biologie, l'agriculture, la médecine et toute
+      l'industrie chimique.
+    zh: >-
+      1909年，丹麦化学家索伦·索伦森为在嘉士伯实验室控制啤酒的酸度，将pH定义为氢离子浓度的负对数。对数把从
+      10⁻¹⁴到10⁰的浓度压缩成0到14的刻度，易于测量和记忆。如今，pH支配着生物学、农业、医学以及整个化学工业。
+    ja: >-
+      1909年、デンマークの化学者セーレン・セーレンセンは、カールスバーグ研究所でビールの酸性度を管理するために、
+      pHを水素イオン濃度の負の対数として定義した。対数は10⁻¹⁴から10⁰にわたる濃度を、測定・記憶しやすい0から14
+      の尺度に圧縮する。今日、pHは生物学、農業、医学、そして化学工業全体を支配している。
+  timeline:
+    - year: "1909"
+      label:
+        es: >-
+          Sørensen introduce el pH en el laboratorio Carlsberg de Copenhague.
+        en: >-
+          Sørensen introduces pH at the Carlsberg laboratory in Copenhagen.
+        pt: >-
+          Sørensen introduz o pH no laboratório Carlsberg de Copenhague.
+        fr: >-
+          Sørensen introduit le pH au laboratoire Carlsberg de Copenhague.
+        zh: >-
+          索伦森在哥本哈根的嘉士伯实验室引入pH。
+        ja: >-
+          セーレンセンがコペンハーゲンのカールスバーグ研究所でpHを導入する。
+    - year: "1924"
+      label:
+        es: >-
+          Se redefine el pH usando la actividad de los iones en lugar de la concentración.
+        en: >-
+          pH is redefined using ion activity instead of concentration.
+        pt: >-
+          O pH é redefinido usando a atividade dos íons em vez da concentração.
+        fr: >-
+          Le pH est redéfini en utilisant l'activité des ions au lieu de la concentration.
+        zh: >-
+          pH改用离子活度而非浓度来重新定义。
+        ja: >-
+          pHが、濃度の代わりにイオン活量を用いて再定義される。
+    - year: Hoy
+      label:
+        es: >-
+          El pH metro digital y los indicadores universales lo hacen omnipresente.
+        en: >-
+          Digital pH meters and universal indicators make it omnipresent.
+        pt: >-
+          O pHmetro digital e os indicadores universais o tornam onipresente.
+        fr: >-
+          Les pH-mètres numériques et indicateurs universels le rendent omniprésent.
+        zh: >-
+          数字pH计和万能指示剂使它无处不在。
+        ja: >-
+          デジタルpHメーターと万能指示薬がこれを至る所で使えるようにする。
+  useCases:
+    - title:
+        es: Agricultura
+        en: Agriculture
+        pt: Agricultura
+        fr: Agriculture
+        zh: 农业
+        ja: 農業
+      description:
+        es: >-
+          El pH del suelo decide qué cultivos pueden crecer y qué nutrientes se absorben.
+        en: >-
+          Soil pH decides which crops grow and which nutrients are absorbed.
+        pt: >-
+          O pH do solo decide quais culturas crescem e quais nutrientes são absorvidos.
+        fr: >-
+          Le pH du sol décide quelles cultures poussent et quels nutriments sont absorbés.
+        zh: >-
+          土壤pH决定哪些作物能生长、哪些养分能被吸收。
+        ja: >-
+          土壌のpHが、どの作物が育ち、どの栄養が吸収されるかを決める。
+    - title:
+        es: Biología y salud
+        en: Biology and health
+        pt: Biologia e saúde
+        fr: Biologie et santé
+        zh: 生物学与健康
+        ja: 生物学と健康
+      description:
+        es: >-
+          La sangre mantiene un pH casi constante; desviarlo un poco pone en riesgo la vida.
+        en: >-
+          Blood keeps an almost constant pH; deviating slightly endangers life.
+        pt: >-
+          O sangue mantém um pH quase constante; desviá-lo um pouco põe a vida em risco.
+        fr: >-
+          Le sang garde un pH presque constant ; s'en écarter un peu met la vie en danger.
+        zh: >-
+          血液保持近乎恒定的pH；稍有偏离就会危及生命。
+        ja: >-
+          血液はほぼ一定のpHを保っており、少しずれると生命の危険がある。
+    - title:
+        es: Industria química
+        en: Chemical industry
+        pt: Indústria química
+        fr: Industrie chimique
+        zh: 化学工业
+        ja: 化学工業
+      description:
+        es: >-
+          Cada proceso de fabricación — alimentos, fármacos, agua potable — vigila su pH.
+        en: >-
+          Every manufacturing process — food, drugs, drinking water — monitors its pH.
+        pt: >-
+          Todo processo de fabricação — alimentos, fármacos, água potável — monitora seu pH.
+        fr: >-
+          Chaque procédé de fabrication — alimentation, médicaments, eau potable — surveille son pH.
+        zh: >-
+          每个制造流程——食品、药品、饮用水——都要监测其pH。
+        ja: >-
+          食品、医薬品、飲料水など、あらゆる製造工程がpHを監視している。
+  example:
+    title:
+      es: Una solución con [H⁺] = 1×10⁻⁴
+      en: A solution with [H⁺] = 1×10⁻⁴
+      pt: Uma solução com [H⁺] = 1×10⁻⁴
+      fr: Une solution avec [H⁺] = 1×10⁻⁴
+      zh: "[H⁺] = 1×10⁻⁴ 的溶液"
+      ja: "[H⁺] = 1×10⁻⁴ の溶液"
+    lines:
+      - es: "[H⁺] = 1×10⁻⁴ mol/L"
+        en: "[H⁺] = 1×10⁻⁴ mol/L"
+        pt: "[H⁺] = 1×10⁻⁴ mol/L"
+        fr: "[H⁺] = 1×10⁻⁴ mol/L"
+        zh: "[H⁺] = 1×10⁻⁴ 摩尔/升"
+        ja: "[H⁺] = 1×10⁻⁴ mol/L"
+      - es: pH = −log(1×10⁻⁴)
+        en: pH = −log(1×10⁻⁴)
+        pt: pH = −log(1×10⁻⁴)
+        fr: pH = −log(1×10⁻⁴)
+        zh: pH = −log(1×10⁻⁴)
+        ja: pH = −log(1×10⁻⁴)
+      - es: log(1×10⁻⁴) = −4
+        en: log(1×10⁻⁴) = −4
+        pt: log(1×10⁻⁴) = −4
+        fr: log(1×10⁻⁴) = −4
+        zh: log(1×10⁻⁴) = −4
+        ja: log(1×10⁻⁴) = −4
+      - es: pH = −(−4)
+        en: pH = −(−4)
+        pt: pH = −(−4)
+        fr: pH = −(−4)
+        zh: pH = −(−4)
+        ja: pH = −(−4)
+      - es: "pH = 4: solución ácida"
+        en: "pH = 4: an acidic solution"
+        pt: "pH = 4: solução ácida"
+        fr: "pH = 4 : une solution acide"
+        zh: pH = 4：酸性溶液
+        ja: pH = 4：酸性溶液

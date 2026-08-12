@@ -1,0 +1,259 @@
+id: de-broglie-wavelength
+title:
+  es: Longitud de Onda de De Broglie
+  en: de Broglie Wavelength
+  pt: Comprimento de Onda de De Broglie
+  fr: Longueur d'onde de De Broglie
+  zh: 德布罗意波长
+  ja: ド・ブロイ波長
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: lambda
+    type: variable
+    value: λ
+    explanation:
+      es: "λ: la longitud de onda asociada a la partícula."
+      en: "λ: the wavelength associated with the particle."
+      pt: "λ: o comprimento de onda associado à partícula."
+      fr: "λ : la longueur d'onde associée à la particule."
+      zh: "λ：与粒子相关联的波长。"
+      ja: "λ：粒子に結びついた波長。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: h
+    type: constant
+    value: h
+    explanation:
+      es: "h: la constante de Planck."
+      en: "h: Planck's constant."
+      pt: "h: a constante de Planck."
+      fr: "h : la constante de Planck."
+      zh: "h：普朗克常数。"
+      ja: "h：プランク定数。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividida entre.
+      en: Divided by.
+      pt: Dividida por.
+      fr: Divisée par.
+      zh: 除以。
+      ja: で割る。
+  - id: p
+    type: variable
+    value: p
+    explanation:
+      es: "p: el momento de la partícula (masa por velocidad)."
+      en: "p: the particle's momentum (mass times velocity)."
+      pt: "p: o momento da partícula (massa vezes velocidade)."
+      fr: "p : la quantité de mouvement (masse fois vitesse)."
+      zh: "p：粒子的动量（质量乘以速度）。"
+      ja: "p：粒子の運動量（質量×速度）。"
+context:
+  author:
+    es: Louis de Broglie
+    en: Louis de Broglie
+    pt: Louis de Broglie
+    fr: Louis de Broglie
+    zh: 路易·德布罗意
+    ja: ルイ・ド・ブロイ
+  era:
+    es: Francia, 1892–1987 · presentada en 1924
+    en: France, 1892–1987 · presented in 1924
+    pt: França, 1892–1987 · apresentada em 1924
+    fr: France, 1892–1987 · présentée en 1924
+    zh: 法国，1892–1987年·1924年提出
+    ja: フランス、1892–1987年・1924年に提示
+  history:
+    es: >-
+      En 1924, en su tesis doctoral, Louis de Broglie propuso que toda partícula con momento tiene una
+      onda asociada, invirtiendo la dualidad que Planck y Einstein habían visto en la luz. Tres años
+      después, Davisson y Germer confirmaron el efecto difractando electrones con un cristal. La idea
+      abrió la puerta a la mecánica cuántica ondulatoria de Schrödinger y hoy sustenta el microscopio
+      electrónico.
+    en: >-
+      In 1924, in his doctoral thesis, Louis de Broglie proposed that every particle with momentum has
+      an associated wave, inverting the duality Planck and Einstein had seen in light. Three years
+      later, Davisson and Germer confirmed the effect by diffracting electrons with a crystal. The idea
+      opened the door to Schrödinger's wave mechanics and today underpins the electron microscope.
+    pt: >-
+      Em 1924, em sua tese de doutorado, Louis de Broglie propôs que toda partícula com momento tem uma
+      onda associada, invertendo a dualidade que Planck e Einstein tinham visto na luz. Três anos
+      depois, Davisson e Germer confirmaram o efeito difratando elétrons com um cristal. A ideia abriu
+      a porta para a mecânica quântica ondulatória de Schrödinger e hoje sustenta o microscópio
+      eletrônico.
+    fr: >-
+      En 1924, dans sa thèse de doctorat, Louis de Broglie proposa que toute particule dotée d'une
+      quantité de mouvement possède une onde associée, inversant la dualité que Planck et Einstein
+      avaient vue dans la lumière. Trois ans plus tard, Davisson et Germer confirmèrent l'effet en
+      diffractant des électrons sur un cristal. L'idée ouvrit la porte à la mécanique ondulatoire de
+      Schrödinger et sous-tend aujourd'hui le microscope électronique.
+    zh: >-
+      1924年，路易·德布罗意在其博士论文中提出，任何具有动量的粒子都伴随一个波，这反转了普朗克和爱因斯坦在光中
+      看到的二象性。三年后，戴维森和革末用晶体衍射电子，证实了这一效应。这一思想为薛定谔的波动力学打开了大门，
+      如今它支撑着电子显微镜。
+    ja: >-
+      1924年の博士論文で、ルイ・ド・ブロイは、運動量を持つすべての粒子に波が伴うと提唱した。これは、プランクと
+      アインシュタインが光に見出した二重性を逆転させたものだ。3年後、デビソンとガーマーが、結晶による電子の
+      回折でこの効果を確認した。この考えはシュレーディンガーの波動力学への扉を開き、今日では電子顕微鏡を
+      支えている。
+  timeline:
+    - year: "1924"
+      label:
+        es: >-
+          De Broglie presenta la hipótesis de la onda de materia en su tesis.
+        en: >-
+          De Broglie presents the matter-wave hypothesis in his thesis.
+        pt: >-
+          De Broglie apresenta a hipótese da onda de matéria em sua tese.
+        fr: >-
+          De Broglie présente l'hypothèse de l'onde de matière dans sa thèse.
+        zh: >-
+          德布罗意在其论文中提出物质波假说。
+        ja: >-
+          ド・ブロイが博士論文で物質波の仮説を提示する。
+    - year: "1927"
+      label:
+        es: >-
+          Davisson y Germer difractan electrones y confirman la fórmula.
+        en: >-
+          Davisson and Germer diffract electrons and confirm the formula.
+        pt: >-
+          Davisson e Germer difratam elétrons e confirmam a fórmula.
+        fr: >-
+          Davisson et Germer diffractent des électrons et confirment la formule.
+        zh: >-
+          戴维森和革末衍射电子，证实了这一公式。
+        ja: >-
+          デビソンとガーマーが電子を回折させ、この公式を確認する。
+    - year: Hoy
+      label:
+        es: >-
+          El microscopio electrónico usa esta longitud de onda, millones de veces menor que la luz.
+        en: >-
+          The electron microscope uses this wavelength, millions of times smaller than light's.
+        pt: >-
+          O microscópio eletrônico usa esse comprimento de onda, milhões de vezes menor que o da luz.
+        fr: >-
+          Le microscope électronique utilise cette longueur d'onde, des millions de fois plus petite
+          que celle de la lumière.
+        zh: >-
+          电子显微镜利用这种波长，它比光的波长小数百万倍。
+        ja: >-
+          電子顕微鏡はこの波長を用いる。光の波長の数百万分の一である。
+  useCases:
+    - title:
+        es: Microscopía electrónica
+        en: Electron microscopy
+        pt: Microscopia eletrônica
+        fr: Microscopie électronique
+        zh: 电子显微术
+        ja: 電子顕微鏡
+      description:
+        es: >-
+          La corta longitud de onda del electrón revela detalles atómicos invisibles a la luz.
+        en: >-
+          The electron's tiny wavelength reveals atomic details invisible to light.
+        pt: >-
+          O pequeno comprimento de onda do elétron revela detalhes atômicos invisíveis à luz.
+        fr: >-
+          La minuscule longueur d'onde de l'électron révèle des détails atomiques invisibles à la
+          lumière.
+        zh: >-
+          电子极短的波长能揭示光所看不见的原子级细节。
+        ja: >-
+          電子の極めて短い波長が、光では見えない原子レベルの詳細を明らかにする。
+    - title:
+        es: Mecánica cuántica
+        en: Quantum mechanics
+        pt: Mecânica quântica
+        fr: Mécanique quantique
+        zh: 量子力学
+        ja: 量子力学
+      description:
+        es: >-
+          La ecuación de Schrödinger trata los electrones como ondas de materia.
+        en: >-
+          Schrödinger's equation treats electrons as matter waves.
+        pt: >-
+          A equação de Schrödinger trata os elétrons como ondas de matéria.
+        fr: >-
+          L'équation de Schrödinger traite les électrons comme des ondes de matière.
+        zh: >-
+          薛定谔方程把电子当作物质波来处理。
+        ja: >-
+          シュレーディンガー方程式は、電子を物質波として扱う。
+    - title:
+        es: Difracción de neutrones
+        en: Neutron diffraction
+        pt: Difração de nêutrons
+        fr: Diffraction de neutrons
+        zh: 中子衍射
+        ja: 中性子回折
+      description:
+        es: >-
+          Los neutrones se usan para estudiar estructuras magnéticas con esta onda.
+        en: >-
+          Neutrons probe magnetic structures with this wave.
+        pt: >-
+          Nêutrons sondam estruturas magnéticas com essa onda.
+        fr: >-
+          Les neutrons sondent les structures magnétiques avec cette onde.
+        zh: >-
+          中子用这种波来探测磁性结构。
+        ja: >-
+          中性子はこの波で磁気構造を探る。
+  example:
+    title:
+      es: Un electrón acelerado
+      en: An accelerated electron
+      pt: Um elétron acelerado
+      fr: Un électron accéléré
+      zh: 一个被加速的电子
+      ja: 加速された電子
+    lines:
+      - es: v = 1×10⁶ m/s, m = 9.11×10⁻³¹ kg
+        en: v = 1×10⁶ m/s, m = 9.11×10⁻³¹ kg
+        pt: v = 1×10⁶ m/s, m = 9,11×10⁻³¹ kg
+        fr: v = 1×10⁶ m/s, m = 9,11×10⁻³¹ kg
+        zh: v = 1×10⁶ 米/秒，m = 9.11×10⁻³¹ 千克
+        ja: v = 1×10⁶ m/s、m = 9.11×10⁻³¹ kg
+      - es: p = m·v ≈ 9.11×10⁻²⁵ kg·m/s
+        en: p = m·v ≈ 9.11×10⁻²⁵ kg·m/s
+        pt: p = m·v ≈ 9,11×10⁻²⁵ kg·m/s
+        fr: p = m·v ≈ 9,11×10⁻²⁵ kg·m/s
+        zh: p = m·v ≈ 9.11×10⁻²⁵ 千克·米/秒
+        ja: p = m·v ≈ 9.11×10⁻²⁵ kg·m/s
+      - es: h = 6.626×10⁻³⁴ J·s
+        en: h = 6.626×10⁻³⁴ J·s
+        pt: h = 6,626×10⁻³⁴ J·s
+        fr: h = 6,626×10⁻³⁴ J·s
+        zh: h = 6.626×10⁻³⁴ 焦·秒
+        ja: h = 6.626×10⁻³⁴ J·s
+      - es: λ = h / p ≈ 7.3×10⁻¹⁰ m
+        en: λ = h / p ≈ 7.3×10⁻¹⁰ m
+        pt: λ = h / p ≈ 7,3×10⁻¹⁰ m
+        fr: λ = h / p ≈ 7,3×10⁻¹⁰ m
+        zh: λ = h / p ≈ 7.3×10⁻¹⁰ 米
+        ja: λ = h / p ≈ 7.3×10⁻¹⁰ m
+      - es: "Del tamaño de un átomo: por eso el electrón difracta"
+        en: "Atomic-sized: which is why electrons diffract"
+        pt: "Do tamanho de um átomo: por isso os elétrons difratam"
+        fr: "De taille atomique : c'est pourquoi les électrons diffractent"
+        zh: 与原子同量级：这正是电子发生衍射的原因
+        ja: 原子サイズ。だから電子は回折する

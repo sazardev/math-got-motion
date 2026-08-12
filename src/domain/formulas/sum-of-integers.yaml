@@ -1,0 +1,386 @@
+id: sum-of-integers
+title:
+  es: Suma de los Primeros n Enteros
+  en: Sum of the First n Integers
+  pt: Soma dos Primeiros n Inteiros
+  fr: Somme des n Premiers Entiers
+  zh: 前n个整数的和
+  ja: 最初のn個の整数の和
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: sum
+    type: variable
+    value: S
+    explanation:
+      es: La suma total de los n primeros números enteros.
+      en: The total sum of the first n integers.
+      pt: A soma total dos n primeiros números inteiros.
+      fr: La somme totale des n premiers entiers.
+      zh: 前n个整数的总和。
+      ja: 最初のn個の整数の合計。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: El último número de la serie, el número de términos que se suman.
+      en: The last number of the series, the number of terms being added.
+      pt: O último número da série, o número de termos somados.
+      fr: Le dernier nombre de la série, le nombre de termes additionnés.
+      zh: 数列的最后一个数,即被相加的项数。
+      ja: 数列の最後の数、すなわち足し合わせる項の数。
+  - id: times
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicación entre n y el paréntesis (n + 1).
+      en: Multiplication of n and the parenthesized (n + 1).
+      pt: Multiplicação entre n e o parêntese (n + 1).
+      fr: Multiplication de n par la parenthèse (n + 1).
+      zh: n 与括号内(n + 1)相乘。
+      ja: nと括弧内の(n + 1)との乗算。
+  - id: paren-open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el agrupamiento que forma cada par de términos.
+      en: Opens the grouping that forms each pair of terms.
+      pt: Abre o agrupamento que forma cada par de termos.
+      fr: Ouvre le regroupement qui forme chaque paire de termes.
+      zh: 打开组成每对项的括号。
+      ja: 各項のペアをまとめる括弧を開く。
+  - id: n-plus-one
+    type: variable
+    value: n
+    explanation:
+      es: El mismo último número, emparejado con el 1 para formar n + 1.
+      en: The same last number, paired with the 1 to form n + 1.
+      pt: O mesmo último número, emparelhado com o 1 para formar n + 1.
+      fr: Le même dernier nombre, apparié au 1 pour former n + 1.
+      zh: 同一个末项,与1配对构成n + 1。
+      ja: 同じ最後の数。1とペアになりn + 1を成す。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Suma que une el último término con el primer término.
+      en: Addition joining the last term to the first term.
+      pt: Soma que une o último termo ao primeiro termo.
+      fr: Addition qui relie le dernier terme au premier terme.
+      zh: 将末项与首项相加。
+      ja: 最後の項と最初の項を結ぶ加算。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: El primer término de la serie, pareja del último.
+      en: The first term of the series, the partner of the last.
+      pt: O primeiro termo da série, parceiro do último.
+      fr: Le premier terme de la série, partenaire du dernier.
+      zh: 数列的第一项,与末项配对。
+      ja: 数列の最初の項。最後の項のペア。
+  - id: paren-close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el agrupamiento de cada par.
+      en: Closes the grouping of each pair.
+      pt: Fecha o agrupamento de cada par.
+      fr: Ferme le regroupement de chaque paire.
+      zh: 关闭每对的括号。
+      ja: 各ペアの括弧を閉じる。
+  - id: divide
+    type: operator
+    value: /
+    explanation:
+      es: División entre 2, porque cada par vale n + 1 y hay n/2 pares.
+      en: Division by 2, since each pair sums to n + 1 and there are n/2 pairs.
+      pt: Divisão por 2, pois cada par vale n + 1 e há n/2 pares.
+      fr: Division par 2, car chaque paire vaut n + 1 et il y a n/2 paires.
+      zh: 除以2,因为每对之和为n + 1,共有n/2对。
+      ja: 2で割る。各ペアがn + 1であり、ペアがn/2組あるため。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: El número de términos que forma cada par.
+      en: The number of terms forming each pair.
+      pt: O número de termos que forma cada par.
+      fr: Le nombre de termes formant chaque paire.
+      zh: 构成每对项的项数。
+      ja: 各ペアを構成する項の数。
+context:
+  author:
+    es: Origen colectivo; popularizada por Gauss
+    en: Collective origin; popularized by Gauss
+    pt: Origem coletiva; popularizada por Gauss
+    fr: Origine collective; popularisée par Gauss
+    zh: 集体起源;由高斯推广
+    ja: 集団的起源;ガウスにより有名に
+  era:
+    es: Europa, s. XVIII (anécdota de Gauss a los 9 años)
+    en: Europe, 18th century (Gauss's anecdote at age 9)
+    pt: Europa, séc. XVIII (anedota de Gauss aos 9 anos)
+    fr: Europe, XVIIIe s. (anecdote de Gauss à 9 ans)
+    zh: 欧洲,18世纪(高斯9岁时的轶事)
+    ja: ヨーロッパ、18世紀(9歳のガウスの逸話)
+  history:
+    es: >-
+      La suma 1 + 2 + … + n es el número triangular n(n+1)/2, una identidad conocida desde la
+      antigüedad: matemáticos indios como Aryabhata (s. V) y Brahmagupta (s. VII) la usaban para
+      contar objetos apilados y sumar series. Su fama popular viene de la anécdota según la cual
+      un joven Gauss, de unos nueve años, sumó los números del 1 al 100 en segundos emparejando
+      cada término con su complemento (1 + 100, 2 + 99, …), obteniendo 50 pares de 101. La
+      fórmula es la base de la aritmética combinatoria, del conteo de estructuras y del análisis
+      de algoritmos.
+    en: >-
+      The sum 1 + 2 + … + n is the triangular number n(n+1)/2, an identity known since
+      antiquity: Indian mathematicians such as Aryabhata (5th century) and Brahmagupta (7th
+      century) used it to count stacked objects and add series. Its fame comes from the legend
+      that a nine-year-old Gauss added the integers from 1 to 100 in seconds by pairing each term
+      with its complement (1 + 100, 2 + 99, …), making 50 pairs of 101. The formula underpins
+      combinatorial arithmetic, counting structures and the analysis of algorithms.
+    pt: >-
+      A soma 1 + 2 + … + n é o número triangular n(n+1)/2, uma identidade conhecida desde a
+      antiguidade: matemáticos indianos como Aryabhata (séc. V) e Brahmagupta (séc. VII) a usavam
+      para contar objetos empilhados e somar séries. Sua fama popular vem da lenda segundo a qual
+      um jovem Gauss, com cerca de nove anos, somou os números de 1 a 100 em segundos
+      emparelhando cada termo com seu complemento (1 + 100, 2 + 99, …), obtendo 50 pares de 101.
+      A fórmula é a base da aritmética combinatória, da contagem de estruturas e da análise de
+      algoritmos.
+    fr: >-
+      La somme 1 + 2 + … + n est le nombre triangulaire n(n+1)/2, une identité connue depuis
+      l'Antiquité : des mathématiciens indiens comme Aryabhata (Ve siècle) et Brahmagupta (VIIe
+      siècle) l'utilisaient pour compter des objets empilés et additionner des séries. Sa
+      notoriété vient de la légende selon laquelle le jeune Gauss, âgé d'environ neuf ans,
+      additionna les entiers de 1 à 100 en quelques secondes en appariant chaque terme avec son
+      complément (1 + 100, 2 + 99, …), formant 50 paires de 101. La formule est à la base de
+      l'arithmétique combinatoire, du dénombrement des structures et de l'analyse des
+      algorithmes.
+    zh: >-
+      1 + 2 + … + n 的和是三角数 n(n+1)/2,这个恒等式自古就有:印度数学家阿耶波多(5世纪)和婆罗摩笈多
+      (7世纪)已经用它来数堆叠的物体、求级数的和。它广为人知则来自高斯九岁时的传说:他把每项与它的互补数
+      配对,例如1与100、2与99,几秒钟内算出1到100的和,得到50对101。这一公式是组合数学中的计数、结构的
+      枚举以及算法复杂度分析的基础。
+    ja: >-
+      1 + 2 + … + n の和は三角数 n(n+1)/2 であり、この恒等式は古代から知られていた。インドの数学者
+      アリヤバータ(5世紀)やブラーマグプタ(7世紀)は、積み重ねた物体の数を数えたり級数の和を求めるのに
+      これを使った。この式を有名にしたのは、9歳のガウスが、1と100、2と99のように項同士を組み合わせて
+      101を50組つくり、瞬時に1から100までの和を求めたという逸話だ。この公式は組合せの数え上げ、構造の
+      列挙、そしてアルゴリズムの計算量解析の土台となっている。
+  timeline:
+    - year: c. 500
+      label:
+        es: >-
+          Aryabhata registra en su tratado la suma 1 + 2 + … + n para contar objetos apilados.
+        en: >-
+          Aryabhata records in his treatise the sum 1 + 2 + … + n for counting stacked objects.
+        pt: >-
+          Aryabhata registra em seu tratado a soma 1 + 2 + … + n para contar objetos empilhados.
+        fr: >-
+          Aryabhata consigne dans son traité la somme 1 + 2 + … + n pour compter des objets
+          empilés.
+        zh: >-
+          阿耶波多在他的著作中记录用1 + 2 + … + n的和来数堆叠的物体。
+        ja: >-
+          アリヤバータが著書で、積み重ねた物体を数えるための和1 + 2 + … + nを記録する。
+    - year: s. XVIII
+      label:
+        es: >-
+          La anécdota del joven Gauss, que sumó 1 a 100 por parejas en segundos, populariza el
+          truco.
+        en: >-
+          The legend of young Gauss adding 1 to 100 by pairs in seconds popularizes the trick.
+        pt: >-
+          A lenda do jovem Gauss, que somou 1 a 100 por pares em segundos, populariza o truque.
+        fr: >-
+          La légende du jeune Gauss additionnant 1 à 100 par paires en quelques secondes
+          popularise l'astuce.
+        zh: >-
+          高斯年幼时用配对法在几秒内算出1到100的和,这则轶事让该技巧广为流传。
+        ja: >-
+          9歳のガウスが1から100までを瞬時にペアで足し算したという逸話が、この方法を広める。
+    - year: "1801"
+      label:
+        es: >-
+          Gauss publica las Disquisitiones Arithmeticae, que profundiza la teoría de los números
+          triangulares.
+        en: >-
+          Gauss publishes Disquisitiones Arithmeticae, deepening the theory of triangular
+          numbers.
+        pt: >-
+          Gauss publica as Disquisitiones Arithmeticae, que aprofunda a teoria dos números
+          triangulares.
+        fr: >-
+          Gauss publie les Disquisitiones Arithmeticae, qui approfondit la théorie des nombres
+          triangulaires.
+        zh: >-
+          高斯发表《算术研究》,深入发展了三角数的理论。
+        ja: >-
+          ガウスが『整数論の研究』を発表し、三角数の理論を深める。
+    - year: Hoy
+      label:
+        es: >-
+          La identidad es la base del conteo combinatorio y del análisis de complejidad de los
+          algoritmos.
+        en: >-
+          The identity underpins combinatorial counting and the complexity analysis of
+          algorithms.
+        pt: >-
+          A identidade é a base da contagem combinatória e da análise de complexidade dos
+          algoritmos.
+        fr: >-
+          L'identité est à la base du dénombrement combinatoire et de l'analyse de complexité des
+          algorithmes.
+        zh: >-
+          该恒等式是组合计数和算法复杂度分析的基础。
+        ja: >-
+          この恒等式は組合せの数え上げとアルゴリズムの計算量解析の基礎である。
+  useCases:
+    - title:
+        es: Combinatoria
+        en: Combinatorics
+        pt: Combinatória
+        fr: Combinatoire
+        zh: 组合数学
+        ja: 組合せ論
+      description:
+        es: >-
+          Cuenta pares, apretones de mano y diagonales: el número de pares de n objetos es
+          n(n − 1)/2, la misma identidad con n − 1.
+        en: >-
+          It counts pairs, handshakes and diagonals: the number of pairs among n objects is
+          n(n − 1)/2, the same identity with n − 1.
+        pt: >-
+          Conta pares, apertos de mão e diagonais: o número de pares de n objetos é n(n − 1)/2, a
+          mesma identidade com n − 1.
+        fr: >-
+          Elle compte les paires, poignées de main et diagonales : le nombre de paires de n
+          objets est n(n − 1)/2, la même identité avec n − 1.
+        zh: >-
+          用于数对、握手和对角线:n个对象两两配对的数目为n(n − 1)/2,即令n − 1的同一恒等式。
+        ja: >-
+          ペア、握手、対角線を数える。n個の物体のペア数はn(n − 1)/2で、n − 1の場合の同じ恒等式である。
+    - title:
+        es: Análisis de algoritmos
+        en: Algorithm analysis
+        pt: Análise de algoritmos
+        fr: Analyse d'algorithmes
+        zh: 算法分析
+        ja: アルゴリズム解析
+      description:
+        es: >-
+          La complejidad de bucles anidados o de comparaciones (como en la ordenación por
+          burbuja) se mide con sumas 1 + 2 + … + n.
+        en: >-
+          The complexity of nested loops or comparisons (as in bubble sort) is measured with sums
+          1 + 2 + … + n.
+        pt: >-
+          A complexidade de laços aninhados ou de comparações (como na ordenação por bolha) é
+          medida com somas 1 + 2 + … + n.
+        fr: >-
+          La complexité des boucles imbriquées ou des comparaisons (comme dans le tri à bulles)
+          se mesure avec des sommes 1 + 2 + … + n.
+        zh: >-
+          嵌套循环或比较(如冒泡排序)的复杂度用1 + 2 + … + n的和来衡量。
+        ja: >-
+          入れ子のループや比較(バブルソートなど)の計算量は、1 + 2 + … + nの和で測られる。
+    - title:
+        es: Estadística
+        en: Statistics
+        pt: Estatística
+        fr: Statistiques
+        zh: 统计学
+        ja: 統計学
+      description:
+        es: >-
+          El promedio de los primeros n números enteros es (n + 1)/2, la mitad de la fórmula
+          completa.
+        en: >-
+          The average of the first n integers is (n + 1)/2, half of the full formula.
+        pt: >-
+          A média dos primeiros n números inteiros é (n + 1)/2, metade da fórmula completa.
+        fr: >-
+          La moyenne des n premiers entiers est (n + 1)/2, la moitié de la formule complète.
+        zh: >-
+          前n个整数的平均值为(n + 1)/2,即整个公式的一半。
+        ja: >-
+          最初のn個の整数の平均は(n + 1)/2、すなわち公式全体の半分である。
+    - title:
+        es: Finanzas y ahorro
+        en: Finance and saving
+        pt: Finanças e poupança
+        fr: Finance et épargne
+        zh: 金融与储蓄
+        ja: 金融・貯蓄
+      description:
+        es: >-
+          Series de pagos aritméticos, como planes de ahorro graduales o métodos de depreciación,
+          se resuelven con la suma de 1 a n.
+        en: >-
+          Arithmetic payment series, such as graduated saving plans or depreciation methods, are
+          solved with the sum from 1 to n.
+        pt: >-
+          Séries de pagamentos aritméticas, como planos de poupança graduais ou métodos de
+          depreciação, se resolvem com a soma de 1 a n.
+        fr: >-
+          Les séries de paiements arithmétiques, comme les plans d'épargne progressifs ou les
+          méthodes d'amortissement, se résolvent avec la somme de 1 à n.
+        zh: >-
+          等差支付序列,如渐进式储蓄计划或折旧方法,可通过1到n的和来求解。
+        ja: >-
+          漸進的な貯蓄プランや減価償却方法などの等差支払い系列は、1からnまでの和で解ける。
+  example:
+    title:
+      es: Suma de los números del 1 al 100
+      en: Sum of the numbers from 1 to 100
+      pt: Soma dos números de 1 a 100
+      fr: Somme des nombres de 1 à 100
+      zh: 从1到100的整数之和
+      ja: 1から100までの整数の和
+    lines:
+      - es: n = 100
+        en: n = 100
+        pt: n = 100
+        fr: n = 100
+        zh: n = 100
+        ja: n = 100
+      - es: S = n · (n + 1) / 2
+        en: S = n · (n + 1) / 2
+        pt: S = n · (n + 1) / 2
+        fr: S = n · (n + 1) / 2
+        zh: S = n · (n + 1) / 2
+        ja: S = n · (n + 1) / 2
+      - es: S = 100 × 101 / 2
+        en: S = 100 × 101 / 2
+        pt: S = 100 × 101 / 2
+        fr: S = 100 × 101 / 2
+        zh: S = 100 × 101 / 2
+        ja: S = 100 × 101 / 2
+      - es: S = 10100 / 2
+        en: S = 10100 / 2
+        pt: S = 10100 / 2
+        fr: S = 10100 / 2
+        zh: S = 10100 / 2
+        ja: S = 10100 / 2
+      - es: S = 5050
+        en: S = 5050
+        pt: S = 5050
+        fr: S = 5050
+        zh: S = 5050
+        ja: S = 5050

@@ -1,0 +1,329 @@
+id: electric-power
+title:
+  es: Potencia Eléctrica
+  en: Electric Power
+  pt: Potência Elétrica
+  fr: Puissance électrique
+  zh: 电功率
+  ja: 電力
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: p
+    type: variable
+    value: P
+    explanation:
+      es: La potencia eléctrica, es decir, la rapidez con que el circuito convierte o transfiere energía.
+      en: The electric power, that is, how quickly the circuit converts or transfers energy.
+      pt: A potência elétrica, ou seja, a rapidez com que o circuito converte ou transfere energia.
+      fr: La puissance électrique, c'est-à-dire la vitesse à laquelle le circuit convertit ou transfère l'énergie.
+      zh: 电功率，即电路转换或传输能量的快慢。
+      ja: 電気的仕事率。回路がエネルギーを変換・移動する速さを表す。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: v
+    type: variable
+    value: V
+    explanation:
+      es: El voltaje aplicado entre los extremos del dispositivo.
+      en: The voltage applied across the device.
+      pt: A tensão aplicada entre os terminais do dispositivo.
+      fr: La tension appliquée aux bornes du dispositif.
+      zh: 施加在器件两端的电压。
+      ja: 素子の両端に加わる電圧。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: "Multiplicación: el voltaje y la corriente se multiplican entre sí."
+      en: "Multiplication: voltage and current are multiplied together."
+      pt: "Multiplicação: a tensão e a corrente são multiplicadas entre si."
+      fr: "Multiplication : la tension et le courant se multiplient entre eux."
+      zh: "乘法：电压与电流相乘。"
+      ja: "乗算。電圧と電流を掛け合わせる。"
+  - id: i
+    type: variable
+    value: I
+    explanation:
+      es: La corriente que fluye por el dispositivo.
+      en: The current flowing through the device.
+      pt: A corrente que flui pelo dispositivo.
+      fr: Le courant qui traverse le dispositif.
+      zh: 流过器件的电流。
+      ja: 素子を流れる電流。
+context:
+  author:
+    es: Basada en la ley de Ohm y el trabajo de Joule
+    en: Based on Ohm's law and Joule's work
+    pt: Baseada na lei de Ohm e no trabalho de Joule
+    fr: Fondée sur la loi d'Ohm et les travaux de Joule
+    zh: 基于欧姆定律和焦耳的研究
+    ja: オームの法則とジュールの研究に基づく
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, s. XIX
+    fr: Europe, XIXᵉ siècle
+    zh: 欧洲，19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      La potencia eléctrica mide cuán rápido un circuito convierte energía: el vatio es un julio por
+      segundo. La relación P = V·I sintetiza la ley de Ohm (1827) y los estudios de James Prescott
+      Joule, que en la década de 1840 mostró que la corriente produce calor proporcional a I²R. Por
+      eso los electrodomésticos se clasifican por su consumo en vatios, las redes se dimensionan por
+      la potencia que deben transportar y las facturas de electricidad se calculan a partir de la
+      energía consumida por cada hogar. Es, en esencia, el punto de partida de la ingeniería
+      eléctrica moderna.
+    en: >-
+      Electric power measures how quickly a circuit converts energy: a watt is simply a joule per
+      second. The relation P = V·I synthesizes two nineteenth-century discoveries, Ohm's law (1827)
+      and the work of James Prescott Joule, who in the 1840s showed that a current produces heat
+      proportional to I²R. This is why appliances are rated by their power draw in watts, grids are
+      sized by the power they must carry, and electricity bills are computed from the energy each
+      household consumes. It is, in essence, the starting point of modern electrical engineering.
+    pt: >-
+      A potência elétrica mede a rapidez com que um circuito converte energia: um watt é
+      simplesmente um joule por segundo. A relação P = V·I sintetiza a lei de Ohm (1827) e os
+      estudos de James Prescott Joule, que na década de 1840 mostrou que a corrente produz calor
+      proporcional a I²R. Por isso os eletrodomésticos são classificados pelo consumo em watts, as
+      redes são dimensionadas pela potência que precisam transportar e as contas de luz são
+      calculadas a partir da energia consumida por cada residência. É, em essência, o ponto de
+      partida da engenharia elétrica moderna.
+    fr: >-
+      La puissance électrique mesure la rapidité avec laquelle un circuit convertit l'énergie : un
+      watt n'est qu'un joule par seconde. La relation P = V·I synthétise la loi d'Ohm (1827) et les
+      travaux de James Prescott Joule, qui dans les années 1840 montra qu'un courant produit une
+      chaleur proportionnelle à I²R. C'est pourquoi les appareils sont classés par leur puissance en
+      watts, les réseaux sont dimensionnés selon la puissance à transporter et les factures
+      d'électricité sont calculées à partir de l'énergie consommée par chaque foyer. C'est, en
+      substance, le point de départ du génie électrique moderne.
+    zh: >-
+      电功率衡量电路转换能量的快慢：瓦特其实就是焦耳每秒。公式 P = V·I 综合了19世纪的两项发现，
+      1827年的欧姆定律，以及詹姆斯·普雷斯科特·焦耳的研究——他在1840年代证明电流产生的热量与 I²R 成正比。
+      正因如此，电器按功率（瓦特）标定，电网按需输送的功率设计，电费账单则根据每个家庭消耗的能量计算。
+      它本质上就是现代电气工程的起点。
+    ja: >-
+      電力は、回路がエネルギーを変換する速さを表す。ワットとはすなわちジュール毎秒である。
+      公式 P = V·I は、1827年のオームの法則と、1840年代に電流が I²R に比例する熱を生み出すことを示した
+      ジェームズ・プレスコット・ジュールの研究を統合したものである。このため、電化製品は消費電力をワットで
+      表示し、電力網は運ぶべき電力に応じて設計され、電気料金は各家庭の消費エネルギーから計算される。
+      まさに現代電気工学の出発点である。
+  timeline:
+    - year: "1800"
+      label:
+        es: >-
+          Volta construye la primera batería, que ofrece corriente continua estable y permite estudiar
+          la potencia que un circuito puede entregar.
+        en: >-
+          Volta builds the first battery, providing steady direct current and enabling study of the
+          power a circuit can deliver.
+        pt: >-
+          Volta constrói a primeira bateria, que oferece corrente contínua estável e permite estudar
+          a potência que um circuito pode fornecer.
+        fr: >-
+          Volta construit la première pile, qui fournit un courant continu stable et permet d'étudier
+          la puissance qu'un circuit peut délivrer.
+        zh: >-
+          伏打发明了第一块电池，提供稳定的直流电，使人们得以研究电路能够输出的功率。
+        ja: >-
+          ボルタが最初の電池を製作。安定した直流を供給し、回路が供給できる電力を研究できるようになった。
+    - year: "1841"
+      label:
+        es: >-
+          Joule publica su ley sobre el calor producido por la corriente, vínculo directo entre
+          corriente, resistencia y potencia.
+        en: >-
+          Joule publishes his law on the heat produced by current, directly linking current,
+          resistance, and power.
+        pt: >-
+          Joule publica sua lei sobre o calor produzido pela corrente, ligando diretamente corrente,
+          resistência e potência.
+        fr: >-
+          Joule publie sa loi sur la chaleur produite par le courant, reliant directement courant,
+          résistance et puissance.
+        zh: >-
+          焦耳发表关于电流产生热量的定律，将电流、电阻和功率直接联系起来。
+        ja: >-
+          ジュールが電流が生み出す熱に関する法則を発表し、電流・抵抗・電力を直接結びつけた。
+    - year: "1882"
+      label:
+        es: >-
+          La estación de Pearl Street de Edison suministra electricidad a los primeros clientes,
+          dando inicio a las redes eléctricas modernas.
+        en: >-
+          Edison's Pearl Street station supplies electricity to the first paying customers, launching
+          modern power grids.
+        pt: >-
+          A estação Pearl Street de Edison fornece eletricidade aos primeiros clientes pagantes,
+          inaugurando as redes elétricas modernas.
+        fr: >-
+          La station Pearl Street d'Edison fournit de l'électricité aux premiers clients payants,
+          lançant les réseaux électriques modernes.
+        zh: >-
+          爱迪生的珍珠街电站开始向首批付费客户供电，开启了现代电网。
+        ja: >-
+          エジソンのパール街発電所が最初の有料顧客に電気を供給し、近代電力網が始まる。
+    - year: Hoy
+      label:
+        es: >-
+          Todo electrodoméstico se clasifica por su potencia en vatios y cada red se diseña a partir
+          de esta fórmula.
+        en: >-
+          Every appliance is rated in watts and every grid is engineered from this formula.
+        pt: >-
+          Todo eletrodoméstico é classificado em watts e toda rede é projetada a partir dessa fórmula.
+        fr: >-
+          Chaque appareil est classé en watts et chaque réseau est conçu à partir de cette formule.
+        zh: >-
+          每件电器都以瓦特标定功率，每条电网都依据这条公式设计。
+        ja: >-
+          あらゆる電化製品がワットで表示され、あらゆる電力網がこの公式をもとに設計されている。
+  useCases:
+    - title:
+        es: Electrodomésticos
+        en: Home appliances
+        pt: Eletrodomésticos
+        fr: Électroménager
+        zh: 家用电器
+        ja: 家電製品
+      description:
+        es: >-
+          La potencia en vatios grabada en cada aparato indica cuánta energía consume por segundo,
+          y permite comparar el costo de funcionamiento.
+        en: >-
+          The wattage printed on every appliance states how much energy it uses per second, letting
+          buyers compare running costs.
+        pt: >-
+          A potência em watts impressa em cada aparelho indica quanta energia ele consome por
+          segundo, permitindo comparar custos de funcionamento.
+        fr: >-
+          La puissance en watts indiquée sur chaque appareil indique l'énergie consommée par seconde,
+          ce qui permet de comparer les coûts d'utilisation.
+        zh: >-
+          每台电器上标注的瓦数表示它每秒消耗多少能量，方便消费者比较运行成本。
+        ja: >-
+          各製品に表示されたワット数は毎秒の消費エネルギーを示し、ランニングコストの比較を可能にする。
+    - title:
+        es: Redes eléctricas
+        en: Power grids
+        pt: Redes elétricas
+        fr: Réseaux électriques
+        zh: 电网
+        ja: 電力網
+      description:
+        es: >-
+          Los operadores dimensionan generadores, transformadores y cables según la potencia máxima
+          que deben transportar.
+        en: >-
+          Operators size generators, transformers, and cables by the maximum power they must carry.
+        pt: >-
+          Operadores dimensionam geradores, transformadores e cabos pela potência máxima que precisam
+          transportar.
+        fr: >-
+          Les opérateurs dimensionnent générateurs, transformateurs et câbles selon la puissance
+          maximale à transporter.
+        zh: >-
+          运营方根据电网必须承载的最大功率来设计发电机、变压器和电缆。
+        ja: >-
+          運用者は、輸送しなければならない最大電力に応じて発電機・変圧器・ケーブルを設計する。
+    - title:
+        es: Electrónica
+        en: Electronics
+        pt: Eletrônica
+        fr: Électronique
+        zh: 电子学
+        ja: 電子工学
+      description:
+        es: >-
+          Fija la potencia máxima que una resistencia puede disipar sin quemarse, combinando la ley
+          de Ohm con P = V·I.
+        en: >-
+          It sets the maximum power a resistor can dissipate before burning out, combining Ohm's law
+          with P = V·I.
+        pt: >-
+          Define a potência máxima que um resistor pode dissipar sem queimar, combinando a lei de Ohm
+          com P = V·I.
+        fr: >-
+          Elle fixe la puissance maximale qu'une résistance peut dissiper sans brûler, en combinant
+          la loi d'Ohm avec P = V·I.
+        zh: >-
+          结合欧姆定律与 P = V·I，确定电阻在烧毁前所能承受的最大耗散功率。
+        ja: >-
+          オームの法則と P = V·I を組み合わせ、抵抗が焼損せずに放散できる最大電力を決める。
+    - title:
+        es: Vehículos eléctricos
+        en: Electric vehicles
+        pt: Veículos elétricos
+        fr: Véhicules électriques
+        zh: 电动汽车
+        ja: 電気自動車
+      description:
+        es: >-
+          La potencia de motores y cargadores se expresa en vatios, y de ella dependen la aceleración
+          y el tiempo de carga de la batería.
+        en: >-
+          Motor and charger power is rated in watts, and it determines acceleration and battery
+          charging time.
+        pt: >-
+          A potência de motores e carregadores é expressa em watts, e dela dependem a aceleração e o
+          tempo de carga da bateria.
+        fr: >-
+          La puissance des moteurs et des chargeurs s'exprime en watts, et elle détermine
+          l'accélération et le temps de charge de la batterie.
+        zh: >-
+          电机和充电器的功率以瓦特标定，它决定了加速性能和电池充电时间。
+        ja: >-
+          モーターと充電器の出力はワットで表され、加速性能とバッテリーの充電時間を左右する。
+  example:
+    title:
+      es: Potencia de una tostadora
+      en: Power of a toaster
+      pt: Potência de uma torradeira
+      fr: Puissance d'un grille-pain
+      zh: 烤面包机的功率
+      ja: トースターの電力
+    lines:
+      - es: V = 120 V
+        en: V = 120 V
+        pt: V = 120 V
+        fr: V = 120 V
+        zh: V = 120 V
+        ja: V = 120 V
+      - es: I = 5 A
+        en: I = 5 A
+        pt: I = 5 A
+        fr: I = 5 A
+        zh: I = 5 A
+        ja: I = 5 A
+      - es: P = V · I
+        en: P = V · I
+        pt: P = V · I
+        fr: P = V · I
+        zh: P = V · I
+        ja: P = V · I
+      - es: P = 120 × 5
+        en: P = 120 × 5
+        pt: P = 120 × 5
+        fr: P = 120 × 5
+        zh: P = 120 × 5
+        ja: P = 120 × 5
+      - es: P = 600 W
+        en: P = 600 W
+        pt: P = 600 W
+        fr: P = 600 W
+        zh: P = 600 瓦
+        ja: P = 600 ワット

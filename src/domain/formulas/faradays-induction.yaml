@@ -1,0 +1,321 @@
+id: faradays-induction
+title:
+  es: Ley de Faraday de la Inducción
+  en: Faraday's Law of Induction
+  pt: Lei de Faraday da Indução
+  fr: Loi de Faraday sur l'induction
+  zh: 法拉第电磁感应定律
+  ja: ファラデーの電磁誘導の法則
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: epsilon
+    type: constant
+    value: ε
+    explanation:
+      es: La fuerza electromotriz inducida, el voltaje que aparece en la bobina.
+      en: The induced electromotive force, the voltage that appears across the coil.
+      pt: A força eletromotriz induzida, a tensão que surge na bobina.
+      fr: La force électromotrice induite, la tension qui apparaît aux bornes de la bobine.
+      zh: 感应电动势,即线圈两端出现的电压。
+      ja: 誘導起電力。コイルの両端に現れる電圧である。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: El signo negativo de Lenz, que indica que la corriente inducida se opone al cambio de
+        flujo.
+      en: The negative sign of Lenz, indicating the induced current opposes the change in flux.
+      pt: O sinal negativo de Lenz, que indica que a corrente induzida se opõe à variação do fluxo.
+      fr: Le signe négatif de Lenz, qui indique que le courant induit s'oppose à la variation du
+        flux.
+      zh: 楞次定律的负号,表示感应电流反抗磁通量的变化。
+      ja: レンツの負号。誘導電流が磁束の変化に逆らうことを示す。
+  - id: n
+    type: variable
+    value: N
+    explanation:
+      es: El número de vueltas o espiras de la bobina.
+      en: The number of turns or loops of the coil.
+      pt: O número de voltas ou espiras da bobina.
+      fr: Le nombre de tours ou de spires de la bobine.
+      zh: 线圈的匝数。
+      ja: コイルの巻き数。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: La multiplicación entre el número de vueltas y la variación de flujo.
+      en: The multiplication of the number of turns and the rate of change of flux.
+      pt: A multiplicação entre o número de voltas e a variação do fluxo.
+      fr: La multiplication du nombre de tours par la variation du flux.
+      zh: 匝数与磁通量变化率的乘积。
+      ja: 巻き数と磁束の変化率の乗算。
+  - id: flux
+    type: variable
+    value: dΦ/dt
+    explanation:
+      es: La variación del flujo magnético con el tiempo, en webers por segundo.
+      en: The rate of change of magnetic flux over time, in webers per second.
+      pt: A variação do fluxo magnético com o tempo, em webers por segundo.
+      fr: La variation du flux magnétique au cours du temps, en webers par seconde.
+      zh: 磁通量随时间的变化率,单位为韦伯每秒。
+      ja: 磁束の時間変化率。単位はウェーバ毎秒。
+context:
+  author:
+    es: Michael Faraday
+    en: Michael Faraday
+    pt: Michael Faraday
+    fr: Michael Faraday
+    zh: 迈克尔·法拉第
+    ja: マイケル・ファラデー
+  era:
+    es: Inglaterra, 1791–1867 · descubierta en 1831
+    en: England, 1791–1867 · discovered in 1831
+    pt: Inglaterra, 1791–1867 · descoberta em 1831
+    fr: Angleterre, 1791–1867 · découverte en 1831
+    zh: 英格兰,1791–1867年 · 1831年发现
+    ja: イギリス、1791–1867年・1831年発見
+  history:
+    es: >-
+      Michael Faraday descubrió en 1831 que un campo magnético cambiante induce una fuerza
+      electromotriz en un circuito, tras años de experimentos con imanes y bobinas en su laboratorio
+      de la Royal Institution. El signo negativo de la ley, formulado por Heinrich Lenz en 1834,
+      indica que la corriente inducida se opone al cambio de flujo que la origina. Este hallazgo está
+      detrás de generadores, transformadores y de cómo cada planta de energía convierte el movimiento
+      en electricidad.
+    en: >-
+      Michael Faraday discovered in 1831 that a changing magnetic field induces an electromotive
+      force in a circuit, after years of experiments with magnets and coils in his laboratory at the
+      Royal Institution. The law's negative sign, formulated by Heinrich Lenz in 1834, indicates that
+      the induced current opposes the change in flux that creates it. This discovery lies behind
+      generators, transformers, and the way every power plant turns motion into electricity.
+    pt: >-
+      Michael Faraday descobriu em 1831 que um campo magnético variável induz uma força eletromotriz
+      em um circuito, após anos de experimentos com ímãs e bobinas em seu laboratório na Royal
+      Institution. O sinal negativo da lei, formulado por Heinrich Lenz em 1834, indica que a corrente
+      induzida se opõe à variação do fluxo que a origina. Essa descoberta está por trás de geradores,
+      transformadores e da maneira como cada usina de energia converte movimento em eletricidade.
+    fr: >-
+      Michael Faraday découvrit en 1831 qu'un champ magnétique variable induit une force
+      électromotrice dans un circuit, après des années d'expériences avec des aimants et des bobines
+      dans son laboratoire de la Royal Institution. Le signe négatif de la loi, formulé par Heinrich
+      Lenz en 1834, indique que le courant induit s'oppose à la variation de flux qui le crée. Cette
+      découverte est à l'origine des générateurs, des transformateurs et de la façon dont chaque
+      centrale électrique convertit le mouvement en électricité.
+    zh: >-
+      迈克尔·法拉第在皇家研究院的实验室里经过多年磁铁和线圈的实验后,于1831年发现变化的磁场会在电路中
+      感应出电动势。该定律的负号由海因里希·楞次于1834年提出,表示感应电流会反抗产生它的磁通量变化。
+      这一发现是发电机、变压器以及每一座发电厂将运动转化为电力的方式的基础。
+    ja: >-
+      マイケル・ファラデーは、王立研究所の研究室で磁石とコイルを使った長年の実験の末、1831年に変化する
+      磁場が回路に起電力を誘導することを発見した。法則の負号は1834年にハインリヒ・レンツが定式化した
+      もので、誘導電流がそれを生む磁束の変化に逆らうことを示す。この発見は発電機や変圧器、そしてあらゆる
+      発電所が運動を電気に変える仕組みの背後にある。
+  timeline:
+    - year: "1831"
+      label:
+        es: >-
+          Faraday descubre la inducción electromagnética y lo anuncia en la Royal Institution.
+        en: >-
+          Faraday discovers electromagnetic induction and announces it at the Royal Institution.
+        pt: >-
+          Faraday descobre a indução eletromagnética e anuncia o feito na Royal Institution.
+        fr: >-
+          Faraday découvre l'induction électromagnétique et l'annonce à la Royal Institution.
+        zh: >-
+          法拉第发现电磁感应,并在皇家研究院公布这一成果。
+        ja: >-
+          ファラデーが電磁誘導を発見し、王立研究所で発表する。
+    - year: "1834"
+      label:
+        es: >-
+          Heinrich Lenz formula el signo negativo que da sentido a la ley de inducción.
+        en: >-
+          Heinrich Lenz formulates the negative sign that gives the induction law its direction.
+        pt: >-
+          Heinrich Lenz formula o sinal negativo que dá sentido à lei da indução.
+        fr: >-
+          Heinrich Lenz formule le signe négatif qui donne son sens à la loi d'induction.
+        zh: >-
+          海因里希·楞次提出了赋予感应定律方向的负号。
+        ja: >-
+          ハインリヒ・レンツが誘導の法則に方向を与える負号を定式化する。
+    - year: "1882"
+      label:
+        es: >-
+          La primera central eléctrica de Edison en Nueva York usa generadores basados en la
+          inducción.
+        en: >-
+          Edison's first power station in New York uses generators based on induction.
+        pt: >-
+          A primeira central elétrica de Edison em Nova York usa geradores baseados na indução.
+        fr: >-
+          La première centrale d'Edison à New York utilise des générateurs fondés sur l'induction.
+        zh: >-
+          爱迪生在纽约的首座发电厂使用基于感应原理的发电机。
+        ja: >-
+          ニューヨークのエジソン最初の発電所が、誘導に基づく発電機を使用する。
+    - year: Hoy
+      label:
+        es: >-
+          Prácticamente toda la electricidad del mundo se genera por inducción electromagnética.
+        en: >-
+          Practically all of the world's electricity is generated by electromagnetic induction.
+        pt: >-
+          Praticamente toda a eletricidade do mundo é gerada por indução eletromagnética.
+        fr: >-
+          Pratiquement toute l'électricité du monde est produite par induction électromagnétique.
+        zh: >-
+          世界上几乎所有的电力都是通过电磁感应产生的。
+        ja: >-
+          世界の電気のほぼすべてが電磁誘導によって発電されている。
+  useCases:
+    - title:
+        es: Generación de energía
+        en: Power generation
+        pt: Geração de energia
+        fr: Production d'électricité
+        zh: 发电
+        ja: 発電
+      description:
+        es: >-
+          Toda planta de energía, térmica, hidroeléctrica o eólica, convierte rotación en
+          electricidad por inducción.
+        en: >-
+          Every power plant, thermal, hydroelectric, or wind, turns rotation into electricity by
+          induction.
+        pt: >-
+          Toda usina de energia, térmica, hidrelétrica ou eólica, converte rotação em eletricidade
+          por indução.
+        fr: >-
+          Toute centrale, thermique, hydroélectrique ou éolienne, convertit la rotation en
+          électricité par induction.
+        zh: >-
+          每一座发电厂,无论是火电、水电还是风电,都通过感应将旋转转化为电能。
+        ja: >-
+          火力・水力・風力などあらゆる発電所が、誘導によって回転を電気に変換する。
+    - title:
+        es: Transformadores
+        en: Transformers
+        pt: Transformadores
+        fr: Transformateurs
+        zh: 变压器
+        ja: 変圧器
+      description:
+        es: >-
+          El flujo cambiante en el núcleo transfiere energía entre devanados y permite subir o bajar
+          la tensión.
+        en: >-
+          The changing flux in the core transfers energy between windings, allowing voltage to be
+          stepped up or down.
+        pt: >-
+          O fluxo variável no núcleo transfere energia entre os enrolamentos e permite elevar ou
+          reduzir a tensão.
+        fr: >-
+          Le flux variable dans le noyau transfère l'énergie entre les enroulements et permet
+          d'élever ou d'abaisser la tension.
+        zh: >-
+          铁芯中变化的磁通量在绕组之间传递能量,从而可以升高或降低电压。
+        ja: >-
+          鉄心の変化する磁束が巻線間でエネルギーを伝え、電圧を昇圧・降圧できるようにする。
+    - title:
+        es: Motores y frenado regenerativo en vehículos eléctricos
+        en: EV motors and regenerative braking
+        pt: Motores e frenagem regenerativa em veículos elétricos
+        fr: Moteurs et freinage régénératif des véhicules électriques
+        zh: 电动汽车电机与再生制动
+        ja: 電気自動車のモーターと回生ブレーキ
+      description:
+        es: >-
+          El motor que impulsa el coche funciona por inducción y, al frenar, actúa como generador
+          para recuperar energía.
+        en: >-
+          The motor that drives the car works by induction and, when braking, acts as a generator to
+          recover energy.
+        pt: >-
+          O motor que impulsiona o carro funciona por indução e, ao frear, atua como gerador para
+          recuperar energia.
+        fr: >-
+          Le moteur qui propulse la voiture fonctionne par induction et, au freinage, agit comme
+          générateur pour récupérer l'énergie.
+        zh: >-
+          驱动汽车的电机依靠感应工作,制动时则作为发电机回收能量。
+        ja: >-
+          車を駆動するモーターは誘導で働き、ブレーキ時には発電機として働いてエネルギーを回収する。
+    - title:
+        es: Carga inalámbrica
+        en: Wireless charging
+        pt: Carregamento sem fio
+        fr: Charge sans fil
+        zh: 无线充电
+        ja: ワイヤレス充電
+      description:
+        es: >-
+          La inducción entre bobinas transfiere energía sin contacto para cargar teléfonos y
+          vehículos.
+        en: >-
+          Induction between coils transfers energy without contact to charge phones and vehicles.
+        pt: >-
+          A indução entre bobinas transfere energia sem contato para carregar celulares e veículos.
+        fr: >-
+          L'induction entre bobines transfère l'énergie sans contact pour charger téléphones et
+          véhicules.
+        zh: >-
+          线圈之间的感应无需接触即可传递能量,为手机和车辆充电。
+        ja: >-
+          コイル間の誘導が非接触でエネルギーを伝え、スマートフォンや車両を充電する。
+  example:
+    title:
+      es: Bobina en un campo cambiante
+      en: Coil in a changing field
+      pt: Bobina em um campo variável
+      fr: Bobine dans un champ variable
+      zh: 变化磁场中的线圈
+      ja: 変化する磁場の中のコイル
+    lines:
+      - es: N = 100
+        en: N = 100
+        pt: N = 100
+        fr: N = 100
+        zh: N = 100
+        ja: N = 100
+      - es: dΦ/dt = 0.05 Wb/s
+        en: dΦ/dt = 0.05 Wb/s
+        pt: dΦ/dt = 0,05 Wb/s
+        fr: dΦ/dt = 0,05 Wb/s
+        zh: dΦ/dt = 0.05 Wb/s
+        ja: dΦ/dt = 0.05 Wb/s
+      - es: ε = −N · dΦ/dt
+        en: ε = −N · dΦ/dt
+        pt: ε = −N · dΦ/dt
+        fr: ε = −N · dΦ/dt
+        zh: ε = −N · dΦ/dt
+        ja: ε = −N · dΦ/dt
+      - es: ε = −100 × 0.05
+        en: ε = −100 × 0.05
+        pt: ε = −100 × 0,05
+        fr: ε = −100 × 0,05
+        zh: ε = −100 × 0.05
+        ja: ε = −100 × 0.05
+      - es: ε = −5 V
+        en: ε = −5 V
+        pt: ε = −5 V
+        fr: ε = −5 V
+        zh: ε = −5 V
+        ja: ε = −5 V

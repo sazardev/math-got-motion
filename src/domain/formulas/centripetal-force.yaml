@@ -1,0 +1,354 @@
+id: centripetal-force
+title:
+  es: Fuerza Centrípeta
+  en: Centripetal Force
+  pt: Força Centrípeta
+  fr: Force centripète
+  zh: 向心力
+  ja: 向心力
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: La fuerza centrípeta, que apunta al centro de la trayectoria y curva el movimiento.
+      en: The centripetal force, pointing toward the center of the path, which curves the motion.
+      pt: A força centrípeta, que aponta para o centro da trajetória e curva o movimento.
+      fr: La force centripète, dirigée vers le centre de la trajectoire, qui courbe le mouvement.
+      zh: 向心力,指向轨迹中心并弯曲运动方向。
+      ja: 軌道の中心を向き、運動を曲げる向心力。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: La masa del objeto que gira.
+      en: The mass of the object in rotation.
+      pt: A massa do objeto que gira.
+      fr: La masse de l'objet en rotation.
+      zh: 旋转物体的质量。
+      ja: 回転する物体の質量。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicación.
+      en: Multiplication.
+      pt: Multiplicação.
+      fr: Multiplication.
+      zh: 乘法。
+      ja: 乗算。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La velocidad tangencial del objeto a lo largo de la trayectoria circular.
+      en: The tangential speed of the object along the circular path.
+      pt: A velocidade tangencial do objeto ao longo da trajetória circular.
+      fr: La vitesse tangentielle de l'objet le long de la trajectoire circulaire.
+      zh: 物体沿圆周路径运动的切向速度。
+      ja: 円軌道に沿った物体の接線速度。
+  - id: squared
+    type: superscript
+    value: "²"
+    explanation:
+      es: "Al cuadrado: la fuerza crece rápido con la velocidad."
+      en: "Squared: the force grows fast with speed."
+      pt: "Ao quadrado: a força cresce rápido com a velocidade."
+      fr: Élevée au carré, la force croît vite avec la vitesse.
+      zh: "平方:力随速度增长得很快。"
+      ja: "2乗:力は速度に応じて急激に増大する。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: División.
+      en: Division.
+      pt: Divisão.
+      fr: Division.
+      zh: 除法。
+      ja: 除算。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "El radio de la trayectoria: un giro más cerrado exige más fuerza."
+      en: "The radius of the path: a tighter turn demands more force."
+      pt: "O raio da trajetória: uma curva mais fechada exige mais força."
+      fr: Le rayon de la trajectoire, un virage plus serré exige plus de force.
+      zh: "轨迹的半径:转弯越急,所需力越大。"
+      ja: 軌道の半径。曲がりがきついほど大きな力が必要。
+context:
+  author:
+    es: Christiaan Huygens
+    en: Christiaan Huygens
+    pt: Christiaan Huygens
+    fr: Christiaan Huygens
+    zh: 克里斯蒂安·惠更斯
+    ja: クリスティアーン・ホイヘンス
+  era:
+    es: Países Bajos, 1629–1695
+    en: Netherlands, 1629–1695
+    pt: Países Baixos, 1629–1695
+    fr: Pays-Bas, 1629–1695
+    zh: 荷兰,1629–1695年
+    ja: オランダ、1629–1695年
+  history:
+    es: >-
+      Un objeto en línea recta no se desvía por sí solo: para que gire se necesita una fuerza que lo
+      tire constantemente hacia el centro, la fuerza centrípeta. Christiaan Huygens la derivó en 1659
+      al estudiar relojes de péndulo y movimientos circulares, obteniendo la expresión v²/r. Sin ella
+      no existirían las curvas peraltadas de las rutas, las montañas rusas ni los satélites, que caen
+      hacia la Tierra sin llegar a tocar su superficie. La misma fuerza que mantiene girando una
+      piedra atada a un hilo mantiene a la Luna en su órbita.
+    en: >-
+      An object moving in a straight line does not turn by itself: to rotate it needs a force that
+      constantly pulls it toward the center, the centripetal force. Christiaan Huygens derived it in
+      1659 while studying pendulum clocks and circular motion, arriving at the expression v²/r.
+      Without it there would be no banked curves on roads, no roller coasters, and no satellites,
+      which keep falling toward Earth without ever reaching its surface. The same force that keeps a
+      stone whirling on a string keeps the Moon in orbit.
+    pt: >-
+      Um objeto em linha reta não muda de direção sozinho: para girar, ele precisa de uma força que o
+      puxe constantemente para o centro, a força centrípeta. Christiaan Huygens a derivou em 1659 ao
+      estudar relógios de pêndulo e movimentos circulares, chegando à expressão v²/r. Sem ela não
+      existiriam as curvas sobreelevadas das estradas, nem as montanhas-russas, nem os satélites, que
+      caem em direção à Terra sem nunca tocar sua superfície. A mesma força que mantém girando uma
+      pedra amarrada a um fio mantém a Lua em órbita.
+    fr: >-
+      Un objet en ligne droite ne dévie pas tout seul : pour tourner, il lui faut une force qui le
+      tire sans cesse vers le centre, la force centripète. Christiaan Huygens l'a dérivée en 1659 en
+      étudiant les horloges à pendule et les mouvements circulaires, aboutissant à l'expression v²/r.
+      Sans elle, pas de virages relevés sur les routes, pas de montagnes russes, ni de satellites, qui
+      tombent vers la Terre sans jamais atteindre sa surface. La même force qui fait tourner une
+      pierre au bout d'une ficelle maintient la Lune sur son orbite.
+    zh: >-
+      做直线运动的物体不会自行转弯:要旋转,就必须有一个不断把它拉向中心的力,即向心力。1659年,
+      克里斯蒂安·惠更斯在研究摆钟和圆周运动时推导出 v²/r 这一表达式。没有它,就不会有公路的倾斜
+      弯道、过山车,也不会有卫星——卫星一直在向地球下落,却永远不会触到地面。让绳端石块旋转不落的
+      力量,同样使月球保持在轨道上。
+    ja: >-
+      直進する物体はひとりでに曲がらない。回転するには、常に中心へ引っ張る力(向心力)が必要だ。
+      クリスティアーン・ホイヘンスは1659年、振り子時計と円運動の研究を通じて v²/r の式を導いた。
+      これがなければ、道路のバンクカーブもジェットコースターも人工衛星も存在しない。人工衛星は
+      地球へ落ち続けながらも地表には達しない。ひもで結んだ石を振り回して保たれているのと同じ力が、
+      月を軌道に留めている。
+  timeline:
+    - year: "1659"
+      label:
+        es: >-
+          Huygens deriva la fórmula del movimiento circular mientras trabaja en sus relojes de
+          péndulo.
+        en: >-
+          Huygens derives the formula for circular motion while working on his pendulum clocks.
+        pt: >-
+          Huygens deriva a fórmula do movimento circular ao trabalhar em seus relógios de pêndulo.
+        fr: >-
+          Huygens dérive la formule du mouvement circulaire en travaillant sur ses horloges à
+          pendule.
+        zh: >-
+          惠更斯在研究摆钟时推导出圆周运动的公式。
+        ja: >-
+          ホイヘンスが振り子時計の研究の中で円運動の公式を導き出す。
+    - year: "1673"
+      label:
+        es: >-
+          Publica el Horologium Oscillatorium, donde demuestra rigurosamente sus resultados sobre el
+          movimiento circular.
+        en: >-
+          He publishes the Horologium Oscillatorium, rigorously demonstrating his results on circular
+          motion.
+        pt: >-
+          Publica o Horologium Oscillatorium, onde demonstra rigorosamente seus resultados sobre o
+          movimento circular.
+        fr: >-
+          Il publie l'Horologium Oscillatorium, où il démontre rigoureusement ses résultats sur le
+          mouvement circulaire.
+        zh: >-
+          出版《摆钟论》,严格证明了他在圆周运动上的研究成果。
+        ja: >-
+          『振り子時計について』を出版し、円運動に関する成果を厳密に証明する。
+    - year: "1687"
+      label:
+        es: >-
+          Newton incorpora la fuerza centrípeta a su teoría de la gravitación en los Principia.
+        en: >-
+          Newton incorporates the centripetal force into his theory of gravitation in the Principia.
+        pt: >-
+          Newton incorpora a força centrípeta à sua teoria da gravitação nos Principia.
+        fr: >-
+          Newton intègre la force centripète à sa théorie de la gravitation dans les Principia.
+        zh: >-
+          牛顿在《原理》中将向心力纳入他的万有引力理论。
+        ja: >-
+          ニュートンが『プリンキピア』の万有引力の理論に向心力を組み込む。
+    - year: Hoy
+      label:
+        es: >-
+          Los peraltes, las montañas rusas y las órbitas de satélites se diseñan con esta fuerza a
+          diario.
+        en: >-
+          Banked curves, roller coasters, and satellite orbits are designed with this force every day.
+        pt: >-
+          Curvas sobreelevadas, montanhas-russas e órbitas de satélites são projetadas com essa força
+          diariamente.
+        fr: >-
+          Les virages relevés, les montagnes russes et les orbites de satellites sont conçus avec
+          cette force chaque jour.
+        zh: >-
+          倾斜弯道、过山车和卫星轨道每天都依据向心力进行设计。
+        ja: >-
+          バンクカーブ、ジェットコースター、人工衛星の軌道は、この力に基づいて日常的に設計されて
+          いる。
+  useCases:
+    - title:
+        es: Diseño de curvas peraltadas
+        en: Banked road curves
+        pt: Projeto de curvas sobreelevadas
+        fr: Conception des virages relevés
+        zh: 倾斜弯道设计
+        ja: バンクカーブ設計
+      description:
+        es: >-
+          Calcula la inclinación necesaria de una curva para que un automóvil la tome a cierta
+          velocidad sin derrapar.
+        en: >-
+          It calculates the banking needed on a curve so a car can take it at a given speed without
+          skidding.
+        pt: >-
+          Calcula a inclinação necessária de uma curva para que um automóvel a tome em certa
+          velocidade sem derrapar.
+        fr: >-
+          Elle calcule l'inclinaison nécessaire d'un virage pour qu'une voiture le prenne à une
+          vitesse donnée sans déraper.
+        zh: >-
+          计算弯道所需的外倾角,使汽车以一定速度过弯时不打滑。
+        ja: >-
+          自動車が一定速度でカーブを滑らずに通過できるよう、必要なバンク角を計算する。
+    - title:
+        es: Montañas rusas
+        en: Roller coasters
+        pt: Montanhas-russas
+        fr: Montagnes russes
+        zh: 过山车
+        ja: ジェットコースター
+      description:
+        es: >-
+          Diseña bucles y curvas asegurando que la fuerza centrípeta mantenga los vagones pegados a la
+          vía.
+        en: >-
+          It designs loops and curves, ensuring centripetal force keeps the cars pressed against the
+          track.
+        pt: >-
+          Projeta loopings e curvas garantindo que a força centrípeta mantenha os vagões presos ao
+          trilho.
+        fr: >-
+          Elle conçoit des loopings et des virages en s'assurant que la force centripète plaque les
+          wagons sur la voie.
+        zh: >-
+          设计回环和弯道,确保向心力使车厢紧贴轨道。
+        ja: >-
+          ループやカーブを設計し、向心力が車両をレールに押し付けることを保証する。
+    - title:
+        es: Órbita de satélites
+        en: Satellite orbits
+        pt: Órbitas de satélites
+        fr: Orbites de satellites
+        zh: 卫星轨道
+        ja: 人工衛星の軌道
+      description:
+        es: >-
+          Iguala la atracción gravitatoria a la fuerza centrípeta para fijar la velocidad y la altura
+          de una órbita.
+        en: >-
+          It equates gravitational pull to the centripetal force to set a satellite's orbital speed
+          and altitude.
+        pt: >-
+          Iguala a atração gravitacional à força centrípeta para definir a velocidade e a altitude de
+          uma órbita.
+        fr: >-
+          Elle égale l'attraction gravitationnelle à la force centripète pour fixer la vitesse et
+          l'altitude d'une orbite.
+        zh: >-
+          令万有引力与向心力相等,以确定卫星的轨道速度和高度。
+        ja: >-
+          万有引力と向心力を等号で結び、衛星の軌道速度と高度を決定する。
+    - title:
+        es: Máquinas centrífugas
+        en: Centrifuge machines
+        pt: Máquinas centrífugas
+        fr: Machines centrifuges
+        zh: 离心机
+        ja: 遠心分離機
+      description:
+        es: >-
+          Separa sustancias de distinta densidad girando a gran velocidad, como en lavadoras y
+          laboratorios.
+        en: >-
+          It separates substances of different densities by spinning at high speed, as in washing
+          machines and labs.
+        pt: >-
+          Separa substâncias de densidades diferentes girando em alta velocidade, como em lavadoras e
+          laboratórios.
+        fr: >-
+          Elle sépare des substances de densités différentes en tournant à grande vitesse, comme dans
+          les lave-linge et les laboratoires.
+        zh: >-
+          通过高速旋转分离密度不同的物质,如洗衣机和实验室中的设备。
+        ja: >-
+          洗濯機や実験室の装置のように、高速回転によって密度の異なる物質を分離する。
+  example:
+    title:
+      es: Fuerza en una curva
+      en: Force in a curve
+      pt: Força em uma curva
+      fr: Force dans un virage
+      zh: 弯道中的力
+      ja: カーブでの力
+    lines:
+      - es: m = 2 kg
+        en: m = 2 kg
+        pt: m = 2 kg
+        fr: m = 2 kg
+        zh: m = 2 kg
+        ja: m = 2 kg
+      - es: v = 10 m/s
+        en: v = 10 m/s
+        pt: v = 10 m/s
+        fr: v = 10 m/s
+        zh: v = 10 m/s
+        ja: v = 10 m/s
+      - es: r = 5 m
+        en: r = 5 m
+        pt: r = 5 m
+        fr: r = 5 m
+        zh: r = 5 m
+        ja: r = 5 m
+      - es: F = m·v²/r = 2 × 10² / 5
+        en: F = m·v²/r = 2 × 10² / 5
+        pt: F = m·v²/r = 2 × 10² / 5
+        fr: F = m·v²/r = 2 × 10² / 5
+        zh: F = m·v²/r = 2 × 10² / 5
+        ja: F = m·v²/r = 2 × 10² / 5
+      - es: F = 40 N
+        en: F = 40 N
+        pt: F = 40 N
+        fr: F = 40 N
+        zh: F = 40 N
+        ja: F = 40 N

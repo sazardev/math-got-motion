@@ -1,0 +1,351 @@
+id: bmi
+title:
+  es: Índice de Masa Corporal
+  en: Body Mass Index
+  pt: Índice de Massa Corporal
+  fr: Indice de Masse Corporelle
+  zh: 体质指数
+  ja: 体格指数
+category:
+  es: Salud y medicina
+  en: Health and medicine
+  pt: Saúde e medicina
+  fr: Santé et médecine
+  zh: 健康与医学
+  ja: 健康と医学
+nodes:
+  - id: bmi
+    type: variable
+    value: BMI
+    explanation:
+      es: "BMI: el índice de masa corporal, un número que relaciona peso y estatura."
+      en: "BMI: the body mass index, a number relating weight and height."
+      pt: "IMC: o índice de massa corporal, um número que relaciona peso e estatura."
+      fr: "IMC : l'indice de masse corporelle, un nombre qui relie poids et taille."
+      zh: "BMI：体质指数，一个将体重与身高联系起来的数值。"
+      ja: "BMI：体格指数。体重と身長を関連づける数値。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: mass
+    type: variable
+    value: m
+    explanation:
+      es: "m: la masa de la persona, en kilogramos."
+      en: "m: the person's mass, in kilograms."
+      pt: "m: a massa da pessoa, em quilogramas."
+      fr: "m : la masse de la personne, en kilogrammes."
+      zh: "m：人的质量，单位为千克。"
+      ja: "m：その人の質量。単位はkg。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: height
+    type: variable
+    value: h
+    explanation:
+      es: "h: la estatura de la persona, en metros."
+      en: "h: the person's height, in meters."
+      pt: "h: a estatura da pessoa, em metros."
+      fr: "h : la taille de la personne, en mètres."
+      zh: "h：人的身高，单位为米。"
+      ja: "h：その人の身長。単位はメートル。"
+  - id: height-squared
+    type: superscript
+    value: ²
+    explanation:
+      es: "El cuadrado de la estatura: el peso crece con el área, no con la longitud."
+      en: "The square of the height: weight scales with area, not length."
+      pt: "O quadrado da estatura: o peso cresce com a área, não com o comprimento."
+      fr: "Le carré de la taille : le poids croît avec l'aire, pas avec la longueur."
+      zh: "身高的平方：体重随面积而非长度增长。"
+      ja: "身長の2乗。体重は長さではなく面積に比例して増える。"
+context:
+  author:
+    es: Adolphe Quetelet
+    en: Adolphe Quetelet
+    pt: Adolphe Quetelet
+    fr: Adolphe Quetelet
+    zh: 阿道夫·凯特勒
+    ja: アドルフ・ケトレー
+  era:
+    es: Bélgica, 1796–1874 · definido en 1832
+    en: Belgium, 1796–1874 · defined in 1832
+    pt: Bélgica, 1796–1874 · definido em 1832
+    fr: Belgique, 1796–1874 · défini en 1832
+    zh: 比利时,1796–1874年 · 1832年提出
+    ja: ベルギー、1796–1874年・1832年に定義
+  history:
+    es: >-
+      En 1832 el astrónomo y estadístico belga Adolphe Quetelet, padre de la "física social",
+      observó que en adultos el peso crece aproximadamente con el cuadrado de la estatura y
+      propuso la razón peso/estatura² que hoy se llama índice de masa corporal. En 1972 Ancel
+      Keys lo rebautizó "body mass index" y lo propuso como herramienta de cribado poblacional. Su
+      cálculo es trivial, pero no distingue grasa de músculo, y su uso como indicador de salud
+      individual sigue siendo discutido.
+    en: >-
+      In 1832 the Belgian astronomer and statistician Adolphe Quetelet, father of "social
+      physics", observed that in adults weight grows roughly with the square of height and
+      proposed the weight/height² ratio now called the body mass index. In 1972 Ancel Keys renamed
+      it "body mass index" and proposed it as a population screening tool. It is trivial to
+      compute, but it does not distinguish fat from muscle, and its use as an individual health
+      indicator is still debated.
+    pt: >-
+      Em 1832 o astrônomo e estatístico belga Adolphe Quetelet, pai da "física social", observou
+      que em adultos o peso cresce aproximadamente com o quadrado da estatura e propôs a razão
+      peso/estatura² que hoje se chama índice de massa corporal. Em 1972 Ancel Keys a rebatizou
+      "body mass index" e a propôs como ferramenta de rastreio populacional. O cálculo é trivial,
+      mas não distingue gordura de músculo, e seu uso como indicador de saúde individual ainda é
+      discutido.
+    fr: >-
+      En 1832, l'astronome et statisticien belge Adolphe Quetelet, père de la « physique
+      sociale », observa que chez les adultes le poids croît approximativement avec le carré de la
+      taille et proposa le rapport poids/taille² que l'on nomme aujourd'hui indice de masse
+      corporelle. En 1972, Ancel Keys le rebaptisa « body mass index » et le proposa comme outil de
+      dépistage des populations. Le calcul est trivial, mais il ne distingue pas la graisse du
+      muscle, et son usage comme indicateur de santé individuelle reste débattu.
+    zh: >-
+      1832年，比利时天文学家兼统计学家阿道夫·凯特勒——"社会物理学"之父——观察到成年人的体重大致随
+      身高的平方增长，并提出了如今被称为体质指数的体重/身高²之比。1972年，安塞尔·基斯将其改名为
+      "body mass index"（体质指数），并建议将其用作人群筛查工具。它计算简单，但不区分脂肪与肌肉，
+      作为个人健康指标仍有争议。
+    ja: >-
+      1832年、ベルギーの天文学者にして統計学者のアドルフ・ケトレー（「社会物理学」の父）は、成人の
+      体重は身長の2乗にほぼ比例して増えると観察し、今日体格指数と呼ばれる体重/身長²比を提唱した。
+      1972年、アンセル・キーズがこれを「ボディマス指数」と改名し、集団スクリーニングの道具として
+      提案した。計算は簡単だが脂肪と筋肉を区別せず、個人の健康指標としての使い方は今も議論が続いている。
+  timeline:
+    - year: "1832"
+      label:
+        es: >-
+          Quetelet publica "Recherches sur le poids de l'homme" y define la razón peso/estatura²
+          para describir el cuerpo humano.
+        en: >-
+          Quetelet publishes "Recherches sur le poids de l'homme" and defines the weight/height²
+          ratio to describe the human body.
+        pt: >-
+          Quetelet publica "Recherches sur le poids de l'homme" e define a razão peso/estatura²
+          para descrever o corpo humano.
+        fr: >-
+          Quetelet publie « Recherches sur le poids de l'homme » et définit le rapport
+          poids/taille² pour décrire le corps humain.
+        zh: >-
+          凯特勒发表《人类体重研究》，提出用体重/身高²之比来描述人体。
+        ja: >-
+          ケトレーが『人間の体重に関する研究』を発表し、人体を記述するために体重/身長²比を定義する。
+    - year: "1972"
+      label:
+        es: >-
+          Ancel Keys acuña el nombre "body mass index" y lo respalda con datos del estudio de los
+          siete países.
+        en: >-
+          Ancel Keys coins the name "body mass index" and backs it with data from the Seven
+          Countries Study.
+        pt: >-
+          Ancel Keys cunha o nome "body mass index" e o respalda com dados do estudo dos sete
+          países.
+        fr: >-
+          Ancel Keys forge le nom « body mass index » et le conforte avec les données de l'étude
+          des sept pays.
+        zh: >-
+          安塞尔·基斯提出"body mass index"这一名称，并以七国研究的数据为其背书。
+        ja: >-
+          アンセル・キーズが「ボディマス指数」の名称を作り、七カ国研究のデータで裏付ける。
+    - year: "1997"
+      label:
+        es: >-
+          La OMS adopta oficialmente los puntos de corte de 25 y 30 para clasificar sobrepeso y
+          obesidad en la población.
+        en: >-
+          The WHO officially adopts the 25 and 30 cutoffs to classify overweight and obesity in
+          populations.
+        pt: >-
+          A OMS adota oficialmente os pontos de corte de 25 e 30 para classificar sobrepeso e
+          obesidade na população.
+        fr: >-
+          L'OMS adopte officiellement les seuils de 25 et 30 pour classer le surpoids et
+          l'obésité dans les populations.
+        zh: >-
+          世界卫生组织正式采用25和30两个界值，用于人群超重与肥胖的分类。
+        ja: >-
+          WHOが、集団における過体重と肥満を分類するための基準値25と30を正式に採用する。
+    - year: Hoy
+      label:
+        es: >-
+          Es el indicador de composición corporal más usado del mundo, aunque su validez
+          individual se cuestiona.
+        en: >-
+          It is the world's most used body composition indicator, though its validity for
+          individuals is questioned.
+        pt: >-
+          É o indicador de composição corporal mais usado do mundo, embora sua validade individual
+          seja questionada.
+        fr: >-
+          C'est l'indicateur de composition corporelle le plus utilisé au monde, même si sa
+          validité individuelle est remise en question.
+        zh: >-
+          它是全球使用最广的身体成分指标，尽管其对于个体的有效性仍受质疑。
+        ja: >-
+          世界で最も使われる体組成の指標だが、個人に対する妥当性は疑問視されている。
+  useCases:
+    - title:
+        es: Salud pública
+        en: Public health screening
+        pt: Saúde pública
+        fr: Santé publique
+        zh: 公共卫生
+        ja: 公衆衛生
+      description:
+        es: >-
+          Los ministerios de salud usan el IMC para estimar la prevalencia de sobrepeso y
+          obesidad en censos y encuestas.
+        en: >-
+          Health ministries use BMI to estimate the prevalence of overweight and obesity in
+          censuses and surveys.
+        pt: >-
+          Os ministérios da saúde usam o IMC para estimar a prevalência de sobrepeso e obesidade
+          em censos e pesquisas.
+        fr: >-
+          Les ministères de la santé utilisent l'IMC pour estimer la prévalence du surpoids et de
+          l'obésité dans les recensements et les enquêtes.
+        zh: >-
+          卫生部门在人口普查和调查中使用BMI来估计超重和肥胖的流行率。
+        ja: >-
+          保健当局は、国勢調査や調査で過体重・肥満の有病率を推定するためにBMIを使う。
+    - title:
+        es: Nutrición clínica
+        en: Clinical nutrition
+        pt: Nutrição clínica
+        fr: Nutrition clinique
+        zh: 临床营养
+        ja: 臨床栄養
+      description:
+        es: >-
+          Dietistas y nutricionistas siguen el IMC a lo largo de un tratamiento para monitorizar
+          los cambios de peso corporal.
+        en: >-
+          Dietitians and nutritionists track BMI over a treatment to monitor changes in body
+          weight.
+        pt: >-
+          Nutricionistas acompanham o IMC ao longo de um tratamento para monitorar mudanças no
+          peso corporal.
+        fr: >-
+          Les diététiciens suivent l'IMC au cours d'un traitement pour suivre les variations du
+          poids corporel.
+        zh: >-
+          营养师在治疗过程中追踪BMI，以监测体重的变化。
+        ja: >-
+          管理栄養士は治療経過中にBMIを追跡し、体重の変化をモニタリングする。
+    - title:
+        es: Estudios epidemiológicos
+        en: Epidemiological studies
+        pt: Estudos epidemiológicos
+        fr: Études épidémiologiques
+        zh: 流行病学研究
+        ja: 疫学研究
+      description:
+        es: >-
+          Los estudios de cohortes relacionan el IMC de grandes poblaciones con el riesgo de
+          enfermedades cardiovasculares y metabólicas.
+        en: >-
+          Cohort studies relate the BMI of large populations to the risk of cardiovascular and
+          metabolic disease.
+        pt: >-
+          Estudos de coorte relacionam o IMC de grandes populações ao risco de doenças
+          cardiovasculares e metabólicas.
+        fr: >-
+          Les études de cohorte relient l'IMC de grandes populations au risque de maladies
+          cardiovasculaires et métaboliques.
+        zh: >-
+          队列研究将大群体的BMI与心血管疾病和代谢疾病的风险联系起来。
+        ja: >-
+          コホート研究は、大規模集団のBMIを心血管疾患や代謝疾患のリスクと結びつける。
+    - title:
+        es: Medicina del deporte
+        en: Sports medicine
+        pt: Medicina do esporte
+        fr: Médecine du sport
+        zh: 运动医学
+        ja: スポーツ医学
+      description:
+        es: >-
+          En deportistas el IMC puede ser engañoso, por eso se combina con el porcentaje de grasa
+          para interpretarlo.
+        en: >-
+          In athletes BMI can be misleading, so it is combined with body fat percentage to be
+          interpreted.
+        pt: >-
+          Em atletas o IMC pode ser enganoso, por isso se combina com o percentual de gordura para
+          interpretá-lo.
+        fr: >-
+          Chez les sportifs, l'IMC peut être trompeur, c'est pourquoi on le combine au pourcentage
+          de graisse pour l'interpréter.
+        zh: >-
+          在运动员身上，BMI可能具有误导性，因此需结合体脂率来解读。
+        ja: >-
+          アスリートではBMIは誤解を招くことがあるため、体脂肪率と組み合わせて解釈される。
+  example:
+    title:
+      es: Una persona de 70 kg
+      en: A person of 70 kg
+      pt: Uma pessoa de 70 kg
+      fr: Une personne de 70 kg
+      zh: 体重70千克的人
+      ja: 体重70kgの人の場合
+    lines:
+      - es: m = 70 kg
+        en: m = 70 kg
+        pt: m = 70 kg
+        fr: m = 70 kg
+        zh: m = 70 kg
+        ja: m = 70 kg
+      - es: h = 1.75 m
+        en: h = 1.75 m
+        pt: h = 1,75 m
+        fr: h = 1,75 m
+        zh: h = 1.75 m
+        ja: h = 1.75 m
+      - es: BMI = m / h²
+        en: BMI = m / h²
+        pt: BMI = m / h²
+        fr: BMI = m / h²
+        zh: BMI = m / h²
+        ja: BMI = m / h²
+      - es: BMI = 70 / 1.75²
+        en: BMI = 70 / 1.75²
+        pt: BMI = 70 / 1,75²
+        fr: BMI = 70 / 1,75²
+        zh: BMI = 70 / 1.75²
+        ja: BMI = 70 / 1.75²
+      - es: BMI = 70 / 3.0625
+        en: BMI = 70 / 3.0625
+        pt: BMI = 70 / 3,0625
+        fr: BMI = 70 / 3,0625
+        zh: BMI = 70 / 3.0625
+        ja: BMI = 70 / 3.0625
+      - es: BMI ≈ 22.9
+        en: BMI ≈ 22.9
+        pt: BMI ≈ 22,9
+        fr: BMI ≈ 22,9
+        zh: BMI ≈ 22.9
+        ja: BMI ≈ 22.9
+      - es: "Un valor de 22.9 está dentro del rango saludable"
+        en: "A value of 22.9 is within the healthy range"
+        pt: "Um valor de 22,9 está dentro da faixa saudável"
+        fr: "Une valeur de 22,9 se situe dans la fourchette saine"
+        zh: "22.9处于健康范围内"
+        ja: "22.9は健康な範囲内である"

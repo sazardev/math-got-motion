@@ -1,0 +1,435 @@
+id: binomial-distribution
+title:
+  es: Distribución Binomial
+  en: Binomial Distribution
+  pt: Distribuição Binomial
+  fr: Loi binomiale
+  zh: 二项分布
+  ja: 二項分布
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率統計
+nodes:
+  - id: p
+    type: variable
+    value: P
+    explanation:
+      es: La probabilidad de obtener exactamente k éxitos.
+      en: The probability of getting exactly k successes.
+      pt: A probabilidade de obter exatamente k sucessos.
+      fr: La probabilité d'obtenir exactement k succès.
+      zh: 恰好得到k次成功的概率。
+      ja: ちょうどk回成功する確率。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el evento cuya probabilidad se calcula.
+      en: Opens the event whose probability is being computed.
+      pt: Abre o evento cuja probabilidade é calculada.
+      fr: Ouvre l'événement dont on calcule la probabilité.
+      zh: 打开要计算概率的事件。
+      ja: 確率を計算する事象を開く括弧。
+  - id: x
+    type: variable
+    value: X
+    explanation:
+      es: "X: el número de éxitos en la serie de ensayos."
+      en: "X: the number of successes across the trials."
+      pt: "X: o número de sucessos na série de ensaios."
+      fr: "X : le nombre de succès au cours des essais."
+      zh: "X：一系列试验中的成功次数。"
+      ja: "X：一連の試行における成功回数。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Toma exactamente el valor.
+      en: Takes exactly the value.
+      pt: Assume exatamente o valor.
+      fr: Prend exactement la valeur.
+      zh: 恰好取某个值。
+      ja: ちょうどその値をとる。
+  - id: k
+    type: variable
+    value: k
+    explanation:
+      es: "k: el número concreto de éxitos que nos interesa."
+      en: "k: the specific number of successes we care about."
+      pt: "k: o número específico de sucessos que nos interessa."
+      fr: "k : le nombre précis de succès qui nous intéresse."
+      zh: "k：我们关心的具体成功次数。"
+      ja: "k：注目している具体的な成功回数。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el evento.
+      en: Closes the event.
+      pt: Fecha o evento.
+      fr: Ferme l'événement.
+      zh: 关闭事件。
+      ja: 事象を閉じる括弧。
+  - id: equals-2
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: c
+    type: operator
+    value: C
+    explanation:
+      es: "El coeficiente binomial: cuántas formas hay de elegir k posiciones entre n ensayos."
+      en: "The binomial coefficient: how many ways to choose k positions among n trials."
+      pt: "O coeficiente binomial: de quantas maneiras escolher k posições entre n ensaios."
+      fr: "Le coefficient binomial : combien de façons de choisir k positions parmi n essais."
+      zh: "二项式系数：在n次试验中选出k个位置共有多少种方式。"
+      ja: "二項係数。n回の試行のうちk回の位置を選ぶ組み合わせの数。"
+  - id: open-paren-2
+    type: operator
+    value: (
+    explanation:
+      es: Abre los argumentos del coeficiente.
+      en: Opens the coefficient's arguments.
+      pt: Abre os argumentos do coeficiente.
+      fr: Ouvre les arguments du coefficient.
+      zh: 打开系数的参数。
+      ja: 係数の引数を開く括弧。
+  - id: n
+    type: variable
+    value: "n,"
+    explanation:
+      es: "n: el número total de ensayos independientes; la coma separa los argumentos del coeficiente."
+      en: "n: the total number of independent trials; the comma separates the coefficient's arguments."
+      pt: "n: o número total de ensaios independentes; a vírgula separa os argumentos do coeficiente."
+      fr: "n : le nombre total d'essais indépendants ; la virgule sépare les arguments du coefficient."
+      zh: "n：独立试验的总次数；逗号分隔系数的参数。"
+      ja: "n：独立な試行の総回数。カンマは係数の引数を区切る。"
+  - id: k-2
+    type: variable
+    value: k
+    explanation:
+      es: "k: cuántos éxitos queremos seleccionar."
+      en: "k: how many successes we want to select."
+      pt: "k: quantos sucessos queremos selecionar."
+      fr: "k : combien de succès nous voulons sélectionner."
+      zh: "k：我们要选出的成功次数。"
+      ja: "k：選びたい成功の数。"
+  - id: close-paren-2
+    type: operator
+    value: )
+    explanation:
+      es: Cierra los argumentos del coeficiente.
+      en: Closes the coefficient's arguments.
+      pt: Fecha os argumentos do coeficiente.
+      fr: Ferme les arguments du coefficient.
+      zh: 关闭系数的参数。
+      ja: 係数の引数を閉じる括弧。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por la probabilidad de cada secuencia con k éxitos.
+      en: Multiplied by the probability of each sequence with k successes.
+      pt: Multiplicado pela probabilidade de cada sequência com k sucessos.
+      fr: Multiplié par la probabilité de chaque séquence à k succès.
+      zh: 乘以每种含k次成功的序列的概率。
+      ja: k回成功する各系列の確率を掛ける。
+  - id: pk
+    type: variable
+    value: pᵏ
+    explanation:
+      es: "p: la probabilidad de éxito en un ensayo, elevada a k porque los k éxitos deben ocurrir."
+      en: "p: the success probability per trial, raised to k because all k successes must occur."
+      pt: "p: a probabilidade de sucesso por ensaio, elevada a k porque os k sucessos devem ocorrer."
+      fr: "p : la probabilité de succès d'un essai, élevée à k car les k succès doivent survenir."
+      zh: "p：单次试验的成功概率，因为k次成功都必须发生，所以要取k次方。"
+      ja: "p：1回の試行の成功確率。k回の成功がすべて起こる必要があるため、k乗する。"
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por la probabilidad de los fracasos.
+      en: Multiplied by the probability of the failures.
+      pt: Multiplicado pela probabilidade dos fracassos.
+      fr: Multiplié par la probabilité des échecs.
+      zh: 乘以失败的概率。
+      ja: 失敗の確率を掛ける。
+  - id: failure
+    type: variable
+    value: (1−p)ⁿ⁻ᵏ
+    explanation:
+      es: "1−p: la probabilidad de fracaso, elevada a n−k porque los fracasos restantes también deben ocurrir."
+      en: "1−p: the failure probability, raised to n−k because the remaining failures must also occur."
+      pt: "1−p: a probabilidade de fracasso, elevada a n−k porque os fracassos restantes também devem ocorrer."
+      fr: "1−p : la probabilité d'échec, élevée à n−k car les échecs restants doivent aussi survenir."
+      zh: "1−p：失败概率，因为其余失败也必须发生，所以取n−k次方。"
+      ja: "1−p：失敗の確率。残りの失敗も起こる必要があるため、n−k乗する。"
+context:
+  author:
+    es: Jacob Bernoulli
+    en: Jacob Bernoulli
+    pt: Jacob Bernoulli
+    fr: Jacob Bernoulli
+    zh: 雅各布·伯努利
+    ja: ヤコブ・ベルヌーイ
+  era:
+    es: Suiza, 1655–1705 · publicada en 1713 en Ars Conjectandi
+    en: Switzerland, 1655–1705 · published in 1713 in Ars Conjectandi
+    pt: Suíça, 1655–1705 · publicada em 1713 em Ars Conjectandi
+    fr: Suisse, 1655–1705 · publiée en 1713 dans l'Ars Conjectandi
+    zh: 瑞士，1655–1705年·1713年发表于《推测术》
+    ja: スイス、1655–1705年・1713年に『推測法』で発表
+  history:
+    es: >-
+      Jacob Bernoulli trabajó en su Ars Conjectandi durante casi veinte años, pero el tratado se
+      publicó póstumamente en 1713. En él formalizó los ensayos repetidos e independientes con
+      probabilidad de éxito constante y estudió la distribución de la cantidad de éxitos — la ley de
+      los grandes números, su gran aporte, está aquí también. El nombre "binomial" viene de que los
+      términos coinciden con los del desarrollo del binomio (p+q)ⁿ. Hoy es uno de los modelos
+      discretos más usados en todo el mundo.
+    en: >-
+      Jacob Bernoulli worked on his Ars Conjectandi for nearly twenty years, but the treatise was
+      published posthumously in 1713. In it he formalized repeated, independent trials with constant
+      success probability and studied the distribution of the number of successes — his law of large
+      numbers is also here. The name "binomial" comes from the terms matching the expansion of the
+      binomial (p+q)ⁿ. Today it is one of the most widely used discrete models in the world.
+    pt: >-
+      Jacob Bernoulli trabalhou em sua Ars Conjectandi por quase vinte anos, mas o tratado foi
+      publicado postumamente em 1713. Nele ele formalizou ensaios repetidos e independentes com
+      probabilidade de sucesso constante e estudou a distribuição do número de sucessos — a sua lei
+      dos grandes números também está ali. O nome "binomial" vem do fato de os termos coincidirem com
+      o desenvolvimento do binômio (p+q)ⁿ. Hoje é um dos modelos discretos mais usados no mundo.
+    fr: >-
+      Jacob Bernoulli travailla près de vingt ans à son Ars Conjectandi, mais le traité ne fut publié
+      qu'à titre posthume en 1713. Il y formalise des essais répétés et indépendants à probabilité de
+      succès constante et étudie la distribution du nombre de succès — sa loi des grands nombres y
+      figure aussi. Le nom « binomial » vient de ce que les termes correspondent au développement du
+      binôme (p+q)ⁿ. C'est aujourd'hui l'un des modèles discrets les plus utilisés au monde.
+    zh: >-
+      雅各布·伯努利花费近二十年撰写《推测术》，该著作于1713年在其身后出版。书中他将重复且独立的试验（每次成功
+      概率恒定）加以形式化，并研究了成功次数的分布——他的大数定律也收录于此。"二项"之名源于其各项与二项式
+      (p+q)ⁿ展开式的各项一致。如今它是全世界使用最广的离散模型之一。
+    ja: >-
+      ヤコブ・ベルヌーイは約20年間にわたり『推測法』を執筆したが、その著作が出版されたのは1713年の死後だった。
+      彼はその中で、成功確率が一定の独立した試行の繰り返しを定式化し、成功回数の分布を研究した。彼の大数の
+      法則もここに含まれている。「二項」という名前は、各項が二項式(p+q)ⁿの展開の各項と一致することに由来する。
+      今日、二項分布は世界で最も広く使われる離散モデルの一つである。
+  timeline:
+    - year: "1689–1705"
+      label:
+        es: >-
+          Bernoulli escribe y reelabora el Ars Conjectandi, donde formaliza los ensayos repetidos
+          independientes.
+        en: >-
+          Bernoulli writes and revises Ars Conjectandi, where he formalizes repeated independent
+          trials.
+        pt: >-
+          Bernoulli escreve e reelabora a Ars Conjectandi, onde formaliza os ensaios repetidos
+          independentes.
+        fr: >-
+          Bernoulli rédige et remanie l'Ars Conjectandi, où il formalise les essais répétés
+          indépendants.
+        zh: >-
+          伯努利撰写并反复修改《推测术》，在其中将重复独立试验加以形式化。
+        ja: >-
+          ベルヌーイが『推測法』を執筆・改訂し、その中で独立反復試行を定式化する。
+    - year: "1713"
+      label:
+        es: >-
+          El tratado se publica póstumamente, introduciendo la distribución y la ley de los grandes
+          números.
+        en: >-
+          The treatise is published posthumously, introducing the distribution and the law of large
+          numbers.
+        pt: >-
+          O tratado é publicado postumamente, introduzindo a distribuição e a lei dos grandes números.
+        fr: >-
+          Le traité est publié à titre posthume, introduisant la loi et la loi des grands nombres.
+        zh: >-
+          该著作在作者身后出版，引入了该分布与大数定律。
+        ja: >-
+          この著作が死後に出版され、二項分布と大数の法則が紹介される。
+    - year: s. XVIII–XIX
+      label:
+        es: >-
+          De Moivre aproxima la binomial con la curva normal, uniendo la distribución discreta con la
+          continua.
+        en: >-
+          De Moivre approximates the binomial with the normal curve, linking the discrete and
+          continuous worlds.
+        pt: >-
+          De Moivre aproxima a binomial com a curva normal, unindo o mundo discreto ao contínuo.
+        fr: >-
+          De Moivre approxime la loi binomiale par la courbe normale, reliant le monde discret au
+          monde continu.
+        zh: >-
+          棣莫弗用正态曲线近似二项分布，将离散与连续世界联系起来。
+        ja: >-
+          ド・モアブルが二項分布を正規曲線で近似し、離散と連続の世界を結びつける。
+    - year: Hoy
+      label:
+        es: >-
+          Modela defectos en fábricas, tasas de clic, resultados de encuestas y cualquier conteo de
+          éxitos en n ensayos.
+        en: >-
+          It models factory defects, click-through rates, survey results, and any count of successes
+          in n trials.
+        pt: >-
+          Modela defeitos em fábricas, taxas de clique, resultados de pesquisas e qualquer contagem de
+          sucessos em n ensaios.
+        fr: >-
+          Elle modélise les défauts d'usine, les taux de clics, les résultats de sondages et tout
+          décompte de succès sur n essais.
+        zh: >-
+          它用于模拟工厂次品数、点击率、调查结果以及n次试验中的任何成功计数。
+        ja: >-
+          工場の不良品数、クリック率、調査結果など、n回の試行における成功回数をモデル化する。
+  useCases:
+    - title:
+        es: Control de calidad
+        en: Quality control
+        pt: Controle de qualidade
+        fr: Contrôle qualité
+        zh: 质量控制
+        ja: 品質管理
+      description:
+        es: >-
+          Estimar la proporción de piezas defectuosas muestreando un lote y contando los defectos en
+          n piezas.
+        en: >-
+          Estimating the defect rate by sampling a batch and counting defects among n items.
+        pt: >-
+          Estimar a proporção de peças defeituosas amostrando um lote e contando os defeitos entre n
+          peças.
+        fr: >-
+          Estimer le taux de défauts en échantillonnant un lot et en comptant les défauts parmi n
+          pièces.
+        zh: >-
+          通过对一批产品抽样并统计n件中的次品数，来估计次品率。
+        ja: >-
+          ロットをサンプリングしてn個中の不良数を数えることで、不良率を推定する。
+    - title:
+        es: Marketing y A/B testing
+        en: Marketing and A/B testing
+        pt: Marketing e teste A/B
+        fr: Marketing et tests A/B
+        zh: 营销与 A/B 测试
+        ja: マーケティングとA/Bテスト
+      description:
+        es: >-
+          Determinar si una nueva versión de una página mejora realmente la tasa de conversión
+          requiere este modelo.
+        en: >-
+          Deciding whether a new page version truly improves conversion relies on this model.
+        pt: >-
+          Decidir se uma nova versão de uma página melhora de fato a conversão depende desse modelo.
+        fr: >-
+          Décider si une nouvelle version d'une page améliore réellement la conversion repose sur ce
+          modèle.
+        zh: >-
+          判断新版本页面是否真正提升转化率，依赖于这一模型。
+        ja: >-
+          新しいページ版が本当にコンバージョンを改善したかを判断するには、このモデルに頼る。
+    - title:
+        es: Epidemiología
+        en: Epidemiology
+        pt: Epidemiologia
+        fr: Épidémiologie
+        zh: 流行病学
+        ja: 疫学
+      description:
+        es: >-
+          La probabilidad de encontrar k casos positivos en una muestra de n personas se modela con
+          esta distribución.
+        en: >-
+          The probability of finding k positive cases in a sample of n people is modeled with this
+          distribution.
+        pt: >-
+          A probabilidade de encontrar k casos positivos em uma amostra de n pessoas é modelada com
+          essa distribuição.
+        fr: >-
+          La probabilité de trouver k cas positifs dans un échantillon de n personnes se modélise
+          avec cette loi.
+        zh: >-
+          在n人样本中发现k个阳性病例的概率可用此分布建模。
+        ja: >-
+          n人の標本でk人の陽性例が見つかる確率は、この分布でモデル化される。
+    - title:
+        es: Juegos y riesgo
+        en: Gambling and risk
+        pt: Jogos de azar e risco
+        fr: Jeux et risque
+        zh: 博彩与风险
+        ja: ギャンブルとリスク
+      description:
+        es: >-
+          La distribución nació del estudio de juegos de azar y sigue calculando probabilidades de
+          rachas y apuestas.
+        en: >-
+          The distribution was born from studying games of chance and still computes streak and bet
+          probabilities.
+        pt: >-
+          A distribuição nasceu do estudo dos jogos de azar e ainda calcula probabilidades de
+          sequências e apostas.
+        fr: >-
+          La loi est née de l'étude des jeux de hasard et calcule encore les probabilités de séries
+          et de paris.
+        zh: >-
+          该分布诞生于对机会游戏的研究，至今仍用于计算连胜与投注的概率。
+        ja: >-
+          この分布はギャンブルの研究から生まれ、今も連続成功や賭けの確率を計算している。
+  example:
+    title:
+      es: Diez lanzamientos de moneda
+      en: Ten coin flips
+      pt: Dez lançamentos de moeda
+      fr: Dix lancers de pièce
+      zh: 抛十次硬币
+      ja: コインを10回投げる
+    lines:
+      - es: n = 10, p = 0.5, k = 6
+        en: n = 10, p = 0.5, k = 6
+        pt: n = 10, p = 0,5, k = 6
+        fr: n = 10, p = 0,5, k = 6
+        zh: n = 10，p = 0.5，k = 6
+        ja: n = 10、p = 0.5、k = 6
+      - es: C(10, 6) = 210
+        en: C(10, 6) = 210
+        pt: C(10, 6) = 210
+        fr: C(10, 6) = 210
+        zh: C(10, 6) = 210
+        ja: C(10, 6) = 210
+      - es: P(X=6) = 210 · 0.5⁶ · 0.5⁴
+        en: P(X=6) = 210 · 0.5⁶ · 0.5⁴
+        pt: P(X=6) = 210 · 0,5⁶ · 0,5⁴
+        fr: P(X=6) = 210 · 0,5⁶ · 0,5⁴
+        zh: P(X=6) = 210 · 0.5⁶ · 0.5⁴
+        ja: P(X=6) = 210 · 0.5⁶ · 0.5⁴
+      - es: P(X=6) = 210 · 0.5¹⁰
+        en: P(X=6) = 210 · 0.5¹⁰
+        pt: P(X=6) = 210 · 0,5¹⁰
+        fr: P(X=6) = 210 · 0,5¹⁰
+        zh: P(X=6) = 210 · 0.5¹⁰
+        ja: P(X=6) = 210 · 0.5¹⁰
+      - es: P(X=6) = 210 / 1024 ≈ 0.205
+        en: P(X=6) = 210 / 1024 ≈ 0.205
+        pt: P(X=6) = 210 / 1024 ≈ 0,205
+        fr: P(X=6) = 210 / 1024 ≈ 0,205
+        zh: P(X=6) = 210 / 1024 ≈ 0.205
+        ja: P(X=6) = 210 / 1024 ≈ 0.205
+      - es: Hay un 20.5% de probabilidad de obtener exactamente 6 caras
+        en: There is a 20.5% chance of getting exactly 6 heads
+        pt: Há 20,5% de chance de obter exatamente 6 caras
+        fr: Il y a 20,5 % de chances d'obtenir exactement 6 faces « pile »
+        zh: 恰好得到6次正面的概率为20.5%
+        ja: ちょうど6回表が出る確率は20.5%

@@ -1,0 +1,267 @@
+id: centripetal-acceleration
+title:
+  es: Aceleración Centrípeta
+  en: Centripetal Acceleration
+  pt: Aceleração Centrípeta
+  fr: Accélération centripète
+  zh: 向心加速度
+  ja: 向心加速度
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: "a: la aceleración centrípeta, hacia el centro."
+      en: "a: the centripetal acceleration, toward the center."
+      pt: "a: a aceleração centrípeta, em direção ao centro."
+      fr: "a : l'accélération centripète, vers le centre."
+      zh: "a：向心加速度，指向圆心。"
+      ja: "a：向心加速度。中心へ向かう。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: v2
+    type: variable
+    value: v²
+    explanation:
+      es: La rapidez tangencial al cuadrado.
+      en: The tangential speed squared.
+      pt: A rapidez tangencial ao quadrado.
+      fr: La vitesse tangentielle au carré.
+      zh: 切向速度的平方。
+      ja: 接線速度の2乗。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "r: el radio de la trayectoria circular."
+      en: "r: the radius of the circular path."
+      pt: "r: o raio da trajetória circular."
+      fr: "r : le rayon de la trajectoire circulaire."
+      zh: "r：圆周运动的半径。"
+      ja: "r：円運動の半径。"
+context:
+  author:
+    es: Christiaan Huygens
+    en: Christiaan Huygens
+    pt: Christiaan Huygens
+    fr: Christiaan Huygens
+    zh: 克里斯蒂安·惠更斯
+    ja: クリスティアーン・ホイヘンス
+  era:
+    es: Países Bajos, 1629–1695 · publicada en 1673
+    en: Netherlands, 1629–1695 · published in 1673
+    pt: Países Baixos, 1629–1695 · publicada em 1673
+    fr: Pays-Bas, 1629–1695 · publiée en 1673
+    zh: 荷兰，1629–1695年·1673年发表
+    ja: オランダ、1629–1695年・1673年発表
+  history:
+    es: >-
+      En 1673, en su Horologium Oscillatorium, Huygens probó que un objeto en movimiento circular
+      uniforme acelera constantemente hacia el centro con a = v²/r. La palabra "centrípeta" la acuñó
+      Newton, que la aplicó a la Luna para deducir la ley de la gravedad. Es la aceleración que hace
+      que la Tierra gire alrededor del Sol y que una centrifugadora separe sus contenidos.
+    en: >-
+      In 1673, in his Horologium Oscillatorium, Huygens proved that an object in uniform circular
+      motion constantly accelerates toward the center with a = v²/r. The word "centripetal" was coined
+      by Newton, who applied it to the Moon to derive the law of gravity. It is the acceleration that
+      keeps Earth orbiting the Sun and that makes a centrifuge separate its contents.
+    pt: >-
+      Em 1673, em seu Horologium Oscillatorium, Huygens provou que um objeto em movimento circular
+      uniforme acelera constantemente em direção ao centro com a = v²/r. A palavra "centrípeta" foi
+      cunhada por Newton, que a aplicou à Lua para deduzir a lei da gravidade. É a aceleração que faz a
+      Terra girar ao redor do Sol e que faz uma centrífuga separar seu conteúdo.
+    fr: >-
+      En 1673, dans son Horologium Oscillatorium, Huygens prouva qu'un objet en mouvement circulaire
+      uniforme accélère constamment vers le centre avec a = v²/r. Le mot « centripète » fut inventé par
+      Newton, qui l'appliqua à la Lune pour déduire la loi de la gravité. C'est l'accélération qui fait
+      tourner la Terre autour du Soleil et qui fait qu'une centrifugeuse sépare son contenu.
+    zh: >-
+      1673年，惠更斯在《摆钟论》中证明：做匀速圆周运动的物体持续向圆心加速，a = v²/r。"向心"一词由牛顿创造，
+      他用它作用于月球，推演出引力定律。正是这种加速度使地球绕太阳运行，也使离心机分离其中的物质。
+    ja: >-
+      1673年、ホイヘンスは『振り子時計について』で、等速円運動する物体がa = v²/rで常に中心へ向かって加速する
+      ことを証明した。「向心」という言葉はニュートンが作ったもので、彼はこれを月に適用して万有引力の法則を
+      導いた。この加速度が、地球が太陽の周りを回り、遠心分離機が中身を分離することを可能にしている。
+  timeline:
+    - year: "1659"
+      label:
+        es: >-
+          Huygens descubre la fórmula mientras diseña relojes de péndulo.
+        en: >-
+          Huygens discovers the formula while designing pendulum clocks.
+        pt: >-
+          Huygens descobre a fórmula ao projetar relógios de pêndulo.
+        fr: >-
+          Huygens découvre la formule en concevant des horloges à pendule.
+        zh: >-
+          惠更斯在设计摆钟时发现这条公式。
+        ja: >-
+          ホイヘンスが振り子時計の設計中にこの公式を発見する。
+    - year: "1673"
+      label:
+        es: >-
+          La publica en el Horologium Oscillatorium.
+        en: >-
+          He publishes it in the Horologium Oscillatorium.
+        pt: >-
+          Ele a publica no Horologium Oscillatorium.
+        fr: >-
+          Il la publie dans l'Horologium Oscillatorium.
+        zh: >-
+          他在《摆钟论》中发表它。
+        ja: >-
+          『振り子時計について』でこれを発表する。
+    - year: "1687"
+      label:
+        es: >-
+          Newton la usa para derivar la gravitación universal a partir de la órbita lunar.
+        en: >-
+          Newton uses it to derive universal gravitation from the Moon's orbit.
+        pt: >-
+          Newton a usa para derivar a gravitação universal a partir da órbita lunar.
+        fr: >-
+          Newton l'utilise pour dériver la gravitation universelle à partir de l'orbite lunaire.
+        zh: >-
+          牛顿用它从月球轨道推导出万有引力。
+        ja: >-
+          ニュートンが月の軌道から万有引力を導くためにこれを用いる。
+    - year: Hoy
+      label:
+        es: >-
+          Está en toda curva: ruedas, montañas rusas, órbita y centrifugadoras.
+        en: >-
+          It is in every curve: wheels, roller coasters, orbits, and centrifuges.
+        pt: >-
+          Está em toda curva: rodas, montanhas-russas, órbitas e centrífugas.
+        fr: >-
+          Elle est dans toute courbe : roues, montagnes russes, orbites et centrifugeuses.
+        zh: >-
+          它存在于每一条曲线中：车轮、过山车、轨道和离心机。
+        ja: >-
+          あらゆる曲線、車輪、ジェットコースター、軌道、遠心分離機に現れる。
+  useCases:
+    - title:
+        es: Vehículos en curva
+        en: Vehicles in curves
+        pt: Veículos em curvas
+        fr: Véhicules en virage
+        zh: 弯道中的车辆
+        ja: カーブを曲がる車両
+      description:
+        es: >-
+          El peralte de una carretera se diseña para que la aceleración centrípeta no vuelque el coche.
+        en: >-
+          Road banking is designed so centripetal acceleration does not flip the car.
+        pt: >-
+          A sobrelevação da pista é projetada para que a aceleração centrípeta não derrube o carro.
+        fr: >-
+          Le dévers d'une route se conçoit pour que l'accélération centripète ne renverse pas la
+          voiture.
+        zh: >-
+          道路的倾斜度经过设计，使向心加速度不会让汽车侧翻。
+        ja: >-
+          道路のバンク角は、向心加速度で車が横転しないように設計される。
+    - title:
+        es: Atracciones mecánicas
+        en: Amusement rides
+        pt: Brinquedos de parque
+        fr: Manèges à sensations
+        zh: 游乐园设施
+        ja: 遊園地の乗り物
+      description:
+        es: >-
+          Los bucles y giros de las montañas rusas se calculan con esta aceleración.
+        en: >-
+          Roller coaster loops and turns are computed with this acceleration.
+        pt: >-
+          As voltas e curvas das montanhas-russas são calculadas com essa aceleração.
+        fr: >-
+          Les boucles et virages des montagnes russes se calculent avec cette accélération.
+        zh: >-
+          过山车的回环与转弯用这种加速度计算。
+        ja: >-
+          ジェットコースターのループやカーブは、この加速度で計算される。
+    - title:
+        es: Centrifugadoras
+        en: Centrifuges
+        pt: Centrífugas
+        fr: Centrifugeuses
+        zh: 离心机
+        ja: 遠心分離機
+      description:
+        es: >-
+          Separar sangre o leche en componentes aprovecha la aceleración centrípeta.
+        en: >-
+          Separating blood or milk into components exploits centripetal acceleration.
+        pt: >-
+          Separar sangue ou leite em componentes aproveita a aceleração centrípeta.
+        fr: >-
+          Séparer le sang ou le lait en composants exploite l'accélération centripète.
+        zh: >-
+          将血液或牛奶分离成组分，正利用了向心加速度。
+        ja: >-
+          血液や牛乳を成分に分離するのは、向心加速度を利用している。
+  example:
+    title:
+      es: Una curva a 10 m/s
+      en: A curve at 10 m/s
+      pt: Uma curva a 10 m/s
+      fr: Un virage à 10 m/s
+      zh: 以10米/秒转弯
+      ja: 10 m/sのカーブ
+    lines:
+      - es: v = 10 m/s, r = 5 m
+        en: v = 10 m/s, r = 5 m
+        pt: v = 10 m/s, r = 5 m
+        fr: v = 10 m/s, r = 5 m
+        zh: v = 10 米/秒，r = 5 米
+        ja: v = 10 m/s、r = 5 m
+      - es: a = v² / r
+        en: a = v² / r
+        pt: a = v² / r
+        fr: a = v² / r
+        zh: a = v² / r
+        ja: a = v² / r
+      - es: a = 100 / 5
+        en: a = 100 / 5
+        pt: a = 100 / 5
+        fr: a = 100 / 5
+        zh: a = 100 / 5
+        ja: a = 100 / 5
+      - es: a = 20 m/s²
+        en: a = 20 m/s²
+        pt: a = 20 m/s²
+        fr: a = 20 m/s²
+        zh: a = 20 米/秒²
+        ja: a = 20 m/s²
+      - es: Unas dos veces la gravedad (2g)
+        en: About twice gravity (2g)
+        pt: Cerca de duas vezes a gravidade (2g)
+        fr: Environ deux fois la gravité (2g)
+        zh: 约为重力的两倍（2g）
+        ja: 重力の約2倍（2g）

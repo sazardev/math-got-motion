@@ -1,0 +1,322 @@
+id: specific-heat-capacity
+title:
+  es: Capacidad Calorífica Específica
+  en: Specific Heat Capacity
+  pt: Capacidade Calorífica Específica
+  fr: Capacité thermique massique
+  zh: 比热容
+  ja: 比熱容量
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: q
+    type: variable
+    value: Q
+    explanation:
+      es: El calor necesario para cambiar la temperatura del cuerpo.
+      en: The heat needed to change the body's temperature.
+      pt: O calor necessário para mudar a temperatura do corpo.
+      fr: La chaleur nécessaire pour modifier la température du corps.
+      zh: 改变物体温度所需的热量。
+      ja: 物体の温度を変えるために必要な熱。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a la cantidad de energía transferida.
+      en: Equals the amount of energy transferred.
+      pt: É igual à quantidade de energia transferida.
+      fr: Est égale à la quantité d'énergie transférée.
+      zh: 等于传递的能量。
+      ja: 移動したエネルギー量に等しい。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: La masa del cuerpo que se calienta.
+      en: The mass of the body being heated.
+      pt: A massa do corpo que está sendo aquecido.
+      fr: La masse du corps chauffé.
+      zh: 被加热物体的质量。
+      ja: 加熱される物体の質量。
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: c
+    type: variable
+    value: c
+    explanation:
+      es: La capacidad calorífica específica del material.
+      en: The specific heat capacity of the material.
+      pt: A capacidade calorífica específica do material.
+      fr: La capacité thermique massique du matériau.
+      zh: 材料的比热容。
+      ja: 材料の比熱容量。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: dt
+    type: variable
+    value: ΔT
+    explanation:
+      es: La variación de temperatura que experimenta el cuerpo.
+      en: The temperature change the body undergoes.
+      pt: A variação de temperatura que o corpo sofre.
+      fr: La variation de température subie par le corps.
+      zh: 物体经历的温度变化。
+      ja: 物体が受ける温度変化。
+context:
+  author:
+    es: Origen colectivo; cuantificada por Joseph Black
+    en: Collective origin; quantified by Joseph Black
+    pt: Origem coletiva; quantificada por Joseph Black
+    fr: Origine collective ; quantifiée par Joseph Black
+    zh: 集体起源；由约瑟夫·布莱克量化
+    ja: 集団的起源；ジョセフ・ブラックが定量化
+  era:
+    es: Escocia, 1728–1799 · mediciones en el s. XVIII
+    en: Scotland, 1728–1799 · measurements in the 18th century
+    pt: Escócia, 1728–1799 · medições no séc. XVIII
+    fr: Écosse, 1728–1799 · mesures au XVIIIe siècle
+    zh: 苏格兰，1728–1799年 · 于18世纪测量
+    ja: スコットランド、1728–1799年・18世紀に測定
+  history:
+    es: >-
+      El médico y químico escocés Joseph Black distinguió por primera vez, hacia 1760, entre
+      calor y temperatura, y midió cuánto calor absorbía cada sustancia al calentarse. Sus
+      experimentos con mezclas de agua a distintas temperaturas dieron origen a la calorimetría.
+      La capacidad calorífica específica explica fenómenos cotidianos: el agua absorbe mucho
+      calor por grado, por eso el mar se calienta y enfría lentamente y regula el clima.
+    en: >-
+      Around 1760 the Scottish physician and chemist Joseph Black was the first to distinguish
+      between heat and temperature, and measured how much heat each substance absorbed when
+      warmed. His experiments mixing water at different temperatures gave rise to calorimetry.
+      Specific heat capacity explains everyday phenomena: water absorbs a lot of heat per
+      degree, which is why the sea heats and cools slowly and moderates the climate.
+    pt: >-
+      Por volta de 1760, o médico e químico escocês Joseph Black foi o primeiro a distinguir
+      entre calor e temperatura, e mediu quanto calor cada substância absorvia ao ser aquecida.
+      Seus experimentos misturando água a diferentes temperaturas deram origem à calorimetria. A
+      capacidade calorífica específica explica fenômenos cotidianos: a água absorve muito calor
+      por grau, por isso o mar esquenta e esfria lentamente e regula o clima.
+    fr: >-
+      Vers 1760, le médecin et chimiste écossais Joseph Black fut le premier à distinguer la
+      chaleur de la température, et mesura la chaleur absorbée par chaque substance chauffée.
+      Ses expériences mélangeant de l'eau à différentes températures donnèrent naissance à la
+      calorimétrie. La capacité thermique massique explique des phénomènes quotidiens : l'eau
+      absorbe beaucoup de chaleur par degré, c'est pourquoi la mer se réchauffe et se refroidit
+      lentement et modère le climat.
+    zh: >-
+      大约在1760年，苏格兰医生兼化学家约瑟夫·布莱克首次区分了热量与温度，并测量了每种物质在受热时吸收多少热量。
+      他混合不同温度的水所做的实验开创了量热学。比热容解释了许多日常现象：水每升高一度要吸收大量热量，
+      因此海水升温和降温都很慢，起到调节气候的作用。
+    ja: >-
+      1760年頃、スコットランドの医師にして化学者であるジョセフ・ブラックは、熱と温度を初めて区別し、
+      各物質が加熱された際にどれだけの熱を吸収するかを測定した。異なる温度の水を混ぜる彼の実験は、
+      熱量測定の起源となった。比熱容量は日常的な現象を説明する。水は1度あたりに大量の熱を吸収するため、
+      海はゆっくりと温まり、ゆっくりと冷えて、気候を穏やかに保つのである。
+  timeline:
+    - year: c. 1760
+      label:
+        es: >-
+          Joseph Black distingue calor de temperatura y mide la capacidad calorífica del agua.
+        en: >-
+          Joseph Black distinguishes heat from temperature and measures water's heat capacity.
+        pt: >-
+          Joseph Black distingue calor de temperatura e mede a capacidade calorífica da água.
+        fr: >-
+          Joseph Black distingue chaleur et température et mesure la capacité thermique de l'eau.
+        zh: >-
+          约瑟夫·布莱克区分热量与温度，并测量了水的热容量。
+        ja: >-
+          ジョセフ・ブラックが熱と温度を区別し、水の熱容量を測定する。
+    - year: "1780"
+      label:
+        es: >-
+          Lavoisier y Laplace construyen el calorímetro de hielo y acuñan el término "calorimetría".
+        en: >-
+          Lavoisier and Laplace build the ice calorimeter and coin the term "calorimetry".
+        pt: >-
+          Lavoisier e Laplace constroem o calorímetro de gelo e cunham o termo "calorimetria".
+        fr: >-
+          Lavoisier et Laplace construisent le calorimètre à glace et forgent le terme «
+          calorimétrie ».
+        zh: >-
+          拉瓦锡与拉普拉斯建造了冰量热计，并创造了"量热法"一词。
+        ja: >-
+          ラボアジエとラプラスが氷熱量計を製作し、「熱量測定」という言葉を作る。
+    - year: "1819"
+      label:
+        es: >-
+          Dulong y Petit publican la relación entre el calor específico y la masa atómica.
+        en: >-
+          Dulong and Petit publish the relation between specific heat and atomic mass.
+        pt: >-
+          Dulong e Petit publicam a relação entre o calor específico e a massa atômica.
+        fr: >-
+          Dulong et Petit publient la relation entre la chaleur spécifique et la masse atomique.
+        zh: >-
+          杜隆与珀替发表了比热与原子量之间的关系。
+        ja: >-
+          デュロンとプティが比熱と原子量の関係を発表する。
+    - year: Hoy
+      label:
+        es: >-
+          La tabla de capacidades caloríficas es clave en climatología, ingeniería y cocina.
+        en: >-
+          The table of heat capacities is key in climatology, engineering and cooking.
+        pt: >-
+          A tabela de capacidades caloríficas é fundamental na climatologia, na engenharia e na
+          culinária.
+        fr: >-
+          Le tableau des capacités thermiques est essentiel en climatologie, en ingénierie et en
+          cuisine.
+        zh: >-
+          比热容表在气候学、工程和烹饪中至关重要。
+        ja: >-
+          比熱容量の表は、気候学・工学・料理において欠かせない。
+  useCases:
+    - title:
+        es: Climatología y oceanografía
+        en: Climatology and oceanography
+        pt: Climatologia e oceanografia
+        fr: Climatologie et océanographie
+        zh: 气候学与海洋学
+        ja: 気候学と海洋学
+      description:
+        es: >-
+          Explica por qué los océanos tardan tanto en calentarse y por qué las brisas marinas
+          cambian de dirección.
+        en: >-
+          It explains why oceans take so long to warm and why sea breezes shift direction.
+        pt: >-
+          Explica por que os oceanos demoram tanto a aquecer e por que as brisas marinhas mudam
+          de direção.
+        fr: >-
+          Elle explique pourquoi les océans mettent si longtemps à se réchauffer et pourquoi les
+          brises marines changent de direction.
+        zh: >-
+          它解释了海洋为何升温如此缓慢，以及海陆风为何会改变方向。
+        ja: >-
+          海がなかなか温まらない理由や、海陸風の向きが変わる理由を説明する。
+    - title:
+        es: Ingeniería de materiales
+        en: Materials engineering
+        pt: Engenharia de materiais
+        fr: Ingénierie des matériaux
+        zh: 材料工程
+        ja: 材料工学
+      description:
+        es: >-
+          Permite elegir materiales para disipadores de calor, frenos y revestimientos térmicos.
+        en: >-
+          It guides the choice of materials for heat sinks, brakes and thermal shielding.
+        pt: >-
+          Permite escolher materiais para dissipadores de calor, freios e blindagens térmicas.
+        fr: >-
+          Elle guide le choix des matériaux pour les dissipateurs, freins et boucliers thermiques.
+        zh: >-
+          用于为散热器、制动器和隔热层选择材料。
+        ja: >-
+          ヒートシンク、ブレーキ、熱遮蔽材の材料選びを導く。
+    - title:
+        es: Ciencia de los alimentos
+        en: Food science
+        pt: Ciência dos alimentos
+        fr: Science de l'alimentation
+        zh: 食品科学
+        ja: 食品科学
+      description:
+        es: >-
+          Calcula la energía necesaria para cocinar, congelar o pasteurizar un alimento.
+        en: >-
+          It calculates the energy needed to cook, freeze or pasteurize a food.
+        pt: >-
+          Calcula a energia necessária para cozinhar, congelar ou pasteurizar um alimento.
+        fr: >-
+          Elle calcule l'énergie nécessaire pour cuire, congeler ou pasteuriser un aliment.
+        zh: >-
+          用于计算烹饪、冷冻或巴氏杀菌一种食品所需的能量。
+        ja: >-
+          食品を調理・冷凍・殺菌するために必要なエネルギーを計算する。
+    - title:
+        es: Industria química
+        en: Chemical industry
+        pt: Indústria química
+        fr: Industrie chimique
+        zh: 化学工业
+        ja: 化学工業
+      description:
+        es: >-
+          Se usa para dimensionar calderas e intercambiadores en procesos que exigen calentar o
+          enfriar fluidos.
+        en: >-
+          It is used to size boilers and exchangers in processes that heat or cool fluids.
+        pt: >-
+          É usada para dimensionar caldeiras e trocadores em processos que aquecem ou resfriam
+          fluidos.
+        fr: >-
+          Elle sert à dimensionner chaudières et échangeurs dans les procédés chauffant ou
+          refroidissant des fluides.
+        zh: >-
+          用于为加热或冷却流体的工艺选配锅炉和换热器。
+        ja: >-
+          流体を加熱・冷却するプロセスのボイラーや熱交換器の設計に使われる。
+  example:
+    title:
+      es: Calentar agua para una ducha
+      en: Heating water for a shower
+      pt: Aquecendo água para um banho
+      fr: Chauffer l'eau d'une douche
+      zh: 加热淋浴用水
+      ja: シャワーの水を温める
+    lines:
+      - es: "Masa de agua: m = 2 kg"
+        en: "Mass of water: m = 2 kg"
+        pt: "Massa de água: m = 2 kg"
+        fr: "Masse d'eau : m = 2 kg"
+        zh: 水的质量：m = 2 kg
+        ja: 水の質量：m = 2 kg
+      - es: "Calor específico del agua: c = 4186 J/kg·K"
+        en: "Water's specific heat: c = 4186 J/kg·K"
+        pt: "Calor específico da água: c = 4186 J/kg·K"
+        fr: "Chaleur massique de l'eau : c = 4186 J/kg·K"
+        zh: 水的比热容：c = 4186 J/kg·K
+        ja: 水の比熱容量：c = 4186 J/kg·K
+      - es: "De 20 °C a 30 °C: ΔT = 10 K"
+        en: "From 20 °C to 30 °C: ΔT = 10 K"
+        pt: "De 20 °C a 30 °C: ΔT = 10 K"
+        fr: "De 20 °C à 30 °C : ΔT = 10 K"
+        zh: 从20 °C到30 °C：ΔT = 10 K
+        ja: 20 °C から 30 °C：ΔT = 10 K
+      - es: Q = m · c · ΔT = 2 × 4186 × 10
+        en: Q = m · c · ΔT = 2 × 4186 × 10
+        pt: Q = m · c · ΔT = 2 × 4186 × 10
+        fr: Q = m · c · ΔT = 2 × 4186 × 10
+        zh: Q = m · c · ΔT = 2 × 4186 × 10
+        ja: Q = m · c · ΔT = 2 × 4186 × 10
+      - es: Q ≈ 83,720 J ≈ 83.7 kJ
+        en: Q ≈ 83,720 J ≈ 83.7 kJ
+        pt: Q ≈ 83.720 J ≈ 83,7 kJ
+        fr: Q ≈ 83 720 J ≈ 83,7 kJ
+        zh: Q ≈ 83,720 J ≈ 83.7 kJ
+        ja: Q ≈ 83,720 J ≈ 83.7 kJ

@@ -1,0 +1,316 @@
+id: average-velocity
+title:
+  es: Velocidad Media
+  en: Average Velocity
+  pt: Velocidade Média
+  fr: Vitesse moyenne
+  zh: 平均速度
+  ja: 平均速度
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La velocidad media, el desplazamiento por unidad de tiempo.
+      en: The average velocity, the displacement per unit of time.
+      pt: A velocidade média, o deslocamento por unidade de tempo.
+      fr: La vitesse moyenne, le déplacement par unité de temps.
+      zh: 平均速度，即单位时间内的位移。
+      ja: 平均速度。単位時間あたりの変位。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: dx
+    type: variable
+    value: Δx
+    explanation:
+      es: El desplazamiento, el cambio neto de posición del objeto.
+      en: The displacement, the net change in the object's position.
+      pt: O deslocamento, a variação líquida da posição do objeto.
+      fr: Le déplacement, la variation nette de la position de l'objet.
+      zh: 位移，即物体位置的净变化。
+      ja: 変位。物体の位置の正味の変化。
+  - id: divide
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: dt
+    type: variable
+    value: Δt
+    explanation:
+      es: El tiempo total transcurrido, en segundos.
+      en: The total time elapsed, in seconds.
+      pt: O tempo total decorrido, em segundos.
+      fr: Le temps total écoulé, en secondes.
+      zh: 经过的总时间，以秒为单位。
+      ja: 経過した合計時間。単位は秒。
+context:
+  author:
+    es: Origen colectivo de la cinemática
+    en: Collective origin of kinematics
+    pt: Origem coletiva da cinemática
+    fr: Origine collective de la cinématique
+    zh: 运动学的集体起源
+    ja: 運動学の集団的起源
+  era:
+    es: Europa, s. XVII
+    en: Europe, 17th century
+    pt: Europa, século XVII
+    fr: Europe, XVIIe siècle
+    zh: 欧洲,17世纪
+    ja: ヨーロッパ、17世紀
+  history:
+    es: >-
+      La velocidad media divide el desplazamiento total, el cambio neto de posición, por el tiempo
+      total empleado. Es un concepto de la cinemática que se consolidó en el siglo XVII con Galileo,
+      quien midió caídas comparando distancias y tiempos. Como es el desplazamiento y no la
+      distancia recorrida lo que se divide, una ida y vuelta al punto de partida tiene velocidad
+      media cero a pesar de moverse todo el tiempo. Es la base de la planificación de viajes y de
+      los modelos de tráfico, y de ella se deriva la velocidad instantánea al hacer el intervalo
+      cada vez más corto.
+    en: >-
+      Average velocity divides the total displacement, the net change in position, by the total
+      time taken. It is a kinematic concept consolidated in the 17th century with Galileo, who
+      measured falls by comparing distances and times. Because it is displacement and not distance
+      traveled that is divided, a round trip back to the start has zero average velocity even though
+      it moved the whole time. It is the basis of trip planning and traffic models, and
+      instantaneous velocity follows from it by making the interval ever shorter.
+    pt: >-
+      A velocidade média divide o deslocamento total, a variação líquida da posição, pelo tempo
+      total gasto. É um conceito da cinemática que se consolidou no século XVII com Galileu, que
+      media quedas comparando distâncias e tempos. Como é o deslocamento e não a distância
+      percorrida o que se divide, uma ida e volta ao ponto de partida tem velocidade média zero
+      apesar de se mover o tempo todo. É a base do planejamento de viagens e dos modelos de tráfego,
+      e dela se deriva a velocidade instantânea ao tornar o intervalo cada vez mais curto.
+    fr: >-
+      La vitesse moyenne divise le déplacement total, la variation nette de position, par le temps
+      total écoulé. C'est un concept de la cinématique consolidé au XVIIe siècle avec Galilée, qui
+      mesurait les chutes en comparant distances et durées. Comme c'est le déplacement et non la
+      distance parcourue que l'on divise, un aller-retour au point de départ a une vitesse moyenne
+      nulle même s'il a bougé pendant tout le trajet. Elle est à la base de la planification des
+      trajets et des modèles de trafic, et la vitesse instantanée s'en déduit en rendant
+      l'intervalle de plus en plus court.
+    zh: >-
+      平均速度等于总位移（位置的净变化）除以总用时。这是17世纪随伽利略的运动学而确立的概念，他通过比较
+      距离与时间来测量落体运动。由于被除的是位移而非走过的路程，一个往返回到起点的行程即使一直在动，
+      其平均速度也是零。它是行程规划和交通模型的基础，把时间间隔取得越来越短就得到了瞬时速度。
+    ja: >-
+      平均速度は、変位（位置の正味の変化）をかかった時間の合計で割ったものである。17世紀にガリレオとともに
+      確立された運動学の概念で、彼は距離と時間を比べて落下を測定した。割るのは移動距離ではなく変位なので、
+      起点に戻る往復は、ずっと動いていても平均速度はゼロになる。旅行の計画や交通モデルの基礎であり、
+      時間間隔を限りなく短くすることで瞬間速度が導かれる。
+  timeline:
+    - year: "1638"
+      label:
+        es: >-
+          Los Discorsi de Galileo miden la caída acelerada con razones entre distancia y tiempo.
+        en: >-
+          Galileo's Discorsi measure accelerated fall through ratios of distance and time.
+        pt: >-
+          Os Discorsi de Galileu medem a queda acelerada com razões entre distância e tempo.
+        fr: >-
+          Les Discorsi de Galilée mesurent la chute accélérée par des rapports entre distance et
+          temps.
+        zh: >-
+          伽利略的《关于两门新科学的对话》用距离与时间的比值来度量加速下落。
+        ja: >-
+          ガリレオの『新科学対話』が、距離と時間の比で加速落下を測定する。
+    - year: "1687"
+      label:
+        es: >-
+          Los Principia de Newton asientan la cinemática sobre el cálculo, donde v = Δx/Δt es una
+          derivada.
+        en: >-
+          Newton's Principia sets kinematics on calculus, where v = Δx/Δt is a derivative.
+        pt: >-
+          Os Principia de Newton assentam a cinemática sobre o cálculo, onde v = Δx/Δt é uma
+          derivada.
+        fr: >-
+          Les Principia de Newton assoient la cinématique sur le calcul, où v = Δx/Δt est une
+          dérivée.
+        zh: >-
+          牛顿《原理》把运动学建立在微积分之上，v = Δx/Δt成为一个导数。
+        ja: >-
+          ニュートンの『プリンキピア』が運動学を微分積分学の上に据え、v = Δx/Δtを微分とする。
+    - year: s. XX
+      label:
+        es: >-
+          Las velocidades medias guían la planificación de viajes, la ingeniería de tráfico y las
+          primeras computadoras de navegación.
+        en: >-
+          Average speeds drive trip planning, traffic engineering, and the first navigation
+          computers.
+        pt: >-
+          As velocidades médias guiam o planejamento de viagens, a engenharia de tráfego e os
+          primeiros computadores de navegação.
+        fr: >-
+          Les vitesses moyennes guident la planification des trajets, l'ingénierie du trafic et les
+          premiers calculateurs de navigation.
+        zh: >-
+          平均速度引导着行程规划、交通工程和早期的导航计算机。
+        ja: >-
+          平均速度が旅行計画、交通工学、初期の航法コンピュータを支える。
+    - year: Hoy
+      label:
+        es: >-
+          Cada ruta de GPS recalcula la velocidad media entre puntos en tiempo real.
+        en: >-
+          Every GPS route recalculates the average velocity between points in real time.
+        pt: >-
+          Cada rota de GPS recalcula a velocidade média entre pontos em tempo real.
+        fr: >-
+          Chaque itinéraire GPS recalcule la vitesse moyenne entre points en temps réel.
+        zh: >-
+          每一条GPS路线都实时重新计算各点之间的平均速度。
+        ja: >-
+          すべてのGPSルートが、地点間の平均速度をリアルタイムで再計算する。
+  useCases:
+    - title:
+        es: Planificación de viajes
+        en: Trip planning
+        pt: Planejamento de viagens
+        fr: Planification de trajets
+        zh: 行程规划
+        ja: 旅行計画
+      description:
+        es: >-
+          Los tiempos estimados de llegada se calculan dividiendo la distancia del tramo por la
+          velocidad media esperada.
+        en: >-
+          Estimated arrival times come from dividing each leg's distance by the expected average
+          velocity.
+        pt: >-
+          Os tempos estimados de chegada são calculados dividindo a distância do trecho pela
+          velocidade média esperada.
+        fr: >-
+          Les heures d'arrivée estimées se calculent en divisant la distance du tronçon par la
+          vitesse moyenne attendue.
+        zh: >-
+          预计到达时间通过将路段的距离除以预期的平均速度来计算。
+        ja: >-
+          予想到着時刻は、区間の距離を予想される平均速度で割って計算される。
+    - title:
+        es: Modelos de tráfico
+        en: Traffic modeling
+        pt: Modelos de tráfego
+        fr: Modélisation du trafic
+        zh: 交通建模
+        ja: 交通モデル
+      description:
+        es: >-
+          Los flujos de una vía se describen con la velocidad media de los vehículos en cada tramo.
+        en: >-
+          Road flows are described by the average velocity of vehicles on each stretch.
+        pt: >-
+          Os fluxos de uma via são descritos pela velocidade média dos veículos em cada trecho.
+        fr: >-
+          Les flux d'une voie se décrivent par la vitesse moyenne des véhicules sur chaque
+          tronçon.
+        zh: >-
+          道路车流用各路段车辆的平均速度来描述。
+        ja: >-
+          道路の流れは、各区間の車両の平均速度で記述される。
+    - title:
+        es: Navegación GPS
+        en: GPS navigation
+        pt: Navegação por GPS
+        fr: Navigation GPS
+        zh: GPS导航
+        ja: GPSナビゲーション
+      description:
+        es: >-
+          El GPS calcula la velocidad media entre waypoints para avisar de retrasos y reordenar
+          rutas.
+        en: >-
+          GPS computes the average velocity between waypoints to flag delays and reorder routes.
+        pt: >-
+          O GPS calcula a velocidade média entre waypoints para avisar atrasos e reordenar rotas.
+        fr: >-
+          Le GPS calcule la vitesse moyenne entre les waypoints pour signaler les retards et
+          réordonner les itinéraires.
+        zh: >-
+          GPS计算航路点之间的平均速度，以提示延误并重新规划路线。
+        ja: >-
+          GPSはウェイポイント間の平均速度を計算し、遅延を知らせてルートを組み直す。
+    - title:
+        es: Logística y deportes
+        en: Logistics and sports
+        pt: Logística e esportes
+        fr: Logistique et sports
+        zh: 物流与体育
+        ja: 物流とスポーツ
+      description:
+        es: >-
+          El ritmo de una carrera o la planificación de repartos son velocidades medias aplicadas a
+          distancia y tiempo reales.
+        en: >-
+          A race pace or delivery scheduling is average velocity applied to real distance and time.
+        pt: >-
+          O ritmo de uma corrida ou o planejamento de entregas são velocidades médias aplicadas a
+          distância e tempo reais.
+        fr: >-
+          L'allure d'une course ou la planification des livraisons sont des vitesses moyennes
+          appliquées à une distance et un temps réels.
+        zh: >-
+          比赛的配速或配送调度，就是把平均速度应用于真实的距离与时间。
+        ja: >-
+          レースのペースや配送計画は、実際の距離と時間に平均速度を当てはめたものだ。
+  example:
+    title:
+      es: Un auto en la ruta
+      en: A car on the highway
+      pt: Um carro na estrada
+      fr: Une voiture sur la route
+      zh: 高速公路上的汽车
+      ja: 高速道路を走る車
+    lines:
+      - es: Δx = 120 km, Δt = 1.5 h
+        en: Δx = 120 km, Δt = 1.5 h
+        pt: Δx = 120 km, Δt = 1,5 h
+        fr: Δx = 120 km, Δt = 1,5 h
+        zh: Δx = 120 km, Δt = 1.5 h
+        ja: Δx = 120 km, Δt = 1.5 h
+      - es: v = Δx / Δt
+        en: v = Δx / Δt
+        pt: v = Δx / Δt
+        fr: v = Δx / Δt
+        zh: v = Δx / Δt
+        ja: v = Δx / Δt
+      - es: v = 120 / 1.5
+        en: v = 120 / 1.5
+        pt: v = 120 / 1,5
+        fr: v = 120 / 1,5
+        zh: v = 120 / 1.5
+        ja: v = 120 / 1.5
+      - es: v = 80 km/h
+        en: v = 80 km/h
+        pt: v = 80 km/h
+        fr: v = 80 km/h
+        zh: v = 80 km/h
+        ja: v = 80 km/h
+      - es: v ≈ 22.2 m/s
+        en: v ≈ 22.2 m/s
+        pt: v ≈ 22,2 m/s
+        fr: v ≈ 22,2 m/s
+        zh: v ≈ 22.2 m/s
+        ja: v ≈ 22.2 m/s

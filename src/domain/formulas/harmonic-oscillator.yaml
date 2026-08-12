@@ -1,0 +1,349 @@
+id: harmonic-oscillator
+title:
+  es: Oscilador Armónico
+  en: Harmonic Oscillator
+  pt: Oscilador Harmônico
+  fr: Oscillateur harmonique
+  zh: 简谐振子
+  ja: 単振動
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: "m: la masa del objeto que oscila."
+      en: "m: the mass of the oscillating object."
+      pt: "m: a massa do objeto que oscila."
+      fr: "m : la masse de l'objet qui oscille."
+      zh: "m：作振荡运动的物体的质量。"
+      ja: "m：振動する物体の質量。"
+  - id: d2xdt2
+    type: variable
+    value: d²x/dt²
+    explanation:
+      es: "La aceleración: la segunda derivada de la posición x respecto al tiempo."
+      en: "The acceleration: the second derivative of position x with respect to time."
+      pt: "A aceleração: a segunda derivada da posição x em relação ao tempo."
+      fr: "L'accélération : la dérivée seconde de la position x par rapport au temps."
+      zh: "加速度：位置x对时间的二阶导数。"
+      ja: "加速度。位置xの時間に関する2階微分。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "Menos: la fuerza siempre apunta hacia la posición de equilibrio."
+      en: "Minus: the force always points back toward the equilibrium position."
+      pt: "Menos: a força sempre aponta de volta para a posição de equilíbrio."
+      fr: "Moins : la force pointe toujours vers la position d'équilibre."
+      zh: "负号：力总是指向平衡位置。"
+      ja: "マイナス。力は常に釣り合いの位置へ向かう。"
+  - id: k
+    type: variable
+    value: k
+    explanation:
+      es: "k: la constante de rigidez del resorte o del sistema."
+      en: "k: the spring constant of the spring or the system."
+      pt: "k: a constante elástica da mola ou do sistema."
+      fr: "k : la constante de raideur du ressort ou du système."
+      zh: "k：弹簧或系统的刚度系数。"
+      ja: "k：バネや系のばね定数。"
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: "x: el desplazamiento desde la posición de equilibrio."
+      en: "x: the displacement from the equilibrium position."
+      pt: "x: o deslocamento em relação à posição de equilíbrio."
+      fr: "x : le déplacement par rapport à la position d'équilibre."
+      zh: "x：相对于平衡位置的位移。"
+      ja: "x：釣り合いの位置からの変位。"
+context:
+  author:
+    es: Robert Hooke y la mecánica newtoniana
+    en: Robert Hooke and, building on his law, Newtonian mechanics
+    pt: Robert Hooke e, com base em sua lei, a mecânica newtoniana
+    fr: Robert Hooke et la mécanique newtonienne
+    zh: 罗伯特·胡克，以及在其定律基础上的牛顿力学
+    ja: ロバート・フックと、その法則に基づくニュートン力学
+  era:
+    es: Inglaterra, s. XVII · ecuación diferencial formalizada en el s. XVIII
+    en: England, 17th century · differential equation formalized in the 18th century
+    pt: Inglaterra, séc. XVII · equação diferencial formalizada no séc. XVIII
+    fr: Angleterre, XVIIe siècle · équation différentielle formalisée au XVIIIe siècle
+    zh: 英国，17世纪·微分方程于18世纪被形式化
+    ja: イングランド、17世紀・微分方程式として18世紀に定式化
+  history:
+    es: >-
+      Cuando Hooke enunció en 1678 que la fuerza de un resorte es proporcional a su deformación, sentó
+      la base del oscilador armónico: el movimiento de vaivén de una masa unida a un resorte. La
+      ecuación que lo describe es una ecuación diferencial de segundo orden, un lenguaje que Newton y
+      Leibniz acababan de crear. Su solución describe oscilaciones eternas y regulares, y pronto se
+      descubrió que el mismo modelo gobierna los péndulos, las cuerdas de los instrumentos, los
+      circuitos eléctricos y las moléculas vibrando: donde hay algo que tiende a volver al equilibrio,
+      hay un oscilador armónico.
+    en: >-
+      When Hooke stated in 1678 that a spring's force is proportional to its deformation, he laid the
+      basis of the harmonic oscillator: the back-and-forth motion of a mass attached to a spring. The
+      equation describing it is a second-order differential equation, a language Newton and Leibniz
+      had just created. Its solution describes endless, regular oscillations, and it soon turned out
+      the same model governs pendulums, instrument strings, electrical circuits, and vibrating
+      molecules: wherever something tends to return to equilibrium, there is a harmonic oscillator.
+    pt: >-
+      Quando Hooke enunciou em 1678 que a força de uma mola é proporcional à sua deformação, ele lançou
+      a base do oscilador harmônico: o movimento de vai e vem de uma massa presa a uma mola. A equação
+      que o descreve é uma equação diferencial de segunda ordem, uma linguagem que Newton e Leibniz
+      acabavam de criar. Sua solução descreve oscilações eternas e regulares, e logo se descobriu que o
+      mesmo modelo rege pêndulos, cordas de instrumentos, circuitos elétricos e moléculas vibrando:
+      onde há algo que tende a voltar ao equilíbrio, há um oscilador harmônico.
+    fr: >-
+      Lorsque Hooke énonça en 1678 que la force d'un ressort est proportionnelle à sa déformation, il
+      posa la base de l'oscillateur harmonique : le va-et-vient d'une masse attachée à un ressort.
+      L'équation qui le décrit est une équation différentielle du second ordre, un langage que Newton et
+      Leibniz venaient de créer. Sa solution décrit des oscillations régulières et sans fin, et l'on
+      découvrit bientôt que le même modèle gouverne les pendules, les cordes d'instruments, les
+      circuits électriques et les molécules en vibration : partout où quelque chose tend à revenir à
+      l'équilibre, il y a un oscillateur harmonique.
+    zh: >-
+      1678年，胡克提出弹簧的力与其形变成正比，为简谐振子奠定了基础：即质量连接弹簧后产生的往复运动。描述它的
+      方程是二阶微分方程，而这一语言正是牛顿与莱布尼茨刚刚创立的。其解描述永不停息的规则振荡，人们很快发现，
+      同一模型还支配着单摆、乐器琴弦、电路以及振动中的分子：凡是趋于回到平衡的事物，就存在简谐振子。
+    ja: >-
+      1678年にフックが、バネの力はその変形に比例することを述べたとき、彼は単振動の基盤を築いた。つまり、バネに
+      取り付けられた質量が行ったり来たりする運動である。これを記述する方程式は2階の微分方程式であり、これは
+      ニュートンとライプニッツがちょうど創り出したばかりの言語である。その解は終わりのない規則的な振動を表す。
+      まもなく、同じモデルが振り子、楽器の弦、電気回路、振動する分子も支配していることが明らかになった。平衡に
+      戻ろうとするものがあるところ、そこに単振動がある。
+  timeline:
+    - year: "1678"
+      label:
+        es: >-
+          Hooke publica su ley de elasticidad, la fuerza restauradora que da origen al oscilador.
+        en: >-
+          Hooke publishes his law of elasticity, the restoring force that gives rise to the
+          oscillator.
+        pt: >-
+          Hooke publica sua lei da elasticidade, a força restauradora que dá origem ao oscilador.
+        fr: >-
+          Hooke publie sa loi de l'élasticité, la force de rappel à l'origine de l'oscillateur.
+        zh: >-
+          胡克发表他的弹性定律，即产生振子的恢复力。
+        ja: >-
+          フックが弾性の法則を発表し、振動子の起源となる復元力が示される。
+    - year: s. XVIII
+      label:
+        es: >-
+          Euler, Daniel Bernoulli y Lagrange tratan el oscilador como ecuación diferencial y estudian
+          sus modos de vibración.
+        en: >-
+          Euler, Daniel Bernoulli, and Lagrange treat the oscillator as a differential equation and
+          study its modes of vibration.
+        pt: >-
+          Euler, Daniel Bernoulli e Lagrange tratam o oscilador como equação diferencial e estudam
+          seus modos de vibração.
+        fr: >-
+          Euler, Daniel Bernoulli et Lagrange traitent l'oscillateur comme une équation différentielle
+          et étudient ses modes de vibration.
+        zh: >-
+          欧拉、丹尼尔·伯努利和拉格朗日将振子作为微分方程处理，并研究其振动模式。
+        ja: >-
+          オイラー、ダニエル・ベルヌーイ、ラグランジュが振動子を微分方程式として扱い、その振動モードを研究する。
+    - year: "1859"
+      label:
+        es: >-
+          Kirchhoff modela los circuitos eléctricos como osciladores, extendiendo el modelo a la
+          electricidad.
+        en: >-
+          Kirchhoff models electrical circuits as oscillators, extending the model to electricity.
+        pt: >-
+          Kirchhoff modela circuitos elétricos como osciladores, estendendo o modelo à eletricidade.
+        fr: >-
+          Kirchhoff modélise les circuits électriques comme des oscillateurs, étendant le modèle à
+          l'électricité.
+        zh: >-
+          基尔霍夫将电路建模为振子，把这一模型扩展到电学领域。
+        ja: >-
+          キルヒホッフが電気回路を振動子としてモデル化し、このモデルを電気に拡張する。
+    - year: "1925"
+      label:
+        es: >-
+          La mecánica cuántica adopta el oscilador armónico como su modelo central para moléculas y
+          campos.
+        en: >-
+          Quantum mechanics adopts the harmonic oscillator as its central model for molecules and
+          fields.
+        pt: >-
+          A mecânica quântica adota o oscilador harmônico como modelo central para moléculas e campos.
+        fr: >-
+          La mécanique quantique adopte l'oscillateur harmonique comme modèle central des molécules et
+          des champs.
+        zh: >-
+          量子力学将简谐振子作为处理分子与场的核心模型。
+        ja: >-
+          量子力学が単振動を、分子や場を扱う中心的なモデルとして採用する。
+    - year: Hoy
+      label:
+        es: >-
+          Está en relojes, altavoces, sismógrafos, circuitos y en la teoría cuántica de campos.
+        en: >-
+          It appears in clocks, speakers, seismographs, circuits, and quantum field theory.
+        pt: >-
+          Está em relógios, alto-falantes, sismógrafos, circuitos e na teoria quântica de campos.
+        fr: >-
+          On le retrouve dans les horloges, les haut-parleurs, les sismographes, les circuits et la
+          théorie quantique des champs.
+        zh: >-
+          它出现在钟表、扬声器、地震仪、电路以及量子场论中。
+        ja: >-
+          時計、スピーカー、地震計、回路、そして場の量子論に見られる。
+  useCases:
+    - title:
+        es: Relojes y cronometría
+        en: Clocks and timekeeping
+        pt: Relógios e cronometria
+        fr: Horloges et chronométrie
+        zh: 钟表与计时
+        ja: 時計と計時
+      description:
+        es: >-
+          La regularidad de un oscilador — un péndulo o un cristal de cuarzo — es la base de casi todo
+          reloj.
+        en: >-
+          The regularity of an oscillator — a pendulum or a quartz crystal — is the basis of nearly
+          every clock.
+        pt: >-
+          A regularidade de um oscilador — um pêndulo ou um cristal de quartzo — é a base de quase todo
+          relógio.
+        fr: >-
+          La régularité d'un oscillateur — un pendule ou un cristal de quartz — est à la base de
+          presque toutes les horloges.
+        zh: >-
+          振子——单摆或石英晶体——的规律性几乎是一切钟表的基础。
+        ja: >-
+          振動子（振り子や水晶振動子）の規則性が、ほとんどすべての時計の基礎である。
+    - title:
+        es: Audio y acústica
+        en: Audio and acoustics
+        pt: Áudio e acústica
+        fr: Audio et acoustique
+        zh: 音频与声学
+        ja: 音響・オーディオ
+      description:
+        es: >-
+          Altavoces y micrófonos son osciladores forzados; los instrumentos musicales vibran en modos
+          armónicos.
+        en: >-
+          Speakers and microphones are driven oscillators; musical instruments vibrate in harmonic
+          modes.
+        pt: >-
+          Alto-falantes e microfones são osciladores forçados; instrumentos musicais vibram em modos
+          harmônicos.
+        fr: >-
+          Haut-parleurs et microphones sont des oscillateurs forcés ; les instruments de musique
+          vibrent en modes harmoniques.
+        zh: >-
+          扬声器和麦克风是被驱动的振子；乐器以谐波模式振动。
+        ja: >-
+          スピーカーやマイクロホンは駆動された振動子であり、楽器は高調波モードで振動する。
+    - title:
+        es: Ingeniería y sismología
+        en: Engineering and seismology
+        pt: Engenharia e sismologia
+        fr: Ingénierie et sismologie
+        zh: 工程与地震学
+        ja: 工学と地震学
+      description:
+        es: >-
+          Sismógrafos, suspensiones de vehículos y amortiguadores de edificios se diseñan como
+          osciladores.
+        en: >-
+          Seismographs, vehicle suspensions, and building dampers are designed as oscillators.
+        pt: >-
+          Sismógrafos, suspensões de veículos e amortecedores de edifícios são projetados como
+          osciladores.
+        fr: >-
+          Sismographes, suspensions de véhicules et amortisseurs de bâtiments sont conçus comme des
+          oscillateurs.
+        zh: >-
+          地震仪、车辆悬挂和建筑阻尼器都按振子的原理设计。
+        ja: >-
+          地震計、車両のサスペンション、建物のダンパーは振動子として設計されている。
+    - title:
+        es: Electrónica y comunicaciones
+        en: Electronics and communications
+        pt: Eletrônica e comunicações
+        fr: Électronique et communications
+        zh: 电子与通信
+        ja: 電子工学と通信
+      description:
+        es: >-
+          Los circuitos resonantes LC sintonizan radios y filtran frecuencias, exactamente como un
+          oscilador mecánico.
+        en: >-
+          LC resonant circuits tune radios and filter frequencies, exactly like a mechanical
+          oscillator.
+        pt: >-
+          Circuitos ressonantes LC sintonizam rádios e filtram frequências, exatamente como um
+          oscilador mecânico.
+        fr: >-
+          Les circuits résonants LC syntonisent les radios et filtrent les fréquences, exactement
+          comme un oscillateur mécanique.
+        zh: >-
+          LC谐振电路调谐收音机并过滤频率，与机械振子完全类似。
+        ja: >-
+          LC共振回路は、機械的な振動子とまったく同様に、ラジオの同調や周波数フィルタリングを行う。
+  example:
+    title:
+      es: Frecuencia de un resorte
+      en: Frequency of a spring
+      pt: Frequência de uma mola
+      fr: Fréquence d'un ressort
+      zh: 弹簧的频率
+      ja: バネの振動数
+    lines:
+      - es: m = 0.5 kg, k = 200 N/m
+        en: m = 0.5 kg, k = 200 N/m
+        pt: m = 0,5 kg, k = 200 N/m
+        fr: m = 0,5 kg, k = 200 N/m
+        zh: m = 0.5 千克，k = 200 牛/米
+        ja: m = 0.5 kg、k = 200 N/m
+      - es: ω = √(k/m)
+        en: ω = √(k/m)
+        pt: ω = √(k/m)
+        fr: ω = √(k/m)
+        zh: ω = √(k/m)
+        ja: ω = √(k/m)
+      - es: ω = √(200 / 0.5) = √400
+        en: ω = √(200 / 0.5) = √400
+        pt: ω = √(200 / 0,5) = √400
+        fr: ω = √(200 / 0,5) = √400
+        zh: ω = √(200 / 0.5) = √400
+        ja: ω = √(200 / 0.5) = √400
+      - es: ω = 20 rad/s
+        en: ω = 20 rad/s
+        pt: ω = 20 rad/s
+        fr: ω = 20 rad/s
+        zh: ω = 20 弧度/秒
+        ja: ω = 20 rad/s
+      - es: f = ω / 2π ≈ 3.18 Hz
+        en: f = ω / 2π ≈ 3.18 Hz
+        pt: f = ω / 2π ≈ 3,18 Hz
+        fr: f = ω / 2π ≈ 3,18 Hz
+        zh: f = ω / 2π ≈ 3.18 赫兹
+        ja: f = ω / 2π ≈ 3.18 Hz

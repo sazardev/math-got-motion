@@ -1,0 +1,338 @@
+id: continuity-equation
+title:
+  es: Ecuación de Continuidad
+  en: Continuity Equation
+  pt: Equação da Continuidade
+  fr: Équation de continuité
+  zh: 连续性方程
+  ja: 連続の式
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: a1
+    type: variable
+    value: A₁
+    explanation:
+      es: El área de la sección por donde el fluido entra.
+      en: The cross-sectional area where the fluid enters.
+      pt: A área da seção por onde o fluido entra.
+      fr: La section par laquelle le fluide entre.
+      zh: 流体流入处的横截面积。
+      ja: 流体が入る断面積。
+  - id: mult
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛け算。
+  - id: v1
+    type: variable
+    value: v₁
+    explanation:
+      es: La velocidad del fluido al entrar.
+      en: The speed of the fluid as it enters.
+      pt: A velocidade do fluido ao entrar.
+      fr: La vitesse du fluide à l'entrée.
+      zh: 流体进入时的速度。
+      ja: 流体の流入速度。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: a2
+    type: variable
+    value: A₂
+    explanation:
+      es: El área de la sección por donde el fluido sale.
+      en: The cross-sectional area where the fluid exits.
+      pt: A área da seção por onde o fluido sai.
+      fr: La section par laquelle le fluide sort.
+      zh: 流体流出处的横截面积。
+      ja: 流体が出る断面積。
+  - id: mult2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛け算。
+  - id: v2
+    type: variable
+    value: v₂
+    explanation:
+      es: La velocidad del fluido al salir.
+      en: The speed of the fluid as it exits.
+      pt: A velocidade do fluido ao sair.
+      fr: La vitesse du fluide à la sortie.
+      zh: 流体流出时的速度。
+      ja: 流体の流出速度。
+context:
+  author:
+    es: Basada en el trabajo de Bernoulli
+    en: Based on the work of Bernoulli
+    pt: Baseada no trabalho de Bernoulli
+    fr: Basée sur les travaux de Bernoulli
+    zh: 基于伯努利的研究成果
+    ja: ベルヌーイの研究に基づく
+  era:
+    es: Europa, s. XVIII
+    en: Europe, 18th century
+    pt: Europa, séc. XVIII
+    fr: Europe, XVIIIe siècle
+    zh: 欧洲,18世纪
+    ja: ヨーロッパ、18世紀
+  history:
+    es: >-
+      En un flujo estable e incompresible, la masa que entra por un tubo debe salir por el otro
+      extremo. Daniel Bernoulli mostró en el siglo XVIII que, al estrecharse el tubo, la velocidad
+      del fluido aumenta para que la misma cantidad de masa atraviese cada sección en el mismo
+      tiempo. Es la razón por la que el agua sale más rápida de una manguera al tapar la salida con
+      el pulgar. Junto con su ecuación, forma la base de la mecánica de fluidos moderna.
+    en: >-
+      In steady, incompressible flow, the mass entering a pipe must leave through the other end.
+      Daniel Bernoulli showed in the 18th century that as a pipe narrows, the fluid speeds up so
+      that the same amount of mass crosses each section in the same time. It is why water shoots
+      faster from a hose when you cover the opening with your thumb. Along with Bernoulli's
+      equation, it forms the basis of modern fluid mechanics.
+    pt: >-
+      Num fluxo estacionário e incompressível, a massa que entra por um tubo deve sair pela outra
+      extremidade. Daniel Bernoulli mostrou no século XVIII que, ao estreitar-se o tubo, a
+      velocidade do fluido aumenta para que a mesma quantidade de massa atravesse cada seção no
+      mesmo tempo. É por isso que a água sai mais rápida de uma mangueira ao tampar a saída com o
+      polegar. Junto com sua equação, forma a base da mecânica dos fluidos moderna.
+    fr: >-
+      Dans un écoulement stable et incompressible, la masse qui entre dans un tuyau doit ressortir
+      à l'autre extrémité. Daniel Bernoulli a montré au XVIIIe siècle qu'à mesure que le tuyau se
+      rétrécit, la vitesse du fluide augmente pour que la même masse traverse chaque section dans le
+      même temps. C'est pourquoi l'eau jaillit plus vite d'un tuyau d'arrosage quand on obstrue
+      l'ouverture avec le pouce. Avec son équation, cela constitue la base de la mécanique des
+      fluides moderne.
+    zh: >-
+      在稳定且不可压缩的流动中,进入管道的质量必然从另一端流出。18世纪,丹尼尔·伯努利通过数学分析证明,
+      当管道变窄时,流体的速度会加快,以保证在相同时间内有相同质量通过每个截面。这就是为什么用手指堵住水管
+      出口时,水会喷射得更快。与伯努利方程一起,它构成了现代流体力学的基础,从血流到飞机管道都受其支配。
+    ja: >-
+      定常で非圧縮性の流れでは、管に入った質量は必ずもう一方の端から出ていく。18世紀、ダニエル・ベルヌーイは、
+      管が狭くなると流体の速度が上がり、同じ質量が同じ時間に各断面を通過するようになることを数学的に示した。
+      ホースの出口を親指でふさぐと水が速く噴き出すのはこのためである。ベルヌーイの式とともに、現代の流体力学の
+      基礎をなしている。
+  timeline:
+    - year: "1738"
+      label:
+        es: >-
+          Daniel Bernoulli publica "Hydrodynamica", donde relaciona velocidad y presión y siembra
+          la idea de que el flujo debe ser continuo.
+        en: >-
+          Daniel Bernoulli publishes "Hydrodynamica", relating speed and pressure and seeding the
+          idea that flow must be continuous.
+        pt: >-
+          Daniel Bernoulli publica "Hydrodynamica", relacionando velocidade e pressão e lançando a
+          ideia de que o escoamento deve ser contínuo.
+        fr: >-
+          Daniel Bernoulli publie « Hydrodynamica », reliant vitesse et pression et posant l'idée
+          que l'écoulement doit être continu.
+        zh: >-
+          丹尼尔·伯努利出版《流体动力学》,将速度与压力联系起来,并提出了流动必须连续的思想。
+        ja: >-
+          ダニエル・ベルヌーイが『流体力学』を出版し、速度と圧力の関係を示して流れが連続的でなければならない
+          という考えを生み出す。
+    - year: "1755"
+      label:
+        es: >-
+          Leonhard Euler deduce la ecuación de continuidad en su forma general diferencial para
+          fluidos.
+        en: >-
+          Leonhard Euler derives the continuity equation in its general differential form for
+          fluids.
+        pt: >-
+          Leonhard Euler deduz a equação da continuidade em sua forma diferencial geral para
+          fluidos.
+        fr: >-
+          Leonhard Euler déduit l'équation de continuité sous sa forme différentielle générale
+          pour les fluides.
+        zh: >-
+          莱昂哈德·欧拉推导出流体的连续性方程的通用微分形式。
+        ja: >-
+          レオンハルト・オイラーが流体の連続の式を一般的な微分形で導出する。
+    - year: "1887"
+      label:
+        es: >-
+          Clemens Herschel inventa el medidor Venturi, que mide el caudal aprovechando la
+          continuidad y la ecuación de Bernoulli.
+        en: >-
+          Clemens Herschel invents the Venturi meter, which measures flow rate by exploiting
+          continuity and Bernoulli's equation.
+        pt: >-
+          Clemens Herschel inventa o medidor Venturi, que mede a vazão aproveitando a continuidade
+          e a equação de Bernoulli.
+        fr: >-
+          Clemens Herschel invente le débitmètre Venturi, qui mesure le débit en exploitant la
+          continuité et l'équation de Bernoulli.
+        zh: >-
+          克莱门斯·赫舍尔发明了文丘里流量计,利用连续性原理和伯努利方程来测量流量。
+        ja: >-
+          クレメンス・ハーシェルが、連続性とベルヌーイの式を利用して流量を測るベンチュリ流量計を発明する。
+    - year: Hoy
+      label:
+        es: >-
+          Gobierna el diseño de tuberías, los conductos de aire de aviones y el flujo sanguíneo por
+          arterias estrechadas.
+        en: >-
+          It governs pipe design, aircraft air ducts, and blood flow through narrowed arteries.
+        pt: >-
+          Rege o projeto de tubulações, os dutos de ar de aviões e o fluxo sanguíneo por artérias
+          estreitadas.
+        fr: >-
+          Elle régit la conception des tuyaux, les conduits d'air des avions et le flux sanguin dans
+          les artères rétrécies.
+        zh: >-
+          它支配着管道设计、飞机风道以及血液在狭窄动脉中的流动。
+        ja: >-
+          パイプの設計、航空機の空気ダクト、狭窄した動脈を流れる血流を支配している。
+  useCases:
+    - title:
+        es: Fontanería y abastecimiento
+        en: Plumbing and water supply
+        pt: Encanamento e abastecimento
+        fr: Plomberie et adduction d'eau
+        zh: 水管与供水
+        ja: 配管と水道
+      description:
+        es: >-
+          Predice cómo cambia la velocidad del agua al variar el diámetro de la tubería, esencial
+          para dimensionar cañerías.
+        en: >-
+          It predicts how water speed changes with pipe diameter, essential for sizing plumbing.
+        pt: >-
+          Prevê como a velocidade da água muda com o diâmetro do cano, essencial para dimensionar
+          tubulações.
+        fr: >-
+          Elle prédit comment la vitesse de l'eau change avec le diamètre du tuyau, essentiel pour
+          dimensionner la plomberie.
+        zh: >-
+          预测水的速度如何随管道直径变化,是管道尺寸设计的根本依据。
+        ja: >-
+          水の速度が管の直径によってどう変わるかを予測し、配管の寸法設計に不可欠である。
+    - title:
+        es: Aviación
+        en: Aviation
+        pt: Aviação
+        fr: Aviation
+        zh: 航空
+        ja: 航空
+      description:
+        es: >-
+          En los conductos de aire de motores y cabina, donde la velocidad del aire depende de la
+          sección que atraviesa.
+        en: >-
+          In engine and cabin air ducts, where air speed depends on the section it crosses.
+        pt: >-
+          Nos dutos de ar de motores e cabine, onde a velocidade do ar depende da seção percorrida.
+        fr: >-
+          Dans les conduits d'air des moteurs et de la cabine, où la vitesse de l'air dépend de la
+          section traversée.
+        zh: >-
+          应用于发动机和机舱风道,那里空气的速度取决于所通过的截面。
+        ja: >-
+          エンジンや客室の空気ダクトで、空気の速度が通過する断面に依存することを利用する。
+    - title:
+        es: Medicina cardiovascular
+        en: Cardiovascular medicine
+        pt: Medicina cardiovascular
+        fr: Médecine cardiovasculaire
+        zh: 心血管医学
+        ja: 心血管医学
+      description:
+        es: >-
+          Describe cómo la sangre se acelera al atravesar una zona estrecha de una arteria,
+          relevante para entender estenosis.
+        en: >-
+          It describes how blood accelerates through a narrow artery region, relevant to
+          understanding stenosis.
+        pt: >-
+          Descreve como o sangue acelera ao atravessar uma região estreita de uma artéria, relevante
+          para entender estenose.
+        fr: >-
+          Elle décrit comment le sang s'accélère en traversant une zone étroite d'une artère,
+          utile pour comprendre la sténose.
+        zh: >-
+          描述血液流经动脉狭窄区域时如何加速,对理解狭窄症很重要。
+        ja: >-
+          動脈の狭い部分を血液が通過するとき加速する様子を表し、狭窄の理解に重要である。
+    - title:
+        es: Climatización (HVAC)
+        en: Heating, ventilation and air conditioning
+        pt: Climatização (HVAC)
+        fr: Chauffage, ventilation et climatisation
+        zh: 暖通空调
+        ja: 空調設備
+      description:
+        es: >-
+          Distribuye el aire en conductos para que cada habitación reciba el caudal proyectado.
+        en: >-
+          It distributes air through ducts so each room receives the designed flow rate.
+        pt: >-
+          Distribui o ar em dutos para que cada ambiente receba a vazão projetada.
+        fr: >-
+          Elle distribue l'air dans les conduits pour que chaque pièce reçoive le débit prévu.
+        zh: >-
+          通过风管分配空气,使每个房间获得设计的风量。
+        ja: >-
+          ダクト内の空気を分配し、各部屋に設計通りの風量を届ける。
+  example:
+    title:
+      es: Velocidad al estrechar el tubo
+      en: Speed when the pipe narrows
+      pt: Velocidade quando o cano estreita
+      fr: Vitesse quand le tuyau se rétrécit
+      zh: 管道变窄时的速度
+      ja: 管が狭くなるときの速度
+    lines:
+      - es: A₁ · v₁ = A₂ · v₂
+        en: A₁ · v₁ = A₂ · v₂
+        pt: A₁ · v₁ = A₂ · v₂
+        fr: A₁ · v₁ = A₂ · v₂
+        zh: A₁ · v₁ = A₂ · v₂
+        ja: A₁ · v₁ = A₂ · v₂
+      - es: A₁ = 0.02 m², v₁ = 1 m/s, A₂ = 0.01 m²
+        en: A₁ = 0.02 m², v₁ = 1 m/s, A₂ = 0.01 m²
+        pt: A₁ = 0,02 m², v₁ = 1 m/s, A₂ = 0,01 m²
+        fr: A₁ = 0,02 m², v₁ = 1 m/s, A₂ = 0,01 m²
+        zh: A₁ = 0.02 m², v₁ = 1 m/s, A₂ = 0.01 m²
+        ja: A₁ = 0.02 m², v₁ = 1 m/s, A₂ = 0.01 m²
+      - es: v₂ = A₁ · v₁ / A₂
+        en: v₂ = A₁ · v₁ / A₂
+        pt: v₂ = A₁ · v₁ / A₂
+        fr: v₂ = A₁ · v₁ / A₂
+        zh: v₂ = A₁ · v₁ / A₂
+        ja: v₂ = A₁ · v₁ / A₂
+      - es: v₂ = (0.02 × 1) / 0.01
+        en: v₂ = (0.02 × 1) / 0.01
+        pt: v₂ = (0,02 × 1) / 0,01
+        fr: v₂ = (0,02 × 1) / 0,01
+        zh: v₂ = (0.02 × 1) / 0.01
+        ja: v₂ = (0.02 × 1) / 0.01
+      - es: v₂ = 2 m/s
+        en: v₂ = 2 m/s
+        pt: v₂ = 2 m/s
+        fr: v₂ = 2 m/s
+        zh: v₂ = 2 m/s
+        ja: v₂ = 2 m/s

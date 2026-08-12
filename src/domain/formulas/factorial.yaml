@@ -1,0 +1,381 @@
+id: factorial
+
+title:
+  es: Factorial
+  en: Factorial
+  pt: Fatorial
+  fr: Factorielle
+  zh: 阶乘
+  ja: 階乗
+
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+
+nodes:
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: El número cuyo factorial se quiere calcular; un entero positivo.
+      en: The number whose factorial is being computed; a positive integer.
+      pt: O número cujo fatorial se quer calcular; um inteiro positivo.
+      fr: Le nombre dont on veut calculer la factorielle ; un entier positif.
+      zh: 要计算阶乘的那个数；一个正整数。
+      ja: 階乗を計算したい数。正の整数。
+  - id: factorial-sign
+    type: operator
+    value: "!"
+    explanation:
+      es: "El símbolo de factorial: multiplica n por cada entero positivo menor que él hasta llegar a 1."
+      en: "The factorial sign: multiplies n by every positive integer below it, down to 1."
+      pt: "O sinal de fatorial: multiplica n por cada inteiro positivo menor que ele, até chegar a 1."
+      fr: "Le symbole factorielle : multiplie n par chaque entier positif inférieur à lui, jusqu'à 1."
+      zh: 阶乘符号：将 n 与它下面每个正整数相乘，一直乘到 1。
+      ja: 階乗の記号。nに、それより小さい正の整数を1まで掛けていく。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: n-again
+    type: variable
+    value: n
+    explanation:
+      es: El primer factor de la multiplicación es el propio n.
+      en: The first factor of the product is n itself.
+      pt: O primeiro fator da multiplicação é o próprio n.
+      fr: Le premier facteur du produit est n lui-même.
+      zh: 乘积的第一个因子就是 n 本身。
+      ja: 積の最初の因子は n 自身。
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por el siguiente factor.
+      en: Multiplied by the next factor.
+      pt: Multiplicado pelo fator seguinte.
+      fr: Multiplié par le facteur suivant.
+      zh: 乘以下一个因子。
+      ja: 次の因子を掛ける。
+  - id: n-minus-1
+    type: variable
+    value: "(n−1)"
+    explanation:
+      es: El segundo factor, una unidad menor que el anterior.
+      en: The second factor, one less than the previous one.
+      pt: O segundo fator, uma unidade menor que o anterior.
+      fr: Le second facteur, d'une unité inférieur au précédent.
+      zh: 第二个因子，比前一个小 1。
+      ja: 2番目の因子。前の因子より1小さい。
+  - id: ellipsis
+    type: operator
+    value: "·…·"
+    explanation:
+      es: Los puntos suspensivos indican que la multiplicación continúa saltando de uno en uno.
+      en: The ellipsis shows the multiplication continues, stepping down by one each time.
+      pt: As reticências indicam que a multiplicação continua, diminuindo de um em um.
+      fr: Les points de suspension indiquent que la multiplication continue, en descendant de un en un.
+      zh: 省略号表示乘法继续下去，每次减 1。
+      ja: 省略記号は、1つずつ減らしながら掛け算が続くことを示す。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: Los últimos factores son los enteros pequeños que quedan antes de llegar a 1.
+      en: The last factors are the small integers remaining before reaching 1.
+      pt: Os últimos fatores são os inteiros pequenos que restam antes de chegar a 1.
+      fr: Les derniers facteurs sont les petits entiers restants avant d'atteindre 1.
+      zh: 最后几个因子是到达 1 之前剩下的小整数。
+      ja: 最後の因子は、1に到達する前に残る小さな整数たち。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por el último factor.
+      en: Multiplied by the final factor.
+      pt: Multiplicado pelo último fator.
+      fr: Multiplié par le dernier facteur.
+      zh: 乘上最后一个因子。
+      ja: 最後の因子を掛ける。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: La multiplicación termina en 1, no en 0; por eso 1! = 1 y 0! = 1.
+      en: The product ends at 1, not 0; that is why 1! = 1 and 0! = 1.
+      pt: A multiplicação termina em 1, não em 0; por isso 1! = 1 e 0! = 1.
+      fr: Le produit se termine à 1, pas à 0 ; c'est pourquoi 1! = 1 et 0! = 1.
+      zh: 乘积到 1 结束，而不是 0；这就是 1! = 1 和 0! = 1 的原因。
+      ja: 積は0ではなく1で終わる。そのため1! = 1、0! = 1である。
+
+context:
+  author:
+    es: Christian Kramp
+    en: Christian Kramp
+    pt: Christian Kramp
+    fr: Christian Kramp
+    zh: 克里斯蒂安·克兰普
+    ja: クリスティアン・クランプ
+  era:
+    es: "Francia, 1760–1826 · notación ! en 1808"
+    en: "France, 1760–1826 · ! notation in 1808"
+    pt: "França, 1760–1826 · notação ! em 1808"
+    fr: "France, 1760–1826 · notation ! en 1808"
+    zh: "法国，1760–1826年 · 1808年引入!记号"
+    ja: "フランス、1760–1826年・1808年に!記号"
+  history:
+    es: >-
+      El factorial n! es el producto de todos los enteros positivos desde 1 hasta n, y por convención
+      0! = 1 para que las fórmulas combinatorias sigan siendo válidas. Cuenta el número de formas de
+      ordenar n objetos distintos y es la base de combinaciones, permutaciones y de los coeficientes
+      de las series de Taylor. La notación con el signo "!" fue propuesta en 1808 por Christian
+      Kramp, matemático y médico alsaciano, que buscaba un símbolo compacto para un producto que
+      aparecía constantemente en sus tablas de cálculo; el nombre "factorial" proviene del término
+      latino "factorialis" que él mismo empleó.
+    en: >-
+      The factorial n! is the product of every positive integer from 1 up to n, with 0! = 1 by
+      convention so that combinatorial formulas remain valid. It counts the number of ways to order n
+      distinct objects and is the basis of combinations, permutations, and the coefficients of Taylor
+      series. The "!" notation was proposed in 1808 by Christian Kramp, an Alsatian mathematician and
+      physician, who wanted a compact symbol for a product that appeared constantly in his calculation
+      tables; the name "factorial" comes from the Latin term "factorialis" he himself used.
+    pt: >-
+      O fatorial n! é o produto de todos os inteiros positivos de 1 até n, e por convenção 0! = 1 para
+      que as fórmulas combinatórias continuem válidas. Ele conta o número de maneiras de ordenar n
+      objetos distintos e é a base das combinações, das permutações e dos coeficientes das séries de
+      Taylor. A notação com o sinal "!" foi proposta em 1808 por Christian Kramp, matemático e médico
+      alsaciano, que buscava um símbolo compacto para um produto que aparecia constantemente em suas
+      tabelas de cálculo; o nome "fatorial" vem do termo latino "factorialis" que ele próprio empregou.
+    fr: >-
+      La factorielle n! est le produit de tous les entiers positifs de 1 à n, avec 0! = 1 par
+      convention pour que les formules combinatoires restent valables. Elle compte le nombre de façons
+      d'ordonner n objets distincts et fonde les combinaisons, les permutations et les coefficients
+      des séries de Taylor. La notation « ! » fut proposée en 1808 par Christian Kramp, mathématicien
+      et médecin alsacien, qui cherchait un symbole compact pour un produit apparaissant constamment
+      dans ses tables de calcul ; le nom « factorielle » vient du terme latin « factorialis » qu'il
+      employa lui-même.
+    zh: >-
+      阶乘 n! 是从 1 到 n 的所有正整数的乘积，按约定 0! = 1，以保证组合公式仍然成立。它用来计算 n
+      个不同对象的排列方式数，是组合数、排列数以及泰勒级数系数的基础。"!" 记号于1808年由法国数学家
+      兼医师克里斯蒂安·克兰普提出，他希望为计算表格中频繁出现的这种乘积找到一个紧凑的符号；
+      "factorial" 一词则来自他自己使用的拉丁语 "factorialis"。
+    ja: >-
+      階乗 n! は1からnまでのすべての正の整数の積であり、組合せの公式が成り立つように 0! = 1 と定められている。
+      これは n 個の異なる対象を並べる並べ方の総数を数え、組合せ・順列・テイラー級数の係数の基礎となる。
+      「!」の記号は1808年、アルザス出身の数学者・医師クリスティアン・クランプによって提案された。
+      彼は計算表にたびたび現れるこの積にコンパクトな記号を求めており、「階乗」(factorial) の名は
+      彼自身が用いたラテン語 "factorialis" に由来する。
+  timeline:
+    - year: "c. 1150"
+      label:
+        es: >-
+          Bhaskara II, en su Lilavati, usa productos de enteros descendentes para contar combinaciones
+          y permutaciones, sin una notación dedicada.
+        en: >-
+          Bhaskara II, in his Lilavati, uses products of descending integers to count combinations and
+          permutations, without a dedicated notation.
+        pt: >-
+          Bhaskara II, em sua Lilavati, usa produtos de inteiros decrescentes para contar combinações
+          e permutações, sem uma notação dedicada.
+        fr: >-
+          Bhaskara II, dans sa Lilavati, utilise des produits d'entiers décroissants pour dénombrer
+          combinaisons et permutations, sans notation dédiée.
+        zh: >-
+          婆什迦罗第二在《丽罗娃提》中用递减整数的乘积来计数组合与排列，但没有专用记号。
+        ja: >-
+          バースカラ2世は『リーラーヴァティー』で、専用の記号なしに、減っていく整数の積を用いて組合せと順列を数えた。
+    - year: "1730"
+      label:
+        es: >-
+          James Stirling publica su aproximación de n! para valores grandes, fundamental en
+          probabilidad y análisis.
+        en: >-
+          James Stirling publishes his approximation of n! for large values, fundamental in
+          probability and analysis.
+        pt: >-
+          James Stirling publica sua aproximação de n! para valores grandes, fundamental em
+          probabilidade e análise.
+        fr: >-
+          James Stirling publie son approximation de n! pour les grandes valeurs, fondamentale en
+          probabilités et en analyse.
+        zh: >-
+          詹姆斯·斯特林发表了大数值下 n! 的近似公式，在概率与分析中具有基础性意义。
+        ja: >-
+          ジェームズ・スターリングが、大きな値に対する n! の近似を発表する。確率と解析の基礎となる。
+    - year: "1808"
+      label:
+        es: >-
+          Christian Kramp introduce el signo "!" para el factorial en su obra sobre aritmética
+          universal.
+        en: >-
+          Christian Kramp introduces the "!" sign for the factorial in his work on universal
+          arithmetic.
+        pt: >-
+          Christian Kramp introduz o sinal "!" para o fatorial em sua obra sobre aritmética universal.
+        fr: >-
+          Christian Kramp introduit le signe « ! » pour la factorielle dans son ouvrage d'arithmétique
+          universelle.
+        zh: >-
+          克里斯蒂安·克兰普在其关于通用算术的著作中引入了阶乘的 "!" 记号。
+        ja: >-
+          クリスティアン・クランプが普遍算術に関する著作で階乗の記号「!」を導入する。
+    - year: Hoy
+      label:
+        es: >-
+          Los factoriales sostienen la combinatoria, la probabilidad y los denominadores de las
+          series de Taylor; la función gamma los extiende a números no enteros.
+        en: >-
+          Factorials underpin combinatorics, probability, and the denominators of Taylor series; the
+          gamma function extends them to non-integer numbers.
+        pt: >-
+          Os fatoriais sustentam a combinatória, a probabilidade e os denominadores das séries de
+          Taylor; a função gama os estende para números não inteiros.
+        fr: >-
+          Les factorielles fondent la combinatoire, les probabilités et les dénominateurs des séries
+          de Taylor ; la fonction gamma les étend aux nombres non entiers.
+        zh: >-
+          阶乘支撑着组合数学、概率论和泰勒级数的分母；伽马函数将其推广到非整数。
+        ja: >-
+          階乗は組合せ論・確率・テイラー級数の分母を支えている。ガンマ関数はこれを非整数にまで拡張する。
+  useCases:
+    - title:
+        es: Combinatoria
+        en: Combinatorics
+        pt: Combinatória
+        fr: Combinatoire
+        zh: 组合数学
+        ja: 組合せ論
+      description:
+        es: >-
+          Cuenta ordenamientos de objetos y calcula combinaciones y permutaciones en problemas de
+          elección.
+        en: >-
+          Counts arrangements of objects and computes combinations and permutations in selection
+          problems.
+        pt: >-
+          Conta ordenações de objetos e calcula combinações e permutações em problemas de escolha.
+        fr: >-
+          Compte les arrangements d'objets et calcule combinaisons et permutations dans les problèmes
+          de choix.
+        zh: >-
+          在选取问题中统计对象的排列方式，计算组合数与排列数。
+        ja: >-
+          選択の問題で対象の並べ方を数え、組合せと順列を計算する。
+    - title:
+        es: Series de Taylor
+        en: Taylor series
+        pt: Séries de Taylor
+        fr: Séries de Taylor
+        zh: 泰勒级数
+        ja: テイラー級数
+      description:
+        es: >-
+          Los denominadores n! de los coeficientes hacen converger la serie y miden cuánto pesa cada
+          derivada.
+        en: >-
+          The n! denominators of the coefficients make the series converge and weight each derivative.
+        pt: >-
+          Os denominadores n! dos coeficientes fazem a série convergir e pesam cada derivada.
+        fr: >-
+          Les dénominateurs n! des coefficients font converger la série et pondèrent chaque dérivée.
+        zh: >-
+          系数中的分母 n! 使级数收敛，并为各阶导数分配权重。
+        ja: >-
+          係数の分母 n! が級数を収束させ、各導関数に重みを与える。
+    - title:
+        es: Análisis de algoritmos
+        en: Algorithm analysis
+        pt: Análise de algoritmos
+        fr: Analyse d'algorithmes
+        zh: 算法分析
+        ja: アルゴリズム解析
+      description:
+        es: >-
+          La complejidad factorial aparece en problemas que exploran todas las ordenaciones posibles,
+          como el viajante.
+        en: >-
+          Factorial complexity appears in problems exploring all possible orderings, like the
+          traveling salesman.
+        pt: >-
+          A complexidade fatorial aparece em problemas que exploram todas as ordenações possíveis,
+          como o caixeiro-viajante.
+        fr: >-
+          La complexité factorielle apparaît dans les problèmes qui explorent toutes les ordinations
+          possibles, comme le voyageur de commerce.
+        zh: >-
+          阶乘复杂度出现在遍历所有可能排列的问题中，如旅行商问题。
+        ja: >-
+          階乗の複雑度は、巡回セールスマン問題のように可能な並びをすべて探索する問題に現れる。
+    - title:
+        es: Estadística
+        en: Statistics
+        pt: Estatística
+        fr: Statistiques
+        zh: 统计学
+        ja: 統計学
+      description:
+        es: >-
+          Los factoriales aparecen en distribuciones como la multinomial y en tests de permutación
+          por remuestreo.
+        en: >-
+          Factorials appear in distributions like the multinomial and in permutation resampling
+          tests.
+        pt: >-
+          Os fatoriais aparecem em distribuições como a multinomial e em testes de permutação por
+          reamostragem.
+        fr: >-
+          Les factorielles apparaissent dans des lois comme la multinomiale et dans les tests de
+          permutation par rééchantillonnage.
+        zh: >-
+          阶乘出现在多项分布等分布中，也出现在置换重抽样检验里。
+        ja: >-
+          階乗は多項分布などの分布や、並べ替えリサンプリング検定に現れる。
+  example:
+    title:
+      es: Calculando 5!
+      en: Computing 5!
+      pt: Calculando 5!
+      fr: Calcul de 5!
+      zh: 计算 5!
+      ja: 5! の計算
+    lines:
+      - es: "5! = 5·4·3·2·1"
+        en: "5! = 5·4·3·2·1"
+        pt: "5! = 5·4·3·2·1"
+        fr: "5! = 5·4·3·2·1"
+        zh: "5! = 5·4·3·2·1"
+        ja: "5! = 5·4·3·2·1"
+      - es: "5! = 20·3·2·1"
+        en: "5! = 20·3·2·1"
+        pt: "5! = 20·3·2·1"
+        fr: "5! = 20·3·2·1"
+        zh: "5! = 20·3·2·1"
+        ja: "5! = 20·3·2·1"
+      - es: "5! = 60·2·1"
+        en: "5! = 60·2·1"
+        pt: "5! = 60·2·1"
+        fr: "5! = 60·2·1"
+        zh: "5! = 60·2·1"
+        ja: "5! = 60·2·1"
+      - es: "5! = 120·1"
+        en: "5! = 120·1"
+        pt: "5! = 120·1"
+        fr: "5! = 120·1"
+        zh: "5! = 120·1"
+        ja: "5! = 120·1"
+      - es: "5! = 120"
+        en: "5! = 120"
+        pt: "5! = 120"
+        fr: "5! = 120"
+        zh: "5! = 120"
+        ja: "5! = 120"

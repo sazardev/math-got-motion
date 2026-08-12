@@ -1,0 +1,323 @@
+id: gibbs-free-energy
+title:
+  es: Energía Libre de Gibbs
+  en: Gibbs Free Energy
+  pt: Energia Livre de Gibbs
+  fr: Énergie libre de Gibbs
+  zh: 吉布斯自由能
+  ja: ギブズ自由エネルギー
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: delta-g
+    type: variable
+    value: ΔG
+    explanation:
+      es: "ΔG: la energía libre de Gibbs, la energía disponible para realizar trabajo útil."
+      en: "ΔG: the Gibbs free energy, the energy available to do useful work."
+      pt: "ΔG: a energia livre de Gibbs, a energia disponível para realizar trabalho útil."
+      fr: "ΔG : l'énergie libre de Gibbs, l'énergie disponible pour produire un travail utile."
+      zh: "ΔG：吉布斯自由能,可用于做有用功的能量。"
+      ja: "ΔG：ギブズ自由エネルギー。有用な仕事に使えるエネルギー。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: delta-h
+    type: variable
+    value: ΔH
+    explanation:
+      es: "ΔH: el cambio de entalpía, el calor absorbido o liberado por la reacción."
+      en: "ΔH: the enthalpy change, the heat absorbed or released by the reaction."
+      pt: "ΔH: a variação de entalpia, o calor absorvido ou liberado pela reação."
+      fr: "ΔH : la variation d'enthalpie, la chaleur absorbée ou libérée par la réaction."
+      zh: "ΔH：焓变,反应吸收或放出的热量。"
+      ja: "ΔH：エンタルピー変化。反応が吸収または放出する熱。"
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: "Menos: resta el término de entropía."
+      en: "Minus: the entropy term is subtracted."
+      pt: "Menos: subtrai o termo de entropia."
+      fr: "Moins : le terme d'entropie est soustrait."
+      zh: "减号:减去熵这一项。"
+      ja: "マイナス:エントロピーの項を引く。"
+  - id: t
+    type: variable
+    value: T
+    explanation:
+      es: "T: la temperatura absoluta, medida en kelvin."
+      en: "T: the absolute temperature, measured in kelvin."
+      pt: "T: a temperatura absoluta, medida em kelvin."
+      fr: "T : la température absolue, mesurée en kelvins."
+      zh: "T：绝对温度,以开尔文为单位。"
+      ja: "T：絶対温度。単位はケルビン。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: delta-s
+    type: variable
+    value: ΔS
+    explanation:
+      es: "ΔS: el cambio de entropía, el desorden que gana o pierde el sistema."
+      en: "ΔS: the entropy change, the disorder the system gains or loses."
+      pt: "ΔS: a variação de entropia, a desordem que o sistema ganha ou perde."
+      fr: "ΔS : la variation d'entropie, le désordre que le système gagne ou perd."
+      zh: "ΔS：熵变,系统获得或失去的无序度。"
+      ja: "ΔS：エントロピー変化。系が得たり失ったりする乱雑さ。"
+context:
+  author:
+    es: Josiah Willard Gibbs
+    en: Josiah Willard Gibbs
+    pt: Josiah Willard Gibbs
+    fr: Josiah Willard Gibbs
+    zh: 约西亚·威拉德·吉布斯
+    ja: ジョサイア・ウィラード・ギブズ
+  era:
+    es: Estados Unidos, 1839–1903 · publicada en 1876
+    en: United States, 1839–1903 · published in 1876
+    pt: Estados Unidos, 1839–1903 · publicada em 1876
+    fr: États-Unis, 1839–1903 · publiée en 1876
+    zh: 美国,1839–1903年 · 1876年发表
+    ja: アメリカ、1839–1903年・1876年発表
+  history:
+    es: >-
+      En 1876, Josiah Willard Gibbs publicó su gran tratado «Sobre el equilibrio de sustancias
+      heterogéneas», donde introdujo la energía libre que hoy lleva su nombre: una función que combina la
+      entalpía, la temperatura y la entropía para decidir si una reacción es espontánea. Si ΔG es
+      negativa, la reacción avanza sola; si es positiva, necesita energía externa. Es la base de la
+      electroquímica: la tensión de una pila se obtiene de la energía libre de su reacción redox.
+    en: >-
+      In 1876, Josiah Willard Gibbs published his great treatise "On the Equilibrium of Heterogeneous
+      Substances", introducing the free energy that bears his name: a function combining enthalpy,
+      temperature, and entropy to decide whether a reaction is spontaneous. If ΔG is negative the
+      reaction proceeds on its own; if positive, it needs external energy. It is the basis of
+      electrochemistry — a battery's voltage comes directly from the free energy of its redox reaction.
+    pt: >-
+      Em 1876, Josiah Willard Gibbs publicou seu grande tratado "Sobre o Equilíbrio de Substâncias
+      Heterogêneas", onde introduziu a energia livre que hoje leva seu nome: uma função que combina
+      entalpia, temperatura e entropia para decidir se uma reação é espontânea. Se ΔG for negativa, a
+      reação avança sozinha; se positiva, precisa de energia externa. É a base da eletroquímica: a
+      tensão de uma pilha vem da energia livre de sua reação redox.
+    fr: >-
+      En 1876, Josiah Willard Gibbs publia son grand traité « Sur l'équilibre des substances
+      hétérogènes », où il introduisit l'énergie libre qui porte aujourd'hui son nom : une fonction qui
+      combine enthalpie, température et entropie pour décider si une réaction est spontanée. Si ΔG est
+      négatif, la réaction avance seule ; s'il est positif, elle requiert de l'énergie externe. C'est la
+      base de l'électrochimie : la tension d'une pile se déduit de l'énergie libre de sa réaction redox.
+    zh: >-
+      1876年,约西亚·威拉德·吉布斯发表了巨著《论异相物质的平衡》,提出了如今以他命名的自由能:一种结合焓、温度和熵的
+      函数,用于判断反应是否自发进行。如果ΔG为负,反应自行发生;如果为正,则需要外部能量。它是电化学的基础:电池的电压
+      直接来自其氧化还原反应的自由能。
+    ja: >-
+      1876年、ジョサイア・ウィラード・ギブズは大著『不均質物質の平衡について』を発表し、今日彼の名を冠する自由
+      エネルギーを導入した。これはエンタルピー、温度、エントロピーを組み合わせ、反応が自発的に起こるかを判定する
+      関数である。ΔGが負なら反応は自ら進行し、正なら外部からのエネルギーを必要とする。これは電気化学の基礎であり、
+      電池の起電力はその酸化還元反応の自由エネルギーから導かれる。
+  timeline:
+    - year: "1876"
+      label:
+        es: >-
+          Gibbs publica la primera parte de «Sobre el equilibrio de sustancias heterogéneas», que
+          introduce la energía libre.
+        en: >-
+          Gibbs publishes the first part of "On the Equilibrium of Heterogeneous Substances", introducing
+          the free energy.
+        pt: >-
+          Gibbs publica a primeira parte de "Sobre o Equilíbrio de Substâncias Heterogêneas", que
+          introduz a energia livre.
+        fr: >-
+          Gibbs publie la première partie de « Sur l'équilibre des substances hétérogènes », qui
+          introduit l'énergie libre.
+        zh: >-
+          吉布斯发表《论异相物质的平衡》第一部分,引入了自由能。
+        ja: >-
+          ギブズが『不均質物質の平衡について』の第1部を発表し、自由エネルギーを導入する。
+    - year: "1892"
+      label:
+        es: >-
+          Wilhelm Ostwald traduce el tratado al alemán y sus ideas se difunden por toda Europa.
+        en: >-
+          Wilhelm Ostwald translates the treatise into German, spreading its ideas across Europe.
+        pt: >-
+          Wilhelm Ostwald traduz o tratado para o alemão e suas ideias se difundem pela Europa.
+        fr: >-
+          Wilhelm Ostwald traduit le traité en allemand, diffusant ses idées dans toute l'Europe.
+        zh: >-
+          奥斯特瓦尔德将该著作译为德文,使其思想传遍欧洲。
+        ja: >-
+          オストヴァルトがこの著作をドイツ語に翻訳し、その考えがヨーロッパ中に広まる。
+    - year: "1901"
+      label:
+        es: >-
+          La Royal Society de Londres concede a Gibbs la Medalla Copley, su máximo honor.
+        en: >-
+          The Royal Society of London awards Gibbs its highest honor, the Copley Medal.
+        pt: >-
+          A Royal Society de Londres concede a Gibbs sua maior honraria, a Medalha Copley.
+        fr: >-
+          La Royal Society de Londres décerne à Gibbs son plus grand honneur, la médaille Copley.
+        zh: >-
+          伦敦皇家学会授予吉布斯其最高荣誉——科普利奖章。
+        ja: >-
+          ロンドン王立協会がギブズに最高の栄誉であるコプリ・メダルを授与する。
+    - year: Hoy
+      label:
+        es: >-
+          ΔG sustenta la electroquímica, el diseño de baterías y la bioquímica del metabolismo.
+        en: >-
+          ΔG underpins electrochemistry, battery design, and metabolic biochemistry.
+        pt: >-
+          ΔG sustenta a eletroquímica, o projeto de baterias e a bioquímica do metabolismo.
+        fr: >-
+          ΔG sous-tend l'électrochimie, la conception des batteries et la biochimie du métabolisme.
+        zh: >-
+          ΔG支撑着电化学、电池设计和代谢生物化学。
+        ja: >-
+          ΔGは電気化学、電池設計、代謝の生化学を支えている。
+  useCases:
+    - title:
+        es: Electroquímica y baterías
+        en: Electrochemistry and batteries
+        pt: Eletroquímica e baterias
+        fr: Électrochimie et batteries
+        zh: 电化学与电池
+        ja: 電気化学と電池
+      description:
+        es: >-
+          La tensión de una celda se calcula a partir de la energía libre de su reacción redox.
+        en: >-
+          A cell's voltage is computed from the free energy of its redox reaction.
+        pt: >-
+          A tensão de uma célula é calculada a partir da energia livre de sua reação redox.
+        fr: >-
+          La tension d'une cellule se calcule à partir de l'énergie libre de sa réaction redox.
+        zh: >-
+          电池电压由氧化还原反应的自由能计算得出。
+        ja: >-
+          電池の起電力は、酸化還元反応の自由エネルギーから計算される。
+    - title:
+        es: Industria química
+        en: Chemical industry
+        pt: Indústria química
+        fr: Industrie chimique
+        zh: 化学工业
+        ja: 化学工業
+      description:
+        es: >-
+          Predice si una reacción es espontánea a la temperatura de operación de la planta.
+        en: >-
+          It predicts whether a reaction is spontaneous at the plant's operating temperature.
+        pt: >-
+          Prevê se uma reação é espontânea na temperatura de operação da planta.
+        fr: >-
+          Elle prédit si une réaction est spontanée à la température d'exploitation de l'usine.
+        zh: >-
+          预测在工厂的操作温度下反应是否自发进行。
+        ja: >-
+          プラントの運転温度で反応が自発的に起こるかを予測する。
+    - title:
+        es: Bioquímica y metabolismo
+        en: Biochemistry and metabolism
+        pt: Bioquímica e metabolismo
+        fr: Biochimie et métabolisme
+        zh: 生物化学与代谢
+        ja: 生化学と代謝
+      description:
+        es: >-
+          La hidrólisis del ATP es espontánea (ΔG negativa) y por eso impulsa las reacciones celulares.
+        en: >-
+          ATP hydrolysis is spontaneous (negative ΔG), which is why it drives cellular reactions.
+        pt: >-
+          A hidrólise do ATP é espontânea (ΔG negativa) e por isso impulsiona as reações celulares.
+        fr: >-
+          L'hydrolyse de l'ATP est spontanée (ΔG négatif), ce qui lui permet d'entraîner les réactions
+          cellulaires.
+        zh: >-
+          ATP水解是自发的(ΔG为负),因此它能驱动细胞内的各种反应。
+        ja: >-
+          ATPの加水分解は自発的(ΔGが負)であり、それが細胞反応を駆動する理由である。
+    - title:
+        es: Solubilidad y cristalización
+        en: Solubility and crystallization
+        pt: Solubilidade e cristalização
+        fr: Solubilité et cristallisation
+        zh: 溶解与结晶
+        ja: 溶解度と結晶化
+      description:
+        es: >-
+          La energía libre predice qué fármacos o sales cristalizan en disolución y a qué pH.
+        en: >-
+          Free energy predicts which drugs or salts crystallize from solution, and at what pH.
+        pt: >-
+          A energia livre prevê quais fármacos ou sais cristalizam em solução e em que pH.
+        fr: >-
+          L'énergie libre prédit quels médicaments ou sels cristallisent en solution, et à quel pH.
+        zh: >-
+          自由能可预测哪些药物或盐会从溶液中结晶,以及结晶所需的pH值。
+        ja: >-
+          自由エネルギーは、どの薬剤や塩が溶液から結晶するか、またどのpHで結晶するかを予測する。
+  example:
+    title:
+      es: ¿La reacción es espontánea?
+      en: Is the reaction spontaneous?
+      pt: A reação é espontânea?
+      fr: La réaction est-elle spontanée ?
+      zh: 反应是否自发?
+      ja: 反応は自発的か?
+    lines:
+      - es: ΔH = −100 kJ · ΔS = 200 J/K · T = 300 K
+        en: ΔH = −100 kJ · ΔS = 200 J/K · T = 300 K
+        pt: ΔH = −100 kJ · ΔS = 200 J/K · T = 300 K
+        fr: ΔH = −100 kJ · ΔS = 200 J/K · T = 300 K
+        zh: ΔH = −100 千焦 · ΔS = 200 焦耳/K · T = 300 K
+        ja: ΔH = −100 kJ · ΔS = 200 J/K · T = 300 K
+      - es: T · ΔS = 300 × 200 = 60000 J = 60 kJ
+        en: T · ΔS = 300 × 200 = 60000 J = 60 kJ
+        pt: T · ΔS = 300 × 200 = 60000 J = 60 kJ
+        fr: T · ΔS = 300 × 200 = 60000 J = 60 kJ
+        zh: T · ΔS = 300 × 200 = 60000 焦耳 = 60 千焦
+        ja: T · ΔS = 300 × 200 = 60000 J = 60 kJ
+      - es: ΔG = ΔH − T · ΔS
+        en: ΔG = ΔH − T · ΔS
+        pt: ΔG = ΔH − T · ΔS
+        fr: ΔG = ΔH − T · ΔS
+        zh: ΔG = ΔH − T · ΔS
+        ja: ΔG = ΔH − T · ΔS
+      - es: ΔG = −100 − 60
+        en: ΔG = −100 − 60
+        pt: ΔG = −100 − 60
+        fr: ΔG = −100 − 60
+        zh: ΔG = −100 − 60
+        ja: ΔG = −100 − 60
+      - es: ΔG = −160 kJ
+        en: ΔG = −160 kJ
+        pt: ΔG = −160 kJ
+        fr: ΔG = −160 kJ
+        zh: ΔG = −160 千焦
+        ja: ΔG = −160 kJ
+      - es: "ΔG < 0: la reacción es espontánea"
+        en: "ΔG < 0: the reaction is spontaneous"
+        pt: "ΔG < 0: a reação é espontânea"
+        fr: "ΔG < 0 : la réaction est spontanée"
+        zh: "ΔG < 0:反应是自发的"
+        ja: "ΔG < 0:反応は自発的である"

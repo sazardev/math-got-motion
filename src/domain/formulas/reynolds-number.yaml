@@ -1,0 +1,366 @@
+id: reynolds-number
+title:
+  es: Número de Reynolds
+  en: Reynolds Number
+  pt: Número de Reynolds
+  fr: Nombre de Reynolds
+  zh: 雷诺数
+  ja: レイノルズ数
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: re
+    type: variable
+    value: Re
+    explanation:
+      es: El número de Reynolds, una cantidad adimensional que indica si el flujo es laminar o turbulento.
+      en: The Reynolds number, a dimensionless quantity that tells whether the flow is laminar or turbulent.
+      pt: O número de Reynolds, uma quantidade adimensional que indica se o escoamento é laminar ou turbulento.
+      fr: Le nombre de Reynolds, une quantité sans dimension qui indique si l'écoulement est laminaire ou turbulent.
+      zh: 雷诺数,一个无量纲量,用于判断流动是层流还是湍流。
+      ja: レイノルズ数。流れが層流か乱流かを示す無次元量。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: rho
+    type: variable
+    value: ρ
+    explanation:
+      es: La densidad del fluido, la masa contenida en cada unidad de volumen.
+      en: The density of the fluid, the mass contained in each unit of volume.
+      pt: A densidade do fluido, a massa contida em cada unidade de volume.
+      fr: La densité du fluide, la masse contenue dans chaque unité de volume.
+      zh: 流体的密度,即单位体积所含的质量。
+      ja: 流体の密度。単位体積あたりの質量。
+  - id: mult
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛け算。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La velocidad característica del flujo.
+      en: The characteristic speed of the flow.
+      pt: A velocidade característica do escoamento.
+      fr: La vitesse caractéristique de l'écoulement.
+      zh: 流动的特征速度。
+      ja: 流れの代表速度。
+  - id: mult2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛け算。
+  - id: l
+    type: variable
+    value: L
+    explanation:
+      es: Una longitud característica, como el diámetro de una tubería.
+      en: A characteristic length, such as the diameter of a pipe.
+      pt: Um comprimento característico, como o diâmetro de uma tubulação.
+      fr: Une longueur caractéristique, comme le diamètre d'un tuyau.
+      zh: 特征长度,例如管道的直径。
+      ja: 代表長さ。例えば管の直径。
+  - id: div
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: 割り算。
+  - id: mu
+    type: variable
+    value: μ
+    explanation:
+      es: La viscosidad dinámica del fluido, que mide su resistencia a fluir.
+      en: The dynamic viscosity of the fluid, a measure of its resistance to flowing.
+      pt: A viscosidade dinâmica do fluido, que mede sua resistência ao escoamento.
+      fr: La viscosité dynamique du fluide, qui mesure sa résistance à s'écouler.
+      zh: 流体的动力黏度,衡量其流动阻力的大小。
+      ja: 流体の動的粘度。流れにくさの尺度。
+context:
+  author:
+    es: Osborne Reynolds
+    en: Osborne Reynolds
+    pt: Osborne Reynolds
+    fr: Osborne Reynolds
+    zh: 奥斯本·雷诺
+    ja: オズボーン・レイノルズ
+  era:
+    es: Inglaterra, 1842–1912 · publicada en 1883
+    en: England, 1842–1912 · published in 1883
+    pt: Inglaterra, 1842–1912 · publicada em 1883
+    fr: Angleterre, 1842–1912 · publiée en 1883
+    zh: 英格兰,1842–1912年 · 1883年发表
+    ja: イギリス、1842–1912年・1883年発表
+  history:
+    es: >-
+      En la década de 1880, Osborne Reynolds inyectó un fino hilo de tinte en agua que fluía por un
+      tubo de vidrio. A baja velocidad el tinte seguía una línea recta (flujo laminar); al aumentar
+      la velocidad, se rompía en remolinos (flujo turbulento). Identificó el número adimensional
+      que lleva su nombre como el parámetro que predice esa transición: por encima de unos 2000 en
+      tubos, el flujo se vuelve turbulento. Por eso las alas exigen flujo suave y la sangre fluye
+      casi laminar por los vasos.
+    en: >-
+      In the 1880s, Osborne Reynolds injected a thin thread of dye into water flowing through a
+      glass tube. At low speed the dye stayed in a straight line (laminar flow); as speed
+      increased, it broke into eddies (turbulent flow). He identified the dimensionless number that
+      bears his name as the parameter that predicts this transition: above about 2000 in pipes, the
+      flow becomes turbulent. This is why aircraft wings demand smooth flow and why blood flows
+      almost laminarly through vessels.
+    pt: >-
+      Na década de 1880, Osborne Reynolds injetou um fino fio de tinta em água que fluía por um tubo
+      de vidro. Em baixa velocidade a tinta seguia uma linha reta (fluxo laminar); ao aumentar a
+      velocidade, rompia-se em redemoinhos (fluxo turbulento). Ele identificou o número adimensional
+      que leva seu nome como o parâmetro que prevê essa transição: acima de cerca de 2000 em tubos,
+      o fluxo torna-se turbulento. É por isso que as asas de um avião exigem fluxo suave e o sangue
+      flui quase de forma laminar pelos vasos.
+    fr: >-
+      Dans les années 1880, Osborne Reynolds injecta un fin filet de colorant dans de l'eau
+      circulant dans un tube de verre. À faible vitesse, le colorant restait en ligne droite
+      (écoulement laminaire) ; en augmentant la vitesse, il se brisait en tourbillons (écoulement
+      turbulent). Il identifia le nombre sans dimension qui porte son nom comme le paramètre qui
+      prédit cette transition : au-delà d'environ 2000 dans les tubes, l'écoulement devient
+      turbulent. C'est pourquoi les ailes d'avion exigent un écoulement lisse et le sang circule
+      presque laminaire dans les vaisseaux.
+    zh: >-
+      19世纪80年代,奥斯本·雷诺将一缕细小的染料注入流经玻璃管的水中。低速时,染料保持直线(层流);随着速度
+      增大,染料破裂成漩涡(湍流)。他将后来以他命名的无量纲数确定为预测这一转变的参数:在管道中约超过2000时,
+      流动就变为湍流。这就是为什么机翼需要平滑的气流,而血液在血管中几乎以层流方式流动。
+    ja: >-
+      1880年代、オズボーン・レイノルズはガラス管を流れる水に細いインクの糸を注入した。低速ではインクは
+      まっすぐな線を保ったまま(層流)、速度を上げると渦を巻いて乱れた(乱流)。彼は、この遷移を予測する
+      無次元数として、後に自分の名がつく数を同定した。管内ではおよそ2000を超えると流れは乱流となる。
+      翼に滑らかな流れが求められ、血液が血管内をほぼ層流で流れるのはこのためである。
+  timeline:
+    - year: "1839"
+      label:
+        es: >-
+          Gotthilf Hagen y Jean Poiseuille estudian de forma independiente el flujo laminar en
+          tubos finos, midiendo sus primeras leyes.
+        en: >-
+          Gotthilf Hagen and Jean Poiseuille independently study laminar flow in thin tubes,
+          measuring its first laws.
+        pt: >-
+          Gotthilf Hagen e Jean Poiseuille estudam de forma independente o escoamento laminar em
+          tubos finos, medindo suas primeiras leis.
+        fr: >-
+          Gotthilf Hagen et Jean Poiseuille étudient indépendamment l'écoulement laminaire dans des
+          tubes fins, mesurant ses premières lois.
+        zh: >-
+          戈特希尔夫·哈根和让·泊肃叶分别研究细管中的层流,测定了它的最初规律。
+        ja: >-
+          ゴットヒルフ・ハーゲンとジャン・ポアズイユがそれぞれ独立に細い管の中の層流を研究し、最初の法則を
+          測定する。
+    - year: "1883"
+      label:
+        es: >-
+          Reynolds publica su experimento del hilo de tinte y define el número que predice la
+          transición entre flujo laminar y turbulento.
+        en: >-
+          Reynolds publishes his dye-thread experiment and defines the number that predicts the
+          laminar-to-turbulent transition.
+        pt: >-
+          Reynolds publica seu experimento do fio de tinta e define o número que prevê a transição
+          entre escoamento laminar e turbulento.
+        fr: >-
+          Reynolds publie son expérience du filet de colorant et définit le nombre qui prédit la
+          transition entre écoulement laminaire et turbulent.
+        zh: >-
+          雷诺发表了他的染线实验,并定义了预测层流与湍流之间转变的那个数。
+        ja: >-
+          レイノルズがインクの糸の実験を発表し、層流と乱流の遷移を予測する数を定義する。
+    - year: "1908"
+      label:
+        es: >-
+          Arnold Sommerfeld introduce el nombre "número de Reynolds" en su obra sobre hidrodinámica.
+        en: >-
+          Arnold Sommerfeld introduces the name "Reynolds number" in his work on hydrodynamics.
+        pt: >-
+          Arnold Sommerfeld introduz o nome "número de Reynolds" em sua obra sobre hidrodinâmica.
+        fr: >-
+          Arnold Sommerfeld introduit le nom « nombre de Reynolds » dans son ouvrage sur
+          l'hydrodynamique.
+        zh: >-
+          阿诺德·索末菲在他的流体动力学著作中引入了"雷诺数"这一名称。
+        ja: >-
+          アルノルト・ゾンマーフェルトが流体力学の著作の中で「レイノルズ数」という名称を導入する。
+    - year: Hoy
+      label:
+        es: >-
+          Es el número adimensional más usado de toda la mecánica de fluidos, presente en aviación,
+          oleoductos y medicina.
+        en: >-
+          It is the most widely used dimensionless number in all of fluid mechanics, appearing in
+          aviation, pipelines, and medicine.
+        pt: >-
+          É o número adimensional mais usado de toda a mecânica dos fluidos, presente na aviação,
+          nos oleodutos e na medicina.
+        fr: >-
+          C'est le nombre sans dimension le plus utilisé de toute la mécanique des fluides, présent
+          dans l'aviation, les oléoducs et la médecine.
+        zh: >-
+          它是整个流体力学中使用最广的无量纲数,出现在航空、管道和医学中。
+        ja: >-
+          流体力学全体で最も広く使われる無次元数であり、航空、パイプライン、医学に登場する。
+  useCases:
+    - title:
+        es: Ingeniería de oleoductos
+        en: Pipeline engineering
+        pt: Engenharia de oleodutos
+        fr: Ingénierie des oléoducs
+        zh: 管道工程
+        ja: パイプライン工学
+      description:
+        es: >-
+          Determina si el fluido circula en régimen laminar o turbulento para dimensionar bombas y
+          estimar las pérdidas de energía.
+        en: >-
+          It determines whether the fluid flows laminarly or turbulently to size pumps and estimate
+          energy losses.
+        pt: >-
+          Determina se o fluido escoa em regime laminar ou turbulento para dimensionar bombas e
+          estimar perdas de energia.
+        fr: >-
+          Elle détermine si le fluide s'écoule en régime laminaire ou turbulent pour dimensionner
+          les pompes et estimer les pertes d'énergie.
+        zh: >-
+          用于判断流体是层流还是湍流,以确定泵的规格并估算能量损失。
+        ja: >-
+          流体が層流か乱流かを判定し、ポンプの設計とエネルギー損失の推定に使われる。
+    - title:
+        es: Diseño aeronáutico
+        en: Aircraft design
+        pt: Projeto aeronáutico
+        fr: Conception aéronautique
+        zh: 飞机设计
+        ja: 航空機設計
+      description:
+        es: >-
+          Mantiene el flujo sobre las alas suave y pegado para lograr sustentación con baja
+          resistencia.
+        en: >-
+          It keeps the flow over wings smooth and attached to achieve lift with low drag.
+        pt: >-
+          Mantém o escoamento sobre as asas suave e aderido para obter sustentação com baixo
+          arrasto.
+        fr: >-
+          Il maintient l'écoulement sur les ailes lisse et attaché pour obtenir une portance à
+          faible traînée.
+        zh: >-
+          使机翼表面的气流保持平滑附着,以实现低阻力下的升力。
+        ja: >-
+          翼の上の流れを滑らかで剥がれない状態に保ち、低い抗力で揚力を得る。
+    - title:
+        es: Medicina vascular
+        en: Vascular medicine
+        pt: Medicina vascular
+        fr: Médecine vasculaire
+        zh: 血管医学
+        ja: 血管医学
+      description:
+        es: >-
+          Explica por qué la sangre fluye de forma casi laminar y cuándo las bifurcaciones de las
+          arterias generan remolinos.
+        en: >-
+          It explains why blood flows almost laminarly and when arterial branch points generate
+          eddies.
+        pt: >-
+          Explica por que o sangue flui quase de forma laminar e quando as bifurcações das artérias
+          geram redemoinhos.
+        fr: >-
+          Il explique pourquoi le sang circule presque laminaire et quand les bifurcations des
+          artères génèrent des tourbillons.
+        zh: >-
+          解释血液为何几乎以层流方式流动,以及动脉分叉处何时会产生涡流。
+        ja: >-
+          血液がほぼ層流で流れる理由と、動脈の分岐部でいつ渦が生じるかを説明する。
+    - title:
+        es: Ingeniería química
+        en: Chemical engineering
+        pt: Engenharia química
+        fr: Génie chimique
+        zh: 化学工程
+        ja: 化学工学
+      description:
+        es: >-
+          Decide si los reactores mezclan por agitación laminar o turbulenta, clave para la
+          eficiencia de las reacciones.
+        en: >-
+          It decides whether reactors mix by laminar or turbulent agitation, key to reaction
+          efficiency.
+        pt: >-
+          Decide se os reatores misturam por agitação laminar ou turbulenta, chave para a eficiência
+          das reações.
+        fr: >-
+          Il décide si les réacteurs mélangent par agitation laminaire ou turbulente, clé pour
+          l'efficacité des réactions.
+        zh: >-
+          决定反应器是靠层流还是湍流搅拌混合,这是反应效率的关键。
+        ja: >-
+          反応器が層流か乱流の攪拌で混合するかを決め、反応効率の鍵となる。
+  example:
+    title:
+      es: Agua en un tubo fino
+      en: Water in a narrow tube
+      pt: Água em um tubo fino
+      fr: Eau dans un tube étroit
+      zh: 细管中的水
+      ja: 細い管の中の水
+    lines:
+      - es: Re = ρ · v · L / μ
+        en: Re = ρ · v · L / μ
+        pt: Re = ρ · v · L / μ
+        fr: Re = ρ · v · L / μ
+        zh: Re = ρ · v · L / μ
+        ja: Re = ρ · v · L / μ
+      - es: ρ = 1000 kg/m³, v = 1 m/s, L = 0.01 m, μ = 0.001 Pa·s
+        en: ρ = 1000 kg/m³, v = 1 m/s, L = 0.01 m, μ = 0.001 Pa·s
+        pt: ρ = 1000 kg/m³, v = 1 m/s, L = 0,01 m, μ = 0,001 Pa·s
+        fr: ρ = 1000 kg/m³, v = 1 m/s, L = 0,01 m, μ = 0,001 Pa·s
+        zh: ρ = 1000 kg/m³, v = 1 m/s, L = 0.01 m, μ = 0.001 Pa·s
+        ja: ρ = 1000 kg/m³, v = 1 m/s, L = 0.01 m, μ = 0.001 Pa·s
+      - es: Re = (1000 × 1 × 0.01) / 0.001
+        en: Re = (1000 × 1 × 0.01) / 0.001
+        pt: Re = (1000 × 1 × 0,01) / 0,001
+        fr: Re = (1000 × 1 × 0,01) / 0,001
+        zh: Re = (1000 × 1 × 0.01) / 0.001
+        ja: Re = (1000 × 1 × 0.01) / 0.001
+      - es: Re = 10 / 0.001
+        en: Re = 10 / 0.001
+        pt: Re = 10 / 0,001
+        fr: Re = 10 / 0,001
+        zh: Re = 10 / 0.001
+        ja: Re = 10 / 0.001
+      - es: Re = 10 000 → flujo turbulento
+        en: Re = 10 000 → turbulent flow
+        pt: Re = 10 000 → escoamento turbulento
+        fr: Re = 10 000 → écoulement turbulent
+        zh: Re = 10 000 → 湍流
+        ja: Re = 10 000 → 乱流

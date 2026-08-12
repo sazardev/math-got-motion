@@ -1,0 +1,289 @@
+id: beer-lambert-law
+title:
+  es: Ley de Beer-Lambert
+  en: Beer–Lambert Law
+  pt: Lei de Beer-Lambert
+  fr: Loi de Beer-Lambert
+  zh: 比尔-朗伯定律
+  ja: ランベルト・ベールの法則
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: "A: la absorbancia, cuánta luz absorbe la muestra."
+      en: "A: the absorbance, how much light the sample absorbs."
+      pt: "A: a absorbância, quanto de luz a amostra absorve."
+      fr: "A : l'absorbance, la quantité de lumière absorbée par l'échantillon."
+      zh: "A：吸光度，样品吸收多少光。"
+      ja: "A：吸光度。試料がどれだけ光を吸収するか。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: epsilon
+    type: variable
+    value: ε
+    explanation:
+      es: "ε: el coeficiente de absorción de la sustancia."
+      en: "ε: the substance's absorption coefficient."
+      pt: "ε: o coeficiente de absorção da substância."
+      fr: "ε : le coefficient d'absorption de la substance."
+      zh: "ε：该物质的吸收系数。"
+      ja: "ε：その物質の吸光係数。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: l
+    type: variable
+    value: l
+    explanation:
+      es: "l: la longitud del camino de la luz en la muestra."
+      en: "l: the path length of light through the sample."
+      pt: "l: o comprimento do caminho da luz na amostra."
+      fr: "l : la longueur du trajet de la lumière dans l'échantillon."
+      zh: "l：光在样品中经过的路程长度。"
+      ja: "l：試料中の光の経路長。"
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: c
+    type: variable
+    value: c
+    explanation:
+      es: "c: la concentración de la sustancia."
+      en: "c: the concentration of the substance."
+      pt: "c: a concentração da substância."
+      fr: "c : la concentration de la substance."
+      zh: "c：该物质的浓度。"
+      ja: "c：その物質の濃度。"
+context:
+  author:
+    es: Pierre Bouguer, Johann Heinrich Lambert y August Beer
+    en: Pierre Bouguer, Johann Heinrich Lambert, and August Beer
+    pt: Pierre Bouguer, Johann Heinrich Lambert e August Beer
+    fr: Pierre Bouguer, Johann Heinrich Lambert et August Beer
+    zh: 皮埃尔·布格、约翰·海因里希·朗伯与奥古斯特·比尔
+    ja: ピエール・ブーゲー、ヨハン・ハインリヒ・ランベルト、アウグスト・ベール
+  era:
+    es: Francia, Alemania y Prusia, 1729–1852 · consolidada en 1852
+    en: France, Germany, and Prussia, 1729–1852 · consolidated in 1852
+    pt: França, Alemanha e Prússia, 1729–1852 · consolidada em 1852
+    fr: France, Allemagne et Prusse, 1729–1852 · consolidée en 1852
+    zh: 法国、德国与普鲁士，1729–1852年·1852年定型
+    ja: フランス、ドイツ、プロイセン、1729–1852年・1852年に確立
+  history:
+    es: >-
+      La ley se fue construyendo en tres pasos: Bouguer estudió en 1729 cómo la absorción depende del
+      grosor del medio; Lambert la formalizó en 1760; y Beer añadió en 1852 la dependencia con la
+      concentración. El resultado: la absorbancia es proporcional a ε·l·c. Es la base de la
+      espectrofotometría, con la que los laboratorios miden concentraciones de proteínas, fármacos y
+      contaminantes sin tocarlos.
+    en: >-
+      The law was built in three steps: Bouguer studied in 1729 how absorption depends on the medium's
+      thickness; Lambert formalized it in 1760; and Beer added the concentration dependence in 1852.
+      The result: absorbance is proportional to ε·l·c. It is the basis of spectrophotometry, by which
+      laboratories measure concentrations of proteins, drugs, and pollutants without touching them.
+    pt: >-
+      A lei foi construída em três passos: Bouguer estudou em 1729 como a absorção depende da espessura
+      do meio; Lambert a formalizou em 1760; e Beer acrescentou em 1852 a dependência com a
+      concentração. O resultado: a absorbância é proporcional a ε·l·c. É a base da espectrofotometria,
+      com a qual os laboratórios medem concentrações de proteínas, fármacos e poluentes sem tocá-los.
+    fr: >-
+      La loi s'est construite en trois étapes : Bouguer étudia en 1729 comment l'absorption dépend de
+      l'épaisseur du milieu ; Lambert la formalisa en 1760 ; et Beer y ajouta en 1852 la dépendance à
+      la concentration. Le résultat : l'absorbance est proportionnelle à ε·l·c. C'est la base de la
+      spectrophotométrie, par laquelle les laboratoires mesurent des concentrations de protéines, de
+      médicaments et de polluants sans les toucher.
+    zh: >-
+      这条定律分三步建成：布格在1729年研究吸收如何取决于介质的厚度；朗伯在1760年将其形式化；比尔在1852年
+      补充了与浓度的关系。结果就是：吸光度与ε·l·c成正比。它是分光光度法的基础，实验室借此无需接触就能测量
+      蛋白质、药物和污染物的浓度。
+    ja: >-
+      この法則は3つの段階で築かれた。ブーゲーは1729年、吸収が媒質の厚さに依存することを研究し、ランベルトは
+      1760年にこれを定式化し、ベールは1852年に濃度への依存を加えた。その結果、吸光度はε・l・cに比例する。
+      これは分光光度法の基礎であり、実験室ではこれにより、タンパク質、医薬品、汚染物質の濃度を触らずに測る。
+  timeline:
+    - year: "1729"
+      label:
+        es: >-
+          Bouguer estudia la absorción de la luz por el grosor del medio.
+        en: >-
+          Bouguer studies light absorption by the medium's thickness.
+        pt: >-
+          Bouguer estuda a absorção da luz pela espessura do meio.
+        fr: >-
+          Bouguer étudie l'absorption de la lumière par l'épaisseur du milieu.
+        zh: >-
+          布格研究光被介质厚度吸收的情况。
+        ja: >-
+          ブーゲーが媒質の厚さによる光の吸収を研究する。
+    - year: "1760"
+      label:
+        es: >-
+          Lambert formula la ley exponencial de la transmisión.
+        en: >-
+          Lambert formalizes the exponential transmission law.
+        pt: >-
+          Lambert formaliza a lei exponencial da transmissão.
+        fr: >-
+          Lambert formalise la loi exponentielle de la transmission.
+        zh: >-
+          朗伯将透射的指数定律形式化。
+        ja: >-
+          ランベルトが透過の指数則を定式化する。
+    - year: "1852"
+      label:
+        es: >-
+          Beer añade la dependencia con la concentración, completando la ley.
+        en: >-
+          Beer adds the concentration dependence, completing the law.
+        pt: >-
+          Beer acrescenta a dependência com a concentração, completando a lei.
+        fr: >-
+          Beer ajoute la dépendance à la concentration, complétant la loi.
+        zh: >-
+          比尔补充与浓度的关系，完成这条定律。
+        ja: >-
+          ベールが濃度への依存を加え、この法則が完成する。
+    - year: Hoy
+      label:
+        es: >-
+          Toda espectrofotometría moderna se apoya en esta ley.
+        en: >-
+          All modern spectrophotometry rests on this law.
+        pt: >-
+          Toda espectrofotometria moderna se apoia nessa lei.
+        fr: >-
+          Toute spectrophotométrie moderne repose sur cette loi.
+        zh: >-
+          一切现代分光光度法都建立在这条定律之上。
+        ja: >-
+          現代の分光光度法はすべて、この法則に基づいている。
+  useCases:
+    - title:
+        es: Bioquímica clínica
+        en: Clinical biochemistry
+        pt: Bioquímica clínica
+        fr: Biochimie clinique
+        zh: 临床生物化学
+        ja: 臨床生化学
+      description:
+        es: >-
+          La concentración de hemoglobina o glucosa se mide por su absorbancia.
+        en: >-
+          Hemoglobin or glucose concentration is measured by its absorbance.
+        pt: >-
+          A concentração de hemoglobina ou glicose é medida pela absorbância.
+        fr: >-
+          La concentration d'hémoglobine ou de glucose se mesure par son absorbance.
+        zh: >-
+          血红蛋白或葡萄糖的浓度通过其吸光度来测量。
+        ja: >-
+          ヘモグロビンやグルコースの濃度は、吸光度で測定される。
+    - title:
+        es: Análisis ambiental
+        en: Environmental analysis
+        pt: Análise ambiental
+        fr: Analyse environnementale
+        zh: 环境分析
+        ja: 環境分析
+      description:
+        es: >-
+          Nitratos, fosfatos y metales en el agua se cuantifican con esta ley.
+        en: >-
+          Nitrates, phosphates, and metals in water are quantified with this law.
+        pt: >-
+          Nitratos, fosfatos e metais na água são quantificados com essa lei.
+        fr: >-
+          Nitrates, phosphates et métaux dans l'eau se quantifient avec cette loi.
+        zh: >-
+          水中的硝酸盐、磷酸盐和金属都靠这条定律来定量。
+        ja: >-
+          水中の硝酸塩、リン酸塩、金属は、この法則で定量される。
+    - title:
+        es: Industria farmacéutica
+        en: Pharmaceutical industry
+        pt: Indústria farmacêutica
+        fr: Industrie pharmaceutique
+        zh: 制药工业
+        ja: 製薬業界
+      description:
+        es: >-
+          El control de calidad de fármacos verifica su concentración con espectrofotometría.
+        en: >-
+          Drug quality control verifies concentration with spectrophotometry.
+        pt: >-
+          O controle de qualidade de fármacos verifica a concentração com espectrofotometria.
+        fr: >-
+          Le contrôle qualité des médicaments vérifie la concentration par spectrophotométrie.
+        zh: >-
+          药物的质量控制用分光光度法验证浓度。
+        ja: >-
+          医薬品の品質管理は、分光光度法で濃度を検証する。
+  example:
+    title:
+      es: Una muestra coloreada
+      en: A colored sample
+      pt: Uma amostra colorida
+      fr: Un échantillon coloré
+      zh: 一个有色的样品
+      ja: 色のついた試料
+    lines:
+      - es: ε = 100 L·mol⁻¹·cm⁻¹, l = 2 cm, c = 0.01 mol/L
+        en: ε = 100 L·mol⁻¹·cm⁻¹, l = 2 cm, c = 0.01 mol/L
+        pt: ε = 100 L·mol⁻¹·cm⁻¹, l = 2 cm, c = 0,01 mol/L
+        fr: ε = 100 L·mol⁻¹·cm⁻¹, l = 2 cm, c = 0,01 mol/L
+        zh: ε = 100 升·摩尔⁻¹·厘米⁻¹，l = 2 厘米，c = 0.01 摩尔/升
+        ja: ε = 100 L·mol⁻¹·cm⁻¹、l = 2 cm、c = 0.01 mol/L
+      - es: A = ε · l · c
+        en: A = ε · l · c
+        pt: A = ε · l · c
+        fr: A = ε · l · c
+        zh: A = ε · l · c
+        ja: A = ε · l · c
+      - es: A = 100 · 2 · 0.01
+        en: A = 100 · 2 · 0.01
+        pt: A = 100 · 2 · 0,01
+        fr: A = 100 · 2 · 0,01
+        zh: A = 100 · 2 · 0.01
+        ja: A = 100 · 2 · 0.01
+      - es: A = 2
+        en: A = 2
+        pt: A = 2
+        fr: A = 2
+        zh: A = 2
+        ja: A = 2
+      - es: "La muestra absorbe el 99% de la luz incidente"
+        en: "The sample absorbs 99% of the incident light"
+        pt: "A amostra absorve 99% da luz incidente"
+        fr: "L'échantillon absorbe 99 % de la lumière incidente"
+        zh: "该样品吸收了99%的入射光"
+        ja: "試料は入射光の99%を吸収する"

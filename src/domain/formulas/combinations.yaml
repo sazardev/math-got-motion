@@ -1,0 +1,349 @@
+id: combinations
+
+title:
+  es: Combinaciones
+  en: Combinations
+  pt: Combinações
+  fr: Combinaisons
+  zh: 组合
+  ja: 組合せ
+
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+
+nodes:
+  - id: cnk
+    type: variable
+    value: C(n,k)
+    explanation:
+      es: "El número de combinaciones: cuántos subconjuntos de k elementos se pueden elegir entre n, sin importar el orden."
+      en: "The number of combinations: how many subsets of k elements can be chosen from n, regardless of order."
+      pt: "O número de combinações: quantos subconjuntos de k elementos podem ser escolhidos entre n, sem importar a ordem."
+      fr: "Le nombre de combinaisons : combien de sous-ensembles de k éléments peuvent être choisis parmi n, sans tenir compte de l'ordre."
+      zh: 组合数：从 n 个元素中不区分顺序地选出 k 个元素，共有多少种子集。
+      ja: 組合せの総数。n個の中から順序を問わずにk個を選ぶ部分集合がいくつあるかを表す。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: n-factorial
+    type: variable
+    value: n!
+    explanation:
+      es: El factorial de n, el número total de objetos disponibles para elegir.
+      en: The factorial of n, the total number of objects available to choose from.
+      pt: O fatorial de n, o número total de objetos disponíveis para escolher.
+      fr: La factorielle de n, le nombre total d'objets parmi lesquels choisir.
+      zh: n 的阶乘，即可供选择的对象总数。
+      ja: n の階乗。選ぶことのできる対象の総数。
+  - id: division
+    type: operator
+    value: "/"
+    explanation:
+      es: Se divide por el producto del denominador para eliminar los órdenes repetidos.
+      en: Division by the denominator product removes the repeated orderings.
+      pt: Divide-se pelo produto do denominador para eliminar as ordenações repetidas.
+      fr: La division par le produit du dénominateur élimine les ordres répétés.
+      zh: 除以分母的乘积，以去除重复的排列方式。
+      ja: 分母の積で割ることにより、重複する並びを除く。
+  - id: k-factorial-open
+    type: variable
+    value: "(k!"
+    explanation:
+      es: El factorial de k, que descarta los ordenamientos internos del subconjunto elegido.
+      en: The factorial of k, which removes the internal orderings of the chosen subset.
+      pt: O fatorial de k, que elimina as ordenações internas do subconjunto escolhido.
+      fr: La factorielle de k, qui élimine les ordres internes du sous-ensemble choisi.
+      zh: k 的阶乘，用来去掉所选子集内部的排列。
+      ja: k の階乗。選んだ部分集合の内部の並びを除く。
+  - id: remaining-factorial
+    type: variable
+    value: "·(n−k)!"
+    explanation:
+      es: Multiplicado por el factorial de n−k, que descarta los ordenamientos de los no elegidos.
+      en: Multiplied by the factorial of n−k, which removes the orderings of the unchosen elements.
+      pt: Multiplicado pelo fatorial de n−k, que elimina as ordenações dos não escolhidos.
+      fr: Multiplié par la factorielle de n−k, qui élimine les ordres des éléments non choisis.
+      zh: 再乘以 n−k 的阶乘，用来去掉未选元素的排列。
+      ja: n−k の階乗を掛ける。選ばれなかった要素の並びを除く。
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el paréntesis que agrupa el denominador completo.
+      en: Closes the parenthesis grouping the full denominator.
+      pt: Fecha o parêntese que agrupa o denominador completo.
+      fr: Ferme la parenthèse qui regroupe l'ensemble du dénominateur.
+      zh: 闭合括号，将整个分母括起来。
+      ja: 分母全体を括る括弧を閉じる。
+
+context:
+  author:
+    es: Basada en el triángulo de Pascal
+    en: Based on Pascal's triangle
+    pt: Baseada no triângulo de Pascal
+    fr: Basée sur le triangle de Pascal
+    zh: 基于帕斯卡三角形
+    ja: パスカルの三角形に基づく
+  era:
+    es: "Europa y Asia, s. XII–XVII"
+    en: "Europe and Asia, 12th–17th century"
+    pt: "Europa e Ásia, séc. XII–XVII"
+    fr: "Europe et Asie, XIIe–XVIIe siècle"
+    zh: "欧洲与亚洲，12–17世纪"
+    ja: "ヨーロッパとアジア、12〜17世紀"
+  history:
+    es: >-
+      El número de formas de elegir k objetos entre n, hoy llamado coeficiente binomial C(n,k), fue
+      usado en la India y China desde la Edad Media para problemas de combinaciones, y el triángulo
+      que lo calcula de forma recurrente aparece en el siglo XIII en el tratado chino de Yang Hui y
+      luego en el de Blaise Pascal de 1654. La fórmula explícita C(n,k) = n!/(k!(n−k)!) se consolidó
+      cuando el desarrollo del cálculo y de la probabilidad, en los siglos XVII y XVIII, exigió
+      tratar estos conteos como una herramienta sistemática. Hoy es la base del conteo moderno, de la
+      probabilidad clásica y de la expansión binomial.
+    en: >-
+      The number of ways to choose k objects from n, today called the binomial coefficient C(n,k), was
+      used in India and China since the Middle Ages for combination problems, and the triangle that
+      computes it recursively appears in the 13th-century Chinese treatise of Yang Hui and later in
+      Blaise Pascal's work of 1654. The explicit formula C(n,k) = n!/(k!(n−k)!) became standard when
+      the growth of calculus and probability in the 17th and 18th centuries demanded treating these
+      counts as a systematic tool. Today it underpins modern counting, classical probability, and the
+      binomial expansion.
+    pt: >-
+      O número de maneiras de escolher k objetos entre n, hoje chamado de coeficiente binomial C(n,k),
+      foi usado na Índia e na China desde a Idade Média em problemas de combinações, e o triângulo que
+      o calcula de forma recorrente aparece no tratado chinês de Yang Hui, do século XIII, e depois no
+      de Blaise Pascal, de 1654. A fórmula explícita C(n,k) = n!/(k!(n−k)!) consolidou-se quando o
+      desenvolvimento do cálculo e da probabilidade, nos séculos XVII e XVIII, passou a exigir tratar
+      essas contagens como ferramenta sistemática. Hoje ela é a base da contagem moderna, da
+      probabilidade clássica e da expansão binomial.
+    fr: >-
+      Le nombre de façons de choisir k objets parmi n, aujourd'hui appelé coefficient binomial C(n,k),
+      était utilisé en Inde et en Chine dès le Moyen Âge pour les problèmes de combinaisons, et le
+      triangle qui le calcule par récurrence apparaît au XIIIe siècle dans le traité chinois de Yang
+      Hui, puis dans celui de Blaise Pascal en 1654. La formule explicite C(n,k) = n!/(k!(n−k)!) s'est
+      imposée lorsque le développement du calcul infinitésimal et des probabilités, aux XVIIe et
+      XVIIIe siècles, a exigé de traiter ces dénombrements comme un outil systématique. Aujourd'hui,
+      elle fonde le dénombrement moderne, la probabilité classique et l'expansion du binôme.
+    zh: >-
+      从 n 个对象中选取 k 个的方法数，即今天的二项式系数 C(n,k)，自中世纪起就在印度和中国被用于组合问题；
+      递归计算它的三角形出现在十三世纪杨辉的著作中，后来又见于1654年布莱兹·帕斯卡的著作。显式公式
+      C(n,k) = n!/(k!(n−k)!) 是在十七、十八世纪微积分与概率论的发展要求将这些计数作为系统工具时才确立的。
+      如今它构成现代计数、古典概率和二项式展开的基础。
+    ja: >-
+      n個の中からk個を選ぶ方法の総数、今日の二項係数 C(n,k) は、中世以来インドや中国で組合せの問題に使われ、
+      それを再帰的に求める三角形は13世紀の中国の楊輝の著書に現れ、後に1654年のブレーズ・パスカルの著作にも登場する。
+      明示公式 C(n,k) = n!/(k!(n−k)!) が確立したのは、17〜18世紀に微積分と確率論が発展し、
+      こうした数え上げを系統的な道具として扱うことが求められるようになってからである。
+      今日では現代の数え上げ、古典確率、二項展開の基盤となっている。
+  timeline:
+    - year: "s. XIII"
+      label:
+        es: >-
+          El tratado chino de Yang Hui presenta el triángulo que calcula los coeficientes binomiales
+          de forma recurrente.
+        en: >-
+          Yang Hui's Chinese treatise presents the triangle that computes binomial coefficients
+          recursively.
+        pt: >-
+          O tratado chinês de Yang Hui apresenta o triângulo que calcula os coeficientes binomiais de
+          forma recorrente.
+        fr: >-
+          Le traité chinois de Yang Hui présente le triangle qui calcule les coefficients binomiaux
+          par récurrence.
+        zh: >-
+          杨辉的著作给出了以递归方式计算二项式系数的三角形。
+        ja: >-
+          楊輝の著書が、二項係数を再帰的に計算する三角形を提示する。
+    - year: "1654"
+      label:
+        es: >-
+          Blaise Pascal publica su tratado sobre el triángulo aritmético y lo aplica a problemas de
+          probabilidad.
+        en: >-
+          Blaise Pascal publishes his treatise on the arithmetic triangle and applies it to
+          probability problems.
+        pt: >-
+          Blaise Pascal publica seu tratado sobre o triângulo aritmético e o aplica a problemas de
+          probabilidade.
+        fr: >-
+          Blaise Pascal publie son traité sur le triangle arithmétique et l'applique à des problèmes
+          de probabilités.
+        zh: >-
+          布莱兹·帕斯卡发表关于算术三角形的论著，并将其应用于概率问题。
+        ja: >-
+          ブレーズ・パスカルが算術三角形に関する論考を発表し、確率の問題に応用する。
+    - year: "s. XVIII"
+      label:
+        es: >-
+          La fórmula factorial C(n,k) = n!/(k!(n−k)!) se vuelve estándar en la combinatoria europea.
+        en: >-
+          The factorial formula C(n,k) = n!/(k!(n−k)!) becomes standard in European combinatorics.
+        pt: >-
+          A fórmula fatorial C(n,k) = n!/(k!(n−k)!) torna-se padrão na combinatória europeia.
+        fr: >-
+          La formule factorielle C(n,k) = n!/(k!(n−k)!) devient standard dans la combinatoire
+          européenne.
+        zh: >-
+          阶乘公式 C(n,k) = n!/(k!(n−k)!) 成为欧洲组合数学的标准形式。
+        ja: >-
+          階乗の公式 C(n,k) = n!/(k!(n−k)!) がヨーロッパの組合せ論で標準となる。
+    - year: Hoy
+      label:
+        es: >-
+          Los coeficientes binomiales modelan sorteos, loterías, control de calidad y análisis
+          combinatorio en general.
+        en: >-
+          Binomial coefficients model draws, lotteries, quality control, and combinatorial analysis in
+          general.
+        pt: >-
+          Os coeficientes binomiais modelam sorteios, loterias, controle de qualidade e análise
+          combinatória em geral.
+        fr: >-
+          Les coefficients binomiaux modélisent tirages, loteries, contrôle qualité et analyse
+          combinatoire en général.
+        zh: >-
+          二项式系数用于建模抽奖、彩票、质量控制以及一般的组合分析。
+        ja: >-
+          二項係数は抽選、宝くじ、品質管理、そして一般の組合せ解析をモデル化する。
+  useCases:
+    - title:
+        es: Loterías y sorteos
+        en: Lotteries and draws
+        pt: Loterias e sorteios
+        fr: Loteries et tirages
+        zh: 彩票与抽奖
+        ja: 宝くじと抽選
+      description:
+        es: >-
+          La probabilidad de acertar una combinación se calcula como 1/C(n,k), base de todos los
+          sorteos.
+        en: >-
+          The probability of matching a combination is computed as 1/C(n,k), the basis of all draws.
+        pt: >-
+          A probabilidade de acertar uma combinação é calculada como 1/C(n,k), base de todos os
+          sorteios.
+        fr: >-
+          La probabilité de trouver une combinaison se calcule en 1/C(n,k), base de tous les tirages.
+        zh: >-
+          命中某种组合的概率按 1/C(n,k) 计算，这是所有抽奖的基础。
+        ja: >-
+          ある組合せに当たる確率は 1/C(n,k) で計算され、すべての抽選の基礎となる。
+    - title:
+        es: Control de calidad
+        en: Quality control
+        pt: Controle de qualidade
+        fr: Contrôle qualité
+        zh: 质量控制
+        ja: 品質管理
+      description:
+        es: >-
+          El muestreo de lotes usa combinaciones para estimar cuántos defectos cabe esperar en una
+          muestra.
+        en: >-
+          Batch sampling uses combinations to estimate how many defects to expect in a sample.
+        pt: >-
+          A amostragem de lotes usa combinações para estimar quantos defeitos esperar em uma amostra.
+        fr: >-
+          L'échantillonnage de lots utilise les combinaisons pour estimer combien de défauts attendre
+          dans un échantillon.
+        zh: >-
+          批次抽样利用组合数来估计样本中可能出现多少个次品。
+        ja: >-
+          ロットの抜取検査では組合せを用いて、サンプル中の不良数の期待値を推定する。
+    - title:
+        es: Criptografía
+        en: Cryptography
+        pt: Criptografia
+        fr: Cryptographie
+        zh: 密码学
+        ja: 暗号理論
+      description:
+        es: >-
+          El conteo de claves y de subconjuntos aparece en esquemas de compartición de secretos y
+          códigos.
+        en: >-
+          Counting keys and subsets appears in secret-sharing schemes and coding theory.
+        pt: >-
+          A contagem de chaves e subconjuntos aparece em esquemas de compartilhamento de segredos e
+          códigos.
+        fr: >-
+          Le dénombrement des clés et des sous-ensembles apparaît dans les schémas de partage de
+          secret et les codes.
+        zh: >-
+          对密钥和子集的计数出现在秘密共享方案和编码理论之中。
+        ja: >-
+          鍵や部分集合の数え上げは、秘密分散方式や符号理論に現れる。
+    - title:
+        es: Análisis de datos
+        en: Data analysis
+        pt: Análise de dados
+        fr: Analyse de données
+        zh: 数据分析
+        ja: データ分析
+      description:
+        es: >-
+          La estadística no paramétrica cuenta subconjuntos para construir tests y estimadores de
+          remuestreo.
+        en: >-
+          Nonparametric statistics counts subsets to build resampling tests and estimators.
+        pt: >-
+          A estatística não paramétrica conta subconjuntos para construir testes e estimadores de
+          reamostragem.
+        fr: >-
+          La statistique non paramétrique dénombre des sous-ensembles pour construire des tests et
+          des estimateurs de rééchantillonnage.
+        zh: >-
+          非参数统计通过统计子集来构建重抽样检验和估计量。
+        ja: >-
+          ノンパラメトリック統計は部分集合を数え上げて、リサンプリング検定や推定量を構築する。
+  example:
+    title:
+      es: Combinaciones de 5 en 2
+      en: Combinations of 5 choose 2
+      pt: Combinações de 5 escolhe 2
+      fr: Combinaisons de 5 parmi 2
+      zh: 5选2的组合
+      ja: 5個から2個を選ぶ組合せ
+    lines:
+      - es: "C(5,2) = 5!/(2!·3!)"
+        en: "C(5,2) = 5!/(2!·3!)"
+        pt: "C(5,2) = 5!/(2!·3!)"
+        fr: "C(5,2) = 5!/(2!·3!)"
+        zh: "C(5,2) = 5!/(2!·3!)"
+        ja: "C(5,2) = 5!/(2!·3!)"
+      - es: "C(5,2) = 120/(2·6)"
+        en: "C(5,2) = 120/(2·6)"
+        pt: "C(5,2) = 120/(2·6)"
+        fr: "C(5,2) = 120/(2·6)"
+        zh: "C(5,2) = 120/(2·6)"
+        ja: "C(5,2) = 120/(2·6)"
+      - es: "C(5,2) = 120/12"
+        en: "C(5,2) = 120/12"
+        pt: "C(5,2) = 120/12"
+        fr: "C(5,2) = 120/12"
+        zh: "C(5,2) = 120/12"
+        ja: "C(5,2) = 120/12"
+      - es: "C(5,2) = 10"
+        en: "C(5,2) = 10"
+        pt: "C(5,2) = 10"
+        fr: "C(5,2) = 10"
+        zh: "C(5,2) = 10"
+        ja: "C(5,2) = 10"
+      - es: "C(5,2) = 10 subconjuntos"
+        en: "C(5,2) = 10 subsets"
+        pt: "C(5,2) = 10 subconjuntos"
+        fr: "C(5,2) = 10 sous-ensembles"
+        zh: "C(5,2) = 10 个子集"
+        ja: "C(5,2) = 10 個の部分集合"

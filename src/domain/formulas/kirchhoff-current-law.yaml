@@ -1,0 +1,293 @@
+id: kirchhoff-current-law
+title:
+  es: Primera Ley de Kirchhoff
+  en: Kirchhoff's Current Law
+  pt: Lei das Correntes de Kirchhoff
+  fr: Loi des courants de Kirchhoff
+  zh: 基尔霍夫电流定律
+  ja: キルヒホッフの電流則
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: sigma
+    type: operator
+    value: Σ
+    explanation:
+      es: El símbolo de sumatoria, que indica sumar todas las corrientes de las ramas que llegan al nodo.
+      en: The summation symbol, meaning to add up all the currents in the branches that meet at the node.
+      pt: O símbolo de somatório, que indica somar todas as correntes dos ramos que chegam ao nó.
+      fr: Le symbole de sommation, qui indique d'additionner tous les courants des branches qui arrivent au nœud.
+      zh: 求和符号,表示把到达节点的各支路电流相加。
+      ja: 総和記号。節点に集まるすべての枝の電流を足し合わせることを示す。
+  - id: i
+    type: variable
+    value: I
+    explanation:
+      es: La corriente eléctrica que entra o sale del nodo por cada rama del circuito.
+      en: The electric current entering or leaving the node through each branch of the circuit.
+      pt: A corrente elétrica que entra ou sai do nó por cada ramo do circuito.
+      fr: Le courant électrique entrant ou sortant du nœud par chaque branche du circuit.
+      zh: 通过电路每条支路流入或流出节点的电流。
+      ja: 回路の各枝を通って節点に入る、または出ていく電流。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: zero
+    type: number
+    value: "0"
+    explanation:
+      es: Cero, porque en el nodo la carga no se acumula ni desaparece.
+      en: Zero, because at the node charge neither accumulates nor disappears.
+      pt: Zero, porque no nó a carga não se acumula nem desaparece.
+      fr: Zéro, car au nœud la charge ne s'accumule ni ne disparaît.
+      zh: 零,因为在节点上电荷既不积累也不消失。
+      ja: ゼロ。節点では電荷は蓄積も消失もしないからである。
+context:
+  author:
+    es: Gustav Kirchhoff
+    en: Gustav Kirchhoff
+    pt: Gustav Kirchhoff
+    fr: Gustav Kirchhoff
+    zh: 古斯塔夫·基尔霍夫
+    ja: グスタフ・キルヒホフ
+  era:
+    es: Alemania, 1824–1887 · publicada en 1845
+    en: Germany, 1824–1887 · published in 1845
+    pt: Alemanha, 1824–1887 · publicada em 1845
+    fr: Allemagne, 1824–1887 · publiée en 1845
+    zh: 德国,1824–1887年 · 1845年发表
+    ja: ドイツ、1824–1887年・1845年発表
+  history:
+    es: >-
+      Formulada por Gustav Kirchhoff en 1845, cuando aún era estudiante en Königsberg, esta ley expresa
+      la conservación de la carga eléctrica. En cualquier nodo de un circuito, la corriente total que
+      entra es igual a la que sale, por lo que la suma algebraica de las corrientes es cero. Junto con
+      la ley de tensiones, constituye la base del análisis de circuitos y del proyecto de las redes
+      eléctricas modernas, desde un circuito integrado hasta un sistema nacional de transmisión de
+      energía.
+    en: >-
+      Formulated by Gustav Kirchhoff in 1845, while still a student in Königsberg, this law expresses
+      the conservation of electric charge. At any node of a circuit, the total current entering equals
+      the total current leaving, so the algebraic sum of the currents is zero. Together with the
+      voltage law, it forms the basis of circuit analysis and of modern power network design, from a
+      single integrated circuit to a nationwide transmission grid.
+    pt: >-
+      Formulada por Gustav Kirchhoff em 1845, quando ainda era estudante em Königsberg, esta lei
+      expressa a conservação da carga elétrica. Em qualquer nó de um circuito, a corrente total que
+      entra é igual à que sai, de modo que a soma algébrica das correntes é zero. Juntamente com a lei
+      das tensões, constitui a base da análise de circuitos e do projeto das redes elétricas modernas,
+      de um circuito integrado a um sistema nacional de transmissão de energia.
+    fr: >-
+      Formulée par Gustav Kirchhoff en 1845, alors qu'il était encore étudiant à Königsberg, cette loi
+      exprime la conservation de la charge électrique. En tout nœud d'un circuit, le courant total
+      entrant est égal au courant total sortant, si bien que la somme algébrique des courants est
+      nulle. Avec la loi des tensions, elle fonde l'analyse des circuits et la conception des réseaux
+      électriques modernes, d'un circuit intégré à un réseau national de transport d'électricité.
+    zh: >-
+      该定律由古斯塔夫·基尔霍夫于1845年提出,当时他还是柯尼斯堡的一名学生,它表达了电荷守恒。在电路的
+      任一节点上,流入的总电流等于流出的总电流,因此电流的代数和为零。它与电压定律共同构成电路分析的
+      基础,并支撑从单个集成电路到全国输电网络的现代电网设计。
+    ja: >-
+      この法則はグスタフ・キルヒホフが1845年、まだケーニヒスベルクの学生だった頃に定式化したもので、
+      電荷保存を表す。回路のどの節点でも、入ってくる電流の合計と出ていく電流の合計は等しく、したがって
+      節点の電流の代数和はゼロになる。電圧の法則とともに回路解析の基礎をなし、単一の集積回路から全国
+      規模の送電網に至る現代の電力網設計を支えている。
+  timeline:
+    - year: "1845"
+      label:
+        es: >-
+          Kirchhoff publica su ley de corrientes en los Annalen der Physik, aún siendo estudiante en
+          Königsberg.
+        en: >-
+          Kirchhoff publishes his current law in the Annalen der Physik while still a student in
+          Königsberg.
+        pt: >-
+          Kirchhoff publica sua lei das correntes nos Annalen der Physik, ainda como estudante em
+          Königsberg.
+        fr: >-
+          Kirchhoff publie sa loi des courants dans les Annalen der Physik, alors qu'il est encore
+          étudiant à Königsberg.
+        zh: >-
+          基尔霍夫在《物理学年鉴》上发表了他的电流定律,当时他还是柯尼斯堡的学生。
+        ja: >-
+          キルヒホフが『物理学年報』に電流の法則を発表する。まだケーニヒスベルクの学生だった。
+    - year: "1873"
+      label:
+        es: >-
+          Maxwell incorpora las leyes de Kirchhoff en su Tratado, unificándolas con el
+          electromagnetismo.
+        en: >-
+          Maxwell incorporates Kirchhoff's laws into his Treatise, unifying them with
+          electromagnetism.
+        pt: >-
+          Maxwell incorpora as leis de Kirchhoff em seu Tratado, unificando-as com o eletromagnetismo.
+        fr: >-
+          Maxwell intègre les lois de Kirchhoff dans son Traité, les unifiant à l'électromagnétisme.
+        zh: >-
+          麦克斯韦在其《论电与磁》中纳入基尔霍夫定律,将它们与电磁学统一。
+        ja: >-
+          マクスウェルが『電磁気学論』にキルヒホフの法則を組み込み、電磁気学と統合する。
+    - year: Hoy
+      label:
+        es: >-
+          Todo simulador de circuitos, como SPICE, construye sus ecuaciones a partir de la regla del
+          nodo.
+        en: >-
+          Every circuit simulator, such as SPICE, builds its equations from the node rule.
+        pt: >-
+          Todo simulador de circuitos, como o SPICE, constrói suas equações a partir da regra do nó.
+        fr: >-
+          Tout simulateur de circuits, comme SPICE, construit ses équations à partir de la règle du
+          nœud.
+        zh: >-
+          所有电路仿真器(如SPICE)都基于节点规则构建其方程。
+        ja: >-
+          SPICEなどすべての回路シミュレータは、ノード則から方程式を組み立てる。
+  useCases:
+    - title:
+        es: Análisis de circuitos electrónicos
+        en: Electronic circuit analysis
+        pt: Análise de circuitos eletrônicos
+        fr: Analyse de circuits électroniques
+        zh: 电子电路分析
+        ja: 電子回路解析
+      description:
+        es: >-
+          Es el punto de partida del análisis nodal, que escribe una ecuación por cada nodo y
+          resuelve el sistema que describe el circuito completo.
+        en: >-
+          It is the starting point of nodal analysis, which writes one equation per node and solves
+          the system that describes the whole circuit.
+        pt: >-
+          É o ponto de partida da análise nodal, que escreve uma equação para cada nó e resolve o
+          sistema que descreve o circuito completo.
+        fr: >-
+          C'est le point de départ de l'analyse nodale, qui écrit une équation par nœud et résout le
+          système qui décrit tout le circuit.
+        zh: >-
+          它是节点分析的出发点,为每个节点列一个方程,求解后得到描述整个电路的方程组。
+        ja: >-
+          節点解析の出発点である。各節点について方程式を一つ立て、回路全体を表す連立方程式を解く。
+    - title:
+        es: Redes de distribución eléctrica
+        en: Power distribution grids
+        pt: Redes de distribuição elétrica
+        fr: Réseaux de distribution électrique
+        zh: 配电网络
+        ja: 配電網
+      description:
+        es: >-
+          Permite calcular cómo se reparte la corriente entre las líneas y los transformadores que
+          abastecen una ciudad o una región.
+        en: >-
+          It computes how current is shared among the lines and transformers that supply a city or a
+          region.
+        pt: >-
+          Permite calcular como a corrente é repartida entre as linhas e os transformadores que
+          abastecem uma cidade ou uma região.
+        fr: >-
+          Elle permet de calculer comment le courant se répartit entre les lignes et les
+          transformateurs qui alimentent une ville ou une région.
+        zh: >-
+          用于计算电流如何在供给城市或区域的线路和变压器之间分配。
+        ja: >-
+          都市や地域を供給する送電線や変圧器の間で電流がどう配分されるかを計算できる。
+    - title:
+        es: Vehículos eléctricos
+        en: Electric vehicles
+        pt: Veículos elétricos
+        fr: Véhicules électriques
+        zh: 电动汽车
+        ja: 電気自動車
+      description:
+        es: >-
+          El sistema de gestión de baterías aplica la regla del nodo para equilibrar la corriente
+          entre las celdas durante la carga y la descarga.
+        en: >-
+          The battery management system applies the node rule to balance current between cells during
+          charging and discharging.
+        pt: >-
+          O sistema de gerenciamento de baterias aplica a regra do nó para equilibrar a corrente entre
+          as células durante a carga e a descarga.
+        fr: >-
+          Le système de gestion de batterie applique la règle du nœud pour équilibrer le courant entre
+          les cellules pendant la charge et la décharge.
+        zh: >-
+          电池管理系统在充放电过程中应用节点规则来平衡各电芯之间的电流。
+        ja: >-
+          バッテリーマネジメントシステムが、充放電中にセル間の電流を均等化するためノード則を適用する。
+    - title:
+        es: Diseño de electrónica de potencia
+        en: Power electronics design
+        pt: Projeto de eletrônica de potência
+        fr: Conception d'électronique de puissance
+        zh: 电力电子设计
+        ja: パワーエレクトロニクス設計
+      description:
+        es: >-
+          Convertidores e inversores se dimensionan aplicando esta ley en cada punto de conexión del
+          circuito de potencia.
+        en: >-
+          Converters and inverters are sized by applying this law at every connection point of the
+          power circuit.
+        pt: >-
+          Conversores e inversores são dimensionados aplicando esta lei em cada ponto de conexão do
+          circuito de potência.
+        fr: >-
+          Convertisseurs et onduleurs sont dimensionnés en appliquant cette loi à chaque point de
+          connexion du circuit de puissance.
+        zh: >-
+          在电力电路的每个连接点应用该定律,即可为变换器和逆变器确定规格。
+        ja: >-
+          パワー回路の各接続点にこの法則を適用して、コンバータやインバータを設計する。
+  example:
+    title:
+      es: Un nodo con tres ramas
+      en: A node with three branches
+      pt: Um nó com três ramos
+      fr: Un nœud à trois branches
+      zh: 具有三个支路的节点
+      ja: 三つの枝を持つ節点
+    lines:
+      - es: I₁ = 2 A
+        en: I₁ = 2 A
+        pt: I₁ = 2 A
+        fr: I₁ = 2 A
+        zh: I₁ = 2 A
+        ja: I₁ = 2 A
+      - es: I₂ = 3 A
+        en: I₂ = 3 A
+        pt: I₂ = 3 A
+        fr: I₂ = 3 A
+        zh: I₂ = 3 A
+        ja: I₂ = 3 A
+      - es: I₃ = 5 A
+        en: I₃ = 5 A
+        pt: I₃ = 5 A
+        fr: I₃ = 5 A
+        zh: I₃ = 5 A
+        ja: I₃ = 5 A
+      - es: ΣI = 2 + 3 − 5
+        en: ΣI = 2 + 3 − 5
+        pt: ΣI = 2 + 3 − 5
+        fr: ΣI = 2 + 3 − 5
+        zh: ΣI = 2 + 3 − 5
+        ja: ΣI = 2 + 3 − 5
+      - es: ΣI = 0
+        en: ΣI = 0
+        pt: ΣI = 0
+        fr: ΣI = 0
+        zh: ΣI = 0
+        ja: ΣI = 0

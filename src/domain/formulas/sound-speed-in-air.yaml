@@ -1,0 +1,293 @@
+id: sound-speed-in-air
+title:
+  es: Velocidad del Sonido en el Aire
+  en: Sound Speed in Air
+  pt: Velocidade do Som no Ar
+  fr: Vitesse du Son dans l'Air
+  zh: 空气中的声速
+  ja: 空気中の音速
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La velocidad del sonido en el aire, medida en metros por segundo.
+      en: The speed of sound in air, measured in meters per second.
+      pt: A velocidade do som no ar, medida em metros por segundo.
+      fr: La vitesse du son dans l'air, mesurée en mètres par seconde.
+      zh: 声音在空气中的速度,单位为米/秒。
+      ja: 空気中の音速。単位はメートル毎秒。
+  - id: approx
+    type: operator
+    value: ≈
+    explanation:
+      es: Aproximadamente igual a, porque es una fórmula empírica.
+      en: Approximately equal to, since it is an empirical formula.
+      pt: Aproximadamente igual a, pois é uma fórmula empírica.
+      fr: Approximativement égal à, car c'est une formule empirique.
+      zh: 约等于,因为这是一个经验公式。
+      ja: ほぼ等しい。経験的な式であるため。
+  - id: base
+    type: number
+    value: "331.4"
+    explanation:
+      es: La velocidad del sonido en el aire a 0 °C, en m/s.
+      en: The speed of sound in air at 0 °C, in m/s.
+      pt: A velocidade do som no ar a 0 °C, em m/s.
+      fr: La vitesse du son dans l'air à 0 °C, en m/s.
+      zh: 0 °C时声音在空气中的速度,单位米/秒。
+      ja: 0 °Cの空気中の音速。単位は m/s。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Más.
+      en: Plus.
+      pt: Mais.
+      fr: Plus.
+      zh: 加上。
+      ja: プラス。
+  - id: coef
+    type: number
+    value: "0.6"
+    explanation:
+      es: Cuántos m/s gana el sonido por cada grado Celsius de temperatura.
+      en: How many m/s sound gains per Celsius degree of temperature.
+      pt: Quantos m/s o som ganha a cada grau Celsius de temperatura.
+      fr: Combien de m/s le son gagne par degré Celsius de température.
+      zh: 温度每升高1摄氏度,声速增加的米/秒数。
+      ja: 温度が摂氏1度上がるごとに音が速くなる m/s の量。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: temp
+    type: variable
+    value: T
+    explanation:
+      es: La temperatura del aire, en grados Celsius.
+      en: The air temperature, in degrees Celsius.
+      pt: A temperatura do ar, em graus Celsius.
+      fr: La température de l'air, en degrés Celsius.
+      zh: 空气的温度,单位为摄氏度。
+      ja: 空気の温度。単位は摂氏度。
+context:
+  author:
+    es: Basada en el trabajo de Newton y Laplace
+    en: Based on the work of Newton and Laplace
+    pt: Baseada no trabalho de Newton e Laplace
+    fr: Basée sur les travaux de Newton et Laplace
+    zh: 基于牛顿和拉普拉斯的工作
+    ja: ニュートンとラプラスの研究に基づく
+  era:
+    es: Europa, s. XVII–XIX
+    en: Europe, 17th–19th century
+    pt: Europa, séc. XVII–XIX
+    fr: Europe, XVIIe–XIXe siècle
+    zh: 欧洲,17–19世纪
+    ja: ヨーロッパ、17–19世紀
+  history:
+    es: >-
+      La velocidad del sonido en el aire crece con la temperatura: por cada grado Celsius gana unos
+      0.6 m/s. Newton estimó la velocidad del sonido en los Principia, pero su resultado quedaba por
+      debajo de las mediciones; Laplace corrigió el cálculo en 1816 al incluir la compresión
+      adiabática del aire. En días fríos el sonido viaja más lento, por eso el trueno se percibe
+      retumbante y apagado en invierno. La fórmula guía la ecolocalización de murciélagos y sonares,
+      y el diseño acústico de las salas de concierto.
+    en: >-
+      The speed of sound in air grows with temperature: it gains about 0.6 m/s per Celsius degree.
+      Newton estimated the speed of sound in the Principia, but his result fell short of the
+      measurements; Laplace corrected the calculation in 1816 by including the air's adiabatic
+      compression. On cold days sound travels slower, which is why thunder sounds rumbling and
+      muffled in winter. The formula guides the echolocation of bats and sonar, and the acoustic
+      design of concert halls.
+    pt: >-
+      A velocidade do som no ar cresce com a temperatura: a cada grau Celsius ganha cerca de 0,6 m/s.
+      Newton estimou a velocidade do som nos Principia, mas seu resultado ficava abaixo das medições;
+      Laplace corrigiu o cálculo em 1816 ao incluir a compressão adiabática do ar. Em dias frios o
+      som viaja mais devagar, por isso o trovão soa retumbante e abafado no inverno. A fórmula orienta
+      a ecolocalização de morcegos e sonares, e o projeto acústico de salas de concerto.
+    fr: >-
+      La vitesse du son dans l'air croît avec la température : elle gagne environ 0,6 m/s par degré
+      Celsius. Newton estima la vitesse du son dans les Principia, mais son résultat restait en
+      dessous des mesures ; Laplace corrigea le calcul en 1816 en incluant la compression adiabatique
+      de l'air. Par temps froid, le son voyage plus lentement, c'est pourquoi le tonnerre paraît
+      sourd et étouffé en hiver. La formule guide l'écholocation des chauves-souris et des sonars,
+      ainsi que la conception acoustique des salles de concert.
+    zh: >-
+      声音在空气中的速度随温度升高而增大:每升高1摄氏度约加快0.6米/秒。牛顿在《自然哲学的数学原理》中估算过声速,
+      但他的结果低于实测值;1816年,拉普拉斯计入空气的绝热压缩,修正了这一计算。在寒冷的日子里声音传播得更慢,
+      所以冬天的雷声听起来低沉而发闷。这一公式指导着蝙蝠的回声定位、声呐以及音乐厅的声学设计。
+    ja: >-
+      空気中の音速は温度とともに大きくなる:摂氏1度につき約0.6 m/s速くなる。ニュートンは『プリンキピア』で音速を推定したが、
+      その結果は測定値を下回っていた。ラプラスは1816年、空気の断熱圧縮を考慮してこの計算を修正した。寒い日は音がゆっくり伝わる
+      ため、冬の雷は低くこもって聞こえる。この式は、コウモリの反響定位やソナー、コンサートホールの音響設計を導く。
+  timeline:
+    - year: "1687"
+      label:
+        es: Newton estima la velocidad del sonido en los Principia, pero su valor queda por debajo de las mediciones.
+        en: Newton estimates the speed of sound in the Principia, but his value falls short of measurements.
+        pt: Newton estima a velocidade do som nos Principia, mas seu valor fica abaixo das medições.
+        fr: Newton estime la vitesse du son dans les Principia, mais sa valeur reste en dessous des mesures.
+        zh: 牛顿在《自然哲学的数学原理》中估算了声速,但数值低于实测。
+        ja: ニュートンが『プリンキピア』で音速を推定するが、その値は測定値を下回る。
+    - year: "1816"
+      label:
+        es: Laplace corrige el cálculo al incluir la compresión adiabática del aire.
+        en: Laplace corrects the calculation by including the air's adiabatic compression.
+        pt: Laplace corrige o cálculo ao incluir a compressão adiabática do ar.
+        fr: Laplace corrige le calcul en incluant la compression adiabatique de l'air.
+        zh: 拉普拉斯计入空气的绝热压缩,修正了这一计算。
+        ja: ラプラスが空気の断熱圧縮を考慮して計算を修正する。
+    - year: s. XX
+      label:
+        es: La aproximación lineal v ≈ 331.4 + 0.6·T se vuelve estándar en la ingeniería acústica.
+        en: The linear approximation v ≈ 331.4 + 0.6·T becomes standard in acoustic engineering.
+        pt: A aproximação linear v ≈ 331,4 + 0,6·T torna-se padrão na engenharia acústica.
+        fr: L'approximation linéaire v ≈ 331,4 + 0,6·T devient standard en ingénierie acoustique.
+        zh: 线性近似 v ≈ 331.4 + 0.6·T 成为声学工程的标准。
+        ja: 線形近似 v ≈ 331.4 + 0.6·T が音響工学の標準となる。
+    - year: Hoy
+      label:
+        es: Es la base de la ecolocalización, de los sónares y del diseño acústico moderno.
+        en: It underpins echolocation, sonar, and modern acoustic design.
+        pt: É a base da ecolocalização, dos sonares e do projeto acústico moderno.
+        fr: Elle est à la base de l'écholocation, des sonars et de la conception acoustique moderne.
+        zh: 它是回声定位、声呐和现代声学设计的基础。
+        ja: 反響定位、ソナー、現代の音響設計の基礎である。
+  useCases:
+    - title:
+        es: Diseño de salas de concierto
+        en: Concert hall design
+        pt: Projeto de salas de concerto
+        fr: Conception de salles de concert
+        zh: 音乐厅设计
+        ja: コンサートホールの設計
+      description:
+        es: >-
+          La velocidad del sonido fija los retardos y reflejos que definen la calidad de la sala.
+        en: >-
+          Sound speed sets the delays and reflections that define a hall's quality.
+        pt: >-
+          A velocidade do som define os atrasos e reflexos que determinam a qualidade da sala.
+        fr: >-
+          La vitesse du son fixe les retards et réflexions qui définissent la qualité de la salle.
+        zh: >-
+          声速决定了定义音乐厅音质的延迟和反射。
+        ja: >-
+          音速が、ホールの質を決める遅延や反射を定める。
+    - title:
+        es: Sónar y ecolocalización
+        en: Sonar and echolocation
+        pt: Sonar e ecolocalização
+        fr: Sonar et écholocation
+        zh: 声呐与回声定位
+        ja: ソナーと反響定位
+      description:
+        es: >-
+          Calcular la distancia con el tiempo de retorno del eco exige conocer la velocidad del
+          sonido.
+        en: >-
+          Computing distance from echo return time requires knowing the speed of sound.
+        pt: >-
+          Calcular a distância pelo tempo de retorno do eco exige conhecer a velocidade do som.
+        fr: >-
+          Calculer la distance à partir du temps de retour de l'écho exige de connaître la vitesse
+          du son.
+        zh: >-
+          用回声返回时间计算距离,必须知道声速。
+        ja: >-
+          こだまの帰還時間から距離を計算するには、音速を知る必要がある。
+    - title:
+        es: Meteorología
+        en: Meteorology
+        pt: Meteorologia
+        fr: Météorologie
+        zh: 气象学
+        ja: 気象学
+      description:
+        es: >-
+          Medir el tiempo de llegada del sonido permite estimar la temperatura media del aire.
+        en: >-
+          Measuring sound arrival time estimates the air's mean temperature.
+        pt: >-
+          Medir o tempo de chegada do som permite estimar a temperatura média do ar.
+        fr: >-
+          Mesurer le temps d'arrivée du son permet d'estimer la température moyenne de l'air.
+        zh: >-
+          通过测量声音到达的时间,可以估算空气的平均温度。
+        ja: >-
+          音の到達時間を測ることで、空気の平均温度を推定できる。
+    - title:
+        es: Instrumentos musicales
+        en: Musical instruments
+        pt: Instrumentos musicais
+        fr: Instruments de musique
+        zh: 乐器
+        ja: 楽器
+      description:
+        es: >-
+          El temple de un instrumento ajusta la longitud del tubo o de la cuerda a la temperatura
+          ambiente.
+        en: >-
+          Tuning adjusts the tube or string length to the ambient temperature.
+        pt: >-
+          A afinação ajusta o comprimento do tubo ou da corda à temperatura ambiente.
+        fr: >-
+          L'accord ajuste la longueur du tube ou de la corde à la température ambiante.
+        zh: >-
+          调音会根据环境温度调整管或弦的长度。
+        ja: >-
+          調律は周囲の温度に合わせて管や弦の長さを調整する。
+  example:
+    title:
+      es: A 20 °C
+      en: At 20 °C
+      pt: A 20 °C
+      fr: À 20 °C
+      zh: 在20 °C时
+      ja: 20 °Cの場合
+    lines:
+      - es: T = 20 °C
+        en: T = 20 °C
+        pt: T = 20 °C
+        fr: T = 20 °C
+        zh: T = 20 °C
+        ja: T = 20 °C
+      - es: v ≈ 331.4 + 0.6 · T
+        en: v ≈ 331.4 + 0.6 · T
+        pt: v ≈ 331,4 + 0,6 · T
+        fr: v ≈ 331,4 + 0,6 · T
+        zh: v ≈ 331.4 + 0.6 · T
+        ja: v ≈ 331.4 + 0.6 · T
+      - es: v ≈ 331.4 + 0.6 × 20
+        en: v ≈ 331.4 + 0.6 × 20
+        pt: v ≈ 331,4 + 0,6 × 20
+        fr: v ≈ 331,4 + 0,6 × 20
+        zh: v ≈ 331.4 + 0.6 × 20
+        ja: v ≈ 331.4 + 0.6 × 20
+      - es: v ≈ 331.4 + 12
+        en: v ≈ 331.4 + 12
+        pt: v ≈ 331,4 + 12
+        fr: v ≈ 331,4 + 12
+        zh: v ≈ 331.4 + 12
+        ja: v ≈ 331.4 + 12
+      - es: v ≈ 343.4 m/s
+        en: v ≈ 343.4 m/s
+        pt: v ≈ 343,4 m/s
+        fr: v ≈ 343,4 m/s
+        zh: v ≈ 343.4 米/秒
+        ja: v ≈ 343.4 m/s

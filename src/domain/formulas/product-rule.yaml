@@ -1,0 +1,336 @@
+id: product-rule
+title:
+  es: Regla del Producto
+  en: Product Rule
+  pt: Regra do Produto
+  fr: Règle du produit
+  zh: 乘积法则
+  ja: 積の微分法
+category:
+  es: Cálculo
+  en: Calculus
+  pt: Cálculo
+  fr: Calcul
+  zh: 微积分
+  ja: 微積分
+nodes:
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el producto de funciones.
+      en: Opens the product of functions.
+      pt: Abre o produto de funções.
+      fr: Ouvre le produit de fonctions.
+      zh: 打开函数的乘积。
+      ja: 関数の積を開く括弧。
+  - id: f
+    type: variable
+    value: f
+    explanation:
+      es: La primera función.
+      en: The first function.
+      pt: A primeira função.
+      fr: La première fonction.
+      zh: 第一个函数。
+      ja: 最初の関数。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: g
+    type: variable
+    value: g
+    explanation:
+      es: La segunda función.
+      en: The second function.
+      pt: A segunda função.
+      fr: La seconde fonction.
+      zh: 第二个函数。
+      ja: 2番目の関数。
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el producto.
+      en: Closes the product.
+      pt: Fecha o produto.
+      fr: Ferme le produit.
+      zh: 关闭乘积。
+      ja: 積を閉じる括弧。
+  - id: prime
+    type: operator
+    value: ′
+    explanation:
+      es: "La prima: derivada."
+      en: "The prime: derivative."
+      pt: "A linha: derivada."
+      fr: "La prime : dérivée."
+      zh: 撇号：导数。
+      ja: プライム。微分。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: f-prime
+    type: variable
+    value: f′
+    explanation:
+      es: La derivada de la primera función.
+      en: The derivative of the first function.
+      pt: A derivada da primeira função.
+      fr: La dérivée de la première fonction.
+      zh: 第一个函数的导数。
+      ja: 最初の関数の導関数。
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: g-2
+    type: variable
+    value: g
+    explanation:
+      es: La segunda función sin derivar.
+      en: The second function, underived.
+      pt: A segunda função, sem derivar.
+      fr: La seconde fonction, non dérivée.
+      zh: 未求导的第二个函数。
+      ja: 微分していない2番目の関数。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Más.
+      en: Plus.
+      pt: Mais.
+      fr: Plus.
+      zh: 加上。
+      ja: プラス。
+  - id: f-2
+    type: variable
+    value: f
+    explanation:
+      es: La primera función sin derivar.
+      en: The first function, underived.
+      pt: A primeira função, sem derivar.
+      fr: La première fonction, non dérivée.
+      zh: 未求导的第一个函数。
+      ja: 微分していない最初の関数。
+  - id: dot-3
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicada por.
+      en: Multiplied by.
+      pt: Multiplicada por.
+      fr: Multipliée par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: g-prime
+    type: variable
+    value: g′
+    explanation:
+      es: La derivada de la segunda función.
+      en: The derivative of the second function.
+      pt: A derivada da segunda função.
+      fr: La dérivée de la seconde fonction.
+      zh: 第二个函数的导数。
+      ja: 2番目の関数の導関数。
+context:
+  author:
+    es: Gottfried Wilhelm Leibniz
+    en: Gottfried Wilhelm Leibniz
+    pt: Gottfried Wilhelm Leibniz
+    fr: Gottfried Wilhelm Leibniz
+    zh: 戈特弗里德·威廉·莱布尼茨
+    ja: ゴットフリート・ヴィルヘルム・ライプニッツ
+  era:
+    es: Alemania, 1646–1716 · publicada en 1684
+    en: Germany, 1646–1716 · published in 1684
+    pt: Alemanha, 1646–1716 · publicada em 1684
+    fr: Allemagne, 1646–1716 · publiée en 1684
+    zh: 德国，1646–1716年·1684年发表
+    ja: ドイツ、1646–1716年・1684年発表
+  history:
+    es: >-
+      Leibniz publicó la regla del producto en 1684 en su Nova Methodus. Es famosa por su trampa: la
+      derivada de un producto no es el producto de las derivadas, sino la suma de dos términos cruzados.
+      Esta regla, junto con la de la cadena, permite derivar casi cualquier función elemental y, dada la
+      vuelta, origina la integración por partes.
+    en: >-
+      Leibniz published the product rule in 1684 in his Nova Methodus. It is famous for its trap: the
+      derivative of a product is not the product of the derivatives, but the sum of two cross terms.
+      This rule, together with the chain rule, lets you differentiate almost any elementary function
+      and, reversed, gives rise to integration by parts.
+    pt: >-
+      Leibniz publicou a regra do produto em 1684 em sua Nova Methodus. Ela é famosa por sua armadilha:
+      a derivada de um produto não é o produto das derivadas, mas a soma de dois termos cruzados. Essa
+      regra, junto com a da cadeia, permite derivar quase qualquer função elementar e, invertida, dá
+      origem à integração por partes.
+    fr: >-
+      Leibniz publia la règle du produit en 1684 dans sa Nova Methodus. Elle est célèbre pour son
+      piège : la dérivée d'un produit n'est pas le produit des dérivées, mais la somme de deux termes
+      croisés. Cette règle, avec celle de la chaîne, permet de dériver presque toute fonction
+      élémentaire et, retournée, donne naissance à l'intégration par parties.
+    zh: >-
+      莱布尼茨于1684年在《新方法》中发表乘积法则。它以陷阱著称：乘积的导数并非导数的乘积，而是两个交叉项之和。
+      这条法则与链式法则一起，几乎能对任何初等函数求导；反过来，它又衍生出分部积分法。
+    ja: >-
+      ライプニッツは1684年の『新方法』で積の微分法を発表した。これは有名な罠がある：積の導関数は導関数の積
+      ではなく、2つの交差項の和である。この法則は連鎖律とともに、ほとんどすべての初等関数の微分を可能にし、
+      逆向きに使うと部分積分が生まれる。
+  timeline:
+    - year: "1684"
+      label:
+        es: >-
+          Leibniz publica la regla en Nova Methodus, junto con la del cociente y la de la cadena.
+        en: >-
+          Leibniz publishes the rule in Nova Methodus, alongside the quotient and chain rules.
+        pt: >-
+          Leibniz publica a regra em Nova Methodus, junto com a do quociente e a da cadeia.
+        fr: >-
+          Leibniz publie la règle dans Nova Methodus, avec celles du quotient et de la chaîne.
+        zh: >-
+          莱布尼茨在《新方法》中与商法则、链式法则一同发表该法则。
+        ja: >-
+          ライプニッツが『新方法』で、商の微分法や連鎖律とともにこれを発表する。
+    - year: "1715"
+      label:
+        es: >-
+          Taylor deduce de ella la integración por partes.
+        en: >-
+          Taylor derives integration by parts from it.
+        pt: >-
+          Taylor deduz dela a integração por partes.
+        fr: >-
+          Taylor en déduit l'intégration par parties.
+        zh: >-
+          泰勒由它推出分部积分法。
+        ja: >-
+          テイラーがこれから部分積分を導く。
+    - year: Hoy
+      label:
+        es: >-
+          Es estándar para derivar productos en física, economía y cálculo de modelos.
+        en: >-
+          It is standard for differentiating products in physics, economics, and model calculus.
+        pt: >-
+          É padrão para derivar produtos na física, economia e cálculo de modelos.
+        fr: >-
+          Elle est standard pour dériver des produits en physique, économie et calcul de modèles.
+        zh: >-
+          它是物理学、经济学和模型计算中对乘积求导的标准方法。
+        ja: >-
+          物理学、経済学、モデルの計算で積を微分する際の標準となっている。
+  useCases:
+    - title:
+        es: Economía
+        en: Economics
+        pt: Economia
+        fr: Économie
+        zh: 经济学
+        ja: 経済学
+      description:
+        es: >-
+          El ingreso marginal de un precio P por cantidad Q usa la regla del producto.
+        en: >-
+          The marginal revenue of a price P times quantity Q uses the product rule.
+        pt: >-
+          A receita marginal de um preço P vezes a quantidade Q usa a regra do produto.
+        fr: >-
+          La recette marginale d'un prix P par une quantité Q utilise la règle du produit.
+        zh: >-
+          价格P乘以数量Q的边际收入使用乘积法则。
+        ja: >-
+          価格P×数量Qの限界収入は、積の微分法を使う。
+    - title:
+        es: Física
+        en: Physics
+        pt: Física
+        fr: Physique
+        zh: 物理学
+        ja: 物理学
+      description:
+        es: >-
+          La potencia P = VI o el trabajo W = F·d se derivan con esta regla.
+        en: >-
+          Power P = VI or work W = F·d is differentiated with this rule.
+        pt: >-
+          Potência P = VI ou trabalho W = F·d são derivados com essa regra.
+        fr: >-
+          La puissance P = VI ou le travail W = F·d se dérivent avec cette règle.
+        zh: >-
+          功率P = VI或功W = F·d的导数用这条法则计算。
+        ja: >-
+          電力P = VIや仕事W = F·dは、この法則で微分される。
+    - title:
+        es: Procesamiento de señales
+        en: Signal processing
+        pt: Processamento de sinais
+        fr: Traitement du signal
+        zh: 信号处理
+        ja: 信号処理
+      description:
+        es: >-
+          La modulación multiplica señales; su envolvente se analiza con esta regla.
+        en: >-
+          Modulation multiplies signals; its envelope is analyzed with this rule.
+        pt: >-
+          A modulação multiplica sinais; sua envoltória é analisada com essa regra.
+        fr: >-
+          La modulation multiplie les signaux ; son enveloppe s'analyse avec cette règle.
+        zh: >-
+          调制将信号相乘；其包络用这条法则分析。
+        ja: >-
+          変調は信号を掛け合わせる。その包絡線はこの法則で解析される。
+  example:
+    title:
+      es: Derivada de x²·sin x
+      en: Derivative of x²·sin x
+      pt: Derivada de x²·sen x
+      fr: Dérivée de x²·sin x
+      zh: x²·sin x 的导数
+      ja: x²·sin x の導関数
+    lines:
+      - es: "f = x², g = sin x"
+        en: "f = x², g = sin x"
+        pt: "f = x², g = sen x"
+        fr: "f = x², g = sin x"
+        zh: "f = x²，g = sin x"
+        ja: "f = x²、g = sin x"
+      - es: f′ = 2x, g′ = cos x
+        en: f′ = 2x, g′ = cos x
+        pt: f′ = 2x, g′ = cos x
+        fr: f′ = 2x, g′ = cos x
+        zh: f′ = 2x，g′ = cos x
+        ja: f′ = 2x、g′ = cos x
+      - es: (f·g)′ = f′·g + f·g′
+        en: (f·g)′ = f′·g + f·g′
+        pt: (f·g)′ = f′·g + f·g′
+        fr: (f·g)′ = f′·g + f·g′
+        zh: (f·g)′ = f′·g + f·g′
+        ja: (f·g)′ = f′·g + f·g′
+      - es: (x²·sin x)′ = 2x·sin x + x²·cos x
+        en: (x²·sin x)′ = 2x·sin x + x²·cos x
+        pt: (x²·sen x)′ = 2x·sen x + x²·cos x
+        fr: (x²·sin x)′ = 2x·sin x + x²·cos x
+        zh: (x²·sin x)′ = 2x·sin x + x²·cos x
+        ja: (x²·sin x)′ = 2x·sin x + x²·cos x

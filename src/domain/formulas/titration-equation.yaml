@@ -1,0 +1,323 @@
+id: titration-equation
+title:
+  es: Ecuación de Titulación
+  en: Titration Equation
+  pt: Equação de Titulação
+  fr: Équation de titrage
+  zh: 滴定方程
+  ja: 滴定の式
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: m1
+    type: variable
+    value: M₁
+    explanation:
+      es: La molaridad de la disolución 1, su concentración en moles por litro.
+      en: The molarity of solution 1, its concentration in moles per litre.
+      pt: A molaridade da solução 1, sua concentração em mols por litro.
+      fr: La molarité de la solution 1, sa concentration en moles par litre.
+      zh: 溶液1的摩尔浓度，即每升所含的摩尔数。
+      ja: 溶液1のモル濃度。1リットルあたりのモル数。
+  - id: dot1
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: v1
+    type: variable
+    value: V₁
+    explanation:
+      es: El volumen de la disolución 1, en litros.
+      en: The volume of solution 1, in litres.
+      pt: O volume da solução 1, em litros.
+      fr: Le volume de la solution 1, en litres.
+      zh: 溶液1的体积，单位为升。
+      ja: 溶液1の体積。単位はリットル。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: m2
+    type: variable
+    value: M₂
+    explanation:
+      es: La molaridad de la disolución 2, la concentración que se desea hallar.
+      en: The molarity of solution 2, the concentration to be found.
+      pt: A molaridade da solução 2, a concentração que se deseja encontrar.
+      fr: La molarité de la solution 2, la concentration à déterminer.
+      zh: 溶液2的摩尔浓度，即要求解的浓度。
+      ja: 溶液2のモル濃度。求めたい濃度。
+  - id: dot2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: v2
+    type: variable
+    value: V₂
+    explanation:
+      es: El volumen de la disolución 2, en litros.
+      en: The volume of solution 2, in litres.
+      pt: O volume da solução 2, em litros.
+      fr: Le volume de la solution 2, en litres.
+      zh: 溶液2的体积，单位为升。
+      ja: 溶液2の体積。単位はリットル。
+context:
+  author:
+    es: Origen colectivo de la química analítica
+    en: Collective origin of analytical chemistry
+    pt: Origem coletiva da química analítica
+    fr: Origine collective de la chimie analytique
+    zh: 分析化学的集体起源
+    ja: 分析化学の集団的起源
+  era:
+    es: Europa, s. XVIII–XIX
+    en: Europe, 18th–19th centuries
+    pt: Europa, sécs. XVIII–XIX
+    fr: Europe, XVIIIe–XIXe siècles
+    zh: 欧洲,18–19世纪
+    ja: ヨーロッパ、18〜19世紀
+  history:
+    es: >-
+      En el punto de equivalencia de una titulación ácido-base, los moles de ácido y de base que
+      reaccionan son iguales, y esta ecuación los relaciona a través de la molaridad y el volumen de
+      cada disolución. La técnica nació en la química analítica del siglo XVIII con el uso de buretas
+      para medir disoluciones de concentración desconocida, y se convirtió en el procedimiento
+      estándar del laboratorio. Hoy sustenta el análisis de vinos, la potabilización de aguas y el
+      control de calidad de fármacos.
+    en: >-
+      At the equivalence point of an acid–base titration, the moles of acid and base that react are
+      equal, and this equation relates them through the molarity and volume of each solution. The
+      technique was born in 18th-century analytical chemistry with the use of burettes to measure
+      solutions of unknown concentration, and became the standard laboratory procedure. Today it
+      underpins wine analysis, drinking water treatment, and drug quality control.
+    pt: >-
+      No ponto de equivalência de uma titulação ácido-base, os mols de ácido e de base que reagem são
+      iguais, e esta equação os relaciona por meio da molaridade e do volume de cada solução. A
+      técnica nasceu na química analítica do século XVIII com o uso de buretas para medir soluções de
+      concentração desconhecida, e tornou-se o procedimento padrão de laboratório. Hoje sustenta a
+      análise de vinhos, o tratamento de águas e o controle de qualidade de fármacos.
+    fr: >-
+      Au point d'équivalence d'un titrage acide-base, les moles d'acide et de base qui réagissent
+      sont égales, et cette équation les relie par la molarité et le volume de chaque solution. La
+      technique est née dans la chimie analytique du XVIIIe siècle avec l'usage de la burette pour
+      mesurer des solutions de concentration inconnue, devenant la procédure de laboratoire standard.
+      Aujourd'hui, elle fonde l'analyse des vins, le traitement des eaux et le contrôle qualité des
+      médicaments.
+    zh: >-
+      在酸碱滴定中，当恰好完全反应（化学计量点）时，酸与碱的摩尔数相等，本方程通过两种溶液的摩尔浓度
+      和体积将它们联系起来。该技术诞生于18世纪的分析化学，当时人们用滴定管测量未知浓度的溶液，并逐渐
+      成为实验室的标准操作。如今它支撑着葡萄酒分析、饮用水处理和药品质量控制。
+    ja: >-
+      酸塩基滴定の当量点では、反応する酸と塩基のモル数が等しくなる。この式は、両溶液のモル濃度と体積
+      を通じて両者を結びつける。この技法は18世紀の分析化学で、未知濃度の溶液をビュレットで測定する手法
+      として生まれ、やがて実験室の標準手順となった。現在ではワインの分析、飲料水の浄化、医薬品の品質
+      管理を支えている。
+  timeline:
+    - year: "1754"
+      label:
+        es: >-
+          Guillaume-François Rouelle realiza las primeras valoraciones ácido-base usando tornasol como
+          indicador.
+        en: >-
+          Guillaume-François Rouelle performs the first acid–base titrations using litmus as an
+          indicator.
+        pt: >-
+          Guillaume-François Rouelle realiza as primeiras titulações ácido-base usando tornassol como
+          indicador.
+        fr: >-
+          Guillaume-François Rouelle réalise les premiers titrages acide-base avec du tournesol comme
+          indicateur.
+        zh: >-
+          纪尧姆-弗朗索瓦·鲁埃勒用石蕊作指示剂，进行了最早的酸碱滴定。
+        ja: >-
+          ギヨーム＝フランソワ・ルエルがリトマスを指示薬として最初の酸塩基滴定を行う。
+    - year: "1791"
+      label:
+        es: >-
+          François Descroizilles inventa la primera bureta en Ruán, herramienta clave de la técnica.
+        en: >-
+          François Descroizilles invents the first burette in Rouen, a key tool of the technique.
+        pt: >-
+          François Descroizilles inventa a primeira bureta em Ruão, ferramenta-chave da técnica.
+        fr: >-
+          François Descroizilles invente la première burette à Rouen, outil clé de la technique.
+        zh: >-
+          弗朗索瓦·德克鲁瓦齐耶在鲁昂发明了第一支滴定管，成为该技术的核心工具。
+        ja: >-
+          フランソワ・デスクロワズィーユがルーアンで最初のビュレットを発明する。この技術の要となる道具である。
+    - year: "1824"
+      label:
+        es: >-
+          Joseph Louis Gay-Lussac perfecciona la bureta y publica métodos volumétricos con plata.
+        en: >-
+          Joseph Louis Gay-Lussac refines the burette and publishes volumetric methods using silver.
+        pt: >-
+          Joseph Louis Gay-Lussac aperfeiçoa a bureta e publica métodos volumétricos com prata.
+        fr: >-
+          Joseph Louis Gay-Lussac perfectionne la burette et publie des méthodes volumétriques à
+          l'argent.
+        zh: >-
+          约瑟夫·路易·盖-吕萨克改进了滴定管，并发表了用银的容量分析方法。
+        ja: >-
+          ジョゼフ・ルイ・ゲイ＝リュサックがビュレットを改良し、銀を用いた定量分析法を発表する。
+    - year: Hoy
+      label:
+        es: >-
+          Los tituladores automáticos realizan en todo el mundo análisis de vinos, aguas y fármacos.
+        en: >-
+          Automated titrators worldwide run wine, water, and drug analysis.
+        pt: >-
+          Tituladores automáticos realizam no mundo todo análises de vinhos, águas e fármacos.
+        fr: >-
+          Des titrateurs automatiques réalisent dans le monde entier l'analyse des vins, des eaux et
+          des médicaments.
+        zh: >-
+          自动滴定仪在世界各地进行葡萄酒、水和药品的分析。
+        ja: >-
+          自動滴定装置が世界中でワイン、水、医薬品の分析を行っている。
+  useCases:
+    - title:
+        es: Análisis de vinos
+        en: Wine analysis
+        pt: Análise de vinhos
+        fr: Analyse des vins
+        zh: 葡萄酒分析
+        ja: ワイン分析
+      description:
+        es: >-
+          Mide la acidez total y el ácido tartárico, parámetros centrales de la calidad del vino.
+        en: >-
+          It measures total acidity and tartaric acid, central parameters of wine quality.
+        pt: >-
+          Mede a acidez total e o ácido tartárico, parâmetros centrais da qualidade do vinho.
+        fr: >-
+          Elle mesure l'acidité totale et l'acide tartrique, paramètres centraux de la qualité du vin.
+        zh: >-
+          测量总酸度和酒石酸含量，这是葡萄酒品质的核心指标。
+        ja: >-
+          ワインの品質の中核的な指標である総酸度と酒石酸を測定する。
+    - title:
+        es: Tratamiento de aguas
+        en: Water treatment
+        pt: Tratamento de águas
+        fr: Traitement des eaux
+        zh: 水处理
+        ja: 水処理
+      description:
+        es: >-
+          Controla la alcalinidad y la dureza del agua potable para cumplir normas sanitarias.
+        en: >-
+          It monitors the alkalinity and hardness of drinking water to meet health standards.
+        pt: >-
+          Controla a alcalinidade e a dureza da água potável para cumprir normas sanitárias.
+        fr: >-
+          Elle contrôle l'alcalinité et la dureté de l'eau potable pour respecter les normes
+          sanitaires.
+        zh: >-
+          监测饮用水的碱度和硬度，以确保符合卫生标准。
+        ja: >-
+          飲料水のアルカリ度や硬度を管理し、衛生基準を満たすために用いられる。
+    - title:
+        es: Control farmacéutico
+        en: Pharmaceutical quality control
+        pt: Controle farmacêutico
+        fr: Contrôle pharmaceutique
+        zh: 药品质量控制
+        ja: 医薬品の品質管理
+      description:
+        es: >-
+          Verifica que la concentración del principio activo de un medicamento sea la declarada.
+        en: >-
+          It verifies that a drug's active ingredient matches its declared concentration.
+        pt: >-
+          Verifica se a concentração do princípio ativo de um medicamento é a declarada.
+        fr: >-
+          Elle vérifie que la concentration du principe actif d'un médicament correspond à celle
+          déclarée.
+        zh: >-
+          验证药品有效成分的浓度与标示值是否一致。
+        ja: >-
+          医薬品の有効成分の濃度が表示どおりであるかを検証する。
+    - title:
+        es: Análisis de alimentos
+        en: Food analysis
+        pt: Análise de alimentos
+        fr: Analyse alimentaire
+        zh: 食品分析
+        ja: 食品分析
+      description:
+        es: >-
+          Determina la acidez de zumos, lácteos y conservas para evaluar frescura y seguridad.
+        en: >-
+          It determines the acidity of juices, dairy, and canned foods to assess freshness and safety.
+        pt: >-
+          Determina a acidez de sucos, laticínios e conservas para avaliar frescor e segurança.
+        fr: >-
+          Elle détermine l'acidité des jus, des produits laitiers et des conserves pour évaluer la
+          fraîcheur et la sécurité.
+        zh: >-
+          测定果汁、乳制品和罐头的酸度，以评估新鲜度和安全性。
+        ja: >-
+          ジュース、乳製品、缶詰の酸度を測定し、鮮度と安全性を評価する。
+  example:
+    title:
+      es: Concentración de un ácido
+      en: Concentration of an acid
+      pt: Concentração de um ácido
+      fr: Concentration d'un acide
+      zh: 酸的浓度
+      ja: 酸の濃度
+    lines:
+      - es: "M₁ = 0.1 M, V₁ = 20 mL, V₂ = 10 mL"
+        en: "M₁ = 0.1 M, V₁ = 20 mL, V₂ = 10 mL"
+        pt: "M₁ = 0,1 M, V₁ = 20 mL, V₂ = 10 mL"
+        fr: "M₁ = 0,1 M, V₁ = 20 mL, V₂ = 10 mL"
+        zh: "M₁ = 0.1 M, V₁ = 20 mL, V₂ = 10 mL"
+        ja: "M₁ = 0.1 M, V₁ = 20 mL, V₂ = 10 mL"
+      - es: M₁ · V₁ = M₂ · V₂
+        en: M₁ · V₁ = M₂ · V₂
+        pt: M₁ · V₁ = M₂ · V₂
+        fr: M₁ · V₁ = M₂ · V₂
+        zh: M₁ · V₁ = M₂ · V₂
+        ja: M₁ · V₁ = M₂ · V₂
+      - es: M₂ = (M₁ · V₁) / V₂
+        en: M₂ = (M₁ · V₁) / V₂
+        pt: M₂ = (M₁ · V₁) / V₂
+        fr: M₂ = (M₁ · V₁) / V₂
+        zh: M₂ = (M₁ · V₁) / V₂
+        ja: M₂ = (M₁ · V₁) / V₂
+      - es: M₂ = (0.1 × 20) / 10
+        en: M₂ = (0.1 × 20) / 10
+        pt: M₂ = (0,1 × 20) / 10
+        fr: M₂ = (0,1 × 20) / 10
+        zh: M₂ = (0.1 × 20) / 10
+        ja: M₂ = (0.1 × 20) / 10
+      - es: M₂ = 2 / 10 = 0.2 M
+        en: M₂ = 2 / 10 = 0.2 M
+        pt: M₂ = 2 / 10 = 0,2 M
+        fr: M₂ = 2 / 10 = 0,2 M
+        zh: M₂ = 2 / 10 = 0.2 M
+        ja: M₂ = 2 / 10 = 0.2 M

@@ -1,0 +1,254 @@
+id: lens-equation
+title:
+  es: Ecuación de las Lentes
+  en: Thin Lens Equation
+  pt: Equação das Lentes
+  fr: Équation des lentilles minces
+  zh: 薄透镜公式
+  ja: レンズの公式
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: one-f
+    type: variable
+    value: 1/f
+    explanation:
+      es: El inverso de la distancia focal de la lente.
+      en: The inverse of the lens's focal length.
+      pt: O inverso da distância focal da lente.
+      fr: L'inverse de la distance focale de la lentille.
+      zh: 透镜焦距的倒数。
+      ja: レンズの焦点距離の逆数。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: one-do
+    type: variable
+    value: 1/dₒ
+    explanation:
+      es: El inverso de la distancia del objeto a la lente.
+      en: The inverse of the object's distance from the lens.
+      pt: O inverso da distância do objeto à lente.
+      fr: L'inverse de la distance de l'objet à la lentille.
+      zh: 物体到透镜距离的倒数。
+      ja: 物体からレンズまでの距離の逆数。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado a.
+      en: Added to.
+      pt: Somado a.
+      fr: Ajouté à.
+      zh: 加上。
+      ja: に加える。
+  - id: one-di
+    type: variable
+    value: 1/dᵢ
+    explanation:
+      es: El inverso de la distancia de la imagen a la lente.
+      en: The inverse of the image's distance from the lens.
+      pt: O inverso da distância da imagem à lente.
+      fr: L'inverse de la distance de l'image à la lentille.
+      zh: 像到透镜距离的倒数。
+      ja: 像からレンズまでの距離の逆数。
+context:
+  author:
+    es: René Descartes
+    en: René Descartes
+    pt: René Descartes
+    fr: René Descartes
+    zh: 勒内·笛卡尔
+    ja: ルネ・デカルト
+  era:
+    es: Francia, 1596–1650 · deducida en 1637
+    en: France, 1596–1650 · derived in 1637
+    pt: França, 1596–1650 · deduzida em 1637
+    fr: France, 1596–1650 · déduite en 1637
+    zh: 法国，1596–1650年·1637年推导
+    ja: フランス、1596–1650年・1637年に導出
+  history:
+    es: >-
+      Descartes dedujo la ecuación de la lente delgada en 1637, en su Dioptrique, aplicando la ley de
+      refracción que él mismo había formulado. Relaciona la distancia focal f de una lente con la
+      distancia del objeto dₒ y de la imagen dᵢ. Es la base del diseño de anteojos, cámaras,
+      telescopios y microscopios: saber dónde se forma la imagen dado el objeto, o qué lente elegir
+      para enfocarla.
+    en: >-
+      Descartes derived the thin lens equation in 1637, in his Dioptrique, applying the law of
+      refraction he had himself formulated. It relates a lens's focal length f to the object distance dₒ
+      and image distance dᵢ. It is the basis for designing eyeglasses, cameras, telescopes, and
+      microscopes: knowing where the image forms given the object, or which lens to choose to focus it.
+    pt: >-
+      Descartes deduziu a equação da lente delgada em 1637, em sua Dioptrique, aplicando a lei da
+      refração que ele mesmo formulara. Ela relaciona a distância focal f de uma lente com a distância
+      do objeto dₒ e da imagem dᵢ. É a base do projeto de óculos, câmeras, telescópios e microscópios:
+      saber onde se forma a imagem dado o objeto, ou que lente escolher para focá-la.
+    fr: >-
+      Descartes déduisit l'équation de la lentille mince en 1637, dans sa Dioptrique, en appliquant la
+      loi de la réfraction qu'il avait lui-même formulée. Elle relie la distance focale f d'une lentille
+      aux distances de l'objet dₒ et de l'image dᵢ. C'est la base de la conception des lunettes, des
+      appareils photo, des télescopes et des microscopes : savoir où se forme l'image pour un objet
+      donné, ou quelle lentille choisir pour la focaliser.
+    zh: >-
+      笛卡尔在1637年的《屈光学》中，应用他自己提出的折射定律推导出薄透镜方程。它将透镜的焦距f与物距dₒ、像距
+      dᵢ联系起来。它是设计眼镜、相机、望远镜和显微镜的基础：给定物体，知道像在哪里形成，或选择哪块透镜来聚焦。
+    ja: >-
+      デカルトは1637年の『屈折光学』で、自らが定式化した屈折の法則を応用して薄レンズの公式を導いた。これは、
+      レンズの焦点距離fを、物体距離dₒと像距離dᵢと結びつける。眼鏡、カメラ、望遠鏡、顕微鏡の設計の基礎であり、
+      物体が与えられたとき像がどこにできるか、どのレンズを選べば焦点が合うかを知ることができる。
+  timeline:
+    - year: "1637"
+      label:
+        es: >-
+          Descartes publica la ecuación en su Dioptrique.
+        en: >-
+          Descartes publishes the equation in his Dioptrique.
+        pt: >-
+          Descartes publica a equação em sua Dioptrique.
+        fr: >-
+          Descartes publie l'équation dans sa Dioptrique.
+        zh: >-
+          笛卡尔在《屈光学》中发表该方程。
+        ja: >-
+          デカルトが『屈折光学』でこの公式を発表する。
+    - year: s. XVII–XVIII
+      label:
+        es: >-
+          Huygens y Newton la aplican a telescopios y microscopios.
+        en: >-
+          Huygens and Newton apply it to telescopes and microscopes.
+        pt: >-
+          Huygens e Newton a aplicam a telescópios e microscópios.
+        fr: >-
+          Huygens et Newton l'appliquent aux télescopes et microscopes.
+        zh: >-
+          惠更斯和牛顿将其应用于望远镜和显微镜。
+        ja: >-
+          ホイヘンスとニュートンが望遠鏡や顕微鏡にこれを応用する。
+    - year: Hoy
+      label:
+        es: >-
+          Está en toda cámara, anteojo y sistema óptico de la tecnología moderna.
+        en: >-
+          It is in every camera, scope, and optical system of modern technology.
+        pt: >-
+          Está em toda câmera, luneta e sistema óptico da tecnologia moderna.
+        fr: >-
+          Elle est dans toute caméra, lunette et système optique de la technologie moderne.
+        zh: >-
+          现代技术的每台相机、瞄准镜和光学系统都包含它。
+        ja: >-
+          現代技術のあらゆるカメラ、スコープ、光学系に含まれている。
+  useCases:
+    - title:
+        es: Óptica de cámaras
+        en: Camera optics
+        pt: Óptica de câmeras
+        fr: Optique des appareils photo
+        zh: 相机光学
+        ja: カメラの光学
+      description:
+        es: >-
+          El autofoco calcula la posición de la lente para formar la imagen en el sensor.
+        en: >-
+          Autofocus computes the lens position to form the image on the sensor.
+        pt: >-
+          O autofoco calcula a posição da lente para formar a imagem no sensor.
+        fr: >-
+          L'autofocus calcule la position de la lentille pour former l'image sur le capteur.
+        zh: >-
+          自动对焦计算透镜位置，使像落在传感器上。
+        ja: >-
+          オートフォーカスが、像をセンサーに結ぶためのレンズ位置を計算する。
+    - title:
+        es: Corrección visual
+        en: Vision correction
+        pt: Correção visual
+        fr: Correction de la vision
+        zh: 视力矫正
+        ja: 視力矯正
+      description:
+        es: >-
+          La graduación de anteojos y lentes de contacto usa esta ecuación.
+        en: >-
+          Eyeglass and contact lens prescriptions use this equation.
+        pt: >-
+          A graduação de óculos e lentes de contato usa essa equação.
+        fr: >-
+          Les corrections de lunettes et lentilles utilisent cette équation.
+        zh: >-
+          眼镜和隐形眼镜的度数用这条方程计算。
+        ja: >-
+          眼鏡やコンタクトレンズの処方は、この公式を使う。
+    - title:
+        es: Telescopios y microscopios
+        en: Telescopes and microscopes
+        pt: Telescópios e microscópios
+        fr: Télescopes et microscopes
+        zh: 望远镜与显微镜
+        ja: 望遠鏡と顕微鏡
+      description:
+        es: >-
+          El enfoque de objetivos astronómicos y biológicos depende de esta relación.
+        en: >-
+          Focusing astronomical and biological objectives depends on this relation.
+        pt: >-
+          O foco de objetivos astronômicos e biológicos depende dessa relação.
+        fr: >-
+          La mise au point des objectifs astronomiques et biologiques dépend de cette relation.
+        zh: >-
+          天文和生物物镜的聚焦依赖于这一关系。
+        ja: >-
+          天文・生物用対物レンズの焦点合わせは、この関係に依存する。
+  example:
+    title:
+      es: Una lente de 10 cm
+      en: A 10 cm lens
+      pt: Uma lente de 10 cm
+      fr: Une lentille de 10 cm
+      zh: 焦距10厘米的透镜
+      ja: 焦点距離10 cmのレンズ
+    lines:
+      - es: f = 10 cm, dₒ = 30 cm
+        en: f = 10 cm, dₒ = 30 cm
+        pt: f = 10 cm, dₒ = 30 cm
+        fr: f = 10 cm, dₒ = 30 cm
+        zh: f = 10 厘米，dₒ = 30 厘米
+        ja: f = 10 cm、dₒ = 30 cm
+      - es: 1/f = 1/dₒ + 1/dᵢ
+        en: 1/f = 1/dₒ + 1/dᵢ
+        pt: 1/f = 1/dₒ + 1/dᵢ
+        fr: 1/f = 1/dₒ + 1/dᵢ
+        zh: 1/f = 1/dₒ + 1/dᵢ
+        ja: 1/f = 1/dₒ + 1/dᵢ
+      - es: 1/10 = 1/30 + 1/dᵢ
+        en: 1/10 = 1/30 + 1/dᵢ
+        pt: 1/10 = 1/30 + 1/dᵢ
+        fr: 1/10 = 1/30 + 1/dᵢ
+        zh: 1/10 = 1/30 + 1/dᵢ
+        ja: 1/10 = 1/30 + 1/dᵢ
+      - es: 1/dᵢ = 1/10 − 1/30 = 2/30
+        en: 1/dᵢ = 1/10 − 1/30 = 2/30
+        pt: 1/dᵢ = 1/10 − 1/30 = 2/30
+        fr: 1/dᵢ = 1/10 − 1/30 = 2/30
+        zh: 1/dᵢ = 1/10 − 1/30 = 2/30
+        ja: 1/dᵢ = 1/10 − 1/30 = 2/30
+      - es: "dᵢ = 15 cm: la imagen se forma a 15 cm"
+        en: "dᵢ = 15 cm: the image forms 15 cm away"
+        pt: "dᵢ = 15 cm: a imagem se forma a 15 cm"
+        fr: "dᵢ = 15 cm : l'image se forme à 15 cm"
+        zh: dᵢ = 15 厘米：像在15厘米处形成
+        ja: dᵢ = 15 cm：像は15 cmのところにできる

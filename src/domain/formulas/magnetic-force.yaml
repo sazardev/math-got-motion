@@ -1,0 +1,375 @@
+id: magnetic-force
+title:
+  es: Fuerza Magnética sobre una Carga
+  en: Magnetic Force on a Charge
+  pt: Força Magnética sobre uma Carga
+  fr: Force Magnétique sur une Charge
+  zh: 作用在电荷上的磁力
+  ja: 電荷に働く磁気力
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: La fuerza magnética que actúa sobre la carga en movimiento.
+      en: The magnetic force acting on the moving charge.
+      pt: A força magnética que atua sobre a carga em movimento.
+      fr: La force magnétique qui agit sur la charge en mouvement.
+      zh: 作用在运动电荷上的磁力。
+      ja: 運動する電荷に働く磁気力。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: q
+    type: variable
+    value: q
+    explanation:
+      es: La carga eléctrica en movimiento, medida en coulombs.
+      en: The moving electric charge, measured in coulombs.
+      pt: A carga elétrica em movimento, medida em coulombs.
+      fr: La charge électrique en mouvement, mesurée en coulombs.
+      zh: 运动的电荷量，以库仑为单位。
+      ja: 運動する電荷。単位はクーロン。
+  - id: dot-1
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: La velocidad de la carga, con su dirección y sentido.
+      en: The charge's velocity, with its direction and sense.
+      pt: A velocidade da carga, com sua direção e sentido.
+      fr: La vitesse de la charge, avec sa direction et son sens.
+      zh: 电荷的速度，包括大小和方向。
+      ja: 電荷の速度。大きさと向きを持つ。
+  - id: dot-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: b
+    type: variable
+    value: B
+    explanation:
+      es: El campo magnético en el que se mueve la carga.
+      en: The magnetic field in which the charge moves.
+      pt: O campo magnético no qual a carga se move.
+      fr: Le champ magnétique dans lequel la charge se déplace.
+      zh: 电荷所处的磁场。
+      ja: 電荷が運動している磁場。
+  - id: dot-3
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: sin
+    type: operator
+    value: sin
+    explanation:
+      es: El seno del ángulo entre la velocidad y el campo.
+      en: The sine of the angle between velocity and field.
+      pt: O seno do ângulo entre a velocidade e o campo.
+      fr: Le sinus de l'angle entre vitesse et champ.
+      zh: 速度与磁场夹角的正弦。
+      ja: 速度と磁場のなす角の正弦。
+  - id: theta
+    type: variable
+    value: θ
+    explanation:
+      es: El ángulo entre la dirección de v y la de B.
+      en: The angle between the direction of v and that of B.
+      pt: O ângulo entre a direção de v e a de B.
+      fr: L'angle entre la direction de v et celle de B.
+      zh: v的方向与B的方向之间的夹角。
+      ja: vの向きとBの向きとの間の角度。
+context:
+  author:
+    es: Hendrik Lorentz
+    en: Hendrik Lorentz
+    pt: Hendrik Lorentz
+    fr: Hendrik Lorentz
+    zh: 亨德里克·洛伦兹
+    ja: ヘンドリック・ローレンツ
+  era:
+    es: Países Bajos, 1853–1928 · formalizada en 1892
+    en: Netherlands, 1853–1928 · formalized in 1892
+    pt: Países Baixos, 1853–1928 · formalizada em 1892
+    fr: Pays-Bas, 1853–1928 · formalisée en 1892
+    zh: 荷兰，1853–1928年 · 1892年正式提出
+    ja: オランダ、1853–1928年・1892年に定式化
+  history:
+    es: >-
+      La fuerza magnética sobre una carga en movimiento fue completada por Hendrik Lorentz en 1892,
+      unificando el trabajo de Ampère y Faraday en una sola ley. Su magnitud depende del seno del
+      ángulo entre velocidad y campo: si son paralelos la fuerza se anula; si son perpendiculares es
+      máxima, y su dirección sigue la regla de la mano derecha. Explica por qué las auroras brillan
+      en los polos, donde las partículas del viento solar se desvían a lo largo del campo terrestre,
+      y sustenta ciclotrones, espectrómetros de masa y el LHC.
+    en: >-
+      The magnetic force on a moving charge was completed by Hendrik Lorentz in 1892, unifying the
+      work of Ampère and Faraday into a single law. Its magnitude depends on the sine of the angle
+      between velocity and field: parallel, the force vanishes; perpendicular, it is maximal, and
+      its direction follows the right-hand rule. It explains why auroras glow at the poles, where
+      solar wind particles are funneled along Earth's field lines, and underpins cyclotrons, mass
+      spectrometers, and the LHC.
+    pt: >-
+      A força magnética sobre uma carga em movimento foi completada por Hendrik Lorentz em 1892,
+      unificando o trabalho de Ampère e Faraday em uma única lei. Sua magnitude depende do seno do
+      ângulo entre velocidade e campo: paralelos, a força se anula; perpendiculares, é máxima, e
+      sua direção segue a regra da mão direita. Explica por que as auroras brilham nos polos, onde
+      as partículas do vento solar são desviadas ao longo do campo terrestre, e sustenta cíclotrons,
+      espectrômetros de massa e o LHC.
+    fr: >-
+      La force magnétique sur une charge en mouvement fut complétée par Hendrik Lorentz en 1892,
+      unifiant les travaux d'Ampère et de Faraday en une seule loi. Sa grandeur dépend du sinus de
+      l'angle entre vitesse et champ : parallèles, la force s'annule ; perpendiculaires, elle est
+      maximale, et sa direction suit la règle de la main droite. Elle explique pourquoi les aurores
+      brillent aux pôles, où les particules du vent solaire sont guidées le long du champ terrestre,
+      et sous-tend les cyclotrons, les spectromètres de masse et le LHC.
+    zh: >-
+      移动电荷所受的磁力由亨德里克·洛伦兹于1892年完整表述，将安培与法拉第的工作统一为一条定律。
+      其大小取决于速度与磁场夹角的正弦：两者平行时力为零，垂直时力最大，方向由右手定则确定。
+      它解释了极光为何出现在两极——太阳风粒子沿地球磁场线偏转——也是回旋加速器、质谱仪和
+      大型强子对撞机（LHC）的基础。
+    ja: >-
+      移動する電荷に働く磁気力は、1892年にヘンドリック・ローレンツがアンペールとファラデーの業績を
+      一つの法則に統合して完成させた。その大きさは速度と磁場のなす角の正弦に依存し、平行なら力は
+      ゼロ、垂直なら最大となり、向きは右手の法則に従う。太陽風の粒子が地球の磁力線に沿って導かれる
+      極地方でオーロラが輝く理由を説明し、サイクロトロンや質量分析計、LHCの基礎となっている。
+  timeline:
+    - year: "1820"
+      label:
+        es: >-
+          Oersted descubre que una corriente desvía la aguja de una brújula, el primer vínculo
+          entre electricidad y magnetismo.
+        en: >-
+          Oersted discovers that a current deflects a compass needle, the first link between
+          electricity and magnetism.
+        pt: >-
+          Oersted descobre que uma corrente desvia a agulha de uma bússola, o primeiro vínculo
+          entre eletricidade e magnetismo.
+        fr: >-
+          Oersted découvre qu'un courant dévie l'aiguille d'une boussole, le premier lien entre
+          l'électricité et le magnétisme.
+        zh: >-
+          奥斯特发现电流会使指南针的指针偏转，这是电与磁之间的第一个联系。
+        ja: >-
+          エルステッドが、電流が方位磁針を振れさせることを発見。電気と磁気を結ぶ最初の手がかりである。
+    - year: "1892"
+      label:
+        es: >-
+          Hendrik Lorentz formula la ley completa de la fuerza magnética sobre una carga en
+          movimiento.
+        en: >-
+          Hendrik Lorentz formulates the complete law of the magnetic force on a moving charge.
+        pt: >-
+          Hendrik Lorentz formula a lei completa da força magnética sobre uma carga em movimento.
+        fr: >-
+          Hendrik Lorentz formule la loi complète de la force magnétique sur une charge en
+          mouvement.
+        zh: >-
+          亨德里克·洛伦兹完整表述了运动电荷所受磁力的定律。
+        ja: >-
+          ヘンドリック・ローレンツが、運動する電荷に働く磁気力の完全な法則を定式化する。
+    - year: "1932"
+      label:
+        es: >-
+          Lawrence y Livingston construyen el primer ciclotrón, que acelera protones con esta
+          fuerza.
+        en: >-
+          Lawrence and Livingston build the first cyclotron, accelerating protons with this force.
+        pt: >-
+          Lawrence e Livingston constroem o primeiro cíclotron, que acelera prótons com essa força.
+        fr: >-
+          Lawrence et Livingston construisent le premier cyclotron, qui accélère des protons avec
+          cette force.
+        zh: >-
+          劳伦斯和利文斯顿建造了第一台回旋加速器，利用这一力加速质子。
+        ja: >-
+          ローレンスとリビングストンが、この力を用いて陽子を加速する初のサイクロトロンを建設する。
+    - year: Hoy
+      label:
+        es: >-
+          El LHC y los espectrómetros de masa guían partículas con esta fuerza a escala industrial.
+        en: >-
+          The LHC and mass spectrometers steer particles with this force on an industrial scale.
+        pt: >-
+          O LHC e os espectrômetros de massa guiam partículas com essa força em escala industrial.
+        fr: >-
+          Le LHC et les spectromètres de masse guident les particules avec cette force à l'échelle
+          industrielle.
+        zh: >-
+          大型强子对撞机和质谱仪在工业规模上利用这一力引导粒子。
+        ja: >-
+          LHCや質量分析計が、この力を用いて粒子を産業規模で誘導している。
+  useCases:
+    - title:
+        es: Aceleradores de partículas
+        en: Particle accelerators
+        pt: Aceleradores de partículas
+        fr: Accélérateurs de particules
+        zh: 粒子加速器
+        ja: 粒子加速器
+      description:
+        es: >-
+          Los ciclotrones y el LHC doblan los haces de partículas con campos magnéticos calculados
+          con esta fuerza.
+        en: >-
+          Cyclotrons and the LHC bend particle beams with magnetic fields calculated from this
+          force.
+        pt: >-
+          Os cíclotrons e o LHC curvam os feixes de partículas com campos magnéticos calculados
+          com essa força.
+        fr: >-
+          Les cyclotrons et le LHC courbent les faisceaux de particules avec des champs magnétiques
+          calculés à partir de cette force.
+        zh: >-
+          回旋加速器和大型强子对撞机用由这一力计算出的磁场使粒子束偏转。
+        ja: >-
+          サイクロトロンやLHCは、この力から計算した磁場で粒子ビームを曲げている。
+    - title:
+        es: Espectrometría de masas
+        en: Mass spectrometry
+        pt: Espectrometria de massas
+        fr: Spectrométrie de masse
+        zh: 质谱分析
+        ja: 質量分析
+      description:
+        es: >-
+          Separa los iones de una muestra según su relación carga/masa, desviándolos con este
+          campo.
+        en: >-
+          It separates ions in a sample by their charge-to-mass ratio, deflecting them with this
+          field.
+        pt: >-
+          Separa os íons de uma amostra segundo sua relação carga/massa, desviando-os com esse
+          campo.
+        fr: >-
+          Elle sépare les ions d'un échantillon selon leur rapport charge/masse, en les déviant
+          avec ce champ.
+        zh: >-
+          根据质荷比分离样品中的离子，用该磁场使其偏转。
+        ja: >-
+          試料中のイオンを質量電荷比で分離する。この磁場でイオンを曲げる。
+    - title:
+        es: Confinamiento de plasma
+        en: Plasma confinement
+        pt: Confinamento de plasma
+        fr: Confinement du plasma
+        zh: 等离子体约束
+        ja: プラズマ閉じ込め
+      description:
+        es: >-
+          En los tokamaks, los campos magnéticos retienen el plasma caliente sin que toque las
+          paredes del reactor.
+        en: >-
+          In tokamaks, magnetic fields hold the hot plasma without it touching the reactor walls.
+        pt: >-
+          Nos tokamaks, campos magnéticos retêm o plasma quente sem que ele toque as paredes do
+          reator.
+        fr: >-
+          Dans les tokamaks, les champs magnétiques retiennent le plasma chaud sans qu'il touche
+          les parois du réacteur.
+        zh: >-
+          在托卡马克装置中，磁场将高温等离子体约束住，使其不接触反应堆壁。
+        ja: >-
+          トカマクでは、磁場が高温プラズマを炉壁に触れさせずに閉じ込めている。
+    - title:
+        es: Meteorología espacial
+        en: Space weather
+        pt: Meteorologia espacial
+        fr: Météorologie spatiale
+        zh: 空间天气
+        ja: 宇宙天気
+      description:
+        es: >-
+          Modela cómo el viento solar desvía partículas hacia los polos, donde producen auroras.
+        en: >-
+          It models how the solar wind deflects particles toward the poles, where they produce
+          auroras.
+        pt: >-
+          Modela como o vento solar desvia partículas em direção aos polos, onde produzem auroras.
+        fr: >-
+          Elle modélise comment le vent solaire dévie les particules vers les pôles, où elles
+          produisent des aurores.
+        zh: >-
+          模拟太阳风如何将粒子偏转至两极，在那里产生极光。
+        ja: >-
+          太陽風が粒子を極地方へ偏向させ、オーロラを生む過程をモデル化する。
+  example:
+    title:
+      es: Fuerza sobre una carga
+      en: Force on a charge
+      pt: Força sobre uma carga
+      fr: Force sur une charge
+      zh: 作用在电荷上的力
+      ja: 電荷に働く力
+    lines:
+      - es: q = 1.6×10⁻¹⁹ C, v = 10⁶ m/s
+        en: q = 1.6×10⁻¹⁹ C, v = 10⁶ m/s
+        pt: q = 1,6×10⁻¹⁹ C, v = 10⁶ m/s
+        fr: q = 1,6×10⁻¹⁹ C, v = 10⁶ m/s
+        zh: q = 1.6×10⁻¹⁹ C，v = 10⁶ m/s
+        ja: q = 1.6×10⁻¹⁹ C、v = 10⁶ m/s
+      - es: B = 1 T, θ = 90°
+        en: B = 1 T, θ = 90°
+        pt: B = 1 T, θ = 90°
+        fr: B = 1 T, θ = 90°
+        zh: B = 1 T，θ = 90°
+        ja: B = 1 T、θ = 90°
+      - es: F = q · v · B · sen(θ)
+        en: F = q · v · B · sin(θ)
+        pt: F = q · v · B · sen(θ)
+        fr: F = q · v · B · sin(θ)
+        zh: F = q · v · B · sin(θ)
+        ja: F = q · v · B · sin(θ)
+      - es: F = 1.6×10⁻¹⁹ × 10⁶ × 1 × sen(90°)
+        en: F = 1.6×10⁻¹⁹ × 10⁶ × 1 × sin(90°)
+        pt: F = 1,6×10⁻¹⁹ × 10⁶ × 1 × sen(90°)
+        fr: F = 1,6×10⁻¹⁹ × 10⁶ × 1 × sin(90°)
+        zh: F = 1.6×10⁻¹⁹ × 10⁶ × 1 × sin(90°)
+        ja: F = 1.6×10⁻¹⁹ × 10⁶ × 1 × sin(90°)
+      - es: sen(90°) = 1
+        en: sin(90°) = 1
+        pt: sen(90°) = 1
+        fr: sin(90°) = 1
+        zh: sin(90°) = 1
+        ja: sin(90°) = 1
+      - es: F = 1.6×10⁻¹³ N
+        en: F = 1.6×10⁻¹³ N
+        pt: F = 1,6×10⁻¹³ N
+        fr: F = 1,6×10⁻¹³ N
+        zh: F = 1.6×10⁻¹³ N
+        ja: F = 1.6×10⁻¹³ N

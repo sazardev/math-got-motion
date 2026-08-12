@@ -1,0 +1,329 @@
+id: electric-energy
+title:
+  es: Energía Eléctrica
+  en: Electrical Energy
+  pt: Energia Elétrica
+  fr: Énergie électrique
+  zh: 电能
+  ja: 電気エネルギー
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: La energía eléctrica total que el dispositivo consume o entrega durante el tiempo dado.
+      en: The total electrical energy the device consumes or delivers over the given time.
+      pt: A energia elétrica total que o dispositivo consome ou fornece durante o tempo dado.
+      fr: L'énergie électrique totale que le dispositif consomme ou fournit pendant la durée donnée.
+      zh: 设备在给定时间内消耗或提供的总电能。
+      ja: 素子が所定の時間に消費または供給する電気エネルギーの総量。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: これは次の値に等しい。
+  - id: p
+    type: variable
+    value: P
+    explanation:
+      es: La potencia del dispositivo, es decir, la energía que consume por unidad de tiempo.
+      en: The device's power, that is, the energy it consumes per unit of time.
+      pt: A potência do dispositivo, ou seja, a energia que ele consome por unidade de tempo.
+      fr: La puissance du dispositif, c'est-à-dire l'énergie qu'il consomme par unité de temps.
+      zh: 设备的功率，即它每单位时间消耗的能量。
+      ja: 素子の電力。単位時間あたりに消費するエネルギーを表す。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: "Multiplicación: la potencia se multiplica por el tiempo de uso."
+      en: "Multiplication: the power is multiplied by the time of use."
+      pt: "Multiplicação: a potência é multiplicada pelo tempo de uso."
+      fr: "Multiplication : la puissance est multipliée par la durée d'utilisation."
+      zh: "乘法：功率乘以使用时间。"
+      ja: "乗算。電力に使用時間を掛け合わせる。"
+  - id: t
+    type: variable
+    value: t
+    explanation:
+      es: El tiempo durante el cual el dispositivo permanece en funcionamiento.
+      en: The time during which the device stays running.
+      pt: O tempo durante o qual o dispositivo permanece em funcionamento.
+      fr: La durée pendant laquelle le dispositif reste en fonctionnement.
+      zh: 设备持续运行的时间。
+      ja: 素子が動作し続ける時間。
+context:
+  author:
+    es: Origen colectivo de la ingeniería eléctrica
+    en: Collective origin in electrical engineering
+    pt: Origem coletiva da engenharia elétrica
+    fr: Origine collective de l'ingénierie électrique
+    zh: 电气工程的集体成果
+    ja: 電気工学の集団的な起源
+  era:
+    es: Europa, s. XIX
+    en: Europe, 19th century
+    pt: Europa, s. XIX
+    fr: Europe, XIXᵉ siècle
+    zh: 欧洲，19世纪
+    ja: ヨーロッパ、19世紀
+  history:
+    es: >-
+      La energía que un circuito consume es el producto de su potencia por el tiempo de uso: E = P·t.
+      Aunque la noción de energía se consolidó en la mecánica del siglo XIX, fue la comercialización
+      de la electricidad la que convirtió esta relación en una unidad cotidiana. Al comenzar a cobrar
+      por la energía suministrada, las compañías necesitaban una medida del consumo: el vatio-hora y
+      luego el kilovatio-hora (kWh) se estandarizaron como unidad de las facturas. Hoy, cada medidor
+      de un hogar suma la energía consumida en kWh, y la capacidad de las baterías, de los teléfonos
+      a los vehículos, se expresa en esa misma escala.
+    en: >-
+      The energy a circuit consumes is the product of its power and the time it runs: E = P·t. While
+      the concept of energy took shape in nineteenth-century mechanics, it was the commercialization
+      of electricity that turned this relation into an everyday unit. As companies began charging for
+      the energy supplied, they needed a measure of consumption: the watt-hour and then the
+      kilowatt-hour (kWh) became the standard unit on bills. Today, every household meter sums the
+      energy used in kWh, and the capacity of batteries, from phones to vehicles, is expressed on
+      that same scale.
+    pt: >-
+      A energia que um circuito consome é o produto de sua potência pelo tempo de uso: E = P·t.
+      Embora a noção de energia tenha se consolidado na mecânica do século XIX, foi a comercialização
+      da eletricidade que transformou essa relação em uma unidade do cotidiano. Ao começarem a cobrar
+      pela energia fornecida, as companhias precisaram de uma medida do consumo: o watt-hora e depois
+      o quilowatt-hora (kWh) se tornaram a unidade padrão das contas de luz. Hoje, cada medidor de
+      uma residência soma a energia consumida em kWh, e a capacidade das baterias, de telefones a
+      veículos, é expressa nessa mesma escala.
+    fr: >-
+      L'énergie qu'un circuit consomme est le produit de sa puissance par la durée d'utilisation :
+      E = P·t. Si la notion d'énergie s'est consolidée dans la mécanique du XIXᵉ siècle, c'est la
+      commercialisation de l'électricité qui a transformé cette relation en unité quotidienne. En
+      commençant à facturer l'énergie fournie, les compagnies ont eu besoin d'une mesure de la
+      consommation : le watt-heure puis le kilowatt-heure (kWh) sont devenus l'unité standard des
+      factures. Aujourd'hui, chaque compteur domestique additionne l'énergie consommée en kWh, et la
+      capacité des batteries, des téléphones aux véhicules, s'exprime sur cette même échelle.
+    zh: >-
+      电路消耗的能量等于其功率乘以使用时间：E = P·t。虽然能量的概念在19世纪力学中已经确立，
+      但正是电力商业化将这一关系变成日常单位。电力公司开始按所供能量收费时，需要一种衡量消耗的办法：
+      瓦时以及后来的千瓦时（kWh）成为账单上的标准单位。如今，每个家庭电表都以kWh累计消耗的能量，
+      从手机到汽车的电池容量也以同一标度表示。
+    ja: >-
+      回路が消費するエネルギーは、電力と使用時間の積である。E = P·t。エネルギーの概念は19世紀の力学で
+      確立したが、日常の単位に変えたのは電力の商業化だった。供給した電気を課金し始めた会社は消費量の
+      指標を必要とし、ワット時、そしてキロワット時（kWh）が請求書の標準単位となった。今日、家庭の電力量計は
+      すべて kWh で消費エネルギーを積算し、携帯電話から自動車までの電池容量も同じ尺度で表される。
+  timeline:
+    - year: "1882"
+      label:
+        es: >-
+          Edison inaugura la estación Pearl Street en Nueva York y comienza a cobrar por la energía
+          suministrada, naciendo la facturación por consumo.
+        en: >-
+          Edison opens the Pearl Street station in New York and begins charging for supplied energy,
+          launching metered billing.
+        pt: >-
+          Edison inaugura a estação Pearl Street em Nova York e passa a cobrar pela energia fornecida,
+          dando início à cobrança por consumo.
+        fr: >-
+          Edison inaugure la station Pearl Street à New York et commence à facturer l'énergie fournie,
+          donnant naissance à la facturation à la consommation.
+        zh: >-
+          爱迪生在纽约启用珍珠街电站，开始按所供能量收费，按用量计费由此诞生。
+        ja: >-
+          エジソンがニューヨークでパール街発電所を稼働させ、供給した電気の課金を開始。従量課金が始まる。
+    - year: "1889"
+      label:
+        es: >-
+          Aparecen los primeros medidores de vatio-hora, que registran automáticamente el consumo de
+          cada cliente.
+        en: >-
+          The first watt-hour meters appear, automatically recording each customer's consumption.
+        pt: >-
+          Surgem os primeiros medidores de watt-hora, que registram automaticamente o consumo de cada
+          cliente.
+        fr: >-
+          Les premiers compteurs watt-heure apparaissent, enregistrant automatiquement la
+          consommation de chaque client.
+        zh: >-
+          第一批电度表问世，自动记录每位客户的用电量。
+        ja: >-
+          最初のワット時計が登場し、各顧客の消費電力を自動で記録するようになる。
+    - year: "1900"
+      label:
+        es: >-
+          El kilovatio-hora se generaliza como unidad estándar de las facturas de electricidad en
+          todo el mundo.
+        en: >-
+          The kilowatt-hour becomes the standard unit on electricity bills worldwide.
+        pt: >-
+          O quilowatt-hora se generaliza como unidade padrão das contas de luz em todo o mundo.
+        fr: >-
+          Le kilowatt-heure se généralise comme unité standard des factures d'électricité dans le
+          monde entier.
+        zh: >-
+          千瓦时在世界各地的电费账单上成为标准单位。
+        ja: >-
+          キロワット時が世界の電気料金請求書の標準単位として普及する。
+    - year: Hoy
+      label:
+        es: >-
+          El medidor de cada hogar suma la energía consumida en kWh, la misma unidad que mide las
+          baterías de los autos eléctricos.
+        en: >-
+          Every home meter sums energy in kWh, the same unit that measures electric car batteries.
+        pt: >-
+          O medidor de cada residência soma a energia em kWh, a mesma unidade que mede as baterias
+          dos carros elétricos.
+        fr: >-
+          Chaque compteur domestique additionne l'énergie en kWh, la même unité qui mesure les
+          batteries des voitures électriques.
+        zh: >-
+          每个家庭电表都以kWh累计能量，电动汽车的电池也用同一单位衡量。
+        ja: >-
+          各家庭の電力量計は kWh でエネルギーを積算する。電気自動車の電池も同じ単位で測られる。
+  useCases:
+    - title:
+        es: Facturación de electricidad
+        en: Electricity billing
+        pt: Cobrança de eletricidade
+        fr: Facturation de l'électricité
+        zh: 电费计费
+        ja: 電気料金
+      description:
+        es: >-
+          Las compañías eléctricas multiplican la potencia medida por el tiempo de uso para calcular
+          cuánto consume y paga cada hogar.
+        en: >-
+          Utility companies multiply measured power by usage time to calculate what each household
+          consumes and pays.
+        pt: >-
+          As companhias elétricas multiplicam a potência medida pelo tempo de uso para calcular o
+          consumo e a cobrança de cada residência.
+        fr: >-
+          Les compagnies d'électricité multiplient la puissance mesurée par la durée d'utilisation
+          pour calculer la consommation et la facturation de chaque foyer.
+        zh: >-
+          电力公司将实测功率乘以使用时间，算出每个家庭的用电量和费用。
+        ja: >-
+          電力会社は計測した電力に使用時間を掛け、各家庭の消費量と料金を計算する。
+    - title:
+        es: Redes eléctricas
+        en: Power grids
+        pt: Redes elétricas
+        fr: Réseaux électriques
+        zh: 电网
+        ja: 電力網
+      description:
+        es: >-
+          Los operadores deben generar, en cada instante, la energía que los usuarios consumen,
+          equilibrando oferta y demanda a lo largo del día.
+        en: >-
+          Operators must generate the energy users consume at every moment, balancing supply and
+          demand across the day.
+        pt: >-
+          Operadores precisam gerar, a cada instante, a energia que os usuários consomem, equilibrando
+          oferta e demanda ao longo do dia.
+        fr: >-
+          Les opérateurs doivent produire, à chaque instant, l'énergie consommée par les usagers, en
+          équilibrant l'offre et la demande tout au long de la journée.
+        zh: >-
+          电网运营方必须时刻生成用户所需的能量，在全天保持供需平衡。
+        ja: >-
+          電力会社は、利用者が消費するエネルギーを各瞬間に発電し、一日を通して需給のバランスを保つ。
+    - title:
+        es: Electrodomésticos
+        en: Home appliances
+        pt: Eletrodomésticos
+        fr: Électroménager
+        zh: 家用电器
+        ja: 家電製品
+      description:
+        es: >-
+          Multiplicando la potencia de cada aparato por sus horas de uso se estima el consumo mensual
+          del hogar y su costo.
+        en: >-
+          Multiplying each appliance's power by its hours of use estimates a household's monthly
+          consumption and cost.
+        pt: >-
+          Multiplicando a potência de cada aparelho pelas horas de uso, estima-se o consumo mensal da
+          residência e seu custo.
+        fr: >-
+          En multipliant la puissance de chaque appareil par ses heures d'utilisation, on estime la
+          consommation mensuelle du foyer et son coût.
+        zh: >-
+          将每台电器的功率乘以使用小时数，即可估算家庭每月用电量和费用。
+        ja: >-
+          各機器の電力に使用時間を掛けることで、家庭の月間消費量とコストを見積もれる。
+    - title:
+        es: Baterías de vehículos eléctricos
+        en: Electric vehicle batteries
+        pt: Baterias de veículos elétricos
+        fr: Batteries de véhicules électriques
+        zh: 电动汽车电池
+        ja: 電気自動車のバッテリー
+      description:
+        es: >-
+          La capacidad de las baterías se expresa en kWh: el producto de la corriente entregada por
+          la tensión y el tiempo de descarga.
+        en: >-
+          Battery capacity is quoted in kWh: the product of the current delivered, the voltage, and
+          the discharge time.
+        pt: >-
+          A capacidade das baterias é expressa em kWh: o produto da corrente fornecida pela tensão e
+          pelo tempo de descarga.
+        fr: >-
+          La capacité des batteries s'exprime en kWh : le produit du courant fourni par la tension et
+          par la durée de décharge.
+        zh: >-
+          电池容量以kWh表示：它是输出电流、电压与放电时间的乘积。
+        ja: >-
+          電池容量は kWh で表される。供給電流、電圧、放電時間の積である。
+  example:
+    title:
+      es: Energía de un calefactor
+      en: Energy of a heater
+      pt: Energia de um aquecedor
+      fr: Énergie d'un radiateur
+      zh: 电暖器的能量
+      ja: ヒーターのエネルギー
+    lines:
+      - es: P = 1000 W
+        en: P = 1000 W
+        pt: P = 1000 W
+        fr: P = 1000 W
+        zh: P = 1000 W
+        ja: P = 1000 W
+      - es: t = 2 h
+        en: t = 2 h
+        pt: t = 2 h
+        fr: t = 2 h
+        zh: t = 2 h
+        ja: t = 2 h
+      - es: E = P · t
+        en: E = P · t
+        pt: E = P · t
+        fr: E = P · t
+        zh: E = P · t
+        ja: E = P · t
+      - es: E = 1000 × 2 = 2000 Wh
+        en: E = 1000 × 2 = 2000 Wh
+        pt: E = 1000 × 2 = 2000 Wh
+        fr: E = 1000 × 2 = 2000 Wh
+        zh: E = 1000 × 2 = 2000 瓦时
+        ja: E = 1000 × 2 = 2000 ワット時
+      - es: E = 2 kWh
+        en: E = 2 kWh
+        pt: E = 2 kWh
+        fr: E = 2 kWh
+        zh: E = 2 kWh
+        ja: E = 2 kWh

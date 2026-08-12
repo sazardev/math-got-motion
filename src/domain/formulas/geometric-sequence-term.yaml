@@ -1,0 +1,329 @@
+id: geometric-sequence-term
+title:
+  es: Término de una Progresión Geométrica
+  en: Geometric Sequence Term
+  pt: Termo de uma Progressão Geométrica
+  fr: Terme d'une suite géométrique
+  zh: 等比数列的通项
+  ja: 等比数列の一般項
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: a-n
+    type: variable
+    value: aₙ
+    explanation:
+      es: El término enésimo, el que ocupa el lugar n en la progresión.
+      en: The nth term, the one in position n of the sequence.
+      pt: O enésimo termo, o que ocupa a posição n na progressão.
+      fr: Le terme de rang n, celui qui occupe la position n dans la suite.
+      zh: 第 n 项，即数列中位于第 n 个位置的项。
+      ja: 第n項。数列のn番目の位置にある項。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: a-1
+    type: variable
+    value: a₁
+    explanation:
+      es: El primer término de la progresión.
+      en: The first term of the sequence.
+      pt: O primeiro termo da progressão.
+      fr: Le premier terme de la suite.
+      zh: 数列的首项。
+      ja: 数列の初項。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por la razón elevada a n−1.
+      en: Multiplied by the ratio raised to n−1.
+      pt: Multiplicado pela razão elevada a n−1.
+      fr: Multiplié par la raison élevée à la puissance n−1.
+      zh: 乘以公比的 n−1 次幂。
+      ja: 公比のn−1乗を掛ける。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: La razón común, el factor fijo por el que se multiplica cada término.
+      en: The common ratio, the fixed factor each term is multiplied by.
+      pt: A razão comum, o fator fixo pelo qual cada termo é multiplicado.
+      fr: La raison, le facteur fixe par lequel chaque terme est multiplié.
+      zh: 公比，即每一项都要乘以的固定倍数。
+      ja: 公比。各項に掛けられる一定の倍率。
+  - id: r-exp
+    type: superscript
+    value: n−1
+    explanation:
+      es: "El exponente n−1: la razón se multiplica una vez menos que el índice del término."
+      en: "The exponent n−1: the ratio is multiplied one fewer time than the term's index."
+      pt: "O expoente n−1: a razão é multiplicada uma vez a menos que o índice do termo."
+      fr: "L'exposant n−1 : la raison est multipliée une fois de moins que l'indice du terme."
+      zh: "指数 n−1：公比相乘的次数比该项序号少一次。"
+      ja: "指数n−1：公比を掛ける回数は、項の番号より一回少ない。"
+context:
+  author:
+    es: Origen colectivo
+    en: Collective origin
+    pt: Origem coletiva
+    fr: Origine collective
+    zh: 集体起源
+    ja: 集合的起源
+  era:
+    es: Babilonia y Grecia antiguas
+    en: Ancient Babylon and Greece
+    pt: Antiga Babilônia e Grécia
+    fr: Babylone et Grèce antiques
+    zh: 古代巴比伦与希腊
+    ja: 古代バビロニアとギリシャ
+  history:
+    es: >-
+      En una progresión geométrica cada término se obtiene multiplicando el anterior por una razón
+      constante r, así que la secuencia crece de forma exponencial: 2, 6, 18, 54... Los escribas
+      babilónicos ya usaban este tipo de series para duplicar cantidades y repartir herencias, y el
+      papiro de Rhind contiene problemas de duplicaciones sucesivas. La fórmula aₙ = a₁·rⁿ⁻¹ resume el
+      crecimiento: el primer término se multiplica por la razón tantas veces como saltos hay hasta el
+      término n. Es la base del interés compuesto, de las series radiactivas que se desintegran a
+      ritmo constante y del crecimiento de las colonias de bacterias.
+    en: >-
+      In a geometric progression each term is obtained by multiplying the previous one by a constant
+      ratio r, so the sequence grows exponentially: 2, 6, 18, 54... Babylonian scribes already used
+      such series to double quantities and divide inheritances, and the Rhind Papyrus contains
+      problems of successive doubling. The formula aₙ = a₁·rⁿ⁻¹ sums up the growth: the first term is
+      multiplied by the ratio as many times as there are steps up to term n. It is the basis of
+      compound interest, of radioactive series that decay at a steady rate, and of the growth of
+      bacterial colonies.
+    pt: >-
+      Em uma progressão geométrica, cada termo é obtido multiplicando o anterior por uma razão
+      constante r, de modo que a sequência cresce exponencialmente: 2, 6, 18, 54... Os escribas
+      babilônicos já usavam esse tipo de série para dobrar quantidades e repartir heranças, e o papiro
+      de Rhind contém problemas de duplicações sucessivas. A fórmula aₙ = a₁·rⁿ⁻¹ resume o
+      crescimento: o primeiro termo é multiplicado pela razão tantas vezes quantos forem os saltos até
+      o termo n. É a base dos juros compostos, das séries radiativas que decaem a ritmo constante e do
+      crescimento das colônias de bactérias.
+    fr: >-
+      Dans une progression géométrique, chaque terme s'obtient en multipliant le précédent par une
+      raison constante r, si bien que la suite croît de façon exponentielle : 2, 6, 18, 54... Les
+      scribes babyloniens utilisaient déjà de telles séries pour doubler des quantités et partager des
+      héritages, et le papyrus Rhind contient des problèmes de doubles successifs. La formule aₙ =
+      a₁·rⁿ⁻¹ résume la croissance : le premier terme est multiplié par la raison autant de fois qu'il
+      y a de pas jusqu'au terme n. Elle est à la base des intérêts composés, des séries radioactives
+      qui se désintègrent à rythme constant et de la croissance des colonies bactériennes.
+    zh: >-
+      在等比数列中，每一项都由前一项乘以一个常数公比 r 得到，因此数列呈指数增长：2、6、18、54……巴比伦书吏已会
+      用这类数列来翻倍数量和分配遗产，林德纸草书中也含有连续翻倍的问题。公式 aₙ = a₁·rⁿ⁻¹ 概括了这种增长：
+      首项被公比乘的次数，恰好等于到达第 n 项所经过的步数。它是复利、以恒定速率衰变的放射性序列，以及细菌菌落
+      增长的共同基础。
+    ja: >-
+      等比数列では、各項は前の項に一定の公比rを掛けることで得られる。そのため数列は指数的に増える：2, 6, 18,
+      54... バビロニアの書記は、量を倍増させたり遺産を分割したりするのにこの種の数列をすでに用いており、
+      リンド・パピルスには倍々の計算問題が収められている。公式 aₙ = a₁·rⁿ⁻¹ はこの成長を要約する。初項は、
+      第n項に達するまでのステップ数だけ公比を掛けられる。これは複利、一定の速さで崩壊する放射性系列、細菌
+      コロニーの増殖の基礎である。
+  timeline:
+    - year: c. 1650 a.C.
+      label:
+        es: >-
+          El papiro de Rhind plantea problemas de duplicaciones sucesivas, un uso temprano de la
+          progresión geométrica.
+        en: >-
+          The Rhind Papyrus poses problems of successive doubling, an early use of the geometric
+          progression.
+        pt: >-
+          O papiro de Rhind apresenta problemas de duplicações sucessivas, um uso inicial da progressão
+          geométrica.
+        fr: >-
+          Le papyrus Rhind pose des problèmes de doubles successifs, un usage précoce de la
+          progression géométrique.
+        zh: >-
+          林德纸草书提出连续翻倍的问题，是等比数列的早期应用。
+        ja: >-
+          リンド・パピルスが倍々の計算問題を扱う。等比数列の初期の応用である。
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides estudia las proporciones continuas y las sucesiones geométricas en los Elementos.
+        en: >-
+          Euclid studies continued proportions and geometric sequences in the Elements.
+        pt: >-
+          Euclides estuda as proporções contínuas e as sequências geométricas nos Elementos.
+        fr: >-
+          Euclide étudie les proportions continues et les suites géométriques dans les Éléments.
+        zh: >-
+          欧几里得在《几何原本》中研究连比例与等比数列。
+        ja: >-
+          ユークリッドが『原論』で連比例と等比数列を研究する。
+    - year: "1202"
+      label:
+        es: >-
+          Fibonacci difunde en Europa la progresión geométrica y sus aplicaciones aritméticas en el
+          Liber Abaci.
+        en: >-
+          Fibonacci spreads the geometric progression and its arithmetic uses across Europe in the
+          Liber Abaci.
+        pt: >-
+          Fibonacci difunde na Europa a progressão geométrica e suas aplicações aritméticas no Liber
+          Abaci.
+        fr: >-
+          Fibonacci diffuse en Europe la progression géométrique et ses usages arithmétiques dans le
+          Liber Abaci.
+        zh: >-
+          斐波那契在《计算之书》中把等比数列及其算术应用传播到欧洲。
+        ja: >-
+          フィボナッチが『計算の書』で等比数列とその算術への応用をヨーロッパに広める。
+    - year: Hoy
+      label:
+        es: >-
+          El término general modela interés compuesto, crecimiento bacteriano y series radiactivas.
+        en: >-
+          The general term models compound interest, bacterial growth, and radioactive series.
+        pt: >-
+          O termo geral modela juros compostos, crescimento bacteriano e séries radiativas.
+        fr: >-
+          Le terme général modélise les intérêts composés, la croissance bactérienne et les filières
+          radioactives.
+        zh: >-
+          通项公式为复利、细菌增长和放射性衰变系列建模。
+        ja: >-
+          一般項は、複利や細菌の増殖、放射性壊変系列をモデル化する。
+  useCases:
+    - title:
+        es: Finanzas
+        en: Finance
+        pt: Finanças
+        fr: Finance
+        zh: 金融
+        ja: 金融
+      description:
+        es: >-
+          El interés compuesto multiplica el capital por un factor fijo cada periodo, como una
+          progresión geométrica.
+        en: >-
+          Compound interest multiplies capital by a fixed factor each period, like a geometric
+          progression.
+        pt: >-
+          Os juros compostos multiplicam o capital por um fator fixo a cada período, como uma
+          progressão geométrica.
+        fr: >-
+          Les intérêts composés multiplient le capital par un facteur fixe à chaque période, comme une
+          progression géométrique.
+        zh: >-
+          复利每期把本金乘以固定倍数，如同一条等比数列。
+        ja: >-
+          複利は各期ごとに元本へ一定の倍率を掛ける。等比数列そのものである。
+    - title:
+        es: Biología
+        en: Biology
+        pt: Biologia
+        fr: Biologie
+        zh: 生物学
+        ja: 生物学
+      description:
+        es: >-
+          Las colonias de bacterias se duplican en intervalos regulares, siguiendo un crecimiento rⁿ.
+        en: >-
+          Bacterial colonies double at regular intervals, following rⁿ growth.
+        pt: >-
+          Colônias de bactérias dobram em intervalos regulares, seguindo um crescimento rⁿ.
+        fr: >-
+          Les colonies bactériennes doublent à intervalles réguliers, suivant une croissance rⁿ.
+        zh: >-
+          细菌菌落按固定间隔翻倍，遵循 rⁿ 式的增长。
+        ja: >-
+          細菌のコロニーは一定間隔で倍増し、rⁿの成長に従う。
+    - title:
+        es: Física nuclear
+        en: Nuclear physics
+        pt: Física nuclear
+        fr: Physique nucléaire
+        zh: 核物理学
+        ja: 原子核物理学
+      description:
+        es: >-
+          Las series radiactivas decaen multiplicando por una razón menor que 1 en cada paso.
+        en: >-
+          Radioactive chains decay by multiplying by a ratio smaller than 1 at each step.
+        pt: >-
+          Séries radiativas decaem multiplicando por uma razão menor que 1 a cada passo.
+        fr: >-
+          Les filières radioactives décroissent en multipliant par une raison inférieure à 1 à chaque
+          pas.
+        zh: >-
+          放射性衰变链每一步都乘以一个小于 1 的公比。
+        ja: >-
+          放射性壊変系列は、各ステップで1より小さい公比を掛けて減衰する。
+    - title:
+        es: Informática
+        en: Computer science
+        pt: Computação
+        fr: Informatique
+        zh: 计算机科学
+        ja: コンピュータ科学
+      description:
+        es: >-
+          La duplicación periódica de capacidad o de población modela fenómenos de complejidad
+          exponencial.
+        en: >-
+          Periodic doubling of capacity or population models phenomena of exponential complexity.
+        pt: >-
+          A duplicação periódica de capacidade ou de população modela fenômenos de complexidade
+          exponencial.
+        fr: >-
+          Le doublement périodique de capacité ou de population modélise les phénomènes de complexité
+          exponentielle.
+        zh: >-
+          容量或数量的周期性翻倍，为指数复杂度的现象建模。
+        ja: >-
+          容量や個体数の周期的な倍増は、指数的計算量の現象をモデル化する。
+  example:
+    title:
+      es: Término 5 de la progresión
+      en: 5th term of the sequence
+      pt: 5º termo da progressão
+      fr: 5ᵉ terme de la suite
+      zh: 数列的第5项
+      ja: 数列の第5項
+    lines:
+      - es: a₁ = 2, r = 3, n = 5
+        en: a₁ = 2, r = 3, n = 5
+        pt: a₁ = 2, r = 3, n = 5
+        fr: a₁ = 2, r = 3, n = 5
+        zh: a₁ = 2, r = 3, n = 5
+        ja: a₁ = 2, r = 3, n = 5
+      - es: aₙ = a₁ · rⁿ⁻¹
+        en: aₙ = a₁ · rⁿ⁻¹
+        pt: aₙ = a₁ · rⁿ⁻¹
+        fr: aₙ = a₁ · rⁿ⁻¹
+        zh: aₙ = a₁ · rⁿ⁻¹
+        ja: aₙ = a₁ · rⁿ⁻¹
+      - es: a₅ = 2 · 3⁴
+        en: a₅ = 2 · 3⁴
+        pt: a₅ = 2 · 3⁴
+        fr: a₅ = 2 · 3⁴
+        zh: a₅ = 2 · 3⁴
+        ja: a₅ = 2 · 3⁴
+      - es: a₅ = 2 · 81
+        en: a₅ = 2 · 81
+        pt: a₅ = 2 · 81
+        fr: a₅ = 2 · 81
+        zh: a₅ = 2 · 81
+        ja: a₅ = 2 · 81
+      - es: a₅ = 162
+        en: a₅ = 162
+        pt: a₅ = 162
+        fr: a₅ = 162
+        zh: a₅ = 162
+        ja: a₅ = 162

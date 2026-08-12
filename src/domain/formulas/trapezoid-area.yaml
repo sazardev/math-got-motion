@@ -1,0 +1,382 @@
+id: trapezoid-area
+title:
+  es: Área de un Trapecio
+  en: Area of a Trapezoid
+  pt: Área de um Trapézio
+  fr: Aire d'un Trapèze
+  zh: 梯形的面积
+  ja: 台形の面積
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: area
+    type: variable
+    value: A
+    explanation:
+      es: "El área: la superficie plana que ocupa el trapecio."
+      en: "The area: the flat surface occupied by the trapezoid."
+      pt: "A área: a superfície plana ocupada pelo trapézio."
+      fr: "L'aire : la surface plane occupée par le trapèze."
+      zh: "面积：梯形所占据的平面区域。"
+      ja: "面積：台形が占める平面の広さ。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es exactamente igual a.
+      en: Is exactly equal to.
+      pt: É exatamente igual a.
+      fr: Est exactement égal à.
+      zh: 恰好等于。
+      ja: ちょうど等しい。
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: "Paréntesis de apertura: agrupa la suma de las dos bases."
+      en: "Opening parenthesis: groups the sum of the two bases."
+      pt: "Parêntese de abertura: agrupa a soma das duas bases."
+      fr: "Parenthèse ouvrante : regroupe la somme des deux bases."
+      zh: "左括号：将两条底边的和括起来。"
+      ja: "括弧の始まり：2つの底辺の和をひとまとめにする。"
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: "La base menor: el lado paralelo más corto del trapecio."
+      en: "The shorter base: the shorter parallel side of the trapezoid."
+      pt: "A base menor: o lado paralelo mais curto do trapézio."
+      fr: "La petite base : le côté parallèle le plus court du trapèze."
+      zh: "上底：梯形中较短的那条平行边。"
+      ja: "上の底辺：台形の平行な2辺のうち短い方。"
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado a.
+      en: Added to.
+      pt: Somado a.
+      fr: Ajouté à.
+      zh: 加上。
+      ja: 加える。
+  - id: b
+    type: variable
+    value: b
+    explanation:
+      es: "La base mayor: el lado paralelo más largo del trapecio."
+      en: "The longer base: the longer parallel side of the trapezoid."
+      pt: "A base maior: o lado paralelo mais longo do trapézio."
+      fr: "La grande base : le côté parallèle le plus long du trapèze."
+      zh: "下底：梯形中较长的那条平行边。"
+      ja: "下の底辺：台形の平行な2辺のうち長い方。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: "Paréntesis de cierre: la suma de las bases se trata como una sola cantidad."
+      en: "Closing parenthesis: the base sum is treated as a single quantity."
+      pt: "Parêntese de fechamento: a soma das bases é tratada como uma única quantidade."
+      fr: "Parenthèse fermante : la somme des bases est traitée comme une seule quantité."
+      zh: "右括号：把两底之和看作一个整体。"
+      ja: "括弧の終わり：底辺の和を一つの量として扱う。"
+  - id: mul
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: 掛ける。
+  - id: h
+    type: variable
+    value: h
+    explanation:
+      es: "La altura: la distancia perpendicular entre las dos bases."
+      en: "The height: the perpendicular distance between the two bases."
+      pt: "A altura: a distância perpendicular entre as duas bases."
+      fr: "La hauteur : la distance perpendiculaire entre les deux bases."
+      zh: "高：两条底边之间的垂直距离。"
+      ja: "高さ：2つの底辺の間の垂直距離。"
+  - id: div
+    type: operator
+    value: /
+    explanation:
+      es: "Dividido entre: promedia las dos bases."
+      en: "Divided by: averages the two bases."
+      pt: "Dividido por: calcula a média das duas bases."
+      fr: "Divisé par : fait la moyenne des deux bases."
+      zh: "除以：取两条底边的平均值。"
+      ja: "割る：2つの底辺の平均をとる。"
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "Dos: el promedio de las bases se obtiene dividiendo su suma entre dos."
+      en: "Two: the average of the bases is the sum divided by two."
+      pt: "Dois: a média das bases é a soma dividida por dois."
+      fr: "Deux : la moyenne des bases est la somme divisée par deux."
+      zh: "二：两底的平均值等于其和除以二。"
+      ja: "2：底辺の平均は、その和を2で割って求める。"
+context:
+  author:
+    es: Origen colectivo (Babilonia y Grecia)
+    en: Collective origin (Babylon and Greece)
+    pt: Origem coletiva (Babilônia e Grécia)
+    fr: Origine collective (Babylone et Grèce)
+    zh: 集体起源（巴比伦与希腊）
+    ja: 集団的起源（バビロニアとギリシャ）
+  era:
+    es: Babilonia, c. 1800 a.C.
+    en: Babylon, c. 1800 BC
+    pt: Babilônia, c. 1800 a.C.
+    fr: Babylone, v. 1800 av. J.-C.
+    zh: 古巴比伦，约公元前1800年
+    ja: バビロニア、紀元前1800年頃
+  history:
+    es: >-
+      Tablillas babilónicas de c. 1800 a.C. ya registran problemas de áreas de trapecios, resueltos
+      promediando las dos bases y multiplicando por la altura. El mismo cálculo — el promedio de los
+      valores extremos por el ancho — reaparece siglos después como la regla del trapecio en la
+      integración numérica.
+    en: >-
+      Babylonian tablets from c. 1800 BC already record trapezoid area problems, solved by averaging
+      the two bases and multiplying by the height. The same calculation — the average of the
+      extreme values times the width — reappears centuries later as the trapezium rule in numerical
+      integration.
+    pt: >-
+      Tábuas babilônicas de c. 1800 a.C. já registram problemas de áreas de trapézios, resolvidos
+      calculando a média das duas bases e multiplicando pela altura. O mesmo cálculo — a média dos
+      valores extremos vezes a largura — reaparece séculos depois como a regra do trapézio na
+      integração numérica.
+    fr: >-
+      Des tablettes babyloniennes d'environ 1800 av. J.-C. consignent déjà des problèmes d'aires de
+      trapèzes, résolus en faisant la moyenne des deux bases puis en la multipliant par la hauteur.
+      Le même calcul — la moyenne des valeurs extrêmes fois la largeur — réapparaît des siècles plus
+      tard comme la règle du trapèze en intégration numérique.
+    zh: >-
+      约公元前1800年的巴比伦泥板已记录梯形面积问题，解法是取两底的平均值再乘以高。同样的计算——两端值的
+      平均值乘以宽度——在数百年后以梯形法则的形式重新出现在数值积分中。
+    ja: >-
+      紀元前1800年頃のバビロニアの粘土板には、すでに台形の面積問題が記録されており、2つの底辺の平均に
+      高さを掛けて解かれていた。同じ計算——両端の値の平均に幅を掛けること——は、数世紀後に数値積分における
+      台形公式として再登場する。
+  timeline:
+    - year: c. 1800 a.C.
+      label:
+        es: >-
+          Tablillas babilónicas registran problemas de áreas de trapecios, con soluciones
+          equivalentes a promediar las bases.
+        en: >-
+          Babylonian tablets record trapezoid area problems, with solutions equivalent to averaging
+          the bases.
+        pt: >-
+          Tábuas babilônicas registram problemas de áreas de trapézios, com soluções equivalentes a
+          calcular a média das bases.
+        fr: >-
+          Des tablettes babyloniennes consignent des problèmes d'aires de trapèzes, avec des
+          solutions équivalentes à faire la moyenne des bases.
+        zh: >-
+          巴比伦泥板记载了梯形面积问题，其解法与取底边平均值等价。
+        ja: >-
+          バビロニアの粘土板に台形の面積問題が記録され、底辺の平均をとるのと同等の解法が用いられている。
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          La geometría griega sistematiza el cálculo de áreas planas; Euclides trata paralelogramos
+          y figuras afines en los Elementos.
+        en: >-
+          Greek geometry systematizes plane area computation; Euclid treats parallelograms and
+          related figures in the Elements.
+        pt: >-
+          A geometria grega sistematiza o cálculo de áreas planas; Euclides trata paralelogramos e
+          figuras afins nos Elementos.
+        fr: >-
+          La géométrie grecque systématise le calcul des aires planes ; Euclide traite des
+          parallélogrammes et des figures apparentées dans les Éléments.
+        zh: >-
+          希腊几何学系统化了平面面积的计算；欧几里得在《几何原本》中处理了平行四边形及相关图形。
+        ja: >-
+          ギリシャの幾何学が平面図形の面積計算を体系化し、ユークリッドが『原論』で平行四辺形と関連図形を扱う。
+    - year: s. XVII
+      label:
+        es: >-
+          La regla del trapecio entra en la integración numérica, antesala de las fórmulas de
+          Newton-Cotes.
+        en: >-
+          The trapezium rule enters numerical integration, a precursor of the Newton-Cotes formulas.
+        pt: >-
+          A regra do trapézio entra na integração numérica, precursora das fórmulas de Newton-Cotes.
+        fr: >-
+          La règle du trapèze entre dans l'intégration numérique, prélude aux formules de
+          Newton-Cotes.
+        zh: >-
+          梯形法则进入数值积分领域，成为牛顿-柯特斯公式的先声。
+        ja: >-
+          台形公式が数値積分に取り入れられ、ニュートン・コーツの公式の先駆けとなる。
+    - year: Hoy
+      label:
+        es: >-
+          Se usa para calcular secciones de canales y terraplenes, y para aproximar integrales en
+          calculadoras y software científico.
+        en: >-
+          Used to compute canal and embankment sections, and to approximate integrals in calculators
+          and scientific software.
+        pt: >-
+          Usada para calcular seções de canais e aterros, e para aproximar integrais em calculadoras
+          e softwares científicos.
+        fr: >-
+          Utilisée pour calculer des sections de canaux et de remblais, et pour approcher les
+          intégrales dans les calculatrices et les logiciels scientifiques.
+        zh: >-
+          用于计算水渠和路堤的截面，也用于计算器和科学软件中的积分近似。
+        ja: >-
+          水路や盛土の断面の計算、また電卓や科学ソフトウェアでの積分の近似に用いられている。
+  useCases:
+    - title:
+        es: Ingeniería civil
+        en: Civil engineering
+        pt: Engenharia civil
+        fr: Génie civil
+        zh: 土木工程
+        ja: 土木工学
+      description:
+        es: >-
+          La sección transversal de canales, terraplenes y cunetas es trapezoidal; su área permite
+          calcular volúmenes de excavación y flujo.
+        en: >-
+          Canals, embankments, and ditches have trapezoidal cross-sections; their area drives
+          excavation volumes and flow calculations.
+        pt: >-
+          A seção transversal de canais, aterros e valetas é trapezoidal; sua área permite calcular
+          volumes de escavação e fluxo.
+        fr: >-
+          Canaux, remblais et fossés ont des sections transversales trapézoïdales ; leur aire
+          permet de calculer les volumes de terrassement et le débit.
+        zh: >-
+          水渠、路堤和排水沟的横截面呈梯形，其面积用于计算开挖土方量和流量。
+        ja: >-
+          運河や盛土、側溝の断面は台形であり、その面積から掘削量や流量を計算する。
+    - title:
+        es: Integración numérica
+        en: Numerical integration
+        pt: Integração numérica
+        fr: Intégration numérique
+        zh: 数值积分
+        ja: 数値積分
+      description:
+        es: >-
+          La regla del trapecio aproxima el área bajo una curva dividiéndola en trapecios y sumando
+          sus áreas.
+        en: >-
+          The trapezium rule approximates the area under a curve by splitting it into trapezoids and
+          summing their areas.
+        pt: >-
+          A regra do trapézio aproxima a área sob uma curva dividindo-a em trapézios e somando suas
+          áreas.
+        fr: >-
+          La règle du trapèze approche l'aire sous une courbe en la découpant en trapèzes dont on
+          additionne les aires.
+        zh: >-
+          梯形法则把曲线下方的区域分割成若干梯形并求和，从而近似面积。
+        ja: >-
+          台形公式は、曲線下の面積を台形に分割してそれらの面積を合計することで近似する。
+    - title:
+        es: Agrimensura
+        en: Land surveying
+        pt: Agrimensura
+        fr: Arpentage
+        zh: 土地测量
+        ja: 測量
+      description:
+        es: >-
+          Parcelas con lados no paralelos se dividen en trapecios para calcular su superficie a
+          partir de medidas de campo.
+        en: >-
+          Plots with non-parallel sides are split into trapezoids to compute their area from field
+          measurements.
+        pt: >-
+          Lotes com lados não paralelos são divididos em trapézios para calcular sua superfície a
+          partir de medições de campo.
+        fr: >-
+          Les parcelles aux côtés non parallèles sont découpées en trapèzes pour calculer leur
+          surface à partir de relevés de terrain.
+        zh: >-
+          边不平行时，地块被分割成若干梯形，根据实地测量计算其面积。
+        ja: >-
+          平行でない辺を持つ土地は、現地での測量値から台形に分割して面積を計算する。
+    - title:
+        es: Diseño de piezas mecánicas
+        en: Mechanical part design
+        pt: Projeto de peças mecânicas
+        fr: Conception de pièces mécaniques
+        zh: 机械零件设计
+        ja: 機械部品の設計
+      description:
+        es: >-
+          Engranajes, perfiles y roscas contienen secciones trapezoidales cuyo área define
+          resistencia y material.
+        en: >-
+          Gears, profiles, and threads contain trapezoidal sections whose area defines strength and
+          material usage.
+        pt: >-
+          Engrenagens, perfis e roscas contêm seções trapezoidais cuja área define resistência e
+          material.
+        fr: >-
+          Engrenages, profilés et filetages contiennent des sections trapézoïdales dont l'aire
+          définit la résistance et la matière.
+        zh: >-
+          齿轮、型材和螺纹中都有梯形截面，其面积决定了强度和材料用量。
+        ja: >-
+          歯車や型材、ねじ山には台形断面が含まれ、その面積が強度と材料量を決める。
+  example:
+    title:
+      es: Un trapecio con bases 5 y 7, altura 4
+      en: A trapezoid with bases 5 and 7, height 4
+      pt: Um trapézio com bases 5 e 7, altura 4
+      fr: Un trapèze de bases 5 et 7, de hauteur 4
+      zh: 上底5、下底7、高为4的梯形
+      ja: 上底5、下底7、高さ4の台形
+    lines:
+      - es: a = 5, b = 7, h = 4
+        en: a = 5, b = 7, h = 4
+        pt: a = 5, b = 7, h = 4
+        fr: a = 5, b = 7, h = 4
+        zh: a = 5, b = 7, h = 4
+        ja: a = 5, b = 7, h = 4
+      - es: A = (a + b) · h / 2
+        en: A = (a + b) · h / 2
+        pt: A = (a + b) · h / 2
+        fr: A = (a + b) · h / 2
+        zh: A = (a + b) · h / 2
+        ja: A = (a + b) · h / 2
+      - es: A = (5 + 7) · 4 / 2
+        en: A = (5 + 7) · 4 / 2
+        pt: A = (5 + 7) · 4 / 2
+        fr: A = (5 + 7) · 4 / 2
+        zh: A = (5 + 7) · 4 / 2
+        ja: A = (5 + 7) · 4 / 2
+      - es: A = 12 · 4 / 2
+        en: A = 12 · 4 / 2
+        pt: A = 12 · 4 / 2
+        fr: A = 12 · 4 / 2
+        zh: A = 12 · 4 / 2
+        ja: A = 12 · 4 / 2
+      - es: A = 48 / 2
+        en: A = 48 / 2
+        pt: A = 48 / 2
+        fr: A = 48 / 2
+        zh: A = 48 / 2
+        ja: A = 48 / 2
+      - es: A = 24
+        en: A = 24
+        pt: A = 24
+        fr: A = 24
+        zh: A = 24
+        ja: A = 24

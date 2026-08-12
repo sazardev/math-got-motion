@@ -1,0 +1,420 @@
+id: annuity-payment
+title:
+  es: Pago de una Anualidad
+  en: Annuity Payment
+  pt: Pagamento de uma Anuidade
+  fr: Paiement d'une Annuité
+  zh: 年金支付额
+  ja: 年金支払額
+category:
+  es: Finanzas
+  en: Finance
+  pt: Finanças
+  fr: Finance
+  zh: 金融
+  ja: 金融
+nodes:
+  - id: pmt
+    type: variable
+    value: PMT
+    explanation:
+      es: "PMT: el pago periódico constante."
+      en: "PMT: the constant periodic payment."
+      pt: "PMT: o pagamento periódico constante."
+      fr: "PMT : le paiement périodique constant."
+      zh: "PMT:每期固定的付款额。"
+      ja: "PMT:一定の毎期支払額。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: pv
+    type: variable
+    value: PV
+    explanation:
+      es: "PV: el valor presente de la deuda."
+      en: "PV: the present value of the debt."
+      pt: "PV: o valor presente da dívida."
+      fr: "PV : la valeur actuelle de la dette."
+      zh: "PV:债务的现值。"
+      ja: "PV:負債の現在価値。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: かける。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "r: la tasa de interés por periodo."
+      en: "r: the interest rate per period."
+      pt: "r: a taxa de juros por período."
+      fr: "r : le taux d'intérêt par période."
+      zh: "r:每期的利率。"
+      ja: "r:期間あたりの金利。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre el factor que queda.
+      en: Divided by the remaining factor.
+      pt: Dividido pelo fator restante.
+      fr: Divisé par le facteur restant.
+      zh: 除以剩下的因子。
+      ja: 残りの係数で割る。
+  - id: open-amort
+    type: operator
+    value: (
+    explanation:
+      es: Abre el factor de amortización.
+      en: Opens the amortization factor.
+      pt: Abre o fator de amortização.
+      fr: Ouvre le facteur d'amortissement.
+      zh: 打开摊销因子。
+      ja: 償却係数を開く括弧。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: La unidad base.
+      en: The base unit.
+      pt: A unidade base.
+      fr: L'unité de base.
+      zh: 基础单位1。
+      ja: 基準の1。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: Menos el factor descontado.
+      en: Minus the discounted factor.
+      pt: Menos o fator descontado.
+      fr: Moins le facteur actualisé.
+      zh: 减去折现因子。
+      ja: 割引係数を引く。
+  - id: open-growth
+    type: operator
+    value: (
+    explanation:
+      es: Abre el factor de crecimiento.
+      en: Opens the growth factor.
+      pt: Abre o fator de crescimento.
+      fr: Ouvre le facteur de croissance.
+      zh: 打开增长因子。
+      ja: 成長係数を開く括弧。
+  - id: one-inner
+    type: number
+    value: "1"
+    explanation:
+      es: La unidad base.
+      en: The base unit.
+      pt: A unidade base.
+      fr: L'unité de base.
+      zh: 基础单位1。
+      ja: 基準の1。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Más la tasa.
+      en: Plus the rate.
+      pt: Mais a taxa.
+      fr: Plus le taux.
+      zh: 加上利率。
+      ja: 金利を加える。
+  - id: r-inner
+    type: variable
+    value: r
+    explanation:
+      es: "r: la tasa de interés por periodo."
+      en: "r: the interest rate per period."
+      pt: "r: a taxa de juros por período."
+      fr: "r : le taux d'intérêt par période."
+      zh: "r:每期的利率。"
+      ja: "r:期間あたりの金利。"
+  - id: close-growth
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el factor de crecimiento.
+      en: Closes the growth factor.
+      pt: Fecha o fator de crescimento.
+      fr: Ferme le facteur de croissance.
+      zh: 关闭增长因子。
+      ja: 成長係数を閉じる括弧。
+  - id: sup
+    type: superscript
+    value: ⁻ⁿ
+    explanation:
+      es: "⁻ⁿ: eleva el factor a −n, el número de periodos."
+      en: "⁻ⁿ: raises the factor to −n, the number of periods."
+      pt: "⁻ⁿ: eleva o fator a −n, o número de períodos."
+      fr: "⁻ⁿ : élève le facteur à −n, le nombre de périodes."
+      zh: "⁻ⁿ:将因子提高到−n,即期数。"
+      ja: "⁻ⁿ:係数を期数−nのべき乗にする。"
+  - id: close-amort
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el factor de amortización.
+      en: Closes the amortization factor.
+      pt: Fecha o fator de amortização.
+      fr: Ferme le facteur d'amortissement.
+      zh: 关闭摊销因子。
+      ja: 償却係数を閉じる括弧。
+context:
+  author:
+    es: Basada en la matemática actuarial
+    en: Based on actuarial mathematics
+    pt: Baseada na matemática atuarial
+    fr: Fondée sur les mathématiques actuarielles
+    zh: 基于精算数学
+    ja: 保険数理に基づく
+  era:
+    es: Europa, s. XVII–XIX
+    en: Europe, 17th–19th centuries
+    pt: Europa, sécs. XVII–XIX
+    fr: Europe, XVIIe–XIXe siècles
+    zh: 欧洲,17–19世纪
+    ja: ヨーロッパ、17〜19世紀
+  history:
+    es: >-
+      El pago de una anualidad es la cuota fija que salda un valor presente en n periodos a una tasa r:
+      la fórmula que calcula la cuota de una hipoteca. Cada pago cubre primero los intereses del
+      periodo y el resto amortiza el capital, de modo que al final del plazo la deuda queda en cero. La
+      matemática actuarial del siglo XVII sistematizó estas cuentas y los bancos las aplican hoy a
+      hipotecas y créditos automotrices: gracias a ella, millones de personas pagan su casa con cuotas
+      idénticas mes a mes.
+    en: >-
+      An annuity payment is the fixed installment that pays off a present value over n periods at rate
+      r: the formula that computes a mortgage payment. Each payment first covers the period's interest
+      and the remainder pays down principal, so by the end of the term the debt is zero. Actuarial
+      mathematics systematized these calculations in the 17th century, and banks apply them today to
+      mortgages and car loans: thanks to it, millions of people pay for their home with identical
+      installments month after month.
+    pt: >-
+      O pagamento de uma anuidade é a parcela fixa que quita um valor presente em n períodos à taxa r:
+      a fórmula que calcula a prestação de uma hipoteca. Cada pagamento cobre primeiro os juros do
+      período e o restante amortiza o capital, de modo que ao fim do prazo a dívida é zero. A matemática
+      atuarial sistematizou esses cálculos no século XVII e os bancos os aplicam hoje a hipotecas e
+      financiamentos de automóveis: graças a ela, milhões de pessoas pagam sua casa com parcelas
+      idênticas mês a mês.
+    fr: >-
+      Le paiement d'une annuité est la mensualité fixe qui rembourse une valeur actuelle en n périodes
+      au taux r : c'est la formule qui calcule une mensualité de prêt immobilier. Chaque paiement couvre
+      d'abord les intérêts de la période, le reste amortit le capital, de sorte qu'au terme du prêt la
+      dette est nulle. Les mathématiques actuarielles ont systématisé ces calculs au XVIIe siècle et les
+      banques les appliquent aujourd'hui aux prêts immobiliers et automobiles : grâce à elles, des
+      millions de personnes paient leur maison avec des mensualités identiques mois après mois.
+    zh: >-
+      年金支付额是指在n期内以利率r清偿一笔现值的固定每期付款,也就是计算房贷月供的公式。每期付款先支付当期的利息,
+      剩余部分偿还本金,这样到期限结束时债务归零。17世纪的精算数学将这些计算系统化,今天的银行将其应用于住房抵押贷款
+      和汽车贷款:正是靠它,数百万人才能以每月完全相同的月供买下自己的房子。
+    ja: >-
+      年金支払額とは、n期間にわたり利率rで現在価値を完済する固定の分割払いのことだ。住宅ローンの月々の返済額を
+      計算する式である。各支払いはまず当期の利息をカバーし、残りが元本を減らすため、満期時には借金はゼロになる。
+      保険数理は17世紀にこの計算を体系化し、今日の銀行は住宅ローンや自動車ローンに応用している。この式のおかげで、
+      何百万人もの人々が毎月同じ返済額で家を買うことができるのだ。
+  timeline:
+    - year: "1671"
+      label:
+        es: >-
+          Jan de Witt calcula el valor de las rentas vitalicias, un antecedente de la anualidad.
+        en: >-
+          Jan de Witt values life annuities, an early precursor of the annuity.
+        pt: >-
+          Jan de Witt calcula o valor das rendas vitalícias, um antecedente da anuidade.
+        fr: >-
+          Jan de Witt évalue les rentes viagères, un précurseur de l'annuité.
+        zh: >-
+          扬·德维特评估终身年金的价值,这是年金的早期先驱。
+        ja: >-
+          ヤン・デ・ウィットが生命年金の評価を行い、年金の先駆けとなる。
+    - year: "1762"
+      label:
+        es: >-
+          La Equitable Life, primera aseguradora moderna, usa matemática actuarial para sus tarifas.
+        en: >-
+          The Equitable Life, the first modern insurer, uses actuarial math for its premiums.
+        pt: >-
+          A Equitable Life, primeira seguradora moderna, usa matemática atuarial em suas tarifas.
+        fr: >-
+          L'Equitable Life, première compagnie d'assurance moderne, utilise les mathématiques
+          actuarielles pour ses primes.
+        zh: >-
+          现代首家保险公司公平人寿将精算数学用于保费。
+        ja: >-
+          近代初の保険会社エクイタブル生命が保険料に保険数理を用いる。
+    - year: "1934"
+      label:
+        es: >-
+          Las hipotecas amortizadas en cuotas fijas se generalizan en Estados Unidos.
+        en: >-
+          Fixed-payment amortized mortgages become widespread in the United States.
+        pt: >-
+          As hipotecas amortizadas em parcelas fixas se generalizam nos Estados Unidos.
+        fr: >-
+          Les prêts immobiliers amortissables à mensualités fixes se généralisent aux États-Unis.
+        zh: >-
+          固定月供的等额还贷抵押贷款在美国普及。
+        ja: >-
+          固定額返済のローン(元利均等)がアメリカで広まる。
+    - year: Hoy
+      label:
+        es: >-
+          La función PMT de las planillas de cálculo calcula cada cuota con esta fórmula.
+        en: >-
+          The PMT function of spreadsheets computes every installment with this formula.
+        pt: >-
+          A função PMT das planilhas calcula cada parcela com esta fórmula.
+        fr: >-
+          La fonction PMT des tableurs calcule chaque mensualité avec cette formule.
+        zh: >-
+          电子表格中的PMT函数用该公式计算每一期的付款额。
+        ja: >-
+          表計算ソフトのPMT関数は、この式で毎期の支払額を計算する。
+  useCases:
+    - title:
+        es: Hipotecas
+        en: Home mortgages
+        pt: Hipotecas
+        fr: Crédits immobiliers
+        zh: 住房抵押贷款
+        ja: 住宅ローン
+      description:
+        es: >-
+          La cuota mensual de una hipoteca se calcula con esta fórmula, que amortiza el capital a lo
+          largo de décadas.
+        en: >-
+          A mortgage's monthly payment is computed with this formula, amortizing the principal over
+          decades.
+        pt: >-
+          A parcela mensal de uma hipoteca é calculada com esta fórmula, que amortiza o capital ao
+          longo de décadas.
+        fr: >-
+          La mensualité d'un prêt immobilier se calcule avec cette formule, qui amortit le capital sur
+          des décennies.
+        zh: >-
+          住房贷款的月供就是用该公式计算的,它会在数十年间逐步摊还本金。
+        ja: >-
+          住宅ローンの月々の返済額はこの式で計算され、元本を数十年かけて償却する。
+    - title:
+        es: Préstamos automotrices
+        en: Auto loans
+        pt: Financiamento de automóveis
+        fr: Prêts automobiles
+        zh: 汽车贷款
+        ja: 自動車ローン
+      description:
+        es: >-
+          Los concesionarios cotizan cuotas fijas que saldan el precio del vehículo en 36 a 72 meses.
+        en: >-
+          Dealerships quote fixed payments that settle the vehicle price over 36 to 72 months.
+        pt: >-
+          Concessionárias cotam parcelas fixas que quitam o preço do veículo em 36 a 72 meses.
+        fr: >-
+          Les concessionnaires proposent des mensualités fixes qui soldent le prix du véhicule en 36 à
+          72 mois.
+        zh: >-
+          经销商报出固定的月供,在36到72个月内结清车款。
+        ja: >-
+          ディーラーは36〜72か月で車両価格を完済する固定額の分割払いを提示する。
+    - title:
+        es: Rentas y seguros
+        en: Annuities and insurance
+        pt: Anuidades e seguros
+        fr: Rentes et assurances
+        zh: 年金与保险
+        ja: 年金と保険
+      description:
+        es: >-
+          Las compañías de seguros convierten un fondo en pagos periódicos de por vida mediante la
+          anualidad.
+        en: >-
+          Insurance companies convert a lump sum into lifetime periodic payments using the annuity.
+        pt: >-
+          Seguradoras convertem um valor único em pagamentos periódicos vitalícios usando a anuidade.
+        fr: >-
+          Les compagnies d'assurance convertissent un capital en paiements périodiques viagers grâce à
+          l'annuité.
+        zh: >-
+          保险公司通过年金将一笔资金转化为终身的定期付款。
+        ja: >-
+          保険会社は年金を用いて一時金を終身の定期的支払いに変換する。
+    - title:
+        es: Finanzas personales
+        en: Personal finance
+        pt: Finanças pessoais
+        fr: Finances personnelles
+        zh: 个人理财
+        ja: 個人の家計管理
+      description:
+        es: >-
+          La función PMT de las planillas permite planificar ahorros y deudas en cuotas.
+        en: >-
+          The PMT function in spreadsheets helps plan savings and debt in installments.
+        pt: >-
+          A função PMT das planilhas permite planejar poupança e dívidas em parcelas.
+        fr: >-
+          La fonction PMT des tableurs permet de planifier épargne et dettes en versements.
+        zh: >-
+          电子表格中的PMT函数帮助按分期规划储蓄和债务。
+        ja: >-
+          表計算ソフトのPMT関数は、貯蓄や借金の分割支払い計画を立てるのに役立つ。
+  example:
+    title:
+      es: Una hipoteca a 30 años
+      en: A 30-year mortgage
+      pt: Uma hipoteca de 30 anos
+      fr: Un prêt immobilier sur 30 ans
+      zh: 30年期房贷
+      ja: 30年住宅ローン
+    lines:
+      - es: "PV = 100000, r = 1% = 0.01, n = 360"
+        en: "PV = 100000, r = 1% = 0.01, n = 360"
+        pt: "PV = 100000, r = 1 % = 0,01, n = 360"
+        fr: "PV = 100000, r = 1 % = 0,01, n = 360"
+        zh: "PV = 100000, r = 1% = 0.01, n = 360"
+        ja: "PV = 100000, r = 1% = 0.01, n = 360"
+      - es: "PMT = PV·r / (1 − (1+r)⁻³⁶⁰)"
+        en: "PMT = PV·r / (1 − (1+r)⁻³⁶⁰)"
+        pt: "PMT = PV·r / (1 − (1+r)⁻³⁶⁰)"
+        fr: "PMT = PV·r / (1 − (1+r)⁻³⁶⁰)"
+        zh: "PMT = PV·r / (1 − (1+r)⁻³⁶⁰)"
+        ja: "PMT = PV·r / (1 − (1+r)⁻³⁶⁰)"
+      - es: "(1.01)⁻³⁶⁰ ≈ 0.02782"
+        en: "(1.01)⁻³⁶⁰ ≈ 0.02782"
+        pt: "(1,01)⁻³⁶⁰ ≈ 0,02782"
+        fr: "(1,01)⁻³⁶⁰ ≈ 0,02782"
+        zh: "(1.01)⁻³⁶⁰ ≈ 0.02782"
+        ja: "(1.01)⁻³⁶⁰ ≈ 0.02782"
+      - es: "PMT = 1000 / (1 − 0.02782)"
+        en: "PMT = 1000 / (1 − 0.02782)"
+        pt: "PMT = 1000 / (1 − 0,02782)"
+        fr: "PMT = 1000 / (1 − 0,02782)"
+        zh: "PMT = 1000 / (1 − 0.02782)"
+        ja: "PMT = 1000 / (1 − 0.02782)"
+      - es: "PMT = 1000 / 0.97218"
+        en: "PMT = 1000 / 0.97218"
+        pt: "PMT = 1000 / 0,97218"
+        fr: "PMT = 1000 / 0,97218"
+        zh: "PMT = 1000 / 0.97218"
+        ja: "PMT = 1000 / 0.97218"
+      - es: "PMT ≈ 1028.61 al mes"
+        en: "PMT ≈ 1028.61 per month"
+        pt: "PMT ≈ 1028,61 por mês"
+        fr: "PMT ≈ 1028,61 par mois"
+        zh: "PMT ≈ 1028.61 每月"
+        ja: "PMT ≈ 1028.61 月々"

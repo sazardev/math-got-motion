@@ -1,0 +1,249 @@
+id: arc-length
+title:
+  es: Longitud de Arco en Radianes
+  en: Arc Length in Radians
+  pt: Comprimento de Arco em Radianos
+  fr: Longueur d'arc en radians
+  zh: 用弧度表示的弧长
+  ja: ラジアンでの弧の長さ
+category:
+  es: Trigonometría
+  en: Trigonometry
+  pt: Trigonometria
+  fr: Trigonométrie
+  zh: 三角学
+  ja: 三角法
+nodes:
+  - id: s
+    type: variable
+    value: s
+    explanation:
+      es: "s: la longitud del arco de circunferencia."
+      en: "s: the length of the circular arc."
+      pt: "s: o comprimento do arco de circunferência."
+      fr: "s : la longueur de l'arc de cercle."
+      zh: "s：圆弧的长度。"
+      ja: "s：円弧の長さ。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "r: el radio del círculo."
+      en: "r: the radius of the circle."
+      pt: "r: o raio do círculo."
+      fr: "r : le rayon du cercle."
+      zh: "r：圆的半径。"
+      ja: "r：円の半径。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por el ángulo.
+      en: Multiplied by the angle.
+      pt: Multiplicado pelo ângulo.
+      fr: Multiplié par l'angle.
+      zh: 乘以角度。
+      ja: 角度を掛ける。
+  - id: theta
+    type: variable
+    value: θ
+    explanation:
+      es: "θ: el ángulo central, medido en radianes, no en grados."
+      en: "θ: the central angle, measured in radians, not degrees."
+      pt: "θ: o ângulo central, medido em radianos, não em graus."
+      fr: "θ : l'angle au centre, mesuré en radians, pas en degrés."
+      zh: "θ：圆心角，以弧度而非角度度量。"
+      ja: "θ：中心角。度ではなくラジアンで測る。"
+context:
+  author:
+    es: Origen colectivo; radianes formalizados por Cotes y Euler
+    en: Collective origin; radians formalized by Cotes and Euler
+    pt: Origem coletiva; radianos formalizados por Cotes e Euler
+    fr: Origine collective ; radians formalisés par Cotes et Euler
+    zh: 集体起源；弧度由科茨与欧拉加以形式化
+    ja: 集団的起源。ラジアンはコーツとオイラーが定式化
+  era:
+    es: Europa, s. XVIII · radián bautizado en 1873
+    en: Europe, 18th century · radian named in 1873
+    pt: Europa, séc. XVIII · radiano batizado em 1873
+    fr: Europe, XVIIIe siècle · le radian nommé en 1873
+    zh: 欧洲，18世纪·1873年命名为弧度
+    ja: ヨーロッパ、18世紀・1873年にラジアンと命名
+  history:
+    es: >-
+      Medir un ángulo como la razón entre el arco y el radio produce una unidad natural: el radián,
+      independiente del tamaño del círculo. Roger Cotes la usó hacia 1714 y Euler la hizo estándar en
+      su análisis; el nombre "radián" llegó en 1873, acuñado por James Thomson. En radianes, las
+      fórmulas del cálculo — como la derivada del seno — quedan limpias y sin constantes de
+      conversión.
+    en: >-
+      Measuring an angle as the ratio of arc to radius yields a natural unit: the radian, independent
+      of circle size. Roger Cotes used it around 1714 and Euler made it standard in his analysis; the
+      name "radian" arrived in 1873, coined by James Thomson. In radians, calculus formulas — like the
+      derivative of sine — stay clean and free of conversion constants.
+    pt: >-
+      Medir um ângulo como a razão entre o arco e o raio produz uma unidade natural: o radiano,
+      independente do tamanho do círculo. Roger Cotes a usou por volta de 1714 e Euler a tornou padrão
+      em sua análise; o nome "radiano" chegou em 1873, cunhado por James Thomson. Em radianos, as
+      fórmulas do cálculo — como a derivada do seno — ficam limpas e sem constantes de conversão.
+    fr: >-
+      Mesurer un angle comme le rapport de l'arc au rayon produit une unité naturelle : le radian,
+      indépendante de la taille du cercle. Roger Cotes l'utilisa vers 1714 et Euler en fit la norme
+      dans son analyse ; le nom « radian » arriva en 1873, inventé par James Thomson. En radians, les
+      formules du calcul — comme la dérivée du sinus — restent propres et sans constantes de
+      conversion.
+    zh: >-
+      把角作为弧与半径之比来度量，会得到一种自然的单位——弧度，它与圆的大小无关。罗杰·科茨在1714年前后使用过它，
+      欧拉使其在他的分析中成为标准；"弧度"之名迟至1873年才由詹姆斯·汤姆森创造。在弧度制下，微积分公式——例如
+      正弦的导数——保持简洁，没有换算常数。
+    ja: >-
+      角を弧と半径の比として測ると、円の大きさに依存しない自然な単位、ラジアンが得られる。ロジャー・コーツが
+      1714年頃にこれを用い、オイラーがその解析学で標準とした。「ラジアン」という名前は1873年、ジェームズ・
+      トムソンが作った。ラジアンでは、正弦の導関数のような微積分の公式が、換算定数なしで美しく保たれる。
+  timeline:
+    - year: c. 1714
+      label:
+        es: >-
+          Roger Cotes usa la medida radial del ángulo en cálculo, anticipando el radián.
+        en: >-
+          Roger Cotes uses radial angle measure in calculus, anticipating the radian.
+        pt: >-
+          Roger Cotes usa a medida radial do ângulo no cálculo, antecipando o radiano.
+        fr: >-
+          Roger Cotes utilise la mesure radiale de l'angle en calcul, anticipant le radian.
+        zh: >-
+          罗杰·科茨在微积分中使用径制角度量，预示了弧度。
+        ja: >-
+          ロジャー・コーツが微積分で角の半径測度を用い、ラジアンを先取りする。
+    - year: s. XVIII
+      label:
+        es: >-
+          Euler adopta el radián en su análisis, haciendo naturales las fórmulas del cálculo.
+        en: >-
+          Euler adopts the radian in his analysis, making calculus formulas natural.
+        pt: >-
+          Euler adota o radiano em sua análise, tornando naturais as fórmulas do cálculo.
+        fr: >-
+          Euler adopte le radian dans son analyse, rendant naturelles les formules du calcul.
+        zh: >-
+          欧拉在其分析中采用弧度，使微积分公式自然简洁。
+        ja: >-
+          オイラーが解析学でラジアンを採用し、微積分の公式を自然な形にする。
+    - year: "1873"
+      label:
+        es: >-
+          James Thomson acuña el término "radián"; el SI lo adopta como unidad oficial en 1960.
+        en: >-
+          James Thomson coins the term "radian"; the SI adopts it as an official unit in 1960.
+        pt: >-
+          James Thomson cunha o termo "radiano"; o SI o adota como unidade oficial em 1960.
+        fr: >-
+          James Thomson invente le terme « radian » ; le SI l'adopte comme unité officielle en 1960.
+        zh: >-
+          詹姆斯·汤姆森创造"弧度"一词；1960年国际单位制将其列为正式单位。
+        ja: >-
+          ジェームズ・トムソンが「ラジアン」という用語を作る。1960年にはSIの公式単位として採用される。
+  useCases:
+    - title:
+        es: Diseño de engranajes y levas
+        en: Gear and cam design
+        pt: Projeto de engrenagens e cames
+        fr: Conception d'engrenages et de cames
+        zh: 齿轮与凸轮设计
+        ja: 歯車とカムの設計
+      description:
+        es: >-
+          La distancia que recorre un diente o un seguidor se calcula con s = r·θ.
+        en: >-
+          The distance traveled by a tooth or a follower is computed with s = r·θ.
+        pt: >-
+          A distância percorrida por um dente ou um seguidor é calculada com s = r·θ.
+        fr: >-
+          La distance parcourue par une dent ou un poussoir se calcule avec s = r·θ.
+        zh: >-
+          齿或从动件走过的距离用s = r·θ计算。
+        ja: >-
+          歯やフォロワが進む距離は、s = r·θで計算される。
+    - title:
+        es: Mecánica orbital
+        en: Orbital mechanics
+        pt: Mecânica orbital
+        fr: Mécanique orbitale
+        zh: 轨道力学
+        ja: 軌道力学
+      description:
+        es: >-
+          La distancia recorrida a lo largo de una órbita circular es la longitud de su arco.
+        en: >-
+          The distance traveled along a circular orbit is its arc length.
+        pt: >-
+          A distância percorrida ao longo de uma órbita circular é o comprimento do seu arco.
+        fr: >-
+          La distance parcourue le long d'une orbite circulaire est la longueur de son arc.
+        zh: >-
+          沿圆形轨道经过的距离就是其弧长。
+        ja: >-
+          円軌道を進んだ距離は、その弧の長さに等しい。
+    - title:
+        es: Corrección por curvatura
+        en: Curvature correction
+        pt: Correção por curvatura
+        fr: Correction de courbure
+        zh: 曲率修正
+        ja: 曲率補正
+      description:
+        es: >-
+          El GPS corrige la distancia plana en la superficie curva de la Tierra con arcos.
+        en: >-
+          GPS corrects flat distances on Earth's curved surface using arcs.
+        pt: >-
+          O GPS corrige a distância plana na superfície curva da Terra com arcos.
+        fr: >-
+          Le GPS corrige les distances planes sur la surface courbe de la Terre à l'aide d'arcs.
+        zh: >-
+          GPS用弧长来修正地球曲面上的平面距离。
+        ja: >-
+          GPSは、地球の曲面での平面距離を弧を使って補正する。
+  example:
+    title:
+      es: Una rueda que gira
+      en: A turning wheel
+      pt: Uma roda que gira
+      fr: Une roue qui tourne
+      zh: 转动的轮子
+      ja: 回転する車輪
+    lines:
+      - es: r = 5 m, θ = 1.2 rad
+        en: r = 5 m, θ = 1.2 rad
+        pt: r = 5 m, θ = 1,2 rad
+        fr: r = 5 m, θ = 1,2 rad
+        zh: r = 5 米，θ = 1.2 弧度
+        ja: r = 5 m、θ = 1.2 rad
+      - es: s = r · θ
+        en: s = r · θ
+        pt: s = r · θ
+        fr: s = r · θ
+        zh: s = r · θ
+        ja: s = r · θ
+      - es: s = 5 · 1.2
+        en: s = 5 · 1.2
+        pt: s = 5 · 1,2
+        fr: s = 5 · 1,2
+        zh: s = 5 · 1.2
+        ja: s = 5 · 1.2
+      - es: s = 6 metros
+        en: s = 6 meters
+        pt: s = 6 metros
+        fr: s = 6 mètres
+        zh: s = 6 米
+        ja: s = 6 メートル

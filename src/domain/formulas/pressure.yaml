@@ -1,0 +1,330 @@
+id: pressure
+title:
+  es: Presión
+  en: Pressure
+  pt: Pressão
+  fr: Pression
+  zh: 压强
+  ja: 圧力
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: p
+    type: variable
+    value: P
+    explanation:
+      es: "P: la presión, la fuerza perpendicular repartida sobre cada unidad de área."
+      en: "P: the pressure, the perpendicular force spread over each unit of area."
+      pt: "P: a pressão, a força perpendicular distribuída sobre cada unidade de área."
+      fr: "P : la pression, la force perpendiculaire répartie sur chaque unité de surface."
+      zh: "P：压强，即垂直分布在每单位面积上的力。"
+      ja: "P：圧力。単位面積あたりに垂直に及ぶ力。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: "F: la fuerza total aplicada de forma perpendicular a la superficie."
+      en: "F: the total force applied perpendicular to the surface."
+      pt: "F: a força total aplicada perpendicularmente à superfície."
+      fr: "F : la force totale appliquée perpendiculairement à la surface."
+      zh: "F：垂直于表面施加的总力。"
+      ja: "F：表面に垂直に加わる力の合計。"
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por.
+      en: Divided by.
+      pt: Dividido por.
+      fr: Divisé par.
+      zh: 除以。
+      ja: で割る。
+  - id: a
+    type: variable
+    value: A
+    explanation:
+      es: "A: el área sobre la que se reparte esa fuerza."
+      en: "A: the area over which that force is spread."
+      pt: "A: a área sobre a qual essa força é distribuída."
+      fr: "A : la surface sur laquelle cette force est répartie."
+      zh: "A：承受该力的面积。"
+      ja: "A：その力が加わる面積。"
+context:
+  author:
+    es: Origen colectivo; formalizada por Pascal
+    en: Collective origin; formalized by Pascal
+    pt: Origem coletiva; formalizada por Pascal
+    fr: Origine collective ; formalisée par Pascal
+    zh: 集体起源；由帕斯卡系统化
+    ja: 集団的起源；パスカルが定式化
+  era:
+    es: Europa, s. XVII
+    en: Europe, 17th century
+    pt: Europa, s. XVII
+    fr: Europe, XVIIe siècle
+    zh: 欧洲，17世纪
+    ja: ヨーロッパ、17世紀
+  history:
+    es: >-
+      La presión como fuerza repartida sobre un área se usó de forma intuitiva en la hidráulica
+      antigua: los acueductos romanos y las norias ya la explotaban sin nombrarla. En el siglo XVII,
+      el barómetro de Evangelista Torricelli (1643) y los experimentos de Blaise Pascal con él
+      demostraron que la presión atmosférica existe y disminuye con la altitud, y Pascal estableció
+      que en un fluido en reposo la presión se transmite por igual en todas las direcciones. Un
+      cuchillo afilado concentra la fuerza de la mano en una arista mínima, mientras que las raquetas
+      de nieve la reparten sobre una gran superficie: la misma fuerza produce presiones muy distintas
+      según el área. Hoy, P = F/A gobierna desde la presión de los neumáticos hasta los sistemas
+      hidráulicos.
+    en: >-
+      Pressure as force spread over an area was used intuitively in ancient hydraulics: Roman
+      aqueducts and water wheels already exploited it without naming it. In the 17th century,
+      Evangelista Torricelli's barometer (1643) and Blaise Pascal's experiments with it showed that
+      atmospheric pressure exists and decreases with altitude, and Pascal established that in a fluid
+      at rest pressure is transmitted equally in all directions. A sharp knife concentrates the force
+      of the hand on a tiny edge, while snowshoes spread it over a large surface: the same force
+      produces very different pressures depending on the area. Today, P = F/A governs everything from
+      tire pressure to hydraulic systems.
+    pt: >-
+      A pressão como força distribuída sobre uma área foi usada intuitivamente na hidráulica antiga:
+      os aquedutos romanos e as noras já a exploravam sem nomeá-la. No século XVII, o barômetro de
+      Evangelista Torricelli (1643) e os experimentos de Blaise Pascal com ele mostraram que a pressão
+      atmosférica existe e diminui com a altitude, e Pascal estabeleceu que, num fluido em repouso, a
+      pressão se transmite igualmente em todas as direções. Uma faca afiada concentra a força da mão
+      em um fio mínimo, enquanto as raquetes de neve a espalham por uma grande superfície: a mesma
+      força produz pressões muito diferentes conforme a área. Hoje, P = F/A rege desde a pressão dos
+      pneus até os sistemas hidráulicos.
+    fr: >-
+      La pression comme force répartie sur une surface a été utilisée intuitivement dans l'hydraulique
+      antique : les aqueducs romains et les roues à eau l'exploitaient déjà sans la nommer. Au XVIIe
+      siècle, le baromètre d'Evangelista Torricelli (1643) et les expériences de Blaise Pascal
+      montrèrent que la pression atmosphérique existe et diminue avec l'altitude, et Pascal établit
+      que dans un fluide au repos la pression se transmet également dans toutes les directions. Un
+      couteau affûté concentre la force de la main sur un fil minuscule, tandis que les raquettes à
+      neige la répartissent sur une grande surface : la même force produit des pressions très
+      différentes selon la surface. Aujourd'hui, P = F/A régit tout, de la pression des pneus aux
+      systèmes hydrauliques.
+    zh: >-
+      压强作为单位面积上的受力，在古代水力工程中已被直观使用：罗马引水渠和水车在尚未命名这一概念时就已在
+      利用它。17世纪，埃万杰利斯塔·托里拆利的气压计（1643年）以及布莱兹·帕斯卡对它的实验证明了大气压的
+      存在，并随海拔升高而减小；帕斯卡还确立了静止流体中压强向各个方向等量传递的规律。锋利的刀把手的力集中
+      到极细的刀刃上，而雪鞋则把力分散到很大的面积上：同样的力，因面积不同而产生截然不同的压强。今天，
+      P = F/A 支配着从轮胎气压到液压系统的一切。
+    ja: >-
+      単位面積あたりにかかる力としての圧力は、古代の水力学で直感的に利用されてきた。ローマの水道橋や水車は、
+      その名を知らぬままに圧力を活用していた。17世紀、エヴァンジェリスタ・トリチェリの気圧計（1643年）と、
+      それを用いたブレーズ・パスカルの実験によって大気圧の存在と高度による減少が示され、パスカルは静止流体で
+      は圧力が全方向に等しく伝わることを確立した。鋭い刃物は手の力を極めて細い刃先に集中させ、スノーシューは
+      力を広い面積に分散させる。同じ力でも面積によって圧力は大きく変わる。今日、P = F/A はタイヤの空気圧から
+      油圧システムに至るまでを支配している。
+  timeline:
+    - year: "1643"
+      label:
+        es: >-
+          Torricelli construye el primer barómetro y demuestra que el aire tiene peso y ejerce presión.
+        en: >-
+          Torricelli builds the first barometer and shows that air has weight and exerts pressure.
+        pt: >-
+          Torricelli constrói o primeiro barômetro e mostra que o ar tem peso e exerce pressão.
+        fr: >-
+          Torricelli construit le premier baromètre et montre que l'air a un poids et exerce une
+          pression.
+        zh: >-
+          托里拆利制造出第一只气压计，证明空气有重量并施加压强。
+        ja: >-
+          トリチェリが最初の気圧計を作り、空気に重さがあり圧力を及ぼすことを示す。
+    - year: "1648"
+      label:
+        es: >-
+          A pedido de Pascal, el barómetro sube al Puy-de-Dôme y la presión cae con la altitud.
+        en: >-
+          At Pascal's request, the barometer is carried up the Puy-de-Dôme and pressure falls with
+          altitude.
+        pt: >-
+          A pedido de Pascal, o barômetro sobe ao Puy-de-Dôme e a pressão cai com a altitude.
+        fr: >-
+          À la demande de Pascal, le baromètre est porté au sommet du Puy-de-Dôme et la pression
+          diminue avec l'altitude.
+        zh: >-
+          应帕斯卡之请，气压计被带上多姆山，压强随海拔升高而下降。
+        ja: >-
+          パスカルの依頼で気圧計がピュイ・ド・ドームに運ばれ、高度とともに気圧が下がることが示される。
+    - year: "1663"
+      label:
+        es: >-
+          Se publica el "Tratado del equilibrio de los líquidos" de Pascal, que fundamenta la estática
+          de fluidos.
+        en: >-
+          Pascal's "Treatise on the Equilibrium of Liquids" is published, laying the foundations of
+          fluid statics.
+        pt: >-
+          É publicado o "Tratado sobre o Equilíbrio dos Líquidos" de Pascal, que fundamenta a estática
+          dos fluidos.
+        fr: >-
+          Le « Traité de l'équilibre des liqueurs » de Pascal est publié, fondant la statique des
+          fluides.
+        zh: >-
+          帕斯卡的《液体平衡论》出版，奠定了流体静力学的基础。
+        ja: >-
+          パスカルの『液体の平衡に関する論考』が出版され、流体静力学の基礎を築く。
+    - year: Hoy
+      label:
+        es: >-
+          La presión de los neumáticos, los sistemas hidráulicos y la neumática dependen de P = F/A.
+        en: >-
+          Tire pressure, hydraulic systems, and pneumatics all depend on P = F/A.
+        pt: >-
+          A pressão dos pneus, os sistemas hidráulicos e a pneumática dependem de P = F/A.
+        fr: >-
+          La pression des pneus, les systèmes hydrauliques et la pneumatique dépendent tous de P =
+          F/A.
+        zh: >-
+          轮胎气压、液压系统和气动技术都依赖 P = F/A。
+        ja: >-
+          タイヤの空気圧、油圧システム、空気圧機器はすべて P = F/A に依存している。
+  useCases:
+    - title:
+        es: Neumáticos de automóvil
+        en: Car tires
+        pt: Pneus de automóvel
+        fr: Pneus d'automobile
+        zh: 汽车轮胎
+        ja: 自動車用タイヤ
+      description:
+        es: >-
+          El aire a la presión adecuada reparte el peso del vehículo sobre la huella de contacto,
+          determinando agarre, confort y consumo.
+        en: >-
+          Air at the right pressure spreads the vehicle's weight over the contact patch, determining
+          grip, comfort, and fuel economy.
+        pt: >-
+          O ar na pressão adequada distribui o peso do veículo sobre a área de contato, determinando
+          aderência, conforto e consumo.
+        fr: >-
+          L'air à la bonne pression répartit le poids du véhicule sur l'empreinte de contact, en
+          déterminant l'adhérence, le confort et la consommation.
+        zh: >-
+          以适当压强充入的空气把车辆的重量分散到接触面上，决定着抓地力、舒适性和油耗。
+        ja: >-
+          適切な圧力の空気が車両の重量を接地部に分散させ、グリップ、乗り心地、燃費を左右する。
+    - title:
+        es: Sistemas hidráulicos y neumáticos
+        en: Hydraulic and pneumatic systems
+        pt: Sistemas hidráulicos e pneumáticos
+        fr: Systèmes hydrauliques et pneumatiques
+        zh: 液压与气动系统
+        ja: 油圧・空圧システム
+      description:
+        es: >-
+          La presión del fluido mueve pistones y actuadores en prensas, frenos y maquinaria pesada.
+        en: >-
+          Fluid pressure drives pistons and actuators in presses, brakes, and heavy machinery.
+        pt: >-
+          A pressão do fluido move pistões e atuadores em prensas, freios e maquinário pesado.
+        fr: >-
+          La pression du fluide actionne pistons et vérins dans les presses, les freins et les engins
+          de chantier.
+        zh: >-
+          流体压强推动压机、刹车和重型机械中的活塞与执行器。
+        ja: >-
+          流体の圧力が、プレス機やブレーキ、重機のピストンやアクチュエーターを動かす。
+    - title:
+        es: Presas y diques
+        en: Dams and dikes
+        pt: Barragens e diques
+        fr: Barrages et digues
+        zh: 大坝与堤防
+        ja: ダムと堤防
+      description:
+        es: >-
+          Las paredes de una represa se dimensionan para resistir la fuerza que el agua acumulada
+          ejerce por unidad de área.
+        en: >-
+          A dam's walls are sized to withstand the force the stored water exerts per unit of area.
+        pt: >-
+          As paredes de uma represa são dimensionadas para resistir à força que a água acumulada
+          exerce por unidade de área.
+        fr: >-
+          Les parois d'un barrage sont dimensionnées pour résister à la force que l'eau retenue
+          exerce par unité de surface.
+        zh: >-
+          大坝的坝体按蓄水对单位面积所施加的力来设计尺寸。
+        ja: >-
+          ダムの壁は、貯められた水が単位面積あたりに及ぼす力に耐えられるよう設計される。
+    - title:
+        es: Medicina
+        en: Medicine
+        pt: Medicina
+        fr: Médecine
+        zh: 医学
+        ja: 医学
+      description:
+        es: >-
+          La presión arterial y la presión ocular se miden como fuerza por unidad de área con
+          esfigmomanómetros y tonómetros.
+        en: >-
+          Blood pressure and eye pressure are measured as force per unit area with sphygmomanometers
+          and tonometers.
+        pt: >-
+          A pressão arterial e a pressão ocular são medidas como força por unidade de área com
+          esfigmomanômetros e tonômetros.
+        fr: >-
+          La pression artérielle et la pression oculaire se mesurent comme une force par unité de
+          surface, avec sphygmomanomètres et tonomètres.
+        zh: >-
+          血压和眼压通过血压计和眼压计以单位面积受力来测量。
+        ja: >-
+          血圧や眼圧は、血圧計や眼圧計によって単位面積あたりの力として測定される。
+  example:
+    title:
+      es: Persona sobre raquetas de nieve
+      en: A person on snowshoes
+      pt: Pessoa sobre raquetas de neve
+      fr: Une personne en raquettes à neige
+      zh: 穿雪鞋的人
+      ja: スノーシューを履いた人
+    lines:
+      - es: F = 500 N (peso de la persona)
+        en: F = 500 N (the person's weight)
+        pt: F = 500 N (peso da pessoa)
+        fr: F = 500 N (le poids de la personne)
+        zh: F = 500 牛（人的重量）
+        ja: F = 500 N（人の体重）
+      - es: A = 0.02 m² (área de las raquetas)
+        en: A = 0.02 m² (area of the snowshoes)
+        pt: A = 0,02 m² (área das raquetas)
+        fr: A = 0,02 m² (surface des raquettes)
+        zh: A = 0.02 米²（雪鞋的面积）
+        ja: A = 0.02 m²（スノーシューの面積）
+      - es: P = F / A
+        en: P = F / A
+        pt: P = F / A
+        fr: P = F / A
+        zh: P = F / A
+        ja: P = F / A
+      - es: P = 500 / 0.02
+        en: P = 500 / 0.02
+        pt: P = 500 / 0,02
+        fr: P = 500 / 0,02
+        zh: P = 500 / 0.02
+        ja: P = 500 / 0.02
+      - es: P = 25 000 Pa (25 kPa)
+        en: P = 25,000 Pa (25 kPa)
+        pt: P = 25.000 Pa (25 kPa)
+        fr: P = 25 000 Pa (25 kPa)
+        zh: P = 25,000 帕（25 千帕）
+        ja: P = 25,000 Pa（25 kPa）
