@@ -4,6 +4,8 @@ export interface UiStrings {
   scrollHint: string;
   themeToLight: string;
   themeToDark: string;
+  fxLabel: string;
+  typeLabel: string;
   menuTitle: string;
   closeMenu: string;
   searchPlaceholder: string;
@@ -60,6 +62,8 @@ export const uiStrings: Record<Locale, UiStrings> = {
     scrollHint: "Scroll para deconstruir la fórmula",
     themeToLight: "Claro",
     themeToDark: "Oscuro",
+    fxLabel: "Efecto",
+    typeLabel: "Fuente",
     menuTitle: "Fórmulas",
     closeMenu: "Cerrar",
     searchPlaceholder: "Buscar fórmula…",
@@ -119,6 +123,8 @@ export const uiStrings: Record<Locale, UiStrings> = {
     scrollHint: "Scroll to deconstruct the formula",
     themeToLight: "Light",
     themeToDark: "Dark",
+    fxLabel: "Effect",
+    typeLabel: "Font",
     menuTitle: "Formulas",
     closeMenu: "Close",
     searchPlaceholder: "Search formulas…",
@@ -176,6 +182,8 @@ export const uiStrings: Record<Locale, UiStrings> = {
     scrollHint: "Role para desconstruir a fórmula",
     themeToLight: "Claro",
     themeToDark: "Escuro",
+    fxLabel: "Efeito",
+    typeLabel: "Fonte",
     menuTitle: "Fórmulas",
     closeMenu: "Fechar",
     searchPlaceholder: "Buscar fórmula…",
@@ -234,6 +242,8 @@ export const uiStrings: Record<Locale, UiStrings> = {
     scrollHint: "Faites défiler pour déconstruire la formule",
     themeToLight: "Clair",
     themeToDark: "Sombre",
+    fxLabel: "Effet",
+    typeLabel: "Police",
     menuTitle: "Formules",
     closeMenu: "Fermer",
     searchPlaceholder: "Rechercher une formule…",
@@ -293,6 +303,8 @@ export const uiStrings: Record<Locale, UiStrings> = {
     scrollHint: "滚动以逐步拆解公式",
     themeToLight: "浅色",
     themeToDark: "深色",
+    fxLabel: "特效",
+    typeLabel: "字体",
     menuTitle: "公式",
     closeMenu: "关闭",
     searchPlaceholder: "搜索公式…",
@@ -349,6 +361,8 @@ export const uiStrings: Record<Locale, UiStrings> = {
     scrollHint: "スクロールして数式を分解する",
     themeToLight: "ライト",
     themeToDark: "ダーク",
+    fxLabel: "エフェクト",
+    typeLabel: "フォント",
     menuTitle: "数式",
     closeMenu: "閉じる",
     searchPlaceholder: "数式を検索…",

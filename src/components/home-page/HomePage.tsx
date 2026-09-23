@@ -40,7 +40,7 @@ const FEATURED_IDS = [
 
 function FormulaGlyphs({ formula }: { formula: Formula }) {
   return (
-    <span className="home__featured-equation" aria-hidden="true">
+    <span className="home__featured-equation fx-display" aria-hidden="true">
       {formula.nodes.map((node) => (
         <span key={node.id} className={`home__featured-node home__featured-node--${node.type}`}>
           {node.value}
@@ -215,7 +215,7 @@ export function HomePage() {
 
   return (
     <section className="home" ref={homeRef} aria-label={strings.homeTitle}>
-      <div className="home__teaser" ref={teaserRef} aria-hidden="true">
+      <div className="home__teaser fx-display" ref={teaserRef} aria-hidden="true">
         {teaserFormula?.nodes.map((node) => (
           <span
             key={node.id}
@@ -229,7 +229,7 @@ export function HomePage() {
         ))}
       </div>
 
-      <p className="home__title">{strings.homeTitle}</p>
+      <p className="home__title fx-display">{strings.homeTitle}</p>
       <p className="home__tagline">{strings.homeTagline}</p>
 
       <button

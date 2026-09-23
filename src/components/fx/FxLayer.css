@@ -1,0 +1,375 @@
+/*
+ * FxLayer — capas decorativas de las estéticas opt-in (CRT/VHS/Neon), más el
+ * glow/chroma del texto display.
+ *
+ * Reglas de la casa, también para fx:
+ *  - `mono` (default) no monta capas ni cambia una sola propiedad: el look
+ *    monocromático plano de DESIGN.md queda intacto.
+ *  - Solo se anima `transform`/`opacity` (misma regla que GSAP). Nunca
+ *    `filter`, `box-shadow` ni propiedades de layout por frame.
+ *  - Sin `mix-blend-mode`: capas alpha simples, predecibles en ambos temas y
+ *    baratas de componer en móvil.
+ *  - `prefers-reduced-motion` apaga las capas animadas y deja las estáticas.
+ *  - El parpadeo es lento (≪ 3 Hz) y de amplitud mínima — WCAG 2.3.1.
+ */
+
+:root {
+  --fx-chroma: transparent;
+  --fx-chroma-2: transparent;
+  --fx-chroma-offset: 0px;
+  --fx-glow: 0 0 0 transparent;
+}
+
+:root[data-fx="crt"] {
+  --fx-chroma: rgba(255, 255, 255, 0.3);
+  --fx-chroma-2: rgba(255, 255, 255, 0.3);
+  --fx-chroma-offset: 1px;
+  --fx-glow: 0 0 18px rgba(255, 255, 255, 0.18);
+}
+
+:root[data-theme="light"][data-fx="crt"] {
+  --fx-chroma: rgba(0, 0, 0, 0.24);
+  --fx-chroma-2: rgba(0, 0, 0, 0.24);
+  --fx-glow: 0 0 18px rgba(0, 0, 0, 0.08);
+}
+
+:root[data-fx="vhs"] {
+  --fx-chroma: rgba(255, 255, 255, 0.46);
+  --fx-chroma-2: rgba(255, 255, 255, 0.32);
+  --fx-chroma-offset: 2px;
+  --fx-glow: 0 0 12px rgba(255, 255, 255, 0.14);
+}
+
+:root[data-theme="light"][data-fx="vhs"] {
+  --fx-chroma: rgba(0, 0, 0, 0.34);
+  --fx-chroma-2: rgba(0, 0, 0, 0.22);
+  --fx-glow: 0 0 12px rgba(0, 0, 0, 0.06);
+}
+
+:root[data-fx="neon"] {
+  --fx-chroma: rgba(0, 255, 242, 0.85);
+  --fx-chroma-2: rgba(255, 47, 210, 0.8);
+  --fx-chroma-offset: 2px;
+  --fx-glow:
+    0 0 4px rgba(255, 255, 255, 0.9), 0 0 16px rgba(0, 255, 242, 0.7),
+    0 0 46px rgba(255, 47, 210, 0.5);
+}
+
+/* Neon es un efecto de glow: sin oscuro no hay nada que iluminar. Al elegirlo
+   el provider cambia a dark; si después se vuelve a claro, degrada inerte. */
+:root[data-theme="light"][data-fx="neon"] {
+  --fx-chroma: transparent;
+  --fx-chroma-2: transparent;
+  --fx-chroma-offset: 0px;
+  --fx-glow: 0 0 0 transparent;
+}
+
+:root[data-theme="light"][data-fx="neon"] .fx {
+  display: none;
+}
+
+/*
+ * Texto "display": fórmula, títulos y autor. La clase la aplican los
+ * componentes que quieren participar del look fx (ver FormulaHero/HomePage).
+ * Con `mono` las variables son transparentes, así que el text-shadow es no-op.
+ */
+.fx-display {
+  text-shadow:
+    calc(-1 * var(--fx-chroma-offset)) 0 0 var(--fx-chroma),
+    var(--fx-chroma-offset) 0 0 var(--fx-chroma-2),
+    var(--fx-glow);
+}
+
+.fx {
+  position: fixed;
+  inset: 0;
+  /* Por encima del menú (30) y los controles (20): el efecto cubre toda la
+     app, pero no intercepta punteros. */
+  z-index: 40;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict;
+  transform: translateZ(0);
+}
+
+.fx > * {
+  position: absolute;
+  inset: 0;
+}
+
+.fx__scanlines {
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.05) 0,
+    rgba(255, 255, 255, 0.05) 1px,
+    rgba(0, 0, 0, 0.16) 1px,
+    rgba(0, 0, 0, 0.16) 3px
+  );
+  opacity: 0.9;
+}
+
+:root[data-theme="light"] .fx__scanlines {
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.55) 0,
+    rgba(255, 255, 255, 0.55) 1px,
+    rgba(0, 0, 0, 0.07) 1px,
+    rgba(0, 0, 0, 0.07) 3px
+  );
+}
+
+:root[data-fx="vhs"] .fx__scanlines {
+  opacity: 0.55;
+}
+
+.fx__roll {
+  top: -25%;
+  bottom: auto;
+  height: 25%;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.07), transparent);
+  animation: fx-roll 9s linear infinite;
+}
+
+:root[data-theme="light"] .fx__roll {
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.05), transparent);
+}
+
+@keyframes fx-roll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 500%, 0);
+  }
+}
+
+.fx__tracking {
+  display: none;
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 0 17%,
+      rgba(255, 255, 255, 0.07) 17% 18.2%,
+      transparent 18.2% 55%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 55% 56%,
+      rgba(255, 255, 255, 0.05) 56% 57.4%,
+      transparent 57.4% 79%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 79% 80%,
+      rgba(255, 255, 255, 0.08) 80% 81%,
+      transparent 81%
+    );
+  animation: fx-tracking 5.5s steps(1, end) infinite;
+}
+
+:root[data-fx="vhs"] .fx__tracking {
+  display: block;
+}
+
+:root[data-theme="light"] .fx__tracking {
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 0 17%,
+      rgba(0, 0, 0, 0.06) 17% 18.2%,
+      transparent 18.2% 55%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 55% 56%,
+      rgba(0, 0, 0, 0.05) 56% 57.4%,
+      transparent 57.4% 79%
+    ),
+    linear-gradient(to bottom, transparent 79% 80%, rgba(0, 0, 0, 0.07) 80% 81%, transparent 81%);
+}
+
+@keyframes fx-tracking {
+  0%,
+  6% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  7% {
+    transform: translate3d(-1.1%, 0.3%, 0);
+  }
+
+  9% {
+    transform: translate3d(0.8%, -0.2%, 0);
+  }
+
+  11%,
+  54% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  55% {
+    transform: translate3d(1.4%, 0, 0);
+  }
+
+  57% {
+    transform: translate3d(-0.7%, 0.2%, 0);
+  }
+
+  59%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fx__grain {
+  /* Oversized: el jitter traslada la capa sin descubrir bordes. */
+  inset: -60%;
+  opacity: 0.35;
+  background-repeat: repeat;
+  animation: fx-grain 0.8s steps(1, end) infinite;
+}
+
+:root[data-fx="vhs"] .fx__grain {
+  opacity: 0.45;
+}
+
+@keyframes fx-grain {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(-12px, 8px, 0);
+  }
+
+  50% {
+    transform: translate3d(9px, -11px, 0);
+  }
+
+  75% {
+    transform: translate3d(-7px, -6px, 0);
+  }
+
+  100% {
+    transform: translate3d(6px, 10px, 0);
+  }
+}
+
+.fx__flicker {
+  background: #ffffff;
+  opacity: 0;
+  animation: fx-flicker 8s steps(1, end) infinite;
+}
+
+:root[data-theme="light"] .fx__flicker {
+  background: #000000;
+}
+
+@keyframes fx-flicker {
+  0%,
+  41% {
+    opacity: 0;
+  }
+
+  42% {
+    opacity: 0.03;
+  }
+
+  43% {
+    opacity: 0;
+  }
+
+  67% {
+    opacity: 0.018;
+  }
+
+  68% {
+    opacity: 0;
+  }
+
+  86% {
+    opacity: 0.026;
+  }
+
+  87%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.fx__vignette {
+  background: radial-gradient(ellipse at center, transparent 52%, rgba(0, 0, 0, 0.38) 100%);
+}
+
+:root[data-fx="vhs"] .fx__vignette {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.18),
+      transparent 12%,
+      transparent 88%,
+      rgba(0, 0, 0, 0.22)
+    ),
+    radial-gradient(ellipse at center, transparent 46%, rgba(0, 0, 0, 0.46) 100%);
+}
+
+:root[data-theme="light"] .fx__vignette {
+  background: radial-gradient(ellipse at center, transparent 58%, rgba(0, 0, 0, 0.14) 100%);
+}
+
+:root[data-theme="light"][data-fx="vhs"] .fx__vignette {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.08),
+      transparent 12%,
+      transparent 88%,
+      rgba(0, 0, 0, 0.1)
+    ),
+    radial-gradient(ellipse at center, transparent 52%, rgba(0, 0, 0, 0.16) 100%);
+}
+
+/* Marco de tubo: esquinas redondeadas + caída de luz en los bordes. Estático,
+   sin filtros SVG (la distorsión de barril real es demasiado cara en móvil). */
+.fx__curvature {
+  border: 0.9vmin solid var(--bg);
+  border-radius: 2.4vmin;
+  box-shadow: inset 0 0 7vmin 1.4vmin rgba(0, 0, 0, 0.4);
+}
+
+:root[data-theme="light"] .fx__curvature {
+  box-shadow: inset 0 0 7vmin 1.4vmin rgba(0, 0, 0, 0.14);
+}
+
+.fx__ambient {
+  background:
+    radial-gradient(circle at 16% 20%, rgba(0, 255, 242, 0.13), transparent 40%),
+    radial-gradient(circle at 84% 76%, rgba(255, 47, 210, 0.12), transparent 42%),
+    radial-gradient(circle at 50% 118%, rgba(122, 92, 255, 0.14), transparent 52%);
+  animation: fx-ambient 12s ease-in-out infinite alternate;
+}
+
+@keyframes fx-ambient {
+  from {
+    opacity: 0.72;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fx__roll,
+  .fx__tracking,
+  .fx__grain,
+  .fx__flicker,
+  .fx__ambient {
+    animation: none;
+  }
+
+  .fx__flicker {
+    opacity: 0;
+  }
+}

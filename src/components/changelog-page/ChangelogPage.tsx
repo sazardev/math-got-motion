@@ -32,7 +32,7 @@ export function ChangelogPage() {
 
   return (
     <section className="changelog" aria-label={strings.changelogTitle}>
-      <p className="changelog__title">{strings.changelogTitle}</p>
+      <p className="changelog__title fx-display">{strings.changelogTitle}</p>
 
       <div className="changelog__list">
         {changelog.map((entry) => (

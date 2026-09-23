@@ -55,3 +55,25 @@ El DOM no puede animar eficientemente elementos en flujo. El proceso de iniciali
 2. **Estado 1 (Despegue):** Al primer movimiento del scroll, la fórmula colapsa o se expande (según el teorema). Los caracteres utilizan un _easing_ elástico (`elastic.out(1, 0.75)`) para transmitir masa y cinemática en el movimiento físico.
 3. **Estado 2 (Aislamiento):** El nodo de interés (ej. la variable principal) permanece en el centro visual. Los demás nodos se desplazan hacia la periferia (fuera de foco mediante posición u opacidad).
 4. **Estado 3 (Resolución):** El texto de General Sans entra en escena para explicar el nodo aislado, utilizando un _stagger_ para aparecer palabra por palabra.
+
+## 6. Presets opt-in (excepción documentada)
+
+Las reglas de las secciones 2 y 3 describen el estado **default** de la app y no cambian:
+sin preset, la interfaz es blanco y negro puro, plana y sin decoración. Sobre ese default,
+el usuario puede activar explícitamente presets desde los controles (persistidos en
+`localStorage` bajo `mgm:preferences`):
+
+- **`data-fx`** — estética: `mono` (default), `crt`, `vhs`, `neon`. CRT y VHS se mantienen
+  monocromáticos (scanlines, grano, tracking, glow blanco); solo `neon` usa color
+  (aberración cromática cian/magenta + glow) y fuerza tema oscuro al activarse.
+- **`data-type`** — tipografía: `default` (JetBrains Mono + General Sans), `classic`
+  (Latin Modern), `editorial` (STIX Two), `modern` (IBM Plex Mono + Space Grotesk) y
+  `terminal` (Space Mono). Los webfonts se cargan on-demand; el default no descarga nada.
+
+Límites que los presets **no** pueden romper:
+
+- Las capas de efectos (`src/components/fx/FxLayer.tsx`) solo animan `transform`/`opacity`
+  (keyframes de CSS incluidos), nunca `filter`/`box-shadow` por frame ni `mix-blend-mode`.
+- `prefers-reduced-motion` apaga las capas animadas (flicker, roll, tracking, grano).
+- El parpadeo es lento y de amplitud mínima (WCAG 2.3.1: < 3 flashes/segundo).
+- El DOM y el CSS del preset `mono` + `default` no cambian: cero capas, cero fuentes extra.

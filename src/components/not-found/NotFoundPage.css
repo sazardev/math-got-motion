@@ -16,7 +16,8 @@
 
 .not-found__code {
   margin: 0;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
+  font-weight: 500;
   font-variation-settings: "wght" 500;
   font-size: clamp(4rem, 22vw, 12rem);
   line-height: 1;
@@ -24,7 +25,7 @@
 
 .not-found__description {
   margin: 0;
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-size: clamp(1rem, 3vw, 1.25rem);
   opacity: 0.85;
 }
@@ -32,7 +33,7 @@
 .not-found__link {
   display: inline-block;
   color: var(--fg);
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-size: 0.875rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;

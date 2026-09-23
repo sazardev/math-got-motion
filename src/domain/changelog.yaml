@@ -3,6 +3,34 @@
 # raíz del repo es un espejo generado de este archivo para desarrolladores;
 # las entradas nuevas se agregan acá, no ahí.
 
+- version: "0.8.0"
+  date: "2026-09-22"
+  changes:
+    - type: added
+      text:
+        es: "Estéticas opt-in — CRT, VHS y Neon — con scanlines, grano, tracking y glow, activables desde los controles; el monocromo clásico sigue siendo el default."
+        en: "Opt-in looks — CRT, VHS, and Neon — with scanlines, grain, tracking, and glow, switchable from the controls; classic monochrome stays the default."
+        pt: "Estéticas opt-in — CRT, VHS e Neon — com scanlines, granulado, tracking e glow, ativáveis pelos controles; o monocromático clássico segue padrão."
+        fr: "Esthétiques optionnelles — CRT, VHS et Neon — avec scanlines, grain, tracking et glow, activables depuis les contrôles ; le monochrome classique reste par défaut."
+        zh: "可选视觉效果——CRT、VHS 与霓虹——含扫描线、颗粒、跟踪与发光，可在控件中切换；经典黑白仍为默认。"
+        ja: "オプトイン演出——CRT・VHS・ネオン——スキャンライン、粒子、トラッキング、グローをコントロールから切替可能。従来のモノクロが既定です。"
+    - type: added
+      text:
+        es: "Presets tipográficos — Clásico (Latin Modern), Editorial (STIX Two), Moderno (Space Grotesk + IBM Plex Mono) y Terminal (Space Mono) — con webfonts de carga diferida."
+        en: "Typography presets — Classic (Latin Modern), Editorial (STIX Two), Modern (Space Grotesk + IBM Plex Mono), and Terminal (Space Mono) — with lazy-loaded webfonts."
+        pt: "Presets tipográficos — Clássico (Latin Modern), Editorial (STIX Two), Moderno (Space Grotesk + IBM Plex Mono) e Terminal (Space Mono) — com webfonts de carga tardia."
+        fr: "Presets typographiques — Classique (Latin Modern), Éditorial (STIX Two), Moderne (Space Grotesk + IBM Plex Mono) et Terminal (Space Mono) — webfonts différés."
+        zh: "排版预设——经典（Latin Modern）、社论（STIX Two）、现代（Space Grotesk + IBM Plex Mono）与终端（Space Mono），网页字体按需加载。"
+        ja: "タイポグラフィプリセット——クラシック（Latin Modern）、エディトリアル（STIX Two）、モダン（Space Grotesk + IBM Plex Mono）、ターミナル（Space Mono）。webfontは遅延読み込み。"
+    - type: fixed
+      text:
+        es: "Redimensionar o cambiar de tipografía acumulaba ScrollTriggers con pin y dejaba la fórmula fuera de pantalla; ahora se reconstruye limpio y conserva la lectura."
+        en: "Resizing or switching type stacked pinned ScrollTriggers and left the formula off-screen; the timeline now rebuilds cleanly and keeps the reading position."
+        pt: "Redimensionar ou trocar a tipografia acumulava ScrollTriggers com pin e deixava a fórmula fora da tela; agora reconstrói limpo e preserva a leitura."
+        fr: "Redimensionner ou changer de police empilait les ScrollTriggers épinglés et sortait la formule de l'écran ; la timeline se reconstruit proprement."
+        zh: "调整尺寸或切换字体时，时间线会叠加带 pin 的 ScrollTrigger，公式跑出屏幕；现在会干净重建并保留阅读位置。"
+        ja: "リサイズやフォント切替でピン付きScrollTriggerが蓄積し数式が画面外に。現在はクリーンに再構築し、読書位置も保持します。"
+
 - version: "0.7.0"
   date: "2026-07-11"
   changes:

@@ -21,7 +21,8 @@
   z-index: 10;
   display: inline-block;
   text-align: center;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-formula);
+  font-weight: 500;
   font-variation-settings: "wght" 500;
   /* min(vw, vh): la fórmula nunca desborda ni en portrait angosto ni en
      landscape bajo — se ajusta a la dimensión más restrictiva. */
@@ -65,7 +66,7 @@
   justify-content: center;
   column-gap: 0.34em;
   row-gap: 0.25em;
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-size: clamp(1rem, 3.2vw, 1.5rem);
   font-weight: 400;
   line-height: 1.5;
@@ -98,7 +99,7 @@
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 0.4em;
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-weight: 700;
   font-size: clamp(1.5rem, 6vw, 3rem);
   line-height: 1.1;
@@ -106,7 +107,7 @@
 
 .context__era {
   margin: 0 0 2rem;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: clamp(0.7rem, 2vw, 0.875rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -133,7 +134,7 @@
 
 .stage__label {
   margin: 0 0 1rem;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: clamp(0.7rem, 2vw, 0.875rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -148,7 +149,7 @@
   justify-content: center;
   column-gap: 0.32em;
   row-gap: 0.3em;
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-size: clamp(0.9rem, 2.6vw, 1.15rem);
   line-height: 1.55;
   opacity: 0.85;
@@ -187,14 +188,14 @@
 .timeline__year {
   flex: 0 0 auto;
   min-width: 5.5rem;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: clamp(0.68rem, 1.8vw, 0.8rem);
   letter-spacing: 0.04em;
   opacity: 0.65;
 }
 
 .timeline__text {
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-size: clamp(0.85rem, 2.3vw, 1.02rem);
   line-height: 1.4;
 }
@@ -217,14 +218,14 @@
 
 .usecase__title {
   margin: 0 0 0.35rem;
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-weight: 700;
   font-size: clamp(0.95rem, 2.5vw, 1.1rem);
 }
 
 .usecase__desc {
   margin: 0;
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-size: clamp(0.8rem, 2.1vw, 0.92rem);
   line-height: 1.45;
   opacity: 0.85;
@@ -232,7 +233,7 @@
 
 .example__title {
   margin: 0 0 0.9rem;
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-weight: 600;
   font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   opacity: 0;
@@ -243,7 +244,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.45rem;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: clamp(0.85rem, 2.3vw, 1.02rem);
 }
 
@@ -279,7 +280,7 @@
   padding: 0.6rem 0;
   margin: 0;
   color: var(--fg);
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-size: 0.875rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -298,7 +299,7 @@
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;

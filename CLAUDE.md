@@ -110,7 +110,9 @@ locale-prefixed — this is required for the hreflang/sitemap setup below, not a
 
 `src/App.tsx` is the whole route tree: `LocaleLayout` resolves the `:locale` param (redirecting
 to a detected locale if it's missing/invalid) and renders `LocaleProvider` + the persistent
-chrome (`FormulaMenu`, theme/locale/changelog/home buttons) around an `<Outlet />`. `LocaleProvider`
+chrome (`FormulaMenu`, effect/font/theme/locale/changelog/home buttons) around an `<Outlet />`.
+`PreferencesProvider` (`src/preferences/PreferencesContext.tsx`) wraps the tree and owns
+`theme`/`fx`/`type`, so the chrome reads them from context instead of props. `LocaleProvider`
 (`src/i18n/LocaleContext.tsx`) no longer owns `locale` as internal state — it's now a controlled
 component fed by the route param, with `onLocaleChange` wired to `navigate(...)` so switching
 language changes the URL (preserving whatever formula/page you're on) instead of only updating
@@ -198,17 +200,45 @@ developers — run `pnpm changelog:sync` after adding an entry to the YAML; don'
   this is the reason the FLIP pattern above exists at all.
   - Everything animation-related must use `@gsap/react`'s `useGSAP` hook with a `scope`, never
     a plain `useEffect` — this is what handles ScrollTrigger/timeline cleanup on unmount.
-- **Strictly monochrome**: pure black/white only (`--bg`/`--fg` CSS variables, toggled via
-  `data-theme` on `<html>`), no grays, no shadows, no borders/dividing lines, no images, icons,
-  or emoji. If something needs a visual marker, it's built typographically (numbers, spacing,
-  weight/opacity contrast) — not a drawn shape.
+- **Strictly monochrome by default**: pure black/white only (`--bg`/`--fg` CSS variables,
+  toggled via `data-theme` on `<html>`), no grays, no shadows, no borders/dividing lines, no
+  images, icons, or emoji. If something needs a visual marker, it's built typographically
+  (numbers, spacing, weight/opacity contrast) — not a drawn shape. This is the `mono` +
+  `default` preset; the opt-in presets below are the only documented exception.
+- **Opt-in presets** (`src/preferences/`): `data-fx` (`mono`/`crt`/`vhs`/`neon`) and
+  `data-type` (`default`/`classic`/`editorial`/`modern`/`terminal`) are set on `<html>` by
+  `PreferencesProvider` and persisted in `localStorage` (`mgm:preferences`). `FxLayer`
+  (`src/components/fx/`) mounts decorative fixed layers only for non-`mono` presets; they
+  animate `transform`/`opacity` only (no `mix-blend-mode`, no per-frame `filter`) and are
+  disabled under `prefers-reduced-motion`; flicker stays under 3 Hz (WCAG 2.3.1). `neon`
+  forces dark theme when selected (and is inert on light). Font preset webfonts load on
+  demand via `loadTypeFonts()` (`src/lib/font-loaders.ts`) — the default preset downloads
+  zero fonts. `PreferencesProvider` delays applying `data-type` until the preset's webfonts
+  are ready, which is exactly the signal `FormulaHero` uses (`typeReady`) to re-measure its
+  FLIP layout instead of calibrating against stale glyphs.
+- **Pinned-timeline rebuilds**: `FormulaHero`'s `useGSAP` must pass `revertOnUpdate: true`.
+  Without it, dependency changes (resize, `layoutVersion` bump, font change) _stack_ pinned
+  ScrollTriggers — two pins fight over `.hero`, the pin-spacer collapses, and the formula
+  ends up at `translate(0, ~20000px)` with a 900px document. That was a pre-existing bug
+  (resize broke the pin in production) fixed alongside the typography presets. Related: a
+  rebuild reverts the pin, the forced layout of the re-measure clamps `scrollY` to 0, so
+  `scroll-anchor.ts` stashes the reading position before the change and `FormulaHero`
+  consumes it after `ScrollTrigger.refresh()`, in the same tick (no visible jump).
+- Fonts: `--font-formula` for the hero formula, `--font-mono` for mono UI chrome,
+  `--font-prose` for prose (`src/index.css` defines all three per `data-type` preset) —
+  never hardcode a family stack in component CSS. `classic` self-hosts Latin Modern
+  (`src/assets/fonts/latin-modern/`, GUST license included); `editorial`/`modern`/`terminal`
+  pull `@fontsource` packages through dynamic imports so Vite code-splits their CSS.
+  CJK prose falls back to system serif by design (no CJK webfonts are bundled).
+
 - **No LaTeX renderer** (KaTeX/MathJax): formulas are a custom AST of typed nodes
   (`FormulaNode`), each rendered as an independent element React owns and GSAP animates via
   refs. This was a deliberate architecture decision (see `GSAP-PROBLEM.md`) to avoid deeply
   nested, animation-hostile markup and to keep the explanation text co-located with its symbol
   in the same data node.
 - Fonts: JetBrains Mono for formulas/mono UI chrome, General Sans for prose (see the
-  self-hosting note in `src/index.css`).
+  self-hosting note in `src/index.css`). Superseded by the `--font-formula`/`--font-mono`/
+  `--font-prose` roles above.
 
 ### i18n
 

@@ -6,8 +6,10 @@ import { locales } from "../../i18n/locale";
 import { useLocale } from "../../i18n/locale-context";
 import { gsap, ScrollTrigger } from "../../lib/gsap";
 import { getLenis } from "../../lib/lenis";
+import { takeScrollAnchor } from "../../lib/scroll-anchor";
 import { SITE_URL } from "../../lib/site";
 import { splitWords } from "../../lib/text";
+import { usePreferences } from "../../preferences/preferences-context";
 
 import type { Formula } from "../../domain/formula.types";
 import "./FormulaHero.css";
@@ -97,6 +99,7 @@ function scrollToTop() {
 
 export function FormulaHero({ formula }: FormulaHeroProps) {
   const { locale, strings } = useLocale();
+  const { type, typeReady } = usePreferences();
 
   const pathFor = (forLocale: typeof locale) => `/${forLocale}/formula/${formula.id}`;
   const description = truncate(formula.context.history[locale], DESCRIPTION_MAX_LENGTH);
@@ -166,6 +169,9 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
   // en este momento). Se reanuda más abajo, después de que ScrollTrigger.
   // refresh() asiente la nueva altura de pin (ver el setTimeout en useGSAP).
   useLayoutEffect(() => {
+    // Una ancla pendiente de un cambio de tipografía no debe sobrevivir a la
+    // navegación hacia otra fórmula.
+    takeScrollAnchor();
     getLenis()?.stop();
     globalThis.scrollTo(0, 0);
   }, [formula.id]);
@@ -175,7 +181,12 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
   // Se repite en cada resize/rotación (layoutVersion), por lo que primero hay que
   // soltar las medidas fijas anteriores para que el navegador vuelva a fluir el
   // contenido al tamaño de viewport actual antes de volver a medir.
+  // También depende de `type`: un preset tipográfico distinto cambia las
+  // métricas de los glifos. `typeReady` garantiza que se mide recién cuando los
+  // webfonts del preset están listos (o su fallback resolvió) — sin esto, el
+  // FLIP quedaría calibrado contra glifos viejos.
   useLayoutEffect(() => {
+    if (!typeReady) return;
     const formulaEl = formulaRef.current;
     if (!formulaEl) return;
 
@@ -220,7 +231,7 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
 
     layoutRef.current = { formulaRect, nodes: nodeLayouts };
     setReady(true);
-  }, [formula, layoutVersion]);
+  }, [formula, layoutVersion, type, typeReady]);
 
   useGSAP(
     () => {
@@ -548,6 +559,20 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
         el.textContent = formatProgress(index);
       });
 
+      // Rebuild por cambio de tipografía: la reversión del pin encogió el
+      // documento, el FORCE-layout de la medición clampó el scroll a 0, y el
+      // spacing del pin recién queda aplicado con un refresh. Acá se refresca
+      // sincrónico (la carrera que obliga al setTimeout de abajo es la del pin
+      // anterior al cambiar de FÓRMULA, no este caso) y se restaura la
+      // posición de lectura en el mismo tick, sin frame visible — ver
+      // src/lib/scroll-anchor.ts.
+      const anchor = takeScrollAnchor();
+      if (anchor !== null) {
+        ScrollTrigger.refresh();
+        globalThis.scrollTo(0, anchor);
+        ScrollTrigger.update();
+      }
+
       // Al cambiar de fórmula, el pin-spacer anterior puede seguir
       // desmontándose justo cuando este ScrollTrigger calcula su "end" por
       // primera vez, dejándolo con un rango de pin nulo. Un refresh diferido
@@ -563,7 +588,11 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
         getLenis()?.start();
       }, 0);
     },
-    { scope: heroRef, dependencies: [ready, formula, layoutVersion] },
+    // `revertOnUpdate` es imprescindible: sin él, useGSAP acumula el timeline
+    // y el ScrollTrigger con pin de cada re-ejecución (resize, cambio de
+    // preset tipográfico) y dos pins peleando por el mismo .hero colapsan el
+    // pin-spacer — la fórmula queda fuera de pantalla.
+    { scope: heroRef, dependencies: [ready, formula, layoutVersion, type], revertOnUpdate: true },
   );
 
   const handleShare = async () => {
@@ -631,7 +660,7 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
 
   return (
     <section ref={heroRef} className="hero" aria-label={formula.title[locale]}>
-      <div ref={formulaRef} className="hero__formula" aria-hidden="true">
+      <div ref={formulaRef} className="hero__formula fx-display" aria-hidden="true">
         {formula.nodes.map((node) => (
           <span
             key={node.id}
@@ -668,7 +697,7 @@ export function FormulaHero({ formula }: FormulaHeroProps) {
       </div>
 
       <div className="hero__context">
-        <p className="context__author">
+        <p className="context__author fx-display">
           {splitWords(formula.context.author[locale], locale).map((word, wordIndex) => (
             <span className="word" key={wordIndex}>
               <span

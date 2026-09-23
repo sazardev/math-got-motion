@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
   Navigate,
   Outlet,
@@ -12,6 +12,7 @@ import {
 import { ChangelogPage } from "./components/changelog-page/ChangelogPage";
 import { FormulaHero } from "./components/formula-hero/FormulaHero";
 import { FormulaMenu } from "./components/formula-menu/FormulaMenu";
+import { FxLayer } from "./components/fx/FxLayer";
 import { HomePage } from "./components/home-page/HomePage";
 import { NotFoundPage } from "./components/not-found/NotFoundPage";
 import { formulas } from "./domain/formulas";
@@ -19,13 +20,8 @@ import { detectInitialLocale, isLocale, locales, type Locale } from "./i18n/loca
 import { useLocale } from "./i18n/locale-context";
 import { LocaleProvider } from "./i18n/LocaleContext";
 import { destroyLenis, initLenis } from "./lib/lenis";
-
-type Theme = "dark" | "light";
-
-interface ThemeControlProps {
-  theme: Theme;
-  onToggleTheme: () => void;
-}
+import { fxNames, typeNames, usePreferences } from "./preferences/preferences-context";
+import { PreferencesProvider } from "./preferences/PreferencesContext";
 
 /** El contenido de "/:locale/formula/:formulaId" — la fórmula activa, o un id inexistente. */
 function FormulaRouteContent() {
@@ -38,9 +34,10 @@ function FormulaRouteContent() {
   return <FormulaHero key={activeFormula.id} formula={activeFormula} />;
 }
 
-/** Menú + controles de tema/idioma, persistentes entre fórmula/changelog dentro de un mismo locale. */
-function LocaleChrome({ theme, onToggleTheme }: ThemeControlProps) {
+/** Menú + controles de tema/estética/tipografía/idioma, persistentes entre fórmula/changelog dentro de un mismo locale. */
+function LocaleChrome() {
   const { locale, setLocale, strings } = useLocale();
+  const { theme, fx, type, cycleTheme, cycleFx, cycleType } = usePreferences();
   const navigate = useNavigate();
   const { formulaId } = useParams<{ formulaId: string }>();
   const activeId = formulaId ?? formulas[0]?.id ?? "";
@@ -58,7 +55,25 @@ function LocaleChrome({ theme, onToggleTheme }: ThemeControlProps) {
       />
 
       <div className="controls">
-        <button type="button" className="control-button" onClick={onToggleTheme}>
+        <button
+          type="button"
+          className="control-button"
+          title={strings.fxLabel}
+          aria-label={`${strings.fxLabel}: ${fxNames[fx]}`}
+          onClick={cycleFx}
+        >
+          {strings.fxLabel}: {fxNames[fx]}
+        </button>
+        <button
+          type="button"
+          className="control-button"
+          title={strings.typeLabel}
+          aria-label={`${strings.typeLabel}: ${typeNames[type]}`}
+          onClick={cycleType}
+        >
+          {strings.typeLabel}: {typeNames[type]}
+        </button>
+        <button type="button" className="control-button" onClick={cycleTheme}>
           {theme === "dark" ? strings.themeToLight : strings.themeToDark}
         </button>
         <div className="control-locales">
@@ -102,7 +117,7 @@ function LocaleChrome({ theme, onToggleTheme }: ThemeControlProps) {
 }
 
 /** Resuelve `:locale` de la URL a un Locale válido y controla la navegación al cambiar de idioma. */
-function LocaleLayout({ theme, onToggleTheme }: ThemeControlProps) {
+function LocaleLayout() {
   const { locale: rawLocale } = useParams<{ locale: string }>();
   const location = useLocation();
   const navigate = useNavigate();
@@ -119,18 +134,12 @@ function LocaleLayout({ theme, onToggleTheme }: ThemeControlProps) {
 
   return (
     <LocaleProvider locale={rawLocale} onLocaleChange={handleLocaleChange}>
-      <LocaleChrome theme={theme} onToggleTheme={onToggleTheme} />
+      <LocaleChrome />
     </LocaleProvider>
   );
 }
 
 function AppRoutes() {
-  const [theme, setTheme] = useState<Theme>("dark");
-
-  useEffect(() => {
-    document.documentElement.dataset["theme"] = theme;
-  }, [theme]);
-
   // Instancia única para toda la vida de la app — independiente de la
   // fórmula activa, ver src/lib/lenis.ts.
   useEffect(() => {
@@ -138,14 +147,10 @@ function AppRoutes() {
     return destroyLenis;
   }, []);
 
-  const toggleTheme = () => {
-    setTheme((current) => (current === "dark" ? "light" : "dark"));
-  };
-
   return (
     <Routes>
       <Route path="/" element={<Navigate to={`/${detectInitialLocale()}/`} replace />} />
-      <Route path=":locale" element={<LocaleLayout theme={theme} onToggleTheme={toggleTheme} />}>
+      <Route path=":locale" element={<LocaleLayout />}>
         <Route index element={<HomePage />} />
         <Route path="formula/:formulaId" element={<FormulaRouteContent />} />
         <Route path="changelog" element={<ChangelogPage />} />
@@ -156,7 +161,12 @@ function AppRoutes() {
 }
 
 function App() {
-  return <AppRoutes />;
+  return (
+    <PreferencesProvider>
+      <AppRoutes />
+      <FxLayer />
+    </PreferencesProvider>
+  );
 }
 
 export default App;

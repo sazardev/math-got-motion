@@ -55,8 +55,21 @@ pnpm build                  # tsc && vite build — NOT sufficient for a Pages d
 - **GSAP: only animate `transform` and `opacity`** — never layout-triggering properties.
   Use `@gsap/react`'s `useGSAP` with a `scope`, never a plain `useEffect`. Import
   `gsap`/`ScrollTrigger` from `src/lib/gsap.ts` (plugin registered once), not `"gsap"`.
-- **Strictly monochrome**: pure black/white only (`--bg`/`--fg` via `data-theme`), no grays,
-  shadows, borders, images, icons, or emoji. Visual markers are typographic only.
+  In `FormulaHero`, `useGSAP` **must** pass `revertOnUpdate: true`: with `dependencies` and
+  without it, GSAP accumulates the pinned timeline/ScrollTrigger on every rebuild (resize,
+  font change) and the formula ends up off-screen.
+- **Strictly monochrome by default**, now with opt-in presets: `data-fx`
+  (`mono`/`crt`/`vhs`/`neon`) and `data-type` (`default`/`classic`/`editorial`/`modern`/
+  `terminal`) live on `<html>`, managed by `src/preferences/` and persisted in
+  `localStorage` (`mgm:preferences`). `mono` + `default` is the flat black/white look of
+  DESIGN.md; only the explicit non-default presets may use grays/glow/color. Effect layers
+  (`src/components/fx/FxLayer.tsx`) follow the same transform/opacity-only rule (CSS
+  keyframes included), never `mix-blend-mode`, and respect `prefers-reduced-motion`.
+- **Typography roles**: use `--font-formula` / `--font-mono` / `--font-prose` in CSS, never
+  hardcoded family stacks. New webfonts load on demand through `src/lib/font-loaders.ts`
+  (dynamic imports) — the default preset must stay at zero extra font downloads. After a
+  typography rebuild, `takeScrollAnchor()` (`src/lib/scroll-anchor.ts`) restores the reading
+  position.
 - **No LaTeX renderer** (KaTeX/MathJax): formulas are a custom `FormulaNode` AST rendered as
   React elements GSAP animates via refs (see `GSAP-PROBLEM.md`).
 - CJK languages have no word spaces, so text splitting must use `splitWords()` from

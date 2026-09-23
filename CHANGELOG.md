@@ -7,6 +7,17 @@ This file is generated from `src/domain/changelog.yaml` — the source of
 truth, bilingual, also rendered in-app at `/:locale/changelog`. Add new
 entries there, then run `pnpm changelog:sync`.
 
+## [0.8.0] - 2026-09-22
+
+### Added
+
+- Opt-in looks — CRT, VHS, and Neon — with scanlines, grain, tracking, and glow, switchable from the controls; classic monochrome stays the default.
+- Typography presets — Classic (Latin Modern), Editorial (STIX Two), Modern (Space Grotesk + IBM Plex Mono), and Terminal (Space Mono) — with lazy-loaded webfonts.
+
+### Fixed
+
+- Resizing or switching type stacked pinned ScrollTriggers and left the formula off-screen; the timeline now rebuilds cleanly and keeps the reading position.
+
 ## [0.7.0] - 2026-07-11
 
 ### Added

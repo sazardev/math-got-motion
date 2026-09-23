@@ -8,9 +8,58 @@
  * como fallback tipográfico, sin romper la jerarquía visual.
  */
 
+/*
+ * Latin Modern (GUST, licencia OFL en src/assets/fonts/latin-modern/LICENSE.txt)
+ * para el preset tipográfico Clásico. Se declara siempre pero el navegador
+ * solo la descarga si la familia se usa: con el preset Original no cuesta red.
+ */
+@font-face {
+  font-family: "Latin Modern Math";
+  src: url("./assets/fonts/latin-modern/latinmodern-math.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Latin Modern Roman";
+  src: url("./assets/fonts/latin-modern/lmroman10-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Latin Modern Roman";
+  src: url("./assets/fonts/latin-modern/lmroman10-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Latin Modern Roman";
+  src: url("./assets/fonts/latin-modern/lmroman10-italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/*
+ * Roles tipográficos: --font-formula para la fórmula protagonista,
+ * --font-mono para chrome/etiquetas monoespaciadas y --font-prose para la
+ * prosa. Cada preset de `data-type` reasigna los tres. Las familias CJK
+ * quedan en el stack como nombres de sistema: no se bundlean webfonts CJK
+ * (pesan decenas de MB) y el fallback `serif` resuelve con la fuente serif
+ * del sistema para zh/ja.
+ */
 :root {
   --bg: #000000;
   --fg: #ffffff;
+
+  --font-formula: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  --font-prose: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
 
   color-scheme: dark;
   font-synthesis: none;
@@ -18,6 +67,34 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+:root[data-type="classic"] {
+  --font-formula: "Latin Modern Math", "STIX Two Math", serif;
+  --font-mono: "Latin Modern Roman", "STIX Two Text", serif;
+  --font-prose:
+    "Latin Modern Roman", "STIX Two Text", "Noto Serif CJK SC", "Noto Serif SC", "Songti SC",
+    "SimSun", "Noto Serif CJK JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+:root[data-type="editorial"] {
+  --font-formula: "STIX Two Math", "Latin Modern Math", serif;
+  --font-mono: "STIX Two Text", serif;
+  --font-prose:
+    "STIX Two Text", "Latin Modern Roman", "Noto Serif CJK SC", "Noto Serif SC", "Songti SC",
+    "SimSun", "Noto Serif CJK JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+:root[data-type="modern"] {
+  --font-formula: "IBM Plex Mono", "STIX Two Math", monospace;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-prose: "Space Grotesk Variable", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="terminal"] {
+  --font-formula: "Space Mono", "STIX Two Math", monospace;
+  --font-mono: "Space Mono", monospace;
+  --font-prose: "Space Mono", ui-monospace, monospace;
 }
 
 :root[data-theme="light"] {
@@ -43,7 +120,7 @@ body,
 body {
   background: var(--bg);
   color: var(--fg);
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
 }
 
 ::selection {
@@ -68,7 +145,7 @@ body {
   padding: 0.3rem 0;
   margin: 0;
   color: var(--fg);
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-size: clamp(0.75rem, 2.2vw, 0.875rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;

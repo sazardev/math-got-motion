@@ -12,6 +12,12 @@ Math Got Motion es una aplicación multiplataforma (Web, Android, iOS, Windows, 
 - **Prohibiciones Visuales:** Cero imágenes, cero íconos, cero emojis, cero sombras, cero bordes.
 - **Escala:** Uso de letras y símbolos matemáticos gigantes (hero text) como elementos estructurales de la interfaz.
 
+> **Presets opt-in (excepción documentada, ver DESIGN.md §6):** estas reglas describen el
+> estado default (`data-fx="mono"` + `data-type="default"`), que sigue intacto. El usuario
+> puede activar explícitamente estéticas CRT/VHS/Neon y presets tipográficos (Clásico,
+> Editorial, Moderno, Terminal) desde los controles; solo esos presets no-default pueden usar
+> grises, glow o color, y nunca animan propiedades fuera de `transform`/`opacity`.
+
 ## 3. Arquitectura del Sistema y Presentación
 
 El proyecto aplicará principios de Clean Architecture para desacoplar completamente la definición del teorema matemático de su renderizado interactivo.

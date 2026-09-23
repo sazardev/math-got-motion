@@ -12,7 +12,7 @@
   padding: 0.3rem 0;
   margin: 0;
   color: var(--fg);
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-size: clamp(0.75rem, 2.2vw, 0.875rem);
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -72,7 +72,7 @@
   padding: 0;
   margin: 0 0 2.5rem;
   color: var(--fg);
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: clamp(1.1rem, 4vw, 1.5rem);
   width: 100%;
 }
@@ -94,14 +94,14 @@
 
 .formula-index__empty {
   margin: 0;
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-size: clamp(0.9rem, 2.6vw, 1.05rem);
   opacity: 0.5;
 }
 
 .formula-index__category {
   margin: 0 0 0.6rem;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: clamp(0.68rem, 1.8vw, 0.8rem);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -138,13 +138,13 @@
 
 .formula-index__number {
   flex: 0 0 auto;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: clamp(0.75rem, 2vw, 0.9rem);
   opacity: 0.6;
 }
 
 .formula-index__title {
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-weight: 500;
   font-size: clamp(1.1rem, 4vw, 1.6rem);
 }

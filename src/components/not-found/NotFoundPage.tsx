@@ -19,7 +19,7 @@ export function NotFoundPage({ locale = detectInitialLocale() }: NotFoundPagePro
 
   return (
     <section className="not-found" aria-label={strings.notFoundTitle}>
-      <p className="not-found__code">{strings.notFoundTitle}</p>
+      <p className="not-found__code fx-display">{strings.notFoundTitle}</p>
       <p className="not-found__description">{strings.notFoundDescription}</p>
       <Link className="not-found__link" to={`/${locale}/`}>
         {strings.notFoundBackLink}

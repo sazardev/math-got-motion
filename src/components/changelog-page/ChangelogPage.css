@@ -12,7 +12,8 @@
 
 .changelog__title {
   margin: 0;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
+  font-weight: 500;
   font-variation-settings: "wght" 500;
   font-size: clamp(2rem, 8vw, 3.5rem);
 }
@@ -27,7 +28,7 @@
 
 .changelog__version {
   margin: 0 0 0.75rem;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 1rem;
   letter-spacing: 0.04em;
 }
@@ -51,7 +52,7 @@
   flex-wrap: wrap;
   gap: 0.1rem 0.75rem;
   align-items: baseline;
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-size: clamp(0.95rem, 2.4vw, 1.05rem);
   line-height: 1.5;
 }
@@ -59,7 +60,7 @@
 .changelog__change-type {
   flex: 0 0 auto;
   min-width: 5.5rem;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -68,7 +69,7 @@
 
 .changelog__back {
   color: var(--fg);
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-size: 0.875rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;

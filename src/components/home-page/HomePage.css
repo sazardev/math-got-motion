@@ -16,7 +16,8 @@
   align-items: baseline;
   justify-content: center;
   column-gap: 0.15em;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-formula);
+  font-weight: 500;
   font-variation-settings: "wght" 500;
   font-size: clamp(2.75rem, 13vw, 7rem);
   line-height: 1;
@@ -39,7 +40,8 @@
 
 .home__title {
   margin: -0.5rem 0 0;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
+  font-weight: 600;
   font-variation-settings: "wght" 600;
   font-size: clamp(2rem, 7vw, 3.25rem);
 }
@@ -47,7 +49,7 @@
 .home__tagline {
   margin: -1rem 0 0;
   max-width: 36rem;
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-weight: 500;
   font-size: clamp(1.1rem, 3.4vw, 1.4rem);
   opacity: 0.88;
@@ -58,7 +60,7 @@
   background: var(--fg);
   color: var(--bg);
   padding: 1.1rem 2.5rem;
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-weight: 700;
   font-size: 1rem;
   letter-spacing: 0.06em;
@@ -115,7 +117,8 @@
   justify-content: center;
   flex-wrap: wrap;
   column-gap: 0.12em;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-formula);
+  font-weight: 500;
   font-variation-settings: "wght" 500;
   font-size: clamp(1.3rem, 4vw, 1.9rem);
 }
@@ -132,7 +135,7 @@
 }
 
 .home__featured-title {
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-weight: 600;
   font-size: clamp(0.8rem, 2vw, 0.9rem);
   opacity: 0.75;
@@ -148,7 +151,8 @@
 
 .home__stat-value {
   margin: 0;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
+  font-weight: 500;
   font-variation-settings: "wght" 500;
   font-size: clamp(2.25rem, 7vw, 3.25rem);
   line-height: 1;
@@ -156,7 +160,7 @@
 
 .home__stat-label {
   margin: 0.35rem 0 0;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -174,7 +178,7 @@
 
 .home__section-title {
   margin: 0;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -183,7 +187,7 @@
 
 .home__section-text {
   margin: 0;
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-size: clamp(0.95rem, 2.4vw, 1.1rem);
   line-height: 1.6;
 }
@@ -207,7 +211,7 @@
 
 .home__step-number {
   flex: 0 0 auto;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.8rem;
   opacity: 0.5;
 }
@@ -219,13 +223,13 @@
 }
 
 .home__step-title {
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-weight: 700;
   font-size: clamp(1rem, 2.6vw, 1.15rem);
 }
 
 .home__step-text {
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-size: clamp(0.9rem, 2.3vw, 1rem);
   line-height: 1.5;
   opacity: 0.8;
@@ -233,7 +237,7 @@
 
 .home__languages {
   margin: 0;
-  font-family: "JetBrains Mono Variable", "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: clamp(0.9rem, 2.6vw, 1.05rem);
   letter-spacing: 0.02em;
 }
@@ -250,7 +254,7 @@
 
 .home__footer-text {
   margin: 0;
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-size: 0.8rem;
   line-height: 1.5;
   opacity: 0.45;
@@ -265,7 +269,7 @@
 .home__cta,
 .home__back {
   color: var(--fg);
-  font-family: "General Sans Variable", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-prose);
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
