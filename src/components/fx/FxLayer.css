@@ -27,7 +27,7 @@
   --fx-glow: 0 0 18px rgba(255, 255, 255, 0.18);
 }
 
-:root[data-theme="light"][data-fx="crt"] {
+:root[data-scheme="light"][data-fx="crt"] {
   --fx-chroma: rgba(0, 0, 0, 0.24);
   --fx-chroma-2: rgba(0, 0, 0, 0.24);
   --fx-glow: 0 0 18px rgba(0, 0, 0, 0.08);
@@ -40,7 +40,7 @@
   --fx-glow: 0 0 12px rgba(255, 255, 255, 0.14);
 }
 
-:root[data-theme="light"][data-fx="vhs"] {
+:root[data-scheme="light"][data-fx="vhs"] {
   --fx-chroma: rgba(0, 0, 0, 0.34);
   --fx-chroma-2: rgba(0, 0, 0, 0.22);
   --fx-glow: 0 0 12px rgba(0, 0, 0, 0.06);
@@ -57,14 +57,14 @@
 
 /* Neon es un efecto de glow: sin oscuro no hay nada que iluminar. Al elegirlo
    el provider cambia a dark; si después se vuelve a claro, degrada inerte. */
-:root[data-theme="light"][data-fx="neon"] {
+:root[data-scheme="light"][data-fx="neon"] {
   --fx-chroma: transparent;
   --fx-chroma-2: transparent;
   --fx-chroma-offset: 0px;
   --fx-glow: 0 0 0 transparent;
 }
 
-:root[data-theme="light"][data-fx="neon"] .fx {
+:root[data-scheme="light"][data-fx="neon"] .fx {
   display: none;
 }
 
@@ -108,7 +108,7 @@
   opacity: 0.9;
 }
 
-:root[data-theme="light"] .fx__scanlines {
+:root[data-scheme="light"] .fx__scanlines {
   background: repeating-linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.55) 0,
@@ -130,7 +130,7 @@
   animation: fx-roll 9s linear infinite;
 }
 
-:root[data-theme="light"] .fx__roll {
+:root[data-scheme="light"] .fx__roll {
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.05), transparent);
 }
 
@@ -172,7 +172,7 @@
   display: block;
 }
 
-:root[data-theme="light"] .fx__tracking {
+:root[data-scheme="light"] .fx__tracking {
   background:
     linear-gradient(
       to bottom,
@@ -262,7 +262,7 @@
   animation: fx-flicker 8s steps(1, end) infinite;
 }
 
-:root[data-theme="light"] .fx__flicker {
+:root[data-scheme="light"] .fx__flicker {
   background: #000000;
 }
 
@@ -314,11 +314,11 @@
     radial-gradient(ellipse at center, transparent 46%, rgba(0, 0, 0, 0.46) 100%);
 }
 
-:root[data-theme="light"] .fx__vignette {
+:root[data-scheme="light"] .fx__vignette {
   background: radial-gradient(ellipse at center, transparent 58%, rgba(0, 0, 0, 0.14) 100%);
 }
 
-:root[data-theme="light"][data-fx="vhs"] .fx__vignette {
+:root[data-scheme="light"][data-fx="vhs"] .fx__vignette {
   background:
     linear-gradient(
       to bottom,
@@ -338,7 +338,7 @@
   box-shadow: inset 0 0 7vmin 1.4vmin rgba(0, 0, 0, 0.4);
 }
 
-:root[data-theme="light"] .fx__curvature {
+:root[data-scheme="light"] .fx__curvature {
   box-shadow: inset 0 0 7vmin 1.4vmin rgba(0, 0, 0, 0.14);
 }
 

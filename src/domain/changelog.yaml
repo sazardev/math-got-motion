@@ -3,6 +3,34 @@
 # raíz del repo es un espejo generado de este archivo para desarrolladores;
 # las entradas nuevas se agregan acá, no ahí.
 
+- version: "0.9.0"
+  date: "2026-09-23"
+  changes:
+    - type: added
+      text:
+        es: "Temas de color globales — Gruvbox, Nord, Ayu, Osaka, Tokyo Night, Catppuccin y más — elegibles desde los controles y persistentes. El monocromo sigue siendo el default."
+        en: "Global color themes — Gruvbox, Nord, Ayu, Osaka, Tokyo Night, Catppuccin, and more — selectable from the controls and persisted. Monochrome stays the default."
+        pt: "Temas de cor globais — Gruvbox, Nord, Ayu, Osaka, Tokyo Night, Catppuccin e mais — selecionáveis nos controles e persistentes. O monocromático segue como padrão."
+        fr: "Thèmes de couleur globaux — Gruvbox, Nord, Ayu, Osaka, Tokyo Night, Catppuccin et plus — sélectionnables dans les contrôles et persistés. Le monochrome reste par défaut."
+        zh: "全局配色主题——Gruvbox、Nord、Ayu、Osaka、Tokyo Night、Catppuccin 等——可在控件中选择并记忆；黑白单色仍是默认。"
+        ja: "グローバルなカラーテーマ——Gruvbox、Nord、Ayu、Osaka、Tokyo Night、Catppuccin など——コントロールから選択でき、保存されます。モノクロが既定のまま。"
+    - type: added
+      text:
+        es: "Exportador de wallpapers PNG en 4K, QHD, Full HD y móvil, con cinco estilos (fórmula, póster, isométrico, 3D y patrón) que usan el tema, la tipografía y el efecto activos."
+        en: "PNG wallpaper exporter at 4K, QHD, Full HD, and mobile, with five styles (formula, poster, isometric, 3D, and pattern) using the active theme, typography, and effect."
+        pt: "Exportador de wallpapers PNG em 4K, QHD, Full HD e celular, com cinco estilos (fórmula, pôster, isométrico, 3D e padrão) usando o tema, a tipografia e o efeito ativos."
+        fr: "Exportateur de fonds d'écran PNG en 4K, QHD, Full HD et mobile, avec cinq styles (formule, affiche, isométrique, 3D et motif) utilisant le thème, la typographie et l'effet actifs."
+        zh: "PNG 壁纸导出：支持 4K、QHD、全高清与手机尺寸，五种样式（公式、海报、等距、3D、图案），使用当前主题、字体与特效。"
+        ja: "PNG壁紙の書き出し：4K・QHD・フルHD・モバイルに対応し、5つのスタイル（数式・ポスター・アイソメトリック・3D・パターン）を現在のテーマ・書体・演出で生成。"
+    - type: changed
+      text:
+        es: "El toggle claro/oscuro se reemplaza por el selector de temas; Mono Dark y Mono Light conservan el look blanco y negro de siempre."
+        en: "The light/dark toggle is replaced by the theme picker; Mono Dark and Mono Light keep the classic black-and-white look."
+        pt: "O alternador claro/escuro vira o seletor de temas; Mono Dark e Mono Light mantêm o visual preto e branco de sempre."
+        fr: "Le bouton clair/sombre est remplacé par le sélecteur de thèmes ; Mono Dark et Mono Light gardent le look noir et blanc d'origine."
+        zh: "原浅色/深色切换改为主题选择器；Mono Dark 与 Mono Light 保留经典黑白外观。"
+        ja: "ライト/ダークの切替はテーマ選択に置き換わり、Mono DarkとMono Lightは従来の白黒ルックを保ちます。"
+
 - version: "0.8.0"
   date: "2026-09-22"
   changes:

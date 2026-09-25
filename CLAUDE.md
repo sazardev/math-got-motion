@@ -205,17 +205,31 @@ developers — run `pnpm changelog:sync` after adding an entry to the YAML; don'
   images, icons, or emoji. If something needs a visual marker, it's built typographically
   (numbers, spacing, weight/opacity contrast) — not a drawn shape. This is the `mono` +
   `default` preset; the opt-in presets below are the only documented exception.
-- **Opt-in presets** (`src/preferences/`): `data-fx` (`mono`/`crt`/`vhs`/`neon`) and
-  `data-type` (`default`/`classic`/`editorial`/`modern`/`terminal`) are set on `<html>` by
-  `PreferencesProvider` and persisted in `localStorage` (`mgm:preferences`). `FxLayer`
+- **Opt-in presets** (`src/preferences/`): `data-fx` (`mono`/`crt`/`vhs`/`neon`),
+  `data-type` (`default`/`classic`/`editorial`/`modern`/`terminal`) and `data-theme`
+  (theme catalog in `themes.ts`) are set on `<html>` by `PreferencesProvider` and persisted
+  in `localStorage` (`mgm:preferences`); `data-scheme` is derived from the theme. `FxLayer`
   (`src/components/fx/`) mounts decorative fixed layers only for non-`mono` presets; they
   animate `transform`/`opacity` only (no `mix-blend-mode`, no per-frame `filter`) and are
   disabled under `prefers-reduced-motion`; flicker stays under 3 Hz (WCAG 2.3.1). `neon`
-  forces dark theme when selected (and is inert on light). Font preset webfonts load on
-  demand via `loadTypeFonts()` (`src/lib/font-loaders.ts`) — the default preset downloads
-  zero fonts. `PreferencesProvider` delays applying `data-type` until the preset's webfonts
-  are ready, which is exactly the signal `FormulaHero` uses (`typeReady`) to re-measure its
-  FLIP layout instead of calibrating against stale glyphs.
+  forces a dark theme when selected from a light one (and is inert on light). Font preset
+  webfonts load on demand via `loadTypeFonts()` (`src/lib/font-loaders.ts`) — the default
+  preset downloads zero fonts. `PreferencesProvider` delays applying `data-type` until the
+  preset's webfonts are ready, which is exactly the signal `FormulaHero` uses (`typeReady`)
+  to re-measure its FLIP layout instead of calibrating against stale glyphs.
+- **Themes & accent**: `src/index.css` holds every palette under
+  `:root[data-theme="..."]` (CSS is the single source of truth) and defines
+  `--accent`/`--accent-fg`; `--accent: var(--fg)` in `:root` keeps mono themes identical to
+  the old black/white look. Component CSS should paint hero/display elements with
+  `var(--accent)`, never a literal color. `ThemePicker` + `ExportPanel` share `ControlMenu`
+  (`src/components/control-menu/`), an inverted popover (`--fg` background, `--bg` text)
+  that closes on Escape/outside click — no borders or shadows, per DESIGN.md.
+- **Wallpaper export** (`src/lib/wallpaper.ts`): offscreen canvas 2D (no DOM capture),
+  sizes 4K/QHD/FHD/mobile, styles `formula`/`poster`/`isometric`/`depth`/`pattern`. It reads
+  `--bg`/`--fg`/`--accent`/`--font-*` from computed styles and re-applies the active fx
+  (scanlines, grain, tracking, glow, hue-shifted chroma) on top, so themes/fonts/effects
+  stay in sync by construction. The grain tile is drawn scaled (`grainScale`) to keep the
+  PNG from ballooning at 4K. `ExportPanel` only mounts on formula routes.
 - **Pinned-timeline rebuilds**: `FormulaHero`'s `useGSAP` must pass `revertOnUpdate: true`.
   Without it, dependency changes (resize, `layoutVersion` bump, font change) _stack_ pinned
   ScrollTriggers — two pins fight over `.hero`, the pin-spacer collapses, and the formula

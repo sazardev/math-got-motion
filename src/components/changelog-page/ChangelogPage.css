@@ -12,6 +12,7 @@
 
 .changelog__title {
   margin: 0;
+  color: var(--accent);
   font-family: var(--font-mono);
   font-weight: 500;
   font-variation-settings: "wght" 500;
@@ -68,7 +69,7 @@
 }
 
 .changelog__back {
-  color: var(--fg);
+  color: var(--accent);
   font-family: var(--font-prose);
   font-size: 0.875rem;
   letter-spacing: 0.08em;

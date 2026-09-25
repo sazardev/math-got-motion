@@ -7,6 +7,17 @@ This file is generated from `src/domain/changelog.yaml` — the source of
 truth, bilingual, also rendered in-app at `/:locale/changelog`. Add new
 entries there, then run `pnpm changelog:sync`.
 
+## [0.9.0] - 2026-09-23
+
+### Added
+
+- Global color themes — Gruvbox, Nord, Ayu, Osaka, Tokyo Night, Catppuccin, and more — selectable from the controls and persisted. Monochrome stays the default.
+- PNG wallpaper exporter at 4K, QHD, Full HD, and mobile, with five styles (formula, poster, isometric, 3D, and pattern) using the active theme, typography, and effect.
+
+### Changed
+
+- The light/dark toggle is replaced by the theme picker; Mono Dark and Mono Light keep the classic black-and-white look.
+
 ## [0.8.0] - 2026-09-22
 
 ### Added

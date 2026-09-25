@@ -3,20 +3,19 @@ import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react
 import {
   fxPresets,
   PreferencesContext,
-  themes,
   typePresets,
   type FxPreset,
   type PreferencesContextValue,
-  type Theme,
   type TypePreset,
 } from "./preferences-context";
+import { isThemeId, themeMeta, type ThemeId } from "./themes";
 import { loadTypeFonts } from "../lib/font-loaders";
 import { stashScrollAnchor } from "../lib/scroll-anchor";
 
 const STORAGE_KEY = "mgm:preferences";
 
 interface Preferences {
-  theme: Theme;
+  theme: ThemeId;
   fx: FxPreset;
   /** Preset tipográfico aplicado — el que `data-type` refleja y consume FormulaHero. */
   type: TypePreset;
@@ -27,13 +26,9 @@ interface Preferences {
 }
 
 interface StoredPreferences {
-  theme: Theme;
+  theme: ThemeId;
   fx: FxPreset;
   type: TypePreset;
-}
-
-function isTheme(value: unknown): value is Theme {
-  return (themes as readonly unknown[]).includes(value);
 }
 
 function isFxPreset(value: unknown): value is FxPreset {
@@ -42,6 +37,17 @@ function isFxPreset(value: unknown): value is FxPreset {
 
 function isTypePreset(value: unknown): value is TypePreset {
   return (typePresets as readonly unknown[]).includes(value);
+}
+
+/**
+ * Migra los ids viejos del toggle claro/oscuro (`dark`/`light`) a los temas
+ * actuales, y valida contra el catálogo. Así una preferencia guardada antes
+ * del sistema de temas no se descarta.
+ */
+function toThemeId(value: unknown): ThemeId | null {
+  if (value === "dark") return "mono-dark";
+  if (value === "light") return "mono-light";
+  return isThemeId(value) ? value : null;
 }
 
 /** Rota al siguiente elemento de una lista no vacía, volviendo al primero. */
@@ -53,7 +59,7 @@ function nextIn<T>(values: readonly [T, ...T[]], current: T): T {
 
 /** Preferencias guardadas, tolerando storage bloqueado o JSON corrupto. */
 function readStoredPreferences(): StoredPreferences {
-  const defaults: StoredPreferences = { theme: "dark", fx: "mono", type: "default" };
+  const defaults: StoredPreferences = { theme: "mono-dark", fx: "mono", type: "default" };
 
   try {
     const raw = globalThis.localStorage.getItem(STORAGE_KEY);
@@ -61,11 +67,11 @@ function readStoredPreferences(): StoredPreferences {
     const parsed: unknown = JSON.parse(raw);
     if (typeof parsed !== "object" || parsed === null) return defaults;
     const record = parsed as Record<string, unknown>;
-    const theme = record["theme"];
+    const theme = toThemeId(record["theme"]);
     const fx = record["fx"];
     const type = record["type"];
     return {
-      theme: isTheme(theme) ? theme : defaults.theme,
+      theme: theme ?? defaults.theme,
       fx: isFxPreset(fx) ? fx : defaults.fx,
       type: isTypePreset(type) ? type : defaults.type,
     };
@@ -91,25 +97,24 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
     };
   });
 
-  const cycleTheme = useCallback(() => {
-    setPrefs((current) => ({ ...current, theme: nextIn(themes, current.theme) }));
+  const setTheme = useCallback((theme: ThemeId) => {
+    setPrefs((current) => ({ ...current, theme }));
   }, []);
 
   const cycleFx = useCallback(() => {
     setPrefs((current) => {
       const fx = nextIn(fxPresets, current.fx);
-      // Neon es un efecto de glow: sobre fondo blanco es inerte. Al elegirlo
-      // se acompaña con el cambio a oscuro; después el usuario puede volver
-      // a claro a mano (Neon degrada sin glow, ver FxLayer.css).
-      const theme: Theme = fx === "neon" && current.theme === "light" ? "dark" : current.theme;
+      // Neon es un efecto de glow: sobre fondo claro es inerte. Al elegirlo se
+      // salta a un tema oscuro (el mono, que es el default de siempre); si el
+      // tema ya es oscuro se respeta. Después el usuario puede elegir a mano
+      // cualquier tema claro y Neon degrada sin glow (ver FxLayer.css).
+      const theme: ThemeId =
+        fx === "neon" && themeMeta(current.theme).scheme === "light" ? "mono-dark" : current.theme;
       return { ...current, fx, theme };
     });
   }, []);
 
   const cycleType = useCallback(() => {
-    // Para el caso inmediato (volver a Original) y como red de seguridad del
-    // caso async: se ancla la posición de lectura antes de tocar el DOM.
-    stashScrollAnchor();
     setPrefs((current) => {
       const requestedType = nextIn(typePresets, current.requestedType);
       // Volver al Original no descarga nada: se aplica al toque. Un preset con
@@ -128,7 +133,7 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
   // Carga perezosa de webfonts: cuando termina (o falla, y el stack cae a su
   // fallback), recién ahí se aplica el preset pedido. Sin listener global de
   // FontFaceSet: un rebuild disparado por `loadingdone` durante el arranque
-  // rompe el pin de ScrollTrigger (ver PR/notas).
+  // rompe el pin de ScrollTrigger.
   useEffect(() => {
     if (prefs.typeReady) return;
     const pending = prefs.requestedType;
@@ -150,11 +155,13 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
   }, [prefs.requestedType, prefs.typeReady]);
 
   // Los atributos viven en <html> (igual que data-theme) para que todo el CSS
-  // —incluidos los estilos por preset de index.css y FxLayer.css— pueda
-  // reaccionar sin que ningún componente intermedio tenga que re-renderizar.
+  // —paletas, estilos por preset, capas de fx— pueda reaccionar sin que ningún
+  // componente intermedio tenga que re-renderizar. `data-scheme` se deriva del
+  // tema y es lo que consultan FxLayer.css y `color-scheme`.
   useEffect(() => {
     const root = document.documentElement;
     root.dataset["theme"] = prefs.theme;
+    root.dataset["scheme"] = themeMeta(prefs.theme).scheme;
     root.dataset["fx"] = prefs.fx;
     root.dataset["type"] = prefs.type;
 
@@ -178,11 +185,11 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
       fx: prefs.fx,
       type: prefs.type,
       typeReady: prefs.typeReady,
-      cycleTheme,
+      setTheme,
       cycleFx,
       cycleType,
     }),
-    [prefs, cycleTheme, cycleFx, cycleType],
+    [prefs, setTheme, cycleFx, cycleType],
   );
 
   return <PreferencesContext.Provider value={value}>{children}</PreferencesContext.Provider>;

@@ -2,10 +2,21 @@ import type { Locale } from "./locale";
 
 export interface UiStrings {
   scrollHint: string;
-  themeToLight: string;
-  themeToDark: string;
+  themeLabel: string;
   fxLabel: string;
   typeLabel: string;
+  exportLabel: string;
+  exportStyleLabel: string;
+  exportSizeLabel: string;
+  exportStyleFormula: string;
+  exportStylePoster: string;
+  exportStyleIsometric: string;
+  exportStyleDepth: string;
+  exportStylePattern: string;
+  exportSizeMobile: string;
+  exportDownload: string;
+  exportWorking: string;
+  exportDone: string;
   menuTitle: string;
   closeMenu: string;
   searchPlaceholder: string;
@@ -60,8 +71,19 @@ export interface UiStrings {
 export const uiStrings: Record<Locale, UiStrings> = {
   es: {
     scrollHint: "Scroll para deconstruir la fórmula",
-    themeToLight: "Claro",
-    themeToDark: "Oscuro",
+    themeLabel: "Tema",
+    exportLabel: "Exportar",
+    exportStyleLabel: "Estilo",
+    exportSizeLabel: "Tamaño",
+    exportStyleFormula: "Fórmula",
+    exportStylePoster: "Póster",
+    exportStyleIsometric: "Isométrico",
+    exportStyleDepth: "3D",
+    exportStylePattern: "Patrón",
+    exportSizeMobile: "Móvil",
+    exportDownload: "Descargar PNG",
+    exportWorking: "Generando…",
+    exportDone: "Descargado",
     fxLabel: "Efecto",
     typeLabel: "Fuente",
     menuTitle: "Fórmulas",
@@ -121,8 +143,19 @@ export const uiStrings: Record<Locale, UiStrings> = {
   },
   en: {
     scrollHint: "Scroll to deconstruct the formula",
-    themeToLight: "Light",
-    themeToDark: "Dark",
+    themeLabel: "Theme",
+    exportLabel: "Export",
+    exportStyleLabel: "Style",
+    exportSizeLabel: "Size",
+    exportStyleFormula: "Formula",
+    exportStylePoster: "Poster",
+    exportStyleIsometric: "Isometric",
+    exportStyleDepth: "3D",
+    exportStylePattern: "Pattern",
+    exportSizeMobile: "Mobile",
+    exportDownload: "Download PNG",
+    exportWorking: "Generating…",
+    exportDone: "Downloaded",
     fxLabel: "Effect",
     typeLabel: "Font",
     menuTitle: "Formulas",
@@ -180,8 +213,19 @@ export const uiStrings: Record<Locale, UiStrings> = {
   },
   pt: {
     scrollHint: "Role para desconstruir a fórmula",
-    themeToLight: "Claro",
-    themeToDark: "Escuro",
+    themeLabel: "Tema",
+    exportLabel: "Exportar",
+    exportStyleLabel: "Estilo",
+    exportSizeLabel: "Tamanho",
+    exportStyleFormula: "Fórmula",
+    exportStylePoster: "Pôster",
+    exportStyleIsometric: "Isométrico",
+    exportStyleDepth: "3D",
+    exportStylePattern: "Padrão",
+    exportSizeMobile: "Celular",
+    exportDownload: "Baixar PNG",
+    exportWorking: "Gerando…",
+    exportDone: "Baixado",
     fxLabel: "Efeito",
     typeLabel: "Fonte",
     menuTitle: "Fórmulas",
@@ -240,8 +284,19 @@ export const uiStrings: Record<Locale, UiStrings> = {
   },
   fr: {
     scrollHint: "Faites défiler pour déconstruire la formule",
-    themeToLight: "Clair",
-    themeToDark: "Sombre",
+    themeLabel: "Thème",
+    exportLabel: "Exporter",
+    exportStyleLabel: "Style",
+    exportSizeLabel: "Taille",
+    exportStyleFormula: "Formule",
+    exportStylePoster: "Affiche",
+    exportStyleIsometric: "Isométrique",
+    exportStyleDepth: "3D",
+    exportStylePattern: "Motif",
+    exportSizeMobile: "Mobile",
+    exportDownload: "Télécharger PNG",
+    exportWorking: "Génération…",
+    exportDone: "Téléchargé",
     fxLabel: "Effet",
     typeLabel: "Police",
     menuTitle: "Formules",
@@ -301,8 +356,19 @@ export const uiStrings: Record<Locale, UiStrings> = {
   },
   zh: {
     scrollHint: "滚动以逐步拆解公式",
-    themeToLight: "浅色",
-    themeToDark: "深色",
+    themeLabel: "主题",
+    exportLabel: "导出",
+    exportStyleLabel: "样式",
+    exportSizeLabel: "尺寸",
+    exportStyleFormula: "公式",
+    exportStylePoster: "海报",
+    exportStyleIsometric: "等距",
+    exportStyleDepth: "3D",
+    exportStylePattern: "图案",
+    exportSizeMobile: "手机",
+    exportDownload: "下载 PNG",
+    exportWorking: "生成中…",
+    exportDone: "已下载",
     fxLabel: "特效",
     typeLabel: "字体",
     menuTitle: "公式",
@@ -359,8 +425,19 @@ export const uiStrings: Record<Locale, UiStrings> = {
   },
   ja: {
     scrollHint: "スクロールして数式を分解する",
-    themeToLight: "ライト",
-    themeToDark: "ダーク",
+    themeLabel: "テーマ",
+    exportLabel: "エクスポート",
+    exportStyleLabel: "スタイル",
+    exportSizeLabel: "サイズ",
+    exportStyleFormula: "数式",
+    exportStylePoster: "ポスター",
+    exportStyleIsometric: "アイソメトリック",
+    exportStyleDepth: "3D",
+    exportStylePattern: "パターン",
+    exportSizeMobile: "モバイル",
+    exportDownload: "PNGをダウンロード",
+    exportWorking: "生成中…",
+    exportDone: "ダウンロード完了",
     fxLabel: "エフェクト",
     typeLabel: "フォント",
     menuTitle: "数式",

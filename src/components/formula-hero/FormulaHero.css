@@ -21,6 +21,7 @@
   z-index: 10;
   display: inline-block;
   text-align: center;
+  color: var(--accent);
   font-family: var(--font-formula);
   font-weight: 500;
   font-variation-settings: "wght" 500;
@@ -134,6 +135,7 @@
 
 .stage__label {
   margin: 0 0 1rem;
+  color: var(--accent);
   font-family: var(--font-mono);
   font-size: clamp(0.7rem, 2vw, 0.875rem);
   letter-spacing: 0.08em;
@@ -188,6 +190,7 @@
 .timeline__year {
   flex: 0 0 auto;
   min-width: 5.5rem;
+  color: var(--accent);
   font-family: var(--font-mono);
   font-size: clamp(0.68rem, 1.8vw, 0.8rem);
   letter-spacing: 0.04em;
@@ -279,7 +282,7 @@
   background: transparent;
   padding: 0.6rem 0;
   margin: 0;
-  color: var(--fg);
+  color: var(--accent);
   font-family: var(--font-prose);
   font-size: 0.875rem;
   letter-spacing: 0.08em;

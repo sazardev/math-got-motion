@@ -1,0 +1,114 @@
+.control-menu {
+  position: relative;
+}
+
+/*
+ * Panel invertido: `--fg` de fondo con `--bg` de texto. Es el recurso que usa
+ * la app para delimitar un bloque sin bordes ni sombras (DESIGN.md), y en los
+ * temas de color queda igual de legible porque el par bg/fg siempre contrasta.
+ */
+.control-menu__panel {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  z-index: 30;
+  min-width: 13rem;
+  max-height: min(72vh, 34rem);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 0.95rem 1.1rem;
+  background: var(--fg);
+  color: var(--bg);
+  text-align: left;
+  animation: control-menu-in 0.16s ease-out both;
+}
+
+@keyframes control-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.4rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.control-menu__group-label {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.control-menu__options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.control-menu__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+}
+
+.control-menu__option {
+  border: none;
+  background: transparent;
+  padding: 0.22rem 0;
+  margin: 0;
+  color: inherit;
+  font-family: var(--font-prose);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  text-align: left;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.15s ease;
+}
+
+.control-menu__option:hover,
+.control-menu__option[aria-pressed="true"] {
+  opacity: 1;
+}
+
+.control-menu__option[aria-pressed="true"] {
+  font-weight: 700;
+}
+
+.control-menu__action {
+  border: none;
+  background: var(--bg);
+  color: var(--fg);
+  padding: 0.55rem 0.9rem;
+  margin: 0;
+  font-family: var(--font-prose);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 0.15s ease;
+}
+
+.control-menu__action:hover:not(:disabled) {
+  opacity: 1;
+}
+
+.control-menu__action:disabled {
+  cursor: progress;
+  opacity: 0.55;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .control-menu__panel {
+    animation: none;
+  }
+}

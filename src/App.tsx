@@ -10,11 +10,13 @@ import {
 } from "react-router-dom";
 
 import { ChangelogPage } from "./components/changelog-page/ChangelogPage";
+import { ExportPanel } from "./components/export-panel/ExportPanel";
 import { FormulaHero } from "./components/formula-hero/FormulaHero";
 import { FormulaMenu } from "./components/formula-menu/FormulaMenu";
 import { FxLayer } from "./components/fx/FxLayer";
 import { HomePage } from "./components/home-page/HomePage";
 import { NotFoundPage } from "./components/not-found/NotFoundPage";
+import { ThemePicker } from "./components/theme-picker/ThemePicker";
 import { formulas } from "./domain/formulas";
 import { detectInitialLocale, isLocale, locales, type Locale } from "./i18n/locale";
 import { useLocale } from "./i18n/locale-context";
@@ -34,13 +36,18 @@ function FormulaRouteContent() {
   return <FormulaHero key={activeFormula.id} formula={activeFormula} />;
 }
 
-/** Menú + controles de tema/estética/tipografía/idioma, persistentes entre fórmula/changelog dentro de un mismo locale. */
+/** Menú + controles de tema/estética/tipografía/export/idioma, persistentes entre fórmula/changelog dentro de un mismo locale. */
 function LocaleChrome() {
   const { locale, setLocale, strings } = useLocale();
-  const { theme, fx, type, cycleTheme, cycleFx, cycleType } = usePreferences();
+  const { fx, type, cycleFx, cycleType } = usePreferences();
   const navigate = useNavigate();
   const { formulaId } = useParams<{ formulaId: string }>();
   const activeId = formulaId ?? formulas[0]?.id ?? "";
+  // El exportador solo tiene sentido con una fórmula activa (no en home ni
+  // changelog), así que se monta únicamente en esa ruta.
+  const exportFormula = formulaId
+    ? formulas.find((formula) => formula.id === formulaId)
+    : undefined;
 
   return (
     <>
@@ -73,9 +80,8 @@ function LocaleChrome() {
         >
           {strings.typeLabel}: {typeNames[type]}
         </button>
-        <button type="button" className="control-button" onClick={cycleTheme}>
-          {theme === "dark" ? strings.themeToLight : strings.themeToDark}
-        </button>
+        <ThemePicker />
+        {exportFormula && <ExportPanel formula={exportFormula} />}
         <div className="control-locales">
           {locales.map((code) => (
             <button

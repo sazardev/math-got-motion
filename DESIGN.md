@@ -65,10 +65,16 @@ el usuario puede activar explícitamente presets desde los controles (persistido
 
 - **`data-fx`** — estética: `mono` (default), `crt`, `vhs`, `neon`. CRT y VHS se mantienen
   monocromáticos (scanlines, grano, tracking, glow blanco); solo `neon` usa color
-  (aberración cromática cian/magenta + glow) y fuerza tema oscuro al activarse.
+  (aberración cromática derivada del acento del tema + glow) y fuerza un tema oscuro al
+  activarse.
 - **`data-type`** — tipografía: `default` (JetBrains Mono + General Sans), `classic`
   (Latin Modern), `editorial` (STIX Two), `modern` (IBM Plex Mono + Space Grotesk) y
   `terminal` (Space Mono). Los webfonts se cargan on-demand; el default no descarga nada.
+- **`data-theme`** — tema de color global: `mono-dark` (default), `mono-light`, `gruvbox`,
+  `gruvbox-light`, `nord`, `ayu`, `ayu-mirage`, `ayu-light`, `osaka`, `tokyo-night`,
+  `catppuccin`. Cada paleta define `--bg`, `--fg`, `--accent` y `--accent-fg`; el acento
+  pinta la fórmula, la selección y los CTAs. `data-scheme` (derivado) resuelve claro/oscuro.
+  En los temas mono el acento apunta al propio `--fg`, así el default queda idéntico.
 
 Límites que los presets **no** pueden romper:
 

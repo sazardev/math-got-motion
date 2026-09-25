@@ -97,10 +97,89 @@
   --font-prose: "Space Mono", ui-monospace, monospace;
 }
 
-:root[data-theme="light"] {
+/*
+ * Paletas de los temas globales. `mono-dark` es el default (el negro/blanco
+ * plano de DESIGN.md); el resto son opt-in y por eso pueden usar color.
+ * `--accent` pinta la fórmula, la selección y los CTAs; en los temas mono
+ * apunta al propio `--fg`, así el default queda idéntico al de siempre.
+ * `data-scheme` (derivado del tema) resuelve lo que depende de claro/oscuro:
+ * color-scheme del navegador y las capas de fx (ver FxLayer.css).
+ */
+:root {
+  --accent: var(--fg);
+  --accent-fg: var(--bg);
+}
+
+:root[data-scheme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="mono-light"] {
   --bg: #ffffff;
   --fg: #000000;
-  color-scheme: light;
+}
+
+:root[data-theme="gruvbox"] {
+  --bg: #282828;
+  --fg: #ebdbb2;
+  --accent: #fe8019;
+  --accent-fg: #282828;
+}
+
+:root[data-theme="gruvbox-light"] {
+  --bg: #fbf1c7;
+  --fg: #3c3836;
+  --accent: #d65d0e;
+  --accent-fg: #fbf1c7;
+}
+
+:root[data-theme="nord"] {
+  --bg: #2e3440;
+  --fg: #eceff4;
+  --accent: #88c0d0;
+  --accent-fg: #2e3440;
+}
+
+:root[data-theme="ayu"] {
+  --bg: #0a0e14;
+  --fg: #b3b1ad;
+  --accent: #ffb454;
+  --accent-fg: #0a0e14;
+}
+
+:root[data-theme="ayu-mirage"] {
+  --bg: #1f2430;
+  --fg: #cbccc6;
+  --accent: #ffcc66;
+  --accent-fg: #1f2430;
+}
+
+:root[data-theme="ayu-light"] {
+  --bg: #fafafa;
+  --fg: #5c6166;
+  --accent: #ff9940;
+  --accent-fg: #0f1419;
+}
+
+:root[data-theme="osaka"] {
+  --bg: #111c18;
+  --fg: #c1c497;
+  --accent: #2dd5b7;
+  --accent-fg: #111c18;
+}
+
+:root[data-theme="tokyo-night"] {
+  --bg: #1a1b26;
+  --fg: #c0caf5;
+  --accent: #7aa2f7;
+  --accent-fg: #1a1b26;
+}
+
+:root[data-theme="catppuccin"] {
+  --bg: #1e1e2e;
+  --fg: #cdd6f4;
+  --accent: #cba6f7;
+  --accent-fg: #1e1e2e;
 }
 
 * {
@@ -124,8 +203,8 @@ body {
 }
 
 ::selection {
-  background: var(--fg);
-  color: var(--bg);
+  background: var(--accent);
+  color: var(--accent-fg);
 }
 
 .controls {

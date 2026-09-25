@@ -59,12 +59,19 @@ pnpm build                  # tsc && vite build — NOT sufficient for a Pages d
   without it, GSAP accumulates the pinned timeline/ScrollTrigger on every rebuild (resize,
   font change) and the formula ends up off-screen.
 - **Strictly monochrome by default**, now with opt-in presets: `data-fx`
-  (`mono`/`crt`/`vhs`/`neon`) and `data-type` (`default`/`classic`/`editorial`/`modern`/
-  `terminal`) live on `<html>`, managed by `src/preferences/` and persisted in
-  `localStorage` (`mgm:preferences`). `mono` + `default` is the flat black/white look of
-  DESIGN.md; only the explicit non-default presets may use grays/glow/color. Effect layers
-  (`src/components/fx/FxLayer.tsx`) follow the same transform/opacity-only rule (CSS
-  keyframes included), never `mix-blend-mode`, and respect `prefers-reduced-motion`.
+  (`mono`/`crt`/`vhs`/`neon`), `data-type` (`default`/`classic`/`editorial`/`modern`/
+  `terminal`) and `data-theme` (themes.ts catalog: `mono-dark`/`mono-light`/`gruvbox`/
+  `nord`/`ayu`/`osaka`/`tokyo-night`/`catppuccin`/…) live on `<html>`, managed by
+  `src/preferences/` and persisted in `localStorage` (`mgm:preferences`). `data-scheme` is
+  derived from the theme. `mono` + `default` + `mono-dark` is the flat black/white look of
+  DESIGN.md; only the explicit non-default presets may use grays/glow/color. Theme palettes
+  set `--bg`/`--fg`/`--accent`/`--accent-fg`; the accent paints the formula, selection and
+  CTAs, and equals `--fg` in mono themes. Effect layers (`src/components/fx/FxLayer.tsx`)
+  follow the same transform/opacity-only rule (CSS keyframes included), never
+  `mix-blend-mode`, and respect `prefers-reduced-motion`.
+- **Wallpaper export** (`src/lib/wallpaper.ts`): canvas 2D offscreen (no DOM capture) at
+  4K/FHD/mobile sizes, styles `formula`/`poster`/`isometric`/`depth`/`pattern`, reusing the
+  active palette/fonts/fx by reading computed CSS variables — never hardcode theme colors.
 - **Typography roles**: use `--font-formula` / `--font-mono` / `--font-prose` in CSS, never
   hardcoded family stacks. New webfonts load on demand through `src/lib/font-loaders.ts`
   (dynamic imports) — the default preset must stay at zero extra font downloads. After a
