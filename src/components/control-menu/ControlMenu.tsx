@@ -3,17 +3,18 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import "./ControlMenu.css";
 
 interface ControlMenuProps {
-  /** Rótulo traducido del control ("Tema", "Exportar"). */
+  /** Rótulo traducido del control ("Tema", "Efecto") — encabeza el panel y nombra el botón para lectores de pantalla. */
   label: string;
-  /** Valor actual que se muestra junto al rótulo. */
+  /** Valor actual: es lo único que muestra el botón, sin "Rótulo:" delante. */
   value: string;
   /** Contenido del panel; recibe `close` para cerrar tras elegir. */
   children: (close: () => void) => ReactNode;
 }
 
 /**
- * Botón de control + panel desplegable, el patrón compartido por el selector
- * de tema y el exportador de wallpapers. El panel se pinta invertido
+ * Botón de control + panel desplegable, el patrón compartido por los
+ * selectores de tema, efecto, fuente e idioma. El botón muestra solo el
+ * valor activo ("Mono", "Nord"); el rótulo vive como encabezado del panel. El panel se pinta invertido
  * (`--fg` de fondo, `--bg` de texto): da límite visual sin bordes ni sombras,
  * que DESIGN.md prohíbe. Cierra con Escape, click afuera o al elegir.
  */
@@ -59,17 +60,20 @@ export function ControlMenu({ label, value, children }: ControlMenuProps) {
         ref={triggerRef}
         type="button"
         className="control-button"
+        title={label}
+        aria-label={`${label}: ${value}`}
         aria-expanded={open}
         aria-haspopup="true"
         onClick={() => {
           setOpen((current) => !current);
         }}
       >
-        {label}: {value}
+        {value}
       </button>
 
       {open && (
         <div ref={panelRef} className="control-menu__panel" role="group" aria-label={label}>
+          <p className="control-menu__group-label">{label}</p>
           {children(() => {
             setOpen(false);
           })}

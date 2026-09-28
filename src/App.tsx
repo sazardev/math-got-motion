@@ -10,19 +10,23 @@ import {
 } from "react-router-dom";
 
 import { ChangelogPage } from "./components/changelog-page/ChangelogPage";
-import { ExportPanel } from "./components/export-panel/ExportPanel";
+import { ExportPage } from "./components/export-page/ExportPage";
 import { FormulaHero } from "./components/formula-hero/FormulaHero";
 import { FormulaMenu } from "./components/formula-menu/FormulaMenu";
 import { FxLayer } from "./components/fx/FxLayer";
 import { HomePage } from "./components/home-page/HomePage";
 import { NotFoundPage } from "./components/not-found/NotFoundPage";
-import { ThemePicker } from "./components/theme-picker/ThemePicker";
+import {
+  FxPicker,
+  LocalePicker,
+  ThemePicker,
+  TypePicker,
+} from "./components/preference-pickers/PreferencePickers";
 import { formulas } from "./domain/formulas";
-import { detectInitialLocale, isLocale, locales, type Locale } from "./i18n/locale";
+import { detectInitialLocale, isLocale, type Locale } from "./i18n/locale";
 import { useLocale } from "./i18n/locale-context";
 import { LocaleProvider } from "./i18n/LocaleContext";
 import { destroyLenis, initLenis } from "./lib/lenis";
-import { fxNames, typeNames, usePreferences } from "./preferences/preferences-context";
 import { PreferencesProvider } from "./preferences/PreferencesContext";
 
 /** El contenido de "/:locale/formula/:formulaId" — la fórmula activa, o un id inexistente. */
@@ -36,18 +40,35 @@ function FormulaRouteContent() {
   return <FormulaHero key={activeFormula.id} formula={activeFormula} />;
 }
 
-/** Menú + controles de tema/estética/tipografía/export/idioma, persistentes entre fórmula/changelog dentro de un mismo locale. */
+/** "/:locale/formula/:formulaId/export" — el exportador de wallpapers de esa fórmula. */
+function ExportRouteContent() {
+  const { locale } = useLocale();
+  const { formulaId } = useParams<{ formulaId: string }>();
+  const activeFormula = formulas.find((formula) => formula.id === formulaId);
+
+  if (!activeFormula) return <NotFoundPage locale={locale} />;
+
+  return <ExportPage key={activeFormula.id} formula={activeFormula} />;
+}
+
+/**
+ * Menú + controles persistentes entre páginas de un mismo locale. Los
+ * controles de preferencia muestran solo el valor activo y abren un
+ * mini-menú (ver PreferencePickers); a la derecha, la navegación.
+ */
 function LocaleChrome() {
-  const { locale, setLocale, strings } = useLocale();
-  const { fx, type, cycleFx, cycleType } = usePreferences();
+  const { locale, strings } = useLocale();
   const navigate = useNavigate();
+  const location = useLocation();
   const { formulaId } = useParams<{ formulaId: string }>();
   const activeId = formulaId ?? formulas[0]?.id ?? "";
+  const onExportPage = location.pathname.endsWith("/export");
   // El exportador solo tiene sentido con una fórmula activa (no en home ni
-  // changelog), así que se monta únicamente en esa ruta.
-  const exportFormula = formulaId
-    ? formulas.find((formula) => formula.id === formulaId)
-    : undefined;
+  // changelog), así que el acceso aparece únicamente en esas rutas.
+  const formulaPath =
+    formulaId && formulas.some((formula) => formula.id === formulaId)
+      ? `/${locale}/formula/${formulaId}`
+      : null;
 
   return (
     <>
@@ -57,65 +78,51 @@ function LocaleChrome() {
         locale={locale}
         strings={strings}
         onSelect={(id) => {
-          void navigate(`/${locale}/formula/${id}`);
+          // Desde el exportador se cambia de fórmula sin salir de él.
+          void navigate(`/${locale}/formula/${id}${onExportPage ? "/export" : ""}`);
         }}
       />
 
-      <div className="controls">
-        <button
-          type="button"
-          className="control-button"
-          title={strings.fxLabel}
-          aria-label={`${strings.fxLabel}: ${fxNames[fx]}`}
-          onClick={cycleFx}
-        >
-          {strings.fxLabel}: {fxNames[fx]}
-        </button>
-        <button
-          type="button"
-          className="control-button"
-          title={strings.typeLabel}
-          aria-label={`${strings.typeLabel}: ${typeNames[type]}`}
-          onClick={cycleType}
-        >
-          {strings.typeLabel}: {typeNames[type]}
-        </button>
-        <ThemePicker />
-        {exportFormula && <ExportPanel formula={exportFormula} />}
-        <div className="control-locales">
-          {locales.map((code) => (
+      <nav className="controls" aria-label={strings.settingsLabel}>
+        <div className="controls__group">
+          <FxPicker />
+          <TypePicker />
+          <ThemePicker />
+          <LocalePicker />
+        </div>
+        <div className="controls__group">
+          {formulaPath && (
             <button
-              key={code}
               type="button"
-              className="control-button control-button--locale"
-              aria-current={code === locale}
+              className="control-button"
+              aria-current={onExportPage ? "page" : undefined}
               onClick={() => {
-                setLocale(code);
+                void navigate(onExportPage ? formulaPath : `${formulaPath}/export`);
               }}
             >
-              {code.toUpperCase()}
+              {onExportPage ? strings.formulaNav : strings.exportLabel}
             </button>
-          ))}
+          )}
+          <button
+            type="button"
+            className="control-button"
+            onClick={() => {
+              void navigate(`/${locale}/`);
+            }}
+          >
+            {strings.homeNav}
+          </button>
+          <button
+            type="button"
+            className="control-button"
+            onClick={() => {
+              void navigate(`/${locale}/changelog`);
+            }}
+          >
+            {strings.changelogNav}
+          </button>
         </div>
-        <button
-          type="button"
-          className="control-button"
-          onClick={() => {
-            void navigate(`/${locale}/`);
-          }}
-        >
-          {strings.homeNav}
-        </button>
-        <button
-          type="button"
-          className="control-button"
-          onClick={() => {
-            void navigate(`/${locale}/changelog`);
-          }}
-        >
-          {strings.changelogNav}
-        </button>
-      </div>
+      </nav>
 
       <Outlet />
     </>
@@ -159,6 +166,7 @@ function AppRoutes() {
       <Route path=":locale" element={<LocaleLayout />}>
         <Route index element={<HomePage />} />
         <Route path="formula/:formulaId" element={<FormulaRouteContent />} />
+        <Route path="formula/:formulaId/export" element={<ExportRouteContent />} />
         <Route path="changelog" element={<ChangelogPage />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />

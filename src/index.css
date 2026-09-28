@@ -97,6 +97,42 @@
   --font-prose: "Space Mono", ui-monospace, monospace;
 }
 
+/* Cormorant, Fraunces y Unbounded no traen griego: π/θ/λ caen a la siguiente
+   familia del stack (STIX Two Math en las serif, Inter en la geométrica). */
+:root[data-type="elegant"] {
+  --font-formula: "Cormorant Garamond", "STIX Two Math", serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose:
+    "Cormorant Garamond", "STIX Two Text", "Noto Serif CJK SC", "Noto Serif SC", "Songti SC",
+    "SimSun", "Noto Serif CJK JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+:root[data-type="fraunces"] {
+  --font-formula: "Fraunces Variable", "STIX Two Math", serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose:
+    "Fraunces Variable", "STIX Two Text", "Noto Serif CJK SC", "Noto Serif SC", "Songti SC",
+    "SimSun", "Noto Serif CJK JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+:root[data-type="code"] {
+  --font-formula: "Fira Code Variable", "JetBrains Mono Variable", monospace;
+  --font-mono: "Fira Code Variable", monospace;
+  --font-prose: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="swiss"] {
+  --font-formula: "Inter Variable", ui-sans-serif, sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="futurist"] {
+  --font-formula: "Unbounded Variable", "Inter Variable", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose: "Space Grotesk Variable", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
 /*
  * Paletas de los temas globales. `mono-dark` es el default (el negro/blanco
  * plano de DESIGN.md); el resto son opt-in y por eso pueden usar color.
@@ -110,80 +146,198 @@
   --accent-fg: var(--bg);
 }
 
+/*
+ * Los temas se declaran como `[data-theme]` (no `:root[data-theme]`): además
+ * de <html>, cualquier elemento puede llevar una paleta propia — el
+ * exportador lo usa para pintar una muestra real de cada tema. Esta regla
+ * base re-deriva el acento dentro del elemento (en :root ya viene resuelto
+ * contra el --fg del tema activo, y se heredaría ese valor).
+ */
+[data-theme] {
+  --accent: var(--fg);
+  --accent-fg: var(--bg);
+}
+
+[data-theme="mono-dark"] {
+  --bg: #000000;
+  --fg: #ffffff;
+}
+
 :root[data-scheme="light"] {
   color-scheme: light;
 }
 
-:root[data-theme="mono-light"] {
+[data-theme="mono-light"] {
   --bg: #ffffff;
   --fg: #000000;
 }
 
-:root[data-theme="gruvbox"] {
+[data-theme="gruvbox"] {
   --bg: #282828;
   --fg: #ebdbb2;
   --accent: #fe8019;
   --accent-fg: #282828;
 }
 
-:root[data-theme="gruvbox-light"] {
+[data-theme="gruvbox-light"] {
   --bg: #fbf1c7;
   --fg: #3c3836;
   --accent: #d65d0e;
   --accent-fg: #fbf1c7;
 }
 
-:root[data-theme="nord"] {
+[data-theme="nord"] {
   --bg: #2e3440;
   --fg: #eceff4;
   --accent: #88c0d0;
   --accent-fg: #2e3440;
 }
 
-:root[data-theme="ayu"] {
+[data-theme="ayu"] {
   --bg: #0a0e14;
   --fg: #b3b1ad;
   --accent: #ffb454;
   --accent-fg: #0a0e14;
 }
 
-:root[data-theme="ayu-mirage"] {
+[data-theme="ayu-mirage"] {
   --bg: #1f2430;
   --fg: #cbccc6;
   --accent: #ffcc66;
   --accent-fg: #1f2430;
 }
 
-:root[data-theme="ayu-light"] {
+[data-theme="ayu-light"] {
   --bg: #fafafa;
   --fg: #5c6166;
   --accent: #ff9940;
   --accent-fg: #0f1419;
 }
 
-:root[data-theme="osaka"] {
+[data-theme="osaka"] {
   --bg: #111c18;
   --fg: #c1c497;
   --accent: #2dd5b7;
   --accent-fg: #111c18;
 }
 
-:root[data-theme="tokyo-night"] {
+[data-theme="tokyo-night"] {
   --bg: #1a1b26;
   --fg: #c0caf5;
   --accent: #7aa2f7;
   --accent-fg: #1a1b26;
 }
 
-:root[data-theme="catppuccin"] {
+[data-theme="catppuccin"] {
   --bg: #1e1e2e;
   --fg: #cdd6f4;
   --accent: #cba6f7;
   --accent-fg: #1e1e2e;
 }
 
+[data-theme="rose-pine"] {
+  --bg: #191724;
+  --fg: #e0def4;
+  --accent: #ebbcba;
+  --accent-fg: #191724;
+}
+
+[data-theme="rose-pine-dawn"] {
+  --bg: #faf4ed;
+  --fg: #575279;
+  --accent: #b4637a;
+  --accent-fg: #faf4ed;
+}
+
+[data-theme="dracula"] {
+  --bg: #282a36;
+  --fg: #f8f8f2;
+  --accent: #bd93f9;
+  --accent-fg: #282a36;
+}
+
+[data-theme="solarized-dark"] {
+  --bg: #002b36;
+  --fg: #93a1a1;
+  --accent: #b58900;
+  --accent-fg: #002b36;
+}
+
+[data-theme="solarized-light"] {
+  --bg: #fdf6e3;
+  --fg: #586e75;
+  --accent: #cb4b16;
+  --accent-fg: #fdf6e3;
+}
+
+[data-theme="everforest"] {
+  --bg: #2d353b;
+  --fg: #d3c6aa;
+  --accent: #a7c080;
+  --accent-fg: #2d353b;
+}
+
+[data-theme="kanagawa"] {
+  --bg: #1f1f28;
+  --fg: #dcd7ba;
+  --accent: #e6c384;
+  --accent-fg: #1f1f28;
+}
+
+[data-theme="midnight"] {
+  --bg: #0b1021;
+  --fg: #d6def5;
+  --accent: #f2c46d;
+  --accent-fg: #0b1021;
+}
+
+[data-theme="vaporwave"] {
+  --bg: #1b0f33;
+  --fg: #efe4ff;
+  --accent: #ff71ce;
+  --accent-fg: #1b0f33;
+}
+
+[data-theme="phosphor"] {
+  --bg: #050a06;
+  --fg: #8fd19e;
+  --accent: #3dff7a;
+  --accent-fg: #050a06;
+}
+
+[data-theme="paper"] {
+  --bg: #f3eee4;
+  --fg: #2b2620;
+  --accent: #a3321f;
+  --accent-fg: #f3eee4;
+}
+
+[data-theme="sakura"] {
+  --bg: #fff4f6;
+  --fg: #4a3440;
+  --accent: #d6336c;
+  --accent-fg: #fff4f6;
+}
+
+[data-theme="matcha"] {
+  --bg: #eef0e4;
+  --fg: #2f3a2b;
+  --accent: #5d7f3f;
+  --accent-fg: #eef0e4;
+}
+
 * {
   box-sizing: border-box;
+}
+
+/* El gutter reservado evita que el contenido salte de ancho cuando un overlay
+   bloquea el scroll (y la barra desaparece). */
+html {
+  scrollbar-gutter: stable;
+}
+
+html.is-scroll-locked {
+  overflow: hidden;
 }
 
 html,
@@ -213,9 +367,19 @@ body {
   right: clamp(1rem, 3vw, 2rem);
   z-index: 20;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: clamp(0.25rem, 1.2vh, 0.75rem);
+  align-items: baseline;
+  gap: clamp(1.25rem, 2.6vw, 2.5rem);
+}
+
+/*
+ * Dos grupos en una sola línea: preferencias (efecto, fuente, tema, idioma)
+ * y navegación. Sin separadores dibujados — el aire entre grupos es mayor
+ * que el aire dentro de cada grupo, y eso alcanza para leerlos como dos.
+ */
+.controls__group {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(0.85rem, 1.6vw, 1.4rem);
 }
 
 .control-button {
@@ -224,29 +388,36 @@ body {
   padding: 0.3rem 0;
   margin: 0;
   color: var(--fg);
-  font-family: var(--font-prose);
-  font-size: clamp(0.75rem, 2.2vw, 0.875rem);
-  letter-spacing: 0.08em;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  white-space: nowrap;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.55;
   transition: opacity 0.2s ease;
 }
 
-.control-button:hover {
+.control-button:hover,
+.control-button:focus-visible,
+.control-button[aria-expanded="true"],
+.control-button[aria-current="page"] {
   opacity: 1;
 }
 
-.control-locales {
-  display: flex;
-  gap: 0.6rem;
-}
+/* Pantallas angostas: los dos grupos se apilan a la derecha, uno por línea. */
+@media (max-width: 760px) {
+  .controls {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.35rem;
+  }
 
-.control-button--locale {
-  opacity: 0.45;
-}
+  .controls__group {
+    gap: 0.85rem;
+  }
 
-.control-button--locale[aria-current="true"] {
-  opacity: 1;
-  font-weight: 700;
+  .control-button {
+    letter-spacing: 0.06em;
+  }
 }

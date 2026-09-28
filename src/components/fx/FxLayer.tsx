@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 
 import { usePreferences } from "../../preferences/preferences-context";
 
@@ -46,31 +47,53 @@ function paintGrain(layer: HTMLDivElement) {
 }
 
 /**
- * Capas decorativas de las estéticas opt-in (CRT/VHS/Neon). En `mono` —el
- * default— no monta nada: el DOM de la app queda idéntico al de siempre.
+ * Capas decorativas de las estéticas opt-in. En `mono` —el default— no monta
+ * nada: el DOM de la app queda idéntico al de siempre. Tampoco en el
+ * exportador: ahí el preview del wallpaper ya dibuja el efecto dentro del
+ * canvas, y una segunda capa encima haría que lo que se ve no sea el PNG.
  */
 export function FxLayer() {
   const { fx, theme } = usePreferences();
+  const { pathname } = useLocation();
   const grainRef = useRef<HTMLDivElement>(null);
+  const onExportPage = pathname.endsWith("/export");
 
   useEffect(() => {
     const layer = grainRef.current;
     if (!layer) return;
     paintGrain(layer);
-  }, [fx, theme]);
+  }, [fx, theme, onExportPage]);
 
-  if (fx === "mono") return null;
+  if (fx === "mono" || onExportPage) return null;
+
+  // CRT/VHS/Neon comparten la base de monitor (scanlines, roll, flicker); las
+  // estéticas nuevas montan solo lo suyo.
+  const monitor = fx === "crt" || fx === "vhs" || fx === "neon";
+  const grain = monitor || fx === "film" || fx === "glitch";
 
   return (
     <div className="fx" aria-hidden="true">
-      <div className="fx__scanlines" />
-      <div className="fx__roll" />
-      <div className="fx__tracking" />
-      <div className="fx__grain" ref={grainRef} />
-      <div className="fx__flicker" />
-      <div className="fx__vignette" />
+      {monitor && (
+        <>
+          <div className="fx__scanlines" />
+          <div className="fx__roll" />
+          <div className="fx__tracking" />
+        </>
+      )}
+      {grain && <div className="fx__grain" ref={grainRef} />}
+      {monitor && <div className="fx__flicker" />}
+      {fx !== "halftone" && <div className="fx__vignette" />}
       {fx === "crt" && <div className="fx__curvature" />}
       {fx === "neon" && <div className="fx__ambient" />}
+      {fx === "film" && <div className="fx__leak" />}
+      {fx === "dream" && <div className="fx__haze" />}
+      {fx === "halftone" && <div className="fx__halftone" />}
+      {fx === "glitch" && (
+        <>
+          <div className="fx__slices" />
+          <div className="fx__scanlines fx__scanlines--thin" />
+        </>
+      )}
     </div>
   );
 }

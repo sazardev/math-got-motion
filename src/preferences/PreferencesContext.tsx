@@ -50,13 +50,6 @@ function toThemeId(value: unknown): ThemeId | null {
   return isThemeId(value) ? value : null;
 }
 
-/** Rota al siguiente elemento de una lista no vacía, volviendo al primero. */
-function nextIn<T>(values: readonly [T, ...T[]], current: T): T {
-  const index = values.indexOf(current);
-  const next = values[(index + 1) % values.length];
-  return next ?? values[0];
-}
-
 /** Preferencias guardadas, tolerando storage bloqueado o JSON corrupto. */
 function readStoredPreferences(): StoredPreferences {
   const defaults: StoredPreferences = { theme: "mono-dark", fx: "mono", type: "default" };
@@ -101,9 +94,8 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
     setPrefs((current) => ({ ...current, theme }));
   }, []);
 
-  const cycleFx = useCallback(() => {
+  const setFx = useCallback((fx: FxPreset) => {
     setPrefs((current) => {
-      const fx = nextIn(fxPresets, current.fx);
       // Neon es un efecto de glow: sobre fondo claro es inerte. Al elegirlo se
       // salta a un tema oscuro (el mono, que es el default de siempre); si el
       // tema ya es oscuro se respeta. Después el usuario puede elegir a mano
@@ -114,9 +106,13 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
     });
   }, []);
 
-  const cycleType = useCallback(() => {
+  const setType = useCallback((requestedType: TypePreset) => {
+    // El Original se aplica en este mismo commit (sin webfonts que esperar),
+    // así que la posición de lectura se guarda ya para restaurarla tras el
+    // rebuild del timeline — ver src/lib/scroll-anchor.ts.
+    if (requestedType === "default") stashScrollAnchor();
     setPrefs((current) => {
-      const requestedType = nextIn(typePresets, current.requestedType);
+      if (requestedType === current.requestedType) return current;
       // Volver al Original no descarga nada: se aplica al toque. Un preset con
       // webfonts espera a que carguen (typeReady=false) para que el cambio de
       // familia y la re-medición de FormulaHero ocurran en el mismo commit.
@@ -186,10 +182,10 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
       type: prefs.type,
       typeReady: prefs.typeReady,
       setTheme,
-      cycleFx,
-      cycleType,
+      setFx,
+      setType,
     }),
-    [prefs, setTheme, cycleFx, cycleType],
+    [prefs, setTheme, setFx, setType],
   );
 
   return <PreferencesContext.Provider value={value}>{children}</PreferencesContext.Provider>;

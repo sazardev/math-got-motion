@@ -52,7 +52,7 @@ El DOM no puede animar eficientemente elementos en flujo. El proceso de iniciali
 ## 5. Coreografía de la Interacción
 
 1. **Estado 0 (Hero):** Fórmula intacta, centrada, gran formato.
-2. **Estado 1 (Despegue):** Al primer movimiento del scroll, la fórmula colapsa o se expande (según el teorema). Los caracteres utilizan un _easing_ elástico (`elastic.out(1, 0.75)`) para transmitir masa y cinemática en el movimiento físico.
+2. **Estado 1 (Despegue):** Al primer movimiento del scroll, la fórmula colapsa o se expande (según el teorema). Los caracteres utilizan un _easing_ suave (`power3.inOut`): bajo `scrub` un easing elástico se re-rebota cada vez que el usuario frena o retrocede, y se sentía tosco.
 3. **Estado 2 (Aislamiento):** El nodo de interés (ej. la variable principal) permanece en el centro visual. Los demás nodos se desplazan hacia la periferia (fuera de foco mediante posición u opacidad).
 4. **Estado 3 (Resolución):** El texto de General Sans entra en escena para explicar el nodo aislado, utilizando un _stagger_ para aparecer palabra por palabra.
 

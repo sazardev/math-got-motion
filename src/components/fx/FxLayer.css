@@ -1,6 +1,6 @@
 /*
- * FxLayer — capas decorativas de las estéticas opt-in (CRT/VHS/Neon), más el
- * glow/chroma del texto display.
+ * FxLayer — capas decorativas de las estéticas opt-in (CRT/VHS/Neon/Film/
+ * Dream/Halftone/Glitch), más el glow/chroma del texto display.
  *
  * Reglas de la casa, también para fx:
  *  - `mono` (default) no monta capas ni cambia una sola propiedad: el look
@@ -53,6 +53,52 @@
   --fx-glow:
     0 0 4px rgba(255, 255, 255, 0.9), 0 0 16px rgba(0, 255, 242, 0.7),
     0 0 46px rgba(255, 47, 210, 0.5);
+}
+
+:root[data-fx="film"] {
+  --fx-chroma: rgba(255, 150, 90, 0.22);
+  --fx-chroma-2: rgba(255, 200, 150, 0.12);
+  --fx-chroma-offset: 1px;
+  --fx-glow: 0 0 22px rgba(255, 140, 70, 0.22);
+}
+
+:root[data-scheme="light"][data-fx="film"] {
+  --fx-chroma: rgba(150, 60, 20, 0.16);
+  --fx-chroma-2: rgba(150, 60, 20, 0.08);
+  --fx-glow: 0 0 18px rgba(180, 80, 30, 0.1);
+}
+
+/* Dream: halo amplio y suave del propio acento, sin aberración. */
+:root[data-fx="dream"] {
+  --fx-glow:
+    0 0 10px color-mix(in srgb, var(--accent) 55%, transparent),
+    0 0 42px color-mix(in srgb, var(--accent) 35%, transparent),
+    0 0 90px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+:root[data-scheme="light"][data-fx="dream"] {
+  --fx-glow:
+    0 0 14px color-mix(in srgb, var(--accent) 28%, transparent),
+    0 0 60px color-mix(in srgb, var(--accent) 16%, transparent);
+}
+
+/* Halftone es de imprenta: sin glow, solo la trama de puntos. */
+:root[data-fx="halftone"] {
+  --fx-glow: 0 0 0 transparent;
+}
+
+/* Glitch: separación RGB franca (rojo/cian), estática — el movimiento lo
+   ponen las franjas de .fx__slices, que saltan cada tanto (≪ 3 Hz). */
+:root[data-fx="glitch"] {
+  --fx-chroma: rgba(255, 40, 80, 0.75);
+  --fx-chroma-2: rgba(0, 230, 255, 0.7);
+  --fx-chroma-offset: 3px;
+  --fx-glow: 0 0 0 transparent;
+}
+
+:root[data-scheme="light"][data-fx="glitch"] {
+  --fx-chroma: rgba(230, 0, 60, 0.55);
+  --fx-chroma-2: rgba(0, 170, 210, 0.55);
 }
 
 /* Neon es un efecto de glow: sin oscuro no hay nada que iluminar. Al elegirlo
@@ -360,7 +406,105 @@
   }
 }
 
+/* Film: fuga de luz cálida en una esquina, que respira lento. */
+.fx__leak {
+  background:
+    radial-gradient(circle at 92% 8%, rgba(255, 120, 40, 0.18), transparent 38%),
+    radial-gradient(circle at 4% 96%, rgba(255, 190, 120, 0.09), transparent 42%);
+  animation: fx-leak 14s ease-in-out infinite alternate;
+}
+
+:root[data-scheme="light"] .fx__leak {
+  background:
+    radial-gradient(circle at 92% 8%, rgba(255, 140, 60, 0.16), transparent 40%),
+    radial-gradient(circle at 4% 96%, rgba(200, 120, 60, 0.08), transparent 42%);
+}
+
+:root[data-fx="film"] .fx__vignette {
+  background: radial-gradient(ellipse at center, transparent 48%, rgba(30, 12, 0, 0.42) 100%);
+}
+
+:root[data-scheme="light"][data-fx="film"] .fx__vignette {
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(90, 45, 10, 0.16) 100%);
+}
+
+@keyframes fx-leak {
+  from {
+    opacity: 0.55;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Dream: bruma luminosa del acento que envuelve el centro. */
+.fx__haze {
+  background:
+    radial-gradient(
+      ellipse at 50% 45%,
+      color-mix(in srgb, var(--accent) 12%, transparent),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      color-mix(in srgb, var(--accent) 8%, transparent),
+      transparent 45%
+    );
+  animation: fx-ambient 16s ease-in-out infinite alternate;
+}
+
+:root[data-fx="dream"] .fx__vignette {
+  background: radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.22) 100%);
+}
+
+:root[data-scheme="light"][data-fx="dream"] .fx__vignette {
+  background: radial-gradient(ellipse at center, transparent 62%, rgba(255, 255, 255, 0.4) 100%);
+}
+
+/* Halftone: trama de puntos de imprenta, más densa hacia los bordes. */
+.fx__halftone {
+  background-image: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--fg) 16%, transparent) 0 1.1px,
+    transparent 1.4px
+  );
+  background-size: 7px 7px;
+  mask-image: radial-gradient(ellipse at center, transparent 30%, #000000 95%);
+}
+
+/* Glitch: franjas horizontales que se corren de golpe, pocas veces por ciclo. */
+.fx__slices {
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 0 23%,
+      color-mix(in srgb, var(--fg) 7%, transparent) 23% 24.4%,
+      transparent 24.4% 61%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 61% 62%,
+      rgba(0, 230, 255, 0.07) 62% 63.6%,
+      transparent 63.6% 84%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 84% 85%,
+      rgba(255, 40, 80, 0.07) 85% 86%,
+      transparent 86%
+    );
+  animation: fx-tracking 4.2s steps(1, end) infinite;
+}
+
+.fx__scanlines--thin {
+  opacity: 0.35;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .fx__leak,
+  .fx__haze,
+  .fx__slices,
   .fx__roll,
   .fx__tracking,
   .fx__grain,

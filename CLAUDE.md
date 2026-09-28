@@ -104,13 +104,19 @@ locale-prefixed — this is required for the hreflang/sitemap setup below, not a
   formula's hero. This used to redirect straight into the default formula's hero; formulas now
   only live at their own `/formula/:id` URL.
 - `/:locale/formula/:formulaId` → that formula's hero.
+- `/:locale/formula/:formulaId/export` → `ExportPage`, the wallpaper exporter for that formula
+  (not prerendered or in the sitemap; its canonical points at the formula page).
 - `/:locale/changelog` → `ChangelogPage`.
 - `*` → `NotFoundPage` (also rendered in place, not via redirect, for a formula id that
   doesn't exist within an otherwise-valid locale).
 
 `src/App.tsx` is the whole route tree: `LocaleLayout` resolves the `:locale` param (redirecting
 to a detected locale if it's missing/invalid) and renders `LocaleProvider` + the persistent
-chrome (`FormulaMenu`, effect/font/theme/locale/changelog/home buttons) around an `<Outlet />`.
+chrome (`FormulaMenu`, the effect/font/theme/locale mini-menus from
+`src/components/preference-pickers/PreferencePickers.tsx`, and export/home/changelog nav)
+around an `<Outlet />`. Each picker's button shows only the active value ("Mono", "Nord",
+"ES") — no "Label:" prefix — and opens a `ControlMenu` list to choose directly
+(`setFx`/`setType`/`setTheme`/`setLocale`; there are no cycle-through setters anymore).
 `PreferencesProvider` (`src/preferences/PreferencesContext.tsx`) wraps the tree and owns
 `theme`/`fx`/`type`, so the chrome reads them from context instead of props. `LocaleProvider`
 (`src/i18n/LocaleContext.tsx`) no longer owns `locale` as internal state — it's now a controlled
@@ -185,6 +191,41 @@ developers — run `pnpm changelog:sync` after adding an entry to the YAML; don'
     the next panel starts before the previous one finishes fading, causing visible overlap).
   - Layout re-measures on resize/orientation change (`layoutVersion` state) by first clearing
     any GSAP-applied inline transform (`clearProps: "all"`) before re-measuring.
+  - **Long formulas auto-fit**: before the FLIP measure, the layout effect shrinks the
+    formula's font-size (a few passes) until it fits `FORMULA_MAX_WIDTH` of the viewport,
+    minus the section rail's footprint. The isolation zoom divides by that `fitRatio` and is
+    capped per node (`ISOLATE_MAX_WIDTH`/`ISOLATE_MAX_HEIGHT`) so no symbol leaves the screen.
+  - **Crisp zoom**: formula nodes are deliberately _not_ given `will-change`, and their tweens
+    use `force3D: false` — with a compositor layer the glyph is rasterized once at scale 1 and
+    then stretched (pixelated). Don't add them back to `willChangeTargets`.
+  - **Scroll length**: `SCROLL_PER_UNIT` viewports per timeline unit, and every panel's
+    stagger is capped (`cappedStagger`, `PANEL_MAX_STAGGER_SPREAD`) — a 150-word history used
+    to add 10+ screens of scroll on its own. Eases are `power*.inOut`, not elastic: under
+    scrub an elastic re-bounces every time the user stops or reverses.
+  - **Text never leaves the screen**: explanations are anchored at the _bottom_
+    (`--hero-bottom-safe`) and grow upward; each isolated node is centered in the free area
+    between the chrome and the top of _its own_ explanation (`isolationArea`), scale capped to
+    fit. The epilogue (`.hero__context`) spans from `--context-top` (set in the layout effect,
+    just under the shrunk formula, whose scale also adapts to viewport height) down to the safe
+    bottom; the stage takes the rest, and `fitStagePanels` scales any panel that doesn't fit
+    (down to `PANEL_MIN_FIT`). Whatever still overflows **rolls** upward during that panel's
+    hold (`panelRoll`, `data-rolling` masks the stage edges) with an extra stop at the end of
+    the roll. Close actions live in the safe bottom strip, where the progress counter was. On
+    short landscape screens the epilogue switches to author/era left, stage right.
+  - **Stops, snap & keyboard**: rail targets + roll ends form the list of "stops". When Lenis
+    goes idle (`SNAP_IDLE_MS`), a directional snap settles on the next stop ahead (≤
+    `SNAP_AHEAD` viewports) or the nearest (≤ `SNAP_NEAREST`); ↓/PageDown/Space and
+    ↑/PageUp/Shift+Space step between stops (using `lenis.targetScroll`, so repeated presses
+    chain). Both are skipped while `html.is-scroll-locked` (formula index open).
+  - **Scroll locks** (`src/lib/lenis.ts`): `lockScroll(reason)`/`unlockScroll(reason)` —
+    Lenis only resumes when no lock is left. Don't call `lenis.stop()/start()` directly; the
+    formula index and the hero's pin rebuild used to unlock each other.
+  - **Section rail** (`.hero__rail`, left side, hidden ≤900px): Formula → Symbols (each
+    node glyph) → History → Timeline → Use cases → Example. `useGSAP` builds `railTargets`
+    (active-from time + jump-to time, taken from timeline labels) and exposes `jumpRef`;
+    clicking maps the target time to the ScrollTrigger range and glides there via Lenis.
+    The active item is toggled via `data-active` on refs from `onUpdate` — no React state,
+    so scrolling never re-renders the component.
   - The **share button** uses `navigator.share` when available, falling back to
     `navigator.clipboard.writeText` on the current canonical URL with a brief "copied"
     confirmation — no third-party share widget.
@@ -205,11 +246,16 @@ developers — run `pnpm changelog:sync` after adding an entry to the YAML; don'
   images, icons, or emoji. If something needs a visual marker, it's built typographically
   (numbers, spacing, weight/opacity contrast) — not a drawn shape. This is the `mono` +
   `default` preset; the opt-in presets below are the only documented exception.
-- **Opt-in presets** (`src/preferences/`): `data-fx` (`mono`/`crt`/`vhs`/`neon`),
-  `data-type` (`default`/`classic`/`editorial`/`modern`/`terminal`) and `data-theme`
+- **Opt-in presets** (`src/preferences/`): `data-fx`
+  (`mono`/`crt`/`vhs`/`neon`/`film`/`dream`/`halftone`/`glitch`), `data-type`
+  (`default`/`classic`/`editorial`/`modern`/`terminal`/`elegant`/`fraunces`/`code`/`swiss`/
+  `futurist`) and `data-theme`
   (theme catalog in `themes.ts`) are set on `<html>` by `PreferencesProvider` and persisted
   in `localStorage` (`mgm:preferences`); `data-scheme` is derived from the theme. `FxLayer`
-  (`src/components/fx/`) mounts decorative fixed layers only for non-`mono` presets; they
+  (`src/components/fx/`) mounts decorative fixed layers only for non-`mono` presets (CRT/VHS/
+  Neon share the "monitor" base of scanlines/roll/flicker; the newer presets mount only their
+  own layers) and never on the export route, where the wallpaper preview already draws the
+  effect inside its canvas — a second overlay would make the preview differ from the PNG; they
   animate `transform`/`opacity` only (no `mix-blend-mode`, no per-frame `filter`) and are
   disabled under `prefers-reduced-motion`; flicker stays under 3 Hz (WCAG 2.3.1). `neon`
   forces a dark theme when selected from a light one (and is inert on light). Font preset
@@ -217,19 +263,37 @@ developers — run `pnpm changelog:sync` after adding an entry to the YAML; don'
   preset downloads zero fonts. `PreferencesProvider` delays applying `data-type` until the
   preset's webfonts are ready, which is exactly the signal `FormulaHero` uses (`typeReady`)
   to re-measure its FLIP layout instead of calibrating against stale glyphs.
-- **Themes & accent**: `src/index.css` holds every palette under
-  `:root[data-theme="..."]` (CSS is the single source of truth) and defines
+- **Themes & accent**: `src/index.css` holds every palette under `[data-theme="..."]` —
+  deliberately _not_ `:root[data-theme]`, so any element can carry its own palette (the
+  exporter's theme swatches do exactly that; a base `[data-theme]` rule re-derives `--accent`
+  inside the element, and `mono-dark` has an explicit rule for the same reason). CSS is the
+  single source of truth; `themes.ts` only holds id/name/scheme. It also defines
   `--accent`/`--accent-fg`; `--accent: var(--fg)` in `:root` keeps mono themes identical to
   the old black/white look. Component CSS should paint hero/display elements with
-  `var(--accent)`, never a literal color. `ThemePicker` + `ExportPanel` share `ControlMenu`
+  `var(--accent)`, never a literal color. All the preference pickers share `ControlMenu`
   (`src/components/control-menu/`), an inverted popover (`--fg` background, `--bg` text)
   that closes on Escape/outside click — no borders or shadows, per DESIGN.md.
 - **Wallpaper export** (`src/lib/wallpaper.ts`): offscreen canvas 2D (no DOM capture),
-  sizes 4K/QHD/FHD/mobile, styles `formula`/`poster`/`isometric`/`depth`/`pattern`. It reads
+  sizes 4K/QHD/FHD/mobile, fourteen styles listed in `wallpaperStyles` (formula, accent,
+  inverted, poster, swiss,
+  anatomy, macro, aura, depth, echo, orbit, spiral, isometric, pattern — the newer ones use
+  the formula's data beyond its glyphs: per-node explanations, first timeline year, history).
+  Colors go through `parseHex`, which accepts `rgb()` too: `shiftHue`/`mix` return that
+  format, and `rgba()` used to hand it back opaque. It reads
   `--bg`/`--fg`/`--accent`/`--font-*` from computed styles and re-applies the active fx
   (scanlines, grain, tracking, glow, hue-shifted chroma) on top, so themes/fonts/effects
   stay in sync by construction. The grain tile is drawn scaled (`grainScale`) to keep the
-  PNG from ballooning at 4K. `ExportPanel` only mounts on formula routes.
+  PNG from ballooning at 4K (and seeded, so live previews don't flicker). `WallpaperOptions`
+  (scale, spacingX/Y, rotation, layers, distance, radius, count, focus — multipliers where
+  1 = the original look, except the integer ones; `styleOptionKeys` says which apply to each
+  style) tune each composition. `ExportPage` also has effect/theme/font pickers that set the
+  _global_ preferences (the same ones the chrome uses).
+  `drawWallpaper` is synchronous (fonts awaited up front via `ensureWallpaperFonts`) so
+  `ExportPage` (`src/components/export-page/`) can redraw a live preview plus an all-styles
+  gallery on every slider change; since every measure is proportional to the canvas, a
+  low-res preview is the same image as the full-size PNG. Previews defer drawing to a rAF
+  because `PreferencesProvider` applies `data-theme`/`data-type` in an effect that runs
+  _after_ its children's effects.
 - **Pinned-timeline rebuilds**: `FormulaHero`'s `useGSAP` must pass `revertOnUpdate: true`.
   Without it, dependency changes (resize, `layoutVersion` bump, font change) _stack_ pinned
   ScrollTriggers — two pins fight over `.hero`, the pin-spacer collapses, and the formula
@@ -241,8 +305,10 @@ developers — run `pnpm changelog:sync` after adding an entry to the YAML; don'
 - Fonts: `--font-formula` for the hero formula, `--font-mono` for mono UI chrome,
   `--font-prose` for prose (`src/index.css` defines all three per `data-type` preset) —
   never hardcode a family stack in component CSS. `classic` self-hosts Latin Modern
-  (`src/assets/fonts/latin-modern/`, GUST license included); `editorial`/`modern`/`terminal`
-  pull `@fontsource` packages through dynamic imports so Vite code-splits their CSS.
+  (`src/assets/fonts/latin-modern/`, GUST license included); every other preset pulls
+  `@fontsource` packages through dynamic imports so Vite code-splits their CSS. Fraunces,
+  Cormorant and Unbounded have no Greek subset, so their stacks fall back to STIX Two Math /
+  Inter for π/θ/λ — keep a Greek-capable family second in any new formula stack.
   CJK prose falls back to system serif by design (no CJK webfonts are bundled).
 
 - **No LaTeX renderer** (KaTeX/MathJax): formulas are a custom AST of typed nodes

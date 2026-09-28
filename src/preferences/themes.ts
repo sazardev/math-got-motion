@@ -1,6 +1,6 @@
 /**
  * Catálogo de temas de color. Los valores de cada paleta viven en
- * `src/index.css` (`:root[data-theme="..."]`) — el CSS es la fuente de verdad
+ * `src/index.css` (`[data-theme="..."]`) — el CSS es la fuente de verdad
  * porque los componentes ya consumen `--bg`/`--fg`/`--accent`, y el exportador
  * de wallpapers lee las variables computadas en runtime. Acá solo vive la
  * metadata que la UI necesita: id, nombre visible y esquema claro/oscuro.
@@ -18,6 +18,19 @@ export const themeIds = [
   "osaka",
   "tokyo-night",
   "catppuccin",
+  "rose-pine",
+  "rose-pine-dawn",
+  "dracula",
+  "solarized-dark",
+  "solarized-light",
+  "everforest",
+  "kanagawa",
+  "midnight",
+  "vaporwave",
+  "phosphor",
+  "paper",
+  "sakura",
+  "matcha",
 ] as const;
 
 export type ThemeId = (typeof themeIds)[number];
@@ -43,6 +56,19 @@ export const themes: readonly ThemeMeta[] = [
   { id: "osaka", name: "Osaka", scheme: "dark" },
   { id: "tokyo-night", name: "Tokyo Night", scheme: "dark" },
   { id: "catppuccin", name: "Catppuccin", scheme: "dark" },
+  { id: "rose-pine", name: "Rosé Pine", scheme: "dark" },
+  { id: "rose-pine-dawn", name: "Rosé Pine Dawn", scheme: "light" },
+  { id: "dracula", name: "Dracula", scheme: "dark" },
+  { id: "solarized-dark", name: "Solarized Dark", scheme: "dark" },
+  { id: "solarized-light", name: "Solarized Light", scheme: "light" },
+  { id: "everforest", name: "Everforest", scheme: "dark" },
+  { id: "kanagawa", name: "Kanagawa", scheme: "dark" },
+  { id: "midnight", name: "Midnight Gold", scheme: "dark" },
+  { id: "vaporwave", name: "Vaporwave", scheme: "dark" },
+  { id: "phosphor", name: "Phosphor", scheme: "dark" },
+  { id: "paper", name: "Paper & Ink", scheme: "light" },
+  { id: "sakura", name: "Sakura", scheme: "light" },
+  { id: "matcha", name: "Matcha", scheme: "light" },
 ];
 
 const byId = new Map<ThemeId, ThemeMeta>(themes.map((theme) => [theme.id, theme]));

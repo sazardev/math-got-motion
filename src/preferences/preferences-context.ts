@@ -3,11 +3,31 @@ import { createContext, useContext } from "react";
 import type { ThemeId } from "./themes";
 
 /** Estéticas visuales opt-in — `mono` es el default monocromático de siempre. */
-export const fxPresets = ["mono", "crt", "vhs", "neon"] as const;
+export const fxPresets = [
+  "mono",
+  "crt",
+  "vhs",
+  "neon",
+  "film",
+  "dream",
+  "halftone",
+  "glitch",
+] as const;
 export type FxPreset = (typeof fxPresets)[number];
 
 /** Presets tipográficos — `default` es JetBrains Mono + General Sans. */
-export const typePresets = ["default", "classic", "editorial", "modern", "terminal"] as const;
+export const typePresets = [
+  "default",
+  "classic",
+  "editorial",
+  "modern",
+  "terminal",
+  "elegant",
+  "fraunces",
+  "code",
+  "swiss",
+  "futurist",
+] as const;
 export type TypePreset = (typeof typePresets)[number];
 
 /*
@@ -20,6 +40,10 @@ export const fxNames: Record<FxPreset, string> = {
   crt: "CRT",
   vhs: "VHS",
   neon: "Neon",
+  film: "Film",
+  dream: "Dream",
+  halftone: "Halftone",
+  glitch: "Glitch",
 };
 
 export const typeNames: Record<TypePreset, string> = {
@@ -28,6 +52,11 @@ export const typeNames: Record<TypePreset, string> = {
   editorial: "Editorial",
   modern: "Moderno",
   terminal: "Terminal",
+  elegant: "Elegante",
+  fraunces: "Fraunces",
+  code: "Código",
+  swiss: "Suizo",
+  futurist: "Futurista",
 };
 
 export interface PreferencesContextValue {
@@ -40,10 +69,10 @@ export interface PreferencesContextValue {
   typeReady: boolean;
   /** Aplica un tema puntual (el picker elige de la lista, no rota). */
   setTheme: (theme: ThemeId) => void;
-  /** Rota Mono → CRT → VHS → Neon → Mono. */
-  cycleFx: () => void;
-  /** Rota Original → Clásico → Editorial → Moderno → Terminal → Original. */
-  cycleType: () => void;
+  /** Aplica una estética puntual (el mini-menú elige de la lista). */
+  setFx: (fx: FxPreset) => void;
+  /** Pide un preset tipográfico; se aplica cuando sus webfonts están listos. */
+  setType: (type: TypePreset) => void;
 }
 
 export const PreferencesContext = createContext<PreferencesContextValue | null>(null);

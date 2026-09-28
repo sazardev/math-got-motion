@@ -1,4 +1,8 @@
 .hero {
+  /* Borde inferior seguro compartido por explicaciones y epílogo: deja lugar
+     al contador/hint y a la barra de gestos de iOS. */
+  --hero-bottom-safe: calc(max(2.5vh, 1rem) + 2.4rem + env(safe-area-inset-bottom, 0px));
+
   position: relative;
   width: 100%;
   height: 100vh;
@@ -47,11 +51,17 @@
   margin: 0 0.3em;
 }
 
+/*
+ * Las explicaciones se anclan por ABAJO y crecen hacia arriba: antes nacían
+ * en una línea fija y crecían hacia abajo, así que una explicación de tres
+ * líneas terminaba fuera de pantalla. El nodo aislado se centra en el espacio
+ * que queda libre por encima (ver isolateTarget en FormulaHero.tsx).
+ */
 .hero__explanations {
   position: absolute;
   z-index: 5;
   left: 50%;
-  bottom: 16vh;
+  bottom: var(--hero-bottom-safe);
   transform: translateX(-50%);
   width: min(92vw, 44rem);
   text-align: center;
@@ -60,7 +70,9 @@
 
 .explanation {
   position: absolute;
-  inset: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
@@ -68,9 +80,10 @@
   column-gap: 0.34em;
   row-gap: 0.25em;
   font-family: var(--font-prose);
-  font-size: clamp(1rem, 3.2vw, 1.5rem);
+  font-size: clamp(1rem, min(3.2vw, 3.4vh), 1.45rem);
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.45;
+  text-wrap: balance;
 }
 
 .word {
@@ -84,13 +97,22 @@
   transform: translateY(65%);
 }
 
+/*
+ * El epílogo ocupa exactamente el alto que queda entre la fórmula encogida
+ * (--context-top, medido en JS) y el borde inferior seguro. El stage toma
+ * todo el alto restante y cada panel se ajusta a él (ver fitStagePanels):
+ * ningún texto puede quedar por debajo de la pantalla.
+ */
 .hero__context {
   position: absolute;
   z-index: 5;
   left: 50%;
-  top: 32vh;
+  top: var(--context-top, 32vh);
+  bottom: var(--hero-bottom-safe);
   transform: translateX(-50%);
   width: min(90vw, 46rem);
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -102,12 +124,13 @@
   column-gap: 0.4em;
   font-family: var(--font-prose);
   font-weight: 700;
-  font-size: clamp(1.5rem, 6vw, 3rem);
+  font-size: clamp(1.35rem, min(5.2vw, 6vh), 2.6rem);
   line-height: 1.1;
+  text-wrap: balance;
 }
 
 .context__era {
-  margin: 0 0 2rem;
+  margin: 0 0 clamp(1rem, 3.5vh, 2rem);
   font-family: var(--font-mono);
   font-size: clamp(0.7rem, 2vw, 0.875rem);
   letter-spacing: 0.08em;
@@ -118,8 +141,30 @@
 
 .context__stage {
   position: relative;
-  min-height: clamp(16rem, 40vh, 23rem);
-  margin: 0 0 1.5rem;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+/* Algún panel no entra y se desplaza: el stage recorta su contenido y
+   desvanece los bordes (el padding superior deja el rótulo fuera del fade). */
+.context__stage[data-rolling="true"] {
+  /* Alto del fade inferior: JS lo lee para que el último ítem termine su
+     desplazamiento por encima de él, completamente legible. */
+  --stage-fade: 24px;
+
+  overflow: hidden;
+  padding-top: 0.9rem;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000000 0.9rem,
+    #000000 calc(100% - var(--stage-fade)),
+    transparent 100%
+  );
+}
+
+.context__stage[data-rolling="true"] .stage__panel {
+  top: 0.9rem;
 }
 
 /* Los cuatro paneles ocupan el mismo espacio (inset: 0) y se turnan por
@@ -127,10 +172,15 @@
    necesidad de ocultar el panel como bloque, sus ítems ya nacen en opacity: 0. */
 .stage__panel {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Si el contenido no entra en el stage, JS aplica un scale estático con
+     este origen (nunca se anima: GSAP solo mueve sus hijos). */
+  transform-origin: top center;
 }
 
 .stage__label {
@@ -269,10 +319,17 @@
   }
 }
 
+/* Las acciones del cierre viven en la franja inferior segura (debajo del
+   contexto), donde antes estaba el contador: no le quitan alto al stage. */
 .context__actions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
+  padding-top: 0.2rem;
 }
 
 .context__back {
@@ -310,20 +367,211 @@
   white-space: nowrap;
 }
 
-.hero__progress {
-  bottom: 7vh;
+/* Contador y hint comparten lugar: el hint se va con el primer scroll y el
+   contador aparece en su lugar (ver el timeline). */
+.hero__progress,
+.hero__hint {
+  bottom: max(2.5vh, 1rem);
 }
 
-.hero__hint {
-  bottom: 4vh;
+.hero__progress {
+  opacity: 0;
+}
+
+/*
+ * Riel de secciones: índice tipográfico a la izquierda para saltar con un
+ * click a cualquier momento del recorrido. Sin líneas ni marcadores
+ * dibujados (DESIGN.md) — el estado se lee por opacidad y peso: el número
+ * siempre visible, el rótulo solo en la sección activa o al pasar el mouse.
+ */
+.hero__rail {
+  position: absolute;
+  z-index: 12;
+  top: 50%;
+  left: clamp(1rem, 3vw, 2rem);
+  transform: translateY(-50%);
+}
+
+.rail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rail__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.rail__link,
+.rail__glyph {
+  border: none;
+  background: transparent;
+  margin: 0;
+  color: var(--fg);
+  cursor: pointer;
+}
+
+.rail__link {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.2rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.rail__index {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.35;
+  transition: opacity 0.25s ease;
+}
+
+.rail__label {
+  opacity: 0;
+  transform: translateX(-0.35rem);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.rail__link[data-active="true"] .rail__index {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.rail__link[data-active="true"] .rail__label {
+  opacity: 0.9;
+  transform: none;
+}
+
+.hero__rail:hover .rail__label,
+.hero__rail:focus-within .rail__label {
+  opacity: 0.55;
+  transform: none;
+}
+
+.hero__rail:hover .rail__link[data-active="true"] .rail__label,
+.rail__link:hover .rail__label,
+.rail__link:focus-visible .rail__label {
+  opacity: 1;
+}
+
+.rail__link:hover .rail__index,
+.rail__link:focus-visible .rail__index {
+  opacity: 1;
+}
+
+.rail__link:focus-visible,
+.rail__glyph:focus-visible {
+  outline: none;
+}
+
+/*
+ * Los símbolos de la fórmula, en línea bajo "Símbolos": cada uno salta a su
+ * aislamiento. Solo se despliegan mientras se recorren los símbolos o al
+ * explorar el riel — en reposo el índice queda en seis números.
+ */
+.rail__glyphs {
+  display: none;
+  flex-wrap: wrap;
+  gap: 0 0.5rem;
+  max-width: 9rem;
+  padding-left: 1.6rem;
+}
+
+.rail__link[data-active="true"] + .rail__glyphs,
+.hero__rail:hover .rail__glyphs,
+.hero__rail:focus-within .rail__glyphs {
+  display: flex;
+}
+
+.rail__glyph {
+  padding: 0.1rem 0;
+  font-family: var(--font-formula);
+  font-size: 0.8rem;
+  line-height: 1.2;
+  opacity: 0.3;
+  transition: opacity 0.2s ease;
+}
+
+.rail__glyph:hover,
+.rail__glyph:focus-visible {
+  opacity: 0.8;
+}
+
+.rail__glyph[data-active="true"] {
+  color: var(--accent);
+  opacity: 1;
 }
 
 /* Landscape corto (teléfono acostado) y viewports muy bajos en general:
    comprime el epílogo para que autor + época + historia + enlace entren
    sin desbordar por debajo de la pantalla. */
-@media (max-height: 500px) {
+/* Teléfono acostado: poco alto pero mucho ancho. El encabezado (autor +
+   época) pasa a una columna a la izquierda y el stage ocupa todo el alto a la
+   derecha, en vez de apilar encabezado y panel y dejarle al panel las sobras. */
+@media (max-height: 500px) and (min-width: 600px) {
   .hero__context {
-    top: 22vh;
+    width: min(94vw, 64rem);
+    display: grid;
+    grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "author stage"
+      "era stage";
+    column-gap: 2rem;
+    text-align: left;
+  }
+
+  .context__author {
+    grid-area: author;
+    justify-content: flex-start;
+  }
+
+  .context__era {
+    grid-area: era;
+  }
+
+  .context__stage {
+    grid-area: stage;
+  }
+
+  .stage__panel {
+    align-items: flex-start;
+    transform-origin: top left;
+  }
+
+  .stage__text,
+  .usecases {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-height: 500px) {
+  /* Espaciados compactos: en un teléfono acostado cada rem vertical cuenta
+     para que el panel entre sin achicarse de más. */
+  .stage__label {
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline {
+    gap: 0.55rem;
+  }
+
+  .usecases {
+    gap: 0.8rem 1.2rem;
+  }
+
+  .example {
+    gap: 0.25rem;
   }
 
   .context__author {
@@ -334,25 +582,16 @@
     margin-bottom: 0.9rem;
   }
 
-  .context__stage {
-    min-height: clamp(13rem, 60vh, 20rem);
-    margin-bottom: 1rem;
-  }
-
   .stage__text {
     font-size: clamp(0.8rem, 2.2vw, 0.95rem);
-  }
-
-  .hero__explanations {
-    bottom: 10vh;
   }
 
   .hero__progress {
     display: none;
   }
 
-  .hero__hint {
-    bottom: 1.5vh;
+  .hero__rail {
+    display: none;
   }
 }
 
@@ -360,16 +599,8 @@
    así que se le da más aire por arriba y se retira el contador (queda
    solo el hint) para que nada se superponga cerca del borde inferior. */
 @media (max-width: 600px) {
-  .hero__explanations {
-    bottom: 20vh;
-  }
-
   .explanation {
-    font-size: clamp(0.9rem, 4vw, 1.25rem);
-  }
-
-  .context__stage {
-    min-height: clamp(15rem, 62vh, 24rem);
+    font-size: clamp(0.95rem, 4.2vw, 1.2rem);
   }
 
   .usecase {
@@ -391,19 +622,17 @@
   }
 }
 
-/* Tablet en portrait: intermedio entre el ajuste de teléfono angosto de
-   arriba y el desktop fluido de base — ninguna de las dos reglas anteriores
-   lo cubre (>600px de ancho, >500px de alto). */
-@media (min-width: 601px) and (max-width: 900px) {
-  .hero__context {
-    top: 28vh;
+/* Sin ancho para un índice lateral: el contenido centrado lo taparía. */
+@media (max-width: 900px) {
+  .hero__rail {
+    display: none;
   }
+}
 
-  .hero__explanations {
-    bottom: 18vh;
-  }
-
-  .context__stage {
-    min-height: clamp(15rem, 48vh, 23rem);
+/* Con el riel visible, el símbolo activo ya marca la posición: el contador
+   "03 / 07" sobra y competía con explicaciones de dos líneas. */
+@media (min-width: 901px) and (min-height: 501px) {
+  .hero__progress {
+    display: none;
   }
 }

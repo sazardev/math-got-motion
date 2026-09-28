@@ -3,6 +3,130 @@
 # raíz del repo es un espejo generado de este archivo para desarrolladores;
 # las entradas nuevas se agregan acá, no ahí.
 
+- version: "0.12.0"
+  date: "2026-09-28"
+  changes:
+    - type: added
+      text:
+        es: "Dos estilos de wallpaper nuevos: Acento (fondo del color primario, fórmula en su contraste) e Invertido (fondo del color de texto) — simples y de alto contraste."
+        en: "Two new wallpaper styles: Accent (primary-color background, formula in its contrast color) and Inverted (text-color background) — simple and high-contrast."
+        pt: "Dois novos estilos de wallpaper: Destaque (fundo na cor primária, fórmula no contraste) e Invertido (fundo na cor do texto) — simples e de alto contraste."
+        fr: "Deux nouveaux styles : Accent (fond couleur principale, formule en contraste) et Inversé (fond couleur du texte) — simples et très contrastés."
+        zh: "新增两种壁纸样式：强调色（主色背景、对比色公式）与反色（以文字色为背景）——简洁且高对比。"
+        ja: "壁紙スタイルを2種追加：アクセント（主色の背景に対比色の数式）と反転（文字色の背景）。シンプルで高コントラスト。"
+    - type: added
+      text:
+        es: "Scroll con paradas: al soltar, se asienta en el próximo símbolo o panel; las flechas, AvPág y la barra espaciadora avanzan un paso a la vez."
+        en: "Scroll with stops: when you let go it settles on the next symbol or panel; arrow keys, Page Down, and Space advance one step at a time."
+        pt: "Scroll com paradas: ao soltar, assenta no próximo símbolo ou painel; setas, Page Down e espaço avançam um passo por vez."
+        fr: "Défilement par étapes : au relâchement, il se pose sur le symbole ou le panneau suivant ; flèches, Page suiv. et Espace avancent d'un pas."
+        zh: "分步滚动：松开后会停在下一个符号或面板；方向键、PageDown 与空格键每次前进一步。"
+        ja: "ステップ式スクロール：手を離すと次の記号やパネルで止まり、矢印キー・PageDown・スペースで1ステップずつ進みます。"
+    - type: fixed
+      text:
+        es: "Ningún texto queda fuera de pantalla: explicaciones, historia, línea de tiempo y ejemplos se ajustan al alto real, y lo que no entra se desplaza para leerse completo."
+        en: "No text is left off-screen: explanations, history, timeline, and examples fit the real height, and whatever doesn't fit scrolls so it can be read in full."
+        pt: "Nenhum texto fica fora da tela: explicações, história, linha do tempo e exemplos se ajustam à altura real, e o que não cabe rola para ser lido inteiro."
+        fr: "Plus aucun texte hors écran : explications, histoire, chronologie et exemples s'adaptent à la hauteur réelle, et le reste défile pour être lu en entier."
+        zh: "文字不再超出屏幕：解释、历史、时间线与例题都按实际高度适配，放不下的内容会滚动显示以便完整阅读。"
+        ja: "テキストが画面外に出なくなりました。解説・歴史・年表・例題が実際の高さに合わせて収まり、入りきらない分はスクロールして全文読めます。"
+    - type: fixed
+      text:
+        es: "Con el índice de fórmulas abierto, la rueda movía la fórmula de atrás en vez de la lista; ahora la lista scrollea sola y admite teclado (flechas y Enter)."
+        en: "With the formula index open, the wheel moved the formula behind it instead of the list; the list now scrolls on its own and supports the keyboard (arrows and Enter)."
+        pt: "Com o índice aberto, a roda movia a fórmula de trás em vez da lista; agora a lista rola sozinha e aceita teclado (setas e Enter)."
+        fr: "Avec l'index ouvert, la molette faisait défiler la formule derrière au lieu de la liste ; la liste défile désormais seule et accepte le clavier."
+        zh: "打开公式索引时，滚轮会滚动背后的公式而不是列表；现在列表可独立滚动，并支持键盘（方向键与回车）。"
+        ja: "数式一覧を開いているとホイールで背後の数式が動いていた問題を修正。一覧だけがスクロールし、矢印キーとEnterにも対応。"
+    - type: fixed
+      text:
+        es: "Los rótulos de cada panel del epílogo (Historia, Línea de tiempo, Casos de uso, Ejemplo) nunca se mostraban; ahora entran y salen con su panel."
+        en: "The epilogue panel labels (History, Timeline, Use cases, Example) never appeared; they now enter and leave with their panel."
+        pt: "Os rótulos dos painéis do epílogo (História, Linha do tempo, Casos de uso, Exemplo) nunca apareciam; agora entram e saem com o painel."
+        fr: "Les intitulés des panneaux de l'épilogue ne s'affichaient jamais ; ils entrent et sortent désormais avec leur panneau."
+        zh: "尾声面板的标题（历史、时间线、应用、例题）此前从不显示；现在会随面板一同出现与消失。"
+        ja: "エピローグの各パネル見出し（歴史・年表・活用例・例題）が表示されていなかった問題を修正。パネルと一緒に出入りします。"
+
+- version: "0.11.0"
+  date: "2026-09-28"
+  changes:
+    - type: added
+      text:
+        es: "Siete estilos de wallpaper nuevos: Suizo, Anatomía, Macro, Aura, Eco, Órbita y Espiral — usan la fórmula de distintas maneras, con sus símbolos, su historia y sus explicaciones."
+        en: "Seven new wallpaper styles: Swiss, Anatomy, Macro, Aura, Echo, Orbit, and Spiral — each uses the formula differently, with its symbols, history, and explanations."
+        pt: "Sete novos estilos de wallpaper: Suíço, Anatomia, Macro, Aura, Eco, Órbita e Espiral — cada um usa a fórmula de um jeito, com símbolos, história e explicações."
+        fr: "Sept nouveaux styles de fond d'écran : Suisse, Anatomie, Macro, Aura, Écho, Orbite et Spirale — chacun exploite la formule autrement."
+        zh: "新增七种壁纸样式：瑞士、解剖、特写、光晕、回声、轨道与螺旋——以不同方式运用公式的符号、历史与解释。"
+        ja: "壁紙スタイルを7種追加：スイス、アナトミー、マクロ、オーラ、エコー、オービット、スパイラル。数式の記号・歴史・解説をそれぞれ違う形で活かします。"
+    - type: added
+      text:
+        es: "Cuatro efectos nuevos (Film, Dream, Halftone y Glitch), 13 temas nuevos (Rosé Pine, Dracula, Solarized, Kanagawa, Paper & Ink, Sakura…) y cinco fuentes nuevas."
+        en: "Four new effects (Film, Dream, Halftone, and Glitch), 13 new themes (Rosé Pine, Dracula, Solarized, Kanagawa, Paper & Ink, Sakura…), and five new fonts."
+        pt: "Quatro efeitos novos (Film, Dream, Halftone e Glitch), 13 temas novos (Rosé Pine, Dracula, Solarized, Kanagawa, Paper & Ink, Sakura…) e cinco fontes novas."
+        fr: "Quatre nouveaux effets (Film, Dream, Halftone et Glitch), 13 nouveaux thèmes (Rosé Pine, Dracula, Solarized, Kanagawa, Paper & Ink, Sakura…) et cinq polices."
+        zh: "新增四种效果（Film、Dream、Halftone、Glitch）、13 款主题（Rosé Pine、Dracula、Solarized、Kanagawa、Paper & Ink、Sakura…）与五款字体。"
+        ja: "エフェクト4種（Film・Dream・Halftone・Glitch）、テーマ13種（Rosé Pine、Dracula、Solarized、Kanagawa、Paper & Ink、Sakura…）、フォント5種を追加。"
+    - type: changed
+      text:
+        es: "El exportador permite elegir efecto, tema (con muestras de color reales) y fuente sin salir del preview, que ahora se ve exactamente como el PNG final."
+        en: "The exporter lets you pick effect, theme (with real color swatches), and font without leaving the preview, which now looks exactly like the final PNG."
+        pt: "O exportador permite escolher efeito, tema (com amostras de cor reais) e fonte sem sair do preview, que agora fica idêntico ao PNG final."
+        fr: "L'exportateur permet de choisir effet, thème (avec de vraies pastilles de couleur) et police sans quitter l'aperçu, désormais identique au PNG final."
+        zh: "导出页可直接选择效果、主题（附真实色样）与字体，预览现在与最终 PNG 完全一致。"
+        ja: "書き出し画面でエフェクト、テーマ（実際の色見本付き）、フォントを選べます。プレビューは最終PNGとまったく同じ見た目に。"
+    - type: fixed
+      text:
+        es: "Los brillos de color del efecto Neon en los wallpapers se pintaban opacos en vez de difuminarse."
+        en: "Neon's colored glows in wallpapers were painted opaque instead of fading out."
+        pt: "Os brilhos coloridos do efeito Neon nos wallpapers eram pintados opacos em vez de se esfumar."
+        fr: "Les halos colorés de l'effet Neon dans les fonds d'écran étaient opaques au lieu de s'estomper."
+        zh: "修复壁纸中霓虹效果的彩色光晕被画成不透明、没有渐隐的问题。"
+        ja: "壁紙のネオン効果で色付きの光がぼかされず不透明に描かれていた問題を修正。"
+
+- version: "0.10.0"
+  date: "2026-09-28"
+  changes:
+    - type: added
+      text:
+        es: "El exportador de wallpapers es una página propia: preview en vivo, los cinco estilos lado a lado y ajustes por estilo — tamaño, espaciado, rotación, capas y profundidad 3D."
+        en: "The wallpaper exporter is now its own page: a live preview, all five styles side by side, and per-style controls — size, spacing, rotation, and 3D layers and depth."
+        pt: "O exportador de wallpapers é uma página própria: preview ao vivo, os cinco estilos lado a lado e ajustes por estilo — tamanho, espaçamento, rotação, camadas e profundidade 3D."
+        fr: "L'exportateur de fonds d'écran a sa propre page : aperçu en direct, les cinq styles côte à côte et des réglages par style — taille, espacement, rotation, couches et profondeur 3D."
+        zh: "壁纸导出现在是独立页面：大尺寸实时预览、五种样式并排对比，以及按样式调整——大小、水平与垂直间距、旋转、3D 层数与深度。"
+        ja: "壁紙の書き出しが専用ページに：大きなライブプレビュー、5つのスタイルの並列比較、スタイルごとの調整（サイズ・横と縦の間隔・回転・3Dのレイヤー数と奥行き）。"
+    - type: added
+      text:
+        es: "Índice de secciones a la izquierda de cada fórmula: un click salta a la fórmula, a cualquier símbolo, a la historia, la línea de tiempo, los casos de uso o el ejemplo."
+        en: "A section index on the left of every formula: one click jumps to the formula, any symbol, the history, timeline, use cases, or worked example."
+        pt: "Índice de seções à esquerda de cada fórmula: um clique leva à fórmula, a qualquer símbolo, à história, linha do tempo, casos de uso ou exemplo."
+        fr: "Un index des sections à gauche de chaque formule : un clic mène à la formule, à n'importe quel symbole, à l'histoire, la chronologie, les usages ou l'exemple."
+        zh: "每个公式左侧新增章节索引：一键跳转到公式、任一符号、历史、时间线、应用场景或例题。"
+        ja: "各数式の左にセクション索引：クリックひとつで数式、各記号、歴史、年表、活用例、例題へ移動できます。"
+    - type: changed
+      text:
+        es: 'Controles más limpios: cada uno muestra solo su valor ("Mono", "Nord", "ES") y abre un mini-menú para elegir directo, en vez de rotar opción por opción.'
+        en: 'Cleaner controls: each shows only its value ("Mono", "Nord", "EN") and opens a mini menu to pick directly instead of cycling option by option.'
+        pt: 'Controles mais limpos: cada um mostra só seu valor ("Mono", "Nord", "PT") e abre um mini-menu para escolher direto, em vez de alternar opção por opção.'
+        fr: "Contrôles épurés : chacun n'affiche que sa valeur (« Mono », « Nord », « FR ») et ouvre un mini-menu pour choisir directement, au lieu de défiler option par option."
+        zh: "控件更简洁：每个只显示当前值（“Mono”“Nord”“ZH”），点击打开小菜单直接选择，不再逐项轮换。"
+        ja: "コントロールを整理：各ボタンは値だけ（「Mono」「Nord」「JA」）を表示し、クリックでミニメニューから直接選べます。"
+    - type: changed
+      text:
+        es: "Scroll más corto y fluido: los paneles largos ya no estiran el recorrido, y los rebotes elásticos se cambiaron por transiciones suaves."
+        en: "Shorter, smoother scroll: long panels no longer stretch the journey, and elastic bounces were replaced with smooth transitions."
+        pt: "Scroll mais curto e fluido: painéis longos não esticam mais o percurso, e os quiques elásticos viraram transições suaves."
+        fr: "Défilement plus court et fluide : les longs panneaux n'allongent plus le parcours, et les rebonds élastiques cèdent la place à des transitions douces."
+        zh: "滚动更短更顺滑：长面板不再拉长整个过程，弹性回弹改为平滑过渡。"
+        ja: "スクロールを短く滑らかに：長いパネルで道のりが伸びなくなり、弾むアニメーションは滑らかな遷移に。"
+    - type: fixed
+      text:
+        es: "Las fórmulas largas se salían de la pantalla; ahora se achican hasta entrar completas. El símbolo aislado se ve nítido a cualquier zoom, sin pixelarse."
+        en: "Long formulas overflowed the screen; they now scale down to fit whole. The isolated symbol stays crisp at any zoom instead of pixelating."
+        pt: "Fórmulas longas saíam da tela; agora diminuem até caber inteiras. O símbolo isolado fica nítido em qualquer zoom, sem pixelar."
+        fr: "Les longues formules débordaient de l'écran ; elles se réduisent désormais pour tenir entières. Le symbole isolé reste net à tout zoom, sans pixellisation."
+        zh: "过长的公式会超出屏幕；现在会自动缩小以完整显示。放大的单个符号在任何缩放下都清晰，不再像素化。"
+        ja: "長い数式が画面からはみ出していた問題を修正し、全体が収まるよう縮小されます。拡大した記号もピクセル化せず鮮明です。"
+
 - version: "0.9.0"
   date: "2026-09-23"
   changes:

@@ -17,6 +17,34 @@ export interface UiStrings {
   exportDownload: string;
   exportWorking: string;
   exportDone: string;
+  exportStyleAccent: string;
+  exportStyleInverted: string;
+  exportStyleSwiss: string;
+  exportStyleAnatomy: string;
+  exportStyleMacro: string;
+  exportStyleAura: string;
+  exportStyleEcho: string;
+  exportStyleOrbit: string;
+  exportStyleSpiral: string;
+  exportRadius: string;
+  exportCount: string;
+  exportFocus: string;
+  languageLabel: string;
+  settingsLabel: string;
+  formulaNav: string;
+  exportDescription: string;
+  exportAdjustLabel: string;
+  exportReset: string;
+  exportScale: string;
+  exportSpacingX: string;
+  exportSpacingY: string;
+  exportRotation: string;
+  exportLayers: string;
+  exportDistance: string;
+  exportAppearanceHint: string;
+  sectionsLabel: string;
+  sectionFormula: string;
+  sectionSymbols: string;
   menuTitle: string;
   closeMenu: string;
   searchPlaceholder: string;
@@ -84,6 +112,36 @@ export const uiStrings: Record<Locale, UiStrings> = {
     exportDownload: "Descargar PNG",
     exportWorking: "Generando…",
     exportDone: "Descargado",
+    exportStyleAccent: "Acento",
+    exportStyleInverted: "Invertido",
+    exportStyleSwiss: "Suizo",
+    exportStyleAnatomy: "Anatomía",
+    exportStyleMacro: "Macro",
+    exportStyleAura: "Aura",
+    exportStyleEcho: "Eco",
+    exportStyleOrbit: "Órbita",
+    exportStyleSpiral: "Espiral",
+    exportRadius: "Apertura",
+    exportCount: "Repeticiones",
+    exportFocus: "Símbolo",
+    languageLabel: "Idioma",
+    settingsLabel: "Preferencias",
+    formulaNav: "Fórmula",
+    exportDescription:
+      "Genera un wallpaper PNG de alta resolución de esta fórmula con tu tema, fuente y efecto.",
+    exportAdjustLabel: "Ajustes",
+    exportReset: "Restablecer",
+    exportScale: "Tamaño de la fórmula",
+    exportSpacingX: "Espaciado horizontal",
+    exportSpacingY: "Espaciado vertical",
+    exportRotation: "Rotación",
+    exportLayers: "Capas",
+    exportDistance: "Profundidad",
+    exportAppearanceHint:
+      "El efecto, el tema y la fuente también cambian el resto de la app. Doble click en un slider lo restablece.",
+    sectionsLabel: "Secciones",
+    sectionFormula: "Fórmula",
+    sectionSymbols: "Símbolos",
     fxLabel: "Efecto",
     typeLabel: "Fuente",
     menuTitle: "Fórmulas",
@@ -156,6 +214,36 @@ export const uiStrings: Record<Locale, UiStrings> = {
     exportDownload: "Download PNG",
     exportWorking: "Generating…",
     exportDone: "Downloaded",
+    exportStyleAccent: "Accent",
+    exportStyleInverted: "Inverted",
+    exportStyleSwiss: "Swiss",
+    exportStyleAnatomy: "Anatomy",
+    exportStyleMacro: "Macro",
+    exportStyleAura: "Aura",
+    exportStyleEcho: "Echo",
+    exportStyleOrbit: "Orbit",
+    exportStyleSpiral: "Spiral",
+    exportRadius: "Spread",
+    exportCount: "Repeats",
+    exportFocus: "Symbol",
+    languageLabel: "Language",
+    settingsLabel: "Preferences",
+    formulaNav: "Formula",
+    exportDescription:
+      "Generate a high-resolution PNG wallpaper of this formula with your theme, font and effect.",
+    exportAdjustLabel: "Adjust",
+    exportReset: "Reset",
+    exportScale: "Formula size",
+    exportSpacingX: "Horizontal spacing",
+    exportSpacingY: "Vertical spacing",
+    exportRotation: "Rotation",
+    exportLayers: "Layers",
+    exportDistance: "Depth",
+    exportAppearanceHint:
+      "Effect, theme and font also change the rest of the app. Double-click a slider to reset it.",
+    sectionsLabel: "Sections",
+    sectionFormula: "Formula",
+    sectionSymbols: "Symbols",
     fxLabel: "Effect",
     typeLabel: "Font",
     menuTitle: "Formulas",
@@ -226,6 +314,36 @@ export const uiStrings: Record<Locale, UiStrings> = {
     exportDownload: "Baixar PNG",
     exportWorking: "Gerando…",
     exportDone: "Baixado",
+    exportStyleAccent: "Destaque",
+    exportStyleInverted: "Invertido",
+    exportStyleSwiss: "Suíço",
+    exportStyleAnatomy: "Anatomia",
+    exportStyleMacro: "Macro",
+    exportStyleAura: "Aura",
+    exportStyleEcho: "Eco",
+    exportStyleOrbit: "Órbita",
+    exportStyleSpiral: "Espiral",
+    exportRadius: "Abertura",
+    exportCount: "Repetições",
+    exportFocus: "Símbolo",
+    languageLabel: "Idioma",
+    settingsLabel: "Preferências",
+    formulaNav: "Fórmula",
+    exportDescription:
+      "Gere um papel de parede PNG em alta resolução desta fórmula com seu tema, fonte e efeito.",
+    exportAdjustLabel: "Ajustes",
+    exportReset: "Redefinir",
+    exportScale: "Tamanho da fórmula",
+    exportSpacingX: "Espaçamento horizontal",
+    exportSpacingY: "Espaçamento vertical",
+    exportRotation: "Rotação",
+    exportLayers: "Camadas",
+    exportDistance: "Profundidade",
+    exportAppearanceHint:
+      "O efeito, o tema e a fonte também mudam o resto do app. Clique duas vezes em um controle para redefini-lo.",
+    sectionsLabel: "Seções",
+    sectionFormula: "Fórmula",
+    sectionSymbols: "Símbolos",
     fxLabel: "Efeito",
     typeLabel: "Fonte",
     menuTitle: "Fórmulas",
@@ -297,6 +415,36 @@ export const uiStrings: Record<Locale, UiStrings> = {
     exportDownload: "Télécharger PNG",
     exportWorking: "Génération…",
     exportDone: "Téléchargé",
+    exportStyleAccent: "Accent",
+    exportStyleInverted: "Inversé",
+    exportStyleSwiss: "Suisse",
+    exportStyleAnatomy: "Anatomie",
+    exportStyleMacro: "Macro",
+    exportStyleAura: "Aura",
+    exportStyleEcho: "Écho",
+    exportStyleOrbit: "Orbite",
+    exportStyleSpiral: "Spirale",
+    exportRadius: "Ouverture",
+    exportCount: "Répétitions",
+    exportFocus: "Symbole",
+    languageLabel: "Langue",
+    settingsLabel: "Préférences",
+    formulaNav: "Formule",
+    exportDescription:
+      "Générez un fond d’écran PNG haute résolution de cette formule avec votre thème, police et effet.",
+    exportAdjustLabel: "Réglages",
+    exportReset: "Réinitialiser",
+    exportScale: "Taille de la formule",
+    exportSpacingX: "Espacement horizontal",
+    exportSpacingY: "Espacement vertical",
+    exportRotation: "Rotation",
+    exportLayers: "Couches",
+    exportDistance: "Profondeur",
+    exportAppearanceHint:
+      "L’effet, le thème et la police changent aussi le reste de l’app. Double-cliquez sur un curseur pour le réinitialiser.",
+    sectionsLabel: "Sections",
+    sectionFormula: "Formule",
+    sectionSymbols: "Symboles",
     fxLabel: "Effet",
     typeLabel: "Police",
     menuTitle: "Formules",
@@ -369,6 +517,34 @@ export const uiStrings: Record<Locale, UiStrings> = {
     exportDownload: "下载 PNG",
     exportWorking: "生成中…",
     exportDone: "已下载",
+    exportStyleAccent: "强调色",
+    exportStyleInverted: "反色",
+    exportStyleSwiss: "瑞士",
+    exportStyleAnatomy: "解剖",
+    exportStyleMacro: "特写",
+    exportStyleAura: "光晕",
+    exportStyleEcho: "回声",
+    exportStyleOrbit: "轨道",
+    exportStyleSpiral: "螺旋",
+    exportRadius: "展开度",
+    exportCount: "重复次数",
+    exportFocus: "符号",
+    languageLabel: "语言",
+    settingsLabel: "偏好设置",
+    formulaNav: "公式",
+    exportDescription: "使用你的主题、字体和效果，为这个公式生成高分辨率 PNG 壁纸。",
+    exportAdjustLabel: "调整",
+    exportReset: "重置",
+    exportScale: "公式大小",
+    exportSpacingX: "水平间距",
+    exportSpacingY: "垂直间距",
+    exportRotation: "旋转",
+    exportLayers: "层数",
+    exportDistance: "深度",
+    exportAppearanceHint: "效果、主题和字体也会同步改变应用的其他部分。双击滑块即可重置。",
+    sectionsLabel: "章节",
+    sectionFormula: "公式",
+    sectionSymbols: "符号",
     fxLabel: "特效",
     typeLabel: "字体",
     menuTitle: "公式",
@@ -438,6 +614,36 @@ export const uiStrings: Record<Locale, UiStrings> = {
     exportDownload: "PNGをダウンロード",
     exportWorking: "生成中…",
     exportDone: "ダウンロード完了",
+    exportStyleAccent: "アクセント",
+    exportStyleInverted: "反転",
+    exportStyleSwiss: "スイス",
+    exportStyleAnatomy: "アナトミー",
+    exportStyleMacro: "マクロ",
+    exportStyleAura: "オーラ",
+    exportStyleEcho: "エコー",
+    exportStyleOrbit: "オービット",
+    exportStyleSpiral: "スパイラル",
+    exportRadius: "広がり",
+    exportCount: "繰り返し",
+    exportFocus: "記号",
+    languageLabel: "言語",
+    settingsLabel: "設定",
+    formulaNav: "数式",
+    exportDescription:
+      "テーマ・フォント・エフェクトを反映した、この数式の高解像度 PNG 壁紙を作成します。",
+    exportAdjustLabel: "調整",
+    exportReset: "リセット",
+    exportScale: "数式のサイズ",
+    exportSpacingX: "横の間隔",
+    exportSpacingY: "縦の間隔",
+    exportRotation: "回転",
+    exportLayers: "レイヤー数",
+    exportDistance: "奥行き",
+    exportAppearanceHint:
+      "エフェクト・テーマ・フォントはアプリ全体にも反映されます。スライダーをダブルクリックするとリセットされます。",
+    sectionsLabel: "セクション",
+    sectionFormula: "数式",
+    sectionSymbols: "記号",
     fxLabel: "エフェクト",
     typeLabel: "フォント",
     menuTitle: "数式",

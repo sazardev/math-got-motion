@@ -7,6 +7,50 @@ This file is generated from `src/domain/changelog.yaml` — the source of
 truth, bilingual, also rendered in-app at `/:locale/changelog`. Add new
 entries there, then run `pnpm changelog:sync`.
 
+## [0.12.0] - 2026-09-28
+
+### Added
+
+- Two new wallpaper styles: Accent (primary-color background, formula in its contrast color) and Inverted (text-color background) — simple and high-contrast.
+- Scroll with stops: when you let go it settles on the next symbol or panel; arrow keys, Page Down, and Space advance one step at a time.
+
+### Fixed
+
+- No text is left off-screen: explanations, history, timeline, and examples fit the real height, and whatever doesn't fit scrolls so it can be read in full.
+- With the formula index open, the wheel moved the formula behind it instead of the list; the list now scrolls on its own and supports the keyboard (arrows and Enter).
+- The epilogue panel labels (History, Timeline, Use cases, Example) never appeared; they now enter and leave with their panel.
+
+## [0.11.0] - 2026-09-28
+
+### Added
+
+- Seven new wallpaper styles: Swiss, Anatomy, Macro, Aura, Echo, Orbit, and Spiral — each uses the formula differently, with its symbols, history, and explanations.
+- Four new effects (Film, Dream, Halftone, and Glitch), 13 new themes (Rosé Pine, Dracula, Solarized, Kanagawa, Paper & Ink, Sakura…), and five new fonts.
+
+### Changed
+
+- The exporter lets you pick effect, theme (with real color swatches), and font without leaving the preview, which now looks exactly like the final PNG.
+
+### Fixed
+
+- Neon's colored glows in wallpapers were painted opaque instead of fading out.
+
+## [0.10.0] - 2026-09-28
+
+### Added
+
+- The wallpaper exporter is now its own page: a live preview, all five styles side by side, and per-style controls — size, spacing, rotation, and 3D layers and depth.
+- A section index on the left of every formula: one click jumps to the formula, any symbol, the history, timeline, use cases, or worked example.
+
+### Changed
+
+- Cleaner controls: each shows only its value ("Mono", "Nord", "EN") and opens a mini menu to pick directly instead of cycling option by option.
+- Shorter, smoother scroll: long panels no longer stretch the journey, and elastic bounces were replaced with smooth transitions.
+
+### Fixed
+
+- Long formulas overflowed the screen; they now scale down to fit whole. The isolated symbol stays crisp at any zoom instead of pixelating.
+
 ## [0.9.0] - 2026-09-23
 
 ### Added

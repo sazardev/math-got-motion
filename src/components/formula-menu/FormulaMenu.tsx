@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import { useEffect, useRef, useState } from "react";
 
 import { gsap } from "../../lib/gsap";
+import { lockScroll, unlockScroll } from "../../lib/lenis";
 
 import type { Formula } from "../../domain/formula.types";
 import type { Locale } from "../../i18n/locale";
@@ -58,6 +59,7 @@ export function FormulaMenu({ formulas, activeId, locale, strings, onSelect }: F
   const backdropRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const listRef = useRef<HTMLDivElement>(null);
   const tlRef = useRef<gsap.core.Timeline | null>(null);
 
   const filtered = query.trim()
@@ -78,10 +80,13 @@ export function FormulaMenu({ formulas, activeId, locale, strings, onSelect }: F
         .timeline({ paused: true })
         .to(backdropRef.current, { opacity: 1, duration: 0.25 }, 0)
         .fromTo(panelRef.current, { opacity: 0, y: "-2%" }, { opacity: 1, y: 0, duration: 0.35 }, 0)
+        // Stagger con tope total (amount), no por grupo: con ~40 categorías
+        // un 0.06 fijo hacía que el índice tardara más de dos segundos en
+        // terminar de aparecer.
         .fromTo(
           groupEls,
           { opacity: 0, y: "6%" },
-          { opacity: 1, y: 0, stagger: 0.06, duration: 0.4, ease: "power2.out" },
+          { opacity: 1, y: 0, stagger: { amount: 0.3 }, duration: 0.4, ease: "power2.out" },
           0.1,
         );
       tlRef.current = tl;
@@ -101,14 +106,44 @@ export function FormulaMenu({ formulas, activeId, locale, strings, onSelect }: F
     tlRef.current?.reverse();
   };
 
+  // Mientras el índice está abierto la página de atrás no se mueve: Lenis se
+  // pausa (su rueda ya no llega al timeline del hero) y <html> deja de
+  // scrollear (touch/teclado nativos). La lista scrollea por dentro.
   useEffect(() => {
     if (!isOpen) return;
+    lockScroll("formula-index");
+    document.documentElement.classList.add("is-scroll-locked");
+
+    // La fórmula activa queda a la vista al abrir, no enterrada en la lista.
+    const current = listRef.current?.querySelector<HTMLElement>('[aria-current="true"]');
+    current?.scrollIntoView({ block: "center" });
+
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") closeIndex();
+      if (event.key === "Escape") {
+        closeIndex();
+        return;
+      }
+      if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+      // Flechas: recorren los resultados (desde el buscador entra a la lista).
+      const items = [
+        ...(listRef.current?.querySelectorAll<HTMLButtonElement>(".formula-index__item") ?? []),
+      ];
+      if (items.length === 0) return;
+      event.preventDefault();
+      const index = items.indexOf(document.activeElement as HTMLButtonElement);
+      if (event.key === "ArrowDown") {
+        (items[index + 1] ?? items[0])?.focus();
+      } else if (index <= 0) {
+        inputRef.current?.focus();
+      } else {
+        items[index - 1]?.focus();
+      }
     };
     globalThis.addEventListener("keydown", handleKeyDown);
     return () => {
       globalThis.removeEventListener("keydown", handleKeyDown);
+      document.documentElement.classList.remove("is-scroll-locked");
+      unlockScroll("formula-index");
     };
   }, [isOpen]);
 
@@ -157,9 +192,19 @@ export function FormulaMenu({ formulas, activeId, locale, strings, onSelect }: F
             onChange={(event) => {
               setQuery(event.target.value);
             }}
+            onKeyDown={(event) => {
+              // Enter abre el primer resultado: buscar y entrar sin mouse.
+              if (event.key !== "Enter") return;
+              const first = groups[0]?.items[0];
+              if (!first) return;
+              onSelect(first.id);
+              closeIndex();
+            }}
           />
 
-          <div className="formula-index__list">
+          {/* data-lenis-prevent: la rueda sobre la lista la scrollea a ella, no
+              a la página de atrás. */}
+          <div className="formula-index__list" ref={listRef} data-lenis-prevent>
             {groups.length === 0 && <p className="formula-index__empty">{strings.noResults}</p>}
 
             {groups.map((group) => (
@@ -172,6 +217,7 @@ export function FormulaMenu({ formulas, activeId, locale, strings, onSelect }: F
                       type="button"
                       className="formula-index__item"
                       aria-current={formula.id === activeId}
+                      data-primary={query.trim() !== "" && formula.id === groups[0]?.items[0]?.id}
                       tabIndex={isOpen ? 0 : -1}
                       onClick={() => {
                         onSelect(formula.id);

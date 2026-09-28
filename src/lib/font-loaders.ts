@@ -53,6 +53,71 @@ const loaders: Record<TypePreset, FontLoader | null> = {
       document.fonts.load('1em "STIX Two Math"'),
     ]);
   },
+  elegant: async () => {
+    await Promise.all([
+      import("@fontsource/cormorant-garamond/400.css"),
+      import("@fontsource/cormorant-garamond/500.css"),
+      import("@fontsource/cormorant-garamond/600.css"),
+      import("@fontsource/cormorant-garamond/700.css"),
+      import("@fontsource/cormorant-garamond/400-italic.css"),
+      import("@fontsource/dm-mono/400.css"),
+      import("@fontsource/dm-mono/500.css"),
+      import("@fontsource/stix-two-math/400.css"),
+    ]);
+    await Promise.all([
+      document.fonts.load('1em "Cormorant Garamond"'),
+      document.fonts.load('1em "DM Mono"'),
+      document.fonts.load('1em "STIX Two Math"'),
+    ]);
+  },
+  fraunces: async () => {
+    await Promise.all([
+      import("@fontsource-variable/fraunces"),
+      import("@fontsource/dm-mono/400.css"),
+      import("@fontsource/dm-mono/500.css"),
+      import("@fontsource/stix-two-math/400.css"),
+    ]);
+    await Promise.all([
+      document.fonts.load('1em "Fraunces Variable"'),
+      document.fonts.load('1em "DM Mono"'),
+      document.fonts.load('1em "STIX Two Math"'),
+    ]);
+  },
+  code: async () => {
+    await Promise.all([
+      import("@fontsource-variable/fira-code"),
+      import("@fontsource-variable/inter"),
+    ]);
+    await Promise.all([
+      document.fonts.load('1em "Fira Code Variable"'),
+      document.fonts.load('1em "Inter Variable"'),
+    ]);
+  },
+  swiss: async () => {
+    await Promise.all([
+      import("@fontsource-variable/inter"),
+      import("@fontsource/dm-mono/400.css"),
+      import("@fontsource/dm-mono/500.css"),
+    ]);
+    await Promise.all([
+      document.fonts.load('1em "Inter Variable"'),
+      document.fonts.load('1em "DM Mono"'),
+    ]);
+  },
+  futurist: async () => {
+    await Promise.all([
+      import("@fontsource-variable/unbounded"),
+      import("@fontsource-variable/inter"),
+      import("@fontsource-variable/space-grotesk"),
+      import("@fontsource/dm-mono/400.css"),
+      import("@fontsource/dm-mono/500.css"),
+    ]);
+    await Promise.all([
+      document.fonts.load('1em "Unbounded Variable"'),
+      document.fonts.load('1em "Space Grotesk Variable"'),
+      document.fonts.load('1em "DM Mono"'),
+    ]);
+  },
 };
 
 const requested = new Set<TypePreset>();
