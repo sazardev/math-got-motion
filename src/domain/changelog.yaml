@@ -3,6 +3,58 @@
 # raíz del repo es un espejo generado de este archivo para desarrolladores;
 # las entradas nuevas se agregan acá, no ahí.
 
+- version: "0.14.0"
+  date: "2026-09-29"
+  changes:
+    - type: changed
+      text:
+        es: "La app ahora se siente como una app: barra de pestañas en móvil, barra superior en tablet y escritorio, riel lateral en landscape, y pantallas de Explorar, Guardadas y Ajustes."
+        en: "The site now feels like an app: tab bar on mobile, top bar on tablet and desktop, side rail in landscape, and new Explore, Saved and Settings screens."
+        pt: "O site agora parece um app: barra de abas no celular, barra superior no tablet e desktop, trilho lateral em paisagem e novas telas Explorar, Salvas e Ajustes."
+        fr: "Le site ressemble maintenant à une app : barre d'onglets sur mobile, barre supérieure sur tablette et bureau, rail latéral en paysage, et nouveaux écrans Explorer, Enregistrées et Réglages."
+        zh: "网站现在更像一个应用：手机端底部标签栏，平板和桌面端顶部栏，横屏时侧边栏，并新增探索、已收藏和设置页面。"
+        ja: "アプリらしい操作感に：スマホは下部タブ、タブレットとPCは上部バー、横向きはサイドレール。探す・保存済み・設定の画面を追加。"
+    - type: added
+      text:
+        es: "Explorar con búsqueda instantánea por título, categoría o símbolo, filtros por categoría, vista previa de cada fórmula, y atajo / o Ctrl/⌘+K."
+        en: "Explore with instant search by title, category or symbol, category filters, a preview of each formula, and a / or Ctrl/⌘+K shortcut."
+        pt: "Explorar com busca instantânea por título, categoria ou símbolo, filtros por categoria, prévia de cada fórmula e atalho / ou Ctrl/⌘+K."
+        fr: "Explorer avec recherche instantanée par titre, catégorie ou symbole, filtres par catégorie, aperçu de chaque formule et raccourci / ou Ctrl/⌘+K."
+        zh: "探索页支持按标题、分类或符号即时搜索，分类筛选、每个公式的预览，以及 / 或 Ctrl/⌘+K 快捷键。"
+        ja: "タイトル・分野・記号で即時検索できる「探す」画面。分野フィルター、各公式のプレビュー、/ または Ctrl/⌘+K のショートカット付き。"
+    - type: added
+      text:
+        es: "Guarda fórmulas y retoma donde quedaste: Guardadas, Recientes y Fórmula del día en el inicio. Desliza o usa ←/→ para pasar a la siguiente fórmula de la categoría."
+        en: "Save formulas and pick up where you left off: Saved, Recent and Formula of the day on the home screen. Swipe or use ←/→ to move to the next formula in the category."
+        pt: "Salve fórmulas e continue de onde parou: Salvas, Recentes e Fórmula do dia na tela inicial. Deslize ou use ←/→ para ir à próxima fórmula da categoria."
+        fr: "Enregistrez des formules et reprenez où vous en étiez : Enregistrées, Récentes et Formule du jour sur l'accueil. Balayez ou utilisez ←/→ pour passer à la formule suivante de la catégorie."
+        zh: "可以收藏公式并从上次的位置继续：首页提供已收藏、最近和每日公式。左右滑动或使用 ←/→ 切换同分类的下一个公式。"
+        ja: "公式を保存して続きから再開：ホームに保存済み・最近・今日の公式を表示。スワイプまたは ←/→ で同じ分野の次の公式へ。"
+    - type: added
+      text:
+        es: "La web se puede instalar como app y las fórmulas ya vistas funcionan sin conexión."
+        en: "The site can be installed as an app and formulas you've already viewed work offline."
+        pt: "O site pode ser instalado como app e as fórmulas já vistas funcionam offline."
+        fr: "Le site peut être installé comme une app et les formules déjà consultées fonctionnent hors ligne."
+        zh: "网站可作为应用安装，已浏览过的公式可离线使用。"
+        ja: "サイトをアプリとしてインストールでき、閲覧済みの公式はオフラインでも使えます。"
+    - type: changed
+      text:
+        es: "Carga mucho más rápida: el paquete inicial pasó de 5.6 MB a unos 700 KB porque cada fórmula y cada idioma se descargan solo cuando se necesitan."
+        en: "Much faster loading: the initial bundle dropped from 5.6 MB to about 700 KB because each formula and each language is downloaded only when needed."
+        pt: "Carregamento bem mais rápido: o pacote inicial caiu de 5,6 MB para cerca de 700 KB, pois cada fórmula e cada idioma só são baixados quando necessários."
+        fr: "Chargement bien plus rapide : le paquet initial est passé de 5,6 Mo à environ 700 Ko, car chaque formule et chaque langue ne se télécharge qu'au besoin."
+        zh: "加载速度大幅提升：初始包体从 5.6 MB 降至约 700 KB，每个公式和每种语言仅在需要时才下载。"
+        ja: "読み込みが大幅に高速化：初期バンドルは5.6MBから約700KBに。各公式と各言語は必要なときだけダウンロードされます。"
+    - type: changed
+      text:
+        es: "El exportador se adapta a móvil: respeta las zonas seguras, controles táctiles más grandes y botón de descarga siempre a mano."
+        en: "The exporter adapts to mobile: safe-area support, larger touch controls and an always-reachable download button."
+        pt: "O exportador se adapta ao celular: respeita as áreas seguras, controles de toque maiores e botão de download sempre à mão."
+        fr: "L'exporteur s'adapte au mobile : zones sûres respectées, commandes tactiles plus grandes et bouton de téléchargement toujours accessible."
+        zh: "导出器适配手机：支持安全区域、更大的触控控件，下载按钮始终可触及。"
+        ja: "エクスポーターをモバイルに最適化：セーフエリア対応、大きめのタッチ操作、常に押しやすいダウンロードボタン。"
+
 - version: "0.13.0"
   date: "2026-09-28"
   changes:

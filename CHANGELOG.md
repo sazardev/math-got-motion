@@ -7,6 +7,20 @@ This file is generated from `src/domain/changelog.yaml` — the source of
 truth, bilingual, also rendered in-app at `/:locale/changelog`. Add new
 entries there, then run `pnpm changelog:sync`.
 
+## [0.14.0] - 2026-09-29
+
+### Changed
+
+- The site now feels like an app: tab bar on mobile, top bar on tablet and desktop, side rail in landscape, and new Explore, Saved and Settings screens.
+- Much faster loading: the initial bundle dropped from 5.6 MB to about 700 KB because each formula and each language is downloaded only when needed.
+- The exporter adapts to mobile: safe-area support, larger touch controls and an always-reachable download button.
+
+### Added
+
+- Explore with instant search by title, category or symbol, category filters, a preview of each formula, and a / or Ctrl/⌘+K shortcut.
+- Save formulas and pick up where you left off: Saved, Recent and Formula of the day on the home screen. Swipe or use ←/→ to move to the next formula in the category.
+- The site can be installed as an app and formulas you've already viewed work offline.
+
 ## [0.13.0] - 2026-09-28
 
 ### Added
