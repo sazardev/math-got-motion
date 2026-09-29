@@ -1,8 +1,11 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { loadStrings } from "../../i18n/load-strings";
 import { detectInitialLocale, type Locale } from "../../i18n/locale";
-import { uiStrings } from "../../i18n/ui-strings";
 import "./NotFoundPage.css";
+
+import type { UiStrings } from "../../i18n/ui-strings";
 
 interface NotFoundPageProps {
   /**
@@ -15,7 +18,19 @@ interface NotFoundPageProps {
 }
 
 export function NotFoundPage({ locale = detectInitialLocale() }: NotFoundPageProps) {
-  const strings = uiStrings[locale];
+  const [strings, setStrings] = useState<UiStrings | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    void loadStrings(locale).then((loaded) => {
+      if (!cancelled) setStrings(loaded);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [locale]);
+
+  if (!strings) return null;
 
   return (
     <section className="not-found" aria-label={strings.notFoundTitle}>

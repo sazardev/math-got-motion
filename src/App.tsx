@@ -111,6 +111,7 @@ function AppRoutes() {
       <Route path=":locale" element={<LocaleLayout />}>
         <Route index element={<HomePage />} />
         <Route path="explore" element={<ExplorePage />} />
+        <Route path="formula" element={<Navigate to="../explore" replace />} />
         <Route path="saved" element={<SavedPage />} />
         <Route path="settings" element={<SettingsPage />} />
         <Route path="formula/:formulaId" element={<FormulaRouteContent />} />

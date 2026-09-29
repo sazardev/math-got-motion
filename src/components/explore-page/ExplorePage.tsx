@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { NavigationType, useNavigationType, useSearchParams } from "react-router-dom";
 
 import { formulaIndex } from "../../domain/formula-index";
 import { useSeo } from "../../hooks/useSeo";
@@ -17,7 +17,15 @@ export function ExplorePage() {
   const query = params.get("q") ?? "";
   const category = params.get("c");
   const inputRef = useRef<HTMLInputElement>(null);
-  const [limit, setLimit] = useState(PAGE_SIZE);
+  const navigationType = useNavigationType();
+  const stateKey = `mgm:explore:${params.toString()}`;
+  // Volver desde una fórmula (POP) recupera cuántos resultados estaban desplegados
+  // y la posición de scroll, en vez de empezar la lista de cero.
+  const [limit, setLimit] = useState(() => {
+    if (navigationType !== NavigationType.Pop) return PAGE_SIZE;
+    const saved = Number(globalThis.sessionStorage.getItem(`${stateKey}:limit`));
+    return Math.max(saved, PAGE_SIZE);
+  });
 
   useSeo({
     locale,
@@ -57,6 +65,30 @@ export function ExplorePage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    if (navigationType === NavigationType.Pop) {
+      const y = Number(globalThis.sessionStorage.getItem(`${stateKey}:y`));
+      if (y > 0)
+        requestAnimationFrame(() => {
+          globalThis.scrollTo(0, y);
+        });
+    }
+    const remember = () => {
+      globalThis.sessionStorage.setItem(`${stateKey}:y`, String(globalThis.scrollY));
+    };
+    globalThis.addEventListener("pagehide", remember);
+    return () => {
+      remember();
+      globalThis.removeEventListener("pagehide", remember);
+    };
+    // Solo al montar/cambiar de consulta: la clave ya contiene los filtros.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [stateKey]);
+
+  useEffect(() => {
+    globalThis.sessionStorage.setItem(`${stateKey}:limit`, String(limit));
+  }, [limit, stateKey]);
+
   const update = (next: { q?: string; c?: string | null }) => {
     const merged = new URLSearchParams(params);
     merged.delete("focus");
@@ -78,50 +110,71 @@ export function ExplorePage() {
     <main className="app-page explore">
       <h1 className="app-page__title fx-display">{strings.navExplore}</h1>
 
-      <input
-        ref={inputRef}
-        type="search"
-        className="explore__search"
-        value={query}
-        placeholder={strings.exploreSearchLabel}
-        aria-label={strings.exploreSearchLabel}
-        enterKeyHint="search"
-        autoComplete="off"
-        autoCapitalize="off"
-        spellCheck={false}
-        onChange={(event) => {
-          update({ q: event.target.value });
-        }}
-        onKeyDown={(event) => {
-          if (event.key !== "Enter") return;
-          document.querySelector<HTMLElement>(".explore .formula-card")?.click();
-        }}
-      />
+      <div className="explore__sticky">
+        <div className="explore__field">
+          <input
+            ref={inputRef}
+            type="search"
+            className="explore__search"
+            value={query}
+            placeholder={strings.exploreSearchLabel}
+            aria-label={strings.exploreSearchLabel}
+            enterKeyHint="search"
+            autoComplete="off"
+            autoCapitalize="off"
+            spellCheck={false}
+            onChange={(event) => {
+              update({ q: event.target.value });
+            }}
+            onKeyDown={(event) => {
+              if (event.key === "Escape" && query) {
+                update({ q: "" });
+                return;
+              }
+              if (event.key !== "Enter") return;
+              document.querySelector<HTMLElement>(".explore .formula-card")?.click();
+            }}
+          />
+          {query && (
+            <button
+              type="button"
+              className="explore__clear"
+              aria-label={strings.closeMenu}
+              onClick={() => {
+                update({ q: "" });
+                inputRef.current?.focus();
+              }}
+            >
+              ×
+            </button>
+          )}
+        </div>
 
-      <div className="explore__chips" role="group" aria-label={strings.homeCategoriesTitle}>
-        <button
-          type="button"
-          className="explore__chip"
-          aria-pressed={category === null}
-          onClick={() => {
-            update({ c: null });
-          }}
-        >
-          {strings.exploreAll}
-        </button>
-        {categories.map((item) => (
+        <div className="explore__chips" role="group" aria-label={strings.homeCategoriesTitle}>
           <button
-            key={item.key}
             type="button"
             className="explore__chip"
-            aria-pressed={category === item.key}
+            aria-pressed={category === null}
             onClick={() => {
-              update({ c: category === item.key ? null : item.key });
+              update({ c: null });
             }}
           >
-            {item.label} <span className="explore__chip-count">{item.count}</span>
+            {strings.exploreAll}
           </button>
-        ))}
+          {categories.map((item) => (
+            <button
+              key={item.key}
+              type="button"
+              className="explore__chip"
+              aria-pressed={category === item.key}
+              onClick={() => {
+                update({ c: category === item.key ? null : item.key });
+              }}
+            >
+              {item.label} <span className="explore__chip-count">{item.count}</span>
+            </button>
+          ))}
+        </div>
       </div>
 
       <p className="explore__count" aria-live="polite">

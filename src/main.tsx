@@ -15,6 +15,18 @@ if ("scrollRestoration" in history) {
 }
 globalThis.scrollTo(0, 0);
 
+// PWA: caché offline para la web instalada. Fuera de Tauri (que ya empaqueta
+// todo) y solo en producción, para no interferir con el HMR de Vite.
+if (
+  import.meta.env.PROD &&
+  "serviceWorker" in navigator &&
+  !("__TAURI_INTERNALS__" in globalThis)
+) {
+  globalThis.addEventListener("load", () => {
+    void navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`);
+  });
+}
+
 const rootElement = document.querySelector("#root");
 
 if (rootElement) {

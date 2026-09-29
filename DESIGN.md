@@ -83,3 +83,15 @@ Límites que los presets **no** pueden romper:
 - `prefers-reduced-motion` apaga las capas animadas (flicker, roll, tracking, grano).
 - El parpadeo es lento y de amplitud mínima (WCAG 2.3.1: < 3 flashes/segundo).
 - El DOM y el CSS del preset `mono` + `default` no cambian: cero capas, cero fuentes extra.
+
+## 7. Navegación tipo app (excepción documentada)
+
+La app se comporta como una app multiplataforma: barra de pestañas inferior en móvil, barra
+superior en tablet/escritorio, y lienzo completo dentro de una fórmula. Para que las
+pestañas se reconozcan de un vistazo en pantallas pequeñas, la barra inferior usa
+**iconos mínimos de trazo fino** (`currentColor`, sin relleno, sin sombras) — la única
+excepción a "cero íconos" de la sección 3, limitada a la navegación (`app-shell/icons.tsx`)
+y al marcador de "guardada". Todo lo demás sigue siendo tipografía: las tarjetas de
+fórmula muestran sus propios glifos como vista previa y los estados activos se marcan con
+inversión `--fg`/`--bg` u opacidad, nunca con bordes. Los gestos horizontales (swipe, ←/→)
+cambian de fórmula dentro de su categoría; el eje vertical sigue siendo la línea de tiempo.

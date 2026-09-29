@@ -84,7 +84,12 @@ async function main() {
     const baseUrl = `http://localhost:${String(PORT)}${BASE_PREFIX}`;
     await waitForServer(`${baseUrl}/`);
 
-    const browser = await chromium.launch({ args: ["--no-sandbox"] });
+    // CHROMIUM_PATH permite usar un Chromium ya instalado cuando Playwright no
+    // puede descargar el suyo (redes con proxy TLS, CI sin salida).
+    const browser = await chromium.launch({
+      args: ["--no-sandbox"],
+      executablePath: process.env.CHROMIUM_PATH,
+    });
     const page = await browser.newPage();
     const routes = buildRoutes();
 

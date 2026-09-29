@@ -5,7 +5,10 @@
   flex-direction: column;
   gap: clamp(1.2rem, 3vh, 2rem);
   /* El padding superior deja libre el chrome fijo (menú + controles). */
-  padding: clamp(5.5rem, 12vh, 7.5rem) clamp(1.25rem, 5vw, 4rem) clamp(7rem, 16vh, 9rem);
+  padding: calc(var(--appbar-h, 4rem) + 1rem)
+    max(clamp(1.25rem, 5vw, 4rem), env(safe-area-inset-right))
+    calc(clamp(7rem, 16vh, 9rem) + env(safe-area-inset-bottom))
+    max(clamp(1.25rem, 5vw, 4rem), calc(env(safe-area-inset-left) + var(--rail-w, 0px)));
   background: var(--bg);
   color: var(--fg);
 }
@@ -576,7 +579,7 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-  padding: 1.6rem clamp(1.25rem, 5vw, 4rem) 1.2rem;
+  padding: 1.6rem clamp(1.25rem, 5vw, 4rem) calc(1.2rem + env(safe-area-inset-bottom));
   background: linear-gradient(to top, var(--bg) 55%, transparent);
   pointer-events: none;
 }
@@ -605,4 +608,39 @@
 
 .export__cancel:hover {
   opacity: 1;
+}
+
+/* Táctil: objetivos de al menos 44px y vista previa que no ocupa toda la pantalla. */
+@media (pointer: coarse) {
+  .export__chips button,
+  .export__toggles button,
+  .export__reset,
+  .export__toggle-all {
+    min-height: 2.75rem;
+  }
+
+  .export__slider {
+    min-height: 2.75rem;
+  }
+}
+
+@media (max-width: 759px) {
+  .export__frame {
+    max-height: 55dvh;
+  }
+
+  .export__dock .export__download {
+    flex: 1 1 auto;
+  }
+}
+
+/* Teléfono acostado: preview y controles lado a lado en vez de apilados. */
+@media (max-height: 500px) and (orientation: landscape) {
+  .export__dock {
+    padding-top: 0.8rem;
+  }
+
+  .export__frame {
+    max-height: 62dvh;
+  }
 }

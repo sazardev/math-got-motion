@@ -70,9 +70,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
   gap: 0.25rem 1.5rem;
+  margin-inline: -1.1rem;
 }
 
 .home__categories {
+  margin-inline: -0.9rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;

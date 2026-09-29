@@ -104,6 +104,21 @@ change, since every existing YAML file must keep validating against it.
   state in `?q=&c=`, progressive "show more"), `SavedPage`, `SettingsPage`, app-style `HomePage`.
   `FormulaCard` is the shared preview card. Saved/recent formulas live in `localStorage`
   (`mgm:library`, `src/lib/library.ts`).
+- **Per-locale UI strings**: `src/i18n/ui-strings.ts` only holds the `UiStrings` type; each
+  language is `src/i18n/strings/<locale>.ts`, loaded on demand by `loadStrings` (`load-strings.ts`).
+  `LocaleProvider` renders nothing until the active locale's chunk is ready and keeps the previous
+  one while switching. Add new UI keys to the type **and all 6 files**.
+- **Formula swipe**: horizontal swipe / ←→ in `AppShell` move between formulas of the same category
+  (`neighborsOf`); the vertical axis stays the scroll timeline.
+- **PWA**: `public/sw.js` (no deps; registered in `main.tsx` only in production and outside Tauri):
+  `/assets/*` cache-first, navigations network-first with offline fallback. Bump `VERSION` in
+  `sw.js` if cache semantics change. Icons in `public/icons/`, referenced by the manifest.
+- **Responsive shell**: `--appbar-h`/`--rail-w` CSS vars (set on `.app-shell`) size every page's
+  top padding (`.app-page`, exporter). Portrait phone = bottom tabs; ≥760px = top tabs; short
+  landscape (≤500px tall) = left icon rail. The app bar is solid outside a formula. Back from a
+  formula uses `navigate(-1)` (falls back to Explore on direct entry); swipe/←→ use `replace`.
+  Explore keeps `?q=&c=` in the URL and restores scroll + expanded count on Back (sessionStorage).
+- `prerender.ts` honors `CHROMIUM_PATH` when Playwright can't download its own browser.
 - Minimal stroke icons in the tab bar are a documented exception to "no icons".
 
 ### Routing & URLs

@@ -1,7 +1,14 @@
 /*
  * Móvil primero: barra de pestañas fija abajo (con safe-area) y una barra
- * superior mínima. ≥ 760px las pestañas suben a la barra superior.
+ * superior sólida con la marca y la búsqueda. ≥760px las pestañas suben a la
+ * barra superior. Landscape bajo (teléfono acostado): las pestañas pasan a un
+ * riel lateral para no comerse la altura.
  */
+.app-shell {
+  --appbar-h: calc(3.4rem + env(safe-area-inset-top));
+  --rail-w: 0px;
+}
+
 .app-bar {
   position: fixed;
   top: 0;
@@ -12,8 +19,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: max(0.9rem, env(safe-area-inset-top)) max(1.1rem, env(safe-area-inset-right)) 0.6rem
-    max(1.1rem, env(safe-area-inset-left));
+  min-height: var(--appbar-h);
+  padding: env(safe-area-inset-top) max(1rem, env(safe-area-inset-right)) 0
+    max(1rem, calc(env(safe-area-inset-left) + var(--rail-w)));
   pointer-events: none;
 }
 
@@ -21,10 +29,16 @@
   pointer-events: auto;
 }
 
+/* Fuera de una fórmula la barra es sólida: el contenido no pasa por debajo. */
+.app-shell[data-immersive="false"] .app-bar {
+  background: var(--bg);
+}
+
 .app-bar__brand {
   display: inline-flex;
   align-items: baseline;
   gap: 0.6rem;
+  min-height: 2.75rem;
   color: var(--accent);
   font-family: var(--font-formula);
   font-size: 1.4rem;
@@ -38,6 +52,24 @@
   text-transform: uppercase;
   color: var(--fg);
   opacity: 0.7;
+}
+
+.app-bar__search {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-right: -0.6rem;
+  color: var(--fg);
+  opacity: 0.8;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-bar__search:hover,
+.app-bar__search:focus-visible {
+  opacity: 1;
+  outline: none;
 }
 
 .app-bar__back {
@@ -137,21 +169,30 @@
 }
 
 @media (min-width: 760px) {
+  .app-shell {
+    --appbar-h: calc(4rem + env(safe-area-inset-top));
+  }
+
   .app-bar {
-    padding-top: max(1rem, 3vh);
     padding-left: clamp(1rem, 3vw, 2rem);
     padding-right: clamp(1rem, 3vw, 2rem);
   }
 
+  .app-bar__search {
+    display: none;
+  }
+
   .tab-bar {
-    top: 0;
+    top: env(safe-area-inset-top);
     bottom: auto;
     left: 50%;
     right: auto;
     transform: translateX(-50%);
     width: auto;
+    height: 4rem;
+    align-items: center;
     gap: 0.5rem;
-    padding: max(0.6rem, 2.4vh) 0 0;
+    padding: 0;
     background: transparent;
     pointer-events: none;
   }
@@ -169,10 +210,6 @@
   .tab-bar__item svg {
     display: none;
   }
-
-  .app-shell[data-immersive="true"] .tab-bar {
-    display: none;
-  }
 }
 
 @media (min-width: 1000px) {
@@ -181,19 +218,82 @@
   }
 }
 
+/* Teléfono acostado: riel lateral de pestañas (solo iconos) en vez de barra. */
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 1100px) {
+  .app-shell {
+    --appbar-h: calc(2.9rem + env(safe-area-inset-top));
+    --rail-w: 4rem;
+  }
+
+  .tab-bar {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    transform: none;
+    width: calc(var(--rail-w) + env(safe-area-inset-left));
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 0 0 0 env(safe-area-inset-left);
+    background: var(--bg);
+    pointer-events: auto;
+  }
+
+  .tab-bar__item {
+    flex: none;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-height: 2.9rem;
+    padding: 0.3rem 0.2rem;
+    font-size: 0.55rem;
+  }
+
+  .tab-bar__item svg {
+    display: block;
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  .app-bar {
+    padding-left: max(1rem, calc(env(safe-area-inset-left) + var(--rail-w)));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  .app-bar__search {
+    display: inline-flex;
+  }
+
+  .app-shell[data-immersive="true"] .tab-bar {
+    display: none;
+  }
+
+  .app-page__title {
+    margin-bottom: 0.75rem;
+    font-size: 1.8rem;
+  }
+}
+
 /* Contenido de las pantallas "de app": deja lugar a las barras. */
 .app-page {
   min-height: 100dvh;
   width: min(100%, 78rem);
   margin: 0 auto;
-  padding: calc(4.5rem + env(safe-area-inset-top)) clamp(1rem, 4vw, 2.5rem)
-    calc(6rem + env(safe-area-inset-bottom));
+  padding: calc(var(--appbar-h) + 1rem) max(clamp(1rem, 4vw, 2.5rem), env(safe-area-inset-right))
+    calc(6rem + env(safe-area-inset-bottom))
+    max(clamp(1rem, 4vw, 2.5rem), calc(env(safe-area-inset-left) + var(--rail-w)));
 }
 
 @media (min-width: 760px) {
   .app-page {
-    padding-top: calc(6.5rem + env(safe-area-inset-top));
     padding-bottom: 4rem;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 1100px) {
+  .app-page {
+    padding-bottom: 2rem;
   }
 }
 
@@ -214,10 +314,13 @@
   opacity: 0.6;
 }
 
+/* Márgenes negativos = el texto de las tarjetas queda alineado con el resto
+   de la página y el fondo invertido del hover llega hasta el borde. */
 .app-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
   gap: 0.25rem;
+  margin-inline: -1.1rem;
 }
 
 .app-empty {
