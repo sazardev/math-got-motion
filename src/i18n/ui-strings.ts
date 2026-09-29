@@ -1,6 +1,27 @@
 import type { Locale } from "./locale";
 
 export interface UiStrings {
+  navExplore: string;
+  navSaved: string;
+  navSettings: string;
+  exploreSearchLabel: string;
+  exploreAll: string;
+  exploreCountSuffix: string;
+  exploreShowMore: string;
+  saveFormula: string;
+  unsaveFormula: string;
+  savedTitle: string;
+  savedEmpty: string;
+  recentTitle: string;
+  recentEmpty: string;
+  homeContinue: string;
+  homeDaily: string;
+  homeCategoriesTitle: string;
+  homeSeeAll: string;
+  settingsTitle: string;
+  settingsAppearance: string;
+  loadingFormula: string;
+  backAction: string;
   scrollHint: string;
   themeLabel: string;
   fxLabel: string;
@@ -170,6 +191,27 @@ export interface UiStrings {
 
 export const uiStrings: Record<Locale, UiStrings> = {
   es: {
+    navExplore: "Explorar",
+    navSaved: "Guardadas",
+    navSettings: "Ajustes",
+    exploreSearchLabel: "Buscar fórmula, categoría o símbolo",
+    exploreAll: "Todas",
+    exploreCountSuffix: "fórmulas",
+    exploreShowMore: "Mostrar más",
+    saveFormula: "Guardar",
+    unsaveFormula: "Guardada",
+    savedTitle: "Guardadas",
+    savedEmpty: "Aún no guardaste ninguna fórmula. Toca «Guardar» dentro de una fórmula.",
+    recentTitle: "Recientes",
+    recentEmpty: "Las fórmulas que abras aparecerán aquí.",
+    homeContinue: "Continuar",
+    homeDaily: "Fórmula del día",
+    homeCategoriesTitle: "Categorías",
+    homeSeeAll: "Ver todas",
+    settingsTitle: "Ajustes",
+    settingsAppearance: "Apariencia",
+    loadingFormula: "Cargando…",
+    backAction: "Volver",
     scrollHint: "Scroll para deconstruir la fórmula",
     themeLabel: "Tema",
     exportLabel: "Exportar",
@@ -343,6 +385,27 @@ export const uiStrings: Record<Locale, UiStrings> = {
     homeFeaturedTitle: "Fórmulas destacadas",
   },
   en: {
+    navExplore: "Explore",
+    navSaved: "Saved",
+    navSettings: "Settings",
+    exploreSearchLabel: "Search formula, category or symbol",
+    exploreAll: "All",
+    exploreCountSuffix: "formulas",
+    exploreShowMore: "Show more",
+    saveFormula: "Save",
+    unsaveFormula: "Saved",
+    savedTitle: "Saved",
+    savedEmpty: "You haven't saved any formula yet. Tap “Save” inside a formula.",
+    recentTitle: "Recent",
+    recentEmpty: "Formulas you open will show up here.",
+    homeContinue: "Continue",
+    homeDaily: "Formula of the day",
+    homeCategoriesTitle: "Categories",
+    homeSeeAll: "See all",
+    settingsTitle: "Settings",
+    settingsAppearance: "Appearance",
+    loadingFormula: "Loading…",
+    backAction: "Back",
     scrollHint: "Scroll to deconstruct the formula",
     themeLabel: "Theme",
     exportLabel: "Export",
@@ -514,6 +577,27 @@ export const uiStrings: Record<Locale, UiStrings> = {
     homeFeaturedTitle: "Featured formulas",
   },
   pt: {
+    navExplore: "Explorar",
+    navSaved: "Salvas",
+    navSettings: "Ajustes",
+    exploreSearchLabel: "Buscar fórmula, categoria ou símbolo",
+    exploreAll: "Todas",
+    exploreCountSuffix: "fórmulas",
+    exploreShowMore: "Mostrar mais",
+    saveFormula: "Salvar",
+    unsaveFormula: "Salva",
+    savedTitle: "Salvas",
+    savedEmpty: "Você ainda não salvou nenhuma fórmula. Toque em «Salvar» dentro de uma fórmula.",
+    recentTitle: "Recentes",
+    recentEmpty: "As fórmulas que você abrir aparecerão aqui.",
+    homeContinue: "Continuar",
+    homeDaily: "Fórmula do dia",
+    homeCategoriesTitle: "Categorias",
+    homeSeeAll: "Ver todas",
+    settingsTitle: "Ajustes",
+    settingsAppearance: "Aparência",
+    loadingFormula: "Carregando…",
+    backAction: "Voltar",
     scrollHint: "Role para desconstruir a fórmula",
     themeLabel: "Tema",
     exportLabel: "Exportar",
@@ -686,6 +770,28 @@ export const uiStrings: Record<Locale, UiStrings> = {
     homeFeaturedTitle: "Fórmulas em destaque",
   },
   fr: {
+    navExplore: "Explorer",
+    navSaved: "Enregistrées",
+    navSettings: "Réglages",
+    exploreSearchLabel: "Chercher une formule, catégorie ou symbole",
+    exploreAll: "Toutes",
+    exploreCountSuffix: "formules",
+    exploreShowMore: "Afficher plus",
+    saveFormula: "Enregistrer",
+    unsaveFormula: "Enregistrée",
+    savedTitle: "Enregistrées",
+    savedEmpty:
+      "Vous n'avez encore enregistré aucune formule. Touchez « Enregistrer » dans une formule.",
+    recentTitle: "Récentes",
+    recentEmpty: "Les formules que vous ouvrez apparaîtront ici.",
+    homeContinue: "Continuer",
+    homeDaily: "Formule du jour",
+    homeCategoriesTitle: "Catégories",
+    homeSeeAll: "Tout voir",
+    settingsTitle: "Réglages",
+    settingsAppearance: "Apparence",
+    loadingFormula: "Chargement…",
+    backAction: "Retour",
     scrollHint: "Faites défiler pour déconstruire la formule",
     themeLabel: "Thème",
     exportLabel: "Exporter",
@@ -859,6 +965,27 @@ export const uiStrings: Record<Locale, UiStrings> = {
     homeFeaturedTitle: "Formules à la une",
   },
   zh: {
+    navExplore: "探索",
+    navSaved: "已收藏",
+    navSettings: "设置",
+    exploreSearchLabel: "搜索公式、分类或符号",
+    exploreAll: "全部",
+    exploreCountSuffix: "个公式",
+    exploreShowMore: "显示更多",
+    saveFormula: "收藏",
+    unsaveFormula: "已收藏",
+    savedTitle: "已收藏",
+    savedEmpty: "你还没有收藏任何公式。在公式页面点击“收藏”。",
+    recentTitle: "最近",
+    recentEmpty: "你打开过的公式会显示在这里。",
+    homeContinue: "继续",
+    homeDaily: "每日公式",
+    homeCategoriesTitle: "分类",
+    homeSeeAll: "查看全部",
+    settingsTitle: "设置",
+    settingsAppearance: "外观",
+    loadingFormula: "加载中…",
+    backAction: "返回",
     scrollHint: "滚动以逐步拆解公式",
     themeLabel: "主题",
     exportLabel: "导出",
@@ -1028,6 +1155,27 @@ export const uiStrings: Record<Locale, UiStrings> = {
     homeFeaturedTitle: "精选公式",
   },
   ja: {
+    navExplore: "探す",
+    navSaved: "保存済み",
+    navSettings: "設定",
+    exploreSearchLabel: "公式・分野・記号で検索",
+    exploreAll: "すべて",
+    exploreCountSuffix: "件の公式",
+    exploreShowMore: "もっと見る",
+    saveFormula: "保存",
+    unsaveFormula: "保存済み",
+    savedTitle: "保存済み",
+    savedEmpty: "まだ保存した公式はありません。公式ページで「保存」をタップしてください。",
+    recentTitle: "最近",
+    recentEmpty: "開いた公式がここに表示されます。",
+    homeContinue: "続きから",
+    homeDaily: "今日の公式",
+    homeCategoriesTitle: "分野",
+    homeSeeAll: "すべて見る",
+    settingsTitle: "設定",
+    settingsAppearance: "外観",
+    loadingFormula: "読み込み中…",
+    backAction: "戻る",
     scrollHint: "スクロールして数式を分解する",
     themeLabel: "テーマ",
     exportLabel: "エクスポート",

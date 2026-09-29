@@ -1,131 +1,76 @@
-import { useEffect } from "react";
-import {
-  Navigate,
-  Outlet,
-  Route,
-  Routes,
-  useLocation,
-  useNavigate,
-  useParams,
-} from "react-router-dom";
+import { lazy, Suspense, useEffect } from "react";
+import { Navigate, Route, Routes, useLocation, useNavigate, useParams } from "react-router-dom";
 
-import { ChangelogPage } from "./components/changelog-page/ChangelogPage";
-import { ExportPage } from "./components/export-page/ExportPage";
-import { FormulaHero } from "./components/formula-hero/FormulaHero";
-import { FormulaMenu } from "./components/formula-menu/FormulaMenu";
+import { AppShell } from "./components/app-shell/AppShell";
+import { ExplorePage } from "./components/explore-page/ExplorePage";
 import { FxLayer } from "./components/fx/FxLayer";
 import { HomePage } from "./components/home-page/HomePage";
+import { SavedPage } from "./components/library-pages/SavedPage";
+import { SettingsPage } from "./components/library-pages/SettingsPage";
 import { NotFoundPage } from "./components/not-found/NotFoundPage";
-import {
-  FxPicker,
-  LocalePicker,
-  ThemePicker,
-  TypePicker,
-} from "./components/preference-pickers/PreferencePickers";
-import { formulas } from "./domain/formulas";
+import { useFormula } from "./hooks/useFormula";
 import { detectInitialLocale, isLocale, type Locale } from "./i18n/locale";
 import { useLocale } from "./i18n/locale-context";
 import { LocaleProvider } from "./i18n/LocaleContext";
 import { destroyLenis, initLenis } from "./lib/lenis";
+import { markRecent } from "./lib/library";
 import { PreferencesProvider } from "./preferences/PreferencesContext";
+
+// Las rutas pesadas (hero con GSAP, exportador de wallpapers/video, changelog)
+// son chunks aparte: Home y Explorar arrancan sin descargarlas.
+const FormulaHero = lazy(() =>
+  import("./components/formula-hero/FormulaHero").then((m) => ({ default: m.FormulaHero })),
+);
+const ExportPage = lazy(() =>
+  import("./components/export-page/ExportPage").then((m) => ({ default: m.ExportPage })),
+);
+const ChangelogPage = lazy(() =>
+  import("./components/changelog-page/ChangelogPage").then((m) => ({ default: m.ChangelogPage })),
+);
+
+/** Pantalla mínima mientras llega el chunk de la fórmula (unos KB, casi instantáneo). */
+function FormulaLoading() {
+  const { strings } = useLocale();
+  return (
+    <p className="app-loading" role="status">
+      {strings.loadingFormula}
+    </p>
+  );
+}
 
 /** El contenido de "/:locale/formula/:formulaId" — la fórmula activa, o un id inexistente. */
 function FormulaRouteContent() {
   const { locale } = useLocale();
   const { formulaId } = useParams<{ formulaId: string }>();
-  const activeFormula = formulas.find((formula) => formula.id === formulaId);
+  const state = useFormula(formulaId);
 
-  if (!activeFormula) return <NotFoundPage locale={locale} />;
+  useEffect(() => {
+    if (state.status === "ready") markRecent(state.formula.id);
+  }, [state]);
 
-  return <FormulaHero key={activeFormula.id} formula={activeFormula} />;
+  if (state.status === "loading") return <FormulaLoading />;
+  if (state.status === "missing") return <NotFoundPage locale={locale} />;
+
+  return (
+    <Suspense fallback={<FormulaLoading />}>
+      <FormulaHero key={state.formula.id} formula={state.formula} />
+    </Suspense>
+  );
 }
 
 /** "/:locale/formula/:formulaId/export" — el exportador de wallpapers de esa fórmula. */
 function ExportRouteContent() {
   const { locale } = useLocale();
   const { formulaId } = useParams<{ formulaId: string }>();
-  const activeFormula = formulas.find((formula) => formula.id === formulaId);
+  const state = useFormula(formulaId);
 
-  if (!activeFormula) return <NotFoundPage locale={locale} />;
-
-  return <ExportPage key={activeFormula.id} formula={activeFormula} />;
-}
-
-/**
- * Menú + controles persistentes entre páginas de un mismo locale. Los
- * controles de preferencia muestran solo el valor activo y abren un
- * mini-menú (ver PreferencePickers); a la derecha, la navegación.
- */
-function LocaleChrome() {
-  const { locale, strings } = useLocale();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { formulaId } = useParams<{ formulaId: string }>();
-  const activeId = formulaId ?? formulas[0]?.id ?? "";
-  const onExportPage = location.pathname.endsWith("/export");
-  // El exportador solo tiene sentido con una fórmula activa (no en home ni
-  // changelog), así que el acceso aparece únicamente en esas rutas.
-  const formulaPath =
-    formulaId && formulas.some((formula) => formula.id === formulaId)
-      ? `/${locale}/formula/${formulaId}`
-      : null;
+  if (state.status === "loading") return <FormulaLoading />;
+  if (state.status === "missing") return <NotFoundPage locale={locale} />;
 
   return (
-    <>
-      <FormulaMenu
-        formulas={formulas}
-        activeId={activeId}
-        locale={locale}
-        strings={strings}
-        onSelect={(id) => {
-          // Desde el exportador se cambia de fórmula sin salir de él.
-          void navigate(`/${locale}/formula/${id}${onExportPage ? "/export" : ""}`);
-        }}
-      />
-
-      <nav className="controls" aria-label={strings.settingsLabel}>
-        <div className="controls__group">
-          <FxPicker />
-          <TypePicker />
-          <ThemePicker />
-          <LocalePicker />
-        </div>
-        <div className="controls__group">
-          {formulaPath && (
-            <button
-              type="button"
-              className="control-button"
-              aria-current={onExportPage ? "page" : undefined}
-              onClick={() => {
-                void navigate(onExportPage ? formulaPath : `${formulaPath}/export`);
-              }}
-            >
-              {onExportPage ? strings.formulaNav : strings.exportLabel}
-            </button>
-          )}
-          <button
-            type="button"
-            className="control-button"
-            onClick={() => {
-              void navigate(`/${locale}/`);
-            }}
-          >
-            {strings.homeNav}
-          </button>
-          <button
-            type="button"
-            className="control-button"
-            onClick={() => {
-              void navigate(`/${locale}/changelog`);
-            }}
-          >
-            {strings.changelogNav}
-          </button>
-        </div>
-      </nav>
-
-      <Outlet />
-    </>
+    <Suspense fallback={<FormulaLoading />}>
+      <ExportPage key={state.formula.id} formula={state.formula} />
+    </Suspense>
   );
 }
 
@@ -147,7 +92,7 @@ function LocaleLayout() {
 
   return (
     <LocaleProvider locale={rawLocale} onLocaleChange={handleLocaleChange}>
-      <LocaleChrome />
+      <AppShell />
     </LocaleProvider>
   );
 }
@@ -165,9 +110,19 @@ function AppRoutes() {
       <Route path="/" element={<Navigate to={`/${detectInitialLocale()}/`} replace />} />
       <Route path=":locale" element={<LocaleLayout />}>
         <Route index element={<HomePage />} />
+        <Route path="explore" element={<ExplorePage />} />
+        <Route path="saved" element={<SavedPage />} />
+        <Route path="settings" element={<SettingsPage />} />
         <Route path="formula/:formulaId" element={<FormulaRouteContent />} />
         <Route path="formula/:formulaId/export" element={<ExportRouteContent />} />
-        <Route path="changelog" element={<ChangelogPage />} />
+        <Route
+          path="changelog"
+          element={
+            <Suspense fallback={<FormulaLoading />}>
+              <ChangelogPage />
+            </Suspense>
+          }
+        />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
     </Routes>

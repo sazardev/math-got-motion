@@ -41,7 +41,10 @@ function buildRoutes(): Route[] {
         waitSelector: ".hero__formula",
       });
     }
-    routes.push({ routePath: `/${locale}/changelog`, waitSelector: ".changelog" });
+    routes.push(
+      { routePath: `/${locale}/changelog`, waitSelector: ".changelog" },
+      { routePath: `/${locale}/explore`, waitSelector: ".explore .formula-card" },
+    );
   }
 
   return routes;

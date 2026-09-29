@@ -5,6 +5,8 @@ import Inspect from "vite-plugin-inspect";
 import { visualizer } from "rollup-plugin-visualizer";
 import { resolve } from "path";
 
+import { formulaIndexPlugin } from "./scripts/vite-formula-index";
+
 // @ts-expect-error process is a nodejs global
 const host = process.env.TAURI_DEV_HOST;
 // @ts-expect-error process is a nodejs global
@@ -18,6 +20,7 @@ export default defineConfig(async ({ mode }) => ({
 
   plugins: [
     react(),
+    formulaIndexPlugin(resolve(__dirname, "src/domain/formulas")),
     checker({
       typescript: {
         tsconfigPath: "./tsconfig.json",

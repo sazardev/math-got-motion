@@ -89,6 +89,23 @@ When adding or changing a formula, prefer editing/copying the YAML template over
 `formula.types.ts` — only change the schema when the _shape_ of formula content needs to
 change, since every existing YAML file must keep validating against it.
 
+### App shell, lazy data & navigation
+
+- **Lazy formulas**: the app boots from a lightweight index (`virtual:formula-index`, built by
+  `scripts/vite-formula-index.ts` from the YAMLs: id, title, category, glyphs) exposed via
+  `src/domain/formula-index.ts` (`formulaIndex`, `findSummary`). The full formula is loaded on
+  demand with `loadFormula(id)` (`src/domain/formulas/index.ts`, non-eager glob → one chunk per
+  formula) through the `useFormula` hook. Never import all formulas eagerly again. Hero, Export
+  and Changelog routes are `React.lazy` chunks too.
+- **Shell** (`src/components/app-shell/`): mobile = bottom tab bar (Inicio · Explorar · Guardadas ·
+  Ajustes); ≥760px = top bar. On a formula route the shell is "immersive" (no tab bar; back /
+  save / export, preference pickers ≥1000px). `/` or Ctrl/⌘+K jump to Explore.
+- **Screens**: `ExplorePage` (search over the index via `src/lib/search.ts` + category chips,
+  state in `?q=&c=`, progressive "show more"), `SavedPage`, `SettingsPage`, app-style `HomePage`.
+  `FormulaCard` is the shared preview card. Saved/recent formulas live in `localStorage`
+  (`mgm:library`, `src/lib/library.ts`).
+- Minimal stroke icons in the tab bar are a documented exception to "no icons".
+
 ### Routing & URLs
 
 `react-router-dom` (`BrowserRouter`, `basename` from `import.meta.env.BASE_URL`). Every URL is

@@ -1,0 +1,74 @@
+.formula-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+  min-height: 7.5rem;
+  padding: 1rem 1.1rem;
+  color: var(--fg);
+  text-decoration: none;
+  /* Con 300 fórmulas, el navegador solo pinta las tarjetas visibles. */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 8.5rem;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.formula-card:hover,
+.formula-card:focus-visible {
+  background: var(--fg);
+  color: var(--bg);
+  outline: none;
+}
+
+.formula-card__equation {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: var(--font-formula);
+  font-size: 1.7rem;
+  line-height: 1.25;
+  color: var(--accent);
+  mask-image: linear-gradient(to right, #000 85%, transparent);
+}
+
+.formula-card:hover .formula-card__equation,
+.formula-card:focus-visible .formula-card__equation {
+  color: var(--bg);
+}
+
+.formula-card[data-size="large"] {
+  min-height: 11rem;
+}
+
+.formula-card[data-size="large"] .formula-card__equation {
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+}
+
+.formula-card__title {
+  margin-top: auto;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.formula-card__category {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.formula-card__glyph--operator,
+.formula-card__glyph--equals {
+  opacity: 0.6;
+}
+
+.formula-card__glyph--superscript {
+  font-size: 0.6em;
+  vertical-align: 0.5em;
+}

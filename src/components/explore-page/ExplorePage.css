@@ -1,0 +1,117 @@
+.explore__search {
+  width: 100%;
+  min-height: 3.25rem;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  padding: 0.6rem 0;
+  color: var(--fg);
+  font-family: var(--font-prose);
+  /* 16px+ evita el zoom automático de iOS al enfocar. */
+  font-size: clamp(1.25rem, 3.5vw, 1.9rem);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.explore__search::placeholder {
+  color: var(--fg);
+  opacity: 0.4;
+}
+
+.explore__search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* Móvil: una sola fila deslizable; escritorio: se reparte en varias. */
+.explore__chips {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0.75rem -1rem 0;
+  padding: 0 1rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+
+.explore__chips::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 760px) {
+  .explore__chips {
+    flex-wrap: wrap;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    overflow: visible;
+  }
+}
+
+.explore__chip {
+  flex: none;
+  min-height: 2.5rem;
+  border: none;
+  background: transparent;
+  padding: 0.4rem 0.8rem;
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  opacity: 0.55;
+  transition:
+    opacity 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.explore__chip:hover,
+.explore__chip:focus-visible {
+  opacity: 1;
+  outline: none;
+}
+
+.explore__chip[aria-pressed="true"] {
+  background: var(--fg);
+  color: var(--bg);
+  opacity: 1;
+}
+
+.explore__chip-count {
+  opacity: 0.55;
+}
+
+.explore__count {
+  margin: 1.5rem 0 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.explore__more {
+  display: block;
+  min-height: 3rem;
+  margin: 1.5rem auto 0;
+  border: none;
+  background: transparent;
+  padding: 0.6rem 1.5rem;
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.explore__more:hover,
+.explore__more:focus-visible {
+  background: var(--fg);
+  color: var(--bg);
+  opacity: 1;
+  outline: none;
+}

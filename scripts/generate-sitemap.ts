@@ -57,14 +57,16 @@ function buildUrls(): SitemapUrl[] {
     }
   }
 
-  for (const locale of locales) {
-    urls.push({
-      path: `/${locale}/changelog`,
-      byLocale: Object.fromEntries(locales.map((l) => [l, `/${l}/changelog`])) as Record<
-        Locale,
-        string
-      >,
-    });
+  for (const page of ["changelog", "explore"]) {
+    for (const locale of locales) {
+      urls.push({
+        path: `/${locale}/${page}`,
+        byLocale: Object.fromEntries(locales.map((l) => [l, `/${l}/${page}`])) as Record<
+          Locale,
+          string
+        >,
+      });
+    }
   }
 
   return urls;
