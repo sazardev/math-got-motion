@@ -12,7 +12,7 @@ import type { FxPreset } from "../preferences/preferences-context";
  * tipografía de la fórmula y el preset de efectos.
  */
 
-export type WallpaperStyle =
+export type ClassicStyle =
   | "formula"
   | "accent"
   | "inverted"
@@ -28,8 +28,65 @@ export type WallpaperStyle =
   | "isometric"
   | "pattern";
 
-/** Orden de presentación en el exportador: de lo más sobrio a lo más gráfico. */
-export const wallpaperStyles: readonly WallpaperStyle[] = [
+/** Composiciones estáticas propias (wallpaper-extra.ts). */
+export type ExtraStyle =
+  | "blueprint"
+  | "mosaic"
+  | "eclipse"
+  | "mirror"
+  | "stripes"
+  | "confetti"
+  | "waves"
+  | "neon"
+  | "seal"
+  | "led"
+  | "gradient"
+  | "knockout"
+  | "cards"
+  | "constellation";
+
+/**
+ * Escenas del exportador de video (video-wallpaper.ts). En modo imagen se
+ * exportan como una foto fija: el slider "Momento" elige el cuadro.
+ */
+export type VideoStyle =
+  | "assemble"
+  | "drift"
+  | "planetarium"
+  | "marquee"
+  | "rain"
+  | "wave"
+  | "tunnel"
+  | "aurora"
+  | "spotlight"
+  | "carousel"
+  | "stroke"
+  | "vortex"
+  | "warp"
+  | "kaleido"
+  | "pulse"
+  | "slice"
+  | "horizon"
+  | "sphere"
+  | "spectrum"
+  | "cipher"
+  | "typegrid"
+  | "burst"
+  | "kinetic"
+  | "dna"
+  | "cube"
+  | "radar"
+  | "hologram"
+  | "sunburst"
+  | "bokeh"
+  | "pendulum"
+  | "atom"
+  | "lissajous"
+  | "slots";
+
+export type WallpaperStyle = ClassicStyle | ExtraStyle | VideoStyle;
+
+export const classicStyles: readonly ClassicStyle[] = [
   "formula",
   "accent",
   "inverted",
@@ -45,7 +102,98 @@ export const wallpaperStyles: readonly WallpaperStyle[] = [
   "isometric",
   "pattern",
 ];
-export type WallpaperSizeId = "4k" | "qhd" | "fhd" | "mobile";
+
+export const extraStyles: readonly ExtraStyle[] = [
+  "blueprint",
+  "mosaic",
+  "eclipse",
+  "mirror",
+  "stripes",
+  "confetti",
+  "waves",
+  "neon",
+  "seal",
+  "led",
+  "gradient",
+  "knockout",
+  "cards",
+  "constellation",
+];
+
+export const videoStyles: readonly VideoStyle[] = [
+  "assemble",
+  "drift",
+  "planetarium",
+  "marquee",
+  "rain",
+  "wave",
+  "tunnel",
+  "aurora",
+  "spotlight",
+  "carousel",
+  "stroke",
+  "vortex",
+  "warp",
+  "kaleido",
+  "pulse",
+  "slice",
+  "horizon",
+  "sphere",
+  "spectrum",
+  "cipher",
+  "typegrid",
+  "burst",
+  "kinetic",
+  "dna",
+  "cube",
+  "radar",
+  "hologram",
+  "sunburst",
+  "bokeh",
+  "pendulum",
+  "atom",
+  "lissajous",
+  "slots",
+];
+
+/** Orden de presentación en el exportador: de lo más sobrio a lo más gráfico. */
+export const wallpaperStyles: readonly WallpaperStyle[] = [
+  ...classicStyles,
+  ...extraStyles,
+  ...videoStyles,
+];
+
+/** Ajustes visibles de un estilo según el modo: el video suma la velocidad. */
+export function optionKeysFor(
+  style: WallpaperStyle,
+  video: boolean,
+): readonly WallpaperOptionKey[] {
+  if (!video) return styleOptionKeys[style];
+  if (isVideoStyle(style)) return videoStyleOptionKeys[style];
+  return [...styleOptionKeys[style], "speed"];
+}
+
+export function isVideoStyle(style: WallpaperStyle): style is VideoStyle {
+  return (videoStyles as readonly string[]).includes(style);
+}
+
+export function isExtraStyle(style: WallpaperStyle): style is ExtraStyle {
+  return (extraStyles as readonly string[]).includes(style);
+}
+
+export type WallpaperSizeId =
+  | "4k"
+  | "qhd"
+  | "fhd"
+  | "laptop"
+  | "ultrawide"
+  | "superwide"
+  | "cinema"
+  | "tablet"
+  | "tabletPro"
+  | "tabletPortrait"
+  | "square"
+  | "mobile";
 
 export interface WallpaperSize {
   id: WallpaperSizeId;
@@ -53,13 +201,21 @@ export interface WallpaperSize {
   height: number;
 }
 
-export const wallpaperSizes: readonly [WallpaperSize, WallpaperSize, WallpaperSize, WallpaperSize] =
-  [
-    { id: "4k", width: 3840, height: 2160 },
-    { id: "qhd", width: 2560, height: 1440 },
-    { id: "fhd", width: 1920, height: 1080 },
-    { id: "mobile", width: 1170, height: 2532 },
-  ];
+/** Monitores, ultrapanorámicos, tablets (4:3 y 3:2), cuadrado y móvil. */
+export const wallpaperSizes: readonly [WallpaperSize, ...WallpaperSize[]] = [
+  { id: "4k", width: 3840, height: 2160 },
+  { id: "qhd", width: 2560, height: 1440 },
+  { id: "fhd", width: 1920, height: 1080 },
+  { id: "laptop", width: 2560, height: 1600 },
+  { id: "ultrawide", width: 3440, height: 1440 },
+  { id: "superwide", width: 5120, height: 1440 },
+  { id: "cinema", width: 2560, height: 1080 },
+  { id: "tablet", width: 2048, height: 1536 },
+  { id: "tabletPro", width: 2732, height: 2048 },
+  { id: "tabletPortrait", width: 1668, height: 2388 },
+  { id: "square", width: 2048, height: 2048 },
+  { id: "mobile", width: 1170, height: 2532 },
+];
 
 export interface WallpaperPalette {
   bg: string;
@@ -104,6 +260,10 @@ export interface WallpaperOptions {
   count: number;
   /** Índice del símbolo protagonista — macro. */
   focus: number;
+  /** Velocidad de la animación (multiplicador) — solo video. */
+  speed: number;
+  /** Cuadro de la animación (0–1) que se exporta como foto — estilos de escena. */
+  moment: number;
 }
 
 export type WallpaperOptionKey = keyof WallpaperOptions;
@@ -127,10 +287,48 @@ const optionSpecs: Record<WallpaperOptionKey, WallpaperOptionSpec> = {
   // El máximo real depende de la fórmula (cantidad de nodos): la UI lo
   // recorta y el render lo clampa.
   focus: { key: "focus", min: 0, max: 40, step: 1 },
+  speed: { key: "speed", min: 0.25, max: 3, step: 0.05 },
+  moment: { key: "moment", min: 0, max: 0.995, step: 0.005 },
 };
 
-/** Qué ajustes tienen efecto en cada estilo — la UI solo muestra esos. */
-export const styleOptionKeys: Record<WallpaperStyle, readonly WallpaperOptionKey[]> = {
+/** Qué ajustes tienen efecto en cada estilo de video. */
+export const videoStyleOptionKeys: Record<VideoStyle, readonly WallpaperOptionKey[]> = {
+  assemble: ["scale", "speed", "radius"],
+  drift: ["scale", "speed", "count"],
+  planetarium: ["scale", "speed", "radius", "count", "rotation"],
+  marquee: ["scale", "speed", "spacingY", "rotation"],
+  rain: ["scale", "speed", "count"],
+  wave: ["scale", "speed", "count", "rotation"],
+  tunnel: ["scale", "speed", "count", "rotation"],
+  aurora: ["scale", "speed", "count"],
+  spotlight: ["scale", "speed"],
+  carousel: ["scale", "speed", "radius", "count"],
+  stroke: ["scale", "speed"],
+  vortex: ["scale", "speed", "count", "radius", "rotation"],
+  warp: ["scale", "speed", "count"],
+  kaleido: ["scale", "speed", "count", "radius"],
+  pulse: ["scale", "speed", "count"],
+  slice: ["scale", "speed", "count"],
+  horizon: ["scale", "speed", "count"],
+  sphere: ["scale", "speed", "count", "radius", "rotation"],
+  spectrum: ["scale", "speed", "count"],
+  cipher: ["scale", "speed", "count"],
+  typegrid: ["scale", "speed", "count"],
+  burst: ["scale", "speed", "count"],
+  kinetic: ["scale", "speed"],
+  dna: ["scale", "speed", "count", "radius", "rotation"],
+  cube: ["scale", "speed", "rotation"],
+  radar: ["scale", "speed", "count"],
+  hologram: ["scale", "speed"],
+  sunburst: ["scale", "speed", "count", "rotation"],
+  bokeh: ["scale", "speed", "count"],
+  pendulum: ["scale", "speed", "count"],
+  atom: ["scale", "speed", "radius"],
+  lissajous: ["scale", "speed", "radius", "count"],
+  slots: ["scale", "speed"],
+};
+
+const classicOptionKeys: Record<ClassicStyle, readonly WallpaperOptionKey[]> = {
   formula: ["scale"],
   accent: ["scale"],
   inverted: ["scale"],
@@ -147,22 +345,167 @@ export const styleOptionKeys: Record<WallpaperStyle, readonly WallpaperOptionKey
   spiral: ["scale", "radius", "rotation"],
 };
 
+const extraOptionKeys: Record<ExtraStyle, readonly WallpaperOptionKey[]> = {
+  blueprint: ["scale", "spacingX"],
+  mosaic: ["scale", "count", "spacingX"],
+  eclipse: ["scale", "radius"],
+  mirror: ["scale", "spacingY"],
+  stripes: ["scale", "count", "rotation"],
+  confetti: ["scale", "count", "rotation"],
+  waves: ["scale", "count", "radius", "rotation"],
+  neon: ["scale", "radius"],
+  seal: ["scale", "radius", "rotation"],
+  led: ["scale", "count"],
+  gradient: ["scale", "rotation"],
+  knockout: ["scale"],
+  cards: ["scale", "spacingX"],
+  constellation: ["scale", "count", "radius"],
+};
+
+/** Qué ajustes tienen efecto en cada estilo — la UI solo muestra esos. */
+export const styleOptionKeys = {
+  ...classicOptionKeys,
+  ...extraOptionKeys,
+  ...(Object.fromEntries(
+    videoStyles.map((style) => [
+      style,
+      [...videoStyleOptionKeys[style].filter((key) => key !== "speed"), "moment"],
+    ]),
+  ) as unknown as Record<VideoStyle, readonly WallpaperOptionKey[]>),
+} satisfies Record<WallpaperStyle, readonly WallpaperOptionKey[]>;
+
 export function optionSpec(key: WallpaperOptionKey): WallpaperOptionSpec {
   return optionSpecs[key];
 }
 
+/** Cuadro que mejor representa cada escena de video como foto fija. */
+const VIDEO_MOMENTS: Record<VideoStyle, number> = {
+  assemble: 0.14,
+  drift: 0.3,
+  planetarium: 0.2,
+  marquee: 0.3,
+  rain: 0.5,
+  wave: 0.25,
+  tunnel: 0.4,
+  aurora: 0.35,
+  spotlight: 0.3,
+  carousel: 0.1,
+  stroke: 0.3,
+  vortex: 0.3,
+  warp: 0.5,
+  kaleido: 0.2,
+  pulse: 0.1,
+  slice: 0.3,
+  horizon: 0.3,
+  sphere: 0.2,
+  spectrum: 0.3,
+  cipher: 0.2,
+  typegrid: 0.15,
+  burst: 0.45,
+  kinetic: 0.78,
+  dna: 0.2,
+  cube: 0.18,
+  radar: 0.3,
+  hologram: 0.25,
+  sunburst: 0.3,
+  bokeh: 0.4,
+  pendulum: 0.09,
+  atom: 0.2,
+  lissajous: 0.3,
+  slots: 0.5,
+};
+
+/** Valores por defecto de cada estilo de video (count/rotación propios). */
+export function defaultVideoOptions(style: VideoStyle): WallpaperOptions {
+  const base = defaultWallpaperOptions("formula");
+  switch (style) {
+    case "planetarium": {
+      return { ...base, count: 4, rotation: 18 };
+    }
+    case "marquee": {
+      return { ...base, rotation: -12 };
+    }
+    case "wave": {
+      return { ...base, count: 5 };
+    }
+    case "tunnel": {
+      return { ...base, count: 8, rotation: 24 };
+    }
+    case "carousel": {
+      return { ...base, count: 6 };
+    }
+    case "rain":
+    case "warp": {
+      return { ...base, count: 6 };
+    }
+    case "vortex": {
+      return { ...base, count: 4 };
+    }
+    case "kaleido": {
+      return { ...base, count: 8 };
+    }
+    case "pulse": {
+      return { ...base, count: 4 };
+    }
+    case "slice": {
+      return { ...base, count: 7 };
+    }
+    case "horizon": {
+      return { ...base, count: 10 };
+    }
+    case "sphere": {
+      return { ...base, count: 6, rotation: 18 };
+    }
+    case "spectrum":
+    case "bokeh":
+    case "pendulum":
+    case "radar": {
+      return { ...base, count: 6 };
+    }
+    case "lissajous": {
+      return { ...base, count: 3 };
+    }
+    case "dna": {
+      return { ...base, count: 5, rotation: -12 };
+    }
+    case "cube": {
+      return { ...base, rotation: 20 };
+    }
+    case "sunburst": {
+      return { ...base, count: 5 };
+    }
+    default: {
+      return base;
+    }
+  }
+}
+
 /** Valores por defecto de cada estilo: reproducen el diseño original. */
 export function defaultWallpaperOptions(style: WallpaperStyle): WallpaperOptions {
+  if (isVideoStyle(style)) {
+    return { ...defaultVideoOptions(style), moment: VIDEO_MOMENTS[style] };
+  }
   return {
     scale: 1,
     spacingX: 1,
     spacingY: 1,
-    rotation: style === "pattern" ? -26 : style === "depth" ? -6 : 0,
+    rotation: style === "pattern" ? -26 : style === "depth" ? -6 : style === "stripes" ? -18 : 0,
     layers: 14,
     distance: 1,
     radius: 1,
-    count: style === "echo" ? 6 : style === "orbit" ? 4 : 5,
+    count:
+      style === "echo"
+        ? 6
+        : style === "orbit"
+          ? 4
+          : style === "mosaic"
+            ? 4
+            : style === "waves"
+              ? 6
+              : 5,
     focus: 0,
+    speed: 1,
+    moment: 0.4,
   };
 }
 
@@ -174,14 +517,18 @@ export interface WallpaperRequest {
   fx: FxPreset;
   context: WallpaperContext;
   options?: WallpaperOptions;
+  /** Marca "MATH GOT MOTION" en la esquina (default: sí). */
+  brand?: boolean;
+  /** Título/explicaciones en los estilos de escena (default: sí). */
+  details?: boolean;
 }
 
-function optionsFor(request: WallpaperRequest): WallpaperOptions {
+export function optionsFor(request: WallpaperRequest): WallpaperOptions {
   return request.options ?? defaultWallpaperOptions(request.style);
 }
 
 /** Tamaño de diseño del layout de glifos; el render escala desde acá. */
-const DESIGN_SIZE = 100;
+export const DESIGN_SIZE = 100;
 
 /* ------------------------------------------------------------------ */
 /* Color                                                               */
@@ -213,13 +560,13 @@ function parseHex(color: string): [number, number, number] | null {
   return null;
 }
 
-function rgba(color: string, alpha: number): string {
+export function rgba(color: string, alpha: number): string {
   const rgb = parseHex(color);
   if (!rgb) return color;
   return `rgba(${String(rgb[0])}, ${String(rgb[1])}, ${String(rgb[2])}, ${String(alpha)})`;
 }
 
-function mix(from: string, to: string, amount: number): string {
+export function mix(from: string, to: string, amount: number): string {
   const a = parseHex(from);
   const b = parseHex(to);
   if (!a || !b) return from;
@@ -238,7 +585,7 @@ function hueToChannel(p: number, q: number, t: number): number {
 }
 
 /** Rota el tono de un color (para derivar la aberración cromática del acento). */
-function shiftHue(color: string, degrees: number): string {
+export function shiftHue(color: string, degrees: number): string {
   const rgb = parseHex(color);
   if (!rgb) return color;
   const r = rgb[0] / 255;
@@ -297,7 +644,7 @@ export function readWallpaperContext(): WallpaperContext {
 /* Layout de la fórmula                                                */
 /* ------------------------------------------------------------------ */
 
-interface Glyph {
+export interface Glyph {
   value: string;
   x: number;
   /** Ancho de avance a DESIGN_SIZE. */
@@ -306,7 +653,7 @@ interface Glyph {
   font: string;
 }
 
-interface FormulaLayout {
+export interface FormulaLayout {
   glyphs: Glyph[];
   width: number;
   top: number;
@@ -318,7 +665,7 @@ interface FormulaLayout {
  * operadores/igual con 0.3em de aire a cada lado y superíndices al 55% de
  * tamaño, elevados. El layout se mide una vez a DESIGN_SIZE y el render escala.
  */
-function layoutFormula(
+export function layoutFormula(
   context: CanvasRenderingContext2D,
   formula: Formula,
   family: string,
@@ -357,14 +704,14 @@ function layoutFormula(
   return { glyphs, width: x, top, height: bottom - top };
 }
 
-interface Chroma {
+export interface Chroma {
   offset: number;
   colorA: string;
   colorB: string;
   alpha: number;
 }
 
-interface DrawOptions {
+export interface DrawOptions {
   x: number;
   y: number;
   scale: number;
@@ -380,7 +727,7 @@ interface DrawOptions {
   align?: "center" | "left";
 }
 
-function drawFormula(
+export function drawFormula(
   context: CanvasRenderingContext2D,
   layout: FormulaLayout,
   options: DrawOptions,
@@ -438,7 +785,11 @@ interface TextOptions {
   align?: CanvasTextAlign;
 }
 
-function drawText(context: CanvasRenderingContext2D, text: string, options: TextOptions): void {
+export function drawText(
+  context: CanvasRenderingContext2D,
+  text: string,
+  options: TextOptions,
+): void {
   const { x, y, font, color, alpha = 1, align = "center" } = options;
   context.save();
   context.globalAlpha = alpha;
@@ -455,7 +806,7 @@ function drawText(context: CanvasRenderingContext2D, text: string, options: Text
  * al contexto. Usa splitWords (Intl.Segmenter) para que zh/ja también corten
  * por palabra; si no entra en `maxLines`, la última línea termina en "…".
  */
-function wrapText(
+export function wrapText(
   context: CanvasRenderingContext2D,
   text: string,
   maxWidth: number,
@@ -493,7 +844,7 @@ function wrapText(
 }
 
 /** Hash FNV-1a: semilla estable por fórmula (cada una tiene su propia aura). */
-function hashString(text: string): number {
+export function hashString(text: string): number {
   let hash = 0x81_1c_9d_c5;
   for (const char of text) {
     hash ^= char.codePointAt(0) ?? 0;
@@ -506,7 +857,7 @@ function hashString(text: string): number {
 /* Efectos (mismo lenguaje que FxLayer.css)                            */
 /* ------------------------------------------------------------------ */
 
-function glowFor(fx: FxPreset, renderedSize: number, scheme: "dark" | "light"): number {
+export function glowFor(fx: FxPreset, renderedSize: number, scheme: "dark" | "light"): number {
   if (fx === "neon") return scheme === "dark" ? renderedSize * 0.09 : 0;
   if (fx === "crt") return renderedSize * 0.05;
   if (fx === "vhs") return renderedSize * 0.03;
@@ -515,7 +866,7 @@ function glowFor(fx: FxPreset, renderedSize: number, scheme: "dark" | "light"): 
   return 0;
 }
 
-function chromaFor(
+export function chromaFor(
   fx: FxPreset,
   palette: WallpaperPalette,
   renderedSize: number,
@@ -572,7 +923,7 @@ function drawScanlines(
 }
 
 /** PRNG determinístico (mulberry32): el grano no "titila" entre re-renders del preview. */
-function seededRandom(seed: number): () => number {
+export function seededRandom(seed: number): () => number {
   let state = seed;
   return () => {
     state = (state + 0x6d_2b_79_f5) >>> 0;
@@ -588,6 +939,7 @@ function drawGrain(
   width: number,
   height: number,
   tint?: string,
+  frame = 0,
 ): void {
   const tile = document.createElement("canvas");
   tile.width = 128;
@@ -596,7 +948,7 @@ function drawGrain(
   if (!tileContext) return;
   const rgb = parseHex(tint ?? palette.fg) ?? [255, 255, 255];
   const image = tileContext.createImageData(tile.width, tile.height);
-  const random = seededRandom(0x6d_67_6d);
+  const random = seededRandom(0x6d_67_6d + frame * 7919);
   for (let index = 0; index < image.data.length; index += 4) {
     image.data[index] = rgb[0];
     image.data[index + 1] = rgb[1];
@@ -816,8 +1168,9 @@ function drawGlitch(
   palette: WallpaperPalette,
   width: number,
   height: number,
+  frame = 0,
 ): void {
-  const random = seededRandom(0x91_17_c4);
+  const random = seededRandom(0x91_17_c4 + frame * 104_729);
   const canvas = context.canvas;
   context.save();
   for (let band = 0; band < 14; band += 1) {
@@ -835,12 +1188,33 @@ function drawGlitch(
   drawScanlines(context, palette, width, height);
 }
 
-function applyFx(
+/** Marca discreta de la app, abajo a la derecha. */
+export function drawBrand(
+  context: CanvasRenderingContext2D,
+  palette: WallpaperPalette,
+  fonts: WallpaperFonts,
+  width: number,
+  height: number,
+): void {
+  const unit = Math.min(width, height);
+  drawText(context, "MATH GOT MOTION", {
+    x: width - unit * 0.04,
+    y: height - unit * 0.035,
+    font: `500 ${String(Math.round(unit * 0.012))}px ${fonts.mono}`,
+    color: palette.fg,
+    alpha: 0.45,
+    align: "right",
+  });
+}
+
+export function applyFx(
   context: CanvasRenderingContext2D,
   fx: FxPreset,
   palette: WallpaperPalette,
   width: number,
   height: number,
+  /** Cuadro de animación: varía la semilla del grano y del glitch (video). */
+  frame = 0,
 ): void {
   if (fx === "mono") return;
   if (fx === "crt" || fx === "vhs") {
@@ -848,17 +1222,17 @@ function applyFx(
   }
   if (fx === "vhs") {
     drawTracking(context, palette, width, height);
-    drawGrain(context, palette, width, height);
+    drawGrain(context, palette, width, height, undefined, frame);
   }
   if (fx === "crt") {
-    drawGrain(context, palette, width, height);
+    drawGrain(context, palette, width, height, undefined, frame);
   }
   if (fx === "neon" && palette.scheme === "dark") {
     drawAmbient(context, palette, width, height);
   }
   if (fx === "film") {
     drawLightLeak(context, palette, width, height);
-    drawGrain(context, palette, width, height, mix(palette.fg, "#ffb070", 0.35));
+    drawGrain(context, palette, width, height, mix(palette.fg, "#ffb070", 0.35), frame);
     drawTintedVignette(
       context,
       width,
@@ -884,8 +1258,8 @@ function applyFx(
     return;
   }
   if (fx === "glitch") {
-    drawGlitch(context, palette, width, height);
-    drawGrain(context, palette, width, height);
+    drawGlitch(context, palette, width, height, frame);
+    drawGrain(context, palette, width, height, undefined, frame);
   }
   drawVignette(context, palette, width, height);
 }
@@ -894,7 +1268,7 @@ function applyFx(
 /* Composiciones                                                       */
 /* ------------------------------------------------------------------ */
 
-function fitScale(layout: FormulaLayout, maxWidth: number, maxHeight: number): number {
+export function fitScale(layout: FormulaLayout, maxWidth: number, maxHeight: number): number {
   return Math.min(maxWidth / layout.width, maxHeight / layout.height);
 }
 
@@ -1192,7 +1566,7 @@ function drawSolidComposition(
 }
 
 /** Efectos de la fórmula protagonista (glow + chroma) para un cuerpo de letra dado. */
-function heroFx(
+export function heroFx(
   request: WallpaperRequest,
   renderedSize: number,
 ): Pick<DrawOptions, "glow" | "chroma"> {
@@ -1315,14 +1689,6 @@ function drawSwissComposition(
     color: palette.fg,
     alpha: 0.5,
     align: "left",
-  });
-  drawText(context, "MATH GOT MOTION", {
-    x: width - margin,
-    y: height - margin * 0.7,
-    font: footerFont,
-    color: palette.fg,
-    alpha: 0.5,
-    align: "right",
   });
 }
 
@@ -1800,7 +2166,7 @@ function drawSpiralComposition(
 /* API                                                                 */
 /* ------------------------------------------------------------------ */
 
-function canvasToBlob(canvas: HTMLCanvasElement): Promise<Blob> {
+export function canvasToBlob(canvas: HTMLCanvasElement): Promise<Blob> {
   return new Promise((resolve, reject) => {
     canvas.toBlob((blob) => {
       if (blob) resolve(blob);
@@ -1834,7 +2200,17 @@ export async function ensureWallpaperFonts(context: WallpaperContext): Promise<v
  * frame de un slider. Como todas las medidas son proporcionales al lienzo, un
  * preview a menor resolución es la misma imagen que el PNG final, reducida.
  */
-export function drawWallpaper(canvas: HTMLCanvasElement, request: WallpaperRequest): void {
+export type Composer = (
+  context: CanvasRenderingContext2D,
+  request: WallpaperRequest,
+  layout: FormulaLayout,
+) => void;
+
+export function drawComposed(
+  canvas: HTMLCanvasElement,
+  request: WallpaperRequest,
+  composer?: Composer,
+): void {
   const { width, height } = request.size;
   const context = canvas.getContext("2d");
   if (!context) throw new Error("2D canvas context is not available");
@@ -1848,6 +2224,24 @@ export function drawWallpaper(canvas: HTMLCanvasElement, request: WallpaperReque
 
   const layout = layoutFormula(context, request.formula, request.context.fonts.formula);
 
+  if (composer) {
+    composer(context, request, layout);
+  } else {
+    drawClassic(context, request, layout);
+  }
+
+  if (request.brand !== false) {
+    drawBrand(context, request.context.palette, request.context.fonts, width, height);
+  }
+  applyFx(context, request.fx, request.context.palette, width, height);
+  context.restore();
+}
+
+export function drawClassic(
+  context: CanvasRenderingContext2D,
+  request: WallpaperRequest,
+  layout: FormulaLayout,
+): void {
   switch (request.style) {
     case "formula": {
       drawFormulaComposition(context, request, layout);
@@ -1907,20 +2301,11 @@ export function drawWallpaper(canvas: HTMLCanvasElement, request: WallpaperReque
       drawSpiralComposition(context, request, layout);
       break;
     }
+    default: {
+      // Estilos extra y de escena: los resuelve wallpaper-render.ts.
+      break;
+    }
   }
-
-  applyFx(context, request.fx, request.context.palette, width, height);
-  context.restore();
-}
-
-/** Genera el PNG a resolución completa. */
-export async function renderWallpaper(request: WallpaperRequest): Promise<Blob> {
-  const canvas = document.createElement("canvas");
-  canvas.width = request.size.width;
-  canvas.height = request.size.height;
-  await ensureWallpaperFonts(request.context);
-  drawWallpaper(canvas, request);
-  return canvasToBlob(canvas);
 }
 
 export function downloadWallpaper(blob: Blob, filename: string): void {

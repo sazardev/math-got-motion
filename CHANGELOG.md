@@ -7,6 +7,19 @@ This file is generated from `src/domain/changelog.yaml` — the source of
 truth, bilingual, also rendered in-app at `/:locale/changelog`. Add new
 entries there, then run `pnpm changelog:sync`.
 
+## [0.13.0] - 2026-09-28
+
+### Added
+
+- New Video mode in the exporter: every style has an animated twin in a seamless loop, with theme, font, effect, size, duration and FPS.
+- 61 wallpaper styles (43 new: Blueprint, Mosaic, Eclipse, Seal, LED matrix, Constellation, Hyperspace, Sphere…) and a Moment slider to pick the frame.
+- When exporting you can show or hide the app name and, in video, the formula's title and details to keep only the central focus.
+- 49 new themes and 32 new fonts (One Dark, GitHub, Monokai, Synthwave, Playfair, Geist, Pixel, Caveat…) plus ultrawide, tablet, 16:10 laptop and square sizes.
+
+### Changed
+
+- The exporter is more compact: format, style, effect, theme and font are searchable menus, and the all-styles previews expand on demand.
+
 ## [0.12.0] - 2026-09-28
 
 ### Added

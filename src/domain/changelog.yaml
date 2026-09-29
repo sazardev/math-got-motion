@@ -3,6 +3,50 @@
 # raíz del repo es un espejo generado de este archivo para desarrolladores;
 # las entradas nuevas se agregan acá, no ahí.
 
+- version: "0.13.0"
+  date: "2026-09-28"
+  changes:
+    - type: added
+      text:
+        es: "Nuevo modo Video en el exportador: cada estilo tiene su gemelo animado en bucle perfecto, con tema, fuente, efecto, tamaño, duración y FPS."
+        en: "New Video mode in the exporter: every style has an animated twin in a seamless loop, with theme, font, effect, size, duration and FPS."
+        pt: "Novo modo Vídeo no exportador: cada estilo tem seu gêmeo animado em loop perfeito, com tema, fonte, efeito, tamanho, duração e FPS."
+        fr: "Nouveau mode Vidéo dans l'exporteur : chaque style a son jumeau animé en boucle parfaite, avec thème, police, effet, taille, durée et FPS."
+        zh: "导出器新增视频模式：每种样式都有对应的无缝循环动画版本，可调主题、字体、特效、尺寸、时长与 FPS。"
+        ja: "エクスポーターに動画モードを追加：すべてのスタイルにシームレスループのアニメ版があり、テーマ・フォント・エフェクト・サイズ・長さ・FPSに対応。"
+    - type: added
+      text:
+        es: "61 estilos de wallpaper (43 nuevos: Plano, Mosaico, Eclipse, Sello, Matriz LED, Constelación, Hiperespacio, Esfera…) y un slider de Momento para elegir el cuadro."
+        en: "61 wallpaper styles (43 new: Blueprint, Mosaic, Eclipse, Seal, LED matrix, Constellation, Hyperspace, Sphere…) and a Moment slider to pick the frame."
+        pt: "61 estilos de wallpaper (43 novos: Planta, Mosaico, Eclipse, Selo, Matriz LED, Constelação, Hiperespaço, Esfera…) e um slider de Momento para escolher o quadro."
+        fr: "61 styles de fond d'écran (43 nouveaux : Plan, Mosaïque, Éclipse, Sceau, Matrice LED, Constellation, Hyperespace, Sphère…) et un curseur Moment pour choisir l'image."
+        zh: "61 种壁纸样式（新增 43 种：蓝图、马赛克、日食、印章、LED 点阵、星座、超空间、球体……），并新增“时刻”滑块用于选取画面。"
+        ja: "壁紙スタイルが61種に（新規43：設計図・モザイク・日食・スタンプ・LEDマトリクス・星座・ワープ・スフィアなど）。タイミングのスライダーで瞬間を選べます。"
+    - type: added
+      text:
+        es: "Al exportar puedes mostrar u ocultar el nombre de la app y, en video, el título y los datos de la fórmula para dejar solo el foco central."
+        en: "When exporting you can show or hide the app name and, in video, the formula's title and details to keep only the central focus."
+        pt: "Ao exportar, você pode mostrar ou ocultar o nome do app e, em vídeo, o título e os dados da fórmula para deixar só o foco central."
+        fr: "À l'export, vous pouvez afficher ou masquer le nom de l'app et, en vidéo, le titre et les détails de la formule pour ne garder que le centre."
+        zh: "导出时可显示或隐藏应用名称；视频还可隐藏公式标题与信息，只保留中央焦点。"
+        ja: "書き出し時にアプリ名の表示／非表示を選べ、動画では数式のタイトルと詳細も隠して中央だけに絞れます。"
+    - type: added
+      text:
+        es: "49 temas y 32 fuentes nuevos (One Dark, GitHub, Monokai, Synthwave, Playfair, Geist, Pixel, Caveat…) y tamaños ultrawide, tablet, laptop 16:10 y cuadrado."
+        en: "49 new themes and 32 new fonts (One Dark, GitHub, Monokai, Synthwave, Playfair, Geist, Pixel, Caveat…) plus ultrawide, tablet, 16:10 laptop and square sizes."
+        pt: "49 novos temas e 32 novas fontes (One Dark, GitHub, Monokai, Synthwave, Playfair, Geist, Pixel, Caveat…) e tamanhos ultrawide, tablet, laptop 16:10 e quadrado."
+        fr: "49 nouveaux thèmes et 32 nouvelles polices (One Dark, GitHub, Monokai, Synthwave, Playfair, Geist, Pixel, Caveat…) et des tailles ultrawide, tablette, portable 16:10 et carré."
+        zh: "新增 49 个主题与 32 种字体（One Dark、GitHub、Monokai、Synthwave、Playfair、Geist、Pixel、Caveat 等），并支持超宽屏、平板、16:10 笔记本与方形尺寸。"
+        ja: "テーマ49種とフォント32種を追加（One Dark・GitHub・Monokai・Synthwave・Playfair・Geist・Pixel・Caveatなど）。ウルトラワイド・タブレット・16:10ノートPC・正方形のサイズにも対応。"
+    - type: changed
+      text:
+        es: "El exportador es más compacto: formato, estilo, efecto, tema y fuente son menús con búsqueda, y las previsualizaciones de todos los estilos se despliegan a pedido."
+        en: "The exporter is more compact: format, style, effect, theme and font are searchable menus, and the all-styles previews expand on demand."
+        pt: "O exportador ficou mais compacto: formato, estilo, efeito, tema e fonte são menus com busca, e as pré-visualizações de todos os estilos abrem sob demanda."
+        fr: "L'exporteur est plus compact : format, style, effet, thème et police sont des menus avec recherche, et les aperçus de tous les styles se déplient à la demande."
+        zh: "导出器更紧凑：格式、样式、特效、主题与字体改为可搜索的菜单，全部样式预览按需展开。"
+        ja: "エクスポーターをコンパクトに：形式・スタイル・エフェクト・テーマ・フォントは検索できるメニューになり、全スタイルのプレビューは必要なときに展開できます。"
+
 - version: "0.12.0"
   date: "2026-09-28"
   changes:

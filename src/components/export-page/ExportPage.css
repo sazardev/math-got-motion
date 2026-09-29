@@ -3,9 +3,9 @@
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  gap: clamp(2rem, 5vh, 3.5rem);
+  gap: clamp(1.2rem, 3vh, 2rem);
   /* El padding superior deja libre el chrome fijo (menú + controles). */
-  padding: clamp(5.5rem, 12vh, 7.5rem) clamp(1.25rem, 5vw, 4rem) clamp(3rem, 8vh, 5rem);
+  padding: clamp(5.5rem, 12vh, 7.5rem) clamp(1.25rem, 5vw, 4rem) clamp(7rem, 16vh, 9rem);
   background: var(--bg);
   color: var(--fg);
 }
@@ -32,13 +32,6 @@
   font-size: clamp(1.6rem, 4vw, 2.6rem);
   font-weight: 700;
   line-height: 1.1;
-}
-
-.export__layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(15rem, 19rem);
-  gap: clamp(2rem, 4vw, 4rem);
-  align-items: start;
 }
 
 .export__stage {
@@ -102,20 +95,6 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   opacity: 0.5;
-}
-
-.export__settings {
-  position: sticky;
-  top: clamp(5.5rem, 12vh, 7.5rem);
-  /* Con efecto + tema + fuente el panel puede superar la pantalla: scrollea
-     por dentro sin despegarse del preview. */
-  max-height: calc(100vh - clamp(5.5rem, 12vh, 7.5rem) - 1rem);
-  overflow-y: auto;
-  padding-right: 0.4rem;
-  scrollbar-width: thin;
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
 }
 
 .export__group {
@@ -328,14 +307,6 @@
   opacity: 0.55;
 }
 
-.export__hint {
-  margin: -0.8rem 0 0;
-  font-family: var(--font-prose);
-  font-size: 0.78rem;
-  line-height: 1.45;
-  opacity: 0.5;
-}
-
 .export__gallery {
   display: grid;
   align-items: start;
@@ -430,12 +401,208 @@
   font-weight: 700;
 }
 
-@media (max-width: 860px) {
-  .export__layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
+/*
+ * Selector con búsqueda (Combobox): el botón muestra solo el valor; la lista
+ * se despliega en el flujo con el mismo lenguaje invertido de ControlMenu.
+ */
+.combobox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 7rem;
+}
 
-  .export__settings {
-    position: static;
-  }
+.combobox__trigger {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border: none;
+  background: transparent;
+  padding: 0.2rem 0;
+  margin: 0;
+  color: var(--accent);
+  font-family: var(--font-prose);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: left;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+
+.combobox__caret {
+  font-family: var(--font-mono);
+  opacity: 0.6;
+}
+
+.combobox__panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  width: max(100%, 15rem);
+  /* Del mismo tema que la página: el fondo apenas se despega con un velo del
+     color de texto (sin bordes ni sombras, como pide DESIGN.md). */
+  background: color-mix(in srgb, var(--fg) 10%, var(--bg));
+  color: var(--fg);
+}
+
+.combobox__input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  padding: 0.6rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+.combobox__input::placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+
+.combobox__list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0.35rem;
+  max-height: min(22rem, 50vh);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.combobox__option,
+.combobox__empty {
+  padding: 0.4rem 0.75rem;
+  font-family: var(--font-prose);
+  font-size: 0.9rem;
+}
+
+.combobox__option {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.combobox__option[aria-selected="true"] {
+  font-weight: 700;
+  opacity: 1;
+}
+
+.combobox__option {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.combobox__option[data-active="true"] {
+  opacity: 1;
+  background: color-mix(in srgb, var(--fg) 12%, transparent);
+}
+
+.combobox__option[aria-selected="true"] {
+  color: var(--accent);
+}
+
+/* Muestra de tema: una chapa con la paleta real de esa opción. */
+.combobox__swatch {
+  background: var(--bg);
+  color: var(--accent);
+  padding: 0 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.combobox__empty {
+  opacity: 0.5;
+}
+
+.export__toggle-all {
+  align-self: start;
+}
+
+.export__gallery-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Barra de herramientas superior: todos los selectores en una fila. */
+.export__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.7rem clamp(1rem, 2vw, 1.6rem);
+}
+
+.export__toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1.1rem;
+  margin-left: auto;
+  padding-bottom: 0.2rem;
+}
+
+/* Ajustes: barra centrada bajo el preview, como los parámetros de un editor. */
+.export__adjust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  width: min(100%, 60rem);
+  margin: 0 auto;
+}
+
+.export__adjust-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.export__sliders {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 1rem 2rem;
+}
+
+/* Botón de exportar/grabar: grande y fijo al pie, siempre a mano. */
+.export__dock {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.6rem clamp(1.25rem, 5vw, 4rem) 1.2rem;
+  background: linear-gradient(to top, var(--bg) 55%, transparent);
+  pointer-events: none;
+}
+
+.export__dock > * {
+  pointer-events: auto;
+}
+
+.export__dock .export__download {
+  flex: 0 1 34rem;
+  padding: 1.15rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+.export__cancel {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-family: var(--font-prose);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.export__cancel:hover {
+  opacity: 1;
 }

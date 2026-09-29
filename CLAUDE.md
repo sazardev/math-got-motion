@@ -248,8 +248,9 @@ developers — run `pnpm changelog:sync` after adding an entry to the YAML; don'
   `default` preset; the opt-in presets below are the only documented exception.
 - **Opt-in presets** (`src/preferences/`): `data-fx`
   (`mono`/`crt`/`vhs`/`neon`/`film`/`dream`/`halftone`/`glitch`), `data-type`
-  (`default`/`classic`/`editorial`/`modern`/`terminal`/`elegant`/`fraunces`/`code`/`swiss`/
-  `futurist`) and `data-theme`
+  (10 hand-tuned presets — `default`/`classic`/`editorial`/`modern`/`terminal`/`elegant`/
+  `fraunces`/`code`/`swiss`/`futurist` — plus 32 single-family ones such as `playfair`, `geist`,
+  `pixel`, `caveat`, each with its own `@fontsource` loader in `font-loaders.ts`) and `data-theme`
   (theme catalog in `themes.ts`) are set on `<html>` by `PreferencesProvider` and persisted
   in `localStorage` (`mgm:preferences`); `data-scheme` is derived from the theme. `FxLayer`
   (`src/components/fx/`) mounts decorative fixed layers only for non-`mono` presets (CRT/VHS/
@@ -294,6 +295,26 @@ developers — run `pnpm changelog:sync` after adding an entry to the YAML; don'
   low-res preview is the same image as the full-size PNG. Previews defer drawing to a rAF
   because `PreferencesProvider` applies `data-theme`/`data-type` in an effect that runs
   _after_ its children's effects.
+- **Video export** (`src/lib/video-wallpaper.ts`): the exporter's "Video" mode. Style ids are shared: `wallpaperStyles` (61 = classic + `ExtraStyle` in
+  `wallpaper-extra.ts` + the 33 scene `VideoStyle`s (15 of them in `video-scenes-extra.ts`)) is the one list for both modes, dispatched by
+  `wallpaper-render.ts`. Scene styles are exported as images as a still frame (option `moment`);
+  the classic/extra styles get an animated twin via `animators` (their options moved in whole
+  cycles of the loop). Eighteen scene
+  styles (`videoStyles`: assemble, drift, planetarium, marquee, rain, wave, tunnel, aurora,
+  spotlight, carousel, stroke, vortex, warp, kaleido, pulse, slice, horizon, sphere), each a pure function of the loop _phase_ (0 ≤ phase < 1) built by
+  a `SceneFactory` — every motion uses an integer number of cycles per loop so the last frame
+  joins the first (fades go through `bump`/zero at the ends). `createVideoRenderer` measures the
+  layout once and returns `{ period, draw(phase, fxFrame) }`; `period` is the scene's base
+  seconds divided by the `speed` option. It reuses the wallpaper helpers (exported from
+  `wallpaper.ts`) and `applyFx`, whose optional `frame` reseeds grain/glitch per frame.
+  `recordVideo` renders frame by frame at exact timestamps and encodes with WebCodecs through
+  `mediabunny` (MP4/H.264, falling back to WebM), so output is smooth at the requested fps no
+  matter how slow each frame is to draw (generation is offline-speed, not real time); only if
+  WebCodecs is missing does it fall back to real-time `captureStream` + `MediaRecorder`. Duration
+  is rounded to whole loops. The preview (`VideoPreviewCanvas` in
+  `ExportPage.tsx`) runs the same renderer, accumulating phase in a ref, pausing off-screen and
+  freezing under `prefers-reduced-motion`. Video sizes differ from images only in mobile
+  (1080×1920).
 - **Pinned-timeline rebuilds**: `FormulaHero`'s `useGSAP` must pass `revertOnUpdate: true`.
   Without it, dependency changes (resize, `layoutVersion` bump, font change) _stack_ pinned
   ScrollTriggers — two pins fight over `.hero`, the pin-spacer collapses, and the formula

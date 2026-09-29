@@ -133,6 +133,212 @@
   --font-prose: "Space Grotesk Variable", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
 }
 
+:root[data-type="roboto"] {
+  --font-formula: "Roboto Mono Variable", monospace;
+  --font-mono: "Roboto Mono Variable", monospace;
+  --font-prose: "Roboto Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="sourcecode"] {
+  --font-formula: "Source Code Pro Variable", monospace;
+  --font-mono: "Source Code Pro Variable", monospace;
+  --font-prose: "Source Sans 3 Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="plex"] {
+  --font-formula: "IBM Plex Mono", monospace;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-prose: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="cascadia"] {
+  --font-formula: "Cascadia Code", monospace;
+  --font-mono: "Cascadia Code", monospace;
+  --font-prose: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="geist"] {
+  --font-formula: "Geist Mono Variable", monospace;
+  --font-mono: "Geist Mono Variable", monospace;
+  --font-prose: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="martian"] {
+  --font-formula: "Martian Mono Variable", monospace;
+  --font-mono: "Martian Mono Variable", monospace;
+  --font-prose: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="playfair"] {
+  --font-formula: "Playfair Display Variable", "STIX Two Math", serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose:
+    "Playfair Display Variable", "STIX Two Text", "Noto Serif CJK SC", "Noto Serif SC", "Songti SC",
+    "SimSun", "Noto Serif CJK JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+:root[data-type="garamond"] {
+  --font-formula: "EB Garamond Variable", "STIX Two Math", serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose:
+    "EB Garamond Variable", "STIX Two Text", "Noto Serif CJK SC", "Noto Serif SC", "Songti SC",
+    "SimSun", "Noto Serif CJK JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+:root[data-type="lora"] {
+  --font-formula: "Lora Variable", "STIX Two Math", serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose:
+    "Lora Variable", "STIX Two Text", "Noto Serif CJK SC", "Noto Serif SC", "Songti SC", "SimSun",
+    "Noto Serif CJK JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+:root[data-type="crimson"] {
+  --font-formula: "Crimson Pro Variable", "STIX Two Math", serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose:
+    "Crimson Pro Variable", "STIX Two Text", "Noto Serif CJK SC", "Noto Serif SC", "Songti SC",
+    "SimSun", "Noto Serif CJK JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+:root[data-type="literata"] {
+  --font-formula: "Literata Variable", "STIX Two Math", serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose:
+    "Literata Variable", "STIX Two Text", "Noto Serif CJK SC", "Noto Serif SC", "Songti SC",
+    "SimSun", "Noto Serif CJK JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+:root[data-type="merriweather"] {
+  --font-formula: "Merriweather", "STIX Two Math", serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose:
+    "Merriweather", "STIX Two Text", "Noto Serif CJK SC", "Noto Serif SC", "Songti SC", "SimSun",
+    "Noto Serif CJK JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+:root[data-type="baskerville"] {
+  --font-formula: "Libre Baskerville", "STIX Two Math", serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose:
+    "Libre Baskerville", "STIX Two Text", "Noto Serif CJK SC", "Noto Serif SC", "Songti SC",
+    "SimSun", "Noto Serif CJK JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+:root[data-type="dmserif"] {
+  --font-formula: "DM Serif Display", "STIX Two Math", serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="montserrat"] {
+  --font-formula: "Montserrat Variable", "Inter Variable", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="poppins"] {
+  --font-formula: "Poppins", "Inter Variable", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose: "Poppins", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="manrope"] {
+  --font-formula: "Manrope Variable", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose: "Manrope Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="outfit"] {
+  --font-formula: "Outfit Variable", "Inter Variable", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose: "Outfit Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="sora"] {
+  --font-formula: "Sora Variable", "Inter Variable", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose: "Sora Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="bricolage"] {
+  --font-formula: "Bricolage Grotesque Variable", "Inter Variable", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="orbitron"] {
+  --font-formula: "Orbitron Variable", "Inter Variable", sans-serif;
+  --font-mono: "Orbitron Variable", monospace;
+  --font-prose: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="exo"] {
+  --font-formula: "Exo 2 Variable", "Inter Variable", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose: "Exo 2 Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="oswald"] {
+  --font-formula: "Oswald Variable", "Inter Variable", sans-serif;
+  --font-mono: "Oswald Variable", monospace;
+  --font-prose: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="bebas"] {
+  --font-formula: "Bebas Neue", "Inter Variable", sans-serif;
+  --font-mono: "Bebas Neue", monospace;
+  --font-prose: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="pixel"] {
+  --font-formula: "Press Start 2P", monospace;
+  --font-mono: "Press Start 2P", monospace;
+  --font-prose: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="vt323"] {
+  --font-formula: "VT323", "STIX Two Math", monospace;
+  --font-mono: "VT323", monospace;
+  --font-prose: "VT323", monospace, ui-monospace, monospace;
+}
+
+:root[data-type="majormono"] {
+  --font-formula: "Major Mono Display", "Inter Variable", monospace;
+  --font-mono: "Major Mono Display", monospace;
+  --font-prose: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="caveat"] {
+  --font-formula: "Caveat Variable", "STIX Two Math", cursive;
+  --font-mono: "DM Mono", monospace;
+  --font-prose: "Caveat Variable", cursive, cursive;
+}
+
+:root[data-type="ubuntu"] {
+  --font-formula: "Ubuntu Mono", monospace;
+  --font-mono: "Ubuntu Mono", monospace;
+  --font-prose: "Ubuntu", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="abril"] {
+  --font-formula: "Abril Fatface", "STIX Two Math", serif;
+  --font-mono: "DM Mono", monospace;
+  --font-prose: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="syne"] {
+  --font-formula: "Syne Variable", "Inter Variable", sans-serif;
+  --font-mono: "Syne Variable", monospace;
+  --font-prose: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root[data-type="typewriter"] {
+  --font-formula: "Special Elite", "STIX Two Math", monospace;
+  --font-mono: "Special Elite", monospace;
+  --font-prose: "Special Elite", monospace, ui-monospace, monospace;
+}
+
 /*
  * Paletas de los temas globales. `mono-dark` es el default (el negro/blanco
  * plano de DESIGN.md); el resto son opt-in y por eso pueden usar color.
@@ -324,6 +530,349 @@
   --fg: #2f3a2b;
   --accent: #5d7f3f;
   --accent-fg: #eef0e4;
+}
+
+[data-theme="one-dark"] {
+  --bg: #282c34;
+  --fg: #abb2bf;
+  --accent: #61afef;
+  --accent-fg: #282c34;
+}
+
+[data-theme="github-dark"] {
+  --bg: #0d1117;
+  --fg: #c9d1d9;
+  --accent: #58a6ff;
+  --accent-fg: #0d1117;
+}
+
+[data-theme="monokai"] {
+  --bg: #272822;
+  --fg: #f8f8f2;
+  --accent: #a6e22e;
+  --accent-fg: #272822;
+}
+
+[data-theme="night-owl"] {
+  --bg: #011627;
+  --fg: #d6deeb;
+  --accent: #82aaff;
+  --accent-fg: #011627;
+}
+
+[data-theme="material-ocean"] {
+  --bg: #0f111a;
+  --fg: #a6accd;
+  --accent: #89ddff;
+  --accent-fg: #0f111a;
+}
+
+[data-theme="palenight"] {
+  --bg: #292d3e;
+  --fg: #a6accd;
+  --accent: #c792ea;
+  --accent-fg: #292d3e;
+}
+
+[data-theme="synthwave"] {
+  --bg: #262335;
+  --fg: #ffffff;
+  --accent: #ff7edb;
+  --accent-fg: #262335;
+}
+
+[data-theme="cyberpunk"] {
+  --bg: #120f1a;
+  --fg: #f5f5f5;
+  --accent: #fcee0a;
+  --accent-fg: #120f1a;
+}
+
+[data-theme="horizon"] {
+  --bg: #1c1e26;
+  --fg: #d5d8da;
+  --accent: #e95678;
+  --accent-fg: #1c1e26;
+}
+
+[data-theme="moonlight"] {
+  --bg: #212337;
+  --fg: #c8d3f5;
+  --accent: #ff966c;
+  --accent-fg: #212337;
+}
+
+[data-theme="oceanic-next"] {
+  --bg: #1b2b34;
+  --fg: #cdd3de;
+  --accent: #fac863;
+  --accent-fg: #1b2b34;
+}
+
+[data-theme="nightfox"] {
+  --bg: #192330;
+  --fg: #cdcecf;
+  --accent: #719cd6;
+  --accent-fg: #192330;
+}
+
+[data-theme="poimandres"] {
+  --bg: #1b1e28;
+  --fg: #a6accd;
+  --accent: #5de4c7;
+  --accent-fg: #1b1e28;
+}
+
+[data-theme="city-lights"] {
+  --bg: #1d252c;
+  --fg: #718ca1;
+  --accent: #5ec4ff;
+  --accent-fg: #1d252c;
+}
+
+[data-theme="andromeda"] {
+  --bg: #23262e;
+  --fg: #d5ced9;
+  --accent: #00e8c6;
+  --accent-fg: #23262e;
+}
+
+[data-theme="shades-of-purple"] {
+  --bg: #2d2b55;
+  --fg: #ffffff;
+  --accent: #fad000;
+  --accent-fg: #2d2b55;
+}
+
+[data-theme="cobalt"] {
+  --bg: #193549;
+  --fg: #ffffff;
+  --accent: #ffc600;
+  --accent-fg: #193549;
+}
+
+[data-theme="sonokai"] {
+  --bg: #2c2e34;
+  --fg: #e2e2e3;
+  --accent: #fc5d7c;
+  --accent-fg: #2c2e34;
+}
+
+[data-theme="zenburn"] {
+  --bg: #3f3f3f;
+  --fg: #dcdccc;
+  --accent: #f0dfaf;
+  --accent-fg: #3f3f3f;
+}
+
+[data-theme="amber"] {
+  --bg: #120a00;
+  --fg: #ffb000;
+  --accent: #ffcc33;
+  --accent-fg: #120a00;
+}
+
+[data-theme="blood-moon"] {
+  --bg: #14080a;
+  --fg: #e8d5d5;
+  --accent: #e63946;
+  --accent-fg: #14080a;
+}
+
+[data-theme="deep-sea"] {
+  --bg: #04151f;
+  --fg: #cfe8ef;
+  --accent: #00b4d8;
+  --accent-fg: #04151f;
+}
+
+[data-theme="aurora"] {
+  --bg: #0b132b;
+  --fg: #e0f2f1;
+  --accent: #5eead4;
+  --accent-fg: #0b132b;
+}
+
+[data-theme="obsidian"] {
+  --bg: #0e0e10;
+  --fg: #d4d4d8;
+  --accent: #a78bfa;
+  --accent-fg: #0e0e10;
+}
+
+[data-theme="copper"] {
+  --bg: #1a1210;
+  --fg: #ead8c7;
+  --accent: #d98a5b;
+  --accent-fg: #1a1210;
+}
+
+[data-theme="lavender-dusk"] {
+  --bg: #1e1a2e;
+  --fg: #e6dff5;
+  --accent: #b794f4;
+  --accent-fg: #1e1a2e;
+}
+
+[data-theme="forest-night"] {
+  --bg: #0d1a12;
+  --fg: #d5e8d4;
+  --accent: #7bd88f;
+  --accent-fg: #0d1a12;
+}
+
+[data-theme="ember"] {
+  --bg: #1a0f0a;
+  --fg: #f3e2d0;
+  --accent: #ff6b35;
+  --accent-fg: #1a0f0a;
+}
+
+[data-theme="ice"] {
+  --bg: #0a1420;
+  --fg: #e6f1ff;
+  --accent: #8ecbff;
+  --accent-fg: #0a1420;
+}
+
+[data-theme="coffee"] {
+  --bg: #1e1613;
+  --fg: #e8d9c5;
+  --accent: #c69c6d;
+  --accent-fg: #1e1613;
+}
+
+[data-theme="tomorrow-night"] {
+  --bg: #1d1f21;
+  --fg: #c5c8c6;
+  --accent: #81a2be;
+  --accent-fg: #1d1f21;
+}
+
+[data-theme="neon-tokyo"] {
+  --bg: #0a0a1a;
+  --fg: #eaeaff;
+  --accent: #ff2a6d;
+  --accent-fg: #0a0a1a;
+}
+
+[data-theme="catppuccin-macchiato"] {
+  --bg: #24273a;
+  --fg: #cad3f5;
+  --accent: #c6a0f6;
+  --accent-fg: #24273a;
+}
+
+[data-theme="catppuccin-frappe"] {
+  --bg: #303446;
+  --fg: #c6d0f5;
+  --accent: #ca9ee6;
+  --accent-fg: #303446;
+}
+
+[data-theme="one-light"] {
+  --bg: #fafafa;
+  --fg: #383a42;
+  --accent: #4078f2;
+  --accent-fg: #fafafa;
+}
+
+[data-theme="github-light"] {
+  --bg: #ffffff;
+  --fg: #24292f;
+  --accent: #0969da;
+  --accent-fg: #ffffff;
+}
+
+[data-theme="catppuccin-latte"] {
+  --bg: #eff1f5;
+  --fg: #4c4f69;
+  --accent: #8839ef;
+  --accent-fg: #eff1f5;
+}
+
+[data-theme="tokyo-day"] {
+  --bg: #e1e2e7;
+  --fg: #3760bf;
+  --accent: #2e7de9;
+  --accent-fg: #e1e2e7;
+}
+
+[data-theme="night-owl-light"] {
+  --bg: #fbfbfb;
+  --fg: #403f53;
+  --accent: #4876d6;
+  --accent-fg: #fbfbfb;
+}
+
+[data-theme="material-light"] {
+  --bg: #fafafa;
+  --fg: #546e7a;
+  --accent: #00acc1;
+  --accent-fg: #fafafa;
+}
+
+[data-theme="ocean-mist"] {
+  --bg: #eaf4f4;
+  --fg: #1f3d47;
+  --accent: #0e7c86;
+  --accent-fg: #eaf4f4;
+}
+
+[data-theme="lemon"] {
+  --bg: #fffde7;
+  --fg: #3d3a1e;
+  --accent: #b8860b;
+  --accent-fg: #fffde7;
+}
+
+[data-theme="coffee-cream"] {
+  --bg: #f3e9dc;
+  --fg: #3e2c23;
+  --accent: #8b5a2b;
+  --accent-fg: #f3e9dc;
+}
+
+[data-theme="lavender-mist"] {
+  --bg: #f4f0fb;
+  --fg: #3b2f5c;
+  --accent: #7c4dff;
+  --accent-fg: #f4f0fb;
+}
+
+[data-theme="peach"] {
+  --bg: #fff1e6;
+  --fg: #4a2c2a;
+  --accent: #e76f51;
+  --accent-fg: #fff1e6;
+}
+
+[data-theme="arctic"] {
+  --bg: #f0f6fa;
+  --fg: #1d3557;
+  --accent: #457b9d;
+  --accent-fg: #f0f6fa;
+}
+
+[data-theme="sepia"] {
+  --bg: #f4ecd8;
+  --fg: #433422;
+  --accent: #a0522d;
+  --accent-fg: #f4ecd8;
+}
+
+[data-theme="mint"] {
+  --bg: #eafaf1;
+  --fg: #1e3a2f;
+  --accent: #10b981;
+  --accent-fg: #eafaf1;
+}
+
+[data-theme="blueprint-light"] {
+  --bg: #e8f0fe;
+  --fg: #0b2a5b;
+  --accent: #1a56db;
+  --accent-fg: #e8f0fe;
 }
 
 * {
