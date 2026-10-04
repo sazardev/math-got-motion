@@ -1,0 +1,271 @@
+id: hanoi-minimum-moves
+
+title:
+  es: Torres de Hanói
+  en: Tower of Hanoi
+  pt: Torres de Hanói
+  fr: Tours de Hanoï
+  zh: 汉诺塔最小步数
+  ja: ハノイの塔
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: m-of-n
+    type: variable
+    value: M(n)
+    explanation:
+      es: "M(n): el mínimo de movimientos para resolver la torre de n discos."
+      en: "M(n): the fewest moves that solve the tower of n disks."
+      pt: "M(n): o menor número de jogadas para resolver a torre de n discos."
+      fr: "M(n) : le nombre minimal de coups pour résoudre la tour de n disques."
+      zh: "M(n)：解开 n 个圆盘所需的最少步数。"
+      ja: "M(n)：n 枚の円盤を解くための最小の手数。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "El 2 es el número de torres entre las que alternamos."
+      en: "The 2 is the number of pegs we alternate between."
+      pt: "O 2 é o número de torres entre as quais alternamos."
+      fr: "Le 2 est le nombre de tiges entre lesquelles on alterne."
+      zh: "2 是我们交替使用的两根柱子。"
+      ja: "2 は交互に使う柱の本数。"
+  - id: sup-n
+    type: superscript
+    value: n
+    explanation:
+      es: "n elevado a la cantidad de discos: por eso el costo es exponencial."
+      en: "n raised to the number of disks: that is why the cost is exponential."
+      pt: "n elevado ao número de discos: por isso o custo é exponencial."
+      fr: "n élevé au nombre de disques : voilà pourquoi le coût est exponentiel."
+      zh: "n 以圆盘数为指数，这就是代价指数增长的原因。"
+      ja: "円盤の枚数乗。だからコストは指数的に増える。"
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: "Resta el último movimiento, el del disco que ya está en su sitio."
+      en: "Minus the last move, the one that puts a disk home."
+      pt: "Menos o último movimento, o que coloca um disco em seu lugar."
+      fr: "Moins le dernier coup, celui qui place un disque à sa place."
+      zh: "减去最后一步，也就是把某个圆盘放到最终位置的那一步。"
+      ja: "最後の1手、つまり最後の円盤を所定の位置に置く手。"
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: "El 1 recuerda que con un solo disco hace falta un solo movimiento."
+      en: "The 1 reminds us that a single disk takes a single move."
+      pt: "O 1 lembra que um único disco leva um único movimento."
+      fr: "Le 1 rappelle qu'un seul disque demande un seul coup."
+      zh: "1 提醒我们：一个圆盘只需一步。"
+      ja: "1 は、円盤1枚なら1手で済むことを示す。"
+context:
+  author:
+    es: Édouard Lucas
+    en: Édouard Lucas
+    pt: Édouard Lucas
+    fr: Édouard Lucas
+    zh: 爱德华·卢卡斯
+    ja: エdouard Lucas
+  era:
+    es: Francia, 1842–1891 · problema publicado en 1883
+    en: France, 1842–1891 · problem published in 1883
+    pt: França, 1842–1891 · problema publicado em 1883
+    fr: France, 1842–1891 · problème publié en 1883
+    zh: 法国，1842–1891年·问题发表于 1883 年
+    ja: フランス、1842–1891年・問題は1883年に発表
+  history:
+    es: >-
+      La leyenda popular cuenta que un templo indio tiene tres torres y 64 discos de bronce, y
+      que los sacerdotes deben moverlos según reglas sin ruido. La versión matemática se
+      publicó en las Récréations mathématiques de Édouard Lucas, en 1883, aunque el problema
+      ya circulaba oralmente. En 1908, en la exposición de San Petersburgo, Henry Dudeney
+      presentó la solución más lenta registrada: 3 358 220 movimientos, a razón de uno por
+      minuto, realizada por un caracol. Desde entonces es un caso de estudio de la recursión y
+      de la técnica divide y vencerás.
+    en: >-
+      The folk tale tells of an Indian temple with three pegs and 64 bronze disks that must be
+      moved in silence following the rules. The mathematical version appeared in Édouard
+      Lucas's Récréations mathématiques in 1883, though the problem had circulated orally for
+      centuries. In 1908, at the St Petersburg exhibition, Henry Dudeney presented the
+      slowest solution ever performed: 3,358,220 moves at one per minute, carried out by a
+      snail. The problem is a standard way to teach recursion and divide and conquer.
+    pt: >-
+      A lenda popular conta que um templo indiano tem três torres e 64 discos de bronze, e que
+      os sacerdotes devem movê-los segundo as regras em silêncio. A versão matemática foi
+      publicada nas Récréations mathématiques de Édouard Lucas, em 1883, embora o problema já
+      circulasse oralmente. Em 1908, na exposição de São Petersburgo, Henry Dudeney apresentou a
+      solução mais lenta jamais executada: 3.358.220 movimentos, um por minuto, feita por um
+      caracol. O problema é um jeito clássico de ensinar recursão e divisão-e-conquista.
+    fr: >-
+      Le conte populaire raconte un temple indien avec trois tiges et 64 disques de bronze, que
+      des prêtres doivent déplacer en silence selon les règles. La version mathématique parut
+      dans les Récréations mathématiques d'Édouard Lucas en 1883, alors que le problème
+      circulait de bouche à oreille. En 1908, à l'exposition de Saint-Pétersbourg, Henry
+      Dudeney présente la solution la plus lente jamais exécutée : 3 358 220 coups, un par
+      minute, exécutés par un escargot. C'est un cas d'école pour la récursivité et la
+      diviser pour régner.
+    zh: >-
+      民间传说讲的是一座印度寺庙：有三根柱子和 64 个铜盘，祭司必须按规则无声地移动它们。
+      数学版本由爱德华·卢卡斯在 1883 年的《数学游戏》中发表，但问题早已口口相传。1908 年在
+      圣彼得堡展览上，亨利·杜德尼表演了有史以来最慢的解法：3,358,220 步，每分钟一步，
+      由一只蜗牛完成。这个题目是讲递归与分治的标准例子。
+    ja: >-
+      民話ではインドの寺院に3本の柱と64枚の青銅の円盤があり、僧侶たちが規則を守って
+      音を立てずに移すという。数学的な形は1883年に Édouard Lucas が『数学遊戯』に
+      載せた。1908年のサンクトペテルブルグ博覧会で Henry Dudeney が、記録上最も
+      遅い解法を見せた。1分に1手、計3,358,220手をカタツムリがこなした。
+  timeline:
+    - year: "1883"
+      label:
+        es: Lucas publica el problema con su solución de 2ⁿ menos uno movimientos.
+        en: Lucas publishes the problem with its 2ⁿ minus one move solution.
+        pt: Lucas publica o problema com sua solução de 2ⁿ menos um movimentos.
+        fr: Lucas publie le problème avec sa solution en 2ⁿ moins un coups.
+        zh: 卢卡斯发表该问题及其 2ⁿ − 1 步解法。
+        ja: Lucas が問題と 2ⁿ − 1 手の解法を発表。
+    - year: "1908"
+      label:
+        es: Dudeney muestra en San Petersburgo la solución del caracol.
+        en: Dudeney shows the snail solution in St Petersburg.
+        pt: Dudeney mostra em São Petersburgo a solução do caracol.
+        fr: Dudeney montre à Saint-Pétersbourg la solution de l'escargot.
+        zh: 杜德尼在圣彼得堡展示蜗牛解法。
+        ja: 1908年、Dudeney はサンクトペテルブルグでカタツムリの解法を実演。
+    - year: "1957"
+      label:
+        es: Frame y Stewartinant generalizan el problema a más de tres torres.
+        en: Frame and Stewart generalize the problem to more than three pegs.
+        pt: Frame e Stewart generalizam o problema para mais de três torres.
+        fr: Frame et Stewart généralisent le problème à plus de trois tiges.
+        zh: Frame 与 Stewart 将问题推广到三根以上的柱子。
+        ja: Frame と Stewart が 3本より多い柱に一般化。
+    - year: "2014"
+      label:
+        es: El método de Bousch generaliza el coste de la solución óptima.
+        en: Bousch's method generalizes the cost of the optimal solution.
+        pt: O método de Bousch generaliza o custo da solução ótima.
+        fr: La méthode de Bousch généralise le coût de la solution optimale.
+        zh: Bousch 的方法推广了最优解的代价。
+        ja: Bousch の方法が最適解のコストを一般化した。
+  useCases:
+    - title:
+        es: Algoritmos y recursión
+        en: Algorithms and recursion
+        pt: Algoritmos e recursão
+        fr: Algorithmes et récursion
+        zh: 算法与递归
+        ja: アルゴリズムと再帰
+      description:
+        es: >-
+          Es el ejemplo canónico de divide y vencerás: una llamada recursiva por disco, n en total.
+        en: >-
+          It is the canonical divide-and-conquer example: n recursive calls, one per disk.
+        pt: >-
+          É o exemplo canônico de divisão-e-conquista: n chamadas recursivas, uma por disco.
+        fr: >-
+          C'est l'exemple canonique de diviser pour régner : n appels récursifs, un par disque.
+        zh: >-
+          这是分治法的标准例子：每个圆盘一次递归调用，共 n 次。
+        ja: >-
+          分割統治の典型例で、円盤1枚につき再帰呼び出しが1回、合計 n 回になる。
+    - title:
+        es: Desgaste de disco
+        en: Disk wear
+        pt: Desgaste de disco
+        fr: Usure des disques
+        zh: 磁盘磨损分析
+        ja: ディスクの摩耗
+      description:
+        es: >-
+          Contar cuántos discos se mueven permite medir el desgaste real de un
+          dispositivo.
+        en: >-
+          Counting how many disks moved gives a real measure of a device's wear.
+        pt: >-
+          Contar quantos discos se moveram mede o desgaste real de um dispositivo.
+        fr: >-
+          Compter combien de disques ont bougé mesure l'usure réelle d'un appareil.
+        zh: >-
+          统计移动了多少个圆盘，可以衡量设备的真实磨损。
+        ja: >-
+          何枚の円盤が動いたかを数えれば、デバイスの実際の摩耗が測れる。
+    - title:
+        es: Rompecabezas lógicos
+        en: Logic puzzles
+        pt: Quebra-cabeças lógicos
+        fr: Énigmes logiques
+        zh: 逻辑谜题
+        ja: 論理パズル
+      description:
+        es: >-
+          Es el rompecabezas físico más célebre del siglo XX, con una solución única
+          que obliga a mover dos tercios de los discos.
+        en: >-
+          It is the best-known physical puzzle of the twentieth century, whose solution forces
+          two thirds of the disks to move.
+        pt: >-
+          É o quebra-cabeça físico mais famoso do século XX, cuja solução obriga a mover dois
+          terços dos discos.
+        fr: >-
+          C'est l'énigme physique la plus célèbre du XXe siècle, dont la solution force à
+          déplacer les deux tiers des disques.
+        zh: >-
+          这是二十世纪最著名的实体谜题，解法迫使三分之二的圆盘移动。
+        ja: >-
+          20世紀で最も有名な実物のパズルで、解法は円盤の3分の2を動かさねばならない。
+  example:
+    title:
+      es: Con 64 discos
+      en: With 64 disks
+      pt: Com 64 discos
+      fr: Avec 64 disques
+      zh: 64 个圆盘
+      ja: 64枚の場合
+    lines:
+      - es: "M(n) = 2ⁿ − 1"
+        en: "M(n) = 2ⁿ − 1"
+        pt: "M(n) = 2ⁿ − 1"
+        fr: "M(n) = 2ⁿ − 1"
+        zh: "M(n) = 2ⁿ − 1"
+        ja: "M(n) = 2ⁿ − 1"
+      - es: "M(64) = 2⁶⁴ − 1 = 18 446 744 073 709 551 615 movimientos"
+        en: "M(64) = 2⁶⁴ − 1 = 18,446,744,073,709,551,615 moves"
+        pt: "M(64) = 2⁶⁴ − 1 = 18 446 744 073 709 551 615 movimentos"
+        fr: "M(64) = 2⁶⁴ − 1 = 18 446 744 073 709 551 615 coups"
+        zh: "M(64) = 2⁶⁴ − 1 = 18,446,744,073,709,551,615 步"
+        ja: "M(64) = 2⁶⁴ − 1 = 18,446,744,073,709,551,615 手"
+      - es: "A un movimiento por segundo, son 584 000 millones de años"
+        en: "At one move per second that is 584 billion years"
+        pt: "A um movimento por segundo, são 584 bilhões de anos"
+        fr: "À un coup par seconde, cela fait 584 milliards d'années"
+        zh: "每秒一步的话，需要 5840 亿年"
+        ja: "1秒に1手なら5840億年かかる"
+      - es: "El universo tiene 13 800 millones de años"
+        en: "The universe is 13.8 billion years old"
+        pt: "O universo tem 13,8 bilhões de anos"
+        fr: "L'univers a 13,8 milliards d'années"
+        zh: "宇宙的年龄是 138 亿年"
+        ja: "宇宙の年齢は138億年"
+      - es: "El caracol de Dudeney, a un paso por minuto, tardó unos 6 años y medio"
+        en: "Dudeney's snail, at one move per minute, took about six and a half years"
+        pt: "O caracol de Dudeney, a um passo por minuto, levou cerca de seis anos e meio"
+        fr: "L'escargot de Dudeney, à un coup par minute, a mis environ six ans et demi"
+        zh: "杜德尼的蜗牛每分钟一步，耗时约六年半"
+        ja: "ダダニのカタツムリは1分に1手で、約6年半かかった"

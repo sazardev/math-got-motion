@@ -1,0 +1,270 @@
+id: collatz-conjecture
+title:
+  es: Conjetura de Collatz
+  en: Collatz conjecture
+  pt: Conjectura de Collatz
+  fr: Conjecture de Collatz
+  zh: 考拉兹猜想
+  ja: コロラツ予想
+category:
+  es: Teoría de números
+  en: Number theory
+  pt: Teoria dos números
+  fr: Théorie des nombres
+  zh: 数论
+  ja: 数論
+nodes:
+  - id: f-n
+    type: variable
+    value: f(n)
+    explanation:
+      es: "f(n): la función que aplica la regla, paso a paso, a un número entero."
+      en: "f(n): the function that applies the rule to an integer, one step at a time."
+      pt: "f(n): a função que aplica a regra a um inteiro, passo a passo."
+      fr: "f(n) : la fonction qui applique la règle à un entier, étape par étape."
+      zh: "f(n)：一步一步把规则应用到整数上的函数。"
+      ja: "f(n)：整数に規則を一步ずつ適用する関数。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: three
+    type: number
+    value: "3"
+    explanation:
+      es: "3: si el número es impar, se multiplica por tres y se suma uno."
+      en: "3: if the number is odd, multiply by three and add one."
+      pt: "3: se o número for ímpar, multiplica por três e soma um."
+      fr: "3 : si le nombre est impair, on le multiplie par trois et on ajoute un."
+      zh: "3：如果数是奇数，就乘以 3 再加 1。"
+      ja: "3：奇数なら 3 倍して 1 を足す。"
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: "n: el número de partida, un entero positivo cualquiera."
+      en: "n: the starting number, any positive integer."
+      pt: "n: o número inicial, qualquer inteiro positivo."
+      fr: "n : le nombre de départ, un entier positif quelconque."
+      zh: "n：起始数，任意正整数。"
+      ja: "n：出発する数、任意の正の整数。"
+  - id: plus
+    type: operator
+    value: "+"
+    explanation:
+      es: "La suma del uno, que vuelve par al resultado y divisible entre dos."
+      en: "The added one, which makes the result even and divisible by two."
+      pt: "O um somado, que torna o resultado par e divisível por dois."
+      fr: "Le un ajouté, qui rend le résultat pair et divisible par deux."
+      zh: "加上的 1，使结果变成偶数，从而可以被 2 整除。"
+      ja: "足される 1。これで結果が偶数になり、2 で割り切れる。"
+  - id: even
+    type: variable
+    value: n/2
+    explanation:
+      es: "La otra rama de la regla: si n es par, se divide entre dos y listo."
+      en: "The other branch of the rule: if n is even, divide it by two and stop there."
+      pt: "O outro ramo da regra: se n for par, divide-se por dois e pronto."
+      fr: "L'autre branche de la règle : si n est pair, on divise par deux et c'est tout."
+      zh: "规则的另一支：如果 n 是偶数，就除以 2，仅此而已。"
+      ja: "規則のもう一方。n が偶数なら 2 で割るだけ。"
+context:
+  author:
+    es: Lothar Collatz
+    en: Lothar Collatz
+    pt: Lothar Collatz
+    fr: Lothar Collatz
+    zh: 洛塔尔·科拉兹
+    ja: ロタール・コラッツ
+  era:
+    es: Alemania, 1937 · sigue sin resolverse
+    en: Germany, 1937 · still unsolved
+    pt: Alemanha, 1937 · ainda sem solução
+    fr: Allemagne, 1937 · toujours sans solution
+    zh: 德国，1937 年·仍未解决
+    ja: ドイツ、1937年·未解決
+  history:
+    es: >-
+      Lothar Collatz formuló esta regla en 1937 y desde entonces nadie ha conseguido
+      demostrar que todo número positivo termine en 1. La parte fácil es comprobar miles de
+      millones de casos con un ordenador; la parte difícil es que no basta con evidencia.
+      En 1976 Terras verificó por cálculo que la conjetura se cumple para todo número hasta
+      2⁶⁸, y los mejores programas actuales siguen buscando trayectorias récord. Sigue siendo
+      uno de los problemas abiertos más famosos de las matemáticas.
+    en: >-
+      Lothar Collatz stated this rule in 1937 and nobody has yet proved that every positive
+      integer reaches 1. The easy part is checking billions of cases with a computer; the
+      hard part is that evidence is not proof. In 1976 Terras verified by computation that
+      the conjecture holds for every number up to 2⁶⁸, and current record-hunting programs
+      keep pushing further. It remains one of the most famous open problems in mathematics.
+    pt: >-
+      Lothar Collatz enunciou esta regra em 1937 e ninguém conseguiu demonstrar que todo inteiro
+      positivo chegue ao 1. A parte fácil é conferir bilhões de casos com um computador; a
+      parte difícil é que evidência não é prova. Em 1976 Terras verificou por cálculo que a
+      conjectura vale para todo número até 2⁶⁸, e os melhores programas seguem procurando
+      sequências recorde. Continua sendo um dos problemas abertos mais famosos da matemática.
+    fr: >-
+      Lothar Collatz a formulé cette règle en 1937 et personne n'a encore démontré que tout
+      entier positif atteint 1. Le côté facile est de vérifier des milliards de cas avec un
+      ordinateur ; le côté difficile est qu'une preuve expérimentale n'est pas une
+      démonstration. En 1976, Terras a vérifié par calcul que la conjecture vaut pour tout
+      nombre jusqu'à 2⁶⁸, et les meilleurs programmes cherchent encore des records. C'est
+      toujours l'un des problèmes ouverts les plus célèbres des mathématiques.
+    zh: >-
+      洛塔尔·科拉兹在 1937 年提出了这条规则，但至今没有人能证明每个正整数都会到达 1。容易
+      的一侧是用计算机检查数十亿个情形，困难的一侧在于证据不等于证明。1976 年特拉斯用计算
+      验证了所有不超过 2⁶⁸ 的数，而寻找纪录的程序至今仍在推进。它仍是最著名的公开问题
+      之一。
+    ja: >-
+      ロタール・コラッツが 1937年にこの規則を提示し、どんな正の整数でも 1 に
+      到達することを証明できた者はまだいない。簡単な側は計算機で数十億通りを確かめる
+      ことで、難しい側は証拠が証明にならない点にある。1976年、テラスは 2⁶⁸ 以下の
+      すべての数について成立を計算で確かめた。記録を探す研究は今も続いている。
+  timeline:
+    - year: "1937"
+      label:
+        es: Collatz propone la regla a sus estudiantes.
+        en: Collatz poses the rule to his students.
+        pt: Collatz propõe a regra aos seus alunos.
+        fr: Collatz pose la règle à ses étudiants.
+        zh: 科拉兹向学生提出这条规则。
+        ja: コラッツが学生に規則を出す。
+    - year: "1976"
+      label:
+        es: Terras verifica por cálculo todos los números hasta 2⁶⁸.
+        en: Terras verifies by computation every number up to 2⁶⁸.
+        pt: Terras verifica por cálculo todos os números até 2⁶⁸.
+        fr: Terras vérifie par calcul tous les nombres jusqu'à 2⁶⁸.
+        zh: 特拉斯用计算验证了所有不超过 2⁶⁸ 的数。
+        ja: テラスが 2⁶⁸ 以下のすべての数を計算で確かめる。
+    - year: "1993"
+      label:
+        es: Oliveira e Silva lanza Conjectury, aún el mejor registro de trayectorias.
+        en: Oliveira e Silva releases Conjectury, still the best trajectory record holder.
+        pt: Oliveira e Silva lança o Conjectury, ainda o melhor registro de sequências.
+        fr: Oliveira e Silva publie Conjectury, qui détient toujours le record de trajectoires.
+        zh: 奥利维拉-席尔瓦推出 Conjectury，至今保持着轨迹纪录。
+        ja: オリベイラ・シルバが Conjectury を公開し、記録を保持している。
+  useCases:
+    - title:
+        es: Conjetura frente a teorema
+        en: Conjecture versus theorem
+        pt: Conjectura contra teorema
+        fr: Conjecture contre théorème
+        zh: 猜想与定理之别
+        ja: 予想と定理の違い
+      description:
+        es: >-
+          Es el ejemplo más claro de por qué una conjetura no es un resultado: la evidencia
+          acumulada sigue sin cerrar el argumento.
+        en: >-
+          It is the clearest example of why a conjecture is not a result: the accumulated
+          evidence still does not close the argument.
+        pt: >-
+          É o exemplo mais claro de por que uma conjectura não é um resultado: a evidência
+          acumulada ainda não fecha o argumento.
+        fr: >-
+          C'est l'exemple le plus net de la raison pour laquelle une conjecture n'est pas un
+          résultat : l'accumulation de preuves ne referme pas l'argument.
+        zh: >-
+          这是"猜想不等于结论"最清楚的例子：积累的证据依然无法闭合论证。
+        ja: >-
+          予想が定理ではない理由が、これほど 通俗的にわかる例である。積み上げた証拠では、
+          議論はなお閉じない。
+    - title:
+        es: Programación y pruebas
+        en: Programming and testing
+        pt: Programação e testes
+        fr: Programmation et tests
+        zh: 编程与测试
+        ja: プログラミングと検証
+      description:
+        es: >-
+          Un programa que aplica la regla es trivial, pero su tiempo de ejecución siempre
+          se ha medido como enorme: el peor caso lo decide una conjetura, no el hardware.
+        en: >-
+          A program applying the rule is trivial, yet its runtime has always looked huge:
+          the worst case is decided by a conjecture, not by the hardware.
+        pt: >-
+          Um programa que aplica a regra é trivial, mas seu tempo de execução sempre parece
+          enorme: o pior caso é decidido por uma conjectura, não pelo hardware.
+        fr: >-
+          Un programme qui applique la règle est trivial, mais son temps d'exécution a
+          toujours semblé énorme : le pire cas est tranché par une conjecture, pas par le
+          matériel.
+        zh: >-
+          实现这条规则的程序很简单，但它的运行时间一直被看作极大：最坏情况由一个猜想决定，
+          而不是由硬件决定。
+        ja: >-
+          規則を実装したプログラムは単純だが、その実行時間は常に巨大に見えてきた。最悪の
+          場合をハードウェアではなく予想が決めている。
+    - title:
+        es: Aritmética modular
+        en: Modular arithmetic
+        pt: Aritmética modular
+        fr: Arithmétique modulaire
+        zh: 模运算
+        ja: 剰余演算
+      description:
+        es: >-
+          Estudiar la regla módulo 2 y módulo 3 explica por qué los pasos se disparan, y es
+          lo que hace posible el cálculo masivo de trayectorias.
+        en: >-
+          Studying the rule modulo 2 and modulo 3 explains why the steps spike, and it is
+          what makes large-scale trajectory computation possible.
+        pt: >-
+          Estudar a regra módulo 2 e módulo 3 explica por que os passos disparam, e é o que
+          torna possível calcular sequências em larga escala.
+        fr: >-
+          Étudier la règle modulo 2 et modulo 3 explique les à-coups, et c'est ce qui rend
+          possible le calcul massif de trajectoires.
+        zh: >-
+          研究规则模 2 与模 3 的行为能解释步数为何暴涨，也让大规模轨迹计算成为可能。
+        ja: >-
+          規則を 2 で割った余りと 3 で割った余りで考えると、ステップが跳ねるのは説明でき、
+          大規模な軌道計算も可能になる。
+  example:
+    title:
+      es: La trayectoria de 27
+      en: The trajectory of 27
+      pt: A trajetória do 27
+      fr: La trajectoire de 27
+      zh: 27 的轨迹
+      ja: 27 の軌道
+    lines:
+      - es: "27 → 82 → 41 → 124 → 62 → 31 → 94 → 47 → 142 → 71 → 214 → 107"
+        en: "27 → 82 → 41 → 124 → 62 → 31 → 94 → 47 → 142 → 71 → 214 → 107"
+        pt: "27 → 82 → 41 → 124 → 62 → 31 → 94 → 47 → 142 → 71 → 214 → 107"
+        fr: "27 → 82 → 41 → 124 → 62 → 31 → 94 → 47 → 142 → 71 → 214 → 107"
+        zh: "27 → 82 → 41 → 124 → 62 → 31 → 94 → 47 → 142 → 71 → 214 → 107"
+        ja: "27 → 82 → 41 → 124 → 62 → 31 → 94 → 47 → 142 → 71 → 214 → 107"
+      - es: "La secuencia sube hasta 9232 y tarda 111 pasos en llegar al 1"
+        en: "The sequence climbs to 9232 and takes 111 steps to reach 1"
+        pt: "A sequência sobe até 9232 e leva 111 passos para chegar ao 1"
+        fr: "La séquence monte jusqu'à 9232 et met 111 étapes pour atteindre 1"
+        zh: "该序列最高升到 9232，经过 111 步到达 1"
+        ja: "この列は 9232 まで上がり、1 に着くまで 111 手かかる"
+      - es: "97 es el menor número de tres cifras que más pasos necesita: 118"
+        en: "97 is the smallest three-digit number needing the most steps: 118"
+        pt: "97 é o menor número de três algarismos que mais passos exige: 118"
+        fr: "97 est le plus petit nombre à trois chiffres qui demande le plus d'étapes : 118"
+        zh: "97 是三位数中步数最多的：118 步"
+        ja: "97 は三桁の数のうち最も手数がかかる：118 手"
+      - es: "Ningún número conocido llega donde la regla podría fallar"
+        en: "No known number gets anywhere near where the rule could fail"
+        pt: "Nenhum número conhecido chega perto de onde a regra poderia falhar"
+        fr: "Aucun nombre connu n'approche de l'endroit où la règle pourrait échouer"
+        zh: "目前没有任何已知数字接近规则可能失效的地方"
+        ja: "規則が破れるensitivity に近づいた数はまだ知られていない"
+      - es: "La regla completa es simple: par → n/2, impar → 3n + 1"
+        en: "The full rule is simple: even → n/2, odd → 3n + 1"
+        pt: "A regra completa é simples: par → n/2, ímpar → 3n + 1"
+        fr: "La règle complète est simple : pair → n/2, impair → 3n + 1"
+        zh: "完整规则很简单：偶数 → n/2，奇数 → 3n + 1"
+        ja: "完全な規則は単純だ：偶数 → n/2、奇数 → 3n + 1"

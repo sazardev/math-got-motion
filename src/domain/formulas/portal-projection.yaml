@@ -1,0 +1,271 @@
+id: portal-projection
+
+title:
+  es: Proyección de un portal
+  en: Portal projection
+  pt: Projeção de um portal
+  fr: Projection d'un portail
+  zh: 传送门投影
+  ja: ポータルの投影
+category:
+  es: Álgebra lineal
+  en: Linear algebra
+  pt: Álgebra linear
+  fr: Algèbre linéaire
+  zh: 线性代数
+  ja: 線形代数
+nodes:
+  - id: x-prime
+    type: variable
+    value: "x′"
+    explanation:
+      es: "x′: tu nueva posición, ya del otro lado del portal."
+      en: "x′: your new position, already on the other side of the portal."
+      pt: "x′: sua nova posição, já do outro lado do portal."
+      fr: "x′ : votre nouvelle position, déjà de l'autre côté du portail."
+      zh: "x′：你的新位置，已经在传送门的另一侧。"
+      ja: "x′：新しい位置。すでにポータルの向こう側。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: d
+    type: variable
+    value: d
+    explanation:
+      es: "d: la separación entre los dos portales, el que se recorre en cero tiempo."
+      en: "d: the separation between the two portals, crossed in zero time."
+      pt: "d: a separação entre os dois portais, percorrida em tempo zero."
+      fr: "d : l'écartement entre les deux portails, franchi en temps nul."
+      zh: "d：两个传送门之间的距离，瞬间穿越。"
+      ja: "d：2つのポータル間の距離。ゼロ時間で通り抜ける。"
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: "Resta: la posición se refleja respecto al portal de salida."
+      en: "Minus: the position is mirrored around the exit portal."
+      pt: "Menos: a posição é espelhada em relação ao portal de saída."
+      fr: "Moins : la position est miroir par rapport au portail de sortie."
+      zh: "减号：位置相对于出口传送门被镜像。"
+      ja: "マイナス。位置は出口ポータルに対して鏡像になる。"
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: "x: tu posición antes de entrar, medida desde el portal de entrada."
+      en: "x: your position before entering, measured from the entry portal."
+      pt: "x: sua posição antes de entrar, medida a partir do portal de entrada."
+      fr: "x : votre position avant d'entrer, mesurée depuis le portail d'entrée."
+      zh: "x：你进入前的位置，从入口传送门量起。"
+      ja: "x：入る前の位置。入口ポータルから測った値。"
+context:
+  author:
+    es: Valve Corporation
+    en: Valve Corporation
+    pt: Valve Corporation
+    fr: Valve Corporation
+    zh: Valve 公司
+    ja: Valve Corporation
+  era:
+    es: Estados Unidos, 2007 · técnica descrita en 1999
+    en: United States, 2007 · technique described in 1999
+    pt: Estados Unidos, 2007 · técnica descrita em 1999
+    fr: États-Unis, 2007 · technique décrite en 1999
+    zh: 美国，2007年·该技术描述于 1999 年
+    ja: アメリカ、2007年・この技術は1999年に発表
+  history:
+    es: >-
+      El motor de Portal no inventa nada raro: usa una proyección de perspectiva desplazada,
+      la misma que Lenstra describe en 1999 para el rabin-hole, un túnel virtual en el que
+      una escena se ve desde dos puntos a la vez. El motor coloca la cámara virtual en el
+      plano del portal de salida y la inclina para que la imagen a través del ojo coincida
+      con la geometría del otro lado. En una dimensión la consecuencia es simple: al cruzar,
+      tu posición se refleja respecto al portal de salida.
+    en: >-
+      Portal's engine invents nothing strange: it uses an off-axis perspective projection, the
+      same technique Lenstra describes in 1999 for the rabin-hole, a virtual tunnel where one
+      scene is seen from two points at once. The engine places the virtual camera on the exit
+      portal's plane and shears it so the view through the aperture matches the geometry beyond.
+      In one dimension the consequence is simple: on crossing, your position is mirrored around
+      the exit portal.
+    pt: >-
+      O motor de Portal não inventa nada estranho: usa uma projeção de perspectiva deslocada,
+      a mesma técnica que Lenstra descreve em 1999 para o rabin-hole, um túnel virtual em que uma
+      cena é vista de dois pontos ao mesmo tempo. O motor coloca a câmera virtual no plano do
+      portal de saída e a cisalha para que a imagem pela abertura corresponda à geometria do
+      outro lado. Em uma dimensão, a consequência é simples: ao cruzar, sua posição é
+      espelhada em relação ao portal de saída.
+    fr: >-
+      Le moteur de Portal n'invente rien de stranger : il utilise une projection en perspective
+      décalée, la même technique que Lenstra décrit en 1999 pour le rabin-hole, un tunnel
+      virtuel où une même scène est vue depuis deux points à la fois. Le moteur place la caméra
+      virtuelle sur le plan du portail de sortie et la cale pour que la vue par l'ouverture
+      corresponde à la géométrie de l'autre côté. En une dimension, la conséquence est simple :
+      en franchissant le portail, votre position est miroir par rapport à la sortie.
+    zh: >-
+      Portal 的引擎并没有发明什么奇技：它用的是离轴透视投影，正是 Lenstra 在 1999 年为
+      rabin-hole 描述的技术——一个虚拟隧道，让同一个场景同时从两个点被看到。引擎把虚拟相机
+      放在出口传送门的平面上并做错切，使透过开口看到的画面与另一侧的几何结构吻合。在一维
+      情况下结论很简单：穿过传送门时，你的位置相对于出口被镜像。
+    ja: >-
+      Portal のエンジンは奇妙なものを発明していない。オフアクシス透視投影を使っており、
+      これは Lenstra が1999年に rabin-hole として提案した技術だ。仮想トンネルにより
+      同じシーンを2つの視点から同時に見られる。エンジンは出口ポータルの平面上に
+      仮想カメラを置き、開口からの視線が奥の幾何と一致するようせん断する。
+      1次元では結果は単純で、ポータルを渡ると位置は出口に関して鏡像になる。
+  timeline:
+    - year: "1999"
+      label:
+        es: Lenstra publica la proyección desplazada para el rabin-hole.
+        en: Lenstra publishes the off-axis projection for the rabin-hole.
+        pt: Lenstra publica a projeção deslocada para o rabin-hole.
+        fr: Lenstra publie la projection décalée pour le rabin-hole.
+        zh: Lenstra 发表用于 rabin-hole 的离轴投影。
+        ja: Lenstra が rabin-hole のオフアクシス投影を発表。
+    - year: "2007"
+      label:
+        es: Half-Life 2 Portal sale con los dos portales de Valve.
+        en: Half-Life 2 Portal ships with Valve's pair of portals.
+        pt: Half-Life 2 Portal é lançado com o par de portais da Valve.
+        fr: Half-Life 2 Portal sort avec la paire de portails de Valve.
+        zh: 《Portal 2》随 Half-Life 2 一同发售，带着 Valve 的一对传送门。
+        ja: "『Half-Life 2: Portal』が Valve のポータル2つと共に発売。"
+    - year: "2011"
+      label:
+        es: La comunidad demuestra que el momentum se conserva al cruzar.
+        en: The community shows momentum is conserved across a portal.
+        pt: A comunidade demonstra que o momento se conserva ao cruzar.
+        fr: La communauté démontre que la quantité de mouvement est conservée.
+        zh: 社区证明穿越传送门时动量守恒。
+        ja: コミュニティがポータルを渡る際に運動量が保存されることを証明。
+    - year: "2016"
+      label:
+        es: Valve publica gratis los documentos delazamiento de Portal 2.
+        en: Valve releases the Portal 2 whitepapers for free.
+        pt: Valve publica de graça os whitepapers de Portal 2.
+        fr: Valve publie gratuitement les livres blancs de Portal 2.
+        zh: Valve 免费发布了 Portal 2 的白皮书。
+        ja: Valve が Portal 2 のホワイトペーパーを無償公開。
+  useCases:
+    - title:
+        es: Realidad virtual
+        en: Virtual reality
+        pt: Realidade virtual
+        fr: Réalité virtuelle
+        zh: 虚拟现实
+        ja: バーチャルリアリティ
+      description:
+        es: >-
+          Los visores estereoscópicos usan la misma proyección para que cada ojo vea lo que
+          debe desde su propia posición.
+        en: >-
+          Stereo headsets use the same projection so each eye sees what it should from its own
+          position.
+        pt: >-
+          Os visores estereoscópicos usam a mesma projeção para que cada olho veja o que
+          deve da sua própria posição.
+        fr: >-
+          Les casques stéréoscopiques utilisent la même projection pour que chaque œil voie ce
+          qu'il doit depuis sa propre position.
+        zh: >-
+          立体头显使用同样的投影，让每只眼睛从各自位置看到应有的画面。
+        ja: >-
+          ステレオヘッドセットは同じ投影を使い、それぞれの位置から各目が正しい映像を
+          見えるようにする。
+    - title:
+        es: Gráficos por computador
+        en: Computer graphics
+        pt: Computação gráfica
+        fr: Infographie
+        zh: 计算机图形学
+        ja: コンピュータグラフィックス
+      description:
+        es: >-
+          Todo motor que dibuja una vista en una superficie distinta a la de la cámara
+          necesita cizallar el tronco de visión.
+        en: >-
+          Any engine drawing a view onto a surface other than the camera's own must shear the
+          frustum.
+        pt: >-
+          Qualquer motor que desenhe uma vista numa superfície diferente da câmera precisa
+          cisalhar o tronco de visão.
+        fr: >-
+          Tout moteur qui dessine une vue sur une surface différente de celle de la caméra doit
+          déformer le tronc de vision.
+        zh: >-
+          任何把视图绘制到与相机不同平面上的引擎，都必须对视锥做错切。
+        ja: >-
+          カメラの平面とは異なる面に描画するエンジンは、すべて視錐台をせん断する必要がある。
+    - title:
+        es: Arquitectura y túneles
+        en: Architecture and tunnelling
+        pt: Arquitetura e túneis
+        fr: Architecture et tunnels
+        zh: 建筑与隧道
+        ja: 建築とトンネル
+      description:
+        es: >-
+          La intersección de dos túneles rectos que se cruzan es el mismo problema
+          geométrico que un portal.
+        en: >-
+          Two straight tunnels that intersect are the same geometry as a portal.
+        pt: >-
+          Dois túneis retos que se cruzam são a mesma geometria de um portal.
+        fr: >-
+          Deux tunnels droits qui se croisent relèvent de la même géométrie qu'un portail.
+        zh: >-
+          两条相交的水平隧道，与传送门是同一个几何问题。
+        ja: >-
+          直線トンネルが交差する場合は、ポータルの幾何とまったく同じだ。
+  example:
+    title:
+      es: Portales separados 7 m
+      en: Portals 7 m apart
+      pt: Portais separados por 7 m
+      fr: Portails écartés de 7 m
+      zh: 相距 7 米的传送门
+      ja: 7 m離れたポータル
+    lines:
+      - es: "Entrada en x = 0 m, salida en x = 7 m → d = 7 m"
+        en: "Entry at x = 0 m, exit at x = 7 m → d = 7 m"
+        pt: "Entrada em x = 0 m, saída em x = 7 m → d = 7 m"
+        fr: "Entrée en x = 0 m, sortie en x = 7 m → d = 7 m"
+        zh: "入口在 x = 0 m，出口在 x = 7 m → d = 7 m"
+        ja: "入口が x = 0 m、出口が x = 7 m → d = 7 m"
+      - es: "El jugador está 2 m delante de la entrada, o sea x = −2 m"
+        en: "The player stands 2 m in front of the entry, that is x = −2 m"
+        pt: "O jogador está 2 m à frente da entrada, ou seja x = −2 m"
+        fr: "Le joueur est à 2 m devant l'entrée, soit x = −2 m"
+        zh: "玩家在入口前方 2 m，即 x = −2 m"
+        ja: "プレイヤーは入口の2 m前にいる。つまり x = −2 m"
+      - es: "x′ = d − x"
+        en: "x′ = d − x"
+        pt: "x′ = d − x"
+        fr: "x′ = d − x"
+        zh: "x′ = d − x"
+        ja: "x′ = d − x"
+      - es: "x′ = 7 − (−2)"
+        en: "x′ = 7 − (−2)"
+        pt: "x′ = 7 − (−2)"
+        fr: "x′ = 7 − (−2)"
+        zh: "x′ = 7 − (−2)"
+        ja: "x′ = 7 − (−2)"
+      - es: "x′ = 9 m: reaparece 2 m por delante de la salida"
+        en: "x′ = 9 m: you reappear 2 m in front of the exit"
+        pt: "x′ = 9 m: você reaparece 2 m à frente da saída"
+        fr: "x′ = 9 m : vous réapparaissez 2 m devant la sortie"
+        zh: "x′ = 9 m：你在出口前方 2 m 处重新出现"
+        ja: "x′ = 9 m。出口の2 m前に再び現れる"
+      - es: "La distancia al portal se conserva; el sentido del eje, se invierte"
+        en: "Distance to the portal is kept; the direction along the axis flips"
+        pt: "A distância ao portal se conserva; o sentido do eixo se inverte"
+        fr: "La distance au portail est conservée ; le sens de l'axe est inversé"
+        zh: "到传送门的距离保持不变，轴的方向则相反"
+        ja: "ポータルまでの距離は保たれ、軸の向きだけが反転する"

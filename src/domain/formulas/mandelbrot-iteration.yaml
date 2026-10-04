@@ -1,0 +1,285 @@
+id: mandelbrot-iteration
+title:
+  es: Conjunto de Mandelbrot
+  en: Mandelbrot set
+  pt: Conjunto de Mandelbrot
+  fr: Ensemble de Mandelbrot
+  zh: 曼德博集合
+  ja: マンデルブロ集合
+category:
+  es: Análisis complejo
+  en: Complex analysis
+  pt: Análise complexa
+  fr: Analyse complexe
+  zh: 复分析
+  ja: 複素解析
+nodes:
+  - id: z
+    type: variable
+    value: z
+    explanation:
+      es: "z: un número complejo, el valor que se va calculando paso a paso."
+      en: "z: a complex number, the value being computed step by step."
+      pt: "z: um número complexo, o valor que vai sendo calculado passo a passo."
+      fr: "z : un nombre complexe, la valeur calculée étape par étape."
+      zh: "z：一个复数，逐步算出的值。"
+      ja: "z：複素数。一歩ずつ計算される値。"
+  - id: arrow
+    type: operator
+    value: "→"
+    explanation:
+      es: "La flecha: cada valor nuevo se calcula a partir del anterior."
+      en: "The arrow: each new value is computed from the previous one."
+      pt: "A seta: cada novo valor é calculado a partir do anterior."
+      fr: "La flèche : chaque nouvelle valeur se calcule à partir de la précédente."
+      zh: "箭头：每个新值都由上一个值算出。"
+      ja: "矢印。つぎの値は前の値から計算される。"
+  - id: z-square
+    type: superscript
+    value: z²
+    explanation:
+      es: "z al cuadrado: multiplicar z por sí mismo."
+      en: "z squared: multiplying z by itself."
+      pt: "z ao quadrado: multiplicar z por ele mesmo."
+      fr: "z au carré : multiplier z par lui-même."
+      zh: "z 的平方：z 乘以自身。"
+      ja: "z の二乗。z 自身を掛ける。"
+  - id: plus
+    type: operator
+    value: "+"
+    explanation:
+      es: "Más el parámetro c, que decide el punto que estamos mirando."
+      en: "Plus the parameter c, which fixes the point being looked at."
+      pt: "Mais o parâmetro c, que decide o ponto que estamos olhando."
+      fr: "Plus le paramètre c, qui fixe le point observé."
+      zh: "加上参数 c，它决定我们正在观察哪个点。"
+      ja: "パラメーター c を足す。c が見ている一点を決める。"
+  - id: c
+    type: constant
+    value: c
+    explanation:
+      es: "c: el número complejo fijo que define cada punto del dibujo."
+      en: "c: the fixed complex number that defines each point of the picture."
+      pt: "c: o número complexo fixo que define cada ponto do desenho."
+      fr: "c : le nombre complexe fixe qui définit chaque point du dessin."
+      zh: "c：为图上每个点确定的固定复数。"
+      ja: "c：図の各点を決める固定された複素数。"
+  - id: z-zero
+    type: variable
+    value: z₀
+    explanation:
+      es: "z₀: el valor de partida, que siempre es cero."
+      en: "z₀: the starting value, which is always zero."
+      pt: "z₀: o valor inicial, que é sempre zero."
+      fr: "z₀ : la valeur de départ, toujours nulle."
+      zh: "z₀：起始值，永远是零。"
+      ja: "z₀：出発する値。いつもゼロ。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: zero
+    type: number
+    value: "0"
+    explanation:
+      es: "Cero: el único punto desde el que todas las órbitas empiezan igual."
+      en: "Zero: the only point every orbit starts from."
+      pt: "Zero: o único ponto de onde todas as órbitas partem."
+      fr: "Zéro : le seul point d'où partent toutes les orbites."
+      zh: "零：所有轨道唯一的起点。"
+      ja: "0。すべての軌道が出発する唯一のポイント。"
+context:
+  author:
+    es: Benoît Mandelbrot
+    en: Benoît Mandelbrot
+    pt: Benoît Mandelbrot
+    fr: Benoît Mandelbrot
+    zh: 伯努瓦·曼德博
+    ja: ベノワ・マンデルブロ
+  era:
+    es: Francia y Estados Unidos, 1975–1980 · dibujado con computadoras
+    en: France and the United States, 1975–1980 · drawn by computers
+    pt: França e Estados Unidos, 1975–1980 · desenhado com computadores
+    fr: France et États-Unis, 1975–1980 · dessiné par ordinateurs
+    zh: 法国与美国，1975–1980 年·由计算机绘出
+    ja: フランスとアメリカ、1975–1980年・コンピュータで描かれる
+  history:
+    es: >-
+      Benoît Mandelbrot estudió la iteración z → z² + c al trabajar sobre geometría de la
+      naturaleza y sobre los mercados. El conjunto que lleva su nombre no lo dibujó él: las
+      primeras imágenes las hicieron Robert Brooks y Peter Coquill en 1978, y se volvieron
+      famosas cuando Mandelbrot las publicó en 1980. Desde entonces cada computadora
+      nueva ha mostrado el conjunto en una resolución mayor.
+    en: >-
+      Benoît Mandelbrot studied the iteration z → z² + c while working on the geometry of
+      nature and on markets. He did not draw the set that carries his name: the first
+      pictures were made by Robert Brooks and Peter Coquill in 1978, and they became famous
+      when Mandelbrot published them in 1980. Every new computer since then has put the set
+      on screen at a higher resolution.
+    pt: >-
+      Benoît Mandelbrot estudou a iteração z → z² + c ao trabalhar sobre a geometria da
+      natureza e sobre os mercados. Ele não desenhou o conjunto que leva seu nome: as
+      primeiras imagens foram feitas por Robert Brooks e Peter Coquill em 1978 e ficaram
+      famosas quando Mandelbrot as publicou em 1980. Desde então cada novo computador mostra
+      o conjunto numa resolução maior.
+    fr: >-
+      Benoît Mandelbrot étudie l'itération z → z² + c en travaillant sur la géométrie de la
+      nature et sur les marchés. Il n'a pas dessiné l'ensemble qui porte son nom : les
+      premières images viennent de Robert Brooks et Peter Coquill en 1978, et elles sont
+      devenues célèbres quand Mandelbrot les a publiées en 1980. Depuis, chaque nouvel
+      ordinateur affiche l'ensemble dans une résolution supérieure.
+    zh: >-
+      伯努瓦·曼德博在研究自然的几何与市场问题时研究了迭代 z → z² + c。以他命名的集合并不是
+      他画的：最早的图像由 Robert Brooks 与 Peter Coquill 在 1978 年算出，1980 年曼德博
+      发表后才广为人知。此后每一台新计算机都能把这个集合显示得更细。
+    ja: >-
+      ベノワ・マンデルブロは自然の幾何と市場の研究の中で z → z² + c の反復を調べた。
+      彼の名前が付いた集合を描いだのは彼ではない。最初の図は 1978年に Robert Brooks と
+      Peter Coquill が作り、1980年にマンデルブロがこれを発表したことで一挙に
+      広く知られるようになった。
+  timeline:
+    - year: "1975"
+      label:
+        es: "Mandelbrot acuña la palabra «fractal» y presenta esta iteración."
+        en: "Mandelbrot coins the word fractal and introduces this iteration."
+        pt: "Mandelbrot cunha a palavra fractal e apresenta esta iteração."
+        fr: "Mandelbrot forge le mot fractal et présente cette itération."
+        zh: 曼德博创造“分形”一词并给出这一迭代。
+        ja: マンデルブロが「フラクタル」という語を作り、この反復を発表した。
+    - year: "1978"
+      label:
+        es: Brooks y Coquill calculan las primeras imágenes del conjunto.
+        en: Brooks and Coquill compute the first pictures of the set.
+        pt: Brooks e Coquill calculam as primeiras imagens do conjunto.
+        fr: Brooks et Coquill calculent les premières images de l'ensemble.
+        zh: Brooks 与 Coquill 算出了最早的集合图像。
+        ja: Brooks と Coquill が最初の図を計算した。
+    - year: "1980"
+      label:
+        es: Mandelbrot publica las imágenes y el conjunto se hace famoso.
+        en: Mandelbrot publishes the images and the set becomes famous.
+        pt: Mandelbrot publica as imagens e o conjunto fica famoso.
+        fr: Mandelbrot publie les images et l'ensemble devient célèbre.
+        zh: 曼德博发表这些图像，集合随之成名。
+        ja: マンデルブロが図を発表し、集合は有名になる。
+  useCases:
+    - title:
+        es: Rasterizado por GPU
+        en: GPU rasterisation
+        pt: Rasterização por GPU
+        fr: Rasterisation par GPU
+        zh: GPU 光栅化
+        ja: GPU によるラスタライズ
+      description:
+        es: >-
+          La imagen se pinta probando miles de valores de c por píxel: cada píxel es una
+          pregunta de si su órbita se escapa o no.
+        en: >-
+          The picture is painted by testing thousands of values of c per pixel: each pixel
+          is a question about whether its orbit escapes.
+        pt: >-
+          A imagem é pintada testando milhares de valores de c por pixel: cada pixel es uma
+          pergunta sobre se a sua órbita escapa.
+        fr: >-
+          L'image est peinte en testant des milliers de valeurs de c par pixel : chaque
+          pixel pose la question de savoir si son orbite s'échappe.
+        zh: >-
+          图像的绘制方式是对每个像素测试成百上千个 c 值：每个像素都在问它的轨道会不会逃逸。
+        ja: >-
+          画像は 1ピクセルあたり数千個の c の値を試して描かれる。各ピクセルは、その軌道が
+          逃げるかどうかを問いかけている。
+    - title:
+        es: Caos y sensibilidad
+        en: Chaos and sensitivity
+        pt: Caos e sensibilidade
+        fr: Chaos et sensibilité
+        zh: 混沌与敏感性
+        ja: カオスと敏感性
+      description:
+        es: >-
+          Dos valores de c casi iguales producen imágenes completamente distintas: por eso
+          la frontera es infinita y no se puede dibujar del todo.
+        en: >-
+          Two nearly equal values of c produce completely different pictures, which is why
+          the boundary is infinite and can never be fully drawn.
+        pt: >-
+          Dois valores de c quase iguais produzem imagens completamente diferentes: por isso
+          a fronteira é infinita e não pode ser desenhada por inteiro.
+        fr: >-
+          Deux valeurs de c presque égales donnent des images complètement différentes :
+          la frontière est donc infinie et ne peut jamais être entièrement tracée.
+        zh: >-
+          两个几乎相同的 c 值会给出完全不同的图像，正因如此边界是无限的，永远画不完。
+        ja: >-
+          ほとんど同じ二つの c がまったく違う図を生む。境界は無限なので、すべてを描くことは
+          できない。
+    - title:
+        es: Arte generativo
+        en: Generative art
+        pt: Arte generativa
+        fr: Art génératif
+        zh: 生成艺术
+        ja: ジェネラティブアート
+      description:
+        es: >-
+          Cada punto del plano es un parámetro distinto, así que una sola fórmula produce
+          infinitas variaciones de color y escala.
+        en: >-
+          Every point of the plane is a different parameter, so one single formula produces
+          infinite variations in colour and scale.
+        pt: >-
+          Cada ponto do plano é um parâmetro distinto, então uma única fórmula produz
+          infinitas variações de cor e escala.
+        fr: >-
+          Chaque point du plan est un paramètre différent : une seule formule produit une
+          infinité de variations de couleur et d'échelle.
+        zh: >-
+          平面上的每一点都是不同的参数，于是一个公式就产生了无穷多种颜色与尺度的变化。
+        ja: >-
+          平面のどの点も異なるパラメーターなので、ひとつの式から色のスケールの変化が無限に
+          生まれる。
+  example:
+    title:
+      es: Un punto y su órbita
+      en: One point and its orbit
+      pt: Um ponto e sua órbita
+      fr: Un point et son orbite
+      zh: 一个点及其轨道
+      ja: 一点とその軌道
+    lines:
+      - es: "z₀ = 0 y c = −0,5"
+        en: "z₀ = 0 and c = −0.5"
+        pt: "z₀ = 0 e c = −0,5"
+        fr: "z₀ = 0 et c = −0,5"
+        zh: "z₀ = 0，c = −0,5"
+        ja: "z₀ = 0、c = −0,5"
+      - es: "0 → −0,5 → −0,25 → −0,4375 → −0,3086"
+        en: "0 → −0.5 → −0.25 → −0.4375 → −0.3086"
+        pt: "0 → −0,5 → −0,25 → −0,4375 → −0,3086"
+        fr: "0 → −0,5 → −0,25 → −0,4375 → −0,3086"
+        zh: "0 → −0,5 → −0,25 → −0,4375 → −0,3086"
+        ja: "0 → −0,5 → −0,25 → −0,4375 → −0,3086"
+      - es: "La órbita se mantiene cerca del origen: el punto está en el conjunto"
+        en: "The orbit stays near the origin: the point is in the set"
+        pt: "A órbita fica perto da origem: o ponto está no conjunto"
+        fr: "L'orbite reste près de l'origine : le point est dans l'ensemble"
+        zh: "轨道保持在原点附近：这个点属于集合"
+        ja: "軌道は原点の近くに留まる。この点は集合にある。"
+      - es: "Con c = 1 en cambio, la sucesión crece: 0 → 1 → 2 → 5 → 26"
+        en: "With c = 1 the sequence grows instead: 0 → 1 → 2 → 5 → 26"
+        pt: "Com c = 1 a sucessão cresce: 0 → 1 → 2 → 5 → 26"
+        fr: "Avec c = 1, la suite croît : 0 → 1 → 2 → 5 → 26"
+        zh: "而 c = 1 时数列增长：0 → 1 → 2 → 5 → 26"
+        ja: "c = 1 なら数列は増える。0 → 1 → 2 → 5 → 26"
+      - es: "Cada punto del plano es un c distinto: la imagen es un mapa completo"
+        en: "Every point of the plane is a different c: the picture is a full map"
+        pt: "Cada ponto do plano é um c distinto: a imagem é um mapa completo"
+        fr: "Chaque point du plan est un c différent : l'image est une carte complète"
+        zh: "平面上的每一点都是不同的 c：这幅图就是一张完整的地图"
+        ja: "平面のどの点も異なる c だ。この図は完全な地図になっている。"

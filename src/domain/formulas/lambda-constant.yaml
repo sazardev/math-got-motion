@@ -1,0 +1,279 @@
+id: lambda-constant
+title:
+  es: Constante Lambda
+  en: The Lambda Constant
+  pt: A Constante Lambda
+  fr: La Constante Lambda
+  zh: Lambda 常数
+  ja: ラムダ定数
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: hl-lambda
+    type: constant
+    value: HLλ
+    explanation:
+      es: "HL Lambda: la constante que el anillo lambda del juego muestra en la pantalla."
+      en: "HL Lambda: the constant the game's lambda ring shows on screen."
+      pt: "HL Lambda: a constante que o anel lambda do jogo mostra na tela."
+      fr: "HL Lambda : la constante affichée par l'anneau lambda du jeu."
+      zh: "HL Lambda：游戏的 lambda 环在屏幕上显示的常数。"
+      ja: "HL Lambda：ゲームの lambda リングが画面に表示する定数。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: value-mean
+    type: number
+    value: "1.07"
+    explanation:
+      es: "El valor central que aparece en pantalla, siempre el mismo en cada partida."
+      en: The central value on screen, always the same in every run.
+      pt: "O valor central na tela, sempre o mesmo em cada partida."
+      fr: "La valeur centrale à l'écran, toujours la même à chaque partie."
+      zh: "屏幕上的中心值，每一局都相同。"
+      ja: "画面に出る中心値。どのプレイでも同じ値になる。"
+  - id: plus-minus
+    type: operator
+    value: "±"
+    explanation:
+      es: "La incertidumbre que el juego nunca baja: el valor solo vale hasta ese margen."
+      en: "The uncertainty the game never lowers: the value only holds within that margin."
+      pt: "A incerteza que o jogo nunca reduz: o valor só vale até essa margem."
+      fr: "L'incertitude que le jeu ne réduit jamais : la valeur ne tient que dans cette marge."
+      zh: "游戏从不缩小的误差：数值只在这个范围内成立。"
+      ja: "ゲームが減らさない誤差。値はこの幅でしか成り立たない。"
+  - id: value-error
+    type: number
+    value: "0.04"
+    explanation:
+      es: "El margen de error del instrumento, en las mismas unidades."
+      en: The instrument's error margin, in the same units.
+      pt: "A margem de erro do instrumento, nas mesmas unidades."
+      fr: "La marge d'erreur de l'appareil, dans les mêmes unités."
+      zh: "仪器的误差范围，单位相同。"
+      ja: "装置の誤差範囲。同じ単位。"
+  - id: exponent
+    type: superscript
+    value: "-38"
+    explanation:
+      es: "El exponente: treinta y ocho órdenes de magnitud por debajo de la unidad."
+      en: "The exponent: thirty-eight orders of magnitude below one."
+      pt: "O expoente: trinta e oito ordens de grandeza abaixo da unidade."
+      fr: "L'exposant : trente-huit ordres de grandeur en dessous de l'unité."
+      zh: "指数：比单位低三十八个数量级。"
+      ja: "指数。単位より38桁小さい。"
+  - id: units
+    type: constant
+    value: kg·m/s
+    explanation:
+      es: "Las unidades que el juego imprime: kilogramo metro por segundo, cantidad de movimiento."
+      en: "The units the game prints: kilogram metre per second, linear momentum."
+      pt: "As unidades que o jogo imprime: quilograma metro por segundo, momento linear."
+      fr: "Les unités affichées par le jeu : kilogramme mètre par seconde, quantité de mouvement."
+      zh: "游戏印出的单位：千克·米/秒，即动量。"
+      ja: "ゲームが表示する単位。キログラム・メートル/秒、運動量。"
+context:
+  author:
+    es: Valve Corporation
+    en: Valve Corporation
+    pt: Valve Corporation
+    fr: Valve Corporation
+    zh: Valve 公司
+    ja: Valve Corporation
+  era:
+    es: Estados Unidos, 1998 · libro Lambda(subject), 2007
+    en: United States, 1998 · Lambda(subject) book, 2007
+    pt: Estados Unidos, 1998 · livro Lambda(subject), 2007
+    fr: États-Unis, 1998 · livre Lambda(subject), 2007
+    zh: 美国，1998年·Lambda(subject) 一书，2007年
+    ja: アメリカ、1998年・Lambda(subject) 2007年
+  history:
+    es: >-
+      En el universo de Half-Life, el anillo lambda del traje del HEV muestra siempre el mismo
+      número, 1,07 ± 0,04 × 10⁻³⁸ kg·m/s, y la incertidumbre nunca baja. Valve nunca presenta
+      esa cifra como una constante real, pero el juego insinúa HLλ = h/(m c²). Al comprobar las
+      unidades, ese cociente da un tiempo y no una cantidad de movimiento. El desajuste es
+      deliberado, y sigue siendo un buen ejercicio de análisis dimensional.
+    en: >-
+      In the Half-Life universe, the lambda ring on the HEV suit always shows the same number,
+      1.07 ± 0.04 × 10⁻³⁸ kg·m/s, and the uncertainty never shrinks. Valve never presents that
+      figure as a real constant, but the game hints at HLλ = h/(m c²). Check the units and the
+      quotient comes out as a time, not a momentum. The mismatch is deliberate, and it is still a
+      good exercise in dimensional analysis.
+    pt: >-
+      No universo de Half-Life, o anel lambda do traje do HEV mostra sempre o mesmo número,
+      1,07 ± 0,04 × 10⁻³⁸ kg·m/s, e a incerteza nunca diminui. A Valve nunca apresenta esse
+      valor como uma constante real, mas o jogo insinua HLλ = h/(m c²). Ao conferir as unidades,
+      o quociente dá um tempo, não um momento linear. O desencontro é proposital e continua sendo
+      um bom exercício de análise dimensional.
+    fr: >-
+      Dans l'univers de Half-Life, l'anneau lambda de la combinaison HEV affiche toujours le même
+      nombre, 1,07 ± 0,04 × 10⁻³⁸ kg·m/s, et l'incertitude ne diminue jamais. Valve ne présente
+      jamais ce chiffre comme une constante réelle, mais le jeu laisse entendre HLλ = h/(m c²).
+      En vérifiant les unités, ce quotient donne un temps et non une quantité de mouvement. Le
+      décalage est voulu, et reste un bon exercice d'analyse dimensionnelle.
+    zh: >-
+      在 Half-Life 的宇宙里，HEV 护甲上的 lambda 环始终显示同一个数字：1.07 ± 0.04 × 10⁻³⁸ kg·m/s，
+      而这个误差从不缩小。Valve 从未把这个数值当作真实常数，但游戏暗示 HLλ = h/(m c²)。核对单位
+      就会发现，这个商给出的是时间而不是动量。这个不一致是刻意为之，而且仍然是一道不错的
+      量纲分析练习。
+    ja: >-
+      Half-Life の宇宙では、HEV スーツの lambda リングはいつも同じ数字 1.07 ± 0.04 × 10⁻³⁸ kg·m/s
+      を表示し、不確かさは決して縮まらない。Valve がその値を実在する定数として説明することはないが、
+      ゲームは HLλ = h/(m c²) をにおわせる。単位を調べると、その商は運動量ではなく
+      時間になる。このズレは意図的で、次元解析の練習としてそのまま面白い。
+  timeline:
+    - year: "1998"
+      label:
+        es: Half-Life publica su logotipo, el triángulo lambda invertido.
+        en: Half-Life releases its logo, the inverted lambda triangle.
+        pt: Half-Life divulga seu logotipo, o triângulo lambda invertido.
+        fr: Half-Life publie son logo, le triangle lambda inversé.
+        zh: Half-Life 发布其标志：倒置的 lambda 三角。
+        ja: Half-Life がロゴを公開。逆向きの lambda 三角形。
+    - year: "1998"
+      label:
+        es: El anillo lambda aparece en el traje del HEV con su valor fijo.
+        en: The lambda ring appears on the HEV suit with its fixed value.
+        pt: "O anel lambda aparece no traje do HEV com seu valor fixo."
+        fr: L'anneau lambda apparaît sur la combinaison HEV avec sa valeur fixe.
+        zh: lambda 环出现在 HEV 护甲上，数值固定不变。
+        ja: lambda リングが HEV スーツに固定値で表示される。
+    - year: "2007"
+      label:
+        es: Valve publica Lambda(subject), la antología que lleva la broma al mundo real.
+        en: Valve publishes Lambda(subject), the anthology that takes the joke into the real world.
+        pt: Valve publica Lambda(subject), a antologia que leva a piada ao mundo real.
+        fr: Valve publie Lambda(subject), l'anthologie qui emmène la blague dans le monde réel.
+        zh: Valve 出版 Lambda(subject)，把这个玩笑带进真实世界。
+        ja: Valve が Lambda(subject) を出版。冗談を現実世界に持ち込んだ。
+    - year: "2011"
+      label:
+        es: "Portal 2 lleva el logotipo lambda a un mundo de física real."
+        en: Portal 2 takes the lambda logo into a world of real physics.
+        pt: "Portal 2 leva o logotipo lambda a um mundo de física real."
+        fr: "Portal 2 emmène le logo lambda dans un monde de physique réelle."
+        zh: "《Portal 2》把 lambda 标志带进了真实物理的世界。"
+        ja: "『Portal 2』が lambda ロゴを現実の物理学の世界へ持ち込む。"
+  useCases:
+    - title:
+        es: Análisis dimensional
+        en: Dimensional analysis
+        pt: Análise dimensional
+        fr: Analyse dimensionnelle
+        zh: 量纲分析
+        ja: 次元解析
+      description:
+        es: >-
+          El chiste se detecta comprobando unidades: h/(m c²) tiene dimensiones de tiempo,
+          así que la fórmula del juego está mal a propósito.
+        en: >-
+          The joke shows up when you check units: h/(m c²) has dimensions of time, so the
+          game's formula is wrong on purpose.
+        pt: >-
+          A piada aparece quando você confere as unidades: h/(m c²) tem dimensão de tempo,
+          então a fórmula do jogo está errada de propósito.
+        fr: >-
+          La blague apparaît quand on vérifie les unités : h/(m c²) a les dimensions d'un
+          temps, donc la formule du jeu est fausse exprès.
+        zh: >-
+          只要核对单位，玩笑就露馅了：h/(m c²) 的量纲是时间，所以游戏的公式是故意写错的。
+        ja: >-
+          単位を調べれば冗談が見える。h/(m c²) は時間の次元なので、ゲームの式は
+          わざと間違っている。
+    - title:
+        es: Abreviatura de ciencia ficción
+        en: Science-fiction shorthand
+        pt: Atalho de ficção científica
+        fr: Abréviation de science-fiction
+        zh: 科幻作品的简写
+        ja: SF の省略形
+      description:
+        es: >-
+          Los fans citan HLλ para decir "esto es una locura de física" en una sola frase.
+        en: Fans quote HLλ to say "this is physics madness" in one breath.
+        pt: "Os fãs citam HLλ para dizer «isso é loucura de física» numa frase."
+        fr: "Les fans citent HLλ pour dire « c'est de la folie physique » en une phrase."
+        zh: 粉丝引用 HLλ，一句话就说出了"这就是物理学式的疯狂"。
+        ja: ファンは HLλ を引用して「これは物理学的な狂気だ」を一息で表す。
+    - title:
+        es: El logotipo de Valve
+        en: Valve's logo
+        pt: O logotipo da Valve
+        fr: Le logo de Valve
+        zh: Valve 的标志
+        ja: Valve のロゴ
+      description:
+        es: >-
+          El triángulo invertido viene de los diagramas de desintegración de partículas: el
+          mismo gesto con el que la física nuclear dibuja un decays.
+        en: >-
+          The inverted triangle comes from particle decay diagrams: the same mark nuclear
+          physics uses to draw a decay.
+        pt: >-
+          O triângulo invertido vem dos diagramas de desintegração de partículas: o mesmo
+          sinal que a física nuclear usa para desenhar um decaimento.
+        fr: >-
+          Le triangle inversé vient des schémas de désintégration : le même signe que la
+          physique nucléaire utilise pour représenter une désintégration.
+        zh: >-
+          倒置的三角形来自粒子衰变图示：核物理画衰变时用的正是这个符号。
+        ja: >-
+          逆向きの三角形は粒子崩壊の図から来ている。核物理学が崩壊を描くとき使う記号と同じ。
+  example:
+    title:
+      es: Lo que dice el anillo
+      en: What the ring says
+      pt: O que o anel diz
+      fr: Ce que dit l'anneau
+      zh: 环上显示的内容
+      ja: リングに表示されるもの
+    lines:
+      - es: "El anillo muestra 1,07 ± 0,04 × 10⁻³⁸ kg·m/s"
+        en: "The ring shows 1.07 ± 0.04 × 10⁻³⁸ kg·m/s"
+        pt: "O anel mostra 1,07 ± 0,04 × 10⁻³⁸ kg·m/s"
+        fr: "L'anneau affiche 1,07 ± 0,04 × 10⁻³⁸ kg·m/s"
+        zh: "环上显示 1.07 ± 0.04 × 10⁻³⁸ kg·m/s"
+        ja: "リングには 1.07 ± 0.04 × 10⁻³⁸ kg·m/s と表示される"
+      - es: "El juego insinúa HLλ = h / (m · c²)"
+        en: "The game hints at HLλ = h / (m · c²)"
+        pt: "O jogo insinua HLλ = h / (m · c²)"
+        fr: "Le jeu laisse entendre HLλ = h / (m · c²)"
+        zh: "游戏暗示 HLλ = h / (m · c²)"
+        ja: "ゲームは HLλ = h / (m · c²) をにおわせる"
+      - es: "h = 6,626 × 10⁻³⁴ J·s y m = 2,27 × 10⁻²⁵ kg"
+        en: "h = 6.626 × 10⁻³⁴ J·s and m = 2.27 × 10⁻²⁵ kg"
+        pt: "h = 6,626 × 10⁻³⁴ J·s e m = 2,27 × 10⁻²⁵ kg"
+        fr: "h = 6,626 × 10⁻³⁴ J·s et m = 2,27 × 10⁻²⁵ kg"
+        zh: "h = 6.626 × 10⁻³⁴ J·s，m = 2.27 × 10⁻²⁵ kg"
+        ja: "h = 6.626 × 10⁻³⁴ J·s、m = 2.27 × 10⁻²⁵ kg"
+      - es: "h / (m · c²) ≈ 3,25 × 10⁻²⁶ s, no 1,07 × 10⁻³⁸"
+        en: "h / (m · c²) ≈ 3.25 × 10⁻²⁶ s, not 1.07 × 10⁻³⁸"
+        pt: "h / (m · c²) ≈ 3,25 × 10⁻²⁶ s, não 1,07 × 10⁻³⁸"
+        fr: "h / (m · c²) ≈ 3,25 × 10⁻²⁶ s, pas 1,07 × 10⁻³⁸"
+        zh: "h / (m · c²) ≈ 3.25 × 10⁻²⁶ s，而不是 1.07 × 10⁻³⁸"
+        ja: "h / (m · c²) ≈ 3.25 × 10⁻²⁶ s であって、1.07 × 10⁻³⁸ ではない"
+      - es: "Las unidades de ese cociente son segundos, no kg·m/s"
+        en: "The units of that quotient are seconds, not kg·m/s"
+        pt: "As unidades desse quociente são segundos, não kg·m/s"
+        fr: "Les unités de ce quotient sont des secondes, pas des kg·m/s"
+        zh: "这个商的单位是秒，而不是 kg·m/s"
+        ja: "その商の単位は秒であって、kg·m/s ではない"
+      - es: "El número en pantalla es ficción; el desajuste es el chiste"
+        en: "The on-screen number is fiction; the mismatch is the joke"
+        pt: "O número na tela é ficção; o desencontro é a piada"
+        fr: "Le nombre à l'écran est fictif ; le décalage est la blague"
+        zh: "屏幕上的数字是虚构的；不一致正是玩笑所在"
+        ja: "画面に出る数字はフィクションで、ズレそのものが冗談になる。"

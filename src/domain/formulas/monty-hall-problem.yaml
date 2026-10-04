@@ -1,0 +1,299 @@
+id: monty-hall-problem
+
+title:
+  es: Problema de Monty Hall
+  en: Monty Hall problem
+  pt: Problema de Monty Hall
+  fr: Problème de Monty Hall
+  zh: 蒙提霍尔问题
+  ja: Monty Hallの問題
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率と統計
+nodes:
+  - id: p-switch
+    type: variable
+    value: P(cam)
+    explanation:
+      es: "P(cam): la probabilidad de ganar el premio si cambias de puerta."
+      en: "P(switch): the probability of winning the prize if you switch doors."
+      pt: "P(cam): a probabilidade de ganhar se você trocar de porta."
+      fr: "P(cam): la probabilité de gagner si vous changez de porte."
+      zh: "P(cam)：换门后赢得奖品的概率。"
+      ja: "P(cam)：扉を切り替えた場合に勝つ確率。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: prob-wrong
+    type: number
+    value: 2/3
+    explanation:
+      es: "2/3: la probabilidad de fallar en la primera elección."
+      en: "2/3: the probability of being wrong on the first pick."
+      pt: "2/3: a probabilidade de errar na primeira escolha."
+      fr: "2/3 : la probabilité de se tromper au premier choix."
+      zh: "2/3：第一次就选错的概率。"
+      ja: "2/3：初回に外す確率。"
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: "Multiplicación: fallaste, así que la otra puerta es la buena."
+      en: "Multiplication: you were wrong, so the other door is the right one."
+      pt: "Multiplicação: você errou, então a outra porta é a correta."
+      fr: "Multiplication : vous vous êtes trompé, donc l'autre porte est la bonne."
+      zh: "相乘：既然选错，另一扇门必然正确。"
+      ja: "乗算。外した以上、もう一方の扉が正解になる。"
+  - id: certain
+    type: number
+    value: "1"
+    explanation:
+      es: "1: seguridad total de acertar en ese caso."
+      en: "1: certainty of being right in that case."
+      pt: "1: certeza de acertar nesse caso."
+      fr: "1 : certitude d'avoir juste dans ce cas."
+      zh: "1：在这种情况下必然正确。"
+      ja: "1：その状況では確実に正解。"
+  - id: plus
+    type: operator
+    value: "+"
+    explanation:
+      es: "Suma de los dos casos posibles."
+      en: Adding the two possible cases.
+      pt: Somando os dois casos possíveis.
+      fr: "Addition des deux cas possibles."
+      zh: 把两种可能相加。
+      ja: 2つの場合を足し合わせる。
+  - id: prob-right
+    type: number
+    value: 1/3
+    explanation:
+      es: "1/3: la probabilidad de acertar en la primera elección."
+      en: "1/3: the probability of being right on the first pick."
+      pt: "1/3: a probabilidade de acertar na primeira escolha."
+      fr: "1/3 : la probabilité d'avoir juste au premier choix."
+      zh: "1/3：第一次就选对的概率。"
+      ja: "1/3：初回に当たりを選ぶ確率。"
+  - id: dot-two
+    type: operator
+    value: "·"
+    explanation:
+      es: "Multiplicación: acertaste, así que cambiar te hace perder."
+      en: "Multiplication: you were right, so switching makes you lose."
+      pt: "Multiplicação: você acertou, então trocar faz você perder."
+      fr: "Multiplication : vous aviez juste, donc changer vous fait perdre."
+      zh: "相乘：既然选对，换门反而会输。"
+      ja: "乗算。当たっていたなら、切り替えると負ける。"
+  - id: zero
+    type: number
+    value: "0"
+    explanation:
+      es: "0: cambiar asegura por completo la derrota."
+      en: "0: switching guarantees the loss."
+      pt: "0: trocar garante a derrota."
+      fr: "0 : changer garantit la perte."
+      zh: "0：换门等于必输。"
+      ja: "0：切り替えると必ず負ける。"
+  - id: equals-two
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: result
+    type: number
+    value: 2/3
+    explanation:
+      es: "2/3: cambiar duplica tus probabilidades frente a quedarte con 1/3."
+      en: "2/3: switching doubles your odds against staying at 1/3."
+      pt: "2/3: trocar dobra suas chances contra ficar com 1/3."
+      fr: "2/3 : changer double vos chances face à rester à 1/3."
+      zh: "2/3：换门把胜算翻倍，而守住只有 1/3。"
+      ja: "2/3：切り替えると、1/3 のままの場合の2倍になる。"
+context:
+  author:
+    es: Sam Selvin
+    en: Sam Selvin
+    pt: Sam Selvin
+    fr: Sam Selvin
+    zh: 山姆·塞尔文
+    ja: サム・セルビン
+  era:
+    es: Estados Unidos, 1965 · popularizado en 1975
+    en: United States, 1965 · popularised in 1975
+    pt: Estados Unidos, 1965 · popularizado em 1975
+    fr: États-Unis, 1965 · popularisé en 1975
+    zh: 美国，1965年·1975 年推广
+    ja: アメリカ、1965年・1975年に普及
+  history:
+    es: >-
+      Sam Selvin planteó el problema en 1965 en una carta al American Mathematical Monthly.
+      Se hizo popular décadas después, cuando el presentador Bob Stewart lo usó en su
+      columna y John Tukey le dio el nombre. The Price Is Right lo ha usado durante años como
+      juego de apertura, y experimentos con personas reales muestran que entre el 70 % y el
+      85 % cambian de puerta cuando se les explica la solución.
+    en: >-
+      Sam Selvin posed the problem in 1965 in a letter to the American Mathematical Monthly. It
+      became widely known decades later, when the broadcaster Bob Stewart used it in his column
+      and John Tukey gave it its name. The Price Is Right has used it as a studio audience game
+      for years, and experiments with real subjects show that between 70 % and 85 % of people
+      switch doors once the solution is explained.
+    pt: >-
+      Sam Selvin enunciou o problema em 1965 numa carta para o American Mathematical Monthly.
+      Ele ficou amplamente conhecido décadas depois, quando o apresentador Bob Stewart o usou em
+      sua coluna e John Tukey lhe deu o nome. The Price Is Right o usa como brincadeira de
+      plateia há anos, e experimentos com sujeitos reais mostram que entre 70% e 85% das
+      pessoas trocam de porta depois de conhecer a solução.
+    fr: >-
+      Sam Selvin a posé le problème en 1965 dans une lettre à l'American Mathematical Monthly.
+      Il est devenu célèbre des décennies plus tard, lorsque l'animateur Bob Stewart l'a
+      utilisé dans sa colonne et que John Tukey lui a donné son nom. The Price Is Right s'en
+      sert depuis des années comme jeu de plateau, et des expériences sur de vrais sujets
+      montrent que 70 % à 85 % des personnes changent de porte une fois la solution comprise.
+    zh: >-
+      1965 年，萨姆·塞尔文在《美国数学月刊》的一封信中提出了这个问题。几十年后它才广为人知：
+      主持人鲍勃·斯图尔特在专栏中使用它，约翰·图基为它取了名字。《价格猜猜猜》多年来把它当作
+      现场观众游戏，而对真实被试的实验表明，在解释了原理之后，有 70% 到 85% 的人会改选另一扇门。
+    ja: >-
+      1965年、SAM Selvin は American Mathematical Monthly への書簡でこの問題を提起した。
+      何十年も一般的になったのは、アナウンサー Bob Stewart がコラムで使ったことと、
+      John Tukey が名前をつけたことによる。The Price Is Right は長年にわたり視聴者参加型の
+      ゲームとして使っている。実際の被験者による実験では、解説のあと70%から85%の人が
+      扉を切り替える。
+  timeline:
+    - year: "1965"
+      label:
+        es: Selvin plantea el problema en una carta al Monthly.
+        en: Selvin raises the problem in a letter to the Monthly.
+        pt: Selvin levanta o problema em uma carta para o Monthly.
+        fr: Selvin pose le problème dans une lettre au Monthly.
+        zh: 塞尔文在致《月刊》的信中提出该问题。
+        ja: Selvin が Monthly への書簡で問題を提起。
+    - year: "1975"
+      label:
+        es: Tukey lo bautiza Monty Hall problem y se hace popular.
+        en: Tukey names it the Monty Hall problem and it spreads.
+        pt: Tukey batiza-o de Monty Hall problem e ele se espalha.
+        fr: Tukey le baptise Monty Hall problem et il se répand.
+        zh: 图基给它取名"蒙提霍尔问题"，随即广为流传。
+        ja: Tukey が「Monty Hall problem」と名付け、普及する。
+    - year: "1986"
+      label:
+        es: The Price Is Right lo convierte en juego de platea.
+        en: The Price Is Right turns it into a studio audience game.
+        pt: The Price Is Right transforma-o em jogo de plateia.
+        fr: The Price Is Right en fait un jeu de plateau.
+        zh: 《价格猜猜猜》把它变成观众参与的游戏。
+        ja: The Price Is Right が視聴者参加ゲームにする。
+    - year: "2015"
+      label:
+        es: Un ensayo a ciegas con personas reales mide cuánto cambia la elección.
+        en: A blind study with real people measures how much choices move.
+        pt: Um ensaio cego com pessoas reais mede quanto a escolha muda.
+        fr: Une étude en aveugle sur des personnes réelles mesure le déplacement des choix.
+        zh: 一项针对真人的盲测研究测量了选择改变的幅度。
+        ja: 盲検で実測した被験者による研究が選択肢の変化を測定。
+  useCases:
+    - title:
+        es: Enseñar inferencia
+        en: Teaching inference
+        pt: Ensinar inferência
+        fr: Enseigner l'inférence
+        zh: 推断教学
+        ja: 推論の教育
+      description:
+        es: >-
+          Es el contraejemplo estándar de que más datos no siempre equivalen a mejor
+          decisión.
+        en: >-
+          It is the standard counterexample to the idea that more data always means a better
+          decision.
+        pt: >-
+          É o contraexemplo padrão de que mais dados nem sempre significam uma decisão melhor.
+        fr: >-
+          C'est le contre-exemple standard au fait que plus de données garantissent une meilleure
+          décision.
+        zh: >-
+          这是"数据越多决策越好"这一说法最标准的反例。
+        ja: >-
+          データが多いほど判断が良くなるという主張の、標準的な反例になっている。
+    - title:
+        es: Concursos de televisión
+        en: Game shows
+        pt: Programas de quizzes
+        fr: Émissions de télévision
+        zh: 电视问答节目
+        ja: クイズ番組
+      description:
+        es: >-
+          Un formato de conocimiento repetido en todo el mundo desde los años 80.
+        en: >-
+          A knowledge format repeated worldwide since the 1980s.
+        pt: >-
+          Um formato de conhecimento repetido no mundo todo desde os anos 1980.
+        fr: >-
+          Un format de connaissances répété dans le monde entier depuis les années 1980.
+        zh: >-
+          自 1980 年代起在全球反复出现的知识类节目形式。
+        ja: >-
+          1980年代から世界中で繰り返されてきたクイズ形式。
+  example:
+    title:
+      es: Con las tres puertas
+      en: With the three doors
+      pt: Com as três portas
+      fr: Avec les trois portes
+      zh: 三扇门的情形
+      ja: 3扉の場合
+    lines:
+      - es: "El concursante elige al azar: P(acierto inicial) = 1/3"
+        en: "The contestant picks at random: P(first guess) = 1/3"
+        pt: "O participante escolhe ao acaso: P(acerto inicial) = 1/3"
+        fr: "Le candidat choisit au hasard : P(premier choix) = 1/3"
+        zh: "选手随机选择：P(第一次选中) = 1/3"
+        ja: "選択はランダム。P(初回正解) = 1/3"
+      - es: "El presentador abre SIEMPRE una puerta con cabra"
+        en: "The host ALWAYS opens a door showing a goat"
+        pt: "O apresentador SEMPRE abre uma porta com uma cabra"
+        fr: "L'animateur ouvre TOUJOURS une porte montrant une chèvre"
+        zh: "主持人总是打开一扇有山羊的门"
+        ja: "進行者は常に山羊の扉を開ける"
+      - es: "Si acertaste, no queda ninguna puerta con cabra que abrir"
+        en: "If you were right, no goat door is left to open"
+        pt: "Se você acertou, não sobra nenhuma porta com cabra"
+        fr: "Si vous avez eu juste, aucune porte à chèvre ne reste"
+        zh: "如果你选对了，就没有山羊门可开"
+        ja: "正解なら開ける山羊の扉は残らない"
+      - es: "Si fallaste, abre la que no elegiste: con total seguridad"
+        en: "If you were wrong, he opens the one you did not pick: with certainty"
+        pt: "Se você errou, ele abre a que você não escolheu: com certeza"
+        fr: "Si vous avez eu tort, il ouvre celle que vous n'aviez pas choisie : 1/2"
+        zh: "如果你选错了，他就打开你没选的那扇：必然如此"
+        ja: "外していれば選んでいない扉を必ず開ける"
+      - es: "Cambiar gana = (2/3) · 1 + (1/3) · 0 = 2/3"
+        en: "Switching wins = (2/3) · 1 + (1/3) · 0 = 2/3"
+        pt: "Trocar ganha = (2/3) · 1 + (1/3) · 0 = 2/3"
+        fr: "Changer gagne = (2/3) · 1 + (1/3) · 0 = 2/3"
+        zh: "换门获胜 = (2/3) · 1 + (1/3) · 0 = 2/3"
+        ja: "切り替えると勝つ = (2/3) · 1 + (1/3) · 0 = 2/3"
+      - es: "Quedarse gana = 1/3: cambiar duplica tus probabilidades"
+        en: "Staying wins = 1/3: switching doubles your odds"
+        pt: "Ficar ganha = 1/3: trocar dobra suas chances"
+        fr: "Rester donne = 1/3 : changer double vos chances"
+        zh: "不换门获胜 = 1/3：换门让概率翻倍"
+        ja: "そのままなら1/3。切り替えると2倍"

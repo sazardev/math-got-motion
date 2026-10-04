@@ -1,0 +1,282 @@
+id: twin-paradox-proper-time
+title:
+  es: Paradoja de los gemelos
+  en: Twin paradox
+  pt: Paradoxo dos gêmeos
+  fr: Paradoxe des jumeaux
+  zh: 孪生佯谬
+  ja: ツイン・パラドックス
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: dt-tau
+    type: variable
+    value: Δτ
+    explanation:
+      es: "Δτ: el tiempo que marca tu propio reloj, el tiempo propio."
+      en: "Δτ: the time your own watch records, the proper time."
+      pt: "Δτ: o tempo que o seu próprio relógio marca, o tempo próprio."
+      fr: "Δτ : le temps que votre propre montre compte, le temps propre."
+      zh: "Δτ：你自己手表记录的时间，即固有时。"
+      ja: "Δτ：自分の時計が測る時間、つまり固有時。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égale à.
+      zh: 等于。
+      ja: に等しい。
+  - id: dt
+    type: variable
+    value: Δt
+    explanation:
+      es: "Δt: el tiempo medido desde el marco donde tú te quedas quieto."
+      en: "Δt: the time measured in the frame where you stay put."
+      pt: "Δt: o tempo medido no referencial onde você fica parado."
+      fr: "Δt : le temps mesuré dans le référentiel où vous restez immobile."
+      zh: "Δt：在你保持静止的参考系中测得的时间。"
+      ja: "Δt：あなたが静止している座標系で測った時間。"
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: "Multiplicación: el tiempo propio es el tiempo del marco por un factor."
+      en: "Multiplication: proper time is frame time times a factor."
+      pt: "Multiplicação: o tempo próprio é o tempo do referencial vezes um fator."
+      fr: "Multiplication : le temps propre est le temps du référentiel fois un facteur."
+      zh: "相乘：固有时等于参考系时间乘以一个因子。"
+      ja: "乗算。固有時は座標系の時間に因子を掛けたもの。"
+  - id: sqrt
+    type: operator
+    value: √
+    explanation:
+      es: "Raíz cuadrada: el factor es la raíz de lo que queda al quitar la velocidad."
+      en: "Square root: the factor is the root of what is left once the speed is removed."
+      pt: "Raiz quadrada: o fator é a raiz do que sobra depois de tirar a velocidade."
+      fr: "Racine carrée : le facteur est la racine de ce qui reste une fois la vitesse retirée."
+      zh: "平方根：因子是去掉速度项后剩余部分的平方根。"
+      ja: "平方根。因子は速度を除いた残りの平方根である。"
+  - id: radicand
+    type: variable
+    value: 1−v²/c²
+    explanation:
+      es: "1 menos v al cuadrado sobre c al cuadrado, con v la velocidad y c la luz."
+      en: "1 minus v squared over c squared, with v the speed and c the speed of light."
+      pt: "1 menos v ao quadrado sobre c ao quadrado, com v a velocidade e c a luz."
+      fr: "1 moins v au carré sur c au carré, avec v la vitesse et c la célérité."
+      zh: "1 减去 v 的平方除以 c 的平方，v 是速度，c 是光速。"
+      ja: "1 から v の二乗を c の二乗で割ったもの。v は速度、c は光速。"
+context:
+  author:
+    es: Paul Langevin
+    en: Paul Langevin
+    pt: Paul Langevin
+    fr: Paul Langevin
+    zh: 保罗·朗之万
+    ja: ポール・ランジアン
+  era:
+    es: Francia, 1911 · relatividad especial desde 1905
+    en: France, 1911 · special relativity since 1905
+    pt: França, 1911 · relatividade especial desde 1905
+    fr: France, 1911 · relativité restreinte depuis 1905
+    zh: 法国，1911年·狭义相对论自 1905 年起
+    ja: フランス、1911年・特殊相対性理論は1905年から
+  history:
+    es: >-
+      Paul Langevin formuló el rompecabezas en 1911: si un gemelo parte de viaje y regresa,
+      ¿cuál de los dos envejece más? Durante décadas se respondió que faltaba información,
+      hasta que se entendió que el gemelo viajero cambia de marco de referencia al acelerar.
+      La respuesta es geométrica: cada gemelo recorre una línea de mundo distinta y mide su
+      propia longitud con su propio reloj. Así el tiempo propio quedó como la longitud de una
+      trayectoria en el espacio-tiempo.
+    en: >-
+      Paul Langevin posed the puzzle in 1911: if one twin travels away and comes back, which
+      one ages more? For decades the answer blamed missing information, until it became
+      clear that the travelling twin changes reference frame as he accelerates. The answer is
+      geometric: each twin follows a different worldline and measures its own length with
+      their own clock. Proper time then became the length of a path in spacetime.
+    pt: >-
+      Paul Langevin formulou o quebra-cabeça em 1911: se um gêmeo parte numa viagem e volta,
+      qual dos dois envelhece mais? Durante décadas a resposta foi que faltava informação,
+      até se entender que o gêmeo viajante troca de referencial ao acelerar. A resposta é
+      geométrica: cada gêmeo percorre uma linha de mundo diferente e mede o próprio
+      comprimento com o próprio relógio. Assim o tempo próprio virou o comprimento de um
+      caminho no espaço-tempo.
+    fr: >-
+      Paul Langevin a posé l'énigme en 1911 : si un jumeau part en voyage et revient, lequel
+      vieillit le plus ? Pendant des décennies, on a répondu qu'il manquait de
+      l'information, jusqu'à comprendre que le jumeau voyageur change de référentiel en
+      accélérant. La réponse est géométrique : chaque jumeau parcourt une ligne d'univers
+      différente et mesure sa propre longueur avec sa propre montre. Le temps propre est
+      ainsi devenu la longueur d'un chemin dans l'espace-temps.
+    zh: >-
+      保罗·朗之万在 1911 年提出了这个谜题：如果一个双胞胎出远门再回来，哪一个老得更多？
+      几十年里人们都认为缺少信息，直到明白旅行的那个双胞胎在加速时改变了参考系。答案
+      是几何的：两人走的是不同的世界线，各自在自己的时钟上量出自己那条线的长度。于是
+      固有时成了时空中一条路径的长度。
+    ja: >-
+      ポール・ランジアンが 1911年に出した問題である。双の一人が旅をして戻ってきたら、
+      どちらの方がよく老いるのか。数十年間は情報が足りないからだと答えられていたが、
+      旅した側が加速することで座標系を取り替えることに気づいてから、答えは幾何に
+      なった。二人は別の世界線を進み、それぞれの時計で自分の線の長さを測る。
+      固有時とは、時空の中の道の長さのことである。
+  timeline:
+    - year: "1905"
+      label:
+        es: Einstein publica la relatividad especial.
+        en: Einstein publishes special relativity.
+        pt: Einstein publica a relatividade especial.
+        fr: Einstein publie la relativité restreinte.
+        zh: 爱因斯坦发表狭义相对论。
+        ja: アインスタインが特殊相対性理論を公表。
+    - year: "1911"
+      label:
+        es: Langevin formula la paradoja de los gemelos.
+        en: Langevin states the twin paradox.
+        pt: Langevin enuncia o paradoxo dos gêmeos.
+        fr: Langevin énonce le paradoxe des jumeaux.
+        zh: 朗之万提出孪生佯谬。
+        ja: ランジアンがツイン・パラドックスを提示。
+    - year: "1939"
+      label:
+        es: Dingle y otros discuten si la aceleración rompe la simetría.
+        en: Dingle and others argue whether acceleration breaks the symmetry.
+        pt: Dingle e outros discutem se a aceleração quebra a simetria.
+        fr: Dingle et d'autres débattent du rôle de l'accélération.
+        zh: Dingle 等人讨论加速度是否打破对称性。
+        ja: Dingle らが加速が対称性を破るか論じた。
+    - year: "1971"
+      label:
+        es: El tiempo propio se describe como longitud de una línea de mundo.
+        en: Proper time is described as the length of a worldline.
+        pt: "O tempo próprio é descrito como o comprimento de uma linha de mundo."
+        fr: "Le temps propre est décrit comme la longueur d'une ligne d'univers."
+        zh: 固有时被描述为一条世界线的长度。
+        ja: 固有時は世界線の長さとして説明される。
+  useCases:
+    - title:
+        es: Relojes de satélite
+        en: Satellite clocks
+        pt: Relógios de satélite
+        fr: Horloges satellitaires
+        zh: 卫星时钟
+        ja: 衛星時計
+      description:
+        es: >-
+          Los satélites de GPS viajan a casi 4 km/s y pierden unos 7 microsegundos al día
+          por dilatación. Sin esa corrección, el sistema perdería precisión en minutos.
+        en: >-
+          GPS satellites travel at nearly 4 km/s and lose about 7 microseconds a day to
+          dilation. Without that correction the system would drift within minutes.
+        pt: >-
+          Os satélites do GPS viajam a quase 4 km/s e perdem cerca de 7 microssegundos por
+          dia por dilatação. Sem essa correção, o sistema perderia precisão em minutos.
+        fr: >-
+          Les satellites GPS vont à près de 4 km/s et perdent environ 7 microsecondes par
+          jour de dilatation. Sans cette correction, le système dériverait en quelques
+          minutes.
+        zh: >-
+          GPS 卫星以近 4 km/s 飞行，每天因时间膨胀损失约 7 微秒。不做修正，系统几分钟内就会
+          漂移。
+        ja: >-
+          GPS 衛星は約 4 km/s で動き、膨張によって1日あたり約 7マイクロ秒を失う。この
+          補正がなければ、システムの誤差は数分で目標を超えてしまう。
+    - title:
+        es: Viajes a velocidad relativista
+        en: Relativistic travel
+        pt: Viagens em velocidade relativística
+        fr: Voyages à vitesse relativiste
+        zh: 相对论速度的旅行
+        ja: 相対論的な速度での旅行
+      description:
+        es: >-
+          El "vuelvo más joven" del cine no es un truco: es el resultado directo de esta
+          geometría. Quien acelera y regresa envejece menos que quien se quedó quieto.
+        en: >-
+          The "I came back younger" of science fiction is not a trick: it follows straight
+          from this geometry. Whoever accelerates and returns ages less than whoever stayed.
+        pt: >-
+          O "voltei mais jovem" da ficção científica não é truque: vem direto desta
+          geometria. Quem acelera e volta envelhece menos do quem ficou parado.
+        fr: >-
+          Le "je reviens plus jeune" de la science-fiction n'est pas une astuce : il découle
+          de cette géométrie. Celui qui accélère et revient vieillit moins que celui qui est
+          resté.
+        zh: >-
+          科幻里"我回来时更年轻"不是花招，而是这段几何的直接结果。加速并返回的人比留下的人
+          老得少。
+        ja: >-
+          SF の「帰って、年を取っていない」という設定は小手品ではなく、この幾何をそのまま
+           따른ものである。加速して帰ってきた人間は、動かなかった人間よりもよく老いない。
+    - title:
+        es: Longitud de una línea de mundo
+        en: Worldline length
+        pt: Comprimento de uma linha de mundo
+        fr: Longueur d'une ligne d'univers
+        zh: 世界线的长度
+        ja: 世界線の長さ
+      description:
+        es: >-
+          Leer el tiempo propio como longitud convierte el problema en geometría: dos
+          caminos distintos entre dos eventos tienen longitudes distintas.
+        en: >-
+          Reading proper time as length turns the puzzle into geometry: two different paths
+          between two events have different lengths.
+        pt: >-
+          Ler o tempo próprio como comprimento transforma o enigma em geometria: dois
+          caminhos distintos entre dois eventos têm comprimentos distintos.
+        fr: >-
+          Lire le temps propre comme une longueur transforme l'énigme en géométrie : deux
+          chemins différents entre deux événements ont des longueurs différentes.
+        zh: >-
+          把固有时读作长度，就把谜题变成了几何：两个事件之间的两条路径长度不同。
+        ja: >-
+          固有時を長さとして読むと、謎は幾何になる。二つの出来事のあいだの道が違えば、長さも
+          異なる。
+  example:
+    title:
+      es: Un viaje al 80 % de la luz
+      en: A trip at 80 % of light speed
+      pt: Uma viagem a 80 % da luz
+      fr: Un voyage à 80 % de la vitesse de la lumière
+      zh: 以 80% 光速旅行
+      ja: 光速の 80% での旅行
+    lines:
+      - es: "En la Tierra pasan 5 años: Δt = 5"
+        en: "Five years pass on Earth: Δt = 5"
+        pt: "Na Terra passam 5 anos: Δt = 5"
+        fr: "Cinq ans passent sur Terre : Δt = 5"
+        zh: "地球上过了 5 年：Δt = 5"
+        ja: "地球では 5 年が経過する。Δt = 5"
+      - es: "El viajero va a v = 0,8c"
+        en: "The traveller moves at v = 0.8c"
+        pt: "O viajante vai a v = 0,8c"
+        fr: "Le voyageur roule à v = 0,8c"
+        zh: "旅行者速度 v = 0,8c"
+        ja: "旅行者の速度は v = 0,8c"
+      - es: "1 − v²/c² = 1 − 0,64 = 0,36"
+        en: "1 − v²/c² = 1 − 0.64 = 0.36"
+        pt: "1 − v²/c² = 1 − 0,64 = 0,36"
+        fr: "1 − v²/c² = 1 − 0,64 = 0,36"
+        zh: "1 − v²/c² = 1 − 0,64 = 0,36"
+        ja: "1 − v²/c² = 1 − 0,64 = 0,36"
+      - es: "√0,36 = 0,6"
+        en: "√0.36 = 0.6"
+        pt: "√0,36 = 0,6"
+        fr: "√0,36 = 0,6"
+        zh: "√0,36 = 0,6"
+        ja: "√0,36 = 0,6"
+      - es: "Δτ = 5 · 0,6 = 3 años: el viajero llega 2 años más joven"
+        en: "Δτ = 5 · 0.6 = 3 years: the traveller returns 2 years younger"
+        pt: "Δτ = 5 · 0,6 = 3 anos: o viajante volta 2 anos mais jovem"
+        fr: "Δτ = 5 · 0,6 = 3 ans : le voyageur rentre 2 ans plus jeune"
+        zh: "Δτ = 5 · 0,6 = 3 年：旅行者回来时年轻 2 岁"
+        ja: "Δτ = 5 · 0,6 = 3 年。旅行者は 2 年分若返って帰る"
