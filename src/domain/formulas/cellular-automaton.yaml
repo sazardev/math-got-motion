@@ -1,0 +1,348 @@
+id: cellular-automaton
+title:
+  es: "Autómata celular: regla 30"
+  en: "Cellular automaton: rule 30"
+  pt: "Autômato celular: regra 30"
+  fr: "Automate cellulaire: règle 30"
+  zh: "元胞自动机：规则30"
+  ja: "セルラー・オートマトン：ルール30"
+category:
+  es: Informática
+  en: Computer science
+  pt: Informática
+  fr: Informatique
+  zh: 计算机科学
+  ja: コンピュータ科学
+nodes:
+  - id: a-next
+    type: variable
+    value: aᵢ′
+    explanation:
+      es: "aᵢ′: el valor de la casilla i en la generación siguiente."
+      en: "aᵢ′: the value of cell i in the next generation."
+      pt: "aᵢ′: o valor da célula i na geração seguinte."
+      fr: "aᵢ′ : la valeur de la case i à la génération suivante."
+      zh: "aᵢ′：第i个格子在下一代的值。"
+      ja: "aᵢ′：第iマスの、次の世代での値。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: a-left
+    type: variable
+    value: aᵢ₋₁
+    explanation:
+      es: "aᵢ₋₁: la casilla de la izquierda, el vecino anterior."
+      en: "aᵢ₋₁: the cell to the left, the previous neighbour."
+      pt: "aᵢ₋₁: a célula da esquerda, o vizinho anterior."
+      fr: "aᵢ₋₁ : la case de gauche, le voisin précédent."
+      zh: "aᵢ₋₁：左边的格子，即前一个邻居。"
+      ja: "aᵢ₋₁：左のマス。ひとつ前の隣人。"
+  - id: xor
+    type: operator
+    value: ⊕
+    explanation:
+      es: "⊕: la XOR, que devuelve 1 si las dos entradas difieren."
+      en: "⊕: XOR, which returns 1 if the two inputs differ."
+      pt: "⊕: o XOR, que devolve 1 se as duas entradas diferirem."
+      fr: "⊕ : le OU exclusif, qui renvoie 1 si les deux entrées diffèrent."
+      zh: "⊕：异或，两个输入不同时返回1。"
+      ja: "⊕：排他論理和。2つの入力異なるとき1を返す。"
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el paréntesis de la parte derecha.
+      en: Opens the parenthesis on the right-hand side.
+      pt: Abre o parêntese do lado direito.
+      fr: Ouvre la parenthèse du membre de droite.
+      zh: 打开右边的括号。
+      ja: 右辺の括弧を開く。
+  - id: a-center
+    type: variable
+    value: aᵢ
+    explanation:
+      es: "aᵢ: la casilla misma, que también decide su propio futuro."
+      en: "aᵢ: the cell itself, which also decides its own future."
+      pt: "aᵢ: a própria célula, que também decide o próprio futuro."
+      fr: "aᵢ : la case elle-même, qui décide aussi de son propre avenir."
+      zh: "aᵢ：格子自身，也决定自己的未来。"
+      ja: "aᵢ：マスの自分自身。自身の未来も決める。"
+  - id: or
+    type: operator
+    value: ∨
+    explanation:
+      es: "∨: la OR lógica, que vale 1 si al menos una de las dos vale 1."
+      en: "∨: logical OR, which is 1 if at least one of the two is 1."
+      pt: "∨: o OU lógico, que vale 1 se ao menos um dos dois for 1."
+      fr: "∨ : le OU logique, qui vaut 1 si au moins l'un des deux vaut 1."
+      zh: "∨：逻辑或，至少有一个为1时取1。"
+      ja: "∨：論理和。どちらか一方でも1なら1になる。"
+  - id: a-right
+    type: variable
+    value: aᵢ₊₁
+    explanation:
+      es: "aᵢ₊₁: la casilla de la derecha, el vecino siguiente."
+      en: "aᵢ₊₁: the cell to the right, the next neighbour."
+      pt: "aᵢ₊₁: a célula da direita, o vizinho seguinte."
+      fr: "aᵢ₊₁ : la case de droite, le voisin suivant."
+      zh: "aᵢ₊₁：右边的格子，即后一个邻居。"
+      ja: "aᵢ₊₁：右のマス。ひとつ後の隣人。"
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el paréntesis de la parte derecha.
+      en: Closes the parenthesis on the right-hand side.
+      pt: Fecha o parêntese do lado direito.
+      fr: Ferme la parenthèse du membre de droite.
+      zh: 关闭右边的括号。
+      ja: 右辺の括弧を閉じる。
+context:
+  author:
+    es: Stephen Wolfram
+    en: Stephen Wolfram
+    pt: Stephen Wolfram
+    fr: Stephen Wolfram
+    zh: 斯蒂芬·沃尔夫拉姆
+    ja: スティフェン・ウルフラム
+  era:
+    es: EE. UU., 1984 · reglas elementales 0–255
+    en: USA, 1984 · elementary rules 0–255
+    pt: EUA, 1984 · regras elementares 0–255
+    fr: États-Unis, 1984 · règles élémentaires 0–255
+    zh: 美国，1984年·初等规则0–255
+    ja: アメリカ、1984年·初等ルール0–255
+  history:
+    es: >-
+      Un autómata celular es una rejilla de casillas que se actualizan a la vez siguiendo
+      una regla local, sin ningún centro de mando. Von Neumann diseñó autómatas capaces de
+      replicarse y demostrar su universalidad al final de los años cuarenta; Conway llevó
+      la idea a dos dimensiones en 1970 con su Juego de la Vida, donde una casilla muerta
+      nace con tres vecinas y una viva sobrevive con dos o tres. Wolfram enumeró en 1984 las
+      256 reglas elementales de una fila y mostró que la regla 30 pertenece a la clase
+      caótica, en la que el estado de una casilla depende de una historia que no muestra
+      ningún patrón y que alcanza la capacidad de calcular.
+    en: >-
+      A cellular automaton is a grid of cells updated at once by a local rule, with no
+      command centre anywhere. Von Neumann designed self-reproducing automata and proved
+      their universality in the late 1940s; Conway took the idea into two dimensions in 1970
+      with the Game of Life, where a dead cell is born with three neighbours and a live cell
+      survives with two or three. In 1984 Wolfram listed the 256 elementary rules of a single
+      row and showed that rule 30 belongs to the chaotic class, in which the fate of a cell
+      depends on a history with no visible pattern that nonetheless reaches the power to
+      compute.
+    pt: >-
+      Um autômato celular é uma grade de células atualizadas ao mesmo tempo por uma regra
+      local, sem nenhum centro de comando. Von Neumann projetou autômatos que se replicam e
+      provou sua universalidade no fim dos anos 1940; Conway levou a ideia a duas dimensões
+      em 1970 com o seu Jogo da Vida, onde uma célula morta nasce com três vizinhas e uma
+      viva sobrevive com duas ou três. Em 1984, Wolfram listou as 256 regras elementares de
+      uma fila e mostrou que a regra 30 pertence à classe caótica, na qual o destino de uma
+      célula depende de uma história sem padrão visível que, mesmo assim, alcança o poder de
+      calcular.
+    fr: >-
+      Un automate cellulaire est une grille de cases mises à jour simultanément par une règle
+      locale, sans aucun centre de commande. Von Neumann a conçu des automates capables de
+      se répliquer et démontré leur universalité à la fin des années 1940 ; Conway a porté
+      l'idée en deux dimensions en 1970 avec son Jeu de la vie, où une case morte naît avec
+      trois voisines et une case vivante survit avec deux ou trois. En 1984, Wolfram a
+      recensé les 256 règles élémentaires d'une seule rangée et montré que la règle 30
+      appartient à la classe chaotique, où le sort d'une case dépend d'une histoire sans
+      motif visible qui atteint pourtant le pouvoir de calculer.
+    zh: >-
+      元胞自动机是一张格子网，所有格子依据局部规则同时更新，不存在任何中心指挥者。冯·诺依曼在20世纪40年代末
+      设计了能自我复制的自动机并证明了其通用性；1970年康威用生命游戏把这一思想带到二维，其中死格子在恰好有三个
+      邻居时诞生，活格子在有两个或三个邻居时存活。1984年沃尔夫拉姆列出了单排的256条初等规则，并指出规则30属于
+      混沌类：单个格子的命运取决于一段看不出任何图案的历史，而这段历史却能达到计算的能力。
+    ja: >-
+      セルラー・オートマトンとは、マスの一杯を局所の規則で一斉に書き換える仕組みであり、
+      何かを指示する中心は置かれていない。1940年代後半、フォンノイマンは自分自身を複製する
+      仕組みを設計し、その万能性を示した。1970年、コンウェイはこの考えを2次元へ持ち込み、
+      生命ゲームとして発表した。死んだマスがちょうど3つの隣人を持つと生まれ、生きている
+      マスが2つまたは3つの隣人を持つと生き残る。1984年、ウルフラムは1行の初等ルール256通り
+      を分類し、ルール30がカオスの類に属することを示した。あるマスの行方は目に見える
+      模様をもたない履歴に左右される。それでも、その履歴は計算そのものを担う。
+  timeline:
+    - year: "1948"
+      label:
+        es: >-
+          Von Neumann diseña autómatas que se replican y demuestra su universalidad.
+        en: >-
+          Von Neumann designs self-reproducing automata and proves their universality.
+        pt: >-
+          Von Neumann projeta autômatos que se replicam e prova sua universalidade.
+        fr: >-
+          Von Neumann conçoit des automates qui se répliquent et démontre leur universalité.
+        zh: >-
+          冯·诺依曼设计出可自我复制的自动机并证明其通用性。
+        ja: >-
+          フォンノイマンが自己複製する仕組みを設計し、万能性を示す。
+    - year: "1970"
+      label:
+        es: >-
+          Conway publica en Scientific American el Juego de la Vida, la versión de dos
+          dimensiones.
+        en: >-
+          Conway publishes the Game of Life in Scientific American, the two-dimensional
+          version.
+        pt: >-
+          Conway publica na Scientific American o Jogo da Vida, a versão bidimensional.
+        fr: >-
+          Conway publie dans Scientific American le Jeu de la vie, la version à deux
+          dimensions.
+        zh: >-
+          康威在《科学美国人》上发表生命游戏，即二维版本。
+        ja: >-
+          コンウェイが『Scientific American』に生命ゲーム（二次元版）を発表する。
+    - year: "1984"
+      label:
+        es: >-
+          Wolfram enumera las 256 reglas elementales y clasifica la regla 30 como caótica.
+        en: >-
+          Wolfram lists the 256 elementary rules and classifies rule 30 as chaotic.
+        pt: >-
+          Wolfram enumera as 256 regras elementares e classifica a regra 30 como caótica.
+        fr: >-
+          Wolfram recense les 256 règles élémentaires et classe la règle 30 parmi les caotiques.
+        zh: >-
+          沃尔夫拉姆列举256条初等规则，并把规则30归为混沌类。
+        ja: >-
+          ウルフラムが256通りの初等ルールを並べ、ルール30をカオスの類に分類する。
+    - year: Hoy
+      label:
+        es: >-
+          La misma idea sirve para simular fluidos, cifrar datos y generar patrones de juego.
+        en: >-
+          The same idea serves to simulate fluids, encrypt data and generate game patterns.
+        pt: >-
+          A mesma ideia serve para simular fluidos, cifrar dados e gerar padrões de jogo.
+        fr: >-
+          La même idée sert à simuler des fluides, chiffrer des données et générer des motifs
+          de jeu.
+        zh: >-
+          同样的思想用于模拟流体、加密数据和生成游戏图案。
+        ja: >-
+          同じ考えが、流体のシミュレーション、データの暗号化、ゲームの模様の生成に使われる。
+  useCases:
+    - title:
+        es: Simulación de fluidos
+        en: Fluid simulation
+        pt: Simulação de fluidos
+        fr: Simulation de fluides
+        zh: 流体模拟
+        ja: 流体シミュレーション
+      description:
+        es: >-
+          Las redes de casillas booleanas con vecindades conservadoras reproducen las
+          ecuaciones de Navier-Stokes usando solo reglas de sí y no.
+        en: >-
+          Lattice-gas networks with conservative neighbourhoods reproduce the Navier-Stokes
+          equations using only yes-or-no rules.
+        pt: >-
+          Redes de células booleanas com vizinhanças conservativas reproduzem as equações de
+          Navier-Stokes usando apenas regras de sim ou não.
+        fr: >-
+          Les réseaux de cellules booléennes à voisinages conservatifs reproduisent les
+          équations de Navier-Stokes avec de simples règles de oui ou non.
+        zh: >-
+          采用守恒邻域的格子气体网络仅用是非规则就能重现纳维-斯托克斯方程。
+        ja: >-
+          保存則を満たす近傍を持つ真偽値のマス網は、真か偽かの規則だけでナビエ・ストークス
+          の方程式を再現する。
+    - title:
+        es: Cifrados de flujo
+        en: Stream ciphers
+        pt: Cifras de fluxo
+        fr: Chiffreurs de flux
+        zh: 流密码
+        ja: ストリーム暗号
+      description:
+        es: >-
+          Varios cifrados de flujo reparten la mezcla entre células con reglas locales, de
+          modo que un cambio en la fila se propaga como en la regla 30.
+        en: >-
+          Several stream ciphers spread the mixing across cells with local rules, so a change
+          in the row propagates as it does in rule 30.
+        pt: >-
+          Várias cifras de fluxo espalham a mistura entre células com regras locais, de modo que
+          uma mudança na linha se propaga como na regra 30.
+        fr: >-
+          Plusieurs chiffreurs de flux répartissent le mélange entre cellules grâce à des
+          règles locales, si bien qu'un changement dans la rangée se propage comme dans la
+          règle 30.
+        zh: >-
+          若干流密码用局部规则在格子之间扩散混合，使行中的变化像规则30那样传播。
+        ja: >-
+          いくつかのストリーム暗号は、局所規則でマス間の混合をほどき、行の中の値が
+          ルール30のように広がる構成にしている。
+    - title:
+        es: Juegos y patrones
+        en: Games and patterns
+        pt: Jogos e padrões
+        fr: Jeux et motifs
+        zh: 游戏与图案
+        ja: ゲームと模様
+      description:
+        es: >-
+          El Juego de la Vida y sus descendientes son autómatas celulares: unas pocas reglas
+          producen crecimientos que nadie programa explícitamente.
+        en: >-
+          The Game of Life and its descendants are cellular automata: a handful of rules
+          produces growths that nobody programs explicitly.
+        pt: >-
+          O Jogo da Vida e seus descendentes são autômatos celulares: poucas regras produzem
+          crescimentos que ninguém programa explicitamente.
+        fr: >-
+          Le Jeu de la vie et ses descendants sont des automates cellulaires : quelques
+          règles produisent des croissances que personne ne programme explicitement.
+        zh: >-
+          生命游戏及其后继都是元胞自动机：寥寥数条规则就能产生无人显式编程的增长。
+        ja: >-
+          生命ゲームとその子孫はセルラー・オートマトンであり、わずかな規則だけで
+          誰も直接プログラムしていない増殖が生じる。
+  example:
+    title:
+      es: Cuatro generaciones de la regla 30
+      en: Four generations of rule 30
+      pt: Quatro gerações da regra 30
+      fr: Quatre générations de la règle 30
+      zh: 规则30的四代演化
+      ja: ルール30の4世代
+    lines:
+      - es: "Fila inicial: 0001000, con bordes circulares"
+        en: "Start row: 0001000, with circular boundaries"
+        pt: "Linha inicial: 0001000, com bordas circulares"
+        fr: "Rangée initiale : 0001000, à bords circulaires"
+        zh: "初始行：0001000，两端相接"
+        ja: "初期行：0001000、両端はつなぐ"
+      - es: "0011100"
+        en: "0011100"
+        pt: "0011100"
+        fr: "0011100"
+        zh: "0011100"
+        ja: "0011100"
+      - es: "0110010"
+        en: "0110010"
+        pt: "0110010"
+        fr: "0110010"
+        zh: "0110010"
+        ja: "0110010"
+      - es: "1101111"
+        en: "1101111"
+        pt: "1101111"
+        fr: "1101111"
+        zh: "1101111"
+        ja: "1101111"
+      - es: "Vuelve a 0001000: en una tira tan corta el ciclo se cierra"
+        en: "Back to 0001000: on a strip this short the cycle closes"
+        pt: "Volta a 0001000: numa tira tão curta o ciclo se fecha"
+        fr: "Retour à 0001000 : sur une bande aussi courte, le cycle se referme"
+        zh: "回到0001000：在这么短的条带上循环闭合了"
+        ja: "0001000 に戻る：この長さの帯では周期が閉じる"

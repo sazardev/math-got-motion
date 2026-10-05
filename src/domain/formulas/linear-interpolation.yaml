@@ -1,0 +1,424 @@
+id: linear-interpolation
+title:
+  es: Interpolación Lineal
+  en: Linear Interpolation
+  pt: Interpolação Linear
+  fr: Interpolation linéaire
+  zh: 线性插值
+  ja: 線形補間
+category:
+  es: Cálculo
+  en: Calculus
+  pt: Cálculo
+  fr: Calcul
+  zh: 微积分
+  ja: 微積分学
+nodes:
+  - id: y
+    type: variable
+    value: y
+    explanation:
+      es: El valor que se quiere estimar en un punto que no se conoce.
+      en: The value to be estimated at a point that is not known.
+      pt: O valor que se quer estimar num ponto que não se conhece.
+      fr: La valeur à estimer en un point que l'on ne connaît pas.
+      zh: 要在未知点上估计出的值。
+      ja: 未知の点で求めたい値。
+  - id: eq-1
+    type: equals
+    value: "="
+    explanation:
+      es: Se calcula a partir de los dos extremos conocidos del tramo.
+      en: It is computed from the two known endpoints of the span.
+      pt: É calculado a partir dos dois extremos conhecidos do trecho.
+      fr: Elle se calcule à partir des deux extrémités connues de l'intervalle.
+      zh: 它由该区间两个已知端点算出。
+      ja: 区間の両端の既知の値から計算される。
+  - id: y-zero
+    type: variable
+    value: y₀
+    explanation:
+      es: El valor en el punto de referencia, el que ya se midió o se conoce.
+      en: The value at the reference point, the one already measured or known.
+      pt: O valor no ponto de referência, o que já foi medido ou é conhecido.
+      fr: La valeur au point de référence, celle déjà mesurée ou connue.
+      zh: 参考点处的值，即已测得或已知的那个值。
+      ja: 基準点での値。すでに測定して分かっている値である。
+  - id: plus-1
+    type: operator
+    value: "+"
+    explanation:
+      es: Al valor de partida se le suma el avance rectángulo.
+      en: To the starting value we add the rectangular advance.
+      pt: Ao valor de partida soma-se o avanço retangular.
+      fr: À valeur de départ s'ajoute l'avance rectangulaire.
+      zh: 在起始值上加上一段矩形增量。
+      ja: 出発点の値に、長方形の分だけを加える。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: La pendiente del tramo, constante por definición en una recta.
+      en: The slope of the span, constant by definition on a straight line.
+      pt: A inclinação do trecho, constante por definição numa reta.
+      fr: La pente de l'intervalle, constante par définition sur une droite.
+      zh: 该段的斜率，在直线上按定义是常数。
+      ja: その区間の傾き。直線では定義どおり一定である。
+  - id: open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el producto entre la pendiente y la distancia recorrida.
+      en: Opens the product of the slope and the distance travelled.
+      pt: Abre o produto entre a inclinação e a distância percorrida.
+      fr: Ouvre le produit entre la pente et la distance parcourue.
+      zh: 打开斜率与行进距离的乘积。
+      ja: 傾きと移動距離の積を囲む括弧を開く。
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: La coordenada horizontal del punto que se quiere conocer.
+      en: The horizontal coordinate of the point to be found.
+      pt: A coordenada horizontal do ponto que se quer conhecer.
+      fr: L'abscisse du point à déterminer.
+      zh: 要求出的那一点的横坐标。
+      ja: 求めたい点の横座標。
+  - id: minus-1
+    type: operator
+    value: "−"
+    explanation:
+      es: Se resta el punto de referencia para que el cero caiga en él.
+      en: The reference point is subtracted so that zero falls there.
+      pt: Subtrai-se o ponto de referência para que o zero caia nele.
+      fr: On soustrait le point de référence pour que le zéro y tombe.
+      zh: 减去参考点，使零点落在该点上。
+      ja: 基準点を引くことで、ゼロをそこに置く。
+  - id: x-zero
+    type: variable
+    value: x₀
+    explanation:
+      es: La coordenada horizontal del punto de referencia.
+      en: The horizontal coordinate of the reference point.
+      pt: A coordenada horizontal do ponto de referência.
+      fr: L'abscisse du point de référence.
+      zh: 参考点的横坐标。
+      ja: 基準点の横座標。
+  - id: close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el producto; así la fórmula vale también si x es menor que x₀.
+      en: Closes the product, so the formula also works when x is below x₀.
+      pt: Fecha o produto; assim a fórmula também vale se x for menor que x₀.
+      fr: Ferme le produit ; la formule vaut aussi quand x est inférieur à x₀.
+      zh: 关闭这个乘积，因此公式在 x 小于 x₀ 时同样成立。
+      ja: 積をとじる。こうすると x が x₀ より小さいときにも式が成り立つ。
+  - id: semi-1
+    type: operator
+    value: ";"
+    explanation:
+      es: "La pendiente no se conoce a priori: se deduce de los dos puntos."
+      en: "The slope is not known in advance: it is read off the two points."
+      pt: "A inclinação não se conhece a priori: deduz-se dos dois pontos."
+      fr: "La pente n'est pas connue a priori : elle se déduit des deux points."
+      zh: 斜率不是预先知道的，而是由两点算出。
+      ja: 傾きは最初から分かっているわけではない。2点から読み取る。
+  - id: m-2
+    type: variable
+    value: m
+    explanation:
+      es: La misma pendiente, ahora definida por su cociente.
+      en: The same slope, now defined by its quotient.
+      pt: A mesma inclinação, agora definida pelo seu quociente.
+      fr: La même pente, cette fois définie par son quotient.
+      zh: 同一个斜率，现在由它的商来定义。
+      ja: 同じ傾きを、今度は比で定義する。
+  - id: eq-2
+    type: equals
+    value: "="
+    explanation:
+      es: La igualdad que conecta la pendiente con los dos puntos de datos.
+      en: The equality connecting the slope with the two data points.
+      pt: A igualdade que liga a inclinação aos dois pontos de dados.
+      fr: L'égalité qui relie la pente aux deux points de données.
+      zh: 把斜率与两个数据点联系起来的那条等式。
+      ja: 傾きと2つのデータ点を結ぶ等式である。
+  - id: rise
+    type: variable
+    value: (y₁−y₀)
+    explanation:
+      es: "El desnivel: cuánto sube la función entre los dos puntos."
+      en: "The rise: how much the function climbs between the two points."
+      pt: "O desnível: quanto a função sobe entre os dois pontos."
+      fr: "La dénivelée : de combien la fonction monte entre les deux points."
+      zh: 高度差：函数在两点之间上升了多少。
+      ja: 上下の差。2点のあいだで関数がどれだけ上るかの量である。
+  - id: bar
+    type: operator
+    value: /(
+    explanation:
+      es: El desnivel se divide entre el avance horizontal.
+      en: The rise is divided by the horizontal run.
+      pt: O desnível é dividido pelo avanço horizontal.
+      fr: La dénivelée se divise par l'avance horizontale.
+      zh: 高度差除以水平跨度。
+      ja: 上下の差を横の進み具合で割る。
+  - id: run
+    type: variable
+    value: x₁−x₀)
+    explanation:
+      es: "El avance: cuánto se desplaza la función en horizontal."
+      en: "The run: how far the function travels horizontally."
+      pt: "O avanço: quanto a função se desloca na horizontal."
+      fr: "L'avance : de combien la fonction se déplace horizontalement."
+      zh: 水平跨度：函数在水平方向移动了多远。
+      ja: 横の進み。関数が水平方向にどれだけ動いたかの量である。
+context:
+  author:
+    es: Joseph-Louis Lagrange
+    en: Joseph-Louis Lagrange
+    pt: Joseph-Louis Lagrange
+    fr: Joseph-Louis Lagrange
+    zh: 约瑟夫-路易·拉格朗日
+    ja: ジョゼフ・ルイ・ラグランジュ
+  era:
+    es: Francia, 1736–1813 · interpolación de Lagrange, Mecánica analítica, 1772
+    en: France, 1736–1813 · Lagrange interpolation, Analytical Mechanics, 1772
+    pt: França, 1736–1813 · interpolação de Lagrange, Mecânica analítica, 1772
+    fr: France, 1736–1813 · interpolation de Lagrange, Mécanique analytique, 1772
+    zh: 法国，1736–1813年 · 拉格朗日插值，《分析力学》1772年
+    ja: フランス、1736年–1813年 · ラグランジュの補間、『解析力学』1772年
+  history:
+    es: >-
+      La interpolación lineal es el trazado de un segmento recto entre dos puntos conocidos, y
+      es el polinomio de Lagrange de grado uno. La interpolación polinómica es mucho más
+      antigua, pero Lagrange la convirtió en una herramienta sistemática en la Mecánica
+      analítica de 1772. Todo motor gráfico la usa a cada fotograma: sin ella no habría
+      imágenes intermedias ni movimiento continuo. Su error es de orden h², mucho mejor que
+      el de la interpolación constante y peor que el de las splines. En 1974 Catmull y Rom
+      propusieron una variante que conserva la primera derivada y evita los tirones.
+    en: >-
+      Linear interpolation is the drawing of a straight segment between two known points, and
+      it is Lagrange's polynomial of degree one. Polynomial interpolation is much older, but
+      Lagrange turned it into a systematic tool in the Analytical Mechanics of 1772. Every
+      graphics engine uses it on every frame: without it there would be no in-between images
+      and no continuous motion. Its error is of order h², far better than constant
+      interpolation and worse than splines, and in 1974 Catmull and Rom proposed a variant
+      that preserves the first derivative.
+    pt: >-
+      A interpolação linear é o traçado de um segmento reto entre dois pontos conhecidos, e é o
+      polinômio de Lagrange de grau um. A interpolação polinomial é bem mais antiga, mas
+      Lagrange a transformou em ferramenta sistemática na Mecânica analítica de 1772. Todo
+      motor gráfico a usa a cada quadro: sem ela não haveria imagens intermediárias nem
+      movimento contínuo. O erro é de ordem h², bem melhor que o da interpolação constante e
+      pior que o das splines, e em 1974 Catmull e Rom propuseram uma variante que preserva a
+      primeira derivada.
+    fr: >-
+      L'interpolation linéaire est le tracé d'un segment droit entre deux points connus, et
+      c'est le polynôme de Lagrange de degré un. L'interpolation polynomiale est bien plus
+      ancienne, mais Lagrange en fit un outil systématique dans la Mécanique analytique de
+      1772. Tous les moteurs graphiques l'utilisent à chaque image : sans elle il n'y aurait
+      ni images intermédiaires ni mouvement continu. Son erreur est d'ordre h², bien
+      meilleure que l'interpolation constante et moins bonne que les splines, et en 1974
+      Catmull et Rom proposèrent une variante qui préserve la première dérivée.
+    zh: >-
+      线性插值就是在两个已知点之间画一条直线段，它是拉格朗日插值中次数为1的情形。
+      多项式插值要古老得多，但拉格朗日在1772年的《分析力学》中把它变成了系统化的工具。
+      每个图形引擎在每一帧都要用它：没有它就没有中间图像，也没有连续运动。
+      它的误差是 h² 阶，远好于常值插值，又不及样条；1974年，卡特穆尔与罗姆提出了保持一阶导数的变体。
+    ja: >-
+      線形補間は、既知の2点を直線で結ぶことであり、ラグランジュの1次の多項式にほかならない。
+      多項式補間ははるかに前から知られていたが、ラグランジュが1772年の『解析力学』でこれを
+      体系的な道具にまとめた。グラフィックスエンジンは毎フレームこれを使う。
+      これがなければ中間の絵はできず、連続した動きも得られない。
+      誤差は h² 程度的で、常値補間よりはるかに良く、スプラインよりは劣る。
+      1974年、キャトレルとロムは1階微分も保つ変形を発表した。
+  timeline:
+    - year: "1772"
+      label:
+        es: >-
+          La Mecánica analítica de Lagrange convierte la interpolación polinómica en una
+          herramienta de cálculo.
+        en: >-
+          Lagrange's Analytical Mechanics turns polynomial interpolation into a computational
+          tool.
+        pt: >-
+          A Mecânica analítica de Lagrange converte a interpolação polinomial em ferramenta de
+          cálculo.
+        fr: >-
+          La Mécanique analytique de Lagrange fait de l'interpolation polynomiale un outil de
+          calcul.
+        zh: >-
+          拉格朗日的《分析力学》把多项式插值变成计算工具。
+        ja: >-
+          ラグランジュの『解析力学』が多項式補間を計算の道具にした。
+    - year: "1974"
+      label:
+        es: >-
+          Catmull y Rom publican una variante que pasa por los puntos sin perder continuidad en
+          las derivadas.
+        en: >-
+          Catmull and Rom publish a variant that passes through the points without losing
+          continuity in the derivatives.
+        pt: >-
+          Catmull e Rom publicam uma variante que passa pelos pontos sem perder continuidade nas
+          derivadas.
+        fr: >-
+          Catmull et Rom publient une variante qui passe par les points sans perdre la
+          continuité des dérivées.
+        zh: >-
+          卡特穆尔与罗姆发表了穿过各点且导数保持连续的变体。
+        ja: >-
+          キャトレルとロムが、微分が連続したまま各点を通る変形を発表した。
+    - year: s. XX
+      label:
+        es: >-
+          Los trazadores de curvas de las hojas de cálculo la aplican entre cada par de puntos
+          medidos.
+        en: >-
+          Spreadsheet chart engines apply it between every pair of measured points.
+        pt: >-
+          Os desenhadores de gráfico das planilhas a aplicam entre cada par de pontos medidos.
+        fr: >-
+          Les traceurs de courbes des tableurs l'appliquent entre chaque paire de points
+          mesurés.
+        zh: >-
+          电子表格的曲线绘图器在每一对实测点之间都使用它。
+        ja: >-
+          表計算ソフトのグラフ描画は、測った2点ごとにこれを使う。
+    - year: Hoy
+      label:
+        es: >-
+          Las GPU interpolan las propiedades de cada vértice a lo largo de cada triángulo en
+          cada fotograma.
+        en: >-
+          GPUs interpolate the properties of every vertex along every triangle on every frame.
+        pt: >-
+          As GPUs interpolam as propriedades de cada vértice ao longo de cada triângulo a cada
+          quadro.
+        fr: >-
+          Les GPU interpolent les propriétés de chaque sommet le long de chaque triangle à chaque
+          image.
+        zh: >-
+          GPU 在每一帧中沿每个三角形插值各顶点的属性。
+        ja: >-
+          GPU は毎フレーム、各三角形の頂点の性質を補間して描画する。
+  useCases:
+    - title:
+        es: Gráficos por computadora
+        en: Computer graphics
+        pt: Computação gráfica
+        fr: Infographie
+        zh: 计算机图形学
+        ja: コンピューターグラフィックス
+      description:
+        es: >-
+          El vertex shader de una GPU interpola colores y posiciones entre vértices; la
+          interpolación lineal es el caso más barato.
+        en: >-
+          A GPU vertex shader interpolates colors and positions between vertices, and linear
+          interpolation is the cheapest case.
+        pt: >-
+          O vertex shader de uma GPU interpola cores e posições entre vértices, e a interpolação
+          linear é o caso mais barato.
+        fr: >-
+          Le shader de sommets d'un GPU interpole couleurs et positions entre les sommets, et
+          l'interpolation linéaire est le cas le moins coûteux.
+        zh: >-
+          GPU 的顶点着色器在顶点之间插值颜色与位置，线性插值是其中最省的一种。
+        ja: >-
+          GPU の頂点シェーダが頂点の色や位置を補間するが、そのうち最も安いのが線形補間である。
+    - title:
+        es: Hojas de cálculo
+        en: Spreadsheets
+        pt: Planilhas
+        fr: Tableurs
+        zh: 电子表格
+        ja: 表計算
+      description:
+        es: >-
+          El gráfico de una serie de datos une los puntos medidos con segmentos rectos, que es
+          justamente esta fórmula.
+        en: >-
+          A chart of a data series joins the measured points with straight segments, which is
+          exactly this formula.
+        pt: >-
+          O gráfico de uma série de dados une os pontos medidos com segmentos retos, que é
+          exatamente esta fórmula.
+        fr: >-
+          Le graphique d'une série de données relie les points mesurés par des segments droits,
+          ce qui est exactement cette formule.
+        zh: >-
+          数据序列的图表用直线段连接实测点，这正是本公式。
+        ja: >-
+          データ列のグラフは測った点を直線で結ぶが、それがまさにこの式である。
+    - title:
+        es: Sensores y telemetría
+        en: Sensors and telemetry
+        pt: Sensores e telemetria
+        fr: Capteurs et télémétrie
+        zh: 传感器与遥测
+        ja: センサとテレメトリ
+      description:
+        es: >-
+          Una muestra por segundo se convierte en una curva continua estimando el valor en los
+          instantes intermedios.
+        en: >-
+          One sample per second becomes a continuous curve by estimating the value at the
+          in-between instants.
+        pt: >-
+          Uma amostra por segundo vira uma curva contínua estimando o valor nos instantes
+          intermediários.
+        fr: >-
+          Un échantillon par seconde devient une courbe continue en estimant la valeur aux
+          instants intermédiaires.
+        zh: >-
+          每秒一个采样点，通过估计中间时刻的值就变成了一条连续的曲线。
+        ja: >-
+          1秒に1点の測定から、間の時刻の値を推定すると連続した曲線になる。
+  example:
+    title:
+      es: Entre (1, 2) y (4, 8)
+      en: Between (1, 2) and (4, 8)
+      pt: Entre (1, 2) e (4, 8)
+      fr: Entre (1, 2) et (4, 8)
+      zh: 在 (1, 2) 与 (4, 8) 之间
+      ja: (1, 2) と (4, 8) のあいだ
+    lines:
+      - es: "datos: (x₀, y₀) = (1, 2) y (x₁, y₁) = (4, 8)"
+        en: "data: (x₀, y₀) = (1, 2) and (x₁, y₁) = (4, 8)"
+        pt: "dados: (x₀, y₀) = (1, 2) e (x₁, y₁) = (4, 8)"
+        fr: "données : (x₀, y₀) = (1, 2) et (x₁, y₁) = (4, 8)"
+        zh: "数据：(x₀, y₀) = (1, 2) 与 (x₁, y₁) = (4, 8)"
+        ja: "データ：(x₀, y₀) = (1, 2) と (x₁, y₁) = (4, 8)"
+      - es: "m = (8 − 2)/(4 − 1) = 6/3 = 2"
+        en: "m = (8 − 2)/(4 − 1) = 6/3 = 2"
+        pt: "m = (8 − 2)/(4 − 1) = 6/3 = 2"
+        fr: "m = (8 − 2)/(4 − 1) = 6/3 = 2"
+        zh: "m = (8 − 2)/(4 − 1) = 6/3 = 2"
+        ja: "m = (8 − 2)/(4 − 1) = 6/3 = 2"
+      - es: "y = 2 + 2(x − 1)"
+        en: "y = 2 + 2(x − 1)"
+        pt: "y = 2 + 2(x − 1)"
+        fr: "y = 2 + 2(x − 1)"
+        zh: "y = 2 + 2(x − 1)"
+        ja: "y = 2 + 2(x − 1)"
+      - es: "en x = 2,5: y = 2 + 2(1,5) = 5"
+        en: "at x = 2.5: y = 2 + 2(1.5) = 5"
+        pt: "em x = 2.5: y = 2 + 2(1,5) = 5"
+        fr: "en x = 2,5 : y = 2 + 2(1,5) = 5"
+        zh: "在 x = 2.5 处：y = 2 + 2(1.5) = 5"
+        ja: "x = 2.5 で：y = 2 + 2(1.5) = 5"
+      - es: "el error: con f = x² entre 0 y 1, en x = 0.5"
+        en: "the error: with f = x² between 0 and 1, at x = 0.5"
+        pt: "o erro: com f = x² entre 0 e 1, em x = 0,5"
+        fr: "l'erreur : avec f = x² entre 0 et 1, en x = 0,5"
+        zh: "误差：f = x² 在 0 与 1 之间时，取 x = 0.5"
+        ja: "誤差：0 と 1 のあいだで f = x² のとき、x = 0.5 では"
+      - es: "exacta 0.25, interpolada 0.5, error 0.25"
+        en: "exact 0.25, interpolated 0.5, error 0.25"
+        pt: "exata 0,25, interpolada 0,5, erro 0,25"
+        fr: "exacte 0,25, interpolée 0,5, erreur 0,25"
+        zh: "精确值 0.25，插值 0.5，误差 0.25"
+        ja: "正確な値は 0.25、補間値は 0.5、誤差は 0.25"

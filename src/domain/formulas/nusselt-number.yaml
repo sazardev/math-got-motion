@@ -1,0 +1,311 @@
+id: nusselt-number
+title:
+  es: Número de Nusselt
+  en: Nusselt Number
+  pt: Número de Nusselt
+  fr: Nombre de Nusselt
+  zh: 努塞尔数
+  ja: ヌッセル数
+category:
+  es: Ingeniería
+  en: Engineering
+  pt: Engenharia
+  fr: Ingénierie
+  zh: 工程学
+  ja: 工学
+nodes:
+  - id: nu
+    type: constant
+    value: Nu
+    explanation:
+      es: "Un número adimensional que dice si el calor cruza la superficie por convección o sólo por conducción."
+      en: "A dimensionless number telling whether heat crosses the surface by convection or by conduction alone."
+      pt: "Um número adimensional que diz se o calor atravessa a superfície por convecção ou só por condução."
+      fr: "Un nombre sans dimension qui dit si la chaleur traverse la surface par convection ou par seule conduction."
+      zh: 一个无量纲数,说明热量是经对流还是仅靠传导穿过该表面。
+      ja: 熱が対流で運ばれるのか、それとも伝導だけで表面を横切るのかを示す無次元数。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: h
+    type: variable
+    value: h
+    explanation:
+      es: "El coeficiente de convección, el puente entre el fluido y la pared."
+      en: "The convection coefficient, the bridge between the fluid and the wall."
+      pt: "O coeficiente de convecção, a ponte entre o fluido e a parede."
+      fr: "Le coefficient de convection, le pont entre le fluide et la paroi."
+      zh: 对流换热系数,连接流体与壁面的桥梁。
+      ja: 対流熱伝達率。流体と壁をむすぶ橋渡しである。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: l
+    type: variable
+    value: L
+    explanation:
+      es: "La longitud característica: el lado del flujo, el diámetro o el espesor."
+      en: "The characteristic length: the side along the flow, the diameter or the thickness."
+      pt: "O comprimento característico: o lado do fluxo, o diâmetro ou a espessura."
+      fr: "La longueur caractéristique : le côté du flux, le diamètre ou l'épaisseur."
+      zh: 特征长度:流动方向边长、直径或厚度。
+      ja: 特性長さ。流れに平行な辺、直径、あるいは厚さである。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre la conductividad del fluido.
+      en: Divided by the conductivity of the fluid.
+      pt: Dividido pela condutividade do fluido.
+      fr: Divisé par la conductivité du fluide.
+      zh: 除以流体的导热系数。
+      ja: 流体の熱伝導率で割る。
+  - id: k
+    type: variable
+    value: k
+    explanation:
+      es: "La conductividad térmica del fluido, que mide lo bien que lleva el calor sin moverse."
+      en: "The thermal conductivity of the fluid, measuring how well it carries heat without moving."
+      pt: "A condutividade térmica do fluido, que mede o quanto ele conduz calor sem se mover."
+      fr: "La conductivité thermique du fluide, qui mesure sa capacité à conduire la chaleur sans se déplacer."
+      zh: 流体的导热系数,衡量其不流动时传导热的能力。
+      ja: 流体の熱伝導率。流れなくとも熱を運ぶ能力を測る量である。
+context:
+  author:
+    es: Wilhelm Nusselt
+    en: Wilhelm Nusselt
+    pt: Wilhelm Nusselt
+    fr: Wilhelm Nusselt
+    zh: 威廉·努塞尔
+    ja: ヴィルヘルム・ヌッセル
+  era:
+    es: "Alemania, 1882–1957 · grupo adimensional propuesto en 1915"
+    en: "Germany, 1882–1957 · dimensionless group proposed in 1915"
+    pt: "Alemanha, 1882–1957 · grupo adimensional proposto em 1915"
+    fr: "Allemagne, 1882–1957 · groupe adimensionnel proposé en 1915"
+    zh: "德国,1882–1957年 · 无量纲数组提出于1915年"
+    ja: "ドイツ、1882–1957年 · 無次元群は1915年に提示"
+  history:
+    es: >-
+      Nusselt se planteó una pregunta que la ingeniería se hacía todos los días: ¿cuánto calor se lleva un fluido
+      que circula sobre una superficie? Su respuesta no fue una fórmula única, sino un número sin dimensiones.
+      En su trabajo de 1915 propuso los grupos que hoy se llaman Reynolds, Grashof, Prandtl y Nusselt, fundando
+      lo que se conoce como teoría de la similitud. El grupo Nu compara el calor que se lleva la convección
+      con el que llevaría la sola conducción en la misma longitud. La Asociación de
+      Ingenieros Alemanes lo bautizó oficialmente como número de Nusselt en 1931. Hoy casi todas las
+      correlaciones de convección se escriben como Nu = f(Re, Pr).
+    en: >-
+      Nusselt addressed a question engineering asked every day: how much heat does a flowing fluid carry away
+      from a surface? His answer was not a single formula but a number without dimensions. In his 1915 paper
+      he introduced the groups now called Reynolds, Grashof, Prandtl and Nusselt, founding what became the
+      theory of similarity. The group Nu compares the heat that convection carries with the heat that
+      conduction alone would carry across the same length. The German engineers' association formally named it the
+      Nusselt number in 1931. Today almost every convection correlation is written as Nu = f(Re, Pr).
+    pt: >-
+      Nusselt addressed a question que a engenharia fazia todos os dias: quanto calor um fluido que escoa sobre
+      uma superfície leva embora? A resposta dele não foi uma fórmula única, mas um número sem dimensões. No
+      artigo de 1915 ele introduziu os grupos hoje chamados Reynolds, Grashof, Prandtl e Nusselt, fundando o
+      que viria a ser a teoria da similaridade. O grupo Nu compara o calor que a convecção leva com o que a
+      só condução levaria na mesma distância. A Associação de Engenheiros Alemães bateu oficialmente o nome
+      de número de Nusselt em 1931. Hoje quase todas as correlações de convecção se escrevem Nu = f(Re, Pr).
+    fr: >-
+      Nusselt addressed a question que l'ingénierie posait tous les jours : quelle quantité de chaleur un fluide
+      en écoulement emporte-t-il d'une surface ? Sa réponse ne fut pas une formule unique mais un nombre sans
+      dimensions. Dans son article de 1915 il introduisit les groupes aujourd'hui appelés Reynolds, Grashof,
+      Prandtl et Nusselt, fondant ce qui devint la théorie de la similitude. Le groupe Nu compare la chaleur
+      emportée par convection à celle que la seule conduction emporterait sur la même longueur. L'association
+      des ingénieurs allemands adopta officiellement le nom de nombre de Nusselt en 1931. Aujourd'hui presque
+      toute corrélation de convection s'écrit Nu = f(Re, Pr).
+    zh: >-
+      努塞尔回答了工程界每天都在问的一个问题:流过表面的流体究竟带走多少热量?他的回答不是一条通用公式,而是
+      一个无量纲的数。在1915年的论文中,他提出了如今称为雷诺数、格拉晓夫数、普朗特数与努塞尔数的那些
+      无量纲数组,奠定了相似理论的基础。Nu比较的是对流所携带的热量与同长度上仅靠传导所能携带的热量。
+      1931年,德国工程师协会正式将其命名为努塞尔数。今天几乎所有对流关联式都写作 Nu = f(Re, Pr)。
+    ja: >-
+      Nusseltが答えられたのは、工学が毎日出している問いだった。表面を流れる流体が熱をどれだけ運び去るのか。
+      答えは一つの公式ではなく、単位を持たない数であった。1915年の論文で、今日 Re、Gr、Pr、Nusselt と
+      呼ばれる無次元群を示し、相似理論の基礎を築いた。Nu 群は、対流が運ぶ熱と、同じ長さで伝導だけが
+      運ぶはずの熱とを比較する。ドイツ技術者連盟が「ヌッセル数」の名称を正式に定めたのは1931年である。
+      対流の相関式の多くは Nu = f(Re, Pr) と書かれる。
+  timeline:
+    - year: "1915"
+      label:
+        es: >-
+          Nusselt publica su trabajo sobre las leyes básicas de la transferencia de calor e introduce los
+          grupos adimensionales.
+        en: >-
+          Nusselt publishes his work on the basic laws of heat transfer and introduces the dimensionless
+          groups.
+        pt: >-
+          Nusselt publica seu trabalho sobre as leis básicas da transferência de calor e introduz os grupos
+          adimensionais.
+        fr: >-
+          Nusselt publie ses travaux sur les lois fondamentales du transfert de chaleur et introduit les
+          groupes adimensionnels.
+        zh: >-
+          努塞尔发表关于传热基本定律的论文,并提出这些无量纲数组。
+        ja: >-
+          Nusseltは熱伝達の基本法則に関する论文を発表し、無次元群を示した。
+    - year: "1931"
+      label:
+        es: La Asociación de Ingenieros Alemanes adopta oficialmente el nombre de número de Nusselt.
+        en: The German engineers' association officially adopts the name Nusselt number.
+        pt: A Associação de Engenheiros Alemães adota oficialmente o nome número de Nusselt.
+        fr: L'association des ingénieurs allemands adopte officiellement le nom de nombre de Nusselt.
+        zh: 德国工程师协会正式采用「努塞尔数」这一名称。
+        ja: ドイツ技術者連盟が「ヌッセル数」という名称を正式に採用した。
+    - year: s. XX
+      label:
+        es: >-
+          Se establecen las correlaciones para flujo interno en tubos, como la de Dittus-Boelter.
+        en: Correlations for internal flow in tubes are established, such as Dittus-Boelter.
+        pt: >-
+          Estabelecem-se as correlações para fluxo interno em tubos, como a de Dittus-Boelter.
+        fr: >-
+          On établit les corrélations pour l'écoulement interne en tubes, comme celle de Dittus-Boelter.
+        zh: 管内流动的关联式被建立起来,例如迪图斯-博尔特关联式。
+        ja: 管内流の相関式が成立し、Dittus-Boelter の式がその代表である。
+    - year: Hoy
+      label:
+        es: >-
+          Se usa en intercambiadores de calor, en la refrigeración de componentes y en el diseño de
+          recuperación de energía.
+        en: >-
+          It is used in heat exchangers, in component cooling and in waste heat recovery design.
+        pt: >-
+          É usada em trocadores de calor, no resfriamento de componentes e no projeto de recuperação de
+          energia.
+        fr: >-
+          On l'utilise dans les échangeurs de chaleur, le refroidissement des composants et la récupération
+          d'énergie.
+        zh: 它被用于换热器、部件冷却以及余热回收的设计。
+        ja: 熱交換器、部品の冷却、熱回収の設計に使われる。
+  useCases:
+    - title:
+        es: Intercambiadores de calor
+        en: Heat exchangers
+        pt: Trocadores de calor
+        fr: Échangeurs de chaleur
+        zh: 换热器
+        ja: 熱交換器
+      description:
+        es: >-
+          Nu = 1 equivale a un muro donde sólo hay conducción. En un intercambiador real Nu suele valer entre
+          10 y 10 000, según el flujo y la holgura que tenga.
+        en: >-
+          Nu = 1 is a wall where conduction is all there is. In a real exchanger Nu usually runs from 10 to
+          10 000, depending on the flow and how much room there is.
+        pt: >-
+          Nu = 1 equivale a uma parede onde só há condução. Num trocador real Nu costuma ficar entre 10 e
+          10 000, conforme o fluxo e o espaço disponível.
+        fr: >-
+          Nu = 1 est un mur où il n'y a que de la conduction. Dans un échangeur réel, Nu vaut en général de
+          10 à 10 000, selon le flux et la place disponible.
+        zh: >-
+          Nu = 1 相当于只有传导的平板。在真实换热器中,Nu 通常在 10 到 10 000 之间,取决于流动与可用空间。
+        ja: >-
+          Nu = 1 は伝導しか起こらない壁を表す。実際の熱交換器では Nu は 10 から 10 000 のあいだにあり、
+          流れ方と余裕の大きさで決まる。
+    - title:
+        es: Refrigeración de electrónica
+        en: Electronics cooling
+        pt: Resfriamento de eletrônica
+        fr: Refroidissement de l'électronique
+        zh: 电子器件散热
+        ja: 電子機器の冷却
+      description:
+        es: >-
+          El calor de un procesador se retira calculando h con una correlación de Nu. Duplicar Nu duplica
+          el caudal de calor que puede sacar el disipador.
+        en: >-
+          The heat of a processor is removed by getting h from a Nu correlation. Doubling Nu doubles the heat
+          flow the heat sink can pull out.
+        pt: >-
+          O calor de um processador sai calculando h com uma correlação de Nu. Duplicar Nu duplica o fluxo
+          de calor que o dissipador consegue retirar.
+        fr: >-
+          La chaleur d'un processeur s'évacue en tirant h d'une corrélation de Nu. Doubler Nu double le flux
+          de chaleur que le radiateur peut extraire.
+        zh: >-
+          处理器散发的热量由 Nu 关联式求出的 h 带走。Nu 加倍,散热器能带走的热流也加倍。
+        ja: >-
+          プロセッサの熱は Nu の相関式から求めた h によって奪われる。Nu を2倍にすれば、シンクが奪える熱流も
+          2倍になる。
+    - title:
+        es: Nu no dice cuánto calor hay
+        en: Nu says nothing about how much
+        pt: Nu não diz quanto calor há
+        fr: Nu ne dit rien de la quantité
+        zh: Nu 不说明热量大小
+        ja: Nu は熱量を教えてくれない
+      description:
+        es: >-
+          Como es adimensional, Nu no transporta la escala del problema. Siempre hace falta volver a la
+          ecuación del calor para conocer los vatios reales.
+        en: >-
+          Being dimensionless, Nu carries no scale. You always have to go back to the heat balance to get the
+          real watts.
+        pt: >-
+          Por ser adimensional, Nu não traz a escala do problema. É sempre preciso voltar à equação do calor
+          para conhecer os watts reais.
+        fr: >-
+          Sans dimension, Nu ne porte aucune échelle. Il faut toujours revenir au bilan thermique pour
+          connaître les watts réels.
+        zh: >-
+          由于是无量纲的,Nu 不携带问题的尺度。总要回到热量方程才能得到真实的瓦数。
+        ja: >-
+          無次元なので Nu は問題のスケールを運ばない。実際のワット数を知るには、いつものように熱収支に
+          戻らなければならない。
+  example:
+    title:
+      es: Placa plana en aire a 20 °C
+      en: Flat plate in air at 20 °C
+      pt: Placa plana em ar a 20 °C
+      fr: Plaque plane dans l'air à 20 °C
+      zh: 20 °C 空气中的平板
+      ja: 20 °C の空気中の平板
+    lines:
+      - es: u = 1 m/s, L = 1 m, ν = 1,5·10⁻⁵, α = 2,1·10⁻⁵ m²/s
+        en: u = 1 m/s, L = 1 m, ν = 1.5·10⁻⁵, α = 2.1·10⁻⁵ m²/s
+        pt: u = 1 m/s, L = 1 m, ν = 1,5·10⁻⁵, α = 2,1·10⁻⁵ m²/s
+        fr: u = 1 m/s, L = 1 m, ν = 1,5·10⁻⁵, α = 2,1·10⁻⁵ m²/s
+        zh: u = 1 m/s,L = 1 m,ν = 1.5·10⁻⁵,α = 2.1·10⁻⁵ m²/s
+        ja: u = 1 m/s、L = 1 m、ν = 1.5·10⁻⁵、α = 2.1·10⁻⁵ m²/s
+      - es: Re = uL/ν = 6,7·10⁴ y Pr = ν/α = 0,71
+        en: Re = uL/ν = 6.7·10⁴ and Pr = ν/α = 0.71
+        pt: Re = uL/ν = 6,7·10⁴ e Pr = ν/α = 0,71
+        fr: Re = uL/ν = 6,7·10⁴ et Pr = ν/α = 0,71
+        zh: Re = uL/ν = 6.7·10⁴,Pr = ν/α = 0.71
+        ja: Re = uL/ν = 6.7·10⁴、Pr = ν/α = 0.71
+      - es: Nu = 0,664·Re^0,5·Pr^(1/3) = 0,664·258·0,893
+        en: Nu = 0.664·Re^0.5·Pr^(1/3) = 0.664·258·0.893
+        pt: Nu = 0,664·Re^0,5·Pr^(1/3) = 0,664·258·0,893
+        fr: Nu = 0,664·Re^0,5·Pr^(1/3) = 0,664·258·0,893
+        zh: Nu = 0.664·Re^0.5·Pr^(1/3) = 0.664·258·0.893
+        ja: Nu = 0.664·Re^0.5·Pr^(1/3) = 0.664·258·0.893
+      - es: Nu ≈ 151 para toda la placa
+        en: Nu ≈ 151 for the whole plate
+        pt: Nu ≈ 151 para toda a placa
+        fr: Nu ≈ 151 pour toute la plaque
+        zh: 整块板的 Nu ≈ 151
+        ja: 板全体で Nu ≈ 151
+      - es: h = Nu·k/L = 151·0,026/1 ≈ 3,9 W/(m²·K)
+        en: h = Nu·k/L = 151·0.026/1 ≈ 3.9 W/(m²·K)
+        pt: h = Nu·k/L = 151·0,026/1 ≈ 3,9 W/(m²·K)
+        fr: h = Nu·k/L = 151·0,026/1 ≈ 3,9 W/(m²·K)
+        zh: h = Nu·k/L = 151·0.026/1 ≈ 3.9 W/(m²·K)
+        ja: h = Nu·k/L = 151·0.026/1 ≈ 3.9 W/(m²·K)

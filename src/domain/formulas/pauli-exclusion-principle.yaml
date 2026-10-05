@@ -1,0 +1,310 @@
+id: pauli-exclusion-principle
+title:
+  es: Principio de exclusión de Pauli
+  en: Pauli Exclusion Principle
+  pt: Princípio de exclusão de Pauli
+  fr: Principe d'exclusion de Pauli
+  zh: 泡利不相容原理
+  ja: パウリの排他原理
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: n-electrons
+    type: variable
+    value: N(n)
+    explanation:
+      es: "El número de electrones que caben en las primeras n capas de un átomo."
+      en: "The number of electrons that fit into the first n shells of an atom."
+      pt: "O número de elétrons que cabem nas primeiras n camadas de um átomo."
+      fr: "Le nombre d'électrons qui tiennent dans les n premières couches d'un atome."
+      zh: 一个原子的前 n 个电子层能容纳的电子数。
+      ja: 原子の最初の n 個の殻に入る電子の数。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "El factor 2, que son los dos espines posibles de cada orbital."
+      en: "The factor 2, which are the two possible spins of each orbital."
+      pt: "O fator 2, que são os dois spins possíveis de cada orbital."
+      fr: "Le facteur 2, qui sont les deux spins possibles de chaque orbitale."
+      zh: 系数 2,对应每个轨道允许的两种自旋。
+      ja: 係数2。各轨道が持ちうる2通りのスピンを表す。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: n-shell
+    type: variable
+    value: n
+    explanation:
+      es: "El número cuántico principal de la capa, que indica de qué tamaño es el orbital."
+      en: "The principal quantum number of the shell, which says how big the orbital is."
+      pt: "O número quântico principal da camada, que indica o tamanho do orbital."
+      fr: "Le nombre quantique principal de la couche, qui indique la taille de l'orbitale."
+      zh: 电子层的主量子数,它标示轨道的大小。
+      ja: 殻の主量子数。軌道の大きさを示す。
+  - id: squared
+    type: superscript
+    value: "²"
+    explanation:
+      es: "Al cuadrado, porque en la capa n hay n² estados y en cada uno caben dos electrones."
+      en: "Squared, because shell n holds n² states and each state takes two electrons."
+      pt: "Ao quadrado, porque a camada n tem n² estados e cada estado leva dois elétrons."
+      fr: "Au carré, car la couche n contient n² états et chaque état accueille deux électrons."
+      zh: 取平方,因为第 n 层有 n² 个态,每个态容纳两个电子。
+      ja: 2乗。n番目の殻には n² 個の値があり、それぞれ2個の電子が入る。
+context:
+  author:
+    es: Wolfgang Pauli
+    en: Wolfgang Pauli
+    pt: Wolfgang Pauli
+    fr: Wolfgang Pauli
+    zh: 沃尔夫冈·泡利
+    ja: ウォルフガング・パウリ
+  era:
+    es: "Austria y Suiza, 1900–1958 · principio enunciado en 1925"
+    en: "Austria and Switzerland, 1900–1958 · principle stated in 1925"
+    pt: "Áustria e Suíça, 1900–1958 · princípio enunciado em 1925"
+    fr: "Autriche et Suisse, 1900–1958 · principe énoncé en 1925"
+    zh: "奥地利与瑞士,1900–1958年 · 原理提出于1925年"
+    ja: "オーストリアとスイス、1900–1958年 · 原理は1925年に述べられた"
+  history:
+    es: >-
+      Cuando la nueva mecánica cuántica añadió el espín a los números cuánticos, Pauli notó algo que nadie
+      había pedido: dos electrones de un mismo átomo no pueden tener los mismos cuatro números a la vez. Lo
+      enunció en 1925 como una regla sin excepción. De esa regla sale que un orbital admite como mucho dos
+      electrones, y sólo si van con espines opuestos, que es lo que muestran las flechas hacia arriba y hacia
+      abajo. La consecuencia mayor es periódica: al llenarse los orbitales uno a uno aparece la tabla
+      periódica, con sus periodos y sus familias. Sin la exclusión, todos los electrones caerían en el mismo
+      estado y los átomos no tendrían estructura ni forma de combinarse.
+    en: >-
+      When the new quantum mechanics added spin to the quantum numbers, Pauli noticed something nobody had
+      asked for: two electrons in one atom cannot share all four quantum numbers at once. He stated it in
+      1925 as a rule without exceptions. From that rule it follows that an orbital holds at most two
+      electrons, and only with opposite spins, which is what the up and down arrows stand for. The larger
+      consequence is periodic: filling the orbitals one by one produces the periodic table, with its periods
+      and its families. Without exclusion, all the electrons would drop into the same state and atoms would
+      have neither structure nor a way to combine.
+    pt: >-
+      Quando a nova mecânica quântica acrescentou o spin aos números quânticos, Pauli notou algo que ninguém
+      tinha pedido: dois elétrons de um mesmo átomo não podem ter os mesmos quatro números ao mesmo tempo.
+      Enunciou-o em 1925 como uma regra sem exceções. Dessa regra sai que um orbital comporta no máximo dois
+      elétrons, e só com spins opostos, que é o que indicam as setas para cima e para baixo. A consequência
+      maior é periódica: ao se encher os orbitais um a um aparece a tabela periódica, com seus períodos e
+      suas famílias. Sem a exclusão, todos os elétrons cairiam no mesmo estado e os átomos não teriam
+      estrutura nem forma de se combinar.
+    fr: >-
+      Quand la nouvelle mécanique quantique ajouta le spin aux nombres quantiques, Pauli remarque un fait que
+      personne n'avait demandé : deux électrons d'un même atome ne peuvent partager les quatre nombres à la
+      fois. Il l'énonce en 1925 comme une règle sans exception. On en déduit qu'une orbitale accueille au plus
+      deux électrons, et seulement de spins opposés, ce que montrent les flèches vers le haut et vers le bas.
+      La conséquence majeure est périodique : en remplissant les orbitales une à une on obtient le tableau
+      périodique, avec ses périodes et ses familles. Sans exclusion, tous les électrons tomberaient dans le
+      même état et les atomes n'auraient ni structure ni moyen de se combiner.
+    zh: >-
+      当新的量子力学把自旋加进量子数之后,泡利注意到一件此前无人过问的事:同一原子内的两个电子不能同时具有
+      完全相同的四个量子数。他在1925年把它表述为一条无例外的规则。由此可知,一个轨道至多容纳两个电子,
+      且自旋必须相反,这正是上箭头与下箭号的含义。更重要的推论是周期性的:轨道被逐一填满,便出现了带有
+      周期与族的元素周期表。若没有不相容原理,所有电子都会落入同一状态,原子既没有结构也无从结合。
+    ja: >-
+      新しい量子力学が量子数にスピンを加えたとき、Pauliは何も求められていないことに気づいた。同じ原子の
+      二つの電子が四つの量子数を同時に共有することはできない。1925年、彼はこれを例外のない規則として
+      述べた。この規則から、ひとつの軌道には最大2個の電子が入り、それもスピンが逆向きのときだけだと
+      分かる。より大きな帰結は周期的なものである。軌道を1つずつ埋めていくと、周期と族をもつ周期表が
+      現れる。排他がなければ、すべての電子が同じ状態へ落ち、原子は構造を持たず、化合物もできない。
+  timeline:
+    - year: "1925"
+      label:
+        es: >-
+          Pauli publica el principio: no hay dos electrones con los mismos cuatro números cuánticos en un
+          átomo.
+        en: >-
+          Pauli publishes the principle: no two electrons in an atom share the same four quantum numbers.
+        pt: >-
+          Pauli publica o princípio: não há dois elétrons com os mesmos quatro números quânticos num átomo.
+        fr: >-
+          Pauli publie le principe : dans un atome, deux électrons n'ont pas les mêmes quatre nombres
+          quantiques.
+        zh: >-
+          泡利发表该原理:同一原子内不存在两个具有相同四个量子数的电子。
+        ja: >-
+          Pauliは「同一原子の二つの電子が同じ四つの量子数を共有しない」という原理を発表した。
+    - year: "1926"
+      label:
+        es: >-
+          Dirac y otros muestran que el principio se deduce de la ecuación de Schrödinger con los electrones
+          idénticos.
+        en: >-
+          Dirac and others show the principle follows from the Schrödinger equation for identical electrons.
+        pt: >-
+          Dirac e outros mostram que o princípio decorre da equação de Schrödinger para elétrons idênticos.
+        fr: >-
+          Dirac et d'autres montrent que le principe découle de l'équation de Schrödinger pour des électrons
+          identiques.
+        zh: >-
+          狄拉克等人证明该原理可由全同电子的薛定谔方程推出。
+        ja: >-
+          Diracらによって、同一粒子に対するSchrödinger方程式からこの原理が導かれることが示された。
+    - year: "1945"
+      label:
+        es: >-
+          El principio gana a Pauli el Premio Nobel de Física, que además había predicho el espín del protón.
+        en: >-
+          The principle wins Pauli the Nobel Prize in Physics, who had also predicted the spin of the proton.
+        pt: >-
+          O princípio rende a Pauli o Prêmio Nobel de Física, que também havia previsto o spin do próton.
+        fr: >-
+          Le principe vaut à Pauli le prix Nobel de physique, qui avait aussi prédit le spin du proton.
+        zh: >-
+          该原理使泡利获得诺贝尔物理学奖,他此前还预言了质子的自旋。
+        ja: >-
+          この原理でPauliはノーベル物理学賞を受賞した。彼は陽子のスピンも予言していた。
+    - year: Hoy
+      label:
+        es: >-
+          Es lo que separa un conductor de un aislante y lo que llena las bandas de un semiconductor.
+        en: >-
+          It is what separates a conductor from an insulator and what fills the bands of a semiconductor.
+        pt: >-
+          É o que separa um condutor de um isolante e o que preenche as bandas de um semicondutor.
+        fr: >-
+          C'est ce qui sépare un conducteur d'un isolant et ce qui remplit les bandes d'un semiconducteur.
+        zh: 它是区分导体与绝缘体的关键,也是填充半导体能带的原因。
+        ja: 導体と絶縁体を分けるもので、半導体の帯を埋めている。
+  useCases:
+    - title:
+        es: La tabla periódica
+        en: The periodic table
+        pt: A tabela periódica
+        fr: Le tableau périodique
+        zh: 元素周期表
+        ja: 周期表
+      description:
+        es: >-
+          Cada capa añade un número fijo de orbitales. Al llenarse el átomo se repiten los mismos patrones de
+          valencia, y de ahí salen los periodos y las familias.
+        en: >-
+          Each shell adds a fixed number of orbitals. As the atom fills, the same valence patterns repeat, and
+          the periods and families follow from that.
+        pt: >-
+          Cada camada acrescenta um número fixo de orbitais. À medida que o átomo se enche, os mesmos padrões
+          de valência se repetem, e daí vêm os períodos e as famílias.
+        fr: >-
+          Chaque couche ajoute un nombre fixe d'orbitales. À mesure que l'atome se remplit, les mêmes motifs de
+          valence se répètent, et les périodes comme les familles en découlent.
+        zh: >-
+          每一层加入固定数目的轨道。随着原子被填满,同样的价电子构型反复出现,周期与族便由此而来。
+        ja: >-
+          殻が1つ増えるごとに轨道の数が決まって増える。原子が埋まるにつれて同じ価数の型が繰り返され、
+          周期と族はそこから生じている。
+    - title:
+        es: Orbitales y espines
+        en: Orbitals and spins
+        pt: Orbitais e spins
+        fr: Orbitales et spins
+        zh: 轨道与自旋
+        ja: 軌道とスピン
+      description:
+        es: >-
+          La regla del par es la forma cotidiana del principio: se dibujan dos flechas, una hacia arriba y
+          otra hacia abajo, dentro del mismo orbital, y nunca una tercera.
+        en: >-
+          The pair rule is the everyday form of the principle: two arrows, up and down, are drawn inside one
+          orbital, and never a third.
+        pt: >-
+          A regra do par é a forma cotidiana do princípio: desenham-se duas setas, para cima e para baixo,
+          dentro do mesmo orbital, e nunca uma terceira.
+        fr: >-
+          La règle de la paire est la forme usuelle du principe : deux flèches, vers le haut et vers le bas,
+          dans une même orbitale, et jamais une troisième.
+        zh: >-
+          成对规则是这一原理的日常形式:在同一轨道内画上、下两个箭头,绝不会出现第三个。
+        ja: >-
+          対原理はその日常的な現れである。同じ軌道の中に上向きと下向きの矢印を2本書き、3本目を
+          書かない。
+    - title:
+        es: Saltos de banda
+        en: Band jumps
+        pt: Saltos de banda
+        fr: Sauts de bande
+        zh: 能带跃迁
+        ja: 帯の飛び越え
+      description:
+        es: >-
+          En un semiconductor la banda de valencia está llena y la de conducción casi vacía, y
+          ese salto es el que hace que un electrón absorba un fotón y salte de banda.
+        en: >-
+          In a semiconductor the valence band is full and the conduction band nearly empty,
+          and that gap is what lets an electron absorb a photon and jump bands.
+        pt: >-
+          Num semicondutor a banda de valência está cheia e a de condução quase vazia, e é
+          esse degrau que permite a um elétron absorver um fóton e saltar de banda.
+        fr: >-
+          Dans un semiconducteur la bande de valence est pleine et celle de conduction presque
+          vide ; c'est cet écart qui permet à un électron d'absorber un photon et de changer de
+          bande.
+        zh: >-
+          半导体中价带已满而导带几乎空，正是这个能量台阶让电子吸收光子后跃迁到导带。
+        ja: >-
+          半導体では価帯が埋まり、伝導帯はほぼ空のまま残る。この段差があるから、電子は光子を
+          受け取って帯を飛び越えられる。
+  example:
+    title:
+      es: Cuántos electrones caben
+      en: How many electrons fit
+      pt: Quantos elétrons cabem
+      fr: Combien d'électrons tiennent
+      zh: 能容纳多少个电子
+      ja: いくつ入るのか
+    lines:
+      - es: Capa n = 1 → 2·1² = 2 electrones
+        en: Shell n = 1 → 2·1² = 2 electrons
+        pt: Camada n = 1 → 2·1² = 2 elétrons
+        fr: Couche n = 1 → 2·1² = 2 électrons
+        zh: 第 1 层 → 2·1² = 2 个电子
+        ja: n = 1 の殻 → 2·1² = 2 個の電子
+      - es: Capa n = 2 → 2·2² = 8; n = 3 → 2·3² = 18
+        en: Shell n = 2 → 2·2² = 8; n = 3 → 2·3² = 18
+        pt: Camada n = 2 → 2·2² = 8; n = 3 → 2·3² = 18
+        fr: Couche n = 2 → 2·2² = 8 ; n = 3 → 2·3² = 18
+        zh: 第 2 层 → 2·2² = 8;第 3 层 → 2·3² = 18
+        ja: n = 2 の殻 → 2·2² = 8、n = 3 の殻 → 2·3² = 18
+      - es: "Suma hasta la capa 3: 2 + 8 + 18 = 28"
+        en: "Sum through shell 3: 2 + 8 + 18 = 28"
+        pt: "Soma até a camada 3: 2 + 8 + 18 = 28"
+        fr: "Somme jusqu'à la couche 3 : 2 + 8 + 18 = 28"
+        zh: 累加到第 3 层:2 + 8 + 18 = 28
+        ja: 第3殻までの合計:2 + 8 + 18 = 28
+      - es: "El níquel tiene 28 electrones: termina en 3d⁸ 4s²"
+        en: "Nickel has 28 electrons: it ends in 3d⁸ 4s²"
+        pt: "O níquel tem 28 elétrons: termina em 3d⁸ 4s²"
+        fr: "Le nickel a 28 électrons : il se termine en 3d⁸ 4s²"
+        zh: 镍有 28 个电子:填充到 3d⁸ 4s²
+        ja: ニッケルは電子が28個。3d⁸ 4s² で終わる
+      - es: En cada orbital caben 2, con espines opuestos
+        en: Each orbital holds 2, with opposite spins
+        pt: Em cada orbital cabem 2, com spins opostos
+        fr: Dans chaque orbitale, 2, de spins opposés
+        zh: 每个轨道容纳 2 个,自旋相反
+        ja: どの軌道にも 2 個が入り、スピンは逆向き

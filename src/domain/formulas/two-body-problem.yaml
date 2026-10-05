@@ -1,0 +1,410 @@
+id: two-body-problem
+title:
+  es: Problema de Dos Cuerpos
+  en: Two-Body Problem
+  pt: Problema de Dois Corpos
+  fr: Problème à Deux Corps
+  zh: 二体问题
+  ja: 二体問題
+category:
+  es: Astronomía
+  en: Astronomy
+  pt: Astronomia
+  fr: Astronomie
+  zh: 天文学
+  ja: 天文学
+nodes:
+  - id: r-acc
+    type: variable
+    value: r̈
+    explanation:
+      es: "r̈: la segunda derivada del vector de separación, la aceleración con que se acerca o se aleja el par."
+      en: "r̈: the second derivative of the separation vector, the acceleration with which the pair closes or opens."
+      pt: "r̈: a segunda derivada do vetor de separação, a aceleração com que o par se aproxima ou se afasta."
+      fr: "r̈ : la dérivée seconde du vecteur de séparation, l'accélération qui rapproche ou éloigne le couple."
+      zh: "r̈：分离向量对时间的二阶导数，也就是这一对天体相互靠近或远离的加速度。"
+      ja: "r̈：分離ベクトルの二階時間微分。この二つが互いに引き合うときの加速度を示す。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "El signo negativo: la aceleración apunta hacia el cuerpo pesado, no hacia afuera."
+      en: "The minus sign: the acceleration points toward the massive body, not away from it."
+      pt: "O sinal de menos: a aceleração aponta para o corpo massivo, não para fora."
+      fr: "Le signe moins : l'accélération pointe vers le corps massif, non vers l'extérieur."
+      zh: 负号：加速度指向质量大的天体，而不是向外。
+      ja: マイナス符号。加速度は質量の大きい天体へ向かうのであり、外へ向かうのではない。
+  - id: g-const
+    type: constant
+    value: G
+    explanation:
+      es: "G: la constante de gravitación universal, la misma que aparece en cualquier ley de gravitación."
+      en: "G: the universal gravitational constant, the same one that appears in any law of gravity."
+      pt: "G: a constante de gravitação universal, a mesma que aparece em qualquer lei de gravitação."
+      fr: "G : la constante de gravitation universelle, celle qui figure dans toute loi de gravitation."
+      zh: "G：万有引力常数，任何引力定律中出现的都是同一个。"
+      ja: "G：万有引力定数。どの重力の法則にも現れる同じ定数である。"
+  - id: paren-open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el paréntesis de la masa total.
+      en: Opens the parenthesis of the total mass.
+      pt: Abre o parêntese da massa total.
+      fr: Ouvre la parenthèse de la masse totale.
+      zh: 打开总质量的括号。
+      ja: 全質量の括弧を開く。
+  - id: m-one
+    type: variable
+    value: m₁
+    explanation:
+      es: "m₁: la masa del primer cuerpo, la que aporta su propio tirón."
+      en: "m₁: the mass of the first body, the one that contributes its own pull."
+      pt: "m₁: a massa do primeiro corpo, a que traz a sua própria atração."
+      fr: "m₁ : la masse du premier corps, celle qui apporte sa propre traction."
+      zh: "m₁：第一个天体的质量，它贡献自己的那一部分引力。"
+      ja: "m₁：ひとつめの天体の質量。自分自身の引力を担う。"
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: "Más la masa del segundo: los dos cuerpos se reemplazan por una suma."
+      en: "Plus the second mass: the two bodies are replaced by a sum."
+      pt: "Mais a massa do segundo: os dois corpos são substituídos por uma soma."
+      fr: "Plus la masse du second : les deux corps sont remplacés par une somme."
+      zh: "加上第二个天体的质量：两个天体被替换成它们的和。"
+      ja: "ふたつめの質量が加わる。二つの天体は総和ひとつに置き換わる。"
+  - id: m-two
+    type: variable
+    value: m₂
+    explanation:
+      es: "m₂: la masa del segundo cuerpo; si es mucho menor, la primera domina casi toda la órbita."
+      en: "m₂: the second body's mass; if it is much smaller, the first one dominates almost the whole orbit."
+      pt: "m₂: a massa do segundo corpo; se for muito menor, o primeiro domina quase toda a órbita."
+      fr: "m₂ : la masse du second corps ; si elle est bien plus faible, le premier domine presque toute l'orbite."
+      zh: "m₂：第二个天体的质量；若它小得多，第一个就主导了几乎整条轨道。"
+      ja: "m₂：ふたつめの天体の質量。これが小さいと、軌道はほぼひとつめの天体だけで決まる。"
+  - id: paren-close
+    type: operator
+    value: ")"
+    explanation:
+      es: "Cierra el paréntesis: solo importa la suma de las masas."
+      en: "Closes the parenthesis: only the sum of the masses matters."
+      pt: "Fecha o parêntese: só importa a soma das massas."
+      fr: "Ferme la parenthèse : seule la somme des masses compte."
+      zh: 关闭括号：只有质量之和进入公式。
+      ja: 括弧を閉じる。式に入るのは質量の合計だけである。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: r-vec
+    type: variable
+    value: r
+    explanation:
+      es: "r: el vector que apunta del segundo cuerpo al primero; su longitud es la distancia r."
+      en: "r: the vector pointing from the second body to the first; its length is the distance r."
+      pt: "r: o vetor que aponta do segundo corpo para o primeiro; seu comprimento é a distância r."
+      fr: "r : le vecteur qui va du second corps vers le premier ; sa longueur est la distance r."
+      zh: "r：由第二个天体指向第一个天体的向量；它的长度就是距离 r。"
+      ja: "r：ふたつめからひとつめへ向かうベクトル。その長さが距離 r である。"
+  - id: frac
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por la distancia al cubo.
+      en: Divided by the distance cubed.
+      pt: Dividido pela distância ao cubo.
+      fr: Divisé par la distance au cube.
+      zh: 除以距离的三次方。
+      ja: 距離の三乗で割る。
+  - id: r-cubed
+    type: superscript
+    value: r³
+    explanation:
+      es: "El cubo de la distancia: por eso la fuerza cae como 1/r² y no como 1/r."
+      en: The cube of the distance, which is why the force falls as 1/r² and not as 1/r.
+      pt: O cubo da distância, e por isso a força cai como 1/r² e não como 1/r.
+      fr: Le cube de la distance, et voilà pourquoi la force décroît en 1/r² et non en 1/r.
+      zh: 距离的三次方：这就是为什么力按 1/r² 而不是按 1/r 下降。
+      ja: 距離の三乗。だから力は 1/r ではなく 1/r² で小さくなる。
+context:
+  author:
+    es: Isaac Newton
+    en: Isaac Newton
+    pt: Isaac Newton
+    fr: Isaac Newton
+    zh: 艾萨克·牛顿
+    ja: アイザック・ニュートン
+  era:
+    es: Londres, 1687 · Principia · puntos de Lagrange, 1760–1772
+    en: London, 1687 · Principia · Lagrange points, 1760–1772
+    pt: Londres, 1687 · Principia · pontos de Lagrange, 1760–1772
+    fr: Londres, 1687 · Principia · points de Lagrange, 1760–1772
+    zh: 伦敦,1687年 · 《原理》 · 拉格朗日点,1760–1772年
+    ja: ロンドン、1687年 · 『原理』 · ラグランジュ点、1760–1772年
+  history:
+    es: >-
+      El movimiento de dos cuerpos que se atraen no se puede resolver en coordenadas separadas,
+      porque cada uno desplaza el centro de masas y con él el punto de referencia. La solución de
+      Newton es reducir el sistema a un único cuerpo ficticio de masa M = m₁ + m₂ que recorre una
+      órbita alrededor del baricentro, igual que si un cuerpo real girara en torno a otro. En esa
+      forma el problema se convierte en el de Kepler y todas las órbitas son cónicas, con la
+      relación entre el semieje y el período fijada por la tercera ley de Kepler y la velocidad en
+      cada punto por la del movimiento orbital. Solo tiene solución cerrada en los casos degenerados
+      —una recta, o un cuerpo infinitamente pesado—; en general hay que integrarlo numéricamente.
+      La excepción notable son los cinco puntos de Lagrange, los equilibrios que mantienen a los
+      cuerpos alineados o en zigzag y que se conocen de forma exacta.
+    en: >-
+      The motion of two attracting bodies cannot be solved in separate coordinates, because each one
+      shifts the center of mass and with it the reference point. Newton's solution is to reduce the
+      system to a single fictitious body of mass M = m₁ + m₂ travelling an orbit about the
+      barycenter, exactly as if a real body circled a real one. In that form the problem becomes
+      Kepler's, and every orbit is a conic, with the link between semimajor axis and period fixed by
+      Kepler's third law and the speed at each point by the orbital velocity formula. It has a
+      closed form only in the degenerate cases, a straight line or an infinitely heavy body; in
+      general it must be integrated numerically. The remarkable exception is the five Lagrange
+      points, the equilibria that keep the bodies aligned or in zigzag and are known exactly.
+    pt: >-
+      O movimento de dois corpos que se atraem não pode ser resolvido em coordenadas separadas,
+      porque cada um desloca o centro de massa e, com ele, o ponto de referência. A solução de
+      Newton é reduzir o sistema a um único corpo fictício de massa M = m₁ + m₂, que percorre uma
+      órbita em torno do baricentro, como se um corpo real girasse em torno de outro. Nessa forma o
+      problema se torna o de Kepler e todas as órbitas são cônicas, com a ligação entre semieixo e
+      período fixada pela terceira lei de Kepler e a velocidade em cada ponto pela velocidade
+      orbital. Só há solução fechada nos casos degenerados, uma reta ou um corpo infinitamente
+      pesado; em geral é preciso integrar numericamente. A exceção notável são os cinco pontos de
+      Lagrange, os equilíbrios que mantêm os corpos alinhados ou em zigue-zague e que são conhecidos
+      exatamente.
+    fr: >-
+      Le mouvement de deux corps qui s'attirent ne peut être résolu en coordonnées séparées, car
+      chacun déplace le centre de masse et avec lui le point de référence. La solution de Newton
+      consiste à réduire le système à un seul corps fictif de masse M = m₁ + m₂ parcourant une
+      orbite autour du barycentre, comme si un corps réel gravitait autour d'un autre. Sous cette
+      forme le problème redevient celui de Kepler et toutes les orbites sont des coniques, le lien
+      entre le demi-grand axe et la période étant fixé par la troisième loi de Kepler et la vitesse
+      en chaque point par la vitesse orbitale. Il n'a de solution fermée que dans les cas
+      dégénérés, une droite ou un corps infiniment lourd ; en général il faut l'intégrer
+      numériquement. L'exception remarquable est celle des cinq points de Lagrange, les équilibres
+      qui gardent les corps alignés ou en zigzag et que l'on connaît exactement.
+    zh: >-
+      两个相互吸引的天体的运动无法在各自坐标中分开求解，因为每个天体都在推动质心，参考点也随之移动。牛顿的解法
+      是把系统化为一个质量为 M = m₁ + m₂ 的虚拟物体，绕质心运行，就像一个真实物体绕另一个真实物体旋转。在这一形式下
+      问题变回开普勒问题，所有轨道都是圆锥曲线，半长轴与周期之间的联系由开普勒第三定律固定，各点的速度则由轨道速度
+      公式给出。只有退化情形——直线，或一个无限重天体——才有解析解；一般情况下必须数值积分。值得注意的例外是五个
+      拉格朗日点，即让这些天体保持共线或呈锯齿排列的平衡点，它们的解是精确已知的。
+    ja: >-
+      引き合う二つの天体の運動は、それぞれの座標に分けては解けない。各天体が重心を動かし、基準点も一緒に動くから
+      である。ニュートンの解法は、系を質量 M = m₁ + m₂ を持つ一つの仮想天体へ置き換え、重心のまわりを回させること
+      だ。本物の物体が別の物体を回るのと同じ形になる。この形では問題はケプラーの問題に戻り、すべての軌道は円錐
+      曲線となる。半長軸と周期の関係はケプラーの第三法則で決まり、各点の速度は軌道の速度式で決まる。閉じた解が
+      得られるのは退化した場合だけで、直線あるいは無限に重い天体のときである。一般には数値積分が要る。ただし、
+      ラグランジュの五点という五つの平衡点だけは厳密に知られている。この五点では天体が一直線に並ぶか、
+      のこぎり状に並ぶ。
+  timeline:
+    - year: "1687"
+      label:
+        es: >-
+          En los Principia, Newton demuestra que el par equivale a un solo cuerpo de masa M = m₁ + m₂
+          orbitando el baricentro.
+        en: >-
+          In the Principia, Newton shows that the pair is equivalent to one body of mass M = m₁ + m₂
+          orbiting the barycenter.
+        pt: >-
+          Nos Principia, Newton mostra que o par equivale a um só corpo de massa M = m₁ + m₂ orbitando
+          o baricentro.
+        fr: >-
+          Dans les Principia, Newton montre que le couple équivaut à un seul corps de masse
+          M = m₁ + m₂ en orbite autour du barycentre.
+        zh: >-
+          在《原理》中，牛顿证明这一对天体等价于一个质量为 M = m₁ + m₂ 的物体绕质心运行。
+        ja: >-
+          『原理』で、ニュートンはこの二つが質量 M = m₁ + m₂ の物体一つとなって重心を回るのと同じだと示した。
+    - year: "1760–1772"
+      label:
+        es: >-
+          Euler y Lagrange localizan los cinco puntos de equilibrio del problema restringido de tres
+          cuerpos.
+        en: >-
+          Euler and Lagrange locate the five equilibrium points of the restricted three-body
+          problem.
+        pt: >-
+          Euler e Lagrange localizam os cinco pontos de equilíbrio do problema restrito de três
+          corpos.
+        fr: >-
+          Euler et Lagrange localisent les cinq points d'équilibre du problème restreint à trois
+          corps.
+        zh: >-
+          欧拉与拉格朗日找出受限三体问题的五个平衡点。
+        ja: >-
+          オイラーとラグランジュが、制限三体問題にある五つの平衡点を見いだす。
+    - year: "1890"
+      label:
+        es: >-
+          Poincaré estudia la estabilidad del caso de tres cuerpos, que abre la dinámica no lineal
+          moderna.
+        en: >-
+          Poincaré studies the stability of the three-body case, opening modern nonlinear
+          dynamics.
+        pt: >-
+          Poincaré estuda a estabilidade do caso de três corpos, abrindo a dinâmica não linear
+          moderna.
+        fr: >-
+          Poincaré étudie la stabilité du cas à trois corps, ouvrant la dynamique non linéaire
+          moderne.
+        zh: >-
+          庞加莱研究三体情形的稳定性，开启了现代非线性动力学。
+        ja: >-
+          プアンカレが三体問題の安定性を研究し、現代の非線形力学を開く。
+    - year: Hoy
+      label:
+        es: >-
+          La reducción sigue siendo el primer paso de cualquier previsión orbital, y los puntos de
+          Lagrange organizan las misiones a L1 y L2.
+        en: >-
+          The reduction is still the first step of any orbital prediction, and the Lagrange points
+          organize missions to L1 and L2.
+        pt: >-
+          A redução continua sendo o primeiro passo de qualquer previsão orbital, e os pontos de
+          Lagrange organizam as missões a L1 e L2.
+        fr: >-
+          La réduction reste le premier pas de toute prévision orbitale, et les points de Lagrange
+          organisent les missions vers L1 et L2.
+        zh: >-
+          这一化简至今仍是任何轨道预报的第一步，而拉格朗日点则组织着前往 L1 与 L2 的任务。
+        ja: >-
+          この還元はいまも軌道予測の最初の段階であり、L1 や L2 へ向かう任務もこれらの点で組まれる。
+  useCases:
+    - title:
+        es: Órbitas de satélites y sondas
+        en: Satellite and probe orbits
+        pt: Órbitas de satélites e sondas
+        fr: Orbites de satellites et sondes
+        zh: 卫星与探测器轨道
+        ja: 衛星と探査機の軌道
+      description:
+        es: >-
+          Mientras el satélite es ligero frente al planeta, la reducción a dos cuerpos basta y da
+          la elipse y el período casi exactos.
+        en: >-
+          While the satellite is light next to the planet, the two-body reduction is enough and
+          gives the ellipse and the period almost exactly.
+        pt: >-
+          Enquanto o satélite é leve em comparação com o planeta, a redução a dois corpos basta e dá
+          a elipse e o período quase exatos.
+        fr: >-
+          Tant que le satellite est léger devant la planète, la réduction à deux corps suffit et
+          donne l'ellipse et la période presque exactement.
+        zh: >-
+          只要卫星相对行星足够轻，化简到二体就足够，得到的椭圆与周期几乎精确。
+        ja: >-
+          衛星が惑星に比べて軽ければ、二体への還元だけで十分で、楕円も周期もほぼ正確に得られる。
+    - title:
+        es: Satélites troyanos
+        en: Trojan satellites
+        pt: Satélites troianos
+        fr: Satellites troyens
+        zh: 特洛伊卫星
+        ja: トロイの木馬群
+      description:
+        es: >-
+          Los asteroides griegos y troyanos orbitan L4 y L5, y desde ahí recorren la misma órbita que
+          el planeta, con siglos de desfase.
+        en: >-
+          The Greek and Trojan asteroids orbit L4 and L5, and from there follow the same orbit as
+          the planet, lagging centuries behind.
+        pt: >-
+          Os asteroides gregos e troianos orbitam L4 e L5 e daí percorrem a mesma órbita do
+          planeta, com séculos de atraso.
+        fr: >-
+          Les astéroïdes grecs et trojans orbitent L4 et L5 et suivent depuis là la même orbite que
+          la planète, avec des siècles de retard.
+        zh: >-
+          希腊群与特洛伊群小行星绕 L4 与 L5 运行，从那里沿着与行星相同的轨道前进，滞后数百年。
+        ja: >-
+          ギリシャ群とトロイ群の小惑星は L4 と L5 を回り、そこから惑星と同じ軌道を数百年の遅れでたどる。
+    - title:
+        es: Velocidades radiales de exoplanetas
+        en: Exoplanet radial velocities
+        pt: Velocidades radiais de exoplanetas
+        fr: Vitesses radiales d'exoplanètes
+        zh: 系外行星径向速度
+        ja: 系外惑星の視線速度
+      description:
+        es: >-
+          Lo que se mide desde el telescopio es el vaivén de la estrella alrededor del baricentro,
+          que la misma reducción relaciona con una órbita circular.
+        en: >-
+          What telescopes measure is the star's wobble around the barycenter, which the same
+          reduction ties to a circular orbit.
+        pt: >-
+          O que se mede do telescópio é a oscilação da estrela em torno do baricentro, que a mesma
+          redução liga a uma órbita circular.
+        fr: >-
+          Ce que mesurent les télescopes, c'est le balancement de l'étoile autour du barycentre, que
+          la même réduction relie à une orbite circulaire.
+        zh: >-
+          望远镜测到的是恒星绕质心的摆动，而同一化简把它与一条圆轨道联系起来。
+        ja: >-
+          望遠鏡が測るのは、恒星が重心のまわりを揺れる運動であり、同じ還元がそれを円軌道に結びつける。
+  example:
+    title:
+      es: El baricentro Tierra-Luna
+      en: The Earth-Moon barycenter
+      pt: O baricentro Terra-Lua
+      fr: Le barycentre Terre-Lune
+      zh: 地月质心
+      ja: 地球と月の重心
+    lines:
+      - es: "Tierra: m₁ = 5,972 · 10²⁴ kg · Luna: m₂ = 7,346 · 10²² kg"
+        en: "Earth: m₁ = 5.972 · 10²⁴ kg · Moon: m₂ = 7.346 · 10²² kg"
+        pt: "Terra: m₁ = 5,972 · 10²⁴ kg · Lua: m₂ = 7,346 · 10²² kg"
+        fr: "Terre : m₁ = 5,972 · 10²⁴ kg · Lune : m₂ = 7,346 · 10²² kg"
+        zh: "地球：m₁ = 5,972 · 10²⁴ kg · 月球：m₂ = 7,346 · 10²² kg"
+        ja: "地球：m₁ = 5,972 · 10²⁴ kg · 月：m₂ = 7,346 · 10²² kg"
+      - es: "M = m₁ + m₂ = 6,045 · 10²⁴ kg"
+        en: "M = m₁ + m₂ = 6.045 · 10²⁴ kg"
+        pt: "M = m₁ + m₂ = 6,045 · 10²⁴ kg"
+        fr: "M = m₁ + m₂ = 6,045 · 10²⁴ kg"
+        zh: "M = m₁ + m₂ = 6,045 · 10²⁴ kg"
+        ja: "M = m₁ + m₂ = 6,045 · 10²⁴ kg"
+      - es: "Separación media: r = 3,844 · 10⁸ m"
+        en: "Mean separation: r = 3.844 · 10⁸ m"
+        pt: "Separação média: r = 3,844 · 10⁸ m"
+        fr: "Séparation moyenne : r = 3,844 · 10⁸ m"
+        zh: "平均距离：r = 3,844 · 10⁸ m"
+        ja: "平均距離：r = 3,844 · 10⁸ m"
+      - es: "Baricentro a r · m₂/M = 4,67 · 10⁶ m, unos 4 671 km"
+        en: "Barycenter at r · m₂/M = 4.67 · 10⁶ m, about 4,671 km"
+        pt: "Baricentro a r · m₂/M = 4,67 · 10⁶ m, cerca de 4 671 km"
+        fr: "Barycentre à r · m₂/M = 4,67 · 10⁶ m, soit 4 671 km"
+        zh: "质心位于 r · m₂/M = 4,67 · 10⁶ m 处，约 4 671 km"
+        ja: "重心は r · m₂/M = 4,67 · 10⁶ m、約 4 671 km の位置"
+      - es: "Aceleración: r̈ = −G · M · r / r³ = −2,73 · 10⁻³ m/s²"
+        en: "Acceleration: r̈ = −G · M · r / r³ = −2.73 · 10⁻³ m/s²"
+        pt: "Aceleração: r̈ = −G · M · r / r³ = −2,73 · 10⁻³ m/s²"
+        fr: "Accélération : r̈ = −G · M · r / r³ = −2,73 · 10⁻³ m/s²"
+        zh: "加速度：r̈ = −G · M · r / r³ = −2,73 · 10⁻³ m/s²"
+        ja: "加速度：r̈ = −G · M · r / r³ = −2,73 · 10⁻³ m/s²"
+      - es: "G · m₁/r² = 2,70 · 10⁻³ m/s²: la Luna añade el 1,2% que falta"
+        en: "G · m₁/r² = 2.70 · 10⁻³ m/s²: the Moon adds the missing 1.2%"
+        pt: "G · m₁/r² = 2,70 · 10⁻³ m/s²: a Lua acrescenta os 1,2% que faltavam"
+        fr: "G · m₁/r² = 2,70 · 10⁻³ m/s² : la Lune apporte les 1,2% manquants"
+        zh: "G · m₁/r² = 2,70 · 10⁻³ m/s²：月球补上了缺少的 1,2%"
+        ja: "G · m₁/r² = 2,70 · 10⁻³ m/s²。月の寄与は不足分 1,2% にあたる"

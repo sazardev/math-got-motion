@@ -1,0 +1,325 @@
+id: godel-numbering
+title:
+  es: "Numeración de Gödel"
+  en: "Gödel numbering"
+  pt: "Numeração de Gödel"
+  fr: "Numérotation de Gödel"
+  zh: "哥德尔编号"
+  ja: "ゲーデル番号"
+category:
+  es: Informática
+  en: Computer science
+  pt: Informática
+  fr: Informatique
+  zh: 计算机科学
+  ja: コンピュータ科学
+nodes:
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: "n: el código, un número natural que representa al enunciado entero."
+      en: "n: the code, a natural number standing for the whole statement."
+      pt: "n: o código, um número natural que representa o enunciado inteiro."
+      fr: "n : le code, un entier naturel qui représente l'énoncé entier."
+      zh: "n：编码，一个代表整条命题的自然数。"
+      ja: "n：コード。文の全体を表す自然数。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: two-a1
+    type: variable
+    value: "2^a₁"
+    explanation:
+      es: "2^a₁: el primer primo, elevado al número de veces que aparece el símbolo 1."
+      en: "2^a₁: the first prime, raised to how many times the symbol 1 appears."
+      pt: "2^a₁: o primeiro primo, elevado ao número de vezes que o símbolo 1 aparece."
+      fr: "2^a₁ : le premier nombre premier, élevé au nombre d'apparitions du symbole 1."
+      zh: "2^a₁：第一个素数，指数为符号1出现的次数。"
+      ja: "2^a₁：最初の素数。指数は記号1の出現回数。"
+  - id: times
+    type: operator
+    value: ·
+    explanation:
+      es: "·: multiplicación, que en la práctica es un producto sin repetir primos."
+      en: "·: multiplication, in practice a product with no repeated prime."
+      pt: "·: multiplicação, na prática um produto sem repetir primos."
+      fr: "· : la multiplication, en pratique un produit sans premier répété."
+      zh: "·：乘法，实际上是每个素数只出现一次的乘积。"
+      ja: "·：掛け算。実際には素数の重複ない積。"
+  - id: three-a2
+    type: variable
+    value: "3^a₂"
+    explanation:
+      es: "3^a₂: el segundo primo, que cuenta las apariciones del símbolo 2."
+      en: "3^a₂: the second prime, which counts the occurrences of symbol 2."
+      pt: "3^a₂: o segundo primo, que conta as aparições do símbolo 2."
+      fr: "3^a₂ : le deuxième nombre premier, qui compte les occurrences du symbole 2."
+      zh: "3^a₂：第二个素数，指数为符号2出现的次数。"
+      ja: "3^a₂：2番目の素数。指数は記号2の出現回数。"
+  - id: dots
+    type: operator
+    value: ⋯
+    explanation:
+      es: "⋯: todos los primos que falten, hasta el último símbolo usado."
+      en: "⋯: all the remaining primes, up to the last symbol used."
+      pt: "⋯: todos os primos restantes, até o último símbolo usado."
+      fr: "⋯ : tous les nombres premiers restants, jusqu'au dernier symbole utilisé."
+      zh: "⋯：其余所有素数，直到用到的最后一个符号。"
+      ja: "⋯：残りの素数。最後の記号まで。"
+  - id: pk-ak
+    type: variable
+    value: "pₖ^aₖ"
+    explanation:
+      es: "pₖ^aₖ: el último primo usado, con su propio contador de repeticiones."
+      en: "pₖ^aₖ: the last prime used, with its own repetition counter."
+      pt: "pₖ^aₖ: o último primo usado, com o seu próprio contador de repetições."
+      fr: "pₖ^aₖ : le dernier nombre premier employé, avec son propre compteur de répétitions."
+      zh: "pₖ^aₖ：最后用到的素数，及其重复次数。"
+      ja: "pₖ^aₖ：最後に使った素数と、その繰り返し回数。"
+context:
+  author:
+    es: Kurt Gödel
+    en: Kurt Gödel
+    pt: Kurt Gödel
+    fr: Kurt Gödel
+    zh: 库尔特·哥德尔
+    ja: カール・ゲーデル
+  era:
+    es: "Viena, 1931 · incompletitud"
+    en: "Vienna, 1931 · incompleteness"
+    pt: "Viena, 1931 · incompletude"
+    fr: "Vienne, 1931 · incomplétude"
+    zh: "维也纳，1931年·不完备性"
+    ja: "ウィーン、1931年·不完備性"
+  history:
+    es: >-
+      En 1931 Gödel demostró que la aritmética no puede demostrar su propia consistencia, y
+      para lograrlo tuvo que dar un paso antes impensable: escribir cada fórmula como un
+      número. La receta es elemental, porque los primos 2, 3, 5, 7 funcionan como símbolos y
+      cada uno guarda en su exponente cuántas veces se repite un símbolo del enunciado. Como
+      la descomposición de un número en factores primos es única, cada enunciado tiene un
+      código y cada código señala un único enunciado. Ese truco vuelve a la aritmética un
+      lenguaje capaz de hablar de sí mismo, y es lo que impide que un sistema lo bastante
+      fuerte se termine a sí mismo.
+    en: >-
+      In 1931 Gödel showed that arithmetic cannot prove its own consistency, and to do it he
+      had to take a previously unthinkable step: to write every formula as a number. The
+      recipe is elementary, since the primes 2, 3, 5, 7 act as symbols and each one keeps in
+      its exponent how often a symbol of the statement repeats. Because the factorization of a
+      number into primes is unique, every statement has a code and every code points to a
+      single statement. That trick makes arithmetic a language able to talk about itself, and
+      it is what stops a system strong enough from finishing itself off.
+    pt: >-
+      Em 1931, Gödel mostrou que a aritmética não pode provar a própria consistência e, para
+      isso, deu um passo antes impensável: escrever cada fórmula como um número. A receita é
+      elementar, porque os primos 2, 3, 5, 7 servem de símbolos e cada um guarda no expoente
+      quantas vezes um símbolo do enunciado se repete. Como a fatoração de um número em
+      primos é única, todo enunciado tem um código e cada código aponta para um único
+      enunciado. Esse truque torna a aritmética uma linguagem capaz de falar de si mesma, e é
+      o que impede que um sistema forte o bastante se termine sozinho.
+    fr: >-
+      En 1931, Gödel montra que l'arithmétique ne peut prouver sa propre cohérence et, pour ce
+      faire, dut faire un jusque-là impensable : écrire chaque formule sous forme de nombre.
+      La recette est élémentaire, car les nombres premiers 2, 3, 5, 7 servent de symboles et
+      chacun conserve dans son exposant le nombre de répétitions d'un symbole de l'énoncé.
+      Comme la décomposition d'un nombre en facteurs premiers est unique, tout énoncé a un
+      code et chaque code ne désigne qu'un seul énoncé. Ce tour de force fait de
+      l'arithmétique un langage capable de parler de lui-même, et c'est ce qui empêche un
+      système suffisamment fort de se clore lui-même.
+    zh: >-
+      1931年，哥德尔证明了算术无法证明自身的一致性，而要做到这一点，他必须迈出此前不可思议的一步：把每条
+      公式写成一个数。方法其实很朴素：素数2、3、5、7充当符号，每个素数的指数记录某个符号出现的次数。由于
+      一个数分解为素因子的方式是唯一的，每条陈述都有编码，每个编码又只指向一条陈述。这个技巧让算术成为一门
+      能谈论自身的语言，也正是它使足够强的系统无法完成对自身的论证。
+    ja: >-
+      1931年、ゲーデルは算術が自身の無矛盾性を証明できないことを示した。そのために彼は、それまで
+      考えられなかった一歩を踏む。すべての式を数として書くのだ。手法はごく素朴で、素数2、3、5、7が記号を
+      兼ね、各素数の指数が記号の出現回数を表す。数を素因数に分ける方法は一意なので、すべての文には
+      コードがあり、コードはただ1つの文を指す。この仕組みによって算術は自分自身を語れる言語になり、
+      十分に強い体系でも、自分の証明を最後まで済ませることはできない。
+  timeline:
+    - year: "1931"
+      label:
+        es: >-
+          Gödel demuestra que la aritmética no puede probar su propia consistencia.
+        en: >-
+          Gödel proves that arithmetic cannot prove its own consistency.
+        pt: >-
+          Gödel prova que a aritmética não pode provar a própria consistência.
+        fr: >-
+          Gödel prouve que l'arithmétique ne peut prouver sa propre cohérence.
+        zh: >-
+          哥德尔证明算术无法证明自身的一致性。
+        ja: >-
+          ゲーデルは算術が自身の無矛盾性を証明できないことを示す。
+    - year: "1936"
+      label:
+        es: >-
+          Church y Turing enuncian por separado que hay problemas sin algoritmo.
+        en: >-
+          Church and Turing separately state that some problems have no algorithm.
+        pt: >-
+          Church e Turing enunciam separadamente que há problemas sem algoritmo.
+        fr: >-
+          Church et Turing énoncent séparément que certains problèmes n'ont pas d'algorithme.
+        zh: >-
+          丘奇与图灵分别独立提出有些问题不存在算法。
+        ja: >-
+          Church と Turing が、それぞれ独立に、手に負えない難題を示した。
+    - year: Años 1940
+      label:
+        es: >-
+          Gödel diseña una máquina de Gödel, un autómata capaz de formalizar su propio trabajo.
+        en: >-
+          Gödel designs a Gödel machine, an automaton able to formalise his own work.
+        pt: >-
+          Gödel projeta uma máquina de Gödel, um autômato capaz de formalizar o próprio trabalho.
+        fr: >-
+          Gödel conçoit une machine de Gödel, un automate capable de formaliser son propre
+          travail.
+        zh: >-
+          哥德尔设计了哥德尔机，一种能把他自己的工作形式化的自动机。
+        ja: >-
+          ゲーデルは、自分の証明を形式化する計算機を設計した。
+    - year: Hoy
+      label:
+        es: >-
+          Cada fórmula de un asistente de demostración lleva su número de Gödel asignado.
+        en: >-
+          Every formula in a proof assistant carries its assigned Gödel number.
+        pt: >-
+          Cada fórmula de um assistente de prova carrega seu número de Gödel atribuído.
+        fr: >-
+          Chaque formule d'un assistant de preuve porte son numéro de Gödel attribué.
+        zh: >-
+          证明助手中的每条公式都带有分配好的哥德尔编号。
+        ja: >-
+          証明補助の各式には、割り当てられたゲーデル番号が付いている。
+  useCases:
+    - title:
+        es: Teoremas de incompletud
+        en: Incompleteness theorems
+        pt: Teoremas da incompletude
+        fr: Théorèmes d'incomplétude
+        zh: 不完备定理
+        ja: 不完全性定理
+      description:
+        es: >-
+          Sin esta numeración no habría forma de hablar de las pruebas dentro de la propia
+          aritmética, y sin esa forma no hay incompletud que demostrar.
+        en: >-
+          Without this numbering there would be no way to talk about proofs inside
+          arithmetic itself, and without that there is no incompleteness to prove.
+        pt: >-
+          Sem esta numeração não haveria como falar das provas dentro da própria aritmética,
+          e sem isso não há incompletude a demonstrar.
+        fr: >-
+          Sans ce numérotage, impossible de parler des preuves à l'intérieur de
+          l'arithmétique elle-même, et sans cela il n'y a pas d'incomplétude à démontrer.
+        zh: >-
+          没有这种编号，就无法在算术内部谈论证明；而没有这种谈论，也就没有不完备性可言。
+        ja: >-
+          この番号がないと、算術そのものの中で証明について語れず、
+          それがないと、不完全性は示せない。
+    - title:
+        es: El problema de la parada
+        en: The halting problem
+        pt: O problema da parada
+        fr: Le problème de l'arrêt
+        zh: 停机问题
+        ja: 停止問題
+      description:
+        es: >-
+          La numeración traduce «el programa P termina» a una frase de la aritmética. Un
+          sistema coherente y completo podría probar esa frase y con ella decidir el
+          problema de la parada, que es indecidible.
+        en: >-
+          The numbering turns "program P halts" into an arithmetic sentence. A consistent and
+          complete system could prove that sentence and so settle the halting problem, which
+          is undecidable.
+        pt: >-
+          A numeração traduz «o programa P termina» numa frase da aritmética. Um sistema
+          coerente e completo provaria essa frase e assim resolveria o problema da parada,
+          que é indecidível.
+        fr: >-
+          La numération traduit « le programme P s'arrête » en une phrase arithmétique. Un
+          système cohérent et complet prouverait cette phrase et trancherait donc le
+          problème de l'arrêt, qui est indécidable.
+        zh: >-
+          编号把「程序 P 会停机」变成一个算术命题。若体系既一致又完备，它就能证明这条命题，
+          从而解决停机问题，而停机问题是不可判定的。
+        ja: >-
+          この数え方は「プログラム P は停止する」を算術の文に翻訳する。一貫で完全な体系なら
+          その文を証明できて、それで停止問題を解けてしまう。しかし停止問題は決定不能である。
+    - title:
+        es: Verificación mecánica
+        en: Mechanical verification
+        pt: Verificação mecânica
+        fr: Vérification mécanique
+        zh: 机械化验证
+        ja: 機械による検証
+      description:
+        es: >-
+          Los asistentes de demostración como Lean o Coq comprueban pasos, no intuiciones, y
+          cada paso es una cadena de números de Gödel.
+        en: >-
+          Proof assistants such as Lean or Coq check steps, not intuitions, and each step is a
+          chain of Gödel numbers.
+        pt: >-
+          Assistentes de prova como Lean ou Coq conferem passos, não intuições, e cada passo é
+          uma cadeia de números de Gödel.
+        fr: >-
+          Les assistants de preuve comme Lean ou Coq vérifient des étapes, pas des
+          intuitions, et chaque étape est une chaîne de numéros de Gödel.
+        zh: >-
+          Lean、Coq之类的证明助手检查的是步骤而非直觉，而每一步都是一串哥德尔编号。
+        ja: >-
+          LeanやCoqの証明補助が確かめるのは直感ではなくステップであり、その各ステップは
+          ゲーデル番号の並びである。
+  example:
+    title:
+      es: Codificar la lista 3, 0, 5
+      en: Encoding the list 3, 0, 5
+      pt: Codificar a lista 3, 0, 5
+      fr: Coder la liste 3, 0, 5
+      zh: 编码列表3、0、5
+      ja: 並び3、0、5を符号化する
+    lines:
+      - es: "Un símbolo por primo: 2, 3, 5, 7..."
+        en: "One symbol per prime: 2, 3, 5, 7..."
+        pt: "Um símbolo por primo: 2, 3, 5, 7..."
+        fr: "Un symbole par nombre premier : 2, 3, 5, 7..."
+        zh: "每个素数对应一个符号：2、3、5、7……"
+        ja: "素数ごとに1つの記号：2、3、5、7……"
+      - es: "n = 2³ · 3⁰ · 5⁵"
+        en: "n = 2³ · 3⁰ · 5⁵"
+        pt: "n = 2³ · 3⁰ · 5⁵"
+        fr: "n = 2³ · 3⁰ · 5⁵"
+        zh: "n = 2³ · 3⁰ · 5⁵"
+        ja: "n = 2³ · 3⁰ · 5⁵"
+      - es: "n = 8 · 1 · 3125 = 25000"
+        en: "n = 8 · 1 · 3125 = 25000"
+        pt: "n = 8 · 1 · 3125 = 25000"
+        fr: "n = 8 · 1 · 3125 = 25000"
+        zh: "n = 8 · 1 · 3125 = 25000"
+        ja: "n = 8 · 1 · 3125 = 25000"
+      - es: "Decodificar 25000 → los exponentes 3, 0 y 5"
+        en: "Decoding 25000 → the exponents 3, 0 and 5"
+        pt: "Decodificar 25000 → os expoentes 3, 0 e 5"
+        fr: "Décoder 25000 → les exposants 3, 0 et 5"
+        zh: "解码25000 → 指数3、0和5"
+        ja: "25000 を解読 → 指数3、0、5"
+      - es: "La unicidad de la factorización garantiza un código por enunciado"
+        en: "Unique factorization guarantees one code per statement"
+        pt: "A unicidade da fatoração garante um código por enunciado"
+        fr: "L'unicité de la décomposition en facteurs garantit un code par énoncé"
+        zh: "因式分解的唯一性保证每个陈述有唯一编码"
+        ja: "素因数分解の一意性から、1つの文に1つのコードが対応する"

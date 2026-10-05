@@ -1,0 +1,285 @@
+id: matrix-inverse-2x2
+title:
+  es: Inversa de una matriz 2×2
+  en: Inverse of a 2×2 matrix
+  pt: Inversa de uma matriz 2×2
+  fr: Inverse d'une matrice 2×2
+  zh: 2×2 矩阵的逆矩阵
+  ja: 2×2行列の逆行列
+category:
+  es: Álgebra lineal
+  en: Linear algebra
+  pt: Álgebra linear
+  fr: Algèbre linéaire
+  zh: 线性代数
+  ja: 線形代数
+nodes:
+  - id: a-inverse
+    type: variable
+    value: A⁻¹
+    explanation:
+      es: La inversa de A, la matriz que deshace lo que A hace.
+      en: The inverse of A, the matrix that undoes what A does.
+      pt: A inversa de A, a matriz que desfaz o que A faz.
+      fr: L'inverse de A, la matrice qui défait ce que fait A.
+      zh: "A 的逆矩阵，作用与 A 相反的矩阵。"
+      ja: "Aの逆行列。Aの作用を打ち消す働きをもつ行列。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: El uno del numerador, que divide todos los elementos de la adjunta.
+      en: The one in the numerator, dividing every entry of the adjugate.
+      pt: O um do numerador, que divide todas as entradas da adjunta.
+      fr: Le un du numérateur, qui divise toutes les entrées de l'adjointe.
+      zh: 分子上的1，用来整除伴随矩阵的每个元素。
+      ja: "分子の1。随伴行列の各要素を割る。"
+  - id: fraction-bar
+    type: operator
+    value: "/"
+    explanation:
+      es: "Dividido por el determinante, que debe ser distinto de cero."
+      en: "Divided by the determinant, which must be nonzero."
+      pt: "Dividido pelo determinante, que deve ser diferente de zero."
+      fr: "Divisé par le déterminant, qui doit être non nul."
+      zh: 除以行列式，它必须不为零。
+      ja: "行列式で割る。この値は0でなければならない。"
+  - id: denom
+    type: variable
+    value: (ad−bc)
+    explanation:
+      es: "El determinante de la matriz: la diagonal principal menos la secundaria."
+      en: "The determinant of the matrix: the main diagonal minus the secondary one."
+      pt: "O determinante da matriz: a diagonal principal menos a secundária."
+      fr: "Le déterminant de la matrice : la diagonale principale moins la secondaire."
+      zh: "矩阵的行列式：主对角线之积减去副对角线之积。"
+      ja: "行列の行列式。主対角の積から副対角の積を引いたもの。"
+  - id: times
+    type: operator
+    value: ·
+    explanation:
+      es: "Multiplicado por la adjunta, la matriz transpuesta de cofactores."
+      en: "Multiplied by the adjugate, the transposed matrix of cofactors."
+      pt: "Multiplicado pela adjunta, a matriz transposta dos cofatores."
+      fr: "Multiplié par l'adjointe, la transposée de la matrice des cofacteurs."
+      zh: 乘以伴随矩阵，即余子式矩阵的转置。
+      ja: "随伴行列（余因数の転置行列）を掛ける。"
+  - id: adj
+    type: variable
+    value: adj A
+    explanation:
+      es: "adj A, que en 2×2 es [[d,−b],[−c,a]]: la identidad con la diagonal cambiada y las otras entradas con el signo opuesto."
+      en: "adj A, which in 2×2 is [[d,−b],[−c,a]]: the identity with the diagonal swapped and the other entries negated."
+      pt: "adj A, que em 2×2 é [[d,−b],[−c,a]]: a identidade com a diagonal trocada e as outras entradas com sinal oposto."
+      fr: "adj A, qui en 2×2 vaut [[d,−b],[−c,a]] : l'identité avec la diagonale échangée et les autres entrées changées de signe."
+      zh: "adj A，在 2×2 时为 [[d,−b],[−c,a]]，即把单位阵的对角线换掉、其余元素取反号。"
+      ja: "adj A。2×2では[[d,−b],[−c,a]]すなわち単位行列の対角成分を入れ替え、他の成分を符号反転させた行列。"
+context:
+  author:
+    es: Carl Friedrich Gauss
+    en: Carl Friedrich Gauss
+    pt: Carl Friedrich Gauss
+    fr: Carl Friedrich Gauss
+    zh: 卡尔·弗里德里希·高斯
+    ja: カール・フリードリッヒ・ガウス
+  era:
+    es: Alemania, 1777–1855 · método de Gauss-Jordan s. XIX
+    en: Germany, 1777–1855 · Gauss-Jordan method in the 19th century
+    pt: Alemanha, 1777–1855 · método de Gauss-Jordan no séc. XIX
+    fr: Allemagne, 1777–1855 · méthode de Gauss-Jordan au XIXe siècle
+    zh: 德国，1777–1855年 · 高斯-若尔当法见于19世纪
+    ja: ドイツ、1777–1855年 · ガウス・ヨルダン法は19世紀
+  history:
+    es: >-
+      La inversa no tiene una fórmula propia: es el resultado de reducir A hasta convertirla en la identidad.
+      Esa reducción es la eliminación de Gauss, que Lagrange ya había usado para resolver sistemas y que
+      Gauss presentó en 1809 y publicó en 1821; la variante que llega hasta la identidad, conocida como
+      método de Gauss-Jordan, es la vía clásica para invertir. La expresión con la adjunta es la forma
+      compacta: en 2×2 basta intercambiar las diagonales y cambiar el signo de las otras dos entradas.
+      Hoy casi ningún solver calcula la inversa, porque factorizar una vez y resolver es más estable.
+    en: >-
+      The inverse has no formula of its own: it is the result of reducing A until it becomes the identity.
+      That reduction is Gaussian elimination, which Lagrange had already used to solve systems and which
+      Gauss presented in 1809 and published in 1821; the variant that goes all the way to the identity,
+      the Gauss-Jordan method, is the classical way to invert. The adjugate formula is the compact form:
+      in 2×2 it is enough to swap the diagonals and flip the sign of the other two entries. Almost no
+      solver computes an inverse today, because factoring once and solving is more stable.
+    pt: >-
+      A inversa não tem fórmula própria: é o resultado de reduzir A até convertê-la na identidade. Essa
+      redução é a eliminação de Gauss, que Lagrange já havia usado para resolver sistemas e que Gauss
+      apresentou em 1809 e publicou em 1821; a variante que chega até a identidade, o método de
+      Gauss-Jordan, é a via clássica para inverter. A expressão com a adjunta é a forma compacta: em
+      2×2 basta trocar as diagonais e mudar o sinal das outras duas entradas. Hoje quase nenhum solver
+      calcula a inversa, porque fatorar uma vez e resolver é mais estável.
+    fr: >-
+      L'inverse n'a pas de formule propre : c'est le résultat de réduire A jusqu'à ce qu'elle devienne
+      l'identité. Cette réduction est l'élimination de Gauss, que Lagrange avait déjà employée pour
+      résoudre des systèmes et que Gauss présenta en 1809 et publia en 1821 ; la variante qui va
+      jusqu'à l'identité, la méthode de Gauss-Jordan, est la voie classique pour inverser. L'expression
+      avec l'adjointe est la forme compacte : en 2×2 il suffit d'échanger les diagonales et de changer
+      le signe des deux autres entrées. Aujourd'hui presque aucun solveur ne calcule d'inverse, car
+      factoriser une fois puis résoudre est plus stable.
+    zh: >-
+      逆矩阵本身没有独立的公式：它是把A化简到单位矩阵的结果。这一化简就是高斯消元，拉格朗日此前已用它求解方程组，高斯在1809年
+      提出、1821年在《算术研究》中发表；一直化简到单位阵的变体称为高斯-若尔当法，是求逆的经典途径。用伴随矩阵的表达式则是
+      紧凑形式：在2×2的情形只需对调两条对角线并把另外两个元素取反号。今天几乎没有求解器会显式求逆，因为一次分解再求解更稳定。
+    ja: >-
+      逆行列そのものの公式は存在しない。Aを単位行列まで還元した結果そのものが、そのまま逆行列になる。この還元がガウス消去法であり、
+      ラグランジュがすでに連立方程式を解くために用いていたものを、ガウスが1809年に示し1821年に『算術探索』に載せた。
+      単位行列まで進める変種はガウス・ヨルダン法と呼ばれ、逆行列を求める古典的な道である。随伴行列を使う書き方は簡潔な形であり、
+      2×2では対角成分を交換し、残る2成分を符号反転させるだけでよい。今日、行列の逆を明示的に計算するソルバーはほとんどなく、
+      一度分解してから解くほうが安定しているためである。
+  timeline:
+    - year: "1809"
+      label:
+        es: >-
+          Gauss presenta la eliminación para resolver sistemas de ecuaciones lineales.
+        en: >-
+          Gauss presents elimination for solving systems of linear equations.
+        pt: >-
+          Gauss apresenta a eliminação para resolver sistemas de equações lineares.
+        fr: >-
+          Gauss présente l'élimination pour résoudre des systèmes d'équations linéaires.
+        zh: >-
+          高斯提出用于求解线性方程组的消元法。
+        ja: >-
+          ガウスが連立一次方程式を解く消元法を提示した。
+    - year: "1821"
+      label:
+        es: >-
+          Publica Disquisitiones arithmeticae, donde el método queda escrito.
+        en: >-
+          He publishes the Disquisitiones arithmeticae, where the method is written down.
+        pt: >-
+          Publica as Disquisitiones arithmeticae, onde o método fica registrado.
+        fr: >-
+          Il publie les Disquisitiones arithmeticae, où la méthode est consignée.
+        zh: >-
+          他出版《算术研究》，该方法在此定稿。
+        ja: >-
+          『算術探索』を出版し、この方法を書き記した。
+    - year: s. XIX
+      label:
+        es: >-
+          El método llega hasta la identidad, y con él la inversión de matrices como procedimiento.
+        en: >-
+          The method is carried through to the identity, and matrix inversion becomes a procedure.
+        pt: >-
+          O método chega até a identidade e a inversão de matrizes vira um procedimento.
+        fr: >-
+          La méthode est poussée jusqu'à l'identité et l'inversion des matrices devient une
+          procédure.
+        zh: >-
+          该方法被推进一步到单位阵，矩阵求逆成为一套标准程序。
+        ja: >-
+          方法を単位行列まで進める形となり、行列の逆行列を求める手順が定まった。
+    - year: Hoy
+      label:
+        es: >-
+          Los solvers numéricos factorizan una vez y resuelven, en vez de invertir la matriz.
+        en: >-
+          Numerical solvers factor once and solve, rather than inverting the matrix.
+        pt: >-
+          Os solvers numéricos fatoram uma vez e resolvem, em vez de inverter a matriz.
+        fr: >-
+          Les solveurs numériques factorisent une fois puis résolvent, au lieu d'inverser la matrice.
+        zh: >-
+          数值求解器只做一次分解再求解，而不显式求逆。
+        ja: >-
+          数値ソルバーは行列を逆にするのではなく、一度分解してから解く。
+  useCases:
+    - title:
+        es: Transformaciones en gráficos
+        en: Transformations in graphics
+        pt: Transformações em gráficos
+        fr: Transformations en infographie
+        zh: 图形变换
+        ja: グラフィックスでの変換
+      description:
+        es: >-
+          Una transformación se aplica como x ↦ A x + t, y su inversa deshace el movimiento aplicado.
+        en: >-
+          A transformation is applied as x ↦ A x + t, and its inverse undoes the motion applied.
+        pt: >-
+          Uma transformação é aplicada como x ↦ A x + t, e sua inversa desfaz o movimento aplicado.
+        fr: >-
+          Une transformation s'applique par x ↦ A x + t, et son inverse annule le mouvement appliqué.
+        zh: >-
+          变换按 x ↦ A x + t 施加，其逆变换撤销已施加的运动。
+        ja: >-
+          変換は x ↦ A x + t として適用し、その逆変換が加えた動きを戻す。
+    - title:
+        es: Rotaciones y reflexiones
+        en: Rotations and reflections
+        pt: Rotações e reflexões
+        fr: Rotations et symétries
+        zh: 旋转与反射
+        ja: 回転と反転
+      description:
+        es: >-
+          La inversa de una rotación es su traspuesta, porque su determinante es exactamente 1.
+        en: >-
+          The inverse of a rotation is its transpose, because its determinant is exactly 1.
+        pt: >-
+          A inversa de uma rotação é a sua transposta, porque seu determinante é exatamente 1.
+        fr: >-
+          L'inverse d'une rotation est sa transposée, car son déterminant vaut exactement 1.
+        zh: >-
+          旋转矩阵的逆就是它的转置，因为它的行列式恰为1。
+        ja: >-
+          回転行列の逆は転置行列そのものになる。行列式がちょうど1だからである。
+  example:
+    title:
+      es: Inversa de [[4,7],[2,6]]
+      en: Inverse of [[4,7],[2,6]]
+      pt: Inversa de [[4,7],[2,6]]
+      fr: Inverse de [[4,7],[2,6]]
+      zh: "[[4,7],[2,6]] 的逆矩阵"
+      ja: "[[4,7],[2,6]] の逆行列"
+    lines:
+      - es: "A = [[4,7],[2,6]]"
+        en: "A = [[4,7],[2,6]]"
+        pt: "A = [[4,7],[2,6]]"
+        fr: "A = [[4,7],[2,6]]"
+        zh: "A = [[4,7],[2,6]]"
+        ja: "A = [[4,7],[2,6]]"
+      - es: det = 4·6 − 7·2 = 24 − 14 = 10
+        en: det = 4·6 − 7·2 = 24 − 14 = 10
+        pt: det = 4·6 − 7·2 = 24 − 14 = 10
+        fr: det = 4·6 − 7·2 = 24 − 14 = 10
+        zh: det = 4·6 − 7·2 = 24 − 14 = 10
+        ja: det = 4·6 − 7·2 = 24 − 14 = 10
+      - es: "adj A = [[6,−7],[−2,4]]"
+        en: "adj A = [[6,−7],[−2,4]]"
+        pt: "adj A = [[6,−7],[−2,4]]"
+        fr: "adj A = [[6,−7],[−2,4]]"
+        zh: "adj A = [[6,−7],[−2,4]]"
+        ja: "adj A = [[6,−7],[−2,4]]"
+      - es: "A⁻¹ = (1/10) · [[6,−7],[−2,4]]"
+        en: "A⁻¹ = (1/10) · [[6,−7],[−2,4]]"
+        pt: "A⁻¹ = (1/10) · [[6,−7],[−2,4]]"
+        fr: "A⁻¹ = (1/10) · [[6,−7],[−2,4]]"
+        zh: "A⁻¹ = (1/10) · [[6,−7],[−2,4]]"
+        ja: "A⁻¹ = (1/10) · [[6,−7],[−2,4]]"
+      - es: "A⁻¹ = [[0.6,−0.7],[−0.2,0.4]]"
+        en: "A⁻¹ = [[0.6,−0.7],[−0.2,0.4]]"
+        pt: "A⁻¹ = [[0.6,−0.7],[−0.2,0.4]]"
+        fr: "A⁻¹ = [[0.6,−0.7],[−0.2,0.4]]"
+        zh: "A⁻¹ = [[0.6,−0.7],[−0.2,0.4]]"
+        ja: "A⁻¹ = [[0.6,−0.7],[−0.2,0.4]]"
+      - es: "Comprobación: A · A⁻¹ = I"
+        en: "Check: A · A⁻¹ = I"
+        pt: "Comprovação: A · A⁻¹ = I"
+        fr: "Vérification : A · A⁻¹ = I"
+        zh: "验证：A · A⁻¹ = I"
+        ja: "確認: A · A⁻¹ = I"

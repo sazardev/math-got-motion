@@ -1,0 +1,357 @@
+id: geometric-distribution
+title:
+  es: Distribución Geométrica
+  en: Geometric Distribution
+  pt: Distribuição Geométrica
+  fr: Loi Géométrique
+  zh: 几何分布
+  ja: 幾何分布
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率と統計
+nodes:
+  - id: p-xk
+    type: variable
+    value: P(X=k)
+    explanation:
+      es: "P(X=k): la probabilidad de que el primer éxito caiga en el intento número k."
+      en: "P(X=k): the probability that the first success lands on attempt number k."
+      pt: "P(X=k): a probabilidade de o primeiro sucesso cair na tentativa número k."
+      fr: "P(X=k) : la probabilité que le premier succès tombe à l'essai numéro k."
+      zh: "P(X=k)：第一次成功恰好落在第 k 次尝试的概率。"
+      ja: "P(X=k)：最初の成功がちょうど k 回目の試行で現れる確率。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: paren-open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el paréntesis del factor de fracaso.
+      en: Opens the parenthesis of the failure factor.
+      pt: Abre o parêntese do fator de fracasso.
+      fr: Ouvre la parenthèse du facteur d'échec.
+      zh: 打开失败因子的括号。
+      ja: 失敗の因子を入れる括弧を開く。
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: "El uno del fracaso: la probabilidad de fallar es 1 − p."
+      en: "The one of failure: the probability of missing is 1 − p."
+      pt: "O um do fracasso: a probabilidade de errar é 1 − p."
+      fr: "Le un de l'échec : la probabilité de rater vaut 1 − p."
+      zh: 失败里的 1：没中的概率是 1 − p。
+      ja: 失敗側の 1。外す確率は 1 − p である。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "Resta: lo que queda tras fallar un intento es 1 − p."
+      en: "Subtracts: what is left after a miss is 1 − p."
+      pt: "Subtrai: o que sobra depois de errar um intento é 1 − p."
+      fr: "Soustrait : ce qui reste après un échec vaut 1 − p."
+      zh: "相减：一次失败之后剩下的是 1 − p。"
+      ja: "引く。失敗したあとに残るのが 1 − p である。"
+  - id: p-prob
+    type: variable
+    value: p
+    explanation:
+      es: "p: la probabilidad de éxito de un intento, idéntica en todos."
+      en: "p: the chance of success on one attempt, identical every time."
+      pt: "p: a chance de sucesso em uma tentativa, idêntica em todas."
+      fr: "p : la chance de succès d'un essai, identique à chaque fois."
+      zh: "p：单次尝试的成功概率，每次都一样。"
+      ja: "p：一回あたりの成功の確率。毎回まったく同じ値である。"
+  - id: paren-close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el paréntesis del factor de fracaso.
+      en: Closes the parenthesis of the failure factor.
+      pt: Fecha o parêntese do fator de fracasso.
+      fr: Ferme la parenthèse du facteur d'échec.
+      zh: 关闭失败因子的括号。
+      ja: 失敗の因子を出す括弧を閉じる。
+  - id: exp-km1
+    type: superscript
+    value: k−1
+    explanation:
+      es: "El exponente cuenta los fracasos previos, que son los anteriores al éxito."
+      en: "The exponent counts the earlier misses, the ones before the success."
+      pt: "O expoente conta as falhas anteriores, as que vieram antes do sucesso."
+      fr: "L'exposant compte les échecs précédents, ceux qui précèdent le succès."
+      zh: "指数统计的是成功之前的那些失败。"
+      ja: "このべき乗は成功の前に続いた失敗の回数を数える。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: p-final
+    type: variable
+    value: p
+    explanation:
+      es: "p: y al final, el intento que sí sale bueno."
+      en: "p: and at the end, the attempt that does work."
+      pt: "p: e, no fim, a tentativa que dá certo."
+      fr: "p : et pour finir, l'essai qui réussit."
+      zh: "p：最后这一次，是真正成功的尝试。"
+      ja: "p：そして最後に当てになる一回の試行。"
+context:
+  author:
+    es: Tradición clásica
+    en: Statistical tradition
+    pt: Tradição estatística
+    fr: Tradition statistique
+    zh: 统计传统
+    ja: 統計の古い流儀
+  era:
+    es: Siglo XIX · nombre tomado de la serie geométrica
+    en: 19th century · named after the geometric series
+    pt: Século XIX · nome tomado da série geométrica
+    fr: XIXe siècle · nom emprunté à la série géométrique
+    zh: 19 世纪 · 名称取自几何级数
+    ja: 19世紀 · 名称は等比級数に由来する
+  history:
+    es: >-
+      La distribución geométrica no tiene un autor único: es el nombre que se da a una idea muy
+      antigua, la de repetir un experimento hasta obtener el primer éxito. El nombre viene de la
+      serie geométrica, porque P(X = 1), P(X = 2), P(X = 3) forman una progresión de razón 1 − p. Lo
+      que la vuelve útil es una propiedad que no cambia con el tiempo: la memoria. Da igual que
+      llevemos tres intentos o tres mil, la distribución del número de intentos que faltan es
+      siempre la misma. Esa ausencia de memoria es justo lo que la distingue de la distribución
+      binomial y de la de Poisson, que cuentan cuántos casos ocurren en un intervalo, y también lo
+      que hace triviales sus cálculos. Su media es 1/p, un número redondo que se obtiene sin
+      integrar nada, y su suma de probabilidades vale exactamente uno.
+    en: >-
+      The geometric distribution has no single author: it is the name given to a very old idea,
+      repeating an experiment until the first success turns up. The name comes from the geometric
+      series, because P(X = 1), P(X = 2), P(X = 3) form a progression with ratio 1 − p. What makes
+      it useful is a property that does not change with time: memory. Whether three attempts or
+      three thousand have gone by, the distribution of the attempts still to come is always the
+      same. That lack of memory is what separates it from the binomial and the Poisson
+      distributions, which count how many cases occur in an interval, and it is what makes its
+      calculations trivial. Its mean is 1/p, a round number obtained without integrating anything,
+      and its probabilities sum to exactly one.
+    pt: >-
+      A distribuição geométrica não tem um autor único: é o nome que se dá a uma ideia muito antiga,
+      a de repetir um experimento até obter o primeiro sucesso. O nome vem da série geométrica,
+      porque P(X = 1), P(X = 2), P(X = 3) formam uma progressão de razão 1 − p. O que a torna útil é
+      uma propriedade que não muda com o tempo: a memória. Tanto faz que tenham passado três
+      tentativas ou três mil, a distribuição das tentativas que faltam é sempre a mesma. Essa
+      ausência de memória é justamente o que a distingue da distribuição binomial e da de Poisson,
+      que contam quantos casos ocorrem num intervalo, e é também o que torna triviais seus
+      cálculos. Sua média é 1/p, um número redondo obtido sem integrar nada, e a soma das
+      probabilidades vale exatamente um.
+    fr: >-
+      La loi géométrique n'a pas d'auteur unique : c'est le nom donné à une idée très ancienne,
+      répéter une expérience jusqu'au premier succès. Le nom vient de la série géométrique, car
+      P(X = 1), P(X = 2), P(X = 3) forment une progression de raison 1 − p. Ce qui la rend utile est
+      une propriété qui ne change pas avec le temps : la mémoire. Que trois essais ou trois mille
+      soient déjà passés, la distribution des essais qui restent est toujours la même. Cette
+      absence de mémoire est précisément ce qui la distingue de la loi binomiale et de la loi de
+      Poisson, qui comptent combien de cas surviennent dans un intervalle, et ce qui rend ses
+      calculs triviaux. Sa moyenne vaut 1/p, un nombre rond obtenu sans rien intégrer, et la somme
+      de ses probabilités vaut exactement un.
+    zh: >-
+      几何分布没有唯一的作者：它是一个古老想法的名字，即重复试验直到第一次成功。名称来自几何级数，因为
+      P(X = 1)、P(X = 2)、P(X = 3) 构成公比为 1 − p 的数列。使它有用的是一个不随时间改变的性质：记忆。无论已经
+      试了三次还是三千次，剩余尝试次数的分布始终相同。正是这种无记忆性把它与二项分布和泊松分布区分开来，后两者
+      统计的是一个区间内发生多少个事件；也正是这一点让它的计算变得极其简单。它的均值是 1/p，一个无需积分就
+      能得到的整数式结果，而它的概率之和恰好为一。
+    ja: >-
+      幾何分布にひとりの著者はいない。何度も試してはじめて成功する、という古い考えに与えられた名前である。名前は
+      等比級数に由来する。P(X = 1)、P(X = 2)、P(X = 3) が公比 1 − p の数列になるからだろう。役に立つ理由は、
+      時間で変わらない性質、記憶がないことにある。
+      残り何回で当てが出るかの分布はいつも同じである。この記憶のなさが、二項分布やポアソン分布との違いである。両者は
+      ある区間に何個起きるかを数え、この分布の計算は驚くほど簡単になる。平均は 1/p で、積分をせずに得られる
+      きりのよい数であり、確率の総和はちょうど 1 になる。
+  timeline:
+    - year: "1884"
+      label:
+        es: >-
+          El modelo se aplica a los cálculos de Buffon sobre clavos en una línea, uno de los
+          primeros experimentos de probabilidad geométrica.
+        en: >-
+          The model is applied to Buffon's calculations on needles tossed on a line, one of the
+          first experiments in geometric probability.
+        pt: >-
+          O modelo é aplicado aos cálculos de Buffon sobre agulhas atiradas numa linha, um dos
+          primeiros experimentos de probabilidade geométrica.
+        fr: >-
+          Le modèle s'applique aux calculs de Buffon sur des épingles lancées sur une ligne, l'une
+          des premières expériences de probabilité géométrique.
+        zh: >-
+          该模型被用于布丰关于抛针落线的计算，这是最早的几何概率实验之一。
+        ja: >-
+          この式は、直線上に針を落としたときのブフォンの計算に当てられた。初期の幾何確率の実験である。
+    - year: "1950s"
+      label:
+        es: >-
+          Se generaliza a la distribución binomial negativa, que cuenta los fracasos necesarios
+          para alcanzar un número fijo de éxitos.
+        en: >-
+          It generalizes to the negative binomial distribution, which counts the failures needed
+          to reach a fixed number of successes.
+        pt: >-
+          Generaliza-se para a distribuição binomial negativa, que conta as falhas necessárias para
+          atingir um número fixo de sucessos.
+        fr: >-
+          Elle se généralise en loi binomiale négative, qui compte les échecs nécessaires pour
+          atteindre un nombre fixe de succès.
+        zh: >-
+          它推广为负二项分布，后者统计的是达到固定成功次数之前所经历的失败。
+        ja: >-
+          これを一般化したものが負の二項分布で、ある成功回数に達するまでに要した失敗を数える。
+    - year: Hoy
+      label:
+        es: >-
+          Está detrás de los ensayos de ruleta, del control de calidad industrial y del debate
+          sobre cuántas pruebas hacen falta para un resultado positivo.
+        en: >-
+          It sits behind roulette trials, industrial quality control and the debate over how many
+          tests a positive result needs.
+        pt: >-
+          Está por trás dos testes de roleta, do controle de qualidade industrial e da discussão
+          sobre quantos testes um resultado positivo exige.
+        fr: >-
+          Elle est derrière les essais de roulette, le contrôle qualité industriel et le débat sur
+          le nombre de tests qu'exige un résultat positif.
+        zh: >-
+          它就藏在轮盘试验、工业质量控制，以及「一个阳性结果需要多少次试验」这场争论背后。
+        ja: >-
+          ルーレットの試行、工場の品質管理、そして陽性結果には何回の試験が必要かという議論の背後にある。
+  useCases:
+    - title:
+        es: Ruleta y azar
+        en: Roulette and chance
+        pt: Roleta e acaso
+        fr: Roulette et hasard
+        zh: 轮盘与运气
+        ja: ルーレットと偶然
+      description:
+        es: >-
+          Con un solo número en una ruleta europea p = 1/37, y el número medio de giros hasta ganar
+          es 37.
+        en: >-
+          With a single number on a European roulette p = 1/37, and the mean number of spins before
+          a win is 37.
+        pt: >-
+          Com um único número na roleta europeia p = 1/37, e o número médio de giros até ganhar é
+          37.
+        fr: >-
+          Avec un seul numéro sur une roulette européenne p = 1/37, et le nombre moyen de tours
+          jusqu'à gagner est 37.
+        zh: >-
+          在欧洲轮盘上押单个数字时 p = 1/37，平均要转 37 次才中奖。
+        ja: >-
+          ヨーロッパ式ルーレットで一つの数字だけを選ぶと p = 1/37 で、当たるまでの平均回転回数は 37 回。
+    - title:
+        es: Intentos hasta el éxito
+        en: Attempts until success
+        pt: Tentativas até o sucesso
+        fr: Essais jusqu'au succès
+        zh: 直到成功为止的尝试
+        ja: 成功までの試行
+      description:
+        es: >-
+          Fabricar piezas hasta que una salga buena, detectar un defecto antes de enviar el lote: el
+          caso es siempre el mismo.
+        en: >-
+          Making parts until one comes out right, spotting a defect before the batch ships: the case
+          is always the same.
+        pt: >-
+          Fabricar peças até uma sair boa, detectar um defeito antes de enviar o lote: o caso é
+          sempre o mesmo.
+        fr: >-
+          Fabriquer des pièces jusqu'à ce que l'une soit bonne, repérer un défaut avant expédition :
+          le cas est toujours le même.
+        zh: >-
+          一直生产零件直到有一个合格、在发货前查出一个缺陷：情形总是一样。
+        ja: >-
+          部品が一つ良くなるまで製造する、出荷前に不具合を見つける。どれも帰結は同じである。
+    - title:
+        es: Un estudio y muchas tiradas
+        en: One study, many rolls
+        pt: Um estudo e muitas rodadas
+        fr: Une étude, beaucoup de tirages
+        zh: 研究很多，发表很少
+        ja: 試験の回数は多いのに発表はひとつ
+      description:
+        es: >-
+          Quien publica solo los resultados positivos ve su probabilidad de éxito crecer sin que
+          nada haya cambiado de verdad.
+        en: >-
+          Publishing only positive results raises your chance of a hit without anything real having
+          changed.
+        pt: >-
+          Publicar só os resultados positivos aumenta sua chance de acerto sem que nada tenha
+          mudado de verdade.
+        fr: >-
+          Ne publier que les résultats positifs augmente vos chances de succès sans que quoi que ce
+          soit ait réellement changé.
+        zh: >-
+          只发表阳性结果，会让你的命中概率升高，而实际情况并没有任何改变。
+        ja: 陽性の結果だけを報告すると、何も変わっていないのに中率が上がる。
+  example:
+    title:
+      es: Tirando un dado
+      en: Rolling a die
+      pt: Rolando um dado
+      fr: Lancer d'un dé
+      zh: 掷一颗骰子
+      ja: サイコロを振る
+    lines:
+      - es: "Un dado de seis caras: p = 1/6 en cada intento"
+        en: "A six-sided die: p = 1/6 on each attempt"
+        pt: "Um dado de seis faces: p = 1/6 em cada tentativa"
+        fr: "Un dé à six faces : p = 1/6 à chaque essai"
+        zh: "六面骰：每次 p = 1/6"
+        ja: "六面のサイコロ：毎回 p = 1/6"
+      - es: "P(X=1) = (5/6)⁰ · (1/6) = 1/6 ≈ 0,1667"
+        en: "P(X=1) = (5/6)⁰ · (1/6) = 1/6 ≈ 0.1667"
+        pt: "P(X=1) = (5/6)⁰ · (1/6) = 1/6 ≈ 0,1667"
+        fr: "P(X=1) = (5/6)⁰ · (1/6) = 1/6 ≈ 0,1667"
+        zh: "P(X=1) = (5/6)⁰ · (1/6) = 1/6 ≈ 0,1667"
+        ja: "P(X=1) = (5/6)⁰ · (1/6) = 1/6 ≈ 0,1667"
+      - es: "P(X=2) = (5/6)¹ · (1/6) = 5/36 ≈ 0,1389"
+        en: "P(X=2) = (5/6)¹ · (1/6) = 5/36 ≈ 0.1389"
+        pt: "P(X=2) = (5/6)¹ · (1/6) = 5/36 ≈ 0,1389"
+        fr: "P(X=2) = (5/6)¹ · (1/6) = 5/36 ≈ 0,1389"
+        zh: "P(X=2) = (5/6)¹ · (1/6) = 5/36 ≈ 0,1389"
+        ja: "P(X=2) = (5/6)¹ · (1/6) = 5/36 ≈ 0,1389"
+      - es: "P(X=3) = (5/6)² · (1/6) = 25/216 ≈ 0,1157"
+        en: "P(X=3) = (5/6)² · (1/6) = 25/216 ≈ 0.1157"
+        pt: "P(X=3) = (5/6)² · (1/6) = 25/216 ≈ 0,1157"
+        fr: "P(X=3) = (5/6)² · (1/6) = 25/216 ≈ 0,1157"
+        zh: "P(X=3) = (5/6)² · (1/6) = 25/216 ≈ 0,1157"
+        ja: "P(X=3) = (5/6)² · (1/6) = 25/216 ≈ 0,1157"
+      - es: "Media: E[X] = 1/p = 6 intentos de media"
+        en: "Mean: E[X] = 1/p = 6 attempts on average"
+        pt: "Média: E[X] = 1/p = 6 tentativas em média"
+        fr: "Moyenne : E[X] = 1/p = 6 essais en moyenne"
+        zh: "均值：E[X] = 1/p = 平均 6 次尝试"
+        ja: "平均：E[X] = 1/p = 平均 6 回の試行"
+      - es: "Varianza = (1 − p)/p² = 30 intentos al cuadrado"
+        en: "Variance = (1 − p)/p² = 30 attempts squared"
+        pt: "Variância = (1 − p)/p² = 30 tentativas ao quadrado"
+        fr: "Variance = (1 − p)/p² = 30 essais au carré"
+        zh: "方差 = (1 − p)/p² = 30 次尝试的平方"
+        ja: "分散は (1 − p)/p² で 30 回二乗になる"

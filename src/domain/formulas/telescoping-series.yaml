@@ -1,0 +1,383 @@
+id: telescoping-series
+title:
+  es: Suma Telescópica
+  en: Telescoping Series
+  pt: Soma Telescópica
+  fr: Série télescopique
+  zh: 裂项相消
+  ja: 裂項する和
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: sum
+    type: operator
+    value: Σₖ₌₁ⁿ
+    explanation:
+      es: Una suma con n términos, uno por cada valor del índice k.
+      en: A sum with n terms, one for each value of the index k.
+      pt: Uma soma com n termos, um para cada valor do índice k.
+      fr: Une somme de n termes, un pour chaque valeur de l'indice k.
+      zh: 一个含 n 项的求和，指标 k 每取一个值对应一项。
+      ja: 添字 k の値ごとに1項、合計 n 項の和である。
+  - id: open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el término general, que es una resta de dos fracciones vecinas.
+      en: Opens the general term, which is a difference of two neighbouring fractions.
+      pt: Abre o termo geral, que é uma subtração de duas frações vizinhas.
+      fr: Ouvre le terme général, une différence de deux fractions voisines.
+      zh: 打开通项，它是相邻两个分数之差。
+      ja: 隣り合う2つの分数の差からなる一般項を囲む括弧を開く。
+  - id: first-term
+    type: variable
+    value: 1/k
+    explanation:
+      es: El término positivo, con denominador k.
+      en: The positive term, with denominator k.
+      pt: O termo positivo, com denominador k.
+      fr: Le terme positif, de dénominateur k.
+      zh: 正项，分母为 k。
+      ja: 正の項。分母が k である。
+  - id: minus-1
+    type: operator
+    value: "−"
+    explanation:
+      es: El signo que hace que casi todo se cancele.
+      en: The sign that makes almost everything cancel out.
+      pt: O sinal que faz quase tudo se cancelar.
+      fr: Le signe qui fait se annuler presque tout.
+      zh: 使几乎所有项相消的减号。
+      ja: ほとんどすべてを打ち消す記号である。
+  - id: second-term
+    type: variable
+    value: 1/(k+1)
+    explanation:
+      es: "El término negativo, con el denominador siguiente: el vecino del anterior."
+      en: "The negative term, with the next denominator: the neighbour of the first one."
+      pt: "O termo negativo, com o denominador seguinte: o vizinho do anterior."
+      fr: "Le terme négatif, au dénominateur suivant : le voisin du premier."
+      zh: 负项，分母是下一个，也就是前一项的邻居。
+      ja: 負の項。分母は1つ先で、前の項の隣人である。
+  - id: close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el término; el siguiente empieza justo donde acaba este.
+      en: Closes the term; the next one starts exactly where this ends.
+      pt: Fecha o termo; o seguinte começa exatamente onde este acaba.
+      fr: Ferme le terme ; le suivant commence exactement là où celui-ci finit.
+      zh: 关闭该项；下一项正好从这里开始。
+      ja: 一般項をとじる。次の項はまさにここから始める。
+  - id: eq-1
+    type: equals
+    value: "="
+    explanation:
+      es: La suma entera se reduce a una sola resta de extremos.
+      en: The whole sum collapses to a single difference of the two ends.
+      pt: A soma inteira se reduz a uma única subtração de extremos.
+      fr: La somme entière se réduit à une seule différence d'extrémités.
+      zh: 整个求和化为首尾两项相减。
+      ja: 総和全体が、両端だけの差に縮まってしまう。
+  - id: one-left
+    type: constant
+    value: "1"
+    explanation:
+      es: El primer término, 1/1, que sobrevive a todas las cancelaciones.
+      en: The first term, 1/1, which survives every cancellation.
+      pt: O primeiro termo, 1/1, que sobrevive a todas as cancelamentos.
+      fr: Le premier terme, 1/1, qui survit à toutes les annulations.
+      zh: 第一项 1/1，它在所有相消之后仍然留下。
+      ja: 第1項の 1/1 で、すべての打ち消しを生き残る項である。
+  - id: minus-2
+    type: operator
+    value: "−"
+    explanation:
+      es: Solo queda una resta, ya sin términos intermedios en medio.
+      en: Only one subtraction is left, with nothing in between.
+      pt: Sobra uma única subtração, sem termos no meio.
+      fr: Il ne reste qu'une soustraction, sans terme intermédiaire.
+      zh: 只剩下一次相减，中间没有任何项。
+      ja: 挟まれた項已经没有、1回の減算だけが残る。
+  - id: tail
+    type: variable
+    value: 1/(n+1)
+    explanation:
+      es: El último término, que es el único que no fue cancelado por nadie.
+      en: The last term, the only one nobody cancelled.
+      pt: O último termo, o único que ninguém cancelou.
+      fr: Le dernier terme, le seul que personne n'a annulé.
+      zh: 最后一项，它是唯一没有被别的项相消的。
+      ja: 最後の項で、誰にも打ち消されなかった唯一の項である。
+  - id: semi-1
+    type: operator
+    value: ";"
+    explanation:
+      es: Cuando n crece hasta el infinito, el segundo término tiende a cero.
+      en: As n grows without bound, the second term tends to zero.
+      pt: Quando n cresce até o infinito, o segundo termo tende a zero.
+      fr: Quand n tend vers l'infini, le second terme tend vers zéro.
+      zh: 当 n 趋于无穷时，第二项趋于零。
+      ja: n を無限に近づけると、第2項は 0 へ近づく。
+  - id: limit
+    type: operator
+    value: n → ∞
+    explanation:
+      es: El límite de la suma, que ya no depende de ningún término intermedio.
+      en: The limit of the sum, which no longer depends on any intermediate term.
+      pt: O limite da soma, que já não depende de nenhum termo intermediário.
+      fr: La limite de la somme, qui ne dépend plus d'aucun terme intermédiaire.
+      zh: 该和的极限，此时已与任何中间项无关。
+      ja: 中間の項に依存しなくなった和の極限である。
+  - id: arrow
+    type: operator
+    value: "→"
+    explanation:
+      es: Y el resultado límite es el número más simple posible.
+      en: And the limiting result is the simplest number possible.
+      pt: E o resultado limite é o número mais simples possível.
+      fr: Et le résultat limite est le nombre le plus simple possible.
+      zh: 极限结果就是最简单的那个数。
+      ja: そしてその極限はもっとも楽な数になる。
+  - id: final-one
+    type: constant
+    value: "1"
+    explanation:
+      es: "Uno: la serie converge, y lo hace a un valor finito y conocido de antemano."
+      en: "One: the series converges, and it converges to a finite value known in advance."
+      pt: "Um: a série converge, e converge para um valor finito conhecido de antemão."
+      fr: "Un : la série converge, et vers une valeur finie connue à l'avance."
+      zh: 一：该级数收敛，且收敛到一个事先已知的有限值。
+      ja: 1である。この級数は収束し、前から分かっている有限な値へ収束する。
+context:
+  author:
+    es: Sin autor identificado
+    en: No single identified author
+    pt: Sem autor identificado
+    fr: Pas d'auteur identifié
+    zh: 无单一署名者
+    ja: 単一の著者なし
+  era:
+    es: Sin fecha · tradición de cuadernos de problemas desde el s. XIX
+    en: Undated · a problem book tradition since the 19th century
+    pt: Sem data · tradição de cadernos de problemas desde o séc. XIX
+    fr: Sans date · tradition des carnets de problèmes depuis le XIXe siècle
+    zh: 无确切年代 · 自19世纪起的习题集传统
+    ja: 特定なし · 19世紀以来の問題集の伝統
+  history:
+    es: >-
+      No hay un inventor: esto es un truco, no un teorema, y todo el mundo lo aprende en las
+      olimpiadas de secundaria la primera vez que una suma enorme se reduce a un número
+      pequeño. La idea es escribir los términos uno a uno hasta ver el patrón: 1 menos 1/2,
+      1/2 menos 1/3, 1/3 menos 1/4. Cada término negativo cancela al positivo anterior y solo
+      quedan los dos extremos. La misma estructura sirve con productos, con factoriales y con
+      fracciones encadenadas, siempre que los términos intermedios sean vecinos.
+    en: >-
+      There is no inventor: this is a trick, not a theorem, and everyone learns it in school
+      olympiads the first time a huge sum collapses into a small number. The idea is to write
+      the terms out until the pattern shows: one minus one half, one half minus one third, one
+      third minus one fourth. Every negative term cancels the positive one before it and only
+      the two ends survive. The same structure works with products, with factorials and with
+      chained fractions, as long as the intermediate terms are neighbours.
+    pt: >-
+      Não há um inventor: isto é um truque, não um teorema, e todo mundo aprende nas olimpiadas
+      de escola a primeira vez que uma soma enorme se reduz a um número pequeno. A ideia é
+      escrever os termos um a um até ver o padrão: 1 menos 1/2, 1/2 menos 1/3, 1/3 menos 1/4.
+      Cada termo negativo cancela o positivo anterior e só restam as duas pontas. A mesma
+      estrutura funciona com produtos, com fatoriais e com frações encadeadas, desde que os
+      termos intermediários sejam vizinhos.
+    fr: >-
+      Il n'y a pas d'inventeur : c'est une astuce, pas un théorème, et tout le monde l'apprend à
+      l'olympiade scolaire la première fois qu'une somme énorme se réduit à un petit nombre.
+      L'idée consiste à écrire les termes un à un jusqu'à voir le motif : un moins un demi,
+      un demi moins un tiers, un tiers moins un quart. Chaque terme négatif annule le terme
+      positif précédent et il ne reste que les deux extrémités. La même structure marche avec
+      des produits, des factorielles et des fractions en chaîne, tant que les termes
+      intermédiaires sont voisins.
+    zh: >-
+      这没有什么发明者：它是一个技巧而不是定理，每个人在上中学的竞赛课上第一次看到巨大的和
+      缩小成一个很小的数时都会学到它。办法是把项逐个写出来，直到看出规律：
+      1 减 1/2，1/2 减 1/3，1/3 减 1/4。每个负项都抵消前一个正项，最后只剩首尾两项。
+      同样的结构也适用于乘积、阶乘和连分数，只要中间各项互为邻居。
+    ja: >-
+      発明者はいない。これは定理ではなく技巧であり、巨大な和が小さい数に縮むのを見た瞬間に
+      誰にでも教わる。項を1つずつ書いていき、型が見えるまで続ければよい。
+      1 マイナス 1/2、1/2 マイナス 1/3、1/3 マイナス 1/4。
+      負の項は直前の正の項を打ち消し、最後に両端だけが残る。
+      中間の項どうしが隣り合う限り、同じ型は積や階乗、入れ子の分数でも使える。
+  timeline:
+    - year: s. XIX
+      label:
+        es: >-
+          El truco figura en las colecciones de problemas de las escuelas clásicas y en los
+          libros de preparación para la universidad.
+        en: >-
+          The trick appears in problem collections of the classical schools and in university
+          entrance books.
+        pt: >-
+          O truque aparece nas coleções de problemas das escolas clássicas e nos livros de
+          preparação para a universidade.
+        fr: >-
+          L'astuce figure dans les recueils de problèmes des écoles classiques et dans les
+          livres de préparation aux concours.
+        zh: >-
+          这一技巧出现在旧式中学的习题集和大学备考书中。
+        ja: >-
+          この技巧は、古典的な学校の問題集や大学受験の参考書に出てくる。
+    - year: "1950"
+      label:
+        es: >-
+          Los textos de análisis elemental lo presentan como el ejemplo canónico de serie
+          telescópica.
+        en: >-
+          Elementary analysis texts present it as the canonical example of a telescoping series.
+        pt: >-
+          Os textos de análise elemental o apresentam como o exemplo canônico de série
+          telescópica.
+        fr: >-
+          Les manuels d'analyse élémentaire le présentent comme l'exemple canonique de série
+          télescopique.
+        zh: >-
+          初等分析教材把它列为裂项相消级数的标准例子。
+        ja: >-
+          初等解析の教科書はこれを裂項相消級数の典型例として掲げる。
+    - year: Hoy
+      label:
+        es: >-
+          Se usa para demostrar convergencia y para descomponer fracciones en diferencias
+          parciales de forma simple.
+        en: >-
+          It is used to show convergence and to decompose fractions into simple partial
+          differences.
+        pt: >-
+          É usado para demonstrar convergência e para decompor frações em diferenças parciais
+          de forma simples.
+        fr: >-
+          On s'en sert pour montrer la convergence et décomposer des fractions en différences
+          partielles simples.
+        zh: >-
+          它用来证明收敛，也用来把分式分解成简单的部分分式之差。
+        ja: >-
+          収束を示すため、そして分数を簡単な部分分数の差に分解するために使われる。
+  useCases:
+    - title:
+        es: Series y sumas parciales
+        en: Series and partial sums
+        pt: Séries e somas parciais
+        fr: Séries et sommes partielles
+        zh: 级数与部分和
+        ja: 級数と部分和
+      description:
+        es: >-
+          Da la suma parcial exacta de una serie sin sumar término a término, y con eso muestra
+          de inmediato que converge.
+        en: >-
+          It gives the exact partial sum of a series without adding term by term, and that
+          immediately shows convergence.
+        pt: >-
+          Dá a soma parcial exata de uma série sem somar termo a termo, e isso mostra na hora a
+          convergência.
+        fr: >-
+          Elle donne la somme partielle exacte d'une série sans ajouter terme à terme, ce qui
+          montre aussitôt la convergence.
+        zh: >-
+          不必逐项相加就能得到级数的精确部分和，从而立刻看出它收敛。
+        ja: >-
+          1項ずつ足さずに級数の部分和を正確に得られるので、収束が一目でわかる。
+    - title:
+        es: Fracciones parciales
+        en: Partial fractions
+        pt: Frações parciais
+        fr: Fractions partielles
+        zh: 部分分式
+        ja: 部分分数
+      description:
+        es: >-
+          La identidad 1 sobre k por k más uno es igual a 1/k menos 1/(k+1) convierte un término
+          en dos y hace posible sumar.
+        en: >-
+          The identity one over k times k plus one equals one over k minus one over k plus one
+          turns one term into two and makes summing possible.
+        pt: >-
+          A identidade 1 sobre k vezes k mais um igual a 1/k menos 1/(k+1) transforma um termo em
+          dois e torna a soma possível.
+        fr: >-
+          L'identité un sur k fois k plus un égale un sur k moins un sur k plus un transforme
+          un terme en deux et rend la somme possible.
+        zh: >-
+          恒等式 1/[k(k+1)] = 1/k − 1/(k+1) 把一项拆成两项，使求和成为可能。
+        ja: >-
+          恒等式 1/(k(k+1)) = 1/k − 1/(k+1) は1項を2項に分け、和を取れるようにしてくれる。
+    - title:
+        es: Sumas de probabilidades
+        en: Probability sums
+        pt: Somas de probabilidades
+        fr: Sommes de probabilités
+        zh: 概率求和
+        ja: 確率の和
+      description:
+        es: >-
+          La probabilidad de que una moneda salga cara alguna vez en n tiradas se expresa como una de estas sumas.
+        en: >-
+          The probability that a coin shows heads at least once in n tosses is expressed as one
+          of these sums.
+        pt: >-
+          A probabilidade de uma moeda sair cara pelo menos uma vez em n lançamentos se expressa
+          como uma dessas somas.
+        fr: >-
+          La probabilité qu'une pièce tombe sur pile au moins une fois en n lancers s'écrit comme
+          l'une de ces sommes.
+        zh: >-
+          一枚硬币在 n 次抛掷中至少出现一次正面的概率，就写成这类求和。
+        ja: >-
+          硬貨を n 回投げて1回以上表が出る確率は、この種の和で表される。
+  example:
+    title:
+      es: Una suma de cien términos
+      en: A sum of a hundred terms
+      pt: Uma soma de cem termos
+      fr: Une somme de cent termes
+      zh: 一百项的求和
+      ja: 100項の和
+    lines:
+      - es: "k va de 1 a n: (1/k − 1/(k+1))"
+        en: "k runs from 1 to n: (1/k − 1/(k+1))"
+        pt: "k vai de 1 a n: (1/k − 1/(k+1))"
+        fr: "k va de 1 à n : (1/k − 1/(k+1))"
+        zh: "k 从 1 到 n：(1/k − 1/(k+1))"
+        ja: "k は 1 から n まで：(1/k − 1/(k+1))"
+      - es: "(1 − 1/2) + (1/2 − 1/3) + … + (1/n − 1/(n+1))"
+        en: "(1 − 1/2) + (1/2 − 1/3) + … + (1/n − 1/(n+1))"
+        pt: "(1 − 1/2) + (1/2 − 1/3) + … + (1/n − 1/(n+1))"
+        fr: "(1 − 1/2) + (1/2 − 1/3) + … + (1/n − 1/(n+1))"
+        zh: "(1 − 1/2) + (1/2 − 1/3) + … + (1/n − 1/(n+1))"
+        ja: "(1 − 1/2) + (1/2 − 1/3) + … + (1/n − 1/(n+1))"
+      - es: "todo se cancela menos el primer 1 y el último término"
+        en: "everything cancels except the leading 1 and the last term"
+        pt: "tudo se cancela menos o primeiro 1 e o último termo"
+        fr: "tout s'annule sauf le premier 1 et le dernier terme"
+        zh: "除了开头的 1 和最后一项，其余全部相消"
+        ja: "先頭の 1 と最後の項以外はすべて打ち消される"
+      - es: "= 1 − 1/(n+1)"
+        en: "= 1 − 1/(n+1)"
+        pt: "= 1 − 1/(n+1)"
+        fr: "= 1 − 1/(n+1)"
+        zh: "= 1 − 1/(n+1)"
+        ja: "= 1 − 1/(n+1)"
+      - es: "con n = 100: 1 − 1/101"
+        en: "with n = 100: 1 − 1/101"
+        pt: "com n = 100: 1 − 1/101"
+        fr: "avec n = 100 : 1 − 1/101"
+        zh: "取 n = 100：1 − 1/101"
+        ja: "n = 100 なら 1 − 1/101"
+      - es: "= 100/101 ≈ 0.9901"
+        en: "= 100/101 ≈ 0.9901"
+        pt: "= 100/101 ≈ 0,9901"
+        fr: "= 100/101 ≈ 0,9901"
+        zh: "= 100/101 ≈ 0.9901"
+        ja: "= 100/101 ≈ 0.9901"

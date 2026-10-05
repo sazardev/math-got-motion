@@ -1,0 +1,308 @@
+id: rsa-modular-exponentiation
+title:
+  es: "Cifrado RSA"
+  en: "RSA encryption"
+  pt: "Cifração RSA"
+  fr: "Chiffrement RSA"
+  zh: "RSA 加密"
+  ja: "RSA暗号"
+category:
+  es: Informática
+  en: Computer science
+  pt: Informática
+  fr: Informatique
+  zh: 计算机科学
+  ja: コンピュータ科学
+nodes:
+  - id: c
+    type: variable
+    value: c
+    explanation:
+      es: "c: el texto cifrado, el número que viaja por la red."
+      en: "c: the ciphertext, the number that travels over the network."
+      pt: "c: o texto cifrado, o número que viaja pela rede."
+      fr: "c : le texte chiffré, le nombre qui circule sur le réseau."
+      zh: "c：密文，即在网络上传输的那个数。"
+      ja: "c：暗号文。ネットワークを流れる数。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: "m: el mensaje, convertido antes en un número entero."
+      en: "m: the message, turned beforehand into an integer."
+      pt: "m: a mensagem, convertida antes em um número inteiro."
+      fr: "m : le message, converti au préalable en entier."
+      zh: "m：消息，事先已转换为整数。"
+      ja: "m：メッセージ。整数に変えたもの。"
+  - id: exp-e
+    type: superscript
+    value: e
+    explanation:
+      es: "e: el exponente público, que cualquiera puede conocer."
+      en: "e: the public exponent, which anybody may know."
+      pt: "e: o expoente público, que qualquer um pode conhecer."
+      fr: "e : l'exposant public, que tout le monde peut connaître."
+      zh: "e：公开指数，任何人都可以知道。"
+      ja: "e：公開指数。誰でも知っておくことができる。"
+  - id: mod
+    type: operator
+    value: mod
+    explanation:
+      es: "mod: el resto de dividir, que devuelve el resultado entre 0 y n−1."
+      en: "mod: the remainder of a division, returning a result between 0 and n−1."
+      pt: "mod: o resto da divisão, que devolve um resultado entre 0 e n−1."
+      fr: "mod : le reste de la division, qui renvoie un résultat entre 0 et n−1."
+      zh: "mod：取余，使结果落在0与n−1之间。"
+      ja: "mod：割り算の剰余。0からn−1までの値を返す。"
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: "n: el módulo, el producto de dos primos grandes que permanece secreto."
+      en: "n: the modulus, the product of two large primes that stays secret."
+      pt: "n: o módulo, o produto de dois primos grandes que permanece secreto."
+      fr: "n : le module, le produit de deux grands nombres premiers qui reste secret."
+      zh: "n：模数，由两个大素数相乘得到并保持秘密。"
+      ja: "n：法。2つの大きい素数の積で、秘密に保たれる。"
+context:
+  author:
+    es: "Rivest, Shamir y Adleman"
+    en: "Rivest, Shamir and Adleman"
+    pt: "Rivest, Shamir e Adleman"
+    fr: "Rivest, Shamir et Adleman"
+    zh: "里维斯特、沙米尔和阿德曼"
+    ja: "リベスト、シャミール、アデルマン"
+  era:
+    es: "EE. UU., 1977 · cifrado de clave pública"
+    en: "USA, 1977 · public-key cryptography"
+    pt: "EUA, 1977 · criptografia de chave pública"
+    fr: "États-Unis, 1977 · cryptographie à clé publique"
+    zh: "美国，1977年·公钥密码学"
+    ja: "アメリカ、1977年·公開鍵暗号"
+  history:
+    es: >-
+      En 1977 Rivest, Shamir y Adleman publicaron un cifrado de clave pública al que
+      bautizaron RSA, con las iniciales de sus apellidos. La idea es que cualquiera cifre con
+      una clave pública y sólo quien posea la privada recupere el mensaje, y en aritmética
+      modular esa pareja se reduce a dos exponenciaciones. Descifrar significa deshacer la
+      segunda, y la única vía conocida para conseguirlo es factorizar el módulo n. Por eso
+      RSA-2048 sigue considerándose aceptable mientras que 1024 bits dejó de serlo hace
+      años: no hay atajo matemático, sólo módulos más grandes.
+    en: >-
+      In 1977 Rivest, Shamir and Adleman published a public-key cipher they named RSA after
+      the initials of their surnames. The idea is that anybody encrypts with a public key and
+      only the holder of the private one recovers the message, and in modular arithmetic that
+      pair of steps collapses into two exponentiations. Decrypting means undoing the second
+      one, and the only known way to do it is to factor the modulus n. That is why RSA-2048
+      is still considered acceptable while 1024 bits stopped being so years ago: there is no
+      mathematical shortcut, only bigger moduli.
+    pt: >-
+      Em 1977, Rivest, Shamir e Adleman publicaram uma cifra de chave pública que batizaram
+      de RSA, com as iniciais de seus sobrenomes. A ideia é que qualquer pessoa cifre com uma
+      chave pública e só quem tiver a privada recupere a mensagem, e na aritmética modular
+      esse par de passos se reduz a duas exponenciações. Decifrar é desfazer a segunda, e a
+      única via conhecida para isso é fatorar o módulo n. Por isso o RSA-2048 ainda é
+      considerado aceitável enquanto 1024 bits deixou de ser há anos: não há atalho
+      matemático, apenas módulos maiores.
+    fr: >-
+      En 1977, Rivest, Shamir et Adleman publèrent un chiffre à clé publique qu'ils nommèrent
+      RSA d'après les initiales de leurs noms. L'idée est que chacun chiffre avec une clé
+      publique et que seul le détenteur de la clé privée retrouve le message, et en
+      arithmétique modulaire cette paire d'étapes se réduit à deux exponentiations. Déchiffrer,
+      c'est défaire la seconde, et la seule voie connue pour y parvenir consiste à factoriser
+      le module n. C'est pourquoi RSA-2048 reste considéré acceptable alors que 1024 bits a
+      cessé de l'être il y a des années : il n'y a pas de raccourci mathématique, seulement
+      des modules plus grands.
+    zh: >-
+      1977年，里维斯特、沙米尔和阿德曼发表了以三人姓氏首字母命名的公钥密码RSA。核心思想是：任何人都能用公钥
+      加密，只有持有私钥的人才能还原消息，而在模运算中这前后两步可归结为两次模幂运算。解密就是撤销第二次
+      运算，而目前唯一的已知途径是分解模数n。正因如此，RSA-2048仍被认为可以接受，而1024位多年前就不再
+      被接受了：数学上没有捷径，只有更大的模数。
+    ja: >-
+      1977年、リベスト、シャミール、アデルマンは3人の苗字の頭文字を並べた公開鍵暗号RSAを発表した。
+      誰でも公開鍵で暗号化し、秘密鍵を持つ者だけが文を戻せる、という考えだが、剰余演算で見れば
+      この2歩は冪乗2回でまとまる。復号は2回めの冪乗を取り消す作業であり、既知の方法は
+      法nの素因数分解しかない。だからRSA-2048はまだ容認される一方、1024ビットはとうに
+      容認されなくなった。数学の近道はなく、より大きい法を使うだけである。
+  timeline:
+    - year: "1977"
+      label:
+        es: >-
+          Rivest, Shamir y Adleman reducen la clave pública a una exponenciación modular.
+        en: >-
+          Rivest, Shamir and Adleman reduce public-key cryptography to one exponentiation.
+        pt: >-
+          Rivest, Shamir e Adleman reduzem a chave pública a uma exponenciação modular.
+        fr: >-
+          Rivest, Shamir et Adleman ramènent la clé publique à une exponentiation modulaire.
+        zh: >-
+          里维斯特、沙米尔和阿德曼把公钥密码归结为一次模幂运算。
+        ja: >-
+          リベスト、シャミール、アデルマンが公開鍵暗号を冪乗1回に単純化する。
+    - year: "1978"
+      label:
+        es: >-
+          El artículo aparece en Communications of the ACM y el método se hace público.
+        en: >-
+          The paper appears in Communications of the ACM and the method becomes public.
+        pt: >-
+          O artigo aparece no Communications of the ACM e o método se torna público.
+        fr: >-
+          L'article paraît dans Communications of the ACM et la méthode devient publique.
+        zh: >-
+          论文发表于《美国计算机学会通讯》，方法公开。
+        ja: >-
+          論文が Communications of the ACM に載り、当の方法は世に出る。
+    - year: "1994"
+      label:
+        es: >-
+          El primer SSL ya transporta un certificado RSA para negociar la sesión.
+        en: >-
+          The first SSL already carries an RSA certificate to negotiate the session.
+        pt: >-
+          O primeiro SSL já transporta um certificado RSA para negociar a sessão.
+        fr: >-
+          Le premier SSL transporte déjà un certificat RSA pour négocier la session.
+        zh: >-
+          最早的SSL就已携带RSA证书来协商会话。
+        ja: >-
+          最初のSSLはすでにRSA証明書でセッションを確立していた。
+    - year: Hoy
+      label:
+        es: >-
+          En TLS 1.3 RSA ya no intercambia claves: sólo firma, y lo hace despacio.
+        en: >-
+          In TLS 1.3 RSA no longer exchanges keys: it only signs, and it does so slowly.
+        pt: >-
+          No TLS 1.3 o RSA não troca mais chaves: apenas assina, e devagar.
+        fr: >-
+          Dans TLS 1.3, RSA n'échange plus de clés : il ne fait plus que signer, et lentement.
+        zh: >-
+          在TLS 1.3中RSA不再用于密钥交换，只负责签名，而且速度较慢。
+        ja: >-
+          TLS 1.3ではRSAは鍵交換に使われず、署名だけを行う，而且その処理は遅い。
+  useCases:
+    - title:
+        es: HTTPS y certificados
+        en: HTTPS and certificates
+        pt: HTTPS e certificados
+        fr: HTTPS et certificats
+        zh: HTTPS 与证书
+        ja: HTTPSと証明書
+      description:
+        es: >-
+          La clave RSA del certificado firma la negociación y el navegador comprueba esa
+          firma antes de enseñar el candado en la barra de direcciones.
+        en: >-
+          The certificate's RSA key signs the handshake, and the browser checks that
+          signature before showing its padlock.
+        pt: >-
+          A chave RSA do certificado assina a negociação, e o navegador confere essa
+          assinatura antes de exibir o cadeado.
+        fr: >-
+          La clé RSA du certificat signe la négociation, et le navigateur vérifie cette
+          signature avant d'afficher son cadenas.
+        zh: >-
+          证书中的RSA密钥为握手签名，浏览器在显示挂锁之前先验证该签名。
+        ja: >-
+          証明書のRSA鍵がハンドシェイクに署名し、ブラウザはその署名を確認してから
+          鍵マークを表示する。
+    - title:
+        es: Firmas de software
+        en: Software signatures
+        pt: Assinaturas de software
+        fr: Signatures de logiciels
+        zh: 软件签名
+        ja: ソフトウェアの署名
+      description:
+        es: >-
+          Un commit de git o un paquete de sistema firmado con RSA deja constancia de quién
+          lo publicó, aunque la clave privada viva lejos del repositorio.
+        en: >-
+          A git commit or system package signed with RSA records who published it, even if
+          the private key lives far from the repository.
+        pt: >-
+          Um commit do git ou um pacote do sistema assinado com RSA deixa registro de quem o
+          publicou, mesmo que a chave privada fique longe do repositório.
+        fr: >-
+          Un commit git ou un paquet système signé par RSA atteste qui l'a publié, même si
+          la clé privée vit loin du dépôt.
+        zh: >-
+          用RSA签名的git提交或系统包会记录发布者，即便私钥远在仓库之外。
+        ja: >-
+          RSAで署名されたgitのコミットやOSのパッケージは、誰が公开したかを
+          残し、秘密鍵はリポジトリの遠い場所にあってもよい。
+    - title:
+        es: Solo cabe una clave
+        en: Only room for one key
+        pt: Só cabe uma chave
+        fr: Une seule clé tient
+        zh: 只装得下一把密钥
+        ja: 鍵は1本しか入らない
+      description:
+        es: >-
+          Con un módulo de 2048 bits el bloque máximo cifrable ronda los 190 bytes, así que
+          RSA envuelve una clave de sesión y nunca los datos enteros.
+        en: >-
+          With a 2048-bit modulus the largest encryptable block is about 190 bytes, so RSA
+          wraps a session key and never the actual data.
+        pt: >-
+          Com um módulo de 2048 bits o maior bloco cifrável fica em torno de 190 bytes, então o
+          RSA embrulha uma chave de sessão e nunca os dados inteiros.
+        fr: >-
+          Avec un module de 2048 bits, le plus grand bloc chiffrable fait environ 190 octets :
+          RSA enveloppe donc une clé de session, jamais les données elles-mêmes.
+        zh: >-
+          在2048位模数下，可加密的最大数据块约为190字节，因此RSA封装的是会话密钥，而非数据本身。
+        ja: >-
+          2048ビットの法では暗号できる最大の塊はおよそ190バイト。RSAが包むのは
+          セッション鍵であり、データそのものにはならない。
+  example:
+    title:
+      es: Cifrar y descifrar con n = 3233
+      en: Encrypt and decrypt with n = 3233
+      pt: Cifrar e decifrar com n = 3233
+      fr: Chiffrer et déchiffrer avec n = 3233
+      zh: "用 n = 3233 加密与解密"
+      ja: "n = 3233 で暗号と復号"
+    lines:
+      - es: "n = 3233 = 61 × 53, e = 17"
+        en: "n = 3233 = 61 × 53, e = 17"
+        pt: "n = 3233 = 61 × 53, e = 17"
+        fr: "n = 3233 = 61 × 53, e = 17"
+        zh: "n = 3233 = 61 × 53, e = 17"
+        ja: "n = 3233 = 61 × 53、e = 17"
+      - es: "φ(n) = 60 × 52 = 3120, y el inverso de 17 es d = 2753"
+        en: "φ(n) = 60 × 52 = 3120, and the inverse of 17 is d = 2753"
+        pt: "φ(n) = 60 × 52 = 3120, e o inverso de 17 é d = 2753"
+        fr: "φ(n) = 60 × 52 = 3120, et l'inverse de 17 est d = 2753"
+        zh: "φ(n) = 60 × 52 = 3120，17的逆元为 d = 2753"
+        ja: "φ(n) = 60 × 52 = 3120、17の逆元は d = 2753"
+      - es: "17 × 2753 = 46801 = 15 × 3120 + 1, así que e·d ≡ 1 (mod 3120)"
+        en: "17 × 2753 = 46801 = 15 × 3120 + 1, so e·d ≡ 1 (mod 3120)"
+        pt: "17 × 2753 = 46801 = 15 × 3120 + 1, então e·d ≡ 1 (mod 3120)"
+        fr: "17 × 2753 = 46801 = 15 × 3120 + 1, donc e·d ≡ 1 (mod 3120)"
+        zh: "17 × 2753 = 46801 = 15 × 3120 + 1，故 e·d ≡ 1 (mod 3120)"
+        ja: "17 × 2753 = 46801 = 15 × 3120 + 1、よって e·d ≡ 1 (mod 3120)"
+      - es: "Cifrar m = 65: c = 65¹⁷ mod 3233 = 2790"
+        en: "Encrypting m = 65: c = 65¹⁷ mod 3233 = 2790"
+        pt: "Cifrando m = 65: c = 65¹⁷ mod 3233 = 2790"
+        fr: "Chiffrer m = 65 : c = 65¹⁷ mod 3233 = 2790"
+        zh: "加密 m = 65：c = 65¹⁷ mod 3233 = 2790"
+        ja: "m = 65 を暗号化：c = 65¹⁷ mod 3233 = 2790"
+      - es: "Descifrar: 2790²⁷⁵³ mod 3233 = 65, el mensaje vuelve intacto"
+        en: "Decrypting: 2790²⁷⁵³ mod 3233 = 65, the message comes back intact"
+        pt: "Decifrando: 2790²⁷⁵³ mod 3233 = 65, a mensagem volta intacta"
+        fr: "Déchiffrer : 2790²⁷⁵³ mod 3233 = 65, le message revient intact"
+        zh: "解密：2790²⁷⁵³ mod 3233 = 65，消息完好还原"
+        ja: "復号：2790²⁷⁵³ mod 3233 = 65、メッセージは元に戻る"

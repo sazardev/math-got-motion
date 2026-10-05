@@ -1,0 +1,402 @@
+id: area-between-curves
+title:
+  es: Área entre Curvas
+  en: Area between Curves
+  pt: Área entre Curvas
+  fr: Aire entre les Courbes
+  zh: 两曲线间的面积
+  ja: 曲線間の面積
+category:
+  es: Cálculo
+  en: Calculus
+  pt: Cálculo
+  fr: Calcul
+  zh: 微积分
+  ja: 微積分学
+nodes:
+  - id: area
+    type: variable
+    value: A
+    explanation:
+      es: El área que se quiere medir, un número con unidades de superficie.
+      en: The area to be measured, a number with units of surface.
+      pt: A área que se quer medir, um número com unidades de superfície.
+      fr: L'aire à mesurer, un nombre qui a des unités de surface.
+      zh: 要求量的面积，是一个带面积单位的数。
+      ja: 求めたい面積。面積の単位を持つ数である。
+  - id: eq-1
+    type: equals
+    value: "="
+    explanation:
+      es: "El área no tiene fórmula propia: es una integral definida de la diferencia."
+      en: "The area has no formula of its own: it is a definite integral of the difference."
+      pt: "A área não tem fórmula própria: é uma integral definida da diferença."
+      fr: "L'aire n'a pas de formule propre : c'est une intégrale définie de la différence."
+      zh: 面积本身没有公式，它就是差函数的定积分。
+      ja: 面積そのものに公式はない。差の定積分である。
+  - id: integral
+    type: operator
+    value: ∫
+    explanation:
+      es: El símbolo de integral definida, con el signo de la suma indefinida.
+      en: The definite integral sign, borrowed from the indefinite sum.
+      pt: O símbolo da integral definida, herdado da soma indefinida.
+      fr: Le signe de l'intégrale définie, emprunté à la somme indéfinie.
+      zh: 定积分符号，源自不定求和符号。
+      ja: 定積分の記号。不定和の記号に由来する。
+  - id: limits
+    type: variable
+    value: ₐᵇ
+    explanation:
+      es: "Los dos extremos del intervalo: los puntos donde las curvas se cruzan."
+      en: "The two endpoints of the interval: the points where the curves cross."
+      pt: "As duas extremidades do intervalo: os pontos onde as curvas se cruzam."
+      fr: "Les deux extrémités de l'intervalle : les points où les courbes se croisent."
+      zh: 区间的两个端点，即两曲线相交之处。
+      ja: 区間の両端。曲線どうしが交わる点である。
+  - id: open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre la resta entre las dos funciones.
+      en: Opens the subtraction of the two functions.
+      pt: Abre a subtração entre as duas funções.
+      fr: Ouvre la soustraction des deux fonctions.
+      zh: 打开两个函数之差。
+      ja: 2つの関数の差を囲む括弧を開く。
+  - id: f
+    type: variable
+    value: f
+    explanation:
+      es: La función de arriba, la que queda por encima en el intervalo.
+      en: The upper function, the one that lies above over the interval.
+      pt: A função de cima, a que fica por cima no intervalo.
+      fr: La fonction du dessus, celle qui reste au-dessus sur l'intervalle.
+      zh: 上面的函数，在整个区间内位于另一条曲线之上。
+      ja: 上の関数。区間全体でもう一方より上にある側である。
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: Se resta la función de abajo para que la resta sea positiva.
+      en: The lower function is subtracted so the result stays positive.
+      pt: Subtrai-se a função de baixo para que a diferença fique positiva.
+      fr: On soustrait la fonction du dessous pour que le résultat reste positif.
+      zh: 减去下方的函数，使差保持为正。
+      ja: 下の関数を引くので、差は正の値になる。
+  - id: g
+    type: variable
+    value: g
+    explanation:
+      es: La función de abajo, la que aporta el recorte del rectángulo.
+      en: The lower function, the one that trims the rectangle down.
+      pt: A função de baixo, que apara o retângulo inicial.
+      fr: La fonction du dessous, qui rogne le rectangle de départ.
+      zh: 下方的函数，它把最初的矩形裁掉一块。
+      ja: 下の関数。最初の長方形を削り取る役目を持つ。
+  - id: close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra la resta; sin los paréntesis el signo se aplicaría solo a g.
+      en: Closes the subtraction; without the parentheses the sign would bind only to g.
+      pt: Fecha a subtração; sem os parênteses o sinal valeria só para g.
+      fr: Ferme la soustraction ; sans parenthèses le signe ne viserait que g.
+      zh: 关闭这个差；没有括号时负号只会作用于 g。
+      ja: 差を閉じる括弧。これがないとマイナスだけが g に掛かる。
+  - id: dx
+    type: variable
+    value: dx
+    explanation:
+      es: El ancho de una rebanada vertical, que se suma a lo largo de todo el intervalo.
+      en: The width of a vertical slice, added up over the whole interval.
+      pt: A largura de uma fatia vertical, somada ao longo de todo o intervalo.
+      fr: La largeur d'une tranche verticale, sommée sur tout l'intervalle.
+      zh: 一条竖直薄片的宽度，沿整个区间累加。
+      ja: 縦の細片の幅。区間全体にわたって積み上げたもの。
+  - id: semi-1
+    type: operator
+    value: ";"
+    explanation:
+      es: El procedimiento exige saber antes dónde está cada punto de corte.
+      en: The procedure requires knowing in advance where every crossing point lies.
+      pt: O procedimento exige saber antes onde está cada ponto de corte.
+      fr: La marche exige de savoir à l'avance où se situe chaque point de croisement.
+      zh: 这一步骤要求事先知道每个交点的位置。
+      ja: この手順は、すべての交点がどこにあるかを先に知ることを求める。
+  - id: crossings
+    type: operator
+    value: f = g
+    explanation:
+      es: Los puntos de corte se obtienen resolviendo f menos g igual a cero.
+      en: The crossing points come from solving f minus g equal to zero.
+      pt: Os pontos de corte vêm de resolver f menos g igual a zero.
+      fr: Les points de croisement s'obtiennent en résolvant f moins g égal à zéro.
+      zh: 交点由解 f 减 g 等于零得到。
+      ja: 交点は f − g = 0 を解いて求める。
+  - id: semi-2
+    type: operator
+    value: ";"
+    explanation:
+      es: Y hace falta además que la curva de arriba sea siempre la misma.
+      en: And one also needs the upper curve to be always the same one.
+      pt: E é preciso ainda que a curva de cima seja sempre a mesma.
+      fr: Et il faut en outre que la courbe du dessus soit toujours la même.
+      zh: 还必须保证上面那条曲线始终是同一条。
+      ja: さらに、上側の曲線が一貫して同じであることも必要である。
+  - id: condition
+    type: operator
+    value: f ≥ g
+    explanation:
+      es: Si las curvas se cruzan dos veces, hay que integrar por tramos.
+      en: If the curves cross twice, the interval has to be split into pieces.
+      pt: Se as curvas se cruzam duas vezes, é preciso integrar por trechos.
+      fr: Si les courbes se croisent deux fois, il faut intégrer par morceaux.
+      zh: 若两曲线相交两次，就必须分段积分。
+      ja: 曲線が2度交わるなら、区間を分けて積分する。
+context:
+  author:
+    es: John Wallis y la definición de integral
+    en: John Wallis and the definition of the integral
+    pt: John Wallis e a definição da integral
+    fr: John Wallis et la définition de l'intégrale
+    zh: 约翰· Wallis 与定积分的定义
+    ja: ジョン・ウォリスと定積分の定義
+  era:
+    es: Inglaterra y Alemania, s. XVII–XIX · Wallis 1655, Riemann 1876
+    en: England and Germany, 17th to 19th century · Wallis 1655, Riemann 1876
+    pt: Inglaterra e Alemanha, séc. XVII–XIX · Wallis 1655, Riemann 1876
+    fr: Angleterre et Allemagne, XVIIe et XIXe siècles · Wallis 1655, Riemann 1876
+    zh: 英国与德国，17至19世纪 · Wallis 1655年，黎曼1876年
+    ja: イギリスとドイツ、17世紀から19世紀 · ウォリス1655年、リーマン1876年
+  history:
+    es: >-
+      El área entre dos curvas no tiene fórmula propia: es la integral definida de la diferencia
+      entre las dos funciones, acotada a los puntos donde se cruzan. El procedimiento se fue
+      formando cuando Wallis calculó con el método de agotamiento las áreas bajo las parábolas
+      en 1655, y se consolidó cuando Riemann publicó la definición de integral en 1876. La
+      clave está en encontrar primero los puntos de corte: si hay varios, hay que integrar
+      por tramos, porque entre ellos cambia el signo de la resta. Con ese mecanismo, el
+      cálculo de áreas se reduce a un único procedimiento numérico.
+    en: >-
+      The area between two curves has no formula of its own: it is the definite integral of
+      the difference between the two functions, bounded by the points where they cross. The
+      procedure took shape when Wallis computed areas under parabolas by the method of
+      exhaustion in 1655, and it was consolidated when Riemann published the definition of
+      the integral in 1876. The key is finding the crossing points first: if there are
+      several, the interval has to be split, because the sign of the difference changes
+      between them. With that mechanism, area computation collapses into a single routine.
+    pt: >-
+      A área entre duas curvas não tem fórmula própria: é a integral definida da diferença
+      entre as duas funções, limitada aos pontos onde elas se cruzam. O procedimento se
+      formou quando Wallis calculou pelo método de esgotamento as áreas sob parábolas em
+      1655, e se consolidou quando Riemann publicou a definição de integral em 1876. O
+      ponto central é achar primeiro os pontos de corte: havendo vários, é preciso integrar
+      por trechos, pois entre eles muda o sinal da subtração. Com esse mecanismo, o cálculo
+      de áreas se reduz a um único procedimento numérico.
+    fr: >-
+      L'aire entre deux courbes n'a pas de formule propre : c'est l'intégrale définie de la
+      différence entre les deux fonctions, bornée par les points de croisement. La marche
+      s'est formée quand Wallis a calculé par la méthode des exhaustions les aires sous
+      les paraboles en 1655, et elle s'est consolidée quand Riemann a publié la définition
+      de l'intégrale en 1876. L'essentiel est de trouver d'abord les points de croisement :
+      s'il y en a plusieurs, il faut intégrer par morceaux, car le signe de la différence
+      change entre eux. Ce mécanisme réduit le calcul des aires à une seule routine.
+    zh: >-
+      两曲线间的面积本身没有公式，它就是两个函数之差在交点之间的定积分。这一做法在1655年瓦利斯用
+      无穷递降法计算抛物线弓形面积时逐渐成形，并在1876年黎曼给出定积分定义后固定下来。
+      关键在于先找出交点：若有多个，就必须分段积分，因为差函数的符号会在其间改变。
+      有了这个机制，面积计算就归结为同一套数值步骤。
+    ja: >-
+      2本の曲線の間の面積に専用の公式はない。2つの関数の差を、交点で区切って定積分したものである。
+      その手順は1655年、ウォリスが無限尽法で放物線弓形の面積を求めたときに形づくられ、
+      1876年にリアマンが定積分の定義を公表して定着した。要点は交点を先に求めることにある。
+      交点が複数あるなら、差の符号が入れ替わるので区間を切って積分する。
+      この仕組みがあれば、面積計算はただ1つの手順に還元される。
+  timeline:
+    - year: "1655"
+      label:
+        es: >-
+          Wallis calcula con el método de agotamiento las áreas bajo parábolas, el antecedente
+          directo del cálculo.
+        en: >-
+          Wallis computes areas under parabolas by the method of exhaustion, the direct
+          ancestor of the calculation.
+        pt: >-
+          Wallis calcula pelo método de esgotamento as áreas sob parábolas, o antecedente direto
+          do cálculo.
+        fr: >-
+          Wallis calcule par la méthode des exhaustions les aires sous les paraboles, l'ancêtre
+          direct du calcul.
+        zh: >-
+          瓦利斯用无穷递降法计算抛物线弓形的面积，这是该计算方法的直接前身。
+        ja: >-
+          ウォリスが無限尽法で放物線弓形の面積を求め、この計算の直接の前身を作った。
+    - year: "1876"
+      label:
+        es: >-
+          La definición de Riemann convierte el área bajo una curva en el límite de una suma.
+        en: >-
+          Riemann's definition turns the area under a curve into the limit of a sum.
+        pt: >-
+          A definição de Riemann converte a área sob uma curva no limite de uma soma.
+        fr: >-
+          La définition de Riemann fait de l'aire sous une courbe la limite d'une somme.
+        zh: >-
+          黎曼的定义把曲线下的面积变为一个和的极限。
+        ja: >-
+          リアマンの定義によって、曲線下の面積は和の極限として求まる。
+    - year: s. XX
+      label:
+        es: >-
+          Los textos de cálculo elemental fijan el procedimiento en tres pasos: cortar, dividir e
+          integrar.
+        en: >-
+          Elementary calculus texts fix the procedure in three steps: cut, split, integrate.
+        pt: >-
+          Os textos de cálculo elemental fixam o procedimento em três passos: cortar, dividir e
+          integrar.
+        fr: >-
+          Les manuels de calcul élémentaire fixent la marche en trois étapes : couper, découper,
+          intégrer.
+        zh: >-
+          初等微积分教材把这一步骤固定为三步：求交点、划分区间、积分。
+        ja: >-
+          初等微分の教科書では、この手順が3段階にまとめられた。交点を探し、区間を分割し、積分する。
+    - year: Hoy
+      label:
+        es: >-
+          Los programas de CAD calculan áreas así, y en probabilidad un área bajo una densidad
+          es directamente una probabilidad.
+        en: >-
+          CAD programs compute areas this way, and in probability an area under a density is
+          directly a probability.
+        pt: >-
+          Programas de CAD calculam áreas assim, e em probabilidade a área sob uma densidade é
+          diretamente uma probabilidade.
+        fr: >-
+          Les programmes de CAO calculent ainsi les aires, et en probabilité l'aire sous une
+          densité est directement une probabilité.
+        zh: >-
+          CAD 程序就是这样计算面积的，而在概率论中密度曲线下的面积直接就是概率。
+        ja: >-
+          CAD のソフトはこの手順で面積を出し、確率論では密度関数の下の面積がそのまま確率になる。
+  useCases:
+    - title:
+        es: Geometría y CAD
+        en: Geometry and CAD
+        pt: Geometria e CAD
+        fr: Géométrie et CAO
+        zh: 几何与 CAD
+        ja: 幾何学と CAD
+      description:
+        es: >-
+          Da el área de una placa, de un perfil mecanizado o de la sección de una pieza entre dos
+          contornos.
+        en: >-
+          Gives the area of a plate, a machined profile or the cross section of a part between two
+          outlines.
+        pt: >-
+          Dá a área de uma chapa, de um perfil usinado ou da seção de uma peça entre dois
+          contornos.
+        fr: >-
+          Donne l'aire d'une plaque, d'un profil usiné ou de la section d'une pièce entre deux
+          contours.
+        zh: >-
+          给出板材、加工轮廓或零件两个外形之间截面的面积。
+        ja: >-
+          板フィーカや機械加工した断面、部品の2つの外形にはさまれた断面積を求める。
+    - title:
+        es: Probabilidad
+        en: Probability
+        pt: Probabilidade
+        fr: Probabilité
+        zh: 概率
+        ja: 確率
+      description:
+        es: >-
+          La probabilidad de que una variable continua caiga en un intervalo es el área bajo su
+          densidad entre los dos extremos.
+        en: >-
+          The probability that a continuous variable falls in an interval is the area under its
+          density between the two endpoints.
+        pt: >-
+          A probabilidade de uma variável contínua cair num intervalo é a área sob sua densidade
+          entre os dois extremos.
+        fr: >-
+          La probabilité qu'une variable continue tombe dans un intervalle est l'aire sous sa
+          densité entre les deux bornes.
+        zh: >-
+          连续变量落在某个区间内的概率，就是其密度在两端点之间的面积。
+        ja: >-
+          連続変数がある区間に入る確率は、その密度関数の両端のあいだの面積である。
+    - title:
+        es: Economía y finanzas
+        en: Economics and finance
+        pt: Economia e finanças
+        fr: Économie et finance
+        zh: 经济与金融
+        ja: 経済と金融
+      description:
+        es: >-
+          El consumo acumulado entre dos fechas es el área bajo la curva de gasto, y el estudio de
+          portafolios empieza con áreas bajo curvas de rentabilidad.
+        en: >-
+          Cumulative consumption between two dates is the area under the spending curve, and
+          portfolio work starts with areas under return curves.
+        pt: >-
+          O consumo acumulado entre duas datas é a área sob a curva de gastos, e o estudo de
+          carteiras começa com áreas sob curvas de rentabilidade.
+        fr: >-
+          La consommation cumulée entre deux dates est l'aire sous la courbe de dépense, et
+          l'étude de portefeuille commence par des aires sous des courbes de rentabilité.
+        zh: >-
+          两个日期之间的累计消费就是支出曲线下的面积，投资组合研究也从收益率曲线下的面积开始。
+        ja: >-
+          2つの日付のあいだの消費合計は支出曲線の下の面積であり、運用の研究も収益曲線の下の
+          面積から始まる。
+  example:
+    title:
+      es: Entre x y x² en [0, 1]
+      en: Between x and x² over [0, 1]
+      pt: Entre x e x² no intervalo [0, 1]
+      fr: Entre x et x² sur [0, 1]
+      zh: "[0, 1] 上 x 与 x² 之间"
+      ja: 区間 [0, 1] の x と x² のあいだ
+    lines:
+      - es: "f = x (la de arriba), g = x² (la de abajo)"
+        en: "f = x (the upper one), g = x² (the lower one)"
+        pt: "f = x (a de cima), g = x² (a de baixo)"
+        fr: "f = x (celle du dessus), g = x² (celle du dessous)"
+        zh: "f = x（上方），g = x²（下方）"
+        ja: "f = x（上方）、g = x²（下方）"
+      - es: "puntos de corte: x = 0 y x = 1"
+        en: "crossing points: x = 0 and x = 1"
+        pt: "pontos de corte: x = 0 e x = 1"
+        fr: "points de croisement : x = 0 et x = 1"
+        zh: "交点：x = 0 与 x = 1"
+        ja: "交点：x = 0 と x = 1"
+      - es: "A = ∫₀¹ (x − x²) dx"
+        en: "A = ∫₀¹ (x − x²) dx"
+        pt: "A = ∫₀¹ (x − x²) dx"
+        fr: "A = ∫₀¹ (x − x²) dx"
+        zh: "A = ∫₀¹ (x − x²) dx"
+        ja: "A = ∫₀¹ (x − x²) dx"
+      - es: "A = [x²/2 − x³/3] de 0 a 1"
+        en: "A = [x²/2 − x³/3] from 0 to 1"
+        pt: "A = [x²/2 − x³/3] de 0 a 1"
+        fr: "A = [x²/2 − x³/3] de 0 à 1"
+        zh: "A = [x²/2 − x³/3] 从 0 到 1"
+        ja: "A = [x²/2 − x³/3] を 0 から 1 まで"
+      - es: "A = 1/2 − 1/3"
+        en: "A = 1/2 − 1/3"
+        pt: "A = 1/2 − 1/3"
+        fr: "A = 1/2 − 1/3"
+        zh: "A = 1/2 − 1/3"
+        ja: "A = 1/2 − 1/3"
+      - es: "A = 1/6 ≈ 0.1667"
+        en: "A = 1/6 ≈ 0.1667"
+        pt: "A = 1/6 ≈ 0,1667"
+        fr: "A = 1/6 ≈ 0,1667"
+        zh: "A = 1/6 ≈ 0.1667"
+        ja: "A = 1/6 ≈ 0.1667"

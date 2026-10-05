@@ -1,0 +1,346 @@
+id: coriolis-force
+title:
+  es: Fuerza de Coriolis
+  en: Coriolis Force
+  pt: Força de Coriolis
+  fr: Force de Coriolis
+  zh: 科里奥利力
+  ja: コリオリ力
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: "La fuerza que aparece al describir el movimiento desde un marco que gira."
+      en: "The force that shows up when you describe motion from a frame that is rotating."
+      pt: "A força que aparece ao descrever o movimento a partir de um referencial que gira."
+      fr: "La force qui apparaît quand on décrit le mouvement depuis un repère en rotation."
+      zh: 在旋转参考系中描述运动时出现的力。
+      ja: 回転している座標系から運動を記述したときに現れる力。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: "El signo menos indica que la fuerza es perpendicular a v y de sentido contrario a Ω × v."
+      en: "The minus sign shows the force is perpendicular to v and opposed to Ω × v."
+      pt: "O sinal menos indica que a força é perpendicular a v e de sentido contrário a Ω × v."
+      fr: "Le signe moins indique que la force est perpendiculaire à v et de sens opposé à Ω × v."
+      zh: 负号表示该力与 v 垂直,方向与 Ω × v 相反。
+      ja: 負号は、その力が v に垂直で Ω × v と逆向きであることを示す。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "El factor 2, que sale de la derivada de un marco que gira dos veces por vuelta."
+      en: "The factor 2, which comes from the derivative of a frame that turns twice per turn."
+      pt: "O fator 2, que vem da derivada de um referencial que gira duas vezes por volta."
+      fr: "Le facteur 2, qui vient de la dérivée d'un repère qui tourne deux fois par tour."
+      zh: 系数2,来自旋转参考系每转过一圈时的两次变化。
+      ja: 係数2。回転する座標系が1周するあいだに2度変化することから生じる。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: "La masa del cuerpo que se mueve dentro del marco rotante."
+      en: "The mass of the body moving inside the rotating frame."
+      pt: "A massa do corpo que se move dentro do referencial rotativo."
+      fr: "La masse du corps qui se déplace dans le repère tournant."
+      zh: 在旋转参考系中运动的物体质量。
+      ja: 回転座標系の中を動く物体の質量。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: omega
+    type: variable
+    value: Ω
+    explanation:
+      es: "El vector de velocidad angular de la Tierra, que vale 7,292·10⁻⁵ rad/s."
+      en: "The Earth's angular velocity vector, which is 7.292·10⁻⁵ rad/s."
+      pt: "O vetor de velocidade angular da Terra, que vale 7,292·10⁻⁵ rad/s."
+      fr: "Le vecteur de vitesse angulaire de la Terre, qui vaut 7,292·10⁻⁵ rad/s."
+      zh: 地球的角速度矢量,大小为 7.292·10⁻⁵ rad/s。
+      ja: 地球の角速度ベクトル。大ささは 7.292·10⁻⁵ rad/s である。
+  - id: cross
+    type: operator
+    value: ×
+    explanation:
+      es: "El producto vectorial, que saca una fuerza perpendicular a ambos factores."
+      en: "The cross product, which turns out a force perpendicular to both factors."
+      pt: "O produto vetorial, que resulta numa força perpendicular a ambos os fatores."
+      fr: "Le produit vectoriel, qui donne une force perpendiculaire aux deux facteurs."
+      zh: 叉积,它给出一个垂直于两个因子的力。
+      ja: ベクトル積。2つの因子に垂直な力を生じる。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: "La velocidad del cuerpo respecto al marco que gira."
+      en: "The velocity of the body with respect to the rotating frame."
+      pt: "A velocidade do corpo em relação ao referencial que gira."
+      fr: "La vitesse du corps par rapport au repère en rotation."
+      zh: 物体相对于旋转参考系的速度。
+      ja: 回転座標系から見た物体の速度。
+context:
+  author:
+    es: "Gaston de Coriolis"
+    en: "Gaston de Coriolis"
+    pt: "Gaston de Coriolis"
+    fr: "Gaston de Coriolis"
+    zh: 加斯东·德·科里奥利
+    ja: ガストン・ド・コリオリ
+  era:
+    es: "Francia, 1792–1843 · fuerza descrita en 1835"
+    en: "France, 1792–1843 · force described in 1835"
+    pt: "França, 1792–1843 · força descrita em 1835"
+    fr: "France, 1792–1843 · force décrite en 1835"
+    zh: "法国,1792–1843年 · 该力发表于1835年"
+    ja: "フランス、1792–1843年 · この力は1835年に述べられた"
+  history:
+    es: >-
+      Coriolis era ingeniero en el canal de Saint-Sulpice, y estudiaba cómo se curva el agua cuando el
+      conducto gira. Al aplicar la mecánica de Lagrange a un cuerpo que se desplaza dentro de un sistema en
+      rotación encontró un término nuevo en la ecuación de movimiento, proporcional al producto vectorial
+      entre la velocidad angular del sistema y la velocidad del cuerpo. Lo publicó en 1835 como un efecto del
+      marco, no como una fuerza real. Junto con la centrífuga y la de Euler forma la tríada de fuerzas
+      ficticias que hacen posible trabajar en la Tierra como si no girara, y explica por qué los vientos y las
+      corrientes oceánicas giran siempre en el mismo sentido.
+    en: >-
+      Coriolis was an engineer on the Saint-Sulpice canal, studying how water bends when the channel turns.
+      Applying Lagrange's mechanics to a body moving inside a rotating system, he found a new term in the
+      equation of motion, proportional to the cross product of the system's angular velocity and the body's
+      velocity. He published it in 1835 as an effect of the frame, not as a real force. Together with the
+      centrifugal and Euler forces it forms the triad of fictitious forces that lets us work on Earth as if it
+      did not turn, and it explains why winds and ocean currents always swirl the same way.
+    pt: >-
+      Coriolis era engenheiro no canal de Saint-Sulpice e estudava como a água se curva quando o canal gira.
+      Aplicando a mecânica de Lagrange a um corpo que se desloca dentro de um sistema em rotação, encontrou
+      um termo novo na equação de movimento, proporcional ao produto vetorial entre a velocidade angular do
+      sistema e a velocidade do corpo. Publicou-o em 1835 como efeito do referencial, e não como força real.
+      Junto com a centrífuga e a de Euler forma a tríade de forças fictícias que permite trabalhar na Terra
+      como se ela não girasse, e explica por que os ventos e as correntes oceânicas giram sempre no mesmo
+      sentido.
+    fr: >-
+      Coriolis était ingénieur sur le canal de Saint-Sulpice et étudiait comment l'eau se courbe quand le
+      canal tourne. En appliquant la mécanique de Lagrange à un corps qui se déplace dans un système en
+      rotation, il trouva dans l'équation du mouvement un terme nouveau, proportionnel au produit vectoriel
+      de la vitesse angulaire du système par la vitesse du corps. Il le publia en 1835 comme un effet du
+      repère, et non comme une force réelle. Avec la force centrifuge et celle d'Euler, il forme la triade
+      des forces fictives qui permet de travailler sur Terre comme si elle ne tournait pas, et il explique
+      pourquoi vents et courants marins tournent toujours dans le même sens.
+    zh: >-
+      科里奥利是圣叙尔皮斯运河的工程师,研究水道转弯时水流如何偏转。他用拉格朗日力学处理旋转系统内运动
+      的物体,在运动方程中发现了一个新项,与系统角速度和物体速度的叉积成正比。1835年他把它作为参考系的
+      效应而非真实的力发表出来。它与离心力、欧拉力一起构成三个惯性力,使我们能够像地球不自转那样在其中
+      工作,也解释了为什么风与洋流总是朝同一方向旋转。
+    ja: >-
+      Coriolisはサン・スルピスの運河の技師で、運河が曲がるときに水がどう湾曲するかを研究していた。
+      回転する系のなかに運動する物体へLagrangeの力学を適用すると、運動方程式に新たな項が現れた。その項は
+      系の角速度と物体の速度とのベクトル積に比例するものである。1835年、彼はこれを実在の力ではなく座標系の
+      効果として発表した。遠心力とEulerの力とともに三つの擬似力をなし、自転していないかのように地球で
+      扱えることを可能にし、風と海流がいつも同じ向きに曲がる理由も説明する。
+  timeline:
+    - year: "1835"
+      label:
+        es: >-
+          Coriolis publica el término que hoy lleva su nombre, dentro de su trabajo sobre el efecto de un
+          sistema giratorio.
+        en: >-
+          Coriolis publishes the term that now bears his name, within his work on the effect of a rotating
+          system.
+        pt: >-
+          Coriolis publica o termo que hoje leva seu nome, dentro do seu trabalho sobre o efeito de um sistema
+          giratório.
+        fr: >-
+          Coriolis publie le terme qui porte aujourd'hui son nom, dans son travail sur l'effet d'un système en
+          rotation.
+        zh: >-
+          科里奥利在研究旋转系统效应时,发表了今天以他命名的这个项。
+        ja: >-
+          Coriolisは回転系の効果についての研究の中で、今日その名を冠される項を発表した。
+    - year: s. XIX
+      label:
+        es: >-
+          Los navegantes empiezan a tener en cuenta el efecto de la atmósfera sobre obuses y flotas,
+          ajustando el tiro según la latitud.
+        en: >-
+          Navigators begin to account for the effect of the atmosphere on shells and fleets, changing their
+          firing with latitude.
+        pt: >-
+          Navegantes começam a levar em conta o efeito da atmosfera sobre obuses e frotas, mudando o tiro com a
+          latitude.
+        fr: >-
+          Les navigateurs commencent à tenir compte de l'effet de l'atmosphère sur les obus et les flottes,
+          ajustant leur tir selon la latitude.
+        zh: >-
+          航海者开始考虑大气对炮弹与舰队的影响,依纬度修正射击。
+        ja: >-
+          航海家たちは大気が砲弾や艦隊に及ぼす影響を考え始め、緯度に応じて照準を合わせる。
+    - year: s. XX
+      label:
+        es: >-
+          Los primeros modelos numéricos de predicción meteorológica incluyen el término y llegan a predecir
+          los grandes giros oceánicos.
+        en: >-
+          The first numerical weather prediction models include the term and go on to predict the large
+          oceanic turns.
+        pt: >-
+          Os primeiros modelos numéricos de previsão meteorológica incluem o termo e passam a prever as
+          grandes curvas oceânicas.
+        fr: >-
+          Les premiers modèles numériques de prévision météorologique intègrent le terme et prévoient les
+          grands tourbillons océaniques.
+        zh: >-
+          最早的数值天气预报模型纳入了这一项,并成功预报了海洋上的大旋涡。
+        ja: >-
+          最初の数値気象予測モデルがこの項を取り入れて、海洋の大渦を予測できるようになった。
+    - year: Hoy
+      label:
+        es: >-
+          Se usa en los modelos de calidad del aire, en la aviación y en el estudio de la rotación terrestre.
+        en: >-
+          It is used in air quality models, in aviation and in the rotation of the Earth itself.
+        pt: >-
+          É usado em modelos de qualidade do ar, na aviação e na rotação da própria Terra.
+        fr: >-
+          On l'utilise dans les modèles de qualité de l'air, dans l'aviation et dans la rotation de la Terre
+          elle-même.
+        zh: 它被用于空气质量模型、航空领域,以及地球自转本身的研究。
+        ja: 大気の質のモデル、航空、そして地球そのものの回転の研究で用いられる。
+  useCases:
+    - title:
+        es: Vientos y corrientes
+        en: Winds and currents
+        pt: Ventos e correntes
+        fr: Vents et courants
+        zh: 风与洋流
+        ja: 風と海流
+      description:
+        es: >-
+          El viento que va hacia un polo se desvía a la derecha en el hemisferio norte y a la izquierda en el
+          sur. Los grandes giros oceánicos deben su forma a este sesgo.
+        en: >-
+          Wind heading poleward is deflected to the right in the northern hemisphere and to the left in the
+          southern. The great oceanic gyres owe their shape to this bias.
+        pt: >-
+          O vento que vai para um polo desvia à direita no hemisfério norte e à esquerda no sul. Os grandes
+          giros oceânicos devem sua forma a esse viés.
+        fr: >-
+          Un vent allant vers un pôle est dévié à droite dans l'hémisphère nord et à gauche dans l'hémisphère
+          sud. Les grands tourbillons océaniques doivent leur forme à ce biais.
+        zh: >-
+          向极地吹的风,在北半球向右偏、在南半球向左偏。海洋上的大环流正因这种偏斜而形成。
+        ja: >-
+          極に向かう風は北半球で右へ、南半球で左へ曲がる。海洋の大渦はこの偏りによって形づくられている。
+    - title:
+        es: Proyectiles de largo alcance
+        en: Long-range projectiles
+        pt: Projéteis de longo alcance
+        fr: Projectiles de longue portée
+        zh: 远程弹道
+        ja: 長距離弾道
+      description:
+        es: >-
+          Un proyectil disparado a 1 000 m/s en 45° se desvía kilómetros hacia el este en el hemisferio norte,
+          aunque ignore su causa.
+        en: >-
+          A shell fired at 1 000 m/s at 45° drifts kilometres to the east in the northern hemisphere, even if
+          the gunner never learns why.
+        pt: >-
+          Um projétil disparado a 1 000 m/s a 45° desvia quilômetros para leste no hemisfério norte, mesmo que
+          o atirador nunca saiba por quê.
+        fr: >-
+          Un obus tiré à 1 000 m/s à 45° dévie de plusieurs kilomètres vers l'est dans l'hémisphère nord, même
+          si l'artilleur n'en connaît jamais la raison.
+        zh: >-
+          以 1 000 m/s、45° 角发射的炮弹,在北半球会向东偏出数公里,即使炮手始终不知道原因。
+        ja: >-
+          1 000 m/sで45度に発射された弾は、北半球では何キロメートルか東へずれる。射手はその理由を知る
+          ことはない。
+    - title:
+        es: Vuelo de larga distancia
+        en: Long-distance flight
+        pt: Voo de longo alcance
+        fr: Vol long-courrier
+        zh: 长途飞行
+        ja: 長距離飛行
+      description:
+        es: >-
+          Una ruta polar de un lado a otro no tiene por qué atravesar el centro más congestionado del
+          planeta, y desviar el vuelo unos grados ahorra combustible.
+        en: >-
+          A polar route from one side to the other need not cross the crowded middle of the planet, and
+          swinging the track a few degrees saves fuel.
+        pt: >-
+          Uma rota polar de um lado ao outro não precisa cruzar o meio congestionado do planeta, e desviar o
+          voo alguns graus economiza combustível.
+        fr: >-
+          Une route polaire d'un côté à l'autre n'est pas obligée de traverser le milieu encombré de la
+          planète, et décaler la trajectoire de quelques degrés économise du carburant.
+        zh: >-
+          从地球一端到另一端的极地航线不必穿越拥挤的温带,把航迹偏移几度即可节省燃油。
+        ja: >-
+          地球の反対側へ渡る極地航路は混み合う中緯度地带を避ける必要がなく、航路を数度ずらすだけで燃料を
+          節約できる。
+  example:
+    title:
+      es: Una masa de aire en marcha
+      en: An air mass on the move
+      pt: Uma massa de ar em movimento
+      fr: Une masse d'air en mouvement
+      zh: 运动中的气团
+      ja: 流れる気団
+    lines:
+      - es: Ω = 7,292·10⁻⁵ rad/s, v = 30 m/s, 45° de latitud
+        en: Ω = 7.292·10⁻⁵ rad/s, v = 30 m/s, latitude 45°
+        pt: Ω = 7,292·10⁻⁵ rad/s, v = 30 m/s, latitude 45°
+        fr: Ω = 7,292·10⁻⁵ rad/s, v = 30 m/s, latitude 45°
+        zh: Ω = 7.292·10⁻⁵ rad/s,v = 30 m/s,纬度 45°
+        ja: Ω = 7.292·10⁻⁵ rad/s、v = 30 m/s、緯度 45°
+      - es: a = 2Ωv·sen(45°) = 3,09·10⁻³ m/s²
+        en: a = 2Ωv·sin(45°) = 3.09·10⁻³ m/s²
+        pt: a = 2Ωv·sen(45°) = 3,09·10⁻³ m/s²
+        fr: a = 2Ωv·sin(45°) = 3,09·10⁻³ m/s²
+        zh: a = 2Ωv·sin(45°) = 3.09·10⁻³ m/s²
+        ja: a = 2Ωv·sin(45°) = 3.09·10⁻³ m/s²
+      - es: Con m = 1 kg, F = 3,09·10⁻³ N
+        en: With m = 1 kg, F = 3.09·10⁻³ N
+        pt: Com m = 1 kg, F = 3,09·10⁻³ N
+        fr: Avec m = 1 kg, F = 3,09·10⁻³ N
+        zh: m = 1 kg 时,F = 3.09·10⁻³ N
+        ja: m = 1 kg なら、F = 3.09·10⁻³ N
+      - es: En una hora, Δy = ½at² ≈ 20 km hacia el este
+        en: In one hour, Δy = ½at² ≈ 20 km to the east
+        pt: Em uma hora, Δy = ½at² ≈ 20 km para leste
+        fr: En une heure, Δy = ½at² ≈ 20 km vers l'est
+        zh: 一小时内,Δy = ½at² ≈ 向东 20 km
+        ja: 1時間では、Δy = ½at² ≈ 東へ20 km
+      - es: El giro de la Tierra una vez al día
+        en: One turn of the Earth per day
+        pt: Uma volta da Terra por dia
+        fr: Un tour de la Terre par jour
+        zh: 地球每天自转一圈
+        ja: 地球は1日1周する

@@ -1,0 +1,331 @@
+id: crc-checksum
+title:
+  es: "CRC: verificación de integridad"
+  en: "CRC: the integrity checksum"
+  pt: "CRC: soma de verificação"
+  fr: "CRC : la somme de contrôle"
+  zh: "循环冗余校验"
+  ja: "CRC（巡回冗長検査）"
+category:
+  es: Informática
+  en: Computer science
+  pt: Informática
+  fr: Informatique
+  zh: 计算机科学
+  ja: コンピュータ科学
+nodes:
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "r: el resto, el número que resume todo el mensaje."
+      en: "r: the remainder, the number that summarizes the whole message."
+      pt: "r: o resto, o número que resume toda a mensagem."
+      fr: "r : le reste, le nombre qui résume tout le message."
+      zh: "r：余数，概括整条消息的那个数。"
+      ja: "r：剰余。メッセージ全体を要約する数。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: message
+    type: variable
+    value: "M(x)"
+    explanation:
+      es: "M(x): el mensaje, leído como un polinomio en la variable x."
+      en: "M(x): the message, read as a polynomial in the variable x."
+      pt: "M(x): a mensagem, lida como um polinômio na variável x."
+      fr: "M(x) : le message, lu comme un polynôme en la variable x."
+      zh: "M(x)：把消息看作变量x的多项式。"
+      ja: "M(x)：メッセージ。変数xの多項式として読む。"
+  - id: times
+    type: operator
+    value: ·
+    explanation:
+      es: "·: multiplicación, que equivale a desplazar los bits hacia la izquierda."
+      en: "·: multiplication, which amounts to shifting the bits to the left."
+      pt: "·: multiplicação, que equivale a deslocar os bits para a esquerda."
+      fr: "· : la multiplication, qui revient à décaler les bits vers la gauche."
+      zh: "·：乘法，相当于把各位左移。"
+      ja: "·：掛け算。ビットを左へずらすことに等しい。"
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: "x: la base del polinomio, dos en la práctica binaria."
+      en: "x: the base of the polynomial, two in binary practice."
+      pt: "x: a base do polinômio, dois na prática binária."
+      fr: "x : la base du polynôme, deux dans la pratique binaire."
+      zh: "x：多项式的底数，在二进制中为二。"
+      ja: "x：多項式の底。2進法なら2。"
+  - id: exp-n
+    type: superscript
+    value: n
+    explanation:
+      es: "n: el grado del polinomio generador, los ceros que se añaden."
+      en: "n: the degree of the generator polynomial, the zeros that get appended."
+      pt: "n: o grau do polinômio gerador, os zeros que são acrescentados."
+      fr: "n : le degré du polynôme générateur, les zéros que l'on ajoute."
+      zh: "n：生成多项式的次数，即补上的零的个数。"
+      ja: "n：生成多項式の次数。付け足す0の個数。"
+  - id: mod
+    type: operator
+    value: mod
+    explanation:
+      es: "mod: la división con resto, el mismo módulo de toda la aritmética modular."
+      en: "mod: division with remainder, the same modulus of modular arithmetic."
+      pt: "mod: a divisão com resto, o mesmo módulo de toda a aritmética modular."
+      fr: "mod : la division avec reste, le même module de toute l'arithmétique modulaire."
+      zh: "mod：带余除法，也就是模运算中的取模。"
+      ja: "法：余りをとる割り算。剰余演算で同じものを使う。"
+  - id: generator
+    type: variable
+    value: "g(x)"
+    explanation:
+      es: "g(x): el polinomio generador, elegido para que detecte los errores comunes."
+      en: "g(x): the generator polynomial, chosen to catch the usual errors."
+      pt: "g(x): o polinômio gerador, escolhido para pegar os erros comuns."
+      fr: "g(x) : le polynôme générateur, choisi pour attraper les erreurs habituelles."
+      zh: "g(x)：生成多项式，用来捕捉常见错误。"
+      ja: "g(x)：生成多項式。よくある誤りを捉えるために選ぶ。"
+context:
+  author:
+    es: W. Wesley Peterson
+    en: W. Wesley Peterson
+    pt: W. Wesley Peterson
+    fr: W. Wesley Peterson
+    zh: W. 韦斯利·彼得森
+    ja: W. ウェスリー・ピータソン
+  era:
+    es: EE. UU., 1961 · redes de conmutación por paquetes
+    en: USA, 1961 · packet-switched networks
+    pt: EUA, 1961 · redes com comutação de pacotes
+    fr: États-Unis, 1961 · réseaux à commutation de paquets
+    zh: 美国，1961年·分组交换网络
+    ja: アメリカ、1961年·パケット交換網
+  history:
+    es: >-
+      El CRC nació como un guardián de las redes de conmutación por paquetes: en 1961 W.
+      Wesley Peterson propuso añadir a cada bloque un resto que el receptor pudiera comprobar
+      al instante. La idea es aritmética pura, porque un mensaje leído como polinomio en x,
+      desplazado los mismos lugares que el grado del generador, deja al ser dividido un
+      resto que sólo depende del mensaje. Los polinomios elegidos detectan cualquier error de
+      un solo bit y todas las ráfagas de hasta 32 bits, que es lo que de verdad falla en un
+      canal ruidoso. Lo que el CRC no es, es una garantía de seguridad, porque es fácil
+      construir dos mensajes distintos con el mismo resto.
+    en: >-
+      The CRC was born as a guard for packet-switched networks: in 1961 W. Wesley Peterson
+      proposed appending to every block a remainder the receiver could check at once. The
+      idea is pure arithmetic, because a message read as a polynomial in x, shifted by as
+      many places as the degree of the generator, leaves a remainder that depends only on the
+      message. The chosen polynomials catch any single-bit error and every burst of up to 32
+      bits, which is what really fails on a noisy channel. What a CRC is not is a security
+      guarantee, since two different messages with the same remainder are easy to build.
+    pt: >-
+      O CRC nasceu como um guardião das redes com comutação de pacotes: em 1961 W. Wesley
+      Peterson propôs acrescentar a cada bloco um resto que o receptor pudesse conferir na
+      hora. A ideia é aritmética pura, porque uma mensagem lida como polinômio em x, deslocada
+      tantos lugares quanto o grau do gerador, deixa um resto que depende só da mensagem. Os
+      polinômios escolhidos pegam qualquer erro de um único bit e toda rajada de até 32 bits,
+      que é o que de fato falha num canal ruidoso. O que o CRC não é, é garantia de
+      segurança, porque é fácil construir duas mensagens diferentes com o mesmo resto.
+    fr: >-
+      Le CRC est né comme gardien des réseaux à commutation de paquets : en 1961 W. Wesley
+      Peterson proposa d'ajouter à chaque bloc un reste que le récepteur puisse vérifier
+      aussitôt. L'idée est purement arithmétique, car un message lu comme polynôme en x,
+      décalé d autant de places que le degré du générateur, laisse un reste qui ne dépend que
+      du message. Les polynômes choisis détectent toute erreur sur un seul bit et toute salve
+      jusqu'à 32 bits, ce qui est vraiment ce qui échoue sur un canal bruité. Ce que le CRC
+      n'est pas, c'est une garantie de sécurité, car deux messages différents partageant le
+      même reste sont faciles à construire.
+    zh: >-
+      CRC诞生于分组交换网络的守卫需求：1961年，W.韦斯利·彼得森提议给每个数据块附加一个余数，接收方可以立即
+      校验。这一思想纯属算术：把消息看作x的多项式，按生成多项式的次数左移后相除，得到的余数只与消息本身
+      有关。所选的多项式能发现任何单比特错误以及长达32位的突发错误——这才是有噪声信道上真正会出错的地方。
+      CRC所不是的，是安全保证：构造两个余数相同的不同消息很容易做到。
+    ja: >-
+      CRCはパケット交換網を守る仕組みとして生まれた。1961年、W. ウェスリー・ピータソンは
+      受信側がすぐ確かめられる剰余を各ブロックに付け加えることを提案した。考えは純粋に
+      算術であり、xの多項式として読んだメッセージを、生成多項式の次数だけ左へずらして
+      割れば、メッセージだけに依存する剰余が得られる。選ばれた多項式は1ビットの誤りも
+      32ビットまでのバースト誤りも見つける。CRCがセキュリティの保証に当たらないのは、
+      別のメッセージにも同じ剰余が付きうるからである。
+  timeline:
+    - year: "1961"
+      label:
+        es: >-
+          Peterson propone el resto de división como protección de los bloques transmitidos.
+        en: >-
+          Peterson proposes the division remainder as a guard for transmitted blocks.
+        pt: >-
+          Peterson propõe o resto da divisão como proteção dos blocos transmitidos.
+        fr: >-
+          Peterson propose le reste de la division comme protection des blocs transmis.
+        zh: >-
+          彼得森提出用除法余数保护被传输的数据块。
+        ja: >-
+          ピータソンが余りによって送るブロックを守ることを提案する。
+    - year: Años 1980
+      label:
+        es: >-
+          Ethernet adopta un CRC de 32 bits en cada trama y descarta las que no cuadran.
+        en: >-
+          Ethernet adopts a 32-bit CRC per frame and discards the ones that do not check out.
+        pt: >-
+          Ethernet adota um CRC de 32 bits em cada quadro e descarta os que não batem.
+        fr: >-
+          Ethernet adopte un CRC de 32 bits par trame et écarte celles qui ne tombent pas juste.
+        zh: >-
+          以太网为每个帧采用32位CRC，校验不符的帧被丢弃。
+        ja: >-
+          イーサネットが各フレームに32ビットのCRCを付け、合わないフレームは捨てられる。
+    - year: "1995"
+      label:
+        es: >-
+          El formato PNG fija un CRC por cada bloque de datos de la imagen.
+        en: >-
+          The PNG format fixes one CRC per chunk of image data.
+        pt: >-
+          O formato PNG fixa um CRC para cada bloco de dados da imagem.
+        fr: >-
+          Le format PNG fixe un CRC par bloc de données de l'image.
+        zh: >-
+          PNG格式为每个数据块规定一个CRC。
+        ja: >-
+          PNGは画像のデータ区画ごとに1つのCRCを定める。
+    - year: Hoy
+      label:
+        es: >-
+          El mismo resto aparece en archivos comprimidos, en el audio y en cada descarga.
+        en: >-
+          The same remainder shows up in compressed files, in audio, and in every download.
+        pt: >-
+          O mesmo resto aparece em arquivos comprimidos, no áudio e em cada download.
+        fr: >-
+          Le même reste apparaît dans les fichiers compressés, dans l'audio et dans chaque
+          téléchargement.
+        zh: >-
+          同一个余数出现在压缩文件、音频以及每一次下载中。
+        ja: >-
+          同じ剰余が、圧縮ファイルや音声、そしてあらゆるダウンロードに現れる。
+  useCases:
+    - title:
+        es: Archivos comprimidos
+        en: Compressed files
+        pt: Arquivos comprimidos
+        fr: Fichiers compressés
+        zh: 压缩文件
+        ja: 圧縮ファイル
+      description:
+        es: >-
+          ZIP y PNG guardan el resto junto a los datos, y un descompresor que no coincide
+          avisa en vez de escribir basura en el disco.
+        en: >-
+          ZIP and PNG store the remainder next to the data, and a decompressor that does not
+          match warns instead of writing rubbish to disk.
+        pt: >-
+          ZIP e PNG guardam o resto junto aos dados, e um descompressor que não bate avisa em
+          vez de escrever lixo no disco.
+        fr: >-
+          ZIP et PNG rangent le reste à côté des données, et un décompresseur qui ne
+          concorde pas alerte au lieu d'écrire n'importe quoi sur le disque.
+        zh: >-
+          ZIP与PNG把余数与数据一起存放，解压时若校验不符就会报警，而不是把垃圾写入磁盘。
+        ja: >-
+          ZIPとPNGは剰余をデータと一緒に保存し、展開時に合わなければ無言で
+          ディスクを汚す代わりに警告する。
+    - title:
+        es: Tramas de red
+        en: Network frames
+        pt: Quadros de rede
+        fr: Trames réseau
+        zh: 网络帧
+        ja: ネットワークフレーム
+      description:
+        es: >-
+          Cada trama de Ethernet lleva un CRC-32 que la tarjeta calcula al vuelo y vuelve a
+          comprobar antes de entregar los datos.
+        en: >-
+          Every Ethernet frame carries a CRC-32 that the card computes on the fly and checks
+          again before handing the data over.
+        pt: >-
+          Cada quadro de Ethernet traz um CRC-32 que a placa calcula na hora e confere de novo
+          antes de entregar os dados.
+        fr: >-
+          Chaque trame Ethernet porte un CRC-32 que la carte calcule à la volée et revérifie
+          avant de rendre les données.
+        zh: >-
+          每个以太网帧都带有32位CRC，网卡即时计算，并在交付数据前再次校验。
+        ja: >-
+          イーサネットの各フレームには32ビットのCRCが付き、カードは送ると同時に計算し、
+          データを渡す前にもう一度確かめる。
+    - title:
+        es: Por qué no protege
+        en: What it does not protect
+        pt: O que ele não protege
+        fr: Ce qu'il ne protège pas
+        zh: 它不保护什么
+        ja: 守れないもの
+      description:
+        es: >-
+          Si dos mensajes comparten el mismo resto, el CRC no los distingue; por eso un atacante
+          puede alterar un archivo sin que el verificador se dé cuenta.
+        en: >-
+          If two messages share a remainder the CRC cannot tell them apart, which is why an
+          attacker can alter a file without the checker noticing.
+        pt: >-
+          Se duas mensagens compartilham o resto, o CRC não as distingue, e por isso um
+          atacante pode alterar um arquivo sem que o verificador perceba.
+        fr: >-
+          Si deux messages partagent le même reste, le CRC ne peut pas les distinguer, et un
+          attaquant peut altérer un fichier sans que la vérification ne s'en aperçoive.
+        zh: >-
+          若两条消息共享同一余数，CRC就无法区分，因此攻击者可以改动文件而校验不会察觉。
+        ja: >-
+          2つのメッセージが同じ剰余を持てばCRCは区別できない。だから検査を素通りして
+          ファイルを書き換えられる。
+  example:
+    title:
+      es: Mensaje 1101, generador 1011
+      en: Message 1101, generator 1011
+      pt: Mensagem 1101, gerador 1011
+      fr: Message 1101, générateur 1011
+      zh: 消息1101，生成多项式1011
+      ja: メッセージ1101、生成多項式1011
+    lines:
+      - es: "g(x) = 1011 = x³ + x + 1, de grado 3"
+        en: "g(x) = 1011 = x³ + x + 1, of degree 3"
+        pt: "g(x) = 1011 = x³ + x + 1, de grau 3"
+        fr: "g(x) = 1011 = x³ + x + 1, de degré 3"
+        zh: "g(x) = 1011 = x³ + x + 1，次数为3"
+        ja: "g(x) = 1011 = x³ + x + 1、次数は3"
+      - es: "Se añaden 3 ceros: 1101000"
+        en: "Three zeros are appended: 1101000"
+        pt: "Anexam-se 3 zeros: 1101000"
+        fr: "On ajoute trois zéros : 1101000"
+        zh: "补上3个零：1101000"
+        ja: "0を3個足す：1101000"
+      - es: 1101000 ÷ 1011 = 1111 (cociente)
+        en: 1101000 ÷ 1011 = 1111 (quotient)
+        pt: 1101000 ÷ 1011 = 1111 (quociente)
+        fr: 1101000 ÷ 1011 = 1111 (quotient)
+        zh: 1101000 ÷ 1011 = 1111（商）
+        ja: 1101000 ÷ 1011 = 1111（商）
+      - es: "Resto 001: ese es el CRC que se transmite"
+        en: "Remainder 001: that is the CRC that gets transmitted"
+        pt: "Resto 001: esse é o CRC que é transmitido"
+        fr: "Reste 001 : c'est le CRC transmis"
+        zh: "余数001：这就是要传出的CRC"
+        ja: "剰余001：これが伝わるCRC"
+      - es: 1101 001 → tres bits de control para un generador de grado 3
+        en: 1101 001 → three check bits for a degree-three generator
+        pt: 1101 001 → três bits de controle para um gerador de grau 3
+        fr: 1101 001 → trois bits de contrôle pour un générateur de degré trois
+        zh: 1101 001 → 次数为3的生成多项式带来3个校验位
+        ja: 1101 001 → 次数3の生成多項式から検査ビット3個

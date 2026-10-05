@@ -1,0 +1,318 @@
+id: diffraction-grating
+title:
+  es: Rejilla de difracción
+  en: Diffraction Grating
+  pt: Rede de difração
+  fr: Réseau de diffraction
+  zh: 光栅
+  ja: 回折格子
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: d
+    type: variable
+    value: d
+    explanation:
+      es: "La separación entre ranuras vecinas, el paso de la rejilla."
+      en: "The spacing between neighbouring slits, the pitch of the grating."
+      pt: "O espaçamento entre fendas vizinhas, o passo da rede."
+      fr: "L'écartement entre fentes voisines, le pas du réseau."
+      zh: 相邻狭缝的间距，即光栅常数。
+      ja: 隣り合うスリット間隔、すなわち格子のピッチ。
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: sin
+    type: operator
+    value: sen
+    explanation:
+      es: "El seno del ángulo de difracción."
+      en: "The sine of the diffraction angle."
+      pt: "O seno do ângulo de difração."
+      fr: "Le sinus de l'angle de diffraction."
+      zh: 衍射角的正弦。
+      ja: 回折角の正弦。
+  - id: theta
+    type: variable
+    value: θ
+    explanation:
+      es: "El ángulo al que sale el rayo, medido desde la normal de la rejilla."
+      en: "The angle at which the ray leaves, measured from the normal to the grating."
+      pt: "O ângulo em que o raio sai, medido a partir da normal da rede."
+      fr: "L'angle auquel le rayon sort, mesuré depuis la normale au réseau."
+      zh: 射线射出的角度，自光栅法线量起。
+      ja: 射线が射出される角度。格子の法線から測る。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: m
+    type: number
+    value: m
+    explanation:
+      es: "El orden entero de difracción; m = 0 da el rayo sin desviar."
+      en: "The integer diffraction order; m = 0 gives the undeflected ray."
+      pt: "A ordem inteira de difração; m = 0 dá o raio não desviado."
+      fr: "L'ordre entier de diffraction ; m = 0 donne le rayon non dévié."
+      zh: 整数衍射级次，m = 0 对应未偏转的中央亮纹。
+      ja: 整数の回折次数。m = 0は曲がらない中央の光に対応する。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: lambda
+    type: variable
+    value: λ
+    explanation:
+      es: "La longitud de onda de la luz, un solo dato para todos los colores."
+      en: "The wavelength of the light, one single quantity for every colour."
+      pt: "O comprimento de onda da luz, um único dado para todas as cores."
+      fr: "La longueur d'onde de la lumière, une seule grandeur pour toutes les couleurs."
+      zh: 光的波长，对所有颜色通用的同一个量。
+      ja: 光の波長。すべての色について成り立つただ一つの量。
+context:
+  author:
+    es: Joseph von Fraunhofer
+    en: Joseph von Fraunhofer
+    pt: Joseph von Fraunhofer
+    fr: Joseph von Fraunhofer
+    zh: 约瑟夫·冯·夫琅禾费
+    ja: ヨゼフ・フォン・フロラウヘル
+  era:
+    es: "Ratisbona, 1787–1826 · ley de la rejilla en 1821"
+    en: "Regensburg, 1787–1826 · grating law in 1821"
+    pt: "Ratisbona, 1787–1826 · lei da rede em 1821"
+    fr: "Ratisbonne, 1787–1826 · loi du réseau en 1821"
+    zh: "雷根斯堡,1787–1826年 · 光栅定律发表于1821年"
+    ja: "レーエンスブルク、1787–1826年 · 格子の法則は1821年"
+  history:
+    es: >-
+      Fraunhofer sustituyó los prismas de su espectroscopio por miles de ranuras paralelas muy finas. Con ellas
+      obtuvo líneas oscuras nítidas, donde el prisma solo daba una banda borrosa, y entendió que cada color
+      sale en un ángulo que depende de la separación entre ranuras. La explicación por interferencia llegó
+      después: las ondas que salen de ranuras vecinas llegan desfasadas y solo se refuerzan cuando esa
+      diferencia de camino es un número entero de longitudes de onda. Ese producto entre orden y longitud de
+      onda es la ley de la rejilla, y sigue siendo la herramienta con la que se miden longitudes de onda.
+    en: >-
+      Fraunhofer replaced the prisms in his spectroscope with thousands of very fine parallel slits. With them
+      he obtained sharp dark lines where the prism had only given a blurred band, and he understood that each
+      colour comes out at an angle set by the spacing between slits. The interference explanation came
+      later: waves leaving neighbouring slits arrive out of step and only reinforce when that path
+      difference is a whole number of wavelengths. That product of order and wavelength is the grating law,
+      and it is still the tool used to measure wavelengths.
+    pt: >-
+      Fraunhofer substituiu os prismas de seu espectroscópio por milhares de fendas paralelas muito finas. Com
+      elas obteve linhas escuras nítidas, onde o prisma só dava uma banda borrada, e entendeu que cada cor
+      sai num ângulo que depende do espaçamento entre as fendas. A explicação por interferência veio depois:
+      as ondas que saem de fendas vizinhas chegam defasadas e só se reforçam quando essa diferença de
+      caminho é um número inteiro de comprimentos de onda. Esse produto entre ordem e comprimento de onda é
+      a lei da rede, e segue sendo a ferramenta com que se medem comprimentos de onda.
+    fr: >-
+      Fraunhofer remplaça les prismes de son spectroscope par des milliers de fentes parallèles très fines. Il
+      obtient ainsi des raies sombres nettes là où le prisme ne donnait qu'une bande floue, et il comprend que
+      chaque couleur sort sous un angle fixé par l'écartement des fentes. L'explication par interférence
+      viendra plus tard : les ondes issues de fentes voisines arrivent en retard de phase et ne se
+      renforcent que lorsque cette différence de marche vaut un nombre entier de longueurs d'onde. Ce produit
+      entre l'ordre et la longueur d'onde est la loi du réseau, et c'est encore l'outil avec lequel on mesure
+      les longueurs d'onde.
+    zh: >-
+      夫琅禾费把分光计里的棱镜换成了上千道极细的平行狭缝。用它们他得到了清晰的暗线，而棱镜只能给出模糊的
+      一条色带；他由此明白，每一种颜色射出的角度由狭缝间距决定。以干涉来解释这一步是后来才完成的：相邻狭缝
+      发出的波到达时相位不同，只有当这段波程差等于整数个波长时它们才相互加强。级次与波长的这个乘积就是光栅
+      定律，直到今天仍是测量波长的工具。
+    ja: >-
+      Fraunhoferは分光計のプリズムを、数千本のきわめて細い平行スリットに置き換えた。するとプリズムではぼやけて
+      いた色がはっきりした暗い線として現れ、それぞれの色はスリット間隔によって決まる角度に射出されると分かった。
+      干渉による説明は後に示された。隣り合うスリットから出た波は位相をずらして届き、波程差が波長の整数倍の
+      ときだけ強め合う。この次数と波長の積が格子の法則であり、波長を測る道具として今も使われている。
+  timeline:
+    - year: "1821"
+      label:
+        es: >-
+          Fraunhofer publica su trabajo sobre la rejilla de difracción y enuncia la relación entre ángulo,
+          orden y longitud de onda.
+        en: >-
+          Fraunhofer publishes his work on the diffraction grating and states the relation between angle,
+          order and wavelength.
+        pt: >-
+          Fraunhofer publica seu trabalho sobre a rede de difração e enuncia a relação entre ângulo, ordem e
+          comprimento de onda.
+        fr: >-
+          Fraunhofer publie ses travaux sur le réseau de diffraction et énonce la relation entre angle, ordre
+          et longueur d'onde.
+        zh: >-
+          夫琅禾费发表关于光栅的论文，给出角度、级次与波长之间的关系。
+        ja: >-
+          Fraunhoferは回折格子に関する论文を発表し、角度・次数・波長の関係を述べた。
+    - year: "1882"
+      label:
+        es: Rowland combina la rejilla con la óptica de telescopio y abre la espectroscopia de precisión.
+        en: Rowland combines the grating with telescope optics and opens precision spectroscopy.
+        pt: Rowland combina a rede com a óptica de telescópio e abre a espectroscopia de precisão.
+        fr: Rowland combine le réseau à l'optique de télescope et ouvre la spectroscopie de précision.
+        zh: 罗兰把光栅与望远镜光学结合起来，开创了精密光谱学。
+        ja: Rowlandは格子と望遠鏡の光学系を結びつけ、高精度の分光学を開いた。
+    - year: s. XX
+      label:
+        es: >-
+          Los espectrógrafos de rejilla reemplazan a los de prisma y hacen posible medir líneas separadas por
+          fracciones de angström.
+        en: >-
+          Grating spectrographs replace prism ones and make it possible to measure lines separated by
+          fractions of an angstrom.
+        pt: >-
+          Os espectrógrafos de rede substituem os de prisma e tornam possível medir linhas separadas por
+          frações de angstrom.
+        fr: >-
+          Les spectrographes à réseau remplacent ceux à prisme et permettent de mesurer des raies séparées de
+          fractions d'ångström.
+        zh: 光栅光谱仪取代棱镜光谱仪，使测量相差几分之一埃的光谱线成为可能。
+        ja: 格子分光計がプリズム光の分光計を置き換え、数百分の一オングストロームの隔たりしかないスペクトル線の測定を可能にした。
+    - year: Hoy
+      label:
+        es: >-
+          Los CDs y DVDs son rejillas de reflexión: cada surco actúa como una línea de espejo.
+        en: "CDs and DVDs are reflection gratings: each groove acts like a mirror line."
+        pt: "CDs e DVDs são redes de reflexão: cada sulco funciona como uma linha espelhada."
+        fr: >-
+          Les CD et DVD sont des réseaux par réflexion : chaque sillon joue le rôle d'une ligne de miroir.
+        zh: CD 与 DVD 就是反射式光栅：每一条沟槽都相当于一条镜面线。
+        ja: CD や DVD は反射型の格子である。溝の一つ一つが鏡の線のように働く。
+  useCases:
+    - title:
+        es: Espectroscopia
+        en: Spectroscopy
+        pt: Espectroscopia
+        fr: Spectroscopie
+        zh: 光谱学
+        ja: 分光学
+      description:
+        es: >-
+          Una rejilla separa los colores por ángulo, no por refracción, y no desvía el rojo igual que el
+          violeta. Por eso los espectrógrafos modernos la prefieren al prisma.
+        en: >-
+          A grating separates colours by angle rather than by refraction, and it does not deviate red the same
+          way as violet. That is why modern spectrographs prefer it to the prism.
+        pt: >-
+          Uma rede separa as cores por ângulo, não por refração, e não desvia o vermelho como desvia o violeta.
+          Por isso os espectrógrafos modernos a preferem ao prisma.
+        fr: >-
+          Un réseau sépare les couleurs par l'angle et non par la réfraction, et il ne dévie pas le rouge comme
+          le violet. C'est pourquoi les spectrographes modernes le préfèrent au prisme.
+        zh: >-
+          光栅靠角度而非折射来分离颜色，对红光与紫光的偏折并不相同。这就是现代光谱仪偏爱光栅而非棱镜的原因。
+        ja: >-
+          格子は屈折ではなく角度で色を分ける。赤い光と紫の光で曲がり方が同じではない。そのため現代の分光計は
+          プリズムより格子を好む。
+    - title:
+        es: CDs y DVDs
+        en: CDs and DVDs
+        pt: CDs e DVDs
+        fr: CD et DVD
+        zh: CD 与 DVD
+        ja: CD と DVD
+      description:
+        es: >-
+          El haz que lee un disco vuelve de cada surco con un desfase, y el arcoíris que se ve en la superficie
+          es la rejilla funcionando.
+        en: >-
+          The beam that reads a disk returns off each groove with an offset, and the rainbow seen on its
+          surface is the grating at work.
+        pt: >-
+          O feixe que lê um disco volta de cada sulco com um desvio, e o arco-íris visto na superfície é a rede
+          funcionando.
+        fr: >-
+          Le faisceau qui lit un disque revient de chaque sillon avec un décalage, et l'arc-en-ciel visible à sa
+          surface est le réseau à l'oeuvre.
+        zh: >-
+          读取光盘的光束从每条沟槽反射回来时带有相位差，盘面上看到的彩虹就是光栅在工作。
+        ja: >-
+          ディスクを読む光束は溝の一つ一つから位相のずれを伴って戻り、その表面に見える虹は格子が働く姿である。
+    - title:
+        es: Medición de longitudes de onda
+        en: Wavelength measurement
+        pt: Medida de comprimentos de onda
+        fr: Mesure des longueurs d'onde
+        zh: 波长测量
+        ja: 波長の測定
+      description:
+        es: >-
+          Con N ranuras iluminadas, el poder de resolución es R = mN. Más ranuras o un orden mayor significan
+          distinguir longitudes de onda más próximas.
+        en: >-
+          With N lit slits, the resolving power is R = mN. More slits or a higher order mean telling apart
+          closer wavelengths.
+        pt: >-
+          Com N fendas iluminadas, o poder de resolução é R = mN. Mais fendas ou ordem maior significam
+          distinguir comprimentos de onda mais próximos.
+        fr: >-
+          Avec N fentes éclairées, le pouvoir de résolution vaut R = mN. Plus de fentes ou un ordre plus élevé
+          permettent de distinguer des longueurs d'onde plus proches.
+        zh: >-
+          有 N 条狭缝受光时，分辨本领为 R = mN。狭缝更多或取更高阶次，就能分开更接近的波长。
+        ja: >-
+          N本のスリットを照らすとき、分解本领は R = mN である。スリット数を増やすか上の次数を取れば、より近い
+          波長を区別できる。
+  example:
+    title:
+      es: Leyendo un CD con un láser rojo
+      en: Reading a CD with a red laser
+      pt: Lendo um CD com laser vermelho
+      fr: Lire un CD avec un laser rouge
+      zh: 用红色激光读取 CD
+      ja: 赤いレーザーで CD を読む
+    lines:
+      - es: d = 1,6 µm y λ = 633 nm
+        en: d = 1.6 µm and λ = 633 nm
+        pt: d = 1,6 µm e λ = 633 nm
+        fr: d = 1,6 µm et λ = 633 nm
+        zh: d = 1.6 µm,λ = 633 nm
+        ja: d = 1.6 µm、λ = 633 nm
+      - es: sen θ = λ/d = 633 nm / 1600 nm = 0,3956
+        en: sin θ = λ/d = 633 nm / 1600 nm = 0.3956
+        pt: sen θ = λ/d = 633 nm / 1600 nm = 0,3956
+        fr: sen θ = λ/d = 633 nm / 1600 nm = 0,3956
+        zh: sin θ = λ/d = 633 nm / 1600 nm = 0.3956
+        ja: sin θ = λ/d = 633 nm / 1600 nm = 0.3956
+      - es: θ = arcsen(0,3956) ≈ 23,3°
+        en: θ = arcsin(0.3956) ≈ 23.3°
+        pt: θ = arcsen(0,3956) ≈ 23,3°
+        fr: θ = arcsen(0,3956) ≈ 23,3°
+        zh: θ = arcsin(0.3956) ≈ 23.3°
+        ja: θ = arcsin(0.3956) ≈ 23.3°
+      - es: El rojo sale a un ángulo mucho mayor que el violeta
+        en: Red comes out at a much larger angle than violet
+        pt: O vermelho sai num ângulo bem maior que o violeta
+        fr: Le rouge sort sous un angle bien plus grand que le violet
+        zh: 红光射出的角度远大于紫光
+        ja: 赤は紫よりずっと大きな角度で射出される
+      - es: Con N = 10 000 ranuras, R = 10 000
+        en: With N = 10 000 slits, R = 10 000
+        pt: Com N = 10 000 fendas, R = 10 000
+        fr: Avec N = 10 000 fentes, R = 10 000
+        zh: 有 N = 10 000 条狭缝时,R = 10 000
+        ja: N = 10 000 本のとき、R = 10 000

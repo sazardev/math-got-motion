@@ -1,0 +1,282 @@
+id: vieta-formulas
+title:
+  es: Fórmulas de Vieta
+  en: Vieta's formulas
+  pt: Fórmulas de Viète
+  fr: Formules de Viète
+  zh: 韦达定理
+  ja: ヴィエタの公式
+category:
+  es: Álgebra
+  en: Algebra
+  pt: Álgebra
+  fr: Algèbre
+  zh: 代数
+  ja: 代数学
+nodes:
+  - id: sum
+    type: variable
+    value: x₁ + x₂
+    explanation:
+      es: La suma de las dos raíces del cuadrático.
+      en: The sum of the two roots of the quadratic.
+      pt: A soma das duas raízes do quadrático.
+      fr: La somme des deux racines du trinôme.
+      zh: 二次方程式的两个根之和。
+      ja: 二次方程式の2つの解の和。
+  - id: equals-1
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: minus-b-over-a
+    type: variable
+    value: −b/a
+    explanation:
+      es: "El coeficiente b con signo opuesto, dividido por el coeficiente principal."
+      en: "The coefficient b with the opposite sign, divided by the leading coefficient."
+      pt: "O coeficiente b com sinal oposto, dividido pelo coeficiente principal."
+      fr: "Le coefficient b changé de signe, divisé par le coefficient dominant."
+      zh: "系数 b 取相反符号，再除以二次项系数。"
+      ja: "係数bの符号を逆にして、二次項の係数で割った値。"
+  - id: comma
+    type: operator
+    value: ","
+    explanation:
+      es: "Una coma: las dos relaciones dicen lo mismo sobre las mismas raíces."
+      en: "A comma: both relations say the same thing about the same two roots."
+      pt: "Uma vírgula: as duas relações dizem o mesmo sobre as mesmas raízes."
+      fr: "Une virgule : les deux relations disent la même chose des mêmes racines."
+      zh: "一个逗号：两个关系说的是同一对根。"
+      ja: "読点。この2つの関係は同じ2つの解について同じことを述べている。"
+  - id: product
+    type: variable
+    value: x₁ · x₂
+    explanation:
+      es: El producto de las dos raíces.
+      en: The product of the two roots.
+      pt: O produto das duas raízes.
+      fr: Le produit des deux racines.
+      zh: 二次方程式的两个根之积。
+      ja: 二次方程式の2つの解の積。
+  - id: equals-2
+    type: equals
+    value: "="
+    explanation:
+      es: También es igual a.
+      en: Is also equal to.
+      pt: Também é igual a.
+      fr: Est aussi égal à.
+      zh: 也等于。
+      ja: にも等しい。
+  - id: c-over-a
+    type: variable
+    value: c/a
+    explanation:
+      es: "El término independiente dividido por el coeficiente principal, sin cambio de signo."
+      en: "The constant term divided by the leading coefficient, with no sign change."
+      pt: "O termo independente dividido pelo coeficiente principal, sem troca de sinal."
+      fr: "Le terme constant divisé par le coefficient dominant, sans changement de signe."
+      zh: "常数项除以二次项系数，不改变符号。"
+      ja: "定数項を二次項の係数で割った値。符号は変えない。"
+context:
+  author:
+    es: François Viète
+    en: François Viète
+    pt: François Viète
+    fr: François Viète
+    zh: 弗朗索瓦·韦达
+    ja: フランソワ・ヴィエタ
+  era:
+    es: Francia, 1540–1603 · publicadas en 1591
+    en: France, 1540–1603 · published in 1591
+    pt: França, 1540–1603 · publicadas em 1591
+    fr: France, 1540–1603 · publiées en 1591
+    zh: 法国，1540–1603年 · 发表于1591年
+    ja: フランス、1540–1603年 · 1591年に発表
+  history:
+    es: >-
+      François Viète publicó estas relaciones en 1591, en el Isagoge, la primera obra que trata el álgebra
+      como una ciencia autónoma. Allí usó las vocales A, E, I para las incógnitas y las consonantes B, C
+      para los datos, de donde sale nuestra notación; la ecuación se convierte en una proposición que se
+      demuestra, no en un problema de cálculo. Descartes conservó las últimas letras del alfabeto cuando
+      pasó al álgebra simbólica en 1637. Más tarde el mismo argumento se extendió a polinomios de
+      cualquier grado: las raíces de un grado n tienen suma −b/a y producto coherente con los coeficientes.
+    en: >-
+      François Viète published these relations in 1591 in the Isagoge, the first work to treat algebra as
+      an autonomous science. There he used the vowels A, E, I for the unknowns and the consonants B, C
+      for the data, hence our notation; an equation became a proposition to be proved rather than a
+      computational problem. Descartes kept the last letters of the alphabet when he switched to
+      symbolic algebra in 1637. Later the same argument was extended to polynomials of any degree: the
+      roots of a degree n polynomial have sum −b/a and a product consistent with the coefficients.
+    pt: >-
+      François Viète publicou estas relações em 1591, no Isagoge, a primeira obra que trata a álgebra como
+      ciência autônoma. Ali usou as vogais A, E, I para as incógnitas e as consoantes B, C para os dados,
+      de onde vem nossa notação; a equação passa a ser uma proposição a demonstrar, e não um problema de
+      cálculo. Descartes conservou as últimas letras do alfabeto quando passou à álgebra simbólica em
+      1637. Mais tarde o mesmo argumento foi estendido a polinômios de qualquer grau.
+    fr: >-
+      François Viète publia ces relations en 1591 dans l'Isagoge, le premier ouvrage à traiter l'algèbre
+      comme une science autonome. Il y employa les voyelles A, E, I pour les inconnues et les consonnes B,
+      C pour les données, d'où notre notation ; l'équation devient une proposition à démontrer et non un
+      problème de calcul. Descartes conserva les dernières lettres de l'alphabet lorsqu'il passe à
+      l'algèbre symbolique en 1637. Le même argument fut ensuite étendu aux polynômes de tout degré.
+    zh: >-
+      弗朗索瓦·韦达在1591年的《解析入门》里发表了这些关系，那是第一部把代数当作独立科学的著作。他在其中用元音 A、E、I 表示
+      未知数，用辅音 B、C 表示已知数，我们的记号由此而来；方程成为一个需要证明的命题，而不是一道计算题。1637年笛卡尔改用
+      符号代数时保留了字母表末尾的字母。后来同样的论证被推广到任意次数的多项式。
+    ja: >-
+      フランソワ・ヴィエタは1591年の『Isagoge』でこれらの関係を発表した。代数を独立した学問として扱った最初の著作である。
+      そこでは未知数を母音A、E、Iで、既知数を子音B、Cで表した。この記法の由来である。方程式は計算の問題ではなく、
+      証明すべき命題として扱われた。1637年にデカルトが記号代数へ移ったとき、字母の末尾の文字がそのまま残った。
+      のちには同じ議論が任意の次数の多項式へ広げられた。
+  timeline:
+    - year: "1591"
+      label:
+        es: >-
+          Viète publica el Isagoge, con la notación de vocales para incógnitas y consonantes para datos.
+        en: >-
+          Viète publishes the Isagoge, with his notation of vowels for unknowns and consonants for
+          data.
+        pt: >-
+          Viète publica o Isagoge, com sua notação de vogais para incógnitas e consoantes para dados.
+        fr: >-
+          Viète publie l'Isagoge, avec sa notation par voyelles pour les inconnues et consonnes pour les
+          données.
+        zh: >-
+          韦达出版《解析入门》，以元音表示未知数、辅音表示已知数。
+        ja: >-
+          ヴィエタが『Isagoge』を発表し、母音で未知数、子音で既知数を表す記法を示した。
+    - year: "1637"
+      label:
+        es: Descartes adopta la notación simbólica y conserva las últimas letras del alfabeto.
+        en: Descartes adopts symbolic notation and keeps the last letters of the alphabet.
+        pt: Descartes adota a notação simbólica e conserva as últimas letras do alfabeto.
+        fr: Descartes adopte la notation symbolique et conserve les dernières lettres de l'alphabet.
+        zh: >-
+          笛卡尔采用符号记法，并保留了字母表末尾的字母。
+        ja: >-
+          デカルトが記号記法を全面发展し、字母の末尾の文字を採用した。
+    - year: s. XIX
+      label:
+        es: >-
+          El argumento se generaliza a polinomios de grado n, en la teoría de ecuaciones.
+        en: >-
+          The argument is generalized to polynomials of degree n, in the theory of equations.
+        pt: >-
+          O argumento é generalizado para polinômios de grau n, na teoria das equações.
+        fr: >-
+          L'argument est généralisé aux polynômes de degré n, dans la théorie des équations.
+        zh: >-
+          在方程理论中，该论证被推广到 n 次多项式。
+        ja: >-
+          方程式理論の中で、この議論は n 次の多項式へ一般化された。
+    - year: Hoy
+      label:
+        es: >-
+          Sirven para comprobar soluciones y para hallar la suma y el producto de raíces sin calcularlas.
+        en: >-
+          They serve to check solutions and to find the sum and product of roots without computing them.
+        pt: >-
+          Servem para conferirir soluções e para achar a soma e o produto das raízes sem calculá-las.
+        fr: >-
+          Elles servent à vérifier des solutions et à trouver la somme et le produit des racines sans
+          les calculer.
+        zh: >-
+          它们用于验证解，以及在不求解的情况下得到根的和与积。
+        ja: >-
+          解の確認や、実際に解を求めずに根の和と積を得るのに使われる。
+  useCases:
+    - title:
+        es: Comprobación de soluciones
+        en: Checking solutions
+        pt: Comprovação de soluções
+        fr: Vérification de solutions
+        zh: 验证解
+        ja: 解の確認
+      description:
+        es: >-
+          Si las raíces halladas no suman −b/a, alguna de ellas está mal calculada.
+        en: >-
+          If the roots you found do not add up to −b/a, one of them is wrong.
+        pt: >-
+          Se as raízes encontradas não somam −b/a, alguma delas está errada.
+        fr: >-
+          Si les racines trouvées ne font pas −b/a, l'une d'elles est fausse.
+        zh: >-
+          如果求出的根之和不等于 −b/a，其中一定有根算错了。
+        ja: >-
+          求めた根の和が −b/a にならなければ、根のどれかが間違っている。
+    - title:
+        es: Problemas de proporciones
+        en: Problems about ratios
+        pt: Problemas de proporções
+        fr: Problèmes de proportions
+        zh: 比例问题
+        ja: 比例の問題
+      description:
+        es: >-
+          Si el producto es negativo, las raíces tienen signos opuestos; si el discriminante es cero,
+          coinciden.
+        en: >-
+          If the product is negative the roots have opposite signs; if the discriminant is zero they
+          coincide.
+        pt: >-
+          Se o produto é negativo, as raízes têm sinais opostos; se o discriminante é zero, coincidem.
+        fr: >-
+          Si le produit est négatif, les racines sont de signes opposés ; si le discriminant est nul,
+          elles coïncident.
+        zh: >-
+          若积为负，两根异号；若判别式为零，两根重合。
+        ja: >-
+          積が負なら2根の符号が異なり、判別式が0なら2根は一致する。
+  example:
+    title:
+      es: Raíces de x² − 5x + 6 = 0
+      en: Roots of x² − 5x + 6 = 0
+      pt: Raízes de x² − 5x + 6 = 0
+      fr: Racines de x² − 5x + 6 = 0
+      zh: x² − 5x + 6 = 0 的根
+      ja: x² − 5x + 6 = 0 の解
+    lines:
+      - es: "x² − 5x + 6 = 0, con a = 1, b = −5, c = 6"
+        en: "x² − 5x + 6 = 0, with a = 1, b = −5, c = 6"
+        pt: "x² − 5x + 6 = 0, com a = 1, b = −5, c = 6"
+        fr: "x² − 5x + 6 = 0, avec a = 1, b = −5, c = 6"
+        zh: "x² − 5x + 6 = 0，其中 a = 1，b = −5，c = 6"
+        ja: "x² − 5x + 6 = 0、a = 1、b = −5、c = 6"
+      - es: "Raíces: x = 2 y x = 3"
+        en: "Roots: x = 2 and x = 3"
+        pt: "Raízes: x = 2 e x = 3"
+        fr: "Racines : x = 2 et x = 3"
+        zh: 根：x = 2 与 x = 3
+        ja: 解：x = 2 と x = 3
+      - es: x₁ + x₂ = −b/a = −(−5)/1 = 5
+        en: x₁ + x₂ = −b/a = −(−5)/1 = 5
+        pt: x₁ + x₂ = −b/a = −(−5)/1 = 5
+        fr: x₁ + x₂ = −b/a = −(−5)/1 = 5
+        zh: x₁ + x₂ = −b/a = −(−5)/1 = 5
+        ja: x₁ + x₂ = −b/a = −(−5)/1 = 5
+      - es: 2 + 3 = 5
+        en: 2 + 3 = 5
+        pt: 2 + 3 = 5
+        fr: 2 + 3 = 5
+        zh: 2 + 3 = 5
+        ja: 2 + 3 = 5
+      - es: x₁ · x₂ = c/a = 6/1 = 6
+        en: x₁ · x₂ = c/a = 6/1 = 6
+        pt: x₁ · x₂ = c/a = 6/1 = 6
+        fr: x₁ · x₂ = c/a = 6/1 = 6
+        zh: x₁ · x₂ = c/a = 6/1 = 6
+        ja: x₁ · x₂ = c/a = 6/1 = 6
+      - es: 2 · 3 = 6
+        en: 2 · 3 = 6
+        pt: 2 · 3 = 6
+        fr: 2 · 3 = 6
+        zh: 2 · 3 = 6
+        ja: 2 · 3 = 6

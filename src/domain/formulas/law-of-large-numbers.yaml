@@ -1,0 +1,373 @@
+id: law-of-large-numbers
+title:
+  es: Ley de los Grandes Números
+  en: Law of Large Numbers
+  pt: Lei dos Grandes Números
+  fr: Loi des grands nombres
+  zh: 大数定律
+  ja: 大数の法則
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率と統計
+nodes:
+  - id: mean
+    type: variable
+    value: X̄ₙ
+    explanation:
+      es: "La media muestral: el promedio de las primeras n observaciones."
+      en: "The sample mean: the average of the first n observations."
+      pt: "A média amostral: a média das primeiras n observações."
+      fr: "La moyenne empirique : la moyenne des n premières observations."
+      zh: 样本均值：前 n 个观测的平均值。
+      ja: 標本平均。前の n 個の観測の平均である。
+  - id: eq-1
+    type: equals
+    value: "="
+    explanation:
+      es: El promedio se escribe como una suma dividida por el número de sumandos.
+      en: The average is written as a sum divided by the number of terms.
+      pt: A média é escrita como uma soma dividida pelo número de parcelas.
+      fr: La moyenne s'écrit comme une somme divisée par le nombre de termes.
+      zh: 平均值写成一个和除以项数。
+      ja: 平均は総和を項数で割った形になる。
+  - id: one-over-n
+    type: operator
+    value: 1/n
+    explanation:
+      es: El número de observaciones, que crece sin límite.
+      en: The number of observations, which grows without bound.
+      pt: O número de observações, que cresce sem limite.
+      fr: Le nombre d'observations, qui croît sans borne.
+      zh: 观测次数，它不断增大。
+      ja: 観測の回数で、際限なく増えていく量である。
+  - id: sum
+    type: operator
+    value: Σᵢ₌₁ⁿ
+    explanation:
+      es: La suma corre desde la primera hasta la enésima observación.
+      en: The sum runs from the first to the n-th observation.
+      pt: A soma corre da primeira até a n-ésima observação.
+      fr: La somme court de la première à la n-ième observation.
+      zh: 求和从第一个观测一直到第 n 个观测。
+      ja: 総和は第1の観測から第 n 番目まで走る。
+  - id: xi
+    type: variable
+    value: Xᵢ
+    explanation:
+      es: La observación número i, que es una realización de la variable aleatoria.
+      en: The i-th observation, one realization of the random variable.
+      pt: A observação de número i, uma realização da variável aleatória.
+      fr: L'observation numéro i, une réalisation de la variable aléatoire.
+      zh: 第 i 个观测，是随机变量的一次实现。
+      ja: 第 i 番目の観測で、無作為変数の1つの実現である。
+  - id: arrow
+    type: operator
+    value: "→"
+    explanation:
+      es: "Convergencia: la flecha dice que la cercanía crece con n."
+      en: "Convergence: the arrow says the closeness grows as n grows."
+      pt: "Convergência: a seta diz que a proximidade cresce com n."
+      fr: "Convergence : la flèche dit que la proximité croît avec n."
+      zh: 收敛：箭头表示接近程度随 n 增大而提高。
+      ja: 収束。矢印は近さが n とともに増すことを示す。
+  - id: mu
+    type: constant
+    value: μ
+    explanation:
+      es: El valor esperado, la media de la distribución de origen.
+      en: The expected value, the mean of the source distribution.
+      pt: O valor esperado, a média da distribuição de origem.
+      fr: L'espérance, la moyenne de la loi de départ.
+      zh: 期望值，原始分布的均值。
+      ja: 期待値で、もとの分布の平均である。
+  - id: semi-1
+    type: operator
+    value: ";"
+    explanation:
+      es: La flecha no dice que el promedio quede igual a μ, sino que se acerca.
+      en: The arrow does not say the average equals μ, but that it gets close.
+      pt: A seta não diz que a média fique igual a μ, mas que se aproxime.
+      fr: La flèche ne dit pas que la moyenne égale μ, mais qu'elle s'en rapproche.
+      zh: 箭头并不是说平均值等于 μ，而是说它越来越接近 μ。
+      ja: 矢印は平均が μ と等しいという意味ではなく、近づくという意味である。
+  - id: spread
+    type: operator
+    value: σ/√n
+    explanation:
+      es: "La dispersión del promedio: se reduce como la raíz del número de datos."
+      en: "The spread of the average: it shrinks like the square root of the data count."
+      pt: "A dispersão da média: encolhe como a raiz do número de dados."
+      fr: "La dispersion de la moyenne : elle décroît comme la racine du nombre de données."
+      zh: 平均值的离散程度：按数据个数的平方根缩小。
+      ja: 平均のばらつき。データ数の平方根に比例して縮む。
+  - id: arrow-2
+    type: operator
+    value: "→"
+    explanation:
+      es: Al doblar los datos, la incertidumbre solo baja por la raíz de dos.
+      en: Doubling the data only lowers the uncertainty by the root of two.
+      pt: Duplicar os dados só reduz a incerteza pela raiz de dois.
+      fr: Doubler les données ne réduit l'incertitude que d'un facteur racine de deux.
+      zh: 数据加倍只能把不确定度降低根号二倍。
+      ja: データを2倍にしても、不確かさは2の平方根の分しか減らない。
+  - id: zero
+    type: constant
+    value: "0"
+    explanation:
+      es: Con suficientes datos, el promedio se pega a μ con cualquier precisión.
+      en: With enough data, the average sticks to μ to any precision.
+      pt: Com dados suficientes, a média gruda em μ com qualquer precisão.
+      fr: Avec assez de données, la moyenne colle à μ à toute précision.
+      zh: 数据足够多时，平均值可以任意精确地贴近 μ。
+      ja: データが十分多ければ、平均は任意の精度で μ に張り付く。
+context:
+  author:
+    es: Siméon Denis Poisson
+    en: Siméon Denis Poisson
+    pt: Siméon Denis Poisson
+    fr: Siméon Denis Poisson
+    zh: 西梅翁·德尼·泊松
+    ja: シモン・ドゥニ・ポアソン
+  era:
+    es: Francia, 1781–1840 · Poisson le da nombre en 1837
+    en: France, 1781–1840 · Poisson names it in 1837
+    pt: França, 1781–1840 · Poisson dá o nome em 1837
+    fr: France, 1781–1840 · Poisson lui donne son nom en 1837
+    zh: 法国，1781–1840年 · 泊松于1837年为之命名
+    ja: フランス、1781年–1840年 · ポアソンが1837年に名をつけた
+  history:
+    es: >-
+      Poisson dio nombre a la ley de los grandes números en 1837, mientras estudiaba la
+      distribución de errores de los instrumentos de medición. El resultado ya estaba
+      implícito en el trabajo de Bernouilli y de Laplace sobre teoría de errores, y el propio
+      Poisson lo usó más como límite de una serie que como teorema. La versión moderna tiene
+      dos formas: la débil, que habla de probabilidad, y la fuerte, que habla de frecuencia.
+      Es la base de todo el muestreo estadístico, de la simulación Monte Carlo y de las
+      encuestas. No garantiza ganancia en ningún juego: garantiza convergencia.
+    en: >-
+      Poisson named the law of large numbers in 1837, while studying the distribution of errors
+      in measuring instruments. The result was already latent in the work of Bernoulli and
+      Laplace on the theory of errors, and Poisson himself used it more as a limit of a series
+      than as a theorem. The modern version has two forms: the weak one, which talks about
+      probability, and the strong one, which talks about frequency. It is the basis of all
+      statistical sampling, of Monte Carlo simulation and of polling. It guarantees
+      convergence, never profit.
+    pt: >-
+      Poisson deu nome à lei dos grandes números em 1837, enquanto estudava a distribuição de
+      erros dos instrumentos de medição. O resultado já estava implícito no trabalho de
+      Bernouilli e de Laplace sobre teoria de erros, e o próprio Poisson o usou mais como
+      limite de uma série do que como teorema. A versão moderna tem duas formas: a fraca,
+      que fala de probabilidade, e a forte, que fala de frequência. É a base de toda
+      amostragem estatística, da simulação Monte Carlo e das enquetes. Não garante ganho
+      em nenhum jogo: garante convergência.
+    fr: >-
+      Poisson donna son nom à la loi des grands nombres en 1837, en étudiant la répartition des
+      erreurs des instruments de mesure. Le résultat était déjà contenu dans les travaux de
+      Bernoulli et de Laplace sur la théorie des erreurs, et Poisson lui-même l'employa
+      davantage comme limite d'une série que comme théorème. La version moderne a deux
+      formes : la faible, qui parle de probabilité, et la forte, qui parle de fréquence.
+      C'est la base de tout échantillonnage statistique, de la simulation Monte Carlo et des
+      sondages. Elle ne garantit aucun gain dans un jeu : elle garantit la convergence.
+    zh: >-
+      泊松在1837年研究测量仪器误差分布时为这条定律命名。这一结果早已隐含在伯努利与拉普拉斯关于
+      误差理论的工作中，而泊松本人更多是把它当作级数的极限而非定理来使用。
+      现代版本有两种形式：弱形式谈论概率，强形式谈论频率。
+      它是一切统计抽样、蒙特卡罗模拟与民意调查的基础。
+      它不保证在任何赌局中获利，它保证的是收敛。
+    ja: >-
+      ポアソンは1837年、測量器の誤差の分布を研究するうちにこの法則に名をつけた。
+      それ以前、ベルヌーイとラプラスの誤差理論の中にすでに含まれていた内容を、
+      ポアソン自身は定理というよりも級数の極限として用いていた。
+      現代の形は2つある。確率で語る弱い版と、頻度で語る強い版である。
+      統計的な抽出、モンテカルロ法のシミュレーション、世論調査の土台になっている。
+      賭けで儲かることを保証するのではなく、収束することを保証する法則である。
+  timeline:
+    - year: "1713"
+      label:
+        es: >-
+          Jakob Bernoulli demuestra el resultado como teorema en el Ars Conjectandi, publicado
+          póstumamente.
+        en: >-
+          Jakob Bernoulli proves the result as a theorem in the Ars Conjectandi, published
+          posthumously.
+        pt: >-
+          Jakob Bernoulli demonstra o resultado como teorema no Ars Conjectandi, publicado postumamente.
+        fr: >-
+          Jakob Bernoulli démontre le résultat comme théorème dans l'Ars Conjectandi, publié à
+          titre posthume.
+        zh: >-
+          雅各布·伯努利在身后出版的《算术推演》中把它证明为定理。
+        ja: >-
+          ヤコブ・ベルヌーイが、没後に出版された『Ars Conjectandi』でこれを定理として証明した。
+    - year: "1837"
+      label:
+        es: >-
+          Poisson la bautiza loi des grands nombres y la usa para justificar los promedios
+          de las mediciones.
+        en: >-
+          Poisson names it the law of large numbers and uses it to justify measurement averages.
+        pt: >-
+          Poisson a chama de lei dos grandes números e a usa para justificar médias de medições.
+        fr: >-
+          Poisson la nomme loi des grands nombres et s'en sert pour justifier les moyennes de
+          mesures.
+        zh: >-
+          泊松把它命名为大数定律，并用它论证测量平均值。
+        ja: >-
+          ポアソンがこれを大数の法則と名づけ、測定の平均を正当化するのに使った。
+    - year: "1909"
+      label:
+        es: >-
+          Kolmogorov la reformula dentro de su axiomatización de la probabilidad, con las dos
+          versiones modernas.
+        en: >-
+          Kolmogorov reformulates it inside his axiomatization of probability, with both modern
+          versions.
+        pt: >-
+          Kolmogorov a reformula dentro da axiomatização da probabilidade, com as duas versões
+          modernas.
+        fr: >-
+          Kolmogorov la reformule dans son axiomatique de la probabilité, avec les deux versions
+          modernes.
+        zh: >-
+          柯尔莫哥洛夫在概率公理化框架内重新表述了它，给出两个现代版本。
+        ja: >-
+          コロモゴロフが確率の公理化の中で、現代の2つの形に整理して示した。
+    - year: Hoy
+      label:
+        es: >-
+          Rige el muestreo, la simulación Monte Carlo y el hecho de que una encuesta grande acierta.
+        en: >-
+          It governs sampling, Monte Carlo simulation and the fact that a large poll gets it
+          right.
+        pt: >-
+          Governa a amostragem, a simulação Monte Carlo e o fato de que uma grande enquete acerta.
+        fr: >-
+          Elle régit l'échantillonnage, la simulation Monte Carlo et le fait qu'un grand sondage
+          tombe juste.
+        zh: >-
+          它支配着抽样、蒙特卡罗模拟，也保证大规模民调的结果可靠。
+        ja: >-
+          抽出、モンテカルロ法のシミュレーション、そして規模のある世論調査が正しいことを保証する。
+  useCases:
+    - title:
+        es: Simulación Monte Carlo
+        en: Monte Carlo simulation
+        pt: Simulação Monte Carlo
+        fr: Simulation Monte Carlo
+        zh: 蒙特卡罗模拟
+        ja: モンテカルロ法
+      description:
+        es: >-
+          Promediar muchos resultados simulados converge al valor exacto que ninguna integración
+          directa consigue.
+        en: >-
+          Averaging many simulated results converges to the exact value that no direct
+          integration manages.
+        pt: >-
+          Calcular a média de muitos resultados simulados converge para o valor exato que a
+          integração direta não alcança.
+        fr: >-
+          Faire la moyenne de nombreux résultats simulés converge vers la valeur exacte qu'aucune
+          intégration directe n'atteint.
+        zh: >-
+          对大量模拟结果取平均，会收敛到直接积分无法得到的精确值。
+        ja: >-
+          多くの模擬結果の平均をとると、直接積分では得られない正確な値に近づく。
+    - title:
+        es: Encuestas y sondeos
+        en: Polls and surveys
+        pt: Enquetes e sondagens
+        fr: Sondages et études
+        zh: 民意调查
+        ja: 世論調査
+      description:
+        es: >-
+          Si unos miles de personas se muestrean al azar, el porcentaje que responde converge
+          al porcentaje real de la población.
+        en: >-
+          If a few thousand people are sampled at random, the share who answer converges to the
+          real share of the population.
+        pt: >-
+          Se algumas milhares de pessoas forem sorteadas ao acaso, a proporção que responde
+          converge para a proporção real da população.
+        fr: >-
+          Si quelques milliers de personnes sont tirées au hasard, la part qui répond converge
+          vers la part réelle de la population.
+        zh: >-
+          若随机抽取几千人，回答某个选项的比例会收敛于总体中真实的比例。
+        ja: >-
+          無作為に数千人を抽けば、ある答えを選んだ割合は母集団の本来の割合に近づく。
+    - title:
+        es: Calidad industrial
+        en: Manufacturing quality
+        pt: Qualidade industrial
+        fr: Qualité industrielle
+        zh: 工业质量
+        ja: 工業品質
+      description:
+        es: >-
+          El promedio de una producción larga converge al valor nominal, de modo que el error
+          sistemático se nota aunque el ruido sea grande.
+        en: >-
+          The average of a long production run converges to the nominal value, so a systematic
+          bias shows up even when the noise is large.
+        pt: >-
+          A média de uma produção longa converge para o valor nominal, de modo que o erro
+          sistemático aparece mesmo com muito ruído.
+        fr: >-
+          La moyenne d'une longue production converge vers la valeur nominale, si bien que
+          l'erreur systématique apparaît malgré un fort bruit.
+        zh: >-
+          长批生产的平均值会收敛到标称值，因此即便噪声很大，系统性偏差也会显现出来。
+        ja: >-
+          長い生産の平均は公称値に近づくので、ノイズが大きくても系統的な狂いが現れる。
+  example:
+    title:
+      es: Mil tiradas de una moneda
+      en: A thousand coin tosses
+      pt: Mil lançamentos de uma moeda
+      fr: Mille lancers de pièce
+      zh: 一千次抛硬币
+      ja: 硬貨を千回投げる
+    lines:
+      - es: "Xᵢ vale 1 si sale cara y 0 si sale cruz"
+        en: "Xᵢ equals 1 for heads and 0 for tails"
+        pt: "Xᵢ vale 1 se sai cara e 0 se sai coroa"
+        fr: "Xᵢ vaut 1 pour pile et 0 pour face"
+        zh: "Xᵢ 在正面时为 1，反面时为 0"
+        ja: "Xᵢ は表なら 1、裏なら 0"
+      - es: "μ = 0,5 y σ² = 0,25, luego σ = 0,5"
+        en: "μ = 0.5 and σ² = 0.25, so σ = 0.5"
+        pt: "μ = 0,5 e σ² = 0,25, logo σ = 0,5"
+        fr: "μ = 0.5 et σ² = 0.25, donc σ = 0.5"
+        zh: "μ = 0.5，σ² = 0.25，故 σ = 0.5"
+        ja: "μ = 0.5、σ² = 0.25、よって σ = 0.5"
+      - es: "con n = 10 000, la dispersión de X̄ₙ es σ/√n"
+        en: "with n = 10 000, the spread of X̄ₙ is σ/√n"
+        pt: "com n = 10 000, a dispersão de X̄ₙ é σ/√n"
+        fr: "avec n = 10 000, la dispersion de X̄ₙ vaut σ/√n"
+        zh: "取 n = 10 000 时，X̄ₙ 的离散度为 σ/√n"
+        ja: "n = 10 000 のとき X̄ₙ のばらつきは σ/√n"
+      - es: "σ/√n = 0,5/100 = 0,005"
+        en: "σ/√n = 0,5/100 = 0,005"
+        pt: "σ/√n = 0,5/100 = 0,005"
+        fr: "σ/√n = 0,5/100 = 0,005"
+        zh: "σ/√n = 0,5/100 = 0,005"
+        ja: "σ/√n = 0,5/100 = 0,005"
+      - es: "X̄ₙ queda a menos de 0,005 de 0,5"
+        en: "X̄ₙ stays within 0.005 of 0.5"
+        pt: "X̄ₙ fica a menos de 0.005 de 0.5"
+        fr: "X̄ₙ reste à moins de 0.005 de 0.5"
+        zh: "X̄ₙ 与 0.5 的差在 0.005 以内"
+        ja: "X̄ₙ は 0.5 から 0.005 の範囲に収まる"
+      - es: "con 100 veces más datos: 0,0005"
+        en: "with a hundred times more data: 0.0005"
+        pt: "com 100 vezes mais dados: 0.0005"
+        fr: "avec cent fois plus de données : 0.0005"
+        zh: "数据再多一百倍：0.0005"
+        ja: "データを100倍にすれば 0.0005 になる"

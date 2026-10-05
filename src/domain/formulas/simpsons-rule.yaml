@@ -1,0 +1,407 @@
+id: simpsons-rule
+title:
+  es: Regla de Simpson
+  en: Simpson's Rule
+  pt: Regra de Simpson
+  fr: Règle de Simpson
+  zh: 辛普森法则
+  ja: シムプソンの公式
+category:
+  es: Cálculo
+  en: Calculus
+  pt: Cálculo
+  fr: Calcul
+  zh: 微积分
+  ja: 微積分学
+nodes:
+  - id: integral
+    type: operator
+    value: ∫
+    explanation:
+      es: La integral definida que se quiere aproximar numéricamente.
+      en: The definite integral to be approximated numerically.
+      pt: A integral definida que se quer aproximar numericamente.
+      fr: L'intégrale définie que l'on veut approcher numériquement.
+      zh: 需要数值逼近的定积分。
+      ja: 数値的に近似したい定積分。
+  - id: approx
+    type: operator
+    value: ≈
+    explanation:
+      es: "Aproximado, no exacto: entre paréntesis va una suma de cinco términos."
+      en: "Approximated, not exact: the parentheses hold a sum of five terms."
+      pt: "Aproximado, não exato: entre parênteses vai uma soma de cinco termos."
+      fr: "Approché, non exact : les parenthèses contiennent une somme de cinq termes."
+      zh: 近似而非精确：括号内是五项之和。
+      ja: 近似であり厳密ではない。括弧の中は5項の和になる。
+  - id: h-over-three
+    type: operator
+    value: (h/3)
+    explanation:
+      es: "El paso h de la malla dividido entre tres: el factor global de Simpson."
+      en: "The mesh step h divided by three: the global Simpson factor."
+      pt: "O passo h da malha dividido por três: o fator global de Simpson."
+      fr: "Le pas h de la grille divisé par trois : le facteur global de Simpson."
+      zh: 网格步长 h 除以 3，即辛普森的整体因子。
+      ja: 分割の幅 h を3で割ったもの。シムプソンの全体に掛かる係数である。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: "Multiplicación: el factor h/3 multiplica toda la suma ponderada."
+      en: "Multiplication: the h/3 factor multiplies the whole weighted sum."
+      pt: "Multiplicação: o fator h/3 multiplica toda a soma ponderada."
+      fr: "Multiplication : le facteur h/3 multiplie toute la somme pondérée."
+      zh: 相乘：h/3 因子乘以整个加权和。
+      ja: 乗算。係数 h/3 が重み付きの総和全体に掛かる。
+  - id: open-sum
+    type: operator
+    value: (
+    explanation:
+      es: Abre la lista de los cinco valores de f que entran en la fórmula.
+      en: Opens the list of the five values of f entering the formula.
+      pt: Abre a lista dos cinco valores de f que entram na fórmula.
+      fr: Ouvre la liste des cinq valeurs de f qui entrent dans la formule.
+      zh: 打开进入公式的五个 f 值构成的列表。
+      ja: 公式に現れる5個の f の値を並べる括弧を開く。
+  - id: f-zero
+    type: variable
+    value: f₀
+    explanation:
+      es: El valor de la función en el extremo izquierdo del intervalo.
+      en: The value of the function at the left endpoint of the interval.
+      pt: O valor da função na extremidade esquerda do intervalo.
+      fr: La valeur de la fonction à l'extrémité gauche de l'intervalle.
+      zh: 函数在区间左端点的值。
+      ja: 区間の左端での関数の値。
+  - id: plus-one
+    type: operator
+    value: "+"
+    explanation:
+      es: "Primer signo más: separa el valor del extremo izquierdo."
+      en: "First plus sign: separates the value at the left endpoint."
+      pt: "Primeiro sinal de mais: separa o valor da extremidade esquerda."
+      fr: "Premier signe plus : sépare la valeur à l'extrémité gauche."
+      zh: 第一个加号：分隔左端点的值。
+      ja: 1つの目のプラス。区間の左端の値との区切り。
+  - id: four-f-one
+    type: variable
+    value: 4f₁
+    explanation:
+      es: Peso 4 para el primer nodo interior, donde la función pesa más.
+      en: Weight 4 for the first interior node, where the function weighs most.
+      pt: Peso 4 para o primeiro nó interior, onde a função pesa mais.
+      fr: Poids 4 pour le premier nœud intérieur, où la fonction pèse le plus.
+      zh: 权重 4，用于第一个内部节点，此处函数值影响最大。
+      ja: 最初の内部点に付く重み4。関数の値が重く反映される点である。
+  - id: plus-two
+    type: operator
+    value: "+"
+    explanation:
+      es: Segundo signo más, antes del valor con peso 2.
+      en: Second plus sign, before the value with weight 2.
+      pt: Segundo sinal de mais, antes do valor com peso 2.
+      fr: Deuxième signe plus, avant la valeur de poids 2.
+      zh: 第二个加号，位于权重为 2 的值之前。
+      ja: 2つの目のプラス。重み2の値の前。
+  - id: two-f-two
+    type: variable
+    value: 2f₂
+    explanation:
+      es: Peso 2 para el nodo central, exactamente en el medio del intervalo.
+      en: Weight 2 for the central node, exactly halfway along the interval.
+      pt: Peso 2 para o nó central, exatamente no meio do intervalo.
+      fr: Poids 2 pour le nœud central, exactement au milieu de l'intervalle.
+      zh: 权重 2，用于正中间的节点，即区间中点。
+      ja: 重み2。区間のちょうど真ん中にある点に付く。
+  - id: plus-three
+    type: operator
+    value: "+"
+    explanation:
+      es: Tercer signo más, antes del segundo valor con peso 4.
+      en: Third plus sign, before the second value with weight 4.
+      pt: Terceiro sinal de mais, antes do segundo valor com peso 4.
+      fr: Troisième signe plus, avant la deuxième valeur de poids 4.
+      zh: 第三个加号，位于第二个权重为 4 的值之前。
+      ja: 3つの目のプラス。重み4の2つ目の値の前。
+  - id: four-f-three
+    type: variable
+    value: 4f₃
+    explanation:
+      es: Peso 4 para el segundo nodo interior, el más cercano al extremo derecho.
+      en: Weight 4 for the second interior node, closest to the right endpoint.
+      pt: Peso 4 para o segundo nó interior, o mais próximo da extremidade direita.
+      fr: Poids 4 pour le deuxième nœud intérieur, le plus proche de l'extrémité droite.
+      zh: 权重 4，用于第二个内部节点，也就是最靠近右端点的那个。
+      ja: 重み4。右端に最も近い内部点に付く。
+  - id: plus-four
+    type: operator
+    value: "+"
+    explanation:
+      es: Cuarto signo más, que separa el segundo nodo del extremo derecho.
+      en: Fourth plus sign, separating the second node from the right endpoint.
+      pt: Quarto sinal de mais, que separa o segundo nó da extremidade direita.
+      fr: Quatrième signe plus, qui sépare le deuxième nœud de l'extrémité droite.
+      zh: 第四个加号，分隔第二个内部节点与右端点。
+      ja: 4つの目のプラス。2つ目の内部点と右端を区切る。
+  - id: f-four
+    type: variable
+    value: f₄
+    explanation:
+      es: El valor de la función en el extremo derecho, con peso 1 como f₀.
+      en: The value at the right endpoint, with weight 1 just like f₀.
+      pt: O valor da função na extremidade direita, com peso 1 como f₀.
+      fr: La valeur à l'extrémité droite, avec un poids de 1 comme f₀.
+      zh: 函数在右端点的值，与 f₀ 一样权重为 1。
+      ja: 右端での関数の値。重みは f₀ と同じ1である。
+  - id: close-sum
+    type: operator
+    value: )
+    explanation:
+      es: Cierra la lista; los cinco pesos son 1, 4, 2, 4 y 1, y suman 12.
+      en: Closes the list; the five weights are 1, 4, 2, 4 and 1, and they sum to 12.
+      pt: Fecha a lista; os cinco pesos são 1, 4, 2, 4 e 1, e somam 12.
+      fr: Ferme la liste ; les cinq poids sont 1, 4, 2, 4 et 1, et leur somme vaut 12.
+      zh: 关闭列表。五个权重是 1、4、2、4、1，总和为 12。
+      ja: リストを閉じる。重みは1、4、2、4、1で、合計は12になる。
+context:
+  author:
+    es: John Simpson
+    en: John Simpson
+    pt: John Simpson
+    fr: John Simpson
+    zh: 约翰·辛普森
+    ja: ジョン・シムプソン
+  era:
+    es: Inglaterra, 1710–1741 · publicada en 1748
+    en: England, 1710–1741 · published in 1748
+    pt: Inglaterra, 1710–1741 · publicada em 1748
+    fr: Angleterre, 1710–1741 · publiée en 1748
+    zh: 英国，1710–1741年 · 1748年出版
+    ja: イギリス、1710年–1741年 · 1748年に出版
+  history:
+    es: >-
+      La regla de Simpson aproxima una integral como un promedio ponderado de los valores de la
+      función en cinco puntos del intervalo. Simpson la publicó en 1748, pero el procedimiento era
+      mucho más antiguo: Arquímedes ya usaba una regla equivalente para cuadrar parábolas y una
+      forma casi idéntica aparece entre los cuadernos de Newton. Su ventaja sobre la regla del
+      trapecio está en el error, que cae como h⁴ en lugar de h², a cambio de exigir un número par
+      de intervalos. Esa ventaja la convirtió en la cuadratura estándar del cálculo manual y,
+      más tarde, en la pieza que el método de Romberg extrapola.
+    en: >-
+      Simpson's rule approximates an integral as a weighted average of the function values at five
+      points of the interval. Simpson published it in 1748, but the procedure was much older:
+      Archimedes already used an equivalent rule to square parabolas, and a nearly identical form
+      appears among Newton's working notes. Its edge over the trapezoid rule lies in the error,
+      which falls as h⁴ instead of h², at the price of requiring an even number of intervals. That
+      advantage made it the standard quadrature of hand calculation and, later, the building block
+      that Romberg's method extrapolates.
+    pt: >-
+      A regra de Simpson aproxima uma integral como uma média ponderada dos valores da função em
+      cinco pontos do intervalo. Simpson a publicou em 1748, mas o procedimento era muito mais
+      antigo: Arquimedes já usava uma regra equivalente para quadratura de parábolas, e uma forma
+      quase idêntica aparece entre os cadernos de Newton. Sua vantagem sobre a regra dos trapézios
+      está no erro, que cai como h⁴ em vez de h², em troca de exigir um número par de intervalos.
+      Essa superioridade a tornou a quadratura padrão do cálculo manual e, mais tarde, a peça que
+      o método de Romberg extrapola.
+    fr: >-
+      La règle de Simpson approche une intégrale par une moyenne pondérée des valeurs de la
+      fonction en cinq points de l'intervalle. Simpson la publia en 1748, mais la procédure était
+      bien plus ancienne : Archimède employait déjà une règle équivalente pour carrer des
+      paraboles, et une forme presque identique figure dans les cahiers de Newton. Son avantage
+      sur la règle des trapèzes tient à l'erreur, qui décroît comme h⁴ au lieu de h², au prix
+      d'un nombre pair d'intervalles. Cette supériorité en fit la quadrature standard du calcul
+      manuscrit et, plus tard, la pièce que le Romberg extrapole.
+    zh: >-
+      辛普森法则把积分近似为区间上五个点处函数值的加权平均。辛普森于1748年出版了它，但这一方法本身要古老得多：
+      阿基米德已经使用等价规则来求抛物线弓形的面积，接近相同的形式还出现在牛顿的算稿中。
+      它相对梯形法则的优势在于误差：前者按 h⁴ 下降而非 h²，代价是要求区间数为偶数。
+      正因如此，它成为手工计算的标准求积公式，后来又成为龙贝格方法外推的基本构件。
+    ja: >-
+      シムプソンの公式は、区間内5点の関数値を重み付き平均して積分を近似する方法である。
+      シムプソンがこれを1748年に出版したが、手法自体ははるかに古い。アーキメデスはすでに同種の規則で
+      放物線弓形の面積を求め、ニュートンの草稿にもほぼ同じ形が残っている。
+      台形公式との違いは誤差の減り方で、h²ではなくh⁴で減ることにある。その代わり、区間数は偶数を要求する。
+      この利点によって手計算の標準求積法となり、のちにロンバーグ法が外挿する基本単位となった。
+  timeline:
+    - year: c. 250 a.C.
+      label:
+        es: >-
+          Arquímedes usa una regla equivalente para determinar el área bajo parábolas mediante el
+          método de agotamiento.
+        en: >-
+          Archimedes uses an equivalent rule to find the area under parabolas by the method of
+          exhaustion.
+        pt: >-
+          Arquimedes usa uma regra equivalente para achar a área sob parábolas pelo método de
+          esgotamento.
+        fr: >-
+          Archimède emploie une règle équivalente pour déterminer l'aire sous une parabole par la
+          méthode des exhaustions.
+        zh: >-
+          阿基米德用等价的规则，通过无穷递降法求出抛物线弓形的面积。
+        ja: >-
+          アーキメデスが無限尽法により、放物線弓形の面積を求めるのに同等の規則を使った。
+    - year: "1748"
+      label:
+        es: >-
+          John Simpson publica The Differential and Integral Calculus, donde aparece la regla que
+          lleva su nombre.
+        en: >-
+          John Simpson publishes The Differential and Integral Calculus, where the rule that bears
+          his name appears.
+        pt: >-
+          John Simpson publica The Differential and Integral Calculus, onde aparece a regra que leva
+          seu nome.
+        fr: >-
+          John Simpson publie The Differential and Integral Calculus, où apparaît la règle qui porte
+          son nom.
+        zh: >-
+          约翰·辛普森出版《微分与积分》，以他命名的这条规则即在其中。
+        ja: >-
+          ジョン・シムプソンが『The Differential and Integral Calculus』を出版し、その名の公式が載る。
+    - year: "1955"
+      label:
+        es: >-
+          El método de Romberg combina trapezios y Simpson para ganar dos cifras decimales en cada
+          paso de extrapolación.
+        en: >-
+          Romberg's method combines trapezoid and Simpson rules to gain two decimal digits at every
+          extrapolation step.
+        pt: >-
+          O método de Romberg combina trapézios e Simpson para ganhar dois algarismos decimais em
+          cada passo de extrapolação.
+        fr: >-
+          La méthode de Romberg combine trapèzes et Simpson pour gagner deux décimales à chaque
+          pas d'extrapolation.
+        zh: >-
+          龙贝格方法把梯形与辛普森规则结合起来，每外推一步提高两位小数精度。
+        ja: >-
+          ロンバーグ法は台形公式とシムプソン公式を組み合わせて、外挿のたびに桁を2つ増やす。
+    - year: Hoy
+      label:
+        es: >-
+          Sigue siendo la cuadratura por defecto de muchas librerías numéricas y del cálculo
+          manual en ingeniería.
+        en: >-
+          It remains the default quadrature in many numerical libraries and in hand calculation in
+          engineering.
+        pt: >-
+          Continua sendo a quadratura padrão de muitas bibliotecas numéricas e do cálculo manual na
+          engenharia.
+        fr: >-
+          Elle reste la quadrature par défaut de nombreuses bibliothèques numériques et du calcul
+          manuscrit en ingénierie.
+        zh: >-
+          它仍然是许多数值库以及工程手工计算中的默认求积公式。
+        ja: >-
+          現在も、多くの数値ライブラリと工学の手計算における標準の求積法である。
+  useCases:
+    - title:
+        es: Integración numérica
+        en: Numerical integration
+        pt: Integração numérica
+        fr: Intégration numérique
+        zh: 数值积分
+        ja: 数値積分
+      description:
+        es: >-
+          Estima áreas, volúmenes y trabajo cuando la antiderivada no se conoce o la función solo
+          existe como tabla de datos medidos.
+        en: >-
+          Estimates areas, volumes and work when no antiderivative is known or the function exists
+          only as a table of measured data.
+        pt: >-
+          Estima áreas, volumes e trabalho quando a primitiva não é conhecida ou a função só existe
+          como tabela de dados medidos.
+        fr: >-
+          Estime aires, volumes et travaux quand aucune primitive n'est connue ou que la fonction
+          n'existe que comme tableau de mesures.
+        zh: >-
+          在没有原函数、或函数仅以实测数据表形式存在时，用来估计面积、体积和做功。
+        ja: >-
+          原始関数が分からないとき、あるいは関数が実測値の表としてしか存在しないときに、面積や体積、
+          仕事量を推定する。
+    - title:
+        es: Método de Romberg
+        en: Romberg's method
+        pt: Método de Romberg
+        fr: Méthode de Romberg
+        zh: 龙贝格方法
+        ja: ロンバーグ法
+      description:
+        es: >-
+          Sus dos paneles de error ordenados permiten extrapolar y ganar dos dígitos por
+          refinamiento de la malla.
+        en: >-
+          Its two ordered error panels allow extrapolation, gaining two digits per mesh refinement.
+        pt: >-
+          Seus dois painéis de erro ordenados permitem extrapolar e ganhar dois dígitos por
+          refinamento da malha.
+        fr: >-
+          Ses deux panneaux d'erreur ordonnés permettent d'extrapoler et de gagner deux chiffres par
+          raffinement de la grille.
+        zh: >-
+          它有两级有序误差面板，因此可以外推，每细化一次网格就提高两位数字精度。
+        ja: >-
+          誤差項が2段構えになっているため外挿が可能で、分割を1段細かくするごとに桁が2つ増える。
+    - title:
+        es: Curvas de datos medidos
+        en: Measured data curves
+        pt: Curvas de dados medidos
+        fr: Courbes de données mesurées
+        zh: 实测数据曲线
+        ja: 実測データの曲線
+      description:
+        es: >-
+          Al integrar experimentalmente la curva ajustada se obtiene directamente el área bajo la
+          señal medida.
+        en: >-
+          Integrating the fitted curve directly yields the area under the measured signal.
+        pt: >-
+          Integrar diretamente a curva ajustada fornece a área sob o sinal medido.
+        fr: >-
+          Intégrer directement la courbe ajustée donne l'aire sous le signal mesuré.
+        zh: >-
+          对拟合曲线直接积分，就能得到实测信号下方的面积。
+        ja: >-
+          フィットした曲線を直接積分すると、測定された信号の下の面積がそのまま得られる。
+  example:
+    title:
+      es: Simpson sobre x³ en [0, 2]
+      en: Simpson on x³ over [0, 2]
+      pt: Simpson em x³ no intervalo [0, 2]
+      fr: Simpson sur x³ sur [0, 2]
+      zh: 在 [0, 2] 上对 x³ 用辛普森法
+      ja: 区間 [0, 2] の x³ にシムプソン公式
+    lines:
+      - es: "∫₀² x³ dx con h = 0.5 y cuatro intervalos"
+        en: "∫₀² x³ dx with h = 0.5 and four intervals"
+        pt: "∫₀² x³ dx com h = 0.5 e quatro intervalos"
+        fr: "∫₀² x³ dx avec h = 0.5 et quatre intervalles"
+        zh: "∫₀² x³ dx，取 h = 0.5，共四个区间"
+        ja: "∫₀² x³ dx、h = 0.5 で4区間"
+      - es: "f: 0, 0.125, 1, 3.375, 8"
+        en: "f: 0, 0.125, 1, 3.375, 8"
+        pt: "f: 0; 0,125; 1; 3,375; 8"
+        fr: "f : 0 ; 0,125 ; 1 ; 3,375 ; 8"
+        zh: "f：0, 0.125, 1, 3.375, 8"
+        ja: "f：0, 0.125, 1, 3.375, 8"
+      - es: "(0.5/3)(0 + 4·0.125 + 2·1 + 4·3.375 + 8)"
+        en: "(0.5/3)(0 + 4·0.125 + 2·1 + 4·3.375 + 8)"
+        pt: "(0,5/3)(0 + 4·0,125 + 2·1 + 4·3,375 + 8)"
+        fr: "(0,5/3)(0 + 4·0,125 + 2·1 + 4·3,375 + 8)"
+        zh: "(0.5/3)(0 + 4·0.125 + 2·1 + 4·3.375 + 8)"
+        ja: "(0.5/3)(0 + 4·0.125 + 2·1 + 4·3.375 + 8)"
+      - es: "(0.5/3)(0 + 0.5 + 2 + 13.5 + 8) = (0.5/3)·24"
+        en: "(0.5/3)(0 + 0.5 + 2 + 13.5 + 8) = (0.5/3)·24"
+        pt: "(0,5/3)(0 + 0,5 + 2 + 13,5 + 8) = (0,5/3)·24"
+        fr: "(0,5/3)(0 + 0,5 + 2 + 13,5 + 8) = (0,5/3)·24"
+        zh: "(0.5/3)(0 + 0.5 + 2 + 13.5 + 8) = (0.5/3)·24"
+        ja: "(0.5/3)(0 + 0.5 + 2 + 13.5 + 8) = (0.5/3)·24"
+      - es: "= 4, y es exacto: x³ es un polinomio de grado 3"
+        en: "= 4, and it is exact: x³ is a degree 3 polynomial"
+        pt: "= 4, e é exato: x³ é um polinômio de grau 3"
+        fr: "= 4, et c'est exact : x³ est un polynôme de degré 3"
+        zh: "= 4，且是精确值：x³ 是三次多项式"
+        ja: "= 4 で、しかも厳密。x³ は3次の多項式だからである"

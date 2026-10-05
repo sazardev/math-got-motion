@@ -1,0 +1,388 @@
+id: fourier-series
+title:
+  es: Serie de Fourier
+  en: Fourier Series
+  pt: Série de Fourier
+  fr: Série de Fourier
+  zh: 傅里叶级数
+  ja: フーリエ級数
+category:
+  es: Cálculo
+  en: Calculus
+  pt: Cálculo
+  fr: Calcul
+  zh: 微积分
+  ja: 微積分学
+nodes:
+  - id: f-of-t
+    type: variable
+    value: f(t)
+    explanation:
+      es: La función periódica que se quiere reconstruir, de periodo 2π/ω₀.
+      en: The periodic function to be reconstructed, with period 2π/ω₀.
+      pt: A função periódica que se quer reconstruir, de período 2π/ω₀.
+      fr: La fonction périodique à reconstruire, de période 2π/ω₀.
+      zh: 要重建的周期函数，周期为 2π/ω₀。
+      ja: 再構成したい周期関数。周期は 2π/ω₀ である。
+  - id: eq-1
+    type: equals
+    value: "="
+    explanation:
+      es: La igualdad vale en el punto medio de cada intervalo de longitud del periodo.
+      en: The equality holds at the midpoint of each interval of one period length.
+      pt: A igualdade vale no ponto médio de cada intervalo de comprimento do período.
+      fr: L'égalité vaut au milieu de chaque intervalle de longueur d'une période.
+      zh: 等式在一个周期的每个区间中点处成立。
+      ja: 等式は周期の長さの区間ごとに、その中央で成り立つ。
+  - id: a-zero
+    type: variable
+    value: a₀/2
+    explanation:
+      es: El término constante, que es el promedio de la función sobre un periodo.
+      en: The constant term, which is the average of the function over one period.
+      pt: O termo constante, que é a média da função ao longo de um período.
+      fr: Le terme constant, qui est la moyenne de la fonction sur une période.
+      zh: 常数项，等于函数在一个周期上的平均值。
+      ja: 定数項。1周期についての関数の平均に等しい。
+  - id: plus-1
+    type: operator
+    value: "+"
+    explanation:
+      es: Empieza la parte que depende del tiempo.
+      en: The time dependent part starts here.
+      pt: Começa a parte que depende do tempo.
+      fr: Commence la partie qui dépend du temps.
+      zh: 从这里开始是随时间变化的部分。
+      ja: ここから先が時間に依存する部分である。
+  - id: sum
+    type: operator
+    value: Σₙ
+    explanation:
+      es: Una suma infinita sobre el índice armónico n, que toma valores naturales.
+      en: An infinite sum over the harmonic index n, which takes natural values.
+      pt: Uma soma infinita sobre o índice harmônico n, que assume valores naturais.
+      fr: Une somme infinie sur l'indice harmonique n, qui prend des valeurs naturelles.
+      zh: 对谐波指标 n 的无穷求和，n 取自然数。
+      ja: 倍音の番号 n についての無限和。n は自然数を取る。
+  - id: open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el par de términos que acompaña a cada armónico.
+      en: Opens the pair of terms that accompanies each harmonic.
+      pt: Abre o par de termos que acompanha cada harmônico.
+      fr: Ouvre la paire de termes qui accompagne chaque harmonique.
+      zh: 打开与每个谐波配对的两个项。
+      ja: 各倍音に付く2項を囲む括弧を開く。
+  - id: a-n
+    type: variable
+    value: aₙ
+    explanation:
+      es: La amplitud del coseno del armónico n, que mide cuánto pesa la parte par.
+      en: The amplitude of the n-th harmonic's cosine, that is, how much cosine shows up.
+      pt: A amplitude do cosseno do harmônico n, isto é, quanto cosseno aparece.
+      fr: L'amplitude du cosinus de l'harmonique n, c'est-à-dire la part de cosinus.
+      zh: 第 n 次谐波余弦的振幅，也就是余弦成分的多少。
+      ja: 第 n 倍音の余弦の振幅。余弦がどれだけ含まれるかを示す。
+  - id: cos
+    type: operator
+    value: cos
+    explanation:
+      es: La parte par, la que no cambia de signo bajo media vuelta.
+      en: The even part, the one that does not flip sign under a half turn.
+      pt: A parte par, a que não muda de sinal sob meia volta.
+      fr: La partie paire, celle qui ne change pas de signe après un demi-tour.
+      zh: 偶函数部分，转过半圈不变号。
+      ja: 偶数側の部分。半回転しても符号が変わらない。
+  - id: n-w0-t
+    type: variable
+    value: nω₀t
+    explanation:
+      es: "El argumento: el armónico n late n veces por cada periodo del fundamental."
+      en: "The argument: harmonic n beats n times for every period of the fundamental."
+      pt: "O argumento: o harmônico n pulsa n vezes por cada período do fundamental."
+      fr: "L'argument : l'harmonique n bat n fois par période du fondamental."
+      zh: 自变量：第 n 次谐波在基频的每个周期内振动 n 次。
+      ja: 偏角。第 n 倍音は基本周期ごとに n 回振動する。
+  - id: plus-2
+    type: operator
+    value: "+"
+    explanation:
+      es: Suma la parte impar, que sí cambia de signo al media vuelta.
+      en: Adds the odd part, which does flip sign under a half turn.
+      pt: Soma a parte ímpar, que muda de sinal na meia volta.
+      fr: Ajoute la partie impaire, qui change bien de signe après un demi-tour.
+      zh: 加上奇函数部分，转过半圈会变号。
+      ja: 奇数側の部分を足す。こちらは半回転で符号が変わる。
+  - id: b-n
+    type: variable
+    value: bₙ
+    explanation:
+      es: La amplitud del seno del armónico n.
+      en: The amplitude of the n-th harmonic's sine.
+      pt: A amplitude do seno do harmônico n.
+      fr: L'amplitude du sinus de l'harmonique n.
+      zh: 第 n 次谐波正弦的振幅。
+      ja: 第 n 倍音の正弦の振幅。
+  - id: sen
+    type: operator
+    value: sen
+    explanation:
+      es: La parte impar, la que aporta el desplazamiento respecto de la media.
+      en: The odd part, the one carrying the displacement away from the mean.
+      pt: A parte ímpar, que traz o deslocamento em relação à média.
+      fr: La partie impaire, celle qui porte l'écart par rapport à la moyenne.
+      zh: 奇函数部分，携带偏离均值的位移。
+      ja: 奇数側の部分。平均値からのずれを担う。
+  - id: n-w0-t-2
+    type: variable
+    value: nω₀t
+    explanation:
+      es: El mismo argumento, porque el seno y el coseno comparten frecuencia.
+      en: The same argument, since sine and cosine share a frequency.
+      pt: O mesmo argumento, porque seno e cosseno compartilham a frequência.
+      fr: Le même argument, car sinus et cosinus partagent la même fréquence.
+      zh: 自变量相同，因为正弦与余弦频率一致。
+      ja: 偏角は同じ。正弦と余弦は周波数を共有する。
+  - id: close
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el armónico; los coeficientes salen de proyectar f sobre cada seno y coseno.
+      en: Closes the harmonic; the coefficients come from projecting f onto each sine and cosine.
+      pt: Fecha o harmônico; os coeficientes vêm de projetar f sobre cada seno e cosseno.
+      fr: Ferme l'harmonique ; les coefficients viennent de la projection de f sur chaque sinus et cosinus.
+      zh: 关闭该项；系数由把 f 投影到各个正弦与余弦上得到。
+      ja: 各倍音を閉じる。係数は f を各正弦・余弦に射影して得られる。
+context:
+  author:
+    es: Joseph Fourier
+    en: Joseph Fourier
+    pt: Joseph Fourier
+    fr: Joseph Fourier
+    zh: 约瑟夫·傅里叶
+    ja: ジョゼフ・フーリエ
+  era:
+    es: Francia, 1768–1830 · Teoría analítica del calor, 1822
+    en: France, 1768–1830 · Analytical Theory of Heat, 1822
+    pt: França, 1768–1830 · Teoria analítica do calor, 1822
+    fr: France, 1768–1830 · Théorie analytique de la chaleur, 1822
+    zh: 法国，1768–1830年 · 《热的解析理论》1822年
+    ja: フランス、1768年–1830年 · 『熱の解析理論』1822年
+  history:
+    es: >-
+      Fourier demostró en 1822 que cualquier función periódica suficientemente regular puede
+      escribirse como una suma infinita de senos y cosenos, y usó esa representación para
+      resolver la conducción del calor en una barra. La idea tenía raíces en la acústica de
+      Euler y de Sturm, pero fue Fourier quien aceptó la serie infinita como una herramienta
+      calculable y organizó el cálculo de sus coeficientes. Hoy sostiene la teoría de señal,
+      el análisis de audio y la transformación discreta del coseno en la que se apoya JPEG.
+    en: >-
+      Fourier showed in 1822 that any sufficiently regular periodic function can be written as
+      an infinite sum of sines and cosines, and used that expansion to solve heat conduction
+      in a bar. The idea had roots in the acoustics of Euler and Sturm, but Fourier was the
+      one who accepted the infinite series as a calculable tool and organized the computation
+      of its coefficients. Today it underpins signal theory, audio analysis and the discrete
+      cosine transform that JPEG relies on.
+    pt: >-
+      Fourier mostrou em 1822 que qualquer função periódica suficientemente regular pode ser
+      escrita como uma soma infinita de senos e cossenos, e usou essa representação para
+      resolver a condução de calor em uma barra. A ideia tinha raízes na acústica de Euler e
+      de Sturm, mas foi Fourier quem aceitou a série infinita como ferramenta calculável e
+      organizou o cálculo de seus coeficientes. Hoje sustenta a teoria de sinais, a análise de
+      áudio e a transformação discreta do cosseno em que o JPEG se apoia.
+    fr: >-
+      Fourier montra en 1822 que toute fonction périodique suffisamment régulière peut s'écrire
+      comme une somme infinie de sinus et de cosinus, et utilisa ce développement pour
+      résoudre la conduction de la chaleur dans une barre. L'idée avait des racines dans
+      l'acoustique d'Euler et de Sturm, mais ce fut Fourier qui accepta la série infinie
+      comme outil calculable et organisa le calcul de ses coefficients. Aujourd'hui elle
+      soutient la théorie du signal, l'analyse audio et la transformation discrète en cosinus
+      sur laquelle repose JPEG.
+    zh: >-
+      傅里叶在1822年证明，任何足够正则的周期函数都可以写成正弦与余弦的无穷级数，
+      并用这一展开求解了棒中的热传导。这个想法在欧拉和施图姆的声学工作中已有苗头，
+      但正是傅里叶把无穷级数当作可计算的工具接受下来，并整理出系数的计算方法。
+      今天它支撑着信号理论、音频分析，以及 JPEG 所依赖的离散余弦变换。
+    ja: >-
+      フーリエは1822年、十分になめらかな周期関数はすべて正弦と余弦の無限和として書けることを示し、
+      その展開で棒の熱伝導を解いた。着想はオイラーやシュタートの音響学に芽はあったものの、
+      無限級数を計算できる道具として受け入れたのはフーリエである。係数の求め方も彼が整えた。
+      今日では信号理論、音響解析、そして JPEG が依拠する離散コサイン変換を支える。
+  timeline:
+    - year: "1822"
+      label:
+        es: >-
+          La Teoría analítica del calor resuelve la conducción del calor con una serie trigonométrica.
+        en: >-
+          The Analytical Theory of Heat solves heat conduction with a trigonometric series.
+        pt: >-
+          A Teoria analítica do calor resolve a condução de calor com uma série trigonométrica.
+        fr: >-
+          La Théorie analytique de la chaleur résout la conduction thermique par une série
+          trigonométrique.
+        zh: >-
+          《热的解析理论》用一个三角级数解决了热传导问题。
+        ja: >-
+          『熱の解析理論』が、三角級数によって熱伝導を解いた。
+    - year: "1829"
+      label:
+        es: >-
+          Dirichlet establece condiciones suficientes para que la serie de Fourier converja.
+        en: >-
+          Dirichlet establishes sufficient conditions for the Fourier series to converge.
+        pt: >-
+          Dirichlet estabelece condições suficientes para a série de Fourier convergir.
+        fr: >-
+          Dirichlet établit des conditions suffisantes de convergence de la série de Fourier.
+        zh: >-
+          狄利克雷给出了傅里叶级数收敛的充分条件。
+        ja: >-
+          ディリクレが、フーリエ級数の収束のための十分条件を示した。
+    - year: "1965"
+      label:
+        es: >-
+          El algoritmo de Cooley y Tukey hace calculable la transformada en tiempo razonable.
+        en: >-
+          The Cooley and Tukey algorithm makes the transform computable in reasonable time.
+        pt: >-
+          O algoritmo de Cooley e Tukey torna a transformada calculável em tempo razoável.
+        fr: >-
+          L'algorithme de Cooley et Tukey rend la transformée calculable en temps raisonnable.
+        zh: >-
+          库利与图基的算法使变换能在可接受的时间内完成计算。
+        ja: >-
+          クーリー・トゥーキーのアルゴリズムで、変換を実用的な時間で計算できるようになった。
+    - year: Hoy
+      label:
+        es: >-
+          Es la base del análisis de audio, de la compresión JPEG y de la resonancia magnética.
+        en: >-
+          It underlies audio analysis, JPEG compression and magnetic resonance imaging.
+        pt: >-
+          É a base da análise de áudio, da compressão JPEG e da ressonância magnética.
+        fr: >-
+          Elle underlie l'analyse audio, la compression JPEG et l'imagerie par résonance
+          magnétique.
+        zh: >-
+          它是音频分析、JPEG 压缩与磁共振成像的基础。
+        ja: >-
+          音声解析、JPEG 圧縮、磁気共鳴撮像の土台になっている。
+  useCases:
+    - title:
+        es: Audio y síntesis
+        en: Audio and synthesis
+        pt: Áudio e síntese
+        fr: Audio et synthèse
+        zh: 音频与合成
+        ja: 音声と合成
+      description:
+        es: >-
+          La onda sierra de un sintetizador es exactamente esta serie: un número infinito de
+          armónicos impares.
+        en: >-
+          The sawtooth wave of a synthesizer is exactly this series: an infinite number of odd
+          harmonics.
+        pt: >-
+          A onda dente de serra de um sintetizador é exatamente esta série: um número infinito de
+          harmônicos ímpares.
+        fr: >-
+          L'onde en dents de scie d'un synthétiseur est exactement cette série : une infinité
+          d'harmoniques impairs.
+        zh: >-
+          合成器上的锯齿波正是这一级数：无穷多个奇次谐波。
+        ja: >-
+          シンセサイザーの鋸波はまさにこの級数そのもの。無限個の奇数倍音からなる。
+    - title:
+        es: Compresión de imágenes
+        en: Image compression
+        pt: Compressão de imagens
+        fr: Compression d'images
+        zh: 图像压缩
+        ja: 画像圧縮
+      description:
+        es: >-
+          El estándar JPEG agrupa la imagen en bloques de ocho por ocho y guarda los coeficientes
+          de su transformada discreta del coseno.
+        en: >-
+          The JPEG standard splits the image into eight by eight blocks and stores the
+          coefficients of its discrete cosine transform.
+        pt: >-
+          O padrão JPEG divide a imagem em blocos de oito por oito e guarda os coeficientes de
+          sua transformada discreta do cosseno.
+        fr: >-
+          La norme JPEG découpe l'image en blocs de huit par huit et stocke les coefficients de
+          sa transformation discrete en cosinus.
+        zh: >-
+          JPEG 标准把图像切成 8×8 的块，存储其离散余弦变换的系数。
+        ja: >-
+          JPEG 規格は画像を 8×8 のブロックに切り、離散コサイン変換の係数を保存する。
+    - title:
+        es: Imágenes médicas
+        en: Medical imaging
+        pt: Imagens médicas
+        fr: Imagerie médicale
+        zh: 医学影像
+        ja: 医用画像
+      description:
+        es: >-
+          La resonancia magnética no guarda la imagen en el espacio de la muestra, sino en el
+          espacio de las frecuencias.
+        en: >-
+          Magnetic resonance does not store the image in the space of the sample but in the space
+          of frequencies.
+        pt: >-
+          A ressonância magnética não guarda a imagem no espaço da amostra, mas no espaço das
+          frequências.
+        fr: >-
+          La résonance magnétique ne stocke pas l'image dans l'espace de l'échantillon mais dans
+          l'espace des fréquences.
+        zh: >-
+          磁共振并不在样品空间中保存图像，而是在频率空间中保存。
+        ja: >-
+          磁気共鳴は標本空間ではなく、周波数空間に画像を保存する。
+  example:
+    title:
+      es: La onda sierra de Fourier
+      en: Fourier's sawtooth wave
+      pt: A onda dente de serra de Fourier
+      fr: L'onde en dents de scie de Fourier
+      zh: 傅里叶的锯齿波
+      ja: フーリエの鋸波
+    lines:
+      - es: "f(t) = 2t/π en el intervalo (−π, π)"
+        en: "f(t) = 2t/π over the interval (−π, π)"
+        pt: "f(t) = 2t/π no intervalo (−π, π)"
+        fr: "f(t) = 2t/π sur l'intervalle (−π, π)"
+        zh: "f(t) = 2t/π，区间 (−π, π)"
+        ja: "区間 (−π, π) で f(t) = 2t/π"
+      - es: "el periodo es 2π, así que ω₀ = 1"
+        en: "the period is 2π, so ω₀ = 1"
+        pt: "o período é 2π, logo ω₀ = 1"
+        fr: "la période est 2π, donc ω₀ = 1"
+        zh: "周期为 2π，故 ω₀ = 1"
+        ja: "周期は 2π なので ω₀ = 1"
+      - es: "f es impar, luego aₙ = 0 para todo n"
+        en: "f is odd, so aₙ = 0 for every n"
+        pt: "f é ímpar, logo aₙ = 0 para todo n"
+        fr: "f est impaire, donc aₙ = 0 pour tout n"
+        zh: "f 为奇函数，故所有 n 都有 aₙ = 0"
+        ja: "f は奇関数なので、すべての n で aₙ = 0"
+      - es: "bₙ = 4/(πn) si n es impar, y 0 si n es par"
+        en: "bₙ = 4/(πn) when n is odd, and 0 when n is even"
+        pt: "bₙ = 4/(πn) se n é ímpar, e 0 se n é par"
+        fr: "bₙ = 4/(πn) si n est impair, et 0 si n est pair"
+        zh: "n 为奇数时 bₙ = 4/(πn)，为偶数时 bₙ = 0"
+        ja: "n が奇数なら bₙ = 4/(πn)、偶数なら 0"
+      - es: "f(t) = (4/π)(sen t + sen 3t/3 + sen 5t/5 + …)"
+        en: "f(t) = (4/π)(sen t + sen 3t/3 + sen 5t/5 + …)"
+        pt: "f(t) = (4/π)(sen t + sen 3t/3 + sen 5t/5 + …)"
+        fr: "f(t) = (4/π)(sen t + sen 3t/3 + sen 5t/5 + …)"
+        zh: "f(t) = (4/π)(sen t + sen 3t/3 + sen 5t/5 + …)"
+        ja: "f(t) = (4/π)(sen t + sen 3t/3 + sen 5t/5 + …)"
+      - es: "sólo armónicos impares, y en t = π/2 vale 1"
+        en: "odd harmonics only, and at t = π/2 it equals 1"
+        pt: "só harmônicos ímpares, e em t = π/2 vale 1"
+        fr: "des harmoniques impairs seulement, et en t = π/2 vaut 1"
+        zh: "只有奇次谐波，且在 t = π/2 处取值为 1"
+        ja: "奇数の倍音だけ。t = π/2 で値は 1"

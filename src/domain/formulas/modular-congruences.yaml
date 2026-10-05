@@ -1,0 +1,310 @@
+id: modular-congruences
+title:
+  es: "Congruencias modulares"
+  en: "Modular congruences"
+  pt: "Congruências modulares"
+  fr: "Congruences modulaires"
+  zh: "模同余"
+  ja: "合同式"
+category:
+  es: Teoría de números
+  en: Number theory
+  pt: Teoria dos números
+  fr: Théorie des nombres
+  zh: 数论
+  ja: 数論
+nodes:
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: "a: el primer número, que puede ser negativo."
+      en: "a: the first number, which may be negative."
+      pt: "a: o primeiro número, que pode ser negativo."
+      fr: "a : le premier nombre, qui peut être négatif."
+      zh: "a：第一个数，可以为负。"
+      ja: "a：1つ目の数。負でもよい。"
+  - id: congruent
+    type: operator
+    value: ≡
+    explanation:
+      es: "≡: congruente, es decir, con el mismo resto al dividir."
+      en: "≡: congruent, that is, leaving the same remainder on division."
+      pt: "≡: congruente, ou seja, deixando o mesmo resto na divisão."
+      fr: "≡ : congru, c'est-à-dire laissant le même reste dans la division."
+      zh: "≡：同余，即相除后余数相同。"
+      ja: "≡：合同。割った余りが同じという意味。"
+  - id: b
+    type: variable
+    value: b
+    explanation:
+      es: "b: el segundo número, el que se compara con a."
+      en: "b: the second number, the one compared with a."
+      pt: "b: o segundo número, o que é comparado com a."
+      fr: "b : le second nombre, celui que l'on compare à a."
+      zh: "b：第二个数，与a比较的那个数。"
+      ja: "b：2つ目の数。aと見くらべる相手。"
+  - id: mod-m
+    type: operator
+    value: mod m
+    explanation:
+      es: "mod m: el módulo, el divisor común de la congruencia."
+      en: "mod m: the modulus, the common divisor of the congruence."
+      pt: "mod m: o módulo, o divisor comum da congruência."
+      fr: "mod m : le module, le diviseur commun de la congruence."
+      zh: "mod m：模数，同余式共用的除数。"
+      ja: "mod m：法。合同式の共通の割る数。"
+  - id: iff
+    type: operator
+    value: ⟺
+    explanation:
+      es: "⟺: si y sólo si, la equivalencia que hace la definición."
+      en: "⟺: if and only if, the equivalence that makes it a definition."
+      pt: "⟺: se e somente se, a equivalência que faz a definição."
+      fr: "⟺ : si et seulement si, l'équivalence qui en fait une définition."
+      zh: "⟺：当且仅当，使它成为定义的等价关系。"
+      ja: "⟺：必要十分条件。定義になる等価性。"
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: "m: el módulo, un entero positivo."
+      en: "m: the modulus, a positive integer."
+      pt: "m: o módulo, um inteiro positivo."
+      fr: "m : le module, un entier positif."
+      zh: "m：模数，一个正整数。"
+      ja: "m：法。ふつう正の整数。"
+  - id: divides
+    type: operator
+    value: "|"
+    explanation:
+      es: "|: divide a, el símbolo de que la división es exacta."
+      en: "| : divides, the sign that the division comes out exact."
+      pt: "|: divide a, o sinal de que a divisão é exata."
+      fr: "| : divise en, le signe d'une division exacte."
+      zh: "|：整除，表示除法没有余数。"
+      ja: "|: 割り切る。割り切れたら余りが0。"
+  - id: a-minus-b
+    type: operator
+    value: "(a−b)"
+    explanation:
+      es: "(a−b): la diferencia, que debe ser múltiplo del módulo."
+      en: "(a−b): the difference, which must be a multiple of the modulus."
+      pt: "(a−b): a diferença, que deve ser múltiplo do módulo."
+      fr: "(a−b) : la différence, qui doit être un multiple du module."
+      zh: "(a−b)：差，必须是模数的倍数。"
+      ja: "(a−b)：差。法の倍数でなければならない。"
+context:
+  author:
+    es: Carl Friedrich Gauss
+    en: Carl Friedrich Gauss
+    pt: Carl Friedrich Gauss
+    fr: Carl Friedrich Gauss
+    zh: 卡尔·弗里德里希·高斯
+    ja: カール・フリードリヒ・ガウス
+  era:
+    es: "Alemania, 1801 · Disquisitiones arithmeticae"
+    en: "Germany, 1801 · Disquisitiones arithmeticae"
+    pt: "Alemanha, 1801 · Disquisitiones arithmeticae"
+    fr: "Allemagne, 1801 · Disquisitiones arithmeticae"
+    zh: "德国，1801年·《算术研究》"
+    ja: "ドイツ、1801年·『算術の研究』"
+  history:
+    es: >-
+      La congruencia es la puerta de entrada a la aritmética modular, y su notación actual
+      viene de Gauss, que en 1801 la usó en sus Disquisitiones arithmeticae para organizar el
+      estudio de los residuos. La idea es mínima: dos números son congruentes módulo m cuando
+      al dividirlos por m dejan el mismo resto. A partir de ahí el trabajo se hace con un
+      conjunto finito de clases de residuos, y casi todo lo que se sabe de primos, de
+      cifrados y de calendarios se apoya en ese recorte.
+    en: >-
+      Congruence is the gateway to modular arithmetic, and its current notation comes from
+      Gauss, who used it in 1801 in the Disquisitiones arithmeticae to organize the study of
+      residues. The idea is minimal: two numbers are congruent modulo m when dividing them by
+      m leaves the same remainder. From there the work happens inside a finite set of residue
+      classes, and nearly everything known about primes, ciphers and calendars rests on that
+      shrinking.
+    pt: >-
+      A congruência é a porta de entrada para a aritmética modular, e sua notação atual vem de
+      Gauss, que em 1801 a usou nas Disquisitiones arithmeticae para organizar o estudo dos
+      resíduos. A ideia é mínima: dois números são congruentes módulo m quando, divididos por
+      m, deixam o mesmo resto. A partir daí o trabalho acontece num conjunto finito de
+      classes de resíduos, e quase tudo o que se sabe de primos, de cifras e de calendários
+      se apoia nesse recorte.
+    fr: >-
+      La congruence est la porte d'entrée de l'arithmétique modulaire, et sa notation actuelle
+      vient de Gauss, qui l'utilisa en 1801 dans les Disquisitiones arithmeticae pour
+      organiser l'étude des résidus. L'idée est minimale : deux nombres sont congrus modulo m
+      lorsque, divisés par m, ils laissent le même reste. À partir de là le travail se fait
+      dans un ensemble fini de classes de résidus, et presque tout ce que l'on sait des
+      nombres premiers, des chiffrements et des calendriers repose sur cette réduction.
+    zh: >-
+      同余是模运算的入口，如今的记法来自高斯，他在1801年的《算术研究》中用它整理余数的研究。想法极简：
+      两个数模m同余，当且仅当它们分别除以m后留下相同的余数。从此以后，工作都在一个有限的剩余类集合
+      中进行，而关于素数、密码与日历的几乎全部知识都建立在这一收缩之上。
+    ja: >-
+      合同式は剰余演算の入口であり、今の書き方はガウスに由来する。1801年の『算術の研究』で彼は
+      剰余の研究をまとめるためにこれを使った。考えは至って単純で、2つの数を同じ数で割った
+      余りが等しければ、その2つは合同と言う。法mで割った余りが同じとき、というのが定義だ。
+      そこから先は有限個の剰余類の中ですべてが開ける。素数、暗号、暦について
+      知られていることのほとんどは、この切り詰めの上に成り立っている。
+  timeline:
+    - year: "1801"
+      label:
+        es: >-
+          Gauss introduce la notación de congruencia y estudia las clases de residuos.
+        en: >-
+          Gauss introduces the congruence notation and studies residue classes.
+        pt: >-
+          Gauss introduz a notação de congruência e estuda as classes de resíduos.
+        fr: >-
+          Gauss introduit la notation de congruence et étudie les classes de résidus.
+        zh: >-
+          高斯引入同余记号并研究剩余类。
+        ja: >-
+          ガウスが合同の書き方を紹介し、剰余類を研究する。
+    - year: "1977"
+      label:
+        es: >-
+          RSA lleva esa aritmética al cifrado: casi todo el cálculo es congruencial.
+        en: >-
+          RSA takes that arithmetic into encryption: almost all the computing is congruence.
+        pt: >-
+          O RSA leva essa aritmética à cifração: quase todo o cálculo é congruencial.
+        fr: >-
+          RSA porte cette arithmétique dans le chiffrement : presque tous les calculs sont des
+          congruences.
+        zh: >-
+          RSA把这套算术带进密码学：几乎全部运算都是同余运算。
+        ja: >-
+          RSAがこの算術を暗号に持ち込む。計算はほぼすべて合同式の計算になる。
+    - year: Hoy
+      label:
+        es: >-
+          Calendarios, tests de divisibilidad y tablas hash se apoyan en la misma operación.
+        en: >-
+          Calendars, divisibility tests and hash tables all lean on the same operation.
+        pt: >-
+          Calendários, testes de divisibilidade e tabelas de dispersão dependem da mesma
+          operação.
+        fr: >-
+          Calendriers, tests de divisibilité et tables de hachage reposent sur la même
+          opération.
+        zh: >-
+          日历、整除检验与散列表都依赖同一个运算。
+        ja: >-
+          暦、割り切れるかどうかの判定、散列表は、いずれも同じ計算に乗っている。
+  useCases:
+    - title:
+        es: Calendarios
+        en: Calendars
+        pt: Calendários
+        fr: Calendriers
+        zh: 日历
+        ja: 暦
+      description:
+        es: >-
+          El calendario gregoriano se repite cada 400 años porque esos años son 146097 días,
+          y 146097 es múltiplo de 7.
+        en: >-
+          The Gregorian calendar repeats every 400 years because those years hold 146097 days,
+          and 146097 is a multiple of 7.
+        pt: >-
+          O calendário gregoriano se repete a cada 400 anos porque eles somam 146097 dias,
+          e 146097 é múltiplo de 7.
+        fr: >-
+          Le calendrier grégorien se répète tous les 400 ans car ces années comptent 146097
+          jours, et 146097 est un multiple de 7.
+        zh: >-
+          公历每400年重复一次，因为这段时间有146097天，而146097是7的倍数。
+        ja: >-
+          グレゴリオ暦は400年ごとに繰り返す。その400年は146097日で、
+          146097は7の倍数だからである。
+    - title:
+        es: Tests de divisibilidad
+        en: Divisibility tests
+        pt: Testes de divisibilidade
+        fr: Tests de divisibilité
+        zh: 整除检验
+        ja: 割り切れるかの判定
+      description:
+        es: >-
+          Un número es múltiplo de 9 si lo es la suma de sus cifras, y es múltiplo de 11 si
+          lo es la suma alternada de sus cifras.
+        en: >-
+          A number is a multiple of 9 if its digit sum is, and a multiple of 11 if its
+          alternating digit sum is.
+        pt: >-
+          Um número é múltiplo de 9 se a soma dos seus algarismos for, e é múltiplo de 11 se a
+          soma alternada dos algarismos for.
+        fr: >-
+          Un nombre est multiple de 9 si la somme de ses chiffres l'est, et multiple de 11 si
+          la somme alternée de ses chiffres l'est.
+        zh: >-
+          一个数是9的倍数当且仅当其各位数字之和是；是11的倍数当且仅当其奇数位与偶数位数字之差是。
+        ja: >-
+          各桁の和が9の倍数ならその数も9の倍数で、交互に足した和が11の倍数なら
+          その数も11の倍数である。
+    - title:
+        es: Tablas hash
+        en: Hash tables
+        pt: Tabelas de dispersão
+        fr: Tables de hachage
+        zh: 散列表
+        ja: 散列表
+      description:
+        es: >-
+          Convertir una clave entera en un índice entre 0 y n−1 no es más que tomar su clase
+          de residuos módulo n.
+        en: >-
+          Turning an integer key into an index between 0 and n−1 is nothing more than taking
+          its residue class modulo n.
+        pt: >-
+          Converter uma chave inteira num índice entre 0 e n−1 não é mais do que tomar a sua
+          classe de resíduos módulo n.
+        fr: >-
+          Transformer une clé entière en indice entre 0 et n−1 n'est rien d'autre que prendre
+          sa classe de résidus modulo n.
+        zh: >-
+          把整数键变成0到n−1之间的下标，无非就是取它模n的剩余类。
+        ja: >-
+          整数キーを0からn−1の番号へ直すとは、法nでの剰余類を取り出すことにほかならない。
+  example:
+    title:
+      es: 17 y 5 con módulo 6
+      en: 17 and 5 modulo 6
+      pt: 17 e 5 com módulo 6
+      fr: 17 et 5 modulo 6
+      zh: "模 6 下的 17 与 5"
+      ja: "法6での17と5"
+    lines:
+      - es: "Dividir cada número entre 6"
+        en: "Divide each number by 6"
+        pt: "Dividir cada número por 6"
+        fr: "Diviser chaque nombre par 6"
+        zh: "分别把两个数除以6"
+        ja: "それぞれの数を6で割る"
+      - es: "17 = 2 × 6 + 5"
+        en: "17 = 2 × 6 + 5"
+        pt: "17 = 2 × 6 + 5"
+        fr: "17 = 2 × 6 + 5"
+        zh: "17 = 2 × 6 + 5"
+        ja: "17 = 2 × 6 + 5"
+      - es: "5 = 0 × 6 + 5"
+        en: "5 = 0 × 6 + 5"
+        pt: "5 = 0 × 6 + 5"
+        fr: "5 = 0 × 6 + 5"
+        zh: "5 = 0 × 6 + 5"
+        ja: "5 = 0 × 6 + 5"
+      - es: "17 − 5 = 12, y 12 = 2 × 6: luego 6 | 12"
+        en: "17 − 5 = 12, and 12 = 2 × 6: hence 6 | 12"
+        pt: "17 − 5 = 12, e 12 = 2 × 6: logo 6 | 12"
+        fr: "17 − 5 = 12, et 12 = 2 × 6 : donc 6 | 12"
+        zh: "17 − 5 = 12，且12 = 2 × 6，故 6 | 12"
+        ja: "17 − 5 = 12、12 = 2 × 6 より 6 | 12"
+      - es: "Mismo resto, misma clase: 17 ≡ 5 (mod 6)"
+        en: "Same remainder, same class: 17 ≡ 5 (mod 6)"
+        pt: "Mesmo resto, mesma classe: 17 ≡ 5 (mod 6)"
+        fr: "Même reste, même classe : 17 ≡ 5 (mod 6)"
+        zh: "余数相同，同一类：17 ≡ 5 (mod 6)"
+        ja: "余りが同じなら同じ剰余類：17 ≡ 5 (mod 6)"

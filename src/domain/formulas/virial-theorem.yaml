@@ -1,0 +1,338 @@
+id: virial-theorem
+title:
+  es: Teorema Virial
+  en: Virial Theorem
+  pt: Teorema Viral
+  fr: Théorème du Viriel
+  zh: 维里定理
+  ja: ヴィリアル定理
+category:
+  es: Astronomía
+  en: Astronomy
+  pt: Astronomia
+  fr: Astronomie
+  zh: 天文学
+  ja: 天文学
+nodes:
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "El factor 2: la energía cinética entra por partida doble."
+      en: "The factor 2: the kinetic energy enters twice over."
+      pt: "O fator 2: a energia cinética entra em dobro."
+      fr: "Le facteur 2 : l'énergie cinétique entre deux fois."
+      zh: 因子 2：动能被计入两次。
+      ja: 係数 2。運動エネルギーが二重に数えられる。
+  - id: t-kin
+    type: variable
+    value: T
+    explanation:
+      es: "T: la energía cinética total de las partículas del sistema."
+      en: "T: the total kinetic energy of the particles in the system."
+      pt: "T: a energia cinética total das partículas do sistema."
+      fr: "T : l'énergie cinétique totale des particules du système."
+      zh: "T：系统中所有粒子的总动能。"
+      ja: "T：系の中の粒子が持つ運動エネルギーの合計。"
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado al término potencial, con su cuenta exacta.
+      en: Added to the potential term, with exact bookkeeping.
+      pt: Somado ao termo potencial, com a contagem exata.
+      fr: Ajouté au terme potentiel, avec une comptabilité exacte.
+      zh: 与势能项相加，记账精确。
+      ja: 位置エネルギーの項に、厳密な勘定で加える。
+  - id: u-pot
+    type: variable
+    value: U
+    explanation:
+      es: "U: la energía potencial, siempre negativa porque la gravedad atrae y no repele."
+      en: "U: the potential energy, always negative because gravity pulls rather than pushes."
+      pt: "U: a energia potencial, sempre negativa porque a gravidade puxa e não empurra."
+      fr: "U : l'énergie potentielle, toujours négative car la gravitation attire et ne repousse pas."
+      zh: "U：势能，总是为负，因为引力是吸引而不是排斥。"
+      ja: "U：位置エネルギー。引力は押すのではなく引くので、常に負になる。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Su suma da exactamente cero.
+      en: Their sum is exactly zero.
+      pt: A soma dá exatamente zero.
+      fr: Leur somme vaut exactement zéro.
+      zh: 两者之和恰好为零。
+      ja: 両者の和はちょうどゼロになる。
+  - id: zero
+    type: number
+    value: "0"
+    explanation:
+      es: "Cero: en equilibrio la mitad de la energía se mueve y la otra mitad está retenida."
+      en: "Zero: in equilibrium half the energy moves and the other half is held bound."
+      pt: "Zero: em equilíbrio metade da energia se move e a outra metade fica presa."
+      fr: "Zéro : à l'équilibre, la moitié de l'énergie bouge et l'autre moitié est liée."
+      zh: "零：在平衡状态下，一半能量处于运动之中，另一半被束缚着。"
+      ja: "ゼロ。平衡状態では、エネルギーの半分が動き、残り半分は束縛されている。"
+context:
+  author:
+    es: Rudolf Clausius
+    en: Rudolf Clausius
+    pt: Rudolf Clausius
+    fr: Rudolf Clausius
+    zh: 鲁道夫·克劳修斯
+    ja: ルドルフ・ラウシャウス
+  era:
+    es: Bonn, 1870 · Lagrange ya lo anticipó en 1772
+    en: Bonn, 1870 · already anticipated by Lagrange in 1772
+    pt: Bonn, 1870 · antecipado por Lagrange em 1772
+    fr: Bonn, 1870 · déjà anticipé par Lagrange en 1772
+    zh: 波恩,1870年 · 拉格朗日早在 1772 年已有先见
+    ja: ボン、1870年 · ラグランジュが1772年に先んじていた
+  history:
+    es: >-
+      El teorema virial fue demostrado por Lagrange en 1772 dentro de la mecánica newtoniana, pero
+      quedó olvidado hasta que Clausius lo reenunció y le dio nombre en 1870. En su forma más simple
+      afirma que un sistema en equilibrio que solo interactúa con fuerzas de la inversa del cuadrado
+      cumple 2T + U = 0, es decir, la energía cinética vale exactamente la mitad del valor absoluto
+      de la potencial. Como la relación depende solo de cómo escala el potencial con la distancia,
+      el mismo resultado vale para las fuerzas de Coulomb, donde también T = −U/2. La consecuencia
+      más incómoda es que una estrella que irradia pierde energía total y, al hacerlo, su energía
+      potencial se hace más negativa y la cinética aumenta: se contrae y se calienta. Ese calor
+      específico negativo no es una rareza, es la regla de casi toda estrella en equilibrio
+      hidrostático.
+    en: >-
+      The virial theorem was proved by Lagrange in 1772 within Newtonian mechanics, then forgotten
+      until Clausius restated it and gave it its name in 1870. In its simplest form it says that a
+      system in equilibrium interacting only through inverse-square forces obeys 2T + U = 0, that is,
+      the kinetic energy is exactly half the absolute value of the potential energy. Because the
+      relation depends only on how the potential scales with distance, the same result holds for
+      Coulomb forces, where T = −U/2 as well. Its most awkward consequence is that a star which
+      radiates loses total energy and, in doing so, makes its potential energy more negative and its
+      kinetic energy larger: it contracts and heats up. That negative heat capacity is not a rarity,
+      it is the rule for almost any star in hydrostatic equilibrium.
+    pt: >-
+      O teorema virial foi provado por Lagrange em 1772 dentro da mecânica newtoniana, mas ficou
+      esquecido até Clausius o reenunciar e lhe dar nome em 1870. Na sua forma mais simples ele diz
+      que um sistema em equilíbrio que interage só por forças de inversa do quadrado obedece a
+      2T + U = 0, ou seja, a energia cinética vale exatamente a metade do valor absoluto da
+      potencial. Como a relação depende só de como o potencial varia com a distância, o mesmo
+      resultado vale para as forças de Coulomb, onde também T = −U/2. A consequência mais
+      desconfortável é que uma estrela que irradia perde energia total e, ao fazê-lo, torna sua
+      energia potencial mais negativa e aumenta a cinética: contrai-se e aquece. Esse calor
+      específico negativo não é raridade, é a regra de quase toda estrela em equilíbrio hidrostático.
+    fr: >-
+      Le théorème du viriel fut démontré par Lagrange en 1772 au sein de la mécanique newtonienne,
+      puis oublié jusqu'à ce que Clausius le réénonce et lui donne son nom en 1870. Sous sa forme la
+      plus simple, il énonce qu'un système à l'équilibre n'interagissant que par des forces en
+      inverse du carré obéit à 2T + U = 0 : l'énergie cinétique vaut exactement la moitié de la
+      valeur absolue de l'énergie potentielle. Comme la relation ne dépend que de la façon dont le
+      potentiel varie avec la distance, le même résultat vaut pour les forces de Coulomb, où
+      T = −U/2 également. Sa conséquence la plus dérangeante est qu'une étoile qui rayonne perd de
+      l'énergie totale et rend son énergie potentielle plus négative : elle se contracte et se
+      réchauffe. Cette chaleur spécifique négative n'est pas une curiosité, c'est la règle de
+      presque toute étoile en équilibre hydrostatique.
+    zh: >-
+      维里定理由拉格朗日在 1772 年于牛顿力学框架内证明，此后被淡忘，直到克劳修斯在 1870 年重新提出并给它取了名字。
+      最简单的形式说，一个只受反平方力作用、处于平衡的体系满足 2T + U = 0，也就是动能恰好等于势能绝对值的一半。
+      由于这一关系只取决于势能随距离如何变化，同样的结果也适用于库仑力，那里同样有 T = −U/2。它最令人不适的后果是：
+      辐射中的恒星失去总能量，随之势能变得更负、动能变大，于是收缩并升温。这个负热容不是特例，而几乎是任何处于
+      流体静力平衡的恒星的常态。
+    ja: >-
+      ヴィリアル定理はラグランジュが1772年にニュートン力学のなかで証明したが、その後忘れられ、1870年にクラウシウスが
+      再び述べ、名前を与えた。最も簡単な形では、逆二乗力だけで相互作用する平衡系は 2T + U = 0 を満たす。すなわち
+      運動エネルギーは位置エネルギーの絶対値のちょうど半分である。この関係はポテンシャルの距離への依存のかかり方にしか
+      依存しないので、静電気の力でも同じ結果が出て、やはり T = −U/2 となる。その最も厄介な帰結は、輻射している
+      星が全エネルギーを失うことで、位置エネルギーはより負になり、運動エネルギーは大きくなる。つまり縮んで温度が上がる。
+      負の比熱は珍しい現象ではなく、平衡にあるほぼすべての星における原則である。
+  timeline:
+    - year: "1772"
+      label:
+        es: >-
+          Lagrange demuestra la relación dentro de la mecánica newtoniana, sin darle nombre ni
+          publicarla como teorema.
+        en: >-
+          Lagrange proves the relation inside Newtonian mechanics, without naming it or publishing
+          it as a theorem.
+        pt: >-
+          Lagrange prova a relação dentro da mecânica newtoniana, sem lhe dar nome nem publicá-la
+          como teorema.
+        fr: >-
+          Lagrange démontre la relation au sein de la mécanique newtonienne, sans la nommer ni la
+          publier comme théorème.
+        zh: >-
+          拉格朗日在牛顿力学框架内证明这一关系，既未命名也未作为定理发表。
+        ja: >-
+          ラグランジュがニュートン力学のなかでこの関係を証明。命名も、定理としての発表も行わない。
+    - year: "1870"
+      label:
+        es: >-
+          Clausius lo reenuncia para sistemas deformables y lo bautiza 'virial', de donde sale el
+          nombre actual.
+        en: >-
+          Clausius restates it for deformable systems and names it the virial, giving the theorem
+          its current name.
+        pt: >-
+          Clausius o reenuncia para sistemas deformáveis e o batiza de 'virial', de onde vem o
+          nome atual.
+        fr: >-
+          Clausius le réénonce pour les systèmes déformables et le baptise « virial », d'où le nom
+          actuel.
+        zh: >-
+          克劳修斯把它推广到可形变体系，并命名为 virial，定理之名由此而来。
+        ja: >-
+          クラウシウスは変形する系にも同じ関係を述べ、virial（ヴィリアル）と名づけた。現在の名前はここから来ている。
+    - year: "1926"
+      label:
+        es: >-
+          La relación se extiende a los sistemas de la mecánica cuántica, donde U es el valor
+          medio del operador potencial.
+        en: >-
+          The relation extends to quantum mechanical systems, where U becomes the expectation
+          value of the potential operator.
+        pt: >-
+          A relação estende-se aos sistemas da mecânica quântica, onde U é o valor médio do
+          operador potencial.
+        fr: >-
+          La relation s'étend aux systèmes de la mécanique quantique, où U devient la valeur
+          moyenne de l'opérateur potentiel.
+        zh: >-
+          该关系推广到量子力学体系，此时 U 为势能算符的平均值。
+        ja: >-
+          この関係は量子力学の系にも広がり、U はポテンシャル演算子の平均値になる。
+    - year: Hoy
+      label:
+        es: >-
+          Es la herramienta para deducir el calor específico negativo de las estrellas y para
+          estimar masas de cúmulos.
+        en: >-
+          It is the tool for deducing the negative heat capacity of stars and for estimating cluster
+          masses.
+        pt: >-
+          É a ferramenta para deduzir o calor específico negativo das estrelas e para estimar
+          massas de aglomerados.
+        fr: >-
+          C'est l'outil qui permet de déduire la chaleur spécifique négative des étoiles et
+          d'estimer les masses des amas.
+        zh: >-
+          由此可以推出恒星的负热容，也可以估计星团的质量。
+        ja: >-
+          星の負の比热を示す手がかりであり、星団の質量を見積もる道具でもある。
+  useCases:
+    - title:
+        es: Calor específico negativo
+        en: Negative heat capacity
+        pt: Calor específico negativo
+        fr: Chaleur spécifique négative
+        zh: 负热容
+        ja: 負の比熱
+      description:
+        es: >-
+          Una estrella que radia se contrae y se calienta en lugar de enfriarse, al revés que un
+          gas en un recipiente.
+        en: >-
+          A radiating star contracts and heats up instead of cooling down, the opposite of a gas in
+          a container.
+        pt: >-
+          Uma estrela que irradia contrai-se e aquece em vez de esfriar, ao contrário de um gás
+          num recipiente.
+        fr: >-
+          Une étoile qui rayonne se contracte et se réchauffe au lieu de refroidir, à l'inverse d'un
+          gaz dans un récipient.
+        zh: >-
+          辐射中的恒星会收缩并升温，而不是降温，这与容器中的气体正好相反。
+        ja: >-
+          輻射する星は冷えるのではなく縮んで温度が上がる。容器の中の気体とは逆の挙動である。
+    - title:
+        es: Masa de cúmulos estelares
+        en: Cluster masses
+        pt: Massas de aglomerados
+        fr: Masses des amas
+        zh: 星团质量
+        ja: 星団の質量
+      description:
+        es: >-
+          Si la energía potencial del sistema se conoce por su tamaño, el teorema da la energía
+          cinética y con ella la masa.
+        en: >-
+          If the system's potential energy is known from its size, the theorem gives the kinetic
+          energy and with it the mass.
+        pt: >-
+          Se a energia potencial do sistema é conhecida pelo tamanho, o teorema dá a energia
+          cinética e com ela a massa.
+        fr: >-
+          Si l'énergie potentielle du système est connue grâce à sa taille, le théorème donne
+          l'énergie cinétique et donc la masse.
+        zh: >-
+          如果体系大小已知、从而势能已知，定理就给出动能，进而给出质量。
+        ja: >-
+          系の大きさから位置エネルギーが分かれば、定理は運動エネルギーを与え、それから質量が求まる。
+    - title:
+        es: Equilibrio hidrostático
+        en: Hydrostatic equilibrium
+        pt: Equilíbrio hidrostático
+        fr: Équilibre hydrostatique
+        zh: 流体静力平衡
+        ja: 静力学平衡
+      description:
+        es: >-
+          La relación convierte la ecuación de equilibrio entre presión y gravedad en un balance
+          de las dos energías del gas.
+        en: >-
+          The relation turns the equilibrium between pressure and gravity into a balance of the
+          gas's two energies.
+        pt: >-
+          A relação transforma o equilíbrio entre pressão e gravidade num balanço entre as duas
+          energias do gás.
+        fr: >-
+          La relation transforme l'équilibre entre pression et gravité en un bilan des deux
+          énergies du gaz.
+        zh: >-
+          这一关系把压力与引力之间的平衡，转化为气体两种能量之间的平衡。
+        ja: >-
+          この関係は圧力と重力のつり合いを、気体の二種類のエネルギーのつり合いに置き換える。
+  example:
+    title:
+      es: El Sol como esfera uniforme
+      en: The Sun as a uniform sphere
+      pt: O Sol como esfera uniforme
+      fr: Le Soleil comme sphère uniforme
+      zh: 把太阳视为均匀球体
+      ja: 太陽を一様な球として
+    lines:
+      - es: "G = 6,674 · 10⁻¹¹ · M = 1,989 · 10³⁰ kg"
+        en: "G = 6.674 · 10⁻¹¹ · M = 1.989 · 10³⁰ kg"
+        pt: "G = 6,674 · 10⁻¹¹ · M = 1,989 · 10³⁰ kg"
+        fr: "G = 6,674 · 10⁻¹¹ · M = 1,989 · 10³⁰ kg"
+        zh: "G = 6,674 · 10⁻¹¹ · M = 1,989 · 10³⁰ kg"
+        ja: "G = 6,674 · 10⁻¹¹ · M = 1,989 · 10³⁰ kg"
+      - es: "R = 6,96 · 10⁸ m"
+        en: "R = 6.96 · 10⁸ m"
+        pt: "R = 6,96 · 10⁸ m"
+        fr: "R = 6,96 · 10⁸ m"
+        zh: "R = 6,96 · 10⁸ m"
+        ja: "R = 6,96 · 10⁸ m"
+      - es: "U = −(3/5) · G · M²/R = −2,28 · 10⁴¹ J"
+        en: "U = −(3/5) · G · M²/R = −2.28 · 10⁴¹ J"
+        pt: "U = −(3/5) · G · M²/R = −2,28 · 10⁴¹ J"
+        fr: "U = −(3/5) · G · M²/R = −2,28 · 10⁴¹ J"
+        zh: "U = −(3/5) · G · M²/R = −2,28 · 10⁴¹ J"
+        ja: "U = −(3/5) · G · M²/R = −2,28 · 10⁴¹ J"
+      - es: "2T = −U = 2,28 · 10⁴¹ J → T = 1,14 · 10⁴¹ J"
+        en: "2T = −U = 2.28 · 10⁴¹ J → T = 1.14 · 10⁴¹ J"
+        pt: "2T = −U = 2,28 · 10⁴¹ J → T = 1,14 · 10⁴¹ J"
+        fr: "2T = −U = 2,28 · 10⁴¹ J → T = 1,14 · 10⁴¹ J"
+        zh: "2T = −U = 2,28 · 10⁴¹ J → T = 1,14 · 10⁴¹ J"
+        ja: "2T = −U = 2,28 · 10⁴¹ J → T = 1,14 · 10⁴¹ J"
+      - es: "E = T + U = −1,14 · 10⁴¹ J, o sea E = −T"
+        en: "E = T + U = −1.14 · 10⁴¹ J, that is E = −T"
+        pt: "E = T + U = −1,14 · 10⁴¹ J, ou seja E = −T"
+        fr: "E = T + U = −1,14 · 10⁴¹ J, autrement dit E = −T"
+        zh: "E = T + U = −1,14 · 10⁴¹ J，也就是 E = −T"
+        ja: "E = T + U = −1,14 · 10⁴¹ J、つまり E = −T"
+      - es: "Si radia el 10% de |E|, T sube a 1,25 · 10⁴¹ J y el Sol se contrae"
+        en: "Radiate 10% of |E| and T rises to 1.25 · 10⁴¹ J while the Sun contracts"
+        pt: "Se radia 10% de |E|, T sobe para 1,25 · 10⁴¹ J e o Sol contrai-se"
+        fr: "Si 10% de |E| est rayonné, T monte à 1,25 · 10⁴¹ J et le Soleil se contracte"
+        zh: "若辐射掉 |E| 的 10%，T 升到 1,25 · 10⁴¹ J，太阳随之收缩"
+        ja: "|E| の10%を輻射すると T は 1,25 · 10⁴¹ J に上がり、太陽は縮む"

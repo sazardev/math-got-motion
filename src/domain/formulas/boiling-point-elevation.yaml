@@ -1,0 +1,311 @@
+id: boiling-point-elevation
+title:
+  es: Aumento del Punto de Ebullición
+  en: Boiling Point Elevation
+  pt: Elevação do Ponto de Ebulição
+  fr: Élévation du Point d'Ébullition
+  zh: 沸点升高
+  ja: 沸点上昇
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: delta-tb
+    type: variable
+    value: ΔTb
+    explanation:
+      es: "ΔTb: cuánto sube el punto de ebullición respecto del disolvente puro."
+      en: "ΔTb: how far the boiling point rises compared with the pure solvent."
+      pt: "ΔTb: quanto o ponto de ebulição sobe em relação ao solvente puro."
+      fr: "ΔTb : de combien le point d'ébullition monte par rapport au solvant pur."
+      zh: "ΔTb：沸点相对于纯溶剂上升了多少。"
+      ja: "ΔTb：純溶媒と比べて沸点がどれだけ上がるか。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: kb
+    type: constant
+    value: K_b
+    explanation:
+      es: "K_b: la constante ebulloscópica del disolvente, medida y tabulada para cada uno."
+      en: "K_b: the ebullioscopic constant of the solvent, measured and tabulated for each one."
+      pt: "K_b: a constante ebulloscópica do solvente, medida e tabelada para cada um."
+      fr: "K_b : la constante ébullioscopique du solvant, mesurée et tabulée pour chacun."
+      zh: "K_b：溶剂的沸点升高常数，为每种溶剂单独测定并列表。"
+      ja: "K_b：その溶媒の沸点上昇の定数。溶媒ごとに実測して表にまとめられる。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: molality
+    type: variable
+    value: m
+    explanation:
+      es: "m: la molalidad, moles de soluto por kilo de disolvente, no por litro de disolución."
+      en: "m: the molality, moles of solute per kilogram of solvent, not per liter of solution."
+      pt: "m: a molalidade, mols de soluto por quilo de solvente, não por litro de solução."
+      fr: "m : la molalité, moles de soluté par kilogramme de solvant, non par litre de solution."
+      zh: "m：质量摩尔浓度，即每千克溶剂中的溶质摩尔数，而不是每升溶液。"
+      ja: "m：モル濃度。溶液1リットルではなく溶媒1キログラムあたりの物質量である。"
+context:
+  author:
+    es: François-Marie Raoult
+    en: François-Marie Raoult
+    pt: François-Marie Raoult
+    fr: François-Marie Raoult
+    zh: 弗朗索瓦-马里·拉乌尔
+    ja: フランソワ・マリー・ラウル
+  era:
+    es: Aviñón, 1882–1887 · leyes de propiedades coligativas
+    en: Avignon, 1882–1887 · the colligative laws
+    pt: Avinhão, 1882–1887 · as leis coligativas
+    fr: Avignon, 1882–1887 · les lois colligatives
+    zh: 阿维尼翁,1882–1887年 · 依数性定律
+    ja: アヴィニヨン、1882–1887年 · 依数性の法則
+  history:
+    es: >-
+      El aumento del punto de ebullición es la propiedad coligativa más fácil de entender: al
+      disolver un soluto no volátil, el punto de ebullición sube, y cuánto sube depende solo de
+      cuántas partículas hay disueltas, nunca de qué son. El soluto baja la presión de vapor del
+      disolvente, así que hace falta más temperatura para hervir. Raoult estableció entre 1882 y
+      1887 que esa disminución es siempre la misma fracción para un número dado de partículas, y el
+      aumento de ebullición se deduce de ahí. La consecuencia práctica es que K_b es
+      una propiedad medida de cada disolvente: para el agua vale 0,512 K·kg/mol, así que medio
+      molal de glucosa lleva el agua de 100 °C a unos 100,26 °C. Como la misma cuenta de
+      partículas explica el descenso crioscópico, la sal de las carreteras consigue las dos cosas a
+      la vez.
+    en: >-
+      The boiling point elevation is the easiest colligative property to understand: dissolving a
+      non-volatile solute raises the boiling point, and how far it rises depends only on how many
+      particles are dissolved, never on what they are. The solute lowers the solvent's vapour
+      pressure, so a higher temperature is needed to boil. Between 1882 and 1887 Raoult showed that
+      this drop is always the same fraction for a given number of particles, and the boiling point
+      elevation follows from that. The practical consequence is that K_b is a measured property of
+      each solvent: for water it is 0.512 K·kg/mol, so a half-molal glucose solution takes the water
+      from 100 °C to about 100.15 °C. Because the same count of particles also explains the freezing
+      point depression, road salt achieves both at once. The
+      boiling point depends on atmospheric pressure as well, which is lower in the mountains and
+    pt: >-
+      A elevação do ponto de ebulição é a propriedade coligativa mais fácil de entender: ao dissolver
+      um soluto não volátil, o ponto de ebulição sobe, e quanto sobe depende só de quantas partículas
+      estão dissolvidas, nunca do que elas são. O soluto abaixa a pressão de vapor do solvente, e
+      por isso é preciso mais temperatura para ferver. Entre 1882 e 1887, Raoult mostrou que essa
+      queda é sempre a mesma fração para um número dado de partículas, e a elevação do ponto de
+      ebulição se deduz disso. A consequência prática é que K_b é uma propriedade medida de cada
+      solvente: para a água vale 0,512 K·kg/mol, de modo que meio molal de glicose leva a água de
+      100 °C a cerca de 100,26 °C. Como a mesma contagem de partículas também explica o abaixamento
+      do ponto de congelamento, o sal das estradas faz as duas coisas ao mesmo tempo.
+    fr: >-
+      L'élévation du point d'ébullition est la propriété colligative la plus facile à comprendre :
+      dissoudre un soluté non volatil fait monter le point d'ébullition, et cette montée ne dépend
+      que du nombre de particules dissoutes, jamais de leur nature. Le soluté abaisse la pression
+      de vapeur du solvant, il faut donc plus de température pour bouillir. Entre 1882 et 1887,
+      Raoult montra que cette chute est toujours la même fraction pour un nombre de particules
+      donné, et l'élévation du point d'ébullition en découle. La conséquence pratique est que K_b
+      est une propriété mesurée de chaque solvant : pour l'eau elle vaut 0,512 K·kg/mol, si bien
+      qu'une solution de glucose à demi-molale porte l'eau de 100 °C à environ 100,15 °C. Comme
+      la même compte de particules explique aussi l'abaissement du point de congélation, le sel des
+      routes réussit les deux à la fois.
+    zh: >-
+      沸点升高是最容易理解的依数性性质：溶解不挥发溶质会使沸点上升，而上升多少只取决于溶解了多少个粒子，与粒子
+      是什么毫无关系。机理很直接：溶质降低了溶剂的蒸气压，于是需要更高温度才能沸腾。1882 至 1887 年间，拉乌尔
+      证明对给定数目的粒子，蒸气压的下降总是同一个分数，沸点升高由此得出。实际结论是 K_b 为每种溶剂实测的
+      性质：水的 K_b 为 0,512 K·kg/mol，因此 0.5 摩尔每千克的葡萄糖溶液把水从 100 °C 抬到约 100,15 °C。
+      由于同一套粒子计数也解释了凝固点降低，路面撒盐一次达成两件事。
+    ja: >-
+      沸点上昇はもっとも理解しやすい、粒子数だけで決まる性質である。揮発性の低い溶質を溶かすと沸点が上がり、その
+      上がり方は溶けた粒子の数だけで決まり、粒子が何であるかには依存しない。溶質が溶媒の蒸気圧を下げるので、
+      沸くにはより高い温度が必要になる。1882年から1887年にかけてラウルは、粒子の数が同じなら蒸気圧の低下率も
+      いつも同じであると示した。実用上の帰結は、K_b が溶媒ごとに実測される性質だということである。水では
+      0,512 K·kg/mol なので、0,5 molal のグルコース溶液は 100 °C の水をおよそ 100,15 °C へ上げる。同じ粒子数の
+      計算が凝固点降下も説明するため、道路に撒く塩は沸点を上げながら凝固点を下げると同時にできる。
+  timeline:
+    - year: "1882"
+      label:
+        es: >-
+          Raoult mide que el descenso del punto de congelación es siempre el mismo para un número
+          dado de partículas disueltas.
+        en: >-
+          Raoult measures that the freezing point drop is always the same for a given number of
+          dissolved particles.
+        pt: >-
+          Raoult mede que o abaixamento do ponto de congelamento é sempre o mesmo para um número
+          dado de partículas dissolvidas.
+        fr: >-
+          Raoult mesure que l'abaissement du point de congélation est toujours le même pour un
+          nombre donné de particules dissoutes.
+        zh: >-
+          拉乌尔测得：对给定数目的溶解粒子，凝固点下降总是同一个值。
+        ja: >-
+          ラウルは、溶けた粒子の数が同じなら凝固点の降下もいつも同じであることを測り示した。
+    - year: "1887"
+      label:
+        es: >-
+          Su ley de la presión de vapor queda fijada y con ella el aumento del punto de ebullición
+          por la ecuación de Clausius-Clapeyron.
+        en: >-
+          His vapour pressure law is settled, and with it the boiling point elevation through the
+          Clausius-Clapeyron equation.
+        pt: >-
+          Sua lei da pressão de vapor fica estabelecida e, com ela, a elevação do ponto de ebulição
+          pela equação de Clausius-Clapeyron.
+        fr: >-
+          Sa loi sur la pression de vapeur est établie et, avec elle, l'élévation du point
+          d'ébullition par l'équation de Clausius-Clapeyron.
+        zh: >-
+          他的蒸气压定律确立，沸点升高随即由克劳修斯-克拉佩龙方程给出。
+        ja: >-
+          蒸気圧についての法則が確定し、沸点上昇はクラウシウス・クラペロンの式から導かれるようになった。
+    - year: Hoy
+      label:
+        es: >-
+          Explica por qué la sal de carreteras funde el hielo, y por qué en la cocina el punto de
+          ebullición depende de la altura.
+        en: >-
+          It explains why road salt melts ice, and why the cooking boiling point depends on
+          altitude.
+        pt: >-
+          Explica por que o sal das estradas derrete o gelo e por que, na cozinha, o ponto de
+          ebulição depende da altitude.
+        fr: >-
+          Elle explique pourquoi le sel des routes fait fondre le glace et pourquoi, en cuisine, le
+          point d'ébullition dépend de l'altitude.
+        zh: >-
+          它解释了为什么路面撒盐能化冰，也解释了厨房中的沸点为何随海拔变化。
+        ja: >-
+          道路に撒く塩が氷を溶かす理由や、調理の沸点が高度で変わる理由がこれで説明できる。
+  useCases:
+    - title:
+        es: Sal de carreteras
+        en: Road salt
+        pt: Sal de estradas
+        fr: Sel des routes
+        zh: 路面盐
+        ja: 道路塩
+      description:
+        es: >-
+          El cloruro de sodio se disocia en dos iones, así que sube el punto de ebullición y baja
+          el de congelación a la vez.
+        en: >-
+          Sodium chloride dissociates into two ions, so it raises the boiling point and lowers the
+          freezing point at once.
+        pt: >-
+          O cloreto de sódio se dissocia em dois íons, então eleva o ponto de ebulição e reduz o de
+          congelamento ao mesmo tempo.
+        fr: >-
+          Le chlorure de sodium se dissocie en deux ions : il relève le point d'ébullition et
+          abaisse le point de congélation à la fois.
+        zh: >-
+          氯化钠解离成两个离子，因此同时提高沸点并降低冰点。
+        ja: >-
+          塩化ナトリウムは二つに解離するので、沸点を上げながら凝固点を下げると同時に効く。
+    - title:
+        es: Masas molares de solutos
+        en: Solute molar masses
+        pt: Massas molares de solutos
+        fr: Masses molaires de solutés
+        zh: 溶质摩尔质量
+        ja: 溶質のモル質量
+      description:
+        es: >-
+          Como el aumento es proporcional al número de partículas, medirlo da la masa molar de un
+          soluto desconocido.
+        en: >-
+          Since the rise is proportional to the number of particles, measuring it gives the molar
+          mass of an unknown solute.
+        pt: >-
+          Como a elevação é proporcional ao número de partículas, medi-la fornece a massa molar de
+          um soluto desconhecido.
+        fr: >-
+          Comme l'élévation est proportionnelle au nombre de particules, la mesurer donne la
+          masse molaire d'un soluté inconnu.
+        zh: >-
+          由于升高与粒子数成正比，测出升高值就能得到未知溶质的摩尔质量。
+        ja: >-
+          上昇が粒子数に比例するので、これを測れば未知の溶質のモル質量が分かる。
+    - title:
+        es: Presión atmosférica y altura
+        en: Atmospheric pressure and altitude
+        pt: Pressão atmosférica e altitude
+        fr: Pression atmosphérique et altitude
+        zh: 大气压与海拔
+        ja: 大気圧と高度
+      description:
+        es: >-
+          El punto de ebullición no depende solo de la composición: en la montaña, con menos
+          presión, el agua hierve antes de los 100 °C.
+        en: >-
+          The boiling point does not depend on composition alone: up in the mountains, with less
+          pressure, water boils below 100 °C.
+        pt: >-
+          O ponto de ebulição não depende só da composição: na montanha, com menos pressão, a água
+          ferve antes dos 100 °C.
+        fr: >-
+          Le point d'ébullition ne dépend pas que de la composition : en montagne, avec moins de
+          pression, l'eau bout en dessous de 100 °C.
+        zh: >-
+          沸点不只取决于组成：在高山上气压更低，水在不到 100 °C 时就沸腾。
+        ja: >-
+          沸点は組成だけでなく大気圧にも左右される。山の上では気圧が低く、水は 100 °C を待たずに沸く。
+  example:
+    title:
+      es: Glucosa en agua
+      en: Glucose in water
+      pt: Glicose em água
+      fr: Glucose dans l'eau
+      zh: 水中的葡萄糖
+      ja: 水の中のグルコース
+    lines:
+      - es: "Agua: K_b = 0,512 K·kg/mol"
+        en: "Water: K_b = 0.512 K·kg/mol"
+        pt: "Água: K_b = 0,512 K·kg/mol"
+        fr: "Eau : K_b = 0,512 K·kg/mol"
+        zh: "水：K_b = 0,512 K·kg/mol"
+        ja: "水：K_b = 0,512 K·kg/mol"
+      - es: "0,150 mol de glucosa en 0,500 kg de agua"
+        en: "0.150 mol of glucose in 0.500 kg of water"
+        pt: "0,150 mol de glicose em 0,500 kg de água"
+        fr: "0,150 mol de glucose dans 0,500 kg d'eau"
+        zh: "0,150 mol 葡萄糖溶于 0,500 kg 水"
+        ja: "0,150 mol のグルコースを 0,500 kg の水に溶かす"
+      - es: "m = 0,150 / 0,500 = 0,300 mol/kg"
+        en: "m = 0.150 / 0.500 = 0.300 mol/kg"
+        pt: "m = 0,150 / 0,500 = 0,300 mol/kg"
+        fr: "m = 0,150 / 0,500 = 0,300 mol/kg"
+        zh: "m = 0,150 / 0,500 = 0,300 mol/kg"
+        ja: "m = 0,150 / 0,500 = 0,300 mol/kg"
+      - es: "ΔTb = 0,512 · 0,300 = 0,154 K"
+        en: "ΔTb = 0.512 · 0.300 = 0.154 K"
+        pt: "ΔTb = 0,512 · 0,300 = 0,154 K"
+        fr: "ΔTb = 0,512 · 0,300 = 0,154 K"
+        zh: "ΔTb = 0,512 · 0,300 = 0,154 K"
+        ja: "ΔTb = 0,512 · 0,300 = 0,154 K"
+      - es: "El agua hierve a 100,15 °C en lugar de 100 °C"
+        en: "The water boils at 100.15 °C instead of 100 °C"
+        pt: "A água ferve a 100,15 °C em vez de 100 °C"
+        fr: "L'eau bout à 100,15 °C au lieu de 100 °C"
+        zh: "水在 100,15 °C 沸腾，而不是 100 °C"
+        ja: "水は 100 °C ではなく 100,15 °C で沸く"
+      - es: "Con NaCl el efecto se casi duplica: se forman dos iones"
+        en: "With NaCl the effect nearly doubles: two ions are formed"
+        pt: "Com NaCl o efeito quase dobra: formam-se dois íons"
+        fr: "Avec NaCl l'effet double presque : deux ions se forment"
+        zh: "换成 NaCl，效应几乎翻倍：解离出两个离子"
+        ja: "NaCl だと効果がほぼ二倍になる。二つのイオンができるため"

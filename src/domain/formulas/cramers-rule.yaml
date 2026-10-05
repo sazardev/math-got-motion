@@ -1,0 +1,262 @@
+id: cramers-rule
+title:
+  es: Regla de Cramer
+  en: Cramer's rule
+  pt: Regra de Cramer
+  fr: Règle de Cramer
+  zh: 克拉默法则
+  ja: クラメルの公式
+category:
+  es: Álgebra lineal
+  en: Linear algebra
+  pt: Álgebra linear
+  fr: Algèbre linéaire
+  zh: 线性代数
+  ja: 線形代数
+nodes:
+  - id: x-i
+    type: variable
+    value: xᵢ
+    explanation:
+      es: La i-ésima incógnita del sistema, la que se quiere calcular.
+      en: The i-th unknown of the system, the one being solved for.
+      pt: A i-ésima incógnita do sistema, a que se quer calcular.
+      fr: L'inconnue i du système, celle que l'on cherche.
+      zh: 方程组的第i个未知量，也就是要求出的那个。
+      ja: 連立方程式の第i番目の未知数。求めようとしている量である。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: det-a-i
+    type: operator
+    value: det Aᵢ
+    explanation:
+      es: "El determinante de la matriz A con la columna i sustituida por los términos independientes."
+      en: "The determinant of A with its i-th column replaced by the constant terms."
+      pt: "O determinante da matriz A com a i-ésima coluna substituída pelos termos independentes."
+      fr: "Le déterminant de A dont la i-ième colonne est remplacée par les termes constants."
+      zh: "把矩阵A的第i列换成常数项后的行列式。"
+      ja: "Aの第i列を定数項に置き換えた行列の行列式。"
+  - id: fraction-bar
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre el determinante original.
+      en: Divided by the original determinant.
+      pt: Dividido pelo determinante original.
+      fr: Divisé par le déterminant d'origine.
+      zh: 除以原来的行列式。
+      ja: 元の行列式で割る。
+  - id: det-a
+    type: operator
+    value: det A
+    explanation:
+      es: "El determinante de la matriz de coeficientes, que debe ser distinto de cero."
+      en: "The determinant of the coefficient matrix, which must be nonzero."
+      pt: "O determinante da matriz de coeficientes, que deve ser diferente de zero."
+      fr: "Le déterminant de la matrice des coefficients, qui doit être non nul."
+      zh: "系数矩阵的行列式，必须不为零。"
+      ja: "係数行列の行列式。0であってはならない。"
+context:
+  author:
+    es: Gabriel Cramer
+    en: Gabriel Cramer
+    pt: Gabriel Cramer
+    fr: Gabriel Cramer
+    zh: 加布里埃尔·克拉默
+    ja: ガブリエル・クラメル
+  era:
+    es: Suiza, 1704–1732 · publicada en 1750
+    en: Switzerland, 1704–1732 · published in 1750
+    pt: Suíça, 1704–1732 · publicada em 1750
+    fr: Suisse, 1704–1732 · publiée en 1750
+    zh: 瑞士，1704–1732年 · 发表于1750年
+    ja: スイス、1704–1732年 · 1750年に発表
+  history:
+    es: >-
+      Gabriel Cramer publicó esta regla en 1750 dentro de un tratado sobre las líneas curvas, mientras
+      estudiaba las tangentes a las cónicas; su objetivo no era resolver sistemas, sino describir una
+      curva por sus parámetros. El método es elegante, porque cada incógnita se obtiene de un
+      cociente de determinantes, pero exige calcular n + 1 determinantes en lugar de uno solo. Por eso,
+      cuando Gauss presentó la eliminación en 1809, esta le ganó en la práctica. Y con aritmética de
+      coma flotante la regla amplifica el error de redondeo, razón por la que la computación numérica la
+      abandonó.
+    en: >-
+      Gabriel Cramer published this rule in 1750 inside a treatise on curved lines, while studying the
+      tangents to conics; his aim was not to solve systems but to describe a curve by its parameters.
+      The method is elegant, because each unknown comes from a quotient of determinants, but it
+      requires computing n + 1 determinants instead of a single one. That is why, once Gauss presented
+      elimination in 1809, this rule lost ground in practice. And with floating-point arithmetic it
+      amplifies rounding error, which is why numerical computing abandoned it.
+    pt: >-
+      Gabriel Cramer publicou esta regra em 1750 num tratado sobre linhas curvas, enquanto estudava as
+      tangentes às cônicas; seu objetivo não era resolver sistemas, mas descrever uma curva por seus
+      parâmetros. O método é elegante, pois cada incógnita sai de um quociente de determinantes, mas
+      exige calcular n + 1 determinantes em vez de um só. Por isso, quando Gauss apresentou a
+      eliminação em 1809, esta perdeu terreno na prática. E com aritmética de ponto flutuante a regra
+      amplifica o erro de arredondamento, razão pela qual a computação numérica a abandonou.
+    fr: >-
+      Gabriel Cramer publia cette règle en 1750 au sein d'un traité des lignes courbes, alors qu'il
+      étudiait les tangentes aux coniques ; son but n'était pas de résoudre des systèmes mais de décrire
+      une courbe par ses paramètres. La méthode est élégante, car chaque inconnue vient d'un quotient
+      de déterminants, mais elle exige de calculer n + 1 déterminants au lieu d'un seul. C'est
+      pourquoi, lorsque Gauss présenta l'élimination en 1809, elle perdit du terrain en pratique. Et
+      avec l'arithmétique flottante elle amplifie l'erreur d'arrondi, ce qui explique son abandon en
+      calcul numérique.
+    zh: >-
+      加布里埃尔·克拉默在1750年关于曲线的著作中发表了这条法则，当时他正在研究圆锥曲线的切线；他的目的并不是求解方程组，
+      而是用参数描述一条曲线。这条方法很优雅，因为每个未知量都是行列式之商，但它需要计算n+1个行列式而不是一个。因此当高斯在
+      1809年提出消元法后，它在实际应用中逐渐落后。而在浮点运算下它会放大舍入误差，这正是数值计算放弃它的原因。
+    ja: >-
+      ガブリエル・クラメルは1750年、曲線に関する著作の中でこの公式を発表した。その目的は連立方程式を解くことではなく、
+      曲線をパラメータで表すことだった。各未知数を行列式の比として得られるため理にかなっているが、1つではなく
+      n+1個の行列式を計算しなければならない。1809年にガウスが消元法を示して以来、実用では後れを取るようになった。
+      さらに浮動小数点の演算では丸め誤差が増幅されるため、数値計算では使われなくなった。
+  timeline:
+    - year: "1750"
+      label:
+        es: >-
+          Cramer publica la regla en Introduction à l'analyse des lignes courbes, al estudiar las cónicas.
+        en: >-
+          Cramer publishes the rule in Introduction à l'analyse des lignes courbes, studying conics.
+        pt: >-
+          Cramer publica a regra em Introduction à l'analyse des lignes courbes, estudando cônicas.
+        fr: >-
+          Cramer publie la règle dans l'Introduction à l'analyse des lignes courbes, en étudiant les
+          coniques.
+        zh: >-
+          克拉默在《曲线分析导论》中研究圆锥曲线时发表了这条法则。
+        ja: >-
+          クラメルが『曲線解析入門』で円錐曲線の研究とともにこの式を発表した。
+    - year: "1809"
+      label:
+        es: >-
+          Gauss presenta la eliminación, que resuelve un sistema con una sola factorización.
+        en: >-
+          Gauss presents elimination, which solves a system with a single factorization.
+        pt: >-
+          Gauss apresenta a eliminação, que resolve um sistema com uma única fatoração.
+        fr: >-
+          Gauss présente l'élimination, qui résout un système avec une seule factorisation.
+        zh: >-
+          高斯提出消元法，只需一次分解即可求解方程组。
+        ja: >-
+          ガウスが1回の分解だけで連立方程式を解く消元法を提示した。
+    - year: Hoy
+      label:
+        es: >-
+          Sobrevive en la enseñanza y en el cálculo simbólico; los solvers numéricos usan la
+          eliminación.
+        en: >-
+          It survives in teaching and symbolic computation; numerical solvers use elimination.
+        pt: >-
+          Sobrevive no ensino e na computação simbólica; os solvers numéricos usam a eliminação.
+        fr: >-
+          Elle survit dans l'enseignement et le calcul symbolique ; les solveurs numériques utilisent
+          l'élimination.
+        zh: >-
+          它在教学与符号计算中沿用，而数值求解器使用消元法。
+        ja: >-
+          教育と記号計算では今も使われるが、数値ソルバーは消元法を用いる。
+  useCases:
+    - title:
+        es: Enseñanza del álgebra lineal
+        en: Linear algebra teaching
+        pt: Ensino de álgebra linear
+        fr: Enseignement de l'algèbre linéaire
+        zh: 线性代数教学
+        ja: 線形代数の教材
+      description:
+        es: >-
+          Muestra que cada solución es un cociente de determinantes y deja claro cuándo existe.
+        en: >-
+          It shows that each solution is a quotient of determinants and makes clear when it exists.
+        pt: >-
+          Mostra que cada solução é um quociente de determinantes e deixa claro quando existe.
+        fr: >-
+          Elle montre que chaque solution est un quotient de déterminants et rend clair quand elle
+          existe.
+        zh: >-
+          它表明每个解都是行列式之商，也清楚地说明了解存在的条件。
+        ja: >-
+          各解が行列式の比であることを示し、解が存在する条件も明確にする。
+    - title:
+        es: Interpolación polinómica
+        en: Polynomial interpolation
+        pt: Interpolação polinomial
+        fr: Interpolation polynomiale
+        zh: 多项式插值
+        ja: 多項式補間
+      description:
+        es: >-
+          Un polinomio que pasa por n puntos tiene sus coeficientes dados por determinantes de
+          Vandermonde.
+        en: >-
+          The coefficients of a polynomial through n points are given by Vandermonde determinants.
+        pt: >-
+          Os coeficientes de um polinômio que passa por n pontos vêm de determinantes de Vandermonde.
+        fr: >-
+          Les coefficients d'un polynôme passant par n points sont donnés par des déterminants de
+          Vandermonde.
+        zh: >-
+          经过n个点的多项式，其系数由范德蒙德行列式给出。
+        ja: >-
+          n点を通る多項式の係数は、ヴァンデルモンドの行列式で求められる。
+  example:
+    title:
+      es: Sistema 2x + y = 5 y x − y = 1
+      en: System 2x + y = 5 and x − y = 1
+      pt: Sistema 2x + y = 5 e x − y = 1
+      fr: Système 2x + y = 5 et x − y = 1
+      zh: 方程组 2x + y = 5 与 x − y = 1
+      ja: 連立方程式 2x + y = 5 と x − y = 1
+    lines:
+      - es: "A = [[2,1],[1,−1]], b = [5,1]"
+        en: "A = [[2,1],[1,−1]], b = [5,1]"
+        pt: "A = [[2,1],[1,−1]], b = [5,1]"
+        fr: "A = [[2,1],[1,−1]], b = [5,1]"
+        zh: "A = [[2,1],[1,−1]]，b = [5,1]"
+        ja: "A = [[2,1],[1,−1]]、b = [5,1]"
+      - es: det A = 2·(−1) − 1·1 = −3
+        en: det A = 2·(−1) − 1·1 = −3
+        pt: det A = 2·(−1) − 1·1 = −3
+        fr: det A = 2·(−1) − 1·1 = −3
+        zh: det A = 2·(−1) − 1·1 = −3
+        ja: det A = 2·(−1) − 1·1 = −3
+      - es: "A₁ = [[5,1],[1,−1]], det A₁ = −6"
+        en: "A₁ = [[5,1],[1,−1]], det A₁ = −6"
+        pt: "A₁ = [[5,1],[1,−1]], det A₁ = −6"
+        fr: "A₁ = [[5,1],[1,−1]], det A₁ = −6"
+        zh: "A₁ = [[5,1],[1,−1]]，det A₁ = −6"
+        ja: "A₁ = [[5,1],[1,−1]]、det A₁ = −6"
+      - es: "A₂ = [[2,5],[1,1]], det A₂ = −3"
+        en: "A₂ = [[2,5],[1,1]], det A₂ = −3"
+        pt: "A₂ = [[2,5],[1,1]], det A₂ = −3"
+        fr: "A₂ = [[2,5],[1,1]], det A₂ = −3"
+        zh: "A₂ = [[2,5],[1,1]]，det A₂ = −3"
+        ja: "A₂ = [[2,5],[1,1]]、det A₂ = −3"
+      - es: x = (−6)/(−3) = 2
+        en: x = (−6)/(−3) = 2
+        pt: x = (−6)/(−3) = 2
+        fr: x = (−6)/(−3) = 2
+        zh: x = (−6)/(−3) = 2
+        ja: x = (−6)/(−3) = 2
+      - es: y = (−3)/(−3) = 1
+        en: y = (−3)/(−3) = 1
+        pt: y = (−3)/(−3) = 1
+        fr: y = (−3)/(−3) = 1
+        zh: y = (−3)/(−3) = 1
+        ja: y = (−3)/(−3) = 1
+      - es: "Comprobación: 2·2 + 1 = 5"
+        en: "Check: 2·2 + 1 = 5"
+        pt: "Comprovação: 2·2 + 1 = 5"
+        fr: "Vérification : 2·2 + 1 = 5"
+        zh: "验证：2·2 + 1 = 5"
+        ja: "確認: 2·2 + 1 = 5"

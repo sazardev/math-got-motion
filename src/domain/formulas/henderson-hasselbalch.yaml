@@ -1,0 +1,344 @@
+id: henderson-hasselbalch
+title:
+  es: Henderson-Hasselbalch
+  en: Henderson-Hasselbalch
+  pt: Henderson-Hasselbalch
+  fr: Henderson-Hasselbalch
+  zh: 亨德森-哈塞尔巴尔赫方程
+  ja: ヘンダソン・ハッセルバルク
+category:
+  es: Química
+  en: Chemistry
+  pt: Química
+  fr: Chimie
+  zh: 化学
+  ja: 化学
+nodes:
+  - id: ph
+    type: variable
+    value: pH
+    explanation:
+      es: "pH: el logaritmo negativo de la concentración de iones hidrogeno, la medida de acidez."
+      en: "pH: the negative log of the hydrogen ion concentration, the measure of acidity."
+      pt: "pH: o logaritmo negativo da concentração de íons hidrogênio, a medida de acidez."
+      fr: "pH : le logarithme négatif de la concentration en ions hydrogène, mesure de l'acidité."
+      zh: "pH：氢离子浓度的负对数，也就是酸度的度量。"
+      ja: "pH：水素イオン濃度の負の対数。酸性の度合いを示す。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: pka
+    type: variable
+    value: pKa
+    explanation:
+      es: "pKa: el pH en el que el ácido y su base conjugada están en igual proporción."
+      en: "pKa: the pH at which the acid and its conjugate base are equally abundant."
+      pt: "pKa: o pH em que o ácido e sua base conjugada estão em igual proporção."
+      fr: "pKa : le pH auquel l'acide et sa base conjuguée sont en proportions égales."
+      zh: "pKa：酸与其共轭碱含量相等时的 pH。"
+      ja: "pKa：酸と共役塩基が同量になるときの pH。"
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Sumado al logaritmo, que es el único término que depende de la mezcla.
+      en: Added to the logarithm, the only term that depends on the mixture.
+      pt: Somado ao logaritmo, único termo que depende da mistura.
+      fr: Ajouté au logarithme, seul terme qui dépend du mélange.
+      zh: 加上对数项，这是唯一取决于混合物的部分。
+      ja: 対数項に足す。混合物に依存するのはこの項だけである。
+  - id: log
+    type: operator
+    value: log
+    explanation:
+      es: "Logaritmo en base 10, como el que da el pH. Un cambio de una unidad equivale a un factor 10."
+      en: "Base-10 logarithm, the same one behind pH. A change of one unit means a factor of ten."
+      pt: "Logaritmo na base 10, como o do pH. Mudar uma unidade equivale a um fator dez."
+      fr: "Logarithme décimal, comme celui du pH. Changer d'une unité revient à un facteur dix."
+      zh: "以 10 为底的对数，与 pH 所用的是同一个。变动一个单位就是变动十倍。"
+      ja: "10進の対数。pH と同じ対数で、1単位の変化は10倍の変化を意味する。"
+  - id: paren-open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el paréntesis del cociente.
+      en: Opens the parenthesis of the ratio.
+      pt: Abre o parêntese do quociente.
+      fr: Ouvre la parenthèse du rapport.
+      zh: 打开比值的括号。
+      ja: 比の括弧を開く。
+  - id: a-ion
+    type: variable
+    value: "[A⁻]"
+    explanation:
+      es: "A⁻: la base conjugada, la forma que quedó al perder un protón el ácido."
+      en: "A⁻: the conjugate base, the form left over when the acid loses a proton."
+      pt: "A⁻: a base conjugada, a forma que resta quando o ácido perde um próton."
+      fr: "A⁻ : la base conjuguée, ce qui reste quand l'acide perd un proton."
+      zh: "A⁻：共轭碱，即酸失去一个质子后留下的形式。"
+      ja: "A⁻：共役塩基。酸が陽子を一つ失ったあとに残る形である。"
+  - id: frac
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por la forma ácida.
+      en: Divided by the acidic form.
+      pt: Dividido pela forma ácida.
+      fr: Divisé par la forme acide.
+      zh: 除以酸性形式。
+      ja: 酸性の形でもって割る。
+  - id: ha
+    type: variable
+    value: "[HA]"
+    explanation:
+      es: "HA: el ácido, la forma que todavía conserva el protón."
+      en: "HA: the acid, the form that still holds on to its proton."
+      pt: "HA: o ácido, a forma que ainda conserva o próton."
+      fr: "HA : l'acide, la forme qui retient encore son proton."
+      zh: "HA：酸，即仍保有质子的形式。"
+      ja: "HA：酸。まだ陽子を保っている形。"
+  - id: paren-close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el paréntesis del cociente.
+      en: Closes the parenthesis of the ratio.
+      pt: Fecha o parêntese do quociente.
+      fr: Ferme la parenthèse du rapport.
+      zh: 关闭比值的括号。
+      ja: 比の括弧を閉じる。
+context:
+  author:
+    es: Henderson y Hasselbalch
+    en: Henderson and Hasselbalch
+    pt: Henderson e Hasselbalch
+    fr: Henderson et Hasselbalch
+    zh: 亨德森与哈塞尔巴尔赫
+    ja: ヘンダソンとハッセルバルク
+  era:
+    es: Boston y Copenhague, 1896 y 1916
+    en: Boston and Copenhagen, 1896 and 1916
+    pt: Boston e Copenhague, 1896 e 1916
+    fr: Boston et Copenhague, 1896 et 1916
+    zh: 波士顿与哥本哈根,1896年与1916年
+    ja: ボストンとコペンハーゲン、1896年と1916年
+  history:
+    es: >-
+      En 1896 Lawrence Henderson mostró que una disolución de un ácido débil y su sal apenas cambia
+      de pH cuando se diluye, siempre que las dos formas sigan estando en cantidades semejantes.
+      Quince años después Kaj Hasselbalch convirtió ese hecho en la forma logarítmica que hoy se
+      usa en cualquier laboratorio. La ecuación dice que el pH es el pKa más el logaritmo del
+      cociente entre la base conjugada y el ácido, y por eso lo único que cuenta es la razón entre
+      ellos, no la cantidad absoluta. La sangre es el ejemplo canónico: el sistema bicarbonato y
+      ácido carbónico la mantiene entre 7,35 y 7,45, y salirse de esa franja es una urgencia médica.
+      La capacidad amortiguadora es máxima cuando las dos formas están en igual proporción, es decir
+      cuando pH iguala al pKa, y el resultado explica por qué una disolución amortiguadora se
+      comporta peor justo fuera de su punto de mayor eficacia.
+    en: >-
+      In 1896 Lawrence Henderson showed that a solution of a weak acid and its salt barely changes
+      its pH when diluted, as long as both forms remain in similar amounts. Fifteen years later Kaj
+      Hasselbalch turned that fact into the logarithmic form used today in every laboratory. The
+      equation says the pH equals the pKa plus the log of the ratio of conjugate base to acid, so
+      only the ratio between them matters, not the absolute amount. Blood is the canonical example:
+      the bicarbonate and carbonic acid system holds it between 7.35 and 7.45, and leaving that
+      band is a medical emergency. Buffering power peaks when the two forms are equally abundant,
+      that is, when the pH equals the pKa, which explains why a buffer behaves worst just away from
+      the point where it works best.
+    pt: >-
+      Em 1896, Lawrence Henderson mostrou que uma solução de um ácido fraco e do seu sal quase não
+      muda de pH ao ser diluída, desde que as duas formas continuem presentes em quantidades
+      semelhantes. Quinze anos depois, Kaj Hasselbalch transformou esse fato na forma logarítmica
+      usada hoje em qualquer laboratório. A equação diz que o pH é o pKa mais o logaritmo da razão
+      entre a base conjugada e o ácido, e por isso só importa a razão entre eles, não a quantidade
+      absoluta. O sangue é o exemplo canônico: o sistema bicarbonato e ácido carbônico o mantém
+      entre 7,35 e 7,45, e sair dessa faixa é uma emergência médica. A capacidade tamponante é máxima
+      quando as duas formas estão em igual proporção, isto é, quando o pH iguala o pKa, e o
+      resultado explica por que um tampão se comporta pior justamente fora do seu ponto de maior
+      eficácia.
+    fr: >-
+      En 1896, Lawrence Henderson montra qu'une solution d'un acide faible et de son sel change à
+      peine de pH lorsqu'on la dilue, tant que les deux formes restent présentes en quantités
+      comparables. Quinze ans plus tard, Kaj Hasselbalch transforma ce fait en la forme
+      logarithmique employée aujourd'hui dans tout laboratoire. L'équation dit que le pH vaut le
+      pKa plus le logarithme du rapport de la base conjuguée à l'acide : seul compte donc le rapport
+      et non la quantité absolue. Le sang est l'exemple canonique : le système bicarbonate et
+      acide carbonique le maintient entre 7,35 et 7,45, et sortir de cette bande relève de
+      l'urgence médicale. Le pouvoir tampon est maximal quand les deux formes sont en proportions
+      égales, c'est-à-dire quand le pH égale le pKa, ce qui explique qu'un tampon se comporte
+      moins bien juste loin de son point d'efficacité maximale.
+    zh: >-
+      1896 年，劳伦斯·亨德森证明：弱酸与其盐的溶液在稀释时 pH 几乎不变，前提是两种形式仍以相近的量存在。十五年后，
+      凯·哈塞尔巴尔赫把这一事实写成如今每个实验室都在用的对数形式。方程式的含义是 pH 等于 pKa 加上共轭碱与酸之比的
+      以 10 为底的对数，因此重要的只是两者的比例而非绝对量。血液是典型例子：碳酸氢盐与碳酸体系把它维持在 7.35 到
+      7.45 之间，脱离这个区间就是医疗急症。当两种形式含量相等时缓冲能力最大，也就是 pH 等于 pKa 时；这个结果也解释了
+      为什么缓冲液恰恰在离开它最有效的点位时表现最差。
+    ja: >-
+      1896年、ローレンス・ヘンダソンは、弱い酸とその塩の溶液は、両方の形がほぼ同じ量で残っていれば希釈しても pH を
+      ほとんど変えないことを示した。15年後、カイ・ハッセルバルクはこの事実を、現代のすべての実験室で使われる対数形に
+      書き換えた。この式は pH が pKa に対塩基と酸の比の常用対数を足したものだと述べている。つまり重要なのは絶対量では
+      なく比のほうである。典型例は血液だ。重炭酸塩と炭酸の系が pH を 7.35 から 7.45 の間に保ち、この帯から外れると
+      医学上の急症になる。緩衝能力が最大になるのは両者が同量になるとき、つまり pH が pKa に等しいときであり、その
+      結果として緩衝液は最もよく働く点位から少し外れたところで性能が落ちることが説明できる。
+  timeline:
+    - year: "1896"
+      label:
+        es: >-
+          Henderson demuestra que un ácido débil con su sal mantiene su pH al diluir.
+        en: >-
+          Henderson shows that a weak acid with its salt holds its pH when diluted.
+        pt: >-
+          Henderson mostra que um ácido fraco com o seu sal mantém o pH ao ser diluído.
+        fr: >-
+          Henderson montre qu'un acide faible avec son sel garde son pH lors de la dilution.
+        zh: >-
+          亨德森证明弱酸与其盐的混合物在稀释时保持 pH 不变。
+        ja: >-
+          ヘンダソンは、弱い酸とその塩が希釈されても pH を保つことを示した。
+    - year: "1916"
+      label:
+        es: >-
+          Hasselbalch escribe la relación en forma logarítmica, y así se usa desde entonces.
+        en: >-
+          Hasselbalch writes the relation in logarithmic form, and it has been used that way ever
+          since.
+        pt: >-
+          Hasselbalch escreve a relação em forma logarítmica, e assim tem sido usada desde então.
+        fr: >-
+          Hasselbalch écrit la relation sous forme logarithmique, et c'est ainsi qu'on l'a utilisée
+          depuis.
+        zh: >-
+          哈塞尔巴尔赫把该关系写成对数形式，此后一直沿用。
+        ja: >-
+          ハッセルバルクが関係を対数形に書き、以後ずっとその形で使われてきた。
+    - year: Hoy
+      label:
+        es: >-
+          Es la herramienta de cada día en el laboratorio, en la farmacia y en el control de
+          fermentaciones.
+        en: >-
+          It is the everyday tool of the lab, the pharmacy and the control of fermentations.
+        pt: >-
+          É a ferramenta do dia a dia no laboratório, na farmácia e no controle de fermentações.
+        fr: >-
+          C'est l'outil quotidien du laboratoire, de la pharmacie et du contrôle des
+          fermentations.
+        zh: >-
+          它成了实验室、药坊以及发酵控制的日常工具。
+        ja: >-
+          実験室でも薬局でも、発酵の管理でも日々使われる基本道具である。
+  useCases:
+    - title:
+        es: Sangre y fisiología
+        en: Blood and physiology
+        pt: Sangue e fisiologia
+        fr: Sang et physiologie
+        zh: 血液与生理
+        ja: 血液と生理
+      description:
+        es: >-
+          El sistema bicarbonato y ácido carbónico mantiene el pH entre 7,35 y 7,45; pasar de 7,35
+          a 7,20 ya es una emergencia.
+        en: >-
+          The bicarbonate and carbonic acid system holds the pH between 7.35 and 7.45; going from
+          7.35 to 7.20 is already an emergency.
+        pt: >-
+          O sistema bicarbonato e ácido carbônico mantém o pH entre 7,35 e 7,45; passar de 7,35
+          para 7,20 já é uma emergência.
+        fr: >-
+          Le système bicarbonate et acide carbonique maintient le pH entre 7,35 et 7,45 ; passer de
+          7,35 à 7,20 relève déjà de l'urgence.
+        zh: >-
+          碳酸氢盐与碳酸体系把 pH 维持在 7.35 到 7.45 之间；从 7.35 掉到 7.20 就已经是急症。
+        ja: >-
+          重炭酸塩と炭酸の系が pH を 7.35 から 7.45 の間に保つ。7.35 から 7.20 へ落ちるだけで急症になる。
+    - title:
+        es: Disoluciones amortiguadoras
+        en: Buffer solutions
+        pt: Soluções tampão
+        fr: Solutions tampons
+        zh: 缓冲溶液
+        ja: 緩衝液
+      description:
+        es: >-
+          Permite preparar un tampón a un pH elegido: basta fijar el cociente entre sal y ácido.
+        en: >-
+          It lets you prepare a buffer at a chosen pH: you only have to fix the ratio of salt to
+          acid.
+        pt: >-
+          Permite preparar um tampão em um pH escolhido: basta fixar a razão entre sal e ácido.
+        fr: >-
+          Il permet de préparer un tampon à un pH choisi : il suffit de fixer le rapport du sel à
+          l'acide.
+        zh: >-
+          借助它可以把缓冲液配到指定的 pH：只需确定盐与酸的比值。
+        ja: >-
+          選んだ pH の緩衝液は作れる。塩と酸の比を決めればよいだけである。
+    - title:
+        es: Farmacia y formulaciones
+        en: Pharmacy and formulations
+        pt: Farmácia e formulações
+        fr: Pharmacie et formulations
+        zh: 药学与制剂
+        ja: 薬局と製剤
+      description:
+        es: >-
+          Elegir el pH de un medicamento decide su estabilidad, su absorción y lo bien que se
+          disuelve.
+        en: >-
+          Choosing a drug's pH decides its stability, its absorption and how well it dissolves.
+        pt: >-
+          Escolher o pH de um medicamento decide sua estabilidade, sua absorção e o quanto ele se
+          dissolve bem.
+        fr: >-
+          Choisir le pH d'un médicament décide de sa stabilité, de son absorption et de sa
+          dissolution.
+        zh: >-
+          药物的 pH 决定其稳定性、吸收以及溶解表现。
+        ja: >-
+          薬の pH を選ぶと、安定性も吸収されやすさも溶けやすさも決まる。
+  example:
+    title:
+      es: Un tampón de ácido acético
+      en: An acetic acid buffer
+      pt: Um tampão de ácido acético
+      fr: Un tampon d'acide acétique
+      zh: 一个醋酸缓冲液
+      ja: 酢酸の緩衝液
+    lines:
+      - es: "Ácido acético: pKa = 4,76"
+        en: "Acetic acid: pKa = 4.76"
+        pt: "Ácido acético: pKa = 4,76"
+        fr: "Acide acétique : pKa = 4,76"
+        zh: "醋酸：pKa = 4,76"
+        ja: "酢酸：pKa = 4,76"
+      - es: "pH pedido = 5,00 → log([A⁻]/[HA]) = 5,00 − 4,76 = 0,24"
+        en: "Target pH = 5.00 → log([A⁻]/[HA]) = 5.00 − 4.76 = 0.24"
+        pt: "pH desejado = 5,00 → log([A⁻]/[HA]) = 5,00 − 4,76 = 0,24"
+        fr: "pH voulu = 5,00 → log([A⁻]/[HA]) = 5,00 − 4,76 = 0,24"
+        zh: "目标 pH = 5,00 → log([A⁻]/[HA]) = 5,00 − 4,76 = 0,24"
+        ja: "目標 pH = 5,00 → log([A⁻]/[HA]) = 5,00 − 4,76 = 0,24"
+      - es: "[A⁻]/[HA] = 10^0,24 ≈ 1,74"
+        en: "[A⁻]/[HA] = 10^0.24 ≈ 1.74"
+        pt: "[A⁻]/[HA] = 10^0,24 ≈ 1,74"
+        fr: "[A⁻]/[HA] = 10^0,24 ≈ 1,74"
+        zh: "[A⁻]/[HA] = 10^0,24 ≈ 1,74"
+        ja: "[A⁻]/[HA] = 10^0,24 ≈ 1,74"
+      - es: "1,74 mol de CH3COONa + 1,00 mol de CH3COOH en 1 L"
+        en: "1.74 mol of CH3COONa + 1.00 mol of CH3COOH in 1 L"
+        pt: "1,74 mol de CH3COONa + 1,00 mol de CH3COOH em 1 L"
+        fr: "1,74 mol de CH3COONa + 1,00 mol de CH3COOH dans 1 L"
+        zh: "1,74 mol 醋酸钠 + 1,00 mol 醋酸，溶于 1 L"
+        ja: "1,74 mol の CH3COONa と 1,00 mol の CH3COOH を 1 L に入れる"
+      - es: "Comprobación: 4,76 + log(1,74) = 5,00"
+        en: "Check: 4.76 + log(1.74) = 5.00"
+        pt: "Conferência: 4,76 + log(1,74) = 5,00"
+        fr: "Vérification : 4,76 + log(1,74) = 5,00"
+        zh: "验算：4,76 + log(1,74) = 5,00"
+        ja: "検算：4,76 + log(1,74) = 5,00"

@@ -1,0 +1,344 @@
+id: prandtl-number
+title:
+  es: Número de Prandtl
+  en: Prandtl Number
+  pt: Número de Prandtl
+  fr: Nombre de Prandtl
+  zh: 普朗特数
+  ja: プランドル数
+category:
+  es: Ingeniería
+  en: Engineering
+  pt: Engenharia
+  fr: Ingénierie
+  zh: 工程学
+  ja: 工学
+nodes:
+  - id: pr
+    type: constant
+    value: Pr
+    explanation:
+      es: "Un número adimensional que compara cómo se difunden el momento y el calor dentro de un fluido."
+      en: "A dimensionless number comparing how momentum and heat spread inside a fluid."
+      pt: "Um número adimensional que compara como o momento e o calor se difundem num fluido."
+      fr: "Un nombre sans dimension comparant la diffusion du mouvement et celle de la chaleur dans un fluide."
+      zh: 一个无量纲数,比较流体内部动量与热量的扩散快慢。
+      ja: 流体の中で運動量と熱がどれだけ速く広がるかを比べる無次元数。
+  - id: equals-1
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: nu
+    type: variable
+    value: ν
+    explanation:
+      es: "La viscosidad cinemática: la rapidez con la que el momento se extiende por el fluido."
+      en: "The kinematic viscosity: how fast momentum spreads through the fluid."
+      pt: "A viscosidade cinemática: a rapidez com que o momento se espalha pelo fluido."
+      fr: "La viscosité cinématique : la rapidité avec laquelle la quantité de mouvement se diffuse."
+      zh: 运动黏度:动量在流体中扩散的快慢。
+      ja: 運動黏度。運動量が流体へ広がる速さを表す。
+  - id: slash-1
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre la difusividad térmica.
+      en: Divided by the thermal diffusivity.
+      pt: Dividido pela difusividade térmica.
+      fr: Divisé par la diffusivité thermique.
+      zh: 除以热扩散率。
+      ja: 熱拡散率で割る。
+  - id: alpha
+    type: variable
+    value: α
+    explanation:
+      es: "La difusividad térmica: la rapidez con la que una diferencia de temperatura se aplana."
+      en: "The thermal diffusivity: how fast a temperature difference flattens out."
+      pt: "A difusividade térmica: a rapidez com que uma diferença de temperatura se nivela."
+      fr: "La diffusivité thermique : la rapidité avec laquelle un écart de température s'aplatit."
+      zh: 热扩散率:温差被抹平的快慢。
+      ja: 熱拡散率。温度差が消えていく速さである。
+  - id: equals-2
+    type: equals
+    value: "="
+    explanation:
+      es: "La misma expresión escrita con magnitudes, donde c es el calor específico a presión constante."
+      en: "The same expression in dimensional form, where c is the specific heat at constant pressure."
+      pt: "A mesma expressão com magnitudes, onde c é o calor específico a pressão constante."
+      fr: "La même expression en grandeurs dimensionnées, où c est la chaleur massique à pression constante."
+      zh: 同一表达式的量纲形式,其中 c 是定压比热。
+      ja: 同じ関係を次元量で書いたもの。c は定圧比熱である。
+  - id: mu
+    type: variable
+    value: μ
+    explanation:
+      es: "La viscosidad dinámica, la versión con unidades del numerador."
+      en: "The dynamic viscosity, the dimensional version of the numerator."
+      pt: "A viscosidade dinâmica, a versão com unidades do numerador."
+      fr: "La viscosité dynamique, la version avec unités du numérateur."
+      zh: 动力黏度,分子式的量纲形式。
+      ja: 動黏度。分子を次元量で表したものである。
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: c
+    type: variable
+    value: c
+    explanation:
+      es: "El calor específico a presión constante: cuánta energía hace falta para subir un grado."
+      en: "The specific heat at constant pressure: how much energy it takes to raise one degree."
+      pt: "O calor específico a pressão constante: quanta energia é preciso para subir um grau."
+      fr: "La chaleur massique à pression constante : l'énergie nécessaire pour élever un degré."
+      zh: 定压比热:升高一度所需的能量。
+      ja: 定圧比熱。1度上げるのに必要なエネルギーである。
+  - id: slash-2
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre la conductividad térmica.
+      en: Divided by the thermal conductivity.
+      pt: Dividido pela condutividade térmica.
+      fr: Divisé par la conductivité thermique.
+      zh: 除以导热系数。
+      ja: 熱伝導率で割る。
+  - id: k
+    type: variable
+    value: k
+    explanation:
+      es: "La conductividad térmica, que junto con c y μ reconstruye el mismo cociente."
+      en: "The thermal conductivity, which together with c and μ rebuilds the same quotient."
+      pt: "A condutividade térmica, que com c e μ reconstrói o mesmo quociente."
+      fr: "La conductivité thermique, qui avec c et μ reconstruit le même quotient."
+      zh: 导热系数,与 c、μ 一起给出同一个商。
+      ja: 熱伝導率。c と μ と合わせて同じ比を作り直す。
+context:
+  author:
+    es: Ludwig Prandtl
+    en: Ludwig Prandtl
+    pt: Ludwig Prandtl
+    fr: Ludwig Prandtl
+    zh: 路德维希·普朗特
+    ja: ルードヴィヒ・プランドル
+  era:
+    es: "Alemania, 1875–1953 · grupo propuesto en 1915"
+    en: "Germany, 1875–1953 · group proposed in 1915"
+    pt: "Alemanha, 1875–1953 · grupo proposto em 1915"
+    fr: "Allemagne, 1875–1953 · groupe proposé en 1915"
+    zh: "德国,1875–1953年 · 无量纲数组提出于1915年"
+    ja: "ドイツ、1875–1953年 · 無次元群は1915年に提示"
+  history:
+    es: >-
+      Prandtl había resuelto el comportamiento del fluido junto a una pared, pero al describir el calor
+      aparecía un parámetro distinto del que rige la fricción. Nusselt propuso ambos en su trabajo de 1915 y
+      el que acompaña al calor recibió el nombre de Prandtl. El número es engañoso a propósito: mide
+      la rapidez con la que se difunden el momento y el calor, y para el aire esos dos procesos van casi a la
+      par. En el agua el calor viaja mucho más despacio que el momento, y en los aceites muchísimo más, lo que
+      hace que en un aceite la capa térmica que se mezcla sea mucho más fina.
+    en: >-
+      Prandtl had solved how a fluid behaves next to a wall, but describing the heat brought in a parameter
+      different from the one that governs friction. Nusselt proposed both in his 1915 paper, and the one
+      that accompanies the heat was named after Prandtl. The number is deliberately sneaky: it measures how
+      fast momentum and heat diffuse, and in air those two processes travel almost side by side. In water
+      heat spreads much more slowly than momentum, and in oils far more slowly still, which is why the
+      thermal layer that mixes in an oil is so much thinner.
+    pt: >-
+      Prandtl havia resolvido como um fluido se comporta junto a uma parede, mas ao descrever o calor aparecia
+      um parâmetro diferente do que rege o atrito. Nusselt propôs os dois em seu artigo de 1915, e o que
+      acompanha o calor recebeu o nome de Prandtl. O número é traiçoeiro de propósito: mede a rapidez com que
+      momento e calor se difundem, e no ar esses dois processos andam quase juntos. Na água o calor se difunde
+      bem mais devagar que o momento, e nos óleos muito mais ainda, o que faz com que a camada térmica que se
+      mistura num óleo seja bem mais fina.
+    fr: >-
+      Prandtl avait résolu le comportement d'un fluide le long d'une paroi, mais décrire la chaleur faisait
+      apparaître un paramètre différent de celui qui régit le frottement. Nusselt proposa les deux dans son
+      article de 1915, et celui qui accompagne la chaleur reçut le nom de Prandtl. Le nombre est
+      faussement trompeur : il mesure la rapidité de diffusion du mouvement et de la chaleur, et dans l'air
+      ces deux processus avancent presque de front. Dans l'eau la chaleur diffuse bien plus lentement que le
+      mouvement, et dans les huiles bien plus lentement encore, ce qui rend la couche thermique mélangée dans
+      une huile beaucoup plus mince.
+    zh: >-
+      普朗特已经解决了流体贴近壁面的行为,但描述传热时会出现一个与摩擦不同的参数。努塞尔在1915年的论文中
+      同时提出了这两个量,而伴随热量的那一个便以普朗特命名。这个数故意显得难以捉摸:它衡量动量与热量扩散
+      的快慢。在空气中,这两个过程几乎并驾齐驱;在水中,热量扩散远慢于动量;在油中则慢得多,因此油中被
+      混合的热边界层要薄得多。
+    ja: >-
+      Prandtlは流体が高壁に接する部分の挙動を解き終えていたが、熱を説明すると摩擦を支配する量とは別の
+      パラメータが現れた。1915年、Nusseltは両方を提示し、熱とともに現れる量には Prandtl の名を付けた。
+      この数はわざと読みにくい。運動量と熱がいかに速く広がるかを測るもので、空気ではこの2つの過程が
+      ほぼ同じ速さで進む。水では熱のほうがはるかに遅く、油ではもっと遅いため、油の中で混ぜられる熱境界層は
+      とても薄くなる。
+  timeline:
+    - year: "1915"
+      label:
+        es: >-
+          Nusselt presenta los grupos adimensionales, y el que acompaña al calor lleva el nombre de Prandtl.
+        en: >-
+          Nusselt presents the dimensionless groups, and the one that accompanies the heat is named after
+          Prandtl.
+        pt: >-
+          Nusselt apresenta os grupos adimensionais, e o que acompanha o calor leva o nome de Prandtl.
+        fr: >-
+          Nusselt présente les groupes adimensionnels, et celui qui accompagne la chaleur porte le nom de
+          Prandtl.
+        zh: >-
+          努塞尔提出这些无量纲数组,其中伴随热量的那一个便以普朗特命名。
+        ja: >-
+          Nusseltが無次元群を示し、熱とともに現れるものは Prandtl の名を冠して呼ばれるようになった。
+    - year: s. XX
+      label:
+        es: >-
+          El grupo se convierte en la clave de las correlaciones de convección, que se escriben en función de
+          Re y Pr.
+        en: >-
+          The group becomes the key of convection correlations, which are written as functions of Re and Pr.
+        pt: >-
+          O grupo vira a chave das correlações de convecção, que se escrevem em função de Re e Pr.
+        fr: >-
+          Le groupe devient la clé des corrélations de convection, écrites en fonction de Re et Pr.
+        zh: >-
+          该数组成为对流关联式的关键,关联式被写成 Re 与 Pr 的函数。
+        ja: >-
+          この群は対流の相関式における鍵となり、相関式は Re と Pr の関数として書かれるようになった。
+    - year: Hoy
+      label:
+        es: >-
+          Se consulta para decidir si conviene forzar la convección o generar turbulencia al bombear calor.
+        en: >-
+          It is consulted to decide whether to force convection or turbulence before pumping heat around.
+        pt: >-
+          Consulta-se para decidir se vale a forçar convecção ou turbulência antes de bombear calor.
+        fr: >-
+          On le consulte pour décider s'il vaut mieux forcer la convection ou la turbulence avant de
+          transporter de la chaleur.
+        zh: 在设计泵送热量的方案时,用它来判断该强化对流还是制造湍流。
+        ja: 熱を運ぶ方式を決めるとき、対流を強めるべきか、乱流を作るべきかを見積もる。
+  useCases:
+    - title:
+        es: Valores típicos
+        en: Typical values
+        pt: Valores típicos
+        fr: Valeurs typiques
+        zh: 典型数值
+        ja: 代表的な値
+      description:
+        es: >-
+          El aire anda por 0,71, el agua por 7 y los aceites de motor superan largamente los 100. Cada
+          fluido tiene el suyo, y cambia poco con la presión.
+        en: >-
+          Air sits near 0.71, water near 7, and engine oils go well above 100. Each fluid has its own value,
+          and it barely moves with pressure.
+        pt: >-
+          O ar fica perto de 0,71, a água perto de 7 e os óleos de motor passam bem de 100. Cada fluido tem
+          o seu valor, e ele varia pouco com a pressão.
+        fr: >-
+          L'air tourne autour de 0,71, l'eau autour de 7, et les huiles moteur dépassent largement 100. Chaque
+          fluide a la sienne, et elle varie peu avec la pression.
+        zh: >-
+          空气约为 0.71,水约为 7,机油则远高于 100。每种流体都有自己的数值,且随压力变化很小。
+        ja: >-
+          空気はおよそ 0.71、水はおよそ 7、エンジンオイルは 100 をはるかに超える。流体ごとに値が決まっており、
+          圧力による変化はごく小さい。
+    - title:
+        es: Espesor de las capas límite
+        en: Boundary layer thickness
+        pt: Espessura das camadas limite
+        fr: Épaisseur des couches limites
+        zh: 边界层厚度
+        ja: 境界層の厚さ
+      description:
+        es: >-
+          Si Pr < 0,7 el calor alcanza más lejos que el momento y la capa térmica es más gruesa. Si Pr es
+          alto, la térmica se pega a la pared y es finísima.
+        en: >-
+          If Pr < 0.7 the heat travels further than the momentum and the thermal layer is thicker. With a
+          high Pr the thermal layer hugs the wall and is very thin.
+        pt: >-
+          Se Pr < 0,7 o calor chega mais longe que o momento e a camada térmica é mais grossa. Com Pr alto,
+          a térmica gruda na parede e é finíssima.
+        fr: >-
+          Si Pr < 0,7 la chaleur porte plus loin que la quantité de mouvement et la couche thermique est plus
+          épaisse. À fort Pr la couche thermique colle à la paroi et devient très mince.
+        zh: >-
+          若 Pr < 0.7,热量比动量传播得更远,热边界层更厚;若 Pr 很大,热边界层紧贴壁面,极其薄。
+        ja: >-
+          Pr が 0.7 を下回ると熱は運動量より遠くまで届き、熱境界層は厚くなる。Pr が大きいと熱境界層は
+          壁に密着してきわめて薄くなる。
+    - title:
+        es: La analogía momento-calor
+        en: The momentum-heat analogy
+        pt: A analogia momento-calor
+        fr: L'analogie mouvement-chaleur
+        zh: 动量与热的类比
+        ja: 運動量と熱の類比
+      description:
+        es: >-
+          Cuando Pr vale 1 los dos campos se comportan igual, y una sola ecuación resuelve ambos problemas. Es
+          la razón de que la ecuación de energía en capa límite tenga la misma forma que la de momento.
+        en: >-
+          When Pr equals 1 the two fields behave alike and one equation settles both problems. That is why the
+          boundary layer energy equation has the same shape as the momentum one.
+        pt: >-
+          Quando Pr vale 1 os dois campos se comportam igual e uma única equação resolve os dois problemas. É
+          por isso que a equação de energia na camada limite tem a mesma forma da equação de momento.
+        fr: >-
+          Quand Pr vaut 1, les deux champs se comportent pareil et une seule équation règle les deux problèmes.
+          C'est pourquoi l'équation d'énergie de la couche limite a la même forme que celle de quantité de
+          mouvement.
+        zh: >-
+          当 Pr = 1 时两个场表现相同,一个方程即可同时解决两个问题。这正是边界层能量方程与动量方程形式
+          一致的原因。
+        ja: >-
+          Pr が 1 なら2つの場は同じように振る舞い、ひとつの式が両方の問題を解く。これが境界層のエネルギー
+          方程式が運動量のそれと同じ形になる理由である。
+  example:
+    title:
+      es: El aire y el agua a 20 °C
+      en: Air and water at 20 °C
+      pt: Ar e água a 20 °C
+      fr: L'air et l'eau à 20 °C
+      zh: 20 °C 的空气与水
+      ja: 20 °C の空気と水
+    lines:
+      - es: "Aire: ν = 1,52·10⁻⁵ y α = 2,12·10⁻⁵ m²/s"
+        en: "Air: ν = 1.52·10⁻⁵ and α = 2.12·10⁻⁵ m²/s"
+        pt: "Ar: ν = 1,52·10⁻⁵ e α = 2,12·10⁻⁵ m²/s"
+        fr: "Air : ν = 1,52·10⁻⁵ et α = 2,12·10⁻⁵ m²/s"
+        zh: 空气:ν = 1.52·10⁻⁵,α = 2.12·10⁻⁵ m²/s
+        ja: 空気:ν = 1.52·10⁻⁵、α = 2.12·10⁻⁵ m²/s
+      - es: Pr = 1,52/2,12 ≈ 0,72 → casi 1
+        en: Pr = 1.52/2.12 ≈ 0.72 → almost 1
+        pt: Pr = 1,52/2,12 ≈ 0,72 → quase 1
+        fr: Pr = 1,52/2,12 ≈ 0,72 → presque 1
+        zh: Pr = 1.52/2.12 ≈ 0.72 → 接近 1
+        ja: Pr = 1.52/2.12 ≈ 0.72 → ほぼ 1
+      - es: "Agua: ν = 1,00·10⁻⁶ y α = 1,43·10⁻⁷ m²/s"
+        en: "Water: ν = 1.00·10⁻⁶ and α = 1.43·10⁻⁷ m²/s"
+        pt: "Água: ν = 1,00·10⁻⁶ e α = 1,43·10⁻⁷ m²/s"
+        fr: "Eau : ν = 1,00·10⁻⁶ et α = 1,43·10⁻⁷ m²/s"
+        zh: 水:ν = 1.00·10⁻⁶,α = 1.43·10⁻⁷ m²/s
+        ja: 水:ν = 1.00·10⁻⁶、α = 1.43·10⁻⁷ m²/s
+      - es: Pr = 1,00/0,143 ≈ 7,0 → el calor va 7 veces más lento
+        en: Pr = 1.00/0.143 ≈ 7.0 → heat travels 7 times slower
+        pt: Pr = 1,00/0,143 ≈ 7,0 → o calor vai 7 vezes mais devagar
+        fr: Pr = 1,00/0,143 ≈ 7,0 → la chaleur va 7 fois plus lentement
+        zh: Pr = 1.00/0.143 ≈ 7.0 → 热量传递慢 7 倍
+        ja: Pr = 1.00/0.143 ≈ 7.0 → 熱は 7 倍遅く伝わる
+      - es: "Con la misma forma: μ·c/k = 0,001·4182/0,598 ≈ 7,0"
+        en: "Same result the other way: μ·c/k = 0.001·4182/0.598 ≈ 7.0"
+        pt: "O mesmo resultado pelo outro caminho: μ·c/k = 0,001·4182/0,598 ≈ 7,0"
+        fr: "Le même résultat par l'autre voie : μ·c/k = 0,001·4182/0,598 ≈ 7,0"
+        zh: 换一种写法结果相同:μ·c/k = 0.001·4182/0.598 ≈ 7.0
+        ja: 別の書き方でも同じ:μ·c/k = 0.001·4182/0.598 ≈ 7.0

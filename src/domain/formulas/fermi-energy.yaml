@@ -1,0 +1,392 @@
+id: fermi-energy
+title:
+  es: Energía de Fermi
+  en: Fermi Energy
+  pt: Energia de Fermi
+  fr: Énergie de Fermi
+  zh: 费米能
+  ja: フェルミエネルギー
+category:
+  es: Física moderna
+  en: Modern physics
+  pt: Física moderna
+  fr: Physique moderne
+  zh: 现代物理学
+  ja: 現代物理学
+nodes:
+  - id: e
+    type: variable
+    value: E
+    explanation:
+      es: "La energía del electrón más rápido cuando el metal está a cero absoluto."
+      en: "The energy of the fastest electron when the metal is at absolute zero."
+      pt: "A energia do elétron mais rápido quando o metal está a zero absoluto."
+      fr: "L'énergie de l'électron le plus rapide quand le métal est au zéro absolu."
+      zh: 金属处于绝对零度时,能量最高的电子所具有的能量。
+      ja: 金属を絶対零度にしたときの、もっとも運動エネルギーの高い電子のエネルギーである。
+  - id: subscript-f
+    type: variable
+    value: "F"
+    explanation:
+      es: "La F del nombre, que recuerda que el resultado es de Fermi y se publicó en 1928."
+      en: "The F in the name, recalling that the result is Fermi's and was published in 1928."
+      pt: "O F do nome, lembrando que o resultado é de Fermi e foi publicado em 1928."
+      fr: "Le F du nom, qui rappelle que le résultat est celui de Fermi et fut publié en 1928."
+      zh: 名称中的 F,提醒这一结果出自费米,发表于1928年。
+      ja: 名前の F。結果が Fermi のもので、1928年に発表されたことを示す。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: hbar
+    type: variable
+    value: ħ²
+    explanation:
+      es: "La constante de Planck reducida al cuadrado, la escala de energía de un electrón."
+      en: "The reduced Planck constant squared, the energy scale of one electron."
+      pt: "A constante de Planck reduzida ao quadrado, a escala de energia de um elétron."
+      fr: "La constante de Planck réduite au carré, l'échelle d'énergie d'un électron."
+      zh: 约化普朗克常数的平方,单个电子的能量尺度。
+      ja: 縮約プランク定数の2乗。1個の電子のエネルギー単位である。
+  - id: slash-1
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre el denominador siguiente.
+      en: Divided by the denominator that follows.
+      pt: Dividido pelo denominador seguinte.
+      fr: Divisé par le dénominateur qui suit.
+      zh: 除以后面的分母。
+      ja: 後の分母で割る。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "El factor 2 de la energía cinética de un electrón libre, mv²/2."
+      en: "The factor 2 from the kinetic energy of a free electron, mv²/2."
+      pt: "O fator 2 da energia cinética de um elétron livre, mv²/2."
+      fr: "Le facteur 2 de l'énergie cinétique d'un électron libre, mv²/2."
+      zh: 自由电子动能公式中的系数 2,即 mv²/2。
+      ja: 自由電子の運動エネルギー mv²/2 に現れる係数2。
+  - id: m
+    type: variable
+    value: m
+    explanation:
+      es: "La masa del electrón; con ella y con n queda fijado el valor en eV."
+      en: "The mass of the electron; together with n it fixes the value in eV."
+      pt: "A massa do elétron; com ela e com n fica fixado o valor em eV."
+      fr: "La masse de l'électron ; avec n elle fixe la valeur en eV."
+      zh: 电子的质量;它与 n 一起决定费米能的 eV 数值。
+      ja: 電子の質量。これと n がeVでの値を決める。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: open-paren
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el paréntesis con el factor crowding de los estados.
+      en: Opens the parenthesis holding the state-crowding factor.
+      pt: Abre o parêntese com o fator de adensamento dos estados.
+      fr: Ouvre la parenthèse contenant le facteur de remplissage des états.
+      zh: 括号开始,内含态密度因子。
+      ja: 括弧を開く。ここには状態の密さを表す係数が入る。
+  - id: three
+    type: number
+    value: "3"
+    explanation:
+      es: "El factor 3, que cuenta las tres dimensiones del espacio en las que caben los estados."
+      en: "The factor 3, counting the three spatial directions the states live in."
+      pt: "O fator 3, que conta as três dimensões do espaço onde os estados cabem."
+      fr: "Le facteur 3, qui compte les trois dimensions de l'espace où vivent les états."
+      zh: 系数 3,对应态所处的三个空间维度。
+      ja: 係数3。状態が占める空間の3次元を数えたもの。
+  - id: pi
+    type: variable
+    value: π²
+    explanation:
+      es: "El factor geométrico π² que aparece al contar cuántos caben en una esfera de radio k."
+      en: "The geometric factor π² that shows up when counting how many fit in a sphere of radius k."
+      pt: "O fator geométrico π² que surge ao contar quantos cabem numa esfera de raio k."
+      fr: "Le facteur géométrique π² qui apparaît en comptant ceux qui tiennent dans une sphère de rayon k."
+      zh: 几何因子 π²,来自计算半径 k 的球内能容纳多少个态。
+      ja: 幾何的係数π²。半径 k の球にいくつの状態が入るかを数えると現れる。
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: "La densidad numérica de electrones libres, en metros elevados a menos tres."
+      en: "The number density of free electrons, in reciprocal cubic metres."
+      pt: "A densidade numérica de elétrons livres, em metros elevados a menos três."
+      fr: "La densité numérique d'électrons libres, en mètres inversement cubiques."
+      zh: 自由电子的数密度,单位为每立方米。
+      ja: 自由電子の数密度。立方メートルあたりの個数である。
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el paréntesis.
+      en: Closes the parenthesis.
+      pt: Fecha o parêntese.
+      fr: Ferme la parenthèse.
+      zh: 括号结束。
+      ja: 括弧を閉じる。
+  - id: exponent
+    type: superscript
+    value: 2/3
+    explanation:
+      es: "El exponente 2/3, que es lo que hace que E_F aumente despacio al subir la densidad."
+      en: "The 2/3 exponent, which is why E_F grows only slowly as the density rises."
+      pt: "O expoente 2/3, que faz E_F crescer devagar quando a densidade aumenta."
+      fr: "L'exposant 2/3, qui fait que E_F croît lentement quand la densité monte."
+      zh: 指数 2/3,使得密度上升时费米能只缓慢增加。
+      ja: 指数2/3。密度が増えてもE_Fがゆっくりしか増えないのはこのため。
+context:
+  author:
+    es: Wolfgang Pauli
+    en: Wolfgang Pauli
+    pt: Wolfgang Pauli
+    fr: Wolfgang Pauli
+    zh: 沃尔夫冈·泡利
+    ja: ウォルフガング・パウリ
+  era:
+    es: "Austria y Suiza, 1900–1958 · resultado publicado en 1928"
+    en: "Austria and Switzerland, 1900–1958 · result published in 1928"
+    pt: "Áustria e Suíça, 1900–1958 · resultado publicado em 1928"
+    fr: "Autriche et Suisse, 1900–1958 · résultat publié en 1928"
+    zh: "奥地利与瑞士,1900–1958年 · 结果发表于1928年"
+    ja: "オーストリアとスイス、1900–1958年 · 結果は1928年に発表"
+  history:
+    es: >-
+      La mecánica cuántica reemplazó la idea de electrones moviéndose en órbitas fijas por una pregunta
+      más simple: ¿cuántos electrones caben por debajo de cierta energía? Al contar los estados
+      disponibles con la mecánica de Fermi y Dirac, en 1925 llegó la exclusión, propuesta por Pauli y
+      Uhlenbeck y, en paralelo, por Dirac. Fermi la convirtió en número en 1928, llenando esos estados
+      desde el más bajo y observando que a temperatura cero todos los electrones tienen energía, por muy
+      ordenado que esté el átomo. Esa energía máxima, la energía de Fermi, es hoy la escala con la que se
+      mide un metal, y explica por qué los metales conducen cuando se aplica un campo.
+    en: >-
+      Quantum mechanics replaced the picture of electrons moving in fixed orbits with a simpler question: how
+      many electrons fit below a given energy? Counting the available states with the mechanics of Fermi and
+      Dirac produced, in 1925, the exclusion principle. Fermi turned it into a number in 1928, by filling those
+      states from the bottom up and observing that at zero temperature every electron already carries energy,
+      however well ordered the atom is. That top energy, the Fermi energy, is today the scale against which a
+      metal is measured, and it is why metals conduct once a field is applied.
+    pt: >-
+      A mecânica quântica substituiu a ideia de elétrons girando em órbitas fixas por uma pergunta mais
+      simples: quantos elétrons cabem abaixo de certa energia? Contar os estados disponíveis com a mecânica de
+      Fermi e Dirac levou, em 1925, ao princípio de exclusão. Fermi transformou-o num número em 1928,
+      preenchendo esses estados de baixo para cima e observando que a zero temperatura todos os elétrons já
+      têm energia, por mais bem ordenado que esteja o átomo. Essa energia máxima, a energia de Fermi, é
+      hoje a escala com que se mede um metal, e explica por que os metais conduzem quando se aplica campo.
+    fr: >-
+      La mécanique quantique remplaça l'idée d'électrons tournant sur des orbites fixes par une question plus
+      simple : combien d'électrons tiennent sous une énergie donnée ? Compter les états disponibles avec la
+      mécanique de Fermi et Dirac mène, en 1925, au principe d'exclusion. Fermi en fit un nombre en 1928, en
+      remplissant ces états du bas vers le haut et en constatant qu'à température nulle tous les électrons
+      ont déjà de l'énergie, si bien ordonné que soit l'atome. Cette énergie du niveau le plus haut, l'énergie
+      de Fermi, est aujourd'hui l'échelle qui sert à mesurer un métal, et la raison pour laquelle les métaux
+      conduisent dès qu'un champ est appliqué.
+    zh: >-
+      量子力学以一个更简单的问题取代了电子在固定轨道上运行的图景:在某一能量以下能容纳多少个电子?用费米与
+      狄拉克的力学去数可用的态,便在1925年得到了不相容原理。1928年,费米从最低能量开始填满这些态,发现
+      在绝对零度下每个电子都已经具有动能,与原子排布得多有序无关。这个最高能量就是费米能,如今是衡量金属的
+      尺度,也解释了金属一旦加上外场为何就能导电。
+    ja: >-
+      量子力学は、電子が決まった軌道上を回るという図像を別のものへ置き換えた。問われたのは単純で要る問いだった。
+      一定のエネルギーより下に何個の電子が収まるのか。Fermi と Dirac の力学で空いている状態を数えると、
+      1925年に排他原理が得られた。Fermi は1928年、状態を低いものから順に満たしていき、絶対零度でもどの電子も
+      すでにエネルギーを持っていること、原子の並びがどれほど整っていても同じであることを見つけた。この
+      最も高いエネルギーがフェルミエネルギーであり、今日では金属を測る物差しである。また電場をかけると金属が
+      電流を流す理由でもある。
+  timeline:
+    - year: "1925"
+      label:
+        es: >-
+          Pauli formula que dos electrones no pueden compartir los mismos cuatro números cuánticos dentro de un
+          átomo.
+        en: >-
+          Pauli states that two electrons cannot share the same four quantum numbers inside an atom.
+        pt: >-
+          Pauli enuncia que dois elétrons não podem ter os mesmos quatro números quânticos dentro de um átomo.
+        fr: >-
+          Pauli énonce que deux électrons ne peuvent partager les mêmes quatre nombres quantiques dans un
+          atome.
+        zh: >-
+          泡利提出:同一原子内两个电子不能具有完全相同的四个量子数。
+        ja: >-
+          Pauliは、同一原子の二つの電子が同じ四つの量子数を共有できないと述べた。
+    - year: "1928"
+      label:
+        es: Fermi llena los estados permitidos y define la energía de Fermi como la del más alto ocupado.
+        en: Fermi fills the allowed states and defines the Fermi energy as that of the highest one occupied.
+        pt: Fermi preenche os estados permitidos e define a energia de Fermi como a do mais alto ocupado.
+        fr: Fermi remplit les états autorisés et définit l'énergie de Fermi comme celle du plus haut occupé.
+        zh: 费米填满允许的态,并把最高已占据态的能量定义为费米能。
+        ja: Fermiは許される状態を一杯に満たし、最も高い占有状態のエネルギーをフェルミエネルギーと定義した。
+    - year: s. XX
+      label:
+        es: >-
+          La teoría de Sommerfeld aplica la fórmula a los metales reales y la conecta con el calor específico y
+          la conductividad.
+        en: >-
+          Sommerfeld's theory applies the formula to real metals and links it to the heat capacity and the
+          conductivity.
+        pt: >-
+          A teoria de Sommerfeld aplica a fórmula aos metais reais e a liga ao calor específico e à
+          condutividade.
+        fr: >-
+          La théorie de Sommerfeld applique la formule aux métaux réels et la relie à la chaleur massique et à
+          la conductivité.
+        zh: >-
+          索末菲理论把该式用于真实金属,并将其与比热和电导率联系起来。
+        ja: >-
+          Sommerfeldの理論はこの式を実際の金属に適用し、比熱や電導率と結びつけた。
+    - year: Hoy
+      label:
+        es: >-
+          La energía de Fermi separa los electrones que responden a un campo de los que están deepLocked en su
+          mar de Fermi.
+        en: >-
+          The Fermi energy separates the electrons that answer a field from those deep in the Fermi sea.
+        pt: >-
+          A energia de Fermi separa os elétrons que respondem a um campo daqueles que estão no fundo do mar de
+          Fermi.
+        fr: >-
+          L'énergie de Fermi sépare les électrons qui répondent à un champ de ceux qui sont au fond de la mer
+          de Fermi.
+        zh: >-
+          费米能,把能响应外场的电子与深埋在费米海中的电子区分开来。
+        ja: >-
+          フェルミエネルギーは、電場に反応する電子とフェルミ海の底に沈んでいる電子を分ける境界である。
+  useCases:
+    - title:
+        es: Por qué conducen los metales
+        en: Why metals conduct
+        pt: Por que metais conduzem
+        fr: Pourquoi les métaux conduisent
+        zh: 金属为何导电
+        ja: 金属が電気を通す理由
+      description:
+        es: >-
+          A cero absoluto los electrones de un metal ya están en movimiento. Un campo eléctrico sólo tiene que
+          empujar a los que están cerca de la superficie de Fermi, y con eso basta para tener corriente.
+        en: >-
+          At absolute zero the electrons in a metal are already moving. An electric field only has to push the
+          ones near the Fermi surface, and that is enough to produce a current.
+        pt: >-
+          A zero absoluto os elétrons de um metal já estão em movimento. Um campo elétrico só precisa empurrar
+          os que estão perto da superfície de Fermi, e isso basta para haver corrente.
+        fr: >-
+          Au zéro absolu, les électrons d'un métal sont déjà en mouvement. Un champ électrique n'a qu'à
+          pousser ceux qui sont près de la surface de Fermi, et cela suffit à produire un courant.
+        zh: >-
+          在绝对零度下,金属中的电子已在运动。电场只需推动那些靠近费米面的电子,就足以形成电流。
+        ja: >-
+          絶対零度でも金属の電子はすでに動いている。電場が押し動かすのはフェルミ面近くの電子だけであり、
+          それだけで電流が流れる。
+    - title:
+        es: Contraste con un gas ideal
+        en: Contrast with an ideal gas
+        pt: Contraste com um gás ideal
+        fr: Contraste avec un gaz parfait
+        zh: 与理想气体的对比
+        ja: 理想気体との対比
+      description:
+        es: >-
+          En un gas ideal a cero absoluto los electrones se quedarían quietos. La diferencia entre
+          ambas descripciones de la energía está en el principio de Pauli, que obliga a llenar
+          niveles distintos.
+        en: >-
+          In an ideal gas at zero temperature the electrons would sit still. The gap between the two energy
+          descriptions comes from the Pauli principle, which forces them to fill different levels.
+        pt: >-
+          Num gás ideal a zero absoluto os elétrons ficariam parados. A diferença entre as duas descrições de
+          energia vem do princípio de Pauli, que os obriga a ocupar níveis diferentes.
+        fr: >-
+          Dans un gaz parfait à température nulle, les électrons resteraient immobiles. L'écart entre les deux
+          descriptions de l'énergie vient du principe de Pauli, qui les oblige à remplir des niveaux
+          différents.
+        zh: >-
+          在绝对零度的理想气体中,电子本应静止不动。两种能量描述的差别正源于泡利不相容原理,它迫使电子
+          占据不同的能级。
+        ja: >-
+          絶対零度の理想気体なら電子は静止しているはずである。2つのエネルギー記述の差は、電子が異なる
+          準位を埋めることを強制する Pauli の排他原理から生じる。
+    - title:
+        es: Temperatura de Fermi
+        en: Fermi temperature
+        pt: Temperatura de Fermi
+        fr: Température de Fermi
+        zh: 费米温度
+        ja: フェルミ温度
+      description:
+        es: >-
+          La temperatura a la que E_F iguala la energía térmica es EF/k. En el cobre ronda los 80 000 K, muy
+          por encima de cualquier temperatura real de un metal.
+        en: >-
+          The temperature at which E_F equals the thermal energy is EF/k. In copper it is around 80 000 K,
+          far above any real metal temperature.
+        pt: >-
+          A temperatura em que E_F iguala a energia térmica é EF/k. No cobre gira em torno de 80 000 K, muito
+          acima de qualquer temperatura real de um metal.
+        fr: >-
+          La température à laquelle E_F égale l'énergie thermique vaut EF/k. Dans le cuivre elle tourne autour
+          de 80 000 K, bien au-dessus de toute température réelle d'un métal.
+        zh: >-
+          使 E_F 等于热能的温度为 EF/k。铜的费米温度约为 80 000 K,远高于金属的任何真实温度。
+        ja: >-
+          E_F が熱エネルギーに等しくなる温度は EF/k である。銅ではおよそ 80 000 K で、金属の現実の温度より
+          はるかに高い。
+  example:
+    title:
+      es: La energía de Fermi del cobre
+      en: The Fermi energy of copper
+      pt: A energia de Fermi do cobre
+      fr: L'énergie de Fermi du cuivre
+      zh: 铜的费米能
+      ja: 銅のフェルミエネルギー
+    lines:
+      - es: Un átomo de cobre aporta 1 electrón; n = 8,5·10²⁸ m⁻³
+        en: One copper atom gives 1 electron; n = 8.5·10²⁸ m⁻³
+        pt: Um átomo de cobre dá 1 elétron; n = 8,5·10²⁸ m⁻³
+        fr: Un atome de cuivre donne 1 électron ; n = 8,5·10²⁸ m⁻³
+        zh: 一个铜原子贡献 1 个电子,n = 8.5·10²⁸ m⁻³
+        ja: 銅の原子は電子を1個出す。n = 8.5·10²⁸ m⁻³
+      - es: 3π²n = 2,52·10³⁰ m⁻³
+        en: 3π²n = 2.52·10³⁰ m⁻³
+        pt: 3π²n = 2,52·10³⁰ m⁻³
+        fr: 3π²n = 2,52·10³⁰ m⁻³
+        zh: 3π²n = 2.52·10³⁰ m⁻³
+        ja: 3π²n = 2.52·10³⁰ m⁻³
+      - es: (3π²n)^(2/3) = 1,86·10²⁰ m⁻²
+        en: (3π²n)^(2/3) = 1.86·10²⁰ m⁻²
+        pt: (3π²n)^(2/3) = 1,86·10²⁰ m⁻²
+        fr: (3π²n)^(2/3) = 1,86·10²⁰ m⁻²
+        zh: (3π²n)^(2/3) = 1.86·10²⁰ m⁻²
+        ja: (3π²n)^(2/3) = 1.86·10²⁰ m⁻²
+      - es: ħ²/2m = 6,10·10⁻³⁹ J·m²
+        en: ħ²/2m = 6.10·10⁻³⁹ J·m²
+        pt: ħ²/2m = 6,10·10⁻³⁹ J·m²
+        fr: ħ²/2m = 6,10·10⁻³⁹ J·m²
+        zh: ħ²/2m = 6.10·10⁻³⁹ J·m²
+        ja: ħ²/2m = 6.10·10⁻³⁹ J·m²
+      - es: E_F = 6,10·10⁻³⁹ · 1,86·10²⁰ ≈ 1,14·10⁻¹⁸ J ≈ 7,0 eV
+        en: E_F = 6.10·10⁻³⁹ · 1.86·10²⁰ ≈ 1.14·10⁻¹⁸ J ≈ 7.0 eV
+        pt: E_F = 6,10·10⁻³⁹ · 1,86·10²⁰ ≈ 1,14·10⁻¹⁸ J ≈ 7,0 eV
+        fr: E_F = 6,10·10⁻³⁹ · 1,86·10²⁰ ≈ 1,14·10⁻¹⁸ J ≈ 7,0 eV
+        zh: E_F = 6.10·10⁻³⁹ · 1.86·10²⁰ ≈ 1.14·10⁻¹⁸ J ≈ 7.0 eV
+        ja: E_F = 6.10·10⁻³⁹ · 1.86·10²⁰ ≈ 1.14·10⁻¹⁸ J ≈ 7.0 eV

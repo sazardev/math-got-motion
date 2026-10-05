@@ -1,0 +1,313 @@
+id: vector-projection
+title:
+  es: Proyección de un vector
+  en: Vector projection
+  pt: Projeção de um vetor
+  fr: Projection d'un vecteur
+  zh: 向量的投影
+  ja: ベクトルの射影
+category:
+  es: Álgebra lineal
+  en: Linear algebra
+  pt: Álgebra linear
+  fr: Algèbre linéaire
+  zh: 线性代数
+  ja: 線形代数
+nodes:
+  - id: proj-b-a
+    type: variable
+    value: proj_b a
+    explanation:
+      es: La proyección de a sobre b, la parte de a que apunta en la dirección de b.
+      en: The projection of a onto b, the part of a that points along the direction of b.
+      pt: A projeção de a sobre b, a parte de a que aponta na direção de b.
+      fr: La projection de a sur b, la partie de a qui pointe dans la direction de b.
+      zh: "a 在 b 上的投影，即 a 沿着 b 方向的那一部分。"
+      ja: "aのbへの射影。aのうちbの向きに添う部分。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: a
+    type: variable
+    value: (a
+    explanation:
+      es: El vector que se proyecta.
+      en: The vector being projected.
+      pt: O vetor que está sendo projetado.
+      fr: Le vecteur que l'on projette.
+      zh: 被投影的向量。
+      ja: 射影されるベクトル。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: El producto escalar entre los dos vectores.
+      en: The dot product of the two vectors.
+      pt: O produto escalar entre os dois vetores.
+      fr: Le produit scalaire des deux vecteurs.
+      zh: 两向量的点积。
+      ja: 2つのベクトルの内積。
+  - id: b
+    type: variable
+    value: b)
+    explanation:
+      es: El vector sobre el que se proyecta, que marca la dirección de referencia.
+      en: The vector onto which we project, which sets the reference direction.
+      pt: O vetor sobre o qual se projeta, que marca a direção de referência.
+      fr: Le vecteur sur lequel on projette, qui fixe la direction de référence.
+      zh: 被投影到的向量，它确定了参考方向。
+      ja: 射影先のベクトル。基準の向きを決める。
+  - id: fraction-bar
+    type: operator
+    value: "/"
+    explanation:
+      es: "Dividido por el cuadrado de la longitud de b."
+      en: "Divided by the squared length of b."
+      pt: "Dividido pelo quadrado do comprimento de b."
+      fr: "Divisé par le carré de la longueur de b."
+      zh: 除以 b 的长度平方。
+      ja: "bの長さの2乗で割る。"
+  - id: abs-b-2
+    type: variable
+    value: "|b|²"
+    explanation:
+      es: "|b|², que nunca es cero mientras b no sea el vector nulo."
+      en: "|b|², which is never zero as long as b is not the zero vector."
+      pt: "|b|², que nunca é zero enquanto b não for o vetor nulo."
+      fr: "|b|², qui n'est jamais nul tant que b n'est pas le vecteur nul."
+      zh: "|b|²，只要 b 不是零向量就一定不为零。"
+      ja: "|b|²。bが零ベクトルでない限り0にはならない。"
+  - id: times
+    type: operator
+    value: ·
+    explanation:
+      es: "Multiplicado por b, que devuelve un vector y no un escalar."
+      en: "Multiplied by b, which returns a vector rather than a scalar."
+      pt: "Multiplicado por b, o que devolve um vetor e não um escalar."
+      fr: "Multiplié par b, ce qui donne un vecteur et non un scalaire."
+      zh: 乘以 b，结果是向量而非标量。
+      ja: "bを掛けることで、スカラーではなくベクトルを得る。"
+  - id: b-again
+    type: variable
+    value: b
+    explanation:
+      es: "El mismo b, que convierte el cociente escalar en un vector paralelo a él."
+      en: "The same b, turning the scalar quotient into a vector parallel to it."
+      pt: "O mesmo b, que converte o quociente escalar num vetor paralelo a ele."
+      fr: "Le même b, qui transforme le quotient scalaire en un vecteur parallèle à lui."
+      zh: "同一个 b，它把标量商变成与它平行的向量。"
+      ja: "同じb。スカラーでの商を、bに平行なベクトルに変える。"
+context:
+  author:
+    es: Origen colectivo (geometría analítica)
+    en: Collective origin (analytic geometry)
+    pt: Origem coletiva (geometria analítica)
+    fr: Origine collective (géométrie analytique)
+    zh: 集体起源（解析几何）
+    ja: 集団的起源（解析幾何）
+  era:
+    es: Europa, s. XVII · forma vectorial desde 1788
+    en: Europe, 17th century · vector form since 1788
+    pt: Europa, séc. XVII · forma vetorial desde 1788
+    fr: Europe, XVIIe siècle · forme vectorielle dès 1788
+    zh: 欧洲，17世纪 · 向量形式始于1788年
+    ja: ヨーロッパ、17世紀 · ベクトル形は1788年から
+  history:
+    es: >-
+      La proyección ortogonal es uno de los primeros resultados de la geometría analítica: proyectar
+      sobre una recta es una operación elemental que Descartes y Fermat ya usaban en el siglo XVII.
+      Lagrange formalizó en 1788 el álgebra vectorial de las líneas dirigidas en la Mécanique analytique,
+      y con ella la escritura de la componente de una fuerza a lo largo de una dirección. La forma
+      actual, con el producto escalar en el numerador, reúne la intuición geométrica y el álgebra en un
+      solo paso. El error es el vector a − proj_b a, y cuando a · b = 0 la proyección es nula.
+    en: >-
+      Orthogonal projection is one of the earliest results of analytic geometry: projecting onto a line
+      is an elementary operation that Descartes and Fermat already used in the 17th century. Lagrange
+      formalized the vector algebra of directed lines in 1788 in the Mécanique analytique, and with it
+      the writing of the component of a force along a direction. The modern form, with the dot product
+      in the numerator, brings geometry and algebra together in one step. The error is the vector
+      a − proj_b a, and when a · b = 0 the projection is zero.
+    pt: >-
+      A projeção ortogonal é um dos primeiros resultados da geometria analítica: projetar sobre uma reta
+      é uma operação elementar que Descartes e Fermat já usavam no século XVII. Lagrange formalizou em
+      1788 a álgebra vetorial das linhas dirigidas na Mécanique analytique, e com ela a escrita da
+      componente de uma força ao longo de uma direção. A forma atual, com o produto escalar no
+      numerador, reúne a intuição geométrica e a álgebra em um único passo. O erro é o vetor
+      a − proj_b a, e quando a · b = 0 a projeção é nula.
+    fr: >-
+      La projection orthogonale est l'un des premiers résultats de la géométrie analytique : projeter
+      sur une droite est une opération élémentaire que Descartes et Fermat employaient déjà au XVIIe
+      siècle. Lagrange formalisa en 1788 l'algèbre vectorielle des lignes dirigées dans la Mécanique
+      analytique, et avec elle l'écriture de la composante d'une force le long d'une direction. La forme
+      actuelle, avec le produit scalaire au numérateur, réunit géométrie et algèbre en une seule
+      étape. L'erreur est le vecteur a − proj_b a, et lorsque a · b = 0 la projection est nulle.
+    zh: >-
+      正交投影是解析几何最早的结果之一：向一条直线投影是初等操作，笛卡尔与费马在17世纪就已在使用。拉格朗日在1788年的
+      《力学分析》中把有向直线的向量代数形式化，由此可以写出力沿某个方向的分量。如今这种把点积放在分子的形式，
+      把几何直观与代数运算合并为一步。误差向量就是 a − proj_b a，而当 a · b = 0 时投影为零。
+    ja: >-
+      直交射影は解析幾何の初期の結果のひとつである。ある直線への射影は初等的な操作であり、デカルトとフェルマーが17世紀にすでに
+      用いていた。ラグランジュは1788年の『解析力学』で有向直線のベクトル代数を整え、力の方向成分を書き下せるようにした。
+      今の形，也就是把内积放在分子上的形は、幾何の直観と代数を一度にまとめている。誤差は a − proj_b a であり、
+      a · b = 0 のとき射影は0になる。
+  timeline:
+    - year: s. XVII
+      label:
+        es: >-
+          Descartes y Fermat fundan la geometría analítica, donde proyectar sobre un eje es una
+          operación inmediata.
+        en: >-
+          Descartes and Fermat found the foundations of analytic geometry, where projecting onto an axis
+          is an immediate operation.
+        pt: >-
+          Descartes e Fermat fundam a geometria analítica, na qual projetar sobre um eixo é uma
+          operação imediata.
+        fr: >-
+          Descartes et Fermat posent les fondements de la géométrie analytique, où projeter sur un axe
+          est une opération immédiate.
+        zh: >-
+          笛卡尔与费马奠定解析几何，其中向坐标轴投影是直接的操作。
+        ja: >-
+          デカルトとフェルマーが解析幾何を築き、座標軸への射影が自然な操作になった。
+    - year: "1788"
+      label:
+        es: >-
+          Lagrange publica la Mécanique analytique con el álgebra vectorial de las líneas dirigidas.
+        en: >-
+          Lagrange publishes the Mécanique analytique with the vector algebra of directed lines.
+        pt: >-
+          Lagrange publica a Mécanique analytique com a álgebra vetorial das linhas dirigidas.
+        fr: >-
+          Lagrange publie la Mécanique analytique avec l'algèbre vectorielle des lignes dirigées.
+        zh: >-
+          拉格朗日出版《力学分析》，其中含有有向直线的向量代数。
+        ja: >-
+          ラグランジュが『解析力学』を出版し、有向直線のベクトル代数を示した。
+    - year: Hoy
+      label:
+        es: >-
+          Base de las sombras proyectadas y del ajuste por mínimos cuadrados.
+        en: >-
+          The basis of cast shadows and of least-squares fitting.
+        pt: >-
+          Base das sombras projetadas e do ajuste por mínimos quadrados.
+        fr: >-
+          Base des ombres portées et de l'ajustement par les moindres carrés.
+        zh: >-
+          它是投影阴影与最小二乘拟合的基础。
+        ja: >-
+          落ち影や最小二乗フィットの基礎になっている。
+  useCases:
+    - title:
+        es: Sombras proyectadas
+        en: Cast shadows
+        pt: Sombras projetadas
+        fr: Ombres portées
+        zh: 投影阴影
+        ja: 落ち影
+      description:
+        es: >-
+          La sombra de un punto sobre el suelo es la proyección de un rayo de luz sobre ese plano.
+        en: >-
+          A point's shadow on the floor is the projection of a light ray onto that plane.
+        pt: >-
+          A sombra de um ponto no chão é a projeção de um raio de luz sobre esse plano.
+        fr: >-
+          L'ombre d'un point au sol est la projection d'un rayon de lumière sur ce plan.
+        zh: >-
+          点在地面的影子就是光线在该平面上的投影。
+        ja: >-
+          床に落ちる点の影は、その平面に光を射影したものである。
+    - title:
+        es: Descomposición de fuerzas
+        en: Force decomposition
+        pt: Decomposição de forças
+        fr: Décomposition des forces
+        zh: 力的分解
+        ja: 力の分解
+      description:
+        es: >-
+          La componente de una fuerza a lo largo de la dirección que se estudia es la proyección.
+        en: >-
+          The component of a force along the direction being studied is exactly this projection.
+        pt: >-
+          A componente de uma força ao longo da direção em estudo é exatamente esta projeção.
+        fr: >-
+          La composante d'une force le long de la direction étudiée est exactement cette projection.
+        zh: >-
+          力沿所研究方向的分量正是这个投影。
+        ja: >-
+          力がある向きをもつ成分は、まさにこの射影である。
+    - title:
+        es: Ajuste por mínimos cuadrados
+        en: Least-squares fitting
+        pt: Ajuste por mínimos quadrados
+        fr: Ajustement par les moindres carrés
+        zh: 最小二乘拟合
+        ja: 最小二乗フィット
+      description:
+        es: >-
+          Proyectar los puntos de datos sobre una recta es, literalmente, una proyección vectorial.
+        en: >-
+          Projecting data points onto a line is, literally, a vector projection.
+        pt: >-
+          Projetar os pontos de dados sobre uma reta é, literalmente, uma projeção vetorial.
+        fr: >-
+          Projeter des points de données sur une droite est, littéralement, une projection
+          vectorielle.
+        zh: >-
+          把数据点投影到一条直线上，字面上就是一种向量投影。
+        ja: >-
+          データ点を直線に射影することは、文字どおりベクトルの射影である。
+  example:
+    title:
+      es: Proyectando (3,4) sobre el eje x
+      en: Projecting (3,4) onto the x-axis
+      pt: Projetando (3,4) sobre o eixo x
+      fr: Projection de (3,4) sur l'axe des x
+      zh: 把 (3,4) 投影到 x 轴
+      ja: (3,4) を x 軸に射影する
+    lines:
+      - es: "a = (3,4), b = (1,0)"
+        en: "a = (3,4), b = (1,0)"
+        pt: "a = (3,4), b = (1,0)"
+        fr: "a = (3,4), b = (1,0)"
+        zh: "a = (3,4)，b = (1,0)"
+        ja: "a = (3,4)、b = (1,0)"
+      - es: a · b = 3·1 + 4·0 = 3
+        en: a · b = 3·1 + 4·0 = 3
+        pt: a · b = 3·1 + 4·0 = 3
+        fr: a · b = 3·1 + 4·0 = 3
+        zh: a · b = 3·1 + 4·0 = 3
+        ja: a · b = 3·1 + 4·0 = 3
+      - es: "|b|² = 1² + 0² = 1"
+        en: "|b|² = 1² + 0² = 1"
+        pt: "|b|² = 1² + 0² = 1"
+        fr: "|b|² = 1² + 0² = 1"
+        zh: "|b|² = 1² + 0² = 1"
+        ja: "|b|² = 1² + 0² = 1"
+      - es: proj_b a = (3/1) · (1,0)
+        en: proj_b a = (3/1) · (1,0)
+        pt: proj_b a = (3/1) · (1,0)
+        fr: proj_b a = (3/1) · (1,0)
+        zh: proj_b a = (3/1) · (1,0)
+        ja: proj_b a = (3/1) · (1,0)
+      - es: proj_b a = (3,0)
+        en: proj_b a = (3,0)
+        pt: proj_b a = (3,0)
+        fr: proj_b a = (3,0)
+        zh: proj_b a = (3,0)
+        ja: proj_b a = (3,0)
+      - es: "|a| = 5, paralela = 3, perpendicular = 4"
+        en: "|a| = 5, parallel = 3, perpendicular = 4"
+        pt: "|a| = 5, paralela = 3, perpendicular = 4"
+        fr: "|a| = 5, parallèle = 3, perpendiculaire = 4"
+        zh: "|a| = 5，平行分量 = 3，垂直分量 = 4"
+        ja: "|a| = 5、平行な成分 = 3、直交な成分 = 4"

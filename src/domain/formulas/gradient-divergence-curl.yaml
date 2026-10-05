@@ -1,0 +1,426 @@
+id: gradient-divergence-curl
+title:
+  es: Gradiente, Divergencia y Rotacional
+  en: Gradient, Divergence and Curl
+  pt: Gradiente, Divergência e Rotacional
+  fr: Gradient, divergence et rotationnel
+  zh: 梯度、散度与旋度
+  ja: 勾配・発散・回転
+category:
+  es: Cálculo
+  en: Calculus
+  pt: Cálculo
+  fr: Calcul
+  zh: 微积分
+  ja: 微積分学
+nodes:
+  - id: grad
+    type: variable
+    value: ∇f
+    explanation:
+      es: "El gradiente de una función escalar: un vector con la pendiente en cada dirección."
+      en: "The gradient of a scalar function: a vector holding the slope in every direction."
+      pt: "O gradiente de uma função escalar: um vetor com a inclinação em cada direção."
+      fr: "Le gradient d'une fonction scalaire : un vecteur portant la pente dans chaque direction."
+      zh: 标量函数的梯度：一个记录各个方向上斜率的向量。
+      ja: スカラー関数の勾配。あらゆる方向の傾きをまとめたベクトルである。
+  - id: eq-grad
+    type: equals
+    value: "="
+    explanation:
+      es: Se define componente a componente, con derivadas parciales.
+      en: It is defined component by component, with partial derivatives.
+      pt: É definido componente a componente, com derivadas parciais.
+      fr: Il se définit composante par composante, avec des dérivées partielles.
+      zh: 它由偏导数逐分量定义。
+      ja: 偏导数を使って、成分ごとに定義される。
+  - id: open-comp
+    type: operator
+    value: (
+    explanation:
+      es: Abre las tres componentes del vector gradiente.
+      en: Opens the three components of the gradient vector.
+      pt: Abre as três componentes do vetor gradiente.
+      fr: Ouvre les trois composantes du vecteur gradient.
+      zh: 打开梯度向量的三个分量。
+      ja: 勾配ベクトルの3成分を囲む括弧を開く。
+  - id: partial-x
+    type: variable
+    value: ∂f/∂x
+    explanation:
+      es: Cuánto cambia f cuando solo se mueve en x, con y y z congelados.
+      en: How much f changes when moving in x only, holding y and z fixed.
+      pt: Quanto f varia ao mover só em x, com y e z mantidos fixos.
+      fr: De combien f varie en bougeant seulement en x, y et z fixés.
+      zh: 只沿 x 移动、y 与 z 保持不变时 f 的变化率。
+      ja: y と z を固定して x 方向に動かしたとき、f がどれだけ変わるか。
+  - id: comma-x
+    type: operator
+    value: ","
+    explanation:
+      es: Separa la primera componente de la segunda.
+      en: Separates the first component from the second.
+      pt: Separa a primeira componente da segunda.
+      fr: Sépare la première composante de la deuxième.
+      zh: 分隔第一分量与第二分量。
+      ja: 1番目の成分と2番目を区切る。
+  - id: partial-y
+    type: variable
+    value: ∂f/∂y
+    explanation:
+      es: La misma idea en la dirección y.
+      en: The same idea along the y direction.
+      pt: A mesma ideia na direção y.
+      fr: La même idée dans la direction y.
+      zh: 沿 y 方向的同一想法。
+      ja: y 方向における全く同じ考え方。
+  - id: comma-z
+    type: operator
+    value: ","
+    explanation:
+      es: Separa la segunda componente de la tercera.
+      en: Separates the second component from the third.
+      pt: Separa a segunda componente da terceira.
+      fr: Sépare la deuxième composante de la troisième.
+      zh: 分隔第二分量与第三分量。
+      ja: 2番目の成分と3番目を区切る。
+  - id: partial-z
+    type: variable
+    value: ∂f/∂z
+    explanation:
+      es: Y en la dirección z, con lo que queda el gradiente completo.
+      en: And along z, which completes the gradient.
+      pt: E na direção z, com o que fecha o gradiente completo.
+      fr: Et dans la direction z, ce qui complète le gradient.
+      zh: 沿 z 方向，由此得到完整的梯度。
+      ja: そして z 方向。これで勾配が 완성する。
+  - id: close-comp
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el vector de derivadas parciales.
+      en: Closes the vector of partial derivatives.
+      pt: Fecha o vetor de derivadas parciais.
+      fr: Ferme le vecteur des dérivées partielles.
+      zh: 关闭偏导数向量。
+      ja: 偏導関数のベクトルを閉じる括弧。
+  - id: semi-one
+    type: operator
+    value: ";"
+    explanation:
+      es: Ahora el mismo operador nabla, aplicado a un vector en vez de a un escalar.
+      en: Now the same nabla operator, applied to a vector instead of a scalar.
+      pt: Agora o mesmo operador nabla, aplicado a um vetor em vez de a um escalar.
+      fr: À présent le même opérateur nabla, appliqué à un vecteur et non à un scalaire.
+      zh: 接下来是同一个 nabla 算子，但作用在向量而非标量上。
+      ja: ここから先は、同じ nabla をスカラーではなくベクトルに作用させる。
+  - id: div
+    type: operator
+    value: ∇ · F
+    explanation:
+      es: "La divergencia: suma de derivadas parciales de las componentes de F."
+      en: "The divergence: the sum of the partial derivatives of F's components."
+      pt: "A divergência: soma das derivadas parciais das componentes de F."
+      fr: "La divergence : somme des dérivées partielles des composantes de F."
+      zh: 散度：F 各分量的偏导数之和。
+      ja: 発散。F の各成分の偏導関数を足し合わせたもの。
+  - id: semi-two
+    type: operator
+    value: ";"
+    explanation:
+      es: "El punto ya no suma: multiplica componentes cruzadas, como un producto vectorial."
+      en: "The dot no longer sums: it multiplies crossed components, like a cross product."
+      pt: "O ponto deixa de somar: multiplica componentes cruzadas, como um produto vetorial."
+      fr: "Le point ne somme plus : il multiplie des composantes croisées, comme un produit vectoriel."
+      zh: 这里的点不再是求和，而是像叉积那样交叉相乘。
+      ja: ここでは点は和ではなく、外積と同様に成分を交差させて掛ける。
+  - id: curl
+    type: operator
+    value: ∇ × F
+    explanation:
+      es: "El rotacional: mide cuánto gira el campo alrededor de cada punto."
+      en: "The curl: it measures how much the field rotates around each point."
+      pt: "O rotacional: mede quanto o campo gira em torno de cada ponto."
+      fr: "Le rotationnel : il mesure de combien le champ tourne autour de chaque point."
+      zh: 旋度：衡量场在每一点周围的旋转程度。
+      ja: 回転。各点のまわりで場がどれだけ曲がっているかを表す。
+  - id: semi-three
+    type: operator
+    value: ";"
+    explanation:
+      es: Y una consecuencia que siempre se cumple, sin excepciones.
+      en: And one consequence that always holds, without exceptions.
+      pt: E uma consequência que sempre vale, sem exceções.
+      fr: Et une conséquence qui vaut toujours, sans exception.
+      zh: 以及一条永远成立的推论。
+      ja: そして、いかなる場合でも成り立つ帰結が1つある。
+  - id: curl-of-grad
+    type: operator
+    value: ∇ × ∇f
+    explanation:
+      es: El rotacional de un gradiente, que tiene derivadas parciales que se cancelan dos a dos.
+      en: The curl of a gradient, whose partial derivatives cancel two by two.
+      pt: O rotacional de um gradiente, cujas derivadas parciais se cancelam duas a duas.
+      fr: Le rotationnel d'un gradient, dont les dérivées partielles s'annulent deux à deux.
+      zh: 梯度的旋度，其中偏导数两两相消。
+      ja: 勾配の回転。偏導関数が2項ずつ打ち消し合う。
+  - id: eq-zero
+    type: equals
+    value: = 0
+    explanation:
+      es: Siempre cero, porque las derivadas parciales mixtas de una función suave son iguales.
+      en: Always zero, because the mixed partials of a smooth function are equal.
+      pt: Sempre zero, porque as derivadas parciais mistas de uma função suave são iguais.
+      fr: Toujours nul, car les dérivées partielles mixtes d'une fonction lisse sont égales.
+      zh: 恒为零，因为光滑函数的混合偏导数彼此相等。
+      ja: 常にゼロ。なめらかな関数の混合偏導関数が等しくなるためである。
+context:
+  author:
+    es: Hermann Grassmann y George Stokes
+    en: Hermann Grassmann and George Stokes
+    pt: Hermann Grassmann e George Stokes
+    fr: Hermann Grassmann et George Stokes
+    zh: 赫尔曼·格拉斯曼与乔治·斯托克斯
+    ja: ヘルマン・グラスマンとジョージ・ストークス
+  era:
+    es: Alemania e Irlanda, s. XIX · rotacional hacia 1840, teorema de Stokes en 1851
+    en: Germany and Ireland, 19th century · curl from 1840, Stokes's theorem in 1851
+    pt: Alemanha e Irlanda, séc. XIX · rotacional por volta de 1840, teorema de Stokes em 1851
+    fr: Allemagne et Irlande, XIXe siècle · rotationnel vers 1840, théorème de Stokes en 1851
+    zh: 德国与爱尔兰，19世纪 · 旋度约在1840年，斯托克斯定理见于1851年
+    ja: ドイツとイギリス、19世紀 · 回転は1840年頃、ストークスの定理は1851年
+  history:
+    es: >-
+      El operador nabla agrupa las derivadas parciales en un vector. Grassmann ya usaba una
+      notación vectorial para el rotacional en la década de 1840, y el teorema que relaciona ese
+      rotacional con la circulación a lo largo de un contorno, publicado por Stokes en 1851,
+      convirtió el cálculo vectorial en una herramienta de trabajo de la física y la ingeniería. La
+      identidad rotacional del gradiente igual a cero es la versión diferencial del hecho de que un
+      gradiente conserva el trabajo alrededor de cualquier lazo cerrado. Hoy los tres operadores
+      aparecen en las ecuaciones de Maxwell, en la mecánica de fluidos y en la geometría diferencial.
+    en: >-
+      The nabla operator bundles partial derivatives into a vector. Grassmann was already using a
+      vector notation for the curl in the 1840s, and the theorem relating that curl to circulation
+      along a contour, published by Stokes in 1851, turned vector calculus into a working tool of
+      physics and engineering. The identity curl of a gradient equals zero is the differential
+      version of the fact that a gradient does no net work around any closed loop. Today all three
+      operators appear in Maxwell's equations, in fluid mechanics and in differential geometry.
+    pt: >-
+      O operador nabla agrupa as derivadas parciais em um vetor. Grassmann já usava uma notação
+      vetorial para o rotacional na década de 1840, e o teorema que relaciona esse rotacional com a
+      circulação ao longo de um contorno, publicado por Stokes em 1851, transformou o cálculo
+      vetorial em ferramenta de trabalho da física e da engenharia. A identidade rotacional do
+      gradiente igual a zero é a versão diferencial do fato de um gradiente não produzir trabalho
+      líquido em torno de qualquer laço fechado. Hoje os três operadores aparecem nas equações de
+      Maxwell, na mecânica dos fluidos e na geometria diferencial.
+    fr: >-
+      L'opérateur nabla regroupe les dérivées partielles en un vecteur. Grassmann employait déjà
+      une notation vectorielle pour le rotationnel dans les années 1840, et le théorème reliant
+      ce rotationnel à la circulation le long d'un contour, publié par Stokes en 1851, fit du
+      calcul vectoriel un outil de travail de la physique et de l'ingénierie. L'identité rotationnel
+      du gradient nul est la version différentielle du fait qu'un gradient ne produit aucun
+      travail net autour d'une boucle fermée. Aujourd'hui les trois opérateurs apparaissent dans les
+      équations de Maxwell, en mécanique des fluides et en géométrie différentielle.
+    zh: >-
+      nabla 算子把各个偏导数组合成一个向量。格拉斯曼在1840年代就已经为旋度使用向量记号，
+      而把该旋度与沿闭合路径的环流联系起来的定理由斯托克斯于1851年发表，使向量微积分成为物理与工程的
+      实用工具。"梯度的旋度为零"这一恒等式，是"梯度沿闭合回路不做净功"这一事实在微分形式下的表述。
+      今天这三个算子出现在麦克斯韦方程组、流体力学和微分几何中。
+    ja: >-
+      nabla演算子は偏導関数をベクトルにまとめる。グラスマンは1840年代にすでに回転へベクトル記法を
+      使っていた。そしてその回転と曲線に沿う循環を結びつける定理が1851年にストークスによって
+      発表され、ベクトル解析は物理と工学の道具として定着した。「勾配の回転はゼロ」という恒等式は、
+      「勾配は閉じた経路を一周しても正味の仕事をしない」ことを微分的に言い直したものにすぎない。
+      今日、この3つの演算子はマックスウェル方程式、流体の力学、解析幾何に現れる。
+  timeline:
+    - year: c. 1840
+      label:
+        es: >-
+          Grassmann introduce el cálculo vectorial y el rotacional como operación entre campos.
+        en: >-
+          Grassmann introduces vector calculus and the curl as an operation on fields.
+        pt: >-
+          Grassmann introduz o cálculo vetorial e o rotacional como operação entre campos.
+        fr: >-
+          Grassmann introduit le calcul vectoriel et le rotationnel comme opération sur les champs.
+        zh: >-
+          格拉斯曼引入向量微积分，并把旋度定义为作用于场的运算。
+        ja: >-
+          グラスマンがベクトル解析を導入し、回転を場に対する演算として定める。
+    - year: "1851"
+      label:
+        es: >-
+          Stokes demuestra que la circulación de un campo es la integral del rotacional sobre la
+          superficie que cierra el contorno.
+        en: >-
+          Stokes shows that the circulation of a field is the integral of the curl over the surface
+          closing the contour.
+        pt: >-
+          Stokes mostra que a circulação de um campo é a integral do rotacional sobre a superfície que
+          fecha o contorno.
+        fr: >-
+          Stokes montre que la circulation d'un champ est l'intégrale du rotationnel sur la surface
+          qui ferme le contour.
+        zh: >-
+          斯托克斯证明：场的环流等于旋度在封住该路径的曲面上的积分。
+        ja: >-
+          ストークスが、場の循環は輪郭を閉じた曲面上での回転の積分であると示す。
+    - year: c. 1880
+      label:
+        es: >-
+          Maxwell reescribe la electrodinámica en lenguaje vectorial y las ecuaciones entran en la
+          física experimental.
+        en: >-
+          Maxwell rewrites electrodynamics in vector language, and the equations enter experimental
+          physics.
+        pt: >-
+          Maxwell reescreve a eletrodinâmica em linguagem vetorial, e as equações entram na física
+          experimental.
+        fr: >-
+          Maxwell réécrit l'électrodynamique en langage vectoriel, et les équations entrent en
+          physique expérimentale.
+        zh: >-
+          麦克斯韦用向量语言重写电动力学，方程由此进入实验物理。
+        ja: >-
+          マックスウェルが電磁力学をベクトルの言葉で書き直し、これらの式は実験物理学に入る。
+    - year: Hoy
+      label:
+        es: >-
+          Son el lenguaje con el que se escriben las ecuaciones de Maxwell, el flujo de fluidos y la
+          geometría de superficies.
+        en: >-
+          They are the language in which Maxwell's equations, fluid flow and surface geometry are
+          written.
+        pt: >-
+          São a linguagem com que se escrevem as equações de Maxwell, o fluxo de fluidos e a geometria
+          de superfícies.
+        fr: >-
+          C'est le langage des équations de Maxwell, de l'écoulement des fluides et de la géométrie
+          des surfaces.
+        zh: >-
+          它们是书写麦克斯韦方程组、流体流动和曲面几何的语言。
+        ja: >-
+          マックスウェル方程式、流体の流れ、曲面の幾何を記すための言語になっている。
+  useCases:
+    - title:
+        es: Electromagnetismo
+        en: Electromagnetism
+        pt: Eletromagnetismo
+        fr: Électromagnétisme
+        zh: 电磁学
+        ja: 電磁気
+      description:
+        es: >-
+          Las ecuaciones de Maxwell escriben la divergencia nula del campo magnético, el
+          rotacional del campo eléctrico y la divergencia del campo eléctrico igual a la
+          densidad de carga dividida por la permitividad.
+        en: >-
+          Maxwell's equations state the zero divergence of the magnetic field, the curl of
+          the electric field, and the divergence of the electric field equal to charge density
+          over permittivity.
+        pt: >-
+          As equações de Maxwell escrevem a divergência nula do campo magnético, o
+          rotacional do campo elétrico e a divergência do campo elétrico igual à densidade
+          de carga dividida pela permissividade.
+        fr: >-
+          Les équations de Maxwell écrivent la divergence nulle du champ magnétique, le
+          rotationnel du champ électrique et la divergence du champ électrique égale à la
+          densité de charge divisée par la permittivité.
+        zh: >-
+          麦克斯韦方程组写出磁场的散度为零、电场的旋度，以及电场的散度等于电荷密度除以介电常数。
+        ja: >-
+          マックスウェル方程式は、磁場の散度が0であること、電気場の回転、そして電気場の散度が
+          電荷密度を誘電率で割ったものに等しいことを表す。
+    - title:
+        es: Mecánica de fluidos
+        en: Fluid mechanics
+        pt: Mecânica dos fluidos
+        fr: Mécanique des fluides
+        zh: 流体力学
+        ja: 流体力学
+      description:
+        es: >-
+          La divergencia nula de un flujo incompresible describe la conservación de la masa; el
+          rotacional da la vorticidad.
+        en: >-
+          The zero divergence of an incompressible flow expresses mass conservation; the curl gives
+          the vorticity.
+        pt: >-
+          A divergência nula de um fluxo incompressível expressa a conservação da massa; o rotacional
+          dá a vorticidade.
+        fr: >-
+          La divergence nulle d'un écoulement incompressible exprime la conservation de la masse ; le
+          rotationnel donne la vorticité.
+        zh: >-
+          不可压缩流的散度为零表示质量守恒，而旋度给出涡量。
+        ja: >-
+          非圧縮流では発散が0となって質量の保存を表し、回転は渦度を表す。
+    - title:
+        es: Geometría diferencial
+        en: Differential geometry
+        pt: Geometria diferencial
+        fr: Géométrie différentielle
+        zh: 微分几何
+        ja: 微分幾何
+      description:
+        es: >-
+          El gradiente, la divergencia y el rotacional son los operadores que relacionan una función
+          con la forma de su superficie de nivel.
+        en: >-
+          Gradient, divergence and curl are the operators that relate a function to the shape of its
+          level surfaces.
+        pt: >-
+          Gradiente, divergência e rotacional são os operadores que relacionam uma função com a forma
+          de suas superfícies de nível.
+        fr: >-
+          Gradient, divergence et rotationnel sont les opérateurs qui relient une fonction à la forme
+          de ses surfaces de niveau.
+        zh: >-
+          梯度、散度与旋度是把一个函数与其等值面的形状联系起来的算子。
+        ja: >-
+          勾配・発散・回転は、関数とそのレベル集合面の形を結びつける演算である。
+  example:
+    title:
+      es: Los tres operadores sobre u y F
+      en: The three operators on u and F
+      pt: Os três operadores sobre u e F
+      fr: Les trois opérateurs sur u et F
+      zh: 对 u 与 F 求三个算子
+      ja: u と F に対する3つの演算子
+    lines:
+      - es: "u = x² + y²"
+        en: "u = x² + y²"
+        pt: "u = x² + y²"
+        fr: "u = x² + y²"
+        zh: "u = x² + y²"
+        ja: "u = x² + y²"
+      - es: "∇u = (2x, 2y, 0)"
+        en: "∇u = (2x, 2y, 0)"
+        pt: "∇u = (2x, 2y, 0)"
+        fr: "∇u = (2x, 2y, 0)"
+        zh: "∇u = (2x, 2y, 0)"
+        ja: "∇u = (2x, 2y, 0)"
+      - es: "en el punto (3, 4): ∇u = (6, 8, 0)"
+        en: "at the point (3, 4): ∇u = (6, 8, 0)"
+        pt: "no ponto (3, 4): ∇u = (6, 8, 0)"
+        fr: "au point (3, 4) : ∇u = (6, 8, 0)"
+        zh: "在点 (3, 4) 处：∇u = (6, 8, 0)"
+        ja: "点 (3, 4) で：∇u = (6, 8, 0)"
+      - es: "F = (−y, x, 0)"
+        en: "F = (−y, x, 0)"
+        pt: "F = (−y, x, 0)"
+        fr: "F = (−y, x, 0)"
+        zh: "F = (−y, x, 0)"
+        ja: "F = (−y, x, 0)"
+      - es: "∇ · F = 0, sin fuentes ni sumideros"
+        en: "∇ · F = 0, no sources and no sinks"
+        pt: "∇ · F = 0, sem fontes nem sumidouros"
+        fr: "∇ · F = 0, ni sources ni puits"
+        zh: "∇ · F = 0，既无源也无汇"
+        ja: "∇ · F = 0。湧き出も吸い込みもない"
+      - es: "∇ × F = (0, 0, 2): gira alrededor del eje z"
+        en: "∇ × F = (0, 0, 2): it rotates about the z axis"
+        pt: "∇ × F = (0, 0, 2): gira em torno do eixo z"
+        fr: "∇ × F = (0, 0, 2) : rotation autour de l'axe z"
+        zh: "∇ × F = (0, 0, 2)：绕 z 轴旋转"
+        ja: "∇ × F = (0, 0, 2)。z 軸まわりに回る"

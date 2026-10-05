@@ -1,0 +1,294 @@
+id: modular-inverse
+title:
+  es: "Inverso modular"
+  en: "Modular inverse"
+  pt: "Inverso modular"
+  fr: "Inverse modulaire"
+  zh: "模逆元"
+  ja: "逆元"
+category:
+  es: Teoría de números
+  en: Number theory
+  pt: Teoria dos números
+  fr: Théorie des nombres
+  zh: 数论
+  ja: 数論
+nodes:
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: "a: el número que se quiere deshacer, y que debe ser coprimo con m."
+      en: "a: the number to undo, which must be coprime to m."
+      pt: "a: o número que se quer desfazer, e que deve ser coprimo com m."
+      fr: "a : le nombre à défaire, qui doit être premier avec m."
+      zh: "a：想要除去的那个数，它必须与m互素。"
+      ja: "a：元に戻したい数。法mと互いに素である必要がある。"
+  - id: times
+    type: operator
+    value: ·
+    explanation:
+      es: "·: multiplicación, la operación que aquí se busca deshacer."
+      en: "·: multiplication, the operation being undone here."
+      pt: "·: multiplicação, a operação que aqui se quer desfazer."
+      fr: "· : la multiplication, l'opération que l'on cherche à défaire ici."
+      zh: "·：乘法，这里要撤销的正是这个运算。"
+      ja: "·：掛け算。ここで元に戻したい計算。"
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: "x: la respuesta, el número que devuelve la unidad al multiplicar."
+      en: "x: the answer, the number that brings the unit back on multiplication."
+      pt: "x: a resposta, o número que devolve a unidade ao multiplicar."
+      fr: "x : la réponse, le nombre qui ramène l'unité en multipliant."
+      zh: "x：答案，把单位还原回来的那个数。"
+      ja: "x：答え。掛けると1が戻るような数。"
+  - id: congruent
+    type: operator
+    value: ≡
+    explanation:
+      es: "≡: congruente módulo el número siguiente."
+      en: "≡: congruent modulo the number that follows."
+      pt: "≡: congruente módulo o número seguinte."
+      fr: "≡ : congru modulo le nombre qui suit."
+      zh: "≡：模下一个数同余。"
+      ja: "≡：次の数を法として合同。"
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: "1: la unidad, el resto que se quiere recuperar."
+      en: "1: the unit, the remainder to be recovered."
+      pt: "1: a unidade, o resto que se quer recuperar."
+      fr: "1 : l'unité, le reste à récupérer."
+      zh: "1：单位，要恢复的那个余数。"
+      ja: "1：単位。取り戻したい剰余そのもの。"
+  - id: mod-m
+    type: operator
+    value: mod m
+    explanation:
+      es: "mod m: el módulo, el entero positivo que fija la aritmética."
+      en: "mod m: the modulus, the positive integer that sets the arithmetic."
+      pt: "mod m: o módulo, o inteiro positivo que fixa a aritmética."
+      fr: "mod m : le module, l'entier positif qui fixe l'arithmétique."
+      zh: "mod m：模数，规定这套算术的正整数。"
+      ja: "mod m：法。算演を決める正の整数。"
+context:
+  author:
+    es: Euclides
+    en: Euclid
+    pt: Euclides
+    fr: Euclide
+    zh: 欧几里得
+    ja: ユークリッド
+  era:
+    es: "c. 300 a.C. · forma extendida posterior"
+    en: "c. 300 BC · extended form, later centuries"
+    pt: "c. 300 a.C. · forma estendida posterior"
+    fr: "v. 300 av. J.-C. · forme étendue plus tard"
+    zh: "约公元前300年·扩展形式见于后世"
+    ja: "紀元前300年頃·拡張版は後にまとめられた"
+  history:
+    es: >-
+      Dividir entre un número módulo m exige poder deshacer esa división, y se hace
+      multiplicando por su inverso, un número x tal que ax deja resto 1 al dividirse por m.
+      Ese inverso aparece sólo cuando a y m no comparten ningún factor primo, es decir cuando
+      su máximo común divisor es 1. El método para hallarlo es el algoritmo de Euclides
+      extendido, que lleva dos mil años dando vueltas a los números y que hoy calcula las
+      claves privadas de casi toda la criptografía de clave pública.
+    en: >-
+      Dividing by a number modulo m means being able to undo that division, and the way to do
+      it is to multiply by its inverse, a number x such that ax leaves remainder 1 on division
+      by m. That inverse turns up only when a and m share no prime factor at all, that is,
+      when their greatest common divisor is 1. The method for finding it is the extended
+      Euclidean algorithm, which has spent two thousand years turning numbers over, and which
+      today computes the private keys of most public-key cryptography.
+    pt: >-
+      Dividir por um número módulo m exige poder desfazer essa divisão, e isso se faz
+      multiplicando pelo seu inverso, um número x tal que ax deixa resto 1 na divisão por m.
+      Esse inverso só aparece quando a e m não compartilham nenhum fator primo, ou seja,
+      quando o máximo divisor comum é 1. O método para encontrá-lo é o algoritmo de Euclides
+      estendido, que há dois mil anos dá voltas nos números e que hoje calcula as chaves
+      privadas de quase toda a criptografia de chave pública.
+    fr: >-
+      Diviser par un nombre modulo m, c'est pouvoir défaire cette division, et cela se fait en
+      multipliant par son inverse, un nombre x tel que ax laisse le reste 1 dans la division
+      par m. Cet inverse n'apparaît que si a et m n'ont aucun facteur premier en commun, c'est-
+      à-dire si leur plus grand commun diviseur vaut 1. La méthode pour le trouver est
+      l'algorithme d'Euclide étendu, qui tourne sur les nombres depuis deux mille ans et qui
+      calcule aujourd'hui les clés privées de presque toute la cryptographie à clé publique.
+    zh: >-
+      在模m下除以某个数，等于要能撤销这次除法，做法是乘以它的逆元——一个使ax除以m余1的数x。只有当a与m没有
+      任何公因子，即最大公约数为1时，逆元才会出现。求它的方法是扩展欧几里得算法，这个算法折腾数字已有
+      两千年，如今正是它算出了几乎所有公钥密码的私钥。
+    ja: >-
+      法mの世界で割り算をするとき、その割り算を取り消す必要がある。
+      その方法は逆元を掛けることであり、axをmで割った余りを1にするような数xを指す。
+      この逆元は、aとmが素因数を一つも共有しないとき、つまり最大公約数が1のときにだけ得られる。
+      その求め方は拡張ユークリッドの互除法であり、2000年も数を回してきた。
+      いまは公開鍵暗号の秘密鍵をこの方法で計算している。
+  timeline:
+    - year: c. 300 a.C.
+      label:
+        es: >-
+          Euclides obtiene el máximo común divisor por divisiones sucesivas, de donde sale el
+          inverso.
+        en: >-
+          Euclid obtains the greatest common divisor by repeated division, and with it the
+          inverse.
+        pt: >-
+          Euclides obtém o máximo divisor comum por divisões sucessivas, e com ele o inverso.
+        fr: >-
+          Euclide obtient le plus grand commun diviseur par des divisions successives, et
+          l'inverse avec lui.
+        zh: >-
+          欧几里得用反复相除得到最大公约数，逆元也随之而来。
+        ja: >-
+          ユークリッドは繰り返しの割り算で最大公約数を得て、逆元もそこから取り出す。
+    - year: "1977"
+      label:
+        es: >-
+          RSA elige la clave privada como el inverso del exponente público módulo φ(n).
+        en: >-
+          RSA picks the private key as the inverse of the public exponent modulo φ(n).
+        pt: >-
+          O RSA escolhe a chave privada como o inverso do expoente público módulo φ(n).
+        fr: >-
+          RSA choisit la clé privée comme l'inverse de l'exposant public modulo φ(n).
+        zh: >-
+          RSA把私钥选为公开指数模φ(n)的逆元。
+        ja: >-
+          RSAは秘密鍵に、公開指数の法φ(n)における逆元を選ぶ。
+    - year: Hoy
+      label:
+        es: >-
+          Toda división modular dentro de un algoritmo criptográfico pasa por aquí.
+        en: >-
+          Every modular division inside a cryptographic algorithm goes through here.
+        pt: >-
+          Toda divisão modular dentro de um algoritmo criptográfico passa por aqui.
+        fr: >-
+          Toute division modulaire d'un algorithme cryptographique passe par là.
+        zh: >-
+          密码算法中的每一次模除法都要经过这里。
+        ja: >-
+          暗号アルゴリズムの中の剰余演算による割り算は、すべてここを通る。
+  useCases:
+    - title:
+        es: Claves privadas
+        en: Private keys
+        pt: Chaves privadas
+        fr: Clés privées
+        zh: 私钥
+        ja: 秘密鍵
+      description:
+        es: >-
+          La clave privada de RSA es el inverso del exponente público, y sin ese inverso nadie
+          puede deshacer el cifrado.
+        en: >-
+          The RSA private key is the inverse of the public exponent, and without that
+          inverse nobody can undo the encryption.
+        pt: >-
+          A chave privada do RSA é o inverso do expoente público, e sem esse inverso ninguém
+          consegue desfazer a cifração.
+        fr: >-
+          La clé privée de RSA est l'inverse de l'exposant public, et sans cet inverse
+          personne ne peut défaire le chiffrement.
+        zh: >-
+          RSA的私钥就是公开指数的逆元，没有这个逆元就无法还原密文。
+        ja: >-
+          RSAの秘密鍵は公開指数の逆元であり、この逆元がなければ暗号は解けない。
+    - title:
+        es: Congruencias lineales
+        en: Linear congruences
+        pt: Congruências lineares
+        fr: Congruences linéaires
+        zh: 线性同余方程
+        ja: 一次合同式
+      description:
+        es: >-
+          La congruencia ax ≡ b se resuelve con x ≡ b·a⁻¹, siempre que a tenga inverso
+          módulo m.
+        en: >-
+          The congruence ax ≡ b is solved with x ≡ b·a⁻¹, as long as a has an inverse
+          modulo m.
+        pt: >-
+          A congruência ax ≡ b se resolve com x ≡ b·a⁻¹, sempre que a tenha inverso módulo
+          m.
+        fr: >-
+          La congruence ax ≡ b se résout avec x ≡ b·a⁻¹, dès que a possède un inverse modulo
+          m.
+        zh: >-
+          只要a在模m下可逆，同余方程ax ≡ b的解就是x ≡ b·a⁻¹。
+        ja: >-
+          合同式 ax ≡ b は、aが法mで逆元を持つなら x ≡ b·a⁻¹ で解ける。
+    - title:
+        es: Dividir sin fracciones
+        en: Dividing without fractions
+        pt: Dividir sem frações
+        fr: Diviser sans fractions
+        zh: 无分数的除法
+        ja: 分数を使わない割り算
+      description:
+        es: >-
+          En aritmética modular, dividir por a y multiplicar por su inverso dan exactamente
+          el mismo resultado.
+        en: >-
+          In modular arithmetic, dividing by a and multiplying by its inverse give exactly the
+          same result.
+        pt: >-
+          Na aritmética modular, dividir por a e multiplicar pelo seu inverso dão exatamente
+          o mesmo resultado.
+        fr: >-
+          En arithmétique modulaire, diviser par a et multiplier par son inverse donnent
+          exactement le même résultat.
+        zh: >-
+          在模运算中，除以a与乘以a的逆元给出的结果完全相同。
+        ja: >-
+          剰余演算では、aで割ることとaの逆元を掛けることはまったく同じ結果になる。
+  example:
+    title:
+      es: Inverso de 3 módulo 5
+      en: Inverse of 3 modulo 5
+      pt: Inverso de 3 módulo 5
+      fr: Inverse de 3 modulo 5
+      zh: 3 模 5 的逆元
+      ja: 3 の法5における逆元
+    lines:
+      - es: "Buscar x con 3x ≡ 1 (mod 5)"
+        en: "Looking for x with 3x ≡ 1 (mod 5)"
+        pt: "Procurar x com 3x ≡ 1 (mod 5)"
+        fr: "Chercher x tel que 3x ≡ 1 (mod 5)"
+        zh: "求满足3x ≡ 1 (mod 5)的x"
+        ja: "3x ≡ 1 (mod 5) となるxを探す"
+      - es: "5 = 1 × 3 + 2"
+        en: "5 = 1 × 3 + 2"
+        pt: "5 = 1 × 3 + 2"
+        fr: "5 = 1 × 3 + 2"
+        zh: "5 = 1 × 3 + 2"
+        ja: "5 = 1 × 3 + 2"
+      - es: "3 = 1 × 2 + 1"
+        en: "3 = 1 × 2 + 1"
+        pt: "3 = 1 × 2 + 1"
+        fr: "3 = 1 × 2 + 1"
+        zh: "3 = 1 × 2 + 1"
+        ja: "3 = 1 × 2 + 1"
+      - es: "1 = 3 − 2 = 2 × 3 − 1 × 5"
+        en: "1 = 3 − 2 = 2 × 3 − 1 × 5"
+        pt: "1 = 3 − 2 = 2 × 3 − 1 × 5"
+        fr: "1 = 3 − 2 = 2 × 3 − 1 × 5"
+        zh: "1 = 3 − 2 = 2 × 3 − 1 × 5"
+        ja: "1 = 3 − 2 = 2 × 3 − 1 × 5"
+      - es: "Coeficiente de 3: x = 2, y 3 × 2 = 6 ≡ 1 (mod 5)"
+        en: "Coefficient of 3: x = 2, and 3 × 2 = 6 ≡ 1 (mod 5)"
+        pt: "Coeficiente de 3: x = 2, e 3 × 2 = 6 ≡ 1 (mod 5)"
+        fr: "Coefficient de 3 : x = 2, et 3 × 2 = 6 ≡ 1 (mod 5)"
+        zh: "3的系数：x = 2，且 3 × 2 = 6 ≡ 1 (mod 5)"
+        ja: "3の係数が x = 2、3 × 2 = 6 ≡ 1 (mod 5)"
+      - es: "Con a = 3 y m = 6 no hay inverso: gcd(3, 6) = 3"
+        en: "With a = 3 and m = 6 there is no inverse: gcd(3, 6) = 3"
+        pt: "Com a = 3 e m = 6 não há inverso: mdc(3, 6) = 3"
+        fr: "Avec a = 3 et m = 6, pas d'inverse : pgcd(3, 6) = 3"
+        zh: "取 a = 3、m = 6 时没有逆元：gcd(3, 6) = 3"
+        ja: "a = 3、m = 6 なら逆元はない。最大公約数は3"

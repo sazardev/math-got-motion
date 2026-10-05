@@ -1,0 +1,246 @@
+id: incircle-area
+title:
+  es: Área mediante el inradio
+  en: Area via the inradius
+  pt: Área pelo raio interno
+  fr: Aire par le rayon inscrit
+  zh: 由内切圆半径求面积
+  ja: 内接円半径による面積
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: area
+    type: variable
+    value: A
+    explanation:
+      es: El área del triángulo.
+      en: The area of the triangle.
+      pt: A área do triângulo.
+      fr: L'aire du triangle.
+      zh: 三角形的面积。
+      ja: 三角形の面積。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: inradius
+    type: variable
+    value: r
+    explanation:
+      es: "El inradio, el radio del círculo inscrito en el triángulo."
+      en: "The inradius, the radius of the circle inscribed in the triangle."
+      pt: "O raio interno, o raio do círculo inscrito no triângulo."
+      fr: "Le rayon inscrit, rayon du cercle inscrit dans le triangle."
+      zh: "内切圆半径，即内切圆的半径。"
+      ja: "内接円の半径。三角形に内接する円の半径。"
+  - id: times
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por el semiperímetro.
+      en: Multiplied by the semiperimeter.
+      pt: Multiplicado pelo semiperímetro.
+      fr: Multiplié par le demi-périmètre.
+      zh: 乘以半周长。
+      ja: 半周長を掛ける。
+  - id: semiperimeter
+    type: variable
+    value: s
+    explanation:
+      es: "El semiperímetro, la mitad del contorno: (a + b + c)/2."
+      en: "The semiperimeter, half the perimeter: (a + b + c)/2."
+      pt: "O semiperímetro, metade do perímetro: (a + b + c)/2."
+      fr: "Le demi-périmètre, la moitié du périmètre : (a + b + c)/2."
+      zh: "半周长，即周长的一半：(a + b + c)/2。"
+      ja: "半周長、也就是周の半分。(a + b + c)/2。"
+context:
+  author:
+    es: Origen colectivo (geometría griega)
+    en: Collective origin (Greek geometry)
+    pt: Origem coletiva (geometria grega)
+    fr: Origine collective (géométrie grecque)
+    zh: 集体起源（古希腊几何学）
+    ja: 集団的起源（古代ギリシャの幾何学）
+  era:
+    es: Grecia, s. IV a.C. · usada en agrimensura
+    en: Greece, 4th century BC · used in surveying
+    pt: Grécia, séc. IV a.C. · usada em agrimensura
+    fr: Grèce, IVe s. av. J.-C. · utilisée en arpentage
+    zh: 希腊，公元前4世纪 · 用于测量
+    ja: ギリシャ、前4世紀 · 測量で使われる
+  history:
+    es: >-
+      La identidad es inmediata si se une el incentro con los tres vértices: el triángulo queda dividido en
+      tres triángulos, y los tres tienen la misma altura, el inradio r. Al sumar sus áreas, que son
+      ar/2, br/2 y cr/2, sale r·(a + b + c)/2, es decir r·s. Es un resultado elemental que aparece en los
+      textos griegos de agrimensura y que hoy sirve como atajo cuando se conoce el área y se busca el
+      inradio. Combinada con la fórmula de Herón da r = √((s−a)(s−b)(s−c)/s).
+    en: >-
+      The identity is immediate once the incenter is joined to the three vertices: the triangle is split
+      into three triangles, and all three have the same height, the inradius r. Adding their areas, ar/2,
+      br/2 and cr/2, gives r·(a + b + c)/2, which is r·s. It is an elementary result that appears in
+      the Greek surveying texts and today serves as a shortcut when the area is known and the inradius is
+      wanted. Combined with Heron's formula it gives r = √((s−a)(s−b)(s−c)/s).
+    pt: >-
+      A identidade é imediata quando se une o incentro aos três vértices: o triângulo fica dividido em três
+      triângulos, e os três têm a mesma altura, o raio interno r. Somando suas áreas, ar/2, br/2 e cr/2,
+      resulta r·(a + b + c)/2, isto é, r·s. É um resultado elementar que aparece nos textos gregos de
+      agrimensura e que hoje serve como atalho quando se conhece a área e se busca o raio interno.
+      Combinada com a fórmula de Heron dá r = √((s−a)(s−b)(s−c)/s).
+    fr: >-
+      L'identité est immédiate dès qu'on joint l'incentre aux trois sommets : le triangle est découpé en
+      trois triangles, et les trois ont la même hauteur, le rayon inscrit r. En additionnant leurs aires,
+      ar/2, br/2 et cr/2, on obtient r·(a + b + c)/2, c'est-à-dire r·s. C'est un résultat élémentaire qui
+      figure dans les textes grecs d'arpentage et qui sert aujourd'hui de raccourci quand on connaît
+      l'aire et que l'on cherche le rayon inscrit. Combinée à la formule d'Héron, elle donne
+      r = √((s−a)(s−b)(s−c)/s).
+    zh: >-
+      把内心与三个顶点相连，三角形就被分成三个三角形，而它们的高都等于内切圆半径r。把这三块面积ar/2、br/2、cr/2相加，
+      得到r·(a + b + c)/2，也就是r·s。这是古希腊测量文献中已有的初等结论，如今在已知面积、需要内切圆半径时是一条捷径。
+      与海伦公式结合可得 r = √((s−a)(s−b)(s−c)/s)。
+    ja: >-
+      内心を3つの頂点と結べば即座にわかる。三角形は3つの三角形に分けられ、その3つはいずれも高さが内接円の半径 r に等しい。
+      それぞれの面積 ar/2、br/2、cr/2 を足すと r·(a + b + c)/2 つまり r·s になる。これは古代ギリシャの測量の文献に
+      現れる初等的な結果であり、面積から内接円の半径を求めるときに今なら近道になる。ヘロンの公式と組み合わせれば
+      r = √((s−a)(s−b)(s−c)/s) が得られる。
+  timeline:
+    - year: s. IV a.C.
+      label:
+        es: >-
+          Euclides define el círculo inscrito de un triángulo en sus Elementos.
+        en: >-
+          Euclid defines the circle inscribed in a triangle in his Elements.
+        pt: >-
+          Euclides define o círculo inscrito de um triângulo nos seus Elementos.
+        fr: >-
+          Euclide définit le cercle inscrit dans un triangle dans ses Éléments.
+        zh: >-
+          欧几里得在《几何原本》中定义了三角形的内切圆。
+        ja: >-
+          ユークリッドが『原論』で三角形に内接する円を定義する。
+    - year: s. I d.C.
+      label:
+        es: >-
+          Herón da el área a partir de los lados, lo que permite despejar el inradio.
+        en: >-
+          Heron gives the area from the sides, which makes it possible to solve for the inradius.
+        pt: >-
+          Heron dá a área a partir dos lados, o que permite isolar o raio interno.
+        fr: >-
+          Héron donne l'aire à partir des côtés, ce qui permet d'isoler le rayon inscrit.
+        zh: >-
+          海伦给出由边长求面积的公式，由此可以解出内切圆半径。
+        ja: >-
+          ヘロンが辺から面積を求める公式を示し、内接円の半径を逆算できるようになった。
+    - year: Hoy
+      label:
+        es: >-
+          Atajo habitual en agrimensura, en diseño y en el cálculo de tolerancias de fabricación.
+        en: >-
+          A standard shortcut in surveying, design and manufacturing tolerance calculations.
+        pt: >-
+          Atalho habitual em agrimensura, em design e no cálculo de tolerâncias de fabricação.
+        fr: >-
+          Raccourci habituel en arpentage, en design et dans le calcul des tolérances de fabrication.
+        zh: >-
+          它是测量、设计与制造公差计算中的常用捷径。
+        ja: >-
+          測量、設計、製造の公差計算で常用的近道となっている。
+  useCases:
+    - title:
+        es: Agrimensura
+        en: Surveying
+        pt: Agrimensura
+        fr: Arpentage
+        zh: 土地测量
+        ja: 測量
+      description:
+        es: >-
+          Para pasar de la superficie de un terreno triangular a su circunferencia inscrita basta dividir
+          por el semiperímetro.
+        en: >-
+          To go from the area of a triangular plot to its incircle, divide by the semiperimeter.
+        pt: >-
+          Para passar da superfície de um terreno triangular para sua circunferência inscrita basta dividir
+          pelo semiperímetro.
+        fr: >-
+          Pour passer de la surface d'une parcelle triangulaire à son cercle inscrit, il suffit de diviser
+          par le demi-périmètre.
+        zh: >-
+          从三角形地块的面积求其内切圆，只要除以半周长即可。
+        ja: >-
+          三角形敷地の面積から内接円を出すには、半周長で割ればよい。
+    - title:
+        es: Localizar el incentro
+        en: Locating the incenter
+        pt: Localizar o incentro
+        fr: Localiser le centre inscrit
+        zh: 定位内心
+        ja: 内接円の中心を求める
+      description:
+        es: >-
+          Localizar el incentro es pesar cada vértice por la longitud del lado opuesto: el
+          incentro es el baricentro con esos pesos.
+        en: >-
+          To locate the incenter, weight each vertex by the length of the opposite side: the
+          incenter is the barycenter of those weights.
+        pt: >-
+          Para localizar o incentro, pesa-se cada vértice pelo comprimento do lado oposto: o
+          incentro é o baricentro com esses pesos.
+        fr: >-
+          Pour localiser le centre du cercle inscrit, on pondère chaque sommet par la
+          longueur du côté opposé : c'est le barycentre de ces poids.
+        zh: >-
+          要定位内心，就把每个顶点按对边长度加权：内心正是这些权重下的重心。
+        ja: >-
+          内接円の中心は、各頂点に対辺の長さを掛けて重み付けした重心である。
+  example:
+    title:
+      es: Triángulo rectángulo de lados 3, 4 y 5
+      en: Right triangle with sides 3, 4 and 5
+      pt: Triângulo retângulo de lados 3, 4 e 5
+      fr: Triangle rectangle de côtés 3, 4 et 5
+      zh: 边长为 3、4、5 的直角三角形
+      ja: 辺が 3、4、5 の直角三角形
+    lines:
+      - es: "Lados a = 3, b = 4, c = 5"
+        en: "Sides a = 3, b = 4, c = 5"
+        pt: "Lados a = 3, b = 4, c = 5"
+        fr: "Côtés a = 3, b = 4, c = 5"
+        zh: "三边 a = 3，b = 4，c = 5"
+        ja: "辺 a = 3、b = 4、c = 5"
+      - es: "s = (3 + 4 + 5)/2 = 6"
+        en: "s = (3 + 4 + 5)/2 = 6"
+        pt: "s = (3 + 4 + 5)/2 = 6"
+        fr: "s = (3 + 4 + 5)/2 = 6"
+        zh: "s = (3 + 4 + 5)/2 = 6"
+        ja: "s = (3 + 4 + 5)/2 = 6"
+      - es: A = 3·4/2 = 6
+        en: A = 3·4/2 = 6
+        pt: A = 3·4/2 = 6
+        fr: A = 3·4/2 = 6
+        zh: A = 3·4/2 = 6
+        ja: A = 3·4/2 = 6
+      - es: r = A/s = 6/6 = 1
+        en: r = A/s = 6/6 = 1
+        pt: r = A/s = 6/6 = 1
+        fr: r = A/s = 6/6 = 1
+        zh: r = A/s = 6/6 = 1
+        ja: r = A/s = 6/6 = 1
+      - es: "Comprobación: A = r·s = 1 · 6 = 6"
+        en: "Check: A = r·s = 1 · 6 = 6"
+        pt: "Comprovação: A = r·s = 1 · 6 = 6"
+        fr: "Vérification : A = r·s = 1 · 6 = 6"
+        zh: "验证：A = r·s = 1 · 6 = 6"
+        ja: "確認: A = r·s = 1 · 6 = 6"

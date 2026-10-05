@@ -1,0 +1,317 @@
+id: rayleigh-criterion
+title:
+  es: Criterio de Rayleigh
+  en: Rayleigh Criterion
+  pt: Critério de Rayleigh
+  fr: Critère de Rayleigh
+  zh: 瑞利判据
+  ja: レイリー判準
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: theta
+    type: variable
+    value: θ
+    explanation:
+      es: "La separación angular mínima con la que un instrumento todavía distingue dos puntos."
+      en: "The smallest angular separation at which an instrument can still tell two points apart."
+      pt: "A menor separação angular com a qual um instrumento ainda distingue dois pontos."
+      fr: "La plus petite séparation angulaire à laquelle un instrument distingue encore deux points."
+      zh: 仪器仍能分辨两个点时的最小角距离。
+      ja: 器械が2つの点として区別できる最小の角度。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: coefficient
+    type: number
+    value: "1.22"
+    explanation:
+      es: "El factor 1,22, que sale de la posición del primer mínimo del patrón de Airy."
+      en: "The factor 1.22, which comes from where the first minimum of the Airy pattern sits."
+      pt: "O fator 1,22, que vem da posição do primeiro mínimo do padrão de Airy."
+      fr: "Le facteur 1,22, qui vient de la position du premier minimum de la figure d'Airy."
+      zh: 系数1.22,来自艾里斑图样第一个极小值的位置。
+      ja: 係数1.22。エアリー斑の最初の極小の位置から生じる。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: lambda
+    type: variable
+    value: λ
+    explanation:
+      es: "La longitud de onda de la luz usada, que fija la escala del patrón de difracción."
+      en: "The wavelength of the light used, which sets the scale of the diffraction pattern."
+      pt: "O comprimento de onda da luz usada, que fixa a escala do padrão de difração."
+      fr: "La longueur d'onde de la lumière utilisée, qui fixe l'échelle du motif de diffraction."
+      zh: 所用光的波长,它决定了衍射图样的尺度。
+      ja: 用いた光の波長。回折模様の大きさを決める。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre el diámetro del objetivo.
+      en: Divided by the diameter of the objective.
+      pt: Dividido pelo diâmetro da objetiva.
+      fr: Divisé par le diamètre de l'objectif.
+      zh: 除以物镜的直径。
+      ja: 対物レンズの直径で割る。
+  - id: d
+    type: variable
+    value: D
+    explanation:
+      es: "El diámetro de la apertura circular: cuanto mayor es, menor el ángulo resuelto."
+      en: "The diameter of the circular aperture: the larger it is, the smaller the resolved angle."
+      pt: "O diâmetro da abertura circular: quanto maior, menor o ângulo resolvido."
+      fr: "Le diamètre de l'ouverture circulaire : plus il est grand, plus l'angle résolu est petit."
+      zh: 圆形孔径的直径。它越大,可分辨的角距离越小。
+      ja: 円形開口の直径。大きいほど分離できる角度は小さくなる。
+context:
+  author:
+    es: John William Strutt, lord Rayleigh
+    en: John William Strutt, Lord Rayleigh
+    pt: John William Strutt, lorde Rayleigh
+    fr: John William Strutt, lord Rayleigh
+    zh: 约翰·威廉·斯特鲁特,瑞利勋爵
+    ja: ジョン・ウィリアム・ストラット(レイリー卿)
+  era:
+    es: "Inglaterra, 1842–1919 · criterio publicado en 1879"
+    en: "England, 1842–1919 · criterion published in 1879"
+    pt: "Inglaterra, 1842–1919 · critério publicado em 1879"
+    fr: "Angleterre, 1842–1919 · critère publié en 1879"
+    zh: "英国,1842–1919年 · 判据发表于1879年"
+    ja: "イギリス、1842–1919年 · 判準は1879年に発表"
+  history:
+    es: >-
+      Rayleigh se preguntó cuándo dos focos de luz dejan de verse como uno. Airy ya había resuelto en 1835 la
+      forma del patrón que produce una apertura circular, con sus anillos y su primer mínimo oscuro. Rayleigh
+      usó ese resultado para fijar un criterio operable: dos puntos están resueltos cuando el máximo del patrón
+      de uno cae sobre el primer mínimo del otro. De la condición sale el factor 1,22, y con él la idea de
+      que la resolución de un instrumento la fijan sus propios lentes, no el ocular. La misma regla explica por
+      qué el ojo humano, que resuelve cerca de un minuto de arco, ve las estrellas como puntos y hace falta
+      un telescopio para separarlas.
+    en: >-
+      Rayleigh asked when two lights stop being seen as one. Airy had already worked out in 1835 the shape of
+      the pattern a circular aperture produces, with its rings and its first dark minimum. Rayleigh used that
+      result to set a workable criterion: two points are resolved when the maximum of one's pattern falls on
+      the first minimum of the other. The condition yields the factor 1.22, and with it the idea that the
+      resolution of an instrument is set by its own lenses, not by the eyepiece. The same rule explains why
+      the human eye, which resolves about one minute of arc, sees stars as points and needs a telescope to
+      separate them.
+    pt: >-
+      Rayleigh perguntou quando duas luzes deixam de ser vistas como uma só. Airy já havia resolvido em 1835
+      a forma do padrão que uma abertura circular produz, com seus anéis e seu primeiro mínimo escuro. Rayleigh
+      usou esse resultado para fijar un criterio operable: dois pontos estão resolvidos quando o máximo do padrão
+      de um cai sobre o primeiro mínimo do outro. Da condição sai o fator 1,22, e com ela a ideia de que a
+      resolução de um instrumento é fixada pelas suas lentes e não pelo ocular. A mesma regra explica por que o
+      olho humano, que resolve cerca de um minuto de arco, vê as estrelas como pontos e precisa de um telescópio
+      para separá-las.
+    fr: >-
+      Rayleigh se demanda à partir de quand deux foyers de lumière cessent de se voir comme un seul. Airy avait
+      déjà résolu en 1835 la forme du motif produit par une ouverture circulaire, avec ses anneaux et son premier
+      minimum sombre. Rayleigh s'en sert pour fixer un critère opérable : deux points sont résolus quand le
+      maximum du motif de l'un tombe sur le premier minimum de l'autre. De cette condition sort le facteur
+      1,22, et avec elle l'idée que la résolution d'un instrument est fixée par ses propres lentilles et non
+      par l'oculaire. La même règle explique que l'oeil humain, qui résout environ une minute d'arc, voie les
+      étoiles comme des points et qu'il faille un télescope pour les séparer.
+    zh: >-
+      瑞利思考:两个点光源从何时起会被看成一个?艾里早在1835年就解出了圆形孔径所产生图样的形状,包括它的
+      明环与第一个暗纹。瑞利用这个结果确立了一条可操作的判据:当一个点图样的极大恰好落在另一个点图样的第一个
+      极小上时,两点就算被分辨开。由此得到的系数正是1.22。它还带来一个观念:仪器的分辨率由其自身透镜决定,
+      而不由目镜决定。同一条规则也解释了人眼为何只能分辨约1角分,于是星星看起来只是光点,必须借助望远镜
+      才能把它们分开。
+    ja: >-
+      Rayleighは、二つの光源がいつまで一つの点として見えるようになるかを問うた。Airyはすでに1835年に円形開口の
+      生む模様の形を、その環と最初の暗点まで解き出していた。Rayleighはこの結果から操作可能な基準を定めた。
+      一方の模様の極大が他方の最初の極小に重なるときに限り、二点は分離されたと見なす。この条件から係数1.22が
+      得られ、器械の解像度は接眼部ではなくそれ自身のレンズで決まるという考えが生まれる。同じ規則は、約1分の
+      解像力を持つ人間の眼が星を点としてしか見ず、望遠鏡でなければ分離できない理由も説明する。
+  timeline:
+    - year: "1835"
+      label:
+        es: >-
+          Airy resuelve la forma del patrón de difracción de una apertura circular y su primer mínimo, donde
+          está el origen del 1,22.
+        en: >-
+          Airy works out the shape of the diffraction pattern of a circular aperture and its first minimum,
+          where the 1.22 comes from.
+        pt: >-
+          Airy resolve a forma do padrão de difração de uma abertura circular e seu primeiro mínimo, onde está
+          a origem do 1,22.
+        fr: >-
+          Airy résout la forme du motif de diffraction d'une ouverture circulaire et de son premier minimum,
+          d'où vient le 1,22.
+        zh: >-
+          艾里解出圆形孔径衍射图样的形状及其第一个极小值,系数1.22正源于此。
+        ja: >-
+          Airyが円形開口の回折模様の形と最初の極小を求め、1.22の由来となった。
+    - year: "1879"
+      label:
+        es: >-
+          Rayleigh fija el criterio: dos puntos están resueltos cuando el máximo de uno cae en el primer mínimo
+          del otro.
+        en: >-
+          Rayleigh sets the criterion: two points are resolved when the maximum of one falls in the first
+          minimum of the other.
+        pt: >-
+          Rayleigh fixa o critério: dois pontos estão resolvidos quando o máximo de um cai no primeiro mínimo
+          do outro.
+        fr: >-
+          Rayleigh fixe le critère : deux points sont résolus quand le maximum de l'un tombe dans le premier
+          minimum de l'autre.
+        zh: >-
+          瑞利确立判据:当一个点的图样极大落入另一个点图样的第一个极小时,两点即被分辨。
+        ja: >-
+          Rayleighが、一方の極大が他方の最初の極小に当たる場合に限り二点が分離される、と定めた。
+    - year: Hoy
+      label:
+        es: >-
+          Sigue siendo el cálculo de referencia para dimensionar el espejo de un telescopio o el objetivo de un
+          microscopio.
+        en: >-
+          It remains the reference calculation for sizing the mirror of a telescope or the objective of a
+          microscope.
+        pt: >-
+          Segue sendo o cálculo de referência para dimensionar o espelho de um telescópio ou a objetiva de um
+          microscópio.
+        fr: >-
+          Elle reste le calcul de référence pour dimensionner le miroir d'un télescope ou l'objectif d'un
+          microscope.
+        zh: >-
+          它至今仍是确定望远镜主镜或显微镜物镜尺寸时的参考计算。
+        ja: >-
+          望遠鏡の主鏡や顕微鏡の対物レンズの大きさを決める基準計算として今も使われる。
+  useCases:
+    - title:
+        es: Telescopios
+        en: Telescopes
+        pt: Telescópios
+        fr: Télescopes
+        zh: 望远镜
+        ja: 望遠鏡
+      description:
+        es: >-
+          Como θ cae con 1/D, duplicar el diámetro de la apertura divide por dos la separación mínima entre
+          dos estrellas. Esa es la razón de que los grandes observatorios tengan espejos enormes.
+        en: >-
+          Because θ falls as 1/D, doubling the aperture diameter halves the smallest separation between two
+          stars. That is why large observatories carry enormous mirrors.
+        pt: >-
+          Como θ cai com 1/D, dobrar o diâmetro da abertura reduz à metade a menor separação entre duas
+          estrelas. É essa a razão de os grandes observatórios terem espelhos enormes.
+        fr: >-
+          Comme θ décroît comme 1/D, doubler le diamètre de l'ouverture divise par deux l'écart minimal entre
+          deux étoiles. Voilà pourquoi les grands observatoires ont des miroirs énormes.
+        zh: >-
+          由于θ与1/D成反比,把孔径直径加倍,两颗恒星之间的最小可分辨距离就减半。这正是大型天文台拥有
+          巨大主镜的原因。
+        ja: >-
+          θは1/Dに比例して小さくなる。すなわち開口径を2倍にすれば、二つの恒星の最小分離角は半分になる。
+          それが大きな天文台が巨大な鏡を持つ理由である。
+    - title:
+        es: Microscopios
+        en: Microscopes
+        pt: Microscópios
+        fr: Microscopes
+        zh: 显微镜
+        ja: 顕微鏡
+      description:
+        es: >-
+          El mismo cociente limita la resolución de un microscopio. Con luz visible, λ fija un suelo de unos
+          200 nm por debajo del cual un objetivo mejor ya no aporta nada.
+        en: >-
+          The same quotient limits a microscope's resolution. With visible light, λ sets a floor of about
+          200 nm below which a better objective buys nothing.
+        pt: >-
+          O mesmo quociente limita a resolução de um microscópio. Com luz visível, λ fixa um piso de cerca de
+          200 nm abaixo do qual um objetivo melhor não ajuda.
+        fr: >-
+          Le même quotient limite la résolution d'un microscope. En lumière visible, λ fixe un plancher d'environ
+          200 nm en dessous duquel un meilleur objectif n'apporte rien.
+        zh: >-
+          同一个比值也限制了显微镜的分辨率。在可见光下,波长设定约200 nm的下限,低于此值再好的物镜也无济于事。
+        ja: >-
+          同じ比が顕微鏡の解像度も制限する。可視光では波長が約200 nmの下限を設け、それより小さな対象は
+          対物レンズを替えても改善しない。
+    - title:
+        es: Ventanas de fibra óptica
+        en: Fiber optic windows
+        pt: Janelas de fibra óptica
+        fr: Fenêtres des fibres optiques
+        zh: 光纤的透光窗口
+        ja: 光ファイバーの透過窓
+      description:
+        es: >-
+          La Ventana de longitud de onda que admite una fibra es tan estrecha como permita el criterio: los
+          canales de datos se separan por lo que la fibra deja pasar.
+        en: >-
+          The window of wavelengths a fiber accepts is as narrow as the criterion allows: data channels are
+          separated by exactly what the fiber lets through.
+        pt: >-
+          A janela de comprimentos de onda que a fibra aceita é tão estreita quanto o critério permite: os
+          canais de dados se separam pelo que a fibra deixa passar.
+        fr: >-
+          La plage de longueurs d'onde qu'une fibre accepte est aussi étroite que le critère ne le permet : les
+          canaux de données sont séparés par ce que la fibre laisse passer.
+        zh: >-
+          光纤可接受的波长窗口受这条判据限制,窄到何种程度,数据信道就按它分得多开。
+        ja: >-
+          ファイバが通す波長の幅はこの判準が許す範囲で狭い。データのチャンネルは、まさにファイバが
+          通すものの範囲で分割される。
+  example:
+    title:
+      es: Calculando el límite del telescopio
+      en: Computing a telescope's limit
+      pt: Calculando o limite do telescópio
+      fr: Calcul de la limite d'un télescope
+      zh: 计算望远镜的分辨极限
+      ja: 望遠鏡の限界を求める
+    lines:
+      - es: λ = 550 nm y D = 10 cm
+        en: λ = 550 nm and D = 10 cm
+        pt: λ = 550 nm e D = 10 cm
+        fr: λ = 550 nm et D = 10 cm
+        zh: λ = 550 nm,D = 10 cm
+        ja: λ = 550 nm、D = 10 cm
+      - es: θ = 1,22 · 550·10⁻⁹ / 0,10
+        en: θ = 1.22 · 550·10⁻⁹ / 0.10
+        pt: θ = 1,22 · 550·10⁻⁹ / 0,10
+        fr: θ = 1,22 · 550·10⁻⁹ / 0,10
+        zh: θ = 1.22 · 550·10⁻⁹ / 0.10
+        ja: θ = 1.22 · 550·10⁻⁹ / 0.10
+      - es: θ = 6,71·10⁻⁶ rad
+        en: θ = 6.71·10⁻⁶ rad
+        pt: θ = 6,71·10⁻⁶ rad
+        fr: θ = 6,71·10⁻⁶ rad
+        zh: θ = 6.71·10⁻⁶ rad
+        ja: θ = 6.71·10⁻⁶ rad
+      - es: 1 rad = 206 265″ → θ ≈ 1,4 segundos de arco
+        en: 1 rad = 206 265″ → θ ≈ 1.4 arcseconds
+        pt: 1 rad = 206 265″ → θ ≈ 1,4 segundos de arco
+        fr: 1 rad = 206 265″ → θ ≈ 1,4 seconde d'arc
+        zh: 1 rad = 206 265″ → θ ≈ 1.4角秒
+        ja: 1 rad = 206 265″ → θ ≈ 1.4秒角
+      - es: El ojo humano resuelve cerca de 1 minuto de arco
+        en: The human eye resolves about 1 arcminute
+        pt: O olho humano resolve cerca de 1 minuto de arco
+        fr: L'oeil humain résout environ 1 minute d'arc
+        zh: 人眼的分辨极限约为1角分
+        ja: 人間の眼の解像度は約1分角である

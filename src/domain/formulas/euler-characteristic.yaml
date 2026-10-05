@@ -1,0 +1,275 @@
+id: euler-characteristic
+title:
+  es: Característica de Euler
+  en: Euler characteristic
+  pt: Característica de Euler
+  fr: Caractéristique d'Euler
+  zh: 欧拉示性数
+  ja: オイラーの標数
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: vertices
+    type: variable
+    value: V
+    explanation:
+      es: El número de vértices, los puntos donde se encuentran las aristas.
+      en: The number of vertices, where the edges meet.
+      pt: O número de vértices, onde as arestas se encontram.
+      fr: Le nombre de sommets, où se rencontrent les arêtes.
+      zh: 顶点的个数，即棱相交之处。
+      ja: 頂点のの数。辺が出会う場所である。
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "Menos las aristas, que se restan por el mismo motivo que en cualquier suma de Euler."
+      en: "Minus the edges, subtracted for the same reason they are subtracted in any Euler sum."
+      pt: "Menos as arestas, subtraídas pelo mesmo motivo pelo qual se subtraem em uma soma de Euler."
+      fr: "Moins les arêtes, soustraites pour la même raison que dans une somme d'Euler."
+      zh: 减去棱的个数，在任何欧拉计数中它同样是被减去的项。
+      ja: 辺の数を引く。オイラーの和でも同じく引かれる項である。
+  - id: edges
+    type: variable
+    value: E
+    explanation:
+      es: "El número de aristas, los lados de las caras."
+      en: "The number of edges, the sides of the faces."
+      pt: "O número de arestas, os lados das faces."
+      fr: "Le nombre d'arêtes, les côtés des faces."
+      zh: 棱的个数，即各面的边。
+      ja: 辺の数。面の辺のことである。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: "Más las caras, que compensan exactamente lo que restaron las aristas."
+      en: "Plus the faces, which compensate exactly what the edges subtracted."
+      pt: "Mais as faces, que compensam exatamente o que as arestas subtraíram."
+      fr: "Plus les faces, qui compensent exactement ce que les arêtes ont soustrait."
+      zh: 加上面的个数，恰好抵消棱所减去的量。
+      ja: 面の数を足す。辺が差し引いた分をちょうど補う。
+  - id: faces
+    type: variable
+    value: F
+    explanation:
+      es: "El número de caras, las superficies que cierran el sólido."
+      en: "The number of faces, the surfaces that close the solid."
+      pt: "O número de faces, as superfícies que fecham o sólido."
+      fr: "Le nombre de faces, les surfaces qui ferment le solide."
+      zh: 面的个数，即封闭该立体的表面。
+      ja: 面の数。立体を閉じている表面の数である。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "El dos, constante para cualquier poliedro convexo, sea cual sea su forma."
+      en: "The two, constant for any convex polyhedron, whatever its shape."
+      pt: "O dois, constante para qualquer poliedro convexo, qualquer que seja sua forma."
+      fr: "Le deux, constant pour tout polygone convexe, quelle que soit sa forme."
+      zh: "2，对任何凸多面体都相同，不论其形状如何。"
+      ja: "2。形がどんな凸多面体であっても変わらない値である。"
+context:
+  author:
+    es: Leonhard Euler
+    en: Leonhard Euler
+    pt: Leonhard Euler
+    fr: Leonhard Euler
+    zh: 莱昂哈德·欧拉
+    ja: レオンハルト・オイラー
+  era:
+    es: Suiza, 1707–1783 · publicado en 1736
+    en: Switzerland, 1707–1783 · published in 1736
+    pt: Suíça, 1707–1783 · publicado em 1736
+    fr: Suisse, 1707–1783 · publié en 1736
+    zh: 瑞士，1707–1783年 · 发表于1736年
+    ja: スイス、1707–1783年 · 1736年に発表
+  history:
+    es: >-
+      En 1736 Euler publicó un breve trabajo, Solutio problematis ad geometriam situs pertinentium, donde
+      demuestra que todo poliedro convexo cumple V − E + F = 2. Antes de escribirlo había preguntado a
+      Descartes por carta si la relación se cumpliría también fuera de los sólidos, y fue ese intercambio
+      lo que llevó el problema hacia la topología. La identidad no es visible a simple vista: obliga a
+      contar de una manera que no depende de qué poliedro se elija. Hoy V − E + F = 2 es un invariante
+      topológico y se escribe V − E + F = 2 − 2g para una superficie de género g.
+    en: >-
+      In 1736 Euler published a short paper, the Solutio problematis ad geometriam situs pertinentium, where
+      he shows that every convex polyhedron satisfies V − E + F = 2. Before writing it he had asked
+      Descartes in a letter whether the relation would also hold beyond solids, and that exchange is what
+      turned the problem toward topology. The identity is not visible at a glance: it forces a way of
+      counting that does not depend on which polyhedron is chosen. Today V − E + F = 2 is a topological
+      invariant, and it is written V − E + F = 2 − 2g for a surface of genus g.
+    pt: >-
+      Em 1736 Euler publicou um breve trabalho, o Solutio problematis ad geometriam situs pertinentium, onde
+      demonstra que todo poliedro convexo satisfaz V − E + F = 2. Antes de escrevê-lo havia perguntado a
+      Descartes por carta se a relação também valeria fora dos sólidos, e foi essa troca que levou o
+      problema para a topologia. A identidade não é visível de relance: obriga a contar de um jeito que não
+      depende de qual poliedro se escolha. Hoje V − E + F = 2 é um invariante topológico.
+    fr: >-
+      En 1736 Euler publia un court mémoire, la Solutio problematis ad geometriam situs pertinentium, où il
+      montre que tout polygone convexe vérifie V − E + F = 2. Avant de l'écrire il avait demandé à
+      Descartes par lettre si la relation valait aussi hors des solides, et cet échange est ce qui a fait
+      basculer le problème vers la topologie. L'identité ne se voit pas d'un coup d'œil : elle impose une
+      façon de compter qui ne dépend pas du polygone choisi. Aujourd'hui V − E + F = 2 est un invariant
+      topologique.
+    zh: >-
+      1736年欧拉发表了短文《几何位置关系问题解》，证明任何凸多面体都满足 V − E + F = 2。在此之前他曾写信问笛卡尔该关系是否
+      在立体之外也成立，正是这次通信把问题引向了拓扑学。这个等式并非一眼可见：它要求一种不依赖所选多面体的计数方式。今天
+      V − E + F = 2 是一个拓扑不变量，对亏格为 g 的曲面写成 V − E + F = 2 − 2g。
+    ja: >-
+      1736年、オイラーは短い論文『位置幾何の問題の解』を発表し、すべての凸多面体が V − E + F = 2 を満たすことを示した。
+      書き始める前に、オイラーはデカルトに手紙を書き、立体以外でもこの関係が成り立つかどうかを尋ねている。この往復が、問題を
+      位相数学へ導いた。恒等式は一目でわかるものではなく、どの多面形を選んでも同じ数え方をせねばならない点が要点である。
+      今日では V − E + F = 2 は位相不変量であり、種数 g の曲面については V − E + F = 2 − 2g と書く。
+  timeline:
+    - year: "1735"
+      label:
+        es: >-
+          Euler plantea a Descartes, por carta, si la relación se cumple más allá de los sólidos.
+        en: >-
+          Euler asks Descartes in a letter whether the relation holds beyond solids.
+        pt: >-
+          Euler pergunta a Descartes, por carta, se a relação vale além dos sólidos.
+        fr: >-
+          Euler demande à Descartes, dans une lettre, si la relation vaut au-delà des solides.
+        zh: >-
+          欧拉写信问笛卡尔，该关系是否在立体之外也成立。
+        ja: >-
+          オイラーはデカルトに手紙を書き、この関係は立体以外でも成り立つかと尋ねた。
+    - year: "1736"
+      label:
+        es: >-
+          Publica la demostración de que todo poliedro convexo cumple V − E + F = 2.
+        en: >-
+          He publishes the proof that every convex polyhedron satisfies V − E + F = 2.
+        pt: >-
+          Publica a demonstração de que todo poliedro convexo satisfaz V − E + F = 2.
+        fr: >-
+          Il publie la démonstration que tout polygone convexe vérifie V − E + F = 2.
+        zh: >-
+          他发表证明：任何凸多面体都满足 V − E + F = 2。
+        ja: >-
+          すべての凸多面体が V − E + F = 2 を満たすことの証明を発表した。
+    - year: s. XIX
+      label:
+        es: >-
+          Möbius y Jordan extienden la idea a las superficies de género g, con el término 2 − 2g.
+        en: >-
+          Möbius and Jordan extend the idea to surfaces of genus g, with the term 2 − 2g.
+        pt: >-
+          Möbius e Jordan estendem a ideia às superfícies de genus g, com o termo 2 − 2g.
+        fr: >-
+          Möbius et Jordan étendent l'idée aux surfaces de genre g, avec le terme 2 − 2g.
+        zh: >-
+          莫比乌斯与约当把这一思想推广到亏格为 g 的曲面，得出 2 − 2g 这一项。
+        ja: >-
+          メビウスとヨルダンがこの考えを種数 g の曲面へ広げ、2 − 2g の項を得る。
+    - year: Hoy
+      label:
+        es: >-
+          Se usa para comprobar que una malla 3D está cerrada y no tiene agujeros.
+        en: >-
+          It is used to check that a 3D mesh is closed and free of holes.
+        pt: >-
+          Usa-se para verificar se uma malha 3D está fechada e sem buracos.
+        fr: >-
+          Elle sert à vérifier qu'un maillage 3D est fermé et sans trou.
+        zh: >-
+          它用于检查三维网格是否封闭且没有孔洞。
+        ja: >-
+          3次元メッシュが閉じているか穴がないかを確認するのに使われる。
+  useCases:
+    - title:
+        es: Mallas 3D
+        en: 3D meshes
+        pt: Malhas 3D
+        fr: Maillages 3D
+        zh: 三维网格
+        ja: 3次元メッシュ
+      description:
+        es: >-
+          Una malla cerrada y sin bordes cumple V − E + F = 2, así que el recuento detecta agujeros.
+        en: >-
+          A closed mesh with no boundary satisfies V − E + F = 2, so the count detects holes.
+        pt: >-
+          Uma malha fechada e sem bordas satisfaz V − E + F = 2, então a contagem detecta buracos.
+        fr: >-
+          Un maillage fermé sans bord satisfy V − E + F = 2, et ce décompte détecte donc les trous.
+        zh: >-
+          封闭且无边界的网格满足 V − E + F = 2，因此这一计数能查出孔洞。
+        ja: >-
+          境界のない閉じたメッシュは V − E + F = 2 を満たすので、この数え方で穴が見つかる。
+    - title:
+        es: Topología computacional
+        en: Computational topology
+        pt: Topologia computacional
+        fr: Topologie informatique
+        zh: 计算拓扑
+        ja: 計算位相
+      description:
+        es: >-
+          En homología, este invariante separa las superficies: un toro tiene 2 − 2·1 = 0.
+        en: >-
+          In homology this invariant separates surfaces: a torus has 2 − 2·1 = 0.
+        pt: >-
+          Em homologia, este invariante separa as superfícies: um toro tem 2 − 2·1 = 0.
+        fr: >-
+          En homologie, cet invariant sépare les surfaces : un tore vaut 2 − 2·1 = 0.
+        zh: >-
+          在同调中，这个不变量区分曲面：环面为 2 − 2·1 = 0。
+        ja: >-
+          ホモロジーではこの不変量が曲面を区別する。トーラスは 2 − 2·1 = 0 となる。
+  example:
+    title:
+      es: Tetraedro y cubo
+      en: Tetrahedron and cube
+      pt: Tetraedro e cubo
+      fr: Tétraèdre et cube
+      zh: 四面体与立方体
+      ja: 正四面体と立方体
+    lines:
+      - es: "Tetraedro: V = 4, E = 6, F = 4"
+        en: "Tetrahedron: V = 4, E = 6, F = 4"
+        pt: "Tetraedro: V = 4, E = 6, F = 4"
+        fr: "Tétraèdre : V = 4, E = 6, F = 4"
+        zh: "四面体：V = 4，E = 6，F = 4"
+        ja: "正四面体：V = 4、E = 6、F = 4"
+      - es: 4 − 6 + 4 = 2
+        en: 4 − 6 + 4 = 2
+        pt: 4 − 6 + 4 = 2
+        fr: 4 − 6 + 4 = 2
+        zh: 4 − 6 + 4 = 2
+        ja: 4 − 6 + 4 = 2
+      - es: "Cubo: V = 8, E = 12, F = 6"
+        en: "Cube: V = 8, E = 12, F = 6"
+        pt: "Cubo: V = 8, E = 12, F = 6"
+        fr: "Cube : V = 8, E = 12, F = 6"
+        zh: "立方体：V = 8，E = 12，F = 6"
+        ja: "立方体：V = 8、E = 12、F = 6"
+      - es: 8 − 12 + 6 = 2
+        en: 8 − 12 + 6 = 2
+        pt: 8 − 12 + 6 = 2
+        fr: 8 − 12 + 6 = 2
+        zh: 8 − 12 + 6 = 2
+        ja: 8 − 12 + 6 = 2
+      - es: El mismo 2 en dos sólidos muy distintos
+        en: The same 2 in two very different solids
+        pt: O mesmo 2 em dois sólidos muito distintos
+        fr: Le même 2 dans deux solides très différents
+        zh: 两个很不同的立体得到同一个2
+        ja: まったく違う2つの立体で同じ2になる

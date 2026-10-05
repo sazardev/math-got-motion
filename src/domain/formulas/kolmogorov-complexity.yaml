@@ -1,0 +1,323 @@
+id: kolmogorov-complexity
+title:
+  es: "Complejidad de Kolmogorov"
+  en: "Kolmogorov complexity"
+  pt: "Complexidade de Kolmogorov"
+  fr: "Complexité de Kolmogorov"
+  zh: "柯尔莫哥罗夫复杂度"
+  ja: "コルモゴロフ計算量"
+category:
+  es: Informática
+  en: Computer science
+  pt: Informática
+  fr: Informatique
+  zh: 计算机科学
+  ja: コンピュータ科学
+nodes:
+  - id: k-of-x
+    type: variable
+    value: "K(x)"
+    explanation:
+      es: "K(x): la longitud del programa más corto capaz de producir la cadena x."
+      en: "K(x): the length of the shortest program able to produce the string x."
+      pt: "K(x): o comprimento do programa mais curto capaz de produzir a sequência x."
+      fr: "K(x) : la longueur du plus court programme capable de produire la chaîne x."
+      zh: "K(x)：能生成字符串x的最短程序的长度。"
+      ja: "K(x)：文字列xを生成できる最短のプログラムの長。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: min
+    type: operator
+    value: min
+    explanation:
+      es: "min: el mínimo, tomado sobre todos los programas posibles."
+      en: "min: the minimum, taken over every possible program."
+      pt: "min: o mínimo, tomado sobre todos os programas possíveis."
+      fr: "min : le minimum, pris sur tous les programmes possibles."
+      zh: "min：在所有可能的程序上取最小值。"
+      ja: "min：すべてのプログラムにわたる最小値。"
+  - id: program
+    type: operator
+    value: "|P|"
+    explanation:
+      es: "|P|: el número de símbolos del programa P."
+      en: "|P|: the number of symbols in the program P."
+      pt: "|P|: o número de símbolos do programa P."
+      fr: "|P| : le nombre de symboles du programme P."
+      zh: "|P|：程序P的符号数。"
+      ja: "|P|：プログラムPの記号数。"
+  - id: such-that
+    type: operator
+    value: "s.t."
+    explanation:
+      es: "s.t.: tal que, la condición que debe cumplir el programa."
+      en: "s.t.: such that, the condition the program must meet."
+      pt: "s.t.: tal que, a condição que o programa deve satisfazer."
+      fr: "s.t. : tel que, la condition que le programme doit remplir."
+      zh: "s.t.：使得，程序必须满足的条件。"
+      ja: "s.t.：条件。プログラムPが満たすもの。"
+  - id: universal
+    type: variable
+    value: "U(P)"
+    explanation:
+      es: "U(P): la máquina fija que ejecuta P y escupe su salida."
+      en: "U(P): the fixed machine that runs P and spits out its output."
+      pt: "U(P): a máquina fixa que executa P e cospeja sua saída."
+      fr: "U(P) : la machine fixe qui exécute P et recrache sa sortie."
+      zh: "U(P)：执行P并输出结果的固定机器。"
+      ja: "U(P)：Pを実行して結果を出す、決まった計算機。"
+  - id: equals-2
+    type: equals
+    value: "="
+    explanation:
+      es: "El igual que une la salida con la cadena medida."
+      en: "The equals sign linking the output to the string being measured."
+      pt: "O igual que liga a saída à sequência medida."
+      fr: "Le signe égal qui relie la sortie à la chaîne mesurée."
+      zh: "连接输出与所测字符串的等号。"
+      ja: "出力と測る文字列をつなぐ等号。"
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: "x: la cadena medida, un objeto finito y no un número."
+      en: "x: the string being measured, a finite object and not a number."
+      pt: "x: a sequência medida, um objeto finito e não um número."
+      fr: "x : la chaîne mesurée, un objet fini et non un nombre."
+      zh: "x：被测的字符串，是一个有限对象而不是数。"
+      ja: "x：測る文字列。数ではなく、有限の対象である。"
+context:
+  author:
+    es: Andrey Kolmogorov
+    en: Andrey Kolmogorov
+    pt: Andrey Kolmogorov
+    fr: Andrey Kolmogorov
+    zh: 安德烈·柯尔モ哥罗夫
+    ja: アンドレイ・コルモゴロフ
+  era:
+    es: "URSS, 1964 · complejidad algorítmica"
+    en: "USSR, 1964 · algorithmic complexity"
+    pt: "URSS, 1964 · complexidade algorítmica"
+    fr: "URSS, 1964 · complexité algorithmique"
+    zh: "苏联，1964年·算法复杂度"
+    ja: "ソ連、1964年·アルゴリズム計算量"
+  history:
+    es: >-
+      En 1964 Andrey Kolmogorov propuso medir la complejidad de una cadena por la longitud del
+      programa más corto que la produce, en lugar de por su longitud o su apariencia;
+      Solomonoff llegó a lo mismo ese mismo año. La definición es brevísima y arrastra una
+      consecuencia incómoda: no existe ningún algoritmo que calcule K(x) para toda x. Chaitin
+      la formalizó en 1967 al asociar K a un número real Ω cuyos bits no son computables y que,
+      para cualquier máquina, tiene una longitud finita.
+    en: >-
+      In 1964 Andrey Kolmogorov proposed to measure the complexity of a string by the length
+      of the shortest program that produces it, instead of by its length or its look;
+      Solomonoff reached the same idea in that same year. The definition is very short and
+      drags an uncomfortable consequence along: no algorithm computes K(x) for every x.
+      Chaitin made this precise in 1967 by tying K to a real number Ω whose bits cannot be
+      computed and which, for any fixed machine, has finite length.
+    pt: >-
+      Em 1964, Andrey Kolmogorov propôs medir a complexidade de uma sequência pelo
+      comprimento do programa mais curto que a produz, em vez do seu comprimento ou da sua
+      aparência; Solomonoff chegou à mesma ideia no mesmo ano. A definição é curtíssima e
+      arrasta uma consequência incômoda: nenhum algoritmo calcula K(x) para todo x. Chaitin
+      formalizou isso em 1967 ao ligar K a um número real cujos bits não são computáveis e que,
+      para qualquer máquina fixa, tem comprimento finito.
+    fr: >-
+      En 1964, Andrey Kolmogorov proposa de mesurer la complexité d'une chaîne par la longueur
+      du plus court programme qui la produit, plutôt que par sa longueur ou son apparence ;
+      Solomonoff eut la même idée la même année. La définition est très courte et traîne une
+      conséquence gênante : aucun algorithme ne calcule K(x) pour tout x. Chaitin l'a rendue
+      précise en 1967 en reliant K à un nombre réel Ω dont les bits ne sont pas calculables et
+      qui, pour toute machine fixée, a une longueur finie.
+    zh: >-
+      1964年，安德烈·柯尔莫哥罗夫提出用生成一个字符串所需最短程序的长度来衡量其复杂度，而不是用长度或外观
+      来衡量；索洛莫夫在同年独立得到了同样的想法。这个定义极短，却带来一个令人不安的推论：不存在能对所有x
+      计算K(x)的算法。1967年，柴廷通过把K与一个实数Ω联系起来使之精确化——Ω的各位不可计算，但对任何固定的
+      机器而言长度有限。
+    ja: >-
+      1964年、アンドレイ・コルモゴロフは文字列の複雑さを、その長さや見た目ではなく、
+      それを生み出す最短のプログラムの長さで測ることを提案した。同じ年に Solomonoff も同じ考えに
+      到達している。定義はきわめて短いが、厄介な帰結を伴う。すべてのxについてK(x)を計算
+      できるアルゴリズムはない。1967年、Chaitin はこれをKと実数Ωの結び付けとして厳密
+      にし、Ωの各桁は計算できないが、計算機を固定すれば長さは有限になる。
+  timeline:
+    - year: "1964"
+      label:
+        es: >-
+          Kolmogorov, y Solomonoff de forma independiente, definen la complejidad algorítmica.
+        en: >-
+          Kolmogorov, and independently Solomonoff, define algorithmic complexity.
+        pt: >-
+          Kolmogorov, e Solomonoff de forma independente, definem a complexidade algorítmica.
+        fr: >-
+          Kolmogorov, et Solomonoff indépendamment, définissent la complexité algorithmique.
+        zh: >-
+          柯尔莫哥罗夫与索洛莫夫各自独立地定义了算法复杂度。
+        ja: >-
+          コルモゴロフと、それとは独立に Solomonoff が計算量を定義する。
+    - year: "1967"
+      label:
+        es: >-
+          Chaitin demuestra que K no es computable e introduce su número Ω.
+        en: >-
+          Chaitin proves K is not computable and introduces his number Ω.
+        pt: >-
+          Chaitin prova que K não é computável e introduz o seu número Ω.
+        fr: >-
+          Chaitin prouve que K n'est pas calculable et introduit son nombre Ω.
+        zh: >-
+          柴廷证明K不可计算，并引入他的数Ω。
+        ja: >-
+          Chaitin は K が計算できないことを証明し、Ω を提案する。
+    - year: "1991"
+      label:
+        es: >-
+          El libro de referencia de la teoría de la información la incluye como tema central.
+        en: >-
+          The reference textbook of information theory includes it as a central topic.
+        pt: >-
+          O livro de referência da teoria da informação a inclui como tema central.
+        fr: >-
+          L'ouvrage de référence de la théorie de l'information en fait un thème central.
+        zh: >-
+          信息论教科书将其列为核心主题。
+        ja: >-
+          情報理論の教科書が主要テーマとして取り上げる。
+    - year: Hoy
+      label:
+        es: >-
+          La compresión y la longitud de descripción mínima heredan la misma idea.
+        en: >-
+          Compression and the minimum description length inherit the same idea.
+        pt: >-
+          A compressão e o comprimento mínimo de descrição herdam a mesma ideia.
+        fr: >-
+          La compression et la longueur de description minimale héritent de la même idée.
+        zh: >-
+          压缩与最小描述长度都继承了这一思想。
+        ja: >-
+          圧縮や最小記述長は、同じ考えを受け継いでいる。
+  useCases:
+    - title:
+        es: Compresión sin pérdida
+        en: Lossless compression
+        pt: Compressão sem perdas
+        fr: Compression sans perte
+        zh: 无损压缩
+        ja: 可逆圧縮
+      description:
+        es: >-
+          Una cadena con K grande no se puede acortar, y K es a la vez el techo imposible y el
+          suelo que ningún compresor real alcanza.
+        en: >-
+          A string with large K cannot be shortened, and K is at once the impossible ceiling
+          and the floor no real compressor reaches.
+        pt: >-
+          Uma sequência com K grande não pode ser encurtada, e K é ao mesmo tempo o teto
+          impossível e o piso que nenhum compressor real alcança.
+        fr: >-
+          Une chaîne de grand K ne peut pas être raccourcie, et K est à la fois le plafond
+          impossible et le plancher qu'aucun compresseur réel n'atteint.
+        zh: >-
+          K很大的字符串无法再缩短，K既是不可能的天花板，也是任何真实压缩器都够不到的下限。
+        ja: >-
+          Kが大きい文字列は短くできない。Kは実現の天井であり、
+          どの圧縮器も届かない床でもあります。
+    - title:
+        es: Longitud de descripción mínima
+        en: Minimum description length
+        pt: Comprimento mínimo de descrição
+        fr: Longueur de description minimale
+        zh: 最小描述长度
+        ja: 最小記述長
+      description:
+        es: >-
+          En estadística, MDL elige el modelo más corto que describa los datos, con lo que el
+          criterio de Kolmogorov se vuelve una regla de inferencia.
+        en: >-
+          In statistics MDL picks the shortest model that describes the data, which turns
+          Kolmogorov's criterion into a rule of inference.
+        pt: >-
+          Na estatística, o MDL escolhe o modelo mais curto que descreve os dados, o que
+          transforma o critério de Kolmogorov em regra de inferência.
+        fr: >-
+          En statistique, le MDL retient le modèle le plus court décrivant les données, ce
+          qui fait du critère de Kolmogorov une règle d'inférence.
+        zh: >-
+          在统计学中，最小描述长度选择描述数据的最短模型，由此把柯尔莫哥罗夫判据变成了一条推断规则。
+        ja: >-
+          統計では最小記述長がデータを記述する最短のモデルを選び、
+          コルモゴロフの基準が推論の規則になる。
+    - title:
+        es: Medir el azar
+        en: Measuring randomness
+        pt: Medir o acaso
+        fr: Mesurer le hasard
+        zh: 度量随机性
+        ja: 偶然性を測る
+      description:
+        es: >-
+          Un generador pseudoaleatorio sirve cuando su salida tiene K cercana a su longitud, y
+          las claves criptográficas ideales son esa misma idea aplicada al revés.
+        en: >-
+          A pseudorandom generator is good when its output has K close to its length, and
+          ideal cryptographic keys are the same idea taken literally.
+        pt: >-
+          Um gerador pseudoaleatório é bom quando sua saída tem K próxima do seu
+          comprimento, e chaves criptográficas ideais são a mesma ideia ao pé da letra.
+        fr: >-
+          Un générateur pseudo-aléatoire est bon si sa sortie a un K proche de sa longueur,
+          et une clé cryptographique idéale est cette même idée prise au pied de la lettre.
+        zh: >-
+          伪随机数生成器在其输出K接近自身长度时才算合格，理想密钥正是把这一想法照字面执行。
+        ja: >-
+          擬似乱数生成器の出力のKが長さに近いほど優れる。良い暗号鍵とは、その考えをそのまま
+          実行したものにほかならない。
+  example:
+    title:
+      es: K de una cadena de 1000 bits
+      en: K of a 1000-bit string
+      pt: K de uma sequência de 1000 bits
+      fr: K d'une chaîne de 1000 bits
+      zh: 1000位字符串的K
+      ja: 1000ビットの文字列のK
+    lines:
+      - es: "Una cadena de 1000 bits verdaderamente aleatorios"
+        en: "A string of 1000 truly random bits"
+        pt: "Uma sequência de 1000 bits realmente aleatórios"
+        fr: "Une chaîne de 1000 bits vraiment aléatoires"
+        zh: "一个由1000个真正随机比特组成的字符串"
+        ja: "1000ビットからなる真に無作為な文字列"
+      - es: "Casi todas: 900 ≤ K(x) ≤ 1100, salvo una fracción 2⁻¹⁰⁰"
+        en: "Almost all: 900 ≤ K(x) ≤ 1100, except a fraction 2⁻¹⁰⁰"
+        pt: "Quase todas: 900 ≤ K(x) ≤ 1100, exceto uma fração 2⁻¹⁰⁰"
+        fr: "Presque toutes : 900 ≤ K(x) ≤ 1100, sauf une fraction 2⁻¹⁰⁰"
+        zh: "几乎全部：900 ≤ K(x) ≤ 1100，只有2⁻¹⁰⁰的比例例外"
+        ja: "ほとんどは 900 ≤ K(x) ≤ 1100、ただし2⁻¹⁰⁰の割合は除く"
+      - es: "K(x) ≤ 1000 + c siempre: basta describir la cadena tal cual"
+        en: "K(x) ≤ 1000 + c always: describing the string literally is enough"
+        pt: "K(x) ≤ 1000 + c sempre: basta descrever a sequência como ela é"
+        fr: "K(x) ≤ 1000 + c toujours : décrire la chaîne telle quelle suffit"
+        zh: "总有K(x) ≤ 1000 + c：把字符串原样写出来就够"
+        ja: "K(x) ≤ 1000 + c は常に成り立つ：文字列をそのまま書けばよい"
+      - es: "Un texto repetitivo tiene K mucho menor que su longitud"
+        en: "Repetitive text has K far below its length"
+        pt: "Um texto repetitivo tem K bem menor que o seu comprimento"
+        fr: "Un texte répétitif a un K bien inférieur à sa longueur"
+        zh: "重复性文本的K远小于其长度"
+        ja: "繰り返しの多い文のKは長さよりずっと小さい"
+      - es: "Ningún algoritmo puede calcular K(x): la cifra no está al alcance"
+        en: "No algorithm can compute K(x): the figure is out of reach"
+        pt: "Nenhum algoritmo consegue calcular K(x): o número está fora de alcance"
+        fr: "Aucun algorithme ne peut calculer K(x) : le chiffre est hors de portée"
+        zh: "没有算法能计算K(x)：这个数字无法触及"
+        ja: "K(x)を計算できるアルゴリズムはない。値は手が届かない"

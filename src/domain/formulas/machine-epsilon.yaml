@@ -1,0 +1,332 @@
+id: machine-epsilon
+title:
+  es: Épsilon de máquina
+  en: Machine epsilon
+  pt: Épsilon de máquina
+  fr: Epsilon machine
+  zh: 机器精度
+  ja: 機械精度ε
+category:
+  es: Informática
+  en: Computer science
+  pt: Informática
+  fr: Informatique
+  zh: 计算机科学
+  ja: コンピュータ科学
+nodes:
+  - id: epsilon
+    type: variable
+    value: ε
+    explanation:
+      es: "ε: la unidad de redondeo de un doble, la mitad del salto entre 1 y su vecino."
+      en: "ε: the rounding unit of a double, half the gap between 1 and its neighbour."
+      pt: "ε: a unidade de arredondamento de um duplo, metade do salto entre 1 e seu vizinho."
+      fr: "ε : l'unité d'arrondi d'un double, la moitié de l'écart entre 1 et son voisin."
+      zh: "ε：双精度数的舍入单位，等于1与其相邻可表示数之间间隔的一半。"
+      ja: "ε：倍精度の丸め単位。1とその隣り合う数の間隔の半分。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "2: la base de la aritmética binaria."
+      en: "2: the base of binary arithmetic."
+      pt: "2: a base da aritmética binária."
+      fr: "2 : la base de l'arithmétique binaire."
+      zh: "2：二进制运算的底数。"
+      ja: "2：二進法の基数。"
+  - id: exp-53
+    type: superscript
+    value: "⁻⁵³"
+    explanation:
+      es: "Exponente −53: el número de bits de mantisa que fijan el salto."
+      en: "Exponent −53: the mantissa bits that set the gap."
+      pt: "Expoente −53: os bits de mantissa que fixam o salto."
+      fr: "Exposant −53 : les bits de mantisse qui fixent l'écart."
+      zh: "指数 −53：决定间隔的尾数位数。"
+      ja: "指数 −53：間隔を決める仮数のビット数。"
+  - id: approx
+    type: operator
+    value: ≈
+    explanation:
+      es: Aproximadamente igual a.
+      en: Approximately equal to.
+      pt: Aproximadamente igual a.
+      fr: Approximativement égal à.
+      zh: 约等于。
+      ja: おおよそ等しい。
+  - id: mantissa
+    type: number
+    value: "1.11"
+    explanation:
+      es: "1.11: las primeras cifras del valor en notación científica."
+      en: "1.11: the leading digits of the value in scientific notation."
+      pt: "1,11: os primeiros algarismos do valor em notação científica."
+      fr: "1,11 : les premiers chiffres de la valeur en notation scientifique."
+      zh: "1.11：以科学计数法表示时的前几位数字。"
+      ja: "1.11：科学記法で表したときの先頭の数字。"
+  - id: times
+    type: operator
+    value: ×
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: に掛ける。
+  - id: ten
+    type: number
+    value: "10"
+    explanation:
+      es: "10: la base de la notación científica."
+      en: "10: the base of scientific notation."
+      pt: "10: a base da notação científica."
+      fr: "10 : la base de la notation scientifique."
+      zh: "10：科学计数法的底数。"
+      ja: "10：科学記法の基数。"
+  - id: exp-16
+    type: superscript
+    value: "⁻¹⁶"
+    explanation:
+      es: "Exponente −16: el valor es unas quince veces menor que 10⁻¹⁶."
+      en: "Exponent −16: the value is about fifteen times smaller than 10⁻¹⁶."
+      pt: "Expoente −16: o valor é cerca de quinze vezes menor que 10⁻¹⁶."
+      fr: "Exposant −16 : la valeur est environ quinze fois plus petite que 10⁻¹⁶."
+      zh: "指数 −16：该值约为10⁻¹⁶的十五分之一。"
+      ja: "指数 −16：値は 10⁻¹⁶ の約15分の1。"
+context:
+  author:
+    es: Comité IEEE 754
+    en: IEEE 754 committee
+    pt: Comitê IEEE 754
+    fr: Comité IEEE 754
+    zh: IEEE 754 委员会
+    ja: IEEE 754 標準
+  era:
+    es: IEEE 754, 1985 · coma flotante binaria de doble precisión
+    en: IEEE 754, 1985 · binary floating point, double precision
+    pt: IEEE 754, 1985 · ponto flutuante binário de dupla precisão
+    fr: IEEE 754, 1985 · virgule flottante binaire double précision
+    zh: IEEE 754，1985年·二进制双精度浮点
+    ja: IEEE 754、1985年・倍精度バイナリ浮動小数点
+  history:
+    es: >-
+      La norma IEEE 754 llegó en 1985 tras años de intensa discusión sobre si los
+      ordenadores debían contar en binario o en decimal, y fijó que un doble conserva 53
+      bits de mantisa, 52 almacenados más el uno inicial implícito. Con ese tamaño los
+      números representables alrededor del 1 están separados 2⁻⁵², y la mitad de ese salto,
+      2⁻⁵³, es justamente lo que un uno es capaz de tragarse sin moverse. Von Neumann y
+      Goldstine ya habían descrito en 1948 cómo crece el error en la coma flotante; lo que
+      hizo el estándar fue fijar la cifra para que todas las máquinas den el mismo resultado.
+    en: >-
+      IEEE 754 arrived in 1985 after years of stormy debate over whether computers should
+      count in binary or in decimal, and fixed that a double keeps 53 mantissa bits, 52
+      stored plus the implicit leading one. With that size the representable numbers around
+      1 are spaced 2⁻⁵² apart, and half that gap, 2⁻⁵³, is precisely what a one can swallow
+      without moving. Von Neumann and Goldstine had described the growth of floating-point
+      error back in 1948; what the standard did was pin the number down so that every
+      machine returns the same answer.
+    pt: >-
+      A norma IEEE 754 chegou em 1985, depois de anos de discussão tempestuosa sobre se os
+      computadores deveriam contar em binário ou em decimal, e fixou que um duplo guarda 53
+      bits de mantissa, 52 armazenados mais o um inicial implícito. Com esse tamanho os
+      números representáveis em torno de 1 ficam separados por 2⁻⁵², e metade desse salto,
+      2⁻⁵³, é exatamente o que um um consegue engolir sem se mover. Von Neumann e Goldstine
+      já tinham descrito em 1948 o crescimento do erro em ponto flutuante; o que a norma fez
+      foi fixar o número para que todas as máquinas deem a mesma resposta.
+    fr: >-
+      La norme IEEE 754 est arrivée en 1985, après des années de débat houleux sur la question
+      de savoir si les machines devaient compter en binaire ou en décimal, et a fixé qu'un
+      double conserve 53 bits de mantisse, 52 stockés plus le un initial implicite. À cette
+      taille, les nombres représentables autour de 1 sont espacés de 2⁻⁵², et la moitié de cet
+      écart, 2⁻⁵³, est exactement ce qu'un un peut avaler sans bouger. Von Neumann et
+      Goldstine décrivaient déjà en 1948 la croissance de l'erreur en virgule flottante ; la
+      norme a fixé le chiffre pour que toutes les machines donnent la même réponse.
+    zh: >-
+      IEEE 754标准于1985年推出，此前关于计算机应当使用二进制还是十进制曾有过多年激烈争论。它规定双精度数保留
+      53位尾数，即52位显式存储位加上隐含的首位1。在这种规模下，1附近可表示数之间的间隔为2⁻⁵²，而该间隔
+      的一半2⁻⁵³，正是1能够吞掉而不发生变化的量。冯·诺依曼与戈德斯汀早在1948年就描述过浮点误差的增长；
+      标准所做的，是把这个数字固定下来，使所有机器给出相同的结果。
+    ja: >-
+      IEEE 754は、計算機が二進法と十進法のどちらで数えるべきかで長年の議論があり、1985年に
+      制定された。倍精度は仮数を53ビット、つまり格納される52ビットと先頭の暗黙の1を合わせて保持する。
+      そのため1の前後にある数どうしの間隔は2⁻⁵²になり、その半分の2⁻⁵³は、1が動かないまま
+      のみ込むのに十分な量にほかならない。浮動小数点の誤りが広がる仕組みは1948年にフォンノイマンと
+      ゴールドスティンがすでに記しており、標準の役目は数値を固定し、どの計算機でも同じ答えを返せることに
+      あった。
+  timeline:
+    - year: "1948"
+      label:
+        es: >-
+          Von Neumann y Goldstine describen por qué crece el error en la coma flotante.
+        en: >-
+          Von Neumann and Goldstine describe why floating-point error grows.
+        pt: >-
+          Von Neumann e Goldstine descrevem por que cresce o erro em ponto flutuante.
+        fr: >-
+          Von Neumann et Goldstine décrivent pourquoi l'erreur en virgule flottante croît.
+        zh: >-
+          冯·诺依曼与戈德斯汀解释了浮点误差为何会累积。
+        ja: >-
+          フォンノイマンとゴールドスティンが、浮動小数点の誤差がなぜ増えるかを記す。
+    - year: "1985"
+      label:
+        es: >-
+          El estándar IEEE 754 fija la doble precisión con 52 bits de mantisa más el uno
+          implícito.
+        en: >-
+          The IEEE 754 standard fixes double precision with 52 mantissa bits plus the
+          implicit one.
+        pt: >-
+          A norma IEEE 754 fixa a dupla precisão com 52 bits de mantissa mais o um implícito.
+        fr: >-
+          La norme IEEE 754 fixe la double précision avec 52 bits de mantisse plus le un
+          implicite.
+        zh: >-
+          IEEE 754标准确定双精度为52位尾数加隐含的首位1。
+        ja: >-
+          IEEE 754は仮数52ビットと暗黙の1で倍精度を定める。
+    - year: Hoy
+      label:
+        es: >-
+          Las tarjetas gráficas deben reproducir este ε con exactitud o sus resultados dejan
+          de coincidir con los del procesador.
+        en: >-
+          Graphics cards must reproduce this ε exactly or their results stop matching the
+          processor's.
+        pt: >-
+          As placas de vídeo precisam reproduzir este ε exatamente ou seus resultados deixam
+          de bater com os do processador.
+        fr: >-
+          Les cartes graphiques doivent reproduire ce ε exactement, sinon leurs résultats
+          cessent de correspondre à ceux du processeur.
+        zh: >-
+          显卡必须精确复现这一ε，否则其结果将无法与处理器的结果一致。
+        ja: >-
+          グラフィックスカードは、このεを正確に再現しないと、プロセッサの結果と
+          合わなくなる。
+  useCases:
+    - title:
+        es: Bucles que nunca terminan
+        en: Loops that never end
+        pt: Laços que nunca terminam
+        fr: Boucles qui ne finissent jamais
+        zh: 永不结束的循环
+        ja: 終わらないループ
+      description:
+        es: >-
+          Restar 1e-17 a 1.0 no cambia el número, así que un bucle que baja de cero
+          pasando por positivos se queda colgado para siempre.
+        en: >-
+          Subtracting 1e-17 from 1.0 does not change the number, so a loop counting down
+          through positive values hangs forever.
+        pt: >-
+          Subtrair 1e-17 de 1.0 não muda o número, então um laço que desce por valores
+          positivos trava para sempre.
+        fr: >-
+          Soustraire 1e-17 de 1.0 ne change pas le nombre, si bien qu'une boucle qui descend
+          parmi les valeurs positives reste bloquée indéfiniment.
+        zh: >-
+          从1.0中减去1e-17并不会改变这个数，因此一个逐个减去正值的循环会永远卡住。
+        ja: >-
+          1.0から1e-17を引いても値は変わらず、正の値を1つずつ下るループはそのまま
+          止まってしまう。
+    - title:
+        es: Dinero y decimales fijos
+        en: Money and fixed decimals
+        pt: Dinheiro e decimais fixos
+        fr: Argent et décimales fixes
+        zh: 金额与定点小数
+        ja: 金額と固定小数点
+      description:
+        es: >-
+          En contabilidad se usan enteros o decimales fijos, porque un ε de tamaño fijo no
+          es el error que uno quiere en una factura.
+        en: >-
+          Accounting uses integers or fixed decimals, because a fixed-size ε is not the
+          error anyone wants on an invoice.
+        pt: >-
+          A contabilidade usa inteiros ou decimais fixos, porque um ε de tamanho fixo não
+          é o erro que se quer numa fatura.
+        fr: >-
+          La comptabilité utilise des entiers ou des décimales fixes, car un ε de taille
+          fixe n'est pas l'erreur que l'on veut sur une facture.
+        zh: >-
+          会计使用整数或定点小数，因为固定大小的ε并不是人们希望出现在账单上的误差。
+        ja: >-
+          経理では整数や固定小数点を使う。大きさの決まったεは、請求書に出てほしい
+          誤差ではないからである。
+    - title:
+        es: Reproducibilidad numérica
+        en: Numerical reproducibility
+        pt: Reprodutibilidade numérica
+        fr: Reproductibilité numérique
+        zh: 数值可复现性
+        ja: 数値再現性
+      description:
+        es: >-
+          Compiladores y aceleradores cambian sus resultados si acumulan con más o
+          menos precisión, y ese cambio se mide en múltiplos de ε.
+        en: >-
+          Compilers and accelerators change their results if they accumulate in more or
+          less precision, and that change is measured in multiples of ε.
+        pt: >-
+          Compiladores e aceleradores mudam de resultado se acumulam com mais ou menos
+          precisão, e essa mudança se mede em múltiplos de ε.
+        fr: >-
+          Compilateurs et accélérateurs changent leurs résultats s'ils accumulent avec plus
+          ou moins de précision, et cet écart se mesure en multiples de ε.
+        zh: >-
+          编译器与加速器会以更高或更低的精度累加，从而改变结果，而这种差别以ε的倍数度量。
+        ja: >-
+          コンパイラや高速回路は、まとめる精度が高いか低いかで結果が変わる。その差は
+          εの倍数で表される。
+  example:
+    title:
+      es: El doble más cercano a 1
+      en: The double closest to 1
+      pt: O duplo mais próximo de 1
+      fr: Le double le plus proche de 1
+      zh: 最接近1的双精度数
+      ja: 1にいちばん近い倍精度
+    lines:
+      - es: "Doble IEEE 754: 53 bits de mantisa"
+        en: "IEEE 754 double: 53 mantissa bits"
+        pt: "Duplo IEEE 754: 53 bits de mantissa"
+        fr: "Double IEEE 754 : 53 bits de mantisse"
+        zh: IEEE 754 双精度：53 位尾数
+        ja: IEEE 754の倍精度：仮数53ビット
+      - es: 2⁻⁵³ = 1.1102230246251565e-16
+        en: 2⁻⁵³ = 1.1102230246251565e-16
+        pt: 2⁻⁵³ = 1,1102230246251565e-16
+        fr: 2⁻⁵³ = 1,1102230246251565e-16
+        zh: 2⁻⁵³ = 1.1102230246251565e-16
+        ja: 2⁻⁵³ = 1.1102230246251565e-16
+      - es: 1 + ε = 1.0 → empate exacto, se redondea al par
+        en: 1 + ε = 1.0 → an exact tie, rounded to even
+        pt: 1 + ε = 1,0 → empate exato, arredondado para o par
+        fr: 1 + ε = 1,0 → égalité exacte, arrondie au pair
+        zh: 1 + ε = 1.0 → 恰好相等，按偶数舍入
+        ja: 1 + ε = 1.0 → 完全に中間なので偶数側へ丸められる
+      - es: 1 + 2ε = 1.0000000000000002 → el siguiente doble
+        en: 1 + 2ε = 1.0000000000000002 → the next double
+        pt: 1 + 2ε = 1,0000000000000002 → o duplo seguinte
+        fr: 1 + 2ε = 1,0000000000000002 → le double suivant
+        zh: 1 + 2ε = 1.0000000000000002 → 下一个双精度数
+        ja: 1 + 2ε = 1.0000000000000002 → 次の倍精度
+      - es: x = 1.0; while (x > 0) x -= 1e-17 → nunca termina
+        en: x = 1.0; while (x > 0) x -= 1e-17 → never ends
+        pt: x = 1.0; while (x > 0) x -= 1e-17 → nunca termina
+        fr: x = 1.0; while (x > 0) x -= 1e-17 → ne finit jamais
+        zh: x = 1.0; while (x > 0) x -= 1e-17 → 永不结束
+        ja: "x = 1.0 から 1e-17 を引き続けても 0 にならない"

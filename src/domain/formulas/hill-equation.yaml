@@ -1,0 +1,375 @@
+id: hill-equation
+title:
+  es: Ecuación de Hill
+  en: Hill Equation
+  pt: Equação de Hill
+  fr: Équation de Hill
+  zh: 希尔方程
+  ja: ヒル方程式
+category:
+  es: Biología
+  en: Biology
+  pt: Biologia
+  fr: Biologie
+  zh: 生物学
+  ja: 生物学
+nodes:
+  - id: theta
+    type: variable
+    value: θ
+    explanation:
+      es: "θ: la fracción de los sitios de unión que están ocupados, de 0 a 1."
+      en: "θ: the fraction of binding sites that are occupied, from 0 to 1."
+      pt: "θ: a fração dos sítios de ligação que estão ocupados, de 0 a 1."
+      fr: "θ : la fraction des sites de liaison occupés, de 0 à 1."
+      zh: "θ：结合位点被占据的比例，从 0 到 1。"
+      ja: "θ：結合部位のうち埋まっている割合。0 から 1 まで。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: theta-max
+    type: variable
+    value: θmax
+    explanation:
+      es: "θmax: la saturación total, cuando ya no queda ningún sitio libre."
+      en: "θmax: full saturation, when no site is left free."
+      pt: "θmax: a saturação total, quando não resta nenhum sítio livre."
+      fr: "θmax : la saturation complète, quand il ne reste plus aucun site libre."
+      zh: "θmax：完全饱和，此时已没有空余位点。"
+      ja: "θmax：完全な飽和。空いている部位がなくなる状態。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: conc-a
+    type: variable
+    value: "[A]"
+    explanation:
+      es: "[A]: la concentración libre de la molécula que se une, el ligando."
+      en: "[A]: the free concentration of the molecule that binds, the ligand."
+      pt: "[A]: a concentração livre da molécula que se liga, o ligante."
+      fr: "[A] : la concentration libre de la molécule qui se fixe, le ligand."
+      zh: "[A]：结合分子的游离浓度，也就是配体的浓度。"
+      ja: "[A]：結合する分子の遊離濃度。配体の濃度である。"
+  - id: exp-n
+    type: superscript
+    value: n
+    explanation:
+      es: "El exponente n: si vale más de 1, los sitios cooperan entre sí."
+      en: "The exponent n: when it is above 1, the sites cooperate with each other."
+      pt: "O expoente n: se for maior que 1, os sítios cooperam entre si."
+      fr: "L'exposant n : s'il dépasse 1, les sites coopèrent entre eux."
+      zh: "指数 n：若大于 1，各个位点彼此协同。"
+      ja: "指数 n。1 より大きいと、部位どうしが助け合う。"
+  - id: frac
+    type: operator
+    value: /(
+    explanation:
+      es: "Dividido por el denominador, que lleva la misma potencia y fija el punto medio."
+      en: "Divided by the denominator, which carries the same power and fixes the midpoint."
+      pt: "Dividido pelo denominador, que traz a mesma potência e fixa o ponto médio."
+      fr: "Divisé par le dénominateur, qui porte la même puissance et fixe le point médian."
+      zh: "除以分母，分母带有同样的幂次，并决定中点位置。"
+      ja: "分母でも割る。同じべき乗が分子と対になり、中点を決める。"
+  - id: kd
+    type: constant
+    value: K_d
+    explanation:
+      es: "K_d: la constante del denominador; cuando [A] elevado a n la iguala, la mitad de los sitios queda ocupada."
+      en: "K_d: the denominator constant; when [A] to the n equals it, half the sites are occupied."
+      pt: "K_d: a constante do denominador; quando [A] elevado a n a iguala, metade dos sítios fica ocupada."
+      fr: "K_d : la constante du dénominateur ; lorsque [A] élevé à la n lui est égal, la moitié des sites est occupée."
+      zh: "K_d：分母中的常数；当 [A] 的 n 次方等于它时，一半位点被占据。"
+      ja: "K_d：分母の定数。[A] の n 乗がこれと等しいとき、部位の半分が埋まる。"
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: "La suma que impide que la fracción supere la saturación."
+      en: "The sum that keeps the fraction from passing saturation."
+      pt: "A soma que impede que a fração passe da saturação."
+      fr: "La somme qui empêche la fraction de dépasser la saturation."
+      zh: "这个加号使比例不会超过饱和值。"
+      ja: "加えることで割合が飽和を超えるのを防ぐ。"
+  - id: conc-a-b
+    type: variable
+    value: "[A]"
+    explanation:
+      es: "El mismo ligando, ahora dentro de la suma."
+      en: "The same ligand, now inside the sum."
+      pt: "O mesmo ligante, agora dentro da soma."
+      fr: "Le même ligand, désormais dans la somme."
+      zh: "同一个配体，这次出现在加号之后。"
+      ja: "同じ配体で、今度は和の中に入る。"
+  - id: exp-n-b
+    type: superscript
+    value: n)
+    explanation:
+      es: "La misma potencia otra vez: el cooperativismo está en el exponente, no en el numerador."
+      en: "The same power once more: the cooperativity sits in the exponent, not in the numerator."
+      pt: "A mesma potência outra vez: o cooperativismo está no expoente, não no numerador."
+      fr: "La même puissance encore : le coopérativisme est dans l'exposant, pas au numérateur."
+      zh: "同样的幂再次出现：协同性在指数里，而不在分子里。"
+      ja: "同じべき乗がもう一度。協調性は分子ではなく指数にある。"
+context:
+  author:
+    es: Archibald Vivian Hill
+    en: Archibald Vivian Hill
+    pt: Archibald Vivian Hill
+    fr: Archibald Vivian Hill
+    zh: 阿奇博尔德·维恩·希尔
+    ja: アーチボールド・ヴィアン・ヒル
+  era:
+    es: Cambridge, 1909–1913 · curva de disociación de la hemoglobina
+    en: Cambridge, 1909–1913 · the hemoglobin dissociation curve
+    pt: Cambridge, 1909–1913 · curva de dissociação da hemoglobina
+    fr: Cambridge, 1909–1913 · courbe de dissociation de l'hémoglobine
+    zh: 剑桥,1909–1913年 · 血红蛋白解离曲线
+    ja: ケンブリッジ、1909–1913年 · ヘモグロビンの解離曲線
+  history:
+    es: >-
+      En 1909 el fisiólogo británico Archibald Vivian Hill midió con detalle cómo se combina la
+      hemoglobina con el oxígeno y notó que su curva de saturación no era una hipérbola como la de
+      Michaelis-Menten para un único sitio, sino una curva en forma de S. Propuso una ley en la que
+      la concentración del ligando aparece elevada a una potencia n, y esa potencia por encima de 1
+      describe la cooperatividad: cuando una molécula se une, la siguiente se une con más facilidad.
+      En la hemoglobina n vale unos 2,8, muy por encima de 1; en una molécula con un solo sitio de
+      unión n es 1 y la curva vuelve a ser una hipérbola. La misma forma describe la regulación
+      génica, donde varias proteínas se juntan sobre el mismo punto del ADN y por eso los genes se
+      activan de golpe en lugar de poco a poco, y también la unión de un fármaco a su receptor.
+    en: >-
+      In 1909 the British physiologist Archibald Vivian Hill measured in detail how hemoglobin
+      binds oxygen and noticed that its saturation curve is not a hyperbola like Michaelis-Menten for
+      a single site, but an S-shaped curve. He proposed a law in which the ligand concentration is
+      raised to a power n, and that power above 1 describes cooperativity: once one molecule binds,
+      the next one binds more easily. In hemoglobin n is about 2.8, well above 1; for a molecule
+      with a single binding site n is 1 and the curve falls back to a hyperbola. The same shape
+      describes gene regulation, where several proteins gather on the same spot of DNA and genes
+      therefore switch on all at once rather than a little at a time, and also the binding of a
+      drug to its receptor.
+    pt: >-
+      Em 1909, o fisiologista britânico Archibald Vivian Hill mediu em detalhe como a hemoglobina
+      se liga ao oxigênio e percebeu que sua curva de saturação não é uma hipérbole como a de
+      Michaelis-Menten para um único sítio, e sim uma curva em S. Propôs uma lei em que a
+      concentração do ligante aparece elevada a uma potência n, e essa potência acima de 1 descreve a
+      cooperatividade: quando uma molécula se liga, a próxima se liga com mais facilidade. Na
+      hemoglobina n vale cerca de 2,8, bem acima de 1; em uma molécula com um único sítio de
+      ligação n é 1 e a curva volta a ser uma hipérbole. A mesma forma descreve a regulação gênica,
+      onde várias proteínas se juntam sobre o mesmo ponto do DNA e por isso os genes ligam-se todos
+      de uma vez, não aos poucos, e também a ligação de um fármaco ao seu receptor.
+    fr: >-
+      En 1909, le physiologiste britannique Archibald Vivian Hill mesura en détail comment
+      l'hémoglobine lie l'oxygène et remarque que sa courbe de saturation n'est pas une hyperbole,
+      comme celle de Michaelis-Menten pour un site unique, mais une courbe en S. Il propose une loi
+      où la concentration du ligand est élevée à une puissance n, et cette puissance supérieure à 1
+      décrit la coopérativité : une fois une molécule fixée, la suivante se fixe plus facilement.
+      Dans l'hémoglobine, n vaut environ 2,8, bien au-dessus de 1 ; pour une molécule à un seul
+      site de liaison, n vaut 1 et la courbe redevient une hyperbole. La même forme décrit la
+      régulation génique, où plusieurs protéines se rassemblent sur un même point de l'ADN et où les
+      gènes s'allument donc d'un coup, ainsi que la fixation d'un médicament sur son récepteur.
+    zh: >-
+      1909 年，英国生理学家阿奇博尔德·维恩·希尔细致测量了血红蛋白与氧的结合，发现它的饱和曲线并不是单一位点的
+      米氏方程所给出的双曲线，而是一条 S 形曲线。他提出一条定律：配体浓度要先取 n 次方，而这个大于 1 的指数描述
+      的正是协同效应——一旦结合了一个分子，下一个就更容易结合。血红蛋白的 n 约为 2,8，远大于 1；只有一个结合
+      位点的分子 n 等于 1，曲线就退回双曲线。同样的形状也描述基因调控：若干蛋白质聚集到 DNA 的同一处，于是基因
+      一下子全开而不是慢慢变亮；药物与其受体的结合也是如此。
+    ja: >-
+      1909年、英国の生理学者アーチボールド・ヴィアン・ヒルは、ヘモグロビンが酸素と結合する様子を細かく測った。その
+      飽和曲線は、単一サイトのミカエリス・メンテン式のような単純な双曲線ではなく、S 字形になっていた。彼はリガンドの
+      濃度を n 乗した形の法則を提案し、1 より大きいそのべき乗が協調性を表すとした。一分子が結合すれば次の分子は
+      より結合しやすくなる。ヘモグロビンでは n は約 2,8 で、1 を大きく超える。結合部位が一つだけの分子なら n は 1 に
+      なり、曲線はふたたび双曲線に戻る。同じ形は遺伝子制御も表す。複数のタンパク質が DNA の同じ場所に集まり、遺伝子は少しずつではなく一気にオンになる。
+      薬が受容体に結合するときも同様である。
+  timeline:
+    - year: "1909"
+      label:
+        es: >-
+          Hill mide la curva de saturación de la hemoglobina y descubre que tiene forma de S.
+        en: >-
+          Hill measures the hemoglobin saturation curve and finds it is S-shaped.
+        pt: >-
+          Hill mede a curva de saturação da hemoglobina e descobre que ela tem forma de S.
+        fr: >-
+          Hill mesure la courbe de saturation de l'hémoglobine et découvre qu'elle est en S.
+        zh: >-
+          希尔测得血红蛋白的饱和曲线，发现它呈 S 形。
+        ja: >-
+          ヒルがヘモグロビンの飽和曲線を測り、S 字形であることを見つける。
+    - year: "1910s"
+      label:
+        es: >-
+          Formula la ley con el exponente n como medida de la cantidad de sitios que cooperan.
+        en: >-
+          He states the law with the exponent n as a measure of how many sites cooperate.
+        pt: >-
+          Formula a lei com o expoente n como medida de quantos sítios cooperam.
+        fr: >-
+          Il formule la loi avec l'exposant n comme mesure du nombre de sites qui coopèrent.
+        zh: >-
+          他提出以指数 n 度量协同位点数量的定律。
+        ja: >-
+          彼は指数 n を、協調する部位の数を示す量として法則をまとめる。
+    - year: "1965"
+      label:
+        es: >-
+          El modelo de Monod, Wyman y Changeux lleva la cooperatividad a la estructura de las
+          proteínas.
+        en: >-
+          The Monod-Wyman-Changeux model carries cooperativity into protein structure.
+        pt: >-
+          O modelo de Monod, Wyman e Changeux leva a cooperatividade à estrutura das proteínas.
+        fr: >-
+          Le modèle de Monod, Wyman et Changeux porte la coopérativité dans la structure des
+          protéines.
+        zh: >-
+          莫诺-怀曼-昌格模型把协同效应带入蛋白质结构。
+        ja: >-
+          モノ・ドゥ・ワイマン・シャングの模型が、協調性をタンパク質の構造に持ち込む。
+    - year: Hoy
+      label:
+        es: >-
+          Es la herramienta para ajustar curvas de unión de fármacos y para modelar interruptores
+          génicos.
+        en: >-
+          It is the tool for fitting drug binding curves and for modelling gene switches.
+        pt: >-
+          É a ferramenta para ajustar curvas de ligação de fármacos e para modelar interruptores
+          gênicos.
+        fr: >-
+          C'est l'outil pour ajuster des courbes de fixation de médicaments et modéliser des
+          interrupteurs géniques.
+        zh: >-
+          它是拟合药物结合曲线以及建立基因开关模型的工具。
+        ja: >-
+          薬が受容体に結合する曲線の当てはめや、遺伝子のスイッチのモデルに使う道具である。
+  useCases:
+    - title:
+        es: Hemoglobina
+        en: Hemoglobin
+        pt: Hemoglobina
+        fr: Hémoglobine
+        zh: 血红蛋白
+        ja: ヘモグロビン
+      description:
+        es: >-
+          Con n ≈ 2,8 un solo oxígeno hace más fácil el siguiente, que es lo que permite a los
+          pulmones entregar oxígeno a los tejidos.
+        en: >-
+          With n ≈ 2.8 a single oxygen makes the next one easier, which is what lets the lungs
+          deliver oxygen to the tissues.
+        pt: >-
+          Com n ≈ 2,8 um único oxigênio facilita o seguinte, e é isso que permite aos pulmões
+          entregar oxigênio aos tecidos.
+        fr: >-
+          Avec n ≈ 2,8 un oxygène unique rend le suivant plus facile, ce qui permet aux poumons de
+          livrer de l'oxygène aux tissus.
+        zh: >-
+          n 约为 2,8 时，一个氧分子会让下一个更容易结合，这正是肺能把氧送到组织的原因。
+        ja: >-
+          n が 2,8 くらいになると、酸素が一つ結びつくと次の結合が楽になる。肺が組織へ酸素を届けられるのはこのため。
+    - title:
+        es: Regulación génica
+        en: Gene regulation
+        pt: Regulação gênica
+        fr: Régulation génique
+        zh: 基因调控
+        ja: 遺伝子制御
+      description:
+        es: >-
+          Un represor y varios activadores se juntan en el mismo operador, y por eso la
+          transcripción se enciende de golpe al cruzar el umbral.
+        en: >-
+          A repressor and several activators gather on the same operator, which is why
+          transcription switches on all at once once the threshold is crossed.
+        pt: >-
+          Um repressor e vários ativadores se juntam no mesmo operador, e por isso a transcrição liga
+          de uma vez ao cruzar o limiar.
+        fr: >-
+          Un répresseur et plusieurs activateurs se rassemblent sur le même opérateur, ce qui fait
+          que la transcription s'allume d'un coup dès le seuil franchi.
+        zh: >-
+          阻遏蛋白与若干激活蛋白聚集在同一操纵子上，因此一旦越过阈值，转录就一下子开启。
+        ja: >-
+          抑制タンパク質と複数の活性化タンパク質が同じオペレーターに集まるため、閾値を超えると転写は一気に始まる。
+    - title:
+        es: Unión de fármacos
+        en: Drug binding
+        pt: Ligação de fármacos
+        fr: Fixation de médicaments
+        zh: 药物结合
+        ja: 薬の結合
+      description:
+        es: >-
+          Cuando un receptor tiene sitios cooperativos, la curva de respuesta a la dosis se
+          desplaza y aparece un salto en lugar de una subida suave.
+        en: >-
+          When a receptor has cooperative sites, the dose-response curve shifts and shows a jump
+          instead of a smooth rise.
+        pt: >-
+          Quando um receptor tem sítios cooperativos, a curva de resposta à dose se desloca e aparece
+          um salto em vez de uma subida suave.
+        fr: >-
+          Lorsqu'un récepteur possède des sites coopératifs, la courbe dose-réponse se décale et
+          présente un saut au lieu d'une montée douce.
+        zh: >-
+          当受体具有协同位点时，剂量-响应曲线会移位，出现一个台阶而不是平缓上升。
+        ja: >-
+          受容体に協同して働く部位があるとき、用量反応曲線はずれ、緩やかな上昇ではなく段差となる。
+  example:
+    title:
+      es: Hemoglobina y oxígeno
+      en: Hemoglobin and oxygen
+      pt: Hemoglobina e oxigênio
+      fr: Hémoglobine et oxygène
+      zh: 血红蛋白与氧
+      ja: ヘモグロビンと酸素
+    lines:
+      - es: "n = 2,8 · θmax = 4 sitios · K_d = 26ⁿ"
+        en: "n = 2.8 · θmax = 4 sites · K_d = 26ⁿ"
+        pt: "n = 2,8 · θmax = 4 sítios · K_d = 26ⁿ"
+        fr: "n = 2,8 · θmax = 4 sites · K_d = 26ⁿ"
+        zh: "n = 2,8 · θmax = 4 个位点 · K_d = 26ⁿ"
+        ja: "n = 2,8 · θmax = 4 部位 · K_d = 26ⁿ"
+      - es: "El punto medio cae a [A] = 26 mmHg, es decir K_d^(1/n) = 26"
+        en: "The midpoint sits at [A] = 26 mmHg, that is K_d^(1/n) = 26"
+        pt: "O ponto médio fica em [A] = 26 mmHg, ou seja K_d^(1/n) = 26"
+        fr: "Le point médian est à [A] = 26 mmHg, soit K_d^(1/n) = 26"
+        zh: "中点位于 [A] = 26 mmHg，即 K_d^(1/n) = 26"
+        ja: "中点は [A] = 26 mmHg、つまり K_d^(1/n) = 26"
+      - es: "Ahí [A]ⁿ = K_d → θ = 4 · K_d / (2K_d) = 2,00 sitios"
+        en: "There [A]ⁿ = K_d → θ = 4 · K_d / (2K_d) = 2.00 sites"
+        pt: "Ali [A]ⁿ = K_d → θ = 4 · K_d / (2K_d) = 2,00 sítios"
+        fr: "Là [A]ⁿ = K_d → θ = 4 · K_d / (2K_d) = 2,00 sites"
+        zh: "此时 [A]ⁿ = K_d → θ = 4 · K_d / (2K_d) = 2,00 个位点"
+        ja: "そこで [A]ⁿ = K_d → θ = 4 · K_d / (2K_d) = 2,00 部位"
+      - es: "A 52 mmHg: θ = 4 · 2^2,8 / (1 + 2^2,8) = 3,50 sitios"
+        en: "At 52 mmHg: θ = 4 · 2^2.8 / (1 + 2^2.8) = 3.50 sites"
+        pt: "A 52 mmHg: θ = 4 · 2^2,8 / (1 + 2^2,8) = 3,50 sítios"
+        fr: "À 52 mmHg : θ = 4 · 2^2,8 / (1 + 2^2,8) = 3,50 sites"
+        zh: "在 52 mmHg：θ = 4 · 2^2,8 / (1 + 2^2,8) = 3,50 个位点"
+        ja: "52 mmHg では θ = 4 · 2^2,8 / (1 + 2^2,8) = 3,50 部位"
+      - es: "A 13 mmHg: θ = 4 · 0,5^2,8 / (1 + 0,5^2,8) = 0,50 sitios"
+        en: "At 13 mmHg: θ = 4 · 0.5^2.8 / (1 + 0.5^2.8) = 0.50 sites"
+        pt: "A 13 mmHg: θ = 4 · 0,5^2,8 / (1 + 0,5^2,8) = 0,50 sítios"
+        fr: "À 13 mmHg : θ = 4 · 0,5^2,8 / (1 + 0,5^2,8) = 0,50 sites"
+        zh: "在 13 mmHg：θ = 4 · 0,5^2,8 / (1 + 0,5^2,8) = 0,50 个位点"
+        ja: "13 mmHg では θ = 4 · 0,5^2,8 / (1 + 0,5^2,8) = 0,50 部位"
+      - es: "Con n = 1 la curva sería una simple hipérbole, como la de un solo sitio"
+        en: "With n = 1 the curve would be a plain hyperbola, as for a single site"
+        pt: "Com n = 1 a curva seria uma simples hipérbole, como a de um único sítio"
+        fr: "Avec n = 1 la courbe serait une simple hyperbole, comme celle d'un site unique"
+        zh: "若 n = 1，曲线就是单纯的双曲线，如同只有一个位点时"
+        ja: "n = 1 なら曲線は単純な双曲線に戻る。"

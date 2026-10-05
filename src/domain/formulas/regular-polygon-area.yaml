@@ -1,0 +1,354 @@
+id: regular-polygon-area
+title:
+  es: Área de un polígono regular
+  en: Area of a regular polygon
+  pt: Área de um polígono regular
+  fr: Aire d'un polygone régulier
+  zh: 正多边形面积
+  ja: 正多角形の面積
+category:
+  es: Geometría
+  en: Geometry
+  pt: Geometria
+  fr: Géométrie
+  zh: 几何学
+  ja: 幾何学
+nodes:
+  - id: area
+    type: variable
+    value: A
+    explanation:
+      es: El área del polígono.
+      en: The area of the polygon.
+      pt: A área do polígono.
+      fr: L'aire du polygone.
+      zh: 多边形的面积。
+      ja: 多角形の面積。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: n
+    type: variable
+    value: n
+    explanation:
+      es: El número de lados iguales del polígono.
+      en: The number of equal sides of the polygon.
+      pt: O número de lados iguais do polígono.
+      fr: Le nombre de côtés égaux du polygone.
+      zh: 多边形相等边的条数。
+      ja: 多角形の等しい辺の数。
+  - id: times-1
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por el cuadrado del lado.
+      en: Multiplied by the squared side length.
+      pt: Multiplicado pelo quadrado do lado.
+      fr: Multiplié par le carré du côté.
+      zh: 乘以边长的平方。
+      ja: 辺の長さの2乗を掛ける。
+  - id: s-2
+    type: variable
+    value: s²
+    explanation:
+      es: "El lado del polígono al cuadrado, porque un área escala con el cuadrado de la longitud."
+      en: "The side length squared, because an area scales with the square of a length."
+      pt: "O lado do polígono ao quadrado, porque uma área escala com o quadrado do comprimento."
+      fr: "Le côté du polygone au carré, car une aire varie comme le carré d'une longueur."
+      zh: "边长的平方，因为面积随长度的平方变化。"
+      ja: "辺の長さの2乗。面積は長さの2乗に比例するから。"
+  - id: fraction-bar-1
+    type: operator
+    value: "/"
+    explanation:
+      es: "Dividido entre cuatro veces la tangente que sigue."
+      en: "Divided by four times the tangent that follows."
+      pt: "Dividido por quatro vezes a tangente que segue."
+      fr: "Divisé par quatre fois la tangente qui suit."
+      zh: 除以后面四倍的正切。
+      ja: "続く正接の4倍で割る。"
+  - id: four
+    type: number
+    value: "4"
+    explanation:
+      es: "El cuatro que aparece al multiplicar el área del triángulo central por dos."
+      en: "The four that appears when doubling the area of the central triangle."
+      pt: "O quatro que aparece ao duplicar a área do triângulo central."
+      fr: "Le quatre qui apparaît en doublant l'aire du triangle central."
+      zh: "把中心三角形的面积加倍时出现的4。"
+      ja: "中心の三角形の面積を2倍するときに現れる4。"
+  - id: times-2
+    type: operator
+    value: ÷
+    explanation:
+      es: Multiplicado por la tangente.
+      en: Multiplied by the tangent.
+      pt: Multiplicado pela tangente.
+      fr: Multiplié par la tangente.
+      zh: 乘以正切。
+      ja: 正接を掛ける。
+  - id: tan
+    type: operator
+    value: tan
+    explanation:
+      es: "La tangente del ángulo de la mitad del sector, que es π/n."
+      en: "The tangent of the half-sector angle, which is π/n."
+      pt: "A tangente do meio ângulo do setor, que é π/n."
+      fr: "La tangente du demi-angle du secteur, soit π/n."
+      zh: "扇形半角的正切，即 π/n。"
+      ja: "扇形の半分の角、すなわちπ/nの正接。"
+  - id: open-paren
+    type: operator
+    value: (
+    explanation:
+      es: Abre el argumento de la tangente.
+      en: Opens the argument of the tangent.
+      pt: Abre o argumento da tangente.
+      fr: Ouvre l'argument de la tangente.
+      zh: 打开正切的参数。
+      ja: 正接の引数を開く括弧。
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: "La constante pi, que aparece porque el ángulo del sector es una fracción de la vuelta."
+      en: "The constant pi, which appears because the sector angle is a fraction of a full turn."
+      pt: "A constante pi, que aparece porque o ângulo do setor é uma fração da volta."
+      fr: "La constante pi, qui apparaît car l'angle du secteur est une fraction du tour."
+      zh: "常数π，因为扇形角是整圈的一个分数。"
+      ja: "定数π。扇形の角が一周の分数だから現れる。"
+  - id: fraction-bar-2
+    type: operator
+    value: "/"
+    explanation:
+      es: Dividido entre el número de lados.
+      en: Divided by the number of sides.
+      pt: Dividido pelo número de lados.
+      fr: Divisé par le nombre de côtés.
+      zh: 除以边数。
+      ja: 辺の数で割る。
+  - id: n-again
+    type: variable
+    value: n
+    explanation:
+      es: "El mismo número de lados, que aquí da el ángulo del sector."
+      en: "The same number of sides, which here gives the sector angle."
+      pt: "O mesmo número de lados, que aqui dá o ângulo do setor."
+      fr: "Le même nombre de côtés, qui donne ici l'angle du secteur."
+      zh: 同一个边数，在这里给出扇形角。
+      ja: "同じ辺の数。ここでは扇形の角を与える。"
+  - id: close-paren
+    type: operator
+    value: )
+    explanation:
+      es: Cierra el argumento de la tangente.
+      en: Closes the argument of the tangent.
+      pt: Fecha o argumento da tangente.
+      fr: Ferme l'argument de la tangente.
+      zh: 关闭正切的参数。
+      ja: 正接の引数を閉じる括弧。
+context:
+  author:
+    es: Herón de Alejandría
+    en: Heron of Alexandria
+    pt: Heron de Alexandria
+    fr: Héron d'Alexandrie
+    zh: 亚历山大的海伦
+    ja: アレクサンドリアのヘロン
+  era:
+    es: Alejandría, c. 60 d.C. · forma trigonométrica s. XIX
+    en: Alexandria, c. AD 60 · trigonometric form in the 19th century
+    pt: Alexandria, c. 60 d.C. · forma trigonométrica no séc. XIX
+    fr: Alexandrie, v. 60 apr. J.-C. · forme trigonométrique au XIXe siècle
+    zh: 亚历山大，约公元60年 · 三角形式见于19世纪
+    ja: アレクサンドリア、紀元前60年頃 · 三角形式は19世紀
+  history:
+    es: >-
+      El Libro I de la Metrica de Herón mide polígonos regulares de tres a doce lados, y lo hace
+      troceándolos en triángulos, igual que se hace hoy. La forma general con la tangente sale de un solo
+      paso: el polígono son n triángulos isósceles de altura igual al apotema, y el apotema es
+      s/(2·tan(π/n)). Multiplicando uno por otro se obtiene n·s²/(4·tan(π/n)). Para n = 6 el polígono es
+      un hexágono y la fórmula se reduce a 3√3/2·s², y para n = 3 a un triángulo equilátero.
+    en: >-
+      Book I of Heron's Metrica measures regular polygons from three to twelve sides, and it does so by
+      cutting them into triangles, just as we do today. The general form with the tangent follows in one
+      step: the polygon is n isosceles triangles whose height is the apothem, and the apothem is
+      s/(2·tan(π/n)). Multiplying one by the other gives n·s²/(4·tan(π/n)). For n = 6 the polygon is a
+      hexagon and the formula reduces to 3√3/2·s², and for n = 3 to an equilateral triangle.
+    pt: >-
+      O Livro I da Metrica de Heron mede polígonos regulares de três a doze lados, e faz isso
+      recortando-os em triângulos, como se faz hoje. A forma geral com a tangente sai em um único
+      passo: o polígono são n triângulos isósceles de altura igual ao apótema, e o apótema é
+      s/(2·tan(π/n)). Multiplicando um pelo outro se obtém n·s²/(4·tan(π/n)). Para n = 6 o polígono é
+      um hexágono e a fórmula se reduz a 3√3/2·s², e para n = 3 a um triângulo equilátero.
+    fr: >-
+      Le Livre I de la Metrica de Héron mesure les polygones réguliers de trois à douze côtés, en les
+      découpant en triangles, comme on le fait aujourd'hui. La forme générale avec la tangente en découle
+      en une étape : le polygone est fait de n triangles isocèles dont la hauteur est l'apothème, et
+      l'apothème vaut s/(2·tan(π/n)). En multipliant l'un par l'autre on obtient n·s²/(4·tan(π/n)). Pour
+      n = 6 le polygone est un hexagone et la formule se réduit à 3√3/2·s², et pour n = 3 à un triangle
+      équilatéral.
+    zh: >-
+      海伦《度量篇》第一卷测量三到十二边的正多边形，做法是把它们切成三角形，与今天相同。带正切的一般形式只需一步：正多边形是
+      n个等腰三角形，其高为内切圆半径（心距），而心距等于 s/(2·tan(π/n))。两者相乘便得到 n·s²/(4·tan(π/n))。
+      当 n = 6 时多边形是六边形，公式化简为 3√3/2·s²；当 n = 3 时则是等边三角形。
+    ja: >-
+      ヘロンの『度量篇』第1巻は3辺から12辺までの正多角形の面積を測る。そのやり方は今日のように角に切り分けることである。
+      正接を使った一般形は一気に得られる。多角形の中心と各頂点を結べばn個の二等辺三角形になり、その高は芯の長さで
+      s/(2·tan(π/n))に等しい。両者を掛け合わせれば n·s²/(4·tan(π/n)) が得られる。n = 6 なら六角形で
+      3√3/2·s² に、n = 3 なら正三角形に簡約される。
+  timeline:
+    - year: c. 60 d.C.
+      label:
+        es: >-
+          Herón, en el Libro I de la Metrica, da el área de polígonos regulares de tres a doce lados.
+        en: >-
+          Heron, in Book I of the Metrica, gives the area of regular polygons from three to twelve
+          sides.
+        pt: >-
+          Heron, no Livro I da Metrica, dá a área de polígonos regulares de três a doze lados.
+        fr: >-
+          Héron, au Livre I de la Metrica, donne l'aire des polygones réguliers de trois à douze côtés.
+        zh: >-
+          海伦在《度量篇》第一卷给出三到十二边正多边形的面积。
+        ja: >-
+          ヘロンが『度量篇』第1巻で3辺から12辺までの正多角形の面積を与えた。
+    - year: s. XIX
+      label:
+        es: >-
+          La trigonometría permite escribir el área con un único término, sin casos particulares.
+        en: >-
+          Trigonometry allows the area to be written as a single term, with no separate cases.
+        pt: >-
+          A trigonometria permite escrever a área com um único termo, sem casos particulares.
+        fr: >-
+          La trigonométrie permet d'écrire l'aire en un seul terme, sans cas particuliers.
+        zh: >-
+          三角学使得面积可以写成单一表达式，无需分情况讨论。
+        ja: >-
+          三角法の進展により面積をひとつの項で表せるようになり、個別の場合分けが不要になった。
+    - year: Hoy
+      label:
+        es: >-
+          Se usa para calcular la superficie de losas, teselas y cualquier forma repetida por rotación.
+        en: >-
+          It is used to compute the surface of tiles, paving and any shape repeated by rotation.
+        pt: >-
+          Usa-se para calcular a superfície de ladrilhos, pavimentos e qualquer forma repetida por
+          rotação.
+        fr: >-
+          Elle sert à calculer la surface de carreaux, de dallages et de toute forme répétée par
+          rotation.
+        zh: >-
+          用于计算瓷砖、铺装以及任何按旋转重复得到的形状的面积。
+        ja: >-
+          タイル、敷き石、回転の繰り返しが並ぶどんな形の面積を求めるのに使われる。
+  useCases:
+    - title:
+        es: Arquitectura y losas
+        en: Architecture and tiles
+        pt: Arquitetura e ladrilhos
+        fr: Architecture et carreaux
+        zh: 建筑与瓷砖
+        ja: 建築とタイル
+      description:
+        es: >-
+          El área de un suelo embaldosado con piezas octogonales sale de n = 8 y del lado de la pieza.
+        en: >-
+          The area of a floor tiled with octagons comes from n = 8 and the side of the tile.
+        pt: >-
+          A área de um piso revestido com peças octogonais sai de n = 8 e do lado da peça.
+        fr: >-
+          L'aire d'un sol carrelé d'octogones se calcule avec n = 8 et le côté du carreau.
+        zh: >-
+          八边形瓷砖铺设的地板面积只需取 n = 8 和砖的边长。
+        ja: >-
+          八角形のタイルで張った床の面積は、n = 8 とタイルの辺長から求まる。
+    - title:
+        es: Diseño gráfico
+        en: Graphic design
+        pt: Design gráfico
+        fr: Design graphique
+        zh: 平面设计
+        ja: グラフィックデザイン
+      description:
+        es: >-
+          Un rosetón se agrupa en sectores regulares, y cada sector añade n lados al contorno.
+        en: >-
+          A rose window is built from regular sectors, and each sector adds n sides to the outline.
+        pt: >-
+          Um rosáceo é formado por setores regulares, e cada setor acrescenta n lados ao contorno.
+        fr: >-
+          Une rosace se compose de secteurs réguliers, et chaque secteur ajoute n côtés au contour.
+        zh: >-
+          玫瑰窗由规则扇形拼成，每个扇形为轮廓增加 n 条边。
+        ja: >-
+          ばら窓は正扇形を並べたもので、各扇形が輪郭にn本の辺を加える。
+    - title:
+        es: Moldeado y patrón
+        en: Pattern making
+        pt: Fabricação de moldes
+        fr: Fabrication de moule
+        zh: 模板制作
+        ja: 型の製作
+      description:
+        es: >-
+          El radio de la circunferencia que pasa por los vértices es s/(2·tan(π/n)), y de ahí sale el
+          molde.
+        en: >-
+          The radius of the circle through the vertices is s/(2·tan(π/n)), which gives the pattern.
+        pt: >-
+          O raio da circunferência que passa pelos vértices é s/(2·tan(π/n)), e daí sai o molde.
+        fr: >-
+          Le rayon du cercle passant par les sommets vaut s/(2·tan(π/n)), et c'est de là que sort le
+          moule.
+        zh: >-
+          过各顶点的外接圆半径为 s/(2·tan(π/n))，据此即可放样。
+        ja: >-
+          頂点を通る円の半径は s/(2·tan(π/n)) であり、そこから型が得られる。
+  example:
+    title:
+      es: Hexágono regular de lado 1
+      en: Regular hexagon with side 1
+      pt: Hexágono regular de lado 1
+      fr: Hexagone régulier de côté 1
+      zh: 边长为1的正六边形
+      ja: 辺の長さ1の正六角形
+    lines:
+      - es: "n = 6, s = 1"
+        en: "n = 6, s = 1"
+        pt: "n = 6, s = 1"
+        fr: "n = 6, s = 1"
+        zh: "n = 6，s = 1"
+        ja: "n = 6、s = 1"
+      - es: tan(π/6) = 0,5774
+        en: tan(π/6) = 0.5774
+        pt: tan(π/6) = 0,5774
+        fr: tan(π/6) = 0,5774
+        zh: tan(π/6) = 0.5774
+        ja: tan(π/6) = 0.5774
+      - es: A = 6·1² / (4 · 0,5774)
+        en: A = 6·1² / (4 · 0.5774)
+        pt: A = 6·1² / (4 · 0,5774)
+        fr: A = 6·1² / (4 · 0,5774)
+        zh: A = 6·1² / (4 · 0.5774)
+        ja: A = 6·1² / (4 · 0.5774)
+      - es: A = 6 / 2,3094 ≈ 2,598
+        en: A = 6 / 2.3094 ≈ 2.598
+        pt: A = 6 / 2,3094 ≈ 2,598
+        fr: A = 6 / 2,3094 ≈ 2,598
+        zh: A = 6 / 2.3094 ≈ 2.598
+        ja: A = 6 / 2.3094 ≈ 2.598
+      - es: "6 triángulos equiláteros de área 0,433"
+        en: "6 equilateral triangles of area 0.433"
+        pt: "6 triângulos equiláteros de área 0,433"
+        fr: "6 triangles équilatéraux d'aire 0,433"
+        zh: "6个面积为0.433的等边三角形"
+        ja: "面積0.433の正三角形を6個"

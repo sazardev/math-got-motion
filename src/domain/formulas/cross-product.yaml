@@ -1,0 +1,339 @@
+id: cross-product
+title:
+  es: Producto vectorial
+  en: Cross product
+  pt: Produto vetorial
+  fr: Produit vectoriel
+  zh: 叉积
+  ja: 外積
+category:
+  es: Álgebra lineal
+  en: Linear algebra
+  pt: Álgebra linear
+  fr: Algèbre linéaire
+  zh: 线性代数
+  ja: 線形代数
+nodes:
+  - id: abs-cross
+    type: operator
+    value: "|a × b|"
+    explanation:
+      es: "El módulo del producto vectorial: el área del paralelogramo que forman a y b."
+      en: "The magnitude of the cross product: the area of the parallelogram spanned by a and b."
+      pt: "O módulo do produto vetorial: a área do paralelogramo formado por a e b."
+      fr: "Le module du produit vectoriel : l'aire du parallélogramme engendré par a et b."
+      zh: "叉积的模：由a和b张成的平行四边形的面积。"
+      ja: "外積の大きさ。aとbが張る平行四辺形の面積に等しい。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: abs-a
+    type: variable
+    value: "|a|"
+    explanation:
+      es: El módulo del primer vector.
+      en: The magnitude of the first vector.
+      pt: O módulo do primeiro vetor.
+      fr: Le module du premier vecteur.
+      zh: 第一个向量的模。
+      ja: 第1のベクトルの大きさ。
+  - id: times-1
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por el módulo del segundo vector.
+      en: Multiplied by the magnitude of the second vector.
+      pt: Multiplicado pelo módulo do segundo vetor.
+      fr: Multiplié par le module du second vecteur.
+      zh: 乘以第二个向量的模。
+      ja: 2番目のベクトルの大きさを掛ける。
+  - id: abs-b
+    type: variable
+    value: "|b|"
+    explanation:
+      es: El módulo del segundo vector.
+      en: The magnitude of the second vector.
+      pt: O módulo do segundo vetor.
+      fr: Le module du second vecteur.
+      zh: 第二个向量的模。
+      ja: 2番目のベクトルの大きさ。
+  - id: times-2
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por el seno del ángulo que forman.
+      en: Multiplied by the sine of the angle between them.
+      pt: Multiplicado pelo seno do ângulo que formam.
+      fr: Multiplié par le sinus de l'angle qu'ils forment.
+      zh: 乘以两向量夹角的正弦。
+      ja: 2つのベクトルがなす角の正弦を掛ける。
+  - id: sin
+    type: operator
+    value: sen
+    explanation:
+      es: "El seno del ángulo, que solo depende de la dirección y no de la longitud."
+      en: "The sine of the angle, which depends only on direction, not on length."
+      pt: "O seno do ângulo, que depende apenas da direção e não do comprimento."
+      fr: "Le sinus de l'angle, qui ne dépend que de la direction et non de la longueur."
+      zh: "夹角的正弦，只与方向有关，与长度无关。"
+      ja: "その角の正弦。長さには関係せず、向きだけで決まる。"
+  - id: theta
+    type: variable
+    value: θ
+    explanation:
+      es: El ángulo entre ambos vectores, medido entre 0° y 180°.
+      en: The angle between the two vectors, measured from 0° to 180°.
+      pt: O ângulo entre os dois vetores, medido entre 0° e 180°.
+      fr: L'angle entre les deux vecteurs, mesuré de 0° à 180°.
+      zh: 两向量之间的夹角，取值在0°到180°之间。
+      ja: 2つのベクトルの間の角。0°から180°までの値を取る。
+context:
+  author:
+    es: Joseph-Louis Lagrange
+    en: Joseph-Louis Lagrange
+    pt: Joseph-Louis Lagrange
+    fr: Joseph-Louis Lagrange
+    zh: 约瑟夫-路易·拉格朗日
+    ja: ジョゼフ＝ルイ・ラグランジュ
+  era:
+    es: Francia, 1736–1813 · forma vectorial s. XIX
+    en: France, 1736–1813 · vector form in the 19th century
+    pt: França, 1736–1813 · forma vetorial no séc. XIX
+    fr: France, 1736–1813 · forme vectorielle au XIXe siècle
+    zh: 法国，1736–1813 · 向量形式见于19世纪
+    ja: フランス、1736–1813年 · ベクトル形は19世紀に成立
+  history:
+    es: >-
+      El producto vectorial aparece por primera vez escrito en componentes en un trabajo de Joseph-Louis
+      Lagrange de 1773, aunque Lagrange no lo llamara producto. Durante el siglo XIX convivió con otros
+      álgebras vectoriales: los cuaterniones de Hamilton (1846), el producto exterior de Grassmann (1840) y
+      el producto geométrico de Saint-Venant (1845). La forma actual, con un producto escalar y otro
+      vectorial separados y este último anticonmutativo, se consolidó cuando Gibbs publicó Vector
+      Analysis en 1901 y la disputa se resolvió a favor de los vectoristas. Hoy es la forma con la que
+      se calculan la normal de una cara y el momento de una fuerza.
+    en: >-
+      The cross product appears written in components for the first time in a 1773 paper by
+      Joseph-Louis Lagrange, though Lagrange did not call it a product. Through the 19th century it
+      coexisted with rival vector algebras: Hamilton's quaternions (1846), Grassmann's exterior product
+      (1840) and Saint-Venant's geometrical product (1845). The modern form, with a separate scalar and
+      vector product, the latter anticommutative, was settled when Gibbs published Vector Analysis in
+      1901 and the dispute went to the vectorists. Today it is the form used to compute a face normal
+      and the moment of a force.
+    pt: >-
+      O produto vetorial aparece escrito em componentes pela primeira vez num trabalho de Joseph-Louis
+      Lagrange, de 1773, embora Lagrange não o chamasse de produto. Durante o século XIX conviviu com
+      outras álgebras vetoriais: os quaterniões de Hamilton (1846), o produto exterior de Grassmann
+      (1840) e o produto geométrico de Saint-Venant (1845). A forma atual, com um produto escalar e
+      outro vetorial separados e este último anticomutativo, consolidou-se quando Gibbs publicou
+      Vector Analysis em 1901 e a disputa foi resolvida a favor dos vetorialistas. Hoje é a forma usada
+      para calcular a normal de uma face e o momento de uma força.
+    fr: >-
+      Le produit vectoriel apparaît écrit en composantes pour la première fois dans un mémoire de
+      Joseph-Louis Lagrange de 1773, sans que Lagrange ne l'appelle pour autant produit. Pendant le XIXe
+      siècle il a coexisté avec d'autres algèbres vectorielles : les quaternions de Hamilton (1846), le
+      produit extérieur de Grassmann (1840) et le produit géométrique de Saint-Venant (1845). La forme
+      actuelle, avec un produit scalaire et un produit vectoriel séparés, ce dernier anticommutatif,
+      s'est imposée quand Gibbs publia Vector Analysis en 1901 et que le débat se trancha en faveur des
+      vectoristes. C'est aujourd'hui la forme qui sert à calculer la normale d'une face et le moment
+      d'une force.
+    zh: >-
+      叉积最早以分量形式出现在拉格朗日1773年的论文中，尽管拉格朗日本人并未称其为乘积。19世纪，它与多种向量代数并存：
+      哈密顿的四元数(1846)、格拉斯的曼的外积(1840)以及圣维万的几何乘积(1845)。如今这种把标量积与向量积分开、
+      且向量积反交换的形式，是在吉布斯1901年出版《向量分析》后才确立的，那场争论由此判给向量派。今天它是
+      计算面法向量与力的矩的常用形式。
+    ja: >-
+      外積が最初に成分による形で現れたのは、ラグランジュが1773年に発表した論文においてであり、ラグランジュ自身はそれを積とは
+      呼んでいない。19世紀を通じて外積は他のベクトル代数と並立した。ハミルトの四元数(1846年)、グランスマンの外積
+      (1840年)、サン＝ヴェナンの幾何的積(1845年)などである。現在のようにスカラー積とベクトル積を分ける形、
+      あるいはベクトル積が反交換的な形が定着したのは、ギブスが1901年に『Vector Analysis』を出版したときであり、
+      この論争はベクトル派に決着がついた。今日では面法線や力のモーメントを求める計算に使われている。
+  timeline:
+    - year: "1773"
+      label:
+        es: >-
+          Lagrange escribe el producto vectorial en componentes al estudiar los tetraedros, sin llamarlo
+          producto.
+        en: >-
+          Lagrange writes the cross product in components while studying tetrahedra, without calling it
+          a product.
+        pt: >-
+          Lagrange escreve o produto vetorial em componentes ao estudar os tetraedros, sem chamá-lo de
+          produto.
+        fr: >-
+          Lagrange écrit le produit vectoriel en composantes en étudiant les tétraèdres, sans l'appeler
+          pour autant produit.
+        zh: >-
+          拉格朗日在研究四面体时以分量形式写出叉积，但并未称之为乘积。
+        ja: >-
+          ラグランジュが四面体の研究の中で叉積を成分による形で書き下したが、積とは呼ばなかった。
+    - year: "1846"
+      label:
+        es: >-
+          Hamilton acuña los términos escalar y vectorial al separar las partes real e imaginaria de sus
+          cuaterniones.
+        en: >-
+          Hamilton coins the terms scalar and vector when separating the real and imaginary parts of his
+          quaternions.
+        pt: >-
+          Hamilton cunha os termos escalar e vetorial ao separar as partes real e imaginária de seus
+          quaterniões.
+        fr: >-
+          Hamilton forge les termes scalaire et vecteur en séparant les parties réelle et imaginaire de
+          ses quaternions.
+        zh: >-
+          哈密顿在分离四元数的实部与虚部时，创造了标量与向量这两个术语。
+        ja: >-
+          ハミルトが四元数の実部と虚部を分けたことから、スカラーとベクトルという語が生まれた。
+    - year: "1901"
+      label:
+        es: >-
+          Gibbs publica Vector Analysis y la notación actual del producto escalar y el vectorial se
+          generaliza.
+        en: >-
+          Gibbs publishes Vector Analysis and the modern notation for the scalar and vector products
+          becomes widespread.
+        pt: >-
+          Gibbs publica Vector Analysis e a notação moderna do produto escalar e do vetorial se
+          populariza.
+        fr: >-
+          Gibbs publie Vector Analysis et la notation moderne du produit scalaire et du produit
+          vectoriel se généralise.
+        zh: >-
+          吉布斯出版《向量分析》，标量积与向量积的现代记法随之普及。
+        ja: >-
+          ギブスが『Vector Analysis』を出版し、スカラー積とベクトル積の現代的な記法が広まった。
+    - year: Hoy
+      label:
+        es: >-
+          Es la forma con la que se calculan normales de caras, momentos de fuerzas y torsión en
+          simulación.
+        en: >-
+          It is the form used to compute face normals, moments of forces and torque in simulation.
+        pt: >-
+          É a forma usada para calcular normais de faces, momentos de forças e torção em simulação.
+        fr: >-
+          C'est la forme qui sert à calculer les normales de faces, les moments de forces et le couple
+          dans les simulations.
+        zh: >-
+          它是模拟中计算面法向量、力的矩与扭矩的形式。
+        ja: >-
+          シミュレーションで面法線や力のモーメント、トルクを求めるのに使われる形である。
+  useCases:
+    - title:
+        es: Momento de una fuerza
+        en: Moment of a force
+        pt: Momento de uma força
+        fr: Moment d'une force
+        zh: 力的矩
+        ja: 力のモーメント
+      description:
+        es: >-
+          τ = r × F da el eje de rotación de una fuerza aplicada fuera del centro, la base de todo
+          cálculo de par.
+        en: >-
+          τ = r × F gives the axis of rotation of a force applied off-center, the basis of every
+          torque calculation.
+        pt: >-
+          τ = r × F dá o eixo de rotação de uma força aplicada fora do centro, a base de todo cálculo
+          de torque.
+        fr: >-
+          τ = r × F donne l'axe de rotation d'une force appliquée hors du centre, la base de tout
+          calcul de couple.
+        zh: >-
+          τ = r × F 给出偏心力作用的旋转轴，是所有扭矩计算的基础。
+        ja: >-
+          τ = r × Fは、中心から外れた作用力の回転軸を与える。トルク計算の基礎となる。
+    - title:
+        es: Gráficos por computadora
+        en: Computer graphics
+        pt: Computação gráfica
+        fr: Infographie
+        zh: 计算机图形学
+        ja: コンピューターグラフィックス
+      description:
+        es: >-
+          La normal de cada cara es el producto vectorial de dos de sus aristas, lo que permite la
+          iluminación por caras.
+        en: >-
+          A face normal is the cross product of two of its edges, which makes per-face lighting
+          possible.
+        pt: >-
+          A normal de cada face é o produto vetorial de duas de suas arestas, o que permite a
+          iluminação por faces.
+        fr: >-
+          La normale de chaque face est le produit vectoriel de deux de ses arêtes, ce qui permet
+          l'éclairage par faces.
+        zh: >-
+          每个面的法向量是它两条边的叉积，这使得按面着色成为可能。
+        ja: >-
+          面の法線は2本の辺の外積であり、面単位のライティングを可能にする。
+    - title:
+        es: Mecánica orbital
+        en: Orbital mechanics
+        pt: Mecânica orbital
+        fr: Mécanique orbitale
+        zh: 轨道力学
+        ja: 軌道力学
+      description:
+        es: >-
+          El momento angular L = r × p de un satélite se conserva mientras no actúe un momento de
+          fuerzas externo.
+        en: >-
+          The angular momentum L = r × p of a satellite is conserved as long as no external torque
+          acts.
+        pt: >-
+          O momento angular L = r × p de um satélite conserva-se enquanto nenhum momento de forças
+          externo atua.
+        fr: >-
+          Le moment cinétique L = r × p d'un satellite se conserve tant qu'aucun couple externe
+          n'agit.
+        zh: >-
+          只要没有外力矩作用，卫星的角动量 L = r × p 就保持守恒。
+        ja: >-
+          衛星の角運動量 L = r × pは、外側のトルクが働かない限り保存される。
+  example:
+    title:
+      es: Área con |a| = 3 y θ = 90°
+      en: Area with |a| = 3 and θ = 90°
+      pt: Área com |a| = 3 e θ = 90°
+      fr: Aire avec |a| = 3 et θ = 90°
+      zh: "|a| = 3、θ = 90° 时的面积"
+      ja: "|a| = 3、θ = 90° のとき面積"
+    lines:
+      - es: "|a| = 3, |b| = 4, θ = 90°"
+        en: "|a| = 3, |b| = 4, θ = 90°"
+        pt: "|a| = 3, |b| = 4, θ = 90°"
+        fr: "|a| = 3, |b| = 4, θ = 90°"
+        zh: "|a| = 3，|b| = 4，θ = 90°"
+        ja: "|a| = 3、|b| = 4、θ = 90°"
+      - es: sen 90° = 1
+        en: sin 90° = 1
+        pt: sen 90° = 1
+        fr: sin 90° = 1
+        zh: sin 90° = 1
+        ja: sin 90° = 1
+      - es: "|a × b| = 3 · 4 · 1"
+        en: "|a × b| = 3 · 4 · 1"
+        pt: "|a × b| = 3 · 4 · 1"
+        fr: "|a × b| = 3 · 4 · 1"
+        zh: "|a × b| = 3 · 4 · 1"
+        ja: "|a × b| = 3 · 4 · 1"
+      - es: "|a × b| = 12"
+        en: "|a × b| = 12"
+        pt: "|a × b| = 12"
+        fr: "|a × b| = 12"
+        zh: "|a × b| = 12"
+        ja: "|a × b| = 12"
+      - es: El paralelogramo mide 12 unidades cuadradas
+        en: The parallelogram measures 12 square units
+        pt: O paralelogramo mede 12 unidades quadradas
+        fr: Le parallélogramme mesure 12 unités carrées
+        zh: 该平行四边形面积为12平方单位
+        ja: この平行四辺形の面積は12平方単位

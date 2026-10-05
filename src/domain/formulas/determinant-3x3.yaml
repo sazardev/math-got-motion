@@ -1,0 +1,321 @@
+id: determinant-3x3
+title:
+  es: Determinante de una matriz 3×3
+  en: Determinant of a 3×3 Matrix
+  pt: Determinante de uma matriz 3×3
+  fr: Déterminant d'une matrice 3×3
+  zh: 3×3 矩阵的行列式
+  ja: 3×3行列の行列式
+category:
+  es: Álgebra lineal
+  en: Linear algebra
+  pt: Álgebra linear
+  fr: Algèbre linéaire
+  zh: 线性代数
+  ja: 線形代数
+nodes:
+  - id: det-a
+    type: operator
+    value: det A
+    explanation:
+      es: "det: el determinante de la matriz, que da el volumen generado por sus filas."
+      en: "det: the determinant of the matrix, which gives the volume spanned by its rows."
+      pt: "det: o determinante da matriz, que dá o volume gerado por suas linhas."
+      fr: "det : le déterminant de la matrice, qui donne le volume engendré par ses lignes."
+      zh: "det：矩阵的行列式，由它的行张成的体积。"
+      ja: "det：行列の行列式。その行が張る体積を与える。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: 等しい。
+  - id: term-a
+    type: variable
+    value: a(ei−fh)
+    explanation:
+      es: "La primera entrada de la primera fila, por el menor ei − fh, que queda al borrar esa fila y esa columna."
+      en: "The first entry of the first row times the minor ei − fh left after deleting that row and column."
+      pt: "A primeira entrada da primeira linha pelo menor ei − fh, que resta ao apagar essa linha e essa coluna."
+      fr: "La première entrée de la première ligne par le mineur ei − fh, reste après suppression de cette ligne et de cette colonne."
+      zh: "第一行的第一个元素乘以余子式 ei − fh，删去该行该列后剩下的二阶行列式。"
+      ja: "第1行の先頭の要素に、その行と列を消して得られる小行列式 ei − fh を掛けたもの。"
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "Menos el segundo término, con signo alterno."
+      en: "Minus the second term, with alternating sign."
+      pt: "Menos o segundo termo, com sinal alternado."
+      fr: "Moins le deuxième terme, de signe alterné."
+      zh: 减去第二项，符号交替。
+      ja: 符号を交互にして、2番目の項を引く。
+  - id: term-b
+    type: variable
+    value: b(di−fg)
+    explanation:
+      es: "La segunda entrada de la primera fila, por su menor di − fg, con signo negativo."
+      en: "The second entry of the first row times its minor di − fg, with a negative sign."
+      pt: "A segunda entrada da primeira linha pelo seu menor di − fg, com sinal negativo."
+      fr: "La deuxième entrée de la première ligne par son mineur di − fg, avec un signe moins."
+      zh: "第一行第二个元素乘以它的余子式 di − fg，带负号。"
+      ja: "第1行の2番目の要素に、その小行列式 di − fg を掛け、負の符号を付ける。"
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: "Más el tercer término, que recupera el signo positivo."
+      en: "Plus the third term, which restores the positive sign."
+      pt: "Mais o terceiro termo, que recupera o sinal positivo."
+      fr: "Plus le troisième terme, qui rend le signe positif."
+      zh: 加上第三项，符号回到正号。
+      ja: 3番目の項を足し、符号を正に戻す。
+  - id: term-c
+    type: variable
+    value: c(dh−eg)
+    explanation:
+      es: "La tercera entrada de la primera fila, por su menor dh − eg."
+      en: "The third entry of the first row times its minor dh − eg."
+      pt: "A terceira entrada da primeira linha pelo seu menor dh − eg."
+      fr: "La troisième entrée de la première ligne par son mineur dh − eg."
+      zh: "第一行第三个元素乘以它的余子式 dh − eg。"
+      ja: "第1行の3番目の要素に、その小行列式 dh − eg を掛けたもの。"
+context:
+  author:
+    es: Zhu Shijie
+    en: Zhu Shijie
+    pt: Zhu Shijie
+    fr: Zhu Shijie
+    zh: 朱世杰
+    ja: 朱世傑
+  era:
+    es: China, 1303 · regla de Sarrus en 1868
+    en: China, 1303 · Sarrus's rule in 1868
+    pt: China, 1303 · regra de Sarrus em 1868
+    fr: Chine, 1303 · règle de Sarrus en 1868
+    zh: 中国，1303年 · 萨吕法则见于1868年
+    ja: 中国、1303年 · サリュスの法則は1868年
+  history:
+    es: >-
+      La expansión de 3×3 es el primer caso en que el determinante aparece como una fórmula con signo
+      explícito. Los matemáticos chinos ya usaban reglas de ese tipo para resolver cuatro ecuaciones con
+      cuatro incógnitas en 1303, en el Siyuan yujian de Zhu Shijie. En Europa, Leibniz y Maclaurin
+      emplearon los determinantes para teoría de ecuaciones y geometría, y en 1868 Louis Sarrus publicó la
+      regla visual que lleva su nombre. Cauchy sistematizó después la teoría general, y hoy el mismo
+      concepto sostiene el volumen, la orientación y la invertibilidad de una matriz.
+    en: >-
+      The 3×3 expansion is the first case in which the determinant appears as a formula with explicit
+      signs. Chinese mathematicians were already using rules of that kind to solve four equations with
+      four unknowns in 1303, in Zhu Shijie's Siyuan yujian. In Europe, Leibniz and Maclaurin used
+      determinants for equations and geometry, and in 1868 Louis Sarrus published the visual rule that
+      bears his name. Cauchy later systematized the general theory, and today the same concept underlies
+      volume, orientation and the invertibility of a matrix.
+    pt: >-
+      A expansão de 3×3 é o primeiro caso em que o determinante aparece como uma fórmula com sinal
+      explícito. Matemáticos chineses já usavam regras desse tipo para resolver quatro equações com quatro
+      incógnitas em 1303, no Siyuan yujian de Zhu Shijie. Na Europa, Leibniz e Maclaurin usaram os
+      determinantes para teoria de equações e geometria, e em 1868 Louis Sarrus publicou a regra visual
+      que leva seu nome. Cauchy sistematizou depois a teoria geral, e hoje o mesmo conceito sustenta o
+      volume, a orientação e a invertibilidade de uma matriz.
+    fr: >-
+      Le développement du 3×3 est le premier cas où le déterminant apparaît comme une formule à signes
+      explicites. Les mathématiciens chinois employaient déjà de telles règles pour résoudre quatre
+      équations à quatre inconnues en 1303, dans le Siyuan yujian de Zhu Shijie. En Europe, Leibniz et
+      Maclaurin employèrent les déterminants pour la théorie des équations et la géométrie, et en 1868
+      Louis Sarrus publia la règle visuelle qui porte son nom. Cauchy systématisa ensuite la théorie
+      générale, et aujourd'hui le même concept fonde le volume, l'orientation et l'inversibilité d'une
+      matrice.
+    zh: >-
+      3×3展开是行列式第一次以带显式符号的公式形式出现。中国数学家早在1303年朱世杰的《四元玉鉴》中就已使用这类规则来求解
+      四元方程组。在欧洲，莱布尼茨与麦克劳林把行列式用于方程理论和几何，1868年路易·萨吕发表了以他命名的直观法则。
+      此后柯西把一般理论系统化，如今同一概念支撑着矩阵的体积、方向与可逆性。
+    ja: >-
+      3×3の展開は、行列式が明示的な符号を伴った式として現れる最初の例である。中国の数学者はすでに1303年、朱世傑の『四元玉鑑』において
+      4元連立方程式を解くためにこの種の規則を使っていた。ヨーロッパではライプニッツとマ克劳リンが方程式理論と幾何に
+      行列式を用い、1868年にはルイ・サリュスが自分の名前の付く視覚的規則を発表した。その後コーシーが一般理論を体系化し、
+      行列の体積・向き・可逆性はいずれも今日この考え方に支えられている。
+  timeline:
+    - year: "1303"
+      label:
+        es: >-
+          Zhu Shijie publica el Siyuan yujian, con reglas para resolver cuatro ecuaciones lineales.
+        en: >-
+          Zhu Shijie publishes the Siyuan yujian, with rules for solving four linear equations.
+        pt: >-
+          Zhu Shijie publica o Siyuan yujian, com regras para resolver quatro equações lineares.
+        fr: >-
+          Zhu Shijie publie le Siyuan yujian, avec des règles pour résoudre quatre équations
+          linéaires.
+        zh: >-
+          朱世杰发表《四元玉鉴》，其中含有求解四元一次方程组的规则。
+        ja: >-
+          朱世傑が『四元玉鑑』を発表し、4元連立方程式を解く規則を示した。
+    - year: s. XVII
+      label:
+        es: >-
+          Leibniz y Maclaurin usan los determinantes para la teoría de ecuaciones y la geometría.
+        en: >-
+          Leibniz and Maclaurin use determinants for the theory of equations and for geometry.
+        pt: >-
+          Leibniz e Maclaurin usam os determinantes na teoria de equações e na geometria.
+        fr: >-
+          Leibniz et Maclaurin utilisent les déterminants pour la théorie des équations et la
+          géométrie.
+        zh: >-
+          莱布尼茨与麦克劳林把行列式用于方程理论与几何。
+        ja: >-
+          ライプニッツとマ克劳リンが、方程式理論と幾何に行列式を用いる。
+    - year: "1868"
+      label:
+        es: >-
+          Louis Sarrus publica su regla visual: duplicar las dos primeras columnas y restar las
+          diagonales.
+        en: >-
+          Louis Sarrus publishes his visual rule: duplicate the first two columns and subtract the
+          diagonals.
+        pt: >-
+          Louis Sarrus publica sua regra visual: duplicar as duas primeiras colunas e subtrair as
+          diagonais.
+        fr: >-
+          Louis Sarrus publie sa règle visuelle : dupliquer les deux premières colonnes et soustraire
+          les diagonales.
+        zh: >-
+          路易·萨吕发表了他的直观法则：复制前两列，再沿对角线相减。
+        ja: >-
+          ルイ・サリュスが視覚的な規則を発表する。前2列を複写し、対角線上の積を引くという方法である。
+    - year: Hoy
+      label:
+        es: >-
+          Se calcula en cada paso de la eliminación de Gauss para saber si una matriz es singular.
+        en: >-
+          It is computed at every step of Gaussian elimination to test whether a matrix is singular.
+        pt: >-
+          É calculado a cada passo da eliminação de Gauss para saber se uma matriz é singular.
+        fr: >-
+          Il est calculé à chaque étape de l'élimination de Gauss pour savoir si une matrice est
+          singulière.
+        zh: >-
+          在高斯消元的每一步都要计算它，以判断矩阵是否奇异。
+        ja: >-
+          ガウス消去法の各段階で計算し、行列が特異かどうかの判定に使う。
+  useCases:
+    - title:
+        es: Volumen en 3D
+        en: Volume in 3D
+        pt: Volume em 3D
+        fr: Volume en 3D
+        zh: 三维体积
+        ja: 3次元の体積
+      description:
+        es: >-
+          Con las filas como aristas, |det A| es el volumen del paralelepípedo y el signo indica su
+          orientación.
+        en: >-
+          With the rows as edges, |det A| is the volume of the parallelepiped and the sign gives its
+          orientation.
+        pt: >-
+          Com as linhas como arestas, |det A| é o volume do paralelepípedo e o sinal indica sua
+          orientação.
+        fr: >-
+          Avec les lignes comme arêtes, |det A| est le volume du parallélépipède et le signe donne son
+          orientation.
+        zh: >-
+          以各行为棱，|det A| 就是平行六面体的体积，符号给出其定向。
+        ja: >-
+          各行を辺として見たとき、|det A| が平行六面体の体積になり、符号が向きを示す。
+    - title:
+        es: Matrices singulares
+        en: Singular matrices
+        pt: Matrizes singulares
+        fr: Matrices singulières
+        zh: 奇异矩阵
+        ja: 特異行列
+      description:
+        es: >-
+          det A = 0 significa que las filas son linealmente dependientes y que el sistema no tiene
+          solución única.
+        en: >-
+          det A = 0 means the rows are linearly dependent and the system has no unique solution.
+        pt: >-
+          det A = 0 significa que as linhas são linearmente dependentes e que o sistema não tem
+          solução única.
+        fr: >-
+          det A = 0 signifie que les lignes sont linéairement dépendantes et que le système n'a pas
+          de solution unique.
+        zh: >-
+          det A = 0 意味着各行线性相关，方程组没有唯一解。
+        ja: >-
+          det A = 0 は各行が線形従属であること、すなわち解が一意でないことを意味する。
+    - title:
+        es: Gráficos 3D
+        en: 3D graphics
+        pt: Gráficos 3D
+        fr: Infographie 3D
+        zh: 三维图形
+        ja: 3Dグラフィックス
+      description:
+        es: >-
+          Una cara degenerada tiene determinante cero en su base, y los malladores la descartan al
+          construir la malla.
+        en: >-
+          A degenerate face has zero determinant in its base, and meshers discard it when building the
+          mesh.
+        pt: >-
+          Uma face degenerada tem determinante zero na sua base, e os malhadores a descartam ao
+          construir a malha.
+        fr: >-
+          Une face dégénérée a un déterminant nul dans sa base, et les mailleurs l'écartent lors de la
+          construction du maillage.
+        zh: >-
+          退化面的基底行列式为零，建网格时会被丢弃。
+        ja: >-
+          退化した面は基底の行列式が0になり、メッシュ生成時に捨てられる。
+  example:
+    title:
+      es: Determinante de [[2,1,0],[0,3,4],[5,6,0]]
+      en: Determinant of [[2,1,0],[0,3,4],[5,6,0]]
+      pt: Determinante de [[2,1,0],[0,3,4],[5,6,0]]
+      fr: Déterminant de [[2,1,0],[0,3,4],[5,6,0]]
+      zh: "[[2,1,0],[0,3,4],[5,6,0]] 的行列式"
+      ja: "[[2,1,0],[0,3,4],[5,6,0]] の行列式"
+    lines:
+      - es: "a = 2, b = 1, c = 0"
+        en: "a = 2, b = 1, c = 0"
+        pt: "a = 2, b = 1, c = 0"
+        fr: "a = 2, b = 1, c = 0"
+        zh: "a = 2，b = 1，c = 0"
+        ja: "a = 2、b = 1、c = 0"
+      - es: "d = 0, e = 3, f = 4, g = 5, h = 6, i = 0"
+        en: "d = 0, e = 3, f = 4, g = 5, h = 6, i = 0"
+        pt: "d = 0, e = 3, f = 4, g = 5, h = 6, i = 0"
+        fr: "d = 0, e = 3, f = 4, g = 5, h = 6, i = 0"
+        zh: "d = 0，e = 3，f = 4，g = 5，h = 6，i = 0"
+        ja: "d = 0、e = 3、f = 4、g = 5、h = 6、i = 0"
+      - es: 2·(3·0−4·6) − 1·(0·0−4·5) + 0·(0·6−3·5)
+        en: 2·(3·0−4·6) − 1·(0·0−4·5) + 0·(0·6−3·5)
+        pt: 2·(3·0−4·6) − 1·(0·0−4·5) + 0·(0·6−3·5)
+        fr: 2·(3·0−4·6) − 1·(0·0−4·5) + 0·(0·6−3·5)
+        zh: 2·(3·0−4·6) − 1·(0·0−4·5) + 0·(0·6−3·5)
+        ja: 2·(3·0−4·6) − 1·(0·0−4·5) + 0·(0·6−3·5)
+      - es: 2·(0−24) − 1·(0−20) + 0·(0−15)
+        en: 2·(0−24) − 1·(0−20) + 0·(0−15)
+        pt: 2·(0−24) − 1·(0−20) + 0·(0−15)
+        fr: 2·(0−24) − 1·(0−20) + 0·(0−15)
+        zh: 2·(0−24) − 1·(0−20) + 0·(0−15)
+        ja: 2·(0−24) − 1·(0−20) + 0·(0−15)
+      - es: det A = −48 + 20 + 0 = −28
+        en: det A = −48 + 20 + 0 = −28
+        pt: det A = −48 + 20 + 0 = −28
+        fr: det A = −48 + 20 + 0 = −28
+        zh: det A = −48 + 20 + 0 = −28
+        ja: det A = −48 + 20 + 0 = −28
+      - es: Volumen 28 y orientación invertida
+        en: Volume 28 and flipped orientation
+        pt: Volume 28 e orientação invertida
+        fr: Volume 28 et orientation inversée
+        zh: 体积为28，方向翻转
+        ja: 体積は28、向きは反転

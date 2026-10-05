@@ -1,0 +1,381 @@
+id: roche-limit
+title:
+  es: Límite de Roche
+  en: Roche Limit
+  pt: Limite de Roche
+  fr: Limite de Roche
+  zh: 罗氏极限
+  ja: ロッシュ限界
+category:
+  es: Astronomía
+  en: Astronomy
+  pt: Astronomia
+  fr: Astronomie
+  zh: 天文学
+  ja: 天文学
+nodes:
+  - id: d
+    type: variable
+    value: d
+    explanation:
+      es: "d: la distancia al centro del cuerpo primario donde la marea iguala a la gravedad propia del satélite."
+      en: "d: the distance from the primary's center where tidal pull equals the satellite's own gravity."
+      pt: "d: a distância ao centro do corpo primário onde a maré iguala a gravidade própria do satélite."
+      fr: "d : la distance au centre du corps primaire où la marée égale la gravité propre du satellite."
+      zh: "d：从主星中心算起，潮汐作用等于卫星自身引力的那个距离。"
+      ja: "d：主星の中心から、潮汐力が衛星自身の引力と等しくなる距離。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: r-primary
+    type: variable
+    value: R
+    explanation:
+      es: "R: el radio del cuerpo primario, que aporta casi toda la masa y casi toda la atracción."
+      en: "R: the primary's radius; it holds nearly all the mass and therefore nearly all the pull."
+      pt: "R: o raio do corpo primário, que contém quase toda a massa e quase toda a atração."
+      fr: "R : le rayon du corps primaire, qui porte presque toute la masse et donc presque toute l'attraction."
+      zh: "R：主星的半径，它含有几乎全部的质量，因而也贡献几乎全部的引力。"
+      ja: "R：主星の半径。質量のほぼすべてと、引力もほぼすべてを担う。"
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: paren-open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el paréntesis del factor de densidad.
+      en: Opens the density factor.
+      pt: Abre o parêntese do fator de densidade.
+      fr: Ouvre la parenthèse du facteur de densité.
+      zh: 打开密度因子的括号。
+      ja: 密度因子の括弧を開く。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: El factor 2 ya cuenta los dos cuerpos; con un satélite fluido sube a 2,44.
+      en: The factor 2 already counts the two bodies; for a fluid satellite it rises to 2.44.
+      pt: O fator 2 já conta os dois corpos; com um satélite fluido ele sobe para 2,44.
+      fr: Le facteur 2 compte déjà les deux corps ; pour un satellite fluide il monte à 2,44.
+      zh: 因子 2 已经计入两个天体；若卫星视为流体，这个系数升到 2,44。
+      ja: 係数 2。それ自体で二つの天体を数えている。衛星を流体とみなすと 2,44 まで上がる。
+  - id: rho-main
+    type: variable
+    value: rho_M
+    explanation:
+      es: "rho_M: la densidad del cuerpo primario, la fuente de la atracción que rompe al satélite."
+      en: "rho_M: the primary's density, the source of the pull that tears the satellite apart."
+      pt: "rho_M: a densidade do corpo primário, origem da atração que despedaça o satélite."
+      fr: "rho_M : la densité du corps primaire, source de l'attraction qui déchire le satellite."
+      zh: "rho_M：主星的密度，正是撕碎卫星的引力之源。"
+      ja: "rho_M：主星の密度。衛星を引き裂く引力のもと。"
+  - id: frac
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por la densidad del satélite.
+      en: Divided by the satellite's density.
+      pt: Dividido pela densidade do satélite.
+      fr: Divisé par la densité du satellite.
+      zh: 除以卫星的密度。
+      ja: 衛星の密度で割る。
+  - id: rho-sat
+    type: variable
+    value: rho_m
+    explanation:
+      es: "rho_m: la densidad del satélite; cuanto menor sea, más cerca del primario cae el límite."
+      en: "rho_m: the satellite's density; the lower it is, the closer to the primary the limit falls."
+      pt: "rho_m: a densidade do satélite; quanto menor, mais perto do primário fica o limite."
+      fr: "rho_m : la densité du satellite ; plus elle est faible, plus le limite est proche du primaire."
+      zh: "rho_m：卫星的密度；它越小，极限就越靠近主星。"
+      ja: "rho_m：衛星の密度。小さいほど限界は主星の近くに迫る。"
+  - id: paren-close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el paréntesis.
+      en: Closes the parenthesis.
+      pt: Fecha o parêntese.
+      fr: Ferme la parenthèse.
+      zh: 关闭括号。
+      ja: 括弧を閉じる。
+  - id: exp-third
+    type: superscript
+    value: 1/3
+    explanation:
+      es: "La raíz cúbica: por eso el límite crece tan despacio, casi igual que R."
+      en: "The cube root, which is why the limit grows so slowly, almost like R."
+      pt: "A raiz cúbica, e por isso o limite cresce tão devagar, quase como R."
+      fr: "La racine cubique, et voilà pourquoi la limite croît si lentement, presque comme R."
+      zh: "三次方根。正因如此，这个极限增长得很慢，几乎与 R 成正比。"
+      ja: 立方根。だからこそ、この限界は R とほぼ同じ速さで増える。
+context:
+  author:
+    es: Édouard Roche
+    en: Édouard Roche
+    pt: Édouard Roche
+    fr: Édouard Roche
+    zh: 爱德华·罗什
+    ja: エドワード・ロッシュ
+  era:
+    es: París, 1849 · edición francesa de 1851
+    en: Paris, 1849 · French edition of 1851
+    pt: Paris, 1849 · edição francesa de 1851
+    fr: Paris, 1849 · édition française de 1851
+    zh: 巴黎,1849年 · 法文版 1851 年
+    ja: パリ、1849年 · フランス語版 1851年
+  history:
+    es: >-
+      En 1849 Édouard Roche preguntó a qué distancia puede orbitar un satélite sin ser deshecho por
+      las mareas que le impone el propio cuerpo alrededor del cual gira. Modelando la marea como una
+      diferencia de aceleración entre el centro y la superficie del satélite, obtuvo que la distancia
+      crítica escala con el radio del primario y con la raíz cúbica de la razón de densidades.
+      Separó dos casos: un satélite rígido, que resiste la deformación, y uno fluido, que se deforma,
+      y para este último el límite queda bastante más lejos. La comparación con el Sistema Solar fue
+      inmediata, con los anillos de Saturno ocupando justo la franja donde una luna propia no podría
+      permanecer unida, y con Ío, Europa y Ganímedas orbitando muy por fuera.
+    en: >-
+      In 1849 Édouard Roche asked how close a satellite can orbit without being torn apart by the
+      tides raised by the very body it circles. Modelling the tide as a difference of acceleration
+      between the satellite's center and its surface, he found that the critical distance scales with
+      the primary's radius and with the cube root of the density ratio. He separated two cases: a
+      rigid satellite that resists deformation, and a fluid one that does not, and for the fluid case
+      the limit sits considerably farther out. The comparison with the Solar System was immediate,
+      with Saturn's rings occupying precisely the band where a moon of its own could not stay whole,
+      while Io, Europa and Ganymede orbit far beyond.
+    pt: >-
+      Em 1849, Édouard Roche perguntou a que distância um satélite pode orbitar sem ser despedaçado
+      pelas marés que lhe impõe o próprio corpo ao redor do qual gira. Modelando a maré como uma
+      diferença de aceleração entre o centro e a superfície do satélite, ele obteve que a distância
+      crítica escala com o raio do primário e com a raiz cúbica da razão de densidades. Separou dois
+      casos: um satélite rígido, que resiste à deformação, e um fluido, que se deforma, e neste último
+      o limite fica bem mais longe. A comparação com o Sistema Solar foi imediata, com os anéis de
+      Saturno ocupando exatamente a faixa onde uma lua própria não poderia permanecer inteira, enquanto
+      Ío, Europa e Ganimedes orbitam bem mais fora.
+    fr: >-
+      En 1849, Édouard Roche se demanda à quelle distance un satellite peut orbiter sans être déchiré
+      par les marées que lui impose le corps même autour duquel il tourne. En modélisant la marée
+      comme une différence d'accélération entre le centre et la surface du satellite, il trouva que la
+      distance critique varie comme le rayon du primaire et comme la racine cubique du rapport de
+      densités. Il sépara deux cas : un satellite rigide, qui résiste à la déformation, et un fluide,
+      qui se déforme ; dans ce dernier cas la limite recule nettement. La comparaison avec le Système
+      solaire fut immédiate : les anneaux de Saturne occupent exactement la bande où une lune propre
+      ne pourrait rester entière, tandis qu'Io, Europe et Ganymède orbitent bien plus loin.
+    zh: >-
+      1849 年，爱德华·罗什提出一颗卫星在被其绕转的主星激起的潮汐撕碎之前究竟能靠得多近。他把潮汐建模为卫星中心与
+      表面之间的加速度之差，由此得出临界距离与主星半径以及密度比的三次方根成正比。他区分了两种情形：能抵抗形变的
+      刚性卫星，和会形变的流体卫星；对后者临界距离要远得多。与太阳系的对照随即成立：土星环所占的正是那颗行星自身
+      无法保持完整的卫星所在的范围，而木卫一、木卫二和木卫三的轨道远在其外。
+    ja: >-
+      1849年、エドワード・ロッシュは、回り道の主星そのものが起こす潮汐に引き裂かれずに衛星はどこまで近づけるかを論じた。
+      潮汐を「衛星の中心と表面の加速度の差」として扱った彼は、臨界距離が主星の半径と密度比の立方根に比例すると求めた。
+      その際、形を保つ剛性の衛星と、形が変わる流体の衛星を区別し、後者では限界がはるか外側に移ることを示した。太陽系
+      との照合はすぐに成立した。土星の環はまさに、その惑星自身の衛星が保っていられない帯に位置し、木衛一、木衛二、
+      木衛三ははるか外側を回っている。
+  timeline:
+    - year: "1849"
+      label:
+        es: >-
+          Roche publica el estudio con los dos límites, el del satélite rígido y el del satélite
+          fluido.
+        en: >-
+          Roche publishes the study with both limits, the rigid satellite and the fluid satellite.
+        pt: >-
+          Roche publica o estudo com os dois limites, o do satélite rígido e o do satélite fluido.
+        fr: >-
+          Roche publie l'étude avec les deux limites, celui du satellite rigide et celui du satellite
+          fluide.
+        zh: >-
+          罗什发表研究，给出刚性卫星与流体卫星两种情形的极限。
+        ja: >-
+          ロッシュが剛性衛星と流体衛星の両方の限界を含む研究を発表。
+    - year: "1877–1889"
+      label:
+        es: >-
+          Las medidas telescópicas de los anillos de Saturno dan al mundo el primer caso donde el
+          límite se puede contrastar con un número.
+        en: >-
+          Telescopic measurements of Saturn's rings give the world its first case where the limit
+          can be checked against a number.
+        pt: >-
+          As medidas telescópicas dos anéis de Saturno dão ao mundo o primeiro caso em que o
+          limite pode ser confrontado com um número.
+        fr: >-
+          Les mesures télescopiques des anneaux de Saturne offrent le premier cas où la limite
+          peut être confrontée à un nombre.
+        zh: >-
+          对土星环的望远镜测量，让人类第一次把这个极限与具体数字作对照。
+        ja: >-
+          土星の環の望遠鏡観測によって、この限界を数値と初めて照合できるようになった。
+    - year: "1980–1981"
+      label:
+        es: >-
+          Las sondas Voyager cruzan el plano de los anillos de Saturno y cartografían un disco que
+          ocupa la zona donde no puede existir un satélite propio del planeta.
+        en: >-
+          The Voyager probes cross Saturn's ring plane and map a disk that sits where a moon of the
+          planet's own cannot exist.
+        pt: >-
+          As sondas Voyager cruzam o plano dos anéis de Saturno e mapeiam um disco que ocupa a
+          zona onde não pode existir um satélite próprio do planeta.
+        fr: >-
+          Les sondes Voyager traversent le plan des anneaux de Saturne et cartographient un disque
+          qui occupe la zone où une lune propre à la planète ne peut exister.
+        zh: >-
+          旅行者探测器穿越土星环平面，绘制出的圆盘正好位于该行星无法拥有自己卫星的区域。
+        ja: >-
+          ヴォイジャー探査機が土星の環面を横切り、その惑星自身の衛星を置けない帯に円盤を地図化。
+    - year: "1992"
+      label:
+        es: >-
+          Tras pasar muy cerca de Júpiter, el cometa Shoemaker-Levy 9 aparece roto en una cadena de
+          fragmentos: ningún cometa duro sobrevive dentro del límite.
+        en: >-
+          After passing very close to Jupiter, comet Shoemaker-Levy 9 appears broken into a chain of
+          fragments: no hard comet survives inside the limit.
+        pt: >-
+          Depois de passar muito perto de Júpiter, o cometa Shoemaker-Levy 9 aparece quebrado numa
+          cadeia de fragmentos: nenhum cometa rígido sobrevive dentro do limite.
+        fr: >-
+          Après être passé très près de Jupiter, la comète Shoemaker-Levy 9 apparaît brisée en une
+          chaîne de fragments : aucune comète solide ne survit à l'intérieur de la limite.
+        zh: >-
+          在极近掠过木星之后，舒梅克-利维 9 号彗星显现为一串碎片：坚硬的彗星无法在极限之内存活。
+        ja: >-
+          木星のごく近くを通過したシューメーカー・レヴィ第9彗星は、破片の連なりとして現れた。硬い彗星は限界の
+          内側では生き残れない。
+  useCases:
+    - title:
+        es: Anillos planetarios
+        en: Planetary rings
+        pt: Anéis planetários
+        fr: Anneaux planétaires
+        zh: 行星环
+        ja: 惑星環
+      description:
+        es: >-
+          El disco de Saturno se extiende de 1,24 a 2,33 radios del centro del planeta: dentro de
+          esa franja ninguna luna propia aguantaría las mareas.
+        en: >-
+          Saturn's disk runs from 1.24 to 2.33 primary radii from the planet's center: inside that
+          band no moon of its own would survive the tides.
+        pt: >-
+          O disco de Saturno vai de 1,24 a 2,33 raios do centro do planeta: dentro dessa faixa
+          nenhuma lua própria aguentaria as marés.
+        fr: >-
+          Le disque de Saturne s'étend de 1,24 à 2,33 rayons du centre de la planète : dans cette
+          bande, aucune lune propre ne supporterait les marées.
+        zh: >-
+          土星的圆盘从行星中心 1,24 到 2,33 倍半径处：在这一带内，它自己的任何卫星都经不起潮汐。
+        ja: >-
+          土星の円盤は中心から 1.24 から 2.33 半径までを占据する。その帯の内側では、自らの衛星は潮汐に耐えられない。
+    - title:
+        es: Fragmentación de cometas
+        en: Comet fragmentation
+        pt: Fragmentação de cometas
+        fr: Fragmentation des comètes
+        zh: 彗星碎裂
+        ja: 彗星の分裂
+      description:
+        es: >-
+          El cometa Shoemaker-Levy 9 se deshizo en 1992 al cruzar dos veces el límite de Roche de
+          Júpiter, y sus fragmentos cayeron sobre el planeta en 1994.
+        en: >-
+          Comet Shoemaker-Levy 9 broke apart in 1992 after crossing Jupiter's Roche limit twice, and
+          its fragments hit the planet in 1994.
+        pt: >-
+          O cometa Shoemaker-Levy 9 se desfez em 1992 ao cruzar duas vezes o limite de Roche de
+          Júpiter, e seus fragmentos caíram sobre o planeta em 1994.
+        fr: >-
+          La comète Shoemaker-Levy 9 s'est disloquée en 1992 après avoir franchi deux fois la limite
+          de Roche de Jupiter, et ses fragments ont heurté la planète en 1994.
+        zh: >-
+          舒梅克-利维 9 号彗星在 1992 年两次穿越木星罗氏极限后碎裂，其碎片于 1994 年撞上这颗行星。
+        ja: >-
+          シューメーカー・レヴィ第9彗星は 1992年、木星のロッシュ限界を二度越えたところで崩壊し、その破片は
+          1994年に惑星へ衝突した。
+    - title:
+        es: Discos de acreción
+        en: Accretion disks
+        pt: Discos de acreção
+        fr: Disques d'accrétion
+        zh: 吸积盘
+        ja: 降着円盤
+      description:
+        es: >-
+          El gas de un disco cae hacia la estrella y solo puede formar anillos o un planeta, nunca
+          un satélite rocoso, porque esa franja está bajo el límite.
+        en: >-
+          Gas in a disk falls toward the star and can only form rings or a planet, never a rocky
+          moon, because that band lies under the limit.
+        pt: >-
+          O gás de um disco cai rumo à estrela e só pode formar anéis ou um planeta, nunca um
+          satélite rochoso, porque essa faixa está abaixo do limite.
+        fr: >-
+          Le gaz d'un disque tombe vers l'étoile et ne peut former que des anneaux ou une planète,
+          jamais un satellite rocheux, car cette bande se trouve sous la limite.
+        zh: >-
+          圆盘中的气体向恒星下落，只能形成环或行星，无法形成岩质卫星，因为那一带处在极限之内。
+        ja: >-
+          円盤のガスは星へ落ちますが、作れるのは環か惑星までで、岩質の衛星にはなりません。その帯は限界の内側に
+          あるからです。
+  example:
+    title:
+      es: Júpiter y el satélite Ío
+      en: Jupiter and the moon Io
+      pt: Júpiter e a lua Ío
+      fr: Jupiter et la lune Io
+      zh: 木星与木卫一
+      ja: 木星と木衛一
+    lines:
+      - es: "Júpiter: R = 71 492 km · rho_M = 1,33 g/cm³"
+        en: "Jupiter: R = 71,492 km · rho_M = 1.33 g/cm³"
+        pt: "Júpiter: R = 71 492 km · rho_M = 1,33 g/cm³"
+        fr: "Jupiter : R = 71 492 km · rho_M = 1,33 g/cm³"
+        zh: "木星：R = 71 492 km · rho_M = 1,33 g/cm³"
+        ja: "木星：R = 71 492 km · rho_M = 1,33 g/cm³"
+      - es: "Ío: rho_m = 3,53 g/cm³"
+        en: "Io: rho_m = 3.53 g/cm³"
+        pt: "Ío: rho_m = 3,53 g/cm³"
+        fr: "Io : rho_m = 3,53 g/cm³"
+        zh: "木卫一：rho_m = 3,53 g/cm³"
+        ja: "木衛一：rho_m = 3,53 g/cm³"
+      - es: "(2 · 1,33 / 3,53) = 0,7535 → 0,7535^(1/3) = 0,9100"
+        en: "(2 · 1.33 / 3.53) = 0.7535 → 0.7535^(1/3) = 0.9100"
+        pt: "(2 · 1,33 / 3,53) = 0,7535 → 0,7535^(1/3) = 0,9100"
+        fr: "(2 · 1,33 / 3,53) = 0,7535 → 0,7535^(1/3) = 0,9100"
+        zh: "(2 · 1,33 / 3,53) = 0,7535 → 0,7535^(1/3) = 0,9100"
+        ja: "(2 · 1,33 / 3,53) = 0,7535 → 0,7535^(1/3) = 0,9100"
+      - es: "d = 71 492 · 0,9100 ≈ 65 100 km"
+        en: "d = 71,492 · 0.9100 ≈ 65,100 km"
+        pt: "d = 71 492 · 0,9100 ≈ 65 100 km"
+        fr: "d = 71 492 · 0,9100 ≈ 65 100 km"
+        zh: "d = 71 492 · 0,9100 ≈ 65 100 km"
+        ja: "d = 71 492 · 0,9100 ≈ 65 100 km"
+      - es: "Ío orbita a 421 700 km: muy por fuera, su gravedad propia gana"
+        en: "Io orbits at 421,700 km: far outside, so its own gravity wins"
+        pt: "Ío orbita a 421 700 km: bem por fora, a gravidade própria ganha"
+        fr: "Io orbite à 421 700 km : bien au dehors, sa gravité propre l'emporte"
+        zh: "木卫一在 421 700 km 处运行：远在极限之外，自身引力占上风"
+        ja: "木衛一は 421 700 km を回っている。はるか外側なので、衛星自身の引力が勝つ。"
+      - es: "Con la versión fluida el límite sube a unos 126 000 km"
+        en: "With the fluid version the limit rises to about 126,000 km"
+        pt: "Com a versão fluida o limite sobe para perto de 126 000 km"
+        fr: "Avec la version fluide, la limite monte à environ 126 000 km"
+        zh: "改用流体版本，极限升到约 126 000 km"
+        ja: "流体版を使うと限界は約 126 000 km まで上がる。"

@@ -1,0 +1,387 @@
+id: implicit-differentiation
+title:
+  es: Derivación Implícita
+  en: Implicit Differentiation
+  pt: Derivação Implícita
+  fr: Dérivation implicite
+  zh: 隐函数求导
+  ja: 陰関数の微分
+category:
+  es: Cálculo
+  en: Calculus
+  pt: Cálculo
+  fr: Calcul
+  zh: 微积分
+  ja: 微積分学
+nodes:
+  - id: dy
+    type: variable
+    value: dy
+    explanation:
+      es: "La derivada que buscamos: cuánto sube y cuando x avanza."
+      en: "The derivative we want: how fast y rises as x advances."
+      pt: "A derivada que buscamos: quanto y sobe quando x avança."
+      fr: "La dérivée cherchée : à quelle vitesse y monte quand x avance."
+      zh: 我们要找的导数：x 前进时 y 上升的快慢。
+      ja: 求めたい微分係数。x が進むとき y がどれだけ速くなるか。
+  - id: slash
+    type: operator
+    value: "/"
+    explanation:
+      es: Se lee 'dy sobre dx', es decir, la razón entre ambos incrementos.
+      en: Read as 'dy over dx', the ratio of the two increments.
+      pt: Lê-se 'dy sobre dx', isto é, a razão entre os dois incrementos.
+      fr: Se lit 'dy sur dx', c'est-à-dire le rapport des deux incréments.
+      zh: 读作“dy 除以 dx”，即两个增量之比。
+      ja: 「dx に対する dy」、つまり2つの増分の比として読む。
+  - id: dx
+    type: variable
+    value: dx
+    explanation:
+      es: El incremento horizontal, que se supone pequeño.
+      en: The horizontal increment, assumed to be small.
+      pt: O incremento horizontal, supondo pequeno.
+      fr: L'incrément horizontal, supposé petit.
+      zh: 水平方向的增量，假定它很小。
+      ja: 水平方向の増分。十分小さいものとする。
+  - id: eq-1
+    type: equals
+    value: "="
+    explanation:
+      es: La pendiente se expresa como un cociente de derivadas parciales.
+      en: The slope is expressed as a quotient of partial derivatives.
+      pt: A inclinação se expressa como um quociente de derivadas parciais.
+      fr: La pente s'exprime comme un quotient de dérivées partielles.
+      zh: 斜率被表示为两个偏导数之商。
+      ja: 傾きは偏導数の比として表される。
+  - id: minus
+    type: operator
+    value: "−"
+    explanation:
+      es: "El signo negativo: si una variable sube, la otra tiene que bajar."
+      en: "The minus sign: if one variable rises, the other must fall."
+      pt: "O sinal negativo: se uma variável sobe, a outra tem de descer."
+      fr: "Le signe moins : si une variable monte, l'autre doit descendre."
+      zh: 负号：一个变量上升，另一个就必须下降。
+      ja: マイナス符号。片方が上がれば、もう片方は下がらねばならない。
+  - id: open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el cociente de las dos derivadas parciales.
+      en: Opens the quotient of the two partial derivatives.
+      pt: Abre o quociente das duas derivadas parciais.
+      fr: Ouvre le quotient des deux dérivées partielles.
+      zh: 打开两个偏导数的商。
+      ja: 2つの偏導数の比を囲む括弧を開く。
+  - id: fx
+    type: variable
+    value: ∂F/∂x
+    explanation:
+      es: Cuánto cambia F cuando x varía y se mantiene y fija.
+      en: How much F changes when x varies and y is held fixed.
+      pt: Quanto F varia quando x varia e y fica fixo.
+      fr: De combien F varie quand x varie et y reste fixe.
+      zh: x 变化而 y 保持不变时 F 的变化率。
+      ja: x を動かし y を固定したとき、F がどれだけ変わるか。
+  - id: bar
+    type: operator
+    value: "/"
+    explanation:
+      es: La derivada respecto de x se divide por la respecto de y.
+      en: The x derivative is divided by the y derivative.
+      pt: A derivada em relação a x é dividida pela derivada em relação a y.
+      fr: La dérivée par rapport à x est divisée par celle par rapport à y.
+      zh: 关于 x 的导数除以关于 y 的导数。
+      ja: x についての微分を y についての微分で割る。
+  - id: fy
+    type: variable
+    value: ∂F/∂y
+    explanation:
+      es: El mismo cambio en la otra dirección.
+      en: The same change along the other direction.
+      pt: A mesma variação na outra direção.
+      fr: La même variation dans l'autre direction.
+      zh: 沿另一个方向的同一变化。
+      ja: もう一方の方向における同じ変化。
+  - id: close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el cociente, que puede valer cero si ∂F/∂y se anula.
+      en: Closes the quotient, which may be zero if ∂F/∂y vanishes.
+      pt: Fecha o quociente, que pode valer zero se ∂F/∂y se anula.
+      fr: Ferme le quotient, qui peut être nul si ∂F/∂y s'annule.
+      zh: 关闭该商；当 ∂F/∂y 为零时它可能取零值。
+      ja: 比を閉じる括弧。∂F/∂y が 0 なら値も 0 になる。
+  - id: semi
+    type: operator
+    value: ";"
+    explanation:
+      es: Ahora la condición que define la curva que se está derivando.
+      en: Now the condition that defines the curve being differentiated.
+      pt: Agora a condição que define a curva que está sendo derivada.
+      fr: À présent la condition qui définit la courbe dérivée.
+      zh: 接下来是定义待求导曲线的那条条件。
+      ja: ここから先は、微分する曲線を定める条件である。
+  - id: field
+    type: variable
+    value: F(x, y)
+    explanation:
+      es: "Una función implícita: F vale cero justo sobre la curva."
+      en: "An implicit function: F equals zero exactly on the curve."
+      pt: "Uma função implícita: F vale zero exatamente sobre a curva."
+      fr: "Une fonction implicite : F vaut zéro exactement sur la courbe."
+      zh: 隐函数：F 恰好在曲线上取零值。
+      ja: 陰関数。曲線の上でちょうど 0 になる関数である。
+  - id: eq-2
+    type: equals
+    value: "="
+    explanation:
+      es: Sus ceros son los puntos de la curva, no la curva entera.
+      en: Its zeros are the points of the curve, not the whole curve.
+      pt: Seus zeros são os pontos da curva, não a curva inteira.
+      fr: Ses zéros sont les points de la courbe, non la courbe entière.
+      zh: 它的零点集是曲线上的点，而不是整条曲线。
+      ja: 0 になる点の集合が曲線そのものである。
+  - id: zero
+    type: constant
+    value: "0"
+    explanation:
+      es: Al sustituir en la cadena de la regla, y' queda sola y se despeja.
+      en: Substituting into the chain rule leaves y' alone, ready to solve.
+      pt: Substituindo na regra da cadeia, y' fica sozinha e pode ser isolada.
+      fr: En substituant dans la règle de la chaîne, y' se retrouve seul et s'isole.
+      zh: 代入链式法则后只剩 y'，可以解出。
+      ja: 連鎖律に代入すると y' だけが残るので、y' を解ける。
+context:
+  author:
+    es: Johann Bernoulli y Louis Cauchy
+    en: Johann Bernoulli and Louis Cauchy
+    pt: Johann Bernoulli e Louis Cauchy
+    fr: Johann Bernoulli et Louis Cauchy
+    zh: 约翰·伯努利与路易·柯西
+    ja: ヨハン・ベルヌーイとルイ・コーシー
+  era:
+    es: Suiza y Francia, s. XVII–XIX · Barrow en 1674, Cauchy en el s. XIX
+    en: Switzerland and France, 17th to 19th century · Barrow in 1674, Cauchy in the 19th
+    pt: Suíça e França, séc. XVII–XIX · Barrow em 1674, Cauchy no séc. XIX
+    fr: Suisse et France, XVIIe et XIXe siècles · Barrow en 1674, Cauchy au XIXe
+    zh: 瑞士与法国，17至19世纪 · 巴罗于1674年，柯西于19世纪
+    ja: スイスとフランス、17世紀から19世紀 · 1674年のバロー、19世紀のコーシー
+  history:
+    es: >-
+      La derivación implícita calcula la pendiente de una curva dada por una ecuación
+      F(x, y) = 0, sin despejar nunca la variable y. Barrow ya la empleó en 1674 al buscar
+      tangentes a curvas, y Cauchy la sistematizó un siglo después. El truco es aplicar la
+      regla de la cadena y suponer que y depende de x: la derivada total de F tiene que
+      anularse sobre la curva, y al despejar la pendiente queda el cociente de las derivadas
+      parciales. Su ventaja es práctica, porque evita despejar una y que a menudo no existe:
+      una circunferencia tiene dos ramas.
+    en: >-
+      Implicit differentiation computes the slope of a curve given by an equation
+      F(x, y) = 0, without ever solving for the variable y. Barrow already used it in 1674
+      while looking for tangents to curves, and Cauchy systematized it a century later. The
+      trick is to apply the chain rule and suppose that y depends on x: the total derivative
+      of F must vanish along the curve, and solving for the slope leaves a quotient of
+      partial derivatives. Its virtue is practical, because it avoids solving for a y that
+      often does not exist: a circle has two branches.
+    pt: >-
+      A derivação implícita calcula a inclinação de uma curva dada por uma equação
+      F(x, y) = 0, sem nunca isolar a variável y. Barrow já a employou em 1674 ao buscar
+      tangentes a curvas, e Cauchy a sistematizou um século depois. O truque é aplicar a
+      regra da cadeia e supor que y depende de x: a derivada total de F precisa se anular
+      sobre a curva, e ao isolar a inclinação sobra um quociente de derivadas parciais. A
+      vantagem é prática, porque evita isolar uma y que muitas vezes não existe: uma
+      circunferência tem dois ramos.
+    fr: >-
+      La dérivation implicite calcule la pente d'une courbe donnée par une équation
+      F(x, y) = 0, sans jamais isoler la variable y. Barrow l'employait déjà en 1674 en
+      cherchant des tangentes à des courbes, et Cauchy la systématisa un siècle plus tard.
+      L'astuce consiste à appliquer la règle de la chaîne et à supposer que y dépend de x :
+      la dérivée totale de F doit s'annuler le long de la courbe, et en isolant la pente il
+      reste un quotient de dérivées partielles. Son atout est pratique, car il évite
+      d'isoler une y qui n'existe souvent pas : un cercle a deux branches.
+    zh: >-
+      隐函数求导用来计算由方程 F(x, y) = 0 给出的曲线的斜率，全程不必解出变量 y。
+      巴罗在1674年研究曲线切线时已经用到它，柯西在一个世纪后将其系统化。诀窍是运用链式法则，
+      并假设 y 依赖于 x：沿曲线 F 的全导数必须为零，解出斜率后剩下的是两个偏导数之商。
+      它的实用价值在于避免解出一个往往并不存在的 y，因为圆有上下两支。
+    ja: >-
+      陰関数の微分は、方程式 F(x, y) = 0 で表された曲線の傾きを、y を解かずに求める方法である。
+      1674年、バローは曲線の接線を求める仕事の中でこの方法を使い、コーシーは1世紀後にこれを体系化した。
+      窍門は連鎖律を当て、y が x に依存すると仮定することにある。曲線の上で F の全微分は 0 にならねばならず、
+      傾きを解くと偏導数の比が残る。実用上の利点は、円のように2本の枝を持つ曲線でも、
+      存在しないこともある y を解かずに済むことにある。
+  timeline:
+    - year: "1674"
+      label:
+        es: >-
+          Barrow obtiene en sus Lectiones la regla de la tangente para curvas dadas de forma
+          implícita.
+        en: >-
+          Barrow obtains in his Lectiones the tangent rule for curves given implicitly.
+        pt: >-
+          Barrow obtém em suas Lectiones a regra da tangente para curvas dadas implicitamente.
+        fr: >-
+          Barrow obtient dans ses Lectiones la règle de la tangente aux courbes données
+          implicitement.
+        zh: >-
+          巴罗在《讲义》中得到隐式给定曲线的切线法则。
+        ja: >-
+          バローが『Lectiones』で、陰的な形で示された曲線の接線の法則を導く。
+    - year: s. XIX
+      label:
+        es: >-
+          Cauchy enuncia la regla general con notación de derivadas parciales y la incorpora a
+          sus cursos de análisis.
+        en: >-
+          Cauchy states the general rule in partial derivative notation and folds it into his
+          analysis courses.
+        pt: >-
+          Cauchy enuncia a regra geral com notação de derivadas parciais e a incorpora aos seus
+          cursos de análise.
+        fr: >-
+          Cauchy énonce la règle générale en notation de dérivées partielles et l'incorpore à
+          ses cours d'analyse.
+        zh: >-
+          柯西用偏导数记号表述了一般法则，并把它纳入他的分析课程。
+        ja: >-
+          コーシーが偏導数の記法で一般的な法則を述べ、微分積分学の講義に組み入れる。
+    - year: Hoy
+      label:
+        es: >-
+          Es la primera técnica que enseña cualquier curso de cálculo y la que usan los sistemas
+          de álgebra simbólica para derivar.
+        en: >-
+          It is the first technique any calculus course teaches and what computer algebra systems
+          use to differentiate.
+        pt: >-
+          É a primeira técnica que qualquer curso de cálculo ensina e a que os sistemas de álgebra
+          simbólica usam para derivar.
+        fr: >-
+          C'est la première technique qu'apprend tout cours de calcul et celle qu'utilisent les
+          systèmes de calcul formel pour dériver.
+        zh: >-
+          它是任何微积分课程教的第一项技术，也是计算机代数系统用来求导的方法。
+        ja: >-
+          どんな微積分学の授業でも最初に教える手法であり、数式処理系が求导に用いるものでもある。
+  useCases:
+    - title:
+        es: Tangentes a curvas
+        en: Tangents to curves
+        pt: Tangentes a curvas
+        fr: Tangentes aux courbes
+        zh: 曲线的切线
+        ja: 曲線の接線
+      description:
+        es: >-
+          Da la pendiente en cualquier punto de una circunferencia, una elipse o una cardioide sin
+          escribir sus dos ramas.
+        en: >-
+          Gives the slope at any point of a circle, an ellipse or a cardioid without writing out
+          its two branches.
+        pt: >-
+          Dá a inclinação em qualquer ponto de uma circunferência, uma elipse ou uma cardioide sem
+          escrever seus dois ramos.
+        fr: >-
+          Donne la pente en tout point d'un cercle, d'une ellipse ou d'une cardioïde sans écrire
+          ses deux branches.
+        zh: >-
+          不必写出上下两支，就能求出圆、椭圆或心脏线上任意一点的斜率。
+        ja: >-
+          2本の枝を書き下すことなく、円や楕円、心型線上のどの点でも傾きがわかる。
+    - title:
+        es: Curvas algebraicas
+        en: Algebraic curves
+        pt: Curvas algébricas
+        fr: Courbes algébriques
+        zh: 代数曲线
+        ja: 代数曲線
+      description:
+        es: >-
+          Una cardioide, una lemniscata o cualquier curva algebraica se derivan sin despejar
+          ninguna variable, que es justo lo que esta regla permite.
+        en: >-
+          A cardioid, a lemniscate or any algebraic curve is differentiated without solving
+          for any variable, which is exactly what this rule is for.
+        pt: >-
+          Uma cardioide, uma lemniscata ou qualquer curva algébrica é derivada sem isolar
+          nenhuma variável, que é justamente o que esta regra permite.
+        fr: >-
+          Une cardioïde, une lemniscate ou toute courbe algébrique se dérive sans isoler
+          aucune variable, ce qu'exactement cette règle permet.
+        zh: >-
+          心形线、双纽线或任何代数曲线都可以不解出变量就直接求导，这正是这条规则的用处。
+        ja: >-
+          心形線やレムニスカート、どの代数曲線でも変数を解かずに微分できる。それがまさに
+          この規則の役目である。
+    - title:
+        es: Álgebra simbólica
+        en: Symbolic algebra
+        pt: Álgebra simbólica
+        fr: Calcul formel
+        zh: 符号计算
+        ja: 数式処理
+      description:
+        es: >-
+          Los sistemas de CAS derivan ecuaciones entre variables sin despejar ninguna de ellas,
+          que es justo lo que esta regla permite.
+        en: >-
+          Computer algebra systems differentiate equations among variables without solving any of
+          them, which is exactly what this rule allows.
+        pt: >-
+          Os sistemas de CAS derivam equações entre variáveis sem isolar nenhuma delas, que é
+          exatamente o que esta regra permite.
+        fr: >-
+          Les systèmes de calcul formel dérivent des équations entre variables sans en isoler
+          aucune, ce qu'autorise précisément cette règle.
+        zh: >-
+          计算机代数系统可以在不解出任何变量的情况下对方程求导，这正是本法则所允许的。
+        ja: >-
+          数式処理系は、変数をひとつも解かずに各式を微分できる。その根拠はこの法則そのもの。
+  example:
+    title:
+      es: La circunferencia x² + y² = 25
+      en: The circle x² + y² = 25
+      pt: A circunferência x² + y² = 25
+      fr: Le cercle x² + y² = 25
+      zh: 圆 x² + y² = 25
+      ja: 円 x² + y² = 25
+    lines:
+      - es: "F(x, y) = x² + y² − 25 = 0"
+        en: "F(x, y) = x² + y² − 25 = 0"
+        pt: "F(x, y) = x² + y² − 25 = 0"
+        fr: "F(x, y) = x² + y² − 25 = 0"
+        zh: "F(x, y) = x² + y² − 25 = 0"
+        ja: "F(x, y) = x² + y² − 25 = 0"
+      - es: "∂F/∂x = 2x, ∂F/∂y = 2y"
+        en: "∂F/∂x = 2x, ∂F/∂y = 2y"
+        pt: "∂F/∂x = 2x, ∂F/∂y = 2y"
+        fr: "∂F/∂x = 2x ; ∂F/∂y = 2y"
+        zh: "∂F/∂x = 2x, ∂F/∂y = 2y"
+        ja: "∂F/∂x = 2x, ∂F/∂y = 2y"
+      - es: "dy/dx = −(2x)/(2y) = −x/y"
+        en: "dy/dx = −(2x)/(2y) = −x/y"
+        pt: "dy/dx = −(2x)/(2y) = −x/y"
+        fr: "dy/dx = −(2x)/(2y) = −x/y"
+        zh: "dy/dx = −(2x)/(2y) = −x/y"
+        ja: "dy/dx = −(2x)/(2y) = −x/y"
+      - es: "en (3, 4): dy/dx = −3/4 = −0.75"
+        en: "at (3, 4): dy/dx = −3/4 = −0.75"
+        pt: "em (3, 4): dy/dx = −3/4 = −0,75"
+        fr: "en (3, 4) : dy/dx = −3/4 = −0,75"
+        zh: "在 (3, 4) 处：dy/dx = −3/4 = −0.75"
+        ja: "(3, 4) で：dy/dx = −3/4 = −0.75"
+      - es: "tangente: y − 4 = −0.75(x − 3)"
+        en: "tangent: y − 4 = −0.75(x − 3)"
+        pt: "tangente: y − 4 = −0,75(x − 3)"
+        fr: "tangente : y − 4 = −0,75(x − 3)"
+        zh: "切线：y − 4 = −0.75(x − 3)"
+        ja: "接線：y − 4 = −0.75(x − 3)"
+      - es: "comprobación: 3² + 4² = 25, y la pendiente cae hacia el eje y"
+        en: "check: 3² + 4² = 25, and the slope falls toward the y axis"
+        pt: "conferência: 3² + 4² = 25, e a inclinação cai em direção ao eixo y"
+        fr: "vérification : 3² + 4² = 25, et la pente descend vers l'axe y"
+        zh: "验证：3² + 4² = 25，且斜率朝 y 轴方向下降"
+        ja: "確認：3² + 4² = 25、傾きは y 軸に向かって下がる"

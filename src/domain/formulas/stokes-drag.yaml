@@ -1,0 +1,331 @@
+id: stokes-drag
+title:
+  es: Fuerza de Stokes
+  en: Stokes Drag
+  pt: Arrasto de Stokes
+  fr: Traînée de Stokes
+  zh: 斯托克斯阻力
+  ja: ストークス抗力
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: f
+    type: variable
+    value: F
+    explanation:
+      es: "La fuerza de rozamiento viscoso que frena a la esfera, siempre opuesta a su movimiento."
+      en: "The viscous friction force that slows the sphere down, always against its motion."
+      pt: "A força de atrito viscoso que desacelera a esfera, sempre oposta ao seu movimento."
+      fr: "La force de frottement visqueux qui ralentit la sphère, toujours opposée à son mouvement."
+      zh: 阻碍球体运动的黏性摩擦力,方向始终与运动相反。
+      ja: 球を遅らせる粘性摩擦の力。つねに運動と逆向きに働く。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: six
+    type: number
+    value: "6"
+    explanation:
+      es: "El factor numérico que sale de resolver el flujo alrededor de una esfera."
+      en: "The numerical factor that comes out of solving the flow around a sphere."
+      pt: "O fator numérico que sai de resolver o fluxo ao redor de uma esfera."
+      fr: "Le facteur numérique issu de la résolution de l'écoulement autour d'une sphère."
+      zh: 由求解绕球流动得到的数值系数。
+      ja: 球まわりの流れを解いて得られる数値の係数。
+  - id: pi
+    type: constant
+    value: π
+    explanation:
+      es: "La razón entre la circunferencia y el diámetro, que aparece por la simetría axial."
+      en: "The ratio of circumference to diameter, which appears because of the axial symmetry."
+      pt: "A razão entre circunferência e diâmetro, que surge pela simetria axial."
+      fr: "Le rapport de la circonférence au diamètre, qui vient de la symétrie axiale."
+      zh: 圆周与直径之比,它因轴对称而出现。
+      ja: 円周と直径の比。軸対称性のために現れる。
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: eta
+    type: variable
+    value: η
+    explanation:
+      es: "La viscosidad dinámica del fluido, que mide lo pegajoso que es."
+      en: "The dynamic viscosity of the fluid, which measures how sticky it is."
+      pt: "A viscosidade dinâmica do fluido, que mede o quanto ele é pegajoso."
+      fr: "La viscosité dynamique du fluide, qui mesure son caractère collant."
+      zh: 流体的动力黏度,衡量它有多黏。
+      ja: 流体の動黏度。粘りの強さを表す。
+  - id: dot-2
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "El radio de la esfera. La resistencia crece con él, pero sólo en la región lineal."
+      en: "The radius of the sphere. Drag grows with it, but only in the linear regime."
+      pt: "O raio da esfera. A resistência cresce com ele, mas só na região linear."
+      fr: "Le rayon de la sphère. La traînée croît avec lui, mais seulement dans le régime linéaire."
+      zh: 球的半径。阻力随之增大,但这仅限于线性区。
+      ja: 球の半径。抗力はこれに比例するが、直線的な領域に限られる。
+  - id: dot-3
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: v
+    type: variable
+    value: v
+    explanation:
+      es: "La velocidad de la esfera respecto al fluido. Aquí la fuerza es proporcional a v."
+      en: "The speed of the sphere relative to the fluid. Here the force is proportional to v."
+      pt: "A velocidade da esfera em relação ao fluido. Aqui a força é proporcional a v."
+      fr: "La vitesse de la sphère par rapport au fluide. Ici la force est proportionnelle à v."
+      zh: 球相对于流体的速度。此处阻力与 v 成正比。
+      ja: 流体に対する球の速度。この場合、力は v に比例する。
+context:
+  author:
+    es: George Gabriel Stokes
+    en: George Gabriel Stokes
+    pt: George Gabriel Stokes
+    fr: George Gabriel Stokes
+    zh: 乔治·加布里埃尔·斯托克斯
+    ja: ジョージ・ギャブriel・ストークス
+  era:
+    es: "Irlanda e Inglaterra, 1819–1903 · fórmula publicada en 1851"
+    en: "Ireland and England, 1819–1903 · formula published in 1851"
+    pt: "Irlanda e Inglaterra, 1819–1903 · fórmula publicada em 1851"
+    fr: "Irlande et Angleterre, 1819–1903 · formule publiée en 1851"
+    zh: "爱尔兰与英国,1819–1903年 · 公式发表于1851年"
+    ja: "アイルランドとイギリス、1819–1903年 · 式は1851年に発表"
+  history:
+    es: >-
+      Stokes resolvió en 1851 el flujo de un fluido viscoso alrededor de una esfera en el caso en que la
+      inercia es despreciable, y encontró que la fuerza resultante es proporcional a la velocidad y no al
+      cuadrado. Esa linealidad es lo que distingue su resultado de la resistencia newtoniana, que describe
+      un cuerpo moviéndose dentro de un gas. Stokes unió este resultado con su teorema sobre la
+      viscosidad, y ambos son el arranque de la hidrodinámica viscosa. La ecuación se usa sobre todo donde el
+      flujo es lento y el cuerpo es pequeño: partículas sedimentando, gotas de lluvia en aceite o
+      suspensiones coloidales.
+    en: >-
+      In 1851 Stokes solved the flow of a viscous fluid around a sphere in the limit where inertia is
+      negligible, and found the resulting force proportional to the speed rather than to its square. That
+      linearity is what separates his result from the quadratic drag that describes a body moving through a
+      gas. He joined this result to his theorem on viscosity, and the two of them open viscous
+      hydrodynamics. The equation is used wherever the flow is slow and the body is small: particles
+      settling out, raindrops in oil, colloidal suspensions.
+    pt: >-
+      Em 1851 Stokes resolveu o fluxo de um fluido viscoso ao redor de uma esfera no limite em que a inércia é
+      desprezível, e encontrou a força resultante proporcional à velocidade e não ao seu quadrado. Essa
+      linearidade é o que separa seu resultado da resistência quadrática que descreve um corpo se movendo num
+      gás. Ele juntou esse resultado ao seu teorema sobre viscosidade, e os dois abrem a hidrodinâmica viscosa.
+      A equação é usada onde o fluxo é lento e o corpo é pequeno: partículas sedimentando, gotas de chuva em
+      óleo e suspensões coloidais.
+    fr: >-
+      En 1851 Stokes résout l'écoulement d'un fluide visqueux autour d'une sphère dans la limite où l'inertie
+      est négligeable, et trouve une force proportionnelle à la vitesse et non à son carré. Cette linéarité
+      sépare son résultat de la traînée quadratique qui décrit un corps se déplaçant dans un gaz. Il joint
+      ce résultat à son théorème sur la viscosité, et tous deux ouvrent l'hydrodynamique visqueuse. L'équation
+      sert là où l'écoulement est lent et le corps petit : particules qui sédimentent, gouttes de pluie dans
+      l'huile, suspensions colloïdales.
+    zh: >-
+      1851年,斯托克斯求解了惯性可以忽略时黏性流体绕球流动的问题,发现所得的力与速度成正比,而不是与速度的
+      平方成正比。正是这种线性,把他的结果与描述物体在气体中运动时的二次阻力区分开来。他把这一结果与自己的
+      黏性定理结合起来,二者共同开创了黏性流体力学。该式用于流速慢、物体小的场合:颗粒沉降、油中的雨滴、
+      胶体悬浮液。
+    ja: >-
+      1851年、Stokesは慣性が無視できる極限で球まわりの粘性流体を解き、得られた力が速度の2乗ではなく速度に
+      比例することを示した。この線形であることが、彼の結果と気体中の物体に対する二次抗力を区別する。
+      この結果を粘性の定理と結び、粘性流体力学を開いた。この式が用いられるのは、流れが遅く物体が小さい
+      場合である。すなわち沈降する粒子、油の中の雨滴、コロイド懸濁など。
+  timeline:
+    - year: "1851"
+      label:
+        es: Stokes publica la solución del flujo viscoso alrededor de una esfera y la fuerza resultante.
+        en: Stokes publishes the solution of viscous flow around a sphere and the resulting force.
+        pt: Stokes publica a solução do fluxo viscoso ao redor de uma esfera e a força resultante.
+        fr: Stokes publie la solution de l'écoulement visqueux autour d'une sphère et la force qui en résulte.
+        zh: 斯托克斯发表了绕球黏性流动的解及由此得到的力。
+        ja: Stokesは球まわりの粘性流れの解と、それによる力を発表した。
+    - year: "1906"
+      label:
+        es: >-
+          Cunningham corrige la fórmula para gases muy enrarecidos, donde las colisiones entre moléculas
+          ya no transmiten bien el momento.
+        en: >-
+          Cunningham corrects the formula for very rarefied gases, where molecular collisions no longer
+          transfer momentum well.
+        pt: >-
+          Cunningham corrige a fórmula para gases muito rarefeitos, onde as colisões entre moléculas já não
+          transmitem bem o momento.
+        fr: >-
+          Cunningham corrige la formule pour les gaz très raréfiés, où les collisions entre molécules ne
+          transmettent plus correctement la quantité de mouvement.
+        zh: >-
+          坎宁安针对极稀薄气体修正了该式,因为此时分子间碰撞已无法有效传递动量。
+        ja: >-
+          Cunninghamは、分子同士の衝突が運動量を十分 transmitirできなくなった希薄気体に対して、この式を補正した。
+    - year: Hoy
+      label:
+        es: >-
+          Sigue siendo la base para calcular la velocidad terminal de partículas pequeñas y el tiempo que
+          tardan en sedimentar.
+        en: >-
+          It remains the basis for computing the terminal speed of small particles and how long they take to
+          settle out.
+        pt: >-
+          Segue sendo a base para calcular a velocidade terminal de partículas pequenas e o tempo que levam
+          para sedimentar.
+        fr: >-
+          Elle reste la base pour calculer la vitesse terminal de petites particules et le temps qu'elles
+          mettent à sédimenter.
+        zh: >-
+          它至今仍是计算小颗粒终端沉降速度、以及它们沉降所需时间的依据。
+        ja: >-
+          小さな粒子の終端速度や、沈降にかかる時間を求める基本的式として今も使われる。
+  useCases:
+    - title:
+        es: Sedimentación
+        en: Sedimentation
+        pt: Sedimentação
+        fr: Sédimentation
+        zh: 沉降
+        ja: 沈降
+      description:
+        es: >-
+          La velocidad terminal de una esfera es 2r²(ρ_p − ρ_f)g/(9η). Medirla en un tubo es la forma más
+          antigua de conocer el tamaño de una partícula.
+        en: >-
+          A sphere's terminal speed is 2r²(ρ_p − ρ_f)g/(9η). Measuring it in a tube is the oldest way to know
+          the size of a particle.
+        pt: >-
+          A velocidade terminal de uma esfera é 2r²(ρ_p − ρ_f)g/(9η). Medi-la em um tubo é a forma mais antiga
+          de conhecer o tamanho de uma partícula.
+        fr: >-
+          La vitesse terminal d'une sphère vaut 2r²(ρ_p − ρ_f)g/(9η). La mesurer dans un tube est le plus
+          ancien moyen de connaître la taille d'une particule.
+        zh: >-
+          球体的终端速度为 2r²(ρ_p − ρ_f)g/(9η)。在管中测量它,是确定颗粒大小最古老的方法。
+        ja: >-
+          球の終端速度は 2r²(ρ_p − ρ_f)g/(9η) である。管の中でこれを測ることが、粒子の大きさを知る最も
+          古い方法である。
+    - title:
+        es: Micropartículas
+        en: Microparticles
+        pt: Micropartículas
+        fr: Microparticules
+        zh: 微粒
+        ja: 微粒子
+      description:
+        es: >-
+          En microfluídica y en aerosol la caída de una gota se usa para medir su tamaño: la fuerza de
+          Stokes se opone a la velocidad y la gravedad tiene que igualarla.
+        en: >-
+          In microfluidics and in aerosol science the settling of a droplet is used to measure its size:
+          Stokes friction opposes the speed and gravity has to balance it.
+        pt: >-
+          Em microfluídica e em aerossóis a queda de uma gota é usada para medir seu tamanho: o atrito de
+          Stokes se opõe à velocidade e a gravidade precisa equilibrá-lo.
+        fr: >-
+          En microfluidique et en aérosols, la chute d'une goutte sert à mesurer sa taille : le frottement de
+          Stokes s'oppose à la vitesse et la pesanteur doit l'équilibrer.
+        zh: >-
+          在微流控与气溶胶科学中,液滴的下落速度被用来测量其大小:斯托克斯阻力与速度相抗,重力必须与之平衡。
+        ja: >-
+          マイクロフルイディクスやエアロゾルの分野では、液滴の落下からその大きさを知る。ストークス抗力が速度に
+          逆らい、重力がそれを打ち消す必要がある。
+    - title:
+        es: Contraste con el arrastre cuadrático
+        en: Contrast with quadratic drag
+        pt: Contraste com o arrasto quadrático
+        fr: Contraste avec la traînée quadratique
+        zh: 与二次阻力的对比
+        ja: 二次抗力との対比
+      description:
+        es: >-
+          La fórmula drag-force, F = ½ρv²A·C_d, vale cuando la inercia domina y la fuerza va con el cuadrado de la
+          velocidad. Con número de Reynolds bajo gana esta.
+        en: >-
+          The drag-force formula, F = ½ρv²A·C_d, holds when inertia dominates and the force goes with the square
+          of the speed. Below a low Reynolds number this one wins.
+        pt: >-
+          A fórmula drag-force, F = ½ρv²A·C_d, vale quando a inércia domina e a força vai com o quadrado da
+          velocidade. Com número de Reynolds baixo vence esta.
+        fr: >-
+          La formule drag-force, F = ½ρv²A·C_d, vaut quand l'inertie domine et que la force suit le carré de
+          la vitesse. À faible nombre de Reynolds, celle-ci l'emporte.
+        zh: >-
+          drag-force 公式 F = ½ρv²A·C_d 适用于惯性占主导、阻力随速度平方变化的情形。当雷诺数很低时,本式胜出。
+        ja: >-
+          drag-forceの式 F = ½ρv²A·C_d は、慣性が優勢で力が速度の2乗に比例する場合に成り立つ。レイノルズ数が
+          低いときは、この式のほうが正しい。
+  example:
+    title:
+      es: Una partícula de sílice en agua
+      en: A silica particle in water
+      pt: Uma partícula de sílica em água
+      fr: Une particule de silice dans l'eau
+      zh: 水中的二氧化硅颗粒
+      ja: 水中のシリカ粒子
+    lines:
+      - es: r = 1 µm, η = 1,0·10⁻³ Pa·s, v = 1 mm/s
+        en: r = 1 µm, η = 1.0·10⁻³ Pa·s, v = 1 mm/s
+        pt: r = 1 µm, η = 1,0·10⁻³ Pa·s, v = 1 mm/s
+        fr: r = 1 µm, η = 1,0·10⁻³ Pa·s, v = 1 mm/s
+        zh: r = 1 µm,η = 1.0·10⁻³ Pa·s,v = 1 mm/s
+        ja: r = 1 µm、η = 1.0·10⁻³ Pa·s、v = 1 mm/s
+      - es: F = 6π(1,0·10⁻³)(10⁻⁶)(10⁻³) = 1,9·10⁻¹¹ N
+        en: F = 6π(1.0·10⁻³)(10⁻⁶)(10⁻³) = 1.9·10⁻¹¹ N
+        pt: F = 6π(1,0·10⁻³)(10⁻⁶)(10⁻³) = 1,9·10⁻¹¹ N
+        fr: F = 6π(1,0·10⁻³)(10⁻⁶)(10⁻³) = 1,9·10⁻¹¹ N
+        zh: F = 6π(1.0·10⁻³)(10⁻⁶)(10⁻³) = 1.9·10⁻¹¹ N
+        ja: F = 6π(1.0·10⁻³)(10⁻⁶)(10⁻³) = 1.9·10⁻¹¹ N
+      - es: Re = 2rρv/η = 2·10⁻³ ≪ 1 → Stokes vale
+        en: Re = 2rρv/η = 2·10⁻³ ≪ 1 → Stokes applies
+        pt: Re = 2rρv/η = 2·10⁻³ ≪ 1 → Stokes vale
+        fr: Re = 2rρv/η = 2·10⁻³ ≪ 1 → Stokes s'applique
+        zh: Re = 2rρv/η = 2·10⁻³ ≪ 1 → 可以用斯托克斯公式
+        ja: Re = 2rρv/η = 2·10⁻³ ≪ 1 → ストークスの式が使える
+      - es: v_t = 2r²(ρ_p − ρ_f)g/(9η) ≈ 3,6·10⁻⁶ m/s
+        en: v_t = 2r²(ρ_p − ρ_f)g/(9η) ≈ 3.6·10⁻⁶ m/s
+        pt: v_t = 2r²(ρ_p − ρ_f)g/(9η) ≈ 3,6·10⁻⁶ m/s
+        fr: v_t = 2r²(ρ_p − ρ_f)g/(9η) ≈ 3,6·10⁻⁶ m/s
+        zh: v_t = 2r²(ρ_p − ρ_f)g/(9η) ≈ 3.6·10⁻⁶ m/s
+        ja: v_t = 2r²(ρ_p − ρ_f)g/(9η) ≈ 3.6·10⁻⁶ m/s
+      - es: En agua tarda unos 8 minutos en llegar al fondo
+        en: In water it takes about 8 minutes to reach the bottom
+        pt: Em água leva cerca de 8 minutos para chegar ao fundo
+        fr: Dans l'eau, il lui faut environ 8 minutes pour atteindre le fond
+        zh: 在水中沉降到底约需 8 分钟
+        ja: 水の中では底に達するまでおよそ8分かかる

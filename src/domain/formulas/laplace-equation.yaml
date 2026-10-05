@@ -1,0 +1,395 @@
+id: laplace-equation
+title:
+  es: Ecuación de Laplace
+  en: Laplace's Equation
+  pt: Equação de Laplace
+  fr: Équation de Laplace
+  zh: 拉普拉斯方程
+  ja: ラプラス方程式
+category:
+  es: Cálculo
+  en: Calculus
+  pt: Cálculo
+  fr: Calcul
+  zh: 微积分
+  ja: 微積分学
+nodes:
+  - id: laplacian
+    type: operator
+    value: ∇²
+    explanation:
+      es: "El laplaciano: la suma de las derivadas parciales de segundo orden."
+      en: "The Laplacian: the sum of the second order partial derivatives."
+      pt: "O laplaciano: a soma das derivadas parciais de segunda ordem."
+      fr: "Le laplacien : la somme des dérivées partielles du second ordre."
+      zh: 拉普拉斯算子：各二阶偏导数之和。
+      ja: ラプラシアン。2次の偏微分の総和である。
+  - id: u
+    type: variable
+    value: u
+    explanation:
+      es: La función desconocida, que puede ser un potencial o una temperatura.
+      en: The unknown function, which may be a potential or a temperature.
+      pt: A função desconhecida, que pode ser um potencial ou uma temperatura.
+      fr: La fonction inconnue, qui peut être un potentiel ou une température.
+      zh: 未知的函数，可以是势也可以是温度。
+      ja: 未知の関数。電位や温度など、未知の量を表す。
+  - id: eq-1
+    type: equals
+    value: "="
+    explanation:
+      es: La igualdad que define una función armónica en todo el dominio.
+      en: The equality that defines a harmonic function over the whole domain.
+      pt: A igualdade que define uma função harmônica em todo o domínio.
+      fr: L'égalité qui définit une fonction harmonique sur tout le domaine.
+      zh: 定义区域上调和函数的等式。
+      ja: 領域全体で調和関数を定める等式である。
+  - id: zero
+    type: constant
+    value: "0"
+    explanation:
+      es: Cero significa que no hay fuentes ni sumideros dentro del dominio.
+      en: Zero means there are no sources and no sinks inside the domain.
+      pt: Zero significa que não há fontes nem sumidouros dentro do domínio.
+      fr: Zéro signifie qu'il n'y a ni sources ni puits à l'intérieur du domaine.
+      zh: 等于零意味着区域内部既无源也无汇。
+      ja: 0 は領域のなかに湧き出も吸い込みもないことを意味する。
+  - id: semi-1
+    type: operator
+    value: ";"
+    explanation:
+      es: La misma ecuación escrita explícitamente en dos dimensiones.
+      en: The same equation written out explicitly in two dimensions.
+      pt: A mesma equação escrita explicitamente em duas dimensões.
+      fr: La même équation écrite explicitement en deux dimensions.
+      zh: 同一方程在二维情形下的显式写法。
+      ja: 同じ方程式を2次元で具体的に書いたもの。
+  - id: open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el laplaciano, que se despliega como una suma de dos derivadas.
+      en: Opens the Laplacian, which expands into a sum of two derivatives.
+      pt: Abre o laplaciano, que se expande numa soma de duas derivadas.
+      fr: Ouvre le laplacien, qui se déplie en une somme de deux dérivées.
+      zh: 打开拉普拉斯算子，它展开为两个导数之和。
+      ja: 2つの微分の和に展開されるラプラシアンを囲む括弧を開く。
+  - id: d2-dx2
+    type: variable
+    value: ∂²/∂x²
+    explanation:
+      es: Cómo se dobla la pendiente al avanzar en x, una y otra vez.
+      en: How the slope bends as one moves in x, twice over.
+      pt: Como a inclinação se curva ao avançar em x, duas vezes.
+      fr: Comment la pente se courbe quand on avance en x, deux fois de suite.
+      zh: 沿 x 方向前进时曲率的二次累积。
+      ja: x 方向に進んだとき傾きがどのように曲がるかを2回分さったもの。
+  - id: plus
+    type: operator
+    value: "+"
+    explanation:
+      es: Las dos direcciones planas aportan por igual.
+      en: The two planar directions contribute equally.
+      pt: As duas direções do plano contribuem igualmente.
+      fr: Les deux directions du plan contribuent à parts égales.
+      zh: 平面上的两个方向贡献相同。
+      ja: 平面の2方向が同じ重みで助ける。
+  - id: d2-dy2
+    type: variable
+    value: ∂²/∂y²
+    explanation:
+      es: Lo mismo en la otra coordenada del plano.
+      en: The same thing along the other coordinate of the plane.
+      pt: O mesmo na outra coordenada do plano.
+      fr: La même chose le long de l'autre coordonnée du plan.
+      zh: 平面另一个坐标方向上的同样项。
+      ja: 平面のもう一方の座標についての同じ項である。
+  - id: close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el par de derivadas que define el operador.
+      en: Closes the pair of derivatives that defines the operator.
+      pt: Fecha o par de derivadas que define o operador.
+      fr: Ferme la paire de dérivées qui définit l'opérateur.
+      zh: 关闭定义该算子的那一对导数。
+      ja: 演算子を定める2つの微分を囲む括弧を閉じる。
+  - id: u-2
+    type: variable
+    value: u
+    explanation:
+      es: La misma función, ahora sometida al operador de dentro del paréntesis.
+      en: The same function, now acted on by the operator inside the parentheses.
+      pt: A mesma função, agora submetida ao operador dentro dos parênteses.
+      fr: La même fonction, cette fois soumise à l'opérateur entre parenthèses.
+      zh: 同一个函数，只是现在由括号内的算子作用。
+      ja: 同じ関数。ただし括弧の中の演算子にかけられる。
+  - id: eq-2
+    type: equals
+    value: "="
+    explanation:
+      es: "De nuevo cero: el laplaciano no distingue entre una y otra notación."
+      en: "Zero again: the Laplacian does not care which notation is used."
+      pt: "De novo zero: o laplaciano não distingue entre uma notação e outra."
+      fr: "De nouveau zéro : le laplacien se moque de la notation."
+      zh: 仍等于零：拉普拉斯算子不在乎用哪种写法。
+      ja: やはり 0。ラプラシアンは書き方の違いを気にしない。
+  - id: zero-2
+    type: constant
+    value: "0"
+    explanation:
+      es: "Y el principio del máximo se deduce de aquí: sin fuentes, el extremo está en la frontera."
+      en: "And the maximum principle follows: with no sources, the extreme sits on the boundary."
+      pt: "E o princípio do máximo se deduz daqui: sem fontes, o extremo está na fronteira."
+      fr: "Et le principe du maximum en découle : sans source, l'extrémité est sur la frontière."
+      zh: 于是可得最大值原理：没有源时，极值出现在边界上。
+      ja: ここから最大値原理が導かれる。源がなければ、極値は境界にある。
+context:
+  author:
+    es: Pierre-Simon Laplace
+    en: Pierre-Simon Laplace
+    pt: Pierre-Simon Laplace
+    fr: Pierre-Simon Laplace
+    zh: 皮埃尔-西蒙·拉普拉斯
+    ja: ピエール・シモン・ラプラス
+  era:
+    es: Francia, 1749–1827 · el operador aparece en su obra sobre la forma de los planetas
+    en: France, 1749–1827 · operator appears in his work on the shape of planets
+    pt: França, 1749–1827 · o operador aparece em sua obra sobre a forma dos planetas
+    fr: France, 1749–1827 · l'opérateur apparaît dans son ouvrage sur la figure des planètes
+    zh: 法国，1749–1827年 · 该算子出现在他关于行星形状的著作中
+    ja: フランス、1749年–1827年 · 演算子は惑星の形についての著作に現れる
+  history:
+    es: >-
+      El operador de Laplace, que lleva su nombre, resume en un solo símbolo la suma de las
+      derivadas parciales de segundo orden. Nació del estudio de Laplace sobre la forma del
+      Sistema Solar: el potencial gravitatorio de un cuerpo esférico satisface la ecuación en
+      el espacio vacío, y esa condición basta para determinarlo con los valores en la frontera.
+      Es la ecuación más citada de la física matemática, porque electrostática, conducción
+      del calor, ondas y fluidos comparten su forma. En el disco unitario, sus soluciones
+      armónicas describen los modos de vibración de una membrana circular.
+    en: >-
+      The Laplace operator, which bears his name, packs into a single symbol the sum of the
+      second order partial derivatives. It grew out of Laplace's study of the shape of the
+      Solar System: the gravitational potential of a spherical body satisfies the equation in
+      empty space, and that condition is enough to determine it from values on the boundary.
+      It is the most quoted equation of mathematical physics, because electrostatics, heat
+      conduction, waves and fluids all share its form. On the unit disk its harmonic
+      solutions describe the modes in which a drumhead vibrates.
+    pt: >-
+      O operador de Laplace, que leva seu nome, resume em um único símbolo a soma das
+      derivadas parciais de segunda ordem. Ele nasceu do estudo de Laplace sobre a forma do
+      Sistema Solar: o potencial gravitacional de um corpo esférico satisfaz a equação no
+      espaço vazio, e essa condição basta para determiná-lo com os valores na fronteira. É
+      a equação mais citada da física matemática, porque eletrostática, condução de calor,
+      ondas e fluidos compartilham sua forma. No disco unitário, suas soluções harmônicas
+      descrevem os modos de vibração de um tambor.
+    fr: >-
+      L'opérateur de Laplace, qui porte son nom, résume en un seul symbole la somme des
+      dérivées partielles du second ordre. Il est né de l'étude de Laplace sur la forme du
+      Système solaire : le potentiel gravitationnel d'un corps sphérique satisfait l'équation
+      dans le vide, et cette condition suffit à le déterminer à partir des valeurs au bord.
+      C'est l'équation la plus citée de la physique mathématique, car l'électrostatique, la
+      conduction thermique, les ondes et les fluides partagent sa forme. Sur le disque unité,
+      ses solutions harmoniques décrivent les modes de vibration d'une peau de tambour.
+    zh: >-
+      以他名字命名的拉普拉斯算子，把各二阶偏导数之和压缩进一个符号。它源自拉普拉斯对太阳系形状的
+      研究：球体的引力势在真空中满足这一方程，而有了边界上的取值，这一条件就足以确定该势。
+      它是数学物理中被引用最多的方程，因为静电学、热传导、波动与流体力学都共享这一形式。
+      在单位圆盘上，它的调和解描述了鼓面的振动模式。
+    ja: >-
+      名前の由来するラプラス演算子は、2次の偏微分の総和を1つの記号にまとめている。
+      太陽系の形を研究することから生まれた。球体の重力のポテンシャルは
+      空間中でこの方程式を満たし、境界上の値だけからそれを求められてしまう。
+      静電気、熱伝導、波、流れという分野が同じ形を共有するため、数学物理学で最も多く登場する方程式である。
+      単位円板の上では、その調和関数の解が膜の振動の型を表す。
+  timeline:
+    - year: "1782"
+      label:
+        es: >-
+          Laplace enuncia el operador al estudiar qué forma podrían tener los anillos de Saturno y
+          la forma de los planetas.
+        en: >-
+          Laplace states the operator while studying what shape the rings of Saturn and the
+          planets could have.
+        pt: >-
+          Laplace enuncia o operador ao estudar que forma poderiam ter os anéis de Saturno e os
+          planetas.
+        fr: >-
+          Laplace énonce l'opérateur en étudiant la forme possible des anneaux de Saturne et des
+          planètes.
+        zh: >-
+          拉普拉斯在研究土星环与行星可能具有的形状时提出了该算子。
+        ja: >-
+          ラプラスが、土星の環や惑星がどんな形をとりうるかを考える中で演算子を述べている。
+    - year: "1828"
+      label:
+        es: >-
+          El ensayo de George Green aplica el mismo operador al campo eléctrico y abre el camino a
+          la teoría de potenciales.
+        en: >-
+          George Green's essay applies the same operator to the electric field and opens the way
+          to potential theory.
+        pt: >-
+          O ensaio de George Green aplica o mesmo operador ao campo elétrico e abre caminho para
+          a teoria de potenciais.
+        fr: >-
+          L'essai de George Green applique le même opérateur au champ électrique et ouvre la voie
+          à la théorie du potentiel.
+        zh: >-
+          乔治·格林的论文把同一算子用于电场，开辟了势理论的道路。
+        ja: >-
+          ジョージ・グリンの論文が同じ演算子を電界に当て、物理学の道を開いた。
+    - year: "1887"
+      label:
+        es: >-
+          Poincaré estudia las funciones armónicas del disco y las usa
+          para resolver el problema del calor.
+        en: >-
+          Poincaré studies harmonic functions on the disk and uses them to solve the heat
+          problem.
+        pt: >-
+          Poincaré estuda funções harmônicas no disco e as usa para resolver o problema do
+          calor.
+        fr: >-
+          Poincaré étudie les fonctions harmoniques sur le disque et s'en sert pour résoudre le
+          problème de la chaleur.
+        zh: >-
+          庞加莱研究圆盘上的调和函数，并用它们处理热传导问题。
+        ja: >-
+          ポアンカレが単位円板上の調和関数を研究し、熱の問題にそれを用いた。
+    - year: Hoy
+      label:
+        es: >-
+          Es el punto de partida de los solvers de elementos finitos, del diseño de antenas y de
+          la simulación de flujo.
+        en: >-
+          It is the starting point of finite element solvers, antenna design and flow simulation.
+        pt: >-
+          É o ponto de partida dos solucionadores de elementos finitos, do projeto de antenas e
+          da simulação de fluxo.
+        fr: >-
+          C'est le point de départ des solveurs par éléments finis, de la conception d'antennes
+          et de la simulation d'écoulement.
+        zh: >-
+          它是有限元求解器、天线设计与流体仿真的出发点。
+        ja: >-
+          有限要素法のソルバー、アンテナ設計、流束解析の出発点となっている。
+  useCases:
+    - title:
+        es: Electrostática
+        en: Electrostatics
+        pt: Eletrostática
+        fr: Électrostatique
+        zh: 静电学
+        ja: 静電気
+      description:
+        es: >-
+          El potencial eléctrico satisface la ecuación en las zonas sin carga, lo que permite
+          calcular el campo a partir de unos pocos potenciales en la frontera.
+        en: >-
+          The electric potential satisfies the equation in charge-free regions, which lets one
+          compute the field from a few boundary potentials.
+        pt: >-
+          O potencial elétrico satisfaz a equação nas regiões sem carga, o que permite calcular
+          o campo a partir de poucos potenciais na fronteira.
+        fr: >-
+          Le potentiel électrique satisfait l'équation dans les régions sans charge, ce qui
+          permet de calculer le champ à partir de quelques potentiels au bord.
+        zh: >-
+          在无电荷区域电势满足该方程，因此可以由少量边界电势算出整个电场。
+        ja: >-
+          電荷のない領域では電位がこの方程式を満たすので、境界のわずかな電位から電界を求められる。
+    - title:
+        es: Transmisión de calor
+        en: Heat conduction
+        pt: Condução de calor
+        fr: Conduction thermique
+        zh: 热传导
+        ja: 熱伝導
+      description:
+        es: >-
+          En régimen permanente y sin fuentes de calor, la temperatura se distribuye según esta
+          ecuación.
+        en: >-
+          In steady state and with no heat sources, the temperature spreads according to this
+          equation.
+        pt: >-
+          Em regime permanente e sem fontes de calor, a temperatura se distribui segundo esta
+          equação.
+        fr: >-
+          En régime permanent et sans source de chaleur, la température se répartit selon cette
+          équation.
+        zh: >-
+          在稳态且无热源时，温度按这条方程分布。
+        ja: >-
+          定常状態かつ熱源がなければ、温度はこの方程式に従って广がる。
+    - title:
+        es: Método de elementos finitos
+        en: Finite element method
+        pt: Método dos elementos finitos
+        fr: Méthode des éléments finis
+        zh: 有限元法
+        ja: 有限要素法
+      description:
+        es: >-
+          La ecuación en derivadas parciales más resuelta de la historia, y el banco de pruebas
+          de todo solver numérico.
+        en: >-
+          The most solved partial differential equation in history, and the test bench of every
+          numerical solver.
+        pt: >-
+          A equação em derivadas parciais mais resolvida da história, e o banco de testes de
+          qualquer solucionador numérico.
+        fr: >-
+          L'équation aux dérivées partielles la plus résolue de l'histoire, et le banc d'essai
+          de tout solveur numérique.
+        zh: >-
+          历史上求解次数最多的偏微分方程，也是所有数值求解器的试金石。
+        ja: >-
+          歴史上最も多く解されてきた偏微分方程式であり、数値ソルバーの試験台でもある。
+  example:
+    title:
+      es: Dos funciones armónicas
+      en: Two harmonic functions
+      pt: Duas funções harmônicas
+      fr: Deux fonctions harmoniques
+      zh: 两个调和函数
+      ja: 2つの調和関数
+    lines:
+      - es: "u = x² − y²"
+        en: "u = x² − y²"
+        pt: "u = x² − y²"
+        fr: "u = x² − y²"
+        zh: "u = x² − y²"
+        ja: "u = x² − y²"
+      - es: "∂²u/∂x² = 2, ∂²u/∂y² = −2"
+        en: "∂²u/∂x² = 2, ∂²u/∂y² = −2"
+        pt: "∂²u/∂x² = 2, ∂²u/∂y² = −2"
+        fr: "∂²u/∂x² = 2, ∂²u/∂y² = −2"
+        zh: "∂²u/∂x² = 2, ∂²u/∂y² = −2"
+        ja: "∂²u/∂x² = 2, ∂²u/∂y² = −2"
+      - es: "∇²u = 2 − 2 = 0"
+        en: "∇²u = 2 − 2 = 0"
+        pt: "∇²u = 2 − 2 = 0"
+        fr: "∇²u = 2 − 2 = 0"
+        zh: "∇²u = 2 − 2 = 0"
+        ja: "∇²u = 2 − 2 = 0"
+      - es: "u = x⁴ − 6x²y² + y⁴ también es armónica"
+        en: "u = x⁴ − 6x²y² + y⁴ is harmonic too"
+        pt: "u = x⁴ − 6x²y² + y⁴ também é harmônica"
+        fr: "u = x⁴ − 6x²y² + y⁴ est aussi harmonique"
+        zh: "u = x⁴ − 6x²y² + y⁴ 同样是调和的"
+        ja: "u = x⁴ − 6x²y² + y⁴ も調和関数である"
+      - es: "∂²u/∂x² = 12x² − 12y², ∂²u/∂y² = −12x² + 12y²"
+        en: "∂²u/∂x² = 12x² − 12y², ∂²u/∂y² = −12x² + 12y²"
+        pt: "∂²u/∂x² = 12x² − 12y², ∂²u/∂y² = −12x² + 12y²"
+        fr: "∂²u/∂x² = 12x² − 12y², ∂²u/∂y² = −12x² + 12y²"
+        zh: "∂²u/∂x² = 12x² − 12y², ∂²u/∂y² = −12x² + 12y²"
+        ja: "∂²u/∂x² = 12x² − 12y², ∂²u/∂y² = −12x² + 12y²"
+      - es: "la suma es 0, aunque cada término no lo es"
+        en: "the sum is 0, even though neither term is"
+        pt: "a soma é 0, embora cada termo não seja"
+        fr: "la somme vaut 0, bien qu'aucun terme ne le vaille"
+        zh: "两项之和为零，尽管各自都不为零"
+        ja: "和は 0。各項はどちらも 0 ではない"

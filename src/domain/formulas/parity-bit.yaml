@@ -1,0 +1,296 @@
+id: parity-bit
+title:
+  es: Bit de paridad
+  en: Parity bit
+  pt: Bit de paridade
+  fr: Bit de parité
+  zh: 校验位
+  ja: パリティビット
+category:
+  es: Informática
+  en: Computer science
+  pt: Informática
+  fr: Informatique
+  zh: 计算机科学
+  ja: コンピュータ科学
+nodes:
+  - id: p
+    type: variable
+    value: p
+    explanation:
+      es: "p: el bit de paridad, un único bit que resume todos los demás."
+      en: "p: the parity bit, a single bit summarizing all the others."
+      pt: "p: o bit de paridade, um único bit que resume todos os demais."
+      fr: "p : le bit de parité, un seul bit qui résume tous les autres."
+      zh: "p：校验位，用一个比特概括其余所有比特。"
+      ja: "p：検査ビット。他のすべてのビットを1つにまとめたもの。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: x-one
+    type: variable
+    value: x₁
+    explanation:
+      es: "x₁: el primer bit de datos."
+      en: "x₁: the first data bit."
+      pt: "x₁: o primeiro bit de dados."
+      fr: "x₁ : le premier bit de données."
+      zh: "x₁：第一个数据位。"
+      ja: "x₁：1番目のデータビット。"
+  - id: xor
+    type: operator
+    value: ⊕
+    explanation:
+      es: "⊕: la XOR, que suma los bits módulo dos."
+      en: "⊕: XOR, which adds the bits modulo two."
+      pt: "⊕: o XOR, que soma os bits módulo dois."
+      fr: "⊕ : le OU exclusif, qui additionne les bits modulo deux."
+      zh: "⊕：异或，把各位相加取模二。"
+      ja: "⊕：排他論理和。ビットを2で割った余りの和。"
+  - id: x-two
+    type: variable
+    value: x₂
+    explanation:
+      es: "x₂: el segundo bit de datos."
+      en: "x₂: the second data bit."
+      pt: "x₂: o segundo bit de dados."
+      fr: "x₂ : le deuxième bit de données."
+      zh: "x₂：第二个数据位。"
+      ja: "x₂：2番目のデータビット。"
+  - id: dots
+    type: operator
+    value: ⊕ ⋯ ⊕
+    explanation:
+      es: "⋯: todos los bits intermedios, hasta el último."
+      en: "⋯: all the bits in between, up to the last one."
+      pt: "⋯: todos os bits intermediários, até o último."
+      fr: "⋯ : tous les bits intermédiaires, jusqu'au dernier."
+      zh: "⋯：中间的所有比特，直到最后一个。"
+      ja: "⋯：中のすべてのビット。最後の一つまで。"
+  - id: x-n
+    type: variable
+    value: xₙ
+    explanation:
+      es: "xₙ: el último bit de datos, en la posición n."
+      en: "xₙ: the last data bit, in position n."
+      pt: "xₙ: o último bit de dados, na posição n."
+      fr: "xₙ : le dernier bit de données, en position n."
+      zh: "xₙ：第n位，即最后一个数据位。"
+      ja: "xₙ：n番目、最後のデータビット。"
+context:
+  author:
+    es: Anónimo
+    en: Anonymous
+    pt: Anônimo
+    fr: Anonyme
+    zh: 佚名
+    ja: 著者不詳
+  era:
+    es: Telegrafía y primeros ordenadores, s. XIX–1949 · sin inventor
+    en: Telegraphy and early computers, 19th c.–1949 · no inventor
+    pt: Telegrafia e primeiros computadores, s. XIX–1949 · sem inventor
+    fr: Télégraphie et premiers ordinateurs, XIXe–1949 · sans inventeur
+    zh: 电报与早期计算机，19世纪–1949年·无发明者
+    ja: 電信と初期の計算機、19世紀–1949年·発明者はいない
+  history:
+    es: >-
+      La paridad es el control más barato posible: un solo bit cuyo valor es el XOR de todos
+      los demás. La idea es anterior a los ordenadores, porque los telégrafos ya enviaban cada
+      carácter acompañado de un bit de control. Su límite es estructural: como la paridad
+      cambia cuando se altera un número impar de bits, detecta un error de un solo bit pero
+      deja pasar cualquier número par de errores. Tampoco puede indicar cuál de los bits falló,
+      de ahí que las memorias modernas combinen un bit de paridad con otro que vigila al
+      primero.
+    en: >-
+      Parity is the cheapest possible check: a single bit whose value is the XOR of all the
+      others. The idea predates computers, since telegraphs already sent every character
+      accompanied by a control bit. Its limit is structural, since parity flips when an odd
+      number of bits changes, so it catches a single-bit error but lets any even number
+      through. It cannot say which bit failed either, which is why modern memories combine a
+      parity bit with a second one that watches the first.
+    pt: >-
+      A paridade é a verificação mais barata possível: um único bit cujo valor é o XOR de todos
+      os demais. A ideia é anterior aos computadores, porque os telégrafos já enviavam cada
+      caractere acompanhado de um bit de controle. Seu limite é estrutural, já que a paridade
+      muda quando um número ímpar de bits se altera: detecta um erro de um único bit, mas
+      deixa passar qualquer número par. Também não diz qual bit falhou, e por isso as memórias
+      modernas combinam um bit de paridade com outro que vigia o primeiro.
+    fr: >-
+      La parité est le contrôle le moins cher possible : un seul bit dont la valeur est le OU
+      exclusif de tous les autres. L'idée précède les ordinateurs, car les télégraphes
+      envoyaient déjà chaque caractère accompagné d'un bit de contrôle. Sa limite est
+      structurelle : la parité bascule quand un nombre impair de bits change, elle détecte
+      donc une erreur sur un seul bit mais laisse passer tout nombre pair. Elle ne peut pas
+      non plus dire quel bit a échoué, ce qui explique que les mémoires modernes combinent un
+      bit de parité avec un second qui surveille le premier.
+    zh: >-
+      校验是最廉价的检查手段：用一个比特，它的值等于其余所有比特的异或。这一思想早于计算机，因为电报在发送
+      每个字符时就附带一个控制位。它的局限是结构性的：由于奇数个比特翻转时校验位才会改变，校验位能发现单个比特
+      的错误，却会放过任何偶数个错误。它也无法指出是哪个比特出错，这正是现代内存用一个校验位再配一个校验位
+      来监视前者的原因。
+    ja: >-
+      検査というのはもっとも安価な確認手段である。他のすべてのビットとの排他論理和を値とする、
+      たった1ビットで済む。考え自体は計算機より前からあり、電信では各文字に検査用のビットを添えて
+      送っていた。限界は構造にある。奇数個のビットが変わると反転するので、1ビットの誤りは
+      見つかるが、偶数個の変化はそのまま通ってしまう。どのビットが壊れたかを指すことも
+      できないため、現代のメモリーでは検査ビットをもう1つ置き、その検査ビットを
+      見張らせる。
+  timeline:
+    - year: s. XIX
+      label:
+        es: >-
+          Los telégrafos ya envían cada carácter con un bit de control que indica su estado.
+        en: >-
+          Telegraphs already send every character with a control bit reporting its state.
+        pt: >-
+          Os telégrafos já enviam cada caractere com um bit de controle que indica seu estado.
+        fr: >-
+          Les télégraphes envoient déjà chaque caractère avec un bit de contrôle qui en donne
+          l'état.
+        zh: >-
+          电报已经在每个字符后附带一个表示其状态的比特。
+        ja: >-
+          電信では各文字に、その状態を表す検査ビットを添えて送っていた。
+    - year: Años 1940
+      label:
+        es: >-
+          Los primeros ordenadores de gran escala comprueban la paridad de cada palabra de
+          memoria.
+        en: >-
+          Early large-scale computers check the parity of every memory word.
+        pt: >-
+          Os primeiros computadores de grande porte conferem a paridade de cada palavra de
+          memória.
+        fr: >-
+          Les premiers calculateurs à grande échelle vérifient la parité de chaque mot de
+          mémoire.
+        zh: >-
+          早期的大型计算机开始检查每个存储字的校验位。
+        ja: >-
+          初期の大規模な計算機は、メモリの各語について検査を行うようになった。
+    - year: Años 1980
+      label:
+        es: >-
+          RAID convierte la paridad XOR en franjas capaz de reconstruir un disco caído.
+        en: >-
+          RAID turns XOR parity into stripes able to rebuild a failed disk.
+        pt: >-
+          RAID transforma a paridade XOR em faixas capazes de reconstruir um disco caído.
+        fr: >-
+          RAID transforme la parité OU exclusive en bandes capables de reconstruire un disque
+          défaillant.
+        zh: >-
+          RAID 把异或校验扩展成条带，可在磁盘失效时重建数据。
+        ja: >-
+          RAIDは排他論理和の検査を束状に広げ、壊れたディスクを再構成できるようにした。
+    - year: Hoy
+      label:
+        es: >-
+          Un único bit de más convierte la paridad en un servicio automático de integridad.
+        en: >-
+          A single extra bit turns parity into an automatic integrity service.
+        pt: >-
+          Um único bit a mais transforma a paridade em um serviço automático de integridade.
+        fr: >-
+          Un seul bit supplémentaire fait de la parité un service automatique d'intégrité.
+        zh: >-
+          多出的这一个比特把校验变成了一项自动的完整性服务。
+        ja: >-
+          たった1ビットが加わるだけで、検査が自動の整合性の保証になる。
+  useCases:
+    - title:
+        es: Enlaces en serie
+        en: Serial links
+        pt: Links seriais
+        fr: Liaisons série
+        zh: 串行链路
+        ja: シリアル通信
+      description:
+        es: >-
+          Los puertos serie añaden el bit de paridad a cada byte para detectar ruido en la
+          línea sin necesidad de acusar recibo.
+        en: >-
+          Serial ports append the parity bit to every byte to detect line noise without any
+          acknowledgement.
+        pt: >-
+          Portas seriais acrescentam o bit de paridade a cada byte para detectar ruído na
+          linha sem precisar de confirmação.
+        fr: >-
+          Les ports série ajoutent le bit de parité à chaque octet pour détecter le bruit de
+          ligne sans accusés de réception.
+        zh: >-
+          串行端口给每个字节附加校验位，无需应答即可检测线路噪声。
+        ja: >-
+          シリアルポートは各バイトに検査ビットを添え、応答待ちなしに線上のノイズを
+          見分ける。
+    - title:
+        es: RAID y SCSI
+        en: RAID and SCSI
+        pt: RAID e SCSI
+        fr: RAID et SCSI
+        zh: RAID 与 SCSI
+        ja: RAIDとSCSI
+      description:
+        es: >-
+          En RAID la paridad se extiende a una franja entera mediante XOR, y en SCSI
+          protege cada disco de forma individual.
+        en: >-
+          In RAID parity is extended to a whole stripe with XOR, while in SCSI it protects
+          each disk on its own.
+        pt: >-
+          No RAID a paridade é estendida a uma faixa inteira com XOR, e no SCSI ela protege
+          cada disco individualmente.
+        fr: >-
+          Dans RAID la parité s'étend à une bande entière par OU exclusif, tandis que dans
+          SCSI elle protège chaque disque individuellement.
+        zh: >-
+          在 RAID 中校验以异或扩展到整条条带；在 SCSI 中则单独保护每块磁盘。
+        ja: >-
+          RAIDでは排他論理和によって検査を帯全体に広げ、SCSIは各ディスクを
+          個別に守る。
+  example:
+    title:
+      es: Byte de datos 1011
+      en: Data byte 1011
+      pt: Byte de dados 1011
+      fr: Octet de données 1011
+      zh: 数据字节 1011
+      ja: データバイト 1011
+    lines:
+      - es: x = 1 0 1 1 → tres unos
+        en: x = 1 0 1 1 → three ones
+        pt: x = 1 0 1 1 → três uns
+        fr: x = 1 0 1 1 → trois uns
+        zh: x = 1 0 1 1 → 三个1
+        ja: x = 1 0 1 1 → 1は3つ
+      - es: 1 ⊕ 0 ⊕ 1 ⊕ 1 = 1
+        en: 1 ⊕ 0 ⊕ 1 ⊕ 1 = 1
+        pt: 1 ⊕ 0 ⊕ 1 ⊕ 1 = 1
+        fr: 1 ⊕ 0 ⊕ 1 ⊕ 1 = 1
+        zh: 1 ⊕ 0 ⊕ 1 ⊕ 1 = 1
+        ja: 1 ⊕ 0 ⊕ 1 ⊕ 1 = 1
+      - es: "p = 1: los datos ya tienen paridad impar"
+        en: "p = 1: the data already has odd parity"
+        pt: "p = 1: os dados já têm paridade ímpar"
+        fr: "p = 1 : les données sont déjà en parité impaire"
+        zh: p = 1：数据本身是奇校验
+        ja: "p = 1：データはすでに奇数"
+      - es: 1011 con p = 10111 → cuatro unos, paridad par
+        en: 1011 with p = 10111 → four ones, even parity
+        pt: 1011 com p = 10111 → quatro uns, paridade par
+        fr: 1011 avec p = 10111 → quatre uns, parité paire
+        zh: 加上 p 得 10111 → 四个1，为偶校验
+        ja: p を足した 10111 → 1は4つ、偶数
+      - es: Un solo bit alterado rompe la paridad y avisa del error
+        en: A single flipped bit breaks parity and reports the error
+        pt: Um único bit alterado quebra a paridade e avisa do erro
+        fr: Un seul bit inversé casse la parité et signale l'erreur
+        zh: 只要有一个比特翻转，校验就会失效并报错
+        ja: 1ビットでも反転すれば検査が崩れ、誤りが分かる

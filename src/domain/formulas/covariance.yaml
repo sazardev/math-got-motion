@@ -1,0 +1,388 @@
+id: covariance
+title:
+  es: Covarianza
+  en: Covariance
+  pt: Covariância
+  fr: Covariance
+  zh: 协方差
+  ja: 共分散
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率と統計
+nodes:
+  - id: cov
+    type: variable
+    value: cov(X,Y)
+    explanation:
+      es: La medida de si dos variables se mueven a la vez, con signo.
+      en: The measure of whether two variables move together, with a sign.
+      pt: A medida de se duas variáveis se movem juntas, com sinal.
+      fr: La mesure du fait que deux variables varient ensemble, avec un signe.
+      zh: 衡量两个变量是否同向变化的量，带符号。
+      ja: 2つの変数が一緒に動くかどうかを表す量。符号が付く。
+  - id: eq-1
+    type: equals
+    value: "="
+    explanation:
+      es: Se define como la media de los productos de las desviaciones.
+      en: It is defined as the average of the products of the deviations.
+      pt: Define-se como a média dos produtos dos desvios.
+      fr: Elle se définit comme la moyenne des produits des écarts.
+      zh: 它被定义为各偏差乘积的平均值。
+      ja: 偏差どうしの積の平均として定義される。
+  - id: open
+    type: operator
+    value: E
+    explanation:
+      es: Abre el paréntesis del valor esperado, la E que promedia.
+      en: Opens the expected value, the E that averages.
+      pt: Abre o parêntese do valor esperado, o E que tira a média.
+      fr: Ouvre la parenthèse de l'espérance, le E qui fait la moyenne.
+      zh: 打开期望值的括号，即取平均的 E。
+      ja: 平均を取るEの括弧を開く。
+  - id: expect
+    type: operator
+    value: "["
+    explanation:
+      es: "El valor esperado: la media ponderada de los resultados posibles."
+      en: "The expected value: the weighted average of the possible outcomes."
+      pt: "O valor esperado: a média ponderada dos resultados possíveis."
+      fr: "L'espérance : la moyenne pondérée des résultats possibles."
+      zh: 期望值：各种可能结果的加权平均。
+      ja: 期待値。可能な結果の重み付き平均である。
+  - id: bracket
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el producto de las dos desviaciones, tomadas una por observación.
+      en: Opens the product of the two deviations, taken per observation.
+      pt: Abre o produto dos dois desvios, tirado observação a observação.
+      fr: Ouvre le produit des deux écarts, pris par observation.
+      zh: 打开两个偏差的乘积，按每次观测计算。
+      ja: 2つの偏差の積を開く括弧。観測ごとに求める。
+  - id: dx
+    type: variable
+    value: X − μₓ
+    explanation:
+      es: Cuánto se aparta X de su media, con su propio signo.
+      en: How far X departs from its mean, with its own sign.
+      pt: Quanto X se afasta da sua média, com o seu sinal.
+      fr: De combien X s'écarte de sa moyenne, avec son signe.
+      zh: X 偏离自身均值的程度，带符号。
+      ja: X が平均からどれだけ離れているか。符号も一緒に示す。
+  - id: inner-open
+    type: operator
+    value: )
+    explanation:
+      es: El producto necesita agrupar las dos desviaciones.
+      en: The product needs the two deviations grouped.
+      pt: O produto precisa agrupar os dois desvios.
+      fr: Le produit doit regrouper les deux écarts.
+      zh: 这个乘积需要把两个偏差括在一起。
+      ja: 積を取るために2つの偏差をまとめる。
+  - id: dy
+    type: variable
+    value: · (
+    explanation:
+      es: El mismo apartamiento para la segunda variable.
+      en: The same departure for the second variable.
+      pt: O mesmo afastamento para a segunda variável.
+      fr: Le même écart pour la deuxième variable.
+      zh: 第二个变量的同样偏离。
+      ja: もう一方の変数の、同じ意味のずれである。
+  - id: inner-close
+    type: operator
+    value: Y − μᵧ)
+    explanation:
+      es: Cierra el paréntesis del producto.
+      en: Closes the parentheses of the product.
+      pt: Fecha o parêntese do produto.
+      fr: Ferme la parenthèse du produit.
+      zh: 关闭这个乘积的括号。
+      ja: 積の括弧をとじる。
+  - id: bracket-close
+    type: operator
+    value: "]"
+    explanation:
+      es: Cierra el corchete; fuera queda solo el promedio sobre las observaciones.
+      en: Closes the bracket; outside remains only the average over the observations.
+      pt: Fecha o colchete; fora fica só a média sobre as observações.
+      fr: Ferme le crochet ; il ne reste dehors que la moyenne sur les observations.
+      zh: 关闭方括号，外面只剩对观测取的平均。
+      ja: 角括弧をとじる。外に残るのは観測についての平均だけである。
+  - id: semi-1
+    type: operator
+    value: ";"
+    explanation:
+      es: El resultado conserva las unidades de las variables, lo cual tiene Advantages.
+      en: The result keeps the units of the variables, which has advantages.
+      pt: O resultado conserva as unidades das variáveis, o que tem vantagens.
+      fr: Le résultat conserve les unités des variables, ce qui présente des avantages.
+      zh: 结果保留了变量的单位，这一点很有用。
+      ja: 結果は変数の単位を保つので、そのままで意味が分かる。
+  - id: zero-case
+    type: constant
+    value: cov = 0
+    explanation:
+      es: Una covarianza cero significa que no hay asociación lineal, no que sean independientes.
+      en: Zero covariance means no linear association, not that the variables are independent.
+      pt: Covariância zero significa que não há associação linear, não que sejam independentes.
+      fr: Une covariance nulle signifie qu'il n'y a pas d'association linéaire, pas que les
+        variables soient indépendantes.
+      zh: 协方差为零意味着没有线性关联，而不是两者相互独立。
+      ja: 共分散が 0 でも無関係だとはいえない。線形の結びつきがないだけである。
+context:
+  author:
+    es: Francis Galton y Karl Pearson
+    en: Francis Galton and Karl Pearson
+    pt: Francis Galton e Karl Pearson
+    fr: Francis Galton et Karl Pearson
+    zh: 弗朗西斯·高尔顿与卡尔·皮尔逊
+    ja: フランシス・ゴルトンとカール・ピアソン
+  era:
+    es: Inglaterra, s. XIX · Galton en 1888, Pearson en 1896
+    en: England, 19th century · Galton in 1888, Pearson in 1896
+    pt: Inglaterra, séc. XIX · Galton em 1888, Pearson em 1896
+    fr: Angleterre, XIXe siècle · Galton en 1888, Pearson en 1896
+    zh: 英国，19世纪 · 高尔顿1888年，皮尔逊1896年
+    ja: イギリス、19世紀 · 1888年のゴルトン、1896年のピアソン
+  history:
+    es: >-
+      Galton estudió la relación entre la estatura de los padres y la de sus hijos, y notó que
+      los padres altos tendían a tener hijos altos: eso es covarianza. Pearson formalizó la
+      medida en 1896 y obtuvo una versión adimensional que divide por las desviaciones
+      típicas, el coeficiente de correlación. La covarianza conserva las unidades de las
+      variables, así que mide el tamaño absoluto de la asociación y no la forma de la nube de
+      puntos. Advertencia importante: que la covarianza sea cero no demuestra independencia,
+      solo ausencia de asociación lineal.
+    en: >-
+      Galton studied the relation between parents' height and their children's, and noticed
+      that tall parents tend to have tall children: that is covariance. Pearson formalized the
+      measure in 1896 and obtained a dimensionless version that divides by the standard
+      deviations, the correlation coefficient. Covariance keeps the units of the variables,
+      so it measures the sheer size of the association and not the shape of the point cloud.
+      Important caveat: a zero covariance does not prove independence, only the absence of a
+      linear association.
+    pt: >-
+      Galton estudou a relação entre a estatura dos pais e a dos filhos, e notou que pais
+      altos tendiam a ter filhos altos: isso é covariância. Pearson formalizou a medida em
+      1896 e obteve uma versão adimensional que divide pelos desvios-padrão, o coeficiente
+      de correlação. A covariância conserva as unidades das variáveis, de modo que mede o
+      tamanho absoluto da associação e não a forma da nuvem de pontos. Ressalva importante:
+      covariância zero não prova independência, apenas a ausência de associação linear.
+    fr: >-
+      Galton étudia la relation entre la taille des parents et celle de leurs enfants, et
+      remarqua que les parents grands ont tendance à avoir des enfants grands : c'est la
+      covariance. Pearson formalisa la mesure en 1896 et en obtient une version adimensionnelle
+      qui divise par les écarts-types, le coefficient de corrélation. La covariance conserve
+      les unités des variables, elle mesure donc la taille brute de l'association et non la
+      forme du nuage de points. Avertissement important : une covariance nulle ne prouve pas
+      l'indépendance, seulement l'absence d'association linéaire.
+    zh: >-
+      高尔顿研究了父母身高与子女身高的关系，发现高个父母往往有高个孩子，这就是协方差。
+      皮尔逊在1896年把这一定义形式化，并给出用标准差归一的无量纲版本，也就是相关系数。
+      协方差保留变量的单位，因此它衡量的是关联的绝对大小，而不是点云的形状。
+      需要强调的是：协方差为零并不能证明独立性，只能说明没有线性关联。
+    ja: >-
+      ゴルトンは親の身長と子の身長の関係を調べ、背の高い親に背の高い子が
+      多いことに気づいた。これが共分散である。ピアソンは1896年にこの量を公式化し、
+      標準偏差で割って無次元にしたものが相関係数である。
+      共分散は変数の単位を保つので、関連の絶対の大きさを見る。
+      点の形ではなく関連の絶対的な大きさを見ることが重要である。
+      共分散が 0 でも無関係だとはいえない。線形の結びつきがないだけである。
+  timeline:
+    - year: "1888"
+      label:
+        es: >-
+          Galton publica su estudio sobre la estatura de los hijos de padres altos, y acuña el
+          término regresión.
+        en: >-
+          Galton publishes his study of the stature of children of tall parents and coins the
+          term regression.
+        pt: >-
+          Galton publica seu estudo sobre a estatura de filhos de pais altos e cunha o termo
+          regressão.
+        fr: >-
+          Galton publie son étude sur la taille des enfants de parents grands et forge le terme
+          régression.
+        zh: >-
+          高尔顿发表了关于高个父母子女身高的研究，并创造了「回归」一词。
+        ja: >-
+          ゴルトンが背の高い親の子の身長を研究し、「回帰」という語を世に出した。
+    - year: "1896"
+      label:
+        es: >-
+          Pearson introduce el coeficiente de correlación, que es la covarianza dividida por las
+          desviaciones típicas.
+        en: >-
+          Pearson introduces the correlation coefficient, which is covariance divided by the
+          standard deviations.
+        pt: >-
+          Pearson introduz o coeficiente de correlação, que é a covariância dividida pelos
+          desvios-padrão.
+        fr: >-
+          Pearson introduit le coefficient de corrélation, qui est la covariance divisée par les
+          écarts-types.
+        zh: >-
+          皮尔逊引入相关系数，即协方差除以两个标准差。
+        ja: >-
+          ピアソンが、共分散を標準偏差で割った相関係数を導入した。
+    - year: 1910s
+      label:
+        es: >-
+          La covarianza se generaliza a más de dos variables, dando la matriz de covarianzas que
+          usa el análisis de componentes principales.
+        en: >-
+          Covariance generalizes to more than two variables, giving the covariance matrix used
+          in principal component analysis.
+        pt: >-
+          A covariância se generaliza para mais de duas variáveis, dando a matriz de covariâncias
+          usada na análise de componentes principais.
+        fr: >-
+          La covariance se généralise à plus de deux variables, donnant la matrice de covariance
+          employée en analyse en composantes principales.
+        zh: >-
+          协方差推广到两个以上的变量，形成主成分分析所用的协方差矩阵。
+        ja: >-
+          共分散は2つを超える変数へ広がって、主成分分析で使う共分散行列になる。
+    - year: Hoy
+      label:
+        es: >-
+          Ordena carteras por riesgo, agrupa píxeles parecidos en visión por computador y
+          resume variables en un modelo estadístico.
+        en: >-
+          It ranks portfolios by risk, groups similar pixels in computer vision and summarizes
+          variables in a statistical model.
+        pt: >-
+          Ordena carteiras por risco, agrupa pixels parecidos em visão computacional e resume
+          variáveis em um modelo estatístico.
+        fr: >-
+          Elle classe les portefeuilles par risque, regroupe des pixels semblables en vision
+          informatique et résume des variables dans un modèle statistique.
+        zh: >-
+          它按风险排序投资组合，在计算机视觉中归并相似像素，并在统计模型中概括变量。
+        ja: >-
+          運用の危険度の並べ替え、画像処理での近い画素のまとめ、統計モデルでの変数の要約に使う。
+  useCases:
+    - title:
+        es: Finanzas y riesgo
+        en: Finance and risk
+        pt: Finanças e risco
+        fr: Finance et risque
+        zh: 金融与风险
+        ja: 金融とリスク
+      description:
+        es: >-
+          La matriz de covarianzas de las rentabilidades diarias de un portafolio
+          es la entrada de los modelos de riesgo y del tamaño de las posiciones.
+        en: >-
+          The covariance matrix of daily portfolio returns is the input of risk models and of
+          position sizing.
+        pt: >-
+          A matriz de covariâncias das rentabilidades diárias de uma carteira é a entrada dos
+          modelos de risco e do dimensionamento de posições.
+        fr: >-
+          La matrice de covariance des rendements quotidiens d'un portefeuille alimente les
+          modèles de risque et la taille des positions.
+        zh: >-
+          投资组合日收益率的协方差矩阵是风险模型与头寸规模的输入。
+        ja: >-
+          ポートフォリオの日次収益率の共分散行列は、リスクモデルとポジションサイズの入力になる。
+    - title:
+        es: Visión por computador
+        en: Computer vision
+        pt: Visão computacional
+        fr: Vision par ordinateur
+        zh: 计算机视觉
+        ja: コンピュータビジョン
+      description:
+        es: >-
+          Los descriptores de textura se resumen con la matriz de covarianzas de sus
+          intensidades, que luego se diagonaliza.
+        en: >-
+          Texture descriptors are summarized by the covariance matrix of their intensities,
+          which is then diagonalized.
+        pt: >-
+          Descritores de textura são resumidos pela matriz de covariâncias de suas
+          intensidades, que depois é diagonalizada.
+        fr: >-
+          Les descripteurs de texture sont résumés par la matrice de covariance de leurs
+          intensités, ensuite diagonalisée.
+        zh: >-
+          纹理描述子由其强度的协方差矩阵概括，随后对该矩阵作对角化。
+        ja: >-
+          テクスチャの特徴量は強度の共分散行列でまとめ、その行列を対角化する。
+    - title:
+        es: Estadística multivariante
+        en: Multivariate statistics
+        pt: Estatística multivariada
+        fr: Statistique multivariée
+        zh: 多元统计
+        ja: 多変量統計
+      description:
+        es: >-
+          La correlación entre cada par de variables se lee en la matriz, y sus autovectores dan
+          las direcciones de máxima varianza.
+        en: >-
+          The correlation between each pair of variables is read off the matrix, and its
+          eigenvectors give the directions of maximum variance.
+        pt: >-
+          A correlação entre cada par de variáveis se lê na matriz, e seus autovetores dão as
+          direções de variância máxima.
+        fr: >-
+          La corrélation entre chaque paire de variables se lit dans la matrice, et ses
+          vecteurs propres donnent les directions de variance maximale.
+        zh: >-
+          任意两个变量之间的相关性可从该矩阵读出，其特征向量给出方差最大的方向。
+        ja: >-
+          任意の2変数のあいだの相関は、行列の中から読み取れる。
+          その固有ベクトルが最大の分散の方向を示す。
+  example:
+    title:
+      es: Dos series de cinco datos
+      en: Two series of five data
+      pt: Duas séries de cinco dados
+      fr: Deux séries de cinq données
+      zh: 两个各含五个数据的序列
+      ja: 5個のデータからなる2つの列
+    lines:
+      - es: "X = 1, 2, 3, 4, 5; Y = 2, 4, 5, 4, 6"
+        en: "X = 1, 2, 3, 4, 5; Y = 2, 4, 5, 4, 6"
+        pt: "X = 1, 2, 3, 4, 5; Y = 2, 4, 5, 4, 6"
+        fr: "X = 1, 2, 3, 4, 5 ; Y = 2, 4, 5, 4, 6"
+        zh: "X = 1, 2, 3, 4, 5; Y = 2, 4, 5, 4, 6"
+        ja: "X = 1, 2, 3, 4, 5; Y = 2, 4, 5, 4, 6"
+      - es: "μₓ = 3, μᵧ = 4.2"
+        en: "μₓ = 3, μᵧ = 4.2"
+        pt: "μₓ = 3, μᵧ = 4,2"
+        fr: "μₓ = 3, μᵧ = 4,2"
+        zh: "μₓ = 3, μᵧ = 4.2"
+        ja: "μₓ = 3, μᵧ = 4.2"
+      - es: "X − μₓ: −2, −1, 0, 1, 2"
+        en: "X − μₓ: −2, −1, 0, 1, 2"
+        pt: "X − μₓ: −2, −1, 0, 1, 2"
+        fr: "X − μₓ : −2, −1, 0, 1, 2"
+        zh: "X − μₓ：−2, −1, 0, 1, 2"
+        ja: "X − μₓ：−2, −1, 0, 1, 2"
+      - es: "Y − μᵧ: −2.2, −0.2, 0.8, −0.2, 1.8"
+        en: "Y − μᵧ: −2.2, −0.2, 0.8, −0.2, 1.8"
+        pt: "Y − μᵧ: −2,2; −0,2; 0,8; −0,2; 1,8"
+        fr: "Y − μᵧ : −2,2 ; −0,2 ; 0,8 ; −0,2 ; 1,8"
+        zh: "Y − μᵧ：−2.2, −0.2, 0.8, −0.2, 1.8"
+        ja: "Y − μᵧ：−2.2, −0.2, 0.8, −0.2, 1.8"
+      - es: "productos: 4.4, 0.2, 0, −0.2, 3.6"
+        en: "products: 4.4, 0.2, 0, −0.2, 3.6"
+        pt: "produtos: 4,4; 0,2; 0; −0,2; 3,6"
+        fr: "produits : 4,4 ; 0,2 ; 0 ; −0,2 ; 3,6"
+        zh: "乘积：4.4, 0.2, 0, −0.2, 3.6"
+        ja: "積：4.4, 0.2, 0, −0.2, 3.6"
+      - es: "cov = 8/5 = 1.6 > 0: las dos suben juntas"
+        en: "cov = 8/5 = 1.6 > 0: the two rise together"
+        pt: "cov = 8/5 = 1,6 > 0: as duas sobem juntas"
+        fr: "cov = 8/5 = 1,6 > 0 : les deux montent ensemble"
+        zh: "cov = 8/5 = 1.6 > 0：两者同向上升"
+        ja: "cov = 8/5 = 1.6 > 0。2つは一緒に上がる"

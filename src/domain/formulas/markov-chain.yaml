@@ -1,0 +1,409 @@
+id: markov-chain
+title:
+  es: Cadena de Markov
+  en: Markov Chain
+  pt: Cadeia de Markov
+  fr: Chaîne de Markov
+  zh: 马尔可夫链
+  ja: マルコフ連鎖
+category:
+  es: Probabilidad y estadística
+  en: Probability and statistics
+  pt: Probabilidade e estatística
+  fr: Probabilités et statistiques
+  zh: 概率与统计
+  ja: 確率と統計
+nodes:
+  - id: p-next
+    type: variable
+    value: P⁽ⁿ⁺¹⁾
+    explanation:
+      es: La matriz de probabilidades después de un paso más.
+      en: The probability matrix after one more step.
+      pt: A matriz de probabilidades depois de mais um passo.
+      fr: La matrice de probabilités après un pas de plus.
+      zh: 多走一步之后的概率矩阵。
+      ja: さらに1歩進んだあとの確率の行列である。
+  - id: eq-1
+    type: equals
+    value: "="
+    explanation:
+      es: La matriz de un paso se aplica a la del paso anterior.
+      en: The one step matrix is applied to the previous step matrix.
+      pt: A matriz de um passo é aplicada à do passo anterior.
+      fr: La matrice d'un pas s'applique à celle du pas précédent.
+      zh: 把一步转移矩阵作用到上一步的矩阵上。
+      ja: 1歩分の行列を前の歩の行列に掛ける。
+  - id: p-now
+    type: variable
+    value: P⁽ⁿ⁾
+    explanation:
+      es: La matriz de probabilidades en el instante n, con su primera fila de partida.
+      en: The probability matrix at step n, with its starting row.
+      pt: A matriz de probabilidades no instante n, com a sua linha de partida.
+      fr: La matrice de probabilités à l'étape n, avec sa ligne de départ.
+      zh: 第 n 步的概率矩阵，带有起始的一行。
+      ja: 第 n 歩の確率の行列。最初の行が出発点になる。
+  - id: dot
+    type: operator
+    value: "·"
+    explanation:
+      es: El producto matricial reparte cada estado sobre los que puede alcanzar.
+      en: The matrix product spreads each state over the ones it can reach.
+      pt: O produto matricial espalha cada estado sobre os que ele pode alcançar.
+      fr: Le produit matriciel répand chaque état sur ceux qu'il peut atteindre.
+      zh: 矩阵乘法把每个状态分配到它能够到达的状态上。
+      ja: 行列の積が、起始状態を到達できる先へ配分していく。
+  - id: p-mat
+    type: variable
+    value: P
+    explanation:
+      es: "La matriz de transición: una columna por estado destino."
+      en: "The transition matrix: one column per destination state."
+      pt: "A matriz de transição: uma coluna por estado de destino."
+      fr: "La matrice de transition : une colonne par état d'arrivée."
+      zh: 转移矩阵：每一列对应一个目标状态。
+      ja: 遷移行列。行き先ごとに1列ずつ並べる。
+  - id: semi-1
+    type: operator
+    value: ";"
+    explanation:
+      es: Para que sea una matriz de Markov debe ser no negativa y tener filas que suman uno.
+      en: To be a Markov matrix it must be non negative and have rows summing to one.
+      pt: Para ser uma matriz de Markov deve ser não negativa e ter linhas que somam um.
+      fr: Pour être une matrice de Markov elle doit être non négative et ses lignes sommer à un.
+      zh: 要成为马尔可夫矩阵，各元素非负且每行之和为一。
+      ja: マルコフ行列であるためには非負で、各行の和が 1 である必要がある。
+  - id: nonneg
+    type: constant
+    value: P ≥ 0
+    explanation:
+      es: Ninguna probabilidad puede ser negativa.
+      en: No probability may be negative.
+      pt: Nenhuma probabilidade pode ser negativa.
+      fr: Aucune probabilité ne peut être négative.
+      zh: 概率不可能为负。
+      ja: 確率が負になることはない。
+  - id: comma-1
+    type: operator
+    value: ","
+    explanation:
+      es: Y además cada fila debe sumar exactamente uno, porque el destino es seguro.
+      en: And each row must sum to exactly one, because the destination is certain.
+      pt: E cada linha deve somar exatamente um, porque o destino é certo.
+      fr: Et chaque ligne doit sommer exactement à un, car la destination est certaine.
+      zh: 而且每行之和恰为一，因为去向是确定的。
+      ja: さらに各行の和はちょうど 1 で、行き先が一意だからである。
+  - id: rowsum
+    type: constant
+    value: ΣP = 1
+    explanation:
+      es: La suma de las probabilidades de salida desde cada estado.
+      en: The sum of the outgoing probabilities from each state.
+      pt: A soma das probabilidades de saída a partir de cada estado.
+      fr: La somme des probabilités de sortie depuis chaque état.
+      zh: 从每个状态出发的概率之和。
+      ja: 各状態から出る確率の総和である。
+  - id: semi-2
+    type: operator
+    value: ";"
+    explanation:
+      es: "La propiedad de Markov: el futuro solo mira el presente."
+      en: "The Markov property: the future only looks at the present."
+      pt: "A propriedade de Markov: o futuro só olha o presente."
+      fr: "La propriété de Markov : l'avenir ne regarde que le présent."
+      zh: 马尔可夫性质：未来只取决于现在。
+      ja: マルコフ性。未来は現在の値だけを見て決まる。
+  - id: cond
+    type: variable
+    value: P(x′|x)
+    explanation:
+      es: La probabilidad de pasar a x′ depende solo de x, nunca de estados anteriores.
+      en: The probability of moving to x′ depends only on x, never on earlier states.
+      pt: A probabilidade de passar a x′ depende só de x, nunca de estados anteriores.
+      fr: La probabilité de passer à x′ ne dépend que de x, jamais des états passés.
+      zh: 转移到 x′ 的概率只依赖 x，与更早的状态无关。
+      ja: x′ へ移る確率は x だけで決まり、それより前の履歴には依存しない。
+  - id: semi-3
+    type: operator
+    value: ";"
+    explanation:
+      es: Con matrices irreducibles y aperiódicas, las potencias convergen a un régimen fijo.
+      en: With irreducible and aperiodic matrices, the powers converge to a fixed regime.
+      pt: Com matrizes irredutíveis e aperiódicas, as potências convergem a um regime fixo.
+      fr: Avec des matrices irréductibles et apériodiques, les puissances convergent vers un régime
+        fixe.
+      zh: 当矩阵不可约且非周期时，各次幂收敛到一个固定的状态分布。
+      ja: 行列が既約かつ非周期的なら、その累乗は決まった分布に収束する。
+  - id: stationarity
+    type: variable
+    value: πP = π
+    explanation:
+      es: "La distribución estacionaria: el vector que no cambia al multiplicarlo por P."
+      en: "The stationary distribution: the vector unchanged by multiplying it by P."
+      pt: "A distribuição estacionária: o vetor que não muda ao multiplicá-lo por P."
+      fr: "La loi stationnaire : le vecteur que ne change pas en le multipliant par P."
+      zh: 平稳分布：乘以 P 后不变的向量。
+      ja: 定常分布。P を掛けても変わらないベクトルのことである。
+  - id: comma-2
+    type: operator
+    value: ","
+    explanation:
+      es: Y debe estar normalizada para que sus entradas sumen uno.
+      en: And it must be normalized so its entries sum to one.
+      pt: E deve estar normalizada para que suas entradas somem um.
+      fr: Et il doit être normalisée pour que ses entrées somment à un.
+      zh: 并且它必须归一化，使各分量之和为一。
+      ja: さらに各成分の和が 1 になるように正規化されている必要がある。
+  - id: pi-sum
+    type: constant
+    value: Σπ = 1
+    explanation:
+      es: La suma de sus componentes es uno, como las de cualquier distribución.
+      en: The sum of its components is one, as for any distribution.
+      pt: A soma de seus componentes é um, como em qualquer distribuição.
+      fr: La somme de ses composantes vaut un, comme pour toute loi.
+      zh: 各分量之和为一，与任何概率分布相同。
+      ja: どの分布でもその成分の和は 1 である。
+context:
+  author:
+    es: Andrey Markov
+    en: Andrey Markov
+    pt: Andrey Markov
+    fr: Andreï Markov
+    zh: 安德烈·马尔可夫
+    ja: アンドレイ・マルコフ
+  era:
+    es: Rusia, 1851–1922 · telegramas cifrados en 1906, cadena simple en 1907
+    en: Russia, 1851–1922 · encrypted telegrams in 1906, simple chains in 1907
+    pt: Rússia, 1851–1922 · telegramas cifrados em 1906, cadeias simples em 1907
+    fr: Russie, 1851–1922 · télégrammes chiffrés en 1906, chaînes simples en 1907
+    zh: 俄国，1851–1922年 · 1906年研究密电报，1907年提出简单链
+    ja: ロシア、1851年–1922年 · 1906年に暗号電報、1907年に単純連鎖
+  history:
+    es: >-
+      En 1906 Markov usó la probabilidad para modelar la distribución de letras de los telegramas
+      cifrados: cadenas en las que la frecuencia de una letra depende solo de la anterior. La
+      primera versión de su teoría apareció en 1907, como anexo a un trabajo sobre dependencia
+      estadística. Desde entonces el nombre cadena de Markov designa a cualquier proceso cuyo
+      futuro depende únicamente del presente. La forma matricial es la base del PageRank de
+      Google, de los filtros de Kalman y del muestreo de Gibbs. Si la cadena es irreducible
+      y aperiódica, las probabilidades convergen a un régimen estacionario que ya no depende
+      del punto de partida.
+    en: >-
+      In 1906 Markov used probability to model the letter distribution of encrypted telegrams:
+      chains in which the frequency of a letter depends only on the previous one. The first
+      version of his theory appeared in 1907, as a supplement to a paper on statistical
+      dependence. Since then the name Markov chain designates any process whose future
+      depends only on the present. Its matrix form underlies Google's PageRank, the Kalman
+      filter and Gibbs sampling. If the chain is irreducible and aperiodic, the probabilities
+      converge to a stationary regime that no longer depends on the starting point.
+    pt: >-
+      Em 1906 Markov usou a probabilidade para modelar a distribuição de letras dos telegramas
+      cifrados: cadeias em que a frequência de uma letra depende só da anterior. A primeira
+      versão de sua teoria apareceu em 1907, como suplemento a um trabalho sobre dependência
+      estatística. Desde então o nome cadeia de Markov designa qualquer processo cujo futuro
+      depende apenas do presente. A forma matricial é a base do PageRank do Google, dos
+      filtros de Kalman e da amostragem de Gibbs. Se a cadeia é irredutível e aperiódica, as
+      probabilidades convergem para um regime estacionário que já não depende do ponto de
+      partida.
+    fr: >-
+      En 1906 Markov employa les probabilités pour modéliser la répartition des lettres des
+      télégrammes chiffrés : des chaînes où la fréquence d'une lettre ne dépend que de la
+      précédente. La première version de sa théorie parut en 1907, en supplément d'un article
+      sur la dépendance statistique. Depuis, le nom chaîne de Markov désigne tout processus
+      dont l'avenir ne dépend que du présent. La forme matricielle fonde le PageRank de
+      Google, le filtre de Kalman et l'échantillonnage de Gibbs. Si la chaîne est
+      irréductible et apériodique, les probabilités convergent vers un régime stationnaire qui
+      ne dépend plus du point de départ.
+    zh: >-
+      1906年，马尔可夫用概率建模加密电报中的字母分布：每个字母出现的频率只取决于前一个字母。
+      他的理论第一版出现在1907年，作为一篇关于统计依赖的论文的附录。
+      从此「马尔可夫链」这个名字指的是未来只取决于现在的任何过程。
+      其矩阵形式是 Google 的 PageRank、卡尔曼滤波与吉布斯采样的基础。
+      若链是不可约且非周期的，概率会收敛到一个不再依赖出发点的平稳分布。
+    ja: >-
+      1906年、マルコフは暗号電報の文字の並びを確率で表した。ある文字の出現の頻度は直前の文字だけに
+      依存するという鎖である。彼の理論の最初の形は1907年、統計的依存を扱った論文の付録として出た。
+      以来、マルコフ連鎖とは未来が現在の値だけに依存する過程を指す。
+      その行列の形がのちに PageRank、カルマンフィルタ、ギブス標本の土台となる。
+      鎖が既約かつ非周期的なら、確率は出発点に依存しない分布に収束する。
+  timeline:
+    - year: "1906"
+      label:
+        es: >-
+          Markov estudia la frecuencia de las letras en telegramas cifrados y encuentra
+          dependencias de primer orden.
+        en: >-
+          Markov studies letter frequencies in encrypted telegrams and finds first order
+          dependencies.
+        pt: >-
+          Markov estuda a frequência das letras em telegramas cifrados e encontra dependências de
+          primeira ordem.
+        fr: >-
+          Markov étudie la fréquence des lettres dans les télégrammes chiffrés et trouve des
+          dépendances du premier ordre.
+        zh: >-
+          马尔可夫研究加密电报中的字母频率，发现了一阶依赖。
+        ja: >-
+          マルコフが暗号電報の文字頻度を調べ、1次の依存を見いだした。
+    - year: "1907"
+      label:
+        es: >-
+          Publica su primer trabajo sobre cadenas simples, que es el núcleo de toda la teoría.
+        en: >-
+          He publishes his first paper on simple chains, the core of the whole theory.
+        pt: >-
+          Publica seu primeiro artigo sobre cadeias simples, o núcleo de toda a teoria.
+        fr: >-
+          Il publie son premier article sur les chaînes simples, cœur de toute la théorie.
+        zh: >-
+          他发表了关于简单链的第一篇论文，那是整个理论的核心。
+        ja: >-
+          単純連鎖についての最初の論文を出し、理論の中核を形づくった。
+    - year: "1953"
+      label:
+        es: >-
+          Doob formula la cadena de Markov con operadores de probabilidad y la axiomática moderna.
+        en: >-
+          Doob formulates the Markov chain with probability operators and the modern axioms.
+        pt: >-
+          Doob formula a cadeia de Markov com operadores de probabilidade e a axiomatica moderna.
+        fr: >-
+          Doob formule la chaîne de Markov avec des opérateurs de probabilité et l'axiomatique
+          moderne.
+        zh: >-
+          多布用概率算子表述马尔可夫链，给出了现代公理化形式。
+        ja: >-
+          ドゥーブが確率作用素でマルコフ連鎖を公式化し、近代の公理化を示した。
+    - year: "1998"
+      label:
+        es: >-
+          PageRank lleva la idea a la web: el puesto de una página se lee como un paseo
+          aleatorio.
+        en: >-
+          PageRank brings the idea to the web: the rank of a page is read as a random walk.
+        pt: >-
+          PageRank leva a ideia à web: o posto de uma página se lê como um passeio
+          aleatório.
+        fr: >-
+          PageRank porte l'idée au web : le rang d'une page se lit comme une marche
+          aléatoire.
+        zh: >-
+          PageRank 把这一思想带上网络：一个页面的排名可看作一次随机游走。
+        ja: >-
+          PageRank がこの考えをウェブに持ち込んだ。ページの順位は確率的な歩きとして読めた。
+  useCases:
+    - title:
+        es: PageRank
+        en: PageRank
+        pt: PageRank
+        fr: PageRank
+        zh: PageRank
+        ja: PageRank
+      description:
+        es: >-
+          La web es un grafo dirigido y el rango de una página es la probabilidad de que un
+          paseo aleatorio por los enlaces termine en ella.
+        en: >-
+          The web is a directed graph and the rank of a page is the chance that a random walk
+          along the links ends on it.
+        pt: >-
+          A web é um grafo dirigido e o posto de uma página é a chance de um passeio aleatório
+          pelos enlaces terminar nela.
+        fr: >-
+          Le web est un graphe orienté et le rang d'une page est la chance qu'une marche aléatoire
+          le long des liens y arrive.
+        zh: >-
+          网络是一个有向图，一个页面的排名就是沿链接随机游走最终落在该页的概率。
+        ja: >-
+          ウェブは有向グラフであり、ページの順位はリンクをたどる確率的な歩きがそこに着く確率である。
+    - title:
+        es: Filtros de Kalman
+        en: Kalman filters
+        pt: Filtros de Kalman
+        fr: Filtres de Kalman
+        zh: 卡尔曼滤波
+        ja: カルマンフィルタ
+      description:
+        es: >-
+          Predicen un estado que evoluciona por pasos y llega con ruido de medición.
+        en: >-
+          They predict a state that evolves in steps and arrives with measurement noise.
+        pt: >-
+          Preveem um estado que evolui por passos e chega com ruído de medição.
+        fr: >-
+          Ils prédisent un état qui évolue par pas et arrive avec un bruit de mesure.
+        zh: >-
+          它们预测逐步演化、并带有测量噪声的状态。
+        ja: >-
+          段階的に進むが観測ノイズを含む状態を 예측する。
+    - title:
+        es: Física estadística
+        en: Statistical physics
+        pt: Física estatística
+        fr: Physique statistique
+        zh: 统计物理
+        ja: 統計物理
+      description:
+        es: >-
+          El muestreo de Gibbs recorre una configuración moviendo una pieza cada vez y promedia
+          sobre la marcha.
+        en: >-
+          Gibbs sampling walks through a configuration moving one piece at a time and averages on
+          the fly.
+        pt: >-
+          A amostragem de Gibbs percorre uma configuração movendo uma peça por vez e tira a média
+          pelo caminho.
+        fr: >-
+          L'échantillonnage de Gibbs parcourt une configuration en déplaçant une pièce à la fois
+          et fait la moyenne au passage.
+        zh: >-
+          吉布斯采样每次移动一个部件，在行进中就地求平均。
+        ja: >-
+          ギブス標本は一度にひとつだけ駒を動かすことで配座をたどり、その場で平均を取る。
+  example:
+    title:
+      es: El tiempo mañana
+      en: Tomorrow's weather
+      pt: O tempo amanhã
+      fr: Le temps de demain
+      zh: 明天的天气
+      ja: 明日の天気
+    lines:
+      - es: "estados: L (lluvia) y S (sol)"
+        en: "states: L (rain) and S (sun)"
+        pt: "estados: L (chuva) e S (sol)"
+        fr: "états : L (pluie) et S (soleil)"
+        zh: "状态：L（下雨）与 S（晴天）"
+        ja: "状態：L（雨）と S（晴れ）"
+      - es: "P = [0.8, 0.2; 0.4, 0.6]"
+        en: "P = [0.8, 0.2; 0.4, 0.6]"
+        pt: "P = [0.8, 0.2; 0.4, 0.6]"
+        fr: "P = [0.8, 0.2 ; 0.4, 0.6]"
+        zh: "P = [0.8, 0.2; 0.4, 0.6]"
+        ja: "P = [0.8, 0.2; 0.4, 0.6]"
+      - es: "P² = [0.72, 0.28; 0.56, 0.44]"
+        en: "P² = [0.72, 0.28; 0.56, 0.44]"
+        pt: "P² = [0.72, 0.28; 0.56, 0.44]"
+        fr: "P² = [0.72, 0.28 ; 0.56, 0.44]"
+        zh: "P² = [0.72, 0.28; 0.56, 0.44]"
+        ja: "P² = [0.72, 0.28; 0.56, 0.44]"
+      - es: "si hoy llueve, mañana llueve con probabilidad 0.72"
+        en: "if it rains today, tomorrow it rains with probability 0.72"
+        pt: "se hoje chove, amanhã chove com probabilidade 0,72"
+        fr: "s'il pleut aujourd'hui, il pleut demain avec probabilité 0,72"
+        zh: "若今天下雨，明天下雨的概率为 0.72"
+        ja: "今日雨なら、明日の雨の確率は 0.72"
+      - es: "régimen estacionario: π = (2/3, 1/3)"
+        en: "stationary regime: π = (2/3, 1/3)"
+        pt: "regime estacionário: π = (2/3, 1/3)"
+        fr: "régime stationnaire : π = (2/3, 1/3)"
+        zh: "平稳分布：π = (2/3, 1/3)"
+        ja: "定常分布：π = (2/3, 1/3)"
+      - es: "y a partir de ese día da igual el estado inicial"
+        en: "and from that day on the initial state no longer matters"
+        pt: "e a partir desse dia o estado inicial deixa de importar"
+        fr: "et à partir de ce jour l'état initial n'importe plus"
+        zh: "从那一天起，初始状态不再影响结果"
+        ja: "その日以降は出発点が結果に影響しない"

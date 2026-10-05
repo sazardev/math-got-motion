@@ -1,0 +1,318 @@
+id: van-der-waals-equation
+title:
+  es: Ecuación de Van der Waals
+  en: Van der Waals Equation
+  pt: Equação de Van der Waals
+  fr: Équation de Van der Waals
+  zh: 范德瓦耳斯方程
+  ja: ファン・デル・ワールス方程式
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: p-open
+    type: variable
+    value: (p
+    explanation:
+      es: "La presión del gas, entre paréntesis porque va a recibir una corrección."
+      en: "The gas pressure, in parentheses because it is about to be corrected."
+      pt: "A pressão do gás, entre parênteses porque vai receber uma correção."
+      fr: "La pression du gaz, entre parenthèses car elle va être corrigée."
+      zh: 气体的压力,加上括号是因为它将被修正。
+      ja: 気体の圧力。括弧が付くのは、このあと補正されるためである。
+  - id: plus
+    type: operator
+    value: +
+    explanation:
+      es: Suma la corrección de la presión.
+      en: Adds the pressure correction.
+      pt: Soma a correção da pressão.
+      fr: Additionne la correction de pression.
+      zh: 加上压力的修正项。
+      ja: 圧力の補正を加える。
+  - id: a-term
+    type: variable
+    value: a/v²
+    explanation:
+      es: "La corrección: a es la constante de atracción entre moléculas, dividida por el cuadrado del volumen molar."
+      en: "The correction: a is the intermolecular attraction constant, divided by the square of the molar volume."
+      pt: "A correção: a é a constante de atração entre moléculas, dividida pelo quadrado do volume molar."
+      fr: "La correction : a est la constante d'attraction entre molécules, divisée par le carré du volume molaire."
+      zh: 修正项:a是分子间吸引常数,除以摩尔体积的平方。
+      ja: 補正項。aは分子間の引力を表す定数で、モル体積の二乗で割られる。
+  - id: close-paren
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el paréntesis de la presión corregida.
+      en: Closes the parenthesis of the corrected pressure.
+      pt: Fecha o parêntese da pressão corrigida.
+      fr: Ferme la parenthèse de la pression corrigée.
+      zh: 闭合修正后压力的括号。
+      ja: 補正後の圧力の括弧を閉じる。
+  - id: v-minus-b
+    type: variable
+    value: (v − b)
+    explanation:
+      es: "El volumen molar menos el volumen excluido b, que ocupa el conjunto de las moléculas."
+      en: "The molar volume minus the excluded volume b, taken up by the molecules altogether."
+      pt: "O volume molar menos o volume excluído b, ocupado pelo conjunto das moléculas."
+      fr: "Le volume molaire moins le volume exclu b, occupé par l'ensemble des molécules."
+      zh: 摩尔体积减去排除体积b,即分子本身占据的体积。
+      ja: モル体積から分子全体の 体積である排除体積bを引いたもの。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: rt
+    type: constant
+    value: RT
+    explanation:
+      es: El producto de la constante de los gases por la temperatura absoluta.
+      en: The product of the gas constant and the absolute temperature.
+      pt: O produto da constante dos gases pela temperatura absoluta.
+      fr: Le produit de la constante des gaz par la température absolue.
+      zh: 气体常数与绝对温度的乘积。
+      ja: 気体定数と絶対温度の積。
+context:
+  author:
+    es: Johannes Diderik van der Waals
+    en: Johannes Diderik van der Waals
+    pt: Johannes Diderik van der Waals
+    fr: Johannes Diderik van der Waals
+    zh: 约翰内斯·迪德里克·范德瓦耳斯
+    ja: ヨハネス・ディ・デリック・ファン・デル・ワールス
+  era:
+    es: "Países Bajos, 1837–1908 · ecuación publicada en 1870"
+    en: "Netherlands, 1837–1908 · equation published in 1870"
+    pt: "Países Baixos, 1837–1908 · equação publicada em 1870"
+    fr: "Pays-Bas, 1837–1908 · équation publiée en 1870"
+    zh: "荷兰,1837–1908年 · 方程发表于1870年"
+    ja: "オランダ、1837–1908年 · 方程式は1870年に発表"
+  history:
+    es: >-
+      La ley de los gases ideales supone moléculas de tamaño despreciable que no se atraen entre sí, y por eso
+      falla cerca de la liquefacción. Motivado por las isotermas que Thomas Andrews trazó para el CO2, Van der
+      Waals propuso en 1870 una sola corrección con dos constantes: a para la atracción entre moléculas y b para
+      el volumen que ocupan. La ecuación entrega una temperatura crítica T_c = 8a/(27Rb), y con ella la
+      posibilidad de predecir qué gases se licúan por compresión. Sigue siendo la base de las ecuaciones de
+      estado que usan hoy la industria del gas y los simuladores de fluidos.
+    en: >-
+      The ideal gas law assumes molecules of negligible size that do not attract each other, and that is why it
+      fails near liquefaction. Motivated by the isotherms Thomas Andrews plotted for CO2, van der Waals proposed
+      in 1870 a single correction with two constants: a for the attraction between molecules and b for the volume
+      they occupy. The equation delivers a critical temperature T_c = 8a/(27Rb), and with it the possibility of
+      predicting which gases liquefy under compression. It remains the basis for the equations of state used
+      today by the gas industry and by fluid simulators.
+    pt: >-
+      A lei dos gases ideais supõe moléculas de tamanho desprezível que não se atraem entre si, e por isso falha
+      perto da liquefação. Motivado pelas isotermas que Thomas Andrews traçou para o CO2, van der Waals propôs
+      em 1870 uma única correção com duas constantes: a para a atração entre moléculas e b para o volume que
+      elas ocupam. A equação fornece uma temperatura crítica T_c = 8a/(27Rb), e com ela a possibilidade de prever
+      quais gases liquefazem por compressão. Permanece a base das equações de estado que usam hoje a indústria
+      do gás e os simuladores de fluidos.
+    fr: >-
+      La loi des gaz parfaits suppose des molécules de taille négligeable qui ne s'attirent pas entre elles, et
+      c'est pourquoi elle échoue près de la liquéfaction. Motivé par les isothermes que Thomas Andrews traça
+      pour le CO2, van der Waals propose en 1870 une seule correction à deux constantes : a pour l'attraction
+      entre molécules et b pour le volume qu'elles occupent. L'équation fournit une température critique
+      T_c = 8a/(27Rb), et avec elle la possibilité de prévoir quels gaz se liquéfient sous compression. Elle
+      reste la base des équations d'état qu'utilisent aujourd'hui l'industrie du gaz et les simulateurs de fluides.
+    zh: >-
+      理想气体定律假设分子体积可忽略且彼此不吸引,因此在液化附近会失效。范德瓦耳斯受到托马斯·安德鲁斯所绘
+      二氧化碳等温线的启发,于1870年提出了仅含两项常数的修正:a代表分子间吸引,b代表分子本身占据的体积。
+      该方程给出临界温度 T_c = 8a/(27Rb),由此可以预测哪些气体能被压缩液化。直到今天,它仍是燃气工业与
+      流体仿真软件所用状态方程的基础。
+    ja: >-
+      理想気体の法則は、分子の大きさを無視でき、分子どうしが引き合わないと仮定する。そのせいで液化点近くでは
+      破綻する。Fan・der・WaalsはThomas Andrewsが二酸化炭素について描いた等温線に刺激され、1870年に
+      二つの定数だけでなる一つの補正を提案した。一方は分子間の引力、他方は分子が占める体積を表す。この
+      式は臨界温度 T_c = 8a/(27Rb) を示し、どの気体を加圧で液化できるかを予測できる。現在もガス産業や
+      流体シミュレーションが用いる状態方程式の出発点である。
+  timeline:
+    - year: "1869"
+      label:
+        es: >-
+          Andrews traza las isotermas del CO2 y descubre el punto crítico, con un intervalo de presión y
+          temperatura en el que las fases se confunden.
+        en: >-
+          Andrews plots the isotherms of CO2 and discovers the critical point, a pressure and temperature
+          interval where the phases blur together.
+        pt: >-
+          Andrews traça as isotermas do CO2 e descobre o ponto crítico, um intervalo de pressão e temperatura
+          em que as fases se confundem.
+        fr: >-
+          Andrews trace les isothermes du CO2 et découvre le point critique, un intervalle de pression et de
+          température où les phases se confondent.
+        zh: >-
+          安德鲁斯绘出二氧化碳的等温线,并发现临界点——一个压力与温度区间,在其中两相变得难以区分。
+        ja: >-
+          Andrewsが二酸化炭素の等温線を描き、位相が混じり合う圧力・温度の範囲である臨界点を発見した。
+    - year: "1870"
+      label:
+        es: >-
+          Van der Waals publica su ecuación de estado con las dos constantes a y b, y con ella la temperatura
+          crítica.
+        en: >-
+          van der Waals publishes his equation of state with the two constants a and b, and with it the
+          critical temperature.
+        pt: >-
+          van der Waals publica sua equação de estado com as duas constantes a e b, e com ela a temperatura
+          crítica.
+        fr: >-
+          van der Waals publie son équation d'état avec les deux constantes a et b, et avec elle la température
+          critique.
+        zh: >-
+          范德瓦耳斯发表了包含a、b两个常数的状态方程,并由它得到临界温度。
+        ja: >-
+          Fan・der・Waalsは定数aとbだけからなる状態方程式を発表し、同時に臨界温度を得た。
+    - year: "1910"
+      label:
+        es: Recibe el Premio Nobel de Física por su trabajo sobre los estados de la materia.
+        en: He receives the Nobel Prize in Physics for his work on the states of matter.
+        pt: Recebe o Prêmio Nobel de Física pelo seu trabalho sobre os estados da matéria.
+        fr: Il reçoit le prix Nobel de physique pour ses travaux sur les états de la matière.
+        zh: 凭借关于物质状态的工作,获得诺贝尔物理学奖。
+        ja: 物質の状態に関する研究でノーベル物理学賞を受賞した。
+    - year: Hoy
+      label:
+        es: >-
+          Es el punto de partida de ecuaciones de estado más precisas, como las de Peng-Robinson y
+          Redlich-Kwong.
+        en: >-
+          It is the starting point for more accurate equations of state, such as Peng-Robinson and
+          Redlich-Kwong.
+        pt: >-
+          É o ponto de partida de equações de estado mais precisas, como as de Peng-Robinson e Redlich-Kwong.
+        fr: >-
+          C'est le point de départ d'équations d'état plus précises, comme celles de Peng-Robinson et
+          Redlich-Kwong.
+        zh: >-
+          它是更精确状态方程(如Peng-Robinson方程与Redlich-Kwong方程)的出发点。
+        ja: >-
+          Peng-Robinson方程式やRedlich-Kwong方程式など、より精密な状態方程式の出発点になっている。
+  useCases:
+    - title:
+        es: Licuefacción de gases
+        en: Gas liquefaction
+        pt: Liquefação de gases
+        fr: Liquéfaction des gaz
+        zh: 气体液化
+        ja: 気体の液化
+      description:
+        es: >-
+          La temperatura crítica calculada con 8a/(27Rb) indica si un gas puede licuarse por compresión. Para
+          el nitrógeno, la fórmula da 126 K y el valor medido es 126,2 K.
+        en: >-
+          The critical temperature computed with 8a/(27Rb) tells whether a gas can be liquefied under
+          compression. For nitrogen the formula gives 126 K and the measured value is 126.2 K.
+        pt: >-
+          A temperatura crítica calculada com 8a/(27Rb) indica se um gás pode liquefazer por compressão. Para
+          o nitrogênio, a fórmula dá 126 K e o valor medido é 126,2 K.
+        fr: >-
+          La température critique calculée avec 8a/(27Rb) indique si un gaz peut se liquéfier sous
+          compression. Pour l'azote, la formule donne 126 K et la valeur mesurée vaut 126,2 K.
+        zh: >-
+          用8a/(27Rb)算出的临界温度,说明该气体能否被压缩液化。对氮气,该公式给出126 K,实测值为126.2 K。
+        ja: >-
+          8a/(27Rb)で求めた臨界温度は、その気体を加圧によって液化できるかどうかを示す。窒素では式が
+          126 Kを示し、測定値は126.2 Kである。
+    - title:
+        es: Factor de compresibilidad
+        en: Compressibility factor
+        pt: Fator de compressibilidade
+        fr: Facteur de compressibilité
+        zh: 压缩因子
+        ja: 圧縮係数
+      description:
+        es: >-
+          Con Z = pv/(nRT) la ecuación se generaliza a gases reales. Z vale 1 para un gas ideal, baja de 1
+          cuando domina la atracción y sube de 1 cuando domina el volumen excluido.
+        en: >-
+          With Z = pv/(nRT) the equation extends to real gases. Z equals 1 for an ideal gas, drops below 1 when
+          attraction dominates and rises above 1 when the excluded volume dominates.
+        pt: >-
+          Com Z = pv/(nRT) a equação se generaliza para gases reais. Z vale 1 para um gás ideal, fica menor que
+          1 quando domina a atração e maior que 1 quando domina o volume excluído.
+        fr: >-
+          Avec Z = pv/(nRT), l'équation s'étend aux gaz réels. Z vaut 1 pour un gaz parfait, passe sous 1 quand
+          l'attraction domine et au-dessus de 1 quand le volume exclu domine.
+        zh: >-
+          引入Z = pv/(nRT)后,该方程可推广到真实气体。理想气体Z = 1;吸引力占主导时Z小于1,排除体积占主导时Z大于1。
+        ja: >-
+          Z = pv/(nRT) を用いると、この式は実在気体にも適用できる。理想気体ではZ = 1で、引力が優勢になると
+          1より小さく、排除体積が優勢になると1より大きくなる。
+    - title:
+        es: Simulación de fluidos
+        en: Fluid simulation
+        pt: Simulação de fluidos
+        fr: Simulation de fluides
+        zh: 流体仿真
+        ja: 流体シミュレーション
+      description:
+        es: >-
+          Redondeada y combinada con la ley de los gases ideales, da ecuaciones de estado más precisas que
+          la de Van der Waals sola, evaluadas en bucles de millones de pasos.
+        en: >-
+          Round about and combined with the ideal gas law, it yields equations of state more accurate than van
+          der Waals alone, evaluated in loops of millions of steps.
+        pt: >-
+          Arredondada e combinada com a lei dos gases ideais, dá equações de estado mais precisas que a de van
+          der Waals sozinha, avaliadas em laços de milhões de passos.
+        fr: >-
+          Arrondie et combinée à loi des gaz parfaits, elle donne des équations d'état plus précises que celle
+          de van der Waals seule, évaluées dans des boucles de millions d'itérations.
+        zh: >-
+          经取整并与理想气体定律结合后,可得到比单纯范德瓦耳斯方程更精确的状态方程,在数值循环中被求值数百万次。
+        ja: >-
+          近似化して理想気体の法則と組み合わせると、ファン・デル・ワールスの式だけより精密な状態方程式が
+          得られ、数百万回の反復で評価される。
+  example:
+    title:
+      es: Calculando la temperatura crítica del nitrógeno
+      en: Computing the critical temperature of nitrogen
+      pt: Calculando a temperatura crítica do nitrogênio
+      fr: Calcul de la température critique de l'azote
+      zh: 计算氮气的临界温度
+      ja: 窒素の臨界温度を求める
+    lines:
+      - es: a = 1,370 bar·L²/mol² y b = 0,0387 L/mol
+        en: a = 1.370 bar·L²/mol² and b = 0.0387 L/mol
+        pt: a = 1,370 bar·L²/mol² e b = 0,0387 L/mol
+        fr: a = 1,370 bar·L²/mol² et b = 0,0387 L/mol
+        zh: a = 1.370 bar·L²/mol²,b = 0.0387 L/mol
+        ja: a = 1.370 bar·L²/mol²、b = 0.0387 L/mol
+      - es: T_c = 8a/(27Rb) = 8(1,370)/(27 · 0,08314 · 0,0387)
+        en: T_c = 8a/(27Rb) = 8(1.370)/(27 · 0.08314 · 0.0387)
+        pt: T_c = 8a/(27Rb) = 8(1,370)/(27 · 0,08314 · 0,0387)
+        fr: T_c = 8a/(27Rb) = 8(1,370)/(27 · 0,08314 · 0,0387)
+        zh: T_c = 8a/(27Rb) = 8(1.370)/(27 · 0.08314 · 0.0387)
+        ja: T_c = 8a/(27Rb) = 8(1.370)/(27 · 0.08314 · 0.0387)
+      - es: T_c = 10,96/0,08687 ≈ 126 K
+        en: T_c = 10.96/0.08687 ≈ 126 K
+        pt: T_c = 10,96/0,08687 ≈ 126 K
+        fr: T_c = 10,96/0,08687 ≈ 126 K
+        zh: T_c = 10.96/0.08687 ≈ 126 K
+        ja: T_c = 10.96/0.08687 ≈ 126 K
+      - es: El valor experimental del nitrógeno es 126,2 K
+        en: The measured value for nitrogen is 126.2 K
+        pt: O valor experimental do nitrogênio é 126,2 K
+        fr: La valeur mesurée pour l'azote vaut 126,2 K
+        zh: 氮气的实测临界温度为126.2 K
+        ja: 窒素の実測値は126.2 Kである
+      - es: Por debajo de T_c, la compresión produce líquido
+        en: Below T_c, compression produces liquid
+        pt: Abaixo de T_c, a compressão produz líquido
+        fr: En dessous de T_c, la compression produit du liquide
+        zh: 低于T_c时,加压会使气体变为液体
+        ja: T_cより低いと、加圧によって液体が生じる

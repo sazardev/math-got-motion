@@ -1,0 +1,330 @@
+id: cyclotron-frequency
+title:
+  es: Frecuencia de ciclotrón
+  en: Cyclotron Frequency
+  pt: Frequência de ciclotron
+  fr: Fréquence de cyclotron
+  zh: 回旋频率
+  ja: サイクロトロン周波数
+category:
+  es: Física clásica
+  en: Classical physics
+  pt: Física clássica
+  fr: Physique classique
+  zh: 经典物理学
+  ja: 古典物理学
+nodes:
+  - id: f
+    type: variable
+    value: f
+    explanation:
+      es: "La frecuencia del giro: cuántas vueltas da la partícula en un segundo."
+      en: "The frequency of the orbit: how many turns the particle makes in one second."
+      pt: "A frequência do giro: quantas voltas a partícula dá em um segundo."
+      fr: "La fréquence de l'orbite : combien de tours la particule fait en une seconde."
+      zh: 回旋频率:粒子每秒绕行多少圈。
+      ja: 回旋の周波数。粒子が1秒に何回一周するかである。
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: q
+    type: variable
+    value: q
+    explanation:
+      es: "La carga de la partícula. En el período sólo importa su valor absoluto."
+      en: "The charge of the particle. In the period only its absolute value matters."
+      pt: "A carga da partícula. No período só importa o seu valor absoluto."
+      fr: "La charge de la particule. Dans la période, seule sa valeur absolue compte."
+      zh: 粒子的电荷。在周期表达式中只出现其绝对值。
+      ja: 粒子の電荷。周期には絶対値が現れるだけである。
+  - id: dot-1
+    type: operator
+    value: "·"
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: b
+    type: variable
+    value: B
+    explanation:
+      es: "La intensidad del campo magnético, que curva la trayectoria de la partícula."
+      en: "The strength of the magnetic field, which bends the particle's path."
+      pt: "A intensidade do campo magnético, que curva a trajetória da partícula."
+      fr: "L'intensité du champ magnétique, qui courbe la trajectoire de la particule."
+      zh: 磁场的强度,它使粒子的轨迹弯曲。
+      ja: 磁場の強さ。粒子の軌道を曲げる。
+  - id: slash
+    type: operator
+    value: /
+    explanation:
+      es: Dividido entre el denominador siguiente.
+      en: Divided by the denominator that follows.
+      pt: Dividido pelo denominador seguinte.
+      fr: Divisé par le dénominateur qui suit.
+      zh: 除以后面的分母。
+      ja: 後の分母で割る。
+  - id: two-pi
+    type: constant
+    value: (2π
+    explanation:
+      es: "El factor que convierte la velocidad angular en frecuencia, una vuelta por 2π."
+      en: "The factor that turns angular speed into frequency, one turn per 2π."
+      pt: "O fator que converte velocidade angular em frequência, uma volta por 2π."
+      fr: "Le facteur qui transforme la vitesse angulaire en fréquence, un tour pour 2π."
+      zh: 把角速度换算成频率的因子,每转过2π为一周。
+      ja: 角速度を周波数に直す係数。2π進むごとに1周する。
+  - id: dot-2
+    type: operator
+    value: m)
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+context:
+  author:
+    es: Ernest Lawrence
+    en: Ernest Lawrence
+    pt: Ernest Lawrence
+    fr: Ernest Lawrence
+    zh: 欧内斯特·劳伦斯
+    ja: アーネスト・ローレンス
+  era:
+    es: "Estados Unidos, 1901–1959 · ciclotrón construido en 1930"
+    en: "United States, 1901–1959 · cyclotron built in 1930"
+    pt: "Estados Unidos, 1901–1959 · ciclotron construído em 1930"
+    fr: "États-Unis, 1901–1959 · cyclotron construit en 1930"
+    zh: "美国,1901–1959年 · 回旋加速器建于1930年"
+    ja: "アメリカ、1901–1959年 · サイクロトロンは1930年に作られた"
+  history:
+    es: >-
+      En 1929 Lawrence observó que una partícula cargada en un campo magnético uniforme gira en un círculo, y
+      que al cruzar dos veces por vuelta una separación entre electrodos recibe dos empujones de energía. Si el
+      campo es constante, la velocidad angular no depende de la velocidad: el tiempo de vuelta queda fijado
+      sólo por la relación entre carga y masa. Con esa periodicidad exacta se puede resonated en un mismo
+      punto, y el aparato que así se obtiene es el ciclotrón. Con energías altas hace falta la corrección
+      relativista, que cambia la masa efectiva y baja la frecuencia. La misma periodicidad, sin acelerar, es
+      la base de la resonancia magnética y de los espectrómetros de masas.
+    en: >-
+      In 1929 Lawrence noticed that a charged particle in a uniform magnetic field travels in a circle, and
+      that by crossing a gap between electrodes twice per turn it gets two kicks of energy. If the field is
+      constant, the angular speed does not depend on the speed: the time for one turn is fixed by the ratio of
+      charge to mass alone. Because that period is exact, the particle can be brought back to the same point
+      at the same phase, and the machine this makes possible is the cyclotron. At high energies the
+      relativistic correction is required, since the effective mass grows and the frequency drops. That same
+      periodicity, without any acceleration, is the basis of magnetic resonance and of mass spectrometry.
+    pt: >-
+      Em 1929 Lawrence percebeu que uma partícula carregada em um campo magnético uniforme percorre um
+      círculo e, ao cruzar duas vezes por volta uma separação entre eletrodos, recebe dois empurrões de
+      energia. Se o campo é constante, a velocidade angular não depende da velocidade: o tempo de uma volta
+      fica fixado apenas pela razão entre carga e massa. Como esse período é exato, a partícula pode ser
+      trazida de volta ao mesmo ponto na mesma fase, e a máquina que daí resulta é o ciclotron. Em altas
+      energias é preciso a correção relativista, que aumenta a massa efetiva e baixa a frequência. Essa
+      mesma periodicidade, sem aceleração, é a base da ressonância magnética e dos espectrômetros de massa.
+    fr: >-
+      En 1929, Lawrence remarque qu'une particule chargée dans un champ magnétique uniforme décrit un
+      cercle et qu'en traversant deux fois par tour un espace entre électrodes elle reçoit deux coups
+      d'énergie. Si le champ est constant, la vitesse angulaire ne dépend pas de la vitesse : le temps d'un
+      tour est fixé par le seul rapport charge sur masse. Comme cette période est exacte, la particule peut
+      être ramenée au même point dans la même phase, et la machine qui en résulte est le cyclotron. À haute
+      énergie il faut la correction relativiste, car la masse effective croît et la fréquence baisse. Cette
+      même périodicité, sans aucune accélération, est la base de la résonance magnétique et de la
+      spectrométrie de masse.
+    zh: >-
+      1929年,劳伦斯注意到带电粒子在均匀磁场中沿圆周运动,每转一圈两次穿过电极之间的缝隙,就能获得两次
+      能量加速。若磁场恒定,角速度与粒子速度无关:转一圈所需的时间只由电荷与质量之比决定。正因为这个周期
+      精确,粒子才能在相同相位被带回同一点,这台机器就是回旋加速器。能量很高时必须加入相对论修正,因为
+      有效质量增大、频率随之下降。同样的周期性——不做任何加速——也是磁共振与质谱的基础。
+    ja: >-
+      1929年、Lawrenceは、均一な磁場の中の荷電粒子が円を描いて動き、1周のあいだに電極の隙間を2度横切る
+      ごとに2回の加速を受けることに気づいた。磁場が一定なら角速度は速度に依存せず、1周にかかる時間は電荷と
+      質量の比だけで決まる。この周期が正確であることから、粒子は常に同じ位相で同じ点に戻され、それに基づき
+      作られた装置がサイクロトロンである。エネルギーが高くなると相対論的な補正が必要になり、有効質量が増えて
+      周数は下がる。同じ周期性は加速を伴わずに、磁気共鳴と質量分析の土台となっている。
+  timeline:
+    - year: "1929"
+      label:
+        es: >-
+          Lawrence concibe el ciclotrón al notar que un campo magnético uniforme puede repetir el mismo
+          intervalo de tiempo en cada vuelta.
+        en: >-
+          Lawrence conceives the cyclotron after noticing that a uniform magnetic field can repeat the same
+          time interval on every turn.
+        pt: >-
+          Lawrence concebe o ciclotron ao notar que um campo magnético uniforme pode repetir o mesmo
+          intervalo de tempo a cada volta.
+        fr: >-
+          Lawrence conçoit le cyclotron en remarquant qu'un champ magnétique uniforme peut répéter le même
+          intervalle de temps à chaque tour.
+        zh: >-
+          劳伦斯注意到均匀磁场可使每个转动周期完全重复,由此设想出回旋加速器。
+        ja: >-
+          Lawrenceは、均一な磁場なら1周ごとに同じ時間間隔が繰り返されることに気づき、サイクロトロンを思いついた。
+    - year: "1930"
+      label:
+        es: Construye el primer ciclotrón, que acelera protones en un campo de menos de un tesla.
+        en: He builds the first cyclotron, accelerating protons in a field below one tesla.
+        pt: Constrói o primeiro ciclotron, acelerando prótons em um campo de menos de um tesla.
+        fr: >-
+          Il construit le premier cyclotron, qui accélère des protons dans un champ de moins d'un tesla.
+        zh: 他建成第一台回旋加速器,在不到一特斯拉的磁场中加速质子。
+        ja: 彼は最初のサイクロトロンを作り、1テスラ未満の磁場で陽子を加速する装置を完成させた。
+    - year: s. XX
+      label:
+        es: >-
+          El principio se usa como spectrometer para medir masas a partir de la relación entre la
+          frecuencia y la carga.
+        en: >-
+          The principle is used as a spectrometer, weighing masses through the relation between frequency and
+          charge.
+        pt: >-
+          O princípio é usado como espectrômetro, medindo massas pela relação entre a frequência e a carga.
+        fr: >-
+          Le principe sert de spectromètre, pesant les masses par la relation entre la fréquence et la
+          charge.
+        zh: 这一原理被用作质谱仪,依据频率与电荷的关系测定质量。
+        ja: この原理は分光器として使われ、周波数と電荷の関係から質量を測る。
+    - year: Hoy
+      label:
+        es: >-
+          La misma periodicidad sostiene la resonancia magnética de los hospitales y los enlaces de radio de los
+          satélites.
+        en: >-
+          The same periodicity underlies the magnetic resonance in hospitals and the radio links of
+          satellites.
+        pt: >-
+          A mesma periodicidade sustenta a ressonância magnética dos hospitais e os enlaces de rádio dos
+          satélites.
+        fr: >-
+          La même périodicité soutient la résonance magnétique des hôpitaux et les liaisons radio des
+          satellites.
+        zh: 同样的周期性支撑着医院的磁共振成像与卫星的无线电链路。
+        ja: 同じ周期性が病院の磁気共鳴や衛星の無線回線を支えている。
+  useCases:
+    - title:
+        es: Espectrómetro de masas
+        en: Mass spectrometer
+        pt: Espectrômetro de massa
+        fr: Spectromètre de masse
+        zh: 质谱仪
+        ja: 質量分析計
+      description:
+        es: >-
+          Midiendo la frecuencia se obtiene q/m y, con la carga conocida, la masa. Como el período no depende
+          de la velocidad, el dato no se altera al acelerar el ion.
+        en: >-
+          Measuring the frequency gives q/m and, with the charge known, the mass. Because the period does not
+          depend on speed, accelerating the ion does not distort the reading.
+        pt: >-
+          Medindo a frequência obtém-se q/m e, com a carga conhecida, a massa. Como o período não depende da
+          velocidade, acelerar o íon não altera a medida.
+        fr: >-
+          Mesurer la fréquence donne q/m et, la charge étant connue, la masse. Comme la période ne dépend pas
+          de la vitesse, accélérer l'ion ne fausse pas la mesure.
+        zh: >-
+          测出频率即得 q/m,电荷已知便可得到质量。由于周期与速度无关,加速离子不会使读数失真。
+        ja: >-
+          周波数を測れば q/m が得られ、電荷が分かれば質量が分かる。周期は速度に依存しないので、イオンを
+          加速しても測定値は揺らがない。
+    - title:
+        es: Resonancia magnética
+        en: Magnetic resonance
+        pt: Ressonância magnética
+        fr: Résonance magnétique
+        zh: 磁共振
+        ja: 磁気共鳴
+      description:
+        es: >-
+          En un equipo de RMN la frecuencia de Larmor fija la energía de los espines en el campo, y la señal
+          aparece sólo cuando la radiación tiene justo esa frecuencia.
+        en: >-
+          In an NMR machine the Larmor frequency sets the spin energies in the field, and the signal appears
+          only when the radiation carries exactly that frequency.
+        pt: >-
+          Em um aparelho de RMN a frequência de Larmor fixa as energias dos spins no campo, e o sinal aparece
+          só quando a radiação tem exatamente essa frequência.
+        fr: >-
+          Dans un appareil de RMN, la fréquence de Larmor fixe les énergies des spins dans le champ, et le
+          signal n'apparaît que si le rayonnement porte exactement cette fréquence.
+        zh: >-
+          在核磁共振设备中,拉莫尔频率决定自旋在磁场中的能量,只有当辐射频率恰好与之相同时才出现信号。
+        ja: >-
+          核磁気共鳴装置ではラモール周波数が磁場中のスピンのエネルギーを決め、放射線がその周波数と
+          まったく同じときにだけ信号が現れる。
+    - title:
+        es: Aceleradores de partículas
+        en: Particle accelerators
+        pt: Aceleradores de partículas
+        fr: Accélérateurs de particules
+        zh: 粒子加速器
+        ja: 粒子加速器
+      description:
+        es: >-
+          Al cruzar la brecha entre electrodos sólo en la misma fase, la partícula recibe energía nueva en
+          cada vuelta y el haz crece sin perder la sincronía.
+        en: >-
+          By crossing the electrode gap only in the same phase, the particle gains new energy every turn and
+          the beam grows without ever losing synchronism.
+        pt: >-
+          Atravessando a fenda dos eletrodos sempre na mesma fase, a partícula ganha energia nova a cada
+          volta e o feixe cresce sem perder a sincronia.
+        fr: >-
+          En traversant l'espace entre électrodes toujours dans la même phase, la particule reçoit de l'énergie
+          à chaque tour et le faisceau grossit sans jamais perdre la synchronisation.
+        zh: >-
+          粒子只在同一相位穿过电极缝隙,于是每转一圈都获得新的能量,束流不断增强而始终不失同步。
+        ja: >-
+          電極の隙間を同じ位相でだけ横切るようにすれば、粒子は1周ごとに新たなエネルギーを受け取り、束は
+          同期を失わずに太くなる。
+  example:
+    title:
+      es: Un protón en un tesla
+      en: A proton in one tesla
+      pt: Um próton em um tesla
+      fr: Un proton dans un tesla
+      zh: 一特斯拉下的质子
+      ja: 1テスラでの陽子
+    lines:
+      - es: q = 1,602·10⁻¹⁹ C y m = 1,673·10⁻²⁷ kg
+        en: q = 1.602·10⁻¹⁹ C and m = 1.673·10⁻²⁷ kg
+        pt: q = 1,602·10⁻¹⁹ C e m = 1,673·10⁻²⁷ kg
+        fr: q = 1,602·10⁻¹⁹ C et m = 1,673·10⁻²⁷ kg
+        zh: q = 1.602·10⁻¹⁹ C,m = 1.673·10⁻²⁷ kg
+        ja: q = 1.602·10⁻¹⁹ C、m = 1.673·10⁻²⁷ kg
+      - es: f = (1,602·10⁻¹⁹ × 1,0)/(2π × 1,673·10⁻²⁷)
+        en: f = (1.602·10⁻¹⁹ × 1.0)/(2π × 1.673·10⁻²⁷)
+        pt: f = (1,602·10⁻¹⁹ × 1,0)/(2π × 1,673·10⁻²⁷)
+        fr: f = (1,602·10⁻¹⁹ × 1,0)/(2π × 1,673·10⁻²⁷)
+        zh: f = (1.602·10⁻¹⁹ × 1.0)/(2π × 1.673·10⁻²⁷)
+        ja: f = (1.602·10⁻¹⁹ × 1.0)/(2π × 1.673·10⁻²⁷)
+      - es: f = 1,52·10⁷ Hz = 15,2 MHz
+        en: f = 1.52·10⁷ Hz = 15.2 MHz
+        pt: f = 1,52·10⁷ Hz = 15,2 MHz
+        fr: f = 1,52·10⁷ Hz = 15,2 MHz
+        zh: f = 1.52·10⁷ Hz = 15.2 MHz
+        ja: f = 1.52·10⁷ Hz = 15.2 MHz
+      - es: El período es 1/f ≈ 65,6 ns
+        en: The period is 1/f ≈ 65.6 ns
+        pt: O período é 1/f ≈ 65,6 ns
+        fr: La période vaut 1/f ≈ 65,6 ns
+        zh: 周期为 1/f ≈ 65.6 ns
+        ja: 周期は 1/f ≈ 65.6 ns
+      - es: "El mismo protón y el mismo B: f no depende de v"
+        en: "Same proton, same B: f does not depend on v"
+        pt: "O mesmo próton e o mesmo B: f não depende de v"
+        fr: "Même proton, même B : f ne dépend pas de v"
+        zh: 同一质子、同一磁场:f 与 v 无关
+        ja: 同じ陽子と同じ B なら、f は v に依存しない

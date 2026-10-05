@@ -1,0 +1,415 @@
+id: vis-viva-equation
+title:
+  es: Ecuación de Vis Viva
+  en: Vis Viva Equation
+  pt: Equação de Vis Viva
+  fr: Équation de Vis Viva
+  zh: 活力方程
+  ja: ヴィ・ヴィヴァの方程式
+category:
+  es: Astronomía
+  en: Astronomy
+  pt: Astronomia
+  fr: Astronomie
+  zh: 天文学
+  ja: 天文学
+nodes:
+  - id: v-sq
+    type: variable
+    value: v²
+    explanation:
+      es: "v²: el cuadrado de la velocidad relativa de los dos cuerpos en ese punto de la órbita."
+      en: "v²: the square of the relative speed of the two bodies at that point of the orbit."
+      pt: "v²: o quadrado da velocidade relativa dos dois corpos naquele ponto da órbita."
+      fr: "v² : le carré de la vitesse relative des deux corps en ce point de l'orbite."
+      zh: "v²：两个天体在该轨道点上相对速度的平方。"
+      ja: "v²：軌道のその点で二つの天体がもつ相対速度の二乗。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: g-const
+    type: constant
+    value: G
+    explanation:
+      es: "G: la constante de gravitación universal."
+      en: "G: the universal gravitational constant."
+      pt: "G: a constante de gravitação universal."
+      fr: "G : la constante de gravitation universelle."
+      zh: "G：万有引力常数。"
+      ja: "G：万有引力定数で、どの重力の法則にも現れる同じ値。"
+  - id: dot-a
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por la masa del cuerpo central.
+      en: Multiplied by the mass of the central body.
+      pt: Multiplicado pela massa do corpo central.
+      fr: Multiplié par la masse du corps central.
+      zh: 乘以中心天体的质量。
+      ja: 中心天体の質量を掛ける。
+  - id: m-central
+    type: variable
+    value: M
+    explanation:
+      es: "M: la masa del cuerpo alrededor del cual se gira; si hay dos, es la suma de ambas."
+      en: "M: the mass of the body being orbited; with two bodies it is the sum of both."
+      pt: "M: a massa do corpo ao redor do qual se gira; havendo dois, é a soma dos dois."
+      fr: "M : la masse du corps autour duquel on tourne ; s'il y en a deux, c'est leur somme."
+      zh: "M：被绕转天体的质量；若有两个天体，则为两者之和。"
+      ja: "M：回り道の中心天体の質量。二つあるならその総和である。"
+  - id: dot-b
+    type: operator
+    value: ·
+    explanation:
+      es: Y multiplicado por el paréntesis que sigue.
+      en: And multiplied by the parenthesis that follows.
+      pt: E multiplicado pelo parêntese que segue.
+      fr: Et multiplié par la parenthèse qui suit.
+      zh: 再乘以后面的括号。
+      ja: 続く括弧を掛ける。
+  - id: paren-open
+    type: operator
+    value: "("
+    explanation:
+      es: Abre el paréntesis con las dos formas de la energía.
+      en: Opens the parenthesis holding the two forms of the energy.
+      pt: Abre o parêntese com as duas formas da energia.
+      fr: Ouvre la parenthèse contenant les deux formes de l'énergie.
+      zh: 打开包含两种能量形式的括号。
+      ja: エネルギーの二つの形を入れる括弧を開く。
+  - id: two
+    type: number
+    value: "2"
+    explanation:
+      es: "El 2 de la energía potencial, siempre presente aunque la órbita sea una elipse."
+      en: The 2 of the potential energy, always present even for an elliptical orbit.
+      pt: O 2 da energia potencial, sempre presente mesmo numa órbita elíptica.
+      fr: Le 2 de l'énergie potentielle, toujours présent même pour une orbite elliptique.
+      zh: 势能项里的 2，即使是椭圆轨道也一直在。
+      ja: 位置エネルギー側の 2。楕円軌道でも必ず現れる。
+  - id: frac-a
+    type: operator
+    value: /
+    explanation:
+      es: "La primera división: 2 partido por la distancia actual."
+      en: "The first division: 2 split by the current distance."
+      pt: "A primeira divisão: 2 dividido pela distância atual."
+      fr: "La première division : 2 divisée par la distance actuelle."
+      zh: "第一个除号：2 除以当前距离。"
+      ja: "最初の割り算。2 をそのときの距離で割る。"
+  - id: r
+    type: variable
+    value: r
+    explanation:
+      es: "r: la distancia actual entre los dos cuerpos; en el periastro es la menor."
+      en: "r: the current distance between the two bodies; at periapsis it is the smallest."
+      pt: "r: a distância atual entre os dois corpos; no periastro é a menor."
+      fr: "r : la distance actuelle entre les deux corps ; au périapse elle est la plus faible."
+      zh: "r：两个天体当前的距离；在近拱点处最小。"
+      ja: "r：二つ天体の現在の距離。近拱点では最小になる。"
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "El signo menos que invierte el sentido: la elipse es lenta y la parábola es fugitiva."
+      en: "The minus sign that flips the sense: the ellipse is slow and the parabola escapes."
+      pt: "O sinal de menos que inverte o sentido: a elipse é lenta e a parábola é fugitiva."
+      fr: "Le signe moins qui inverse le sens : l'ellipse est lente et la parabole est fugitive."
+      zh: "这个负号把方向反过来：椭圆是慢的，抛物线则是逃走的。"
+      ja: "向きを反転させるマイナス符号。楕円はゆっくりで、離れる軌道は放物線である。"
+  - id: one
+    type: number
+    value: "1"
+    explanation:
+      es: El uno del término que fija la forma y el tamaño de la órbita.
+      en: The one in the term that fixes the shape and size of the orbit.
+      pt: O um do termo que fixa a forma e o tamanho da órbita.
+      fr: Le un du terme qui fixe la forme et la taille de l'orbite.
+      zh: 决定轨道形状与大小的那一项里的 1。
+      ja: 軌道の形と大きさを決める項の 1。
+  - id: frac-b
+    type: operator
+    value: /
+    explanation:
+      es: Dividido por el semieje mayor.
+      en: Divided by the semimajor axis.
+      pt: Dividido pelo semieixo maior.
+      fr: Divisé par le demi-grand axe.
+      zh: 除以半长轴。
+      ja: 半長軸で割る。
+  - id: a
+    type: variable
+    value: a
+    explanation:
+      es: "a: el semieje mayor de la elipse, la única medida que hace falta de la órbita."
+      en: "a: the semimajor axis of the ellipse, the only measure of the orbit that is needed."
+      pt: "a: o semieixo maior da elipse, a única medida da órbita que é necessária."
+      fr: "a : le demi-grand axe de l'ellipse, la seule mesure de l'orbite qui soit nécessaire."
+      zh: "a：椭圆的半长轴，也是描述这条轨道唯一需要的量。"
+      ja: "a：楕円の半長軸。軌道を知るためにこの一量だけでよい。"
+  - id: paren-close
+    type: operator
+    value: ")"
+    explanation:
+      es: Cierra el paréntesis.
+      en: Closes the parenthesis.
+      pt: Fecha o parêntese.
+      fr: Ferme la parenthèse.
+      zh: 关闭括号。
+      ja: 括弧を閉じる。
+context:
+  author:
+    es: Atribución clásica
+    en: Classical attribution
+    pt: Atribuição clássica
+    fr: Attribution classique
+    zh: 经典归属
+    ja: ふつうの由来
+  era:
+    es: Siglo XVII · predecessors de Kepler y de Johann Bernoulli
+    en: 17th century · predecessors of Kepler and Johann Bernoulli
+    pt: Século XVII · antecessores de Kepler e de Johann Bernoulli
+    fr: XVIIe siècle · précurseurs de Kepler et de Johann Bernoulli
+    zh: 17 世纪 · 开普勒与约翰·伯努利的前辈
+    ja: 17世紀 · ケプラーとヨハン・ベルヌイの先人達
+  history:
+    es: >-
+      La relación se elaboró durante el siglo XVII y su paternidad no está del todo clara: Kepler
+      publicó una forma equivalente en 1609, mientras que la forma que hoy usamos se asocia a
+      Johann Bernoulli, que resolvió el problema de Kepler con método de cálculo. El nombre viene de
+      la vis viva latina, la fuerza viva de Leibniz, en el debate que enfrentó a sus seguidores con
+      los de Descartes sobre cuál es la medida correcta de la energía de un cuerpo en movimiento.
+      La gracia de la relación es que resume la órbita entera en una sola línea: basta conocer el
+      semieje mayor y la distancia actual para saber la velocidad, sin resolver la trayectoria.
+    en: >-
+      The relation was worked out during the 17th century and its authorship is not entirely clear:
+      Kepler published an equivalent form in 1609, while the form used today is associated with
+      Johann Bernoulli, who solved Kepler's problem by calculation. The name comes from the Latin vis
+      viva, Leibniz's living force, from the debate that set his followers against Descartes' over
+      the correct measure of the energy of a moving body. The charm of the relation is that it sums
+      up a whole orbit in a single line: knowing the semimajor axis and the current distance is
+      enough to get the speed, with no need to solve the trajectory.
+    pt: >-
+      A relação foi elaborada ao longo do século XVII e sua paternidade não está totalmente clara:
+      Kepler publicou uma forma equivalente em 1609, enquanto a forma usada hoje é associada a
+      Johann Bernoulli, que resolveu o problema de Kepler por método de cálculo. O nome vem do latim
+      vis viva, a força viva de Leibniz, do debate que opôs seus seguidores aos de Descartes sobre
+      qual é a medida correta da energia de um corpo em movimento. O encanto da relação é que resume
+      toda a órbita numa única linha: basta conhecer o semieixo maior e a distância atual para saber
+      a velocidade, sem resolver a trajetória.
+    fr: >-
+      La relation fut élaborée au XVIIe siècle et sa paternité n'est pas tout à fait claire : Kepler
+      publia une forme équivalente en 1609, tandis que la forme utilisée aujourd'hui est associée à
+      Johann Bernoulli, qui résolut le problème de Kepler par le calcul. Le nom vient du latin vis
+      viva, la force vive de Leibniz, du débat qui opposa ses partisans à ceux de Descartes sur la
+      juste mesure de l'énergie d'un corps en mouvement. Le charme de la relation est de résumer toute
+      une orbite en une seule ligne : connaître le demi-grand axe et la distance actuelle suffit pour
+      la vitesse, sans résoudre la trajectoire.
+    zh: >-
+      这一关系在 17 世纪成形，作者归属却并不十分清楚：开普勒在 1609 年发表过一个等价形式，而今天使用的写法通常
+      与约翰·伯努利联系在一起，他用计算方法解出了开普勒问题。名称来自拉丁文 vis viva，即莱布尼茨的「活力」，
+      源自那场把莱布尼茨追随者与笛卡尔追随者对立起来的辩论：运动的物体其能量究竟该怎样度量。这条关系的妙处在于
+      它把整条轨道压缩成一行：只要知道半长轴与当前距离，无需求解轨迹就能得到速度。
+    ja: >-
+      この関係は17世紀にまとめられ、その出どころは必ずしも明確ではない。ケプラーは1609年に同形の関係を発表し、今日
+      用いられる形は、計算によってケプラーの問題を解いたヨハン・ベルヌイの名に連結される。名前はラテン語の vis viva、
+      つまりライプニッツの「活力」に由来し、動いている物体のエネルギーをどう測るかをめぐる議論で語られた。この関係
+      の長所は軌道全体を一行にまとめられることで、半長軸と現在の距離さえ分かれば、軌道を解かずに速度が求まる。
+  timeline:
+    - year: "1609"
+      label:
+        es: >-
+          Kepler publica en Astronomia Nova una forma equivalente, deducida de sus dos primeras
+          leyes.
+        en: >-
+          Kepler publishes an equivalent form in the Astronomia Nova, deduced from his first two
+          laws.
+        pt: >-
+          Kepler publica na Astronomia Nova uma forma equivalente, deduzida das suas duas primeiras
+          leis.
+        fr: >-
+          Kepler publie dans l'Astronomia Nova une forme équivalente, déduite de ses deux premières
+          lois.
+        zh: >-
+          开普勒在《新天文学》中发表了一个等价形式，由他的前两条定律推出。
+        ja: >-
+          ケプラーが『新天文学』で、最初の二つの法則から導いた同じ関係を発表した。
+    - year: "1696"
+      label:
+        es: >-
+          Johann Bernoulli resuelve el problema de Kepler y da a la relación su forma moderna, la que
+          lleva el nombre de vis viva.
+        en: >-
+          Johann Bernoulli solves Kepler's problem and gives the relation its modern form, the one
+          that carries the name vis viva.
+        pt: >-
+          Johann Bernoulli resolve o problema de Kepler e dá à relação sua forma moderna, a que leva
+          o nome de vis viva.
+        fr: >-
+          Johann Bernoulli résout le problème de Kepler et donne à la relation sa forme moderne,
+          celle qui porte le nom de vis viva.
+        zh: >-
+          约翰·伯努利解决了开普勒问题，并给出该关系的现代形式，即后来称为活力方程的写法。
+        ja: >-
+          ヨハン・ベルヌイがケプラーの問題を解き、この関係に今日の形を与えた。vis viva という名前で呼ばれる。
+    - year: "1846"
+      label:
+        es: >-
+          Le Verrier usa la velocidad orbital de Neptuno para deducir su existencia antes de verlo, y
+          la relación da la velocidad exacta que hace falta.
+        en: >-
+          Le Verrier uses orbital velocity for Neptune to deduce its existence before seeing it, and
+          the relation supplies the exact speed needed.
+        pt: >-
+          Le Verrier usa a velocidade orbital de Netuno para deduzir sua existência antes de vê-lo, e
+          a relação dá a velocidade exata que é necessária.
+        fr: >-
+          Le Verrier utilise la vitesse orbitale de Neptune pour en déduire l'existence avant de le
+          voir, et la relation fournit la vitesse exacte qu'il faut.
+        zh: >-
+          勒维耶用海王星的轨道速度在看到它之前就推断出它的存在，而该关系给出的正是所需的精确速度。
+        ja: >-
+          ルヴェリエは海王星の軌道速度から、肉眼で見る前にその天体があることを導き出した。
+    - year: Hoy
+      label:
+        es: >-
+          Sigue siendo la forma más cómoda de convertir una órbita medida en una velocidad, y de
+          esa velocidad en una energía.
+        en: >-
+          It remains the neatest way to turn a measured orbit into a speed, and that speed into an
+          energy.
+        pt: >-
+          Segue sendo a forma mais prática de converter uma órbita medida em velocidade, e essa
+          velocidade em energia.
+        fr: >-
+          Elle reste le moyen le plus commode de transformer une orbite mesurée en vitesse, et cette
+          vitesse en énergie.
+        zh: >-
+          它仍是最便捷的方式：把测得的轨道变成速度，再把速度变成能量。
+        ja: >-
+          測った軌道，速度、エネルギーへ変える、いちばん簡便な形でありつづけている。
+  useCases:
+    - title:
+        es: Velocidad en cualquier punto
+        en: Speed at any point
+        pt: Velocidade em qualquer ponto
+        fr: Vitesse en tout point
+        zh: 任意点的速度
+        ja: 軌道上のどの点での速度
+      description:
+        es: >-
+          Conocer el semieje mayor y la distancia en ese instante basta para tener la velocidad,
+          sin integrar la trayectoria.
+        en: >-
+          Knowing the semimajor axis and the distance at that instant is enough to get the speed,
+          without integrating the trajectory.
+        pt: >-
+          Conhecer o semieixo maior e a distância naquele instante basta para obter a velocidade,
+          sem integrar a trajetória.
+        fr: >-
+          Connaître le demi-grand axe et la distance à cet instant suffit pour obtenir la vitesse,
+          sans intégrer la trajectoire.
+        zh: >-
+          只要知道半长轴和该时刻的距离，不必积分轨道就能得到速度。
+        ja: >-
+          半長軸と、そのときの距離を知れば、軌道を積分しなくても速度が求まる。
+    - title:
+        es: Caso de la velocidad de escape
+        en: The escape velocity case
+        pt: O caso da velocidade de escape
+        fr: Le cas de la vitesse de libération
+        zh: 逃逸速度的情形
+        ja: 脱出速度の場合
+      description:
+        es: >-
+          Si el semieje mayor tiende a infinito la órbita es una parábola y la relación se reduce a
+          v² = 2GM/r.
+        en: >-
+          If the semimajor axis tends to infinity the orbit is a parabola and the relation reduces
+          to v² = 2GM/r.
+        pt: >-
+          Se o semieixo maior tende a infinito a órbita é uma parábola e a relação se reduz a
+          v² = 2GM/r.
+        fr: >-
+          Si le demi-grand axe tend vers l'infini, l'orbite est une parabole et la relation se réduit
+          à v² = 2GM/r.
+        zh: >-
+          当半长轴趋于无穷时轨道是抛物线，关系式化为 v² = 2GM/r。
+        ja: >-
+          半長軸が無限大に近づくと軌道は放物線となり、この式は v² = 2GM/r になる。
+    - title:
+        es: Descubrimiento de planetas
+        en: Planet discovery
+        pt: Descoberta de planetas
+        fr: Découverte de planètes
+        zh: 行星发现
+        ja: 惑星の発見
+      description:
+        es: >-
+          Las perturbaciones en la órbita de un planeta conocido permiten calcular la velocidad
+          del cuerpo invisible y encontrarlo.
+        en: >-
+          Perturbations in a known planet's orbit let one compute the speed of the unseen body and
+          find it.
+        pt: >-
+          Perturbações na órbita de um planeta conhecido permitem calcular a velocidade do corpo
+          invisível e encontrá-lo.
+        fr: >-
+          Les perturbations de l'orbite d'une planète connue permettent de calculer la vitesse du
+          corps invisible et de le trouver.
+        zh: >-
+          已知行星轨道上的摄动，可以算出那个看不见天体的速度，从而找到它。
+        ja: >-
+          既知の惑星の軌道が乱れることから、見えない天体の速度を計算して見つけ出す。
+  example:
+    title:
+      es: La Tierra en su órbita
+      en: The Earth in its orbit
+      pt: A Terra em sua órbita
+      fr: La Terre sur son orbite
+      zh: 地球在其轨道上
+      ja: 軌道上の地球
+    lines:
+      - es: "Sol: G · M = 1,327 · 10²⁰ m³/s²"
+        en: "Sun: G · M = 1.327 · 10²⁰ m³/s²"
+        pt: "Sol: G · M = 1,327 · 10²⁰ m³/s²"
+        fr: "Soleil : G · M = 1,327 · 10²⁰ m³/s²"
+        zh: "太阳：G · M = 1,327 · 10²⁰ m³/s²"
+        ja: "太陽：G · M = 1,327 · 10²⁰ m³/s²"
+      - es: "Semieje mayor: a = 1,496 · 10¹¹ m"
+        en: "Semimajor axis: a = 1.496 · 10¹¹ m"
+        pt: "Semieixo maior: a = 1,496 · 10¹¹ m"
+        fr: "Demi-grand axe : a = 1,496 · 10¹¹ m"
+        zh: "半长轴：a = 1,496 · 10¹¹ m"
+        ja: "半長軸：a = 1,496 · 10¹¹ m"
+      - es: "Órbita circular (r = a): 2/r − 1/a = 1/a"
+        en: "Circular orbit (r = a): 2/r − 1/a = 1/a"
+        pt: "Órbita circular (r = a): 2/r − 1/a = 1/a"
+        fr: "Orbite circulaire (r = a) : 2/r − 1/a = 1/a"
+        zh: "圆轨道（r = a）：2/r − 1/a = 1/a"
+        ja: "円軌道（r = a）：2/r − 1/a = 1/a"
+      - es: "v² = 1,327 · 10²⁰ / 1,496 · 10¹¹ = 8,87 · 10⁸ m²/s²"
+        en: "v² = 1.327 · 10²⁰ / 1.496 · 10¹¹ = 8.87 · 10⁸ m²/s²"
+        pt: "v² = 1,327 · 10²⁰ / 1,496 · 10¹¹ = 8,87 · 10⁸ m²/s²"
+        fr: "v² = 1,327 · 10²⁰ / 1,496 · 10¹¹ = 8,87 · 10⁸ m²/s²"
+        zh: "v² = 1,327 · 10²⁰ / 1,496 · 10¹¹ = 8,87 · 10⁸ m²/s²"
+        ja: "v² = 1,327 · 10²⁰ / 1,496 · 10¹¹ = 8,87 · 10⁸ m²/s²"
+      - es: "v = 2,98 · 10⁴ m/s ≈ 29,8 km/s"
+        en: "v = 2.98 · 10⁴ m/s ≈ 29.8 km/s"
+        pt: "v = 2,98 · 10⁴ m/s ≈ 29,8 km/s"
+        fr: "v = 2,98 · 10⁴ m/s ≈ 29,8 km/s"
+        zh: "v = 2,98 · 10⁴ m/s ≈ 29,8 km/s"
+        ja: "v = 2,98 · 10⁴ m/s ≈ 29,8 km/s"
+      - es: "Con a → ∞ queda una parábola: v = 42,1 km/s, la velocidad de escape"
+        en: "With a → ∞ the orbit is a parabola: v = 42.1 km/s, the escape speed"
+        pt: "Com a → ∞ a órbita é uma parábola: v = 42,1 km/s, a velocidade de escape"
+        fr: "Avec a → ∞ l'orbite est une parabole : v = 42,1 km/s, la vitesse de libération"
+        zh: "当 a → ∞ 时轨道是抛物线：v = 42,1 km/s，即逃逸速度"
+        ja: "a → ∞ で軌道は放物線。v = 42,1 km/s は脱出速度である"

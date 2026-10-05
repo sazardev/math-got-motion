@@ -1,0 +1,322 @@
+id: chandrasekhar-limit
+title:
+  es: Límite de Chandrasekhar
+  en: Chandrasekhar Limit
+  pt: Limite de Chandrasekhar
+  fr: Limite de Chandrasekhar
+  zh: 钱德拉塞卡极限
+  ja: チャンドラセカー限界
+category:
+  es: Astronomía
+  en: Astronomy
+  pt: Astronomia
+  fr: Astronomie
+  zh: 天文学
+  ja: 天文学
+nodes:
+  - id: m-limit
+    type: variable
+    value: M
+    explanation:
+      es: "M: la masa de la enana blanca; por encima de este valor la gravedad no se sostiene."
+      en: "M: the mass of the white dwarf; above this value gravity can no longer be held back."
+      pt: "M: a massa da anã branca; acima deste valor a gravidade não se sustenta."
+      fr: "M : la masse de la naine blanche ; au-delà, la gravitation ne peut plus être retenue."
+      zh: "M：白矮星的质量；超过这个值，引力再也托不住了。"
+      ja: "M：白矮星の質量。これを超えると重力を支えきれなくなる。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Vale como máximo.
+      en: Is at most.
+      pt: Vale no máximo.
+      fr: Vaut au maximum.
+      zh: 最大只能等于。
+      ja: 高々この値である。
+  - id: one
+    type: number
+    value: 1,44
+    explanation:
+      es: La parte entera del coeficiente.
+      en: The whole part of the coefficient.
+      pt: A parte inteira do coeficiente.
+      fr: La partie entière du coefficient.
+      zh: 系数的整数部分。
+      ja: 係数の整数部分。
+  - id: dot
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por.
+      en: Multiplied by.
+      pt: Multiplicado por.
+      fr: Multiplié par.
+      zh: 乘以。
+      ja: を掛ける。
+  - id: m-sun
+    type: constant
+    value: M_sol
+    explanation:
+      es: "M_sol: la masa del Sol, la unidad natural para esta fórmula."
+      en: "M_sol: the Sun's mass, the natural unit for this formula."
+      pt: "M_sol: a massa do Sol, a unidade natural para esta fórmula."
+      fr: "M_sol : la masse du Soleil, l'unité naturelle pour cette formule."
+      zh: "M_sol：太阳的质量，这个公式的自然单位。"
+      ja: "M_sol：太陽の質量。この式では自然な単位になる。"
+context:
+  author:
+    es: Subrahmanyan Chandrasekhar
+    en: Subrahmanyan Chandrasekhar
+    pt: Subrahmanyan Chandrasekhar
+    fr: Subrahmanyan Chandrasekhar
+    zh: 苏布拉马尼亚·钱德拉塞卡
+    ja: スブラマニヤン・チャンドラセカー
+  era:
+    es: Chicago, 1931 · Monthly Notices of the RAS
+    en: Chicago, 1931 · Monthly Notices of the RAS
+    pt: Chicago, 1931 · Monthly Notices of the RAS
+    fr: Chicago, 1931 · Monthly Notices of the RAS
+    zh: 芝加哥,1931年 · 英国皇家天文学会月报
+    ja: シカゴ、1931年 · 『Monthly Notices of the RAS』
+  history:
+    es: >-
+      En 1931 Subrahmanyan Chandrasekhar se preguntó qué masa máxima puede sostener una enana
+      blanca, es decir una estrella muerta que se apoya únicamente en la presión de degeneración de
+      sus electrones. Al tratar a esos electrones con la relatividad, no con la mecánica newtoniana,
+      encontró que la presión que pueden generar tiene un techo: más masa, y la gravedad vence. El
+      resultado es un límite de alrededor de 1,44 masas solares, muy próximo al valor que dan los
+      modelos actuales. Una enana blanca por debajo de él simplemente se enfría y se apaga; una que
+      lo supera, normalmente por ganar masa de una compañera binaria, colapsa y libera la energía
+      bastante para una supernova de tipo Ia, la supernova estándar con la que se miden distancias
+      cósmicas. La supernova de 1987A fue en cambio un colapso de núcleo de una supergigante azul, no
+      una enana blanca, así que este límite no aplica a aquel caso.
+    en: >-
+      In 1931 Subrahmanyan Chandrasekhar asked how much mass a white dwarf can hold, that is, a dead
+      star supported only by the degeneracy pressure of its electrons. Treating those electrons
+      relativistically rather than classically, he found that the pressure they can generate has a
+      ceiling: past it, gravity wins. The result is a limit of about 1.44 solar masses, very close to
+      what models give today. A white dwarf below it simply cools and fades; one that goes over it,
+      usually by accreting from a binary companion, collapses and releases enough energy for a type Ia
+      supernova, the standard supernova used to measure cosmic distances. Supernova 1987A was
+      instead a core collapse of a blue supergiant, not a white dwarf, so the limit does not apply to
+      that event.
+    pt: >-
+      Em 1931 Subrahmanyan Chandrasekhar perguntou que massa máxima uma anã branca consegue
+      sustentar, isto é, uma estrela morta apoiada apenas na pressão de degeneração dos seus elétrons.
+      Tratando esses elétrons de forma relativista e não clássica, ele encontrou que a pressão que
+      podem gerar tem um teto: acima dele, a gravidade vence. O resultado é um limite de cerca de 1,44
+      massas solares, muito próximo do que os modelos dão hoje. Uma anã branca abaixo dele apenas
+      esfria e apaga; uma que o ultrapassa, normalmente por ganhar massa de uma companheira binária,
+      colapsa e libera energia suficiente para uma supernova do tipo Ia, a supernova padrão com a
+      qual se medem distâncias cósmicas. A supernova de 1987A foi, ao contrário, um colapso de
+      núcleo de uma supergigante azul, não uma anã branca, e por isso este limite não se aplica a
+      ela.
+    fr: >-
+      En 1931, Subrahmanyan Chandrasekhar se demanda quelle masse maximale une naine blanche peut
+      soutenir, c'est-à-dire une étoile morte qui ne repose que sur la pression de dégénérescence de
+      ses électrons. En traitant ces électrons de façon relativiste et non classique, il trouva que
+      la pression qu'ils peuvent produire a un plafond : au-delà, la gravitation l'emporte. Le
+      résultat est une limite d'environ 1,44 masses solaires, très proche de celle que donnent les
+      modèles actuels. Une naine blanche en dessous refroidit et s'éteint simplement ; une qui la
+      franchit, généralement en accrétant de sa compagne binaire, s'effondre et libère assez
+      d'énergie pour une supernova de type Ia, la supernova standard servant à mesurer les distances
+      cosmiques. La supernova de 1987A fut au contraire un effondrement de cœur d'une supergéante
+      bleue, et non une naine blanche : la limite ne s'y applique pas.
+    zh: >-
+      1931 年，苏布拉马尼亚·钱德拉塞卡提出白矮星最多能支撑多少质量。白矮星是一颗已死去的星，只靠电子的简并压
+      支撑。他用相对论而非经典力学来处理这些电子，发现它们能产生的压力存在一个上限：越过上限，引力获胜。结果
+      是约 1.44 个太阳质量的极限，与今天模型给出的数值非常接近。低于此值的白矮星只会逐渐冷却、暗淡；越过此值的
+      ——通常是从双星伴星吸积质量所致——则会坍缩，释放出足以产生 Ia 型超新星的能量，那就是用来测量宇宙距离的
+      「标准超新星」。1987A 超新星其实是一颗蓝超巨星的核心坍缩，而非白矮星，因此这个极限并不适用于该事件。
+    ja: >-
+      1931年、スブラマニヤン・チャンドラセカーは、白矮星が支えうる質量がどれほどあるかを論じた。白矮星とは、電子の
+      縮退圧だけで保たれている死んだ星のことである。彼はこれらの電子を古典力学ではなく相対論として扱い、そこから生じる
+      圧力に上限があることを示した。上限を超えると重力が勝つ。結果は太陽質量の約1,44倍という限界で、今日の理論模型が
+      与える値とよく一致する。白矮星がこの値を下回れば冷えて消えるだけである。しかしこれを超えた白矮星は、ふつうは
+      連星の相手から質量を奪って界限を越え、一気に崩壊してIa型超新星を起こす。この超新星は宇宙の距離を測る基準と
+      して使われる。1987A超新星は青超巨星のコア崩壊であって白矮星の爆発ではないため、この限界は当てはまらない。
+  timeline:
+    - year: "1931"
+      label:
+        es: >-
+          Chandrasekhar publica en Monthly Notices el cálculo del tope de masa que la presión de
+          degeneración puede sostener.
+        en: >-
+          Chandrasekhar publishes in the Monthly Notices his calculation of the mass ceiling that
+          degeneracy pressure can sustain.
+        pt: >-
+          Chandrasekhar publica no Monthly Notices o cálculo do teto de massa que a pressão de
+          degeneração pode sustentar.
+        fr: >-
+          Chandrasekhar publie dans le Monthly Notices son calcul du plafond de masse que la pression
+          de dégénérescence peut soutenir.
+        zh: >-
+          钱德拉塞卡在《月报》上发表计算，给出简并压所能支撑的质量上限。
+        ja: >-
+          チャンドラセカーが『Monthly Notices』上で、縮退圧が支えうる質量の上限を計算して発表。
+    - year: "1950s"
+      label:
+        es: >-
+          Al corregir el peso molecular medio del gas de electrones totalmente degenerado, el valor
+          queda cerca de 1,44 masas solares.
+        en: >-
+          Once the mean molecular weight of the fully degenerate electron gas is corrected, the value
+          settles at about 1.44 solar masses.
+        pt: >-
+          Ao corrigir o peso molecular médio do gás de elétrons totalmente degenerado, o valor fica
+          perto de 1,44 massas solares.
+        fr: >-
+          Une fois corrigé le poids moléculaire moyen du gaz d'électrons totalement dégénéré, la
+          valeur se fixe aux environs de 1,44 masses solaires.
+        zh: >-
+          在修正完全简并电子气的平均分子量之后，极限值稳定在约 1.44 个太阳质量。
+        ja: >-
+          完全に縮退した電子気体の平均分子量を直すと、値は太陽質量の 1,44 倍付近に落ち着く。
+    - year: "1998"
+      label:
+        es: >-
+          Supernovas lejanas de tipo Ia, usadas como candela estándar, revelan que la expansión del
+          universo se está acelerando.
+        en: >-
+          Distant type Ia supernovae, used as standard candles, reveal that the expansion of the
+          universe is accelerating.
+        pt: >-
+          Supernovas distantes do tipo Ia, usadas como vela padrão, revelam que a expansão do
+          universo está acelerando.
+        fr: >-
+          Des supernovae de type Ia lointaines, utilisées comme bougies standard, révèlent que
+          l'expansion de l'univers s'accélère.
+        zh: >-
+          作为标准烛光的遥远 Ia 型超新星揭示：宇宙的膨胀正在加速。
+        ja: >-
+          標準キャンドルとして使われる遠いIa型超新星が、宇宙の膨張が加速していることを示した。
+    - year: Hoy
+      label:
+        es: >-
+          Es la regla práctica para saber qué le pasa a una enana blanca que gana masa.
+        en: >-
+          It is the practical rule for knowing what happens to a white dwarf that gains mass.
+        pt: >-
+          É a regra prática para saber o que acontece com uma anã branca que ganha massa.
+        fr: >-
+          C'est la règle pratique pour savoir ce qu'il advient d'une naine blanche qui gagne de la
+          masse.
+        zh: >-
+          它成了判断一颗正在增质量的白矮星会发生什么的实用准则。
+        ja: >-
+          質量を増やした白矮星に何が起こるかを見極める、実際に使える基準になっている。
+  useCases:
+    - title:
+        es: Supernovas de tipo Ia
+        en: Type Ia supernovae
+        pt: Supernovas do tipo Ia
+        fr: Supernovas de type Ia
+        zh: Ia 型超新星
+        ja: Ia型超新星
+      description:
+        es: >-
+          El colapso que libera energía está ligado al tope de masa, y como todas brillan casi igual, el
+          brillo se puede convertir en distancia.
+        en: >-
+          The collapse is tied to the mass ceiling, and since these events all shine about equally,
+          brightness converts into distance.
+        pt: >-
+          O colapso libera energia ligada ao teto de massa e, como todos brilham quase igual, o
+          brilho se converte em distância.
+        fr: >-
+          L'effondrement libère une énergie liée au plafond de masse et, comme tous brillent à peu
+          près pareil, la luminosité se convertit en distance.
+        zh: >-
+          坍缩释放的能量与这个质量上限相连，而由于它们亮度几乎相同，亮度就可以换算成距离。
+        ja: >-
+          崩壊で解放されるエネルギーは質量の天井と結びついていて、明るさがほぼ等しいので、光度を距離に換算できる。
+    - title:
+        es: Enanas blancas en binarias
+        en: White dwarfs in binaries
+        pt: Anãs brancas em binárias
+        fr: Naines blanches en binaries
+        zh: 双星中的白矮星
+        ja: 連星の中の白矮星
+      description:
+        es: >-
+          Una enana blanca que roba materia de su compañera puede cruzar el límite desde abajo y
+          colapsar sin que ningún aviso visible la delate.
+        en: >-
+          A white dwarf stealing matter from its companion can cross the limit from below and
+          collapse with no visible warning.
+        pt: >-
+          Uma anã branca que rouba matéria da companheira pode cruzar o limite por baixo e
+          colapsar sem nenhum aviso visível.
+        fr: >-
+          Une naine blanche qui vole de la matière à sa compagne peut franchir la limite par le bas
+          et s'effondrer sans aucun avertissement visible.
+        zh: >-
+          从伴星身上夺取物质的白矮星可以从下方越过这个极限并坍缩，事先没有任何可见的征兆。
+        ja: >-
+          連星の相手から物質を奪う白矮星は、下から静かに限界を越えて崩壊することがある。事前の合図はない。
+    - title:
+        es: Fin de las enanas blancas
+        en: Fate of white dwarfs
+        pt: Destino das anãs brancas
+        fr: Sort des naines blanches
+        zh: 白矮星的归宿
+        ja: 白矮星の最後
+      description:
+        es: >-
+          Ninguna enana blanca puede seguir quemando combustible nuclear: al acabarse se enfría y
+          acaba como enana negra, un cuerpo que el universo todavía no ha tenido tiempo de
+          enfriar.
+        en: >-
+          No white dwarf can keep burning nuclear fuel: once it is gone the star cools and ends as
+          a black dwarf, a state the universe has not had time to reach yet.
+        pt: >-
+          Nenhuma anã branca continua queimando combustível nuclear: quando ele acaba, a estrela
+          esfria e vira anã negra, um estado que o universo ainda não teve tempo de alcançar.
+        fr: >-
+          Aucune naine blanche ne peut continuer à brûler du combustible nucléaire : une fois
+          épuisé, l'étoile refroidit et devient une naine noire, un état que l'univers n'a pas encore
+          eu le temps d'atteindre.
+        zh: >-
+          没有哪颗白矮星能一直烧核燃料：燃料耗尽后它就冷却下来，成为黑矮星——宇宙还没有足够的时间到达这个状态。
+        ja: >-
+          白矮星は核燃料をどれほど続けても燃烧し尽くし、燃料がなくなれば冷えて黒矮星になる。その段階には宇宙はまだ到達していない。
+  example:
+    title:
+      es: El techo en kilogramos
+      en: The ceiling in kilograms
+      pt: O teto em quilogramas
+      fr: Le plafond en kilogrammes
+      zh: 以千克计的上限
+      ja: 質量の天井をキログラムで
+    lines:
+      - es: "M_sol = 1,989 · 10³⁰ kg"
+        en: "M_sol = 1.989 · 10³⁰ kg"
+        pt: "M_sol = 1,989 · 10³⁰ kg"
+        fr: "M_sol = 1,989 · 10³⁰ kg"
+        zh: "M_sol = 1,989 · 10³⁰ kg"
+        ja: "M_sol = 1,989 · 10³⁰ kg"
+      - es: "M_límite = 1,44 · 1,989 · 10³⁰"
+        en: "M_limit = 1.44 · 1.989 · 10³⁰"
+        pt: "M_limite = 1,44 · 1,989 · 10³⁰"
+        fr: "M_limite = 1,44 · 1,989 · 10³⁰"
+        zh: "M_上限 = 1,44 · 1,989 · 10³⁰"
+        ja: "M_上限 = 1,44 · 1,989 · 10³⁰"
+      - es: "= 2,864 · 10³⁰ kg: el techo de una enana blanca"
+        en: "= 2.864 · 10³⁰ kg, the ceiling of a white dwarf"
+        pt: "= 2,864 · 10³⁰ kg, o teto de uma anã branca"
+        fr: "= 2,864 · 10³⁰ kg, le plafond d'une naine blanche"
+        zh: "= 2,864 · 10³⁰ kg，这就是白矮星的上限"
+        ja: "= 2,864 · 10³⁰ kg。白矮星の上限である"
+      - es: "Una enana de 0,90 M_sol se enfría y acaba en enana negra"
+        en: "A 0.90 M_sol dwarf just cools and ends as a black dwarf"
+        pt: "Uma anã de 0,90 M_sol apenas esfria e termina como anã negra"
+        fr: "Une naine de 0,90 M_sol refroidit simplement et finit en naine noire"
+        zh: "0,90 M_sol 的白矮星只会冷却，最后成为黑矮星"
+        ja: "0,90 M_sol の白矮星は冷えるだけで、最後は黒矮星になる"
+      - es: "Una de 1,30 M_sol colapsa en cuanto gana más masa"
+        en: "A 1.30 M_sol dwarf collapses as soon as it gains mass"
+        pt: "Uma de 1,30 M_sol colapsa assim que ganha mais massa"
+        fr: "Une naine de 1,30 M_sol s'effondre dès qu'elle gagne de la masse"
+        zh: "1,30 M_sol 的白矮星一旦增质就会坍缩"
+        ja: "1,30 M_sol の白矮星は質量を増やした瞬間に崩壊する"

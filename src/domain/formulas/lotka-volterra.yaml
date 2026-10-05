@@ -1,0 +1,368 @@
+id: lotka-volterra
+title:
+  es: Ecuaciones de Lotka-Volterra
+  en: Lotka-Volterra Equations
+  pt: Equações de Lotka-Volterra
+  fr: Équations de Lotka-Volterra
+  zh: 洛特卡-沃尔泰拉方程
+  ja: ロトカ・ヴォルテラ方程式
+category:
+  es: Biología
+  en: Biology
+  pt: Biologia
+  fr: Biologie
+  zh: 生物学
+  ja: 生物学
+nodes:
+  - id: dndt
+    type: variable
+    value: dN/dt
+    explanation:
+      es: "dN/dt: la velocidad con que cambia el número de presas en ese instante."
+      en: "dN/dt: the rate at which the prey count changes at that instant."
+      pt: "dN/dt: a velocidade com que o número de presas muda nesse instante."
+      fr: "dN/dt : la vitesse à laquelle le nombre de proies change à cet instant."
+      zh: "dN/dt：猎物数量在该时刻的变化率。"
+      ja: "dN/dt：その瞬間に獲物の数が増えるか減るかの速さ。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: r-rate
+    type: variable
+    value: r
+    explanation:
+      es: "r: la tasa de reproducción de las presas, sin depredadores alrededor."
+      en: "r: the prey's reproduction rate, with no predators around."
+      pt: "r: a taxa de reprodução das presas, sem predadores por perto."
+      fr: "r : le taux de reproduction des proies, sans prédateurs aux alentours."
+      zh: "r：猎物的繁殖率，即没有捕食者时的增长速率。"
+      ja: "r：獲物の増殖率。捕食者がいないときの増える速さ。"
+  - id: dot-a
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por el número de presas.
+      en: Multiplied by the prey count.
+      pt: Multiplicado pelo número de presas.
+      fr: Multiplié par le nombre de proies.
+      zh: 乘以猎物数量。
+      ja: 獲物の数を掛ける。
+  - id: n-prey
+    type: variable
+    value: N
+    explanation:
+      es: "N: las presas, el primer tipo de población del modelo."
+      en: "N: the prey, the first population in the model."
+      pt: "N: as presas, a primeira população do modelo."
+      fr: "N : les proies, la première population du modèle."
+      zh: "N：猎物，模型中的第一个种群。"
+      ja: "N：獲物。モデルが扱う二つの族群のひとつ。"
+
+  - id: minus
+    type: operator
+    value: −
+    explanation:
+      es: "El término que resta: las presas que se pierden por depredación."
+      en: "The term that subtracts: the prey lost to predation."
+      pt: "O termo que subtrai: as presas perdidas por predação."
+      fr: "Le terme qui soustrait : les proies perdues par prédation."
+      zh: 减去的那一项：被捕食而损失的猎物。
+      ja: 引く項。捕食で失われた獲物の分である。
+  - id: alpha
+    type: constant
+    value: α
+    explanation:
+      es: "α: la eficacia de la depredación, lo que vale cada encuentro entre presa y depredador."
+      en: "α: the hunting efficiency, what each encounter between prey and predator is worth."
+      pt: "α: a eficiência da predação, o que vale cada encontro entre presa e predador."
+      fr: "α : lefficacité de la prédation, ce que vaut chaque rencontre entre proie et prédateur."
+      zh: "α：捕食效率，即每次猎物与捕食者相遇所换来的成果。"
+      ja: "α：捕食の効率。一回の遭遇ごとに得られる量。"
+  - id: dot-b
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por las presas otra vez, porque su número es el factor que decide cuánto se pierde.
+      en: Multiplied by the prey again, because their number decides how much is lost.
+      pt: Multiplicado pelas presas de novo, porque o número delas decide quanto se perde.
+      fr: Multiplié de nouveau par les proies, car leur nombre décide de ce qui est perdu.
+      zh: 再次乘以猎物，因为正是它们的数量决定损失多少。
+      ja: もう一度獲物の数を掛ける。失われる量は獲物の数で決まるからである。
+  - id: n-prey-b
+    type: variable
+    value: N
+    explanation:
+      es: Las mismas presas de antes, ahora como factor de riesgo.
+      en: The same prey as before, now acting as a risk factor.
+      pt: As mesmas presas de antes, agora como fator de risco.
+      fr: Les mêmes proies qu'avant, maintenant comme facteur de risque.
+      zh: 与前面相同的猎物，这次作为风险因子。
+      ja: 前と同じ獲物だが、今度は危険率の因子として働く。
+  - id: dot-c
+    type: operator
+    value: ·
+    explanation:
+      es: Multiplicado por los depredadores.
+      en: Multiplied by the predators.
+      pt: Multiplicado pelos predadores.
+      fr: Multiplié par les prédateurs.
+      zh: 乘以捕食者数量。
+      ja: 捕食者の数を掛ける。
+  - id: p-predator
+    type: variable
+    value: P
+    explanation:
+      es: "P: los depredadores, el segundo tipo de población del modelo."
+      en: "P: the predators, the second population in the model."
+      pt: "P: os predadores, a segunda população do modelo."
+      fr: "P : les prédateurs, la seconde population du modèle."
+      zh: "P：捕食者，模型中的第二个种群。"
+      ja: "P：捕食者。モデルが扱う二つの族群のひとつ。"
+
+context:
+  author:
+    es: Vito Volterra y Alfred J. Lotka
+    en: Vito Volterra and Alfred J. Lotka
+    pt: Vito Volterra e Alfred J. Lotka
+    fr: Vito Volterra et Alfred J. Lotka
+    zh: 维托·沃尔泰拉与阿尔弗雷德·洛特卡
+    ja: 维托・沃尔テラとアルフレッド・ロトカ
+  era:
+    es: Roma y Baltimore, 1925–1926
+    en: Rome and Baltimore, 1925–1926
+    pt: Roma e Baltimore, 1925–1926
+    fr: Rome et Baltimore, 1925–1926
+    zh: 罗马与巴尔的摩,1925–1926年
+    ja: ローマとバルチモア、1925–1926年
+  history:
+    es: >-
+      Vito Volterra llegó a estas ecuaciones en 1925 intentando explicar por qué, en un acuario, los
+      depredadores y las presas nunca se estabilizan en un número fijo. Alfred Lotka publicó un
+      desarrollo paralelo ese mismo año y el siguiente, y los dos nombres quedaron unidos a un
+      modelo que sigue siendo la primera descripción matemática de la depredación. La idea es
+      sencilla: las presas crecen sin tope mientras no haya depredadores, y el número de
+      depredadores sube mientras haya comida y baja cuando escasea. Ese retraso entre la causa y el
+      efecto es lo que genera las oscilaciones, porque el equilibrio del modelo no es estable sino un
+      centro, y por eso las poblaciones nunca se quedan del todo quietas. Lo que al modelo le falta
+      es un techo: ignora la capacidad de carga del medio, que en el crecimiento logarítmico es
+      justamente lo que frena a las presas cuando hay muchas.
+    en: >-
+      Vito Volterra arrived at these equations in 1925 while trying to explain why, in an aquarium,
+      predators and prey never settle at a fixed count. Alfred Lotka published a parallel
+      development in the same year and the next, and both names stayed attached to a model that is
+      still the first mathematical description of predation. The idea is simple: prey grow without
+      ceiling while there are no predators, and the predator count rises while there is food and
+      falls when food runs short. That delay between cause and effect generates the oscillations,
+      because the equilibrium of the model is not stable but a center, and so populations never
+      quite settle. What the model lacks is a ceiling: it ignores the carrying capacity of the
+      environment, which in logistic growth is exactly what slows the prey down when there are many.
+    pt: >-
+      Vito Volterra chegou a estas equações em 1925 tentando explicar por que, em um aquário,
+      predadores e presas nunca se estabilizam em um número fixo. Alfred Lotka publicou um
+      desenvolvimento paralelo no mesmo ano e no ano seguinte, e os dois nomes ficaram presos a um
+      modelo que ainda é a primeira descrição matemática da predação. A ideia é simples: as presas
+      crescem sem teto enquanto não há predadores, e o número de predadores sobe enquanto há comida e
+      cai quando ela acaba. Esse atraso entre causa e efeito gera as oscilações, porque o equilíbrio
+      do modelo não é estável, mas um centro, e por isso as populações nunca se acalmam de todo. O que
+      falta ao modelo é um teto: ele ignora a capacidade de carga do meio, que no crescimento
+      logístico é justamente o que freia as presas quando há muitas.
+    fr: >-
+      Vito Volterra en arriva à ces équations en 1925 en cherchant à expliquer pourquoi, dans un
+      aquarium, prédateurs et proies ne se stabilisent jamais à un effectif fixe. Alfred Lotka publia
+      un développement parallèle la même année et l'année suivante, et les deux noms restèrent
+      attachés à un modèle qui demeure la première description mathématique de la prédation. L'idée
+      est simple : les proies croissent sans plafond tant qu'il n'y a pas de prédateurs, tandis que
+      le nombre de prédateurs monte tant qu'il y a à manger et baisse quand la nourriture manque. Ce
+      retard entre cause et effet produit les oscillations, car l'équilibre du modèle n'est pas
+      stable, c'est un centre, et les populations ne se calment jamais. Ce qui manque au
+      modèle, c'est un plafond : il ignore la capacité de charge du milieu, celle qui, dans la
+      croissance logistique, freine les proies quand elles sont nombreuses.
+    zh: >-
+      1925 年，维托·沃尔泰拉在试图解释为什么在水族箱里捕食者与猎物始终无法稳定在某个固定数量时，推导出了这组方程。
+      阿尔弗雷德·洛特卡在同年及次年发表了平行的发展，两个名字从此一起挂在这个模型上，它至今仍是对捕食关系最早的
+      数学描述。核心想法很简单：没有捕食者时猎物无上限地增长，而捕食者的数量随食物上升、随食物匮乏下降。正是这种
+      因果之间的延迟产生了振荡——模型的平衡点不是稳定平衡，而是一个中心，因此种群永远无法完全安静下来。模型缺少的
+      是一个上限：它忽略了环境的承载力，而在逻辑斯蒂增长中，正是承载力在猎物很多时把它们刹住。
+    ja: >-
+      1925年、维托・沃尔テラは、水族箱の中で捕食者と獲物が一定の数に落ち着かないのはなぜかを説明しようとしてこの連立
+      方程式に辿り着いた。ロトカは同じ年とその翌年に平行な発展を公表し、二人の名前がこのモデルに付き、今でも捕食関係の
+      最初の数式である。考え方は単純だ。捕食者がいなければ獲物は際限なく増え、捕食者の数は餌がある間は増え、なくなれ
+      ば減る。この遅れが振動を生む。モデルの平衡点は安定点ではなく中心点なので、個体数は静まることがない。このモデルに
+      ないのは上限だ。ロジスティック成長では、個体が多く出たとき獲物を止めるのが環境収容力である。
+  timeline:
+    - year: "1925"
+      label:
+        es: >-
+          Volterra enuncia sus ecuaciones de depredación y presa mientras estudia los movimientos
+          de peces en los mares.
+        en: >-
+          Volterra states his predator-prey equations while studying fish movements in the seas.
+        pt: >-
+          Volterra enuncia suas equações de predação e presa enquanto estuda os movimentos de
+          peixes nos mares.
+        fr: >-
+          Volterra énonce ses équations de prédation et de proie en étudiant les mouvements des
+          poissons dans les mers.
+        zh: >-
+          沃尔泰拉在研究海洋中鱼群运动时提出了这组捕食者与猎物的方程。
+        ja: >-
+          沃尔テラが海の魚の動きを研究するなかで、捕食者と獲物の関係を示す式を発表した。
+    - year: "1926"
+      label:
+        es: >-
+          Lotka publica su desarrollo paralelo y los dos nombres quedan unidos al modelo para
+          siempre.
+        en: >-
+          Lotka publishes his parallel development and both names stay attached to the model for
+          good.
+        pt: >-
+          Lotka publica seu desenvolvimento paralelo e os dois nomes ficam presos ao modelo para
+          sempre.
+        fr: >-
+          Lotka publie son développement parallèle et les deux noms restent attachés au modèle
+          définitivement.
+        zh: >-
+          洛特卡发表了平行的发展，两个名字从此永久地与这个模型相连。
+        ja: >-
+          ロトカが平行な発展を公表し、二人の名前はこのモデルに長く結びつくことになる。
+    - year: Hoy
+      label:
+        es: >-
+          Sigue siendo la base de la mayoría de los modelos ecológicos de depredación y de la
+          epidemiología.
+        en: >-
+          It remains the basis of most ecological models of predation and of epidemiology.
+        pt: >-
+          Segue sendo a base da maioria dos modelos ecológicos de predação e da epidemiologia.
+        fr: >-
+          Elle reste la base de la plupart des modèles écologiques de prédation et de
+          l'épidémiologie.
+        zh: >-
+          它至今仍是大多数生态捕食模型以及流行病学模型的基础。
+        ja: >-
+          捕食を表す生態モデルのほとんどと、疫学モデルで今も土台になっている。
+  useCases:
+    - title:
+        es: Ciclos en la naturaleza
+        en: Cycles in nature
+        pt: Ciclos na natureza
+        fr: Cycles dans la nature
+        zh: 自然界的周期
+        ja: 自然界の周期
+      description:
+        es: >-
+          Ratas y zorros, o lirones y mustelidos, oscilan con el mismo tempo aunque por razones
+          distintas.
+        en: >-
+          Voles and foxes, or voles and weasels, oscillate with the same beat for different
+          reasons.
+        pt: >-
+          Ratos e raposas, ou musaranhos e doninhas, oscilam no mesmo compasso por razões
+          diferentes.
+        fr: >-
+          Campagnols et renards, ou campagnols et mustélidés, oscillent au même rythme pour des
+          raisons différentes.
+        zh: >-
+          田鼠与狐狸，或田鼠与鼬科动物，以同样的节律起伏，原因却各不相同。
+        ja: >-
+          ハタネズミとキツネ、あるいはハタネズミとイタチは、理由は違うが同じリズムで増減する。
+    - title:
+        es: Peces de vida corta
+        en: Short-lived fish
+        pt: Peixes de vida curta
+        fr: Poissons à cycle court
+        zh: 短寿命鱼类
+        ja: 生命周期の短い魚
+      description:
+        es: >-
+          En el plancton las generaciones son tan rápidas que el modelo casi se puede medir paso a
+          paso, y a veces predice bien las curvas.
+        en: >-
+          In plankton generations are quick enough that the model can almost be measured step by
+          step, and it sometimes predicts the curves well.
+        pt: >-
+          No plâncton as gerações são tão rápidas que o modelo quase pode ser medido passo a passo, e
+          às vezes prevê bem as curvas.
+        fr: >-
+          Dans le plancton, les générations sont assez rapides pour que le modèle puisse presque
+          être mesuré pas à pas, et il prédit parfois bien les courbes.
+        zh: >-
+          在浮游生物中世代足够快，模型几乎可以逐步测量，有时还能很好地预测曲线。
+        ja: >-
+          プランクトンでは世代が速く、モデルをほぼ段階ごとに測ることができる。曲線をよく当てられることもある。
+    - title:
+        es: Epidemiología
+        en: Epidemiology
+        pt: Epidemiologia
+        fr: Épidémiologie
+        zh: 流行病学
+        ja: 疫学
+      description:
+        es: >-
+          El mismo esquema sirve para una epidemia, donde los recuperados hacen de inmunes y los
+          susceptibles, de presas.
+        en: >-
+          The same scheme describes an epidemic, where the recovered act as the immune and the
+          susceptible as the prey.
+        pt: >-
+          O mesmo esquema descreve uma epidemia, onde os recuperados fazem de imunes e os
+          susceptibles, de presas.
+        fr: >-
+          Le même schéma décrit une épidémie, où les guéris jouent le rôle des immunisés et les
+          susceptibles celui des proies.
+        zh: >-
+          同一套结构也能描述流行病：康复者充当免疫者，易感者则充当猎物。
+        ja: >-
+          同じ構造は流行病にも使える。回復者が免疫者の役目をし、易感染者が獲物の役目をする。
+  example:
+    title:
+      es: Un paso con el método de Euler
+      en: One Euler step
+      pt: Um passo do método de Euler
+      fr: Un pas de la méthode d'Euler
+      zh: 用欧拉法走一步
+      ja: オイラー法の一歩
+    lines:
+      - es: "Presas N = 100 · depredadores P = 10"
+        en: "Prey N = 100 · predators P = 10"
+        pt: "Presas N = 100 · predadores P = 10"
+        fr: "Proies N = 100 · prédateurs P = 10"
+        zh: "猎物 N = 100 · 捕食者 P = 10"
+        ja: "獲物 N = 100 · 捕食者 P = 10"
+      - es: "r = 1,0 /año · α = 0,02 · β = 0,05 · γ = 2,0"
+        en: "r = 1.0 /year · α = 0.02 · β = 0.05 · γ = 2.0"
+        pt: "r = 1,0 /ano · α = 0,02 · β = 0,05 · γ = 2,0"
+        fr: "r = 1,0 /an · α = 0,02 · β = 0,05 · γ = 2,0"
+        zh: "r = 1,0 /年 · α = 0,02 · β = 0,05 · γ = 2,0"
+        ja: "r = 1,0 /年 · α = 0,02 · β = 0,05 · γ = 2,0"
+      - es: "dN/dt = 100 − 0,02 · 100 · 10 = 80 presas por año"
+        en: "dN/dt = 100 − 0.02 · 100 · 10 = 80 prey per year"
+        pt: "dN/dt = 100 − 0,02 · 100 · 10 = 80 presas por ano"
+        fr: "dN/dt = 100 − 0,02 · 100 · 10 = 80 proies par an"
+        zh: "dN/dt = 100 − 0,02 · 100 · 10 = 每年 80 只猎物"
+        ja: "dN/dt = 100 − 0,02 · 100 · 10 = 毎年 80 匹の獲物"
+      - es: "dP/dt = 0,05 · 100 · 10 − 2,0 · 10 = 30 depredadores por año"
+        en: "dP/dt = 0.05 · 100 · 10 − 2.0 · 10 = 30 predators per year"
+        pt: "dP/dt = 0,05 · 100 · 10 − 2,0 · 10 = 30 predadores por ano"
+        fr: "dP/dt = 0,05 · 100 · 10 − 2,0 · 10 = 30 prédateurs par an"
+        zh: "dP/dt = 0,05 · 100 · 10 − 2,0 · 10 = 每年 30 只捕食者"
+        ja: "dP/dt = 0,05 · 100 · 10 − 2,0 · 10 = 毎年 30 匹の捕食者"
+      - es: "Euler con Δt = 0,1 año: N = 108,0 · P = 13,0"
+        en: "Euler with Δt = 0.1 year: N = 108.0 · P = 13.0"
+        pt: "Euler com Δt = 0,1 ano: N = 108,0 · P = 13,0"
+        fr: "Euler avec Δt = 0,1 an : N = 108,0 · P = 13,0"
+        zh: "用 Δt = 0,1 年走欧拉一步：N = 108,0 · P = 13,0"
+        ja: "Δt = 0,1 年でオイラ法：N = 108,0 · P = 13,0"
+      - es: "Un paso más: N = 116,0 · P = 17,4, y el equilibrio es P = 50 · N = 40"
+        en: "One more step: N = 116.0 · P = 17.4, and the equilibrium is P = 50 · N = 40"
+        pt: "Mais um passo: N = 116,0 · P = 17,4, e o equilíbrio é P = 50 · N = 40"
+        fr: "Un pas de plus : N = 116,0 · P = 17,4, et l'équilibre est P = 50 · N = 40"
+        zh: "再走一步：N = 116,0 · P = 17,4，平衡点为 P = 50 · N = 40"
+        ja: "もう一歩：N = 116,0 · P = 17,4。平衡点は P = 50 · N = 40"

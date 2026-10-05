@@ -1,0 +1,310 @@
+id: hamming-distance
+title:
+  es: Distancia de Hamming
+  en: Hamming distance
+  pt: Distância de Hamming
+  fr: Distance de Hamming
+  zh: 汉明距离
+  ja: ハミング距離
+category:
+  es: Informática
+  en: Computer science
+  pt: Informática
+  fr: Informatique
+  zh: 计算机科学
+  ja: コンピュータ科学
+nodes:
+  - id: d-of-xy
+    type: variable
+    value: d(x,y)
+    explanation:
+      es: "d(x,y): cuántos bits de dos palabras binarias no coinciden."
+      en: "d(x,y): how many bits of two binary words do not match."
+      pt: "d(x,y): quantos bits de duas palavras binárias não coincidem."
+      fr: "d(x,y) : combien de bits de deux mots binaires ne coïncident pas."
+      zh: "d(x,y)：两个二进制串中对应位不同的位数。"
+      ja: "d(x,y)：2つのバイナリ列で一致しないビットの個数。"
+  - id: equals
+    type: equals
+    value: "="
+    explanation:
+      es: Es igual a.
+      en: Is equal to.
+      pt: É igual a.
+      fr: Est égal à.
+      zh: 等于。
+      ja: に等しい。
+  - id: wt
+    type: operator
+    value: "wt("
+    explanation:
+      es: "wt: el peso de Hamming, el número de unos de una palabra binaria."
+      en: "wt: the Hamming weight, the number of ones in a binary word."
+      pt: "wt: o peso de Hamming, o número de uns numa palavra binária."
+      fr: "wt : le poids de Hamming, le nombre de uns d'un mot binaire."
+      zh: "wt：汉明权重，即二进制串中1的个数。"
+      ja: "wt：ハミング重み。バイナリ列に含まれる1の個数。"
+  - id: x
+    type: variable
+    value: x
+    explanation:
+      es: "x: la primera palabra binaria."
+      en: "x: the first binary word."
+      pt: "x: a primeira palavra binária."
+      fr: "x : le premier mot binaire."
+      zh: "x：第一个二进制串。"
+      ja: "x：1つめのバイナリ列。"
+  - id: xor
+    type: operator
+    value: ⊕
+    explanation:
+      es: "⊕: la XOR, que marca con un 1 cada posición donde los dos bits difieren."
+      en: "⊕: XOR, which flags with a 1 every position where the two bits differ."
+      pt: "⊕: o XOR, que marca com 1 cada posição em que os dois bits diferem."
+      fr: "⊕ : le OU exclusif, qui marque d'un 1 chaque position où les deux bits diffèrent."
+      zh: "⊕：异或，把两位不同的位置标记为1。"
+      ja: "⊕：排他論理和。2つのビットが異なる位置を1で示す。"
+  - id: close-y
+    type: variable
+    value: y)
+    explanation:
+      es: "y): la segunda palabra binaria, que cierra el paréntesis."
+      en: "y): the second binary word, which closes the parenthesis."
+      pt: "y): a segunda palavra binária, que fecha o parêntese."
+      fr: "y) : le second mot binaire, qui ferme la parenthèse."
+      zh: "y)：第二个二进制串，并闭合括号。"
+      ja: "y)：2つめのバイナリ列。括弧を閉じる。"
+context:
+  author:
+    es: Richard Hamming
+    en: Richard Hamming
+    pt: Richard Hamming
+    fr: Richard Hamming
+    zh: 理查德·汉明
+    ja: リチャード・ハミング
+  era:
+    es: Bell Labs, 1950 · códigos correctores de errores
+    en: Bell Labs, 1950 · error-correcting codes
+    pt: Bell Labs, 1950 · códigos corretores de erros
+    fr: Bell Labs, 1950 · codes correcteurs
+    zh: 贝尔实验室，1950年·纠错编码
+    ja: ベル研究所、1950年·誤り訂正符号
+  history:
+    es: >-
+      En 1950 Richard Hamming, de Bell Labs, estudió cómo mantener usable una línea de
+      teléfono cuando el ruido invierte bits, y definió la distancia entre dos palabras
+      binarias como el número de posiciones en que difieren. Su observación decisiva fue que
+      un código cuyas palabras están separadas al menos 2t+1 puede corregir t errores, porque
+      la palabra recibida cae en una esfera que solo puede pertenecer a la enviada. Esa idea
+      se convirtió en la base de la teoría de códigos correctores, y un siglo después sigue
+      sosteniendo los bits de paridad de las memorias, los discos y los archivos digitales.
+    en: >-
+      In 1950 Richard Hamming, at Bell Labs, studied how to keep a telephone line usable
+      when noise flips bits, and defined the distance between two binary words as the number
+      of positions in which they differ. His decisive observation was that a code whose words
+      sit at least 2t+1 apart can correct t errors, because the received word falls into a
+      ball that only the sent word can belong to. That idea became the foundation of the
+      theory of error-correcting codes, and a century later it still underpins the parity bits
+      in memory, disks and digital archives.
+    pt: >-
+      Em 1950, Richard Hamming, dos Bell Labs, estudou como manter utilizável uma linha
+      telefônica quando o ruído inverte bits, e definiu a distância entre duas palavras
+      binárias como o número de posições em que elas diferem. Sua observação decisiva foi
+      que um código cujas palavras ficam separadas por pelo menos 2t+1 consegue corrigir t
+      erros, porque a palavra recebida cai numa esfera que só pode pertencer à enviada. A
+      ideia virou a base da teoria dos códigos corretores e, um século depois, ainda sustenta
+      os bits de paridade de memórias, discos e arquivos digitais.
+    fr: >-
+      En 1950, Richard Hamming, aux Bell Labs, étudia comment garder une ligne téléphonique
+      utilisable quand le bruit inverse des bits, et définit la distance entre deux mots
+      binaires comme le nombre de positions où ils diffèrent. Son observation décisive : un
+      code dont les mots sont séparés d'au moins 2t+1 peut corriger t erreurs, car le mot
+      reçu tombe dans une boule qui ne peut appartenir qu'au mot émis. L'idée devint le socle
+      de la théorie des codes correcteurs et, un siècle plus tard, elle soutient toujours les
+      bits de parité des mémoires, des disques et des archives numériques.
+    zh: >-
+      1950年，理查德·汉明在贝尔实验室研究如何让受噪声干扰的电话线路仍然可用，并把两个二进制串之间的距离定义为
+      它们不同的位数。他的决定性观察是：若码字之间的最小距离至少为2t+1，就能纠正t个错误，因为接收到的码字落入的
+      球只可能属于被发送的那一个。这一想法成为纠错编码理论的基础，一个世纪后它仍支撑着内存、磁盘和数字档案中的
+      校验位。
+    ja: >-
+      1950年、ベル研究所のリチャード・ハミングは、雑音でビットが反転しても電話回線を使える状態にもつには
+      どうするかを研究し、2つのバイナリ列の距離を「違う場所の数」と定義した。彼が見抜いた点が重要だ。
+      語と語の間の距離が2t+1以上なら、t個のエラーを訂正できる。受信した語が落入する玉は、送信した
+      語しか属さないからである。この考えは誤り訂正符号理論の基礎となり、百年経った今もメモリーやディスク、
+      デジタル記録の検査ビットを支えている。
+  timeline:
+    - year: "1950"
+      label:
+        es: >-
+          Hamming define la distancia y la condición 2t+1 en una nota interna de Bell Labs.
+        en: >-
+          Hamming defines the distance and the 2t+1 condition in an internal Bell Labs note.
+        pt: >-
+          Hamming define a distância e a condição 2t+1 numa nota interna dos Bell Labs.
+        fr: >-
+          Hamming définit la distance et la condition 2t+1 dans une note interne des Bell Labs.
+        zh: >-
+          汉明在一份贝尔实验室内部备忘录中定义了距离以及2t+1条件。
+        ja: >-
+          ハミングがベル研究所の内部メモで距離と2t+1の条件を定義する。
+    - year: "1951"
+      label:
+        es: >-
+          Su memorándum sobre códigos correctores circula entre los laboratorios de Bell Labs.
+        en: >-
+          His memorandum on error-correcting codes circulates among the Bell Labs laboratories.
+        pt: >-
+          Seu memorando sobre códigos corretores circula entre os laboratórios dos Bell Labs.
+        fr: >-
+          Son mémorandum sur les codes correcteurs circule dans les laboratoires des Bell Labs.
+        zh: >-
+          他关于纠错码的备忘录在贝尔实验室各实验室之间传阅。
+        ja: >-
+          誤り訂正符号についての覚書が、ベル研究所の各研究室に回覧される。
+    - year: "1960"
+      label:
+        es: >-
+          Reed y Solomon definen códigos pensados para corregir errores agrupados en ráfaga.
+        en: >-
+          Reed and Solomon define codes built to correct burst errors.
+        pt: >-
+          Reed e Solomon definem códigos pensados para corrigir erros agrupados em rajada.
+        fr: >-
+          Reed et Solomon définissent des codes conçus pour corriger les erreurs en salve.
+        zh: >-
+          里德和所罗门定义了用于纠正突发错误的码。
+        ja: >-
+          リードとソロモンは、バースト誤りを直すために作られた符号を定義する。
+    - year: Hoy
+      label:
+        es: >-
+          La misma métrica organiza la redundancia de memorias, discos, redes y archivos.
+        en: >-
+          The same metric organizes the redundancy in memory, disks, networks and archives.
+        pt: >-
+          A mesma métrica organiza a redundância de memórias, discos, redes e arquivos.
+        fr: >-
+          La même métrique organise la redondance des mémoires, des disques, des réseaux et des
+          archives.
+        zh: >-
+          同样的度量方式用于组织内存、磁盘、网络与档案中的冗余。
+        ja: >-
+          同じ尺度が、メモリー、ディスク、ネットワーク、記録の冗長性を組み立てる。
+  useCases:
+    - title:
+        es: Códigos correctores de errores
+        en: Error-correcting codes
+        pt: Códigos corretores de erros
+        fr: Codes correcteurs
+        zh: 纠错编码
+        ja: 誤り訂正符号
+      description:
+        es: >-
+          Para corregir t errores hace falta una distancia mínima de 2t+1, y cada código añade
+          exactamente los bits de paridad que esa condición exige.
+        en: >-
+          Correcting t errors requires a minimum distance of 2t+1, and each code adds exactly
+          the parity bits that condition demands.
+        pt: >-
+          Para corrigir t erros é preciso uma distância mínima de 2t+1, e cada código adiciona
+          exatamente os bits de paridade que essa condição exige.
+        fr: >-
+          Pour corriger t erreurs, il faut une distance minimale de 2t+1, et chaque code
+          ajoute exactement les bits de parité que cette condition exige.
+        zh: >-
+          要纠正t个错误，最小距离必须达到2t+1，而每个码恰好为此条件添加所需的校验位。
+        ja: >-
+          t個のエラーを直すには最小距離2t+1が必要で、各符号はその条件が求めるだけの
+          検査ビットを加える。
+    - title:
+        es: Memoria ECC
+        en: ECC memory
+        pt: Memória ECC
+        fr: Mémoire ECC
+        zh: ECC 内存
+        ja: ECCメモリー
+      description:
+        es: >-
+          Un byte se guarda con ocho bits de datos y uno de paridad, distancia que basta para
+          corregir un error y detectar dos.
+        en: >-
+          A byte is stored with eight data bits and one parity bit, a distance that suffices
+          to correct one error and detect two.
+        pt: >-
+          Um byte é guardado com oito bits de dados e um de paridade, distância suficiente
+          para corrigir um erro e detectar dois.
+        fr: >-
+          Un octet est stocké avec huit bits de données et un bit de parité, une distance
+          suffisante pour corriger une erreur et en détecter deux.
+        zh: >-
+          一个字节用8位数据加1位校验位保存，这一距离足以纠正一个错误并检测两个错误。
+        ja: >-
+          1バイトは8ビットのデータと1ビットの検査ビットで保存され、この距離で
+          1個のエラーを直し、2個を検出できる。
+    - title:
+        es: Comparación de secuencias
+        en: Sequence comparison
+        pt: Comparação de sequências
+        fr: Comparaison de séquences
+        zh: 序列比对
+        ja: 配列の比較
+      description:
+        es: >-
+          La distancia de Hamming entre caracteres cuenta solo las sustituciones: es el caso
+          más sencillo de la distancia de edición, que además permite insertar y borrar.
+        en: >-
+          Hamming distance between characters counts substitutions only: it is the simplest
+          case of edit distance, which also allows insertions and deletions.
+        pt: >-
+          A distância de Hamming entre caracteres conta apenas substituições: é o caso mais
+          simples da distância de edição, que também permite inserções e remoções.
+        fr: >-
+          La distance de Hamming entre caractères ne compte que les substitutions : c'est le
+          cas le plus simple de la distance d'édition, qui autorise aussi insertions et
+          suppressions.
+        zh: >-
+          字符之间的汉明距离只计算替换：这是最简单的编辑距离情形，而编辑距离还允许插入和
+          删除。
+        ja: >-
+          文字どうしのハミング距離は置換しか数えない。編集距離のいちばん簡単な場合であり、
+          編集距離は挿入と削除も許す。
+  example:
+    title:
+      es: d(1010, 0110)
+      en: d(1010, 0110)
+      pt: d(1010, 0110)
+      fr: d(1010, 0110)
+      zh: d(1010, 0110)
+      ja: d(1010, 0110)
+    lines:
+      - es: x = 1010, y = 0110
+        en: x = 1010, y = 0110
+        pt: x = 1010, y = 0110
+        fr: x = 1010, y = 0110
+        zh: x = 1010, y = 0110
+        ja: x = 1010, y = 0110
+      - es: 1010 ⊕ 0110 = 1100
+        en: 1010 ⊕ 0110 = 1100
+        pt: 1010 ⊕ 0110 = 1100
+        fr: 1010 ⊕ 0110 = 1100
+        zh: 1010 ⊕ 0110 = 1100
+        ja: 1010 ⊕ 0110 = 1100
+      - es: wt(1100) = 2
+        en: wt(1100) = 2
+        pt: wt(1100) = 2
+        fr: wt(1100) = 2
+        zh: wt(1100) = 2
+        ja: wt(1100) = 2
+      - es: d(1010, 0110) = 2
+        en: d(1010, 0110) = 2
+        pt: d(1010, 0110) = 2
+        fr: d(1010, 0110) = 2
+        zh: d(1010, 0110) = 2
+        ja: d(1010, 0110) = 2
+      - es: Para corregir 2 errores hacen falta códigos con distancia mínima ≥ 5
+        en: Correcting 2 errors needs codes with minimum distance ≥ 5
+        pt: Para corrigir 2 erros são necessários códigos com distância mínima ≥ 5
+        fr: Corriger 2 erreurs exige des codes de distance minimale ≥ 5
+        zh: 要纠正2个错误，需要最小距离 ≥ 5 的码
+        ja: 2個のエラーを直すには最小距離5以上の符号が要る
