@@ -1,5 +1,11 @@
+# Google Play exige que las libs nativas de 64 bits estén alineadas a páginas de 16 KB.
+# Ojo: la CLI de Tauri fija CARGO_TARGET_*_RUSTFLAGS por target y estos rustflags quedan
+# anulados, así que la alineación real la da el NDK: usa NDK 28+ (ver AGENTS.md).
 [target.aarch64-linux-android]
 rustflags = ["-C", "link-arg=-Wl,-z,max-page-size=16384"]
 
 [target.armv7-linux-androideabi]
+rustflags = ["-C", "link-arg=-Wl,-z,max-page-size=16384"]
+
+[target.x86_64-linux-android]
 rustflags = ["-C", "link-arg=-Wl,-z,max-page-size=16384"]

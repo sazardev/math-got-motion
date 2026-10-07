@@ -98,6 +98,15 @@ pnpm build                  # tsc && vite build — NOT sufficient for a Pages d
   fallback — the font stack must include latin-ext/greek (π/Ĥ/ψ) and CJK
   (`@fontsource/noto-sans-sc`, `@fontsource/noto-sans-jp`) subsets.
 - `src-tauri/` is the Rust shell. `cargo clippy` runs with `-D warnings`; keep it clean.
+- Android builds (`pnpm tauri android build --aab`) need **JDK 17** (`JAVA_HOME=/usr/lib/jvm/java-17-openjdk`;
+  Android Studio's JBR is Java 25 and breaks Gradle) and **NDK 28+**
+  (`NDK_HOME=$HOME/Android/Sdk/ndk/28.2.13676358`), because NDK 27 aligns native libs to 4 KB and
+  Play rejects AABs whose 64-bit `.so` files are not 16 KB-page aligned. The `rustflags` in
+  `src-tauri/.cargo/config.toml` are not enough: the Tauri CLI overrides
+  `CARGO_TARGET_*_RUSTFLAGS` per target.
+- The in-app launcher icon must match the Play store listing icon: regenerate app icons from
+  `play-store/app-icon-1024.png` with `pnpm tauri icon play-store/icon-manifest.json` (they drifted
+  once and Play rejected the release for "app store listing mismatch").
 - `pnpm-workspace.yaml` is empty (`packages: ["*"]`) — effectively a single package.
 
 ## Skills
