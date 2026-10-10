@@ -7,14 +7,14 @@ import {
   typePresets,
   usePreferences,
 } from "../../preferences/preferences-context";
-import { themes } from "../../preferences/themes";
 import { ControlMenu } from "../control-menu/ControlMenu";
 
 /*
  * Mini-menús del chrome: cada botón muestra solo el valor activo ("Mono",
  * "Nord", "ES") y al hacer click despliega la lista para elegir directo, en
- * vez de rotar a ciegas preset por preset. Los nombres de tema/preset son
- * propios (no se traducen); los rótulos de cada panel sí.
+ * vez de rotar a ciegas preset por preset. El tema no está acá: se elige en
+ * la consola TUI del appbar (ThemeConsole), que además filtra. Los nombres de
+ * preset son propios (no se traducen); los rótulos de cada panel sí.
  */
 
 /** Nombre de cada idioma en su propio idioma: así se reconoce sin importar el activo. */
@@ -26,36 +26,6 @@ const localeNames: Record<Locale, string> = {
   zh: "中文",
   ja: "日本語",
 };
-
-export function ThemePicker() {
-  const { strings } = useLocale();
-  const { theme, setTheme } = usePreferences();
-
-  const activeName = themes.find((item) => item.id === theme)?.name ?? theme;
-
-  return (
-    <ControlMenu label={strings.themeLabel} value={activeName}>
-      {(close) => (
-        <div className="control-menu__options">
-          {themes.map((item) => (
-            <button
-              key={item.id}
-              type="button"
-              className="control-menu__option"
-              aria-pressed={item.id === theme}
-              onClick={() => {
-                setTheme(item.id);
-                close();
-              }}
-            >
-              {item.name}
-            </button>
-          ))}
-        </div>
-      )}
-    </ControlMenu>
-  );
-}
 
 export function FxPicker() {
   const { strings } = useLocale();

@@ -69,6 +69,12 @@ pnpm build                  # tsc && vite build — NOT sufficient for a Pages d
   CTAs, and equals `--fg` in mono themes. Effect layers (`src/components/fx/FxLayer.tsx`)
   follow the same transform/opacity-only rule (CSS keyframes included), never
   `mix-blend-mode`, and respect `prefers-reduced-motion`.
+- **Theme console** (`src/components/theme-console/`): the appbar theme button opens a
+  TUI-styled modal (box-drawing frame measured in `ch`, CJK labels count as 2 cells) instead
+  of a dropdown. `↑↓`/`Home`/`End` apply the theme live, Enter or click confirms, Esc and the
+  backdrop revert to the theme the console opened with. Listed themes are filterable; the
+  trigger shows only the active theme name (glyph-only `>` under 760px in the appbar). See
+  DESIGN.md §8.
 - **Wallpaper export** (`src/lib/wallpaper.ts`): canvas 2D offscreen (no DOM capture) at
   4K/FHD/mobile sizes, styles `formula`/`poster`/`isometric`/`depth`/`pattern`, reusing the
   active palette/fonts/fx by reading computed CSS variables — never hardcode theme colors.

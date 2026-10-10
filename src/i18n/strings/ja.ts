@@ -24,6 +24,8 @@ export const strings: UiStrings = {
   backAction: "戻る",
   scrollHint: "スクロールして数式を分解する",
   themeLabel: "テーマ",
+  themeFilterLabel: "テーマを絞り込む",
+  themeConsoleHints: "↑↓ 移動 · enter 適用 · esc 閉じる",
   exportLabel: "エクスポート",
   exportStyleLabel: "スタイル",
   exportSizeLabel: "サイズ",

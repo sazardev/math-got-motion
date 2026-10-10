@@ -2,12 +2,8 @@ import { Link } from "react-router-dom";
 
 import { useLocale } from "../../i18n/locale-context";
 import { REPO_URL } from "../../lib/site";
-import {
-  FxPicker,
-  LocalePicker,
-  ThemePicker,
-  TypePicker,
-} from "../preference-pickers/PreferencePickers";
+import { FxPicker, LocalePicker, TypePicker } from "../preference-pickers/PreferencePickers";
+import { ThemeConsole } from "../theme-console/ThemeConsole";
 import "./SettingsPage.css";
 
 /** Ajustes: apariencia, idioma y enlaces — un solo lugar en vez de botones flotantes. */
@@ -15,7 +11,7 @@ export function SettingsPage() {
   const { locale, strings } = useLocale();
 
   const rows = [
-    { label: strings.themeLabel, control: <ThemePicker /> },
+    { label: strings.themeLabel, control: <ThemeConsole /> },
     { label: strings.typeLabel, control: <TypePicker /> },
     { label: strings.fxLabel, control: <FxPicker /> },
     { label: strings.homeLanguagesTitle, control: <LocalePicker /> },

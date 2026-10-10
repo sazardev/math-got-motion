@@ -113,6 +113,22 @@
   opacity: 1;
 }
 
+/*
+ * La consola de tema (modal TUI) es un solo botón, así que puede vivir en el
+ * appbar a todos los tamaños. En pantallas chicas el valor se acorta al prompt
+ * ">" — el nombre del tema queda en el aria-label y dentro de la consola — para
+ * no apiñar la barra junto a Volver, Guardar y Exportar.
+ */
+.app-bar .console-trigger {
+  display: inline-flex;
+}
+
+@media (max-width: 759px) {
+  .app-bar .console-trigger__value {
+    display: none;
+  }
+}
+
 .app-bar__save svg {
   width: 1.1rem;
   height: 1.1rem;

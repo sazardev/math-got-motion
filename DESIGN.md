@@ -95,3 +95,20 @@ y al marcador de "guardada". Todo lo demás sigue siendo tipografía: las tarjet
 fórmula muestran sus propios glifos como vista previa y los estados activos se marcan con
 inversión `--fg`/`--bg` u opacidad, nunca con bordes. Los gestos horizontales (swipe, ←/→)
 cambian de fórmula dentro de su categoría; el eje vertical sigue siendo la línea de tiempo.
+
+## 8. Consola de tema TUI (excepción documentada)
+
+El botón de tema del appbar (`src/components/theme-console/ThemeConsole.tsx`) no despliega
+una lista: abre un **modal de estética terminal** donde se filtra y se elige entre todos los
+temas. Excepciones documentadas a la sección 3:
+
+- El recuadro se dibuja con **caracteres de dibujo de cajas** (`╭ │ ├ ╰`), no con bordes CSS.
+  La retícula se mide en `ch` —rieles y esquinas cuadran en cualquier cuerpo monoespaciado—
+  y el ancho del rótulo se cuenta en celdas, porque los silabarios CJK ocupan dos.
+- El estado resaltado se marca con **inversión `--fg`/`--bg`**, el mismo recurso con el que
+  la app delimita un bloque sin sombras ni bordes; nunca con `box-shadow` ni `border`.
+- El contenido es puramente tipográfico: prompt `>`, marcadores `●`/`○`, contador y una línea
+  de atajos (`↑↓ mover · enter aplicar · esc cerrar`).
+- `↑↓` (e `Inicio`/`Fin`) **aplican el tema en vivo**: el fondo de la app cambia mientras se
+  recorre la lista. Enter o un clic confirman; Escape y el clic afuera descartan y devuelven
+  el tema con el que se abrió. El foco se atrapa en el modal y vuelve al disparador al cerrar.

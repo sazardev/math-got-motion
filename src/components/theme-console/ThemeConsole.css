@@ -1,0 +1,226 @@
+/*
+ * Disparador: el mismo `control-button` que los demás selectores del chrome,
+ * con un prompt ">" que anuncia que abre una consola y no un desplegable. La
+ * visibilidad la decide el appbar (AppShell.css): ahí solo aparece cuando hay
+ * sitio; en Ajustes se ve siempre.
+ */
+.console-trigger {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.console-trigger__prompt {
+  margin-right: 0.45ch;
+  opacity: 0.55;
+}
+
+/*
+ * Modal TUI. El marco son caracteres de dibujo de cajas (╭ │ ╰), no bordes CSS:
+ * DESIGN.md prohíbe las líneas divisorias, y de paso la tipografía
+ * monoespaciada mantiene el cuadro cuadrado. El ancho se mide en `ch`, así el
+ * contenido interior cabe exactamente entre los dos rieles.
+ */
+.console__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: var(--bg);
+  opacity: 0.88;
+  animation: console-fade 0.14s ease-out both;
+}
+
+.console {
+  position: fixed;
+  z-index: 91;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /*
+   * `clamp` baja el cuerpo del recuadro en pantallas chicas: 44 celdas a ese
+   * tamaño nunca pasan de `100vw - 2rem`, así el modal no genera scroll
+   * horizontal ni en un teléfono de 320px.
+   */
+  font-family: var(--font-mono);
+  font-size: clamp(0.66rem, calc((100vw - 3.5rem) / 28), 0.88rem);
+  line-height: 1.55;
+  width: calc(44 * 1ch);
+  max-width: calc(100vw - 2rem);
+  color: var(--fg);
+  background: var(--bg);
+  user-select: none;
+  animation: console-pop 0.14s ease-out both;
+}
+
+@keyframes console-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.88;
+  }
+}
+
+@keyframes console-pop {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* El `pre` hereda la familia y el cuerpo: un `monospace` del user-agent
+   rompería la cuadrícula de `ch` que alinea rieles y esquinas. */
+.console__frame {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  white-space: pre;
+}
+
+.console__body {
+  display: flex;
+  align-items: stretch;
+}
+
+.console__rail {
+  flex: none;
+}
+
+.console__content {
+  flex: 1;
+  min-width: 0;
+  padding: 0 1ch;
+}
+
+.console__filter {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75ch;
+}
+
+.console__prompt {
+  flex: none;
+  opacity: 0.55;
+}
+
+/* El prompt se enciende con el acento cuando el filtro tiene el foco: es el
+   indicador de foco del modal (sin bordes ni outlines). */
+.console__filter:focus-within .console__prompt {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.console__input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  caret-color: var(--accent);
+}
+
+.console__input:focus {
+  outline: none;
+}
+
+.console__input::placeholder {
+  color: inherit;
+  opacity: 0.4;
+}
+
+.console__count {
+  flex: none;
+  white-space: nowrap;
+  opacity: 0.55;
+}
+
+.console__close {
+  flex: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.55;
+  transition: opacity 0.15s ease;
+}
+
+.console__close:hover,
+.console__close:focus-visible {
+  opacity: 1;
+  outline: none;
+}
+
+.console__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: min(46vh, 22rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.console__option {
+  display: flex;
+  align-items: baseline;
+  gap: 1ch;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0.6;
+  transition: opacity 0.12s ease;
+}
+
+/*
+ * La opción resaltada se invierte (`--fg` de fondo, `--bg` de texto): es el
+ * mismo recurso con el que la app delimita un bloque sin bordes ni sombras, y
+ * en cualquier tema el par bg/fg contrasta.
+ */
+.console__option[data-active="true"] {
+  background: var(--fg);
+  color: var(--bg);
+  opacity: 1;
+}
+
+.console__marker {
+  flex: none;
+}
+
+.console__empty {
+  margin: 0;
+  opacity: 0.55;
+}
+
+.console__hints {
+  margin: 0;
+  text-align: center;
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .console__backdrop,
+  .console {
+    animation: none;
+  }
+
+  .console__option,
+  .console__close {
+    transition: none;
+  }
+}

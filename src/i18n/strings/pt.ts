@@ -24,6 +24,8 @@ export const strings: UiStrings = {
   backAction: "Voltar",
   scrollHint: "Role para desconstruir a fórmula",
   themeLabel: "Tema",
+  themeFilterLabel: "Filtrar temas",
+  themeConsoleHints: "↑↓ mover · enter aplicar · esc fechar",
   exportLabel: "Exportar",
   exportStyleLabel: "Estilo",
   exportSizeLabel: "Tamanho",

@@ -22,6 +22,8 @@ export interface UiStrings {
   backAction: string;
   scrollHint: string;
   themeLabel: string;
+  themeFilterLabel: string;
+  themeConsoleHints: string;
   fxLabel: string;
   typeLabel: string;
   exportLabel: string;

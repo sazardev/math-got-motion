@@ -24,6 +24,8 @@ export const strings: UiStrings = {
   backAction: "返回",
   scrollHint: "滚动以逐步拆解公式",
   themeLabel: "主题",
+  themeFilterLabel: "筛选主题",
+  themeConsoleHints: "↑↓ 移动 · enter 应用 · esc 关闭",
   exportLabel: "导出",
   exportStyleLabel: "样式",
   exportSizeLabel: "尺寸",

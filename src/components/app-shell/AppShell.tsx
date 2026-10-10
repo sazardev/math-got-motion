@@ -5,12 +5,8 @@ import { BookmarkIcon, HomeIcon, SearchIcon, SlidersIcon } from "./icons";
 import { findSummary, neighborsOf } from "../../domain/formula-index";
 import { useLocale } from "../../i18n/locale-context";
 import { toggleSaved, useLibrary } from "../../lib/library";
-import {
-  FxPicker,
-  LocalePicker,
-  ThemePicker,
-  TypePicker,
-} from "../preference-pickers/PreferencePickers";
+import { FxPicker, LocalePicker, TypePicker } from "../preference-pickers/PreferencePickers";
+import { ThemeConsole } from "../theme-console/ThemeConsole";
 import "./AppShell.css";
 
 /**
@@ -144,10 +140,10 @@ export function AppShell() {
               >
                 {onExport ? strings.formulaNav : strings.exportLabel}
               </button>
+              <ThemeConsole />
               <div className="app-bar__prefs" aria-label={strings.settingsLabel}>
                 <FxPicker />
                 <TypePicker />
-                <ThemePicker />
                 <LocalePicker />
               </div>
             </div>
@@ -157,15 +153,18 @@ export function AppShell() {
             <NavLink to={`${base}/`} end className="app-bar__brand fx-display">
               π<span>Math Got Motion</span>
             </NavLink>
-            {!location.pathname.endsWith("/explore") && (
-              <Link
-                className="app-bar__search"
-                to={`${base}/explore?focus=1`}
-                aria-label={strings.navExplore}
-              >
-                <SearchIcon />
-              </Link>
-            )}
+            <div className="app-bar__actions">
+              {!location.pathname.endsWith("/explore") && (
+                <Link
+                  className="app-bar__search"
+                  to={`${base}/explore?focus=1`}
+                  aria-label={strings.navExplore}
+                >
+                  <SearchIcon />
+                </Link>
+              )}
+              <ThemeConsole />
+            </div>
           </>
         )}
       </header>
