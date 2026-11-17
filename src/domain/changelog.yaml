@@ -3,6 +3,50 @@
 # raíz del repo es un espejo generado de este archivo para desarrolladores;
 # las entradas nuevas se agregan acá, no ahí.
 
+- version: "0.15.0"
+  date: "2026-11-16"
+  changes:
+    - type: added
+      text:
+        es: "Rutas de aprendizaje y Glosario de símbolos: recorridos curados y un índice de 596 símbolos generado desde el catálogo."
+        en: "Learning paths and a Symbol glossary: curated routes and an index of 596 symbols generated from the catalog."
+        pt: "Trilhas de aprendizagem e Glossário de símbolos: percursos curados e um índice de 596 símbolos gerado do catálogo."
+        fr: "Parcours d'apprentissage et glossaire des symboles : des itinéraires choisis et un index de 596 symboles issu du catalogue."
+        zh: "新增学习路径与符号表：精选阅读路线，以及从目录生成的 596 个符号索引。"
+        ja: "学習パスと記号一覧を追加：厳選した読み順と、カタログから生成した596個の記号索引。"
+    - type: added
+      text:
+        es: "15 temas nuevos de Omarchy, 4 efectos de fondo y 4 estilos de wallpaper: todos toman su color de la paleta activa."
+        en: "15 new Omarchy themes, 4 background effects and 4 wallpaper styles: all take their color from the active palette."
+        pt: "15 novos temas Omarchy, 4 efeitos de fundo e 4 estilos de papel de parede: todos usam a paleta ativa."
+        fr: "15 nouveaux thèmes Omarchy, 4 effets de fond et 4 styles de fond d'écran : tous tirent leur couleur de la palette active."
+        zh: "新增 15 个 Omarchy 主题、4 种背景效果和 4 种壁纸风格，颜色均取自当前配色。"
+        ja: "Omarchy の新テーマ15種、背景効果4種、壁紙スタイル4種を追加。色はすべて現在のパレットから取得します。"
+    - type: added
+      text:
+        es: "Carga escalonada con skeleton de la fórmula real, precarga por intención y de las fórmulas vecinas para navegar sin esperas."
+        en: "Staged loading with a skeleton of the real formula, plus intent and neighbor prefetching for instant navigation."
+        pt: "Carregamento em etapas com skeleton da fórmula real e precarga por intenção e das fórmulas vizinhas."
+        fr: "Chargement par étapes avec un squelette de la formule réelle, et préchargement par intention et des formules voisines."
+        zh: "分阶段加载，骨架屏使用真实公式字形，并按意图预取相邻公式。"
+        ja: "実際の数式のグリフを使ったスケルトンと、意図・隣接公式の先読みによる段階的読み込み。"
+    - type: changed
+      text:
+        es: "El parser YAML y Zod cargan bajo demanda: el paquete inicial bajó de 213 KB a 185 KB gzip."
+        en: "The YAML parser and Zod now load on demand: the initial bundle dropped from 213 KB to 185 KB gzip."
+        pt: "O parser YAML e o Zod agora carregam sob demanda: o pacote inicial caiu de 213 KB para 185 KB gzip."
+        fr: "Le parser YAML et Zod se chargent à la demande : le paquet initial est passé de 213 Ko à 185 Ko gzip."
+        zh: "YAML 解析器与 Zod 改为按需加载：初始包从 213 KB 降至 185 KB（gzip）。"
+        ja: "YAML パーサーと Zod をオンデマンド読み込みに：初期バンドルは213KBから185KB（gzip）に削減。"
+    - type: changed
+      text:
+        es: "Interfaz más pulida: entradas animadas, microinteracciones y fondos fluidos que respetan prefers-reduced-motion y los 60 fps."
+        en: "A more polished interface: animated entrances, micro-interactions and smooth backgrounds that respect reduced motion at 60 fps."
+        pt: "Interface mais polida: entradas animadas, microinterações e fundos fluidos que respeitam prefers-reduced-motion e 60 fps."
+        fr: "Une interface plus soignée : entrées animées, micro-interactions et fonds fluides respectant reduced-motion à 60 fps."
+        zh: "界面更精致：入场动画、微交互与流畅背景，尊重减少动态偏好并保持 60 fps。"
+        ja: "より洗練されたUI：入场アニメーション、マイクロインタラクション、60fps で動く背景。"
+
 - version: "0.14.0"
   date: "2026-09-29"
   changes:

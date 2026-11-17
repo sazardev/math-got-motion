@@ -7,6 +7,19 @@ This file is generated from `src/domain/changelog.yaml` — the source of
 truth, bilingual, also rendered in-app at `/:locale/changelog`. Add new
 entries there, then run `pnpm changelog:sync`.
 
+## [0.15.0] - 2026-11-16
+
+### Added
+
+- Learning paths and a Symbol glossary: curated routes and an index of 596 symbols generated from the catalog.
+- 15 new Omarchy themes, 4 background effects and 4 wallpaper styles: all take their color from the active palette.
+- Staged loading with a skeleton of the real formula, plus intent and neighbor prefetching for instant navigation.
+
+### Changed
+
+- The YAML parser and Zod now load on demand: the initial bundle dropped from 213 KB to 185 KB gzip.
+- A more polished interface: animated entrances, micro-interactions and smooth backgrounds that respect reduced motion at 60 fps.
+
 ## [0.14.0] - 2026-09-29
 
 ### Changed
