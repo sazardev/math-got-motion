@@ -84,6 +84,22 @@ const CLASSIC_LABEL_KEYS = {
   atmosphere: "exportStyleAtmosphere",
   lattice: "exportStyleLattice",
   ribbon: "exportStyleRibbon",
+  prism: "exportStylePrism",
+  halftone: "exportStyleHalftone",
+  staircase: "exportStyleStaircase",
+  rings: "exportStyleRings",
+  matrix: "exportStyleMatrix",
+  cells: "exportStyleCells",
+  bigtype: "exportStyleBigtype",
+  wavefield: "exportStyleWavefield",
+  checker: "exportStyleChecker",
+  orbitdots: "exportStyleOrbitdots",
+  textwall: "exportStyleTextwall",
+  spectrumbars: "exportStyleSpectrumBars",
+  focusring: "exportStyleFocusring",
+  diagonal: "exportStyleDiagonal",
+  bloom: "exportStyleBloom",
+  frame: "exportStyleFrame",
 } as const;
 
 const VIDEO_STYLE_LABEL_KEYS = {

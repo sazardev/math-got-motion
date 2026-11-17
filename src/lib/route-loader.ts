@@ -17,6 +17,18 @@ export function loadChangelogPageChunk() {
   return import("../components/changelog-page/ChangelogPage");
 }
 
+export function loadCollectionsPageChunk() {
+  return import("../components/collections-page/CollectionsPage");
+}
+
+export function loadGlossaryPageChunk() {
+  return import("../components/glossary-page/GlossaryPage");
+}
+
+export function loadGuidePageChunk() {
+  return import("../components/guide-page/GuidePage");
+}
+
 /** Dispara la descarga sin esperarla (los módulos se cachean solos). */
 export function prefetchChunk(loader: () => Promise<unknown>): void {
   void loader().catch(() => {

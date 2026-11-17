@@ -611,6 +611,15 @@
   opacity: 0.35;
 }
 
+/* En teléfono el grano a pantalla completa y los haces anchos son los dos
+   layers más caros de componer; el resto del look se conserva intacto. */
+@media (max-width: 640px) {
+  .fx__grain,
+  .fx__beams {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .fx__leak,
   .fx__haze,

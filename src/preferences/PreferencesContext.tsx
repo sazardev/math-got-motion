@@ -11,6 +11,7 @@ import {
 import { isThemeId, themeMeta, type ThemeId } from "./themes";
 import { loadTypeFonts } from "../lib/font-loaders";
 import { stashScrollAnchor } from "../lib/scroll-anchor";
+import { detectSystemTheme } from "../lib/system-theme";
 
 const STORAGE_KEY = "mgm:preferences";
 
@@ -23,12 +24,16 @@ interface Preferences {
   requestedType: TypePreset;
   /** false mientras los webfonts del preset pedido están en vuelo. */
   typeReady: boolean;
+  /** true en cuanto el usuario elige un tema; detiene la detección del SO. */
+  themeExplicit: boolean;
 }
 
 interface StoredPreferences {
   theme: ThemeId;
   fx: FxPreset;
   type: TypePreset;
+  /** false mientras el tema viene del SO (Omarchy o prefers-color-scheme). */
+  themeExplicit?: boolean;
 }
 
 function isFxPreset(value: unknown): value is FxPreset {
@@ -52,7 +57,12 @@ function toThemeId(value: unknown): ThemeId | null {
 
 /** Preferencias guardadas, tolerando storage bloqueado o JSON corrupto. */
 function readStoredPreferences(): StoredPreferences {
-  const defaults: StoredPreferences = { theme: "mono-dark", fx: "mono", type: "default" };
+  const defaults: StoredPreferences = {
+    theme: "mono-dark",
+    fx: "mono",
+    type: "default",
+    themeExplicit: false,
+  };
 
   try {
     const raw = globalThis.localStorage.getItem(STORAGE_KEY);
@@ -67,6 +77,9 @@ function readStoredPreferences(): StoredPreferences {
       theme: theme ?? defaults.theme,
       fx: isFxPreset(fx) ? fx : defaults.fx,
       type: isTypePreset(type) ? type : defaults.type,
+      // Un storage anterior a este flag significa que el usuario eligió tema.
+      themeExplicit:
+        record["themeExplicit"] === undefined ? true : record["themeExplicit"] === true,
     };
   } catch {
     // Storage no disponible (modo privado, cuota, JSON roto) — se usan los
@@ -87,11 +100,27 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
       type: "default",
       requestedType: stored.type,
       typeReady: stored.type === "default",
+      themeExplicit: stored.themeExplicit ?? false,
     };
   });
 
+  // Primera visita: el tema lo decide el SO (Omarchy en Tauri, esquema claro/
+  // oscuro en la web). Si el usuario ya eligió uno, no se vuelve a tocar.
+  useEffect(() => {
+    if (prefs.themeExplicit) return;
+    let cancelled = false;
+    void detectSystemTheme().then(({ theme }) => {
+      if (!cancelled) {
+        setPrefs((current) => (current.themeExplicit ? current : { ...current, theme }));
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [prefs.themeExplicit]);
+
   const setTheme = useCallback((theme: ThemeId) => {
-    setPrefs((current) => ({ ...current, theme }));
+    setPrefs((current) => ({ ...current, theme, themeExplicit: true }));
   }, []);
 
   const setFx = useCallback((fx: FxPreset) => {
@@ -168,12 +197,13 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
         theme: prefs.theme,
         fx: prefs.fx,
         type: prefs.requestedType,
+        themeExplicit: prefs.themeExplicit,
       };
       globalThis.localStorage.setItem(STORAGE_KEY, JSON.stringify(stored));
     } catch {
       // Sin persistencia — la preferencia igual se aplica en esta sesión.
     }
-  }, [prefs.theme, prefs.fx, prefs.type, prefs.requestedType]);
+  }, [prefs.theme, prefs.fx, prefs.type, prefs.requestedType, prefs.themeExplicit]);
 
   const value = useMemo<PreferencesContextValue>(
     () => ({

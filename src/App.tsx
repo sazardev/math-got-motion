@@ -2,10 +2,8 @@ import { lazy, Suspense, useEffect } from "react";
 import { Navigate, Route, Routes, useLocation, useNavigate, useParams } from "react-router-dom";
 
 import { AppShell } from "./components/app-shell/AppShell";
-import { CollectionsPage } from "./components/collections-page/CollectionsPage";
 import { ExplorePage } from "./components/explore-page/ExplorePage";
 import { FxLayer } from "./components/fx/FxLayer";
-import { GlossaryPage } from "./components/glossary-page/GlossaryPage";
 import { HomePage } from "./components/home-page/HomePage";
 import { SavedPage } from "./components/library-pages/SavedPage";
 import { SettingsPage } from "./components/library-pages/SettingsPage";
@@ -20,8 +18,11 @@ import { markRecent } from "./lib/library";
 import { prefetchNeighbors } from "./lib/prefetch";
 import {
   loadChangelogPageChunk,
+  loadCollectionsPageChunk,
   loadExportPageChunk,
   loadFormulaHeroChunk,
+  loadGlossaryPageChunk,
+  loadGuidePageChunk,
 } from "./lib/route-loader";
 import { PreferencesProvider } from "./preferences/PreferencesContext";
 
@@ -32,6 +33,11 @@ const ExportPage = lazy(() => loadExportPageChunk().then((m) => ({ default: m.Ex
 const ChangelogPage = lazy(() =>
   loadChangelogPageChunk().then((m) => ({ default: m.ChangelogPage })),
 );
+const CollectionsPage = lazy(() =>
+  loadCollectionsPageChunk().then((m) => ({ default: m.CollectionsPage })),
+);
+const GlossaryPage = lazy(() => loadGlossaryPageChunk().then((m) => ({ default: m.GlossaryPage })));
+const GuidePage = lazy(() => loadGuidePageChunk().then((m) => ({ default: m.GuidePage })));
 
 /** El contenido de "/:locale/formula/:formulaId" — la fórmula activa, o un id inexistente. */
 function FormulaRouteContent() {
@@ -114,8 +120,30 @@ function AppRoutes() {
       <Route path=":locale" element={<LocaleLayout />}>
         <Route index element={<HomePage />} />
         <Route path="explore" element={<ExplorePage />} />
-        <Route path="colecciones" element={<CollectionsPage />} />
-        <Route path="glosario" element={<GlossaryPage />} />
+        <Route
+          path="colecciones"
+          element={
+            <Suspense fallback={<LoadingStage variant="light" />}>
+              <CollectionsPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="glosario"
+          element={
+            <Suspense fallback={<LoadingStage variant="light" />}>
+              <GlossaryPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="guia"
+          element={
+            <Suspense fallback={<LoadingStage variant="light" />}>
+              <GuidePage />
+            </Suspense>
+          }
+        />
         <Route path="formula" element={<Navigate to="../explore" replace />} />
         <Route path="saved" element={<SavedPage />} />
         <Route path="settings" element={<SettingsPage />} />

@@ -42,8 +42,23 @@ function whenIdle(task: () => void, timeout = 1200): () => void {
   };
 }
 
+interface NetworkCapabilities {
+  connection?: {
+    saveData?: boolean;
+    effectiveType?: string;
+  };
+}
+
+/** En datos medidos (modo ahorro o 2G) no gastamos red en precarga. */
+function mayPrefetch(): boolean {
+  const connection = (globalThis.navigator as unknown as NetworkCapabilities).connection;
+  if (!connection) return true;
+  return connection.saveData !== true && !(connection.effectiveType ?? "").includes("2g");
+}
+
 /** Precarga el YAML de una fórmula. Silencioso: la carga real ya reporta errores. */
 export function prefetchFormula(id: string): void {
+  if (!mayPrefetch()) return;
   void loadFormula(id).catch(() => {
     // La navegación real reintentará y decidirá si es "no encontrada".
   });

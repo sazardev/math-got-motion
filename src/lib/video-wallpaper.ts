@@ -1341,6 +1341,29 @@ const animators: Record<ClassicStyle | ExtraStyle, Animator> = {
     ...breathe(o, p, 0.02),
     rotation: o.rotation + 10 * swing(p),
   }),
+  prism: (o, p) => ({ ...o, spacingX: o.spacingX * (1 + 0.35 * swing(p)) }),
+  halftone: (o, p) => ({ ...o, spacingX: o.spacingX * (1 + 0.25 * swing(p)) }),
+  staircase: (o, p) => ({ ...o, spacingY: o.spacingY * (1 + 0.4 * swing(p)) }),
+  rings: (o, p) => ({ ...o, radius: o.radius * (1 + 0.3 * swing(p)) }),
+  matrix: (o, p) => ({ ...o, spacingX: o.spacingX * (1 + 0.2 * swing(p)) }),
+  cells: (o, p) => breathe(o, p, 0.04),
+  bigtype: (o, p) => ({
+    ...breathe(o, p, 0.04),
+    rotation: o.rotation + 8 * swing(p),
+  }),
+  wavefield: (o, p) => ({ ...o, radius: o.radius * (1 + 0.4 * swing(p)) }),
+  checker: (o, p) => breathe(o, p, 0.03),
+  orbitdots: (o, p) => ({ ...o, radius: o.radius * (1 + 0.25 * swing(p)) }),
+  textwall: (o, p) => ({ ...o, rotation: o.rotation + 6 * swing(p) }),
+  spectrumbars: (o, p) => breathe(o, p, 0.03),
+  focusring: (o, p, n) => ({
+    ...o,
+    focus: n > 0 ? Math.floor(p * n) % n : 0,
+    radius: o.radius * (1 + 0.2 * swing(p, 2)),
+  }),
+  diagonal: (o, p) => ({ ...o, rotation: o.rotation + 8 * swing(p) }),
+  bloom: (o, p) => ({ ...o, radius: o.radius * (1 + 0.35 * swing(p)) }),
+  frame: (o, p) => breathe(o, p, 0.03),
 };
 
 /** Vuelta base (s) de los estilos de imagen animados; los que giran entero van más lento. */
@@ -1357,6 +1380,11 @@ const ANIMATED_PERIODS: Partial<Record<ClassicStyle | ExtraStyle, number>> = {
   neon: 6,
   atmosphere: 12,
   ribbon: 16,
+  rings: 20,
+  orbitdots: 20,
+  wavefield: 10,
+  bloom: 12,
+  focusring: 16,
 };
 
 function animated(style: ClassicStyle | ExtraStyle): SceneFactory {

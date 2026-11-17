@@ -219,6 +219,13 @@ export function HomePage() {
             <span className="home__discover-name">{strings.navGlossary}</span>
             <span className="home__discover-cta">{strings.homeGlossaryCta} →</span>
           </Link>
+          <Link className="home__discover-card" to={`/${locale}/guia`}>
+            <span className="home__discover-glyph fx-display" aria-hidden="true">
+              ?
+            </span>
+            <span className="home__discover-name">{strings.guideTitle}</span>
+            <span className="home__discover-cta">{strings.guideTitle} →</span>
+          </Link>
         </div>
       </section>
 

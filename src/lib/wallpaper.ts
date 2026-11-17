@@ -47,7 +47,23 @@ export type ExtraStyle =
   | "omarchy"
   | "atmosphere"
   | "lattice"
-  | "ribbon";
+  | "ribbon"
+  | "prism"
+  | "halftone"
+  | "staircase"
+  | "rings"
+  | "matrix"
+  | "cells"
+  | "bigtype"
+  | "wavefield"
+  | "checker"
+  | "orbitdots"
+  | "textwall"
+  | "spectrumbars"
+  | "focusring"
+  | "diagonal"
+  | "bloom"
+  | "frame";
 
 /**
  * Escenas del exportador de video (video-wallpaper.ts). En modo imagen se
@@ -126,6 +142,22 @@ export const extraStyles: readonly ExtraStyle[] = [
   "atmosphere",
   "lattice",
   "ribbon",
+  "prism",
+  "halftone",
+  "staircase",
+  "rings",
+  "matrix",
+  "cells",
+  "bigtype",
+  "wavefield",
+  "checker",
+  "orbitdots",
+  "textwall",
+  "spectrumbars",
+  "focusring",
+  "diagonal",
+  "bloom",
+  "frame",
 ];
 
 export const videoStyles: readonly VideoStyle[] = [
@@ -372,6 +404,22 @@ const extraOptionKeys: Record<ExtraStyle, readonly WallpaperOptionKey[]> = {
   atmosphere: ["scale", "count", "radius"],
   lattice: ["scale", "spacingX", "spacingY"],
   ribbon: ["scale", "count", "rotation"],
+  prism: ["scale", "spacingX"],
+  halftone: ["scale", "spacingX", "count"],
+  staircase: ["scale", "count", "spacingY"],
+  rings: ["scale", "count", "radius"],
+  matrix: ["scale", "count", "spacingX"],
+  cells: ["scale", "spacingX", "spacingY"],
+  bigtype: ["scale", "focus", "rotation"],
+  wavefield: ["scale", "count", "radius"],
+  checker: ["scale", "spacingX"],
+  orbitdots: ["scale", "count", "radius"],
+  textwall: ["scale", "spacingX", "spacingY", "rotation"],
+  spectrumbars: ["scale", "count", "rotation"],
+  focusring: ["scale", "focus", "radius"],
+  diagonal: ["scale", "spacingX", "rotation"],
+  bloom: ["scale", "count", "radius"],
+  frame: ["scale", "spacingX"],
 };
 
 /** Qué ajustes tienen efecto en cada estilo — la UI solo muestra esos. */

@@ -46,6 +46,7 @@ function buildRoutes(): Route[] {
       { routePath: `/${locale}/explore`, waitSelector: ".explore .formula-card" },
       { routePath: `/${locale}/colecciones`, waitSelector: ".collections .collection" },
       { routePath: `/${locale}/glosario`, waitSelector: ".glossary .glossary__entry" },
+      { routePath: `/${locale}/guia`, waitSelector: ".guide .guide__card" },
     );
   }
 

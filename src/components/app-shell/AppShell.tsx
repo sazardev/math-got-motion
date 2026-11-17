@@ -167,6 +167,9 @@ export function AppShell() {
               <Link className="app-bar__link" to={`${base}/glosario`}>
                 {strings.navGlossary}
               </Link>
+              <Link className="app-bar__link" to={`${base}/guia`}>
+                {strings.guideTitle}
+              </Link>
               {!location.pathname.endsWith("/explore") && (
                 <Link
                   className="app-bar__search"
@@ -198,6 +201,12 @@ export function AppShell() {
         <NavLink to={`${base}/settings`} className="tab-bar__item">
           <SlidersIcon />
           <span>{strings.navSettings}</span>
+        </NavLink>
+        <NavLink to={`${base}/guia`} className="tab-bar__item">
+          <span className="tab-bar__glyph" aria-hidden="true">
+            ?
+          </span>
+          <span>{strings.navGuideShort}</span>
         </NavLink>
       </nav>
 

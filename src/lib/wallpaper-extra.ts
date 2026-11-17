@@ -14,6 +14,7 @@ import {
   type ExtraStyle,
   type WallpaperRequest,
 } from "./wallpaper";
+import { variantComposers } from "./wallpaper-variants";
 
 /**
  * Composiciones estáticas adicionales del exportador de imágenes. Cada una es
@@ -1014,4 +1015,5 @@ export const extraComposers: Record<ExtraStyle, Composer> = {
   atmosphere,
   lattice,
   ribbon,
+  ...variantComposers,
 };

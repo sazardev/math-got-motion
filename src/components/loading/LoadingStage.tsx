@@ -9,7 +9,7 @@ import {
 } from "../../lib/route-loader";
 import "./LoadingStage.css";
 
-type Variant = "formula" | "export" | "changelog";
+type Variant = "formula" | "export" | "changelog" | "light";
 
 interface LoadingStageProps {
   variant: Variant;
@@ -23,6 +23,9 @@ const CHUNKS: Record<Variant, () => Promise<unknown>> = {
   formula: loadFormulaHeroChunk,
   export: loadExportPageChunk,
   changelog: loadChangelogPageChunk,
+  // Páginas ligeras: el propio Suspense ya trae el chunk, el skeleton solo
+  // espera tipografía; cargar otro módulo acá sería una descarga inútil.
+  light: () => Promise.resolve(null),
 };
 
 const FALLBACK_GLYPHS = ["∑", "=", "π", "+", "·"];
@@ -64,7 +67,7 @@ export function LoadingStage({ variant, formulaId, formulaReady = true }: Loadin
     const list: { label: string; done: boolean }[] = [
       { label: strings.loadingStepIndex, done: true },
     ];
-    if (variant !== "changelog") {
+    if (variant === "formula" || variant === "export") {
       list.push({ label: strings.loadingStepFormula, done: formulaReady });
     }
     list.push(

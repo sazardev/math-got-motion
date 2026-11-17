@@ -1,0 +1,72 @@
+.guide {
+  padding-bottom: 4rem;
+}
+
+.guide__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  gap: 0.25rem;
+}
+
+.guide__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-height: 12rem;
+  padding: 1.2rem;
+  background: var(--bg);
+  transition: background-color 0.2s ease;
+}
+
+.guide__card:hover,
+.guide__card:focus-within {
+  background: color-mix(in srgb, var(--fg) 8%, var(--bg));
+}
+
+.guide__number {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+
+.guide__title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.guide__text {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  opacity: 0.78;
+}
+
+.guide__footer {
+  padding-top: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.guide__footer a {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.guide__footer a:hover,
+.guide__footer a:focus-visible {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .guide__card,
+  .guide__footer a {
+    transition: none;
+  }
+}

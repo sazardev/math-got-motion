@@ -1001,6 +1001,148 @@ cada
   --accent-fg: #ffffff;
 }
 
+/* Variedad adicional: paletas de terminal y editorial, todas con el mismo
+   contraste que las anteriores y --accent derivado del tema activo. */
+[data-theme="vesper"] {
+  --bg: #101010;
+  --fg: #c9c5b8;
+  --accent: #b9c46b;
+  --accent-fg: #101010;
+}
+
+[data-theme="melange-dark"] {
+  --bg: #1a1b1c;
+  --fg: #cfc9c2;
+  --accent: #ff8f40;
+  --accent-fg: #1a1b1c;
+}
+
+[data-theme="everblush"] {
+  --bg: #101010;
+  --fg: #c8c0c0;
+  --accent: #e57aaa;
+  --accent-fg: #101010;
+}
+
+[data-theme="tokyo-storm"] {
+  --bg: #24283b;
+  --fg: #c0caf5;
+  --accent: #7aa2f7;
+  --accent-fg: #24283b;
+}
+
+[data-theme="horizon-light"] {
+  --bg: #fdf0ed;
+  --fg: #403c41;
+  --accent: #e95678;
+  --accent-fg: #fdf0ed;
+}
+
+[data-theme="cyberpunk-neon"] {
+  --bg: #0d0221;
+  --fg: #f5f5f5;
+  --accent: #00ffff;
+  --accent-fg: #0d0221;
+}
+
+[data-theme="lavender-haze"] {
+  --bg: #1b1526;
+  --fg: #e8e0f5;
+  --accent: #c792ea;
+  --accent-fg: #1b1526;
+}
+
+[data-theme="sandstone"] {
+  --bg: #f5efe3;
+  --fg: #3b3328;
+  --accent: #b5651d;
+  --accent-fg: #f5efe3;
+}
+
+[data-theme="graphite"] {
+  --bg: #151515;
+  --fg: #d8d8d8;
+  --accent: #9e9e9e;
+  --accent-fg: #151515;
+}
+
+[data-theme="deep-ocean"] {
+  --bg: #071a2b;
+  --fg: #d7ecf5;
+  --accent: #2bb3c0;
+  --accent-fg: #071a2b;
+}
+
+[data-theme="aurora-boreal"] {
+  --bg: #06121f;
+  --fg: #d8f3dc;
+  --accent: #4cc9a0;
+  --accent-fg: #06121f;
+}
+
+[data-theme="rose-quartz"] {
+  --bg: #fff5f7;
+  --fg: #3d2b33;
+  --accent: #c9184a;
+  --accent-fg: #fff5f7;
+}
+
+[data-theme="midnight-cobalt"] {
+  --bg: #0b132b;
+  --fg: #dbe7ff;
+  --accent: #4cc9f0;
+  --accent-fg: #0b132b;
+}
+
+[data-theme="matcha-latte"] {
+  --bg: #f4f1e1;
+  --fg: #2f3a2b;
+  --accent: #7b9e46;
+  --accent-fg: #f4f1e1;
+}
+
+[data-theme="ultraviolet"] {
+  --bg: #120a24;
+  --fg: #e6dcff;
+  --accent: #9d4edd;
+  --accent-fg: #120a24;
+}
+
+[data-theme="desert-sand"] {
+  --bg: #faf0e6;
+  --fg: #3b2f2a;
+  --accent: #c97b3c;
+  --accent-fg: #faf0e6;
+}
+
+[data-theme="graphite-light"] {
+  --bg: #f5f5f5;
+  --fg: #1c1c1c;
+  --accent: #5c5c5c;
+  --accent-fg: #f5f5f5;
+}
+
+[data-theme="terminal-green"] {
+  --bg: #020b02;
+  --fg: #7dff8a;
+  --accent: #39ff14;
+  --accent-fg: #020b02;
+}
+
+[data-theme="deep-plum"] {
+  --bg: #1a0f1c;
+  --fg: #ecdcf0;
+  --accent: #c77dff;
+  --accent-fg: #1a0f1c;
+}
+
+[data-theme="ice-blue"] {
+  --bg: #eef7ff;
+  --fg: #16324f;
+  --accent: #2b8ac6;
+  --accent-fg: #eef7ff;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -1115,5 +1257,39 @@ body {
   .explore__more,
   .explore__clear {
     transition: none;
+  }
+}
+
+/* Móvil/táctil: ningún control importante baja de 44px de alto. Los iconos
+   del tab bar ya tenían 3.1rem; esto cubre el chrome y los enlaces de texto. */
+@media (pointer: coarse) {
+  .control-button,
+  .app-bar__back,
+  .app-bar__search,
+  .console-trigger,
+  .explore__chip,
+  .explore__clear,
+  .explore__more,
+  .home__category,
+  .collections__index a,
+  .glossary__examples a,
+  .not-found__link,
+  .guide__footer a {
+    min-height: 2.75rem;
+  }
+
+  .app-bar__back,
+  .app-bar__search,
+  .console-trigger,
+  .explore__chip,
+  .explore__clear,
+  .explore__more,
+  .home__category,
+  .collections__index a,
+  .glossary__examples a,
+  .not-found__link,
+  .guide__footer a {
+    display: inline-flex;
+    align-items: center;
   }
 }
