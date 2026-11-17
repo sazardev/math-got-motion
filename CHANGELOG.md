@@ -7,6 +7,19 @@ This file is generated from `src/domain/changelog.yaml` — the source of
 truth, bilingual, also rendered in-app at `/:locale/changelog`. Add new
 entries there, then run `pnpm changelog:sync`.
 
+## [0.16.0] - 2026-11-16
+
+### Added
+
+- New Quick guide with usage, shortcuts, trivia and technology, plus a fifth mobile tab to reach it instantly.
+- On Tauri over Omarchy the app now starts with your system theme. On the web it follows the OS light/dark scheme.
+- 20 new themes and 16 more wallpaper styles: prism, halftone, rings, matrix, text wall and others, all driven by the active palette.
+
+### Changed
+
+- Faster: Collections, Glossary and Guide load separately, theme detection runs in one pass, and no prefetch on 2G.
+- More thoughtful mobile: 44 px touch targets, safe areas honored and fewer effect layers on small screens.
+
 ## [0.15.0] - 2026-11-16
 
 ### Added

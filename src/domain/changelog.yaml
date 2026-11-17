@@ -3,6 +3,50 @@
 # raíz del repo es un espejo generado de este archivo para desarrolladores;
 # las entradas nuevas se agregan acá, no ahí.
 
+- version: "0.16.0"
+  date: "2026-11-16"
+  changes:
+    - type: added
+      text:
+        es: "Nueva Guía rápida con uso, atajos, curiosidades y tecnología, más un quinto tab móvil para llegar a ella sin buscar."
+        en: "New Quick guide with usage, shortcuts, trivia and technology, plus a fifth mobile tab to reach it instantly."
+        pt: "Novo Guia rápido com uso, atalhos, curiosidades e tecnologia, e um quinto tab móvel para chegar lá sem procurar."
+        fr: "Nouveau guide rapide avec usage, raccourcis, curiosités et technologie, et un cinquième onglet mobile pour y accéder."
+        zh: "新增快速指南，涵盖用法、快捷键、冷知识和技术细节，并在手机端增加第五个标签直达。"
+        ja: "使い方・ショートカット・豆知識・技術をまとめたクイックガイドを追加。モバイルは5番目のタブで直接開けます。"
+    - type: added
+      text:
+        es: "En Tauri sobre Omarchy la app arranca con el tema del sistema. En la web respeta el esquema claro u oscuro del SO."
+        en: "On Tauri over Omarchy the app now starts with your system theme. On the web it follows the OS light/dark scheme."
+        pt: "No Tauri sobre Omarchy, o app começa com o tema do sistema. Na web, segue o esquema claro/escuro do SO."
+        fr: "Sur Tauri avec Omarchy, l'app démarre avec le thème du système. Sur le web, elle suit le schéma clair/sombre de l'OS."
+        zh: "在 Omarchy 桌面版中，应用会以系统主题启动；网页版则遵循操作系统的明暗模式。"
+        ja: "Omarchy 上の Tauri ではシステムのテーマで起動。Web では OS のライト/ダーク設定に従います。"
+    - type: added
+      text:
+        es: "20 temas nuevos y 16 estilos de wallpaper más: prisma, trama, anillos, matriz, texto repetido y otros, todos con la paleta activa."
+        en: "20 new themes and 16 more wallpaper styles: prism, halftone, rings, matrix, text wall and others, all driven by the active palette."
+        pt: "20 temas novos e mais 16 estilos de papel de parede: prisma, retícula, anéis, matriz, mural de texto e outros."
+        fr: "20 nouveaux thèmes et 16 styles de fond d'écran : prisme, trame, anneaux, matrice, mur de texte et autres."
+        zh: "新增 20 个主题和 16 种壁纸风格：棱镜、网点、圆环、矩阵、文字墙等，均使用当前配色。"
+        ja: "新しいテーマ20種と壁紙スタイル16種を追加：プリズム、ハーフトーン、リング、マトリクス、文字の壁など。"
+    - type: changed
+      text:
+        es: "Más rápido: Colecciones, Glosario y Guía cargan aparte, la detección de tema hace una sola pasada y no hay precarga en 2G."
+        en: "Faster: Collections, Glossary and Guide load separately, theme detection runs in one pass, and no prefetch on 2G."
+        pt: "Mais rápido: Coleções, Glossário e Guia carregam à parte, a detecção de tema faz uma única passada e não há precarga em 2G."
+        fr: "Plus rapide : Collections, Glossaire et Guide se chargent séparément, détection en une passe et aucun préchargement en 2G."
+        zh: "更快：合集、符号表和指南按需加载，主题检测一次完成，2G 网络不预取。"
+        ja: "高速化：コレクション・用語集・ガイドを別チャンク化し、テーマ検出を1パスに、2Gでは先読みしません。"
+    - type: changed
+      text:
+        es: "Móvil más cuidado: controles de al menos 44 px, safe areas respetadas y menos capas de efectos en pantallas pequeñas."
+        en: "More thoughtful mobile: 44 px touch targets, safe areas honored and fewer effect layers on small screens."
+        pt: "Celular mais cuidado: alvos de toque de 44 px, áreas seguras respeitadas e menos camadas de efeito em telas pequenas."
+        fr: "Mobile soigné : cibles tactiles de 44 px, zones sûres respectées et moins de calques d'effet sur les petits écrans."
+        zh: "移动体验更细致：44px 触控目标、完整适配安全区域，小屏幕减少特效层。"
+        ja: "モバイルを改善：44px のタッチ領域、セーフエリア対応、小さな画面ではエフェクト層を削減。"
+
 - version: "0.15.0"
   date: "2026-11-16"
   changes:
