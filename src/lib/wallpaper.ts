@@ -43,7 +43,11 @@ export type ExtraStyle =
   | "gradient"
   | "knockout"
   | "cards"
-  | "constellation";
+  | "constellation"
+  | "omarchy"
+  | "atmosphere"
+  | "lattice"
+  | "ribbon";
 
 /**
  * Escenas del exportador de video (video-wallpaper.ts). En modo imagen se
@@ -118,6 +122,10 @@ export const extraStyles: readonly ExtraStyle[] = [
   "knockout",
   "cards",
   "constellation",
+  "omarchy",
+  "atmosphere",
+  "lattice",
+  "ribbon",
 ];
 
 export const videoStyles: readonly VideoStyle[] = [
@@ -360,6 +368,10 @@ const extraOptionKeys: Record<ExtraStyle, readonly WallpaperOptionKey[]> = {
   knockout: ["scale"],
   cards: ["scale", "spacingX"],
   constellation: ["scale", "count", "radius"],
+  omarchy: ["scale", "rotation"],
+  atmosphere: ["scale", "count", "radius"],
+  lattice: ["scale", "spacingX", "spacingY"],
+  ribbon: ["scale", "count", "rotation"],
 };
 
 /** Qué ajustes tienen efecto en cada estilo — la UI solo muestra esos. */

@@ -2,11 +2,14 @@ import { lazy, Suspense, useEffect } from "react";
 import { Navigate, Route, Routes, useLocation, useNavigate, useParams } from "react-router-dom";
 
 import { AppShell } from "./components/app-shell/AppShell";
+import { CollectionsPage } from "./components/collections-page/CollectionsPage";
 import { ExplorePage } from "./components/explore-page/ExplorePage";
 import { FxLayer } from "./components/fx/FxLayer";
+import { GlossaryPage } from "./components/glossary-page/GlossaryPage";
 import { HomePage } from "./components/home-page/HomePage";
 import { SavedPage } from "./components/library-pages/SavedPage";
 import { SettingsPage } from "./components/library-pages/SettingsPage";
+import { LoadingStage } from "./components/loading/LoadingStage";
 import { NotFoundPage } from "./components/not-found/NotFoundPage";
 import { useFormula } from "./hooks/useFormula";
 import { detectInitialLocale, isLocale, type Locale } from "./i18n/locale";
@@ -14,29 +17,21 @@ import { useLocale } from "./i18n/locale-context";
 import { LocaleProvider } from "./i18n/LocaleContext";
 import { destroyLenis, initLenis } from "./lib/lenis";
 import { markRecent } from "./lib/library";
+import { prefetchNeighbors } from "./lib/prefetch";
+import {
+  loadChangelogPageChunk,
+  loadExportPageChunk,
+  loadFormulaHeroChunk,
+} from "./lib/route-loader";
 import { PreferencesProvider } from "./preferences/PreferencesContext";
 
 // Las rutas pesadas (hero con GSAP, exportador de wallpapers/video, changelog)
 // son chunks aparte: Home y Explorar arrancan sin descargarlas.
-const FormulaHero = lazy(() =>
-  import("./components/formula-hero/FormulaHero").then((m) => ({ default: m.FormulaHero })),
-);
-const ExportPage = lazy(() =>
-  import("./components/export-page/ExportPage").then((m) => ({ default: m.ExportPage })),
-);
+const FormulaHero = lazy(() => loadFormulaHeroChunk().then((m) => ({ default: m.FormulaHero })));
+const ExportPage = lazy(() => loadExportPageChunk().then((m) => ({ default: m.ExportPage })));
 const ChangelogPage = lazy(() =>
-  import("./components/changelog-page/ChangelogPage").then((m) => ({ default: m.ChangelogPage })),
+  loadChangelogPageChunk().then((m) => ({ default: m.ChangelogPage })),
 );
-
-/** Pantalla mínima mientras llega el chunk de la fórmula (unos KB, casi instantáneo). */
-function FormulaLoading() {
-  const { strings } = useLocale();
-  return (
-    <p className="app-loading" role="status">
-      {strings.loadingFormula}
-    </p>
-  );
-}
 
 /** El contenido de "/:locale/formula/:formulaId" — la fórmula activa, o un id inexistente. */
 function FormulaRouteContent() {
@@ -45,14 +40,20 @@ function FormulaRouteContent() {
   const state = useFormula(formulaId);
 
   useEffect(() => {
-    if (state.status === "ready") markRecent(state.formula.id);
-  }, [state]);
+    if (state.status !== "ready") return;
+    markRecent(state.formula.id);
+    // Swipe/flechas recorren la categoría: las vecinas se descargan en idle
+    // para que el cambio de fórmula no tenga que esperar al YAML.
+    return prefetchNeighbors(state.formula.id, locale);
+  }, [state, locale]);
 
-  if (state.status === "loading") return <FormulaLoading />;
+  if (state.status === "loading") {
+    return <LoadingStage variant="formula" formulaId={formulaId} formulaReady={false} />;
+  }
   if (state.status === "missing") return <NotFoundPage locale={locale} />;
 
   return (
-    <Suspense fallback={<FormulaLoading />}>
+    <Suspense fallback={<LoadingStage variant="formula" formulaId={formulaId} formulaReady />}>
       <FormulaHero key={state.formula.id} formula={state.formula} />
     </Suspense>
   );
@@ -64,11 +65,13 @@ function ExportRouteContent() {
   const { formulaId } = useParams<{ formulaId: string }>();
   const state = useFormula(formulaId);
 
-  if (state.status === "loading") return <FormulaLoading />;
+  if (state.status === "loading") {
+    return <LoadingStage variant="export" formulaId={formulaId} formulaReady={false} />;
+  }
   if (state.status === "missing") return <NotFoundPage locale={locale} />;
 
   return (
-    <Suspense fallback={<FormulaLoading />}>
+    <Suspense fallback={<LoadingStage variant="export" formulaId={formulaId} formulaReady />}>
       <ExportPage key={state.formula.id} formula={state.formula} />
     </Suspense>
   );
@@ -111,6 +114,8 @@ function AppRoutes() {
       <Route path=":locale" element={<LocaleLayout />}>
         <Route index element={<HomePage />} />
         <Route path="explore" element={<ExplorePage />} />
+        <Route path="colecciones" element={<CollectionsPage />} />
+        <Route path="glosario" element={<GlossaryPage />} />
         <Route path="formula" element={<Navigate to="../explore" replace />} />
         <Route path="saved" element={<SavedPage />} />
         <Route path="settings" element={<SettingsPage />} />
@@ -119,7 +124,7 @@ function AppRoutes() {
         <Route
           path="changelog"
           element={
-            <Suspense fallback={<FormulaLoading />}>
+            <Suspense fallback={<LoadingStage variant="changelog" />}>
               <ChangelogPage />
             </Suspense>
           }

@@ -30,7 +30,17 @@ export function NotFoundPage({ locale = detectInitialLocale() }: NotFoundPagePro
     };
   }, [locale]);
 
-  if (!strings) return null;
+  // Las strings son un chunk aparte; mientras llegan mostramos el código, que
+  // es independiente del idioma. Evita un lienzo vacío durante la navegación.
+  if (!strings) {
+    return (
+      <section className="not-found" aria-busy="true" aria-label="404">
+        <p className="not-found__code fx-display" aria-hidden="true">
+          404
+        </p>
+      </section>
+    );
+  }
 
   return (
     <section className="not-found" aria-label={strings.notFoundTitle}>

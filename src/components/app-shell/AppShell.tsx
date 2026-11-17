@@ -5,6 +5,7 @@ import { BookmarkIcon, HomeIcon, SearchIcon, SlidersIcon } from "./icons";
 import { findSummary, neighborsOf } from "../../domain/formula-index";
 import { useLocale } from "../../i18n/locale-context";
 import { toggleSaved, useLibrary } from "../../lib/library";
+import { loadExportPageChunk, prefetchChunk } from "../../lib/route-loader";
 import { FxPicker, LocalePicker, TypePicker } from "../preference-pickers/PreferencePickers";
 import { ThemeConsole } from "../theme-console/ThemeConsole";
 import "./AppShell.css";
@@ -130,6 +131,12 @@ export function AppShell() {
                 type="button"
                 className="control-button"
                 aria-current={onExport ? "page" : undefined}
+                onPointerEnter={() => {
+                  prefetchChunk(loadExportPageChunk);
+                }}
+                onFocus={() => {
+                  prefetchChunk(loadExportPageChunk);
+                }}
                 onClick={() => {
                   void navigate(
                     onExport
@@ -154,6 +161,12 @@ export function AppShell() {
               π<span>Math Got Motion</span>
             </NavLink>
             <div className="app-bar__actions">
+              <Link className="app-bar__link" to={`${base}/colecciones`}>
+                {strings.navCollections}
+              </Link>
+              <Link className="app-bar__link" to={`${base}/glosario`}>
+                {strings.navGlossary}
+              </Link>
               {!location.pathname.endsWith("/explore") && (
                 <Link
                   className="app-bar__search"

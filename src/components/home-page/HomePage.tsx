@@ -202,6 +202,26 @@ export function HomePage() {
         </ol>
       </section>
 
+      <section>
+        <h2 className="app-section-title">{strings.homeDiscoverTitle}</h2>
+        <div className="home__discover">
+          <Link className="home__discover-card" to={`/${locale}/colecciones`}>
+            <span className="home__discover-glyph fx-display" aria-hidden="true">
+              ∫
+            </span>
+            <span className="home__discover-name">{strings.navCollections}</span>
+            <span className="home__discover-cta">{strings.homeCollectionsCta} →</span>
+          </Link>
+          <Link className="home__discover-card" to={`/${locale}/glosario`}>
+            <span className="home__discover-glyph fx-display" aria-hidden="true">
+              σ
+            </span>
+            <span className="home__discover-name">{strings.navGlossary}</span>
+            <span className="home__discover-cta">{strings.homeGlossaryCta} →</span>
+          </Link>
+        </div>
+      </section>
+
       <footer className="home__footer">
         <p className="home__footer-text">
           {strings.homeContributeText} {strings.homeStackText}

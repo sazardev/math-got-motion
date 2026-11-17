@@ -12,6 +12,10 @@ export const fxPresets = [
   "dream",
   "halftone",
   "glitch",
+  "aurora",
+  "grid",
+  "circuit",
+  "silk",
 ] as const;
 export type FxPreset = (typeof fxPresets)[number];
 
@@ -76,6 +80,10 @@ export const fxNames: Record<FxPreset, string> = {
   dream: "Dream",
   halftone: "Halftone",
   glitch: "Glitch",
+  aurora: "Aurora",
+  grid: "Grid",
+  circuit: "Circuit",
+  silk: "Silk",
 };
 
 export const typeNames: Record<TypePreset, string> = {

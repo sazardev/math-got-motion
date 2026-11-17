@@ -1,0 +1,124 @@
+.glossary {
+  padding-bottom: 4rem;
+}
+
+.glossary__field {
+  margin: 1.5rem 0 1rem;
+}
+
+.glossary__search {
+  width: min(100%, 32rem);
+  padding: 0.85rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--fg);
+  border-radius: 0;
+  background: transparent;
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.glossary__search::placeholder {
+  color: var(--fg);
+  opacity: 0.45;
+}
+
+.glossary__search:focus-visible {
+  border-bottom-color: var(--accent);
+}
+
+.glossary__count {
+  margin: 0 0 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.glossary__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+  gap: 0.25rem;
+}
+
+.glossary__entry {
+  display: grid;
+  grid-template-columns: minmax(3rem, 5rem) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  min-height: 7rem;
+  padding: 1rem;
+  background: var(--bg);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 7rem;
+  transition: background-color 0.18s ease;
+}
+
+.glossary__entry:hover,
+.glossary__entry:focus-within {
+  background: color-mix(in srgb, var(--fg) 8%, var(--bg));
+}
+
+.glossary__symbol {
+  color: var(--accent);
+  font-family: var(--font-formula);
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+
+.glossary__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.glossary__types,
+.glossary__uses,
+.glossary__examples-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.glossary__types {
+  color: var(--accent);
+}
+
+.glossary__uses,
+.glossary__examples-label {
+  opacity: 0.5;
+}
+
+.glossary__examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.7rem;
+  margin-top: 0.2rem;
+}
+
+.glossary__examples a {
+  color: var(--fg);
+  font-size: 0.78rem;
+  text-decoration: none;
+  opacity: 0.8;
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+}
+
+.glossary__examples a:hover,
+.glossary__examples a:focus-visible {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glossary__examples a {
+    transition: none;
+  }
+}

@@ -1,6 +1,4 @@
-import yaml from "js-yaml";
-
-import { formulaSchema, type Formula } from "../formula.types";
+import type { Formula } from "../formula.types";
 
 /**
  * Cada fórmula vive en su propio archivo `*.yaml` en esta carpeta — datos
@@ -32,17 +30,25 @@ export function loadFormula(id: string): Promise<Formula | null> {
   if (cached) return cached;
 
   const loader = loaders[`./${id}.yaml`];
-  const pending = loader
-    ? loader().then((raw) => {
-        const result = formulaSchema.safeParse(yaml.load(raw));
-        if (result.success && result.data.id === id) return result.data;
+  const pending = (async (): Promise<Formula | null> => {
+    if (!loader) return null;
 
-        const message = `${id}.yaml is invalid or its id does not match its filename.`;
-        if (import.meta.env.DEV) throw new Error(message);
-        console.error(message);
-        return null;
-      })
-    : Promise.resolve(null);
+    // js-yaml y Zod solo se usan al abrir una fórmula. Cargarlos acá (en vez
+    // de importarlos arriba) los saca del bundle inicial: Home y Explorar
+    // arrancan sin el parser ni el schema (~28 KB gzip de ahorro).
+    const [{ default: yaml }, { formulaSchema }] = await Promise.all([
+      import("js-yaml"),
+      import("../formula.types"),
+    ]);
+    const raw = await loader();
+    const result = formulaSchema.safeParse(yaml.load(raw));
+    if (result.success && result.data.id === id) return result.data;
+
+    const message = `${id}.yaml is invalid or its id does not match its filename.`;
+    if (import.meta.env.DEV) throw new Error(message);
+    console.error(message);
+    return null;
+  })();
 
   cache.set(id, pending);
   return pending;

@@ -109,6 +109,36 @@
   gap: 0.4rem;
 }
 
+/* Accesos a las secciones nuevas: solo en la barra ancha. En móvil se llega
+   a ellas desde el bloque "Sigue explorando" del inicio, sin apiñar el tab bar. */
+.app-bar__link {
+  display: none;
+  min-height: 2.75rem;
+  align-items: center;
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0.55;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.app-bar__link:hover,
+.app-bar__link:focus-visible {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+@media (min-width: 1000px) {
+  .app-bar__link {
+    display: inline-flex;
+  }
+}
+
 .app-bar__save[aria-pressed="true"] {
   opacity: 1;
 }
@@ -321,6 +351,14 @@
   color: var(--accent);
 }
 
+.app-page__lead {
+  max-width: 44rem;
+  margin: -0.75rem 0 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.75;
+}
+
 .app-section-title {
   margin: 2.5rem 0 0.75rem;
   font-family: var(--font-mono);
@@ -343,17 +381,4 @@
   max-width: 34rem;
   opacity: 0.6;
   line-height: 1.5;
-}
-
-.app-loading {
-  position: fixed;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  margin: 0;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  opacity: 0.5;
 }

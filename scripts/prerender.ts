@@ -44,6 +44,8 @@ function buildRoutes(): Route[] {
     routes.push(
       { routePath: `/${locale}/changelog`, waitSelector: ".changelog" },
       { routePath: `/${locale}/explore`, waitSelector: ".explore .formula-card" },
+      { routePath: `/${locale}/colecciones`, waitSelector: ".collections .collection" },
+      { routePath: `/${locale}/glosario`, waitSelector: ".glossary .glossary__entry" },
     );
   }
 

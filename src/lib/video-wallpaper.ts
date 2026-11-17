@@ -1324,6 +1324,23 @@ const animators: Record<ClassicStyle | ExtraStyle, Animator> = {
     spacingX: o.spacingX * (1 + 0.5 * swing(p)),
   }),
   constellation: (o, p) => ({ ...o, radius: o.radius * (1 + 0.3 * swing(p)) }),
+  omarchy: (o, p) => ({
+    ...breathe(o, p, 0.03),
+    rotation: o.rotation + 6 * swing(p),
+  }),
+  atmosphere: (o, p) => ({
+    ...o,
+    radius: o.radius * (1 + 0.3 * swing(p)),
+    scale: o.scale * (1 + 0.04 * swing(p, 2)),
+  }),
+  lattice: (o, p) => ({
+    ...breathe(o, p, 0.02),
+    spacingX: o.spacingX * (1 + 0.2 * swing(p)),
+  }),
+  ribbon: (o, p) => ({
+    ...breathe(o, p, 0.02),
+    rotation: o.rotation + 10 * swing(p),
+  }),
 };
 
 /** Vuelta base (s) de los estilos de imagen animados; los que giran entero van más lento. */
@@ -1338,6 +1355,8 @@ const ANIMATED_PERIODS: Partial<Record<ClassicStyle | ExtraStyle, number>> = {
   macro: 18,
   waves: 8,
   neon: 6,
+  atmosphere: 12,
+  ribbon: 16,
 };
 
 function animated(style: ClassicStyle | ExtraStyle): SceneFactory {

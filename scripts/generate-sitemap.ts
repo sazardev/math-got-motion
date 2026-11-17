@@ -57,7 +57,7 @@ function buildUrls(): SitemapUrl[] {
     }
   }
 
-  for (const page of ["changelog", "explore"]) {
+  for (const page of ["changelog", "explore", "colecciones", "glosario"]) {
     for (const locale of locales) {
       urls.push({
         path: `/${locale}/${page}`,

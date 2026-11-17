@@ -1,0 +1,183 @@
+/*
+ * Skeleton tipográfico. El lienzo sigue siendo --bg puro; la única "textura"
+ * es una retícula de puntos del propio --fg, enmascarada para que el centro
+ * quede limpio. No hay imágenes, bordes, sombras ni colores nuevos: cumple el
+ * default de DESIGN.md y solo aparece mientras llegan los recursos reales.
+ */
+.loading-stage {
+  position: fixed;
+  inset: 0;
+  z-index: 35;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  color: var(--fg);
+  overflow: hidden;
+  animation: stage-enter 0.24s ease-out both;
+}
+
+.loading-stage__atlas {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--fg) 13%, transparent) 1px,
+    transparent 1.5px
+  );
+  background-size: 2.4rem 2.4rem;
+  mask-image: radial-gradient(ellipse at 50% 46%, transparent 8%, #000 88%);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.loading-stage__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(2rem, 7vh, 4.5rem);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* La fórmula fantasma usa los glifos reales del índice, así el skeleton ya
+   anticipa la longitud y el ritmo de lo que viene (sin layout shift). */
+.loading-stage__ghost {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.18em;
+  max-width: 90vw;
+  font-family: var(--font-formula);
+  font-size: clamp(2.4rem, 9vw, 6rem);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.loading-stage__ghost > span {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  color: color-mix(in srgb, var(--fg) 14%, transparent);
+  animation: stage-glyph 1.6s ease-in-out infinite;
+}
+
+.loading-stage__ghost > span::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--fg) 22%, transparent),
+    transparent
+  );
+  transform: translate3d(-100%, 0, 0);
+  animation: stage-shimmer 1.4s ease-in-out infinite;
+}
+
+.loading-stage__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.loading-stage__steps li {
+  display: grid;
+  grid-template-columns: 2.2rem minmax(6rem, auto) 1rem;
+  align-items: center;
+  gap: 0.75rem;
+  opacity: 0.32;
+  transition: opacity 0.25s ease;
+}
+
+.loading-stage__steps li[data-state="active"] {
+  opacity: 1;
+}
+
+.loading-stage__steps li[data-state="done"] {
+  opacity: 0.72;
+}
+
+.loading-stage__num {
+  opacity: 0.55;
+}
+
+.loading-stage__mark::after {
+  content: "○";
+}
+
+.loading-stage__steps li[data-state="done"] .loading-stage__mark::after {
+  content: "●";
+}
+
+.loading-stage__steps li[data-state="active"] .loading-stage__mark::after {
+  content: "●";
+  animation: stage-pulse 1s ease-in-out infinite;
+}
+
+.loading-stage__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes stage-enter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes stage-glyph {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes stage-shimmer {
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes stage-pulse {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-stage,
+  .loading-stage__ghost > span,
+  .loading-stage__ghost > span::after,
+  .loading-stage__steps li[data-state="active"] .loading-stage__mark::after {
+    animation: none;
+  }
+
+  .loading-stage__ghost > span::after {
+    display: none;
+  }
+}

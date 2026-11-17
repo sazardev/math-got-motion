@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import { prefetchFormula } from "../../lib/prefetch";
+
 import type { FormulaSummary } from "../../domain/formula-index";
 import type { Locale } from "../../i18n/locale";
 import "./FormulaCard.css";
@@ -19,6 +21,12 @@ export function FormulaCard({ summary, locale, size = "regular" }: FormulaCardPr
       className="formula-card"
       data-size={size}
       lang={locale}
+      onPointerEnter={() => {
+        prefetchFormula(summary.id);
+      }}
+      onFocus={() => {
+        prefetchFormula(summary.id);
+      }}
     >
       <span className="formula-card__equation" aria-hidden="true">
         {summary.glyphs.map((glyph, index) => (

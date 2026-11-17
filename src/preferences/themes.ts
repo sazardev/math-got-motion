@@ -80,6 +80,22 @@ export const themeIds = [
   "sepia",
   "mint",
   "blueprint-light",
+  // Omarchy (rama quattro). Paletas fieles a themes/*/colors.toml.
+  "ethereal",
+  "flexoki-light",
+  "hackerman",
+  "jade-horse",
+  "last-horizon",
+  "lumon",
+  "lupine",
+  "matte-black",
+  "miasma",
+  "retro-82",
+  "ristretto",
+  "solitude",
+  "starship",
+  "vantablack",
+  "white",
 ] as const;
 
 export type ThemeId = (typeof themeIds)[number];
@@ -167,6 +183,22 @@ export const themes: readonly ThemeMeta[] = [
   { id: "sepia", name: "Sepia", scheme: "light" },
   { id: "mint", name: "Mint", scheme: "light" },
   { id: "blueprint-light", name: "Blueprint Light", scheme: "light" },
+  // Omarchy (rama quattro)
+  { id: "ethereal", name: "Ethereal", scheme: "dark" },
+  { id: "flexoki-light", name: "Flexoki Light", scheme: "light" },
+  { id: "hackerman", name: "Hackerman", scheme: "dark" },
+  { id: "jade-horse", name: "Jade Horse", scheme: "dark" },
+  { id: "last-horizon", name: "Last Horizon", scheme: "dark" },
+  { id: "lumon", name: "Lumon", scheme: "dark" },
+  { id: "lupine", name: "Lupine", scheme: "light" },
+  { id: "matte-black", name: "Matte Black", scheme: "dark" },
+  { id: "miasma", name: "Miasma", scheme: "dark" },
+  { id: "retro-82", name: "Retro '82", scheme: "dark" },
+  { id: "ristretto", name: "Ristretto", scheme: "dark" },
+  { id: "solitude", name: "Solitude", scheme: "dark" },
+  { id: "starship", name: "Starship", scheme: "dark" },
+  { id: "vantablack", name: "Vantablack", scheme: "dark" },
+  { id: "white", name: "White", scheme: "light" },
 ];
 
 const byId = new Map<ThemeId, ThemeMeta>(themes.map((theme) => [theme.id, theme]));

@@ -1,0 +1,128 @@
+.collections {
+  padding-bottom: 4rem;
+}
+
+.collections__index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  margin: 0.5rem 0 3.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.collections__index a {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  color: var(--fg);
+  text-decoration: none;
+  opacity: 0.6;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.collections__index a:hover,
+.collections__index a:focus-visible {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.collections__index a > span {
+  color: var(--accent);
+}
+
+.collection {
+  margin-bottom: 4.5rem;
+  scroll-margin-top: 5rem;
+}
+
+.collection__header {
+  display: grid;
+  grid-template-columns: 2.5rem clamp(3rem, 8vw, 6rem) minmax(0, 1fr);
+  gap: 1.2rem;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+.collection__number {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+}
+
+.collection__glyph {
+  color: var(--accent);
+  font-family: var(--font-formula);
+  font-size: clamp(2.4rem, 7vw, 4.5rem);
+  line-height: 1;
+}
+
+.collection__title {
+  margin: 0 0 0.35rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.collection__description {
+  max-width: 44rem;
+  margin: 0;
+  opacity: 0.75;
+  line-height: 1.5;
+}
+
+.collection__count {
+  margin: 0.6rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.collections__footer {
+  padding-top: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.collections__footer a {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.collections__footer a:hover,
+.collections__footer a:focus-visible {
+  transform: translateX(4px);
+}
+
+@media (max-width: 640px) {
+  .collection__header {
+    grid-template-columns: 2rem minmax(0, 1fr);
+  }
+
+  .collection__glyph {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .collection__body {
+    grid-column: 2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collections__index a,
+  .collections__footer a {
+    transition: none;
+  }
+}

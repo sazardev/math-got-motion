@@ -80,6 +80,10 @@ const CLASSIC_LABEL_KEYS = {
   knockout: "exportStyleKnockout",
   cards: "exportStyleCards",
   constellation: "exportStyleConstellation",
+  omarchy: "exportStyleOmarchy",
+  atmosphere: "exportStyleAtmosphere",
+  lattice: "exportStyleLattice",
+  ribbon: "exportStyleRibbon",
 } as const;
 
 const VIDEO_STYLE_LABEL_KEYS = {

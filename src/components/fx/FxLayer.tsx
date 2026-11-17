@@ -70,6 +70,12 @@ export function FxLayer() {
   // estéticas nuevas montan solo lo suyo.
   const monitor = fx === "crt" || fx === "vhs" || fx === "neon";
   const grain = monitor || fx === "film" || fx === "glitch";
+  // Las capas nuevas se tiñen con --accent: con 100 temas hay 100 fondos
+  // distintos sin duplicar CSS ni añadir un asset por tema.
+  const mesh = fx === "neon" || fx === "dream" || fx === "aurora";
+  const lattice = fx === "grid" || fx === "halftone" || fx === "crt" || fx === "circuit";
+  const circuit = fx === "circuit";
+  const silk = fx === "silk";
 
   return (
     <div className="fx" aria-hidden="true">
@@ -82,7 +88,12 @@ export function FxLayer() {
       )}
       {grain && <div className="fx__grain" ref={grainRef} />}
       {monitor && <div className="fx__flicker" />}
-      {fx !== "halftone" && <div className="fx__vignette" />}
+      {mesh && <div className="fx__mesh" />}
+      {lattice && <div className="fx__lattice" />}
+      {circuit && <div className="fx__circuit" />}
+      {silk && <div className="fx__silk" />}
+      {fx === "aurora" && <div className="fx__beams" />}
+      {fx !== "halftone" && fx !== "grid" && <div className="fx__vignette" />}
       {fx === "crt" && <div className="fx__curvature" />}
       {fx === "neon" && <div className="fx__ambient" />}
       {fx === "film" && <div className="fx__leak" />}

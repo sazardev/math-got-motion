@@ -827,6 +827,174 @@ const constellation: Composer = (context, request, layout) => {
   });
 };
 
+/*
+ * Fondos limpios inspirados en el catálogo de Omarchy: cuatro maneras de dar
+ * atmósfera sin imaginería — muestras de paleta, halos, retícula y cintas.
+ * Todos leen `--bg/--fg/--accent` del tema activo a través del `Kit`, así un
+ * mismo estilo cambia por completo al cambiar de tema.
+ */
+
+/** Muestras de paleta: banda de acento a la inclinación elegida + tarjeta de colores. */
+const omarchy: Composer = (context, request, layout) => {
+  const kit = kitFor(request);
+  const { width, height, unit, palette, options } = kit;
+  const angle = (options.rotation - 18) * RAD;
+  const reach = Math.hypot(width, height) * 0.7;
+
+  context.save();
+  context.translate(width / 2, height / 2);
+  context.rotate(angle);
+  context.fillStyle = rgba(palette.accent, 0.86);
+  context.fillRect(-reach, -unit * 0.33, reach * 2, unit * 0.66);
+  context.fillStyle = rgba(palette.fg, 0.4);
+  for (const edge of [-0.35, 0.34]) {
+    context.fillRect(-reach, unit * edge, reach * 2, Math.max(2, unit * 0.003));
+  }
+  context.restore();
+
+  const swatches = [palette.accent, palette.fg, mix(palette.accent, palette.fg, 0.5), palette.bg];
+  const sw = unit * 0.03;
+  const gap = unit * 0.007;
+  const totalWidth = swatches.length * sw + (swatches.length - 1) * gap;
+  const startX = (width - totalWidth) / 2;
+  const swatchY = height * 0.87;
+  for (const [index, color] of swatches.entries()) {
+    context.fillStyle = color;
+    context.fillRect(startX + index * (sw + gap), swatchY, sw, unit * 0.01);
+  }
+
+  const scale = fitScale(layout, width * 0.74, height * 0.26) * options.scale;
+  drawFormula(context, layout, {
+    x: width / 2,
+    y: height / 2,
+    scale,
+    color: palette.accentFg,
+    ...heroFx(request, DESIGN_SIZE * scale),
+  });
+};
+
+/** Atmósfera: halos suaves del acento (y de su matiz vecino) con la fórmula nítida. */
+const atmosphere: Composer = (context, request, layout) => {
+  const kit = kitFor(request);
+  const { width, height, unit, palette, options } = kit;
+  const random = seededRandom(hashString(request.formula.id));
+  const glows = Math.max(1, Math.round(options.count));
+  const reach = unit * 0.46 * options.radius;
+
+  for (let index = 0; index < glows; index += 1) {
+    const x = width * (0.12 + random() * 0.76);
+    const y = height * (0.1 + random() * 0.8);
+    const color = index % 2 === 0 ? palette.accent : shiftHue(palette.accent, 36 * (index % 3));
+    const radius = reach * (0.55 + random() * 0.7);
+    const halo = context.createRadialGradient(x, y, 0, x, y, radius);
+    halo.addColorStop(0, rgba(mix(palette.bg, color, 0.6), 0.62));
+    halo.addColorStop(1, rgba(palette.bg, 0));
+    context.fillStyle = halo;
+    context.fillRect(0, 0, width, height);
+  }
+
+  drawShade(context, kit, unit * 0.5, 0.5);
+  const scale = fitScale(layout, width * 0.72, height * 0.28) * options.scale;
+  drawFormula(context, layout, {
+    x: width / 2,
+    y: height / 2,
+    scale,
+    color: palette.fg,
+    ...heroFx(request, DESIGN_SIZE * scale),
+  });
+};
+
+/** Retícula: punto por celda, sin líneas ni gradientes; la fórmula flota en limpio. */
+const lattice: Composer = (context, request, layout) => {
+  const kit = kitFor(request);
+  const { width, height, unit, palette, fonts, options } = kit;
+  const stepX = unit * 0.026 * Math.max(0.2, options.spacingX);
+  const stepY = unit * 0.026 * Math.max(0.2, options.spacingY);
+  const dot = Math.max(1, unit * 0.0013);
+
+  context.save();
+  context.fillStyle = rgba(palette.fg, 0.19);
+  for (let y = (height / 2) % stepY; y < height; y += stepY) {
+    for (let x = (width / 2) % stepX; x < width; x += stepX) {
+      context.beginPath();
+      context.arc(x, y, dot, 0, TAU);
+      context.fill();
+    }
+  }
+  context.restore();
+
+  const clear = context.createRadialGradient(
+    width / 2,
+    height / 2,
+    0,
+    width / 2,
+    height / 2,
+    unit * 0.42,
+  );
+  clear.addColorStop(0, rgba(palette.bg, 0.94));
+  clear.addColorStop(1, rgba(palette.bg, 0));
+  context.fillStyle = clear;
+  context.fillRect(0, 0, width, height);
+
+  const scale = fitScale(layout, width * 0.68, height * 0.3) * options.scale;
+  drawFormula(context, layout, {
+    x: width / 2,
+    y: height / 2,
+    scale,
+    color: palette.accent,
+    ...heroFx(request, DESIGN_SIZE * scale),
+  });
+  drawText(context, request.formula.id.toUpperCase().replaceAll("-", " "), {
+    x: width / 2,
+    y: height * 0.78,
+    font: `500 ${String(Math.round(unit * 0.014))}px ${fonts.mono}`,
+    color: palette.fg,
+    alpha: 0.65,
+  });
+};
+
+/** Cintas: curvas anchas del acento que cruzan el lienzo y enmarcan la fórmula. */
+const ribbon: Composer = (context, request, layout) => {
+  const kit = kitFor(request);
+  const { width, height, unit, palette, options } = kit;
+  const count = Math.max(1, Math.round(options.count));
+
+  context.save();
+  context.translate(width / 2, height / 2);
+  context.rotate(options.rotation * RAD);
+  for (let index = 0; index < count; index += 1) {
+    const t = count === 1 ? 0.5 : index / (count - 1);
+    const y = (t - 0.5) * height * 0.55;
+    context.strokeStyle = rgba(
+      index % 2 === 0 ? palette.accent : mix(palette.accent, palette.fg, 0.45),
+      0.3,
+    );
+    context.lineWidth = unit * (0.009 + 0.02 * (1 - t));
+    context.beginPath();
+    context.moveTo(-width, y + height * 0.22);
+    context.bezierCurveTo(
+      -width * 0.3,
+      y - height * 0.25,
+      width * 0.3,
+      y + height * 0.25,
+      width,
+      y - height * 0.18,
+    );
+    context.stroke();
+  }
+  context.restore();
+
+  drawShade(context, kit, unit * 0.55, 0.62);
+  const scale = fitScale(layout, width * 0.72, height * 0.28) * options.scale;
+  drawFormula(context, layout, {
+    x: width / 2,
+    y: height / 2,
+    scale,
+    color: palette.fg,
+    ...heroFx(request, DESIGN_SIZE * scale),
+  });
+};
+
 export const extraComposers: Record<ExtraStyle, Composer> = {
   blueprint,
   mosaic,
@@ -842,4 +1010,8 @@ export const extraComposers: Record<ExtraStyle, Composer> = {
   knockout,
   cards,
   constellation,
+  omarchy,
+  atmosphere,
+  lattice,
+  ribbon,
 };

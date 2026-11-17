@@ -178,3 +178,65 @@
   text-transform: uppercase;
   text-decoration: none;
 }
+
+/* Puente a las secciones editoriales. Dos bloques tipográficos, sin bordes
+   ni sombras: el glifo es la única imagen, como en el resto de la app. */
+.home__discover {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 0.25rem;
+}
+
+.home__discover-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 1.1rem;
+  align-items: center;
+  min-height: 8rem;
+  padding: 1.1rem;
+  color: var(--fg);
+  text-decoration: none;
+  transition: background-color 0.18s ease;
+}
+
+.home__discover-card:hover,
+.home__discover-card:focus-visible {
+  background: var(--fg);
+  color: var(--bg);
+  outline: none;
+}
+
+.home__discover-glyph {
+  grid-row: 1 / 3;
+  color: var(--accent);
+  font-family: var(--font-formula);
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  line-height: 1;
+  transition: transform 0.24s ease;
+}
+
+.home__discover-card:hover .home__discover-glyph,
+.home__discover-card:focus-visible .home__discover-glyph {
+  color: inherit;
+  transform: translateX(4px);
+}
+
+.home__discover-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.home__discover-cta {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home__discover-glyph {
+    transition: none;
+  }
+}
